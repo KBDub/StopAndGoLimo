@@ -3,13 +3,17 @@
 
 ---
 
-## Technical Stack
+## Technical Stack (TALL Stack)
 
-- **Framework:** PHP 8.2+ with Laravel 11
-- **Templating:** Blade templates with component architecture
-- **CSS Framework:** Tailwind CSS with custom configuration
+- **T** - Tailwind CSS with custom configuration
+- **A** - Alpine.js for lightweight JavaScript interactions
+- **L** - Laravel 11 (PHP 8.2+)
+- **L** - Livewire 3 for reactive components
+- **E-Commerce:** Lunar (headless e-commerce package for Laravel)
 - **Build Tool:** Vite (Laravel default)
-- **SEO:** Server-side rendering (native Laravel)
+- **Testing:** Pest PHP
+- **Static Analysis:** Larastan (PHPStan for Laravel)
+- **SEO:** Server-side rendering (native Laravel/Livewire)
 
 ---
 
@@ -304,10 +308,148 @@
 
 ---
 
-## File Structure (Laravel)
+## Development Requirements & Best Practices
+
+### Code Organization & Modularity
+
+**Maximum File Size: 800 Lines**
+- No single file may exceed 800 lines of code
+- Break large files into smaller, focused modules
+- Extract reusable logic into traits, services, or actions
+- Use Livewire components for UI modularity
+
+### TALL Stack Architecture
+
+**Tailwind CSS**
+- Mobile-first CSS methodology
+- Fluid typography using `clamp()`
+- Custom theme configuration matching brand colors
+- Purge unused styles in production
+
+**Alpine.js**
+- Lightweight interactions (dropdowns, modals, toggles)
+- Use `x-data`, `x-show`, `x-on` for reactive behavior
+- Keep Alpine logic minimal; prefer Livewire for complex state
+
+**Laravel 11**
+- Follow Laravel conventions strictly
+- Use route model binding
+- Implement form request validation
+- Configure proper caching for production
+- Implement CSRF protection on all forms
+
+**Livewire 3**
+- Use for all reactive UI components
+- Prefer Livewire over AJAX for dynamic content
+- Implement proper loading states
+- Use `wire:navigate` for SPA-like navigation
+
+### Lunar E-Commerce Integration
+
+- Use Lunar for product catalog, cart, and checkout
+- Extend Lunar models as needed for custom fields
+- Implement custom product types for signage vs. apparel
+- Use Lunar's built-in payment gateway integrations
+- Follow Lunar's admin panel conventions
+
+### Modern PHP Standards (2025)
+
+#### 1. Strict Typing
+Every PHP file must begin with strict types declaration:
+```php
+<?php
+
+declare(strict_types=1);
+```
+
+Use typed properties and return types:
+```php
+class ProductService
+{
+    public function calculatePrice(float $base, int $taxRate): float
+    {
+        return $base * (1 + ($taxRate / 100));
+    }
+}
+```
+
+#### 2. Dependency Injection (DI)
+- Never instantiate dependencies directly (`new DatabaseConnection()`)
+- Request interfaces in constructors; let the container inject them
+- Makes code testable and swappable
+
+```php
+class OrderService
+{
+    public function __construct(
+        private readonly OrderRepositoryInterface $orders,
+        private readonly PaymentGatewayInterface $payments,
+    ) {}
+}
+```
+
+#### 3. Static Analysis with Larastan
+- Run PHPStan/Larastan on all code before commits
+- Minimum level 5 for new code, work toward level 8
+- Catches null pointer exceptions, type mismatches, undefined methods
+- Integrate into CI/CD pipeline
+
+#### 4. Testing with Pest
+Use Pest for all tests (preferred over PHPUnit in Laravel ecosystem):
+```php
+test('a user can add item to cart', function () {
+    $user = User::factory()->create();
+    $product = Product::factory()->create();
+
+    actingAs($user)
+        ->post('/cart/add', ['product_id' => $product->id])
+        ->assertStatus(200);
+
+    expect($user->cart->items)->toHaveCount(1);
+});
+```
+
+#### 5. The Action Pattern
+Instead of bloated Controllers or Models, use single-purpose Action classes:
+
+```php
+// app/Actions/CreateOrderAction.php
+class CreateOrderAction
+{
+    public function __construct(
+        private readonly OrderRepository $orders,
+        private readonly NotificationService $notifications,
+    ) {}
+
+    public function execute(User $user, Cart $cart): Order
+    {
+        $order = $this->orders->createFromCart($user, $cart);
+        $this->notifications->sendOrderConfirmation($order);
+        
+        return $order;
+    }
+}
+```
+
+Benefits:
+- Single responsibility
+- Easy to test in isolation
+- Reusable across controllers, commands, jobs
+- Clear naming reveals intent
+
+### File Structure (TALL Stack + Lunar)
 
 ```
 ├── app/
+│   ├── Actions/
+│   │   ├── Cart/
+│   │   │   ├── AddToCartAction.php
+│   │   │   └── RemoveFromCartAction.php
+│   │   ├── Orders/
+│   │   │   ├── CreateOrderAction.php
+│   │   │   └── ProcessPaymentAction.php
+│   │   └── Inquiries/
+│   │       └── SubmitInquiryAction.php
 │   ├── Http/
 │   │   ├── Controllers/
 │   │   │   ├── HomeController.php
@@ -316,19 +458,41 @@
 │   │   │   └── ContactController.php
 │   │   └── Requests/
 │   │       └── ContactFormRequest.php
-│   └── Models/
-│       ├── Product.php
-│       ├── Category.php
-│       └── Inquiry.php
+│   ├── Livewire/
+│   │   ├── Components/
+│   │   │   ├── Navigation.php
+│   │   │   ├── ProductCard.php
+│   │   │   ├── ProductGallery.php
+│   │   │   └── TestimonialCarousel.php
+│   │   ├── Cart/
+│   │   │   ├── CartIcon.php
+│   │   │   ├── CartDrawer.php
+│   │   │   └── CartPage.php
+│   │   ├── Checkout/
+│   │   │   └── CheckoutForm.php
+│   │   └── Forms/
+│   │       └── ContactForm.php
+│   ├── Models/
+│   │   ├── Product.php (extends Lunar)
+│   │   ├── Category.php
+│   │   ├── Inquiry.php
+│   │   └── Testimonial.php
+│   └── Services/
+│       ├── ProductService.php
+│       └── InquiryService.php
 ├── resources/
 │   ├── views/
 │   │   ├── layouts/
 │   │   │   └── app.blade.php
 │   │   ├── components/
-│   │   │   ├── navigation.blade.php
-│   │   │   ├── footer.blade.php
-│   │   │   ├── product-card.blade.php
-│   │   │   └── testimonial.blade.php
+│   │   │   ├── button.blade.php
+│   │   │   ├── input.blade.php
+│   │   │   └── card.blade.php
+│   │   ├── livewire/
+│   │   │   ├── components/
+│   │   │   ├── cart/
+│   │   │   ├── checkout/
+│   │   │   └── forms/
 │   │   ├── pages/
 │   │   │   ├── home.blade.php
 │   │   │   ├── products.blade.php
@@ -342,6 +506,13 @@
 │   │   └── app.css
 │   └── js/
 │       └── app.js
+├── tests/
+│   ├── Feature/
+│   │   ├── CartTest.php
+│   │   ├── CheckoutTest.php
+│   │   └── ContactFormTest.php
+│   └── Unit/
+│       └── Actions/
 ├── public/
 │   └── images/
 ├── routes/
@@ -350,21 +521,22 @@
     └── migrations/
 ```
 
----
+### Code Quality Checklist
 
-## Development Notes
-
-### Laravel Best Practices
-- Use Blade components for reusability
-- Implement form request validation
-- Use Eloquent ORM for database operations
-- Configure proper caching for production
-- Implement CSRF protection on all forms
-- Use Laravel Mix/Vite for asset compilation
+Before committing any code:
+- [ ] File is under 800 lines
+- [ ] `declare(strict_types=1);` at top
+- [ ] All methods have type hints and return types
+- [ ] Larastan passes at level 5+
+- [ ] Pest tests written for new features
+- [ ] No `dd()` or `dump()` left in code
+- [ ] CSRF protection on all forms
+- [ ] Input validation via Form Requests
+- [ ] Proper error handling implemented
 
 ### Responsive Design Approach
 - Mobile-first CSS methodology
-- Fluid typography using clamp()
+- Fluid typography using `clamp()`
 - Flexible images and media
 - Touch-friendly interactions
 - Optimized images for different screen sizes

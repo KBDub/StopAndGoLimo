@@ -294,28 +294,82 @@ A comprehensive branding demonstration page showcasing all design elements.
 
 ### Mega Menu Navigation
 
+#### Main Navigation Items
+```
+┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│ LOGO  Home  About Us  Custom Apparel▼  Design It Yourself▼  Signs▼  Decals▼  Vehicle    │
+│                                                                      Graphics▼           │
+│       Promotional Items  Stores▼  Portfolio  Contact Us                        [Cart]   │
+└──────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Menu Structure
+
+| Main Menu Item | Has Dropdown | Sub-Menu Items |
+|----------------|--------------|----------------|
+| Home | No | - |
+| About Us | No | - |
+| Custom Apparel | Yes | Custom Shirts, DTF Transfers, Reunion Shirts, Corporate Wear, Spirit Wear |
+| Design It Yourself | Yes | Use Our Free Online Designer, Browse Our Design Idea Catalogs |
+| Signs | Yes | Coronavirus Signs, Business Signs, Banners, Posters, Table Runners, Sidewalk Signs, Yard Signs |
+| Decals | Yes | Coronavirus Decals, Stickers, Window/Wall/Floor Decals |
+| Vehicle Graphics | Yes | Automobile Graphics, Vehicle Magnets, DOT Decals |
+| Promotional Items | No | - |
+| Stores | Yes | (External store links) |
+| Portfolio | No | - |
+| Contact Us | No | - |
+
+#### Dropdown Visual Structure
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│  LOGO          PRODUCTS ▼    SERVICES ▼    ABOUT    CONTACT    [Cart] [CTA]│
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  PRODUCTS MEGA MENU (shown on hover/click)                          │   │
-│  │                                                                      │   │
-│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────┐ │   │
-│  │  │ SIGNAGE      │  │ APPAREL      │  │ PROMOTIONAL  │  │ FEATURED│ │   │
-│  │  │              │  │              │  │              │  │  IMAGE  │ │   │
-│  │  │ • Banners    │  │ • T-Shirts   │  │ • Stickers   │  │         │ │   │
-│  │  │ • Yard Signs │  │ • Hoodies    │  │ • Magnets    │  │  [Shop  │ │   │
-│  │  │ • A-Frames   │  │ • Hats       │  │ • Decals     │  │   Now]  │ │   │
-│  │  │ • Window     │  │ • Polos      │  │ • Mugs       │  │         │ │   │
-│  │  │ • Vehicle    │  │ • Jackets    │  │ • Pens       │  │         │ │   │
-│  │  │              │  │              │  │              │  │         │ │   │
-│  │  │ View All →   │  │ View All →   │  │ View All →   │  │         │ │   │
-│  │  └──────────────┘  └──────────────┘  └──────────────┘  └─────────┘ │   │
-│  │                                                                      │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
-│                                                                             │
+│  CUSTOM APPAREL DROPDOWN                                                    │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  • Custom Shirts                                                    │    │
+│  │  • DTF Transfers                                                    │    │
+│  │  • Reunion Shirts                                                   │    │
+│  │  • Corporate Wear                                                   │    │
+│  │  • Spirit Wear                                                      │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  DESIGN IT YOURSELF DROPDOWN                                                │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  • Use Our Free Online Designer                                     │    │
+│  │  • Browse Our Design Idea Catalogs                                  │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  SIGNS DROPDOWN                                                             │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  • Coronavirus Signs                                                │    │
+│  │  • Business Signs                                                   │    │
+│  │  • Banners                                                          │    │
+│  │  • Posters                                                          │    │
+│  │  • Table Runners                                                    │    │
+│  │  • Sidewalk Signs                                                   │    │
+│  │  • Yard Signs                                                       │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  DECALS DROPDOWN                                                            │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  • Coronavirus Decals                                               │    │
+│  │  • Stickers                                                         │    │
+│  │  • Window/Wall/Floor Decals                                         │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  VEHICLE GRAPHICS DROPDOWN                                                  │
+│  ┌────────────────────────────────────────────────────────────────────┐    │
+│  │  • Automobile Graphics                                              │    │
+│  │  • Vehicle Magnets                                                  │    │
+│  │  • DOT Decals                                                       │    │
+│  └────────────────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 

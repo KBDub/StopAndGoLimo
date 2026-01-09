@@ -15,26 +15,24 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
-| Jet Black | `#0A0A0A` | 10, 10, 10 | Primary backgrounds, headers |
-| Pure White | `#FFFFFF` | 255, 255, 255 | Primary text on dark, clean sections |
-| Charcoal | `#1A1A1A` | 26, 26, 26 | Secondary backgrounds, cards |
-
-### Secondary Colors
-
-| Color Name | Hex Code | RGB | Usage |
-|------------|----------|-----|-------|
-| Warm Gray | `#2D2D2D` | 45, 45, 45 | Borders, dividers |
-| Light Gray | `#F5F5F5` | 245, 245, 245 | Light section backgrounds |
-| Medium Gray | `#888888` | 136, 136, 136 | Secondary text, captions |
+| Primary Gold | `#CDBF2B` | 205, 191, 43 | Primary brand color, CTAs, highlights |
+| Background White | `#FFFFFF` | 255, 255, 255 | Page backgrounds, clean sections |
+| Text Black | `#000000` | 0, 0, 0 | Primary text, headings |
 
 ### Accent Colors
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
-| Champagne Gold | `#C9A962` | 201, 169, 98 | CTAs, highlights, premium accents |
-| Soft Gold | `#D4AF37` | 212, 175, 55 | Hover states, icons |
-| Muted Bronze | `#8B7355` | 139, 115, 85 | Tertiary accents |
-| Royal Blue | `#3273DC` | 50, 115, 220 | Links, interactive elements, secondary CTAs |
+| Accent Blue | `#3273DC` | 50, 115, 220 | Links, interactive elements, secondary CTAs |
+
+### Supporting Colors
+
+| Color Name | Hex Code | RGB | Usage |
+|------------|----------|-----|-------|
+| Dark Gray | `#333333` | 51, 51, 51 | Footer backgrounds, dark sections |
+| Medium Gray | `#666666` | 102, 102, 102 | Secondary text, captions |
+| Light Gray | `#F5F5F5` | 245, 245, 245 | Light section backgrounds, borders |
+| Border Gray | `#E0E0E0` | 224, 224, 224 | Subtle borders, dividers |
 
 ### Functional Colors
 
@@ -42,48 +40,42 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 |------------|----------|-------|
 | Success | `#2E7D32` | Form success states |
 | Error | `#C62828` | Form errors, alerts |
-| Info | `#1565C0` | Informational elements |
+| Info | `#3273DC` | Informational elements (uses Accent Blue) |
 
 ---
 
 ## Typography
 
-### Primary Font Family
+### Font Families
 
-**Heading Font:** `"Playfair Display"` or `"Cormorant Garamond"`
-- Use for: H1, H2, featured quotes, brand statements
-- Weights: 400 (Regular), 500 (Medium), 600 (SemiBold), 700 (Bold)
-- Style: Elegant serif conveying luxury and refinement
+**Primary Font:** `"Titillium Web", sans-serif`
+- Use for: All headings (H1-H5), body text, navigation, buttons, forms
+- Weights: 300 (Light), 400 (Regular), 600 (SemiBold), 700 (Bold)
+- Source: Google Fonts
+- Style: Modern, technical sans-serif with excellent readability
 
-### Secondary Font Family
+**Fallback Stack:** `"Titillium Web", Arial, sans-serif`
 
-**Body Font:** `"Inter"` or `"Helvetica Neue"`
-- Use for: Body text, navigation, buttons, forms
-- Weights: 300 (Light), 400 (Regular), 500 (Medium), 600 (SemiBold), 700 (Bold)
-- Style: Clean, modern sans-serif for readability
-
-### Tertiary Font Family
-
-**Accent Font:** `"Montserrat"`
-- Use for: Subheadings, labels, button text, navigation
-- Weights: 400 (Regular), 500 (Medium), 600 (SemiBold), 700 (Bold)
-- Style: Geometric sans-serif for modern sophistication
+### Font Import
+```css
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+```
 
 ### Typography Scale
 
 | Element | Font | Size (Desktop) | Size (Mobile) | Weight | Line Height | Letter Spacing |
 |---------|------|----------------|---------------|--------|-------------|----------------|
-| H1 | Playfair Display | 72px | 40px | 700 | 1.1 | -0.02em |
-| H2 | Playfair Display | 48px | 32px | 600 | 1.2 | -0.01em |
-| H3 | Montserrat | 32px | 24px | 600 | 1.3 | 0em |
-| H4 | Montserrat | 24px | 20px | 500 | 1.4 | 0.01em |
-| H5 | Montserrat | 18px | 16px | 500 | 1.4 | 0.02em |
-| Body Large | Inter | 18px | 16px | 400 | 1.7 | 0em |
-| Body | Inter | 16px | 15px | 400 | 1.6 | 0em |
-| Body Small | Inter | 14px | 13px | 400 | 1.5 | 0.01em |
-| Caption | Inter | 12px | 11px | 400 | 1.4 | 0.02em |
-| Button | Montserrat | 14px | 13px | 600 | 1 | 0.1em |
-| Nav Link | Montserrat | 13px | 12px | 500 | 1 | 0.08em |
+| H1 | Titillium Web | 32px | 28px | 700 | 1.2 | 0em |
+| H2 | Titillium Web | 24px | 22px | 700 | 1.3 | 0em |
+| H3 | Titillium Web | 20px | 18px | 600 | 1.3 | 0em |
+| H4 | Titillium Web | 18px | 16px | 600 | 1.4 | 0em |
+| H5 | Titillium Web | 16px | 15px | 600 | 1.4 | 0.01em |
+| Body Large | Titillium Web | 18px | 16px | 400 | 1.7 | 0em |
+| Body | Titillium Web | 16px | 15px | 400 | 1.6 | 0em |
+| Body Small | Titillium Web | 14px | 13px | 400 | 1.5 | 0.01em |
+| Caption | Titillium Web | 12px | 11px | 400 | 1.4 | 0.02em |
+| Button | Titillium Web | 14px | 13px | 600 | 1 | 0.05em |
+| Nav Link | Titillium Web | 14px | 13px | 600 | 1 | 0.02em |
 
 ---
 
@@ -116,7 +108,10 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 ### Color Variants
 - Primary: White on dark backgrounds
 - Secondary: Black on light backgrounds
-- Accent: Gold foil for premium applications
+- Accent: Primary Gold (#CDBF2B) for premium applications
+
+### Logo Asset
+- **Source:** `https://top5pct.com/images/footer-images-top5percent-joliet/top5-logo.gif`
 
 ---
 
@@ -203,27 +198,28 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 
 | Type | Background | Text | Border | Padding |
 |------|------------|------|--------|---------|
-| Primary | Gold (#C9A962) | Black (#0A0A0A) | None | 16px 32px |
-| Secondary | Transparent | White (#FFFFFF) | 1px white | 16px 32px |
-| Tertiary | Transparent | Gold (#C9A962) | None | 8px 0 |
-| Link Button | Transparent | Royal Blue (#3273DC) | None | 8px 0 |
+| Primary | Primary Gold (#CDBF2B) | Black (#000000) | None | 16px 32px |
+| Secondary | Transparent | Black (#000000) | 1px Dark Gray (#333333) | 16px 32px |
+| Tertiary | Transparent | Accent Blue (#3273DC) | None | 8px 0 |
+| Link Button | Transparent | Accent Blue (#3273DC) | None | 8px 0 |
 
 ### Button States
 - **Hover:** Slight scale (1.02) + shadow increase
 - **Active:** Scale (0.98) + deeper shadow
 - **Disabled:** 50% opacity, no pointer events
-- **Focus:** 2px gold outline for accessibility
+- **Focus:** 2px Primary Gold (#CDBF2B) outline for accessibility
 
 ---
 
 ## Form Element Styles
 
-- **Input Height:** 56px
-- **Border:** 1px solid Medium Gray (#888888)
-- **Border Focus:** 2px solid Champagne Gold (#C9A962)
-- **Background:** Transparent or Light Gray (#F5F5F5)
-- **Label Style:** Above input, small caps, Montserrat font
-- **Placeholder:** Medium Gray (#888888), italic
+- **Input Height:** 48px
+- **Border:** 1px solid Border Gray (#E0E0E0)
+- **Border Focus:** 2px solid Primary Gold (#CDBF2B)
+- **Border Radius:** 2px
+- **Background:** White (#FFFFFF)
+- **Label Style:** Above input, Titillium Web font, 600 weight
+- **Placeholder:** Medium Gray (#666666)
 - **Error State:** 2px solid Error (#C62828), error message below in Error color
 - **Success State:** 2px solid Success (#2E7D32)
 
@@ -249,14 +245,14 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 ### Loading States
 - Skeleton screens for content loading
 - Smooth fade-in when content appears
-- Spinner with Gold accent for form submission
+- Spinner with Primary Gold (#CDBF2B) accent for form submission
 
 ---
 
 ## Footer Branding
 
-- **Background:** Jet Black (#0A0A0A)
-- **Text Color:** Pure White (#FFFFFF)
-- **Link Color:** Medium Gray (#888888), Gold on hover
-- **Dividers:** Warm Gray (#2D2D2D)
-- **Copyright Text:** Caption size, Medium Gray
+- **Background:** Dark Gray (#333333)
+- **Text Color:** White (#FFFFFF)
+- **Link Color:** Light Gray, Primary Gold (#CDBF2B) on hover
+- **Dividers:** Medium Gray (#666666)
+- **Copyright Text:** Caption size, Light Gray

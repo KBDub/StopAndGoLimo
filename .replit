@@ -1,6 +1,7 @@
 run = "php -S 0.0.0.0:8000 -t ."
 
 entrypoint = "index.php"
+modules = ["php-8.4", "nodejs-20"]
 
 [nix]
 channel = "stable-22_11"
@@ -10,8 +11,47 @@ run = ["php", "-S", "0.0.0.0:8000", "-t", "."]
 deploymentTarget = "cloudrun"
 
 [[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
 localPort = 8000
 externalPort = 80
 
 [agent]
 expertMode = true
+
+[userenv]
+
+[userenv.shared]
+APP_NAME = "Top 5 Percent"
+APP_URL = "http://0.0.0.0:5000"
+DB_CONNECTION = "pgsql"
+DB_HOST = "helium"
+DB_PORT = "5432"
+DB_DATABASE = "heliumdb"
+DB_USERNAME = "postgres"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Laravel Server"
+
+[[workflows.workflow]]
+name = "Laravel Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php artisan serve --host=0.0.0.0 --port=5000"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"

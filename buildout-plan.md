@@ -17,6 +17,29 @@ A phased implementation plan for the Laravel 11 + TALL Stack + Lunar e-commerce 
 
 ---
 
+## Critical Development Rules
+
+### 1. File Size Limit
+**No file will be more than 800 lines of code.**
+
+- Split large files into smaller, focused modules
+- Use Actions, Services, and Repository patterns
+- Keep components single-responsibility
+
+### 2. Required Reading Before Development
+**Always reread these documents before making changes:**
+
+- `branding-requirements.md` - Colors, fonts, CSS variables, styling
+- `layout-design.md` - Navigation, page structure, component specs
+
+### 3. Additional Reference Documents
+- `seo.md` - SEO keywords, voice search, meta strategies
+- `cart.md` - Shopping cart implementation with Lunar
+- `facets.md` - Product filtering and facet search
+- `admin.md` - Backend admin panel specifications
+
+---
+
 ## Critical Path
 
 ```

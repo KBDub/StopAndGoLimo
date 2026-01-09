@@ -8,7 +8,17 @@
     <meta property="og:title" content="Top 5 Percent - Custom Signage & Apparel">
     <meta property="og:description" content="Premium custom signage and apparel in Joliet, IL.">
     <meta name="theme-color" content="#CDBF2B">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @php
+        $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
+        $cssFile = $manifest['resources/css/app.css']['file'] ?? null;
+        $jsFile = $manifest['resources/js/app.js']['file'] ?? null;
+    @endphp
+    @if($cssFile)
+    <link rel="stylesheet" href="/build/{{ $cssFile }}">
+    @endif
+    @if($jsFile)
+    <script type="module" src="/build/{{ $jsFile }}"></script>
+    @endif
 </head>
 <body class="font-sans antialiased bg-white text-black">
     <header class="bg-gray-dark text-white">

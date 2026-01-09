@@ -34,6 +34,7 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 | Champagne Gold | `#C9A962` | 201, 169, 98 | CTAs, highlights, premium accents |
 | Soft Gold | `#D4AF37` | 212, 175, 55 | Hover states, icons |
 | Muted Bronze | `#8B7355` | 139, 115, 85 | Tertiary accents |
+| Royal Blue | `#3273DC` | 50, 115, 220 | Links, interactive elements, secondary CTAs |
 
 ### Functional Colors
 
@@ -165,3 +166,97 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 - Professional
 - Refined
 - Elevated
+
+---
+
+## Semantic HTML Requirements
+
+### Heading Hierarchy (H2-H5 Preference)
+- **Use heading tags (H2-H5) instead of generic `<p>` tags** for all text that serves as a title, label, or section identifier
+- Reserve `<p>` tags strictly for body paragraph content
+- This improves SEO, accessibility, and document structure
+
+| Element | Tag | Usage |
+|---------|-----|-------|
+| Page Title | `<h1>` | One per page, main page title only |
+| Section Titles | `<h2>` | Major sections (Services, Products, About) |
+| Subsection Titles | `<h3>` | Card titles, feature headings |
+| Item Labels | `<h4>` | Product names, testimonial names |
+| Minor Headings | `<h5>` | Captions with emphasis, small labels |
+| Body Text | `<p>` | Paragraphs of descriptive content only |
+
+### Example Structure
+```html
+<section>
+    <h2>Our Services</h2>
+    <div class="service-card">
+        <h3>Custom Signage</h3>
+        <h4>Business Signs</h4>
+        <p>High-quality materials for lasting impressions.</p>
+    </div>
+</section>
+```
+
+---
+
+## Button Styles
+
+| Type | Background | Text | Border | Padding |
+|------|------------|------|--------|---------|
+| Primary | Gold (#C9A962) | Black (#0A0A0A) | None | 16px 32px |
+| Secondary | Transparent | White (#FFFFFF) | 1px white | 16px 32px |
+| Tertiary | Transparent | Gold (#C9A962) | None | 8px 0 |
+| Link Button | Transparent | Royal Blue (#3273DC) | None | 8px 0 |
+
+### Button States
+- **Hover:** Slight scale (1.02) + shadow increase
+- **Active:** Scale (0.98) + deeper shadow
+- **Disabled:** 50% opacity, no pointer events
+- **Focus:** 2px gold outline for accessibility
+
+---
+
+## Form Element Styles
+
+- **Input Height:** 56px
+- **Border:** 1px solid Medium Gray (#888888)
+- **Border Focus:** 2px solid Champagne Gold (#C9A962)
+- **Background:** Transparent or Light Gray (#F5F5F5)
+- **Label Style:** Above input, small caps, Montserrat font
+- **Placeholder:** Medium Gray (#888888), italic
+- **Error State:** 2px solid Error (#C62828), error message below in Error color
+- **Success State:** 2px solid Success (#2E7D32)
+
+---
+
+## Animation & Transition Styles
+
+### Standard Transitions
+- **Duration:** 200-300ms for UI elements
+- **Easing:** `cubic-bezier(0.4, 0, 0.2, 1)` (ease-out)
+- **Properties:** opacity, transform, background-color
+
+### Hover Effects
+- **Buttons:** Slight scale (1.02) + shadow increase
+- **Cards:** Image zoom (1.05) within container
+- **Links:** Underline animation from left to right
+
+### Scroll Animations
+- **Trigger:** When element enters viewport (50% visible)
+- **Effect:** Fade up with subtle Y translation (20px)
+- **Stagger:** 100ms delay between sequential elements
+
+### Loading States
+- Skeleton screens for content loading
+- Smooth fade-in when content appears
+- Spinner with Gold accent for form submission
+
+---
+
+## Footer Branding
+
+- **Background:** Jet Black (#0A0A0A)
+- **Text Color:** Pure White (#FFFFFF)
+- **Link Color:** Medium Gray (#888888), Gold on hover
+- **Dividers:** Warm Gray (#2D2D2D)
+- **Copyright Text:** Caption size, Medium Gray

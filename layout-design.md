@@ -160,6 +160,92 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
+### 5. Demo Page (/demo)
+
+A comprehensive branding demonstration page showcasing all design elements.
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                        NAVIGATION                               │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                    PAGE HEADER                                  │
+│           "Brand Style Guide & Demo"                            │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   COLOR PALETTE                                 │
+│    ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐            │
+│    │Black│ │White│ │Char │ │Gold │ │Blue │ │Gray │            │
+│    │     │ │     │ │     │ │     │ │     │ │     │            │
+│    └─────┘ └─────┘ └─────┘ └─────┘ └─────┘ └─────┘            │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   TYPOGRAPHY SHOWCASE                           │
+│                                                                 │
+│    H1: Playfair Display - Main Heading                          │
+│    H2: Playfair Display - Section Title                         │
+│    H3: Montserrat - Subsection                                  │
+│    H4: Montserrat - Card Title                                  │
+│    H5: Montserrat - Minor Heading                               │
+│    Body: Inter - Paragraph text sample...                       │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   BUTTON VARIATIONS                             │
+│    [Primary CTA]  [Secondary]  [Tertiary →]  [Link]             │
+│                                                                 │
+│    Hover States | Active States | Disabled States               │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   FORM ELEMENTS                                 │
+│    ┌────────────────┐  ┌────────────────┐                      │
+│    │  Text Input    │  │  Select Menu   │                      │
+│    └────────────────┘  └────────────────┘                      │
+│    ┌────────────────────────────────────┐                      │
+│    │  Textarea                           │                      │
+│    └────────────────────────────────────┘                      │
+│    [ ] Checkbox    ( ) Radio    [Toggle]                       │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   CARD COMPONENTS                               │
+│    ┌───────┐  ┌───────┐  ┌───────┐  ┌───────┐                 │
+│    │Product│  │Service│  │Testim │  │ Info  │                 │
+│    │ Card  │  │ Card  │  │ Card  │  │ Card  │                 │
+│    └───────┘  └───────┘  └───────┘  └───────┘                 │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   ICONS & BADGES                                │
+│    [★] [→] [✓] [✕] [i] [!] [Cart] [Menu]                      │
+│                                                                 │
+│    ┌─────────┐ ┌─────────┐ ┌─────────┐                         │
+│    │Featured │ │  Sale   │ │  New    │                         │
+│    └─────────┘ └─────────┘ └─────────┘                         │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│                   SPACING & GRID                                │
+│    Visual demonstration of spacing tokens                       │
+│    4px | 8px | 16px | 24px | 32px | 48px | 64px                │
+│                                                                 │
+├─────────────────────────────────────────────────────────────────┤
+│                         FOOTER                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+#### Demo Page Sections
+1. **Color Palette** - All brand colors with hex codes and usage notes
+2. **Typography** - All heading levels (H1-H5) and body text samples
+3. **Buttons** - All button variants with interactive states
+4. **Form Elements** - Inputs, selects, textareas, checkboxes, radios, toggles
+5. **Card Components** - Product, service, testimonial, and info cards
+6. **Icons & Badges** - Common icons and status badges
+7. **Spacing & Grid** - Visual spacing scale demonstration
+
 ---
 
 ## Grid System
@@ -206,12 +292,61 @@
 
 ## Component Specifications
 
-### Navigation Bar
-- **Height:** 80px (desktop), 64px (mobile)
-- **Background:** Transparent on hero, solid on scroll
-- **Position:** Fixed to top
-- **Animation:** Smooth background transition on scroll
-- **Mobile:** Hamburger menu with full-screen overlay
+### Mega Menu Navigation
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  LOGO          PRODUCTS ▼    SERVICES ▼    ABOUT    CONTACT    [Cart] [CTA]│
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │  PRODUCTS MEGA MENU (shown on hover/click)                          │   │
+│  │                                                                      │   │
+│  │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  ┌─────────┐ │   │
+│  │  │ SIGNAGE      │  │ APPAREL      │  │ PROMOTIONAL  │  │ FEATURED│ │   │
+│  │  │              │  │              │  │              │  │  IMAGE  │ │   │
+│  │  │ • Banners    │  │ • T-Shirts   │  │ • Stickers   │  │         │ │   │
+│  │  │ • Yard Signs │  │ • Hoodies    │  │ • Magnets    │  │  [Shop  │ │   │
+│  │  │ • A-Frames   │  │ • Hats       │  │ • Decals     │  │   Now]  │ │   │
+│  │  │ • Window     │  │ • Polos      │  │ • Mugs       │  │         │ │   │
+│  │  │ • Vehicle    │  │ • Jackets    │  │ • Pens       │  │         │ │   │
+│  │  │              │  │              │  │              │  │         │ │   │
+│  │  │ View All →   │  │ View All →   │  │ View All →   │  │         │ │   │
+│  │  └──────────────┘  └──────────────┘  └──────────────┘  └─────────┘ │   │
+│  │                                                                      │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Mega Menu Specifications
+- **Height (navbar):** 80px (desktop), 64px (mobile)
+- **Background:** Transparent on hero, Jet Black (#0A0A0A) on scroll
+- **Position:** Fixed to top, z-index: 1000
+- **Animation:** Smooth background transition on scroll (200ms)
+
+#### Mega Menu Dropdown
+- **Trigger:** Hover on desktop, click on tablet
+- **Width:** Full viewport width, max 1440px centered
+- **Background:** Charcoal (#1A1A1A) with subtle shadow
+- **Padding:** 48px vertical, 64px horizontal
+- **Columns:** 3 category columns + 1 featured image column
+- **Animation:** Fade in + slide down (200ms ease-out)
+- **Backdrop:** Optional subtle blur on page content
+
+#### Mega Menu Content
+- **Category Title:** H4, Montserrat, Gold (#C9A962), uppercase
+- **Menu Items:** Body size, Inter, White, hover Gold
+- **"View All" Link:** Tertiary button style, Gold
+- **Featured Image:** 16:9 aspect ratio, hover zoom effect
+
+#### Mobile Navigation
+- **Trigger:** Hamburger icon (3 lines)
+- **Style:** Full-screen overlay, Jet Black background
+- **Animation:** Slide in from right (300ms)
+- **Menu Items:** Large touch targets (48px height minimum)
+- **Accordion:** Categories expand to show sub-items
+- **Close:** X button top-right + swipe right to close
 
 ### Hero Section
 - **Height:** 100vh (min 600px)
@@ -227,49 +362,13 @@
 - **Gap:** 24px between cards
 - **Columns:** 4 (desktop), 3 (tablet), 2 (mobile)
 
-### Buttons
-| Type | Background | Text | Border | Padding |
-|------|------------|------|--------|---------|
-| Primary | Gold (#C9A962) | Black | None | 16px 32px |
-| Secondary | Transparent | White | 1px white | 16px 32px |
-| Tertiary | Transparent | Gold | None | 8px 0 |
-
-### Form Elements
-- **Input Height:** 56px
-- **Border:** 1px solid gray, 2px gold on focus
-- **Background:** Transparent or subtle gray
-- **Label:** Above input, small caps
-- **Error State:** Red border, error message below
-
 ### Footer
-- **Background:** Jet Black (#0A0A0A)
 - **Columns:** 4 (desktop), 2 (tablet), 1 (mobile)
 - **Content:** Logo, navigation, contact, social, newsletter
 - **Copyright:** Bottom bar, separate from main footer
+- **See branding-requirements.md for color specifications**
 
----
-
-## Animation Guidelines
-
-### Transitions
-- **Duration:** 200-300ms for UI elements
-- **Easing:** `cubic-bezier(0.4, 0, 0.2, 1)` (ease-out)
-- **Properties:** opacity, transform, background-color
-
-### Scroll Animations
-- **Trigger:** When element enters viewport (50% visible)
-- **Effect:** Fade up with subtle Y translation (20px)
-- **Stagger:** 100ms delay between sequential elements
-
-### Hover Effects
-- Buttons: Slight scale (1.02) + shadow increase
-- Cards: Image zoom (1.05) within container
-- Links: Underline animation from left to right
-
-### Loading States
-- Skeleton screens for content loading
-- Smooth fade-in when content appears
-- Spinner for form submission
+> **Note:** Button styles, form element styles, and animation specifications are defined in `branding-requirements.md` to maintain a single source of truth for visual branding.
 
 ---
 

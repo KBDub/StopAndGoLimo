@@ -256,3 +256,250 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 - **Link Color:** Light Gray, Primary Gold (#CDBF2B) on hover
 - **Dividers:** Medium Gray (#666666)
 - **Copyright Text:** Caption size, Light Gray
+
+---
+
+## CSS Custom Properties (Variables)
+
+### Complete Variable Definition
+
+```css
+:root {
+  /* ===================
+     COLOR VARIABLES
+     =================== */
+  
+  /* Primary Colors */
+  --color-primary: #CDBF2B;
+  --color-primary-rgb: 205, 191, 43;
+  --color-background: #FFFFFF;
+  --color-text: #000000;
+  
+  /* Accent Colors */
+  --color-accent: #3273DC;
+  --color-accent-rgb: 50, 115, 220;
+  --color-link: #3273DC;
+  --color-link-hover: #2563c4;
+  
+  /* Gray Scale */
+  --color-gray-dark: #333333;
+  --color-gray-medium: #666666;
+  --color-gray-light: #F5F5F5;
+  --color-gray-border: #E0E0E0;
+  
+  /* Functional Colors */
+  --color-success: #2E7D32;
+  --color-error: #C62828;
+  --color-info: #3273DC;
+  --color-warning: #F9A825;
+  
+  /* ===================
+     TYPOGRAPHY VARIABLES
+     =================== */
+  
+  /* Font Families */
+  --font-primary: 'Titillium Web', Arial, sans-serif;
+  --font-fallback: Arial, sans-serif;
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Font Sizes - Desktop */
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-h4: 18px;
+  --font-size-h5: 16px;
+  --font-size-body-lg: 18px;
+  --font-size-body: 16px;
+  --font-size-body-sm: 14px;
+  --font-size-caption: 12px;
+  --font-size-button: 14px;
+  --font-size-nav: 14px;
+  
+  /* Font Sizes - Mobile (use with media queries) */
+  --font-size-h1-mobile: 28px;
+  --font-size-h2-mobile: 22px;
+  --font-size-h3-mobile: 18px;
+  --font-size-h4-mobile: 16px;
+  --font-size-h5-mobile: 15px;
+  --font-size-body-mobile: 15px;
+  
+  /* Line Heights */
+  --line-height-heading: 1.2;
+  --line-height-subheading: 1.3;
+  --line-height-body: 1.6;
+  --line-height-body-lg: 1.7;
+  --line-height-tight: 1;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-button: 0.05em;
+  
+  /* ===================
+     SPACING VARIABLES
+     =================== */
+  
+  /* Base Unit: 4px */
+  --spacing-unit: 4px;
+  
+  /* Spacing Scale */
+  --spacing-1: 4px;    /* 1 unit */
+  --spacing-2: 8px;    /* 2 units */
+  --spacing-3: 12px;   /* 3 units */
+  --spacing-4: 16px;   /* 4 units */
+  --spacing-5: 20px;   /* 5 units */
+  --spacing-6: 24px;   /* 6 units */
+  --spacing-8: 32px;   /* 8 units */
+  --spacing-10: 40px;  /* 10 units */
+  --spacing-12: 48px;  /* 12 units */
+  --spacing-16: 64px;  /* 16 units */
+  --spacing-20: 80px;  /* 20 units */
+  --spacing-24: 96px;  /* 24 units */
+  
+  /* Section Spacing */
+  --section-padding-y: 80px;
+  --section-padding-y-mobile: 48px;
+  --section-gap: 64px;
+  --section-gap-mobile: 40px;
+  
+  /* Container */
+  --container-max-width: 1280px;
+  --container-padding: 24px;
+  --container-padding-mobile: 16px;
+  
+  /* ===================
+     BORDER & RADIUS
+     =================== */
+  
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  --border-radius: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+  --border-radius-full: 9999px;
+  
+  /* ===================
+     SHADOWS
+     =================== */
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+  
+  /* ===================
+     TRANSITIONS
+     =================== */
+  
+  --transition-fast: 150ms;
+  --transition-normal: 200ms;
+  --transition-slow: 300ms;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Shorthand Transitions */
+  --transition-default: var(--transition-normal) var(--transition-easing);
+  --transition-color: color var(--transition-default);
+  --transition-background: background-color var(--transition-default);
+  --transition-transform: transform var(--transition-default);
+  --transition-opacity: opacity var(--transition-default);
+  --transition-all: all var(--transition-default);
+  
+  /* ===================
+     Z-INDEX SCALE
+     =================== */
+  
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  
+  /* ===================
+     COMPONENT SPECIFIC
+     =================== */
+  
+  /* Buttons */
+  --btn-padding-x: 32px;
+  --btn-padding-y: 16px;
+  --btn-font-size: var(--font-size-button);
+  --btn-font-weight: var(--font-weight-semibold);
+  --btn-border-radius: var(--border-radius);
+  
+  /* Inputs */
+  --input-height: 48px;
+  --input-padding-x: 16px;
+  --input-border-color: var(--color-gray-border);
+  --input-focus-border-color: var(--color-primary);
+  --input-border-radius: var(--border-radius);
+  
+  /* Cards */
+  --card-padding: var(--spacing-6);
+  --card-border-radius: var(--border-radius-md);
+  --card-shadow: var(--shadow-md);
+  
+  /* Navigation */
+  --nav-height: 80px;
+  --nav-height-mobile: 64px;
+  --nav-background: var(--color-gray-dark);
+  --nav-text-color: #FFFFFF;
+  
+  /* Footer */
+  --footer-background: var(--color-gray-dark);
+  --footer-text-color: #FFFFFF;
+}
+
+/* Dark mode overrides (if needed) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Add dark mode variable overrides here if implementing dark mode */
+  }
+}
+```
+
+### Tailwind CSS Integration
+
+For use with Tailwind CSS, extend the theme in `tailwind.config.js`:
+
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#CDBF2B',
+        accent: '#3273DC',
+        'gray-dark': '#333333',
+        'gray-medium': '#666666',
+        'gray-light': '#F5F5F5',
+        'gray-border': '#E0E0E0',
+        success: '#2E7D32',
+        error: '#C62828',
+      },
+      fontFamily: {
+        sans: ['Titillium Web', 'Arial', 'sans-serif'],
+      },
+      fontSize: {
+        'h1': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
+        'h2': ['24px', { lineHeight: '1.3', fontWeight: '700' }],
+        'h3': ['20px', { lineHeight: '1.3', fontWeight: '600' }],
+        'h4': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
+        'h5': ['16px', { lineHeight: '1.4', fontWeight: '600' }],
+      },
+      spacing: {
+        '18': '72px',
+        '22': '88px',
+      },
+      borderRadius: {
+        'sm': '2px',
+      },
+    },
+  },
+}
+```

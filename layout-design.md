@@ -319,6 +319,41 @@ A comprehensive branding demonstration page showcasing all design elements.
 | Portfolio | No | - |
 | Contact Us | No | - |
 
+#### Custom Shirts - Specialty Materials (Sub-Sub Menu)
+
+These are related product types that appear under Custom Shirts, showcasing different printing techniques and specialty materials:
+
+| Category | Items |
+|----------|-------|
+| **Printing Techniques** | Digital Printing, Dye-Sublimation, Screen Printing, White Toner Laser Printing |
+| **Specialty Materials** | Vinyl, Rhinestone, Glitter, Foil, Glow In The Dark, Flock, Reflective, Holographic, Brick, Patterns |
+| **Additional Services** | Embroidery, Picture Shirts |
+
+##### Specialty Materials Detail
+
+| Material | Description | URL Path |
+|----------|-------------|----------|
+| Vinyl | Heat transfer vinyl graphics, custom cut shapes | `/vinyl-shirts-joliet` |
+| Rhinestone | Crystal/rhinestone embellishments | `/rhinestone-shirts-joliet` |
+| Glitter | Glitter heat transfer material | `/glitter-shirts-joliet` |
+| Foil | Metallic foil finishes (gold, silver, etc.) | `/foil-shirts-joliet` |
+| Glow In The Dark | Phosphorescent glow material | `/glow-shirt-joliet` |
+| Flock | Velvet-like textured material | `/flock-custom-t-shirt` |
+| Reflective | Safety/visibility reflective material | `/reflective-shirts-joliet` |
+| Holographic | Rainbow/holographic effect material | `/holographic-shirts-joliet` |
+| Brick | Thick textured brick vinyl | `/brick-custom-t-shirts` |
+| Patterns | Custom pattern heat transfers (basketball, etc.) | `/pattern-shirts-joliet` |
+| Embroidery | Traditional thread embroidery | `/embroidery-joliet` |
+| Picture Shirts | Photo-realistic image printing | `/shirts-with-pictures-joliet` |
+
+##### Apparel Types Available
+- Custom T-Shirts
+- Custom Hoodies
+- Custom Caps/Hats
+- Custom Bags
+- Baby Clothes
+- Reunion Shirts
+
 #### Dropdown Visual Structure
 
 ```

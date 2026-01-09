@@ -24,12 +24,13 @@ expertMode = true
 
 [userenv.shared]
 APP_NAME = "Top 5 Percent"
-APP_URL = "http://0.0.0.0:5000"
+APP_URL = "https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker.replit.dev"
 DB_CONNECTION = "pgsql"
 DB_HOST = "helium"
 DB_PORT = "5432"
 DB_DATABASE = "heliumdb"
 DB_USERNAME = "postgres"
+ASSET_URL = "https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker.replit.dev"
 
 [workflows]
 runButton = "Project"

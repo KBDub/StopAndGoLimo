@@ -441,6 +441,113 @@ A comprehensive branding demonstration page showcasing all design elements.
 
 ---
 
+## Image Assets & Directory Structure
+
+### Directory Structure
+```
+public/images/
+├── logos/
+│   ├── logo.svg              # Primary logo (vector)
+│   ├── logo.png              # Primary logo (raster, 512px)
+│   ├── logo-white.svg        # White version for dark backgrounds
+│   ├── logo-white.png        # White version (raster)
+│   ├── logo-dark.svg         # Dark version for light backgrounds
+│   └── logo-icon.svg         # Icon-only version (square)
+├── favicons/
+│   ├── favicon.ico           # Legacy favicon (16x16, 32x32)
+│   ├── favicon-16x16.png     # Modern favicon 16px
+│   ├── favicon-32x32.png     # Modern favicon 32px
+│   ├── apple-touch-icon.png  # iOS home screen (180x180)
+│   ├── android-chrome-192x192.png  # Android Chrome
+│   ├── android-chrome-512x512.png  # Android Chrome large
+│   ├── mstile-150x150.png    # Windows tiles
+│   ├── safari-pinned-tab.svg # Safari pinned tab
+│   ├── site.webmanifest      # Web app manifest
+│   └── browserconfig.xml     # Windows browser config
+├── og-images/
+│   ├── og-default.jpg        # Default Open Graph (1200x630)
+│   ├── og-home.jpg           # Homepage OG image
+│   ├── og-products.jpg       # Products page OG image
+│   ├── og-about.jpg          # About page OG image
+│   ├── og-contact.jpg        # Contact page OG image
+│   └── twitter-card.jpg      # Twitter card (1200x600)
+├── heroes/
+│   ├── hero-home.jpg         # Homepage hero (1920x1080)
+│   ├── hero-home-mobile.jpg  # Homepage hero mobile (768x1024)
+│   ├── hero-about.jpg        # About page hero
+│   └── hero-contact.jpg      # Contact page hero
+├── products/
+│   └── (product images organized by category)
+└── icons/
+    ├── icon-sprite.svg       # SVG sprite for UI icons
+    └── (individual icon files)
+```
+
+### Image Best Practices
+
+#### Logo Requirements
+| Asset | Dimensions | Format | Usage |
+|-------|------------|--------|-------|
+| Primary Logo | Variable (max 300px wide) | SVG preferred, PNG fallback | Navigation, footer |
+| Logo Icon | 512x512 | SVG, PNG | Favicon source, app icons |
+| White Logo | Same as primary | SVG, PNG | Dark backgrounds |
+| Dark Logo | Same as primary | SVG, PNG | Light backgrounds |
+
+#### Favicon Generation
+Generate from a 512x512 source image using tools like:
+- [RealFaviconGenerator](https://realfavicongenerator.net/)
+- [Favicon.io](https://favicon.io/)
+
+Required files:
+```html
+<link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+<link rel="manifest" href="/images/favicons/site.webmanifest">
+<meta name="msapplication-TileColor" content="#CDBF2B">
+<meta name="theme-color" content="#CDBF2B">
+```
+
+#### Open Graph (OG) Images
+| Platform | Dimensions | Format | Notes |
+|----------|------------|--------|-------|
+| Facebook/LinkedIn | 1200x630 | JPG | Primary OG image |
+| Twitter | 1200x600 | JPG | Twitter card (summary_large_image) |
+| Pinterest | 1000x1500 | JPG | Vertical format |
+
+Required meta tags:
+```html
+<meta property="og:image" content="https://top5pct.com/images/og-images/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Top 5 Percent - Custom Signage & Apparel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://top5pct.com/images/og-images/twitter-card.jpg">
+```
+
+#### Hero Images
+| Usage | Desktop | Mobile | Format |
+|-------|---------|--------|--------|
+| Homepage Hero | 1920x1080 | 768x1024 | JPG (WebP with fallback) |
+| Page Headers | 1920x600 | 768x400 | JPG (WebP with fallback) |
+
+Best practices:
+- Compress to <200KB for hero images
+- Use `srcset` for responsive images
+- Implement lazy loading for below-fold images
+- Provide WebP with JPG fallback
+
+#### Product Images
+| Type | Dimensions | Format | Notes |
+|------|------------|--------|-------|
+| Thumbnail | 400x500 | JPG/WebP | Gallery grid |
+| Medium | 800x1000 | JPG/WebP | Product cards |
+| Large | 1200x1500 | JPG/WebP | Product detail |
+| Zoom | 2400x3000 | JPG | Zoom functionality |
+
+---
+
 ## SEO Considerations
 
 ### Technical SEO (Laravel Implementation)

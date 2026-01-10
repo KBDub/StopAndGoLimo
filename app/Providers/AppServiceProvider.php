@@ -8,6 +8,7 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
+use Lunar\Base\TelemetryServiceInterface;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -29,5 +30,9 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('login', function (Request $request) {
             return Limit::none();
         });
+
+        if ($this->app->bound(TelemetryServiceInterface::class)) {
+            $this->app->make(TelemetryServiceInterface::class)->optOut();
+        }
     }
 }

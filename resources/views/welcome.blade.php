@@ -8,6 +8,7 @@
     <meta property="og:title" content="Top 5 Percent - Custom Signage & Apparel">
     <meta property="og:description" content="Premium custom signage and apparel in Joliet, IL.">
     <meta name="theme-color" content="#CDBF2B">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     @php
         $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
         $cssFile = $manifest['resources/css/app.css']['file'] ?? null;

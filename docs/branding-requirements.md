@@ -37,9 +37,22 @@ background: linear-gradient(135deg, #F8E300 0%, #CDC02B 100%);
 
 ### Section Background Rules
 
-- **Primary Section Background:** Cream `#F2F0E6`
-- **Alternate Section Background:** Alt Pink `#CF58A3`
-- **Dark Sections:** Black `#000000` (navigation, banners, footers)
+- **Primary Section Background:** Soft Linen `#F2F0E6`
+- **Alternate Section Background:** White `#FFFFFF`
+- **Content Sections:** Alternate between Soft Linen and White
+
+### Header & Footer Requirements (MANDATORY)
+
+**All pages must have headers and footers with Soft Linen (#F2F0E6) background.**
+
+- **Header Background:** Soft Linen `#F2F0E6`
+- **Header Text:** Charcoal `#2C2C2C`
+- **Header Border:** Light gray bottom border for separation
+- **Footer Background:** Soft Linen `#F2F0E6`
+- **Footer Text:** Slate `#666666`
+- **Footer Border:** Light gray top border for separation
+
+This creates a warm, cohesive brand experience across all pages.
 
 ### Supporting Colors
 

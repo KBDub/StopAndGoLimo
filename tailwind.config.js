@@ -20,6 +20,8 @@ export default {
                 'gray-border': '#E0E0E0',
                 success: '#2E7D32',
                 error: '#C62828',
+                warning: '#F9A825',
+                info: '#3273DC',
             },
             fontFamily: {
                 sans: ['Titillium Web', 'Arial', ...defaultTheme.fontFamily.sans],

@@ -13,7 +13,12 @@ export default {
         extend: {
             colors: {
                 primary: '#CDBF2B',
+                'primary-dark': '#645D15',
+                'primary-gradient-start': '#F8E300',
+                'primary-gradient-end': '#CDC02B',
                 accent: '#3273DC',
+                'cream': '#F2F0E6',
+                'section-alt': '#CF58A3',
                 'gray-dark': '#333333',
                 'gray-medium': '#666666',
                 'gray-light': '#F5F5F5',
@@ -22,6 +27,10 @@ export default {
                 error: '#C62828',
                 warning: '#F9A825',
                 info: '#3273DC',
+            },
+            backgroundImage: {
+                'gold-gradient': 'linear-gradient(135deg, #F8E300 0%, #CDC02B 100%)',
+                'gold-gradient-horizontal': 'linear-gradient(90deg, #F8E300 0%, #CDC02B 100%)',
             },
             fontFamily: {
                 sans: ['Titillium Web', 'Arial', ...defaultTheme.fontFamily.sans],

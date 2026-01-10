@@ -15,23 +15,39 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
-| Primary Gold | `#CDBF2B` | 205, 191, 43 | Primary brand color, CTAs, highlights |
-| Background White | `#FFFFFF` | 255, 255, 255 | Page backgrounds, clean sections |
-| Text Black | `#000000` | 0, 0, 0 | Primary text, headings |
+| Primary Gold | `#CDBF2B` | 205, 191, 43 | Primary brand color, solid buttons |
+| Gold Gradient Start | `#F8E300` | 248, 227, 0 | Gradient start for CTAs, highlights |
+| Gold Gradient End | `#CDC02B` | 205, 192, 43 | Gradient end for CTAs, highlights |
+| Gold Text | `#645D15` | 100, 93, 21 | Gold text on light backgrounds |
+| Text Black | `#000000` | 0, 0, 0 | Primary text, headings, navigation bars, banners |
+| Cream | `#F2F0E6` | 242, 240, 230 | Section backgrounds, text on black |
+
+### Gold Gradient
+
+```css
+background: linear-gradient(135deg, #F8E300 0%, #CDC02B 100%);
+```
 
 ### Accent Colors
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
 | Accent Blue | `#3273DC` | 50, 115, 220 | Links, interactive elements, secondary CTAs |
+| Section Alt | `#CF58A3` | 207, 88, 163 | Alternate section background |
+
+### Section Background Rules
+
+- **Primary Section Background:** Cream `#F2F0E6`
+- **Alternate Section Background:** Alt Pink `#CF58A3`
+- **Dark Sections:** Black `#000000` (navigation, banners, footers)
 
 ### Supporting Colors
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
-| Dark Gray | `#333333` | 51, 51, 51 | Footer backgrounds, dark sections |
+| Dark Gray | `#333333` | 51, 51, 51 | Secondary dark elements |
 | Medium Gray | `#666666` | 102, 102, 102 | Secondary text, captions |
-| Light Gray | `#F5F5F5` | 245, 245, 245 | Light section backgrounds, borders |
+| Gray Light | `#F5F5F5` | 245, 245, 245 | Card backgrounds |
 | Border Gray | `#E0E0E0` | 224, 224, 224 | Subtle borders, dividers |
 
 ### Functional Colors
@@ -40,7 +56,14 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 |------------|----------|-------|
 | Success | `#2E7D32` | Form success states |
 | Error | `#C62828` | Form errors, alerts |
+| Warning | `#F9A825` | Warning notifications |
 | Info | `#3273DC` | Informational elements (uses Accent Blue) |
+
+### Text on Dark Backgrounds
+
+- **On Black:** Use Cream `#F2F0E6` for body text
+- **On Black (accent):** Use Primary Gold `#CDBF2B` for highlights
+- **On Gold Gradient:** Use Black `#000000` for maximum contrast
 
 ---
 

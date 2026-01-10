@@ -19,47 +19,57 @@
     <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
 </head>
-<body class="font-sans antialiased bg-white text-black">
-    <header class="bg-gray-dark text-white">
+<body class="font-sans antialiased bg-cream text-black">
+    <header class="bg-black text-cream">
         <nav class="container-custom flex items-center justify-between py-4">
             <a href="/" class="flex items-center">
                 <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-12">
             </a>
             <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-                <a href="/" class="text-white hover:text-primary transition-colors">Home</a>
+                <a href="/" class="text-cream hover:text-primary transition-colors">Home</a>
                 <a href="/demo" class="text-primary">Demo</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="bg-gray-dark text-white py-16">
+        <section class="bg-black text-cream py-16">
             <div class="container-custom text-center">
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Brand Style Guide & Demo</h1>
-                <p class="text-xl text-gray-300">Top 5 Percent Custom Signage & Apparel Design System</p>
+                <p class="text-xl text-cream/80">Top 5 Percent Custom Signage & Apparel Design System</p>
             </div>
         </section>
 
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Color Palette</h2>
                 
-                <h3 class="text-lg font-semibold mb-4">Primary Colors</h3>
+                <h3 class="text-lg font-semibold mb-4">Primary Brand Colors</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+                    <div class="text-center">
+                        <div class="w-full h-24 bg-gold-gradient rounded-sm mb-2 shadow-md"></div>
+                        <h4 class="font-semibold text-sm">Gold Gradient</h4>
+                        <p class="text-xs text-gray-medium">#F8E300 → #CDC02B</p>
+                    </div>
                     <div class="text-center">
                         <div class="w-full h-24 bg-primary rounded-sm mb-2 shadow-md"></div>
                         <h4 class="font-semibold text-sm">Primary Gold</h4>
                         <p class="text-xs text-gray-medium">#CDBF2B</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-full h-24 bg-white border border-gray-border rounded-sm mb-2 shadow-md"></div>
-                        <h4 class="font-semibold text-sm">Background White</h4>
-                        <p class="text-xs text-gray-medium">#FFFFFF</p>
+                        <div class="w-full h-24 bg-primary-dark rounded-sm mb-2 shadow-md"></div>
+                        <h4 class="font-semibold text-sm">Gold Text</h4>
+                        <p class="text-xs text-gray-medium">#645D15</p>
                     </div>
                     <div class="text-center">
                         <div class="w-full h-24 bg-black rounded-sm mb-2 shadow-md"></div>
-                        <h4 class="font-semibold text-sm">Text Black</h4>
+                        <h4 class="font-semibold text-sm">Black</h4>
                         <p class="text-xs text-gray-medium">#000000</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-full h-24 bg-cream border border-gray-border rounded-sm mb-2 shadow-md"></div>
+                        <h4 class="font-semibold text-sm">Cream</h4>
+                        <p class="text-xs text-gray-medium">#F2F0E6</p>
                     </div>
                     <div class="text-center">
                         <div class="w-full h-24 bg-accent rounded-sm mb-2 shadow-md"></div>
@@ -68,27 +78,21 @@
                     </div>
                 </div>
 
-                <h3 class="text-lg font-semibold mb-4">Supporting Colors</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
+                <h3 class="text-lg font-semibold mb-4">Section Backgrounds</h3>
+                <div class="grid md:grid-cols-2 gap-4 mb-8">
                     <div class="text-center">
-                        <div class="w-full h-24 bg-gray-dark rounded-sm mb-2 shadow-md"></div>
-                        <h4 class="font-semibold text-sm">Dark Gray</h4>
-                        <p class="text-xs text-gray-medium">#333333</p>
+                        <div class="w-full h-32 bg-cream border border-gray-border rounded-sm mb-2 shadow-md flex items-center justify-center">
+                            <span class="text-black font-semibold">Section Background 1</span>
+                        </div>
+                        <h4 class="font-semibold text-sm">Cream</h4>
+                        <p class="text-xs text-gray-medium">#F2F0E6</p>
                     </div>
                     <div class="text-center">
-                        <div class="w-full h-24 bg-gray-medium rounded-sm mb-2 shadow-md"></div>
-                        <h4 class="font-semibold text-sm">Medium Gray</h4>
-                        <p class="text-xs text-gray-medium">#666666</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full h-24 bg-gray-light rounded-sm mb-2 shadow-md"></div>
-                        <h4 class="font-semibold text-sm">Light Gray</h4>
-                        <p class="text-xs text-gray-medium">#F5F5F5</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-full h-24 bg-gray-border rounded-sm mb-2 shadow-md"></div>
-                        <h4 class="font-semibold text-sm">Border Gray</h4>
-                        <p class="text-xs text-gray-medium">#E0E0E0</p>
+                        <div class="w-full h-32 bg-section-alt rounded-sm mb-2 shadow-md flex items-center justify-center">
+                            <span class="text-white font-semibold">Section Background 2</span>
+                        </div>
+                        <h4 class="font-semibold text-sm">Alt Section</h4>
+                        <p class="text-xs text-gray-medium">#CF58A3</p>
                     </div>
                 </div>
 
@@ -118,7 +122,25 @@
             </div>
         </section>
 
-        <section class="py-16 bg-gray-light">
+        <section class="py-16 bg-black text-cream">
+            <div class="container-custom">
+                <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-medium">Text on Dark Backgrounds</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-primary font-semibold mb-4">Gold Text on Black</h3>
+                        <p class="text-cream mb-4">Cream colored body text (#F2F0E6) provides excellent readability on black backgrounds while maintaining the premium aesthetic.</p>
+                        <p class="text-primary-dark mb-4">Gold text (#645D15) can be used for subtle gold accents that need less contrast.</p>
+                    </div>
+                    <div class="bg-gold-gradient p-6 rounded-sm">
+                        <h3 class="text-black font-bold mb-2">Text on Gold Gradient</h3>
+                        <p class="text-black/80">Black text on gold gradient backgrounds provides maximum contrast for call-to-action elements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Typography</h2>
                 
@@ -197,49 +219,58 @@
             </div>
         </section>
 
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Button Variations</h2>
                 
                 <div class="space-y-8">
                     <div>
-                        <h3 class="text-lg font-semibold mb-4">Standard States</h3>
+                        <h3 class="text-lg font-semibold mb-4">Primary Buttons (Gold Gradient)</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="btn btn-primary">Primary CTA</a>
-                            <a href="#" class="btn btn-secondary">Secondary</a>
-                            <a href="#" class="text-accent hover:underline font-semibold">Tertiary Link</a>
+                            <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-black font-semibold rounded-sm hover:shadow-lg transition-all hover:scale-[1.02]">Primary CTA</a>
+                            <a href="#" class="inline-block px-8 py-4 bg-primary text-black font-semibold rounded-sm hover:shadow-lg transition-all hover:scale-[1.02]">Solid Gold</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Secondary & Tertiary Buttons</h3>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a href="#" class="inline-block px-8 py-4 border-2 border-black text-black font-semibold rounded-sm hover:bg-black hover:text-cream transition-all">Secondary</a>
+                            <a href="#" class="inline-block px-8 py-4 border-2 border-primary text-primary-dark font-semibold rounded-sm hover:bg-primary hover:text-black transition-all">Secondary Gold</a>
+                            <a href="#" class="text-accent hover:underline font-semibold">Tertiary Link →</a>
                         </div>
                     </div>
 
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Button Sizes</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="btn btn-primary text-xs py-2 px-4">Small</a>
-                            <a href="#" class="btn btn-primary">Default</a>
-                            <a href="#" class="btn btn-primary text-lg py-5 px-10">Large</a>
+                            <a href="#" class="inline-block px-4 py-2 bg-gold-gradient text-black text-xs font-semibold rounded-sm">Small</a>
+                            <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-black font-semibold rounded-sm">Default</a>
+                            <a href="#" class="inline-block px-10 py-5 bg-gold-gradient text-black text-lg font-semibold rounded-sm">Large</a>
                         </div>
                     </div>
 
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Disabled State</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <button class="btn btn-primary opacity-50 cursor-not-allowed" disabled>Disabled Primary</button>
-                            <button class="btn btn-secondary opacity-50 cursor-not-allowed" disabled>Disabled Secondary</button>
+                            <button class="inline-block px-8 py-4 bg-gold-gradient text-black font-semibold rounded-sm opacity-50 cursor-not-allowed" disabled>Disabled Primary</button>
+                            <button class="inline-block px-8 py-4 border-2 border-black text-black font-semibold rounded-sm opacity-50 cursor-not-allowed" disabled>Disabled Secondary</button>
                         </div>
                     </div>
 
-                    <div class="bg-gray-dark p-8 rounded-sm">
-                        <h3 class="text-lg font-semibold mb-4 text-white">On Dark Background</h3>
+                    <div class="bg-black p-8 rounded-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-cream">On Dark Background</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="btn btn-primary">Primary CTA</a>
-                            <a href="#" class="btn btn-secondary text-white border-white hover:bg-white/10">Secondary</a>
+                            <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-black font-semibold rounded-sm hover:shadow-lg transition-all">Primary CTA</a>
+                            <a href="#" class="inline-block px-8 py-4 border-2 border-cream text-cream font-semibold rounded-sm hover:bg-cream hover:text-black transition-all">Secondary</a>
+                            <a href="#" class="text-primary hover:underline font-semibold">Link →</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-gray-light">
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Form Elements</h2>
                 
@@ -248,17 +279,17 @@
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Text Input</label>
-                                <input type="text" placeholder="Enter your name" class="w-full h-12 px-4 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors">
+                                <input type="text" placeholder="Enter your name" class="w-full h-12 px-4 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors bg-cream">
                             </div>
                             
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Email Input</label>
-                                <input type="email" placeholder="email@example.com" class="w-full h-12 px-4 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors">
+                                <input type="email" placeholder="email@example.com" class="w-full h-12 px-4 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors bg-cream">
                             </div>
                             
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Select Menu</label>
-                                <select class="w-full h-12 px-4 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors bg-white">
+                                <select class="w-full h-12 px-4 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors bg-cream">
                                     <option>Select an option</option>
                                     <option>Custom Apparel</option>
                                     <option>Business Signs</option>
@@ -271,13 +302,13 @@
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Textarea</label>
-                                <textarea placeholder="Describe your project..." rows="4" class="w-full px-4 py-3 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors resize-none"></textarea>
+                                <textarea placeholder="Describe your project..." rows="4" class="w-full px-4 py-3 border border-gray-border rounded-sm focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-colors resize-none bg-cream"></textarea>
                             </div>
                             
                             <div>
                                 <label class="block text-sm font-semibold mb-2">Input States</label>
-                                <input type="text" value="Success state" class="w-full h-12 px-4 border-2 border-success rounded-sm mb-3 outline-none">
-                                <input type="text" value="Error state" class="w-full h-12 px-4 border-2 border-error rounded-sm outline-none">
+                                <input type="text" value="Success state" class="w-full h-12 px-4 border-2 border-success rounded-sm mb-3 outline-none bg-cream">
+                                <input type="text" value="Error state" class="w-full h-12 px-4 border-2 border-error rounded-sm outline-none bg-cream">
                                 <p class="text-error text-sm mt-1">This field is required.</p>
                             </div>
                         </div>
@@ -312,28 +343,28 @@
             </div>
         </section>
 
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Card Components</h2>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-gray-light p-6 rounded-sm hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-6 rounded-sm shadow-md hover:shadow-lg transition-shadow">
                         <div class="w-full h-40 bg-gray-border rounded-sm mb-4"></div>
                         <h3 class="font-semibold mb-2">Product Card</h3>
                         <p class="text-sm text-gray-medium mb-3">Custom printed t-shirt with vinyl graphics.</p>
-                        <p class="font-bold text-primary">$24.99</p>
+                        <p class="font-bold text-primary-dark">$24.99</p>
                     </div>
                     
-                    <div class="bg-gray-light p-6 rounded-sm hover:shadow-lg transition-shadow">
-                        <div class="w-12 h-12 bg-primary rounded-sm mb-4 flex items-center justify-center text-black font-bold">S</div>
+                    <div class="bg-white p-6 rounded-sm shadow-md hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-gold-gradient rounded-sm mb-4 flex items-center justify-center text-black font-bold">S</div>
                         <h3 class="font-semibold mb-2">Service Card</h3>
                         <p class="text-sm text-gray-medium">Professional signage solutions for your business needs.</p>
                     </div>
                     
-                    <div class="bg-gray-light p-6 rounded-sm hover:shadow-lg transition-shadow">
+                    <div class="bg-white p-6 rounded-sm shadow-md hover:shadow-lg transition-shadow">
                         <p class="text-sm text-gray-medium italic mb-4">"Outstanding quality and fast turnaround. Will definitely order again!"</p>
                         <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-gray-dark rounded-full"></div>
+                            <div class="w-10 h-10 bg-black rounded-full"></div>
                             <div>
                                 <h4 class="font-semibold text-sm">John D.</h4>
                                 <p class="text-xs text-gray-medium">Verified Customer</p>
@@ -341,26 +372,27 @@
                         </div>
                     </div>
                     
-                    <div class="bg-gray-dark text-white p-6 rounded-sm hover:shadow-lg transition-shadow">
+                    <div class="bg-black text-cream p-6 rounded-sm shadow-md hover:shadow-lg transition-shadow">
                         <h3 class="font-semibold mb-2">Info Card</h3>
-                        <p class="text-sm text-gray-300 mb-4">Dark variant for highlighted information.</p>
-                        <a href="#" class="text-primary hover:underline text-sm font-semibold">Learn More</a>
+                        <p class="text-sm text-cream/70 mb-4">Dark variant for highlighted information.</p>
+                        <a href="#" class="text-primary hover:underline text-sm font-semibold">Learn More →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-gray-light">
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Badges & Status Indicators</h2>
                 
                 <div class="bg-white p-8 rounded-sm shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Product Badges</h3>
                     <div class="flex flex-wrap gap-4 mb-8">
-                        <span class="inline-block px-3 py-1 bg-primary text-black text-xs font-semibold rounded-sm">Featured</span>
+                        <span class="inline-block px-3 py-1 bg-gold-gradient text-black text-xs font-semibold rounded-sm">Featured</span>
                         <span class="inline-block px-3 py-1 bg-error text-white text-xs font-semibold rounded-sm">Sale</span>
                         <span class="inline-block px-3 py-1 bg-success text-white text-xs font-semibold rounded-sm">New</span>
                         <span class="inline-block px-3 py-1 bg-accent text-white text-xs font-semibold rounded-sm">Popular</span>
-                        <span class="inline-block px-3 py-1 bg-gray-dark text-white text-xs font-semibold rounded-sm">Sold Out</span>
+                        <span class="inline-block px-3 py-1 bg-black text-cream text-xs font-semibold rounded-sm">Sold Out</span>
                         <span class="inline-block px-3 py-1 border border-gray-border text-gray-medium text-xs font-semibold rounded-sm">Default</span>
                     </div>
                     
@@ -387,51 +419,99 @@
             </div>
         </section>
 
-        <section class="py-16 bg-white">
+        <section class="py-16 bg-cream">
+            <div class="container-custom">
+                <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Alerts & Notifications</h2>
+                
+                <div class="space-y-4">
+                    <div class="p-4 bg-success/10 border-l-4 border-success rounded-sm">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-success mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <h4 class="font-semibold text-success">Success</h4>
+                                <p class="text-sm text-gray-medium">Your order has been placed successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 bg-error/10 border-l-4 border-error rounded-sm">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-error mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <h4 class="font-semibold text-error">Error</h4>
+                                <p class="text-sm text-gray-medium">There was a problem processing your request.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 bg-warning/10 border-l-4 border-warning rounded-sm">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-warning mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <h4 class="font-semibold text-warning">Warning</h4>
+                                <p class="text-sm text-gray-medium">Your session will expire in 5 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 bg-info/10 border-l-4 border-info rounded-sm">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-info mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                            <div>
+                                <h4 class="font-semibold text-info">Info</h4>
+                                <p class="text-sm text-gray-medium">Free shipping on orders over $50.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Spacing Scale</h2>
                 
-                <div class="bg-gray-light p-8 rounded-sm">
+                <div class="bg-white p-8 rounded-sm shadow-md">
                     <h3 class="text-lg font-semibold mb-6">Base Unit: 4px</h3>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">4px</div>
-                            <div class="h-4 bg-primary" style="width: 4px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 4px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-1</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">8px</div>
-                            <div class="h-4 bg-primary" style="width: 8px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 8px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-2</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">16px</div>
-                            <div class="h-4 bg-primary" style="width: 16px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 16px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-4</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">24px</div>
-                            <div class="h-4 bg-primary" style="width: 24px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 24px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-6</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">32px</div>
-                            <div class="h-4 bg-primary" style="width: 32px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 32px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-8</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">48px</div>
-                            <div class="h-4 bg-primary" style="width: 48px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 48px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-12</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">64px</div>
-                            <div class="h-4 bg-primary" style="width: 64px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 64px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-16</span>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 text-sm text-gray-medium">96px</div>
-                            <div class="h-4 bg-primary" style="width: 96px;"></div>
+                            <div class="h-4 bg-gold-gradient" style="width: 96px;"></div>
                             <span class="text-xs text-gray-medium">--spacing-24</span>
                         </div>
                     </div>
@@ -439,7 +519,7 @@
             </div>
         </section>
 
-        <section class="py-16 bg-gray-light">
+        <section class="py-16 bg-cream">
             <div class="container-custom">
                 <h2 class="text-2xl font-bold mb-8 pb-4 border-b border-gray-border">Shadows & Borders</h2>
                 
@@ -474,50 +554,58 @@
                                     <p class="text-sm font-semibold">Small (2px)</p>
                                     <p class="text-xs text-gray-medium">--border-radius</p>
                                 </div>
-                                <div class="w-16 h-16 bg-primary rounded-sm"></div>
+                                <div class="w-16 h-16 bg-gold-gradient rounded-sm"></div>
                             </div>
                             <div class="bg-white p-6 border border-gray-border rounded-sm flex justify-between items-center">
                                 <div>
                                     <p class="text-sm font-semibold">Medium (4px)</p>
                                     <p class="text-xs text-gray-medium">--border-radius-md</p>
                                 </div>
-                                <div class="w-16 h-16 bg-primary rounded"></div>
+                                <div class="w-16 h-16 bg-gold-gradient rounded"></div>
                             </div>
                             <div class="bg-white p-6 border border-gray-border rounded-sm flex justify-between items-center">
                                 <div>
                                     <p class="text-sm font-semibold">Large (8px)</p>
                                     <p class="text-xs text-gray-medium">--border-radius-lg</p>
                                 </div>
-                                <div class="w-16 h-16 bg-primary rounded-lg"></div>
+                                <div class="w-16 h-16 bg-gold-gradient rounded-lg"></div>
                             </div>
                             <div class="bg-white p-6 border border-gray-border rounded-sm flex justify-between items-center">
                                 <div>
                                     <p class="text-sm font-semibold">Full</p>
                                     <p class="text-xs text-gray-medium">--border-radius-full</p>
                                 </div>
-                                <div class="w-16 h-16 bg-primary rounded-full"></div>
+                                <div class="w-16 h-16 bg-gold-gradient rounded-full"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="py-16 bg-gold-gradient">
+            <div class="container-custom text-center">
+                <h2 class="text-3xl font-bold mb-4 text-black">Ready to Get Started?</h2>
+                <p class="text-lg text-black/80 mb-8 max-w-2xl mx-auto">Contact us today to discuss your custom signage and apparel needs. Veteran-owned and proudly serving Joliet, IL.</p>
+                <a href="#" class="inline-block px-8 py-4 bg-black text-cream font-semibold rounded-sm hover:shadow-lg transition-all hover:scale-[1.02]">Contact Us Today</a>
+            </div>
+        </section>
     </main>
 
-    <footer class="bg-gray-dark text-white py-12">
+    <footer class="bg-black text-cream py-12">
         <div class="container-custom">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div class="flex items-center gap-4">
                     <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-10">
-                    <span class="text-sm text-gray-300">Premium Custom Signage & Apparel</span>
+                    <span class="text-sm text-cream/70">Premium Custom Signage & Apparel</span>
                 </div>
-                <div class="text-sm text-gray-300">
+                <div class="text-sm text-cream/70">
                     <a href="/" class="hover:text-primary transition-colors">Home</a>
                     <span class="mx-2">|</span>
                     <a href="/demo" class="hover:text-primary transition-colors">Demo</a>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-medium text-center text-xs text-gray-300">
+            <div class="mt-8 pt-8 border-t border-gray-medium text-center text-xs text-cream/50">
                 &copy; {{ date('Y') }} Top 5 Percent. All rights reserved. Veteran Owned. Joliet, IL.
             </div>
         </div>

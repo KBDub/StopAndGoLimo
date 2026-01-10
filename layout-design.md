@@ -17,6 +17,79 @@
 
 ---
 
+## Component Structure Requirements
+
+### Rule: Each Section = One Component File
+
+Every HTML `<section>` element on a page **must** be extracted into its own component file for:
+- **SEO:** Server-Side Rendering (SSR) is mandatory - no client-side only rendering
+- **Maintainability:** Smaller, focused files under 800 lines
+- **Reusability:** Components can be shared across pages
+
+### Naming Convention
+
+Components should be named descriptively by their function:
+
+| Section Type | Component Name | Location |
+|--------------|----------------|----------|
+| Hero Banner | `hero-banner.blade.php` | `resources/views/components/sections/` |
+| Services Overview | `services-overview.blade.php` | `resources/views/components/sections/` |
+| Featured Products | `featured-products.blade.php` | `resources/views/components/sections/` |
+| Testimonials | `testimonials-carousel.blade.php` | `resources/views/components/sections/` |
+| CTA Banner | `cta-banner.blade.php` | `resources/views/components/sections/` |
+| About Preview | `about-preview.blade.php` | `resources/views/components/sections/` |
+
+### Directory Structure
+
+```
+resources/views/components/
+├── sections/              # Page section components (SSR)
+│   ├── hero-banner.blade.php
+│   ├── services-overview.blade.php
+│   ├── featured-products.blade.php
+│   ├── testimonials-carousel.blade.php
+│   ├── cta-banner.blade.php
+│   └── about-preview.blade.php
+├── layout/                # Layout components
+│   ├── header.blade.php
+│   ├── footer.blade.php
+│   └── navigation.blade.php
+└── ui/                    # Reusable UI components
+    ├── button.blade.php
+    ├── card.blade.php
+    └── input.blade.php
+```
+
+### Usage in Pages
+
+```blade
+{{-- resources/views/pages/home.blade.php --}}
+<x-layout.app>
+    <x-sections.hero-banner 
+        title="Custom Signage & Apparel"
+        subtitle="Premium Quality. Veteran Owned."
+    />
+    <x-sections.services-overview :services="$services" />
+    <x-sections.featured-products :products="$featuredProducts" />
+    <x-sections.testimonials-carousel :testimonials="$testimonials" />
+    <x-sections.cta-banner />
+</x-layout.app>
+```
+
+### Livewire Components (for Interactive Sections)
+
+For sections requiring real-time interactivity, use Livewire with SSR:
+
+```
+app/Livewire/Sections/
+├── ProductGrid.php
+├── FacetSidebar.php
+├── CartDrawer.php
+└── SearchResults.php
+```
+
+---
+
 ## Page Structure
 
 ### 1. Homepage

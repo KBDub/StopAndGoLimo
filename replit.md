@@ -19,7 +19,25 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 - `branding-requirements.md` - Colors, fonts, CSS variables, styling
 - `layout-design.md` - Navigation, page structure, component specs
 
-### 3. Additional Reference Documents
+### 3. Component Structure Requirements
+**Each HTML `<section>` must be its own component file:**
+- Use Blade components or Livewire components (SSR-enabled for SEO)
+- Name components descriptively by function (e.g., `hero-banner.blade.php`, `services-grid.blade.php`)
+- Store in `resources/views/components/sections/` for Blade or `app/Livewire/Sections/` for Livewire
+- Server-Side Rendering (SSR) is mandatory for all page sections to maximize SEO
+
+**Example structure:**
+```
+resources/views/components/sections/
+├── hero-banner.blade.php
+├── services-overview.blade.php
+├── featured-products.blade.php
+├── testimonials-carousel.blade.php
+├── cta-banner.blade.php
+└── about-preview.blade.php
+```
+
+### 4. Additional Reference Documents
 - `seo.md` - SEO keywords, voice search, meta strategies
 - `cart.md` - Shopping cart implementation with Lunar
 - `facets.md` - Product filtering and facet search

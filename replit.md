@@ -16,8 +16,8 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 
 ### 2. Required Reading Before Development
 **Always reread these documents before making changes:**
-- `branding-requirements.md` - Colors, fonts, CSS variables, styling
-- `layout-design.md` - Navigation, page structure, component specs
+- `docs/branding-requirements.md` - Colors, fonts, CSS variables, styling
+- `docs/layout-design.md` - Navigation, page structure, component specs
 
 ### 3. Component Structure Requirements
 **Each HTML `<section>` must be its own component file:**
@@ -38,10 +38,10 @@ resources/views/components/sections/
 ```
 
 ### 4. Additional Reference Documents
-- `seo.md` - SEO keywords, voice search, meta strategies
-- `cart.md` - Shopping cart implementation with Lunar
-- `facets.md` - Product filtering and facet search
-- `admin.md` - Backend admin panel specifications
+- `docs/seo.md` - SEO keywords, voice search, meta strategies
+- `docs/cart.md` - Shopping cart implementation with Lunar
+- `docs/facets.md` - Product filtering and facet search
+- `docs/admin.md` - Backend admin panel specifications
 
 ---
 
@@ -105,12 +105,13 @@ resources/views/components/sections/
 │       ├── heroes/        # Hero banners
 │       ├── products/      # Product images
 │       └── icons/         # UI icons
-├── branding-requirements.md
-├── layout-design.md
-├── seo.md
-├── cart.md
-├── facets.md
-├── admin.md
+├── docs\
+│   ├── layout-design.md
+│   ├── branding-requirements.md
+│   ├── seo.md
+│   ├── cart.md
+│   ├── facets.md
+│   ├── admin.md
 └── replit.md              # This file
 ```
 
@@ -127,7 +128,7 @@ resources/views/components/sections/
 
 ### Frontend Standards
 - Use H2-H5 tags for headings (not `<p>` for labels)
-- CSS variables from `branding-requirements.md`
+- CSS variables from `docs\branding-requirements.md`
 - Mobile-first responsive design
 - Accessibility (WCAG 2.1 AA)
 

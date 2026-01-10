@@ -12,14 +12,19 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#CDBF2B',
-                'primary-dark': '#645D15',
-                'primary-gradient-start': '#F8E300',
-                'primary-gradient-end': '#CDC02B',
-                accent: '#3273DC',
+                'sunburst': '#FFC20E',
+                'honey': '#FFD93D',
+                'amber': '#E6A500',
+                'linen': '#F2F0E6',
+                'charcoal': '#2C2C2C',
+                'slate': '#666666',
+                'coral': '#FF6B35',
                 'cream': '#F2F0E6',
-                'section-alt': '#CF58A3',
-                'gray-dark': '#333333',
+                primary: '#FFC20E',
+                'primary-light': '#FFD93D',
+                'primary-dark': '#E6A500',
+                accent: '#FF6B35',
+                'gray-dark': '#2C2C2C',
                 'gray-medium': '#666666',
                 'gray-light': '#F5F5F5',
                 'gray-border': '#E0E0E0',
@@ -29,8 +34,10 @@ export default {
                 info: '#3273DC',
             },
             backgroundImage: {
-                'gold-gradient': 'linear-gradient(135deg, #F8E300 0%, #CDC02B 100%)',
-                'gold-gradient-horizontal': 'linear-gradient(90deg, #F8E300 0%, #CDC02B 100%)',
+                'gold-gradient': 'linear-gradient(135deg, #FFC20E 0%, #FFD93D 100%)',
+                'gold-gradient-dark': 'linear-gradient(135deg, #FFC20E 0%, #E6A500 100%)',
+                'gold-gradient-horizontal': 'linear-gradient(90deg, #FFC20E 0%, #FFD93D 100%)',
+                'warm-gradient': 'linear-gradient(135deg, #FFF9E6 0%, #F2F0E6 100%)',
             },
             fontFamily: {
                 sans: ['Titillium Web', 'Arial', ...defaultTheme.fontFamily.sans],
@@ -48,6 +55,10 @@ export default {
             },
             borderRadius: {
                 'sm': '2px',
+            },
+            boxShadow: {
+                'gold': '0 4px 20px rgba(255, 194, 14, 0.15)',
+                'gold-lg': '0 8px 30px rgba(255, 194, 14, 0.25)',
             },
         },
     },

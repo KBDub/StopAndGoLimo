@@ -9,6 +9,45 @@ A premium custom signage and apparel business requiring a high-end, sophisticate
 
 ---
 
+## Component Architecture (MANDATORY)
+
+All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
+
+### Component Usage Rules
+
+1. **All pages must use Blade components** - No inline HTML for reusable elements
+2. **Component naming convention:** `x-<type>.<name>` (e.g., `x-layout.navigation-bar`)
+3. **Props must be typed** - Use `@props` directive for all component parameters
+4. **SSR-enabled** - All components render server-side for SEO
+
+### Required Layout Components
+
+| Component | Usage | File Path |
+|-----------|-------|-----------|
+| `x-layout.top-notification-bar` | Deal of the day, promotions | `resources/views/components/layout/top-notification-bar.blade.php` |
+| `x-layout.navigation-bar` | Main site navigation | `resources/views/components/layout/navigation-bar.blade.php` |
+| `x-layout.footer` | Site footer | `resources/views/components/layout/footer.blade.php` |
+
+### Example Page Structure
+
+```blade
+<body>
+    <x-layout.top-notification-bar message="Free Shipping on Orders Over $50!" />
+    <x-layout.navigation-bar currentPage="home" />
+    
+    <main>
+        <x-sections.hero-banner />
+        <x-sections.featured-products :products="$products" />
+    </main>
+    
+    <x-layout.footer />
+</body>
+```
+
+Reference: [Laravel Blade Components Documentation](https://laravel.com/docs/11.x/blade#components)
+
+---
+
 ## Color Palette
 
 ### Primary Colors

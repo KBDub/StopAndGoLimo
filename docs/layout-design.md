@@ -51,14 +51,60 @@ resources/views/components/
 │   ├── cta-banner.blade.php
 │   └── about-preview.blade.php
 ├── layout/                # Layout components
-│   ├── header.blade.php
-│   ├── footer.blade.php
-│   └── navigation.blade.php
+│   ├── top-notification-bar.blade.php  # Deal of the day messages
+│   ├── navigation-bar.blade.php        # Logo + main navigation menu
+│   └── footer.blade.php                # Site footer
 └── ui/                    # Reusable UI components
     ├── button.blade.php
     ├── card.blade.php
     └── input.blade.php
 ```
+
+### Header Components (MANDATORY)
+
+The header must consist of two separate Blade components:
+
+#### 1. Top Notification Bar (`x-layout.top-notification-bar`)
+
+Purpose: Display promotional messages, deals of the day, and site-wide announcements.
+
+**Props:**
+- `message` (string): The notification text to display
+- `link` (string|null): Optional link URL
+- `linkText` (string): Text for the link button
+
+**Usage:**
+```blade
+<x-layout.top-notification-bar 
+    message="Deal of the Day: 20% Off Custom T-Shirts!" 
+    link="/custom-shirts" 
+    linkText="Shop Now" 
+/>
+```
+
+**Styling:**
+- Background: Sunburst Gold (`#FFC20E`)
+- Text: Charcoal (`#2C2C2C`)
+- Centered content with optional call-to-action link
+
+#### 2. Navigation Bar (`x-layout.navigation-bar`)
+
+Purpose: Main site navigation with logo, menu items, and shopping cart.
+
+**Props:**
+- `currentPage` (string|null): Highlights the active page
+
+**Usage:**
+```blade
+<x-layout.navigation-bar currentPage="home" />
+```
+
+**Styling:**
+- Background: Soft Linen (`#F2F0E6`)
+- Text: Charcoal (`#2C2C2C`)
+- Border: Light gray bottom border for separation
+- Dropdown menus on hover (Alpine.js)
+- Mobile responsive with hamburger menu
 
 ### Usage in Pages
 

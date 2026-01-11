@@ -20,17 +20,8 @@
     @endif
 </head>
 <body class="font-sans antialiased bg-linen text-charcoal">
-    <header class="bg-linen text-charcoal border-b border-gray-200">
-        <nav class="max-w-6xl mx-auto px-6 flex items-center justify-between py-4">
-            <a href="/" class="flex items-center">
-                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-12">
-            </a>
-            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-                <a href="/" class="text-charcoal hover:text-sunburst transition-colors">Home</a>
-                <a href="/demo" class="text-sunburst">Demo</a>
-            </div>
-        </nav>
-    </header>
+    <x-layout.top-notification-bar message="Deal of the Day: 20% Off Custom T-Shirts!" link="/custom-shirts" linkText="Shop Now" />
+    <x-layout.navigation-bar currentPage="demo" />
 
     <main>
         <section class="bg-white py-16 shadow-gold">
@@ -561,23 +552,6 @@
         </section>
     </main>
 
-    <footer class="bg-linen text-charcoal py-12 border-t border-gray-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-4">
-                    <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-10">
-                    <span class="text-sm text-slate">Premium Custom Signage & Apparel</span>
-                </div>
-                <div class="text-sm text-slate">
-                    <a href="/" class="hover:text-sunburst transition-colors">Home</a>
-                    <span class="mx-2">|</span>
-                    <a href="/demo" class="hover:text-sunburst transition-colors">Demo</a>
-                </div>
-            </div>
-            <div class="mt-8 pt-8 border-t border-gray-300 text-center text-xs text-slate">
-                &copy; {{ date('Y') }} Top 5 Percent. All rights reserved. Veteran Owned. Joliet, IL.
-            </div>
-        </div>
-    </footer>
+    <x-layout.footer />
 </body>
 </html>

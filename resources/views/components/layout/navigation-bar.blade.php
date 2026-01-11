@@ -34,7 +34,7 @@
                         Custom Apparel
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div x-show="openDropdown === 'apparel'" x-transition class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'apparel'" x-transition class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         <a href="/custom-shirts" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Custom Shirts</a>
                         <a href="/dtf-transfers" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">DTF Transfers</a>
                         <a href="/reunion-shirts" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Reunion Shirts</a>
@@ -48,7 +48,7 @@
                         Design It Yourself
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div x-show="openDropdown === 'design'" x-transition class="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'design'" x-transition class="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         <a href="/online-designer" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Use Our Free Online Designer</a>
                         <a href="/design-catalogs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Browse Our Design Idea Catalogs</a>
                     </div>
@@ -59,7 +59,7 @@
                         Signs
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div x-show="openDropdown === 'signs'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'signs'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         <a href="/coronavirus-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Coronavirus Signs</a>
                         <a href="/business-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Business Signs</a>
                         <a href="/banners" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Banners</a>
@@ -75,7 +75,7 @@
                         Decals
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div x-show="openDropdown === 'decals'" x-transition class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'decals'" x-transition class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         <a href="/coronavirus-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Coronavirus Decals</a>
                         <a href="/stickers" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Stickers</a>
                         <a href="/window-wall-floor-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Window/Wall/Floor Decals</a>
@@ -87,7 +87,7 @@
                         Vehicle Graphics
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div x-show="openDropdown === 'vehicle'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'vehicle'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         <a href="/automobile-graphics" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Automobile Graphics</a>
                         <a href="/vehicle-magnets" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Vehicle Magnets</a>
                         <a href="/dot-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">DOT Decals</a>
@@ -103,7 +103,7 @@
                         Stores
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
-                    <div x-show="openDropdown === 'stores'" x-transition class="absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'stores'" x-transition class="absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                         <a href="/stores" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">View All Stores</a>
                     </div>
                 </div>
@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <div x-show="mobileMenuOpen" x-transition class="lg:hidden pb-4 border-t border-gray-200 pt-4">
+        <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden pb-4 border-t border-gray-200 pt-4">
             <div class="space-y-2">
                 <a href="/" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Home</a>
                 <a href="/about" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">About Us</a>

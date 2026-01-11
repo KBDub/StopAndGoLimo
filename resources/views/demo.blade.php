@@ -164,15 +164,15 @@
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="h-36 bg-coral flex items-center justify-center">
-                            <span class="text-white text-xl font-bold drop-shadow-lg">Coral Accent</span>
+                        <div class="h-36 bg-azure flex items-center justify-center">
+                            <span class="text-white text-xl font-bold drop-shadow-lg">Azure Blue</span>
                         </div>
                         <div class="p-5 bg-white">
                             <h3 class="font-semibold mb-1">Complementary Accent</h3>
-                            <p class="text-slate text-sm italic mb-3">CTAs & Important Actions</p>
+                            <p class="text-slate text-sm italic mb-3">Navigation, Links & Secondary CTAs</p>
                             <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#FF6B35</span></div>
-                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>255, 107, 53</span></div>
+                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#3273DC</span></div>
+                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>50, 115, 220</span></div>
                             </div>
                         </div>
                     </div>
@@ -306,7 +306,7 @@
                         <div class="flex flex-wrap gap-4 items-center">
                             <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-charcoal font-semibold rounded-lg hover:shadow-gold-lg transition-all hover:-translate-y-0.5">Primary CTA</a>
                             <a href="#" class="inline-block px-8 py-4 bg-sunburst text-charcoal font-semibold rounded-lg hover:shadow-gold-lg transition-all hover:-translate-y-0.5">Solid Gold</a>
-                            <a href="#" class="inline-block px-8 py-4 bg-coral text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">Coral Action</a>
+                            <a href="#" class="inline-block px-8 py-4 bg-azure text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">Azure Action</a>
                         </div>
                     </div>
 
@@ -394,7 +394,7 @@
                     <div class="rounded-xl overflow-hidden shadow-lg">
                         <div class="flex h-24">
                             <div class="flex-1 bg-sunburst"></div>
-                            <div class="flex-1 bg-coral"></div>
+                            <div class="flex-1 bg-azure"></div>
                         </div>
                         <div class="p-5 bg-white">
                             <h3 class="font-semibold mb-2">High Energy</h3>
@@ -497,7 +497,7 @@
                     <h3 class="text-lg font-semibold mb-4">Product Badges</h3>
                     <div class="flex flex-wrap gap-4">
                         <span class="inline-block px-4 py-1.5 bg-gold-gradient text-charcoal text-xs font-semibold rounded-full">Featured</span>
-                        <span class="inline-block px-4 py-1.5 bg-coral text-white text-xs font-semibold rounded-full">Sale</span>
+                        <span class="inline-block px-4 py-1.5 bg-azure text-white text-xs font-semibold rounded-full">New</span>
                         <span class="inline-block px-4 py-1.5 bg-success text-white text-xs font-semibold rounded-full">New</span>
                         <span class="inline-block px-4 py-1.5 bg-charcoal text-white text-xs font-semibold rounded-full">Sold Out</span>
                         <span class="inline-block px-4 py-1.5 border border-slate text-slate text-xs font-semibold rounded-full">Default</span>
@@ -513,10 +513,10 @@
                         </div>
                     </div>
                     
-                    <div class="p-4 bg-coral/10 border-l-4 border-coral rounded-lg flex items-start gap-3">
-                        <svg class="w-5 h-5 text-coral mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+                    <div class="p-4 bg-warning/10 border-l-4 border-warning rounded-lg flex items-start gap-3">
+                        <svg class="w-5 h-5 text-warning mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-coral">Warning</h4>
+                            <h4 class="font-semibold text-warning">Warning</h4>
                             <p class="text-sm text-slate">Your session will expire in 5 minutes.</p>
                         </div>
                     </div>
@@ -538,7 +538,7 @@
                     <h3 class="text-2xl font-bold text-charcoal mb-4">Brand Personality</h3>
                     <p class="text-charcoal mb-4"><strong>Sunburst Gold (#FFC20E):</strong> This vibrant golden yellow radiates optimism, creativity, and energy. It evokes feelings of warmth, confidence, and innovation.</p>
                     <p class="text-charcoal mb-4"><strong>Soft Linen (#F2F0E6):</strong> This warm, off-white creates a sophisticated, organic foundation with subtle yellow undertones that harmonize with the primary gold.</p>
-                    <p class="text-charcoal"><strong>Visual Harmony:</strong> The palette uses an analogous color scheme with warm yellows and golds. The coral accent provides a complementary pop that adds energy to calls-to-action.</p>
+                    <p class="text-charcoal"><strong>Visual Harmony:</strong> The palette uses a complementary color scheme with warm Sunburst Gold and cool Azure Blue. This classic yellow-blue pairing creates natural visual balance while the complementary contrast adds professional energy.</p>
                 </div>
             </div>
         </section>

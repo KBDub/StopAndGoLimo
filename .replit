@@ -32,6 +32,11 @@ DB_DATABASE = "heliumdb"
 DB_USERNAME = "postgres"
 ASSET_URL = "https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker.replit.dev"
 
+[userenv.development]
+SESSION_DRIVER = "file"
+CACHE_STORE = "file"
+QUEUE_CONNECTION = "sync"
+
 [workflows]
 runButton = "Project"
 

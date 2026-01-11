@@ -50,29 +50,38 @@ Reference: [Laravel Blade Components Documentation](https://laravel.com/docs/11.
 
 ## Color Palette
 
-### Primary Colors
+### Core Brand Colors
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
-| Primary Gold | `#CDBF2B` | 205, 191, 43 | Primary brand color, solid buttons |
-| Gold Gradient Start | `#F8E300` | 248, 227, 0 | Gradient start for CTAs, highlights |
-| Gold Gradient End | `#CDC02B` | 205, 192, 43 | Gradient end for CTAs, highlights |
-| Gold Text | `#645D15` | 100, 93, 21 | Gold text on light backgrounds |
-| Text Black | `#000000` | 0, 0, 0 | Primary text, headings, navigation bars, banners |
-| Cream | `#F2F0E6` | 242, 240, 230 | Section backgrounds, text on black |
+| Sunburst Gold | `#FFC20E` | 255, 194, 14 | Primary - Hero elements, primary CTAs, brand moments, creative sections |
+| Azure Blue | `#3273DC` | 50, 115, 220 | Secondary - Navigation, secondary CTAs, links, professional sections, informational badges |
+| Soft Linen | `#F2F0E6` | 242, 240, 230 | Background - Main backgrounds, breathing room, header/footer backgrounds |
+| Charcoal | `#2C2C2C` | 44, 44, 44 | Text - All body text and headers |
+| White | `#FFFFFF` | 255, 255, 255 | Containers - Cards, containers, alternating backgrounds |
 
-### Gold Gradient
+### Color Psychology
+
+- **Sunburst Gold (#FFC20E):** Warmth, optimism, energy, creativity
+- **Azure Blue (#3273DC):** Trust, stability, professionalism, reliability
+- **Complementary Harmony:** Yellow and blue sit opposite on the color wheel, creating natural visual tension and balance
+
+### Gradient Options
 
 ```css
-background: linear-gradient(135deg, #F8E300 0%, #CDC02B 100%);
+/* Gold-to-Blue Gradient (use sparingly for special features) */
+background: linear-gradient(135deg, #3273dc 0%, #FFC20E 100%);
+
+/* Subtle Gold Gradient */
+background: linear-gradient(135deg, #FFC20E 0%, #E5AE0D 100%);
 ```
 
-### Accent Colors
+### Accent Color Usage
 
-| Color Name | Hex Code | RGB | Usage |
-|------------|----------|-----|-------|
-| Accent Blue | `#3273DC` | 50, 115, 220 | Links, interactive elements, secondary CTAs |
-| Section Alt | `#CF58A3` | 207, 88, 163 | Alternate section background |
+| Color Name | Hex Code | Best Use Cases |
+|------------|----------|----------------|
+| Azure Blue | `#3273DC` | Primary navigation, secondary CTAs, links, information badges, section headers |
+| Sunburst Gold | `#FFC20E` | Hero sections, primary CTAs, brand moments, promotional banners |
 
 ### Section Background Rules
 
@@ -86,9 +95,11 @@ background: linear-gradient(135deg, #F8E300 0%, #CDC02B 100%);
 
 - **Header Background:** Soft Linen `#F2F0E6`
 - **Header Text:** Charcoal `#2C2C2C`
+- **Header Active Link:** Sunburst Gold `#FFC20E`
 - **Header Border:** Light gray bottom border for separation
 - **Footer Background:** Soft Linen `#F2F0E6`
-- **Footer Text:** Slate `#666666`
+- **Footer Text:** Charcoal `#2C2C2C` (primary), Medium Gray `#666666` (secondary)
+- **Footer Links:** Azure Blue `#3273DC`
 - **Footer Border:** Light gray top border for separation
 
 This creates a warm, cohesive brand experience across all pages.
@@ -97,25 +108,26 @@ This creates a warm, cohesive brand experience across all pages.
 
 | Color Name | Hex Code | RGB | Usage |
 |------------|----------|-----|-------|
-| Dark Gray | `#333333` | 51, 51, 51 | Secondary dark elements |
-| Medium Gray | `#666666` | 102, 102, 102 | Secondary text, captions |
-| Gray Light | `#F5F5F5` | 245, 245, 245 | Card backgrounds |
+| Medium Gray | `#666666` | 102, 102, 102 | Secondary text, captions, muted content |
+| Light Gray | `#F5F5F5` | 245, 245, 245 | Card backgrounds, alternate sections |
 | Border Gray | `#E0E0E0` | 224, 224, 224 | Subtle borders, dividers |
 
 ### Functional Colors
 
 | Color Name | Hex Code | Usage |
 |------------|----------|-------|
-| Success | `#2E7D32` | Form success states |
+| Success | `#4CAF50` | Form success states, confirmations |
 | Error | `#C62828` | Form errors, alerts |
 | Warning | `#F9A825` | Warning notifications |
-| Info | `#3273DC` | Informational elements (uses Accent Blue) |
+| Info | `#3273DC` | Informational elements (uses Azure Blue) |
 
-### Text on Dark Backgrounds
+### Text Color Guidelines
 
-- **On Black:** Use Cream `#F2F0E6` for body text
-- **On Black (accent):** Use Primary Gold `#CDBF2B` for highlights
-- **On Gold Gradient:** Use Black `#000000` for maximum contrast
+- **On Soft Linen (#F2F0E6):** Use Charcoal `#2C2C2C` for body text
+- **On White (#FFFFFF):** Use Charcoal `#2C2C2C` for body text
+- **On Sunburst Gold (#FFC20E):** Use Charcoal `#2C2C2C` for maximum contrast
+- **On Azure Blue (#3273DC):** Use White `#FFFFFF` for buttons and headers
+- **Links on light backgrounds:** Use Azure Blue `#3273DC`
 
 ---
 
@@ -182,8 +194,8 @@ This creates a warm, cohesive brand experience across all pages.
 
 ### Color Variants
 - Primary: White on dark backgrounds
-- Secondary: Black on light backgrounds
-- Accent: Primary Gold (#CDBF2B) for premium applications
+- Secondary: Charcoal (#2C2C2C) on light backgrounds
+- Accent: Sunburst Gold (#FFC20E) for premium applications
 
 ### Logo Asset
 - **Source:** `https://top5pct.com/images/footer-images-top5percent-joliet/top5-logo.gif`
@@ -273,16 +285,16 @@ This creates a warm, cohesive brand experience across all pages.
 
 | Type | Background | Text | Border | Padding |
 |------|------------|------|--------|---------|
-| Primary | Primary Gold (#CDBF2B) | Black (#000000) | None | 16px 32px |
-| Secondary | Transparent | Black (#000000) | 1px Dark Gray (#333333) | 16px 32px |
-| Tertiary | Transparent | Accent Blue (#3273DC) | None | 8px 0 |
-| Link Button | Transparent | Accent Blue (#3273DC) | None | 8px 0 |
+| Primary | Sunburst Gold (#FFC20E) | Charcoal (#2C2C2C) | None | 16px 32px |
+| Secondary | Azure Blue (#3273DC) | White (#FFFFFF) | None | 16px 32px |
+| Tertiary | Transparent | Charcoal (#2C2C2C) | 1px Charcoal (#2C2C2C) | 16px 32px |
+| Link Button | Transparent | Azure Blue (#3273DC) | None | 8px 0 |
 
 ### Button States
 - **Hover:** Slight scale (1.02) + shadow increase
 - **Active:** Scale (0.98) + deeper shadow
 - **Disabled:** 50% opacity, no pointer events
-- **Focus:** 2px Primary Gold (#CDBF2B) outline for accessibility
+- **Focus:** 2px Azure Blue (#3273DC) outline for accessibility
 
 ---
 
@@ -290,13 +302,13 @@ This creates a warm, cohesive brand experience across all pages.
 
 - **Input Height:** 48px
 - **Border:** 1px solid Border Gray (#E0E0E0)
-- **Border Focus:** 2px solid Primary Gold (#CDBF2B)
+- **Border Focus:** 2px solid Azure Blue (#3273DC)
 - **Border Radius:** 2px
 - **Background:** White (#FFFFFF)
-- **Label Style:** Above input, Titillium Web font, 600 weight
+- **Label Style:** Above input, Titillium Web font, 600 weight, Charcoal (#2C2C2C)
 - **Placeholder:** Medium Gray (#666666)
 - **Error State:** 2px solid Error (#C62828), error message below in Error color
-- **Success State:** 2px solid Success (#2E7D32)
+- **Success State:** 2px solid Success (#4CAF50)
 
 ---
 
@@ -320,17 +332,18 @@ This creates a warm, cohesive brand experience across all pages.
 ### Loading States
 - Skeleton screens for content loading
 - Smooth fade-in when content appears
-- Spinner with Primary Gold (#CDBF2B) accent for form submission
+- Spinner with Sunburst Gold (#FFC20E) accent for form submission
 
 ---
 
 ## Footer Branding
 
-- **Background:** Dark Gray (#333333)
-- **Text Color:** White (#FFFFFF)
-- **Link Color:** Light Gray, Primary Gold (#CDBF2B) on hover
-- **Dividers:** Medium Gray (#666666)
-- **Copyright Text:** Caption size, Light Gray
+- **Background:** Soft Linen (#F2F0E6)
+- **Text Color:** Charcoal (#2C2C2C)
+- **Secondary Text:** Medium Gray (#666666)
+- **Link Color:** Azure Blue (#3273DC), Sunburst Gold (#FFC20E) on hover
+- **Dividers:** Border Gray (#E0E0E0)
+- **Copyright Text:** Caption size, Medium Gray (#666666)
 
 ---
 
@@ -344,28 +357,36 @@ This creates a warm, cohesive brand experience across all pages.
      COLOR VARIABLES
      =================== */
   
-  /* Primary Colors */
-  --color-primary: #CDBF2B;
-  --color-primary-rgb: 205, 191, 43;
-  --color-background: #FFFFFF;
-  --color-text: #000000;
+  /* Core Brand Colors */
+  --color-sunburst-gold: #FFC20E;
+  --color-sunburst-gold-rgb: 255, 194, 14;
+  --color-azure-blue: #3273DC;
+  --color-azure-blue-rgb: 50, 115, 220;
+  --color-soft-linen: #F2F0E6;
+  --color-soft-linen-rgb: 242, 240, 230;
+  --color-charcoal: #2C2C2C;
+  --color-charcoal-rgb: 44, 44, 44;
+  --color-white: #FFFFFF;
   
-  /* Accent Colors */
-  --color-accent: #3273DC;
-  --color-accent-rgb: 50, 115, 220;
-  --color-link: #3273DC;
+  /* Semantic Color Aliases */
+  --color-primary: var(--color-sunburst-gold);
+  --color-secondary: var(--color-azure-blue);
+  --color-background: var(--color-soft-linen);
+  --color-text: var(--color-charcoal);
+  
+  /* Links */
+  --color-link: var(--color-azure-blue);
   --color-link-hover: #2563c4;
   
   /* Gray Scale */
-  --color-gray-dark: #333333;
   --color-gray-medium: #666666;
   --color-gray-light: #F5F5F5;
   --color-gray-border: #E0E0E0;
   
   /* Functional Colors */
-  --color-success: #2E7D32;
+  --color-success: #4CAF50;
   --color-error: #C62828;
-  --color-info: #3273DC;
+  --color-info: var(--color-azure-blue);
   --color-warning: #F9A825;
   
   /* ===================
@@ -523,12 +544,14 @@ This creates a warm, cohesive brand experience across all pages.
   /* Navigation */
   --nav-height: 80px;
   --nav-height-mobile: 64px;
-  --nav-background: var(--color-gray-dark);
-  --nav-text-color: #FFFFFF;
+  --nav-background: var(--color-soft-linen);
+  --nav-text-color: var(--color-charcoal);
+  --nav-active-color: var(--color-sunburst-gold);
   
   /* Footer */
-  --footer-background: var(--color-gray-dark);
-  --footer-text-color: #FFFFFF;
+  --footer-background: var(--color-soft-linen);
+  --footer-text-color: var(--color-charcoal);
+  --footer-link-color: var(--color-azure-blue);
 }
 
 /* Dark mode overrides (if needed) */
@@ -548,14 +571,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#CDBF2B',
-        accent: '#3273DC',
-        'gray-dark': '#333333',
+        // Core Brand Colors
+        'sunburst-gold': '#FFC20E',
+        'azure-blue': '#3273DC',
+        'soft-linen': '#F2F0E6',
+        'charcoal': '#2C2C2C',
+        // Semantic Aliases
+        primary: '#FFC20E',
+        secondary: '#3273DC',
+        // Supporting Colors
         'gray-medium': '#666666',
         'gray-light': '#F5F5F5',
         'gray-border': '#E0E0E0',
-        success: '#2E7D32',
+        // Functional Colors
+        success: '#4CAF50',
         error: '#C62828',
+        warning: '#F9A825',
+        info: '#3273DC',
       },
       fontFamily: {
         sans: ['Titillium Web', 'Arial', 'sans-serif'],

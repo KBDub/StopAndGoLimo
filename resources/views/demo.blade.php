@@ -90,43 +90,29 @@
 
         <section class="py-16 bg-linen">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Extended Color System</h2>
+                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Supporting Colors</h2>
                 
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="h-36 bg-honey flex items-center justify-center">
-                            <span class="text-white text-xl font-bold drop-shadow-lg">Bright Honey</span>
+                        <div class="h-36 bg-azure flex items-center justify-center">
+                            <span class="text-white text-xl font-bold drop-shadow-lg">Azure Blue</span>
                         </div>
                         <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-1">Primary Light</h3>
-                            <p class="text-slate text-sm italic mb-3">Highlights & Accents</p>
+                            <h3 class="font-semibold mb-1">Secondary Color</h3>
+                            <p class="text-slate text-sm italic mb-3">Navigation, Links & Secondary CTAs</p>
                             <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#FFD93D</span></div>
-                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>255, 217, 61</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="h-36 bg-amber flex items-center justify-center">
-                            <span class="text-white text-xl font-bold drop-shadow-lg">Deep Amber</span>
-                        </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-1">Primary Dark</h3>
-                            <p class="text-slate text-sm italic mb-3">Headers & Emphasis</p>
-                            <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#E6A500</span></div>
-                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>230, 165, 0</span></div>
+                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#3273DC</span></div>
+                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>50, 115, 220</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <div class="h-36 bg-charcoal flex items-center justify-center">
-                            <span class="text-white text-xl font-bold">Charcoal Black</span>
+                            <span class="text-white text-xl font-bold">Charcoal</span>
                         </div>
                         <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-1">Neutral Dark</h3>
+                            <h3 class="font-semibold mb-1">Text Color</h3>
                             <p class="text-slate text-sm italic mb-3">Body Text & Headers</p>
                             <div class="font-mono text-sm">
                                 <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#2C2C2C</span></div>
@@ -136,26 +122,12 @@
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="h-36 bg-slate flex items-center justify-center">
-                            <span class="text-white text-xl font-bold">Slate Gray</span>
-                        </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-1">Neutral Medium</h3>
-                            <p class="text-slate text-sm italic mb-3">Secondary Text</p>
-                            <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#666666</span></div>
-                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>102, 102, 102</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <div class="h-36 bg-white border border-gray-200 flex items-center justify-center">
-                            <span class="text-charcoal text-xl font-bold">Pure White</span>
+                            <span class="text-charcoal text-xl font-bold">White</span>
                         </div>
                         <div class="p-5 bg-gray-50">
-                            <h3 class="font-semibold mb-1">Neutral Light</h3>
-                            <p class="text-slate text-sm italic mb-3">Backgrounds & Cards</p>
+                            <h3 class="font-semibold mb-1">Container Color</h3>
+                            <p class="text-slate text-sm italic mb-3">Cards & Alternating Backgrounds</p>
                             <div class="font-mono text-sm">
                                 <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#FFFFFF</span></div>
                                 <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>255, 255, 255</span></div>
@@ -164,15 +136,15 @@
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="h-36 bg-azure flex items-center justify-center">
-                            <span class="text-white text-xl font-bold drop-shadow-lg">Azure Blue</span>
+                        <div class="h-36 bg-slate flex items-center justify-center">
+                            <span class="text-white text-xl font-bold">Medium Gray</span>
                         </div>
                         <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-1">Complementary Accent</h3>
-                            <p class="text-slate text-sm italic mb-3">Navigation, Links & Secondary CTAs</p>
+                            <h3 class="font-semibold mb-1">Supporting Text</h3>
+                            <p class="text-slate text-sm italic mb-3">Secondary Text & Captions</p>
                             <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#3273DC</span></div>
-                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>50, 115, 220</span></div>
+                                <div class="flex justify-between py-1"><span class="text-slate">HEX</span><span>#666666</span></div>
+                                <div class="flex justify-between py-1"><span class="text-slate">RGB</span><span>102, 102, 102</span></div>
                             </div>
                         </div>
                     </div>
@@ -314,8 +286,8 @@
                         <h3 class="text-lg font-semibold mb-4">Secondary Buttons</h3>
                         <div class="flex flex-wrap gap-4 items-center">
                             <a href="#" class="inline-block px-8 py-4 border-2 border-charcoal text-charcoal font-semibold rounded-lg hover:bg-charcoal hover:text-white transition-all">Secondary Dark</a>
-                            <a href="#" class="inline-block px-8 py-4 border-2 border-sunburst text-amber font-semibold rounded-lg hover:bg-sunburst hover:text-charcoal transition-all">Secondary Gold</a>
-                            <a href="#" class="text-sunburst hover:text-amber font-semibold transition-colors">Text Link →</a>
+                            <a href="#" class="inline-block px-8 py-4 border-2 border-sunburst text-sunburst font-semibold rounded-lg hover:bg-sunburst hover:text-charcoal transition-all">Secondary Gold</a>
+                            <a href="#" class="text-azure hover:text-azure-dark font-semibold transition-colors">Text Link →</a>
                         </div>
                     </div>
 
@@ -333,7 +305,7 @@
                         <div class="flex flex-wrap gap-4 items-center">
                             <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-charcoal font-semibold rounded-lg hover:shadow-gold-lg transition-all">Primary CTA</a>
                             <a href="#" class="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-charcoal transition-all">Secondary</a>
-                            <a href="#" class="text-sunburst hover:text-honey font-semibold transition-colors">Link →</a>
+                            <a href="#" class="text-sunburst hover:text-white font-semibold transition-colors">Link →</a>
                         </div>
                     </div>
                 </div>
@@ -372,7 +344,7 @@
                         <div class="flex h-24">
                             <div class="flex-1 bg-white"></div>
                             <div class="flex-1 bg-sunburst"></div>
-                            <div class="flex-1 bg-amber"></div>
+                            <div class="flex-1 bg-sunburst"></div>
                         </div>
                         <div class="p-5 bg-white">
                             <h3 class="font-semibold mb-2">Premium Gradient</h3>
@@ -406,7 +378,7 @@
                         <div class="flex h-24">
                             <div class="flex-1 bg-white"></div>
                             <div class="flex-1 bg-linen"></div>
-                            <div class="flex-1 bg-honey"></div>
+                            <div class="flex-1 bg-azure"></div>
                         </div>
                         <div class="p-5 bg-white">
                             <h3 class="font-semibold mb-2">Light & Airy</h3>
@@ -460,7 +432,7 @@
                         <div class="w-full h-40 bg-linen rounded-lg mb-4"></div>
                         <h3 class="font-semibold mb-2 text-charcoal">Product Card</h3>
                         <p class="text-sm text-slate mb-3">Custom printed t-shirt with vinyl graphics.</p>
-                        <p class="font-bold text-amber">$24.99</p>
+                        <p class="font-bold text-charcoal">$24.99</p>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
@@ -483,7 +455,7 @@
                     <div class="bg-charcoal text-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <h3 class="font-semibold mb-2">Info Card</h3>
                         <p class="text-sm text-white/70 mb-4">Dark variant for highlighted information.</p>
-                        <a href="#" class="text-sunburst hover:text-honey text-sm font-semibold transition-colors">Learn More →</a>
+                        <a href="#" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -521,10 +493,10 @@
                         </div>
                     </div>
                     
-                    <div class="p-4 bg-sunburst/10 border-l-4 border-sunburst rounded-lg flex items-start gap-3">
-                        <svg class="w-5 h-5 text-amber mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
+                    <div class="p-4 bg-azure/10 border-l-4 border-azure rounded-lg flex items-start gap-3">
+                        <svg class="w-5 h-5 text-azure mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
                         <div>
-                            <h4 class="font-semibold text-amber">Info</h4>
+                            <h4 class="font-semibold text-azure">Info</h4>
                             <p class="text-sm text-slate">Free shipping on orders over $50.</p>
                         </div>
                     </div>

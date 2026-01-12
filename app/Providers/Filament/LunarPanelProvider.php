@@ -11,15 +11,17 @@ class LunarPanelProvider extends ServiceProvider
 {
     public function register(): void
     {
-        //
+        $this->app->booting(function () {
+            LunarPanel::panel(function ($panel) {
+                return $panel
+                    ->default()
+                    ->path('hub');
+            })->register();
+        });
     }
 
     public function boot(): void
     {
-        LunarPanel::panel(function ($panel) {
-            return $panel
-                ->default()
-                ->path('hub');
-        })->register();
+        //
     }
 }

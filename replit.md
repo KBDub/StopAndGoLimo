@@ -22,19 +22,29 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 ### 3. Component Structure Requirements
 **Each HTML `<section>` must be its own component file:**
 - Use Blade components or Livewire components (SSR-enabled for SEO)
-- Name components descriptively by function (e.g., `hero-banner.blade.php`, `services-grid.blade.php`)
+- Sections use `x-sections.<name>` naming (e.g., `x-sections.hero`)
+- CTAs use `x-sections.cta-<name>` naming (e.g., `x-sections.cta-ready-to-get-started`)
 - Store in `resources/views/components/sections/` for Blade or `app/Livewire/Sections/` for Livewire
 - Server-Side Rendering (SSR) is mandatory for all page sections to maximize SEO
+- **Standard section padding: `py-10`**
 
-**Example structure:**
+**Current section components:**
 ```
 resources/views/components/sections/
-├── hero-banner.blade.php
-├── services-overview.blade.php
-├── featured-products.blade.php
-├── testimonials-carousel.blade.php
-├── cta-banner.blade.php
-└── about-preview.blade.php
+├── hero.blade.php
+├── our-services.blade.php
+├── why-choose-us.blade.php
+├── design-it-yourself.blade.php
+└── cta-ready-to-get-started.blade.php
+```
+
+**UI button components:**
+```
+resources/views/components/ui/
+├── button-charcoal-gold.blade.php
+├── button-white-charcoal.blade.php
+├── button-gold-white.blade.php
+└── button-blue-white.blade.php
 ```
 
 ### 4. Additional Reference Documents

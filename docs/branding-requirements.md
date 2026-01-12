@@ -20,6 +20,25 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 3. **Props must be typed** - Use `@props` directive for all component parameters
 4. **SSR-enabled** - All components render server-side for SEO
 
+### Component Naming Conventions (MANDATORY)
+
+| Component Type | Naming Pattern | Example |
+|----------------|----------------|---------|
+| **Sections** | `x-sections.<name>` | `x-sections.hero`, `x-sections.our-services` |
+| **CTA Sections** | `x-sections.cta-<name>` | `x-sections.cta-ready-to-get-started` |
+| **Layout** | `x-layout.<name>` | `x-layout.navigation-bar`, `x-layout.footer` |
+| **UI Elements** | `x-ui.<name>` | `x-ui.button-charcoal-gold` |
+
+### Standard Section Padding
+
+**All sections use `py-10` for vertical padding.**
+
+```blade
+<section class="py-10 bg-white">
+    <!-- Section content -->
+</section>
+```
+
 ### Required Layout Components
 
 | Component | Usage | File Path |
@@ -27,6 +46,25 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 | `x-layout.top-notification-bar` | Deal of the day, promotions | `resources/views/components/layout/top-notification-bar.blade.php` |
 | `x-layout.navigation-bar` | Main site navigation | `resources/views/components/layout/navigation-bar.blade.php` |
 | `x-layout.footer` | Site footer | `resources/views/components/layout/footer.blade.php` |
+
+### Section Components
+
+| Component | Usage | File Path |
+|-----------|-------|-----------|
+| `x-sections.hero` | Hero banner | `resources/views/components/sections/hero.blade.php` |
+| `x-sections.our-services` | Services grid | `resources/views/components/sections/our-services.blade.php` |
+| `x-sections.why-choose-us` | Trust badges | `resources/views/components/sections/why-choose-us.blade.php` |
+| `x-sections.design-it-yourself` | Design tool promo | `resources/views/components/sections/design-it-yourself.blade.php` |
+| `x-sections.cta-ready-to-get-started` | Contact CTA | `resources/views/components/sections/cta-ready-to-get-started.blade.php` |
+
+### UI Button Components
+
+| Component | Normal State | Hover State |
+|-----------|--------------|-------------|
+| `x-ui.button-charcoal-gold` | Charcoal bg, Gold text | Dark Charcoal bg |
+| `x-ui.button-white-charcoal` | White bg, Charcoal text | Linen bg, Blue text |
+| `x-ui.button-gold-white` | Gold bg, White text | Dark Gold bg |
+| `x-ui.button-blue-white` | Blue bg, White text | Dark Blue bg |
 
 ### Example Page Structure
 
@@ -36,8 +74,11 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
     <x-layout.navigation-bar currentPage="home" />
     
     <main>
-        <x-sections.hero-banner />
-        <x-sections.featured-products :products="$products" />
+        <x-sections.hero />
+        <x-sections.our-services />
+        <x-sections.why-choose-us />
+        <x-sections.design-it-yourself />
+        <x-sections.cta-ready-to-get-started />
     </main>
     
     <x-layout.footer />

@@ -436,6 +436,38 @@
                             <a href="#" class="text-sunburst hover:text-white font-semibold transition-colors">Link →</a>
                         </div>
                     </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">UI Button Components</h3>
+                        <p class="text-charcoal-light text-sm mb-4">Reusable Blade components with consistent styling. Usage: <code class="bg-linen px-2 py-1 rounded text-xs">&lt;x-ui.button-*&gt;</code></p>
+                        <div class="flex flex-wrap gap-4 items-center mb-6">
+                            <x-ui.button-charcoal-gold href="#">Charcoal + Gold</x-ui.button-charcoal-gold>
+                            <x-ui.button-white-charcoal href="#">White + Charcoal</x-ui.button-white-charcoal>
+                            <x-ui.button-gold-white href="#">Gold + White</x-ui.button-gold-white>
+                            <x-ui.button-blue-white href="#">Blue + White</x-ui.button-blue-white>
+                        </div>
+                        <div class="bg-linen p-6 rounded-lg">
+                            <h4 class="font-semibold mb-3 text-charcoal">Component Usage</h4>
+                            <div class="space-y-2 font-mono text-sm">
+                                <div class="bg-white p-3 rounded border border-linen-dark">
+                                    <code class="text-charcoal">&lt;x-ui.button-charcoal-gold href="/shop"&gt;Shop Now&lt;/x-ui.button-charcoal-gold&gt;</code>
+                                    <p class="text-charcoal-light text-xs mt-1">Charcoal bg, Gold text → Hover: Dark Charcoal bg</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-linen-dark">
+                                    <code class="text-charcoal">&lt;x-ui.button-white-charcoal href="/learn"&gt;Learn More&lt;/x-ui.button-white-charcoal&gt;</code>
+                                    <p class="text-charcoal-light text-xs mt-1">White bg, Charcoal text → Hover: Linen bg, Blue text</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-linen-dark">
+                                    <code class="text-charcoal">&lt;x-ui.button-gold-white href="/cta"&gt;Get Started&lt;/x-ui.button-gold-white&gt;</code>
+                                    <p class="text-charcoal-light text-xs mt-1">Gold bg, White text → Hover: Dark Gold bg, Dark Blue text</p>
+                                </div>
+                                <div class="bg-white p-3 rounded border border-linen-dark">
+                                    <code class="text-charcoal">&lt;x-ui.button-blue-white href="/contact"&gt;Contact Us&lt;/x-ui.button-blue-white&gt;</code>
+                                    <p class="text-charcoal-light text-xs mt-1">Blue bg, White text → Hover: Dark Blue bg, Dark Gold text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

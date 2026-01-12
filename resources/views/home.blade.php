@@ -26,7 +26,7 @@
     <x-layout.navigation-bar currentPage="home" />
 
     <main>
-        <section class="bg-gold-gradient py-20 md:py-28">
+        <section class="bg-linen py-20 md:py-28">
             <div class="max-w-6xl mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-6">
                     Custom Signage & Apparel

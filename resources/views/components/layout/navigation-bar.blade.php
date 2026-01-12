@@ -2,7 +2,7 @@
     'currentPage' => null
 ])
 
-<nav class="bg-azure text-white" x-data="{ mobileMenuOpen: false, openDropdown: null }">
+<nav class="bg-charcoal text-white" x-data="{ mobileMenuOpen: false, openDropdown: null }">
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between py-4">
             <a href="/" class="flex items-center flex-shrink-0">
@@ -124,7 +124,7 @@
             </div>
         </div>
 
-        <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden pb-4 border-t border-azure-dark pt-4">
+        <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden pb-4 border-t border-charcoal-light pt-4">
             <div class="space-y-2">
                 <a href="/" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Home</a>
                 <a href="/about" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">About Us</a>

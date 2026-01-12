@@ -57,7 +57,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Custom Apparel</h3>
-                        <p class="text-slate">T-shirts, hoodies, hats, and more with vinyl, rhinestone, glitter, and embroidery options.</p>
+                        <p class="text-charcoal-light">T-shirts, hoodies, hats, and more with vinyl, rhinestone, glitter, and embroidery options.</p>
                     </div>
                     <div class="bg-linen p-8 rounded-xl text-center hover:shadow-gold transition-all hover:-translate-y-1">
                         <div class="w-16 h-16 bg-sunburst rounded-full flex items-center justify-center mx-auto mb-6">
@@ -66,7 +66,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Business Signs</h3>
-                        <p class="text-slate">Banners, yard signs, posters, table runners, and professional business signage.</p>
+                        <p class="text-charcoal-light">Banners, yard signs, posters, table runners, and professional business signage.</p>
                     </div>
                     <div class="bg-linen p-8 rounded-xl text-center hover:shadow-gold transition-all hover:-translate-y-1">
                         <div class="w-16 h-16 bg-sunburst rounded-full flex items-center justify-center mx-auto mb-6">
@@ -75,7 +75,7 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-bold mb-4">Vehicle Graphics</h3>
-                        <p class="text-slate">Automobile graphics, vehicle magnets, DOT decals, and full vehicle wraps.</p>
+                        <p class="text-charcoal-light">Automobile graphics, vehicle magnets, DOT decals, and full vehicle wraps.</p>
                     </div>
                 </div>
             </div>

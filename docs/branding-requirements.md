@@ -50,38 +50,68 @@ Reference: [Laravel Blade Components Documentation](https://laravel.com/docs/11.
 
 ## Color Palette
 
-### Core Brand Colors
+The palette consists of **4 core brand colors + white**, each with 3 variants (light, default, dark), plus **3 semantic colors** for functional UI states.
 
-| Color Name | Hex Code | RGB | Usage |
-|------------|----------|-----|-------|
-| Sunburst Gold | `#FFC20E` | 255, 194, 14 | Primary - Hero elements, primary CTAs, brand moments, creative sections |
-| Azure Blue | `#3273DC` | 50, 115, 220 | Secondary - Navigation, secondary CTAs, links, professional sections, informational badges |
-| Soft Linen | `#F2F0E6` | 242, 240, 230 | Background - Main backgrounds, breathing room, header/footer backgrounds |
-| Charcoal | `#2C2C2C` | 44, 44, 44 | Text - All body text and headers |
-| White | `#FFFFFF` | 255, 255, 255 | Containers - Cards, containers, alternating backgrounds |
+### Core Brand Colors (4 + White)
 
-### Color Psychology
+#### Sunburst Gold
+Hero elements, primary CTAs, brand moments, creative sections
 
-- **Sunburst Gold (#FFC20E):** Warmth, optimism, energy, creativity
-- **Azure Blue (#3273DC):** Trust, stability, professionalism, reliability
-- **Complementary Harmony:** Yellow and blue sit opposite on the color wheel, creating natural visual tension and balance
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Light | Sunburst Light | `#FFD93D` | 255, 217, 61 | 48°, 100%, 62% |
+| Default | Sunburst Gold | `#FFC20E` | 255, 194, 14 | 45°, 100%, 53% |
+| Dark | Sunburst Dark | `#E6A500` | 230, 165, 0 | 43°, 100%, 45% |
 
-### Gradient Options
+#### Azure Blue
+Navigation, secondary CTAs, links, professional sections, informational badges
 
-```css
-/* Gold-to-Blue Gradient (use sparingly for special features) */
-background: linear-gradient(135deg, #3273dc 0%, #FFC20E 100%);
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Light | Azure Light | `#5A9AE8` | 90, 154, 232 | 213°, 77%, 63% |
+| Default | Azure Blue | `#3273DC` | 50, 115, 220 | 217°, 72%, 53% |
+| Dark | Azure Dark | `#2558A8` | 37, 88, 168 | 217°, 64%, 40% |
 
-/* Subtle Gold Gradient */
-background: linear-gradient(135deg, #FFC20E 0%, #E5AE0D 100%);
-```
+#### Soft Linen
+Main backgrounds, breathing room, header/footer backgrounds
 
-### Accent Color Usage
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Light | Linen Light | `#FAF9F5` | 250, 249, 245 | 48°, 33%, 97% |
+| Default | Soft Linen | `#F2F0E6` | 242, 240, 230 | 50°, 27%, 93% |
+| Dark | Linen Dark | `#E8E5D8` | 232, 229, 216 | 48°, 28%, 88% |
 
-| Color Name | Hex Code | Best Use Cases |
-|------------|----------|----------------|
-| Azure Blue | `#3273DC` | Primary navigation, secondary CTAs, links, information badges, section headers |
-| Sunburst Gold | `#FFC20E` | Hero sections, primary CTAs, brand moments, promotional banners |
+#### Charcoal
+All body text and headers
+
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Light | Charcoal Light | `#555555` | 85, 85, 85 | 0°, 0%, 33% |
+| Default | Charcoal | `#2C2C2C` | 44, 44, 44 | 0°, 0%, 17% |
+| Dark | Charcoal Dark | `#1A1A1A` | 26, 26, 26 | 0°, 0%, 10% |
+
+#### White
+Cards, containers, alternating backgrounds
+
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Default | White | `#FFFFFF` | 255, 255, 255 | 0°, 0%, 100% |
+
+### Semantic Colors (3)
+
+| Color | Hex Code | RGB | HSL | Usage |
+|-------|----------|-----|-----|-------|
+| Success | `#4CAF50` | 76, 175, 80 | 122°, 39%, 49% | Form success states, confirmations |
+| Warning | `#F9A825` | 249, 168, 37 | 37°, 95%, 56% | Warning notifications, cautions |
+| Error | `#C62828` | 198, 40, 40 | 0°, 66%, 47% | Form errors, alerts, destructive actions |
+
+### Color Hierarchy
+
+1. **Sunburst Gold (#FFC20E):** Primary brand color - Hero elements, primary CTAs, brand moments
+2. **Azure Blue (#3273DC):** Secondary brand color - Navigation, secondary CTAs, links, professional sections
+3. **Soft Linen (#F2F0E6):** Background color - Main backgrounds, breathing room
+4. **Charcoal (#2C2C2C):** Text color - All body text and headers
+5. **White (#FFFFFF):** Container color - Cards, containers, alternating backgrounds
 
 ### Section Background Rules
 
@@ -96,30 +126,11 @@ background: linear-gradient(135deg, #FFC20E 0%, #E5AE0D 100%);
 - **Header Background:** Soft Linen `#F2F0E6`
 - **Header Text:** Charcoal `#2C2C2C`
 - **Header Active Link:** Sunburst Gold `#FFC20E`
-- **Header Border:** Light gray bottom border for separation
+- **Header Hover:** Sunburst Light `#FFD93D`
 - **Footer Background:** Soft Linen `#F2F0E6`
-- **Footer Text:** Charcoal `#2C2C2C` (primary), Medium Gray `#666666` (secondary)
+- **Footer Text:** Charcoal `#2C2C2C`
 - **Footer Links:** Azure Blue `#3273DC`
-- **Footer Border:** Light gray top border for separation
-
-This creates a warm, cohesive brand experience across all pages.
-
-### Supporting Colors
-
-| Color Name | Hex Code | RGB | Usage |
-|------------|----------|-----|-------|
-| Medium Gray | `#666666` | 102, 102, 102 | Secondary text, captions, muted content |
-| Light Gray | `#F5F5F5` | 245, 245, 245 | Card backgrounds, alternate sections |
-| Border Gray | `#E0E0E0` | 224, 224, 224 | Subtle borders, dividers |
-
-### Functional Colors
-
-| Color Name | Hex Code | Usage |
-|------------|----------|-------|
-| Success | `#4CAF50` | Form success states, confirmations |
-| Error | `#C62828` | Form errors, alerts |
-| Warning | `#F9A825` | Warning notifications |
-| Info | `#3273DC` | Informational elements (uses Azure Blue) |
+- **Footer Link Hover:** Azure Dark `#2558A8`
 
 ### Text Color Guidelines
 
@@ -127,7 +138,7 @@ This creates a warm, cohesive brand experience across all pages.
 - **On White (#FFFFFF):** Use Charcoal `#2C2C2C` for body text
 - **On Sunburst Gold (#FFC20E):** Use Charcoal `#2C2C2C` for maximum contrast
 - **On Azure Blue (#3273DC):** Use White `#FFFFFF` for buttons and headers
-- **Links on light backgrounds:** Use Azure Blue `#3273DC`
+- **Links on light backgrounds:** Use Azure Blue `#3273DC`, hover Azure Dark `#2558A8`
 
 ---
 

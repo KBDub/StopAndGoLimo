@@ -12,22 +12,29 @@ export default {
     theme: {
         extend: {
             colors: {
-                'sunburst': '#FFC20E',
-                'linen': '#F2F0E6',
-                'charcoal': '#2C2C2C',
-                'slate': '#666666',
-                'azure': '#3273DC',
-                'azure-dark': '#2563c4',
-                primary: '#FFC20E',
-                secondary: '#3273DC',
-                accent: '#3273DC',
-                'gray-medium': '#666666',
-                'gray-light': '#F5F5F5',
-                'gray-border': '#E0E0E0',
-                success: '#4CAF50',
-                error: '#C62828',
-                warning: '#F9A825',
-                info: '#3273DC',
+                'sunburst': {
+                    light: '#FFD93D',
+                    DEFAULT: '#FFC20E',
+                    dark: '#E6A500',
+                },
+                'azure': {
+                    light: '#5A9AE8',
+                    DEFAULT: '#3273DC',
+                    dark: '#2558A8',
+                },
+                'linen': {
+                    light: '#FAF9F5',
+                    DEFAULT: '#F2F0E6',
+                    dark: '#E8E5D8',
+                },
+                'charcoal': {
+                    light: '#555555',
+                    DEFAULT: '#2C2C2C',
+                    dark: '#1A1A1A',
+                },
+                'success': '#4CAF50',
+                'warning': '#F9A825',
+                'error': '#C62828',
             },
             backgroundImage: {
                 'gold-gradient': 'linear-gradient(135deg, #FFC20E 0%, #FFD93D 100%)',

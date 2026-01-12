@@ -9,31 +9,41 @@
 }
 
 :root {
-    --color-sunburst-gold: #FFC20E;
-    --color-sunburst-gold-rgb: 255, 194, 14;
-    --color-azure-blue: #3273DC;
-    --color-azure-blue-rgb: 50, 115, 220;
-    --color-soft-linen: #F2F0E6;
-    --color-soft-linen-rgb: 242, 240, 230;
+    /* Sunburst Gold - Primary Brand Color */
+    --color-sunburst-light: #FFD93D;
+    --color-sunburst: #FFC20E;
+    --color-sunburst-dark: #E6A500;
+    
+    /* Azure Blue - Secondary Brand Color */
+    --color-azure-light: #5A9AE8;
+    --color-azure: #3273DC;
+    --color-azure-dark: #2558A8;
+    
+    /* Soft Linen - Background Color */
+    --color-linen-light: #FAF9F5;
+    --color-linen: #F2F0E6;
+    --color-linen-dark: #E8E5D8;
+    
+    /* Charcoal - Text Color */
+    --color-charcoal-light: #555555;
     --color-charcoal: #2C2C2C;
-    --color-charcoal-rgb: 44, 44, 44;
+    --color-charcoal-dark: #1A1A1A;
+    
+    /* White - Container Color */
     --color-white: #FFFFFF;
-    --color-primary: #FFC20E;
-    --color-primary-rgb: 255, 194, 14;
-    --color-secondary: #3273DC;
-    --color-background: #F2F0E6;
-    --color-text: #2C2C2C;
-    --color-accent: #3273DC;
-    --color-accent-rgb: 50, 115, 220;
-    --color-link: #3273DC;
-    --color-link-hover: #2563c4;
-    --color-gray-medium: #666666;
-    --color-gray-light: #F5F5F5;
-    --color-gray-border: #E0E0E0;
+    
+    /* Semantic Colors */
     --color-success: #4CAF50;
-    --color-error: #C62828;
-    --color-info: #3273DC;
     --color-warning: #F9A825;
+    --color-error: #C62828;
+    
+    /* Semantic Aliases */
+    --color-primary: var(--color-sunburst);
+    --color-secondary: var(--color-azure);
+    --color-background: var(--color-linen);
+    --color-text: var(--color-charcoal);
+    --color-link: var(--color-azure);
+    --color-link-hover: var(--color-azure-dark);
 
     --font-primary: 'Titillium Web', Arial, sans-serif;
     --font-fallback: Arial, sans-serif;
@@ -188,11 +198,11 @@
     }
     
     a {
-        @apply text-accent transition-colors duration-200;
+        @apply text-azure transition-colors duration-200;
     }
     
     a:hover {
-        @apply text-accent/80;
+        @apply text-azure/80;
     }
 }
 

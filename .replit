@@ -11,11 +11,20 @@ run = ["php", "-S", "0.0.0.0:8000", "-t", "."]
 deploymentTarget = "cloudrun"
 
 [[ports]]
+localPort = 3000
+externalPort = 3000
+
+[[ports]]
 localPort = 5000
 externalPort = 80
 
 [[ports]]
+localPort = 7700
+externalPort = 3001
+
+[[ports]]
 localPort = 8000
+externalPort = 8000
 
 [agent]
 expertMode = true
@@ -31,6 +40,9 @@ DB_PORT = "5432"
 DB_DATABASE = "heliumdb"
 DB_USERNAME = "postgres"
 ASSET_URL = "https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker.replit.dev"
+SCOUT_DRIVER = "meilisearch"
+MEILISEARCH_HOST = "http://localhost:8000"
+MEILISEARCH_KEY = "OK51DYdyix57qXmQLGkDaq2L4ieZzFB3"
 
 [userenv.development]
 SESSION_DRIVER = "file"
@@ -49,6 +61,10 @@ author = "agent"
 task = "workflow.run"
 args = "Laravel Server"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Meilisearch"
+
 [[workflows.workflow]]
 name = "Laravel Server"
 author = "agent"
@@ -60,3 +76,15 @@ waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[[workflows.workflow]]
+name = "Meilisearch"
+author = "agent"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "meilisearch --http-addr 0.0.0.0:8000 --master-key OK51DYdyix57qXmQLGkDaq2L4ieZzFB3 --db-path ./storage/meilisearch"
+waitForPort = 8000

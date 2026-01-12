@@ -65,27 +65,27 @@ resources/views/components/sections/
 Each color has 3 variants: light, default, dark
 
 ```css
-/* Sunburst Gold - Primary Brand Color */
+/* Sunburst Gold - Primary CTAs, accents */
 sunburst-light: #FFD93D
 sunburst: #FFC20E
 sunburst-dark: #E6A500
 
-/* Azure Blue - Secondary Brand Color */
+/* Azure Blue - Secondary CTAs, links */
 azure-light: #5A9AE8
 azure: #3273DC
 azure-dark: #2558A8
 
-/* Soft Linen - Background Color */
+/* Soft Linen - Hero, footer, backgrounds */
 linen-light: #FAF9F5
 linen: #F2F0E6
 linen-dark: #E8E5D8
 
-/* Charcoal - Text Color */
+/* Charcoal - Navigation bar, text, headers */
 charcoal-light: #555555
 charcoal: #2C2C2C
 charcoal-dark: #1A1A1A
 
-/* White - Container Color */
+/* White - Cards, containers */
 white: #FFFFFF
 
 /* Semantic Colors */
@@ -93,6 +93,15 @@ success: #4CAF50
 warning: #F9A825
 error: #C62828
 ```
+
+### Color Usage
+- **Navigation Bar:** Charcoal (#2C2C2C) background, white text
+- **Hero Section:** Soft Linen (#F2F0E6) background
+- **Footer:** Soft Linen (#F2F0E6) background
+- **Content Sections:** Alternate between White and Soft Linen
+- **Primary CTAs:** Sunburst Gold or Charcoal background
+- **Secondary CTAs:** Azure Blue background
+- **Links:** Azure Blue, hover to Azure Dark
 
 ### Typography
 ```css

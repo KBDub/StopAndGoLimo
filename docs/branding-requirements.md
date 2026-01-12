@@ -55,7 +55,7 @@ The palette consists of **4 core brand colors + white**, each with 3 variants (l
 ### Core Brand Colors (4 + White)
 
 #### Sunburst Gold
-Hero elements, primary CTAs, brand moments, creative sections
+Primary CTAs, brand moments, accents, creative sections
 
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
@@ -64,7 +64,7 @@ Hero elements, primary CTAs, brand moments, creative sections
 | Dark | Sunburst Dark | `#E6A500` | 230, 165, 0 | 43°, 100%, 45% |
 
 #### Azure Blue
-Navigation, secondary CTAs, links, professional sections, informational badges
+Secondary CTAs, links, professional sections, informational badges
 
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
@@ -73,7 +73,7 @@ Navigation, secondary CTAs, links, professional sections, informational badges
 | Dark | Azure Dark | `#2558A8` | 37, 88, 168 | 217°, 64%, 40% |
 
 #### Soft Linen
-Main backgrounds, breathing room, header/footer backgrounds
+Hero section, main backgrounds, breathing room, footer background
 
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
@@ -82,7 +82,7 @@ Main backgrounds, breathing room, header/footer backgrounds
 | Dark | Linen Dark | `#E8E5D8` | 232, 229, 216 | 48°, 28%, 88% |
 
 #### Charcoal
-All body text and headers
+Navigation bar background, all body text and headers
 
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
@@ -107,10 +107,10 @@ Cards, containers, alternating backgrounds
 
 ### Color Hierarchy
 
-1. **Sunburst Gold (#FFC20E):** Primary brand color - Hero elements, primary CTAs, brand moments
-2. **Azure Blue (#3273DC):** Secondary brand color - Navigation, secondary CTAs, links, professional sections
-3. **Soft Linen (#F2F0E6):** Background color - Main backgrounds, breathing room
-4. **Charcoal (#2C2C2C):** Text color - All body text and headers
+1. **Sunburst Gold (#FFC20E):** Primary brand color - Primary CTAs, brand moments, accents
+2. **Azure Blue (#3273DC):** Secondary brand color - Secondary CTAs, links, professional sections, informational badges
+3. **Soft Linen (#F2F0E6):** Background color - Hero section, main backgrounds, breathing room
+4. **Charcoal (#2C2C2C):** Text and navigation color - All body text, headers, navigation bar background
 5. **White (#FFFFFF):** Container color - Cards, containers, alternating backgrounds
 
 ### Section Background Rules
@@ -119,18 +119,32 @@ Cards, containers, alternating backgrounds
 - **Alternate Section Background:** White `#FFFFFF`
 - **Content Sections:** Alternate between Soft Linen and White
 
-### Header & Footer Requirements (MANDATORY)
+### Navigation Bar Requirements (MANDATORY)
 
-**All pages must have headers and footers with Soft Linen (#F2F0E6) background.**
+**Navigation bar uses Charcoal (#2C2C2C) background with white text.**
 
-- **Header Background:** Soft Linen `#F2F0E6`
-- **Header Text:** Charcoal `#2C2C2C`
-- **Header Active Link:** Sunburst Gold `#FFC20E`
-- **Header Hover:** Sunburst Light `#FFD93D`
+- **Navigation Background:** Charcoal `#2C2C2C`
+- **Navigation Text:** White `#FFFFFF`
+- **Navigation Active Link:** Sunburst Gold `#FFC20E`
+- **Navigation Hover:** Sunburst Light `#FFD93D`
+
+### Footer Requirements (MANDATORY)
+
+**Footer uses Soft Linen (#F2F0E6) background.**
+
 - **Footer Background:** Soft Linen `#F2F0E6`
 - **Footer Text:** Charcoal `#2C2C2C`
 - **Footer Links:** Azure Blue `#3273DC`
 - **Footer Link Hover:** Azure Dark `#2558A8`
+
+### Hero Section Requirements
+
+**Hero section uses Soft Linen (#F2F0E6) background.**
+
+- **Hero Background:** Soft Linen `#F2F0E6`
+- **Hero Text:** Charcoal `#2C2C2C`
+- **Hero Primary CTA:** Charcoal background, White text
+- **Hero Secondary CTA:** White background, Charcoal text with border
 
 ### Text Color Guidelines
 

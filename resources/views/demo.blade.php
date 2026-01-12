@@ -280,38 +280,6 @@
             </div>
         </section>
 
-        <section class="py-16 bg-linen">
-            <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Brand Gradients</h2>
-                            <span class="text-charcoal text-xl font-bold">White</span>
-                        </div>
-                        <div class="p-5 bg-gray-50">
-                            <h3 class="font-semibold mb-1">Container Color</h3>
-                            <p class="text-charcoal-light text-sm italic mb-3">Cards & Alternating Backgrounds</p>
-                            <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-charcoal-light">HEX</span><span>#FFFFFF</span></div>
-                                <div class="flex justify-between py-1"><span class="text-charcoal-light">RGB</span><span>255, 255, 255</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="h-36 bg-charcoal-light flex items-center justify-center">
-                            <span class="text-white text-xl font-bold">Medium Gray</span>
-                        </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-1">Supporting Text</h3>
-                            <p class="text-charcoal-light text-sm italic mb-3">Secondary Text & Captions</p>
-                            <div class="font-mono text-sm">
-                                <div class="flex justify-between py-1"><span class="text-charcoal-light">HEX</span><span>#666666</span></div>
-                                <div class="flex justify-between py-1"><span class="text-charcoal-light">RGB</span><span>102, 102, 102</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Brand Gradients</h2>

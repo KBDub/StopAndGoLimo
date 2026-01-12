@@ -442,75 +442,46 @@
 
         <section class="py-16 bg-linen">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Combinations</h2>
+                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Visual Combinations</h2>
                 
-                <div class="grid md:grid-cols-3 gap-6">
+                <div class="grid md:grid-cols-2 gap-6">
                     <div class="rounded-xl overflow-hidden shadow-lg">
-                        <div class="flex h-24">
-                            <div class="flex-1 bg-sunburst"></div>
-                            <div class="flex-1 bg-charcoal"></div>
+                        <div class="py-5 px-6 bg-azure">
+                            <span class="text-white font-semibold text-lg">Professional Header</span>
                         </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-2">Bold & Professional</h3>
-                            <p class="text-sm text-charcoal-light">Maximum contrast for headers and CTAs.</p>
+                        <div class="p-6 bg-white">
+                            <h3 class="font-bold text-charcoal mb-2">Blue + White Foundation</h3>
+                            <p class="text-charcoal-light">Clean, trustworthy, and professional. Perfect for navigation bars, dashboards, and corporate sections.</p>
                         </div>
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg">
-                        <div class="flex h-24">
-                            <div class="flex-1 bg-linen"></div>
-                            <div class="flex-1 bg-charcoal"></div>
-                            <div class="flex-1 bg-sunburst"></div>
+                        <div class="py-5 px-6 bg-sunburst">
+                            <span class="text-charcoal font-semibold text-lg">Energetic Header</span>
                         </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-2">Balanced Foundation</h3>
-                            <p class="text-sm text-charcoal-light">Linen background, charcoal text, gold accents.</p>
+                        <div class="p-6 bg-white">
+                            <h3 class="font-bold text-charcoal mb-2">Gold + White Foundation</h3>
+                            <p class="text-charcoal-light">Bold, optimistic, and creative. Ideal for hero sections, promotions, and brand-forward content.</p>
                         </div>
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg">
-                        <div class="flex h-24">
-                            <div class="flex-1 bg-white"></div>
-                            <div class="flex-1 bg-sunburst"></div>
-                            <div class="flex-1 bg-sunburst"></div>
+                        <div class="py-5 px-6 bg-gradient-to-r from-azure to-sunburst">
+                            <span class="text-white font-semibold text-lg drop-shadow">Dynamic Gradient</span>
                         </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-2">Premium Gradient</h3>
-                            <p class="text-sm text-charcoal-light">Clean backgrounds with gold gradient overlays.</p>
+                        <div class="p-6 bg-white">
+                            <h3 class="font-bold text-charcoal mb-2">Blue-to-Gold Gradient</h3>
+                            <p class="text-charcoal-light">Modern and eye-catching. Use sparingly for special features, hero backgrounds, or accent elements.</p>
                         </div>
                     </div>
 
                     <div class="rounded-xl overflow-hidden shadow-lg">
-                        <div class="flex h-24">
-                            <div class="flex-1 bg-linen"></div>
-                            <div class="flex-1 bg-charcoal-light"></div>
+                        <div class="py-5 px-6 bg-linen border-b border-linen-dark">
+                            <span class="text-azure font-semibold text-lg">Subtle Elegance</span>
                         </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-2">Subtle Elegance</h3>
-                            <p class="text-sm text-charcoal-light">For secondary content and captions.</p>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden shadow-lg">
-                        <div class="flex h-24">
-                            <div class="flex-1 bg-sunburst"></div>
-                            <div class="flex-1 bg-azure"></div>
-                        </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-2">High Energy</h3>
-                            <p class="text-sm text-charcoal-light">Use sparingly for promotions.</p>
-                        </div>
-                    </div>
-
-                    <div class="rounded-xl overflow-hidden shadow-lg">
-                        <div class="flex h-24">
-                            <div class="flex-1 bg-white"></div>
-                            <div class="flex-1 bg-linen"></div>
-                            <div class="flex-1 bg-azure"></div>
-                        </div>
-                        <div class="p-5 bg-white">
-                            <h3 class="font-semibold mb-2">Light & Airy</h3>
-                            <p class="text-sm text-charcoal-light">Modern, minimalist layouts.</p>
+                        <div class="p-6 bg-white">
+                            <h3 class="font-bold text-charcoal mb-2">Blue on Linen</h3>
+                            <p class="text-charcoal-light">Sophisticated and readable. Excellent for text links, secondary headers, and informational content.</p>
                         </div>
                     </div>
                 </div>

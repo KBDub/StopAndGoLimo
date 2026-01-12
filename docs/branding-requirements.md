@@ -317,7 +317,7 @@ Cards, containers, alternating backgrounds
 - **Border Radius:** 2px
 - **Background:** White (#FFFFFF)
 - **Label Style:** Above input, Titillium Web font, 600 weight, Charcoal (#2C2C2C)
-- **Placeholder:** Medium Gray (#666666)
+- **Placeholder:** Charcoal Light (#555555)
 - **Error State:** 2px solid Error (#C62828), error message below in Error color
 - **Success State:** 2px solid Success (#4CAF50)
 
@@ -351,10 +351,10 @@ Cards, containers, alternating backgrounds
 
 - **Background:** Soft Linen (#F2F0E6)
 - **Text Color:** Charcoal (#2C2C2C)
-- **Secondary Text:** Medium Gray (#666666)
+- **Secondary Text:** Charcoal Light (#555555)
 - **Link Color:** Azure Blue (#3273DC), Sunburst Gold (#FFC20E) on hover
 - **Dividers:** Border Gray (#E0E0E0)
-- **Copyright Text:** Caption size, Medium Gray (#666666)
+- **Copyright Text:** Caption size, Charcoal Light (#555555)
 
 ---
 
@@ -390,7 +390,7 @@ Cards, containers, alternating backgrounds
   --color-link-hover: #2563c4;
   
   /* Gray Scale */
-  --color-gray-medium: #666666;
+  --color-charcoal-light: #555555;
   --color-gray-light: #F5F5F5;
   --color-gray-border: #E0E0E0;
   
@@ -591,7 +591,7 @@ module.exports = {
         primary: '#FFC20E',
         secondary: '#3273DC',
         // Supporting Colors
-        'gray-medium': '#666666',
+        'charcoal-light': '#555555',
         'gray-light': '#F5F5F5',
         'gray-border': '#E0E0E0',
         // Functional Colors

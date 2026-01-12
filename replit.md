@@ -61,13 +61,37 @@ resources/views/components/sections/
 
 ## Branding Quick Reference
 
-### Colors
+### Color Palette (4 + White)
+Each color has 3 variants: light, default, dark
+
 ```css
---color-primary: #CDBF2B;    /* Primary Gold */
---color-accent: #3273DC;     /* Accent Blue */
---color-text: #000000;       /* Text Black */
---color-background: #FFFFFF; /* Background White */
---color-gray-dark: #333333;  /* Footer/Dark sections */
+/* Sunburst Gold - Primary Brand Color */
+sunburst-light: #FFD93D
+sunburst: #FFC20E
+sunburst-dark: #E6A500
+
+/* Azure Blue - Secondary Brand Color */
+azure-light: #5A9AE8
+azure: #3273DC
+azure-dark: #2558A8
+
+/* Soft Linen - Background Color */
+linen-light: #FAF9F5
+linen: #F2F0E6
+linen-dark: #E8E5D8
+
+/* Charcoal - Text Color */
+charcoal-light: #555555
+charcoal: #2C2C2C
+charcoal-dark: #1A1A1A
+
+/* White - Container Color */
+white: #FFFFFF
+
+/* Semantic Colors */
+success: #4CAF50
+warning: #F9A825
+error: #C62828
 ```
 
 ### Typography
@@ -134,10 +158,31 @@ resources/views/components/sections/
 
 ---
 
+## Admin Panel
+
+Lunar Hub admin panel is accessible at `/hub`
+- Admin Email: admin@top5percent.com
+- Default Password: admin123
+
+**SECURITY NOTE:** Change the admin password before deploying to production! Use `php artisan lunar:create-admin` to create a new admin with a secure password.
+
+## Search Configuration
+
+- **Engine:** Meilisearch (running on port 8000)
+- **Driver:** Laravel Scout with meilisearch driver
+- **Host:** http://localhost:8000
+- **Storage:** ./storage/meilisearch
+
 ## Recent Changes
 
 | Date | Change |
 |------|--------|
+| Jan 12, 2026 | Installed Pest testing framework v3.8 |
+| Jan 12, 2026 | Installed Larastan (PHPStan) for static analysis |
+| Jan 12, 2026 | Configured Meilisearch for faceted search |
+| Jan 12, 2026 | Set up Lunar Hub admin panel at /hub |
+| Jan 12, 2026 | Updated color palette to 4 colors + white with 3 variants each |
+| Jan 12, 2026 | Created mandatory layout components (top-notification-bar, navigation-bar, footer) |
 | Current | Initial documentation setup |
 | Current | Branding requirements defined with CSS variables |
 | Current | Layout design with mega menu structure |

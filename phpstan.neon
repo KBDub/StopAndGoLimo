@@ -1,0 +1,18 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+
+    level: 6
+
+    ignoreErrors:
+        # Ignore errors in Filament panel providers during initial setup
+        - '#Call to an undefined method Illuminate\\Foundation\\Application::booting#'
+
+    excludePaths:
+        - app/Providers/Filament/
+
+    checkGenericClassInNonGenericObjectType: false

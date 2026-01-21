@@ -91,9 +91,16 @@ Reference: [Laravel Blade Components Documentation](https://laravel.com/docs/11.
 
 ## Color Palette
 
-The palette consists of **4 core brand colors + white**, each with 3 variants (light, default, dark), plus **3 semantic colors** for functional UI states.
+The palette consists of **5 core brand colors + white**, each with up to 3 variants (light, default, dark), plus **3 semantic colors** for functional UI states.
 
-### Core Brand Colors (4 + White)
+### Core Brand Colors (5 + White)
+
+#### Olive
+Headline lead-in text, subheadings, accent text
+
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Default | Olive | `#A39822` | 163, 152, 34 | 55°, 65%, 39% |
 
 #### Sunburst Gold
 Primary CTAs, brand moments, accents, creative sections
@@ -180,11 +187,12 @@ Cards, containers, alternating backgrounds
 
 ### Hero Section Requirements
 
-**Hero section uses Soft Linen (#F2F0E6) background.**
+**Hero section uses White (#FFFFFF) background.**
 
-- **Hero Background:** Soft Linen `#F2F0E6`
-- **Hero Text:** Charcoal `#2C2C2C`
-- **Hero Primary CTA:** Charcoal background, White text
+- **Hero Background:** White `#FFFFFF`
+- **Hero Headline:** Charcoal `#2C2C2C`
+- **Hero Subheadline/Lead-in:** Olive `#A39822`
+- **Hero Primary CTA:** Charcoal background, Gold text
 - **Hero Secondary CTA:** White background, Charcoal text with border
 
 ### Text Color Guidelines

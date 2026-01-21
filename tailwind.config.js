@@ -32,6 +32,9 @@ export default {
                     DEFAULT: '#2C2C2C',
                     dark: '#1A1A1A',
                 },
+                'olive': {
+                    DEFAULT: '#A39822',
+                },
                 'success': '#4CAF50',
                 'warning': '#F9A825',
                 'error': '#C62828',

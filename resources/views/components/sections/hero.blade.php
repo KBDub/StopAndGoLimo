@@ -3,7 +3,7 @@
         <h1 class="text-h1 font-bold text-charcoal mb-6">
             Custom Signage & Apparel
         </h1>
-        <h2 class="text-h3 text-charcoal/80 mb-8">
+        <h2 class="text-h3 text-olive mb-8">
             Premium Quality. Veteran Owned. Joliet, IL.
         </h2>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">

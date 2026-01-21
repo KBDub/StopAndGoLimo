@@ -34,13 +34,28 @@
 
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Palette (4 + White)</h2>
-                <p class="text-charcoal-light mb-8">Each core color has 3 variants: Light, Default, and Dark</p>
+                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Palette (5 + White)</h2>
+                <p class="text-charcoal-light mb-8">Each core color has up to 3 variants: Light, Default, and Dark</p>
                 
                 <div class="rounded-xl overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
+                        <h3 class="text-xl font-bold text-charcoal">Olive</h3>
+                        <p class="text-charcoal-light text-sm">Headline lead-in text, subheadings, accent text</p>
+                    </div>
+                    <div class="p-6 bg-olive">
+                        <span class="text-white font-bold block mb-2">Olive</span>
+                        <div class="text-white text-sm font-mono space-y-1">
+                            <div>#A39822</div>
+                            <div>163, 152, 34</div>
+                            <div>55°, 65%, 39%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-xl overflow-hidden shadow-lg mb-8">
+                    <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Sunburst Gold</h3>
-                        <p class="text-charcoal-light text-sm">Hero elements, primary CTAs, brand moments, creative sections</p>
+                        <p class="text-charcoal-light text-sm">Primary CTAs, brand moments, accents, creative sections</p>
                     </div>
                     <div class="grid grid-cols-3">
                         <div class="p-6 bg-sunburst-light">

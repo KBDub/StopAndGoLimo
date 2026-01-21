@@ -71,10 +71,13 @@ resources/views/components/ui/
 
 ## Branding Quick Reference
 
-### Color Palette (4 + White)
-Each color has 3 variants: light, default, dark
+### Color Palette (5 + White)
+Each color has up to 3 variants: light, default, dark
 
 ```css
+/* Olive - Headline lead-in, subheadings */
+olive: #A39822
+
 /* Sunburst Gold - Primary CTAs, accents */
 sunburst-light: #FFD93D
 sunburst: #FFC20E
@@ -106,7 +109,7 @@ error: #C62828
 
 ### Color Usage
 - **Navigation Bar:** Charcoal (#2C2C2C) background, white text
-- **Hero Section:** Soft Linen (#F2F0E6) background
+- **Hero Section:** White (#FFFFFF) background, Olive (#A39822) subheadline
 - **Footer:** Soft Linen (#F2F0E6) background
 - **Content Sections:** Alternate between White and Soft Linen
 - **Primary CTAs:** Sunburst Gold or Charcoal background

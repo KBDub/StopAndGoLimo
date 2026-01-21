@@ -1,4 +1,4 @@
-<section class="bg-linen min-h-screen flex items-center">
+<section class="bg-white min-h-screen flex items-center">
     <div class="max-w-6xl mx-auto px-6 text-center w-full">
         <h1 class="text-h1 font-bold text-charcoal mb-6">
             Custom Signage & Apparel

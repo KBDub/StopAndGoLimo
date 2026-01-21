@@ -6,7 +6,7 @@
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between py-4">
             <a href="/" class="flex items-center flex-shrink-0">
-                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-12">
+                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-24">
             </a>
 
             <button 

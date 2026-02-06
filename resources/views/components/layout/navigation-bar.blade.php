@@ -2,7 +2,7 @@
     'currentPage' => null
 ])
 
-<nav class="bg-charcoal text-white" x-data="{ mobileMenuOpen: false, openDropdown: null }">
+<nav class="bg-linen text-white" x-data="{ mobileMenuOpen: false, openDropdown: null }">
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center justify-between py-4">
             <a href="/" class="flex items-center flex-shrink-0">

@@ -159,6 +159,11 @@ Target vendors and attendees of these specific local events.
 
 Keywords: "Joliet Mall Winter Craft Show signage," "Plainfield Fest vendor banners," "Shorewood Crossroads Festival shirts," "Vendor booth displays Joliet," "Craft fair table runners."
 
+9. Negative Keywords
+Do not target or optimize for these terms. They attract irrelevant traffic or do not align with the brand.
+
+Negative Keywords: Veteran Owned
+
 https://lairdplastics.com/resources/the-2025-guide-to-outdoor-banner-material-/
 https://www.signsbytomorrow.com/plainfield/sign-company-joliet-illin
 https://shieldcoart.com/blog/top-5-things-to-consider-when-buying-a-custom-business-sign/

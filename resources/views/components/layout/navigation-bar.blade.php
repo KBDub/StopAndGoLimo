@@ -11,7 +11,7 @@
 
             <button 
                 @click="mobileMenuOpen = !mobileMenuOpen" 
-                class="lg:hidden p-2 text-white hover:text-sunburst"
+                class="lg:hidden p-2 text-sunburst-light hover:text-sunburst"
                 aria-label="Toggle menu"
             >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -21,16 +21,16 @@
             </button>
 
             <div class="hidden lg:flex items-center space-x-1">
-                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-sunburst' : 'text-white hover:text-sunburst-light' }} transition-colors">
+                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-sunburst' : 'text-sunburst-light hover:text-sunburst' }} transition-colors">
                     Home
                 </a>
                 
-                <a href="/about" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'about' ? 'text-sunburst' : 'text-white hover:text-sunburst-light' }} transition-colors">
+                <a href="/about" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'about' ? 'text-sunburst' : 'text-sunburst-light hover:text-sunburst' }} transition-colors">
                     About Us
                 </a>
 
                 <div class="relative" @mouseenter="openDropdown = 'apparel'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-white hover:text-sunburst-light transition-colors flex items-center gap-1">
+                    <button class="px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst transition-colors flex items-center gap-1">
                         Custom Apparel
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'design'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-white hover:text-sunburst-light transition-colors flex items-center gap-1">
+                    <button class="px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst transition-colors flex items-center gap-1">
                         Design It Yourself
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'signs'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-white hover:text-sunburst-light transition-colors flex items-center gap-1">
+                    <button class="px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst transition-colors flex items-center gap-1">
                         Signs
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
@@ -71,7 +71,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'decals'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-white hover:text-sunburst-light transition-colors flex items-center gap-1">
+                    <button class="px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst transition-colors flex items-center gap-1">
                         Decals
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'vehicle'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-white hover:text-sunburst-light transition-colors flex items-center gap-1">
+                    <button class="px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst transition-colors flex items-center gap-1">
                         Vehicle Graphics
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
@@ -94,12 +94,12 @@
                     </div>
                 </div>
 
-                <a href="/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-sunburst' : 'text-white hover:text-sunburst-light' }} transition-colors">
+                <a href="/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-sunburst' : 'text-sunburst-light hover:text-sunburst' }} transition-colors">
                     Promotional Items
                 </a>
 
                 <div class="relative" @mouseenter="openDropdown = 'stores'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-white hover:text-sunburst-light transition-colors flex items-center gap-1">
+                    <button class="px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst transition-colors flex items-center gap-1">
                         Stores
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
@@ -108,15 +108,15 @@
                     </div>
                 </div>
 
-                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-sunburst' : 'text-white hover:text-sunburst-light' }} transition-colors">
+                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-sunburst' : 'text-sunburst-light hover:text-sunburst' }} transition-colors">
                     Portfolio
                 </a>
 
-                <a href="/contact" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'contact' ? 'text-sunburst' : 'text-white hover:text-sunburst-light' }} transition-colors">
+                <a href="/contact" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'contact' ? 'text-sunburst' : 'text-sunburst-light hover:text-sunburst' }} transition-colors">
                     Contact Us
                 </a>
 
-                <a href="/cart" class="ml-2 p-2 text-white hover:text-sunburst-light transition-colors relative">
+                <a href="/cart" class="ml-2 p-2 text-sunburst-light hover:text-sunburst transition-colors relative">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                     </svg>
@@ -126,18 +126,18 @@
 
         <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden pb-4 border-t border-charcoal-light pt-4">
             <div class="space-y-2">
-                <a href="/" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Home</a>
-                <a href="/about" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">About Us</a>
-                <a href="/custom-shirts" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Custom Apparel</a>
-                <a href="/online-designer" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Design It Yourself</a>
-                <a href="/business-signs" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Signs</a>
-                <a href="/stickers" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Decals</a>
-                <a href="/automobile-graphics" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Vehicle Graphics</a>
-                <a href="/promotional-items" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Promotional Items</a>
-                <a href="/stores" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Stores</a>
-                <a href="/portfolio" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Portfolio</a>
-                <a href="/contact" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Contact Us</a>
-                <a href="/cart" class="block px-3 py-2 text-sm font-semibold text-white hover:text-sunburst">Cart</a>
+                <a href="/" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Home</a>
+                <a href="/about" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">About Us</a>
+                <a href="/custom-shirts" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Custom Apparel</a>
+                <a href="/online-designer" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Design It Yourself</a>
+                <a href="/business-signs" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Signs</a>
+                <a href="/stickers" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Decals</a>
+                <a href="/automobile-graphics" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Vehicle Graphics</a>
+                <a href="/promotional-items" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Promotional Items</a>
+                <a href="/stores" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Stores</a>
+                <a href="/portfolio" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Portfolio</a>
+                <a href="/contact" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Contact Us</a>
+                <a href="/cart" class="block px-3 py-2 text-sm font-semibold text-sunburst-light hover:text-sunburst">Cart</a>
             </div>
         </div>
     </div>

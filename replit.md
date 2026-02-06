@@ -41,10 +41,25 @@ resources/views/components/sections/
 **UI button components:**
 ```
 resources/views/components/ui/
-├── button-charcoal-gold.blade.php
-├── button-white-charcoal.blade.php
-├── button-gold-white.blade.php
-└── button-blue-white.blade.php
+├── button-gold-gradient.blade.php    # Primary CTA - gold gradient bg, charcoal text
+├── button-gold-charcoal.blade.php    # Solid gold bg, charcoal text
+├── button-charcoal-gold.blade.php    # Charcoal bg, gold text
+├── button-blue-white.blade.php       # Azure bg, white text
+├── button-gold-white.blade.php       # Gold bg, white text
+├── button-white-charcoal.blade.php   # White bg, charcoal text, bordered
+├── button-outline-charcoal.blade.php # Outlined charcoal border, fills on hover
+├── button-outline-gold.blade.php     # Outlined gold border, fills on hover
+└── button-text-link.blade.php        # Text link with arrow indicator
+```
+
+**UI badge components:**
+```
+resources/views/components/ui/
+├── badge-featured.blade.php    # Gold gradient badge
+├── badge-new.blade.php         # Azure blue badge
+├── badge-success.blade.php     # Green success badge
+├── badge-sold-out.blade.php    # Charcoal badge
+└── badge-default.blade.php     # Outlined charcoal badge
 ```
 
 **UI thin banner separators (3px lines, wrap navigation):**

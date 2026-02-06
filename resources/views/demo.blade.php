@@ -519,73 +519,73 @@
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Button Variations</h2>
-                
+                <p class="text-charcoal-light mb-8">All buttons are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.button-&lt;type&gt;</code>. Each accepts <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">href</code> (renders as link) or renders as <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">&lt;button&gt;</code> by default.</p>
+
                 <div class="space-y-8">
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Primary Buttons</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-charcoal font-semibold rounded-lg hover:shadow-gold-lg transition-all hover:-translate-y-0.5">Primary CTA</a>
-                            <a href="#" class="inline-block px-8 py-4 bg-sunburst text-charcoal font-semibold rounded-lg hover:shadow-gold-lg transition-all hover:-translate-y-0.5">Solid Gold</a>
-                            <a href="#" class="inline-block px-8 py-4 bg-azure text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">Azure Action</a>
+                            <div class="text-center">
+                                <x-ui.button-gold-gradient href="#">Primary CTA</x-ui.button-gold-gradient>
+                                <p class="text-xs text-charcoal-light mt-2">button-gold-gradient</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-gold-charcoal href="#">Solid Gold</x-ui.button-gold-charcoal>
+                                <p class="text-xs text-charcoal-light mt-2">button-gold-charcoal</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-blue-white href="#">Azure Action</x-ui.button-blue-white>
+                                <p class="text-xs text-charcoal-light mt-2">button-blue-white</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-charcoal-gold href="#">Dark CTA</x-ui.button-charcoal-gold>
+                                <p class="text-xs text-charcoal-light mt-2">button-charcoal-gold</p>
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Secondary Buttons</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="inline-block px-8 py-4 border-2 border-charcoal text-charcoal font-semibold rounded-lg hover:bg-charcoal hover:text-white transition-all">Secondary Dark</a>
-                            <a href="#" class="inline-block px-8 py-4 border-2 border-sunburst text-sunburst font-semibold rounded-lg hover:bg-sunburst hover:text-charcoal transition-all">Secondary Gold</a>
-                            <a href="#" class="text-azure hover:text-azure-dark font-semibold transition-colors">Text Link →</a>
+                            <div class="text-center">
+                                <x-ui.button-outline-charcoal href="#">Secondary Dark</x-ui.button-outline-charcoal>
+                                <p class="text-xs text-charcoal-light mt-2">button-outline-charcoal</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-outline-gold href="#">Secondary Gold</x-ui.button-outline-gold>
+                                <p class="text-xs text-charcoal-light mt-2">button-outline-gold</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-white-charcoal href="#">White + Charcoal</x-ui.button-white-charcoal>
+                                <p class="text-xs text-charcoal-light mt-2">button-white-charcoal</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-gold-white href="#">Gold + White</x-ui.button-gold-white>
+                                <p class="text-xs text-charcoal-light mt-2">button-gold-white</p>
+                            </div>
+                            <div class="text-center">
+                                <x-ui.button-text-link href="#">Text Link</x-ui.button-text-link>
+                                <p class="text-xs text-charcoal-light mt-2">button-text-link</p>
+                            </div>
                         </div>
                     </div>
 
                     <div>
                         <h3 class="text-lg font-semibold mb-4">Button Sizes</h3>
+                        <p class="text-sm text-charcoal-light mb-4">Override default sizing with Tailwind classes via attributes</p>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="inline-block px-4 py-2 bg-gold-gradient text-charcoal text-xs font-semibold rounded-lg">Small</a>
-                            <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-charcoal font-semibold rounded-lg">Default</a>
-                            <a href="#" class="inline-block px-10 py-5 bg-gold-gradient text-charcoal text-lg font-semibold rounded-lg">Large</a>
+                            <x-ui.button-gold-gradient href="#" class="!px-4 !py-2 !text-xs">Small</x-ui.button-gold-gradient>
+                            <x-ui.button-gold-gradient href="#">Default</x-ui.button-gold-gradient>
+                            <x-ui.button-gold-gradient href="#" class="!px-10 !py-5 !text-lg">Large</x-ui.button-gold-gradient>
                         </div>
                     </div>
 
                     <div class="bg-charcoal p-8 rounded-xl">
                         <h3 class="text-lg font-semibold mb-4 text-white">On Dark Background</h3>
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#" class="inline-block px-8 py-4 bg-gold-gradient text-charcoal font-semibold rounded-lg hover:shadow-gold-lg transition-all">Primary CTA</a>
-                            <a href="#" class="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-charcoal transition-all">Secondary</a>
-                            <a href="#" class="text-sunburst hover:text-white font-semibold transition-colors">Link →</a>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">UI Button Components</h3>
-                        <p class="text-charcoal-light text-sm mb-4">Reusable Blade components with consistent styling. Usage: <code class="bg-linen px-2 py-1 rounded text-xs">&lt;x-ui.button-*&gt;</code></p>
-                        <div class="flex flex-wrap gap-4 items-center mb-6">
-                            <x-ui.button-charcoal-gold href="#">Charcoal + Gold</x-ui.button-charcoal-gold>
-                            <x-ui.button-white-charcoal href="#">White + Charcoal</x-ui.button-white-charcoal>
-                            <x-ui.button-gold-white href="#">Gold + White</x-ui.button-gold-white>
-                            <x-ui.button-blue-white href="#">Blue + White</x-ui.button-blue-white>
-                        </div>
-                        <div class="bg-linen p-6 rounded-lg">
-                            <h4 class="font-semibold mb-3 text-charcoal">Component Usage</h4>
-                            <div class="space-y-2 font-mono text-sm">
-                                <div class="bg-white p-3 rounded border border-linen-dark">
-                                    <code class="text-charcoal">&lt;x-ui.button-charcoal-gold href="/shop"&gt;Shop Now&lt;/x-ui.button-charcoal-gold&gt;</code>
-                                    <p class="text-charcoal-light text-xs mt-1">Charcoal bg, Gold text → Hover: Dark Charcoal bg</p>
-                                </div>
-                                <div class="bg-white p-3 rounded border border-linen-dark">
-                                    <code class="text-charcoal">&lt;x-ui.button-white-charcoal href="/learn"&gt;Learn More&lt;/x-ui.button-white-charcoal&gt;</code>
-                                    <p class="text-charcoal-light text-xs mt-1">White bg, Charcoal text → Hover: Linen bg, Blue text</p>
-                                </div>
-                                <div class="bg-white p-3 rounded border border-linen-dark">
-                                    <code class="text-charcoal">&lt;x-ui.button-gold-white href="/cta"&gt;Get Started&lt;/x-ui.button-gold-white&gt;</code>
-                                    <p class="text-charcoal-light text-xs mt-1">Gold bg, White text → Hover: Dark Gold bg, Dark Blue text</p>
-                                </div>
-                                <div class="bg-white p-3 rounded border border-linen-dark">
-                                    <code class="text-charcoal">&lt;x-ui.button-blue-white href="/contact"&gt;Contact Us&lt;/x-ui.button-blue-white&gt;</code>
-                                    <p class="text-charcoal-light text-xs mt-1">Blue bg, White text → Hover: Dark Blue bg, Dark Gold text</p>
-                                </div>
-                            </div>
+                            <x-ui.button-gold-gradient href="#">Primary CTA</x-ui.button-gold-gradient>
+                            <x-ui.button-outline-charcoal href="#" class="!border-white !text-white hover:!bg-white hover:!text-charcoal">Secondary</x-ui.button-outline-charcoal>
+                            <x-ui.button-text-link href="#" class="!text-sunburst hover:!text-white">Link</x-ui.button-text-link>
                         </div>
                     </div>
                 </div>
@@ -728,15 +728,31 @@
         <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Badges & Alerts</h2>
-                
+                <p class="text-charcoal-light mb-8">Product badges are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.badge-&lt;type&gt;</code>.</p>
+
                 <div class="bg-linen p-8 rounded-xl mb-8">
                     <h3 class="text-lg font-semibold mb-4">Product Badges</h3>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="inline-block px-4 py-1.5 bg-gold-gradient text-charcoal text-xs font-semibold rounded-full">Featured</span>
-                        <span class="inline-block px-4 py-1.5 bg-azure text-white text-xs font-semibold rounded-full">New</span>
-                        <span class="inline-block px-4 py-1.5 bg-success text-white text-xs font-semibold rounded-full">New</span>
-                        <span class="inline-block px-4 py-1.5 bg-charcoal text-white text-xs font-semibold rounded-full">Sold Out</span>
-                        <span class="inline-block px-4 py-1.5 border border-charcoal-light text-charcoal-light text-xs font-semibold rounded-full">Default</span>
+                    <div class="flex flex-wrap gap-4 items-end">
+                        <div class="text-center">
+                            <x-ui.badge-featured>Featured</x-ui.badge-featured>
+                            <p class="text-xs text-charcoal-light mt-2">badge-featured</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.badge-new>New</x-ui.badge-new>
+                            <p class="text-xs text-charcoal-light mt-2">badge-new</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.badge-success>In Stock</x-ui.badge-success>
+                            <p class="text-xs text-charcoal-light mt-2">badge-success</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.badge-sold-out>Sold Out</x-ui.badge-sold-out>
+                            <p class="text-xs text-charcoal-light mt-2">badge-sold-out</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.badge-default>Default</x-ui.badge-default>
+                            <p class="text-xs text-charcoal-light mt-2">badge-default</p>
+                        </div>
                     </div>
                 </div>
 

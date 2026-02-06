@@ -40,14 +40,14 @@
                 <div class="rounded-xl overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Olive</h3>
-                        <p class="text-charcoal-light text-sm">Headline lead-in text, subheadings, accent text</p>
+                        <p class="text-charcoal-light text-sm">Social media hover tags exclusively</p>
                     </div>
                     <div class="p-6 bg-olive">
                         <span class="text-white font-bold block mb-2">Olive</span>
                         <div class="text-white text-sm font-mono space-y-1">
-                            <div>#A39822</div>
-                            <div>163, 152, 34</div>
-                            <div>55°, 65%, 39%</div>
+                            <div><span class="opacity-60">HEX</span> #A39822</div>
+                            <div><span class="opacity-60">RGB</span> 163, 152, 34</div>
+                            <div><span class="opacity-60">HSL</span> 55°, 65%, 39%</div>
                         </div>
                     </div>
                 </div>
@@ -61,25 +61,25 @@
                         <div class="p-6 bg-sunburst-light">
                             <span class="text-charcoal font-bold block mb-2">Sunburst Light</span>
                             <div class="text-charcoal text-sm font-mono space-y-1">
-                                <div>#FFD93D</div>
-                                <div>255, 217, 61</div>
-                                <div>48°, 100%, 62%</div>
+                                <div><span class="opacity-60">HEX</span> #FFD93D</div>
+                                <div><span class="opacity-60">RGB</span> 255, 217, 61</div>
+                                <div><span class="opacity-60">HSL</span> 48°, 100%, 62%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-sunburst">
                             <span class="text-charcoal font-bold block mb-2">Sunburst Gold</span>
                             <div class="text-charcoal text-sm font-mono space-y-1">
-                                <div>#FFC20E</div>
-                                <div>255, 194, 14</div>
-                                <div>45°, 100%, 53%</div>
+                                <div><span class="opacity-60">HEX</span> #FFC20E</div>
+                                <div><span class="opacity-60">RGB</span> 255, 194, 14</div>
+                                <div><span class="opacity-60">HSL</span> 45°, 100%, 53%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-sunburst-dark">
                             <span class="text-white font-bold block mb-2">Sunburst Dark</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#E6A500</div>
-                                <div>230, 165, 0</div>
-                                <div>43°, 100%, 45%</div>
+                                <div><span class="opacity-60">HEX</span> #E6A500</div>
+                                <div><span class="opacity-60">RGB</span> 230, 165, 0</div>
+                                <div><span class="opacity-60">HSL</span> 43°, 100%, 45%</div>
                             </div>
                         </div>
                     </div>
@@ -94,25 +94,25 @@
                         <div class="p-6 bg-azure-light">
                             <span class="text-white font-bold block mb-2">Azure Light</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#5A9AE8</div>
-                                <div>90, 154, 232</div>
-                                <div>213°, 77%, 63%</div>
+                                <div><span class="opacity-60">HEX</span> #5A9AE8</div>
+                                <div><span class="opacity-60">RGB</span> 90, 154, 232</div>
+                                <div><span class="opacity-60">HSL</span> 213°, 77%, 63%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-azure">
                             <span class="text-white font-bold block mb-2">Azure Blue</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#3273DC</div>
-                                <div>50, 115, 220</div>
-                                <div>217°, 72%, 53%</div>
+                                <div><span class="opacity-60">HEX</span> #3273DC</div>
+                                <div><span class="opacity-60">RGB</span> 50, 115, 220</div>
+                                <div><span class="opacity-60">HSL</span> 217°, 72%, 53%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-azure-dark">
                             <span class="text-white font-bold block mb-2">Azure Dark</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#2558A8</div>
-                                <div>37, 88, 168</div>
-                                <div>217°, 64%, 40%</div>
+                                <div><span class="opacity-60">HEX</span> #2558A8</div>
+                                <div><span class="opacity-60">RGB</span> 37, 88, 168</div>
+                                <div><span class="opacity-60">HSL</span> 217°, 64%, 40%</div>
                             </div>
                         </div>
                     </div>
@@ -127,25 +127,25 @@
                         <div class="p-6 bg-linen-light border border-linen-dark">
                             <span class="text-charcoal font-bold block mb-2">Linen Light</span>
                             <div class="text-charcoal text-sm font-mono space-y-1">
-                                <div>#FAF9F5</div>
-                                <div>250, 249, 245</div>
-                                <div>48°, 33%, 97%</div>
+                                <div><span class="opacity-60">HEX</span> #FAF9F5</div>
+                                <div><span class="opacity-60">RGB</span> 250, 249, 245</div>
+                                <div><span class="opacity-60">HSL</span> 48°, 33%, 97%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-linen border border-linen-dark">
                             <span class="text-charcoal font-bold block mb-2">Soft Linen</span>
                             <div class="text-charcoal text-sm font-mono space-y-1">
-                                <div>#F2F0E6</div>
-                                <div>242, 240, 230</div>
-                                <div>50°, 27%, 93%</div>
+                                <div><span class="opacity-60">HEX</span> #F2F0E6</div>
+                                <div><span class="opacity-60">RGB</span> 242, 240, 230</div>
+                                <div><span class="opacity-60">HSL</span> 50°, 27%, 93%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-linen-dark">
                             <span class="text-charcoal font-bold block mb-2">Linen Dark</span>
                             <div class="text-charcoal text-sm font-mono space-y-1">
-                                <div>#E8E5D8</div>
-                                <div>232, 229, 216</div>
-                                <div>48°, 28%, 88%</div>
+                                <div><span class="opacity-60">HEX</span> #E8E5D8</div>
+                                <div><span class="opacity-60">RGB</span> 232, 229, 216</div>
+                                <div><span class="opacity-60">HSL</span> 48°, 28%, 88%</div>
                             </div>
                         </div>
                     </div>
@@ -160,25 +160,25 @@
                         <div class="p-6 bg-charcoal-light">
                             <span class="text-white font-bold block mb-2">Charcoal Light</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#555555</div>
-                                <div>85, 85, 85</div>
-                                <div>0°, 0%, 33%</div>
+                                <div><span class="opacity-60">HEX</span> #555555</div>
+                                <div><span class="opacity-60">RGB</span> 85, 85, 85</div>
+                                <div><span class="opacity-60">HSL</span> 0°, 0%, 33%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-charcoal">
                             <span class="text-white font-bold block mb-2">Charcoal</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#2C2C2C</div>
-                                <div>44, 44, 44</div>
-                                <div>0°, 0%, 17%</div>
+                                <div><span class="opacity-60">HEX</span> #2C2C2C</div>
+                                <div><span class="opacity-60">RGB</span> 44, 44, 44</div>
+                                <div><span class="opacity-60">HSL</span> 0°, 0%, 17%</div>
                             </div>
                         </div>
                         <div class="p-6 bg-charcoal-dark">
                             <span class="text-white font-bold block mb-2">Charcoal Dark</span>
                             <div class="text-white text-sm font-mono space-y-1">
-                                <div>#1A1A1A</div>
-                                <div>26, 26, 26</div>
-                                <div>0°, 0%, 10%</div>
+                                <div><span class="opacity-60">HEX</span> #1A1A1A</div>
+                                <div><span class="opacity-60">RGB</span> 26, 26, 26</div>
+                                <div><span class="opacity-60">HSL</span> 0°, 0%, 10%</div>
                             </div>
                         </div>
                     </div>
@@ -192,9 +192,9 @@
                     <div class="p-6 bg-white border border-linen-dark">
                         <span class="text-charcoal font-bold block mb-2">White</span>
                         <div class="text-charcoal text-sm font-mono space-y-1">
-                            <div>#FFFFFF</div>
-                            <div>255, 255, 255</div>
-                            <div>0°, 0%, 100%</div>
+                            <div><span class="opacity-60">HEX</span> #FFFFFF</div>
+                            <div><span class="opacity-60">RGB</span> 255, 255, 255</div>
+                            <div><span class="opacity-60">HSL</span> 0°, 0%, 100%</div>
                         </div>
                     </div>
                 </div>
@@ -291,6 +291,13 @@
                             <p class="text-charcoal-light text-sm">Container color - Cards, containers, alternating backgrounds</p>
                         </div>
                     </div>
+                    <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
+                        <div class="w-16 h-16 bg-olive rounded-lg flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-bold text-charcoal">6. Olive (#A39822)</h3>
+                            <p class="text-charcoal-light text-sm">SM (Social Media) background hover color exclusively</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -383,6 +390,32 @@
                         <div>
                             <p class="text-xs text-charcoal-light mb-2">Caption - 12px / Regular</p>
                             <p class="text-xs text-charcoal-light">Image caption or fine print text styling.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-lg font-semibold mb-6">Links</h3>
+                    <div class="space-y-6">
+                        <div class="pb-4 border-b border-gray-200">
+                            <p class="text-xs text-charcoal-light mb-2">Inline Link - Azure Blue, underline on hover</p>
+                            <p class="text-base text-charcoal">Visit our <a href="#" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom shirts page</a> to browse our full catalog of apparel options.</p>
+                        </div>
+                        <div class="pb-4 border-b border-gray-200">
+                            <p class="text-xs text-charcoal-light mb-2">Underbar Link - Bottom border style (used on top5pct.com)</p>
+                            <p class="text-base text-charcoal">Learn more about <a href="#" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline">vinyl lettering &amp; car wraps</a> and our <a href="#" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline">vehicle graphics</a> services.</p>
+                        </div>
+                        <div class="pb-4 border-b border-gray-200">
+                            <p class="text-xs text-charcoal-light mb-2">Navigation Link - Charcoal default, Sunburst hover</p>
+                            <div class="flex gap-6">
+                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-sm transition-colors no-underline">Custom Apparel</a>
+                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-sm transition-colors no-underline">Signs</a>
+                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-sm transition-colors no-underline">Decals</a>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-xs text-charcoal-light mb-2">Arrow Link - Azure with arrow indicator</p>
+                            <a href="#" class="text-azure hover:text-azure-dark font-semibold transition-colors no-underline">View All Products →</a>
                         </div>
                     </div>
                 </div>

@@ -96,7 +96,7 @@ The palette consists of **5 core brand colors + white**, each with up to 3 varia
 ### Core Brand Colors (5 + White)
 
 #### Olive
-Headline lead-in text, subheadings, accent text
+Social media hover tags exclusively
 
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
@@ -160,6 +160,7 @@ Cards, containers, alternating backgrounds
 3. **Soft Linen (#F2F0E6):** Background color - Hero section, main backgrounds, breathing room
 4. **Charcoal (#2C2C2C):** Text and navigation color - All body text, headers, navigation bar background
 5. **White (#FFFFFF):** Container color - Cards, containers, alternating backgrounds
+6. **Olive (#A39822):** SM (Social Media) background hover color exclusively
 
 ### Section Background Rules
 
@@ -172,9 +173,9 @@ Cards, containers, alternating backgrounds
 **Navigation bar uses Charcoal (#2C2C2C) background with white text.**
 
 - **Navigation Background:** Charcoal `#2C2C2C`
-- **Navigation Text:** White `#FFFFFF`
-- **Navigation Active Link:** Sunburst Gold `#FFC20E`
-- **Navigation Hover:** Sunburst Light `#FFD93D`
+- **Navigation Text:** Charcoal `#2C2C2C`
+- **Navigation Active/Selected Link:** Azure Blue `#3273DC`
+- **Navigation Hover:** Sunburst Gold `#FFC20E`
 
 ### Footer Requirements (MANDATORY)
 
@@ -620,7 +621,7 @@ Cards, containers, alternating backgrounds
   --nav-height-mobile: 64px;
   --nav-background: var(--color-soft-linen);
   --nav-text-color: var(--color-charcoal);
-  --nav-active-color: var(--color-sunburst-gold);
+  --nav-active-color: var(--color-azure);
   
   /* Footer */
   --footer-background: var(--color-soft-linen);

@@ -21,11 +21,11 @@
             </button>
 
             <div class="hidden lg:flex items-center space-x-1">
-                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-sunburst' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     Home
                 </a>
                 
-                <a href="/about" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'about' ? 'text-sunburst' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/about" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     About Us
                 </a>
 
@@ -94,7 +94,7 @@
                     </div>
                 </div>
 
-                <a href="/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-sunburst' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     Promotional Items
                 </a>
 
@@ -108,11 +108,11 @@
                     </div>
                 </div>
 
-                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-sunburst' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     Portfolio
                 </a>
 
-                <a href="/contact" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'contact' ? 'text-sunburst' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/contact" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'contact' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     Contact Us
                 </a>
 

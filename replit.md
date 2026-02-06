@@ -47,6 +47,15 @@ resources/views/components/ui/
 └── button-blue-white.blade.php
 ```
 
+**UI thin banner separators (3px lines, wrap navigation):**
+```
+resources/views/components/ui/
+├── banner-thin-sunburst.blade.php
+├── banner-thin-charcoal.blade.php
+├── banner-thin-azure.blade.php
+└── banner-thin-linen.blade.php
+```
+
 ### 4. Additional Reference Documents
 - `docs/seo.md` - SEO keywords, voice search, meta strategies
 - `docs/cart.md` - Shopping cart implementation with Lunar

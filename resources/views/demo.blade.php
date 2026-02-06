@@ -21,7 +21,12 @@
 </head>
 <body class="font-sans antialiased bg-linen text-charcoal">
     <x-layout.top-notification-bar message="Deal of the Day: 20% Off Custom T-Shirts!" link="/custom-shirts" linkText="Shop Now" />
+
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-charcoal />
     <x-layout.navigation-bar currentPage="demo" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-charcoal />
 
     <main>
         <section class="bg-white py-16 shadow-gold">

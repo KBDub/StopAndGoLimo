@@ -25,7 +25,11 @@
 
     <x-layout.top-notification-bar message="Free Shipping on Orders Over $50!" link="/custom-shirts" linkText="Shop Now" />
 
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-charcoal />
     <x-layout.navigation-bar currentPage="home" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-charcoal />
 
     <main>
         <x-sections.hero />

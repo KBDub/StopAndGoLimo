@@ -1,1 +1,1 @@
-<div {{ $attributes->merge(['class' => 'w-full h-[3px] bg-linen-dark']) }}></div>
+<div {{ $attributes->merge(['class' => 'banner-thin bg-linen-dark']) }}></div>

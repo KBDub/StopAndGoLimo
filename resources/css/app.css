@@ -261,6 +261,11 @@
         border-width: var(--border-width-thick);
         outline: none;
     }
+
+    .banner-thin {
+        width: 100%;
+        height: 3px;
+    }
 }
 
 @media (max-width: 768px) {

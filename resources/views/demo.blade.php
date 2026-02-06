@@ -351,6 +351,51 @@
 
         <section class="py-16 bg-linen">
             <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Banners</h2>
+                <p class="text-charcoal-light mb-8">Thin 3px separator banners used to wrap the navigation bar and divide page sections. Use <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.banner-thin-&lt;color&gt;</code> components.</p>
+
+                <div class="space-y-10">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4">Individual Banners</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Sunburst Gold &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-sunburst</code></p>
+                                <x-ui.banner-thin-sunburst />
+                            </div>
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Charcoal &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-charcoal</code></p>
+                                <x-ui.banner-thin-charcoal />
+                            </div>
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Azure Blue &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-azure</code></p>
+                                <x-ui.banner-thin-azure />
+                            </div>
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Linen &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-linen</code></p>
+                                <x-ui.banner-thin-linen />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4">Navigation Wrap Pattern</h3>
+                        <p class="text-sm text-charcoal-light mb-4">Stacked sunburst + charcoal banners above and below the navigation, matching top5pct.com</p>
+                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                            <div class="bg-sunburst-light text-charcoal text-center py-2 text-sm font-semibold">Notification Bar</div>
+                            <x-ui.banner-thin-sunburst />
+                            <x-ui.banner-thin-charcoal />
+                            <div class="bg-linen text-charcoal text-center py-4 text-sm font-semibold">Navigation Bar</div>
+                            <x-ui.banner-thin-sunburst />
+                            <x-ui.banner-thin-charcoal />
+                            <div class="bg-white text-charcoal text-center py-6 text-sm text-charcoal-light">Page Content</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Typography</h2>
                 
                 <div class="bg-white p-8 rounded-xl shadow-lg">

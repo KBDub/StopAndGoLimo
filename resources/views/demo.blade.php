@@ -352,11 +352,11 @@
         <section class="py-16 bg-linen">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Banners</h2>
-                <p class="text-charcoal-light mb-8">Thin 3px separator banners used to wrap the navigation bar and divide page sections. Use <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.banner-thin-&lt;color&gt;</code> components.</p>
+                <p class="text-charcoal-light mb-8">Separator banners in two weights: <strong>thin</strong> (3px) and <strong>medium</strong> (8px). Use <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.banner-&lt;weight&gt;-&lt;color&gt;</code> components.</p>
 
                 <div class="space-y-10">
                     <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <h3 class="text-lg font-semibold mb-4">Individual Banners</h3>
+                        <h3 class="text-lg font-semibold mb-4">Thin Banners (3px)</h3>
                         <div class="space-y-6">
                             <div>
                                 <p class="text-sm text-charcoal-light mb-2">Sunburst Gold &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-sunburst</code></p>
@@ -388,6 +388,28 @@
                             <x-ui.banner-thin-sunburst />
                             <x-ui.banner-thin-charcoal />
                             <div class="bg-white text-charcoal text-center py-6 text-sm text-charcoal-light">Page Content</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-lg font-semibold mb-4">Medium Banners (8px)</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Sunburst Gold &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-sunburst</code></p>
+                                <x-ui.banner-medium-sunburst />
+                            </div>
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Charcoal &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-charcoal</code></p>
+                                <x-ui.banner-medium-charcoal />
+                            </div>
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Azure Blue &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-azure</code></p>
+                                <x-ui.banner-medium-azure />
+                            </div>
+                            <div>
+                                <p class="text-sm text-charcoal-light mb-2">Linen &mdash; <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-linen</code></p>
+                                <x-ui.banner-medium-linen />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -655,37 +677,50 @@
         <section class="py-16 bg-linen">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Card Components</h2>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="w-full h-40 bg-linen rounded-lg mb-4"></div>
-                        <h3 class="font-semibold mb-2 text-charcoal">Product Card</h3>
-                        <p class="text-sm text-charcoal-light mb-3">Custom printed t-shirt with vinyl graphics.</p>
-                        <p class="font-bold text-charcoal">$24.99</p>
+                <p class="text-charcoal-light mb-8">All cards are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.card-&lt;type&gt;</code>. No icons allowed per branding rules.</p>
+
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Standard Cards</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-product</code></p>
+                        <x-ui.card-product title="Custom T-Shirt" description="Custom printed t-shirt with vinyl graphics." price="$24.99" />
                     </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <div class="w-12 h-12 bg-gold-gradient rounded-lg mb-4 flex items-center justify-center text-charcoal font-bold text-xl">S</div>
-                        <h3 class="font-semibold mb-2 text-charcoal">Service Card</h3>
-                        <p class="text-sm text-charcoal-light">Professional signage solutions for your business.</p>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-service</code></p>
+                        <x-ui.card-service title="Custom Signage" description="Professional signage solutions for your business." />
                     </div>
-                    
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <p class="text-sm text-charcoal-light italic mb-4">"Outstanding quality and fast turnaround!"</p>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 bg-charcoal rounded-full"></div>
-                            <div>
-                                <h4 class="font-semibold text-sm text-charcoal">John D.</h4>
-                                <p class="text-xs text-charcoal-light">Verified Customer</p>
-                            </div>
-                        </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-testimonial</code></p>
+                        <x-ui.card-testimonial quote="Outstanding quality and fast turnaround!" name="John D." label="Verified Customer" />
                     </div>
-                    
-                    <div class="bg-charcoal text-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
-                        <h3 class="font-semibold mb-2">Info Card</h3>
-                        <p class="text-sm text-white/70 mb-4">Dark variant for highlighted information.</p>
-                        <a href="#" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors">Learn More →</a>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-info</code></p>
+                        <x-ui.card-info title="Info Card" description="Dark variant for highlighted information." linkText="Learn More" linkHref="#" />
                     </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Additional Card Types</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-info-light</code></p>
+                        <x-ui.card-info-light title="Shipping Info" description="Free shipping on all orders over $50. Standard delivery in 5-7 business days." linkText="View Shipping Policy" linkHref="#" />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-feature</code></p>
+                        <x-ui.card-feature step="01" title="Upload Your Design" description="Start by uploading your artwork or use our free online designer to create something unique." />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-feature</code> (step 2)</p>
+                        <x-ui.card-feature step="02" title="Choose Your Products" description="Select from custom shirts, signs, decals, vehicle graphics, and more." />
+                    </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">FAQ Accordion Cards</h3>
+                <p class="text-sm text-charcoal-light mb-4">SEO-friendly expandable mini-FAQ cards using <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-faq</code>. Great for structured data and voice search.</p>
+                <div class="space-y-3 max-w-2xl">
+                    <x-ui.card-faq question="What file formats do you accept for custom prints?" answer="We accept most standard image formats including PNG, JPG, SVG, AI, PSD, and PDF. For best results, we recommend vector files (SVG, AI) or high-resolution raster images at 300 DPI or above." :open="true" />
+                    <x-ui.card-faq question="How long does production take?" answer="Standard production is 5-7 business days. Rush orders can be completed in 2-3 business days for an additional fee. Large bulk orders may require additional time." />
+                    <x-ui.card-faq question="Do you offer bulk discounts?" answer="Yes! We offer tiered pricing on orders of 12 or more items. The more you order, the more you save. Contact us for a custom quote on large orders." />
                 </div>
             </div>
         </section>

@@ -56,6 +56,27 @@ resources/views/components/ui/
 └── banner-thin-linen.blade.php
 ```
 
+**UI medium banner separators (8px lines, section dividers):**
+```
+resources/views/components/ui/
+├── banner-medium-sunburst.blade.php
+├── banner-medium-charcoal.blade.php
+├── banner-medium-azure.blade.php
+└── banner-medium-linen.blade.php
+```
+
+**UI card components (no icons allowed per branding rules):**
+```
+resources/views/components/ui/
+├── card-product.blade.php       # Product card with image, title, description, price
+├── card-service.blade.php       # Service card with gold accent line (no icon)
+├── card-testimonial.blade.php   # Customer quote with avatar and name
+├── card-info.blade.php          # Dark charcoal variant with link
+├── card-info-light.blade.php    # Light variant with sunburst left border
+├── card-faq.blade.php           # SEO accordion mini-FAQ with Alpine.js
+└── card-feature.blade.php       # Feature/step card with numbered indicator
+```
+
 ### 4. Additional Reference Documents
 - `docs/seo.md` - SEO keywords, voice search, meta strategies
 - `docs/cart.md` - Shopping cart implementation with Lunar

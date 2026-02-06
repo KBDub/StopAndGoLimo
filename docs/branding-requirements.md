@@ -394,6 +394,12 @@ Cards, containers, alternating backgrounds
 - **Easing:** `cubic-bezier(0.4, 0, 0.2, 1)` (ease-out)
 - **Properties:** opacity, transform, background-color
 
+### Card Component Rules (MANDATORY)
+- **Never use icons** in card component types. Icons are prohibited in all `x-ui.card-*` components.
+- **Check marks are acceptable** — they are not considered icons.
+- Cards use White (#FFFFFF) backgrounds by default with shadow and hover lift.
+- Dark variant cards use Charcoal (#2C2C2C) background.
+
 ### Hover Effects
 - **Buttons:** Slight scale (1.02) + shadow increase
 - **Cards:** Image zoom (1.05) within container

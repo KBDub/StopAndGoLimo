@@ -6,7 +6,6 @@
     <x-sections.category-hero />
     <x-ui.banner-medium-sunburst />
 
-    <x-sections.top5pct-same-day-service />
     <x-sections.our-services />
     <x-sections.cta-design-your-own />
     <x-sections.why-choose-us />

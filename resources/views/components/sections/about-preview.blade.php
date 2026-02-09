@@ -44,11 +44,11 @@
                 </div>
 
                 <div class="md:col-span-2 relative">
-                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                    <div class="rounded-2xl overflow-hidden shadow-lg max-h-72">
                         <img
                             src="/images/about-preview.jpg"
                             alt="Custom signage and apparel production at Top 5 Percent in Joliet, Illinois"
-                            class="w-full h-auto object-cover"
+                            class="w-full h-72 object-cover"
                             loading="lazy"
                         />
                     </div>

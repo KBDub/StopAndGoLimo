@@ -1,152 +1,63 @@
 <section class="py-10 bg-white">
     <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center mb-12">
-            <h5 class="text-olive font-semibold mb-2">Our Story</h5>
-            <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">Built on Service, Driven by Quality</h2>
-            <div class="w-16 h-1 bg-sunburst rounded mx-auto"></div>
-        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+            <span class="text-olive">Veteran Owned</span>
+            <span class="text-charcoal"> Custom Signage &amp; Apparel Experts Serving Joliet &amp; Will County Since 2017</span>
+        </h2>
 
-        <div class="space-y-16">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="relative">
-                    <div class="bg-linen rounded-2xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-sunburst rounded"></div>
-                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-sunburst/10 rounded-full"></div>
-                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-azure/10 rounded-full"></div>
-                        <div class="pl-6 relative z-10">
-                            <h3 class="text-xl font-bold text-charcoal mb-4">Who Are The Founders?</h3>
-                            <p class="text-charcoal-light leading-relaxed mb-4">
-                                Top 5 Percent was founded in January of 2017 by two happily married veterans. One with over 20 years of business management experience and the other with over 20 years of graphic arts experience.
+        <p class="text-charcoal-light leading-relaxed text-center max-w-4xl mx-auto mb-10">
+            For over 8 years, Top 5 Percent has been the trusted choice for custom signage, apparel, and promotional products throughout the Joliet area. We understand the importance of making a strong impression &mdash; whether it's a storefront sign, custom t-shirts for your team, or branded merchandise for your next event.
+        </p>
+
+        <x-ui.card-showcase minHeight="min-h-0" class="!bg-white !p-0 !rounded-none !items-start !justify-start">
+            <div class="grid md:grid-cols-5 gap-8 items-start text-left w-full">
+                <div class="md:col-span-3 space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+                        <div>
+                            <h3 class="text-lg font-bold text-olive mb-2">Who Are The Founders?</h3>
+                            <p class="text-charcoal-light text-sm leading-relaxed">
+                                Top 5 Percent, LLC was founded in January of 2017 by two happily married veterans. One having over 20 years of business management experience and the other having over 20 years of Graphic Arts experience. They decided to utilize their talents to create their own business, which is now legally known as Top 5%, LLC (Top 5 Percent, LLC).
                             </p>
-                            <p class="text-charcoal-light leading-relaxed">
-                                They decided to combine their talents to build something meaningful &mdash; a business rooted in service, precision, and the same dedication they brought to their military careers.
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-olive mb-2">Joliet Is Our Kind Of Town</h3>
+                            <p class="text-charcoal-light text-sm leading-relaxed">
+                                We chose the City of Joliet because of its tight-knit support amongst its community and local businesses. It's also known as the City of Excitement! It's no wonder why it's the fourth largest city in the state of Illinois. We have the opportunity to meet wonderful residents and network with local businesses, as well as provide products, services, create brand awareness and build long-term relationships.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-olive mb-2">Your One Stop Shop</h3>
+                            <p class="text-charcoal-light text-sm leading-relaxed">
+                                Our goal is to provide the best service and products to the community. We wanted to make our signage and custom apparel business a one stop shop by offering a variety of products and services that range from custom t-shirts and other apparel, vehicle magnets, custom stickers, decals, promotional products, window and wall signs, logo design, table runners and so much more.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 class="text-lg font-bold text-olive mb-2">Quality You Can Count On</h3>
+                            <p class="text-charcoal-light text-sm leading-relaxed">
+                                At Top 5 Percent, you are our number one priority. Our <strong class="text-charcoal">quality craftsmanship commitment</strong> ensures that every project we take on &mdash; from a single custom shirt to a full fleet vehicle wrap &mdash; lives up to the highest standards. Same day service available for select products.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="bg-charcoal rounded-2xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-sunburst/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                        <div class="absolute bottom-0 left-0 w-20 h-20 bg-azure/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-                        <div class="relative z-10 flex flex-col items-center justify-center text-center min-h-[200px]">
-                            <span class="text-5xl font-bold text-sunburst mb-2">2017</span>
-                            <h4 class="text-white font-semibold mb-1">Established in Joliet, IL</h4>
-                            <p class="text-white/60 text-sm">Veteran owned and operated</p>
-                            <div class="flex items-center gap-4 mt-4">
-                                <div class="text-center">
-                                    <span class="text-2xl font-bold text-sunburst-light">20+</span>
-                                    <p class="text-white/60 text-xs mt-1">Years business<br>management</p>
-                                </div>
-                                <div class="w-px h-10 bg-white/20"></div>
-                                <div class="text-center">
-                                    <span class="text-2xl font-bold text-sunburst-light">20+</span>
-                                    <p class="text-white/60 text-xs mt-1">Years graphic<br>arts expertise</p>
-                                </div>
-                            </div>
-                        </div>
+
+                <div class="md:col-span-2 relative">
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img
+                            src="/images/about-preview.jpg"
+                            alt="Custom signage and apparel production at Top 5 Percent in Joliet, Illinois"
+                            class="w-full h-auto object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="absolute -bottom-6 right-4 bg-white rounded-lg shadow-lg border border-linen-dark px-6 py-4 text-center z-20">
+                        <h4 class="text-charcoal font-bold">When Quality Matters</h4>
+                        <p class="text-charcoal-light text-sm">Serving Joliet &amp; Will County</p>
                     </div>
                 </div>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="relative md:order-2">
-                    <div class="bg-linen rounded-2xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-1 h-full bg-azure rounded"></div>
-                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-azure/10 rounded-full"></div>
-                        <div class="absolute -bottom-4 -right-4 w-16 h-16 bg-sunburst/10 rounded-full"></div>
-                        <div class="pr-6 relative z-10">
-                            <h3 class="text-xl font-bold text-charcoal mb-4">Joliet Is Our Kind Of Town</h3>
-                            <p class="text-charcoal-light leading-relaxed mb-4">
-                                We chose the City of Joliet because of its tight-knit support amongst its community and local businesses. It's also known as the City of Excitement &mdash; and it's no wonder why it's the fourth largest city in Illinois.
-                            </p>
-                            <p class="text-charcoal-light leading-relaxed">
-                                For us, that means the opportunity to meet wonderful residents, network with local businesses, and build the kind of long-term relationships that make a community thrive.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative md:order-1">
-                    <div class="bg-charcoal rounded-2xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-32 h-32 bg-azure/5 rounded-full -translate-y-1/2 -translate-x-1/2"></div>
-                        <div class="absolute bottom-0 right-0 w-20 h-20 bg-sunburst/5 rounded-full translate-y-1/2 translate-x-1/2"></div>
-                        <div class="relative z-10 flex flex-col items-center justify-center text-center min-h-[200px]">
-                            <h4 class="text-sunburst font-bold text-lg mb-3">Proudly Serving</h4>
-                            <div class="space-y-2">
-                                <p class="text-white font-semibold">Joliet &bull; Shorewood &bull; Plainfield</p>
-                                <p class="text-white/70 text-sm">Will County &amp; Surrounding Communities</p>
-                            </div>
-                            <div class="w-12 h-px bg-sunburst/40 my-4"></div>
-                            <p class="text-white/50 text-xs italic">The City of Excitement</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div class="relative">
-                    <div class="bg-linen rounded-2xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-1 h-full bg-sunburst rounded"></div>
-                        <div class="absolute -top-6 -right-6 w-24 h-24 bg-sunburst/10 rounded-full"></div>
-                        <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-azure/10 rounded-full"></div>
-                        <div class="pl-6 relative z-10">
-                            <h3 class="text-xl font-bold text-charcoal mb-4">Your One Stop Shop</h3>
-                            <p class="text-charcoal-light leading-relaxed mb-4">
-                                Our goal is to provide the best service and products to the community. We built our signage and custom apparel business to be a true one stop shop &mdash; offering everything you need under one roof.
-                            </p>
-                            <p class="text-charcoal-light leading-relaxed">
-                                From custom t-shirts and corporate apparel to vehicle magnets, stickers, decals, promotional products, window and wall signs, logo design, table runners, and so much more.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="bg-charcoal rounded-2xl p-8 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-sunburst/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-                        <div class="absolute bottom-0 left-0 w-20 h-20 bg-azure/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-                        <div class="relative z-10 min-h-[200px] flex flex-col justify-center">
-                            <h4 class="text-sunburst font-bold text-lg mb-4 text-center">What We Offer</h4>
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Custom Apparel</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Business Signs</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Vehicle Graphics</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Custom Decals</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Logo Design</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Promotional Items</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">Table Runners</span>
-                                </div>
-                                <div class="flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 bg-sunburst rounded-full flex-shrink-0"></span>
-                                    <span class="text-white/80 text-sm">And Much More</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-12 text-center">
-            <x-ui.button-gold-gradient href="/about">Learn More About Us</x-ui.button-gold-gradient>
-        </div>
+        </x-ui.card-showcase>
     </div>
 </section>

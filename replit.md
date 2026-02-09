@@ -92,8 +92,8 @@ resources/views/components/ui/
 ├── card-product.blade.php       # Product card with image, title, description, price
 ├── card-service.blade.php       # Service card with gold accent line (no icon)
 ├── card-testimonial.blade.php   # Customer quote with avatar and name
-├── card-info.blade.php          # Dark charcoal variant with link
-├── card-info-light.blade.php    # Light variant with sunburst left border
+├── card-info-dark.blade.php     # Dark charcoal variant with link
+├── card-info-light.blade.php    # Warm gradient bg with sunburst border
 ├── card-faq.blade.php           # SEO accordion mini-FAQ with Alpine.js
 ├── card-feature.blade.php       # Feature/step card with numbered indicator
 └── card-showcase.blade.php      # Linen panel with decorative accent circles

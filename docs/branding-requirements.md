@@ -137,8 +137,8 @@ Thin banners (3px height) wrap the navigation bar in a dual-line sandwich patter
 | `x-ui.card-product` | `title`, `description`, `price`, `image` | Product card with optional image, title, description, price |
 | `x-ui.card-service` | `title`, `description`, `letter` | Service card with gold accent line (no icon) |
 | `x-ui.card-testimonial` | `quote`, `name`, `label`, `avatar` | Customer quote with avatar and name |
-| `x-ui.card-info` | `title`, `description`, `linkText`, `linkHref` | Dark charcoal background with optional link |
-| `x-ui.card-info-light` | `title`, `description`, `linkText`, `linkHref` | White background with sunburst left border |
+| `x-ui.card-info-dark` | `title`, `description`, `linkText`, `linkHref` | Dark charcoal background with optional link |
+| `x-ui.card-info-light` | `title`, `description`, `linkText`, `linkHref` | Warm gradient background with sunburst border |
 | `x-ui.card-faq` | `question`, `answer`, `open` | Accordion expand/collapse with Alpine.js |
 | `x-ui.card-feature` | `step`, `title`, `description` | Numbered step/feature card |
 
@@ -170,14 +170,14 @@ Thin banners (3px height) wrap the navigation bar in a dual-line sandwich patter
 - Name: `font-semibold text-charcoal text-sm`
 - Label: defaults to "Verified Customer", `text-xs text-charcoal-light`
 
-**card-info (dark variant):**
+**card-info-dark:**
 - Background: Charcoal `#2C2C2C`
 - Title: `font-semibold text-white`
 - Description: `text-sm text-white/70`
-- Optional link: Azure Blue text with arrow
+- Optional link: Sunburst text with arrow
 
 **card-info-light:**
-- Background: White with `border-l-4 border-sunburst` left accent
+- Background: Warm Gradient (`bg-warm-gradient`) with `border border-sunburst/30`
 - Title: `font-semibold text-charcoal`
 - Description: `text-sm text-charcoal-light`
 - Optional link: Azure Blue text with arrow
@@ -218,14 +218,14 @@ Thin banners (3px height) wrap the navigation bar in a dual-line sandwich patter
 />
 
 {{-- Info card (dark) with link --}}
-<x-ui.card-info
+<x-ui.card-info-dark
     title="Free Shipping"
     description="On all orders over $50."
     linkText="Learn More"
     linkHref="/shipping"
 />
 
-{{-- Info card (light) with sunburst border --}}
+{{-- Info card (light) with warm gradient --}}
 <x-ui.card-info-light
     title="Design Services"
     description="Our team can bring your vision to life."
@@ -619,10 +619,10 @@ All badges are implemented as Blade components (see **UI Badge Components** abov
 - **Never use icons** in card component types. Icons are prohibited in all `x-ui.card-*` components.
 - **Check marks are acceptable** — they are not considered icons.
 - Cards use White (#FFFFFF) backgrounds by default with `shadow-lg` and `hover:shadow-gold-lg` transition.
-- Dark variant cards (`card-info`) use Charcoal (#2C2C2C) background.
+- Dark variant cards (`card-info-dark`) use Charcoal (#2C2C2C) background.
 - All cards include `hover:-translate-y-1` lift effect on hover.
 - `card-service` uses a gold accent line (`w-12 h-1 bg-sunburst`) instead of an icon.
-- `card-info-light` uses a sunburst left border (`border-l-4 border-sunburst`).
+- `card-info-light` uses Warm Gradient background (`bg-warm-gradient`) with `border border-sunburst/30`.
 - `card-faq` uses Alpine.js (`x-data`, `x-show`) for accordion expand/collapse behavior.
 - All card components accept `$attributes->merge()` for custom classes.
 

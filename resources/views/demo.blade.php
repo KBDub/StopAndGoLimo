@@ -694,8 +694,8 @@
                         <x-ui.card-testimonial quote="Outstanding quality and fast turnaround!" name="John D." label="Verified Customer" />
                     </div>
                     <div>
-                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-info</code></p>
-                        <x-ui.card-info title="Info Card" description="Dark variant for highlighted information." linkText="Learn More" linkHref="#" />
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-info-dark</code></p>
+                        <x-ui.card-info-dark title="Info Card" description="Dark variant for highlighted information." linkText="Learn More" linkHref="#" />
                     </div>
                 </div>
 

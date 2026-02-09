@@ -9,7 +9,7 @@
     'secondaryButtonHref' => '/contact',
 ])
 
-<section class="relative min-h-[28rem] md:min-h-[32rem] lg:min-h-[36rem] flex items-center py-10 overflow-hidden">
+<section class="relative h-[28rem] md:h-[32rem] lg:h-[36rem] flex items-center py-10 overflow-hidden">
     <div class="absolute inset-0">
         <img
             src="/images/top5pct-banner-joliet.jpg"

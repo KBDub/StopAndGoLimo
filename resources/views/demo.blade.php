@@ -699,12 +699,20 @@
                     </div>
                 </div>
 
-                <h3 class="text-lg font-semibold mb-4 text-charcoal">Additional Card Types</h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Info Card Variants</h3>
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-info-dark</code></p>
+                        <x-ui.card-info-dark title="Free Shipping" description="On all orders over $50. Standard delivery in 5-7 business days." linkText="View Shipping Policy" linkHref="#" />
+                    </div>
                     <div>
                         <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-info-light</code></p>
                         <x-ui.card-info-light title="Shipping Info" description="Free shipping on all orders over $50. Standard delivery in 5-7 business days." linkText="View Shipping Policy" linkHref="#" />
                     </div>
+                </div>
+
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Additional Card Types</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                     <div>
                         <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-feature</code></p>
                         <x-ui.card-feature step="01" title="Upload Your Design" description="Start by uploading your artwork or use our free online designer to create something unique." />

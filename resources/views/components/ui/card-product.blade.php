@@ -5,10 +5,10 @@
     'image' => null,
 ])
 
-<div {{ $attributes->merge(['class' => 'bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1 relative overflow-hidden']) }}>
-    <div class="absolute top-0 right-0 w-32 h-32 bg-sunburst/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-    <div class="absolute bottom-0 left-0 w-24 h-24 bg-azure/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
-    <div class="relative z-10">
+<div {{ $attributes->merge(['class' => 'bg-white rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1 relative overflow-hidden']) }}>
+    <div class="absolute top-0 right-0 w-16 h-16 bg-gold-gradient-dark rounded-bl-2xl"></div>
+    <div class="absolute bottom-0 left-0 w-14 h-14 bg-gold-gradient-dark rounded-tr-2xl"></div>
+    <div class="relative z-10 p-6">
         @if($image)
             <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-40 object-cover rounded-lg mb-4">
         @else

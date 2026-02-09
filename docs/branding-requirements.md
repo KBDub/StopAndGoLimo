@@ -1079,7 +1079,8 @@ These are brand-specific Tailwind classes available beyond the defaults:
 | Class | Description | Usage |
 |-------|-------------|-------|
 | `bg-gold-gradient` | Gold 135deg: `#FFC20E` → `#FFD93D` | Primary CTA backgrounds, featured badges |
-| `bg-gold-gradient-dark` | Gold 135deg: `#FFC20E` → `#E6A500` | Hover state for gold gradient |
+| `bg-gold-gradient-light` | Gold 135deg: `#FFD93D` → `#FFE680` | Subtle gold accents, lighter gold highlights |
+| `bg-gold-gradient-dark` | Gold 135deg: `#FFC20E` → `#E6A500` | Hover state for gold gradient, decorative corners |
 | `bg-gold-gradient-horizontal` | Gold 90deg: `#FFC20E` → `#FFD93D` | Horizontal accent bars |
 | `bg-warm-gradient` | Warm 135deg: `#FFF9E6` → `#F2F0E6` | Subtle warm section backgrounds |
 

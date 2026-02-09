@@ -40,6 +40,7 @@
         <x-sections.cta-free-quote />
         <x-sections.home-page-services-accordion />
         <x-sections.cta-ready-to-get-started />
+        <x-sections.testimonial-banner-gold-gradient-dark />
     </main>
 
     <x-layout.footer />

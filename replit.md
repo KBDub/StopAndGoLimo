@@ -39,9 +39,10 @@ resources/views/components/sections/
 ├── why-choose-us.blade.php
 ├── design-it-yourself.blade.php
 ├── home-page-services-accordion.blade.php  # FAQ accordions for all services
-├── cta-design-your-own.blade.php           # Thin warm-gradient CTA banner
-├── cta-free-quote.blade.php                # Thin warm-gradient CTA banner
-└── cta-ready-to-get-started.blade.php
+├── cta-design-your-own.blade.php                   # Thin warm-gradient CTA banner
+├── cta-free-quote.blade.php                         # Thin warm-gradient CTA banner
+├── cta-ready-to-get-started.blade.php               # Full charcoal CTA with decorative blurs
+└── testimonial-banner-gold-gradient-dark.blade.php  # Gold gradient testimonial section
 ```
 
 **UI button components:**

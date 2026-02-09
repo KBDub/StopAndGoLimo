@@ -4,15 +4,21 @@
     currentPage="home"
 >
     <x-sections.category-hero />
+    <x-ui.banner-thin-charcoal />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.about-preview />
     <x-ui.banner-medium-charcoal />
+
+    <x-sections.featured-products />
+    <x-ui.banner-thin-charcoal />
+    <x-ui.banner-testimonial />
+    <x-ui.banner-thin-charcoal />
+
     <x-sections.our-services />
     <x-sections.cta-design-your-own />
-    <x-sections.why-choose-us />
-    <x-ui.banner-testimonial />
-    <x-sections.featured-products />
+
+    <x-sections.our-services />
     <x-sections.design-it-yourself />
     <x-sections.cta-free-quote />
     <x-sections.home-page-services-accordion />

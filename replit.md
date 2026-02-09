@@ -46,7 +46,8 @@ resources/views/components/sections/
 ├── cta-design-your-own.blade.php           # Thin warm-gradient CTA banner
 ├── cta-free-quote.blade.php                # Thin warm-gradient CTA banner
 ├── cta-ready-to-get-started.blade.php               # Full charcoal CTA with decorative blurs
-├── testimonial-banner.blade.php                     # Customer testimonials section
+├── review-banner.blade.php                          # Customer reviews section (3-card grid)
+├── featured-products.blade.php                      # 3x3 product grid with card-product cards
 └── map-section.blade.php                            # Service area map with Leaflet
 ```
 
@@ -90,6 +91,12 @@ resources/views/components/ui/
 ├── banner-medium-charcoal.blade.php
 ├── banner-medium-azure.blade.php
 └── banner-medium-linen.blade.php
+```
+
+**UI testimonial banner (thin inline review strip):**
+```
+resources/views/components/ui/
+└── banner-testimonial.blade.php     # Sunburst-light bg, 5-star rating with quote (props: quote, name, location, stars)
 ```
 
 **UI card components (no icons allowed per branding rules):**

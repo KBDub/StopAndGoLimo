@@ -11,11 +11,12 @@
     <x-sections.our-services />
     <x-sections.cta-design-your-own />
     <x-sections.why-choose-us />
+    <x-ui.banner-testimonial />
     <x-sections.featured-products />
     <x-sections.design-it-yourself />
     <x-sections.cta-free-quote />
     <x-sections.home-page-services-accordion />
     <x-sections.cta-ready-to-get-started />
-    <x-sections.testimonial-banner />
+    <x-sections.review-banner />
     <x-sections.map-section />
 </x-layouts.page>

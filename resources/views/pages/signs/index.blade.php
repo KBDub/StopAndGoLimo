@@ -80,6 +80,6 @@
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />
-    <x-sections.testimonial-banner />
+    <x-sections.review-banner />
     <x-sections.map-section />
 </x-layouts.page>

@@ -41,6 +41,7 @@
         <x-sections.home-page-services-accordion />
         <x-sections.cta-ready-to-get-started />
         <x-sections.testimonial-banner />
+        <x-sections.map-section />
     </main>
 
     <x-layout.footer />

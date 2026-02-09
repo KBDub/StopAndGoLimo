@@ -3,8 +3,6 @@
     'description' => '',
     'price' => '',
     'image' => null,
-    'link' => null,
-    'linkText' => 'view more',
 ])
 
 <div {{ $attributes->merge(['class' => 'bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1']) }}>
@@ -21,10 +19,5 @@
     @endif
     @if($price)
         <p class="font-bold text-charcoal">{{ $price }}</p>
-    @endif
-    @if($link)
-        <a href="{{ $link }}" class="text-azure hover:text-azure-dark text-sm font-semibold inline-flex items-center gap-1 mt-2">
-            .... {{ $linkText }}
-        </a>
     @endif
 </div>

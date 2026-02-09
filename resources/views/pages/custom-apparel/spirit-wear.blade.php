@@ -11,7 +11,10 @@
     />
     <x-ui.banner-medium-sunburst />
 
-    <x-sections.top5pct-same-day-service serviceType="spirit-wear" displayServiceType="Spirit Wear" />
+    <x-sections.top5pct-same-day-service 
+        serviceType="spirit-wear" 
+        displayServiceType="Spirit Wear" 
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

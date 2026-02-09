@@ -34,6 +34,7 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 **Current section components:**
 ```
 resources/views/components/sections/
+├── about-preview.blade.php              # Brand story with alternating left/right layout (Founders, Joliet, One Stop Shop)
 ├── category-hero.blade.php              # Reusable hero with bg image (props: heading, headingAccent, description, buttons)
 ├── home-page-hero.blade.php             # Original home hero (deprecated, use category-hero)
 ├── our-services.blade.php
@@ -286,6 +287,8 @@ Lunar Hub admin panel is accessible at `/hub`
 | Feb 9, 2026 | Created top-level-category-section component with alternating dark/light cards |
 | Feb 9, 2026 | Updated 5 category index pages with SEO-rich sub-menu card sections |
 | Feb 9, 2026 | Standardized hero section to fixed height for consistent bg image display |
+| Feb 9, 2026 | Created about-preview section with brand story (Founders, Joliet, One Stop Shop) |
+| Feb 9, 2026 | Added brand story content to docs/seo.md section 10 |
 
 ---
 

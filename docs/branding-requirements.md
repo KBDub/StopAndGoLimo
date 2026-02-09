@@ -59,12 +59,81 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 
 ### UI Button Components
 
-| Component | Normal State | Hover State |
-|-----------|--------------|-------------|
-| `x-ui.button-charcoal-gold` | Charcoal bg, Gold text | Dark Charcoal bg |
-| `x-ui.button-white-charcoal` | White bg, Charcoal text | Linen bg, Blue text |
-| `x-ui.button-gold-white` | Gold bg, White text | Dark Gold bg |
-| `x-ui.button-blue-white` | Blue bg, White text | Dark Blue bg |
+All button components accept `href` (renders as `<a>`) or render as `<button>` by default. All accept `type` prop (default: `button`). All use `$attributes->merge()` for extensibility.
+
+| Component | Normal State | Hover State | Usage |
+|-----------|--------------|-------------|-------|
+| `x-ui.button-gold-gradient` | Gold gradient bg, Charcoal text | Brighter gradient, scale up | Primary CTA |
+| `x-ui.button-gold-charcoal` | Solid Gold bg, Charcoal text | Darker gold bg | Solid primary CTA |
+| `x-ui.button-charcoal-gold` | Charcoal bg, Gold text | Dark Charcoal bg | Inverse primary CTA |
+| `x-ui.button-blue-white` | Azure bg, White text | Dark Azure bg | Secondary CTA |
+| `x-ui.button-gold-white` | Gold bg, White text | Darker gold bg | Alternate CTA |
+| `x-ui.button-white-charcoal` | White bg, Charcoal text, bordered | Linen bg, Blue text | Light background CTA |
+| `x-ui.button-outline-charcoal` | Transparent, Charcoal border/text | Fills Charcoal bg, White text | Outlined variant |
+| `x-ui.button-outline-gold` | Transparent, Gold border/text | Fills Gold bg, Charcoal text | Outlined gold variant |
+| `x-ui.button-text-link` | Azure text with arrow (→) | Underline animation | Inline text link |
+
+```blade
+{{-- Button usage examples --}}
+<x-ui.button-gold-gradient href="/shop">Shop Now</x-ui.button-gold-gradient>
+<x-ui.button-blue-white type="submit">Submit</x-ui.button-blue-white>
+<x-ui.button-text-link href="/about">Learn More</x-ui.button-text-link>
+```
+
+### UI Badge Components
+
+All badge components use rounded-full pill shape, `text-xs font-semibold`, and support `$attributes->merge()` for extensibility.
+
+| Component | Background | Text | Usage |
+|-----------|------------|------|-------|
+| `x-ui.badge-featured` | Gold gradient | Charcoal | Featured/promoted products |
+| `x-ui.badge-new` | Azure Blue | White | New arrivals |
+| `x-ui.badge-success` | Success Green | White | In stock, available |
+| `x-ui.badge-sold-out` | Charcoal | White | Out of stock items |
+| `x-ui.badge-default` | Transparent, Charcoal border | Charcoal Light | General/default tag |
+
+```blade
+{{-- Badge usage examples --}}
+<x-ui.badge-featured>Featured</x-ui.badge-featured>
+<x-ui.badge-new>New</x-ui.badge-new>
+<x-ui.badge-sold-out>Sold Out</x-ui.badge-sold-out>
+```
+
+### UI Banner Separator Components
+
+Thin banners (3px) wrap the navigation bar. Medium banners (8px) divide content sections.
+
+| Component | Height | Color | Usage |
+|-----------|--------|-------|-------|
+| `x-ui.banner-thin-sunburst` | 3px | Sunburst Gold | Above/below navigation |
+| `x-ui.banner-thin-charcoal` | 3px | Charcoal | Navigation border |
+| `x-ui.banner-thin-azure` | 3px | Azure Blue | Accent separator |
+| `x-ui.banner-thin-linen` | 3px | Soft Linen | Subtle separator |
+| `x-ui.banner-medium-sunburst` | 8px | Sunburst Gold | Section divider |
+| `x-ui.banner-medium-charcoal` | 8px | Charcoal | Section divider |
+| `x-ui.banner-medium-azure` | 8px | Azure Blue | Section divider |
+| `x-ui.banner-medium-linen` | 8px | Soft Linen | Section divider |
+
+### UI Card Components
+
+**No icons allowed** in any card component (check marks are acceptable). All cards use `$attributes->merge()` for extensibility with `hover:shadow-gold-lg` and `hover:-translate-y-1` transitions.
+
+| Component | Props | Description |
+|-----------|-------|-------------|
+| `x-ui.card-product` | `title`, `description`, `price`, `image` | Product card with optional image, title, description, price |
+| `x-ui.card-service` | `title`, `description`, `letter` | Service card with gold accent line (no icon) |
+| `x-ui.card-testimonial` | `quote`, `name`, `label`, `avatar` | Customer quote with avatar and name |
+| `x-ui.card-info` | `title`, `description`, `linkText`, `linkHref` | Dark charcoal background with optional link |
+| `x-ui.card-info-light` | `title`, `description`, `linkText`, `linkHref` | White background with sunburst left border |
+| `x-ui.card-faq` | `question`, `answer`, `open` | Accordion expand/collapse with Alpine.js |
+| `x-ui.card-feature` | `step`, `title`, `description` | Numbered step/feature card |
+
+```blade
+{{-- Card usage examples --}}
+<x-ui.card-service title="Custom Signs" description="Professional signage solutions." />
+<x-ui.card-faq question="How long does it take?" answer="Most orders ship in 5-7 days." />
+<x-ui.card-product title="Banner" description="Indoor/outdoor" price="$49.99" />
+```
 
 ### Example Page Structure
 
@@ -358,18 +427,39 @@ Cards, containers, alternating backgrounds
 
 ## Button Styles
 
-| Type | Background | Text | Border | Padding |
-|------|------------|------|--------|---------|
-| Primary | Sunburst Gold (#FFC20E) | Charcoal (#2C2C2C) | None | 16px 32px |
-| Secondary | Azure Blue (#3273DC) | White (#FFFFFF) | None | 16px 32px |
-| Tertiary | Transparent | Charcoal (#2C2C2C) | 1px Charcoal (#2C2C2C) | 16px 32px |
-| Link Button | Transparent | Azure Blue (#3273DC) | None | 8px 0 |
+All buttons are implemented as Blade components (see **UI Button Components** above). Each renders as `<a>` when `href` is provided, or `<button>` otherwise. All support `$attributes->merge()` for custom classes.
+
+### Button Style Matrix
+
+| Component | Background | Text | Border | Hover Behavior |
+|-----------|------------|------|--------|----------------|
+| `button-gold-gradient` | Gold gradient (light → dark) | Charcoal | None | Brighter gradient, slight scale up |
+| `button-gold-charcoal` | Sunburst Gold solid | Charcoal | None | Darker gold background |
+| `button-charcoal-gold` | Charcoal | Sunburst Gold | None | Dark Charcoal background |
+| `button-blue-white` | Azure Blue | White | None | Azure Dark background |
+| `button-gold-white` | Sunburst Gold | White | None | Darker gold background |
+| `button-white-charcoal` | White | Charcoal | 1px Charcoal | Linen bg, Azure text |
+| `button-outline-charcoal` | Transparent | Charcoal | 2px Charcoal | Fills Charcoal bg, White text |
+| `button-outline-gold` | Transparent | Sunburst Gold | 2px Sunburst Gold | Fills Gold bg, Charcoal text |
+| `button-text-link` | Transparent | Azure Blue + arrow (→) | None | Underline animation |
 
 ### Button States
-- **Hover:** Slight scale (1.02) + shadow increase
+- **Hover:** Slight scale (1.02) + shadow increase (solid buttons), fill transition (outline buttons)
 - **Active:** Scale (0.98) + deeper shadow
 - **Disabled:** 50% opacity, no pointer events
 - **Focus:** 2px Azure Blue (#3273DC) outline for accessibility
+
+### Badge Styles
+
+All badges are implemented as Blade components (see **UI Badge Components** above). Rounded-full pill shape, `text-xs font-semibold`.
+
+| Component | Background | Text | Border |
+|-----------|------------|------|--------|
+| `badge-featured` | Gold gradient | Charcoal | None |
+| `badge-new` | Azure Blue | White | None |
+| `badge-success` | Success Green (#4CAF50) | White | None |
+| `badge-sold-out` | Charcoal | White | None |
+| `badge-default` | Transparent | Charcoal Light | 1px Charcoal Light |
 
 ---
 
@@ -397,12 +487,19 @@ Cards, containers, alternating backgrounds
 ### Card Component Rules (MANDATORY)
 - **Never use icons** in card component types. Icons are prohibited in all `x-ui.card-*` components.
 - **Check marks are acceptable** — they are not considered icons.
-- Cards use White (#FFFFFF) backgrounds by default with shadow and hover lift.
-- Dark variant cards use Charcoal (#2C2C2C) background.
+- Cards use White (#FFFFFF) backgrounds by default with `shadow-lg` and `hover:shadow-gold-lg` transition.
+- Dark variant cards (`card-info`) use Charcoal (#2C2C2C) background.
+- All cards include `hover:-translate-y-1` lift effect on hover.
+- `card-service` uses a gold accent line (`w-12 h-1 bg-sunburst`) instead of an icon.
+- `card-info-light` uses a sunburst left border (`border-l-4 border-sunburst`).
+- `card-faq` uses Alpine.js (`x-data`, `x-show`) for accordion expand/collapse behavior.
+- All card components accept `$attributes->merge()` for custom classes.
+
+See **UI Card Components** in the Component Architecture section above for full prop details.
 
 ### Hover Effects
-- **Buttons:** Slight scale (1.02) + shadow increase
-- **Cards:** Image zoom (1.05) within container
+- **Buttons:** Slight scale (1.02) + shadow increase (solid), fill transition (outline)
+- **Cards:** Shadow gold glow + Y-axis lift (-translate-y-1)
 - **Links:** Underline animation from left to right
 
 ### Scroll Animations

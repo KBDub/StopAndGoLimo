@@ -34,15 +34,17 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 **Current section components:**
 ```
 resources/views/components/sections/
-├── hero.blade.php
+├── home-page-hero.blade.php
 ├── our-services.blade.php
 ├── why-choose-us.blade.php
 ├── design-it-yourself.blade.php
 ├── home-page-services-accordion.blade.php  # FAQ accordions for all services
+├── top5pct-same-day-service.blade.php               # Same day service two-panel section
 ├── cta-design-your-own.blade.php                   # Thin warm-gradient CTA banner
 ├── cta-free-quote.blade.php                         # Thin warm-gradient CTA banner
 ├── cta-ready-to-get-started.blade.php               # Full charcoal CTA with decorative blurs
-└── testimonial-banner.blade.php                     # Customer testimonials section
+├── testimonial-banner.blade.php                     # Customer testimonials section
+└── map-section.blade.php                            # Service area map with Leaflet
 ```
 
 **UI button components:**
@@ -192,6 +194,7 @@ error: #C62828
 │   └── Services/          # Service classes
 ├── resources/
 │   ├── views/
+│   │   ├── pages/         # Page views (nested by menu structure)
 │   │   ├── components/    # Blade components
 │   │   ├── layouts/       # Layout templates
 │   │   └── livewire/      # Livewire views
@@ -266,6 +269,12 @@ Lunar Hub admin panel is accessible at `/hub`
 | Feb 9, 2026 | Added home-page-services-accordion section with 8 FAQ cards |
 | Feb 9, 2026 | Created cta-design-your-own and cta-free-quote thin CTA banners (warm gradient) |
 | Feb 9, 2026 | Added "never use all caps" rule to branding-requirements.md |
+| Feb 9, 2026 | Moved pages to resources/views/pages/ with nested URL structure |
+| Feb 9, 2026 | Updated nav links to nested URLs (/custom-apparel/custom-shirts, etc.) |
+| Feb 9, 2026 | Created page-management dashboard at /page-management |
+| Feb 9, 2026 | Created ScanPageComponents Action for dynamic page/component scanning |
+| Feb 9, 2026 | Renamed hero.blade.php to home-page-hero.blade.php (full viewport) |
+| Feb 9, 2026 | Made navigation and top-notification-bar sticky |
 | Feb 9, 2026 | Removed all uppercase classes from section components |
 
 ---

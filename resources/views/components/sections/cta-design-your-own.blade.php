@@ -4,7 +4,7 @@
             <h3 class="text-lg font-bold text-charcoal">Have a design in mind?</h3>
             <p class="text-sm text-charcoal-light">Use our free online tool to create your custom product in minutes.</p>
         </div>
-        <x-ui.button-charcoal-gold href="/online-designer" class="px-6 py-3 text-sm whitespace-nowrap">
+        <x-ui.button-charcoal-gold href="/design-it-yourself/online-designer" class="px-6 py-3 text-sm whitespace-nowrap">
             Start Designing
         </x-ui.button-charcoal-gold>
     </div>

@@ -19,10 +19,10 @@
             <div>
                 <h4 class="font-semibold text-charcoal mb-4">Services</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="/custom-shirts" class="text-azure hover:text-azure-dark transition-colors">Custom Apparel</a></li>
-                    <li><a href="/business-signs" class="text-azure hover:text-azure-dark transition-colors">Signs & Banners</a></li>
-                    <li><a href="/stickers" class="text-azure hover:text-azure-dark transition-colors">Decals & Stickers</a></li>
-                    <li><a href="/automobile-graphics" class="text-azure hover:text-azure-dark transition-colors">Vehicle Graphics</a></li>
+                    <li><a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark transition-colors">Custom Apparel</a></li>
+                    <li><a href="/signs/business-signs" class="text-azure hover:text-azure-dark transition-colors">Signs & Banners</a></li>
+                    <li><a href="/decals/stickers" class="text-azure hover:text-azure-dark transition-colors">Decals & Stickers</a></li>
+                    <li><a href="/vehicle-graphics/automobile-graphics" class="text-azure hover:text-azure-dark transition-colors">Vehicle Graphics</a></li>
                 </ul>
             </div>
             

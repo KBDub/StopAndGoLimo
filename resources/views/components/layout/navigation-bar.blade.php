@@ -35,11 +35,11 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-cloak x-show="openDropdown === 'apparel'" x-transition class="absolute top-full left-0 mt-1 w-56 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
-                        <a href="/custom-shirts" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Custom Shirts</a>
-                        <a href="/dtf-transfers" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">DTF Transfers</a>
-                        <a href="/reunion-shirts" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Reunion Shirts</a>
-                        <a href="/corporate-wear" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Corporate Wear</a>
-                        <a href="/spirit-wear" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Spirit Wear</a>
+                        <a href="/custom-apparel/custom-shirts" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Custom Shirts</a>
+                        <a href="/custom-apparel/dtf-transfers" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">DTF Transfers</a>
+                        <a href="/custom-apparel/reunion-shirts" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Reunion Shirts</a>
+                        <a href="/custom-apparel/corporate-wear" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Corporate Wear</a>
+                        <a href="/custom-apparel/spirit-wear" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Spirit Wear</a>
                     </div>
                 </div>
 
@@ -49,8 +49,8 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-cloak x-show="openDropdown === 'design'" x-transition class="absolute top-full left-0 mt-1 w-64 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
-                        <a href="/online-designer" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Use Our Free Online Designer</a>
-                        <a href="/design-catalogs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Browse Our Design Idea Catalogs</a>
+                        <a href="/design-it-yourself/online-designer" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Use Our Free Online Designer</a>
+                        <a href="/design-it-yourself/design-catalogs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Browse Our Design Idea Catalogs</a>
                     </div>
                 </div>
 
@@ -60,13 +60,13 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-cloak x-show="openDropdown === 'signs'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
-                        <a href="/coronavirus-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Coronavirus Signs</a>
-                        <a href="/business-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Business Signs</a>
-                        <a href="/banners" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Banners</a>
-                        <a href="/posters" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Posters</a>
-                        <a href="/table-runners" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Table Runners</a>
-                        <a href="/sidewalk-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Sidewalk Signs</a>
-                        <a href="/yard-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Yard Signs</a>
+                        <a href="/signs/coronavirus-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Coronavirus Signs</a>
+                        <a href="/signs/business-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Business Signs</a>
+                        <a href="/signs/banners" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Banners</a>
+                        <a href="/signs/posters" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Posters</a>
+                        <a href="/signs/table-runners" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Table Runners</a>
+                        <a href="/signs/sidewalk-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Sidewalk Signs</a>
+                        <a href="/signs/yard-signs" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Yard Signs</a>
                     </div>
                 </div>
 
@@ -76,9 +76,9 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-cloak x-show="openDropdown === 'decals'" x-transition class="absolute top-full left-0 mt-1 w-56 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
-                        <a href="/coronavirus-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Coronavirus Decals</a>
-                        <a href="/stickers" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Stickers</a>
-                        <a href="/window-wall-floor-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Window/Wall/Floor Decals</a>
+                        <a href="/decals/coronavirus-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Coronavirus Decals</a>
+                        <a href="/decals/stickers" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Stickers</a>
+                        <a href="/decals/window-wall-floor-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Window/Wall/Floor Decals</a>
                     </div>
                 </div>
 
@@ -88,9 +88,9 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </button>
                     <div x-cloak x-show="openDropdown === 'vehicle'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
-                        <a href="/automobile-graphics" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Automobile Graphics</a>
-                        <a href="/vehicle-magnets" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Vehicle Magnets</a>
-                        <a href="/dot-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">DOT Decals</a>
+                        <a href="/vehicle-graphics/automobile-graphics" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Automobile Graphics</a>
+                        <a href="/vehicle-graphics/vehicle-magnets" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Vehicle Magnets</a>
+                        <a href="/vehicle-graphics/dot-decals" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">DOT Decals</a>
                     </div>
                 </div>
 
@@ -128,11 +128,11 @@
             <div class="space-y-2">
                 <a href="/" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Home</a>
                 <a href="/about" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">About Us</a>
-                <a href="/custom-shirts" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Custom Apparel</a>
-                <a href="/online-designer" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Design It Yourself</a>
-                <a href="/business-signs" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Signs</a>
-                <a href="/stickers" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Decals</a>
-                <a href="/automobile-graphics" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Vehicle Graphics</a>
+                <a href="/custom-apparel/custom-shirts" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Custom Apparel</a>
+                <a href="/design-it-yourself/online-designer" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Design It Yourself</a>
+                <a href="/signs/business-signs" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Signs</a>
+                <a href="/decals/stickers" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Decals</a>
+                <a href="/vehicle-graphics/automobile-graphics" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Vehicle Graphics</a>
                 <a href="/promotional-items" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Promotional Items</a>
                 <a href="/stores" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Stores</a>
                 <a href="/portfolio" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Portfolio</a>

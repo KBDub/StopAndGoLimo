@@ -10,6 +10,10 @@ Route::get('/demo', function () {
     return view('pages.demo');
 });
 
+Route::get('/custom-apparel', function () {
+    return view('pages.custom-apparel.index');
+})->name('custom-apparel');
+
 Route::get('/custom-apparel/custom-shirts', function () {
     return view('pages.custom-apparel.custom-shirts');
 })->name('custom-apparel.custom-shirts');
@@ -30,6 +34,10 @@ Route::get('/custom-apparel/spirit-wear', function () {
     return view('pages.custom-apparel.spirit-wear');
 })->name('custom-apparel.spirit-wear');
 
+Route::get('/design-it-yourself', function () {
+    return view('pages.design-it-yourself.index');
+})->name('design-it-yourself');
+
 Route::get('/design-it-yourself/online-designer', function () {
     return view('pages.design-it-yourself.online-designer');
 })->name('design-it-yourself.online-designer');
@@ -37,6 +45,10 @@ Route::get('/design-it-yourself/online-designer', function () {
 Route::get('/design-it-yourself/design-catalogs', function () {
     return view('pages.design-it-yourself.design-catalogs');
 })->name('design-it-yourself.design-catalogs');
+
+Route::get('/signs', function () {
+    return view('pages.signs.index');
+})->name('signs');
 
 Route::get('/signs/coronavirus-signs', function () {
     return view('pages.signs.coronavirus-signs');
@@ -66,6 +78,10 @@ Route::get('/signs/yard-signs', function () {
     return view('pages.signs.yard-signs');
 })->name('signs.yard-signs');
 
+Route::get('/decals', function () {
+    return view('pages.decals.index');
+})->name('decals');
+
 Route::get('/decals/coronavirus-decals', function () {
     return view('pages.decals.coronavirus-decals');
 })->name('decals.coronavirus-decals');
@@ -77,6 +93,10 @@ Route::get('/decals/stickers', function () {
 Route::get('/decals/window-wall-floor-decals', function () {
     return view('pages.decals.window-wall-floor-decals');
 })->name('decals.window-wall-floor-decals');
+
+Route::get('/vehicle-graphics', function () {
+    return view('pages.vehicle-graphics.index');
+})->name('vehicle-graphics');
 
 Route::get('/vehicle-graphics/automobile-graphics', function () {
     return view('pages.vehicle-graphics.automobile-graphics');

@@ -412,6 +412,17 @@ Cards, containers, alternating backgrounds
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
 ```
 
+### Text Transform Rules
+
+**Never use all caps (uppercase) anywhere on the site.** This includes:
+- Headings and subheadings (H1-H5)
+- Navigation links and buttons
+- Section lead-in labels
+- Badge and card text
+- Any body or caption text
+
+Do not use the CSS `text-transform: uppercase` property or the Tailwind `uppercase` class. All text should use natural sentence case or title case as appropriate. This applies to all Blade components, sections, and layouts.
+
 ### Typography Scale
 
 | Element | Font | Size (Desktop) | Size (Mobile) | Weight | Line Height | Letter Spacing |

@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h5 class="text-azure font-semibold tracking-wide uppercase mb-3">
+                <h5 class="text-azure font-semibold tracking-wide mb-3">
                     Online Design Tool
                 </h5>
                 <h2 class="text-h2 font-bold text-charcoal mb-4">Design It Yourself</h2>

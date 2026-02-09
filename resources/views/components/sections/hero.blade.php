@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h5 class="text-olive font-semibold tracking-wide uppercase mb-4">
+                <h5 class="text-olive font-semibold tracking-wide mb-4">
                     Veteran Owned &bull; Joliet, IL
                 </h5>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight mb-6">

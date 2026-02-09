@@ -34,8 +34,11 @@
     <main>
         <x-sections.hero />
         <x-sections.our-services />
+        <x-sections.cta-design-your-own />
         <x-sections.why-choose-us />
         <x-sections.design-it-yourself />
+        <x-sections.cta-free-quote />
+        <x-sections.home-page-services-accordion />
         <x-sections.cta-ready-to-get-started />
     </main>
 

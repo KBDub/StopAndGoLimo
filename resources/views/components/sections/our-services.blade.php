@@ -1,7 +1,7 @@
 <section class="py-10 bg-linen">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-12">
-            <h5 class="text-azure font-semibold tracking-wide uppercase mb-3">
+            <h5 class="text-azure font-semibold tracking-wide mb-3">
                 What We Do
             </h5>
             <h2 class="text-h2 font-bold text-charcoal mb-4">Our Services</h2>

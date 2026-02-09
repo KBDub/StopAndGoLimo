@@ -15,9 +15,12 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 - Keep components single-responsibility
 
 ### 2. Required Reading Before Development
-**Always reread these documents before making changes:**
-- `docs/branding-requirements.md` - Colors, fonts, CSS variables, styling
+**Always reread these documents before making any changes to the codebase:**
+- `docs/branding-requirements.md` - Colors, fonts, CSS variables, styling, text rules (MANDATORY - read every time)
 - `docs/layout-design.md` - Navigation, page structure, component specs
+
+### 2a. Text Formatting Rule
+**Never use all caps (uppercase) anywhere on the site.** Do not use the Tailwind `uppercase` class or CSS `text-transform: uppercase`. All text uses natural sentence case or title case.
 
 ### 3. Component Structure Requirements
 **Each HTML `<section>` must be its own component file:**
@@ -35,6 +38,9 @@ resources/views/components/sections/
 ├── our-services.blade.php
 ├── why-choose-us.blade.php
 ├── design-it-yourself.blade.php
+├── home-page-services-accordion.blade.php  # FAQ accordions for all services
+├── cta-design-your-own.blade.php           # Thin warm-gradient CTA banner
+├── cta-free-quote.blade.php                # Thin warm-gradient CTA banner
 └── cta-ready-to-get-started.blade.php
 ```
 
@@ -255,6 +261,10 @@ Lunar Hub admin panel is accessible at `/hub`
 | Current | Layout design with mega menu structure |
 | Current | SEO strategy document added |
 | Current | Cart and facets implementation guides added |
+| Feb 9, 2026 | Added home-page-services-accordion section with 8 FAQ cards |
+| Feb 9, 2026 | Created cta-design-your-own and cta-free-quote thin CTA banners (warm gradient) |
+| Feb 9, 2026 | Added "never use all caps" rule to branding-requirements.md |
+| Feb 9, 2026 | Removed all uppercase classes from section components |
 
 ---
 
@@ -264,3 +274,5 @@ Lunar Hub admin panel is accessible at `/hub`
 - Follow exact branding from top5pct.com
 - Use semantic HTML (H2-H5 for structure)
 - Premium, professional aesthetic
+- Never use all caps / uppercase text anywhere on the site
+- Always read docs/branding-requirements.md before making changes

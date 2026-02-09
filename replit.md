@@ -42,7 +42,7 @@ resources/views/components/sections/
 ├── cta-design-your-own.blade.php                   # Thin warm-gradient CTA banner
 ├── cta-free-quote.blade.php                         # Thin warm-gradient CTA banner
 ├── cta-ready-to-get-started.blade.php               # Full charcoal CTA with decorative blurs
-└── testimonial-banner-gold-gradient-dark.blade.php  # Gold gradient testimonial section
+└── testimonial-banner.blade.php                     # Customer testimonials section
 ```
 
 **UI button components:**

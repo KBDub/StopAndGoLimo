@@ -63,11 +63,17 @@ final class ScanPageComponents
         $ui = [];
         $layout = [];
         $all = [];
+        $seen = [];
 
-        preg_match_all('/<x-([\w.-]+)/', $content, $matches);
+        preg_match_all('/<x-([\w.-]+)/', $content, $matches, PREG_OFFSET_CAPTURE);
 
         if (!empty($matches[1])) {
-            foreach (array_unique($matches[1]) as $component) {
+            foreach ($matches[1] as $match) {
+                $component = $match[0];
+                if (isset($seen[$component])) {
+                    continue;
+                }
+                $seen[$component] = true;
                 $all[] = $component;
 
                 if (Str::startsWith($component, 'sections.')) {
@@ -79,11 +85,6 @@ final class ScanPageComponents
                 }
             }
         }
-
-        sort($sections);
-        sort($ui);
-        sort($layout);
-        sort($all);
 
         return compact('sections', 'ui', 'layout', 'all');
     }

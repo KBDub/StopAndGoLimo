@@ -32,11 +32,48 @@
             <div class="mb-8">
                 <h1 class="text-3xl font-bold text-charcoal mb-2">Page Management</h1>
                 <p class="text-charcoal-light">
-                    Overview of all pages, grouped by top-level menu item. Expand each card to see sections and shared components.
+                    Overview of all pages, grouped by top-level menu item. Expand each card to see components in page order.
                 </p>
             </div>
 
             @php
+                $colorPalette = [
+                    ['bg' => 'bg-blue-50', 'text' => 'text-blue-700', 'border' => 'border-blue-200', 'dot' => 'bg-blue-400'],
+                    ['bg' => 'bg-amber-50', 'text' => 'text-amber-700', 'border' => 'border-amber-200', 'dot' => 'bg-amber-400'],
+                    ['bg' => 'bg-emerald-50', 'text' => 'text-emerald-700', 'border' => 'border-emerald-200', 'dot' => 'bg-emerald-400'],
+                    ['bg' => 'bg-purple-50', 'text' => 'text-purple-700', 'border' => 'border-purple-200', 'dot' => 'bg-purple-400'],
+                    ['bg' => 'bg-rose-50', 'text' => 'text-rose-700', 'border' => 'border-rose-200', 'dot' => 'bg-rose-400'],
+                    ['bg' => 'bg-cyan-50', 'text' => 'text-cyan-700', 'border' => 'border-cyan-200', 'dot' => 'bg-cyan-400'],
+                    ['bg' => 'bg-orange-50', 'text' => 'text-orange-700', 'border' => 'border-orange-200', 'dot' => 'bg-orange-400'],
+                    ['bg' => 'bg-indigo-50', 'text' => 'text-indigo-700', 'border' => 'border-indigo-200', 'dot' => 'bg-indigo-400'],
+                    ['bg' => 'bg-pink-50', 'text' => 'text-pink-700', 'border' => 'border-pink-200', 'dot' => 'bg-pink-400'],
+                    ['bg' => 'bg-teal-50', 'text' => 'text-teal-700', 'border' => 'border-teal-200', 'dot' => 'bg-teal-400'],
+                    ['bg' => 'bg-lime-50', 'text' => 'text-lime-700', 'border' => 'border-lime-200', 'dot' => 'bg-lime-400'],
+                    ['bg' => 'bg-fuchsia-50', 'text' => 'text-fuchsia-700', 'border' => 'border-fuchsia-200', 'dot' => 'bg-fuchsia-400'],
+                    ['bg' => 'bg-sky-50', 'text' => 'text-sky-700', 'border' => 'border-sky-200', 'dot' => 'bg-sky-400'],
+                    ['bg' => 'bg-violet-50', 'text' => 'text-violet-700', 'border' => 'border-violet-200', 'dot' => 'bg-violet-400'],
+                    ['bg' => 'bg-red-50', 'text' => 'text-red-700', 'border' => 'border-red-200', 'dot' => 'bg-red-400'],
+                    ['bg' => 'bg-yellow-50', 'text' => 'text-yellow-700', 'border' => 'border-yellow-200', 'dot' => 'bg-yellow-400'],
+                ];
+                $paletteCount = count($colorPalette);
+
+                $allUniqueComponents = [];
+                foreach ($groups as $group) {
+                    foreach ($group['pages'] as $page) {
+                        foreach ($page['all_components'] as $comp) {
+                            if (!in_array($comp, $allUniqueComponents)) {
+                                $allUniqueComponents[] = $comp;
+                            }
+                        }
+                    }
+                }
+                sort($allUniqueComponents);
+
+                $componentColorMap = [];
+                foreach ($allUniqueComponents as $index => $comp) {
+                    $componentColorMap[$comp] = $colorPalette[$index % $paletteCount];
+                }
+
                 $totalPages = 0;
                 $totalComponents = 0;
                 foreach ($groups as $group) {
@@ -46,6 +83,7 @@
                     }
                 }
             @endphp
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                 <div class="bg-white rounded-lg p-5 shadow-sm border border-linen-dark/20">
                     <p class="text-sm text-charcoal-light mb-1">Total Groups</p>
@@ -60,10 +98,8 @@
                     <p class="text-2xl font-bold text-azure">{{ $totalComponents }}</p>
                 </div>
                 <div class="bg-white rounded-lg p-5 shadow-sm border border-linen-dark/20">
-                    <p class="text-sm text-charcoal-light mb-1">Section Components</p>
-                    <p class="text-2xl font-bold text-charcoal">
-                        {{ count(glob(resource_path('views/components/sections/*.blade.php'))) }}
-                    </p>
+                    <p class="text-sm text-charcoal-light mb-1">Unique Components</p>
+                    <p class="text-2xl font-bold text-charcoal">{{ count($allUniqueComponents) }}</p>
                 </div>
             </div>
 
@@ -115,84 +151,40 @@
                                 </button>
 
                                 <div x-show="expanded" x-cloak x-transition class="border-t border-linen-dark/20 p-5">
-                                    @if(count($page['layout']) > 0)
-                                        <h4 class="text-xs font-semibold text-charcoal-light mb-2">Layout Components</h4>
-                                        <div class="space-y-1.5 mb-4">
-                                            @foreach($page['layout'] as $component)
-                                                <div class="flex items-center gap-2 px-3 py-1.5 rounded text-sm
-                                                    {{ in_array($component, $page['shared_components']) ? 'bg-purple-50 text-purple-700 border border-purple-200' : 'bg-linen text-charcoal border border-linen-dark/30' }}
-                                                ">
-                                                    <svg class="w-3.5 h-3.5 shrink-0 {{ in_array($component, $page['shared_components']) ? 'text-purple-400' : 'text-charcoal-light' }}" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                                                    </svg>
-                                                    <span class="font-medium">{{ Str::after($component, 'layout.') }}</span>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    @endif
-
-                                    @if(count($page['sections']) > 0)
-                                        <h4 class="text-xs font-semibold text-charcoal-light mb-2">Section Components</h4>
-                                        <div class="space-y-1.5 mb-4">
-                                            @foreach($page['sections'] as $component)
-                                                @php
-                                                    $isShared = in_array($component, $page['shared_components']);
-                                                    $isCta = Str::contains($component, 'cta-');
-                                                    if ($isCta) {
-                                                        $bgClass = 'bg-red-50 text-red-700 border border-red-200';
-                                                        $iconClass = 'text-red-400';
-                                                    } elseif ($isShared) {
-                                                        $bgClass = 'bg-yellow-50 text-yellow-700 border border-yellow-200';
-                                                        $iconClass = 'text-yellow-400';
-                                                    } else {
-                                                        $bgClass = 'bg-blue-50 text-blue-700 border border-blue-200';
-                                                        $iconClass = 'text-blue-400';
-                                                    }
-                                                @endphp
-                                                <div class="flex items-center gap-2 px-3 py-1.5 rounded text-sm {{ $bgClass }}">
-                                                    <svg class="w-3.5 h-3.5 shrink-0 {{ $iconClass }}" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                                                    </svg>
-                                                    <span class="font-medium">{{ Str::of(Str::after($component, 'sections.'))->replace(['-', '_'], ' ')->title() }}</span>
-                                                </div>
-                                            @endforeach
-                                        </div>
-                                    @endif
-
-                                    @if(count($page['ui']) > 0)
-                                        <h4 class="text-xs font-semibold text-charcoal-light mb-2">UI Components</h4>
+                                    @if(count($page['all_components']) > 0)
+                                        <h4 class="text-xs font-semibold text-charcoal-light mb-3">Components (in page order)</h4>
                                         <div class="space-y-1.5">
-                                            @foreach($page['ui'] as $component)
+                                            @foreach($page['all_components'] as $index => $component)
                                                 @php
+                                                    $color = $componentColorMap[$component];
                                                     $isShared = in_array($component, $page['shared_components']);
-                                                    if (Str::contains($component, 'banner-')) {
-                                                        $bgClass = 'bg-orange-50 text-orange-700 border border-orange-200';
-                                                        $iconClass = 'text-orange-400';
-                                                    } elseif (Str::contains($component, 'button-')) {
-                                                        $bgClass = 'bg-green-50 text-green-700 border border-green-200';
-                                                        $iconClass = 'text-green-400';
-                                                    } elseif (Str::contains($component, 'card-')) {
-                                                        $bgClass = 'bg-pink-50 text-pink-700 border border-pink-200';
-                                                        $iconClass = 'text-pink-400';
-                                                    } elseif (Str::contains($component, 'badge-')) {
-                                                        $bgClass = 'bg-indigo-50 text-indigo-700 border border-indigo-200';
-                                                        $iconClass = 'text-indigo-400';
+
+                                                    if (Str::startsWith($component, 'sections.')) {
+                                                        $label = Str::of(Str::after($component, 'sections.'))->replace(['-', '_'], ' ')->title();
+                                                        $typeLabel = 'Section';
+                                                    } elseif (Str::startsWith($component, 'layout.')) {
+                                                        $label = Str::of(Str::after($component, 'layout.'))->replace(['-', '_'], ' ')->title();
+                                                        $typeLabel = 'Layout';
+                                                    } elseif (Str::startsWith($component, 'ui.')) {
+                                                        $label = Str::of(Str::after($component, 'ui.'))->replace(['-', '_'], ' ')->title();
+                                                        $typeLabel = 'Ui';
                                                     } else {
-                                                        $bgClass = 'bg-gray-50 text-gray-700 border border-gray-200';
-                                                        $iconClass = 'text-gray-400';
+                                                        $label = Str::of($component)->replace(['-', '_'], ' ')->title();
+                                                        $typeLabel = 'Other';
                                                     }
                                                 @endphp
-                                                <div class="flex items-center gap-2 px-3 py-1.5 rounded text-sm {{ $bgClass }}">
-                                                    <svg class="w-3.5 h-3.5 shrink-0 {{ $iconClass }}" fill="currentColor" viewBox="0 0 20 20">
-                                                        <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-                                                    </svg>
-                                                    <span class="font-medium">{{ Str::of(Str::after($component, 'ui.'))->replace(['-', '_'], ' ')->title() }}</span>
+                                                <div class="flex items-center gap-2 px-3 py-1.5 rounded text-sm {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
+                                                    <span class="w-2.5 h-2.5 rounded-full shrink-0 {{ $color['dot'] }}"></span>
+                                                    <span class="text-xs font-medium opacity-60 shrink-0 w-12">{{ $typeLabel }}</span>
+                                                    <span class="font-medium flex-1">{{ $label }}</span>
+                                                    @if($isShared)
+                                                        <span class="text-[10px] opacity-50 shrink-0">shared</span>
+                                                    @endif
+                                                    <span class="text-[10px] opacity-40 shrink-0">{{ $index + 1 }}</span>
                                                 </div>
                                             @endforeach
                                         </div>
-                                    @endif
-
-                                    @if(count($page['all_components']) === 0)
+                                    @else
                                         <p class="text-sm text-charcoal-light italic">No components found. Page may not be created yet.</p>
                                     @endif
                                 </div>
@@ -201,6 +193,29 @@
                     </div>
                 </div>
             @endforeach
+
+            <div class="mt-12 bg-white rounded-lg shadow-sm border border-linen-dark/20 p-6">
+                <h2 class="text-lg font-bold text-charcoal mb-4">Color Legend</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                    @foreach($componentColorMap as $comp => $color)
+                        @php
+                            if (Str::startsWith($comp, 'sections.')) {
+                                $shortLabel = Str::of(Str::after($comp, 'sections.'))->replace(['-', '_'], ' ')->title();
+                            } elseif (Str::startsWith($comp, 'layout.')) {
+                                $shortLabel = Str::of(Str::after($comp, 'layout.'))->replace(['-', '_'], ' ')->title();
+                            } elseif (Str::startsWith($comp, 'ui.')) {
+                                $shortLabel = Str::of(Str::after($comp, 'ui.'))->replace(['-', '_'], ' ')->title();
+                            } else {
+                                $shortLabel = Str::of($comp)->replace(['-', '_'], ' ')->title();
+                            }
+                        @endphp
+                        <div class="flex items-center gap-2 px-2 py-1 rounded text-xs {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
+                            <span class="w-2 h-2 rounded-full shrink-0 {{ $color['dot'] }}"></span>
+                            <span class="truncate">{{ $shortLabel }}</span>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
         </div>
     </main>
 

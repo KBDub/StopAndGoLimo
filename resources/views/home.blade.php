@@ -23,16 +23,17 @@
 </head>
 <body class="font-sans antialiased bg-linen text-charcoal">
 
-    <x-layout.top-notification-bar message="Free Shipping on Orders Over $50!" link="/custom-shirts" linkText="Shop Now" />
-
-    <x-ui.banner-thin-sunburst />
-    <x-ui.banner-thin-charcoal />
-    <x-layout.navigation-bar currentPage="home" />
-    <x-ui.banner-thin-sunburst />
-    <x-ui.banner-thin-charcoal />
+    <header class="sticky top-0 z-50">
+        <x-layout.top-notification-bar message="Free Shipping on Orders Over $50!" link="/custom-shirts" linkText="Shop Now" />
+        <x-ui.banner-thin-sunburst />
+        <x-ui.banner-thin-charcoal />
+        <x-layout.navigation-bar currentPage="home" />
+        <x-ui.banner-thin-sunburst />
+        <x-ui.banner-thin-charcoal />
+    </header>
 
     <main>
-        <x-sections.hero />
+        <x-sections.home-page-hero />
         <x-ui.banner-medium-sunburst />
 
         <x-sections.top5pct-same-day-service />

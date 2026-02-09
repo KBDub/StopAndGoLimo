@@ -4,7 +4,7 @@
     'linkText' => 'Shop Now'
 ])
 
-<div class="bg-sunburst text-charcoal py-2 text-center text-sm font-semibold">
+<div class="bg-sunburst text-charcoal py-2 text-center text-sm font-semibold sticky-header-part">
     <div class="max-w-6xl mx-auto px-6 flex items-center justify-center gap-2">
         <span>{{ $message }}</span>
         @if($link)

@@ -1,5 +1,5 @@
-<section class="bg-white py-10">
-    <div class="max-w-6xl mx-auto px-6">
+<section class="bg-white min-h-screen flex items-center py-10">
+    <div class="max-w-6xl mx-auto px-6 w-full">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h5 class="text-olive font-semibold tracking-wide mb-4">

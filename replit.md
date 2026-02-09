@@ -95,7 +95,8 @@ resources/views/components/ui/
 ├── card-info.blade.php          # Dark charcoal variant with link
 ├── card-info-light.blade.php    # Light variant with sunburst left border
 ├── card-faq.blade.php           # SEO accordion mini-FAQ with Alpine.js
-└── card-feature.blade.php       # Feature/step card with numbered indicator
+├── card-feature.blade.php       # Feature/step card with numbered indicator
+└── card-showcase.blade.php      # Linen panel with decorative accent circles
 ```
 
 ### 4. Additional Reference Documents

@@ -715,6 +715,35 @@
                     </div>
                 </div>
 
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Showcase Card</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-showcase</code> (with image)</p>
+                        <x-ui.card-showcase
+                            image="/images/logos/top5-logo.gif"
+                            imageAlt="Top 5 Percent"
+                            description="What Do You Represent?"
+                        />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-showcase</code> (with title)</p>
+                        <x-ui.card-showcase
+                            title="Design Studio"
+                            description="Create professional designs in minutes with our intuitive online tool."
+                        />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-showcase</code> (with slot)</p>
+                        <x-ui.card-showcase>
+                            <div class="w-16 h-16 bg-gold-gradient rounded-xl flex items-center justify-center mx-auto mb-4 shadow-gold">
+                                <span class="text-2xl font-bold text-charcoal">5%</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-charcoal mb-1">Premium Quality</h3>
+                            <p class="text-charcoal-light text-sm">Only the finest materials and equipment.</p>
+                        </x-ui.card-showcase>
+                    </div>
+                </div>
+
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">FAQ Accordion Cards</h3>
                 <p class="text-sm text-charcoal-light mb-4">SEO-friendly expandable mini-FAQ cards using <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-faq</code>. Great for structured data and voice search.</p>
                 <div class="space-y-3 max-w-2xl">

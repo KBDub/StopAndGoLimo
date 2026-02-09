@@ -23,7 +23,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -42,7 +42,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -61,7 +61,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -80,7 +80,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -99,7 +99,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -118,7 +118,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -137,7 +137,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -156,7 +156,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>
@@ -175,7 +175,7 @@
                         </p>
                     </div>
                     <button @click="open = !open" class="text-azure hover:text-azure-dark text-sm font-semibold transition-colors mt-2 cursor-pointer">
-                        <span x-text="open ? '... less &larr;' : '... more &rarr;'"></span>
+                        <span x-text="open ? 'less &larr;' : 'more &rarr;'"></span>
                     </button>
                 </x-ui.card-product>
             </div>

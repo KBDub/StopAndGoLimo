@@ -157,11 +157,11 @@
 
     --nav-height: 80px;
     --nav-height-mobile: 64px;
-    --nav-background: var(--color-gray-dark);
+    --nav-background: var(--color-charcoal);
     --nav-text-color: #FFFFFF;
 
-    --footer-background: var(--color-gray-dark);
-    --footer-text-color: #FFFFFF;
+    --footer-background: var(--color-linen);
+    --footer-text-color: var(--color-charcoal);
 }
 
 @layer base {
@@ -217,15 +217,15 @@
     }
     
     .btn-primary {
-        @apply bg-primary text-black hover:scale-[1.02] hover:shadow-lg;
+        @apply bg-sunburst text-charcoal hover:scale-[1.02] hover:shadow-lg;
     }
     
     .btn-secondary {
-        @apply bg-transparent text-black border border-gray-dark hover:bg-gray-light;
+        @apply bg-transparent text-charcoal border border-charcoal hover:bg-linen;
     }
     
     .btn-accent {
-        @apply bg-accent text-white hover:bg-accent/90;
+        @apply bg-azure text-white hover:bg-azure-dark;
     }
     
     .container-custom {

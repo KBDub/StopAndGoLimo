@@ -101,18 +101,32 @@ All badge components use rounded-full pill shape, `text-xs font-semibold`, and s
 
 ### UI Banner Separator Components
 
-Thin banners (3px) wrap the navigation bar. Medium banners (8px) divide content sections.
+Thin banners (3px height) wrap the navigation bar in a dual-line sandwich pattern. Medium banners (8px height) divide content sections throughout the page.
 
-| Component | Height | Color | Usage |
-|-----------|--------|-------|-------|
-| `x-ui.banner-thin-sunburst` | 3px | Sunburst Gold | Above/below navigation |
-| `x-ui.banner-thin-charcoal` | 3px | Charcoal | Navigation border |
-| `x-ui.banner-thin-azure` | 3px | Azure Blue | Accent separator |
-| `x-ui.banner-thin-linen` | 3px | Soft Linen | Subtle separator |
-| `x-ui.banner-medium-sunburst` | 8px | Sunburst Gold | Section divider |
-| `x-ui.banner-medium-charcoal` | 8px | Charcoal | Section divider |
-| `x-ui.banner-medium-azure` | 8px | Azure Blue | Section divider |
-| `x-ui.banner-medium-linen` | 8px | Soft Linen | Section divider |
+**Navigation sandwich pattern:** The navigation bar is wrapped with `banner-thin-sunburst` above and `banner-thin-charcoal` below (or vice versa) to create a branded border effect matching top5pct.com.
+
+| Component | Height | Color | Hex | Usage |
+|-----------|--------|-------|-----|-------|
+| `x-ui.banner-thin-sunburst` | 3px | Sunburst Gold | `#FFC20E` | Above/below navigation |
+| `x-ui.banner-thin-charcoal` | 3px | Charcoal | `#2C2C2C` | Navigation border |
+| `x-ui.banner-thin-azure` | 3px | Azure Blue | `#3273DC` | Accent separator |
+| `x-ui.banner-thin-linen` | 3px | Soft Linen | `#F2F0E6` | Subtle separator |
+| `x-ui.banner-medium-sunburst` | 8px | Sunburst Gold | `#FFC20E` | Section divider |
+| `x-ui.banner-medium-charcoal` | 8px | Charcoal | `#2C2C2C` | Section divider |
+| `x-ui.banner-medium-azure` | 8px | Azure Blue | `#3273DC` | Section divider |
+| `x-ui.banner-medium-linen` | 8px | Soft Linen | `#F2F0E6` | Section divider |
+
+```blade
+{{-- Navigation sandwich pattern --}}
+<x-ui.banner-thin-sunburst />
+<x-ui.banner-thin-charcoal />
+<x-layout.navigation-bar currentPage="home" />
+<x-ui.banner-thin-charcoal />
+<x-ui.banner-thin-sunburst />
+
+{{-- Section divider --}}
+<x-ui.banner-medium-sunburst />
+```
 
 ### UI Card Components
 
@@ -128,11 +142,116 @@ Thin banners (3px) wrap the navigation bar. Medium banners (8px) divide content 
 | `x-ui.card-faq` | `question`, `answer`, `open` | Accordion expand/collapse with Alpine.js |
 | `x-ui.card-feature` | `step`, `title`, `description` | Numbered step/feature card |
 
+#### Card Visual Specifications
+
+**Shared card styles:**
+- Background: White `#FFFFFF` (default), Charcoal `#2C2C2C` (dark variant)
+- Padding: `p-6` (24px)
+- Border radius: `rounded-xl` (12px)
+- Shadow: `shadow-lg` at rest, `shadow-gold-lg` on hover (gold glow: `0 8px 30px rgba(255, 194, 14, 0.25)`)
+- Hover: `-translate-y-1` (lift 4px)
+- Transition: `transition-all` (200ms default)
+
+**card-product:**
+- Optional image with `w-full h-40 object-cover rounded-lg mb-4`
+- Title: `font-semibold text-charcoal`
+- Description: `text-sm text-charcoal-light`
+- Price: `text-lg font-bold text-sunburst`
+
+**card-service:**
+- Gold accent line: `w-12 h-1 bg-sunburst rounded mb-4` (replaces icon)
+- Title: `font-semibold text-charcoal`
+- Description: `text-sm text-charcoal-light`
+- Optional `letter` prop for categorization
+
+**card-testimonial:**
+- Quote: `text-sm text-charcoal-light italic` with quotation marks
+- Avatar: `w-10 h-10 rounded-full object-cover` (optional, shows initial letter if absent)
+- Name: `font-semibold text-charcoal text-sm`
+- Label: defaults to "Verified Customer", `text-xs text-charcoal-light`
+
+**card-info (dark variant):**
+- Background: Charcoal `#2C2C2C`
+- Title: `font-semibold text-white`
+- Description: `text-sm text-white/70`
+- Optional link: Azure Blue text with arrow
+
+**card-info-light:**
+- Background: White with `border-l-4 border-sunburst` left accent
+- Title: `font-semibold text-charcoal`
+- Description: `text-sm text-charcoal-light`
+- Optional link: Azure Blue text with arrow
+
+**card-faq (accordion):**
+- Requires Alpine.js (`x-data="{ expanded: false }"`)
+- Question bar: `border-l-4 border-sunburst`, click toggles `expanded`
+- Chevron rotates 180deg when expanded (`rotate-180` transition)
+- Answer panel: `x-show="expanded"` with smooth slide transition
+- `open` prop: set to `true` to default expanded
+- Uses `x-cloak` to prevent flash of unstyled content
+
+**card-feature:**
+- Large step number: `text-4xl font-bold text-sunburst/20` positioned top-right
+- Title: `font-semibold text-charcoal`
+- Description: `text-sm text-charcoal-light`
+
 ```blade
-{{-- Card usage examples --}}
-<x-ui.card-service title="Custom Signs" description="Professional signage solutions." />
-<x-ui.card-faq question="How long does it take?" answer="Most orders ship in 5-7 days." />
-<x-ui.card-product title="Banner" description="Indoor/outdoor" price="$49.99" />
+{{-- Product card with image --}}
+<x-ui.card-product
+    title="Custom Banner"
+    description="Indoor/outdoor vinyl banner"
+    price="$49.99"
+    image="/images/products/banner.jpg"
+/>
+
+{{-- Service card (no icons, gold accent line) --}}
+<x-ui.card-service
+    title="Custom Signs"
+    description="Professional signage solutions for your business."
+/>
+
+{{-- Testimonial card --}}
+<x-ui.card-testimonial
+    quote="Outstanding quality and fast turnaround!"
+    name="John D."
+    label="Business Owner"
+/>
+
+{{-- Info card (dark) with link --}}
+<x-ui.card-info
+    title="Free Shipping"
+    description="On all orders over $50."
+    linkText="Learn More"
+    linkHref="/shipping"
+/>
+
+{{-- Info card (light) with sunburst border --}}
+<x-ui.card-info-light
+    title="Design Services"
+    description="Our team can bring your vision to life."
+    linkText="Get Started"
+    linkHref="/design"
+/>
+
+{{-- FAQ accordion card --}}
+<x-ui.card-faq
+    question="How long does shipping take?"
+    answer="Most orders ship within 5-7 business days."
+/>
+
+{{-- FAQ card open by default --}}
+<x-ui.card-faq
+    question="Do you offer rush orders?"
+    answer="Yes! Rush orders are available for an additional fee."
+    :open="true"
+/>
+
+{{-- Feature/step card --}}
+<x-ui.card-feature
+    step="01"
+    title="Choose Your Product"
+    description="Browse our catalog of signs, apparel, and promotional items."
+/>
 ```
 
 ### Example Page Structure
@@ -242,9 +361,10 @@ Cards, containers, alternating backgrounds
 **Navigation bar uses Charcoal (#2C2C2C) background with white text.**
 
 - **Navigation Background:** Charcoal `#2C2C2C`
-- **Navigation Text:** Charcoal `#2C2C2C`
+- **Navigation Text:** White `#FFFFFF`
 - **Navigation Active/Selected Link:** Azure Blue `#3273DC`
 - **Navigation Hover:** Sunburst Gold `#FFC20E`
+- **Navigation Separators:** Wrapped with dual-line thin banners (sunburst + charcoal)
 
 ### Footer Requirements (MANDATORY)
 
@@ -527,7 +647,9 @@ See **UI Card Components** in the Component Architecture section above for full 
 
 ## CSS Custom Properties (Variables)
 
-### Complete Variable Definition
+These variables are defined in `resources/css/app.css` and match the Tailwind config in `tailwind.config.js`. The CSS file is the source of truth for all custom properties.
+
+### Complete Variable Definition (from resources/css/app.css)
 
 ```css
 :root {
@@ -535,37 +657,44 @@ See **UI Card Components** in the Component Architecture section above for full 
      COLOR VARIABLES
      =================== */
   
-  /* Core Brand Colors */
-  --color-sunburst-gold: #FFC20E;
-  --color-sunburst-gold-rgb: 255, 194, 14;
-  --color-azure-blue: #3273DC;
-  --color-azure-blue-rgb: 50, 115, 220;
-  --color-soft-linen: #F2F0E6;
-  --color-soft-linen-rgb: 242, 240, 230;
+  /* Sunburst Gold - Primary Brand Color */
+  --color-sunburst-light: #FFD93D;
+  --color-sunburst: #FFC20E;
+  --color-sunburst-dark: #E6A500;
+  
+  /* Azure Blue - Secondary Brand Color */
+  --color-azure-light: #5A9AE8;
+  --color-azure: #3273DC;
+  --color-azure-dark: #2558A8;
+  
+  /* Soft Linen - Background Color */
+  --color-linen-light: #FAF9F5;
+  --color-linen: #F2F0E6;
+  --color-linen-dark: #E8E5D8;
+  
+  /* Charcoal - Text Color */
+  --color-charcoal-light: #555555;
   --color-charcoal: #2C2C2C;
-  --color-charcoal-rgb: 44, 44, 44;
+  --color-charcoal-dark: #1A1A1A;
+  
+  /* Olive - Social Media Hover Tags */
+  --color-olive: #A39822;
+  
+  /* White - Container Color */
   --color-white: #FFFFFF;
   
-  /* Semantic Color Aliases */
-  --color-primary: var(--color-sunburst-gold);
-  --color-secondary: var(--color-azure-blue);
-  --color-background: var(--color-soft-linen);
-  --color-text: var(--color-charcoal);
-  
-  /* Links */
-  --color-link: var(--color-azure-blue);
-  --color-link-hover: #2563c4;
-  
-  /* Gray Scale */
-  --color-charcoal-light: #555555;
-  --color-gray-light: #F5F5F5;
-  --color-gray-border: #E0E0E0;
-  
-  /* Functional Colors */
+  /* Semantic Colors */
   --color-success: #4CAF50;
-  --color-error: #C62828;
-  --color-info: var(--color-azure-blue);
   --color-warning: #F9A825;
+  --color-error: #C62828;
+  
+  /* Semantic Aliases */
+  --color-primary: var(--color-sunburst);
+  --color-secondary: var(--color-azure);
+  --color-background: var(--color-linen);
+  --color-text: var(--color-charcoal);
+  --color-link: var(--color-azure);
+  --color-link-hover: var(--color-azure-dark);
   
   /* ===================
      TYPOGRAPHY VARIABLES
@@ -722,53 +851,178 @@ See **UI Card Components** in the Component Architecture section above for full 
   /* Navigation */
   --nav-height: 80px;
   --nav-height-mobile: 64px;
-  --nav-background: var(--color-soft-linen);
-  --nav-text-color: var(--color-charcoal);
-  --nav-active-color: var(--color-azure);
+  --nav-background: var(--color-charcoal);
+  --nav-text-color: #FFFFFF;
   
   /* Footer */
-  --footer-background: var(--color-soft-linen);
+  --footer-background: var(--color-linen);
   --footer-text-color: var(--color-charcoal);
-  --footer-link-color: var(--color-azure-blue);
 }
+```
 
-/* Dark mode overrides (if needed) */
-@media (prefers-color-scheme: dark) {
+### Alpine.js Integration
+
+Alpine.js is bundled via Vite (imported in `resources/js/app.js`). The following CSS rule is required in `resources/css/app.css` to prevent flash of unstyled content on Alpine-powered components:
+
+```css
+[x-cloak] {
+    display: none !important;
+}
+```
+
+### Mobile Responsive Overrides
+
+Font sizes and spacing automatically scale down on mobile via a media query override in `resources/css/app.css`:
+
+```css
+@media (max-width: 768px) {
   :root {
-    /* Add dark mode variable overrides here if implementing dark mode */
+    --font-size-h1: var(--font-size-h1-mobile);
+    --font-size-h2: var(--font-size-h2-mobile);
+    --font-size-h3: var(--font-size-h3-mobile);
+    --font-size-h4: var(--font-size-h4-mobile);
+    --font-size-h5: var(--font-size-h5-mobile);
+    --font-size-body: var(--font-size-body-mobile);
+    --section-padding-y: var(--section-padding-y-mobile);
+    --section-gap: var(--section-gap-mobile);
+    --container-padding: var(--container-padding-mobile);
   }
 }
 ```
 
-### Tailwind CSS Integration
+### Base Layer Styles (from resources/css/app.css)
 
-For use with Tailwind CSS, extend the theme in `tailwind.config.js`:
+Global heading and link styles are applied via Tailwind's `@layer base`:
+
+```css
+@layer base {
+  html { font-family: var(--font-primary); }
+  body { @apply bg-white text-black antialiased; }
+  h1 { @apply text-h1 font-bold; line-height: var(--line-height-heading); }
+  h2 { @apply text-h2 font-bold; line-height: var(--line-height-heading); }
+  h3 { @apply text-h3 font-semibold; line-height: var(--line-height-subheading); }
+  h4 { @apply text-h4 font-semibold; line-height: var(--line-height-subheading); }
+  h5 { @apply text-h5 font-semibold; line-height: var(--line-height-subheading); }
+  a { @apply text-azure transition-colors duration-200; }
+  a:hover { @apply text-azure/80; }
+}
+```
+
+### Component Layer Utilities (from resources/css/app.css)
+
+Reusable utility classes defined via Tailwind's `@layer components`:
+
+```css
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center font-semibold text-sm rounded-sm transition-all duration-200;
+    padding: var(--btn-padding-y) var(--btn-padding-x);
+    letter-spacing: var(--letter-spacing-button);
+  }
+  
+  .btn-primary {
+    @apply bg-sunburst text-charcoal hover:scale-[1.02] hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-charcoal border border-charcoal hover:bg-linen;
+  }
+  
+  .btn-accent {
+    @apply bg-azure text-white hover:bg-azure-dark;
+  }
+  
+  .container-custom {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+
+  .section-padding {
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+  }
+
+  .card {
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+  }
+
+  .input-field {
+    height: var(--input-height);
+    padding: 0 var(--input-padding-x);
+    border: var(--border-width) solid var(--input-border-color);
+    border-radius: var(--input-border-radius);
+    transition: var(--transition-all);
+  }
+
+  .input-field:focus {
+    border-color: var(--input-focus-border-color);
+    border-width: var(--border-width-thick);
+    outline: none;
+  }
+
+  .banner-thin {
+    width: 100%;
+    height: 3px;
+  }
+}
+```
+
+### Tailwind CSS Integration (from tailwind.config.js)
+
+The Tailwind config extends the default theme with brand-specific values. This is the **actual** config used in the project:
 
 ```javascript
-module.exports = {
+import defaultTheme from 'tailwindcss/defaultTheme';
+
+export default {
+  content: [
+    './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+    './storage/framework/views/*.php',
+    './resources/**/*.blade.php',
+    './resources/**/*.js',
+    './resources/**/*.vue',
+  ],
   theme: {
     extend: {
       colors: {
-        // Core Brand Colors
-        'sunburst-gold': '#FFC20E',
-        'azure-blue': '#3273DC',
-        'soft-linen': '#F2F0E6',
-        'charcoal': '#2C2C2C',
-        // Semantic Aliases
-        primary: '#FFC20E',
-        secondary: '#3273DC',
-        // Supporting Colors
-        'charcoal-light': '#555555',
-        'gray-light': '#F5F5F5',
-        'gray-border': '#E0E0E0',
-        // Functional Colors
-        success: '#4CAF50',
-        error: '#C62828',
-        warning: '#F9A825',
-        info: '#3273DC',
+        'sunburst': {
+          light: '#FFD93D',
+          DEFAULT: '#FFC20E',
+          dark: '#E6A500',
+        },
+        'azure': {
+          light: '#5A9AE8',
+          DEFAULT: '#3273DC',
+          dark: '#2558A8',
+        },
+        'linen': {
+          light: '#FAF9F5',
+          DEFAULT: '#F2F0E6',
+          dark: '#E8E5D8',
+        },
+        'charcoal': {
+          light: '#555555',
+          DEFAULT: '#2C2C2C',
+          dark: '#1A1A1A',
+        },
+        'olive': {
+          DEFAULT: '#A39822',
+        },
+        'success': '#4CAF50',
+        'warning': '#F9A825',
+        'error': '#C62828',
+      },
+      backgroundImage: {
+        'gold-gradient': 'linear-gradient(135deg, #FFC20E 0%, #FFD93D 100%)',
+        'gold-gradient-dark': 'linear-gradient(135deg, #FFC20E 0%, #E6A500 100%)',
+        'gold-gradient-horizontal': 'linear-gradient(90deg, #FFC20E 0%, #FFD93D 100%)',
+        'warm-gradient': 'linear-gradient(135deg, #FFF9E6 0%, #F2F0E6 100%)',
       },
       fontFamily: {
-        sans: ['Titillium Web', 'Arial', 'sans-serif'],
+        sans: ['Titillium Web', 'Arial', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         'h1': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
@@ -784,7 +1038,51 @@ module.exports = {
       borderRadius: {
         'sm': '2px',
       },
+      boxShadow: {
+        'gold': '0 4px 20px rgba(255, 194, 14, 0.15)',
+        'gold-lg': '0 8px 30px rgba(255, 194, 14, 0.25)',
+      },
     },
   },
-}
+  plugins: [],
+};
 ```
+
+### Custom Tailwind Class Quick Reference
+
+These are brand-specific Tailwind classes available beyond the defaults:
+
+#### Colors (use as `bg-`, `text-`, `border-`, etc.)
+| Class prefix | Values |
+|-------------|--------|
+| `sunburst` | `sunburst-light`, `sunburst` (default), `sunburst-dark` |
+| `azure` | `azure-light`, `azure` (default), `azure-dark` |
+| `linen` | `linen-light`, `linen` (default), `linen-dark` |
+| `charcoal` | `charcoal-light`, `charcoal` (default), `charcoal-dark` |
+| `olive` | `olive` (default only) |
+| `success` | `success` |
+| `warning` | `warning` |
+| `error` | `error` |
+
+#### Background Gradients
+| Class | Description | Usage |
+|-------|-------------|-------|
+| `bg-gold-gradient` | Gold 135deg: `#FFC20E` → `#FFD93D` | Primary CTA backgrounds, featured badges |
+| `bg-gold-gradient-dark` | Gold 135deg: `#FFC20E` → `#E6A500` | Hover state for gold gradient |
+| `bg-gold-gradient-horizontal` | Gold 90deg: `#FFC20E` → `#FFD93D` | Horizontal accent bars |
+| `bg-warm-gradient` | Warm 135deg: `#FFF9E6` → `#F2F0E6` | Subtle warm section backgrounds |
+
+#### Custom Box Shadows
+| Class | Value | Usage |
+|-------|-------|-------|
+| `shadow-gold` | `0 4px 20px rgba(255, 194, 14, 0.15)` | Subtle gold glow on cards at rest |
+| `shadow-gold-lg` | `0 8px 30px rgba(255, 194, 14, 0.25)` | Strong gold glow on card hover |
+
+#### Custom Font Sizes
+| Class | Size | Weight | Line Height |
+|-------|------|--------|-------------|
+| `text-h1` | 32px | 700 | 1.2 |
+| `text-h2` | 24px | 700 | 1.3 |
+| `text-h3` | 20px | 600 | 1.3 |
+| `text-h4` | 18px | 600 | 1.4 |
+| `text-h5` | 16px | 600 | 1.4 |

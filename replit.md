@@ -9,7 +9,7 @@ Premium e-commerce website for Top 5 Percent, a custom signage and apparel busin
 ## Critical Development Rules
 
 ### 1. File Size Limit
-**No file will be more than 800 lines of code.**
+**No code file will be more than 800 lines.** Documentation files (docs/*.md) are exempt.
 - Split large files into smaller, focused modules
 - Use Actions, Services, and Repository patterns
 - Keep components single-responsibility

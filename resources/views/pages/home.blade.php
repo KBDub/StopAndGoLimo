@@ -11,6 +11,7 @@
     <x-sections.our-services />
     <x-sections.cta-design-your-own />
     <x-sections.why-choose-us />
+    <x-sections.featured-products />
     <x-sections.design-it-yourself />
     <x-sections.cta-free-quote />
     <x-sections.home-page-services-accordion />

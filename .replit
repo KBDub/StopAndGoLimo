@@ -44,6 +44,7 @@ ASSET_URL = "https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker
 SCOUT_DRIVER = "meilisearch"
 MEILISEARCH_HOST = "http://localhost:8000"
 MEILISEARCH_KEY = "OK51DYdyix57qXmQLGkDaq2L4ieZzFB3"
+DB_PASSWORD = "password"
 
 [userenv.development]
 SESSION_DRIVER = "file"

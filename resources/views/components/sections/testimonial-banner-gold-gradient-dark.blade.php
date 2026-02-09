@@ -13,44 +13,26 @@
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                <p class="text-sm text-charcoal-light italic mb-4">"Top 5 Percent did an amazing job on our company shirts. The quality is outstanding and they delivered ahead of schedule!"</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center">
-                        <span class="text-white font-semibold text-sm">MR</span>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sm text-charcoal">Maria R.</h4>
-                        <p class="text-xs text-charcoal-light">Business Owner</p>
-                    </div>
-                </div>
-            </div>
+            <x-ui.card-testimonial
+                quote="Top 5 Percent did an amazing job on our company shirts. The quality is outstanding and they delivered ahead of schedule!"
+                name="Maria R."
+                label="Business Owner"
+                class="bg-warm-gradient"
+            />
 
-            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                <p class="text-sm text-charcoal-light italic mb-4">"Best signage company in Joliet. They made our storefront look incredible. Highly recommend to anyone needing custom signs!"</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center">
-                        <span class="text-white font-semibold text-sm">JT</span>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sm text-charcoal">James T.</h4>
-                        <p class="text-xs text-charcoal-light">Restaurant Owner</p>
-                    </div>
-                </div>
-            </div>
+            <x-ui.card-testimonial
+                quote="Best signage company in Joliet. They made our storefront look incredible. Highly recommend to anyone needing custom signs!"
+                name="James T."
+                label="Restaurant Owner"
+                class="bg-warm-gradient"
+            />
 
-            <div class="bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                <p class="text-sm text-charcoal-light italic mb-4">"Love my vehicle graphics! Professional work and great customer service. Will definitely be back for more."</p>
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 bg-charcoal rounded-full flex items-center justify-center">
-                        <span class="text-white font-semibold text-sm">DP</span>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-sm text-charcoal">David P.</h4>
-                        <p class="text-xs text-charcoal-light">Contractor</p>
-                    </div>
-                </div>
-            </div>
+            <x-ui.card-testimonial
+                quote="Love my vehicle graphics! Professional work and great customer service. Will definitely be back for more."
+                name="David P."
+                label="Contractor"
+                class="bg-warm-gradient"
+            />
         </div>
     </div>
 </section>

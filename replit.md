@@ -41,6 +41,7 @@ resources/views/components/sections/
 ├── design-it-yourself.blade.php
 ├── home-page-services-accordion.blade.php  # FAQ accordions for all services
 ├── top5pct-same-day-service.blade.php      # Same day service (props: serviceType, displayServiceType)
+├── top-level-category-section.blade.php   # Alternating dark/light cards for sub-menu items (props: heading, items[])
 ├── cta-design-your-own.blade.php           # Thin warm-gradient CTA banner
 ├── cta-free-quote.blade.php                # Thin warm-gradient CTA banner
 ├── cta-ready-to-get-started.blade.php               # Full charcoal CTA with decorative blurs
@@ -282,6 +283,9 @@ Lunar Hub admin panel is accessible at `/hub`
 | Feb 9, 2026 | Created base page layout at components/layouts/page.blade.php |
 | Feb 9, 2026 | Created 30+ landing pages with standard section structure |
 | Feb 9, 2026 | Added category landing page routes (custom-apparel, signs, decals, etc.) |
+| Feb 9, 2026 | Created top-level-category-section component with alternating dark/light cards |
+| Feb 9, 2026 | Updated 5 category index pages with SEO-rich sub-menu card sections |
+| Feb 9, 2026 | Standardized hero section to fixed height for consistent bg image display |
 
 ---
 

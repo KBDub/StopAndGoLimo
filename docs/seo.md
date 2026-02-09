@@ -164,6 +164,21 @@ Do not target or optimize for these terms. They attract irrelevant traffic or do
 
 Negative Keywords: Veteran Owned
 
+10. Brand Story & Founder Content (About Page SEO)
+
+Who Are The Founders?
+Top 5 Percent, LLC was founded in January of 2017 by two happily married veterans. One having over 20 years of business management experience and the other having over 20 years of Graphic Arts experience. They decided to utilize their talents to create their own business, which is now legally known as Top 5%, LLC (Top 5 Percent, LLC)
+
+Joliet Is Our Kind Of Town
+We chose the City of Joliet because of it's tight-knit support amongst it's community and local businesses. It's also known as the City of Excitement! It's no wonder why it's the fourth largest city in the state of Illinois. What does this mean for our business? It means we have the opportunity to meet the wonderful residents and network with local businesses in Joliet, as well as provide products, services, create brand awareness and build long-term relationships.
+
+One Stop Shop
+Our goal is to provide the best service and products to the community. We wanted to make our signage and custom apparel business a one stop shop by offering a variety of products and services that range from custom t shirts and other apparel, vehicle magnets, custom stickers, decals, promotional products, window and wall signs, logo design, table runners and so much more.
+
+Brand Story Keywords: Veteran founded business, married veteran entrepreneurs, 20 years graphic arts, 20 years business management, Joliet Illinois small business, City of Excitement, Will County community, one stop shop signage, one stop custom apparel, local manufacturing Joliet.
+
+Voice Search: "Who owns Top 5 Percent in Joliet?" "Is Top 5 Percent veteran owned?" "Custom sign shop started by veterans," "One stop shop for signs and shirts in Joliet."
+
 https://lairdplastics.com/resources/the-2025-guide-to-outdoor-banner-material-/
 https://www.signsbytomorrow.com/plainfield/sign-company-joliet-illin
 https://shieldcoart.com/blog/top-5-things-to-consider-when-buying-a-custom-business-sign/

@@ -21,7 +21,7 @@ class CollectionPage extends Component
 
     public array $filters = [
         'min_price' => 0,
-        'max_price' => 100000,
+        'max_price' => 3000,
         'in_stock' => false,
         'garment_type' => [],
         'print_method' => [],
@@ -63,7 +63,7 @@ class CollectionPage extends Component
     {
         $this->filters = [
             'min_price' => 0,
-            'max_price' => 100000,
+            'max_price' => 3000,
             'in_stock' => false,
             'garment_type' => [],
             'print_method' => [],
@@ -121,7 +121,7 @@ class CollectionPage extends Component
             $minCents = (int) ($this->filters['min_price'] * 100);
             $filterParts[] = "min_price >= {$minCents}";
         }
-        if ($this->filters['max_price'] > 0 && $this->filters['max_price'] < 100000) {
+        if ($this->filters['max_price'] > 0 && $this->filters['max_price'] < 3000) {
             $maxCents = (int) ($this->filters['max_price'] * 100);
             $filterParts[] = "max_price <= {$maxCents}";
         }

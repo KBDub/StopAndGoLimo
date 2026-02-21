@@ -135,3 +135,59 @@ Route::get('/page-management', function () {
     $groups = $scanner->execute();
     return view('pages.page-management', compact('groups'));
 })->name('page-management');
+
+Route::get('/collections/{slug}', function (string $slug) {
+    $collection = \Lunar\Models\Collection::whereHas('urls', function ($q) use ($slug) {
+        $q->where('slug', $slug);
+    })->first();
+
+    if (! $collection) {
+        abort(404);
+    }
+
+    return view('pages.collection', [
+        'collectionSlug' => $slug,
+        'parentSlug' => null,
+        'collectionName' => $collection->translateAttribute('name'),
+    ]);
+})->name('collections.show');
+
+Route::get('/collections/{parent}/{child}', function (string $parent, string $child) {
+    $collection = \Lunar\Models\Collection::whereHas('urls', function ($q) use ($child) {
+        $q->where('slug', $child);
+    })->first();
+
+    if (! $collection) {
+        abort(404);
+    }
+
+    return view('pages.collection', [
+        'collectionSlug' => $child,
+        'parentSlug' => $parent,
+        'collectionName' => $collection->translateAttribute('name'),
+    ]);
+})->name('collections.child');
+
+Route::get('/products/{slug}', function (string $slug) {
+    $product = \Lunar\Models\Product::whereHas('urls', function ($q) use ($slug) {
+        $q->where('slug', $slug);
+    })->where('status', 'published')->first();
+
+    if (! $product) {
+        abort(404);
+    }
+
+    return view('pages.product', [
+        'slug' => $slug,
+        'productName' => $product->translateAttribute('name'),
+        'productDescription' => \Illuminate\Support\Str::limit($product->translateAttribute('description'), 160),
+    ]);
+})->name('products.show');
+
+Route::get('/shop', function () {
+    return view('pages.collection', [
+        'collectionSlug' => null,
+        'parentSlug' => null,
+        'collectionName' => 'All Products',
+    ]);
+})->name('shop');

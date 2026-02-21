@@ -217,13 +217,25 @@ error: #C62828
 │       ├── heroes/        # Hero banners
 │       ├── products/      # Product images
 │       └── icons/         # UI icons
-├── docs\
+├── app/
+│   ├── Livewire/Catalog/
+│   │   ├── CollectionPage.php      # Faceted collection/shop page (direct Meilisearch)
+│   │   ├── ProductDetail.php       # Product detail with variants
+│   │   └── FeaturedProducts.php    # Homepage featured product grid
+│   └── Search/
+│       └── ProductIndexer.php      # Custom Meilisearch indexer (extends Lunar)
+├── database/seeders/
+│   ├── AttributeSeeder.php         # 7 groups, 28+ filterable attributes
+│   ├── CollectionSeeder.php        # 30 hierarchical collections
+│   └── ProductSeeder.php           # 31 products, 93 variants
+├── docs/
 │   ├── layout-design.md
 │   ├── branding-requirements.md
 │   ├── seo.md
 │   ├── cart.md
 │   ├── facets.md
 │   ├── admin.md
+│   └── buildout-plan.md
 └── replit.md              # This file
 ```
 
@@ -296,6 +308,16 @@ Lunar Hub admin panel is accessible at `/hub`
 | Feb 9, 2026 | Standardized hero section to fixed height for consistent bg image display |
 | Feb 9, 2026 | Created about-preview section with brand story (Founders, Joliet, One Stop Shop) |
 | Feb 9, 2026 | Added brand story content to docs/seo.md section 10 |
+| Feb 21, 2026 | Built AttributeSeeder with 7 groups, 28+ filterable attributes |
+| Feb 21, 2026 | Built CollectionSeeder with 30 hierarchical collections |
+| Feb 21, 2026 | Built ProductSeeder with 31 products, 93 variants |
+| Feb 21, 2026 | Created custom ProductIndexer for Meilisearch with min/max price |
+| Feb 21, 2026 | Built Livewire CollectionPage with faceted search (direct Meilisearch client) |
+| Feb 21, 2026 | Built Livewire ProductDetail with variant selection, quantity, stock |
+| Feb 21, 2026 | Built Livewire FeaturedProducts for homepage dynamic product grid |
+| Feb 21, 2026 | Wired routes: /shop, /collections/{slug}, /collections/{parent}/{child}, /products/{slug} |
+| Feb 21, 2026 | Fixed Lunar Price object handling (use ->price->value for int, ->price->formatted() for display) |
+| Feb 21, 2026 | Fixed Meilisearch compat: bypass Scout paginate (uses hitsPerPage v1.0+), use direct client with offset/limit |
 
 ---
 

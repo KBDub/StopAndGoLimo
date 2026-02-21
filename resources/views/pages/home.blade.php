@@ -11,6 +11,7 @@
     <x-ui.banner-medium-charcoal />
 
     <x-sections.featured-products />
+    @livewire('catalog.featured-products')
     <x-ui.banner-thin-charcoal />
     <x-ui.banner-testimonial />
     <x-ui.banner-thin-charcoal />

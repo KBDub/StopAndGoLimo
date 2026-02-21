@@ -138,7 +138,7 @@ return [
 
     'meilisearch' => [
         'host' => env('MEILISEARCH_HOST', 'http://localhost:8000'),
-        'key' => env('MEILISEARCH_KEY', ''),
+        'key' => env('MEILISEARCH_KEY', 'OK51DYdyix57qXmQLGkDaq2L4ieZzFB3'),
         'index-settings' => [
             // 'users' => [
             //     'filterableAttributes'=> ['id', 'name', 'email'],

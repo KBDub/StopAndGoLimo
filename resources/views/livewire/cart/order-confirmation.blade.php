@@ -56,7 +56,7 @@
             <div class="bg-white rounded-xl shadow p-6 mb-8">
                 <h2 class="font-heading text-lg font-bold text-charcoal mb-4">Order Items</h2>
                 <div class="space-y-4">
-                    @foreach($order->lines as $line)
+                    @foreach($order->lines->where('type', '!=', 'shipping') as $line)
                         @php
                             $productName = $line->description ?? 'Product';
                             $lineTotal = $line->sub_total?->value ?? 0;

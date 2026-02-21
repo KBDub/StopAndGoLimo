@@ -9,19 +9,26 @@ use Lunar\Models\Order;
 
 class OrderConfirmation extends Component
 {
-    public ?Order $order = null;
+    public int $orderId;
 
     public function mount(int $orderId): void
     {
-        $this->order = Order::with([
-            'lines.purchasable.product',
+        $this->orderId = $orderId;
+    }
+
+    public function getOrderProperty(): Order
+    {
+        return Order::with([
+            'lines',
             'shippingAddress',
             'billingAddress',
-        ])->findOrFail($orderId);
+        ])->findOrFail($this->orderId);
     }
 
     public function render()
     {
-        return view('livewire.cart.order-confirmation');
+        return view('livewire.cart.order-confirmation', [
+            'order' => $this->order,
+        ]);
     }
 }

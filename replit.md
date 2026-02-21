@@ -1,325 +1,8 @@
 # Top 5 Percent E-Commerce Platform
 
-## Project Overview
+## Overview
 
-Premium e-commerce website for Top 5 Percent, a custom signage and apparel business in Joliet, IL. Built with PHP Laravel 11 and the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire) using Lunar for e-commerce functionality.
-
----
-
-## Critical Development Rules
-
-### 1. File Size Limit
-**No code file will be more than 800 lines.** Documentation files (docs/*.md) are exempt.
-- Split large files into smaller, focused modules
-- Use Actions, Services, and Repository patterns
-- Keep components single-responsibility
-
-### 2. Required Reading Before Development
-**Always reread these documents before making any changes to the codebase:**
-- `docs/branding-requirements.md` - Colors, fonts, CSS variables, styling, text rules (MANDATORY - read every time)
-- `docs/layout-design.md` - Navigation, page structure, component specs
-
-### 2a. Text Formatting Rule
-**Never use all caps (uppercase) anywhere on the site.** Do not use the Tailwind `uppercase` class or CSS `text-transform: uppercase`. All text uses natural sentence case or title case.
-
-### 3. Component Structure Requirements
-**Each HTML `<section>` must be its own component file:**
-- Use Blade components or Livewire components (SSR-enabled for SEO)
-- Sections use `x-sections.<name>` naming (e.g., `x-sections.hero`)
-- CTAs use `x-sections.cta-<name>` naming (e.g., `x-sections.cta-ready-to-get-started`)
-- Store in `resources/views/components/sections/` for Blade or `app/Livewire/Sections/` for Livewire
-- Server-Side Rendering (SSR) is mandatory for all page sections to maximize SEO
-- **Standard section padding: `py-10`**
-
-**Current section components:**
-```
-resources/views/components/sections/
-├── about-preview.blade.php              # Brand story with alternating left/right layout (Founders, Joliet, One Stop Shop)
-├── category-hero.blade.php              # Reusable hero with bg image (props: heading, headingAccent, description, buttons)
-├── home-page-hero.blade.php             # Original home hero (deprecated, use category-hero)
-├── our-services.blade.php
-├── why-choose-us.blade.php
-├── design-it-yourself.blade.php
-├── home-page-services-accordion.blade.php  # FAQ accordions for all services
-├── top5pct-same-day-service.blade.php      # Same day service (props: serviceType, displayServiceType)
-├── top-level-category-section.blade.php   # Alternating dark/light cards for sub-menu items (props: heading, items[])
-├── cta-design-your-own.blade.php           # Thin warm-gradient CTA banner
-├── cta-free-quote.blade.php                # Thin warm-gradient CTA banner
-├── cta-ready-to-get-started.blade.php               # Full charcoal CTA with decorative blurs
-├── review-banner.blade.php                          # Customer reviews section (3-card grid)
-├── featured-products.blade.php                      # 3x3 product grid with card-product cards
-└── map-section.blade.php                            # Service area map with Leaflet
-```
-
-**UI button components:**
-```
-resources/views/components/ui/
-├── button-gold-gradient.blade.php    # Primary CTA - gold gradient bg, charcoal text
-├── button-gold-charcoal.blade.php    # Solid gold bg, charcoal text
-├── button-charcoal-gold.blade.php    # Charcoal bg, gold text
-├── button-blue-white.blade.php       # Azure bg, white text
-├── button-gold-white.blade.php       # Gold bg, white text
-├── button-white-charcoal.blade.php   # White bg, charcoal text, bordered
-├── button-outline-charcoal.blade.php # Outlined charcoal border, fills on hover
-├── button-outline-gold.blade.php     # Outlined gold border, fills on hover
-└── button-text-link.blade.php        # Text link with arrow indicator
-```
-
-**UI badge components:**
-```
-resources/views/components/ui/
-├── badge-featured.blade.php    # Gold gradient badge
-├── badge-new.blade.php         # Azure blue badge
-├── badge-success.blade.php     # Green success badge
-├── badge-sold-out.blade.php    # Charcoal badge
-└── badge-default.blade.php     # Outlined charcoal badge
-```
-
-**UI thin banner separators (3px lines, wrap navigation):**
-```
-resources/views/components/ui/
-├── banner-thin-sunburst.blade.php
-├── banner-thin-charcoal.blade.php
-├── banner-thin-azure.blade.php
-└── banner-thin-linen.blade.php
-```
-
-**UI medium banner separators (8px lines, section dividers):**
-```
-resources/views/components/ui/
-├── banner-medium-sunburst.blade.php
-├── banner-medium-charcoal.blade.php
-├── banner-medium-azure.blade.php
-└── banner-medium-linen.blade.php
-```
-
-**UI testimonial banner (thin inline review strip):**
-```
-resources/views/components/ui/
-└── banner-testimonial.blade.php     # Sunburst-light bg, 5-star rating with quote (props: quote, name, location, stars)
-```
-
-**UI card components (no icons allowed per branding rules):**
-```
-resources/views/components/ui/
-├── card-product.blade.php       # Product card with image, title, description, price
-├── card-service.blade.php       # Service card with gold accent line (no icon)
-├── card-testimonial.blade.php   # Customer quote with avatar and name
-├── card-info-dark.blade.php     # Dark charcoal variant with link
-├── card-info-light.blade.php    # Warm gradient bg with sunburst border
-├── card-faq.blade.php           # SEO accordion mini-FAQ with Alpine.js
-├── card-feature.blade.php       # Feature/step card with numbered indicator
-└── card-showcase.blade.php      # Linen panel with decorative accent circles
-```
-
-### 4. Additional Reference Documents
-- `docs/seo.md` - SEO keywords, voice search, meta strategies
-- `docs/cart.md` - Shopping cart implementation with Lunar
-- `docs/facets.md` - Product filtering and facet search
-- `docs/admin.md` - Backend admin panel specifications
-
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Framework | Laravel 11 |
-| Frontend | TALL Stack (Tailwind CSS, Alpine.js, Livewire) |
-| E-commerce | Lunar PHP |
-| Database | PostgreSQL |
-| Search | Meilisearch (for faceted search) |
-| Testing | Pest PHP |
-| Static Analysis | Larastan Level 5+ |
-
----
-
-## Branding Quick Reference
-
-### Color Palette (5 + White)
-Each color has up to 3 variants: light, default, dark
-
-```css
-/* Olive - Headline lead-in, subheadings */
-olive: #A39822
-
-/* Sunburst Gold - Primary CTAs, accents */
-sunburst-light: #FFD93D
-sunburst: #FFC20E
-sunburst-dark: #E6A500
-
-/* Azure Blue - Secondary CTAs, links */
-azure-light: #5A9AE8
-azure: #3273DC
-azure-dark: #2558A8
-
-/* Soft Linen - Hero, footer, backgrounds */
-linen-light: #FAF9F5
-linen: #F2F0E6
-linen-dark: #E8E5D8
-
-/* Charcoal - Navigation bar, text, headers */
-charcoal-light: #555555
-charcoal: #2C2C2C
-charcoal-dark: #1A1A1A
-
-/* White - Cards, containers */
-white: #FFFFFF
-
-/* Semantic Colors */
-success: #4CAF50
-warning: #F9A825
-error: #C62828
-```
-
-### Color Usage
-- **Navigation Bar:** Charcoal (#2C2C2C) background, white text
-- **Hero Section:** White (#FFFFFF) background, Olive (#A39822) subheadline
-- **Footer:** Soft Linen (#F2F0E6) background
-- **Content Sections:** Alternate between White and Soft Linen
-- **Primary CTAs:** Sunburst Gold or Charcoal background
-- **Secondary CTAs:** Azure Blue background
-- **Links:** Azure Blue, hover to Azure Dark
-
-### Typography
-```css
---font-primary: 'Titillium Web', Arial, sans-serif;
-```
-
-### Logo
-- Location: `public/images/logos/top5-logo.gif`
-
----
-
-## Project Structure
-
-```
-/
-├── app/
-│   ├── Actions/           # Business logic (Action pattern)
-│   ├── Http/
-│   │   ├── Controllers/
-│   │   └── Livewire/      # Livewire components
-│   ├── Models/
-│   └── Services/          # Service classes
-├── resources/
-│   ├── views/
-│   │   ├── pages/         # Page views (nested by menu structure)
-│   │   ├── components/    # Blade components
-│   │   ├── layouts/       # Layout templates
-│   │   └── livewire/      # Livewire views
-│   └── css/
-├── public/
-│   └── images/
-│       ├── logos/         # Brand logos
-│       ├── favicons/      # Favicon assets
-│       ├── og-images/     # Open Graph images
-│       ├── heroes/        # Hero banners
-│       ├── products/      # Product images
-│       └── icons/         # UI icons
-├── app/
-│   ├── Livewire/Catalog/
-│   │   ├── CollectionPage.php      # Faceted collection/shop page (direct Meilisearch)
-│   │   ├── ProductDetail.php       # Product detail with variants
-│   │   └── FeaturedProducts.php    # Homepage featured product grid
-│   └── Search/
-│       └── ProductIndexer.php      # Custom Meilisearch indexer (extends Lunar)
-├── database/seeders/
-│   ├── AttributeSeeder.php         # 7 groups, 28+ filterable attributes
-│   ├── CollectionSeeder.php        # 30 hierarchical collections
-│   └── ProductSeeder.php           # 31 products, 93 variants
-├── docs/
-│   ├── layout-design.md
-│   ├── branding-requirements.md
-│   ├── seo.md
-│   ├── cart.md
-│   ├── facets.md
-│   ├── admin.md
-│   └── buildout-plan.md
-└── replit.md              # This file
-```
-
----
-
-## Coding Standards
-
-### PHP Standards
-- Strict typing: `declare(strict_types=1);` in all PHP files
-- Use dependency injection
-- Follow Action pattern for business logic
-- Larastan Level 5+ compliance
-- Pest for testing
-
-### Frontend Standards
-- Use H2-H5 tags for headings (not `<p>` for labels)
-- CSS variables from `docs\branding-requirements.md`
-- Mobile-first responsive design
-- Accessibility (WCAG 2.1 AA)
-
----
-
-## Admin Panel
-
-Lunar Hub admin panel is accessible at `/hub`
-- Admin Email: admin@top5percent.com
-- Default Password: admin123
-
-**SECURITY NOTE:** Change the admin password before deploying to production! Use `php artisan lunar:create-admin` to create a new admin with a secure password.
-
-## Search Configuration
-
-- **Engine:** Meilisearch (running on port 8000)
-- **Driver:** Laravel Scout with meilisearch driver
-- **Host:** http://localhost:8000
-- **Storage:** ./storage/meilisearch
-
-## Recent Changes
-
-| Date | Change |
-|------|--------|
-| Jan 12, 2026 | Installed Pest testing framework v3.8 |
-| Jan 12, 2026 | Installed Larastan (PHPStan) for static analysis |
-| Jan 12, 2026 | Configured Meilisearch for faceted search |
-| Jan 12, 2026 | Set up Lunar Hub admin panel at /hub |
-| Jan 12, 2026 | Updated color palette to 4 colors + white with 3 variants each |
-| Jan 12, 2026 | Created mandatory layout components (top-notification-bar, navigation-bar, footer) |
-| Current | Initial documentation setup |
-| Current | Branding requirements defined with CSS variables |
-| Current | Layout design with mega menu structure |
-| Current | SEO strategy document added |
-| Current | Cart and facets implementation guides added |
-| Feb 9, 2026 | Added home-page-services-accordion section with 8 FAQ cards |
-| Feb 9, 2026 | Created cta-design-your-own and cta-free-quote thin CTA banners (warm gradient) |
-| Feb 9, 2026 | Added "never use all caps" rule to branding-requirements.md |
-| Feb 9, 2026 | Moved pages to resources/views/pages/ with nested URL structure |
-| Feb 9, 2026 | Updated nav links to nested URLs (/custom-apparel/custom-shirts, etc.) |
-| Feb 9, 2026 | Created page-management dashboard at /page-management |
-| Feb 9, 2026 | Created ScanPageComponents Action for dynamic page/component scanning |
-| Feb 9, 2026 | Renamed hero.blade.php to home-page-hero.blade.php (full viewport) |
-| Feb 9, 2026 | Made navigation and top-notification-bar sticky |
-| Feb 9, 2026 | Removed all uppercase classes from section components |
-| Feb 9, 2026 | Created reusable category-hero component with bg image (top5pct-banner-joliet.jpg) |
-| Feb 9, 2026 | Refactored top5pct-same-day-service to accept serviceType/displayServiceType props |
-| Feb 9, 2026 | Created base page layout at components/layouts/page.blade.php |
-| Feb 9, 2026 | Created 30+ landing pages with standard section structure |
-| Feb 9, 2026 | Added category landing page routes (custom-apparel, signs, decals, etc.) |
-| Feb 9, 2026 | Created top-level-category-section component with alternating dark/light cards |
-| Feb 9, 2026 | Updated 5 category index pages with SEO-rich sub-menu card sections |
-| Feb 9, 2026 | Standardized hero section to fixed height for consistent bg image display |
-| Feb 9, 2026 | Created about-preview section with brand story (Founders, Joliet, One Stop Shop) |
-| Feb 9, 2026 | Added brand story content to docs/seo.md section 10 |
-| Feb 21, 2026 | Built AttributeSeeder with 7 groups, 28+ filterable attributes |
-| Feb 21, 2026 | Built CollectionSeeder with 30 hierarchical collections |
-| Feb 21, 2026 | Built ProductSeeder with 31 products, 93 variants |
-| Feb 21, 2026 | Created custom ProductIndexer for Meilisearch with min/max price |
-| Feb 21, 2026 | Built Livewire CollectionPage with faceted search (direct Meilisearch client) |
-| Feb 21, 2026 | Built Livewire ProductDetail with variant selection, quantity, stock |
-| Feb 21, 2026 | Built Livewire FeaturedProducts for homepage dynamic product grid |
-| Feb 21, 2026 | Wired routes: /shop, /collections/{slug}, /collections/{parent}/{child}, /products/{slug} |
-| Feb 21, 2026 | Fixed Lunar Price object handling (use ->price->value for int, ->price->formatted() for display) |
-| Feb 21, 2026 | Fixed Meilisearch compat: bypass Scout paginate (uses hitsPerPage v1.0+), use direct client with offset/limit |
-
----
+This project is a premium e-commerce website for "Top 5 Percent," a custom signage and apparel business in Joliet, IL. The platform aims to provide a sophisticated online presence, enabling customers to browse and purchase custom products. It focuses on a high-quality user experience and robust e-commerce functionality, positioning the business for growth in the custom apparel and signage market.
 
 ## User Preferences
 
@@ -329,3 +12,49 @@ Lunar Hub admin panel is accessible at `/hub`
 - Premium, professional aesthetic
 - Never use all caps / uppercase text anywhere on the site
 - Always read docs/branding-requirements.md before making changes
+
+## System Architecture
+
+The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alpine.js, Livewire) for a modern, reactive frontend. Lunar PHP is integrated for core e-commerce functionalities.
+
+**Key Architectural Decisions:**
+
+-   **Modular Development:** Enforced with a strict 800-line file limit, promoting the use of Actions, Services, and Repository patterns.
+-   **Component-Based UI:** Every HTML `<section>` is implemented as its own Blade or Livewire component, ensuring reusability and maintainability. Components are designed for Server-Side Rendering (SSR) to optimize SEO.
+-   **Branding & UI/UX:** Adherence to a defined brand guide (`docs/branding-requirements.md`) for colors, typography (Titillium Web), and overall aesthetic. Specific UI components (buttons, badges, cards, banners) are standardized.
+-   **SEO-First Design:** All page sections are SSR-enabled. Semantic HTML, structured headings (H2-H5), and mobile-first responsive design are prioritized.
+-   **No All-Caps Rule:** A critical branding and UI/UX rule prohibiting the use of uppercase text anywhere on the site.
+-   **Data Structure:** Comprehensive seeders for attributes (7 groups, 28+ filterable), collections (30 hierarchical), and products (31 products, 93 variants).
+-   **Admin Panel:** Utilizes Lunar Hub for backend administration, accessible at `/hub`.
+-   **Coding Standards:** Strict PHP typing, dependency injection, Action pattern for business logic, Larastan Level 5+ compliance, and Pest for testing.
+
+**Color Palette (5 + White, 3 variants each):**
+
+-   **Olive:** `#A39822` (Headline lead-in, subheadings)
+-   **Sunburst Gold:** `#FFC20E` (Primary CTAs, accents)
+-   **Azure Blue:** `#3273DC` (Secondary CTAs, links)
+-   **Soft Linen:** `#F2F0E6` (Hero, footer, backgrounds)
+-   **Charcoal:** `#2C2C2C` (Navigation bar, text, headers)
+-   **White:** `#FFFFFF` (Cards, containers)
+
+**Typography:**
+
+-   `'Titillium Web', Arial, sans-serif;`
+
+**Project Structure Highlights:**
+
+-   `app/Actions/`: Business logic.
+-   `app/Http/Livewire/`: Livewire components.
+-   `resources/views/components/sections/`: Reusable section components.
+-   `resources/views/components/ui/`: UI components (buttons, cards, banners, badges).
+-   `resources/views/pages/`: Nested page views.
+-   `docs/`: Extensive documentation covering branding, layout, SEO, cart, facets, and admin.
+
+## External Dependencies
+
+-   **E-commerce Framework:** Lunar PHP
+-   **Database:** PostgreSQL
+-   **Search Engine:** Meilisearch (for faceted search)
+-   **Frontend Libraries:** Tailwind CSS, Alpine.js, Livewire
+-   **Testing Framework:** Pest PHP
+-   **Static Analysis:** Larastan

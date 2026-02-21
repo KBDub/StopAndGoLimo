@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Livewire\Catalog;
 
+use App\Actions\Cart\AddToCart;
 use Livewire\Component;
 use Lunar\Models\Product;
 
@@ -12,6 +13,7 @@ class ProductDetail extends Component
     public ?Product $product = null;
     public ?int $selectedVariantId = null;
     public int $quantity = 1;
+    public bool $addedToCart = false;
 
     public function mount(string $slug): void
     {
@@ -23,6 +25,7 @@ class ProductDetail extends Component
             'thumbnail',
             'collections.urls',
             'productType',
+            'urls',
         ])->where('status', 'published')->firstOrFail();
 
         $this->selectedVariantId = $this->product->variants->first()?->id;
@@ -31,6 +34,7 @@ class ProductDetail extends Component
     public function selectVariant(int $variantId): void
     {
         $this->selectedVariantId = $variantId;
+        $this->addedToCart = false;
     }
 
     public function incrementQuantity(): void
@@ -41,6 +45,22 @@ class ProductDetail extends Component
     public function decrementQuantity(): void
     {
         $this->quantity = max($this->quantity - 1, 1);
+    }
+
+    public function addToCart(): void
+    {
+        if (! $this->selectedVariantId) {
+            return;
+        }
+
+        try {
+            (new AddToCart())->execute($this->selectedVariantId, $this->quantity);
+            $this->addedToCart = true;
+            $this->dispatch('cart-updated');
+            $this->dispatch('open-cart-drawer');
+        } catch (\Exception $e) {
+            session()->flash('cart-error', 'Unable to add item to cart. Please try again.');
+        }
     }
 
     public function getSelectedVariantProperty()

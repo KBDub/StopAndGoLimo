@@ -2,12 +2,16 @@
 
 return [
 
-    'default' => env('PAYMENTS_TYPE', 'cash-in-hand'),
+    'default' => env('PAYMENTS_TYPE', 'offline'),
 
     'types' => [
-        'cash-in-hand' => [
+        'offline' => [
             'driver' => 'offline',
             'authorized' => 'payment-offline',
+        ],
+        'stripe' => [
+            'driver' => 'stripe',
+            'released' => 'payment-received',
         ],
     ],
 

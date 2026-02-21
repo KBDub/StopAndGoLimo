@@ -46,6 +46,9 @@ SCOUT_DRIVER = "meilisearch"
 MEILISEARCH_HOST = "http://localhost:8000"
 MEILISEARCH_KEY = "OK51DYdyix57qXmQLGkDaq2L4ieZzFB3"
 DB_PASSWORD = "password"
+STRIPE_KEY = "pk_test_placeholder_top5pct"
+STRIPE_SECRET = "sk_test_placeholder_top5pct"
+PAYMENTS_TYPE = "offline"
 
 [userenv.development]
 SESSION_DRIVER = "file"

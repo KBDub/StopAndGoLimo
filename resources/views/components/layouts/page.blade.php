@@ -40,6 +40,8 @@
         {{ $slot }}
     </main>
 
+    @livewire('cart.cart-drawer')
+
     <x-layout.footer />
 </body>
 </html>

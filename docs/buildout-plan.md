@@ -175,59 +175,64 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 
 ---
 
-## Phase 3: Cart & Checkout MVP
+## Phase 3: Cart & Checkout MVP ✅
 
 **Complexity:** High  
 **Duration:** Transaction flow  
 **Goal:** Complete purchase flow  
-**Status:** Not started
+**Status:** Complete
 
 ### Tasks
 
 #### 3.0 Carried Over from Phase 1/2
-- [ ] Set up media library for product images
-- [ ] Product image gallery on PDP
-- [ ] Related products section on PDP
+- [ ] Set up media library for product images (deferred to Phase 4)
+- [ ] Product image gallery on PDP (deferred to Phase 4)
+- [x] Related products section on PDP
 
 #### 3.1 Shopping Cart
-- [ ] Cart Livewire component
-- [ ] Add/remove items
-- [ ] Update quantities
-- [ ] Cart sidebar/drawer
-- [ ] Cart page (full view)
-- [ ] Price calculations (subtotal, tax)
+- [x] Cart Livewire components (CartIcon, CartDrawer, CartPage)
+- [x] Add/remove items (AddToCart, RemoveFromCart actions)
+- [x] Update quantities (UpdateCartQuantity action with stock validation)
+- [x] Cart sidebar/drawer (slide-out with Alpine.js transitions)
+- [x] Cart page (full view with order summary sidebar)
+- [x] Price calculations (subtotal, tax via Lunar pipelines)
 
 #### 3.2 Checkout Flow
-- [ ] Customer information form
-- [ ] Shipping address
-- [ ] Billing address (toggle same as shipping)
-- [ ] Shipping method selection
-- [ ] Order summary
+- [x] Customer information form (email, name, phone)
+- [x] Shipping address (full US address form)
+- [x] Billing address (toggle same as shipping)
+- [x] Order summary (line items, subtotal, tax, total)
+- [ ] Shipping method selection (deferred - using free shipping)
 
 #### 3.3 Payment Integration
-- [ ] Stripe integration (via Lunar)
-- [ ] Payment form (card input)
-- [ ] Payment processing
-- [ ] Error handling
-- [ ] Order confirmation
+- [x] Stripe adapter installed (lunarphp/stripe)
+- [x] Offline payment mode active (placeholder for Stripe)
+- [x] Error handling (validation, cart empty checks)
+- [x] Order creation via Lunar Cart->createOrder()
+- [ ] Stripe payment intent flow (activate when real keys available)
 
 #### 3.4 Order Confirmation
-- [ ] Thank you page
-- [ ] Order details display
-- [ ] Email confirmation (queue job)
-- [ ] Order number generation
+- [x] Thank you page with order details
+- [x] Order reference number display
+- [x] Shipping/billing address display
+- [x] Order line items and totals
+- [ ] Email confirmation (deferred to Phase 4)
 
 #### 3.5 Customer Features
-- [ ] Guest checkout
-- [ ] Account creation (optional)
-- [ ] Order history (if logged in)
+- [x] Guest checkout (no login required)
+- [x] Order notes field
+- [ ] Account creation (deferred to Phase 4)
+- [ ] Order history (deferred to Phase 4)
 
 ### Phase 3 Deliverables
-- ⬜ Add to cart functionality
-- ⬜ Complete checkout process
-- ⬜ Stripe payments working
-- ⬜ Order confirmation emails
-- ⬜ Orders appearing in Lunar Hub
+- ✅ Add to cart from product detail page
+- ✅ Cart drawer with live updates
+- ✅ Full cart page with quantity management
+- ✅ Complete checkout process with address forms
+- ✅ Order creation and confirmation page
+- ✅ Orders appearing in Lunar Hub
+- ⬜ Stripe live payments (placeholder active, ready for real keys)
+- ⬜ Order confirmation emails (deferred to Phase 4)
 
 ---
 

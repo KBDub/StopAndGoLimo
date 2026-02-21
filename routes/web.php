@@ -228,3 +228,15 @@ Route::get('/shop', function () {
         'categoryItems' => [],
     ]);
 })->name('shop');
+
+Route::get('/cart', function () {
+    return view('pages.cart');
+})->name('cart');
+
+Route::get('/checkout', function () {
+    return view('pages.checkout');
+})->name('checkout');
+
+Route::get('/order-confirmation/{orderId}', function (int $orderId) {
+    return view('pages.order-confirmation', ['orderId' => $orderId]);
+})->name('order-confirmation');

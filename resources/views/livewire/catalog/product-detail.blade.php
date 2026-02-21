@@ -135,10 +135,40 @@
                         </div>
                     @endif
 
+                    @if(session('cart-error'))
+                        <div class="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-4">
+                            {{ session('cart-error') }}
+                        </div>
+                    @endif
+
                     <div class="space-y-3 mb-8">
-                        <x-ui.button-gold-gradient class="w-full text-center justify-center py-3 text-lg">
-                            Add to Cart
-                        </x-ui.button-gold-gradient>
+                        <button
+                            wire:click="addToCart"
+                            wire:loading.attr="disabled"
+                            class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold rounded-lg transition-all
+                                   {{ $addedToCart
+                                      ? 'bg-olive text-white'
+                                      : 'bg-gradient-to-r from-sunburst-light via-sunburst to-sunburst-dark text-charcoal hover:shadow-lg hover:scale-[1.02]' }}
+                                   disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            <span wire:loading.remove wire:target="addToCart">
+                                @if($addedToCart)
+                                    <svg class="w-5 h-5 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                    Added to Cart
+                                @else
+                                    Add to Cart
+                                @endif
+                            </span>
+                            <span wire:loading wire:target="addToCart" class="flex items-center gap-2">
+                                <svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+                                </svg>
+                                Adding...
+                            </span>
+                        </button>
                         <x-ui.button-outline-charcoal href="/contact" class="w-full text-center justify-center py-3">
                             Request Custom Quote
                         </x-ui.button-outline-charcoal>

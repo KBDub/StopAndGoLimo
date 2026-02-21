@@ -27,6 +27,8 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 -   **Data Structure:** Comprehensive seeders for attributes (7 groups, 28+ filterable), collections (30 hierarchical), and products (31 products, 93 variants).
 -   **Admin Panel:** Utilizes Lunar Hub for backend administration, accessible at `/hub`.
 -   **Coding Standards:** Strict PHP typing, dependency injection, Action pattern for business logic, Larastan Level 5+ compliance, and Pest for testing.
+-   **Cart & Checkout:** Lunar cart system with session-based cart management. Actions pattern (AddToCart, UpdateCartQuantity, RemoveFromCart). Cart drawer (slide-out), full cart page, and multi-step checkout with guest support.
+-   **Payments:** Currently using offline payment mode (placeholder). Stripe adapter installed (lunarphp/stripe) and ready for activation with real API keys.
 
 **Color Palette (5 + White, 3 variants each):**
 
@@ -43,18 +45,34 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 
 **Project Structure Highlights:**
 
--   `app/Actions/`: Business logic.
--   `app/Http/Livewire/`: Livewire components.
+-   `app/Actions/`: Business logic (Cart/, Checkout/).
+-   `app/Livewire/Cart/`: Cart Livewire components (CartIcon, CartDrawer, CartPage, CheckoutPage, OrderConfirmation).
+-   `app/Livewire/Catalog/`: Catalog components (CollectionPage, ProductDetail, FeaturedProducts).
 -   `resources/views/components/sections/`: Reusable section components.
 -   `resources/views/components/ui/`: UI components (buttons, cards, banners, badges).
+-   `resources/views/livewire/cart/`: Cart-related Blade views.
 -   `resources/views/pages/`: Nested page views.
 -   `docs/`: Extensive documentation covering branding, layout, SEO, cart, facets, and admin.
 
+## Recent Changes
+
+-   **Phase 3 Cart & Checkout (Feb 2026):** Implemented full cart system with add-to-cart from PDP, cart drawer, cart page, checkout with shipping/billing addresses, and order confirmation page. Offline payment placeholder active; Stripe adapter installed for future activation.
+
+## Technical Notes
+
+-   **Critical:** Lunar Price objects require `->price->value` for integers, `->price->formatted()` for display
+-   **Critical:** Meilisearch price filtering requires dollars * 100 conversion for cents
+-   **Critical:** Livewire v3 bundles Alpine.js - never import Alpine separately in app.js
+-   **Critical:** Alpine plugins (like Collapse) must register via `document.addEventListener('alpine:init')` event
+-   **Cart:** Lunar CartSession facade manages session-based carts. CartSessionManager works with Laravel sessions directly (no middleware needed in Lunar v1.2).
+-   **Payments:** Default set to `offline` in config/lunar/payments.php. Switch to `stripe` via PAYMENTS_TYPE env var when real Stripe keys are available.
+
 ## External Dependencies
 
--   **E-commerce Framework:** Lunar PHP
+-   **E-commerce Framework:** Lunar PHP v1.2
+-   **Payment Adapter:** Lunar Stripe (lunarphp/stripe v1.2)
 -   **Database:** PostgreSQL
 -   **Search Engine:** Meilisearch (for faceted search)
--   **Frontend Libraries:** Tailwind CSS, Alpine.js, Livewire
+-   **Frontend Libraries:** Tailwind CSS, Alpine.js, Livewire v3
 -   **Testing Framework:** Pest PHP
 -   **Static Analysis:** Larastan

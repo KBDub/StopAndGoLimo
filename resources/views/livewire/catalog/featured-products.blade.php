@@ -41,7 +41,7 @@
                                         {{ $product->translateAttribute('name') }}
                                     </h3>
                                     <p class="text-sm text-charcoal-light mb-2 line-clamp-2">
-                                        {{ \Illuminate\Support\Str::limit($product->translateAttribute('description'), 80) }}
+                                        {{ \Illuminate\Support\Str::limit(strip_tags($product->translateAttribute('description') ?? ''), 80) }}
                                     </p>
                                     <div class="flex items-center justify-between">
                                         <span class="font-bold text-charcoal">{{ $priceDisplay }}</span>

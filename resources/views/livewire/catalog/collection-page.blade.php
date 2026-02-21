@@ -39,7 +39,7 @@
 
             <div class="flex flex-col lg:flex-row gap-8">
 
-                <aside class="w-full lg:w-64 flex-shrink-0" x-data="{ open: false }">
+                <aside class="w-full lg:w-64 lg:min-w-[16rem] flex-shrink-0" x-data="{ open: false }">
                     <button @click="open = !open" class="lg:hidden w-full flex items-center justify-between py-3 px-4 bg-linen rounded-lg mb-4">
                         <span class="font-semibold text-charcoal">Filters</span>
                         <svg class="w-5 h-5 transform transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +47,7 @@
                         </svg>
                     </button>
 
-                    <div :class="{ 'hidden': !open }" class="lg:block space-y-6">
+                    <div class="hidden lg:block space-y-6" :class="{ '!block': open }">
 
                         <div>
                             <h3 class="font-heading font-bold text-sm uppercase tracking-wider mb-3 text-charcoal">Price Range</h3>
@@ -103,7 +103,7 @@
                     </div>
                 </aside>
 
-                <div class="flex-1">
+                <div class="flex-1 min-w-0">
 
                     <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
                         <div class="relative flex-1 max-w-md">
@@ -182,7 +182,7 @@
                                                     {{ $product->translateAttribute('name') }}
                                                 </h3>
                                                 <p class="text-sm text-charcoal-light mb-2 line-clamp-2">
-                                                    {{ \Illuminate\Support\Str::limit($product->translateAttribute('description'), 80) }}
+                                                    {{ \Illuminate\Support\Str::limit(strip_tags($product->translateAttribute('description') ?? ''), 80) }}
                                                 </p>
                                                 <div class="flex items-center justify-between">
                                                     <span class="font-bold text-charcoal">{{ $priceDisplay }}</span>

@@ -147,7 +147,7 @@
                     <div class="border-t border-charcoal-lighter pt-6">
                         <h3 class="font-heading font-bold text-lg mb-3 text-charcoal">Description</h3>
                         <div class="prose prose-sm text-charcoal-light max-w-none">
-                            <p>{{ $product->translateAttribute('description') }}</p>
+                            {!! $product->translateAttribute('description') !!}
                         </div>
                     </div>
 

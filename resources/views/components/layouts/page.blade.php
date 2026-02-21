@@ -26,7 +26,7 @@
     <header class="sticky top-0 z-50">
         <x-layout.top-notification-bar
             message="{{ $notificationMessage ?? 'Free Shipping on Orders Over $50!' }}"
-            link="{{ $notificationLink ?? '/custom-apparel/custom-shirts' }}"
+            link="{{ $notificationLink ?? '/collections/custom-apparel/custom-shirts' }}"
             linkText="{{ $notificationLinkText ?? 'Shop Now' }}"
         />
         <x-ui.banner-thin-sunburst />

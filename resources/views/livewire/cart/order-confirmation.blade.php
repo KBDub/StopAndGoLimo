@@ -85,12 +85,10 @@
                         <span class="text-charcoal-light">Subtotal</span>
                         <span class="font-medium text-charcoal">${{ number_format($subTotal / 100, 2) }}</span>
                     </div>
-                    @if($taxTotal > 0)
-                        <div class="flex justify-between text-sm">
-                            <span class="text-charcoal-light">Tax</span>
-                            <span class="font-medium text-charcoal">${{ number_format($taxTotal / 100, 2) }}</span>
-                        </div>
-                    @endif
+                    <div class="flex justify-between text-sm">
+                        <span class="text-charcoal-light">Tax</span>
+                        <span class="font-medium text-charcoal">${{ number_format($taxTotal / 100, 2) }}</span>
+                    </div>
                     <div class="flex justify-between text-base font-bold border-t border-linen-dark pt-2">
                         <span class="text-charcoal">Total</span>
                         <span class="text-charcoal">${{ number_format($total / 100, 2) }}</span>

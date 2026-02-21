@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Shipping\FreeShippingModifier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
+use Lunar\Base\ShippingModifiers;
 use Lunar\Base\TelemetryServiceInterface;
 
 class AppServiceProvider extends ServiceProvider
@@ -34,5 +36,7 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->bound(TelemetryServiceInterface::class)) {
             $this->app->make(TelemetryServiceInterface::class)->optOut();
         }
+
+        app(ShippingModifiers::class)->add(FreeShippingModifier::class);
     }
 }

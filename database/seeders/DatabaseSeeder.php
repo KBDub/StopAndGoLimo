@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             AttributeSeeder::class,
             CollectionSeeder::class,
             ProductSeeder::class,
+            TaxSeeder::class,
         ]);
     }
 }

@@ -6,6 +6,7 @@ namespace App\Livewire\Cart;
 
 use Livewire\Component;
 use Lunar\Facades\CartSession;
+use Lunar\Facades\ShippingManifest;
 use Lunar\Models\Cart;
 use Lunar\Models\Country;
 
@@ -119,6 +120,12 @@ class CheckoutPage extends Component
                     'contact_email' => $this->email,
                     'contact_phone' => $this->phone,
                 ]);
+            }
+
+            $shippingOption = ShippingManifest::getOptions($cart)->first();
+
+            if ($shippingOption) {
+                $cart->setShippingOption($shippingOption);
             }
 
             $cart = $cart->refresh()->calculate();

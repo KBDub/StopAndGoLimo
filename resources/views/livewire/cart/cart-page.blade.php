@@ -98,12 +98,10 @@
                                     <span class="text-charcoal-light">Shipping</span>
                                     <span class="text-sm text-charcoal-light">Calculated at checkout</span>
                                 </div>
-                                @if($taxTotal > 0)
-                                    <div class="flex justify-between text-sm">
-                                        <span class="text-charcoal-light">Tax</span>
-                                        <span class="font-medium text-charcoal">${{ number_format($taxTotal / 100, 2) }}</span>
-                                    </div>
-                                @endif
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-charcoal-light">Estimated tax</span>
+                                    <span class="font-medium text-charcoal">${{ number_format($taxTotal / 100, 2) }}</span>
+                                </div>
                                 <div class="border-t border-linen-dark pt-3">
                                     <div class="flex justify-between">
                                         <span class="font-bold text-charcoal">Total</span>

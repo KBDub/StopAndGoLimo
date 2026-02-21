@@ -54,7 +54,7 @@
 
                 <div>
                     <div class="mb-4">
-                        <span class="text-sm text-charcoal-light uppercase tracking-wider">{{ $product->productType->name }}</span>
+                        <span class="text-sm text-charcoal-light tracking-wider">{{ $product->productType->name }}</span>
                     </div>
 
                     <h1 class="font-heading text-3xl font-bold text-charcoal mb-4">
@@ -86,7 +86,7 @@
 
                     @if($product->variants->count() > 1)
                         <div class="mb-6">
-                            <h3 class="font-heading font-bold text-sm uppercase tracking-wider mb-3 text-charcoal">Select Option</h3>
+                            <h3 class="font-heading font-bold text-sm tracking-wider mb-3 text-charcoal">Select Option</h3>
                             <div class="flex flex-wrap gap-2">
                                 @foreach($product->variants as $variant)
                                     <button wire:click="selectVariant({{ $variant->id }})"
@@ -108,7 +108,7 @@
                     @endif
 
                     <div class="mb-6">
-                        <h3 class="font-heading font-bold text-sm uppercase tracking-wider mb-3 text-charcoal">Quantity</h3>
+                        <h3 class="font-heading font-bold text-sm tracking-wider mb-3 text-charcoal">Quantity</h3>
                         <div class="flex items-center gap-3">
                             <button wire:click="decrementQuantity"
                                     class="w-10 h-10 rounded-lg border border-charcoal-lighter flex items-center justify-center hover:bg-linen transition-colors">

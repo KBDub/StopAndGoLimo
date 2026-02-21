@@ -50,7 +50,7 @@
                     <div class="hidden lg:block space-y-6" :class="{ '!block': open }">
 
                         <div>
-                            <h3 class="font-heading font-bold text-sm uppercase tracking-wider mb-3 text-charcoal">Price Range</h3>
+                            <h3 class="font-heading font-bold text-sm tracking-wider mb-3 text-charcoal">Price Range</h3>
                             <div class="flex items-center gap-2">
                                 <span class="text-sm">$</span>
                                 <input type="number" wire:model.live.debounce.500ms="filters.min_price" min="0"

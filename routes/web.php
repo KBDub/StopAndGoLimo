@@ -145,14 +145,40 @@ Route::get('/collections/{slug}', function (string $slug) {
         abort(404);
     }
 
+    $collectionName = $collection->translateAttribute('name');
+    $description = strip_tags($collection->translateAttribute('description') ?? '');
+
+    $children = $collection->children()->with('urls')->get();
+    $categoryItems = $children->map(function ($child) use ($slug) {
+        $childSlug = $child->urls->first()?->slug ?? '';
+        $childName = $child->translateAttribute('name');
+        $childDesc = strip_tags($child->translateAttribute('description') ?? '');
+        return [
+            'title' => $childName,
+            'description' => $childDesc ?: "Browse our {$childName} collection.",
+            'linkText' => "View {$childName} →",
+            'linkHref' => "/collections/{$slug}/{$childSlug}",
+            'seoTitle' => $childName,
+            'seoDescription' => $childDesc ?: "Premium {$childName} by Top 5 Percent in Joliet, IL.",
+            'seoLinkText' => "View {$childName} →",
+        ];
+    })->toArray();
+
     return view('pages.collection', [
         'collectionSlug' => $slug,
         'parentSlug' => null,
-        'collectionName' => $collection->translateAttribute('name'),
+        'collectionName' => $collectionName,
+        'collectionDescription' => $description,
+        'isParentCategory' => $children->isNotEmpty(),
+        'categoryItems' => $categoryItems,
     ]);
 })->name('collections.show');
 
 Route::get('/collections/{parent}/{child}', function (string $parent, string $child) {
+    $parentCollection = \Lunar\Models\Collection::whereHas('urls', function ($q) use ($parent) {
+        $q->where('slug', $parent);
+    })->first();
+
     $collection = \Lunar\Models\Collection::whereHas('urls', function ($q) use ($child) {
         $q->where('slug', $child);
     })->first();
@@ -161,10 +187,18 @@ Route::get('/collections/{parent}/{child}', function (string $parent, string $ch
         abort(404);
     }
 
+    $collectionName = $collection->translateAttribute('name');
+    $parentName = $parentCollection?->translateAttribute('name') ?? '';
+    $description = strip_tags($collection->translateAttribute('description') ?? '');
+
     return view('pages.collection', [
         'collectionSlug' => $child,
         'parentSlug' => $parent,
-        'collectionName' => $collection->translateAttribute('name'),
+        'collectionName' => $collectionName,
+        'collectionDescription' => $description,
+        'parentCategoryName' => $parentName,
+        'isParentCategory' => false,
+        'categoryItems' => [],
     ]);
 })->name('collections.child');
 
@@ -189,5 +223,8 @@ Route::get('/shop', function () {
         'collectionSlug' => null,
         'parentSlug' => null,
         'collectionName' => 'All Products',
+        'collectionDescription' => 'Browse our complete catalog of custom signage, apparel, decals, vehicle graphics, and promotional items.',
+        'isParentCategory' => false,
+        'categoryItems' => [],
     ]);
 })->name('shop');

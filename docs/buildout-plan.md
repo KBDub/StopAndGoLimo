@@ -57,11 +57,12 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 
 ---
 
-## Phase 1: Platform Foundation
+## Phase 1: Platform Foundation ✅
 
 **Complexity:** Medium  
 **Duration:** Foundation setup  
-**Goal:** Working Laravel + Lunar installation with branding
+**Goal:** Working Laravel + Lunar installation with branding  
+**Status:** Complete
 
 ### Tasks
 
@@ -77,7 +78,7 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 - [x] Run Lunar migrations
 - [x] Configure Lunar Hub (admin at `/hub`)
 - [x] Create admin user
-- [ ] Set up media library
+- [ ] Set up media library (rolled into Phase 3)
 
 #### 1.3 TALL Stack Configuration
 - [x] Install Tailwind CSS
@@ -89,69 +90,75 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 #### 1.4 Search Engine Setup
 - [x] Install Meilisearch
 - [x] Configure Laravel Scout
-- [ ] Set up filterable attributes for facets
-- [ ] Test search indexing
+- [x] Set up filterable attributes for facets (28+ filterable attributes configured)
+- [x] Test search indexing (products indexed with flat price values, facet distribution verified)
 
 #### 1.5 Development Tooling
 - [x] Install Pest for testing
 - [x] Configure Larastan (Level 5+)
 - [x] Set up strict typing standards
-- [ ] Create Action pattern base classes
+- [x] Create Action pattern base classes
 
 #### 1.6 Initial Data Seeding
-- [ ] Create attribute groups (Apparel Options, Signs, etc.)
-- [ ] Seed product attributes (sizes, materials, print methods)
-- [ ] Create sample collections/categories
-- [ ] Add test products
+- [x] Create attribute groups (Apparel Options, Signs, Decals, Vehicle Graphics, Promo Items, etc.)
+- [x] Seed product attributes (sizes, materials, print methods, 28+ filterable attributes)
+- [x] Create sample collections/categories (30 hierarchical collections)
+- [x] Add test products (31 products, 93 variants with pricing)
 
 ### Phase 1 Deliverables
 - ✅ Laravel app running on port 5000
 - ✅ Lunar Hub accessible at `/hub`
 - ✅ Tailwind with custom branding compiled
-- ⬜ Meilisearch indexing products (connected but filterable attributes not configured)
-- ⬜ Database seeded with attributes (not yet seeded)
+- ✅ Meilisearch indexing products with filterable attributes
+- ✅ Database seeded with attributes, collections, and products
 
 ---
 
-## Phase 2: Catalog & Navigation MVP
+## Phase 2: Catalog & Navigation MVP ✅
 
 **Complexity:** High  
 **Duration:** Core frontend build  
-**Goal:** Browsable product catalog with mega menu
+**Goal:** Browsable product catalog with mega menu  
+**Status:** Complete
 
 ### Tasks
 
 #### 2.1 Layout & Navigation
-- [x] Create base Blade layout (`layouts/app.blade.php`)
+- [x] Create base Blade layout (`layouts/page.blade.php`)
 - [x] Build header component with logo
-- [x] Implement mega menu navigation (Livewire)
+- [x] Implement mega menu navigation with dropdowns
 - [x] Create footer component
 - [x] Mobile responsive navigation
 
 #### 2.2 Homepage
 - [x] Hero section with CTA
-- [ ] Featured products grid (static placeholder, not wired to Lunar)
+- [x] Featured products grid (Livewire component wired to Lunar)
 - [x] Category showcase
 - [x] Trust badges section
 - [x] About preview section
 
 #### 2.3 Collection/Category Pages
-- [ ] Collection listing page (static pages exist but not connected to Lunar products)
-- [ ] Faceted sidebar filters (Livewire + Meilisearch)
-  - Price range slider
-  - Size checkboxes with counts
-  - Material type filters
-  - Availability toggle
-- [ ] Product grid with pagination
-- [ ] Sort options (price, newest, popular)
+- [x] Collection listing page (Livewire, connected to Lunar via Meilisearch)
+- [x] Faceted sidebar filters (Livewire + Meilisearch)
+  - [x] Price range filter (min/max dollar inputs, converted to cents)
+  - [x] Garment type, print method, material checkboxes with counts
+  - [x] Sign type, decal type, vehicle product filters
+  - [x] Availability toggle (in stock only)
+- [x] Product grid with pagination
+- [x] Sort options (price low/high, newest)
+- [x] Top Level Category Section for parent collections (child collection cards)
+- [x] Branded section wrappers (Category Hero, Same Day Service, Why Choose Us, CTAs, Review Banner, Map)
 
 #### 2.4 Product Detail Pages
-- [ ] Product image gallery
-- [ ] Variant selection (size, color)
-- [ ] Material type display
-- [ ] Add to cart button
-- [ ] Related products
-- [ ] Product description/specs
+- [x] Variant selection (size options with per-variant pricing)
+- [x] Material type display
+- [x] Add to cart button (UI present, cart functionality is Phase 3)
+- [x] Product description/specs (HTML rendering)
+- [x] Quantity selector with increment/decrement
+- [x] Stock availability display
+- [x] Breadcrumb navigation
+- [ ] Product image gallery (placeholder images, rolled into Phase 3)
+- [ ] Related products section (rolled into Phase 3)
 
 #### 2.5 Static Pages
 - [x] About Us page
@@ -159,11 +166,12 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 - [x] Portfolio/Gallery page
 
 ### Phase 2 Deliverables
-- ✅ Full navigation working
-- ⬜ Products browsable with filters (not wired to Lunar)
-- ⬜ Product detail pages (not built)
+- ✅ Full navigation working with dropdowns
+- ✅ Products browsable with live faceted filters
+- ✅ Product detail pages with variant selection and pricing
 - ✅ Responsive on all devices
-- ⬜ SEO meta tags on all pages (partial)
+- ✅ SEO meta tags on all pages
+- ✅ Successfully deployed to production
 
 ---
 
@@ -171,9 +179,15 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 
 **Complexity:** High  
 **Duration:** Transaction flow  
-**Goal:** Complete purchase flow
+**Goal:** Complete purchase flow  
+**Status:** Not started
 
 ### Tasks
+
+#### 3.0 Carried Over from Phase 1/2
+- [ ] Set up media library for product images
+- [ ] Product image gallery on PDP
+- [ ] Related products section on PDP
 
 #### 3.1 Shopping Cart
 - [ ] Cart Livewire component
@@ -221,7 +235,8 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 
 **Complexity:** Medium-High  
 **Duration:** Admin customization + polish  
-**Goal:** Full admin control + Phase 2 features
+**Goal:** Full admin control + Phase 2 features  
+**Status:** Not started
 
 ### Tasks
 
@@ -361,7 +376,7 @@ Before starting Phase 1:
 - [x] Admin requirements defined (`admin.md`)
 - [x] Logo asset available (`public/images/logos/top5-logo.gif`)
 - [ ] Stripe API keys obtained
-- [ ] Domain/SSL configured (for production)
+- [x] Domain/SSL configured (deployed to Replit)
 
 ---
 
@@ -370,12 +385,12 @@ Before starting Phase 1:
 **Minimum Viable Product = Phases 1 + 2 + 3**
 
 A customer can:
-1. Browse products via mega menu
-2. Filter products by size, material, price
-3. View product details
-4. Add items to cart
-5. Complete checkout with payment
-6. Receive order confirmation
+1. ✅ Browse products via mega menu
+2. ✅ Filter products by size, material, price
+3. ✅ View product details
+4. ⬜ Add items to cart
+5. ⬜ Complete checkout with payment
+6. ⬜ Receive order confirmation
 
 ---
 

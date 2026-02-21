@@ -69,12 +69,12 @@ class ProductIndexer extends \Lunar\Search\ProductIndexer
     {
         $data = parent::toSearchableArray($model);
 
-        $prices = $model->variants->flatMap(function ($variant) {
-            return $variant->prices->pluck('price');
+        $priceValues = $model->variants->flatMap(function ($variant) {
+            return $variant->prices->map(fn ($p) => $p->price->value);
         })->filter();
 
-        $data['min_price'] = $prices->min() ?? 0;
-        $data['max_price'] = $prices->max() ?? 0;
+        $data['min_price'] = $priceValues->min() ?? 0;
+        $data['max_price'] = $priceValues->max() ?? 0;
 
         $totalStock = $model->variants->sum('stock');
         $data['in_stock'] = $totalStock > 0;

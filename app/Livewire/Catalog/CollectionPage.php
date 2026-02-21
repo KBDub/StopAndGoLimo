@@ -118,10 +118,12 @@ class CollectionPage extends Component
         }
 
         if ($this->filters['min_price'] > 0) {
-            $filterParts[] = "min_price >= {$this->filters['min_price']}";
+            $minCents = (int) ($this->filters['min_price'] * 100);
+            $filterParts[] = "min_price >= {$minCents}";
         }
-        if ($this->filters['max_price'] < 100000) {
-            $filterParts[] = "max_price <= {$this->filters['max_price']}";
+        if ($this->filters['max_price'] > 0 && $this->filters['max_price'] < 100000) {
+            $maxCents = (int) ($this->filters['max_price'] * 100);
+            $filterParts[] = "max_price <= {$maxCents}";
         }
 
         $arrayFilters = ['garment_type', 'print_method', 'material_type', 'sign_type', 'placement', 'decal_type', 'vehicle_product'];

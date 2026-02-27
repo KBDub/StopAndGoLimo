@@ -19,15 +19,6 @@
         :displayServiceType="$collectionName ?? 'Custom Signage & Apparel'"
     />
 
-    @if(!empty($categoryItems))
-        <x-sections.top-level-category-section
-            :heading="$collectionName"
-            headingAccent="Services"
-            :description="'Explore our full range of ' . strtolower($collectionName ?? '') . ' services for businesses, teams, events, and personal wear in Joliet and Will County.'"
-            :items="$categoryItems"
-        />
-    @endif
-
     @livewire('catalog.collection-page', [
         'collectionSlug' => $collectionSlug,
         'parentSlug' => $parentSlug ?? null,

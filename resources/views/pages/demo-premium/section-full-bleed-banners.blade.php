@@ -13,8 +13,8 @@
         </div>
 
         <x-ui.banner-full-bleed-image
-            image="/images/demo-banner-floral.png"
-            alt="End of month sale - extra 50% off"
+            image="/images/ModCloth3600x1024.webp"
+            alt="Custom signage and apparel by Top 5 Percent"
             href="/custom-apparel"
         />
     </div>
@@ -26,7 +26,8 @@
         </div>
 
         <x-ui.banner-full-bleed-2-image
-            imageLeft="/images/demo-banner-2up.png"
+            imageLeft="/images/gymshark1.avif"
+            imageRight="/images/gymshark2.avif"
             altLeft="Custom apparel"
             altRight="Custom apparel lifestyle"
             title="For every occasion"
@@ -44,8 +45,8 @@
         </div>
 
         <x-ui.banner-full-bleed-video
-            video="/images/demo-banner-video.mov"
-            type="video/quicktime"
+            video="/images/video-web-banner.8x3.mp4"
+            type="video/mp4"
             alt="Custom signage showcase"
             height="400px"
         />
@@ -58,8 +59,9 @@
         </div>
 
         <x-ui.banner-full-bleed-2-video
-            videoLeft="/images/demo-banner-video.mov"
-            type="video/quicktime"
+            videoLeft="/images/video-web-banner.8x3.mp4"
+            videoRight="/images/video-web-banner.8x3.mp4"
+            type="video/mp4"
             altLeft="Custom signage"
             altRight="Custom apparel"
             title="See it in action"

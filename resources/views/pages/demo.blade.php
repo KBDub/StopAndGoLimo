@@ -206,7 +206,7 @@
             </div>
         </section>
 
-        <section class="py-16 bg-linen">
+        <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Semantic Colors (3)</h2>
                 
@@ -349,7 +349,7 @@
             </div>
         </section>
 
-        <section class="py-16 bg-linen">
+        <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Banners</h2>
                 <p class="text-charcoal-light mb-8">Separator banners in two weights: <strong>thin</strong> (3px) and <strong>medium</strong> (8px). Use <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.banner-&lt;weight&gt;-&lt;color&gt;</code> components.</p>
@@ -592,7 +592,7 @@
             </div>
         </section>
 
-        <section class="py-16 bg-linen">
+        <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Visual Combinations</h2>
                 
@@ -674,7 +674,7 @@
             </div>
         </section>
 
-        <section class="py-16 bg-linen">
+        <section class="py-16 bg-white">
             <div class="max-w-6xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Card Components</h2>
                 <p class="text-charcoal-light mb-8">All cards are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.card-&lt;type&gt;</code>. No icons allowed per branding rules.</p>
@@ -836,7 +836,10 @@
             <div class="max-w-6xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-4 text-charcoal">Ready to Get Started?</h2>
                 <p class="text-lg text-charcoal/80 mb-8 max-w-2xl mx-auto">Contact us today to discuss your custom signage and apparel needs. Veteran-owned and proudly serving Joliet, IL.</p>
-                <a href="#" class="inline-block px-8 py-4 bg-charcoal text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">Contact Us Today</a>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="inline-block px-8 py-4 bg-charcoal text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">Contact us today</a>
+                    <a href="/demo/premium" class="inline-block px-8 py-4 bg-white text-charcoal font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">View premium components</a>
+                </div>
             </div>
         </section>
     </main>

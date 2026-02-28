@@ -1,4 +1,4 @@
-<section class="py-16 bg-linen">
+<section class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-2xl font-bold mb-3 border-l-4 border-sunburst pl-5">Hover product cards</h2>
         <p class="text-charcoal-light mb-10 pl-5">3:4 aspect ratio cards with hover zoom, badges, color swatches, quick-add overlay, and sale pricing. Designed for ModCloth/Gymshark-level polish.</p>

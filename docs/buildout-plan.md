@@ -10,10 +10,10 @@ A phased implementation plan for the Laravel 11 + TALL Stack + Lunar e-commerce 
 
 | Metric | Value |
 |--------|-------|
-| Total Phases | 4 |
+| Total Phases | 5 |
 | MVP Phases | 1-3 |
 | Estimated Complexity | Medium-High |
-| Stack | Laravel 11, Tailwind, Alpine.js, Livewire, Lunar, Meilisearch, PostgreSQL |
+| Stack | Laravel 11, Tailwind, Alpine.js, Livewire, Lunar, Meilisearch, PostgreSQL, Spatie Media Library |
 
 ---
 
@@ -44,6 +44,9 @@ A phased implementation plan for the Laravel 11 + TALL Stack + Lunar e-commerce 
 - `cart.md` - Shopping cart implementation with Lunar
 - `facets.md` - Product filtering and facet search
 - `admin.md` - Backend admin panel specifications
+- `branding-update.md` - Premium UI components, media pipeline, new card/CTA designs
+- `ECommerceMediaOptimizationStrategies.pdf` - Aspect ratios, file sizes, format specs
+- `ImageDisplayAndConversionPipeline.pdf` - Spatie Media Library pipeline, HTML/CSS patterns
 
 ---
 
@@ -236,6 +239,117 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 
 ---
 
+## Phase 3.5: Premium UI Components & Media Pipeline
+
+**Complexity:** High  
+**Duration:** Component buildout + media infrastructure  
+**Goal:** ModCloth/Gymshark-quality product presentation with automated image pipeline  
+**Status:** Not started  
+**Reference:** `docs/branding-update.md`, `docs/ECommerceMediaOptimizationStrategies.pdf`, `docs/ImageDisplayAndConversionPipeline.pdf`
+
+### Tasks
+
+#### 3.5.1 Spatie Media Library Setup
+- [ ] Install and configure Spatie Media Library (`spatie/laravel-medialibrary`)
+- [ ] Publish migrations and run them
+- [ ] Configure Lunar Product model with media conversions (`grid`, `zoom`, `thumb`)
+- [ ] Register media collection (`images`) with accepted MIME types
+- [ ] Configure WebP conversion pipeline (600x800 grid, 1600px zoom, 150x200 thumb)
+- [ ] Test upload-to-conversion pipeline via tinker
+- [ ] Verify integration with Lunar Hub product image uploads
+
+#### 3.5.2 Product Image Carousel (PDP)
+- [ ] Build `x-ui.carousel-product` Blade component
+- [ ] Mobile: full-width swipeable carousel with snap scroll (`snap-x snap-mandatory`)
+- [ ] Mobile: dot indicators for current image position
+- [ ] Desktop: large main image with vertical thumbnail strip navigation
+- [ ] Desktop: hover-to-zoom using Alpine.js (`background-position` tracking cursor)
+- [ ] 3:4 aspect ratio on mobile (`aspect-[3/4]`), auto height on desktop
+- [ ] Smooth crossfade transitions between images (300ms)
+- [ ] Fallback placeholder when no images uploaded
+- [ ] Integrate carousel into ProductDetail Livewire component
+- [ ] Add to demo page
+
+#### 3.5.3 Hover Product Cards
+- [ ] Build `x-ui.card-product-hover` Blade component
+- [ ] 3:4 aspect ratio image container with `object-cover object-top`
+- [ ] Hover effect: image scale (`group-hover:scale-105`, 500ms transition)
+- [ ] Quick-add button slides up from bottom on hover
+- [ ] Badge overlays: "New" (Azure Blue) and "Best Seller" (Sunburst Gold) positioned top-left
+- [ ] Color swatches row below image (16px circles, max 5 visible)
+- [ ] Product name, price, variant count below image
+- [ ] Responsive grid: 2-col mobile, 3-col tablet, 4-col desktop
+- [ ] Wire quick-add button to AddToCart action via Livewire
+- [ ] Add to demo page
+
+#### 3.5.4 Full-Bleed Hero CTAs
+- [ ] Build `x-sections.hero-full-bleed` Blade component
+- [ ] Full viewport width (`w-full`), no max-width constraint
+- [ ] Large lifestyle background image with dark gradient overlay
+- [ ] Bold heading (white/Sunburst Gold), subheading, 1-2 CTA buttons
+- [ ] Responsive text sizing (`text-5xl` desktop, `text-2xl` mobile)
+- [ ] Minimum height: `min-h-[60vh]` desktop, `min-h-[40vh]` mobile
+- [ ] Layout variants: center-aligned, left-aligned, split
+- [ ] Add to demo page
+
+#### 3.5.5 Category Grid Cards
+- [ ] Build `x-ui.card-category-visual` Blade component
+- [ ] Background image with dark gradient overlay from bottom
+- [ ] Category name in bold white text, positioned bottom-left
+- [ ] Subtitle with product count
+- [ ] Hover effect: image zooms, overlay lightens
+- [ ] Rounded corners (`rounded-xl`) with overflow hidden
+- [ ] Responsive grid: 2-col mobile, 3-col tablet, 4-col desktop
+- [ ] Support for featured/span-2 category cards
+- [ ] Add to demo page
+
+#### 3.5.6 Sticky Add-to-Cart Bar
+- [ ] Build `x-ui.sticky-add-to-cart` Blade component
+- [ ] Fixed bottom position, slides up when main CTA scrolls out of view
+- [ ] Alpine.js `IntersectionObserver` via `x-intersect` watching main "Add to Cart" button
+- [ ] Contains: product name (truncated), selected variant, price, quantity, "Add to Cart" button
+- [ ] Compact single-row on desktop, stacked on mobile
+- [ ] White background with top shadow, proper z-index
+- [ ] Integrate into ProductDetail PDP
+- [ ] Add to demo page
+
+#### 3.5.7 Quick-View Modal
+- [ ] Build `x-ui.modal-quick-view` Blade component
+- [ ] Modal with backdrop blur and dark overlay
+- [ ] Two-column layout: image carousel (60%) + product details (40%)
+- [ ] Mini image carousel with thumbnail navigation (3-4 images)
+- [ ] Product name, price, variant selector, quantity, "Add to Cart" button
+- [ ] "View Full Details" link to full PDP
+- [ ] Close button + click-outside-to-close
+- [ ] Fade-in/scale-up animation
+- [ ] Responsive: full-screen mobile, centered modal desktop (max-width ~900px)
+- [ ] Wire to Livewire for add-to-cart functionality
+- [ ] Add to demo page
+
+#### 3.5.8 Full-Width Layout Updates
+- [ ] Update section wrapper to support full-width mode (no max-width on outer)
+- [ ] Inner content remains `max-w-7xl mx-auto px-4 sm:px-6`
+- [ ] Apply full-width to hero CTAs, category grids, promotional banners
+- [ ] Keep checkout, cart, and PDP text content contained
+
+#### 3.5.9 SheafUI Integration
+- [ ] Install SheafUI as a design reference/component source
+- [ ] Adapt SheafUI card and CTA patterns to Top 5 Percent branding
+- [ ] Ensure all adapted components follow existing brand guidelines (no uppercase, correct colors)
+
+### Phase 3.5 Deliverables
+- ⬜ Spatie Media Library processing pipeline (grid/zoom/thumb WebP conversions)
+- ⬜ Product image carousel on PDP (swipeable mobile, hover-to-zoom desktop)
+- ⬜ Hover product cards with quick-add, badges, and color swatches
+- ⬜ Full-bleed hero CTA sections (edge-to-edge)
+- ⬜ Visual category grid cards with image backgrounds
+- ⬜ Sticky add-to-cart bar on PDP
+- ⬜ Quick-view modal from collection pages
+- ⬜ All new components on demo page for review
+- ⬜ Full-width layout support for applicable sections
+
+---
+
 ## Phase 4: Admin & Enhancements
 
 **Complexity:** Medium-High  
@@ -338,9 +452,25 @@ app/
 │   └── Navigation/
 │       ├── MegaMenu.php
 │       └── MobileMenu.php
+├── Shipping/
+│   └── FreeShippingModifier.php
 └── Services/
     ├── SearchService.php
     └── PricingService.php
+
+resources/views/components/
+├── ui/
+│   ├── card-product-hover.blade.php          (Phase 3.5 - hover product card)
+│   ├── card-category-visual.blade.php        (Phase 3.5 - image category card)
+│   ├── sticky-add-to-cart.blade.php          (Phase 3.5 - sticky purchase bar)
+│   ├── modal-quick-view.blade.php            (Phase 3.5 - quick view modal)
+│   ├── carousel-product.blade.php            (Phase 3.5 - PDP image carousel)
+│   └── ...existing card/button/badge/banner components
+├── sections/
+│   ├── hero-full-bleed.blade.php             (Phase 3.5 - full-width hero CTA)
+│   └── ...existing section components
+└── layouts/
+    └── page.blade.php
 ```
 
 ---

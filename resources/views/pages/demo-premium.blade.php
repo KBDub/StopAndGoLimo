@@ -36,6 +36,7 @@
             </div>
         </section>
 
+        @include('pages.demo-premium.section-full-bleed-banners')
         @include('pages.demo-premium.section-hero-full-bleed')
         @include('pages.demo-premium.section-product-cards')
         @include('pages.demo-premium.section-category-grid')

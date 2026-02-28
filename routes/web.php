@@ -10,6 +10,10 @@ Route::get('/demo', function () {
     return view('pages.demo');
 });
 
+Route::get('/demo/premium', function () {
+    return view('pages.demo-premium');
+})->name('demo.premium');
+
 Route::get('/custom-apparel', function () {
     return view('pages.custom-apparel.index');
 })->name('custom-apparel');

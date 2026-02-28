@@ -56,6 +56,7 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 
 ## Recent Changes
 
+-   **Phase 3.5 Premium UI Components (Feb 2026):** Created 6 premium components: `card-product-hover` (3:4 ratio, badges, swatches, quick-add), `card-category-visual` (gradient overlay, featured layout), `hero-full-bleed` (center/left/split layouts, dual CTAs), `carousel-product` (thumbnail strip, hover-to-zoom 250%), `sticky-add-to-cart` (Alpine.js event-driven slide-up), `modal-quick-view` (image gallery, variant selector, quantity picker). Demo page at `/demo/premium`. Added `charcoal-lighter` (#999999) to Tailwind config. Added `hide-scrollbar` CSS utility.
 -   **Phase 3 Cart & Checkout (Feb 2026):** Implemented full cart system with add-to-cart from PDP, cart drawer, cart page, checkout with shipping/billing addresses, and order confirmation page. Offline payment placeholder active; Stripe adapter installed for future activation.
 
 ## Technical Notes

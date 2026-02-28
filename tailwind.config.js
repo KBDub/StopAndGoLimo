@@ -28,6 +28,7 @@ export default {
                     dark: '#E8E5D8',
                 },
                 'charcoal': {
+                    lighter: '#999999',
                     light: '#555555',
                     DEFAULT: '#2C2C2C',
                     dark: '#1A1A1A',

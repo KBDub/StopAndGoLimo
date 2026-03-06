@@ -1,5 +1,5 @@
 <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl font-bold mb-3 border-l-4 border-sunburst pl-5">Full-bleed hero CTA</h2>
         <p class="text-charcoal-light mb-8 pl-5">Edge-to-edge hero sections with gradient overlays, responsive text, and dual CTA buttons. Supports center, left, and split layouts.</p>
     </div>

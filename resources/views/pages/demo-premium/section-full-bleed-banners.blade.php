@@ -1,5 +1,5 @@
 <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl font-bold mb-3 border-l-4 border-sunburst pl-5">Full-bleed banners</h2>
         <p class="text-charcoal-light mb-10 pl-5">Edge-to-edge promotional banners in single-image, 2-image, single-video, and 2-video layouts. All span the full viewport width with no margins or padding.</p>
     </div>
@@ -7,7 +7,7 @@
 
 <div class="space-y-16">
     <div>
-        <div class="max-w-6xl mx-auto px-6 mb-4">
+        <div class="max-w-7xl mx-auto px-6 mb-4">
             <h3 class="text-lg font-semibold text-charcoal">Single image banner</h3>
             <p class="text-sm text-charcoal-light">Full-width image that acts as the entire banner. Optionally wraps in a link.</p>
         </div>
@@ -20,7 +20,7 @@
     </div>
 
     <div>
-        <div class="max-w-6xl mx-auto px-6 mb-4">
+        <div class="max-w-7xl mx-auto px-6 mb-4">
             <h3 class="text-lg font-semibold text-charcoal">2-image banner</h3>
             <p class="text-sm text-charcoal-light">Two images side by side, edge-to-edge with text overlay on the left. Configurable split ratio.</p>
         </div>
@@ -39,7 +39,7 @@
     </div>
 
     <div>
-        <div class="max-w-6xl mx-auto px-6 mb-4">
+        <div class="max-w-7xl mx-auto px-6 mb-4">
             <h3 class="text-lg font-semibold text-charcoal">Single video banner</h3>
             <p class="text-sm text-charcoal-light">Full-width autoplaying, looped, muted video. Falls back to poster image or placeholder.</p>
         </div>
@@ -51,7 +51,7 @@
             height="400px"
         />
 
-        <div class="max-w-6xl mx-auto px-6 mb-4 mt-10">
+        <div class="max-w-7xl mx-auto px-6 mb-4 mt-10">
             <h3 class="text-lg font-semibold text-charcoal">Single video banner (alternate)</h3>
             <p class="text-sm text-charcoal-light">Second full-width video banner with different content.</p>
         </div>
@@ -65,7 +65,7 @@
     </div>
 
     <div>
-        <div class="max-w-6xl mx-auto px-6 mb-4">
+        <div class="max-w-7xl mx-auto px-6 mb-4">
             <h3 class="text-lg font-semibold text-charcoal">2-video banner</h3>
             <p class="text-sm text-charcoal-light">Two videos side by side with text overlay on the left video. Same layout as 2-image but with video sources.</p>
         </div>
@@ -86,7 +86,7 @@
 </div>
 
 <section class="py-12 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="bg-white rounded-xl p-6 shadow-sm border border-linen-dark">
             <h3 class="text-lg font-semibold text-charcoal mb-3">Banner component features</h3>
             <div class="grid md:grid-cols-2 gap-6 text-sm text-charcoal-light">

@@ -1,5 +1,5 @@
 <section class="py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-2xl font-bold mb-3 border-l-4 border-sunburst pl-5">Category grid cards</h2>
         <p class="text-charcoal-light mb-10 pl-5">Visual category navigation with gradient overlays, hover zoom, and featured (wide) layout option. Text overlaid at bottom with smooth hover color transition.</p>
 

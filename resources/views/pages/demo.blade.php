@@ -30,7 +30,7 @@
 
     <main>
         <section class="bg-white py-16 shadow-gold">
-            <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-4">Golden Optimism</h1>
                 <div class="w-24 h-1 bg-gold-gradient mx-auto mb-6 rounded"></div>
                 <p class="text-xl text-charcoal-light">A vibrant, warm brand palette radiating confidence and creativity</p>
@@ -38,7 +38,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Palette (5 + White)</h2>
                 <p class="text-charcoal-light mb-8">Each core color has up to 3 variants: Light, Default, and Dark</p>
                 
@@ -207,7 +207,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Semantic Colors (3)</h2>
                 
                 <div class="grid md:grid-cols-3 gap-6">
@@ -257,7 +257,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Hierarchy</h2>
                 
                 <div class="space-y-4">
@@ -308,7 +308,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Brand Gradients</h2>
                 
                 <div class="grid md:grid-cols-2 gap-8">
@@ -350,7 +350,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Banners</h2>
                 <p class="text-charcoal-light mb-8">Separator banners in two weights: <strong>thin</strong> (3px) and <strong>medium</strong> (8px). Use <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.banner-&lt;weight&gt;-&lt;color&gt;</code> components.</p>
 
@@ -417,7 +417,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Typography</h2>
                 
                 <div class="bg-white p-8 rounded-xl shadow-lg">
@@ -517,7 +517,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Button Variations</h2>
                 <p class="text-charcoal-light mb-8">All buttons are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.button-&lt;type&gt;</code>. Each accepts <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">href</code> (renders as link) or renders as <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">&lt;button&gt;</code> by default.</p>
 
@@ -593,7 +593,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Visual Combinations</h2>
                 
                 <div class="grid md:grid-cols-2 gap-6">
@@ -641,7 +641,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Form Elements</h2>
                 
                 <div class="bg-linen p-8 rounded-xl">
@@ -675,7 +675,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Card Components</h2>
                 <p class="text-charcoal-light mb-8">All cards are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.card-&lt;type&gt;</code>. No icons allowed per branding rules.</p>
 
@@ -763,7 +763,7 @@
         </section>
 
         <section class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Badges & Alerts</h2>
                 <p class="text-charcoal-light mb-8">Product badges are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.badge-&lt;type&gt;</code>.</p>
 
@@ -822,7 +822,7 @@
         </section>
 
         <section class="py-16 bg-warm-gradient border-t-2 border-b-2 border-sunburst">
-            <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-7xl mx-auto px-6">
                 <div class="p-8 rounded-xl">
                     <h3 class="text-2xl font-bold text-charcoal mb-4">Brand Personality</h3>
                     <p class="text-charcoal mb-4"><strong>Sunburst Gold (#FFC20E):</strong> This vibrant golden yellow radiates optimism, creativity, and energy. It evokes feelings of warmth, confidence, and innovation.</p>
@@ -833,7 +833,7 @@
         </section>
 
         <section class="py-16 bg-gold-gradient">
-            <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="max-w-7xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-4 text-charcoal">Ready to Get Started?</h2>
                 <p class="text-lg text-charcoal/80 mb-8 max-w-2xl mx-auto">Contact us today to discuss your custom signage and apparel needs. Veteran-owned and proudly serving Joliet, IL.</p>
                 <div class="flex flex-wrap justify-center gap-4">

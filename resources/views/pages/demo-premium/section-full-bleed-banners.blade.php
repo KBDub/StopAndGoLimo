@@ -50,6 +50,18 @@
             alt="Custom signage showcase"
             height="400px"
         />
+
+        <div class="max-w-6xl mx-auto px-6 mb-4 mt-10">
+            <h3 class="text-lg font-semibold text-charcoal">Single video banner (alternate)</h3>
+            <p class="text-sm text-charcoal-light">Second full-width video banner with different content.</p>
+        </div>
+
+        <x-ui.banner-full-bleed-video
+            video="/images/video-banner.running.8x3.mp4"
+            type="video/mp4"
+            alt="Custom apparel in action"
+            height="400px"
+        />
     </div>
 
     <div>
@@ -60,7 +72,7 @@
 
         <x-ui.banner-full-bleed-2-video
             videoLeft="/images/video-web-banner.8x3.mp4"
-            videoRight="/images/video-web-banner.8x3.mp4"
+            videoRight="/images/video-banner.running.8x3.mp4"
             type="video/mp4"
             altLeft="Custom signage"
             altRight="Custom apparel"

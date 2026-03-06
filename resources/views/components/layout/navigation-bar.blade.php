@@ -25,10 +25,6 @@
                     Home
                 </a>
                 
-                <a href="/about" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
-                    About Us
-                </a>
-
                 <div class="relative" @mouseenter="openDropdown = 'apparel'" @mouseleave="openDropdown = null">
                     <a href="/collections/custom-apparel" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors flex items-center gap-1">
                         Custom Apparel
@@ -108,23 +104,26 @@
                     Promotional Items
                 </a>
 
-                <div class="relative" @mouseenter="openDropdown = 'stores'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst transition-colors flex items-center gap-1">
-                        Stores
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                    <div x-cloak x-show="openDropdown === 'stores'" x-transition class="absolute top-full right-0 mt-1 w-48 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
-                        <a href="/stores" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">View All Stores</a>
-                    </div>
-                </div>
+                <a href="/black-doll-apparel" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'black-doll-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    Black Doll Apparel
+                </a>
 
                 <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     Portfolio
                 </a>
 
-                <a href="/contact" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'contact' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
-                    Contact Us
-                </a>
+                <!-- TODO make About be a dropdown, with About Us link and Team link and contact link -->
+                <div class="relative" @mouseenter="openDropdown = 'about'" @mouseleave="openDropdown = null">
+                    <button class="px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst transition-colors flex items-center gap-1">
+                        About
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div x-cloak x-show="openDropdown === 'about'" x-transition class="absolute top-full left-0 mt-1 w-48 bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                        <a href="/about" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">About Us</a>
+                        <a href="/team" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Our Team</a>
+                        <a href="/contact" class="block px-4 py-2 text-sm text-charcoal hover:bg-linen hover:text-sunburst">Contact Us</a>
+                    </div>
+                </div>
 
                 <div class="ml-2">
                     @livewire('cart.cart-icon')

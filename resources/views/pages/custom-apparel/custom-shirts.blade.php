@@ -11,7 +11,7 @@
     />
     <x-ui.banner-medium-sunburst />
 
-    <!--x-sections.top5pct-same-day-service serviceType="custom-shirts" displayServiceType="Custom Shirts" /-->
+    <x-sections.top5pct-same-day-service serviceType="custom-shirts" displayServiceType="Custom Shirts" />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

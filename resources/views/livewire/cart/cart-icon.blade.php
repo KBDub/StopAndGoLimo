@@ -1,7 +1,7 @@
 <div>
     <button
         wire:click="$dispatch('open-cart-drawer')"
-        class="relative p-1 text-charcoal hover:text-sunburst transition-colors"
+        class="relative p-1 text-charcoal hover:text-azure transition-colors"
         aria-label="Shopping cart"
     >
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

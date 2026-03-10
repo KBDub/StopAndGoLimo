@@ -105,7 +105,7 @@
                         </svg>
                         <h3 class="font-heading font-bold text-lg text-charcoal mb-2">Your cart is empty</h3>
                         <p class="text-sm text-charcoal-light mb-6">Browse our products and find something you love.</p>
-                        <x-ui.button-gold-gradient href="/shop" @click="show = false; $wire.closeDrawer()">
+                        <x-ui.button-gold-gradient href="/top5pct-merchandise" @click="show = false; $wire.closeDrawer()">
                             Start Shopping
                         </x-ui.button-gold-gradient>
                     </div>

@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/top5pct-merchandise', function () {
-    return view('pages.store');
+    return view('pages.top5pct-merchandise');
 })->name('store');
 
 Route::get('/demo', function () {

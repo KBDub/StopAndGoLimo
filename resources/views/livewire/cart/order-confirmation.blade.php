@@ -104,7 +104,7 @@
             @endif
 
             <div class="text-center space-y-3">
-                <x-ui.button-gold-gradient href="/shop" class="px-8">
+                <x-ui.button-gold-gradient href="/top5pct-merchandise" class="px-8">
                     Continue Shopping
                 </x-ui.button-gold-gradient>
                 <div>

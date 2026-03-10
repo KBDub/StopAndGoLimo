@@ -55,7 +55,7 @@
             </div>
 
             <div class="text-center mt-8">
-                <x-ui.button-gold-gradient href="/shop">Browse All Products</x-ui.button-gold-gradient>
+                <x-ui.button-gold-gradient href="/top5pct-merchandise">Browse All Products</x-ui.button-gold-gradient>
             </div>
         </div>
     </section>

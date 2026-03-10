@@ -5,7 +5,7 @@
                 <div class="bg-white rounded-xl shadow p-12 text-center max-w-lg mx-auto">
                     <h1 class="font-heading text-2xl font-bold text-charcoal mb-3">Nothing to checkout</h1>
                     <p class="text-charcoal-light mb-6">Your cart is empty. Add some items before checking out.</p>
-                    <x-ui.button-gold-gradient href="/shop">Browse Products</x-ui.button-gold-gradient>
+                    <x-ui.button-gold-gradient href="/top5pct-merchandise">Browse Products</x-ui.button-gold-gradient>
                 </div>
             @else
                 <h1 class="font-heading text-3xl font-bold text-charcoal mb-8">Checkout</h1>

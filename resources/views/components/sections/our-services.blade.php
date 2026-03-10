@@ -41,7 +41,7 @@
         </div>
 
         <div class="text-center">
-            <x-ui.button-text-link href="/shop">
+            <x-ui.button-text-link href="/top5pct-merchandise">
                 View All Products
             </x-ui.button-text-link>
         </div>

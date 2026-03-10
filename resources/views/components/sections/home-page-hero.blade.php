@@ -15,7 +15,7 @@
                     products. Designed and produced right here in Joliet.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <x-ui.button-gold-gradient href="/shop">
+                    <x-ui.button-gold-gradient href="/top5pct-merchandise">
                         Shop Now
                     </x-ui.button-gold-gradient>
                     <x-ui.button-outline-charcoal href="/contact">

@@ -114,7 +114,7 @@
                                 Proceed to Checkout
                             </x-ui.button-gold-gradient>
 
-                            <x-ui.button-outline-charcoal href="/shop" class="w-full text-center justify-center py-2 text-sm">
+                            <x-ui.button-outline-charcoal href="/top5pct-merchandise" class="w-full text-center justify-center py-2 text-sm">
                                 Continue Shopping
                             </x-ui.button-outline-charcoal>
 
@@ -136,7 +136,7 @@
                     </svg>
                     <h2 class="font-heading text-2xl font-bold text-charcoal mb-3">Your cart is empty</h2>
                     <p class="text-charcoal-light mb-8">Looks like you haven't added any items yet. Browse our catalog to find custom signage, apparel, and more.</p>
-                    <x-ui.button-gold-gradient href="/shop" class="px-8">
+                    <x-ui.button-gold-gradient href="/top5pct-merchandise" class="px-8">
                         Browse Products
                     </x-ui.button-gold-gradient>
                 </div>

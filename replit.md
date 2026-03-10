@@ -52,10 +52,11 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 -   `resources/views/components/ui/`: UI components (buttons, cards, banners, badges).
 -   `resources/views/livewire/cart/`: Cart-related Blade views.
 -   `resources/views/pages/`: Nested page views.
--   `docs/`: Extensive documentation covering branding, layout, SEO, cart, facets, and admin.
+-   `docs/`: Extensive documentation covering branding, layout, SEO, cart, facets, admin, and collections architecture (`docs/lunar.collections.md`).
 
 ## Recent Changes
 
+-   **Shop Page Consolidation (Mar 2026):** Renamed `/store` to `/top5pct-merchandise` (`pages/top5pct-merchandise.blade.php`). Removed old `/shop` route. All internal "Shop Now" / "Continue Shopping" links updated. Page is a hybrid: static marketing sections + embedded `catalog.collection-page` Livewire component showing all products. Navigation bar scroll hysteresis added (shrink at 50px, expand at 10px) to prevent shaking. See `docs/lunar.collections.md` for full collections architecture.
 -   **Phase 3.5 Premium UI Components (Feb 2026):** Created 10 premium components: `card-product-hover` (3:4 ratio, badges, swatches, quick-add), `card-category-visual` (gradient overlay, featured layout), `hero-full-bleed` (center/left/split layouts, dual CTAs), `carousel-product` (thumbnail strip, hover-to-zoom 250%), `sticky-add-to-cart` (Alpine.js event-driven slide-up), `modal-quick-view` (image gallery, variant selector, quantity picker), `banner-full-bleed-image` (single full-width image banner), `banner-full-bleed-2-image` (2-image side-by-side with text overlay, configurable split ratio), `banner-full-bleed-video` (full-width autoplay video), `banner-full-bleed-2-video` (2-video side-by-side with text overlay). Demo page at `/demo/premium`. Added `charcoal-lighter` (#999999) to Tailwind config. Added `hide-scrollbar` CSS utility.
 -   **Phase 3 Cart & Checkout (Feb 2026):** Implemented full cart system with add-to-cart from PDP, cart drawer, cart page, checkout with shipping/billing addresses, and order confirmation page. Offline payment placeholder active; Stripe adapter installed for future activation.
 

@@ -5,11 +5,20 @@
         headingAccent="Rep the Brand"
         description="Shop our exclusive line of Top 5 Percent branded merchandise. Premium quality t-shirts, hoodies, hats, and accessories that represent the Top 5% lifestyle."
         primaryButtonText="Shop Now"
-        primaryButtonHref="/store"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Contact Us"
         secondaryButtonHref="/contact"
     />
     <x-ui.banner-medium-sunburst />
+
+    <section id="all-products" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            @livewire('catalog.collection-page', [
+                'collectionSlug' => null,
+                'parentSlug' => null,
+            ])
+        </div>
+    </section>
 
     <x-sections.top5pct-same-day-service serviceType="merchandise" displayServiceType="Merchandise" />
     <x-sections.why-choose-us />

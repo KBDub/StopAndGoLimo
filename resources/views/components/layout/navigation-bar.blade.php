@@ -108,7 +108,7 @@
                     Promotional Items
                 </a>
 
-                <a href="/store" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'store' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                <a href="/top5pct-merchandise" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'store' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Top 5% Merchandise
                 </a>
 
@@ -136,7 +136,7 @@
             <div class="space-y-2">
                 <a href="/" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Home</a>
                 <a href="/about" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">About Us</a>
-                <a href="/shop" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Shop All</a>
+                <a href="/top5pct-merchandise" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Top 5% Merchandise</a>
                 <a href="/collections/custom-apparel" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Custom Apparel</a>
                 <a href="/collections/signs" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Signs</a>
                 <a href="/collections/decals" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Decals</a>
@@ -144,7 +144,6 @@
                 <a href="/collections/promotional-items" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Promotional Items</a>
                 <a href="/design-it-yourself" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Design It Yourself</a>
                 <a href="/stores" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Stores</a>
-                <a href="/store" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Top 5% Merchandise</a>
                 <a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Black Doll Apparel</a>
                 <a href="/portfolio" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Portfolio</a>
                 <a href="/contact" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Contact Us</a>

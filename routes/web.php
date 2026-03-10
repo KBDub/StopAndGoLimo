@@ -6,7 +6,7 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
-Route::get('/store', function () {
+Route::get('/top5pct-merchandise', function () {
     return view('pages.store');
 })->name('store');
 
@@ -226,16 +226,6 @@ Route::get('/products/{slug}', function (string $slug) {
     ]);
 })->name('products.show');
 
-Route::get('/shop', function () {
-    return view('pages.collection', [
-        'collectionSlug' => null,
-        'parentSlug' => null,
-        'collectionName' => 'All Products',
-        'collectionDescription' => 'Browse our complete catalog of custom signage, apparel, decals, vehicle graphics, and promotional items.',
-        'isParentCategory' => false,
-        'categoryItems' => [],
-    ]);
-})->name('shop');
 
 Route::get('/cart', function () {
     return view('pages.cart');

@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::get('/store', function () {
+    return view('pages.store');
+})->name('store');
+
 Route::get('/demo', function () {
     return view('pages.demo');
 });

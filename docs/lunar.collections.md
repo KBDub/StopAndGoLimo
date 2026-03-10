@@ -396,13 +396,110 @@ Each page card shows:
 
 ---
 
-## Migration Status
+## Migration Status: Hybrid Conversion
 
-Pages that still need conversion from static-only to hybrid:
+Every product category page (parent and sub-category) needs the `x-sections.product-grid` component added. The nav bar parent/child dropdown structure stays the same. Currently, nav dropdown links point to `/collections/` routes — these will be updated to point to the hybrid page URLs once the product grid is added to each page.
 
-| Current URL | Collection Slug Needed | Status |
+### Legend
+
+- **Done** — Has `x-sections.product-grid` with Livewire component
+- **Needs product grid** — Static marketing sections exist, needs `x-sections.product-grid` added
+
+### Custom Apparel (parent + 5 sub-categories)
+
+| Page | URL | Blade File | Collection Slug | Status |
+|---|---|---|---|---|
+| Custom Apparel (parent) | `/custom-apparel` | `pages/custom-apparel/index.blade.php` | `custom-apparel` | Needs product grid |
+| Custom Shirts | `/custom-apparel/custom-shirts` | `pages/custom-apparel/custom-shirts.blade.php` | `custom-shirts` | Needs product grid |
+| DTF Transfers | `/custom-apparel/dtf-transfers` | `pages/custom-apparel/dtf-transfers.blade.php` | `dtf-transfers` | Needs product grid |
+| Reunion Shirts | `/custom-apparel/reunion-shirts` | `pages/custom-apparel/reunion-shirts.blade.php` | `reunion-shirts` | Needs product grid |
+| Corporate Wear | `/custom-apparel/corporate-wear` | `pages/custom-apparel/corporate-wear.blade.php` | `corporate-wear` | Needs product grid |
+| Spirit Wear | `/custom-apparel/spirit-wear` | `pages/custom-apparel/spirit-wear.blade.php` | `spirit-wear` | Needs product grid |
+
+### Signs (parent + 7 sub-categories)
+
+| Page | URL | Blade File | Collection Slug | Status |
+|---|---|---|---|---|
+| Signs (parent) | `/signs` | `pages/signs/index.blade.php` | `signs` | Needs product grid |
+| Business Signs | `/signs/business-signs` | `pages/signs/business-signs.blade.php` | `business-signs` | Needs product grid |
+| Banners | `/signs/banners` | `pages/signs/banners.blade.php` | `banners` | Needs product grid |
+| Posters | `/signs/posters` | `pages/signs/posters.blade.php` | `posters` | Needs product grid |
+| Table Runners | `/signs/table-runners` | `pages/signs/table-runners.blade.php` | `table-runners` | Needs product grid |
+| Sidewalk Signs | `/signs/sidewalk-signs` | `pages/signs/sidewalk-signs.blade.php` | `sidewalk-signs` | Needs product grid |
+| Yard Signs | `/signs/yard-signs` | `pages/signs/yard-signs.blade.php` | `yard-signs` | Needs product grid |
+| Coronavirus Signs | `/signs/coronavirus-signs` | `pages/signs/coronavirus-signs.blade.php` | `coronavirus-signs` | Needs product grid |
+
+### Decals (parent + 3 sub-categories)
+
+| Page | URL | Blade File | Collection Slug | Status |
+|---|---|---|---|---|
+| Decals (parent) | `/decals` | `pages/decals/index.blade.php` | `decals` | Needs product grid |
+| Stickers | `/decals/stickers` | `pages/decals/stickers.blade.php` | `stickers` | Needs product grid |
+| Window, Wall & Floor Decals | `/decals/window-wall-floor-decals` | `pages/decals/window-wall-floor-decals.blade.php` | `window-wall-floor-decals` | Needs product grid |
+| Coronavirus Decals | `/decals/coronavirus-decals` | `pages/decals/coronavirus-decals.blade.php` | `coronavirus-decals` | Needs product grid |
+
+### Vehicle Graphics (parent + 3 sub-categories)
+
+| Page | URL | Blade File | Collection Slug | Status |
+|---|---|---|---|---|
+| Vehicle Graphics (parent) | `/vehicle-graphics` | `pages/vehicle-graphics/index.blade.php` | `vehicle-graphics` | Needs product grid |
+| Automobile Graphics | `/vehicle-graphics/automobile-graphics` | `pages/vehicle-graphics/automobile-graphics.blade.php` | `automobile-graphics` | Needs product grid |
+| Vehicle Magnets | `/vehicle-graphics/vehicle-magnets` | `pages/vehicle-graphics/vehicle-magnets.blade.php` | `vehicle-magnets` | Needs product grid |
+| DOT Decals | `/vehicle-graphics/dot-decals` | `pages/vehicle-graphics/dot-decals.blade.php` | `dot-decals` | Needs product grid |
+
+### Standalone Category Pages
+
+| Page | URL | Blade File | Collection Slug | Status |
+|---|---|---|---|---|
+| Promotional Items | `/promotional-items` | `pages/promotional-items.blade.php` | `promotional-items` | Needs product grid |
+| Top 5% Merchandise | `/top5pct-merchandise` | `pages/top5pct-merchandise.blade.php` | `null` (all products) | Done |
+
+### Non-Category Pages (no product grid needed)
+
+These pages are not product categories and do not need a product grid:
+
+| Page | URL | Notes |
 |---|---|---|
-| `/custom-apparel/custom-shirts` | `custom-shirts` | Static only — needs product grid added |
-| `/custom-apparel/custom-hoodies` | `custom-hoodies` | Static only — needs product grid added |
-| Other category pages | Various | Audit needed |
-| `/top5pct-merchandise` | `null` (all products) | Done — reference implementation |
+| Home | `/` | Has `featured-products` Livewire (different component) |
+| About | `/about` | Informational |
+| Contact | `/contact` | Lead form |
+| Portfolio | `/portfolio` | Gallery |
+| Stores | `/stores` | Location page |
+| Design It Yourself (parent) | `/design-it-yourself` | Tool/service page |
+| Online Designer | `/design-it-yourself/online-designer` | Tool page |
+| Design Catalogs | `/design-it-yourself/design-catalogs` | Resource page |
+
+### Nav Bar Update Required
+
+When hybrid conversion is complete, the navigation bar dropdown links need to change from `/collections/` routes to the hybrid page URLs:
+
+**Current (points to dynamic `/collections/` routes):**
+```
+/collections/custom-apparel/custom-shirts
+/collections/signs/business-signs
+/collections/decals/stickers
+/collections/vehicle-graphics/automobile-graphics
+/collections/promotional-items
+```
+
+**Target (points to hybrid pages directly):**
+```
+/custom-apparel/custom-shirts
+/signs/business-signs
+/decals/stickers
+/vehicle-graphics/automobile-graphics
+/promotional-items
+```
+
+The parent/child dropdown menu structure stays exactly the same — only the `href` values change to point to the hybrid page URLs instead of the `/collections/` prefix routes.
+
+### Summary
+
+| Category | Parent Page | Sub-Category Pages | Total | Done | Remaining |
+|---|---|---|---|---|---|
+| Custom Apparel | 1 | 5 | 6 | 0 | 6 |
+| Signs | 1 | 7 | 8 | 0 | 8 |
+| Decals | 1 | 3 | 4 | 0 | 4 |
+| Vehicle Graphics | 1 | 3 | 4 | 0 | 4 |
+| Standalone | — | — | 2 | 1 | 1 |
+| **Total** | **4** | **18** | **24** | **1** | **23** |

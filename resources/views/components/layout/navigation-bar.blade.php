@@ -25,7 +25,7 @@
             </button>
 
             <div class="hidden lg:flex items-center space-x-1">
-                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Home
                 </a>
                 
@@ -104,15 +104,15 @@
                     </div>
                 </div>
 
-                <a href="/collections/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/collections/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Promotional Items
                 </a>
 
-                <a href="/black-doll-apparel" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'black-doll-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/black-doll-apparel" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'black-doll-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Black Doll Apparel
                 </a>
 
-                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Portfolio
                 </a>
 

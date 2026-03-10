@@ -2,11 +2,15 @@
     'currentPage' => null
 ])
 
-<nav class="bg-linen text-white" x-data="{ mobileMenuOpen: false, openDropdown: null }">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center justify-between py-4">
+<nav
+    class="bg-linen text-white transition-all duration-300"
+    x-data="{ mobileMenuOpen: false, openDropdown: null, scrolled: false }"
+    x-on:scroll.window="scrolled = window.scrollY > 50"
+>
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between transition-all duration-300" x-bind:class="scrolled ? 'py-1.5' : 'py-4'">
             <a href="/" class="flex items-center flex-shrink-0">
-                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-24">
+                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="transition-all duration-300" x-bind:class="scrolled ? 'h-14' : 'h-24'">
             </a>
 
             <button 
@@ -112,7 +116,6 @@
                     Portfolio
                 </a>
 
-                <!-- TODO make About be a dropdown, with About Us link and Team link and contact link -->
                 <div class="relative" @mouseenter="openDropdown = 'about'" @mouseleave="openDropdown = null">
                     <button class="px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst transition-colors flex items-center gap-1">
                         About

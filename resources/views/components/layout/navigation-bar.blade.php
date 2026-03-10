@@ -25,12 +25,12 @@
             </button>
 
             <div class="hidden lg:flex items-center space-x-1">
-                <a href="/" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                <a href="/" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Home
                 </a>
                 
                 <div class="relative" @mouseenter="openDropdown = 'apparel'" @mouseleave="openDropdown = null">
-                    <a href="/collections/custom-apparel" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
+                    <a href="/collections/custom-apparel" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
                         Custom Apparel
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'apparel' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'design'" @mouseleave="openDropdown = null">
-                    <a href="/design-it-yourself" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'design-it-yourself' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
+                    <a href="/design-it-yourself" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'design-it-yourself' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
                         Design It Yourself
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'design' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'signs'" @mouseleave="openDropdown = null">
-                    <a href="/collections/signs" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
+                    <a href="/collections/signs" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
                         Signs
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'signs' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'decals'" @mouseleave="openDropdown = null">
-                    <a href="/collections/decals" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'decals' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
+                    <a href="/collections/decals" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'decals' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
                         Decals
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'decals' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="relative" @mouseenter="openDropdown = 'vehicle'" @mouseleave="openDropdown = null">
-                    <a href="/collections/vehicle-graphics" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
+                    <a href="/collections/vehicle-graphics" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors inline-flex items-center gap-0.5 text-center">
                         Vehicle Graphics
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'vehicle' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -104,20 +104,20 @@
                     </div>
                 </div>
 
-                <a href="/collections/promotional-items" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'promotional' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                <a href="/collections/promotional-items" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'promotional' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Promotional Items
                 </a>
 
-                <a href="/black-doll-apparel" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'black-doll-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                <a href="/black-doll-apparel" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'black-doll-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Black Doll Apparel
                 </a>
 
-                <a href="/portfolio" class="px-3 py-2 text-sm font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                <a href="/portfolio" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Portfolio
                 </a>
 
                 <div class="relative" @mouseenter="openDropdown = 'about'" @mouseleave="openDropdown = null">
-                    <button class="px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst transition-colors inline-flex items-center gap-0.5 text-center">
+                    <button class="px-3 py-2 text-base font-semibold text-charcoal hover:text-sunburst transition-colors inline-flex items-center gap-0.5 text-center">
                         About
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'about' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </button>

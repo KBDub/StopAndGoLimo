@@ -4,14 +4,15 @@
         heading="Custom Banners"
         headingAccent="Big Impact"
         description="Vinyl banners, fabric banners, and retractable banner stands for events, trade shows, and storefronts. Full color, any size."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="banners" displayServiceType="Custom Banners" />
+    <x-sections.product-grid collectionSlug="banners" parentSlug="signs" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

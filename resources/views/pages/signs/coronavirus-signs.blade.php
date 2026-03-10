@@ -4,14 +4,15 @@
         heading="Coronavirus"
         headingAccent="Safety Signs"
         description="Social distancing signs, mask required signs, and safety protocol signage for your business. Quick turnaround, professional quality."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="coronavirus-signs" displayServiceType="Coronavirus Signs" />
+    <x-sections.product-grid collectionSlug="coronavirus-signs" parentSlug="signs" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -4,14 +4,15 @@
         heading="Table Runners"
         headingAccent="Trade Show Ready"
         description="Custom printed table runners and tablecloths for trade shows, events, and retail displays. Full-color printing on premium fabric."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="table-runners" displayServiceType="Table Runners" />
+    <x-sections.product-grid collectionSlug="table-runners" parentSlug="signs" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

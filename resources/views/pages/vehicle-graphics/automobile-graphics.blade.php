@@ -4,14 +4,15 @@
         heading="Automobile"
         headingAccent="Graphics"
         description="Custom car graphics, partial wraps, lettering, and racing stripes. Transform your vehicle with professional-grade vinyl graphics."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="automobile-graphics" displayServiceType="Automobile Graphics" />
+    <x-sections.product-grid collectionSlug="automobile-graphics" parentSlug="vehicle-graphics" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

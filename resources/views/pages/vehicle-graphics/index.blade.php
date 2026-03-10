@@ -4,15 +4,15 @@
         heading="Vehicle Graphics"
         headingAccent="& Wraps"
         description="Turn your vehicle into a mobile billboard. Custom wraps, lettering, magnets, and DOT compliance decals for cars, trucks, and fleets."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="vehicle-graphics" displayServiceType="Vehicle Graphics" />
-
+    <x-sections.product-grid collectionSlug="vehicle-graphics" />
     <x-sections.top-level-category-section
         heading="Vehicle Graphics"
         headingAccent="Services"

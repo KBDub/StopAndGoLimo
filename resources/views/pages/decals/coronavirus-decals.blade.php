@@ -4,14 +4,15 @@
         heading="Coronavirus"
         headingAccent="Safety Decals"
         description="Floor decals, window decals, and safety stickers for social distancing and health protocols. Easy to apply and remove."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="coronavirus-decals" displayServiceType="Coronavirus Decals" />
+    <x-sections.product-grid collectionSlug="coronavirus-decals" parentSlug="decals" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

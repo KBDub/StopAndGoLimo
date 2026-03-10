@@ -4,15 +4,15 @@
         heading="Custom Signs"
         headingAccent="& Banners"
         description="Professional custom signs, banners, posters, and displays for your business. Indoor and outdoor options with premium materials and fast turnaround."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="signs" displayServiceType="Custom Signs" />
-
+    <x-sections.product-grid collectionSlug="signs" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

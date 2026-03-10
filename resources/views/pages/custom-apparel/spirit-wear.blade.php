@@ -4,8 +4,8 @@
         heading="Spirit Wear"
         headingAccent="Show Your Pride"
         description="Custom spirit wear for schools, teams, and organizations. T-shirts, hoodies, hats, and more with your logo and colors."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
@@ -15,6 +15,7 @@
         serviceType="spirit-wear" 
         displayServiceType="Spirit Wear" 
     />
+    <x-sections.product-grid collectionSlug="spirit-wear" parentSlug="custom-apparel" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -4,14 +4,15 @@
         heading="Custom Stickers"
         headingAccent="Any Shape, Any Size"
         description="Die-cut stickers, bumper stickers, and label stickers for branding, packaging, and promotions. Premium vinyl with weatherproof finish."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="stickers" displayServiceType="Custom Stickers" />
+    <x-sections.product-grid collectionSlug="stickers" parentSlug="decals" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

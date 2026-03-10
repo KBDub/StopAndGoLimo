@@ -4,14 +4,15 @@
         heading="Promotional"
         headingAccent="Items & Swag"
         description="Custom promotional products including pens, mugs, tote bags, koozies, and corporate gifts. Branded merchandise to grow your business."
-        primaryButtonText="Get a Free Quote"
-        primaryButtonHref="/contact"
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
     />
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="promotional-items" displayServiceType="Promotional Items" />
+    <x-sections.product-grid collectionSlug="promotional-items" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -53,10 +53,10 @@ export default {
             },
             fontSize: {
                 'h1': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
-                'h2': ['24px', { lineHeight: '1.3', fontWeight: '700' }],
-                'h3': ['20px', { lineHeight: '1.3', fontWeight: '600' }],
-                'h4': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
-                'h5': ['16px', { lineHeight: '1.4', fontWeight: '600' }],
+                'h2': ['28px', { lineHeight: '1.3', fontWeight: '700' }],
+                'h3': ['24px', { lineHeight: '1.3', fontWeight: '600' }],
+                'h4': ['20px', { lineHeight: '1.4', fontWeight: '600' }],
+                'h5': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
             },
             spacing: {
                 '18': '72px',

@@ -1,5 +1,28 @@
 # Branding Update: Premium E-Commerce Components
 
+## Changelog
+
+### March 10, 2026 — Typography Scale Increase
+
+All non-H1 font sizes bumped up one level for improved readability across body content sections. H1 remains unchanged at 32px/28px.
+
+| Element | Previous (Desktop / Mobile) | New (Desktop / Mobile) |
+|---------|---------------------------|----------------------|
+| H2 | 24px / 22px | 28px / 24px |
+| H3 | 20px / 18px | 24px / 20px |
+| H4 | 18px / 16px | 20px / 18px |
+| H5 | 16px / 15px | 18px / 16px |
+| Body Large | 18px / 16px | 20px / 18px |
+| Body | 16px / 15px | 18px / 16px |
+| Body Small | 14px / 13px | 16px / 15px |
+| Caption | 12px / 11px | 14px / 13px |
+| Button | 14px / 13px | 16px / 15px |
+| Nav Link | 14px / 13px | 16px / 15px |
+
+**Files changed:** `resources/css/app.css` (CSS variables), `tailwind.config.js` (Tailwind fontSize utilities), `docs/branding-requirements.md` (documented scale).
+
+---
+
 ## Overview
 
 This document outlines the new component designs, media pipeline, and layout strategies for elevating the Top 5 Percent storefront to match the visual quality and conversion patterns of leading e-commerce brands like ModCloth and Gymshark. These new components are separate from the existing UI component set and will be added to the demo page for review.

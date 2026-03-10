@@ -21,7 +21,6 @@ This gives every page the best of both worlds:
 
 ```blade
 <x-layouts.page title="Top 5% Merchandise" currentPage="store">
-    {{-- Static marketing sections --}}
     <x-sections.category-hero
         preHeading="Veteran Owned - Joliet, IL"
         heading="Top 5% Merchandise"
@@ -33,25 +32,64 @@ This gives every page the best of both worlds:
         secondaryButtonHref="/contact"
     />
     <x-ui.banner-medium-sunburst />
-
-    {{-- Embedded product grid — collectionSlug filters products, null = all --}}
-    <section id="all-products" class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            @livewire('catalog.collection-page', [
-                'collectionSlug' => null,
-                'parentSlug' => null,
-            ])
-        </div>
-    </section>
-
-    {{-- More static marketing sections --}}
     <x-sections.top5pct-same-day-service serviceType="merchandise" displayServiceType="Merchandise" />
+    <x-sections.product-grid />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />
 </x-layouts.page>
+```
+
+### Standard Hybrid Page Section Order
+
+Every hybrid page follows this section order:
+
+1. `x-sections.category-hero` — hero banner with heading, description, CTAs (Shop Now scrolls to #all-products)
+2. `x-ui.banner-medium-sunburst` — decorative divider
+3. `x-sections.top5pct-same-day-service` — service/trust highlight (always **before** the product grid)
+4. `x-sections.product-grid` — the Livewire-powered product grid (see below)
+5. `x-sections.why-choose-us` — value proposition
+6. `x-sections.cta-free-quote` — lead generation
+7. `x-sections.cta-ready-to-get-started` — conversion CTA
+8. `x-sections.review-banner` — customer testimonials
+9. `x-sections.map-section` — location/contact
+
+The same-day-service section comes before the product grid intentionally — it establishes trust and service quality before the customer enters the shopping experience.
+
+### The Product Grid Section Component
+
+**File:** `resources/views/components/sections/product-grid.blade.php`
+
+The product grid is a standard `x-sections` Blade component that wraps the `catalog.collection-page` Livewire component. This keeps the Livewire embed consistent with the rest of the section-based page structure and makes it visible in the page-management scanner.
+
+**Props:**
+- `collectionSlug` (string|null, default: `null`) — Lunar collection slug to filter products. `null` shows all products.
+- `parentSlug` (string|null, default: `null`) — Parent collection slug for breadcrumb context.
+
+**Usage examples:**
+```blade
+{{-- All products (no filter) --}}
+<x-sections.product-grid />
+
+{{-- Filtered to a specific collection --}}
+<x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
+
+{{-- Top-level collection --}}
+<x-sections.product-grid collectionSlug="signs" />
+```
+
+**Internal structure:**
+```blade
+<section id="all-products" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        @livewire('catalog.collection-page', [
+            'collectionSlug' => $collectionSlug,
+            'parentSlug' => $parentSlug,
+        ])
+    </div>
+</section>
 ```
 
 ### How the Livewire Component Works
@@ -279,7 +317,7 @@ Step-by-step process for adding a new product category page:
    resources/views/pages/your-category/your-page.blade.php
    ```
 
-3. **Follow the hybrid template:**
+3. **Follow the hybrid template (standard section order):**
    ```blade
    <x-layouts.page title="Page Title" metaDescription="..." currentPage="your-page">
        <x-sections.category-hero
@@ -293,17 +331,8 @@ Step-by-step process for adding a new product category page:
            secondaryButtonHref="/contact"
        />
        <x-ui.banner-medium-sunburst />
-
-       <section id="all-products" class="py-12 bg-white">
-           <div class="max-w-7xl mx-auto px-6">
-               @livewire('catalog.collection-page', [
-                   'collectionSlug' => 'your-collection-slug',
-                   'parentSlug' => 'parent-slug-if-nested',
-               ])
-           </div>
-       </section>
-
        <x-sections.top5pct-same-day-service serviceType="your-type" displayServiceType="Your Type" />
+       <x-sections.product-grid collectionSlug="your-collection-slug" parentSlug="parent-slug-if-nested" />
        <x-sections.why-choose-us />
        <x-sections.cta-free-quote />
        <x-sections.cta-ready-to-get-started />
@@ -322,6 +351,39 @@ Step-by-step process for adding a new product category page:
 5. **Update the navigation bar** in `resources/views/components/layout/navigation-bar.blade.php` to link to the new page
 
 6. **When SEO is implemented:** Add the page to `sitemap.xml`, add canonical tag, add JSON-LD
+
+## Page Management Dashboard
+
+**URL:** `/page-management`
+
+The page management dashboard (`resources/views/pages/page-management.blade.php`) scans all page Blade files and displays their component composition. It is powered by `App\Actions\ScanPageComponents`.
+
+### What the Scanner Detects
+
+The scanner identifies four types of components in each page file:
+
+| Type | Detection Method | Example |
+|---|---|---|
+| Section | `<x-sections.*>` tags | `x-sections.product-grid`, `x-sections.why-choose-us` |
+| Ui | `<x-ui.*>` tags | `x-ui.banner-medium-sunburst` |
+| Layout | `<x-layout.*>` tags | `x-layout.navigation-bar` |
+| Livewire | `@livewire('...')` directives | `catalog.collection-page`, `cart.cart-page` |
+
+### Nested Livewire Detection
+
+When a Blade section component (e.g., `x-sections.product-grid`) contains an `@livewire` directive internally, the scanner detects and displays the nested Livewire component alongside the section. This appears as a purple badge on the section row showing which Livewire component powers it.
+
+This means:
+- `x-sections.product-grid` will show a badge: `catalog.collection-page`
+- `x-sections.featured-products` (if it wraps a Livewire component) will show its nested component
+
+### Display in the Dashboard
+
+Each page card shows:
+- Page name and URL
+- Badge counts: shared components, unique components
+- Expanded view: all components in page order, with type labels (Section, Ui, Layout, Livewire) and nested Livewire badges
+- Color legend at the bottom maps all components to their color-coded entries
 
 ---
 

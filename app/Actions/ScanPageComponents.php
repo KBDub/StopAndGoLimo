@@ -49,7 +49,9 @@ final class ScanPageComponents
                 'sections' => $components['sections'],
                 'ui' => $components['ui'],
                 'layout' => $components['layout'],
+                'livewire' => $components['livewire'],
                 'all_components' => $components['all'],
+                'component_livewire_map' => $components['component_livewire_map'],
                 'exists' => true,
             ];
         }
@@ -62,22 +64,62 @@ final class ScanPageComponents
         $sections = [];
         $ui = [];
         $layout = [];
+        $livewire = [];
         $all = [];
         $seen = [];
+        $componentLivewireMap = [];
 
-        preg_match_all('/<x-([\w.-]+)/', $content, $matches, PREG_OFFSET_CAPTURE);
+        $allMatches = [];
 
-        if (!empty($matches[1])) {
-            foreach ($matches[1] as $match) {
-                $component = $match[0];
-                if (isset($seen[$component])) {
-                    continue;
-                }
-                $seen[$component] = true;
+        preg_match_all('/<x-([\w.-]+)/', $content, $xMatches, PREG_OFFSET_CAPTURE);
+        if (!empty($xMatches[1])) {
+            foreach ($xMatches[1] as $match) {
+                $allMatches[] = [
+                    'type' => 'blade',
+                    'name' => $match[0],
+                    'offset' => $match[1],
+                ];
+            }
+        }
+
+        preg_match_all("/@livewire\(\s*['\"]([^'\"]+)['\"]/", $content, $lwMatches, PREG_OFFSET_CAPTURE);
+        if (!empty($lwMatches[1])) {
+            foreach ($lwMatches[1] as $match) {
+                $allMatches[] = [
+                    'type' => 'livewire',
+                    'name' => $match[0],
+                    'offset' => $match[1],
+                ];
+            }
+        }
+
+        usort($allMatches, fn(array $a, array $b) => $a['offset'] <=> $b['offset']);
+
+        foreach ($allMatches as $match) {
+            $component = $match['name'];
+            if ($match['type'] === 'livewire') {
+                $key = 'livewire:' . $component;
+            } else {
+                $key = $component;
+            }
+
+            if (isset($seen[$key])) {
+                continue;
+            }
+            $seen[$key] = true;
+
+            if ($match['type'] === 'livewire') {
+                $livewire[] = $component;
+                $all[] = $key;
+            } else {
                 $all[] = $component;
 
                 if (Str::startsWith($component, 'sections.')) {
                     $sections[] = $component;
+                    $nestedLivewire = $this->scanComponentForLivewire($component);
+                    if (!empty($nestedLivewire)) {
+                        $componentLivewireMap[$component] = $nestedLivewire;
+                    }
                 } elseif (Str::startsWith($component, 'ui.')) {
                     $ui[] = $component;
                 } elseif (Str::startsWith($component, 'layout.')) {
@@ -86,7 +128,36 @@ final class ScanPageComponents
             }
         }
 
-        return compact('sections', 'ui', 'layout', 'all');
+        return [
+            'sections' => $sections,
+            'ui' => $ui,
+            'layout' => $layout,
+            'livewire' => $livewire,
+            'all' => $all,
+            'component_livewire_map' => $componentLivewireMap,
+        ];
+    }
+
+    private function scanComponentForLivewire(string $componentName): array
+    {
+        $parts = explode('.', $componentName);
+        $fileName = array_pop($parts);
+        $subPath = implode('/', $parts);
+        $filePath = resource_path("views/components/{$subPath}/{$fileName}.blade.php");
+
+        if (!File::exists($filePath)) {
+            return [];
+        }
+
+        $content = File::get($filePath);
+        $livewireComponents = [];
+
+        preg_match_all("/@livewire\(\s*['\"]([^'\"]+)['\"]/", $content, $matches);
+        if (!empty($matches[1])) {
+            $livewireComponents = array_unique($matches[1]);
+        }
+
+        return array_values($livewireComponents);
     }
 
     private function calculateSharedComponents(array $pages): void

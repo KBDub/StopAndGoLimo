@@ -156,10 +156,15 @@
                                         <div class="space-y-1.5">
                                             @foreach($page['all_components'] as $index => $component)
                                                 @php
+                                                    $isLivewire = Str::startsWith($component, 'livewire:');
+                                                    $displayComponent = $isLivewire ? Str::after($component, 'livewire:') : $component;
                                                     $color = $componentColorMap[$component];
                                                     $isShared = in_array($component, $page['shared_components']);
 
-                                                    if (Str::startsWith($component, 'sections.')) {
+                                                    if ($isLivewire) {
+                                                        $label = Str::of($displayComponent)->replace(['.', '-', '_'], ' ')->title();
+                                                        $typeLabel = 'Livewire';
+                                                    } elseif (Str::startsWith($component, 'sections.')) {
                                                         $label = Str::of(Str::after($component, 'sections.'))->replace(['-', '_'], ' ')->title();
                                                         $typeLabel = 'Section';
                                                     } elseif (Str::startsWith($component, 'layout.')) {
@@ -172,11 +177,19 @@
                                                         $label = Str::of($component)->replace(['-', '_'], ' ')->title();
                                                         $typeLabel = 'Other';
                                                     }
+
+                                                    $nestedLivewire = $page['component_livewire_map'][$component] ?? [];
                                                 @endphp
                                                 <div class="flex items-center gap-2 px-3 py-1.5 rounded text-sm {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
                                                     <span class="w-2.5 h-2.5 rounded-full shrink-0 {{ $color['dot'] }}"></span>
-                                                    <span class="text-xs font-medium opacity-60 shrink-0 w-12">{{ $typeLabel }}</span>
+                                                    <span class="text-xs font-medium opacity-60 shrink-0 w-14">{{ $typeLabel }}</span>
                                                     <span class="font-medium flex-1">{{ $label }}</span>
+                                                    @if(!empty($nestedLivewire))
+                                                        <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 text-[10px] font-medium border border-purple-200 shrink-0">
+                                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                                                            {{ implode(', ', $nestedLivewire) }}
+                                                        </span>
+                                                    @endif
                                                     @if($isShared)
                                                         <span class="text-[10px] opacity-50 shrink-0">shared</span>
                                                     @endif
@@ -199,19 +212,29 @@
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                     @foreach($componentColorMap as $comp => $color)
                         @php
-                            if (Str::startsWith($comp, 'sections.')) {
+                            $isLw = Str::startsWith($comp, 'livewire:');
+                            $displayComp = $isLw ? Str::after($comp, 'livewire:') : $comp;
+
+                            if ($isLw) {
+                                $shortLabel = Str::of($displayComp)->replace(['.', '-', '_'], ' ')->title();
+                                $typePrefix = 'Livewire: ';
+                            } elseif (Str::startsWith($comp, 'sections.')) {
                                 $shortLabel = Str::of(Str::after($comp, 'sections.'))->replace(['-', '_'], ' ')->title();
+                                $typePrefix = '';
                             } elseif (Str::startsWith($comp, 'layout.')) {
                                 $shortLabel = Str::of(Str::after($comp, 'layout.'))->replace(['-', '_'], ' ')->title();
+                                $typePrefix = '';
                             } elseif (Str::startsWith($comp, 'ui.')) {
                                 $shortLabel = Str::of(Str::after($comp, 'ui.'))->replace(['-', '_'], ' ')->title();
+                                $typePrefix = '';
                             } else {
                                 $shortLabel = Str::of($comp)->replace(['-', '_'], ' ')->title();
+                                $typePrefix = '';
                             }
                         @endphp
                         <div class="flex items-center gap-2 px-2 py-1 rounded text-xs {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
                             <span class="w-2 h-2 rounded-full shrink-0 {{ $color['dot'] }}"></span>
-                            <span class="truncate">{{ $shortLabel }}</span>
+                            <span class="truncate">{{ $typePrefix }}{{ $shortLabel }}</span>
                         </div>
                     @endforeach
                 </div>

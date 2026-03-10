@@ -10,17 +10,8 @@
         secondaryButtonHref="/contact"
     />
     <x-ui.banner-medium-sunburst />
-
-    <section id="all-products" class="py-12 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            @livewire('catalog.collection-page', [
-                'collectionSlug' => null,
-                'parentSlug' => null,
-            ])
-        </div>
-    </section>
-
     <x-sections.top5pct-same-day-service serviceType="merchandise" displayServiceType="Merchandise" />
+    <x-sections.product-grid />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

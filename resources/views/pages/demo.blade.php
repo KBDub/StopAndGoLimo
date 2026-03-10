@@ -430,37 +430,37 @@
                         </div>
                         
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">H2 - 24px / Bold / Line Height 1.3</p>
+                            <p class="text-xs text-charcoal-light mb-2">H2 - 32px / Bold / Line Height 1.3</p>
                             <h2 class="text-h2 font-bold text-charcoal">Section Title</h2>
                         </div>
                         
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">H3 - 20px / SemiBold / Line Height 1.3</p>
+                            <p class="text-xs text-charcoal-light mb-2">H3 - 28px / SemiBold / Line Height 1.3</p>
                             <h3 class="text-h3 font-semibold text-charcoal">Subsection Heading</h3>
                         </div>
                         
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">H4 - 18px / SemiBold / Line Height 1.4</p>
+                            <p class="text-xs text-charcoal-light mb-2">H4 - 24px / SemiBold / Line Height 1.4</p>
                             <h4 class="text-h4 font-semibold text-charcoal">Card Title</h4>
                         </div>
                         
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">H5 - 16px / SemiBold / Line Height 1.4</p>
+                            <p class="text-xs text-charcoal-light mb-2">H5 - 20px / SemiBold / Line Height 1.4</p>
                             <h5 class="text-h5 font-semibold text-charcoal">Minor Heading</h5>
                         </div>
                         
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">Body Large - 18px / Regular</p>
+                            <p class="text-xs text-charcoal-light mb-2">Body Large - 22px / Regular</p>
                             <p class="text-lg text-charcoal">Premium custom signage and apparel. Veteran-owned business specializing in custom shirts, signs, decals, and vehicle graphics.</p>
                         </div>
                         
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">Body - 16px / Regular</p>
+                            <p class="text-xs text-charcoal-light mb-2">Body - 20px / Regular</p>
                             <p class="text-base text-charcoal">Our team delivers exceptional quality with attention to detail. From custom t-shirts to full vehicle wraps, we bring your vision to life.</p>
                         </div>
                         
                         <div>
-                            <p class="text-xs text-charcoal-light mb-2">Caption - 12px / Regular</p>
+                            <p class="text-xs text-charcoal-light mb-2">Caption - 16px / Regular</p>
                             <p class="text-xs text-charcoal-light">Image caption or fine print text styling.</p>
                         </div>
                     </div>

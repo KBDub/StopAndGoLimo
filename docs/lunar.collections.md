@@ -155,6 +155,81 @@ This is the **primary shop page** for the site. It replaced the old `/shop` rout
 
 ---
 
+## Discovery & Routing: Users, Search Engines, and AI Crawlers
+
+Both URL patterns coexist on the site. Understanding how each visitor type discovers and interacts with them is critical for SEO and avoiding duplicate content penalties.
+
+### How Users Find Pages
+
+Users navigate the site through the **navigation bar**, which contains explicit links:
+
+- **Static landing pages** are linked directly (e.g., "Custom Apparel" dropdown links to `/custom-apparel/custom-shirts`)
+- **Dynamic collection pages** are linked via the `/collections/` prefix routes (e.g., breadcrumbs, category cards on parent collection pages)
+- **Hybrid pages** are linked in the nav (e.g., "Top 5% Merchandise" links to `/top5pct-merchandise`)
+- **Product detail pages** are linked from product cards in both collection grids and the merchandise page
+
+Users generally don't type URLs — they follow the links the navigation provides. The nav bar determines which system a user enters.
+
+### How Search Engines (Google, Bing) Find Pages
+
+Search engines discover pages through three mechanisms:
+
+1. **Crawling internal links** — Googlebot follows every `<a href>` it finds on any indexed page. Since both URL patterns have links pointing to them from various places on the site, both get crawled and indexed.
+
+2. **Sitemap.xml** — A sitemap explicitly tells search engines which URLs exist and which are most important. **Currently, no `sitemap.xml` exists.** This means search engines have no authoritative list of preferred URLs.
+
+3. **Canonical tags** — A `<link rel="canonical">` tag tells search engines "this is the preferred version of this page." **Currently, no canonical tags exist on any page.** This means when both `/custom-apparel/custom-shirts` and `/collections/custom-apparel/custom-shirts` exist with related content, search engines must guess which one to prioritize.
+
+### How AI Engines (ChatGPT, Perplexity, Google AI Overview) Find Pages
+
+AI crawlers behave similarly to search engine crawlers but with some differences:
+
+- They may use `sitemap.xml` for discovery (same gap as above)
+- They tend to prefer pages with rich, structured content (static landing pages with descriptive text rank well here)
+- They follow `robots.txt` directives (currently none exist)
+- They may also pull from search engine indexes, inheriting whatever Google/Bing decided to index
+
+### Current Gaps (Action Items)
+
+The following SEO infrastructure is **missing** and should be implemented before production launch:
+
+| Item | Status | Impact |
+|---|---|---|
+| `sitemap.xml` | Missing | Search engines have no authoritative URL list |
+| `robots.txt` | Missing | No crawler directives; all paths are open |
+| `<link rel="canonical">` | Missing | Duplicate/overlapping pages may compete in rankings |
+| `<meta name="robots">` | Missing | No per-page index/noindex control |
+| Structured data (JSON-LD) | Missing | No rich snippets for products, business, breadcrumbs |
+
+### Recommended SEO Strategy
+
+When implementing SEO infrastructure, the intended relationship between the two URL systems should be:
+
+**Static landing pages (`/custom-apparel/custom-shirts`):**
+- Should be the **canonical, indexable** pages for search engines
+- Rich marketing content makes them ideal for ranking on informational and transactional queries
+- Should appear in `sitemap.xml`
+- Should have `<link rel="canonical" href="...">` pointing to themselves
+
+**Dynamic collection pages (`/collections/custom-apparel/custom-shirts`):**
+- Should be treated as **functional/utility pages** for users who are actively shopping
+- Could be set to `noindex, follow` via `<meta name="robots">` to prevent duplicate content
+- Or could use `<link rel="canonical">` pointing back to the corresponding static landing page
+- Should **not** appear in `sitemap.xml`
+
+**Hybrid pages (`/top5pct-merchandise`):**
+- Should be canonical and indexable (they are unique, with no duplicate counterpart)
+- Should appear in `sitemap.xml`
+
+**Product detail pages (`/products/{slug}`):**
+- Should be canonical and indexable
+- Should appear in `sitemap.xml`
+- Should include JSON-LD Product structured data
+
+This strategy ensures search engines index the content-rich marketing pages while the dynamic shopping pages serve users who arrive via navigation. AI engines will similarly surface the richer static pages in their responses.
+
+---
+
 ## How Collections Are Created
 
 Collections are managed in the Lunar Hub admin panel (`/hub`). They are:

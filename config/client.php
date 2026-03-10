@@ -49,6 +49,8 @@ return [
         'Sunday' => '',
     ],
 
+    'product_grid_enabled' => false,
+
     'primary_color' => '#FFC20E',
     'secondary_color' => '#3273DC',
 

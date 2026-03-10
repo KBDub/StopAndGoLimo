@@ -24,6 +24,7 @@ This file is a standard Laravel config file. Values are accessed via:
     config('client.primary_color')    // "#FFC20E"
     config('client.secondary_color')  // "#3273DC"
     config('client.color_palette')    // Array of brand colors
+    config('client.product_grid_enabled') // false (controls product grid on category pages)
     config('client.operating_hours')  // Array of hours by day (not yet populated)
 
 In Blade templates:
@@ -41,4 +42,17 @@ Available keys:
     certifications, associations, chamber_associations,
     service_areas, priority_service_areas, service_areas_description,
     service_area_slugs, logo (url, alt, width, height),
+    product_grid_enabled,
     operating_hours, primary_color, secondary_color, color_palette
+
+Product Grid Flag
+-----------------
+config('client.product_grid_enabled') controls whether the product grid
+(x-sections.product-grid) renders on the 23 hybrid category pages.
+
+    false (default) = product grids hidden on all category pages
+    true            = product grids shown on all category pages
+
+The top5pct-merchandise page is exempt — it passes :alwaysShow="true"
+to the component, so its product grid is always visible regardless of
+this flag.

@@ -36,6 +36,7 @@ export default {
                 'olive': {
                     DEFAULT: '#A39822',
                 },
+                'blush-pink': '#FBCDCE',
                 'success': '#4CAF50',
                 'warning': '#F9A825',
                 'error': '#C62828',

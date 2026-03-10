@@ -2,22 +2,23 @@
 
 ## Changelog
 
-### March 10, 2026 — Typography Scale Increase
+### March 10, 2026 — Typography Scale Increase (2nd bump)
 
-All non-H1 font sizes bumped up one level for improved readability across body content sections. H1 remains unchanged at 32px/28px.
+All non-H1 font sizes bumped up two levels total from the original scale for improved readability. H1 remains unchanged at 32px/28px. H2 now matches H1 in size (32px) but retains different line-height (1.3 vs 1.2).
 
-| Element | Previous (Desktop / Mobile) | New (Desktop / Mobile) |
-|---------|---------------------------|----------------------|
-| H2 | 24px / 22px | 28px / 24px |
-| H3 | 20px / 18px | 24px / 20px |
-| H4 | 18px / 16px | 20px / 18px |
-| H5 | 16px / 15px | 18px / 16px |
-| Body Large | 18px / 16px | 20px / 18px |
-| Body | 16px / 15px | 18px / 16px |
-| Body Small | 14px / 13px | 16px / 15px |
-| Caption | 12px / 11px | 14px / 13px |
-| Button | 14px / 13px | 16px / 15px |
-| Nav Link | 14px / 13px | 16px / 15px |
+| Element | Original | 1st Bump | 2nd Bump (Current) |
+|---------|----------|----------|-------------------|
+| H1 | 32px / 28px | 32px / 28px | 32px / 28px |
+| H2 | 24px / 22px | 28px / 24px | 32px / 28px |
+| H3 | 20px / 18px | 24px / 20px | 28px / 24px |
+| H4 | 18px / 16px | 20px / 18px | 24px / 20px |
+| H5 | 16px / 15px | 18px / 16px | 20px / 18px |
+| Body Large | 18px / 16px | 20px / 18px | 22px / 20px |
+| Body | 16px / 15px | 18px / 16px | 20px / 18px |
+| Body Small | 14px / 13px | 16px / 15px | 18px / 16px |
+| Caption | 12px / 11px | 14px / 13px | 16px / 14px |
+| Button | 14px / 13px | 16px / 15px | 18px / 16px |
+| Nav Link | 14px / 13px | 16px / 15px | 18px / 16px |
 
 **Files changed:** `resources/css/app.css` (CSS variables), `tailwind.config.js` (Tailwind fontSize utilities), `docs/branding-requirements.md` (documented scale).
 

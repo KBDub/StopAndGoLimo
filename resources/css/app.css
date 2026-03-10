@@ -56,23 +56,23 @@
     --font-weight-bold: 700;
 
     --font-size-h1: 32px;
-    --font-size-h2: 28px;
-    --font-size-h3: 24px;
-    --font-size-h4: 20px;
-    --font-size-h5: 18px;
-    --font-size-body-lg: 20px;
-    --font-size-body: 18px;
-    --font-size-body-sm: 16px;
-    --font-size-caption: 14px;
-    --font-size-button: 16px;
-    --font-size-nav: 16px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-h4: 24px;
+    --font-size-h5: 20px;
+    --font-size-body-lg: 22px;
+    --font-size-body: 20px;
+    --font-size-body-sm: 18px;
+    --font-size-caption: 16px;
+    --font-size-button: 18px;
+    --font-size-nav: 18px;
 
     --font-size-h1-mobile: 28px;
-    --font-size-h2-mobile: 24px;
-    --font-size-h3-mobile: 20px;
-    --font-size-h4-mobile: 18px;
-    --font-size-h5-mobile: 16px;
-    --font-size-body-mobile: 16px;
+    --font-size-h2-mobile: 28px;
+    --font-size-h3-mobile: 24px;
+    --font-size-h4-mobile: 20px;
+    --font-size-h5-mobile: 18px;
+    --font-size-body-mobile: 18px;
 
     --line-height-heading: 1.2;
     --line-height-subheading: 1.3;

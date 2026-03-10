@@ -428,16 +428,16 @@ Do not use the CSS `text-transform: uppercase` property or the Tailwind `upperca
 | Element | Font | Size (Desktop) | Size (Mobile) | Weight | Line Height | Letter Spacing |
 |---------|------|----------------|---------------|--------|-------------|----------------|
 | H1 | Titillium Web | 32px | 28px | 700 | 1.2 | 0em |
-| H2 | Titillium Web | 28px | 24px | 700 | 1.3 | 0em |
-| H3 | Titillium Web | 24px | 20px | 600 | 1.3 | 0em |
-| H4 | Titillium Web | 20px | 18px | 600 | 1.4 | 0em |
-| H5 | Titillium Web | 18px | 16px | 600 | 1.4 | 0.01em |
-| Body Large | Titillium Web | 20px | 18px | 400 | 1.7 | 0em |
-| Body | Titillium Web | 18px | 16px | 400 | 1.6 | 0em |
-| Body Small | Titillium Web | 16px | 15px | 400 | 1.5 | 0.01em |
-| Caption | Titillium Web | 14px | 13px | 400 | 1.4 | 0.02em |
-| Button | Titillium Web | 16px | 15px | 600 | 1 | 0.05em |
-| Nav Link | Titillium Web | 16px | 15px | 600 | 1 | 0.02em |
+| H2 | Titillium Web | 32px | 28px | 700 | 1.3 | 0em |
+| H3 | Titillium Web | 28px | 24px | 600 | 1.3 | 0em |
+| H4 | Titillium Web | 24px | 20px | 600 | 1.4 | 0em |
+| H5 | Titillium Web | 20px | 18px | 600 | 1.4 | 0.01em |
+| Body Large | Titillium Web | 22px | 20px | 400 | 1.7 | 0em |
+| Body | Titillium Web | 20px | 18px | 400 | 1.6 | 0em |
+| Body Small | Titillium Web | 18px | 16px | 400 | 1.5 | 0.01em |
+| Caption | Titillium Web | 16px | 14px | 400 | 1.4 | 0.02em |
+| Button | Titillium Web | 18px | 16px | 600 | 1 | 0.05em |
+| Nav Link | Titillium Web | 18px | 16px | 600 | 1 | 0.02em |
 
 ---
 
@@ -723,24 +723,24 @@ These variables are defined in `resources/css/app.css` and match the Tailwind co
   
   /* Font Sizes - Desktop */
   --font-size-h1: 32px;
-  --font-size-h2: 28px;
-  --font-size-h3: 24px;
-  --font-size-h4: 20px;
-  --font-size-h5: 18px;
-  --font-size-body-lg: 20px;
-  --font-size-body: 18px;
-  --font-size-body-sm: 16px;
-  --font-size-caption: 14px;
-  --font-size-button: 16px;
-  --font-size-nav: 16px;
+  --font-size-h2: 32px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+  --font-size-body-lg: 22px;
+  --font-size-body: 20px;
+  --font-size-body-sm: 18px;
+  --font-size-caption: 16px;
+  --font-size-button: 18px;
+  --font-size-nav: 18px;
   
   /* Font Sizes - Mobile (use with media queries) */
   --font-size-h1-mobile: 28px;
-  --font-size-h2-mobile: 24px;
-  --font-size-h3-mobile: 20px;
-  --font-size-h4-mobile: 18px;
-  --font-size-h5-mobile: 16px;
-  --font-size-body-mobile: 16px;
+  --font-size-h2-mobile: 28px;
+  --font-size-h3-mobile: 24px;
+  --font-size-h4-mobile: 20px;
+  --font-size-h5-mobile: 18px;
+  --font-size-body-mobile: 18px;
   
   /* Line Heights */
   --line-height-heading: 1.2;
@@ -1037,10 +1037,10 @@ export default {
       },
       fontSize: {
         'h1': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
-        'h2': ['28px', { lineHeight: '1.3', fontWeight: '700' }],
-        'h3': ['24px', { lineHeight: '1.3', fontWeight: '600' }],
-        'h4': ['20px', { lineHeight: '1.4', fontWeight: '600' }],
-        'h5': ['18px', { lineHeight: '1.4', fontWeight: '600' }],
+        'h2': ['32px', { lineHeight: '1.3', fontWeight: '700' }],
+        'h3': ['28px', { lineHeight: '1.3', fontWeight: '600' }],
+        'h4': ['24px', { lineHeight: '1.4', fontWeight: '600' }],
+        'h5': ['20px', { lineHeight: '1.4', fontWeight: '600' }],
       },
       spacing: {
         '18': '72px',
@@ -1094,7 +1094,7 @@ These are brand-specific Tailwind classes available beyond the defaults:
 | Class | Size | Weight | Line Height |
 |-------|------|--------|-------------|
 | `text-h1` | 32px | 700 | 1.2 |
-| `text-h2` | 28px | 700 | 1.3 |
-| `text-h3` | 24px | 600 | 1.3 |
-| `text-h4` | 20px | 600 | 1.4 |
-| `text-h5` | 18px | 600 | 1.4 |
+| `text-h2` | 32px | 700 | 1.3 |
+| `text-h3` | 28px | 600 | 1.3 |
+| `text-h4` | 24px | 600 | 1.4 |
+| `text-h5` | 20px | 600 | 1.4 |

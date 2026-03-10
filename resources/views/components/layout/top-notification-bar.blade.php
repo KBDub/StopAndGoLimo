@@ -8,7 +8,7 @@
     x-data="{ scrolled: false }"
     x-on:scroll.window="scrolled = window.scrollY > 50"
     class="bg-sunburst text-charcoal text-center font-semibold sticky-header-part transition-all duration-300"
-    x-bind:class="scrolled ? 'py-1 text-xs' : 'py-2 text-sm'"
+    x-bind:class="scrolled ? 'py-0.5 text-xs' : 'py-1 text-sm'"
 >
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between gap-2">
         <div class="flex-1"></div>

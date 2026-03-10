@@ -8,7 +8,7 @@
     x-on:scroll.window="let wasScrolled = scrolled; scrolled = window.scrollY > 50; if (wasScrolled !== scrolled) openDropdown = null"
 >
     <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between transition-all duration-300" x-bind:class="scrolled ? 'py-1.5' : 'py-4'">
+        <div class="flex items-center justify-between transition-all duration-300" x-bind:class="scrolled ? 'py-1' : 'py-2'">
             <a href="/" class="flex items-center flex-shrink-0">
                 <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="transition-all duration-300" x-bind:class="scrolled ? 'h-14' : 'h-24'">
             </a>
@@ -108,12 +108,12 @@
                     Promotional Items
                 </a>
 
-                <a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-base font-semibold text-charcoal hover:text-sunburst transition-colors text-center">
-                    Black Doll Apparel
-                </a>
-
                 <a href="/store" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'store' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
                     Top 5% Merchandise
+                </a>
+
+                <a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-base font-semibold text-charcoal hover:text-sunburst transition-colors text-center">
+                    Black Doll Apparel
                 </a>
 
                 <div class="relative" @mouseenter="openDropdown = 'about'" @mouseleave="openDropdown = null">

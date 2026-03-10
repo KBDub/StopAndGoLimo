@@ -128,9 +128,6 @@
                     </div>
                 </div>
 
-                <div class="ml-2">
-                    @livewire('cart.cart-icon')
-                </div>
             </div>
         </div>
 

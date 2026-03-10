@@ -108,12 +108,12 @@
                     Promotional Items
                 </a>
 
-                <a href="/black-doll-apparel" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'black-doll-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                <a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-base font-semibold text-charcoal hover:text-sunburst transition-colors text-center">
                     Black Doll Apparel
                 </a>
 
-                <a href="/portfolio" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'portfolio' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
-                    Portfolio
+                <a href="/store" class="px-3 py-2 text-base font-semibold {{ $currentPage === 'store' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors text-center">
+                    Top 5% Merchandise
                 </a>
 
                 <div class="relative" @mouseenter="openDropdown = 'about'" @mouseleave="openDropdown = null">
@@ -121,9 +121,10 @@
                         About
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'about' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </button>
-                    <div x-cloak x-show="openDropdown === 'about'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'about'" x-transition class="absolute top-full right-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/about" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">About Us</a>
                         <a href="/team" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Our Team</a>
+                        <a href="/portfolio" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Portfolio</a>
                         <a href="/contact" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Contact Us</a>
                     </div>
                 </div>
@@ -143,6 +144,8 @@
                 <a href="/collections/promotional-items" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Promotional Items</a>
                 <a href="/design-it-yourself" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Design It Yourself</a>
                 <a href="/stores" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Stores</a>
+                <a href="/store" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Top 5% Merchandise</a>
+                <a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Black Doll Apparel</a>
                 <a href="/portfolio" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Portfolio</a>
                 <a href="/contact" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Contact Us</a>
                 <a href="/cart" class="block px-3 py-2 text-sm font-semibold text-charcoal hover:text-sunburst">Cart</a>

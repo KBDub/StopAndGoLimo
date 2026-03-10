@@ -5,7 +5,7 @@
 <nav
     class="bg-linen text-white transition-all duration-300"
     x-data="{ mobileMenuOpen: false, openDropdown: null, scrolled: false }"
-    x-on:scroll.window="let wasScrolled = scrolled; scrolled = window.scrollY > 50; if (wasScrolled !== scrolled) openDropdown = null"
+    x-on:scroll.window="let wasScrolled = scrolled; if (!scrolled && window.scrollY > 50) scrolled = true; else if (scrolled && window.scrollY < 10) scrolled = false; if (wasScrolled !== scrolled) openDropdown = null"
 >
     <div class="max-w-7xl mx-auto px-6">
         <div class="flex items-center justify-between transition-all duration-300" x-bind:class="scrolled ? 'py-1' : 'py-2'">

@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
             CollectionSeeder::class,
             ProductSeeder::class,
             TaxSeeder::class,
+            Top5PctMerchSeeder::class,
         ]);
     }
 }

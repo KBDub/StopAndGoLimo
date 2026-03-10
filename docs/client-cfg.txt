@@ -56,3 +56,27 @@ config('client.product_grid_enabled') controls whether the product grid
 The top5pct-merchandise page is exempt — it passes :alwaysShow="true"
 to the component, so its product grid is always visible regardless of
 this flag.
+
+Top 5% Merchandise / Brand
+---------------------------
+Lunar Brand: "Top 5 Percent" (brand_id=2)
+Collection: "Top 5% Merchandise" (slug: top5pct-merchandise, collection_id=31)
+Seeder: database/seeders/Top5PctMerchSeeder.php
+CSV data: database/data/top5pct-merch-products.csv
+Source: https://www.top5pct.com/store/ (Clothing category, path=64)
+
+11 products, 79 total variants (sized XS-6XL with price surcharges):
+
+  1. Foil Brand V Blue        - $25.99 base (V-Neck, 7 sizes)
+  2. Foil Brand V Maroon      - $25.99 base (V-Neck, 7 sizes)
+  3. Orange Drip              - $25.99 base (T-Shirt, 7 sizes)
+  4. Gold Foil/Puff Chicago   - $49.99 base (Hoodie, 6 sizes)
+  5. Gold Wreath Camo         - $35.99 base (T-Shirt, 7 sizes)
+  6. Money Green              - $39.99 base (T-Shirt, 8 sizes)
+  7. Silver Wreath Camo       - $35.99 base (T-Shirt, 7 sizes)
+  8. Silver Drip              - $25.99 base (T-Shirt, 10 sizes)
+  9. Top 5% Flag Hoodie       - $29.99 base (Hoodie, 9 sizes)
+ 10. T5P Steel Shirt          - $35.99 base (T-Shirt, 6 sizes)
+ 11. Supermen T               - $25.99 base (Ringer T-Shirt, 5 sizes)
+
+To re-seed: php artisan db:seed --class=Top5PctMerchSeeder

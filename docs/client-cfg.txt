@@ -1,68 +1,44 @@
-// TODO this is json for a different project, but the idea is the same, needs to be converted to php
+Client Configuration
+====================
 
-private getDefaultColorPalette(): ColorPalette {
-  return {
-    primary: {
-    },
-    accent: {
-    },
-    neutral: {
-    }
-  };
-}
+The client/business configuration file has been converted to a PHP config file
+and is located at:
 
-private getDefaultConfig(): SiteConfig {
-  const colorPalette = this.getDefaultColorPalette();
+    config/client.php
 
-  return {
-    businessName: "",
-    primaryColor: "",
-    secondaryColor: "",
-    colorPalette: colorPalette,
-    tagline: "Exceptional Service, Exceptional Customer Satisfaction",
-    phoneNumber: "",
-    emergencyContactPhone: "",
-    email: "",
-    address : {
-      street: "",
-      street2: "",
-      city: "",
-      state: "",
-      zip: ""
-    },
-    serviceAreas: [''],
-    priorityServiceAreas: [''],
-    serviceAreasDescription: "proudly serves Will County & the Chicagoland area",
-    serviceAreaSlugs: [''],
-    yearIncorporated: ,
-    licenseNumber: "",
-    licenseNumberDisplayOnBanner: false,
-    emergencyContact: false,
-    certifications: [''],
-    associations: [''],
-    chamberAssociations: [''],
-    logo: {
-      url: "",
-      alt: "",
-      width: 300,
-      height: 50
-    },
-    operatingHours: {
-      "Monday": "6:00 AM - 9:30 PM",
-      "Tuesday": "6:00 AM - 9:30 PM",
-      "Wednesday": "6:00 AM - 9:30 PM",
-      "Thursday": "6:00 AM - 9:30 PM",
-      "Friday": "6:00 AM - 9:30 PM",
-      "Saturday": "6:00 AM - 9:30 PM",
-    },
-    emergencyHours: {
-      "Monday": "24 Hour",
-      "Tuesday": "24 Hour",
-      "Wednesday": "24 Hour",
-      "Thursday": "24 Hour",
-      "Friday": "24 Hour", 
-      "Saturday": "24 Hour",
-      "Sunday": "24 Hour"
-    }
-  }
-}
+This file is a standard Laravel config file. Values are accessed via:
+
+    config('client.business_name')    // "Top 5 Percent, LLC"
+    config('client.phone')            // "(815) 349-8600"
+    config('client.phone_alt')        // "(815) 349-TOP5"
+    config('client.phone_raw')        // "+18153498600" (for tel: links)
+    config('client.address.street')   // "121 Springfield Avenue"
+    config('client.address.street2')  // "Unit 110"
+    config('client.address.city')     // "Joliet"
+    config('client.address.state')    // "Illinois"
+    config('client.address.state_abbr') // "IL"
+    config('client.address.zip')      // "60435"
+    config('client.tagline')          // "Exceptional Service, Exceptional Customer Satisfaction"
+    config('client.year_incorporated') // 2017
+    config('client.logo.url')         // "/images/logos/top5-logo.gif"
+    config('client.primary_color')    // "#FFC20E"
+    config('client.secondary_color')  // "#3273DC"
+    config('client.color_palette')    // Array of brand colors
+    config('client.operating_hours')  // Array of hours by day (not yet populated)
+
+In Blade templates:
+
+    {{ config('client.business_name') }}
+    {{ config('client.phone') }}
+
+Wiring into the site (replacing hardcoded values in Blade templates, components,
+and layouts) will be done in a future task.
+
+Available keys:
+    business_name, tagline, phone, phone_alt, phone_raw, email,
+    address (street, street2, city, state, state_abbr, zip),
+    year_incorporated, license_number, license_number_display_on_banner,
+    certifications, associations, chamber_associations,
+    service_areas, priority_service_areas, service_areas_description,
+    service_area_slugs, logo (url, alt, width, height),
+    operating_hours, primary_color, secondary_color, color_palette

@@ -1,129 +1,40 @@
 # Lunar Collections & Product Display Architecture
 
-This document explains how product collections are displayed across the site, the routing system behind them, and the distinction between static landing pages and dynamic collection pages.
+This document explains how product category pages are built, how the navigation routes to them, how search engines and AI crawlers discover them, and how to add new pages.
 
 ---
 
-## Two Page Systems
+## Architecture: Hybrid Pages (The Standard)
 
-The site uses two separate systems for displaying product-related content. Understanding the distinction is critical for adding new pages or modifying existing ones.
+Every product category page on the site follows the **hybrid page** pattern. A hybrid page combines:
 
-### 1. Static Landing Pages (Marketing / SEO Pages)
+1. **Static marketing sections** at the top and bottom (hero banners, CTAs, testimonials, trust badges)
+2. **An embedded Livewire product grid** in the middle (filterable, sortable, paginated via Meilisearch)
 
-These are handcrafted Blade views with hardcoded routes. They do not query Lunar for products. Their purpose is to serve as marketing funnels and SEO-optimized entry points.
+This gives every page the best of both worlds:
+- Rich, hand-crafted marketing content for SEO and conversion
+- A live, interactive product browsing experience powered by Lunar and Meilisearch
 
-**Characteristics:**
-- Route defined explicitly in `routes/web.php` as a closure returning a specific Blade view
-- No `/collections` prefix in the URL
-- Content is composed of static section components (hero banners, CTAs, testimonials, etc.)
-- No product grid, no filtering, no Meilisearch integration
-- Each page has its own Blade file in `resources/views/pages/`
-
-**Example routes:**
-```
-/custom-apparel/custom-shirts   → resources/views/pages/custom-apparel/custom-shirts.blade.php
-/custom-apparel/custom-hoodies  → resources/views/pages/custom-apparel/custom-hoodies.blade.php
-/top5pct-merchandise            → resources/views/pages/top5pct-merchandise.blade.php
-```
-
-**Example route definition:**
-```php
-Route::get('/custom-apparel/custom-shirts', function () {
-    return view('pages.custom-apparel.custom-shirts');
-});
-```
-
-**Typical sections used:**
-- `category-hero` — hero banner with heading, description, CTAs
-- `banner-medium-sunburst` — decorative divider
-- `top5pct-same-day-service` — service highlight
-- `why-choose-us` — trust/value proposition
-- `cta-free-quote` — lead generation
-- `cta-ready-to-get-started` — conversion CTA
-- `review-banner` — customer testimonials
-- `map-section` — location/contact
-
-### 2. Dynamic Collection Pages (Shopping / Browsing)
-
-These pages query Lunar's collection database and use Meilisearch to display a filterable, sortable product grid. They are the actual shopping experience.
-
-**Characteristics:**
-- Routes use the `/collections` prefix
-- Products are fetched dynamically from Meilisearch based on collection membership
-- Faceted filtering (color, size, material, etc.), sorting, and pagination
-- Handled by the `catalog.collection-page` Livewire component
-- All use the shared `resources/views/pages/collection.blade.php` view
-
-**Route patterns:**
-```
-/collections/{slug}            → Top-level collection (e.g., /collections/custom-apparel)
-/collections/{parent}/{child}  → Sub-collection (e.g., /collections/custom-apparel/custom-shirts)
-```
-
-**Route definitions:**
-```php
-// Top-level collection
-Route::get('/collections/{slug}', function (string $slug) {
-    $collection = \Lunar\Models\Collection::whereHas('urls', function ($q) use ($slug) {
-        $q->where('slug', $slug);
-    })->first();
-
-    if (! $collection) {
-        abort(404);
-    }
-
-    // Fetch collection name, description, children...
-    return view('pages.collection', [
-        'collectionSlug' => $slug,
-        'parentSlug' => null,
-        'collectionName' => $collectionName,
-        'collectionDescription' => $description,
-        'isParentCategory' => $children->isNotEmpty(),
-        'categoryItems' => $categoryItems,
-    ]);
-})->name('collections.show');
-
-// Sub-collection
-Route::get('/collections/{parent}/{child}', function (string $parent, string $child) {
-    // Lookup parent and child collections by slug...
-    return view('pages.collection', [
-        'collectionSlug' => $child,
-        'parentSlug' => $parent,
-        'collectionName' => $collectionName,
-        'collectionDescription' => $description,
-        'parentCategoryName' => $parentName,
-        'isParentCategory' => false,
-        'categoryItems' => [],
-    ]);
-})->name('collections.child');
-```
-
-**How it works internally:**
-1. The route looks up a `Lunar\Models\Collection` by matching its URL slug
-2. For parent collections, it also fetches child collections to display as sub-category links
-3. The `pages/collection.blade.php` view renders the Livewire component
-4. The `catalog.collection-page` Livewire component queries Meilisearch with the collection slug
-5. Meilisearch returns filtered, sorted products with facet counts
-6. The product grid renders with filtering sidebar, sorting controls, and pagination
-
----
-
-## Hybrid Pages
-
-Some pages combine both approaches. The `/top5pct-merchandise` page is a hybrid:
-
-- It is a **static landing page** with marketing sections (hero, CTAs, testimonials)
-- It **also embeds** the `catalog.collection-page` Livewire component for a live product grid
-- When `collectionSlug` is `null`, the Livewire component shows **all products** (no collection filter)
+### Reference Implementation: `/top5pct-merchandise`
 
 **File:** `resources/views/pages/top5pct-merchandise.blade.php`
 
 ```blade
 <x-layouts.page title="Top 5% Merchandise" currentPage="store">
-    <x-sections.category-hero ... />
+    {{-- Static marketing sections --}}
+    <x-sections.category-hero
+        preHeading="Veteran Owned - Joliet, IL"
+        heading="Top 5% Merchandise"
+        headingAccent="Rep the Brand"
+        description="Shop our exclusive line of Top 5 Percent branded merchandise..."
+        primaryButtonText="Shop Now"
+        primaryButtonHref="#all-products"
+        secondaryButtonText="Contact Us"
+        secondaryButtonHref="/contact"
+    />
     <x-ui.banner-medium-sunburst />
 
-    {{-- All Products section — Livewire component with null slug shows everything --}}
+    {{-- Embedded product grid — collectionSlug filters products, null = all --}}
     <section id="all-products" class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             @livewire('catalog.collection-page', [
@@ -133,110 +44,148 @@ Some pages combine both approaches. The `/top5pct-merchandise` page is a hybrid:
         </div>
     </section>
 
-    <x-sections.top5pct-same-day-service ... />
+    {{-- More static marketing sections --}}
+    <x-sections.top5pct-same-day-service serviceType="merchandise" displayServiceType="Merchandise" />
     <x-sections.why-choose-us />
-    ...
+    <x-sections.cta-free-quote />
+    <x-sections.cta-ready-to-get-started />
+    <x-sections.review-banner />
+    <x-sections.map-section />
 </x-layouts.page>
 ```
 
-This is the **primary shop page** for the site. It replaced the old `/shop` route.
+### How the Livewire Component Works
+
+The `catalog.collection-page` Livewire component is the engine behind the product grid.
+
+**File:** `app/Livewire/Catalog/CollectionPage.php`
+**View:** `resources/views/livewire/catalog/collection-page.blade.php`
+
+**Key properties:**
+- `collectionSlug` — which Lunar collection to filter by. When `null`, it shows **all products** across the entire catalog.
+- `parentSlug` — parent collection slug, used for breadcrumb context in nested collections.
+
+**What it does at render time:**
+1. If `collectionSlug` is provided, it looks up the matching `Lunar\Models\Collection` by its URL slug in the `lunar_urls` table
+2. It queries Meilisearch with the collection filter (or no filter if `null`)
+3. Meilisearch returns products with facet counts for the filtering sidebar
+4. The component renders a product grid with:
+   - Faceted filtering (color, size, material, etc.)
+   - Sorting (price, name, newest)
+   - Pagination
+   - Product cards linking to `/products/{slug}` detail pages
+
+### Controlling Which Products Appear
+
+The `collectionSlug` parameter determines what products the grid shows:
+
+| `collectionSlug` Value | Products Shown |
+|---|---|
+| `null` | All products in the catalog (no filter) |
+| `'custom-apparel'` | Only products assigned to the "Custom Apparel" collection |
+| `'custom-shirts'` | Only products assigned to the "Custom Shirts" sub-collection |
+
+Products are assigned to collections in the Lunar Hub admin panel (`/hub`). The assignment is stored in the `lunar_collection_product` pivot table.
 
 ---
 
-## URL Mapping Summary
+## Navigation & Routing
 
-| URL Pattern | Type | Source | Products Shown |
-|---|---|---|---|
-| `/top5pct-merchandise` | Hybrid (static + Livewire) | `pages/top5pct-merchandise.blade.php` | All products (no filter) |
-| `/custom-apparel/custom-shirts` | Static landing | `pages/custom-apparel/custom-shirts.blade.php` | None (marketing only) |
-| `/collections/custom-apparel` | Dynamic collection | `pages/collection.blade.php` | Products in custom-apparel collection |
-| `/collections/custom-apparel/custom-shirts` | Dynamic sub-collection | `pages/collection.blade.php` | Products in custom-shirts sub-collection |
-| `/products/{slug}` | Product detail | `catalog.product-detail` Livewire | Single product |
+### How the Navigation Bar Links to Hybrid Pages
 
----
+Every link in the navigation bar points directly to a hybrid page. The nav does **not** link to `/collections/` routes.
 
-## Discovery & Routing: Users, Search Engines, and AI Crawlers
+**Current nav structure (desktop):**
 
-Both URL patterns coexist on the site. Understanding how each visitor type discovers and interacts with them is critical for SEO and avoiding duplicate content penalties.
-
-### How Users Find Pages
-
-Users navigate the site through the **navigation bar**, which contains explicit links:
-
-- **Static landing pages** are linked directly (e.g., "Custom Apparel" dropdown links to `/custom-apparel/custom-shirts`)
-- **Dynamic collection pages** are linked via the `/collections/` prefix routes (e.g., breadcrumbs, category cards on parent collection pages)
-- **Hybrid pages** are linked in the nav (e.g., "Top 5% Merchandise" links to `/top5pct-merchandise`)
-- **Product detail pages** are linked from product cards in both collection grids and the merchandise page
-
-Users generally don't type URLs — they follow the links the navigation provides. The nav bar determines which system a user enters.
-
-### How Search Engines (Google, Bing) Find Pages
-
-Search engines discover pages through three mechanisms:
-
-1. **Crawling internal links** — Googlebot follows every `<a href>` it finds on any indexed page. Since both URL patterns have links pointing to them from various places on the site, both get crawled and indexed.
-
-2. **Sitemap.xml** — A sitemap explicitly tells search engines which URLs exist and which are most important. **Currently, no `sitemap.xml` exists.** This means search engines have no authoritative list of preferred URLs.
-
-3. **Canonical tags** — A `<link rel="canonical">` tag tells search engines "this is the preferred version of this page." **Currently, no canonical tags exist on any page.** This means when both `/custom-apparel/custom-shirts` and `/collections/custom-apparel/custom-shirts` exist with related content, search engines must guess which one to prioritize.
-
-### How AI Engines (ChatGPT, Perplexity, Google AI Overview) Find Pages
-
-AI crawlers behave similarly to search engine crawlers but with some differences:
-
-- They may use `sitemap.xml` for discovery (same gap as above)
-- They tend to prefer pages with rich, structured content (static landing pages with descriptive text rank well here)
-- They follow `robots.txt` directives (currently none exist)
-- They may also pull from search engine indexes, inheriting whatever Google/Bing decided to index
-
-### Current Gaps (Action Items)
-
-The following SEO infrastructure is **missing** and should be implemented before production launch:
-
-| Item | Status | Impact |
+| Nav Item | URL | Page File |
 |---|---|---|
-| `sitemap.xml` | Missing | Search engines have no authoritative URL list |
-| `robots.txt` | Missing | No crawler directives; all paths are open |
-| `<link rel="canonical">` | Missing | Duplicate/overlapping pages may compete in rankings |
-| `<meta name="robots">` | Missing | No per-page index/noindex control |
-| Structured data (JSON-LD) | Missing | No rich snippets for products, business, breadcrumbs |
+| Home | `/` | `pages/home.blade.php` |
+| Custom Apparel (dropdown) | `/custom-apparel/custom-shirts`, etc. | `pages/custom-apparel/*.blade.php` |
+| Design It Yourself | `/design-it-yourself` | `pages/design-it-yourself.blade.php` |
+| Signs (dropdown) | `/signs/...` | `pages/signs/*.blade.php` |
+| Decals (dropdown) | `/decals/...` | `pages/decals/*.blade.php` |
+| Vehicle Graphics | `/vehicle-graphics` | `pages/vehicle-graphics.blade.php` |
+| Promotional Items | `/collections/promotional-items` | `pages/collection.blade.php` (dynamic) |
+| Top 5% Merchandise | `/top5pct-merchandise` | `pages/top5pct-merchandise.blade.php` |
+| Black Doll Apparel | `https://blackdollbytop5.com/` | External link |
+| About (dropdown) | `/about`, `/portfolio`, `/contact` | Various |
 
-### Recommended SEO Strategy
+**Migration in progress:** Some nav items still point to old static-only or dynamic-only pages. These need to be converted to hybrid pages following the standard pattern. Each page should embed the appropriate `@livewire('catalog.collection-page', ['collectionSlug' => '...'])` with its matching Lunar collection slug.
 
-When implementing SEO infrastructure, the intended relationship between the two URL systems should be:
+### Route Structure
 
-**Static landing pages (`/custom-apparel/custom-shirts`):**
-- Should be the **canonical, indexable** pages for search engines
-- Rich marketing content makes them ideal for ranking on informational and transactional queries
-- Should appear in `sitemap.xml`
-- Should have `<link rel="canonical" href="...">` pointing to themselves
+Each hybrid page has an explicit route in `routes/web.php`:
 
-**Dynamic collection pages (`/collections/custom-apparel/custom-shirts`):**
-- Should be treated as **functional/utility pages** for users who are actively shopping
-- Could be set to `noindex, follow` via `<meta name="robots">` to prevent duplicate content
-- Or could use `<link rel="canonical">` pointing back to the corresponding static landing page
-- Should **not** appear in `sitemap.xml`
+```php
+Route::get('/top5pct-merchandise', function () {
+    return view('pages.top5pct-merchandise');
+})->name('store');
 
-**Hybrid pages (`/top5pct-merchandise`):**
-- Should be canonical and indexable (they are unique, with no duplicate counterpart)
-- Should appear in `sitemap.xml`
+Route::get('/custom-apparel/custom-shirts', function () {
+    return view('pages.custom-apparel.custom-shirts');
+});
+```
 
-**Product detail pages (`/products/{slug}`):**
-- Should be canonical and indexable
-- Should appear in `sitemap.xml`
-- Should include JSON-LD Product structured data
+The `/collections/` catch-all routes still exist in `routes/web.php` as a fallback:
 
-This strategy ensures search engines index the content-rich marketing pages while the dynamic shopping pages serve users who arrive via navigation. AI engines will similarly surface the richer static pages in their responses.
+```php
+Route::get('/collections/{slug}', ...)->name('collections.show');
+Route::get('/collections/{parent}/{child}', ...)->name('collections.child');
+```
+
+These `/collections/` routes serve as:
+- A fallback for any collection that doesn't yet have a dedicated hybrid page
+- Programmatic access for internal use (breadcrumbs, category card links on parent pages)
+- They will eventually be either removed or set to `noindex` once all collections have dedicated hybrid pages
 
 ---
 
-## How Collections Are Created
+## Converting Existing Pages to Hybrid
 
-Collections are managed in the Lunar Hub admin panel (`/hub`). They are:
+To convert an existing static-only page (e.g., `/custom-apparel/custom-shirts`) to a hybrid page:
+
+1. Open the Blade file (e.g., `resources/views/pages/custom-apparel/custom-shirts.blade.php`)
+2. Identify where the product grid should appear (typically after the hero/banner, before the trust/CTA sections)
+3. Add the Livewire component with the matching collection slug:
+
+```blade
+<section id="all-products" class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        @livewire('catalog.collection-page', [
+            'collectionSlug' => 'custom-shirts',
+            'parentSlug' => 'custom-apparel',
+        ])
+    </div>
+</section>
+```
+
+4. The `collectionSlug` must match the slug stored in `lunar_urls` for that collection
+5. The `parentSlug` is optional — it provides breadcrumb context for nested collections
+6. Update the hero "Shop Now" CTA to `href="#all-products"` so it scrolls to the product grid
+
+### Finding Collection Slugs
+
+Collection slugs are stored in the `lunar_urls` table. To find a slug:
+
+```sql
+SELECT lu.slug, lt.value->>'name' as name
+FROM lunar_urls lu
+JOIN lunar_collections lc ON lu.element_id = lc.id AND lu.element_type = 'Lunar\\Models\\Collection'
+JOIN lunar_attribute_data lt ON lt.attributable_id = lc.id AND lt.attributable_type = 'Lunar\\Models\\Collection'
+ORDER BY lu.slug;
+```
+
+Or check the Lunar Hub admin panel under Collections.
+
+---
+
+## How Collections Are Managed
+
+Collections are managed in the Lunar Hub admin panel (`/hub`):
 
 1. Created with a name, description, and URL slug
-2. Organized in a parent-child hierarchy (e.g., Custom Apparel → Custom Shirts)
-3. Products are assigned to collections in the admin panel
+2. Organized in a parent-child hierarchy (e.g., Custom Apparel > Custom Shirts)
+3. Products are assigned to collections via the admin panel
 4. The database seeder (`database/seeders/`) pre-populates 30 hierarchical collections
 
 **Database tables involved:**
@@ -246,35 +195,133 @@ Collections are managed in the Lunar Hub admin panel (`/hub`). They are:
 
 ---
 
-## The Livewire Component: catalog.collection-page
+## Discovery: Users, Search Engines, and AI Crawlers
 
-**File:** `app/Livewire/Catalog/CollectionPage.php`
+### How Users Find Pages
 
-**Key properties:**
-- `collectionSlug` — which collection to filter by (`null` = all products)
-- `parentSlug` — parent collection slug for breadcrumb context
-- Supports faceted filters, sorting, pagination via Meilisearch
+Users navigate through the **navigation bar**, which links directly to hybrid pages. Users follow links — they don't type URLs. The nav bar is the single entry point into the product browsing experience.
 
-**Blade view:** `resources/views/livewire/catalog/collection-page.blade.php`
+When a user clicks "Custom Shirts" in the nav, they land on the hybrid page at `/custom-apparel/custom-shirts`, which shows marketing content and the product grid together. The "Shop Now" CTA on the hero scrolls them down to the product grid section.
+
+### How Search Engines (Google, Bing) Find Pages
+
+Search engines discover pages through three mechanisms:
+
+1. **Crawling internal links** — Googlebot follows every `<a href>` on indexed pages. Since the nav bar and internal links point to hybrid pages, those are the primary URLs that get crawled.
+
+2. **Sitemap.xml** — An XML sitemap explicitly lists preferred URLs and their priority. The sitemap should list only hybrid pages and product detail pages, not `/collections/` routes.
+
+3. **Canonical tags** — A `<link rel="canonical">` tag tells search engines which URL is the "official" version. Each hybrid page should have a self-referencing canonical tag. Any remaining `/collections/` pages should canonical-redirect to their hybrid counterpart.
+
+**Why hybrid pages are ideal for search engines:**
+- They contain rich, unique marketing copy (SEO-friendly)
+- They have structured headings (H2-H5) and descriptive content
+- They also contain a live product grid, which search engines can partially render
+- One URL serves both the marketing and shopping intent — no duplicate content problem
+
+### How AI Engines (ChatGPT, Perplexity, Google AI Overview) Find Pages
+
+AI crawlers behave similarly to search engine crawlers:
+
+- They follow links and use `sitemap.xml` for discovery
+- They strongly prefer pages with rich, structured, descriptive content — hybrid pages excel here because they combine marketing copy with product data
+- They follow `robots.txt` directives
+- They may also pull from search engine indexes, so proper canonical/sitemap setup ensures they find the right pages
+
+### SEO Infrastructure Required (Not Yet Implemented)
+
+The following must be built before production launch:
+
+| Item | Status | What It Does |
+|---|---|---|
+| `sitemap.xml` | Not built | Lists all hybrid pages and product detail pages for search engines |
+| `robots.txt` | Not built | Tells crawlers which paths to index; blocks `/collections/` if desired |
+| `<link rel="canonical">` | Not built | Each hybrid page gets a self-referencing canonical; `/collections/` pages canonical to their hybrid counterpart |
+| `<meta name="robots">` | Not built | Per-page control: `index, follow` on hybrid pages; `noindex, follow` on `/collections/` pages |
+| JSON-LD structured data | Not built | Product schema on PDPs, LocalBusiness on all pages, BreadcrumbList for navigation |
+| Open Graph / Twitter cards | Not built | Social sharing previews with images, titles, descriptions |
+
+### Target SEO State
+
+Once SEO infrastructure is implemented:
+
+**Hybrid pages (e.g., `/custom-apparel/custom-shirts`):**
+- Canonical, indexable, in sitemap
+- Rich marketing content + product grid
+- JSON-LD BreadcrumbList + CollectionPage schema
+- Open Graph tags for social sharing
+
+**`/collections/` routes:**
+- `noindex, follow` (or canonical pointing to hybrid counterpart)
+- Not in sitemap
+- Functional fallback for collections without a dedicated hybrid page
+- Will be phased out as all collections get hybrid pages
+
+**Product detail pages (`/products/{slug}`):**
+- Canonical, indexable, in sitemap
+- JSON-LD Product schema (name, price, availability, images, reviews)
+
+**Pages not indexed:**
+- `/hub/*` (admin panel)
+- `/cart`, `/checkout` (transactional, no SEO value)
+- `/demo/*` (development only)
 
 ---
 
-## Adding a New Collection Page
+## Adding a New Hybrid Page
 
-**To add a new dynamic collection page:**
-1. Create the collection in Lunar Hub with a URL slug
-2. Assign products to the collection
-3. The `/collections/{slug}` route handles it automatically
+Step-by-step process for adding a new product category page:
 
-**To add a new static landing page:**
-1. Create a Blade view in `resources/views/pages/`
-2. Add a route in `routes/web.php` pointing to the view
-3. Compose the page using section components from `resources/views/components/sections/`
+1. **Ensure the Lunar collection exists** — Check Lunar Hub or the seeder for the collection and its slug
 
-**To add a hybrid page (static + products):**
-1. Create the Blade view with marketing sections
-2. Embed `@livewire('catalog.collection-page', ['collectionSlug' => 'your-slug'])` where the product grid should appear
-3. Add the route in `routes/web.php`
+2. **Create the Blade file** in `resources/views/pages/`:
+   ```
+   resources/views/pages/your-category/your-page.blade.php
+   ```
+
+3. **Follow the hybrid template:**
+   ```blade
+   <x-layouts.page title="Page Title" metaDescription="..." currentPage="your-page">
+       <x-sections.category-hero
+           preHeading="Veteran Owned - Joliet, IL"
+           heading="Your Category"
+           headingAccent="Accent Text"
+           description="Marketing description..."
+           primaryButtonText="Shop Now"
+           primaryButtonHref="#all-products"
+           secondaryButtonText="Contact Us"
+           secondaryButtonHref="/contact"
+       />
+       <x-ui.banner-medium-sunburst />
+
+       <section id="all-products" class="py-12 bg-white">
+           <div class="max-w-7xl mx-auto px-6">
+               @livewire('catalog.collection-page', [
+                   'collectionSlug' => 'your-collection-slug',
+                   'parentSlug' => 'parent-slug-if-nested',
+               ])
+           </div>
+       </section>
+
+       <x-sections.top5pct-same-day-service serviceType="your-type" displayServiceType="Your Type" />
+       <x-sections.why-choose-us />
+       <x-sections.cta-free-quote />
+       <x-sections.cta-ready-to-get-started />
+       <x-sections.review-banner />
+       <x-sections.map-section />
+   </x-layouts.page>
+   ```
+
+4. **Add the route** in `routes/web.php`:
+   ```php
+   Route::get('/your-category/your-page', function () {
+       return view('pages.your-category.your-page');
+   });
+   ```
+
+5. **Update the navigation bar** in `resources/views/components/layout/navigation-bar.blade.php` to link to the new page
+
+6. **When SEO is implemented:** Add the page to `sitemap.xml`, add canonical tag, add JSON-LD
 
 ---
 
@@ -282,5 +329,18 @@ Collections are managed in the Lunar Hub admin panel (`/hub`). They are:
 
 | Old Route | Replacement | Notes |
 |---|---|---|
-| `/shop` | `/top5pct-merchandise` | Removed in March 2026. All internal links updated. |
+| `/shop` | `/top5pct-merchandise` | Removed March 2026. All internal links updated. |
 | `/store` | `/top5pct-merchandise` | Intermediate rename, never published long-term. |
+
+---
+
+## Migration Status
+
+Pages that still need conversion from static-only to hybrid:
+
+| Current URL | Collection Slug Needed | Status |
+|---|---|---|
+| `/custom-apparel/custom-shirts` | `custom-shirts` | Static only — needs product grid added |
+| `/custom-apparel/custom-hoodies` | `custom-hoodies` | Static only — needs product grid added |
+| Other category pages | Various | Audit needed |
+| `/top5pct-merchandise` | `null` (all products) | Done — reference implementation |

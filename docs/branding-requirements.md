@@ -15,10 +15,11 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 
 ### Component Usage Rules
 
-1. **All pages must use Blade components** - No inline HTML for reusable elements
-2. **Component naming convention:** `x-<type>.<name>` (e.g., `x-layout.navigation-bar`)
-3. **Props must be typed** - Use `@props` directive for all component parameters
-4. **SSR-enabled** - All components render server-side for SEO
+1. **All sections must be Blade component files** — Every `<section>` on every page must live in its own file under `resources/views/components/sections/`. No inline `<section>` HTML is permitted directly inside page files (`resources/views/pages/`). Page files must contain only `x-sections.*`, `x-ui.*`, and `x-layouts.*` component tags.
+2. **All pages must use Blade components** - No inline HTML for reusable elements
+3. **Component naming convention:** `x-<type>.<name>` (e.g., `x-layout.navigation-bar`)
+4. **Props must be typed** - Use `@props` directive for all component parameters
+5. **SSR-enabled** - All components render server-side for SEO
 
 ### Component Naming Conventions (MANDATORY)
 
@@ -68,13 +69,31 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 
 ### Section Components
 
+Every `<section>` must be its own file in `resources/views/components/sections/`. Page files must only reference sections via `x-sections.*` component tags — no inline `<section>` HTML.
+
 | Component | Usage | File Path |
 |-----------|-------|-----------|
-| `x-sections.hero` | Hero banner | `resources/views/components/sections/hero.blade.php` |
+| `x-sections.category-hero` | Hero for category/product pages | `resources/views/components/sections/category-hero.blade.php` |
+| `x-sections.home-page-hero` | Hero for the home page | `resources/views/components/sections/home-page-hero.blade.php` |
+| `x-sections.hero-full-bleed` | Full-bleed image hero (center/left/split layouts) | `resources/views/components/sections/hero-full-bleed.blade.php` |
 | `x-sections.our-services` | Services grid | `resources/views/components/sections/our-services.blade.php` |
-| `x-sections.why-choose-us` | Trust badges | `resources/views/components/sections/why-choose-us.blade.php` |
+| `x-sections.why-choose-us` | Trust/differentiator badges | `resources/views/components/sections/why-choose-us.blade.php` |
 | `x-sections.design-it-yourself` | Design tool promo | `resources/views/components/sections/design-it-yourself.blade.php` |
-| `x-sections.cta-ready-to-get-started` | Contact CTA | `resources/views/components/sections/cta-ready-to-get-started.blade.php` |
+| `x-sections.about-preview` | About/veteran-owned preview | `resources/views/components/sections/about-preview.blade.php` |
+| `x-sections.featured-products` | Featured products grid | `resources/views/components/sections/featured-products.blade.php` |
+| `x-sections.product-grid` | Livewire catalog product grid | `resources/views/components/sections/product-grid.blade.php` |
+| `x-sections.top5pct-same-day-service` | Same-day service highlight | `resources/views/components/sections/top5pct-same-day-service.blade.php` |
+| `x-sections.top-level-category-section` | Category index child listing | `resources/views/components/sections/top-level-category-section.blade.php` |
+| `x-sections.review-banner` | Customer testimonials | `resources/views/components/sections/review-banner.blade.php` |
+| `x-sections.map-section` | Location map + contact info | `resources/views/components/sections/map-section.blade.php` |
+| `x-sections.home-page-services-accordion` | FAQ / services accordion | `resources/views/components/sections/home-page-services-accordion.blade.php` |
+| `x-sections.shirt-types-grid` | 12-card custom shirt techniques grid | `resources/views/components/sections/shirt-types-grid.blade.php` |
+| `x-sections.shirt-types-video` | YouTube video embed (charcoal bg) | `resources/views/components/sections/shirt-types-video.blade.php` |
+| `x-sections.represent-yourself` | "Represent Yourself" brand statement + stats | `resources/views/components/sections/represent-yourself.blade.php` |
+| `x-sections.shirt-types-faq` | 7-tip shirt maker FAQ accordion | `resources/views/components/sections/shirt-types-faq.blade.php` |
+| `x-sections.cta-free-quote` | Free quote CTA bar | `resources/views/components/sections/cta-free-quote.blade.php` |
+| `x-sections.cta-design-your-own` | Design-it-yourself CTA bar | `resources/views/components/sections/cta-design-your-own.blade.php` |
+| `x-sections.cta-ready-to-get-started` | Full-width charcoal CTA | `resources/views/components/sections/cta-ready-to-get-started.blade.php` |
 
 ### UI Button Components
 

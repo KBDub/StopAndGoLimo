@@ -11,6 +11,8 @@
     />
     <x-ui.banner-medium-sunburst />
 
+    <x-sections.top5pct-same-day-service serviceType="custom-apparel" displayServiceType="Custom Apparel" />
+
     <x-sections.lp-category-banners :banners="[
         [
             'image' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
@@ -43,8 +45,6 @@
             'href'  => '/custom-apparel/spirit-wear',
         ],
     ]" />
-
-    <x-sections.top5pct-same-day-service serviceType="custom-apparel" displayServiceType="Custom Apparel" />
     <x-sections.product-grid collectionSlug="custom-apparel" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

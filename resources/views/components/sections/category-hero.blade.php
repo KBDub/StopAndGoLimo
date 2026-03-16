@@ -33,7 +33,7 @@
                 </h1>
                 <div class="h-1 bg-sunburst rounded"></div>
             </div>
-            <p class="text-lg text-linen mb-8 max-w-lg">
+            <p class="text-2xl text-linen mb-8 max-w-lg">
                 {{ $description }}
             </p>
             <div class="flex flex-col sm:flex-row gap-4">

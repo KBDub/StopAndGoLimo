@@ -7,7 +7,8 @@
         </div>
         <div class="max-w-7xl mx-auto">
             <iframe
-                class="w-full h-[450px] rounded-xl shadow-2xl"
+                class="w-full rounded-xl shadow-2xl"
+                style="height: 450px;"
                 src="https://www.youtube.com/embed/F3J9nyiM3So"
                 title="Custom Caps and Custom Hats made by Top 5 Percent, LLC in Joliet, Illinois"
                 aria-label="YouTube Video Player - Top 5 Percent custom apparel showcase"

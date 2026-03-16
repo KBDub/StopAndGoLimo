@@ -5,8 +5,10 @@
         <div class="mb-12">
             <div class="text-center mb-8">
                 <p class="text-olive font-semibold mb-2">Buyer's guide</p>
-                <h2 class="text-charcoal mb-4">7 Tips for Choosing a Custom T-Shirt Maker</h2>
-                <div class="w-20 h-1 bg-sunburst mx-auto rounded"></div>
+                <div class="w-fit mx-auto">
+                    <h2 class="text-charcoal mb-2">7 Tips for Choosing a Custom T-Shirt Maker</h2>
+                    <div class="h-1 bg-sunburst rounded w-full"></div>
+                </div>
             </div>
             <div class="flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto">
                 <img

@@ -4,8 +4,10 @@
             <h5 class="text-azure font-semibold tracking-wide mb-3">
                 What We Do
             </h5>
-            <h2 class="text-h2 font-bold text-charcoal mb-4">Our Services</h2>
-            <div class="w-20 h-1 bg-sunburst mx-auto rounded"></div>
+            <div class="w-fit mx-auto">
+                <h2 class="text-h2 font-bold text-charcoal mb-2">Our Services</h2>
+                <div class="h-1 bg-sunburst rounded w-full"></div>
+            </div>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">

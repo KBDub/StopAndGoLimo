@@ -4,8 +4,10 @@
             <h5 class="text-azure font-semibold tracking-wide mb-3">
                 The Top 5 Percent Difference
             </h5>
-            <h2 class="text-h2 font-bold text-charcoal mb-4">Why Choose Us?</h2>
-            <div class="w-20 h-1 bg-sunburst mx-auto rounded"></div>
+            <div class="w-fit mx-auto">
+                <h2 class="text-h2 font-bold text-charcoal mb-2">Why Choose Us?</h2>
+                <div class="h-1 bg-sunburst rounded w-full"></div>
+            </div>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

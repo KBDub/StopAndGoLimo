@@ -9,7 +9,9 @@
                     Custom Signage
                     <span class="block text-sunburst">&amp; Apparel</span>
                 </h1>
-                <div class="w-20 h-1 bg-sunburst rounded mb-6"></div>
+                <div class="w-fit mb-6">
+                    <div class="h-1 bg-sunburst rounded w-full"></div>
+                </div>
                 <p class="text-lg text-charcoal-light mb-8 max-w-lg">
                     Premium quality custom t-shirts, business signs, vehicle graphics, and promotional
                     products. Designed and produced right here in Joliet.

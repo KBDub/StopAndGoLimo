@@ -8,6 +8,7 @@
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
+        image="/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg"
     />
     <x-ui.banner-medium-sunburst />
 

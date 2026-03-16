@@ -8,6 +8,7 @@
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
+        image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
     />
     <x-ui.banner-medium-sunburst />
 

@@ -283,8 +283,13 @@
 }
 
 .card-text-sway {
-    animation: sway 3s ease-in-out infinite;
     transform-origin: center center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-text-sway:hover {
+    animation: sway 3s ease-in-out infinite;
+    transition: none;
 }
 
 @media (max-width: 768px) {

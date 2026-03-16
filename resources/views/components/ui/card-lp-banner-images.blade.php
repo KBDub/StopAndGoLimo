@@ -23,7 +23,7 @@
                                 loading="lazy"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             >
-                            <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/55 transition-colors duration-300 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/75 transition-colors duration-300 flex items-center justify-center">
                                 <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-6">
                                     <h3 class="text-7xl font-bold text-white underline underline-offset-8 decoration-2">{{ $banner['title'] }}</h3>
                                 </div>
@@ -42,7 +42,7 @@
                             loading="lazy"
                             class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         >
-                        <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/55 transition-colors duration-300 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/75 transition-colors duration-300 flex items-center justify-center">
                             <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-6">
                                 <h3 class="text-7xl font-bold text-white underline underline-offset-8 decoration-2">{{ $banner['title'] }}</h3>
                             </div>

@@ -384,11 +384,10 @@
 
 .lp-banner-wrap:hover::before {
     opacity: 1;
-    filter: brightness(1.6);
     animation: lp-border-swirl 1.8s linear 1 forwards;
 }
 
 @keyframes lp-border-swirl {
     from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+    to   { transform: rotate(450deg); }
 }

@@ -298,6 +298,9 @@
 .card-detail-content p {
     margin-bottom: 1rem;
 }
+.card-detail-content > p:first-child {
+    text-indent: 2em;
+}
 .card-detail-content h3 {
     font-size: var(--font-size-h3, 1.75rem);
     font-weight: 700;

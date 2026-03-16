@@ -821,7 +821,7 @@
                     alt2="Vinyl printed shirts caps and hoodies"
                 >
                     <x-slot name="intro">
-                        <p>Custom shirts do more than cover your back. They build identity, spark conversations, and put your name in front of people who have never heard of you. Whether you are a school, a small business, a sports team, or a community group, a well-made shirt is one of the most affordable marketing tools you can use.</p>
+                        <p><span class="text-olive font-semibold">Custom shirts do more</span> than cover your back. They build identity, spark conversations, and put your name in front of people who have never heard of you. Whether you are a school, a small business, a sports team, or a community group, a well-made shirt is one of the most affordable marketing tools you can use.</p>
                         <h4>Build a Recognizable Brand</h4>
                         <p>When your staff, students, or volunteers wear the same shirt, people notice. Consistent branding tells the world you are organized and serious. A strong logo on a quality shirt can do more for name recognition than a social media post that disappears in an hour.</p>
                         <h4>Show School or Team Spirit</h4>

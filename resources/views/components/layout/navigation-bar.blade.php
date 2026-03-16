@@ -34,7 +34,7 @@
                         Custom Apparel
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'apparel' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <div x-cloak x-show="openDropdown === 'apparel'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'apparel'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/custom-apparel" class="block px-4 py-2 text-base font-semibold text-sunburst hover:bg-linen">View All Custom Apparel</a>
                         <div class="border-t border-linen-dark my-1"></div>
                         <a href="/custom-apparel/custom-shirts" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Custom Shirts</a>
@@ -50,7 +50,7 @@
                         Design It Yourself
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'design' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <div x-cloak x-show="openDropdown === 'design'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'design'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/design-it-yourself" class="block px-4 py-2 text-base font-semibold text-sunburst hover:bg-linen">View All Design Options</a>
                         <div class="border-t border-linen-dark my-1"></div>
                         <a href="/design-it-yourself/online-designer" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Use Our Free Online Designer</a>
@@ -63,7 +63,7 @@
                         Signs
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'signs' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <div x-cloak x-show="openDropdown === 'signs'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'signs'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/signs" class="block px-4 py-2 text-base font-semibold text-sunburst hover:bg-linen">View All Signs</a>
                         <div class="border-t border-linen-dark my-1"></div>
                         <a href="/signs/business-signs" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Business Signs</a>
@@ -80,7 +80,7 @@
                         Decals
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'decals' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <div x-cloak x-show="openDropdown === 'decals'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'decals'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/decals" class="block px-4 py-2 text-base font-semibold text-sunburst hover:bg-linen">View All Decals</a>
                         <div class="border-t border-linen-dark my-1"></div>
                         <a href="/decals/stickers" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Stickers</a>
@@ -93,7 +93,7 @@
                         Vehicle Graphics
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'vehicle' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </a>
-                    <div x-cloak x-show="openDropdown === 'vehicle'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'vehicle'" x-transition class="absolute top-full left-0 mt-1 w-auto whitespace-nowrap bg-white shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/vehicle-graphics" class="block px-4 py-2 text-base font-semibold text-sunburst hover:bg-linen">View All Vehicle Graphics</a>
                         <div class="border-t border-linen-dark my-1"></div>
                         <a href="/vehicle-graphics/automobile-graphics" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Automobile Graphics</a>
@@ -119,7 +119,7 @@
                         About
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openDropdown === 'about' ? 'rotate-90' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
                     </button>
-                    <div x-cloak x-show="openDropdown === 'about'" x-transition class="absolute top-full right-0 mt-1 w-auto whitespace-nowrap bg-white rounded-sm shadow-lg border border-linen-dark py-2 z-50">
+                    <div x-cloak x-show="openDropdown === 'about'" x-transition class="absolute top-full right-0 mt-1 w-auto whitespace-nowrap bg-white shadow-lg border border-linen-dark py-2 z-50">
                         <a href="/about" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">About Us</a>
                         <a href="/team" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Our Team</a>
                         <a href="/portfolio" class="block px-4 py-2 text-base text-charcoal hover:bg-linen hover:text-sunburst">Portfolio</a>

@@ -6,7 +6,7 @@
             </h5>
             <div class="inline-block mb-4">
                 <h2 class="text-h2 font-bold text-charcoal mb-2">Our Products &amp; Services</h2>
-                <div class="h-1 bg-sunburst rounded"></div>
+                <div class="h-1 bg-sunburst"></div>
             </div>
             <p class="text-charcoal-light max-w-4xl mx-auto">
                 Learn more about what we offer. From custom apparel to vehicle graphics,

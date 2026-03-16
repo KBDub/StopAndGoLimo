@@ -17,8 +17,8 @@
                                 $lineTotal = $line->subTotal?->value ?? 0;
                                 $productUrl = '/products/' . ($product->urls->first()?->slug ?? '');
                             @endphp
-                            <div class="bg-white rounded-xl shadow p-6 flex gap-6" wire:key="cart-line-{{ $line->id }}">
-                                <a href="{{ $productUrl }}" class="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-linen block">
+                            <div class="bg-white shadow p-6 flex gap-6" wire:key="cart-line-{{ $line->id }}">
+                                <a href="{{ $productUrl }}" class="w-24 h-24 flex-shrink-0 overflow-hidden bg-linen block">
                                     @if($thumbnail)
                                         <img src="{{ $thumbnail }}" alt="{{ $productName }}" class="w-full h-full object-cover">
                                     @else
@@ -56,7 +56,7 @@
                                         <div class="flex items-center gap-2">
                                             <button
                                                 wire:click="updateQuantity({{ $line->id }}, {{ $line->quantity - 1 }})"
-                                                class="w-8 h-8 rounded-lg border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors"
+                                                class="w-8 h-8 border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors"
                                             >
                                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
@@ -65,7 +65,7 @@
                                             <span class="w-10 text-center font-bold">{{ $line->quantity }}</span>
                                             <button
                                                 wire:click="updateQuantity({{ $line->id }}, {{ $line->quantity + 1 }})"
-                                                class="w-8 h-8 rounded-lg border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors"
+                                                class="w-8 h-8 border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors"
                                             >
                                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="lg:col-span-1">
-                        <div class="bg-white rounded-xl shadow p-6 sticky top-32">
+                        <div class="bg-white shadow p-6 sticky top-32">
                             <h2 class="font-heading text-xl font-bold text-charcoal mb-4">Order Summary</h2>
 
                             @php
@@ -130,7 +130,7 @@
                     </div>
                 </div>
             @else
-                <div class="bg-white rounded-xl shadow p-12 text-center max-w-lg mx-auto">
+                <div class="bg-white shadow p-12 text-center max-w-lg mx-auto">
                     <svg class="w-20 h-20 text-charcoal-lighter mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
                     </svg>

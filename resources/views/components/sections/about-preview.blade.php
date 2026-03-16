@@ -43,7 +43,7 @@
             </div>
 
             <div class="md:col-span-2 relative pb-8">
-                <div class="rounded-2xl overflow-hidden shadow-lg">
+                <div class="overflow-hidden shadow-lg">
                     <img
                         src="/images/about-preview.jpg"
                         alt="Custom signage and apparel production at Top 5 Percent in Joliet, Illinois"
@@ -51,7 +51,7 @@
                         loading="lazy"
                     />
                 </div>
-                <div class="absolute -bottom-2 right-4 bg-white rounded-lg shadow-lg border border-linen-dark px-6 py-4 text-center z-20">
+                <div class="absolute -bottom-2 right-4 bg-white shadow-lg border border-linen-dark px-6 py-4 text-center z-20">
                     <h4 class="text-charcoal font-bold">When Quality Matters</h4>
                     <p class="text-charcoal-light text-sm">Serving Joliet &amp; Will County</p>
                 </div>

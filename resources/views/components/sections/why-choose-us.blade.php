@@ -6,7 +6,7 @@
             </h5>
             <div class="inline-block">
                 <h2 class="text-h2 font-bold text-charcoal mb-2">Why Choose Us?</h2>
-                <div class="h-1 bg-sunburst rounded"></div>
+                <div class="h-1 bg-sunburst"></div>
             </div>
         </div>
 

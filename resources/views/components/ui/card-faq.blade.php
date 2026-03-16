@@ -4,7 +4,7 @@
     'open' => false,
 ])
 
-<div {{ $attributes->merge(['class' => 'bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-gold-lg transition-all']) }} x-data="{ expanded: {{ $open ? 'true' : 'false' }} }">
+<div {{ $attributes->merge(['class' => 'bg-white shadow-lg overflow-hidden hover:shadow-gold-lg transition-all']) }} x-data="{ expanded: {{ $open ? 'true' : 'false' }} }">
     <button
         @click="expanded = !expanded"
         class="w-full flex items-center justify-between p-5 text-left border-l-4 border-sunburst hover:bg-linen transition-colors"

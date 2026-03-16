@@ -2,7 +2,7 @@
     <section class="py-10 bg-linen">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             @if(!$cart || $cart->lines->isEmpty())
-                <div class="bg-white rounded-xl shadow p-12 text-center max-w-lg mx-auto">
+                <div class="bg-white shadow p-12 text-center max-w-lg mx-auto">
                     <h1 class="font-heading text-2xl font-bold text-charcoal mb-3">Nothing to checkout</h1>
                     <p class="text-charcoal-light mb-6">Your cart is empty. Add some items before checking out.</p>
                     <x-ui.button-gold-gradient href="/top5pct-merchandise">Browse Products</x-ui.button-gold-gradient>
@@ -11,14 +11,14 @@
                 <h1 class="font-heading text-3xl font-bold text-charcoal mb-8">Checkout</h1>
 
                 @if($errorMessage)
-                    <div class="bg-red-50 border border-red-200 text-red-700 rounded-lg p-4 mb-6">
+                    <div class="bg-red-50 border border-red-200 text-red-700 p-4 mb-6">
                         {{ $errorMessage }}
                     </div>
                 @endif
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div class="lg:col-span-2 space-y-6">
-                        <div class="bg-white rounded-xl shadow p-6">
+                        <div class="bg-white shadow p-6">
                             <h2 class="font-heading text-xl font-bold text-charcoal mb-4">Contact Information</h2>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="sm:col-span-2">
@@ -27,7 +27,7 @@
                                         type="email"
                                         id="email"
                                         wire:model="email"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         placeholder="your@email.com"
                                     >
                                     @error('email') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
@@ -38,7 +38,7 @@
                                         type="text"
                                         id="firstName"
                                         wire:model="firstName"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                     >
                                     @error('firstName') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
@@ -48,7 +48,7 @@
                                         type="text"
                                         id="lastName"
                                         wire:model="lastName"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                     >
                                     @error('lastName') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
@@ -58,14 +58,14 @@
                                         type="tel"
                                         id="phone"
                                         wire:model="phone"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         placeholder="(555) 123-4567"
                                     >
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-xl shadow p-6">
+                        <div class="bg-white shadow p-6">
                             <h2 class="font-heading text-xl font-bold text-charcoal mb-4">Shipping Address</h2>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="sm:col-span-2">
@@ -74,7 +74,7 @@
                                         type="text"
                                         id="shippingLine1"
                                         wire:model="shippingLine1"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                     >
                                     @error('shippingLine1') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
@@ -84,7 +84,7 @@
                                         type="text"
                                         id="shippingLine2"
                                         wire:model="shippingLine2"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                     >
                                 </div>
                                 <div>
@@ -93,7 +93,7 @@
                                         type="text"
                                         id="shippingCity"
                                         wire:model="shippingCity"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                     >
                                     @error('shippingCity') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
@@ -103,7 +103,7 @@
                                         type="text"
                                         id="shippingState"
                                         wire:model="shippingState"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         placeholder="IL"
                                     >
                                     @error('shippingState') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
@@ -114,19 +114,19 @@
                                         type="text"
                                         id="shippingPostcode"
                                         wire:model="shippingPostcode"
-                                        class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                     >
                                     @error('shippingPostcode') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-xl shadow p-6">
+                        <div class="bg-white shadow p-6">
                             <div class="flex items-center gap-3 mb-4">
                                 <h2 class="font-heading text-xl font-bold text-charcoal">Billing Address</h2>
                             </div>
                             <label class="flex items-center gap-2 cursor-pointer mb-4">
-                                <input type="checkbox" wire:model.live="sameBillingAddress" class="w-4 h-4 rounded border-charcoal-lighter text-sunburst focus:ring-sunburst">
+                                <input type="checkbox" wire:model.live="sameBillingAddress" class="w-4 h-4 border-charcoal-lighter text-sunburst focus:ring-sunburst">
                                 <span class="text-sm text-charcoal">Same as shipping address</span>
                             </label>
 
@@ -138,7 +138,7 @@
                                             type="text"
                                             id="billingLine1"
                                             wire:model="billingLine1"
-                                            class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                            class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         >
                                         @error('billingLine1') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
@@ -148,7 +148,7 @@
                                             type="text"
                                             id="billingLine2"
                                             wire:model="billingLine2"
-                                            class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                            class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         >
                                     </div>
                                     <div>
@@ -157,7 +157,7 @@
                                             type="text"
                                             id="billingCity"
                                             wire:model="billingCity"
-                                            class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                            class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         >
                                         @error('billingCity') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
@@ -167,7 +167,7 @@
                                             type="text"
                                             id="billingState"
                                             wire:model="billingState"
-                                            class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                            class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         >
                                         @error('billingState') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
@@ -177,7 +177,7 @@
                                             type="text"
                                             id="billingPostcode"
                                             wire:model="billingPostcode"
-                                            class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
+                                            class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all"
                                         >
                                         @error('billingPostcode') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
@@ -185,19 +185,19 @@
                             @endif
                         </div>
 
-                        <div class="bg-white rounded-xl shadow p-6">
+                        <div class="bg-white shadow p-6">
                             <h2 class="font-heading text-xl font-bold text-charcoal mb-4">Order Notes (optional)</h2>
                             <textarea
                                 wire:model="notes"
                                 rows="3"
-                                class="w-full px-4 py-2.5 border border-charcoal-lighter rounded-lg text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all resize-none"
+                                class="w-full px-4 py-2.5 border border-charcoal-lighter text-charcoal focus:ring-2 focus:ring-sunburst focus:border-sunburst outline-none transition-all resize-none"
                                 placeholder="Special instructions for your order..."
                             ></textarea>
                         </div>
                     </div>
 
                     <div class="lg:col-span-1">
-                        <div class="bg-white rounded-xl shadow p-6 sticky top-32">
+                        <div class="bg-white shadow p-6 sticky top-32">
                             <h2 class="font-heading text-xl font-bold text-charcoal mb-4">Order Summary</h2>
 
                             <div class="space-y-3 mb-4 max-h-64 overflow-y-auto">
@@ -211,7 +211,7 @@
                                         $variantLabel = $variant->sku ? last(explode('-', $variant->sku)) : '';
                                     @endphp
                                     <div class="flex gap-3 pb-3 border-b border-linen" wire:key="checkout-line-{{ $line->id }}">
-                                        <div class="w-14 h-14 flex-shrink-0 rounded-lg overflow-hidden bg-linen">
+                                        <div class="w-14 h-14 flex-shrink-0 overflow-hidden bg-linen">
                                             @if($thumbnail)
                                                 <img src="{{ $thumbnail }}" alt="{{ $productName }}" class="w-full h-full object-cover">
                                             @else
@@ -263,7 +263,7 @@
                             <button
                                 wire:click="placeOrder"
                                 wire:loading.attr="disabled"
-                                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold rounded-lg transition-all
+                                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold transition-all
                                        bg-gradient-to-r from-sunburst-light via-sunburst to-sunburst-dark text-charcoal hover:shadow-lg hover:scale-[1.02]
                                        disabled:opacity-50 disabled:cursor-not-allowed"
                                 {{ $processing ? 'disabled' : '' }}

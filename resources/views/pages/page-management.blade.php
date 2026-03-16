@@ -106,7 +106,7 @@
             @foreach($groups as $groupName => $group)
                 <div class="mb-8">
                     <h2 class="text-xl font-bold text-charcoal mb-4 flex items-center gap-2">
-                        <span class="w-3 h-3 bg-sunburst rounded-full"></span>
+                        <span class="w-3 h-3 bg-sunburst-full"></span>
                         {{ $groupName }}
                         <span class="text-sm font-normal text-charcoal-light">({{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }})</span>
                     </h2>

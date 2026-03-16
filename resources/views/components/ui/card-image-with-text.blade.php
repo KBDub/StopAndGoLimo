@@ -25,7 +25,7 @@
     <div class="flex-1 p-10 bg-white shadow-gold-lg flex flex-col justify-center text-center">
         <div class="inline-block mx-auto mb-5">
             <h3 class="text-olive font-bold text-h3 mb-2">{{ $title }}</h3>
-            <div class="h-1 bg-sunburst rounded"></div>
+            <div class="h-1 bg-sunburst"></div>
         </div>
         <div class="text-charcoal-light leading-relaxed max-w-5xl mx-auto">
             {{ $slot }}

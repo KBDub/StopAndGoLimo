@@ -54,7 +54,7 @@
                                 $lineTotal = $line->subTotal?->value ?? 0;
                             @endphp
                             <div class="flex gap-4 pb-4 border-b border-linen" wire:key="drawer-line-{{ $line->id }}">
-                                <div class="w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden bg-linen">
+                                <div class="w-20 h-20 flex-shrink-0 overflow-hidden bg-linen">
                                     @if($thumbnail)
                                         <img src="{{ $thumbnail }}" alt="{{ $productName }}" class="w-full h-full object-cover">
                                     @else
@@ -76,12 +76,12 @@
                                     <div class="flex items-center gap-2 mt-2">
                                         <button
                                             wire:click="updateQuantity({{ $line->id }}, {{ $line->quantity - 1 }})"
-                                            class="w-7 h-7 rounded border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors text-sm"
+                                            class="w-7 h-7 border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors text-sm"
                                         >-</button>
                                         <span class="text-sm font-medium w-6 text-center">{{ $line->quantity }}</span>
                                         <button
                                             wire:click="updateQuantity({{ $line->id }}, {{ $line->quantity + 1 }})"
-                                            class="w-7 h-7 rounded border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors text-sm"
+                                            class="w-7 h-7 border border-charcoal-lighter flex items-center justify-center text-charcoal-light hover:bg-linen transition-colors text-sm"
                                         >+</button>
 
                                         <button

@@ -31,7 +31,7 @@
                     {{ $heading }}
                     <span class="block text-sunburst">{{ $headingAccent }}</span>
                 </h1>
-                <div class="h-1 bg-sunburst rounded"></div>
+                <div class="h-1 bg-sunburst"></div>
             </div>
             <p class="text-2xl text-linen mb-8 max-w-3xl">
                 {{ $description }}

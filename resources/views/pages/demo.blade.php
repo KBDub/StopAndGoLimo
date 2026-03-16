@@ -262,7 +262,7 @@
                 
                 <div class="space-y-4">
                     <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
-                        <div class="w-16 h-16 bg-sunburst rounded-lg flex-shrink-0"></div>
+                        <div class="w-16 h-16 bg-sunburst-lg flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">1. Sunburst Gold (#FFC20E)</h3>
                             <p class="text-charcoal-light text-sm">Primary brand color - Hero elements, primary CTAs, brand moments</p>
@@ -957,7 +957,7 @@
                 {{-- Campaign Themes --}}
                 <div class="mt-14 mb-12">
                     <h3 class="text-xl font-bold text-charcoal mb-1">Campaign Themes</h3>
-                    <div class="h-1 bg-sunburst rounded w-32 mb-6"></div>
+                    <div class="h-1 bg-sunburst w-32 mb-6"></div>
                     <div class="flex flex-wrap gap-3">
                         <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best hoodies in town</span>
                         <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best bling around</span>
@@ -971,33 +971,33 @@
                 {{-- Brand Persona Pillars --}}
                 <div class="mb-14">
                     <h3 class="text-xl font-bold text-charcoal mb-1">Brand Persona Pillars</h3>
-                    <div class="h-1 bg-sunburst rounded w-48 mb-6"></div>
+                    <div class="h-1 bg-sunburst w-48 mb-6"></div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-white shadow-gold p-6">
                             <div class="inline-block mb-3">
                                 <h4 class="text-olive font-bold text-h4 mb-1">Empowerment Through Creative Agency</h4>
-                                <div class="h-1 bg-sunburst rounded"></div>
+                                <div class="h-1 bg-sunburst"></div>
                             </div>
                             <p class="text-charcoal-light leading-relaxed">Customers express who they are through what they wear and display. The brand enables that self-expression at the highest quality level.</p>
                         </div>
                         <div class="bg-white shadow-gold p-6">
                             <div class="inline-block mb-3">
                                 <h4 class="text-olive font-bold text-h4 mb-1">Local Community Kinship</h4>
-                                <div class="h-1 bg-sunburst rounded"></div>
+                                <div class="h-1 bg-sunburst"></div>
                             </div>
                             <p class="text-charcoal-light leading-relaxed">Rooted in Joliet, IL. Neighbors serving neighbors. The brand feels personal, not corporate.</p>
                         </div>
                         <div class="bg-white shadow-gold p-6">
                             <div class="inline-block mb-3">
                                 <h4 class="text-olive font-bold text-h4 mb-1">Veteran-Grade Trustworthiness</h4>
-                                <div class="h-1 bg-sunburst rounded"></div>
+                                <div class="h-1 bg-sunburst"></div>
                             </div>
                             <p class="text-charcoal-light leading-relaxed">Reliability, precision, and integrity in every order. Backed by veteran ownership and work ethic.</p>
                         </div>
                         <div class="bg-white shadow-gold p-6">
                             <div class="inline-block mb-3">
                                 <h4 class="text-olive font-bold text-h4 mb-1">Local Expert Energy</h4>
-                                <div class="h-1 bg-sunburst rounded"></div>
+                                <div class="h-1 bg-sunburst"></div>
                             </div>
                             <p class="text-charcoal-light leading-relaxed">The go-to authority for custom signage and apparel in the region. Deep craft knowledge with a friendly, approachable delivery.</p>
                         </div>
@@ -1007,7 +1007,7 @@
                 {{-- Customer Personas --}}
                 <div>
                     <h3 class="text-xl font-bold text-charcoal mb-1">Customer Personas</h3>
-                    <div class="h-1 bg-sunburst rounded w-44 mb-6"></div>
+                    <div class="h-1 bg-sunburst w-44 mb-6"></div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">

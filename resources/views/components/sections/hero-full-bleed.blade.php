@@ -66,7 +66,7 @@
                                 <x-ui.button-gold-gradient href="{{ $primaryHref }}">{{ $primaryCta }}</x-ui.button-gold-gradient>
                             @endif
                             @if($secondaryCta)
-                                <a href="{{ $secondaryHref }}" class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold rounded-lg border-2 border-white text-white hover:bg-white hover:text-charcoal transition-all">
+                                <a href="{{ $secondaryHref }}" class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-charcoal transition-all">
                                     {{ $secondaryCta }}
                                 </a>
                             @endif

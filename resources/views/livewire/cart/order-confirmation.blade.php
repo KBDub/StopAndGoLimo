@@ -1,7 +1,7 @@
 <div>
     <section class="py-10 bg-linen">
         <div class="max-w-3xl mx-auto px-4 sm:px-6">
-            <div class="bg-white rounded-xl shadow p-8 text-center mb-8">
+            <div class="bg-white shadow p-8 text-center mb-8">
                 <div class="w-16 h-16 rounded-full bg-olive/10 flex items-center justify-center mx-auto mb-4">
                     <svg class="w-8 h-8 text-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
@@ -19,7 +19,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 @if($order->shippingAddress)
-                    <div class="bg-white rounded-xl shadow p-6">
+                    <div class="bg-white shadow p-6">
                         <h2 class="font-heading text-lg font-bold text-charcoal mb-3">Shipping Address</h2>
                         <div class="text-sm text-charcoal-light space-y-1">
                             <p class="font-medium text-charcoal">{{ $order->shippingAddress->first_name }} {{ $order->shippingAddress->last_name }}</p>
@@ -39,7 +39,7 @@
                 @endif
 
                 @if($order->billingAddress)
-                    <div class="bg-white rounded-xl shadow p-6">
+                    <div class="bg-white shadow p-6">
                         <h2 class="font-heading text-lg font-bold text-charcoal mb-3">Billing Address</h2>
                         <div class="text-sm text-charcoal-light space-y-1">
                             <p class="font-medium text-charcoal">{{ $order->billingAddress->first_name }} {{ $order->billingAddress->last_name }}</p>
@@ -53,7 +53,7 @@
                 @endif
             </div>
 
-            <div class="bg-white rounded-xl shadow p-6 mb-8">
+            <div class="bg-white shadow p-6 mb-8">
                 <h2 class="font-heading text-lg font-bold text-charcoal mb-4">Order Items</h2>
                 <div class="space-y-4">
                     @foreach($order->lines->where('type', '!=', 'shipping') as $line)
@@ -97,7 +97,7 @@
             </div>
 
             @if($order->notes)
-                <div class="bg-white rounded-xl shadow p-6 mb-8">
+                <div class="bg-white shadow p-6 mb-8">
                     <h2 class="font-heading text-lg font-bold text-charcoal mb-2">Order Notes</h2>
                     <p class="text-sm text-charcoal-light">{{ $order->notes }}</p>
                 </div>

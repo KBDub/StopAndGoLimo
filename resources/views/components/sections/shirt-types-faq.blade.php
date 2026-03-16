@@ -7,14 +7,14 @@
                 <p class="text-olive font-semibold mb-2">Buyer's guide</p>
                 <div class="inline-block">
                     <h2 class="text-charcoal mb-2">7 Tips for Choosing a Custom T-Shirt Maker</h2>
-                    <div class="h-1 bg-sunburst rounded"></div>
+                    <div class="h-1 bg-sunburst"></div>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto">
                 <img
                     src="/images/top5pct-t-shirt-maker-7-tips.jpg"
                     alt="Custom t-shirt printing at Top 5 Percent, Joliet IL"
-                    class="w-[280px] h-[373px] object-cover rounded-xl shadow-lg flex-shrink-0"
+                    class="w-[280px] h-[373px] object-cover shadow-lg flex-shrink-0"
                 >
                 <p class="text-charcoal-light leading-relaxed">Custom t-shirt printing has become more popular over the years. Individuals and businesses enjoy having the freedom to express themselves using their choice of graphics, words, and photography. There are a lot of different custom t-shirt makers to choose from, so finding the best company can be a challenge. Use these seven useful tips to help you choose the best custom t-shirt maker for your needs.</p>
             </div>

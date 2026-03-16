@@ -5,7 +5,7 @@
     'avatar' => null,
 ])
 
-<div {{ $attributes->merge(['class' => 'bg-white p-6 rounded-xl shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1']) }}>
+<div {{ $attributes->merge(['class' => 'bg-white p-6 shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1']) }}>
     <p class="text-sm text-charcoal-light italic mb-4">"{{ $quote }}"</p>
     <div class="flex items-center gap-3">
         @if($avatar)

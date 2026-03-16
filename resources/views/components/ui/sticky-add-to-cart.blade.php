@@ -37,7 +37,7 @@
 
                 <button
                     type="button"
-                    class="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold rounded-lg transition-all
+                    class="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold transition-all
                            bg-gradient-to-r from-sunburst-light via-sunburst to-sunburst-dark text-charcoal
                            hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
                 >

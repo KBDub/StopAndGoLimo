@@ -8,7 +8,7 @@
 
 <a
     href="{{ $href }}"
-    {{ $attributes->merge(['class' => 'group relative block overflow-hidden rounded-xl ' . ($featured ? 'md:col-span-2' : '')]) }}
+    {{ $attributes->merge(['class' => 'group relative block overflow-hidden ' . ($featured ? 'md:col-span-2' : '')]) }}
 >
     <div class="relative w-full {{ $featured ? 'aspect-[2/1] md:aspect-[3/1]' : 'aspect-[3/4] sm:aspect-square' }}">
         @if($image)

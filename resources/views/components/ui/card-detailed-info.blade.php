@@ -12,7 +12,7 @@
     <div class="text-center mb-6">
         <div class="inline-block">
             <h2 class="text-olive font-bold text-h2 mb-2">{{ $heading }}</h2>
-            <div class="h-1 bg-sunburst rounded"></div>
+            <div class="h-1 bg-sunburst"></div>
         </div>
     </div>
 

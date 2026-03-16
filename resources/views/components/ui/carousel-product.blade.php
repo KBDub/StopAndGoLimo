@@ -28,7 +28,7 @@
                     <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full" x-ref="mobileCarousel">
                         <template x-for="(img, idx) in images" x-bind:key="'mobile-' + idx">
                             <div class="w-[90vw] shrink-0 snap-center px-1">
-                                <div class="aspect-[3/4] overflow-hidden rounded-xl bg-linen">
+                                <div class="aspect-[3/4] overflow-hidden bg-linen">
                                     <img
                                         x-bind:src="img"
                                         x-bind:alt="'{{ $alt }} ' + (idx + 1)"
@@ -57,7 +57,7 @@
                     <template x-for="(img, idx) in images" x-bind:key="'thumb-' + idx">
                         <button
                             x-on:click="goTo(idx)"
-                            class="w-20 h-24 rounded-lg overflow-hidden border-2 transition-all shrink-0"
+                            class="w-20 h-24 overflow-hidden border-2 transition-all shrink-0"
                             x-bind:class="current === idx ? 'border-sunburst shadow-gold' : 'border-transparent hover:border-charcoal-lighter'"
                         >
                             <img x-bind:src="img" class="w-full h-full object-cover object-top" alt="">
@@ -67,7 +67,7 @@
 
                 <div class="flex-1 relative">
                     <div
-                        class="aspect-[3/4] overflow-hidden rounded-xl bg-linen cursor-crosshair relative"
+                        class="aspect-[3/4] overflow-hidden bg-linen cursor-crosshair relative"
                         x-on:mouseenter="zooming = true"
                         x-on:mouseleave="zooming = false"
                         x-on:mousemove="handleZoom($event)"
@@ -108,7 +108,7 @@
     </template>
 
     <template x-if="images.length === 0">
-        <div class="aspect-[3/4] overflow-hidden rounded-xl bg-linen flex flex-col items-center justify-center text-charcoal-lighter">
+        <div class="aspect-[3/4] overflow-hidden bg-linen flex flex-col items-center justify-center text-charcoal-lighter">
             <svg class="w-16 h-16 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>

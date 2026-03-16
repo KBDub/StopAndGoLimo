@@ -7,7 +7,7 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-8">
 
-            <div class="border-t-4 border-sunburst rounded-lg bg-white shadow-md p-8">
+            <div class="border-t-4 border-sunburst bg-white shadow-md p-8">
                 <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-3">
                     {{ $displayServiceType }} Services for Joliet Area Residents
                 </h2>
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            <div class="border-t-4 border-azure rounded-lg bg-linen-light shadow-md p-8">
+            <div class="border-t-4 border-azure bg-linen-light shadow-md p-8">
                 <h2 class="text-2xl md:text-3xl font-bold text-charcoal mb-5">
                     <span class="text-sunburst">Top 5 Percent</span> Will Handle Your {{ $displayServiceType }} Needs, Same Day
                 </h2>

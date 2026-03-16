@@ -44,7 +44,7 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="opacity-100 scale-100"
             x-transition:leave-end="opacity-0 scale-95"
-            class="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden z-10"
+            class="relative bg-white shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden z-10"
         >
             <button
                 x-on:click="open = false"
@@ -80,7 +80,7 @@
                             <template x-for="(img, idx) in allImages" x-bind:key="idx">
                                 <button
                                     x-on:click="currentImage = idx"
-                                    class="w-12 h-12 rounded-lg overflow-hidden border-2 transition-all"
+                                    class="w-12 h-12 overflow-hidden border-2 transition-all"
                                     x-bind:class="currentImage === idx ? 'border-sunburst shadow-gold' : 'border-white/50 hover:border-white'"
                                 >
                                     <img x-bind:src="img" class="w-full h-full object-cover" alt="">
@@ -112,7 +112,7 @@
                                     <button
                                         x-on:click="selectedVariant = '{{ $variant }}'"
                                         x-bind:class="selectedVariant === '{{ $variant }}' ? 'border-charcoal bg-charcoal text-white' : 'border-charcoal-lighter text-charcoal hover:border-charcoal'"
-                                        class="px-4 py-2 text-sm font-medium rounded-lg border transition-all"
+                                        class="px-4 py-2 text-sm font-medium border transition-all"
                                     >
                                         {{ $variant }}
                                     </button>
@@ -123,12 +123,12 @@
 
                     <div class="mb-6">
                         <h4 class="text-sm font-semibold text-charcoal mb-2">Quantity</h4>
-                        <div class="inline-flex items-center border border-charcoal-lighter rounded-lg">
-                            <button x-on:click="quantity = Math.max(1, quantity - 1)" class="px-3 py-2 text-charcoal hover:bg-linen transition-colors rounded-l-lg">
+                        <div class="inline-flex items-center border border-charcoal-lighter">
+                            <button x-on:click="quantity = Math.max(1, quantity - 1)" class="px-3 py-2 text-charcoal hover:bg-linen transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/></svg>
                             </button>
                             <span x-text="quantity" class="px-4 py-2 text-sm font-semibold text-charcoal min-w-[3rem] text-center border-x border-charcoal-lighter"></span>
-                            <button x-on:click="quantity = Math.min(99, quantity + 1)" class="px-3 py-2 text-charcoal hover:bg-linen transition-colors rounded-r-lg">
+                            <button x-on:click="quantity = Math.min(99, quantity + 1)" class="px-3 py-2 text-charcoal hover:bg-linen transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
                             </button>
                         </div>
@@ -136,7 +136,7 @@
 
                     <button
                         type="button"
-                        class="w-full py-3 text-base font-semibold rounded-lg transition-all
+                        class="w-full py-3 text-base font-semibold transition-all
                                bg-gradient-to-r from-sunburst-light via-sunburst to-sunburst-dark text-charcoal
                                hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] mb-3"
                     >

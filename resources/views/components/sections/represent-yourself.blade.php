@@ -13,22 +13,22 @@
             </div>
 
             <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white/5 border border-sunburst/20 rounded-xl p-6 hover:border-sunburst/50 transition-colors">
+                <div class="bg-white/5 border border-sunburst/20 p-6 hover:border-sunburst/50 transition-colors">
                     <div class="text-sunburst text-4xl font-bold mb-2">12</div>
                     <h4 class="text-white mb-2">Printing Techniques</h4>
                     <p class="text-white/60 text-sm">Vinyl, rhinestone, foil, glitter, embroidery, and more — all under one roof.</p>
                 </div>
-                <div class="bg-white/5 border border-sunburst/20 rounded-xl p-6 hover:border-sunburst/50 transition-colors">
+                <div class="bg-white/5 border border-sunburst/20 p-6 hover:border-sunburst/50 transition-colors">
                     <div class="text-sunburst text-4xl font-bold mb-2">24hr</div>
                     <h4 class="text-white mb-2">Same-Day Available</h4>
                     <p class="text-white/60 text-sm">Need it fast? We offer same-day and rush turnaround for select orders.</p>
                 </div>
-                <div class="bg-white/5 border border-sunburst/20 rounded-xl p-6 hover:border-sunburst/50 transition-colors">
+                <div class="bg-white/5 border border-sunburst/20 p-6 hover:border-sunburst/50 transition-colors">
                     <div class="text-sunburst text-4xl font-bold mb-2">1</div>
                     <h4 class="text-white mb-2">No Minimums</h4>
                     <p class="text-white/60 text-sm">Order one shirt or one thousand. We treat every order with the same care.</p>
                 </div>
-                <div class="bg-white/5 border border-sunburst/20 rounded-xl p-6 hover:border-sunburst/50 transition-colors">
+                <div class="bg-white/5 border border-sunburst/20 p-6 hover:border-sunburst/50 transition-colors">
                     <div class="text-sunburst text-4xl font-bold mb-2">★</div>
                     <h4 class="text-white mb-2">Veteran-Owned</h4>
                     <p class="text-white/60 text-sm">Veteran-grade discipline and integrity in every product we deliver.</p>

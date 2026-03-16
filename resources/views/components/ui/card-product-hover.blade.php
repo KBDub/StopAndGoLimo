@@ -13,7 +13,7 @@
 
 <div {{ $attributes->merge(['class' => 'group relative flex flex-col w-full']) }}>
     <a href="{{ $href }}" class="block">
-        <div class="relative w-full aspect-[3/4] overflow-hidden bg-linen rounded-xl">
+        <div class="relative w-full aspect-[3/4] overflow-hidden bg-linen">
             @if($image)
                 <img
                     src="{{ $image }}"
@@ -37,7 +37,7 @@
                             {{ $badge }}
                         </span>
                     @elseif($badgeType === 'best-seller')
-                        <span class="inline-block px-3 py-1 text-xs font-semibold text-charcoal bg-sunburst rounded-full shadow-sm">
+                        <span class="inline-block px-3 py-1 text-xs font-semibold text-charcoal bg-sunburst-full shadow-sm">
                             {{ $badge }}
                         </span>
                     @elseif($badgeType === 'sale')

@@ -10,7 +10,7 @@
                         Custom Signage
                         <span class="block text-sunburst">&amp; Apparel</span>
                     </h1>
-                    <div class="h-1 bg-sunburst rounded"></div>
+                    <div class="h-1 bg-sunburst"></div>
                 </div>
                 <p class="text-2xl text-charcoal-light mb-8 max-w-3xl">
                     Premium quality custom t-shirts, business signs, vehicle graphics, and promotional

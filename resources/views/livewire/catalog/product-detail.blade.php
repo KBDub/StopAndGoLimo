@@ -26,12 +26,12 @@
                     @endphp
 
                     @if($mainImage)
-                        <div class="rounded-xl overflow-hidden bg-linen mb-4">
+                        <div class="overflow-hidden bg-linen mb-4">
                             <img src="{{ $mainImage }}" alt="{{ $product->translateAttribute('name') }}"
                                  class="w-full h-auto object-contain max-h-[500px]">
                         </div>
                     @else
-                        <div class="rounded-xl bg-linen flex items-center justify-center h-[400px] mb-4">
+                        <div class="bg-linen flex items-center justify-center h-[400px] mb-4">
                             <div class="text-center">
                                 <svg class="mx-auto w-16 h-16 text-charcoal-lighter mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -44,7 +44,7 @@
                     @if($allImages->count() > 1)
                         <div class="grid grid-cols-4 gap-2">
                             @foreach($allImages->take(4) as $image)
-                                <div class="rounded-lg overflow-hidden bg-linen cursor-pointer hover:ring-2 hover:ring-sunburst transition-all">
+                                <div class="overflow-hidden bg-linen cursor-pointer hover:ring-2 hover:ring-sunburst transition-all">
                                     <img src="{{ $image->getUrl('small') }}" alt="" class="w-full h-20 object-cover">
                                 </div>
                             @endforeach
@@ -90,7 +90,7 @@
                             <div class="flex flex-wrap gap-2">
                                 @foreach($product->variants as $variant)
                                     <button wire:click="selectVariant({{ $variant->id }})"
-                                            class="px-4 py-2 rounded-lg border-2 text-sm font-medium transition-all
+                                            class="px-4 py-2 border-2 text-sm font-medium transition-all
                                                    {{ $selectedVariant && $selectedVariant->id === $variant->id
                                                       ? 'border-sunburst bg-sunburst/10 text-charcoal'
                                                       : 'border-charcoal-lighter text-charcoal-light hover:border-charcoal' }}">
@@ -111,14 +111,14 @@
                         <h3 class="font-heading font-bold text-sm tracking-wider mb-3 text-charcoal">Quantity</h3>
                         <div class="flex items-center gap-3">
                             <button wire:click="decrementQuantity"
-                                    class="w-10 h-10 rounded-lg border border-charcoal-lighter flex items-center justify-center hover:bg-linen transition-colors">
+                                    class="w-10 h-10 border border-charcoal-lighter flex items-center justify-center hover:bg-linen transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
                                 </svg>
                             </button>
                             <span class="w-12 text-center font-bold text-lg">{{ $quantity }}</span>
                             <button wire:click="incrementQuantity"
-                                    class="w-10 h-10 rounded-lg border border-charcoal-lighter flex items-center justify-center hover:bg-linen transition-colors">
+                                    class="w-10 h-10 border border-charcoal-lighter flex items-center justify-center hover:bg-linen transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                                 </svg>
@@ -136,7 +136,7 @@
                     @endif
 
                     @if(session('cart-error'))
-                        <div class="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg p-3 mb-4">
+                        <div class="bg-red-50 border border-red-200 text-red-700 text-sm p-3 mb-4">
                             {{ session('cart-error') }}
                         </div>
                     @endif
@@ -145,7 +145,7 @@
                         <button
                             wire:click="addToCart"
                             wire:loading.attr="disabled"
-                            class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold rounded-lg transition-all
+                            class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold transition-all
                                    {{ $addedToCart
                                       ? 'bg-olive text-white'
                                       : 'bg-gradient-to-r from-sunburst-light via-sunburst to-sunburst-dark text-charcoal hover:shadow-lg hover:scale-[1.02]' }}
@@ -236,7 +236,7 @@
                             $relPrice = $related->variants->flatMap(fn($v) => $v->prices->map(fn($p) => $p->price->value))->min();
                         @endphp
                         <a href="/products/{{ $relUrl }}" class="block group">
-                            <div class="bg-white rounded-xl shadow hover:shadow-lg transition-all overflow-hidden">
+                            <div class="bg-white shadow hover:shadow-lg transition-all overflow-hidden">
                                 @if($relThumb)
                                     <img src="{{ $relThumb }}" alt="{{ $related->translateAttribute('name') }}"
                                          class="w-full h-40 object-cover" loading="lazy">

@@ -1,6 +1,6 @@
 <section class="py-10 bg-charcoal relative overflow-hidden">
     <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-0 left-1/4 w-64 h-64 bg-sunburst rounded-full blur-3xl"></div>
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-sunburst-full blur-3xl"></div>
         <div class="absolute bottom-0 right-1/3 w-48 h-48 bg-azure rounded-full blur-3xl"></div>
     </div>
 
@@ -50,11 +50,11 @@
                             @keyup.enter="checkZip()"
                             maxlength="5"
                             placeholder="Enter zip code"
-                            class="flex-1 px-4 py-3 rounded-l-lg border-2 border-r-0 border-sunburst/30 bg-charcoal-dark text-white placeholder-white/40 focus:border-sunburst focus:outline-none transition-colors"
+                            class="flex-1 px-4 py-3 border-2 border-r-0 border-sunburst/30 bg-charcoal-dark text-white placeholder-white/40 focus:border-sunburst focus:outline-none transition-colors"
                         >
                         <button
                             @click="checkZip()"
-                            class="px-5 py-3 bg-gold-gradient text-charcoal font-bold rounded-r-lg hover:shadow-gold-lg transition-all"
+                            class="px-5 py-3 bg-gold-gradient text-charcoal font-bold hover:shadow-gold-lg transition-all"
                             aria-label="Check zip code"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -92,7 +92,7 @@
             <div>
                 <div
                     id="service-map"
-                    class="w-full h-[400px] md:h-[480px] rounded-lg border-2 border-sunburst/20 shadow-lg"
+                    class="w-full h-[400px] md:h-[480px] border-2 border-sunburst/20 shadow-lg"
                 ></div>
                 <p class="text-white/40 text-xs text-center mt-3">
                     We proudly serve the highlighted areas and surrounding communities

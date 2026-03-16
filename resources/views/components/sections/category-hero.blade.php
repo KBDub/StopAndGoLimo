@@ -26,12 +26,12 @@
             <h5 class="text-sunburst font-semibold tracking-wide mb-4">
                 {{ $preHeading }}
             </h5>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                {{ $heading }}
-                <span class="block text-sunburst">{{ $headingAccent }}</span>
-            </h1>
-            <div class="w-fit mb-6">
-                <div class="h-1 bg-sunburst rounded w-full"></div>
+            <div class="inline-block mb-6">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2">
+                    {{ $heading }}
+                    <span class="block text-sunburst">{{ $headingAccent }}</span>
+                </h1>
+                <div class="h-1 bg-sunburst rounded"></div>
             </div>
             <p class="text-lg text-linen mb-8 max-w-lg">
                 {{ $description }}

@@ -5,9 +5,9 @@
         <div class="mb-12">
             <div class="text-center mb-8">
                 <p class="text-olive font-semibold mb-2">Buyer's guide</p>
-                <div class="w-fit mx-auto">
+                <div class="inline-block">
                     <h2 class="text-charcoal mb-2">7 Tips for Choosing a Custom T-Shirt Maker</h2>
-                    <div class="h-1 bg-sunburst rounded w-full"></div>
+                    <div class="h-1 bg-sunburst rounded"></div>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto">

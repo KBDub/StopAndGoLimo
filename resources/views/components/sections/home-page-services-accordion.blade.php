@@ -4,9 +4,9 @@
             <h5 class="text-azure font-semibold tracking-wide mb-3">
                 Frequently Asked Questions
             </h5>
-            <div class="w-fit mx-auto mb-4">
+            <div class="inline-block mb-4">
                 <h2 class="text-h2 font-bold text-charcoal mb-2">Our Products &amp; Services</h2>
-                <div class="h-1 bg-sunburst rounded w-full"></div>
+                <div class="h-1 bg-sunburst rounded"></div>
             </div>
             <p class="text-charcoal-light max-w-4xl mx-auto">
                 Learn more about what we offer. From custom apparel to vehicle graphics,

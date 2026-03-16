@@ -46,19 +46,19 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 - **Inner container `<div>`:** Always `max-w-7xl mx-auto px-6` — do not use `max-w-6xl`, `max-w-5xl`, `max-w-4xl`, or any narrower container as the primary layout wrapper.
 - **Inner text readability constraints:** Nested elements may still use narrower max-widths as text readability helpers — these are not layout containers.
 - **H2–H5 description paragraphs (MANDATORY):** Any descriptive `<p>` that follows an H2, H3, H4, or H5 heading in a section intro/header area must use `max-w-4xl mx-auto`. This applies to both centered and left-aligned section headers. Never use `max-w-2xl` or `max-w-3xl` for these paragraphs — they produce lines that are too narrow at desktop widths.
-- **Sunburst heading underbar (MANDATORY):** The gold decorative underbar (`h-1 bg-sunburst rounded`) beneath any section heading (H1–H3) must span the full width of the heading text — never a fixed width like `w-20`. Implement by wrapping the heading and underbar together in `<div class="w-fit">` (add `mx-auto` for centered headings) and using `w-full` on the underbar div. Move any bottom margin (`mb-*`) to the wrapper div, not the heading or underbar.
+- **Sunburst heading underbar (MANDATORY):** The gold decorative underbar (`h-1 bg-sunburst rounded`) beneath any section heading (H1–H3) must span the full width of the heading text — never a fixed width like `w-20`. Implement by wrapping the heading and underbar together in `<div class="inline-block">`. The underbar div needs no explicit width — a block element inside `inline-block` naturally fills the container, which is sized by the heading text. For centered sections the parent already has `text-center` which centers the `inline-block` wrapper automatically. Move any bottom margin (`mb-*`) to the wrapper div, and use `mb-2` on the heading for tight spacing to the bar.
 
 ```blade
-{{-- Centered heading with full-width underbar --}}
-<div class="w-fit mx-auto mb-4">
+{{-- Centered heading — parent has text-center, inline-block is auto-centered --}}
+<div class="inline-block mb-4">
     <h2 class="text-h2 font-bold text-charcoal mb-2">Section Title</h2>
-    <div class="h-1 bg-sunburst rounded w-full"></div>
+    <div class="h-1 bg-sunburst rounded"></div>
 </div>
 
-{{-- Left-aligned heading with full-width underbar --}}
-<div class="w-fit mb-6">
+{{-- Left-aligned heading --}}
+<div class="inline-block mb-6">
     <h2 class="text-h2 font-bold text-charcoal mb-2">Section Title</h2>
-    <div class="h-1 bg-sunburst rounded w-full"></div>
+    <div class="h-1 bg-sunburst rounded"></div>
 </div>
 ```
 

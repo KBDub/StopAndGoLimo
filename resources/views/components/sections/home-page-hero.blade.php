@@ -5,12 +5,12 @@
                 <h5 class="text-olive font-semibold tracking-wide mb-4">
                     Veteran Owned &bull; Joliet, IL
                 </h5>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight mb-6">
-                    Custom Signage
-                    <span class="block text-sunburst">&amp; Apparel</span>
-                </h1>
-                <div class="w-fit mb-6">
-                    <div class="h-1 bg-sunburst rounded w-full"></div>
+                <div class="inline-block mb-6">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight mb-2">
+                        Custom Signage
+                        <span class="block text-sunburst">&amp; Apparel</span>
+                    </h1>
+                    <div class="h-1 bg-sunburst rounded"></div>
                 </div>
                 <p class="text-lg text-charcoal-light mb-8 max-w-lg">
                     Premium quality custom t-shirts, business signs, vehicle graphics, and promotional

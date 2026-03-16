@@ -5,9 +5,9 @@
                 <h5 class="text-azure font-semibold tracking-wide mb-3">
                     Online Design Tool
                 </h5>
-                <div class="w-fit mb-6">
+                <div class="inline-block mb-6">
                     <h2 class="text-h2 font-bold text-charcoal mb-2">Design It Yourself</h2>
-                    <div class="h-1 bg-sunburst rounded w-full"></div>
+                    <div class="h-1 bg-sunburst rounded"></div>
                 </div>
                 <p class="text-charcoal-light mb-8 text-lg max-w-4xl">
                     Use our easy online design tool to create custom t-shirts, signs, and more.

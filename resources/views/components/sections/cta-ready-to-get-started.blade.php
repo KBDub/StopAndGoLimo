@@ -7,9 +7,9 @@
         <h5 class="text-sunburst font-semibold tracking-wide mb-3">
             Let's Build Something Great
         </h5>
-        <div class="w-fit mx-auto mb-6">
+        <div class="inline-block mb-6">
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Ready to Get Started?</h2>
-            <div class="h-1 bg-sunburst rounded w-full"></div>
+            <div class="h-1 bg-sunburst rounded"></div>
         </div>
         <p class="text-white/70 mb-8 text-lg max-w-4xl mx-auto">
             Contact us today for a free quote on your custom project.

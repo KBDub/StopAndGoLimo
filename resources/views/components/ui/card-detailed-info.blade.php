@@ -18,7 +18,7 @@
 
     {{-- Top section: image floated left, intro text wraps right and continues below --}}
     <div class="overflow-hidden mb-4">
-        <div class="float-left mr-10 mb-4 shadow-gold flex-shrink-0">
+        <div class="float-left mb-4 shadow-gold flex-shrink-0" style="margin-right: 3rem;">
             <img
                 src="{{ $image1 }}"
                 alt="{{ $alt1 }}"

@@ -9,13 +9,13 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             <a href="/custom-apparel/vinyl-shirts" class="no-underline block group">
                 <x-ui.card-product title="Vinyl Shirts" image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg">
-                    <p class="text-charcoal-light mb-4">Bold, durable heat-press vinyl in any color. Sharp lines and long-lasting results, ideal for <span class="text-azure underline underline-offset-2">logos, names, and numbers</span>.</p>
+                    <p class="text-charcoal-light mb-4">Bold, durable <span class="text-azure underline underline-offset-2">heat-press vinyl</span> in any color. Sharp lines and long-lasting results, ideal for logos, names, and numbers.</p>
                 </x-ui.card-product>
             </a>
 
             <a href="/custom-apparel/rhinestone-shirts" class="no-underline block group">
                 <x-ui.card-product title="Rhinestone Shirts" image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg">
-                    <p class="text-charcoal-light mb-4">Dazzling crystal rhinestone designs for maximum bling. Custom patterns, logos, and text that <span class="text-azure underline underline-offset-2">catch every eye in the room</span>.</p>
+                    <p class="text-charcoal-light mb-4">Dazzling crystal rhinestone designs for <span class="text-azure underline underline-offset-2">maximum bling</span>. Custom patterns, logos, and text that catch every eye in the room.</p>
                 </x-ui.card-product>
             </a>
 

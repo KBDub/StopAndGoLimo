@@ -371,7 +371,7 @@
     top: -50%;
     left: -50%;
     background: conic-gradient(
-        from 0deg,
+        from 225deg,
         transparent  0deg,
         #FFC20E     30deg,
         #FFC20E     90deg,
@@ -384,6 +384,7 @@
 
 .lp-banner-wrap:hover::before {
     opacity: 1;
+    filter: brightness(1.6);
     animation: lp-border-swirl 1.8s linear 1 forwards;
 }
 

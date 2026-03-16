@@ -808,6 +808,57 @@
             </div>
         </section>
 
+        <section class="py-16 bg-linen">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold mb-4 border-l-4 border-sunburst pl-5">Detailed Info Card</h2>
+                <p class="text-sm text-charcoal-light mb-8">Long-form editorial layout with asymmetric image inlays and flowing text. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-detailed-info</code> with named slots: <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$intro</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$mid</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$lower</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$footer</code>.</p>
+
+                <x-ui.card-detailed-info
+                    heading="How Custom Shirts Can Help Your Business or School"
+                    image1="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"
+                    alt1="Custom shirts printed in Joliet IL"
+                    image2="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+                    alt2="Vinyl printed shirts caps and hoodies"
+                >
+                    <x-slot name="intro">
+                        <p>Custom shirts do more than cover your back. They build identity, spark conversations, and put your name in front of people who have never heard of you. Whether you are a school, a small business, a sports team, or a community group, a well-made shirt is one of the most affordable marketing tools you can use.</p>
+                        <h4>Build a Recognizable Brand</h4>
+                        <p>When your staff, students, or volunteers wear the same shirt, people notice. Consistent branding tells the world you are organized and serious. A strong logo on a quality shirt can do more for name recognition than a social media post that disappears in an hour.</p>
+                        <h4>Show School or Team Spirit</h4>
+                        <p>Spirit wear brings people together. It gives fans something to cheer in, athletes something to train in, and parents something to wear with pride on game day. Custom shirts are one of the easiest ways to build a sense of community around any group or organization.</p>
+                        <p>You do not need a big order to get started. We work with groups of any size, from five shirts for a small club to five hundred for a school-wide event.</p>
+                    </x-slot>
+
+                    <x-slot name="mid">
+                        <h4>Fundraising That Actually Works</h4>
+                        <p>Selling custom shirts is one of the most reliable fundraising methods for schools, nonprofits, and community groups. People are happy to buy something they can wear and show off. You set the price, we handle the printing, and the difference goes straight to your cause.</p>
+                        <h4>Event and Reunion Shirts</h4>
+                        <p>Nothing makes a reunion, walk, or company picnic feel more official than a shirt made just for the occasion. Give every attendee something to remember the day by. Event shirts also make it easy to spot volunteers, staff, and participants in a crowd.</p>
+                        <h4>Employee Uniforms That Look Professional</h4>
+                        <p>A uniform does not have to be boring. We can put your logo on polos, t-shirts, hoodies, or hats in colors that match your brand. Your team will look sharp, and your customers will know exactly who to talk to.</p>
+                    </x-slot>
+
+                    <x-slot name="lower">
+                        <h4>Sports and Athletic Teams</h4>
+                        <p>Custom team shirts and jerseys give your players a sense of pride before the first whistle blows. We print numbers, names, and logos with precision, using techniques that hold up through practice, games, and washing.</p>
+                        <h4>What to Think About When You Order</h4>
+                        <p>A few simple decisions make the process smooth. Consider these before you reach out:</p>
+                        <ul>
+                            <li>How many shirts do you need and in what sizes</li>
+                            <li>What colors work best with your logo</li>
+                            <li>Whether you need them by a specific date</li>
+                            <li>Whether you have a print-ready file or need design help</li>
+                        </ul>
+                        <p>Our team is happy to walk you through every step. We have worked with first-time buyers and seasoned print buyers alike, and we make the process simple no matter where you are starting from.</p>
+                    </x-slot>
+
+                    <x-slot name="footer">
+                        <p>If you need custom shirts in Joliet or the surrounding area, <a href="/contact">contact Top 5 Percent</a> today. We specialize in <a href="/custom-apparel/custom-shirts">custom t-shirts</a>, <a href="/custom-apparel/custom-shirts/vinyl">vinyl printing</a>, <a href="/custom-apparel/custom-shirts/embroidery">embroidery</a>, and a full range of <a href="/custom-apparel">custom apparel</a>. Same-day service is available on most orders.</p>
+                    </x-slot>
+                </x-ui.card-detailed-info>
+            </div>
+        </section>
+
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Badges & Alerts</h2>

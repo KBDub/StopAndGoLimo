@@ -379,7 +379,6 @@
         transparent 360deg
     );
     opacity: 0;
-    transition: opacity 0.25s ease;
 }
 
 .lp-banner-wrap:hover::before {

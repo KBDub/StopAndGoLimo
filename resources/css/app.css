@@ -373,11 +373,8 @@
     background: conic-gradient(
         from 0deg,
         transparent  0deg,
-        #A39822     30deg,
-        #FFC20E     45deg,
-        #FF8C00     60deg,
-        #FFC20E     75deg,
-        #A39822     90deg,
+        #FFC20E     30deg,
+        #FFC20E     90deg,
         transparent 120deg,
         transparent 360deg
     );

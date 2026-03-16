@@ -382,10 +382,10 @@
 }
 
 .lp-banner-wrap:hover::before {
-    animation: lp-border-swirl 1.3s linear 1 both;
+    animation: lp-border-swirl 2.1s linear 1 both;
 }
 
 @keyframes lp-border-swirl {
     0%   { transform: rotate(0deg);   opacity: 1; }
-    100% { transform: rotate(450deg); opacity: 1; }
+    100% { transform: rotate(720deg); opacity: 1; }
 }

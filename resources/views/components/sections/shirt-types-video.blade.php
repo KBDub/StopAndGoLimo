@@ -5,7 +5,7 @@
             <h2 class="text-charcoal mb-4">Watch Us Work</h2>
             <p class="text-charcoal-light max-w-4xl mx-auto">From design to finished product, see the quality and care that goes into every shirt we produce at Top 5 Percent in Joliet, Illinois.</p>
         </div>
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-xl mx-auto w-full">
             <div class="relative w-full rounded-xl overflow-hidden shadow-2xl" style="padding-top: 56.25%;">
                 <iframe
                     class="absolute inset-0 w-full h-full"

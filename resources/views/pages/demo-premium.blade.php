@@ -30,8 +30,10 @@
     <main>
         <section class="bg-white py-16 shadow-gold">
             <div class="max-w-7xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-4">Premium components</h2>
-                <div class="w-24 h-1 bg-gold-gradient mx-auto mb-6 rounded"></div>
+                <div class="inline-block mb-6">
+                    <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-2">Premium components</h2>
+                    <div class="h-1 bg-sunburst"></div>
+                </div>
                 <p class="text-lg text-charcoal-light max-w-2xl mx-auto">Phase 3.5 premium UI components: hover product cards, full-bleed hero CTAs, category grids, sticky add-to-cart, quick-view modal, and product image carousel.</p>
             </div>
         </section>
@@ -48,7 +50,7 @@
             <div class="max-w-7xl mx-auto px-6 text-center">
                 <h2 class="text-3xl font-bold mb-4 text-charcoal">Premium components complete</h2>
                 <p class="text-lg text-charcoal/80 mb-8 max-w-2xl mx-auto">These components form the foundation of a premium e-commerce experience, ready for integration with Spatie Media Library image pipeline.</p>
-                <a href="/demo" class="inline-block px-8 py-4 bg-charcoal text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">View brand style guide</a>
+                <x-ui.button-charcoal-gold href="/demo">View brand style guide</x-ui.button-charcoal-gold>
             </div>
         </section>
     </main>

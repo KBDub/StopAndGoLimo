@@ -87,7 +87,7 @@
 
 <section class="py-12 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-linen-dark">
+        <div class="bg-white p-6 shadow-sm border border-linen-dark">
             <h3 class="text-lg font-semibold text-charcoal mb-3">Banner component features</h3>
             <div class="grid md:grid-cols-2 gap-6 text-sm text-charcoal-light">
                 <div>

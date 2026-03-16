@@ -10,7 +10,7 @@
             />
         </div>
 
-        <div class="mt-12 bg-white rounded-xl p-6 shadow-sm">
+        <div class="mt-12 bg-white p-6 shadow-sm">
             <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                 <ul class="space-y-2">

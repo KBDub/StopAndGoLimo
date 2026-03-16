@@ -3,30 +3,28 @@
         <h2 class="text-2xl font-bold mb-3 border-l-4 border-sunburst pl-5">Quick-view modal</h2>
         <p class="text-charcoal-light mb-10 pl-5">Product quick-view modal with image gallery, variant selector, quantity picker, and add-to-cart. Opens without page navigation for faster browsing.</p>
 
-        <div class="bg-white rounded-xl p-6 shadow-sm">
+        <div class="bg-white p-6 shadow-sm">
             <h3 class="text-lg font-semibold text-charcoal mb-4">Preview</h3>
             <p class="text-sm text-charcoal-light mb-6">Click the buttons below to open quick-view modals with different configurations.</p>
 
             <div class="flex flex-wrap gap-4">
-                <button
+                <x-ui.button-blue-white
                     x-data
                     x-on:click="$dispatch('open-quick-view', { id: 'qv-demo-1' })"
-                    class="px-6 py-3 bg-azure text-white font-semibold rounded-lg hover:bg-azure-dark transition-colors"
                 >
                     Quick view: T-shirt (with variants)
-                </button>
+                </x-ui.button-blue-white>
 
-                <button
+                <x-ui.button-charcoal-gold
                     x-data
                     x-on:click="$dispatch('open-quick-view', { id: 'qv-demo-2' })"
-                    class="px-6 py-3 bg-charcoal text-white font-semibold rounded-lg hover:bg-charcoal-dark transition-colors"
                 >
                     Quick view: Banner (no variants)
-                </button>
+                </x-ui.button-charcoal-gold>
             </div>
         </div>
 
-        <div class="mt-8 bg-white rounded-xl p-6 shadow-sm">
+        <div class="mt-8 bg-white p-6 shadow-sm">
             <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                 <ul class="space-y-2">

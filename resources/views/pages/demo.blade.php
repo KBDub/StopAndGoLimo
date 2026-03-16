@@ -31,8 +31,10 @@
     <main>
         <section class="bg-white py-16 shadow-gold">
             <div class="max-w-7xl mx-auto px-6 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-4">Golden Optimism</h1>
-                <div class="w-24 h-1 bg-gold-gradient mx-auto mb-6 rounded"></div>
+                <div class="inline-block mb-6">
+                    <h1 class="text-4xl md:text-5xl font-bold text-charcoal mb-2">Golden Optimism</h1>
+                    <div class="h-1 bg-sunburst"></div>
+                </div>
                 <p class="text-xl text-charcoal-light">A vibrant, warm brand palette radiating confidence and creativity</p>
             </div>
         </section>
@@ -42,7 +44,7 @@
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Palette (5 + White)</h2>
                 <p class="text-charcoal-light mb-8">Each core color has up to 3 variants: Light, Default, and Dark</p>
                 
-                <div class="rounded-xl overflow-hidden shadow-lg mb-8">
+                <div class="overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Olive</h3>
                         <p class="text-charcoal-light text-sm">Social media hover tags exclusively</p>
@@ -57,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="rounded-xl overflow-hidden shadow-lg mb-8">
+                <div class="overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Sunburst Gold</h3>
                         <p class="text-charcoal-light text-sm">Primary CTAs, brand moments, accents, creative sections</p>
@@ -90,7 +92,7 @@
                     </div>
                 </div>
 
-                <div class="rounded-xl overflow-hidden shadow-lg mb-8">
+                <div class="overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Azure Blue</h3>
                         <p class="text-charcoal-light text-sm">Navigation, secondary CTAs, links, professional sections, informational badges</p>
@@ -123,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="rounded-xl overflow-hidden shadow-lg mb-8">
+                <div class="overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Soft Linen</h3>
                         <p class="text-charcoal-light text-sm">Main backgrounds, breathing room, header/footer backgrounds</p>
@@ -156,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="rounded-xl overflow-hidden shadow-lg mb-8">
+                <div class="overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Charcoal</h3>
                         <p class="text-charcoal-light text-sm">All body text and headers</p>
@@ -189,7 +191,7 @@
                     </div>
                 </div>
 
-                <div class="rounded-xl overflow-hidden shadow-lg">
+                <div class="overflow-hidden shadow-lg">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">White</h3>
                         <p class="text-charcoal-light text-sm">Cards, containers, alternating backgrounds</p>
@@ -211,7 +213,7 @@
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Semantic Colors (3)</h2>
                 
                 <div class="grid md:grid-cols-3 gap-6">
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
+                    <div class="overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <div class="h-36 bg-success flex items-center justify-center">
                             <span class="text-white text-xl font-bold">Success</span>
                         </div>
@@ -225,7 +227,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
+                    <div class="overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <div class="h-36 bg-warning flex items-center justify-center">
                             <span class="text-charcoal text-xl font-bold">Warning</span>
                         </div>
@@ -239,7 +241,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
+                    <div class="overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <div class="h-36 bg-error flex items-center justify-center">
                             <span class="text-white text-xl font-bold">Error</span>
                         </div>
@@ -261,43 +263,43 @@
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Hierarchy</h2>
                 
                 <div class="space-y-4">
-                    <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
+                    <div class="flex items-center gap-4 p-4 bg-linen">
                         <div class="w-16 h-16 bg-sunburst-lg flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">1. Sunburst Gold (#FFC20E)</h3>
                             <p class="text-charcoal-light text-sm">Primary brand color - Hero elements, primary CTAs, brand moments</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
-                        <div class="w-16 h-16 bg-azure rounded-lg flex-shrink-0"></div>
+                    <div class="flex items-center gap-4 p-4 bg-linen">
+                        <div class="w-16 h-16 bg-azure flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">2. Azure Blue (#3273DC)</h3>
                             <p class="text-charcoal-light text-sm">Secondary brand color - Navigation, secondary CTAs, links, professional sections</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-white border border-linen-dark rounded-lg">
-                        <div class="w-16 h-16 bg-linen border border-linen-dark rounded-lg flex-shrink-0"></div>
+                    <div class="flex items-center gap-4 p-4 bg-white border border-linen-dark">
+                        <div class="w-16 h-16 bg-linen border border-linen-dark flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">3. Soft Linen (#F2F0E6)</h3>
                             <p class="text-charcoal-light text-sm">Background color - Main backgrounds, breathing room</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
-                        <div class="w-16 h-16 bg-charcoal rounded-lg flex-shrink-0"></div>
+                    <div class="flex items-center gap-4 p-4 bg-linen">
+                        <div class="w-16 h-16 bg-charcoal flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">4. Charcoal (#2C2C2C)</h3>
                             <p class="text-charcoal-light text-sm">Text color - All body text and headers</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
-                        <div class="w-16 h-16 bg-white border border-linen-dark rounded-lg flex-shrink-0"></div>
+                    <div class="flex items-center gap-4 p-4 bg-linen">
+                        <div class="w-16 h-16 bg-white border border-linen-dark flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">5. White (#FFFFFF)</h3>
                             <p class="text-charcoal-light text-sm">Container color - Cards, containers, alternating backgrounds</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-4 p-4 bg-linen rounded-lg">
-                        <div class="w-16 h-16 bg-olive rounded-lg flex-shrink-0"></div>
+                    <div class="flex items-center gap-4 p-4 bg-linen">
+                        <div class="w-16 h-16 bg-olive flex-shrink-0"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">6. Olive (#A39822)</h3>
                             <p class="text-charcoal-light text-sm">SM (Social Media) background hover color exclusively</p>
@@ -312,7 +314,7 @@
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Brand Gradients</h2>
                 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="rounded-xl overflow-hidden shadow-lg">
+                    <div class="overflow-hidden shadow-lg">
                         <div class="h-40 bg-gold-gradient flex items-center justify-center">
                             <span class="text-white text-2xl font-bold drop-shadow-lg">Gold Gradient Light</span>
                         </div>
@@ -325,7 +327,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl overflow-hidden shadow-lg">
+                    <div class="overflow-hidden shadow-lg">
                         <div class="h-40 bg-gold-gradient-dark flex items-center justify-center">
                             <span class="text-white text-2xl font-bold drop-shadow-lg">Gold Gradient Dark</span>
                         </div>
@@ -339,7 +341,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 p-8 bg-warm-gradient rounded-xl border-2 border-sunburst">
+                <div class="mt-8 p-8 bg-warm-gradient border-2 border-sunburst">
                     <h3 class="text-xl font-bold text-charcoal mb-4">Warm Background Gradient</h3>
                     <p class="text-charcoal-light mb-4">Use for content sections and feature highlights. Creates a warm, inviting atmosphere.</p>
                     <div class="bg-charcoal text-white p-4 rounded font-mono text-sm">
@@ -355,7 +357,7 @@
                 <p class="text-charcoal-light mb-8">Separator banners in two weights: <strong>thin</strong> (3px) and <strong>medium</strong> (8px). Use <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.banner-&lt;weight&gt;-&lt;color&gt;</code> components.</p>
 
                 <div class="space-y-10">
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-white p-8 shadow-lg">
                         <h3 class="text-lg font-semibold mb-4">Thin Banners (3px)</h3>
                         <div class="space-y-6">
                             <div>
@@ -377,10 +379,10 @@
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-white p-8 shadow-lg">
                         <h3 class="text-lg font-semibold mb-4">Navigation Wrap Pattern</h3>
                         <p class="text-sm text-charcoal-light mb-4">Stacked sunburst + charcoal banners above and below the navigation, matching top5pct.com</p>
-                        <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <div class="border border-gray-200 overflow-hidden">
                             <div class="bg-sunburst-light text-charcoal text-center py-2 text-sm font-semibold">Notification Bar</div>
                             <x-ui.banner-thin-sunburst />
                             <x-ui.banner-thin-charcoal />
@@ -391,7 +393,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-white p-8 shadow-lg">
                         <h3 class="text-lg font-semibold mb-4">Medium Banners (8px)</h3>
                         <div class="space-y-6">
                             <div>
@@ -420,7 +422,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Typography</h2>
                 
-                <div class="bg-white p-8 rounded-xl shadow-lg">
+                <div class="bg-white p-8 shadow-lg">
                     <h3 class="text-lg font-semibold mb-6 text-charcoal-light">Font Family: Titillium Web</h3>
                     
                     <div class="space-y-6">
@@ -466,7 +468,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-white p-8 rounded-xl shadow-lg">
+                <div class="mt-8 bg-white p-8 shadow-lg">
                     <h3 class="text-lg font-semibold mb-6">Links</h3>
                     <div class="space-y-6">
                         <div class="pb-4 border-b border-gray-200">
@@ -492,7 +494,7 @@
                     </div>
                 </div>
 
-                <div class="mt-8 bg-white p-8 rounded-xl shadow-lg">
+                <div class="mt-8 bg-white p-8 shadow-lg">
                     <h3 class="text-lg font-semibold mb-6">Font Weights</h3>
                     <div class="grid md:grid-cols-4 gap-6">
                         <div>
@@ -580,7 +582,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-charcoal p-8 rounded-xl">
+                    <div class="bg-charcoal p-8">
                         <h3 class="text-lg font-semibold mb-4 text-white">On Dark Background</h3>
                         <div class="flex flex-wrap gap-4 items-center">
                             <x-ui.button-gold-gradient href="#">Primary CTA</x-ui.button-gold-gradient>
@@ -694,7 +696,7 @@
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Visual Combinations</h2>
                 
                 <div class="grid md:grid-cols-2 gap-6">
-                    <div class="rounded-xl overflow-hidden shadow-lg">
+                    <div class="overflow-hidden shadow-lg">
                         <div class="py-5 px-6 bg-azure">
                             <span class="text-white font-semibold text-lg">Professional Header</span>
                         </div>
@@ -704,7 +706,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl overflow-hidden shadow-lg">
+                    <div class="overflow-hidden shadow-lg">
                         <div class="py-5 px-6 bg-sunburst">
                             <span class="text-charcoal font-semibold text-lg">Energetic Header</span>
                         </div>
@@ -714,7 +716,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl overflow-hidden shadow-lg">
+                    <div class="overflow-hidden shadow-lg">
                         <div class="py-5 px-6 bg-gradient-to-r from-azure to-sunburst">
                             <span class="text-white font-semibold text-lg drop-shadow">Dynamic Gradient</span>
                         </div>
@@ -724,7 +726,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-xl overflow-hidden shadow-lg">
+                    <div class="overflow-hidden shadow-lg">
                         <div class="py-5 px-6 bg-linen border-b border-linen-dark">
                             <span class="text-azure font-semibold text-lg">Subtle Elegance</span>
                         </div>
@@ -741,17 +743,17 @@
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Form Elements</h2>
                 
-                <div class="bg-linen p-8 rounded-xl">
+                <div class="bg-linen p-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold mb-2 text-charcoal">Text Input</label>
-                                <input type="text" placeholder="Enter your name" class="w-full h-12 px-4 bg-white border border-gray-300 rounded-lg focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors">
+                                <input type="text" placeholder="Enter your name" class="w-full h-12 px-4 bg-white border border-gray-300 focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors">
                             </div>
                             
                             <div>
                                 <label class="block text-sm font-semibold mb-2 text-charcoal">Select Menu</label>
-                                <select class="w-full h-12 px-4 bg-white border border-gray-300 rounded-lg focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors">
+                                <select class="w-full h-12 px-4 bg-white border border-gray-300 focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors">
                                     <option>Select an option</option>
                                     <option>Custom Apparel</option>
                                     <option>Business Signs</option>
@@ -763,7 +765,7 @@
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold mb-2 text-charcoal">Textarea</label>
-                                <textarea placeholder="Describe your project..." rows="4" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors resize-none"></textarea>
+                                <textarea placeholder="Describe your project..." rows="4" class="w-full px-4 py-3 bg-white border border-gray-300 focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors resize-none"></textarea>
                             </div>
                         </div>
                     </div>
@@ -840,7 +842,7 @@
                     <div>
                         <p class="text-xs text-charcoal-light mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-showcase</code> (with slot)</p>
                         <x-ui.card-showcase>
-                            <div class="w-16 h-16 bg-gold-gradient rounded-xl flex items-center justify-center mx-auto mb-4 shadow-gold">
+                            <div class="w-16 h-16 bg-gold-gradient flex items-center justify-center mx-auto mb-4 shadow-gold">
                                 <span class="text-2xl font-bold text-charcoal">5%</span>
                             </div>
                             <h3 class="text-lg font-bold text-charcoal mb-1">Premium Quality</h3>
@@ -956,8 +958,10 @@
 
                 {{-- Campaign Themes --}}
                 <div class="mt-14 mb-12">
-                    <h3 class="text-xl font-bold text-charcoal mb-1">Campaign Themes</h3>
-                    <div class="h-1 bg-sunburst w-32 mb-6"></div>
+                    <div class="inline-block mb-6">
+                        <h3 class="text-xl font-bold text-charcoal mb-2">Campaign Themes</h3>
+                        <div class="h-1 bg-sunburst"></div>
+                    </div>
                     <div class="flex flex-wrap gap-3">
                         <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best hoodies in town</span>
                         <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best bling around</span>
@@ -970,8 +974,10 @@
 
                 {{-- Brand Persona Pillars --}}
                 <div class="mb-14">
-                    <h3 class="text-xl font-bold text-charcoal mb-1">Brand Persona Pillars</h3>
-                    <div class="h-1 bg-sunburst w-48 mb-6"></div>
+                    <div class="inline-block mb-6">
+                        <h3 class="text-xl font-bold text-charcoal mb-2">Brand Persona Pillars</h3>
+                        <div class="h-1 bg-sunburst"></div>
+                    </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-white shadow-gold p-6">
                             <div class="inline-block mb-3">
@@ -1006,8 +1012,10 @@
 
                 {{-- Customer Personas --}}
                 <div>
-                    <h3 class="text-xl font-bold text-charcoal mb-1">Customer Personas</h3>
-                    <div class="h-1 bg-sunburst w-44 mb-6"></div>
+                    <div class="inline-block mb-6">
+                        <h3 class="text-xl font-bold text-charcoal mb-2">Customer Personas</h3>
+                        <div class="h-1 bg-sunburst"></div>
+                    </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
@@ -1087,7 +1095,7 @@
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Badges & Alerts</h2>
                 <p class="text-charcoal-light mb-8">Product badges are standalone Blade components using <code class="bg-charcoal text-white px-2 py-0.5 rounded text-sm">x-ui.badge-&lt;type&gt;</code>.</p>
 
-                <div class="bg-linen p-8 rounded-xl mb-8">
+                <div class="bg-linen p-8 mb-8">
                     <h3 class="text-lg font-semibold mb-4">Product Badges</h3>
                     <div class="flex flex-wrap gap-4 items-end">
                         <div class="text-center">
@@ -1114,7 +1122,7 @@
                 </div>
 
                 <div class="space-y-4">
-                    <div class="p-4 bg-success/10 border-l-4 border-success rounded-lg flex items-start gap-3">
+                    <div class="p-4 bg-success/10 border-l-4 border-success flex items-start gap-3">
                         <svg class="w-5 h-5 text-success mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                         <div>
                             <h4 class="font-semibold text-success">Success</h4>
@@ -1122,7 +1130,7 @@
                         </div>
                     </div>
                     
-                    <div class="p-4 bg-warning/10 border-l-4 border-warning rounded-lg flex items-start gap-3">
+                    <div class="p-4 bg-warning/10 border-l-4 border-warning flex items-start gap-3">
                         <svg class="w-5 h-5 text-warning mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
                         <div>
                             <h4 class="font-semibold text-warning">Warning</h4>
@@ -1130,7 +1138,7 @@
                         </div>
                     </div>
                     
-                    <div class="p-4 bg-azure/10 border-l-4 border-azure rounded-lg flex items-start gap-3">
+                    <div class="p-4 bg-azure/10 border-l-4 border-azure flex items-start gap-3">
                         <svg class="w-5 h-5 text-azure mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
                         <div>
                             <h4 class="font-semibold text-azure">Info</h4>
@@ -1143,7 +1151,7 @@
 
         <section class="py-16 bg-warm-gradient border-t-2 border-b-2 border-sunburst">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="p-8 rounded-xl">
+                <div class="p-8">
                     <h3 class="text-2xl font-bold text-charcoal mb-4">Brand Personality</h3>
                     <p class="text-charcoal mb-4"><strong>Sunburst Gold (#FFC20E):</strong> This vibrant golden yellow radiates optimism, creativity, and energy. It evokes feelings of warmth, confidence, and innovation.</p>
                     <p class="text-charcoal mb-4"><strong>Soft Linen (#F2F0E6):</strong> This warm, off-white creates a sophisticated, organic foundation with subtle yellow undertones that harmonize with the primary gold.</p>
@@ -1157,8 +1165,8 @@
                 <h2 class="text-3xl font-bold mb-4 text-charcoal">Ready to Get Started?</h2>
                 <p class="text-lg text-charcoal/80 mb-8 max-w-2xl mx-auto">Contact us today to discuss your custom signage and apparel needs. Veteran-owned and proudly serving Joliet, IL.</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#" class="inline-block px-8 py-4 bg-charcoal text-white font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">Contact us today</a>
-                    <a href="/demo/premium" class="inline-block px-8 py-4 bg-white text-charcoal font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-0.5">View premium components</a>
+                    <x-ui.button-charcoal-gold href="/contact">Contact us today</x-ui.button-charcoal-gold>
+                    <x-ui.button-white-charcoal href="/demo/premium">View premium components</x-ui.button-white-charcoal>
                 </div>
             </div>
         </section>

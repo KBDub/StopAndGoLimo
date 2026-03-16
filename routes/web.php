@@ -26,6 +26,54 @@ Route::get('/custom-apparel/custom-shirts', function () {
     return view('pages.custom-apparel.custom-shirts');
 })->name('custom-apparel.custom-shirts');
 
+Route::get('/custom-apparel/vinyl-shirts', function () {
+    return view('pages.custom-apparel.vinyl-shirts');
+})->name('custom-apparel.vinyl-shirts');
+
+Route::get('/custom-apparel/rhinestone-shirts', function () {
+    return view('pages.custom-apparel.rhinestone-shirts');
+})->name('custom-apparel.rhinestone-shirts');
+
+Route::get('/custom-apparel/glitter-shirts', function () {
+    return view('pages.custom-apparel.glitter-shirts');
+})->name('custom-apparel.glitter-shirts');
+
+Route::get('/custom-apparel/foil-shirts', function () {
+    return view('pages.custom-apparel.foil-shirts');
+})->name('custom-apparel.foil-shirts');
+
+Route::get('/custom-apparel/glow-in-the-dark-shirts', function () {
+    return view('pages.custom-apparel.glow-in-the-dark-shirts');
+})->name('custom-apparel.glow-in-the-dark-shirts');
+
+Route::get('/custom-apparel/flock-shirts', function () {
+    return view('pages.custom-apparel.flock-shirts');
+})->name('custom-apparel.flock-shirts');
+
+Route::get('/custom-apparel/reflective-shirts', function () {
+    return view('pages.custom-apparel.reflective-shirts');
+})->name('custom-apparel.reflective-shirts');
+
+Route::get('/custom-apparel/holographic-shirts', function () {
+    return view('pages.custom-apparel.holographic-shirts');
+})->name('custom-apparel.holographic-shirts');
+
+Route::get('/custom-apparel/brick-shirts', function () {
+    return view('pages.custom-apparel.brick-shirts');
+})->name('custom-apparel.brick-shirts');
+
+Route::get('/custom-apparel/pattern-shirts', function () {
+    return view('pages.custom-apparel.pattern-shirts');
+})->name('custom-apparel.pattern-shirts');
+
+Route::get('/custom-apparel/embroidery-shirts', function () {
+    return view('pages.custom-apparel.embroidery-shirts');
+})->name('custom-apparel.embroidery-shirts');
+
+Route::get('/custom-apparel/picture-shirts', function () {
+    return view('pages.custom-apparel.picture-shirts');
+})->name('custom-apparel.picture-shirts');
+
 Route::get('/custom-apparel/dtf-transfers', function () {
     return view('pages.custom-apparel.dtf-transfers');
 })->name('custom-apparel.dtf-transfers');

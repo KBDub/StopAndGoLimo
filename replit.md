@@ -12,6 +12,7 @@ This project is a premium e-commerce website for "Top 5 Percent," a custom signa
 - Premium, professional aesthetic
 - Never use all caps / uppercase text anywhere on the site
 - Always read docs/branding-requirements.md before making changes
+- Always read docs/themes.md before making UI or design changes
 
 ## System Architecture
 

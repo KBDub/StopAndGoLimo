@@ -494,6 +494,21 @@ Do not use the CSS `text-transform: uppercase` property or the Tailwind `upperca
 3. **Reliability:** Fast turnaround without compromising quality
 4. **Local Excellence:** Community-focused, personal service
 
+### Writing Standards (MANDATORY)
+
+- **No em dashes:** Never use the `—` character anywhere on the site. Rewrite the sentence, use a comma, or break it into two shorter sentences instead.
+- **Reading level:** Write at a 7th grade reading level. Use short sentences and common everyday words. If a simpler word works, use it.
+- **Laymen's terms:** Avoid industry jargon and technical terms. Write as if explaining to a customer who has never ordered a custom shirt or sign before. If a technical term is necessary, follow it with a plain-language explanation.
+- **No all caps:** Never use uppercase text anywhere on the site (see also: Text Transform Rules).
+
+**Quick reference — rewrites:**
+
+| Avoid | Use instead |
+|---|---|
+| `Premium quality craftsmanship — delivered fast.` | `Premium quality, delivered fast.` |
+| `Our vinyl heat-transfer process ensures durability.` | `Our vinyl prints are built to last wash after wash.` |
+| `Utilizing state-of-the-art equipment` | `Using the latest printing equipment` |
+
 ---
 
 ## Logo Usage Guidelines

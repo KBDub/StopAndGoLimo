@@ -277,18 +277,18 @@
     }
 }
 
-@keyframes sway {
-    0%, 100% { transform: rotate(-1deg) translateX(-6px); }
-    50% { transform: rotate(1deg) translateX(6px); }
+@keyframes rock {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
 }
 
 .card-text-sway {
-    transform-origin: center center;
+    transform-origin: bottom center;
     transition: transform 0.5s ease-in-out;
 }
 
 .card-text-sway:hover {
-    animation: sway 3s ease-in-out infinite;
+    animation: rock 2.5s ease-in-out infinite;
     transition: none;
 }
 

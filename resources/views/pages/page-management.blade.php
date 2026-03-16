@@ -138,6 +138,11 @@
                                     </div>
 
                                     <div class="flex flex-wrap gap-2 mt-3 ml-6">
+                                        @if($page['is_landing'])
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sunburst text-charcoal">
+                                                Landing Page
+                                            </span>
+                                        @endif
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                                             Active
                                         </span>

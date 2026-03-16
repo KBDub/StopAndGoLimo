@@ -38,6 +38,10 @@ final class ScanPageComponents
                 $urlPath = '/';
             }
 
+            if (Str::startsWith($urlPath, '/demo')) {
+                continue;
+            }
+
             $content = File::get($file->getPathname());
             $components = $this->extractComponents($content);
 
@@ -212,11 +216,18 @@ final class ScanPageComponents
             $page['unique_count'] = $uniqueCount;
             $page['total_count'] = count($page['all_components']);
             $page['shared_components'] = $this->sharedComponents;
+            $page['is_landing'] = ($page['url'] === '/' . $topLevel)
+                || ($topLevel === 'home' && $page['url'] === '/');
 
             $groups[$groupName]['pages'][] = $page;
         }
 
         ksort($groups);
+
+        foreach ($groups as &$group) {
+            usort($group['pages'], fn(array $a, array $b) => ($b['is_landing'] ? 1 : 0) <=> ($a['is_landing'] ? 1 : 0));
+        }
+        unset($group);
 
         return $groups;
     }

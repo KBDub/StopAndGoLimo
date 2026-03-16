@@ -278,12 +278,12 @@
 }
 
 @keyframes sway {
-    0%, 100% { transform: rotate(-0.2deg) translateX(-2px); }
-    50% { transform: rotate(0.2deg) translateX(2px); }
+    0%, 100% { transform: rotate(-1deg) translateX(-6px); }
+    50% { transform: rotate(1deg) translateX(6px); }
 }
 
 .card-text-sway {
-    animation: sway 4s ease-in-out infinite;
+    animation: sway 3s ease-in-out infinite;
     transform-origin: center center;
 }
 

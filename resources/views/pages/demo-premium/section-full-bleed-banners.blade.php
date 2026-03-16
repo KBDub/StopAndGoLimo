@@ -13,7 +13,7 @@
         </div>
 
         <x-ui.banner-full-bleed-image
-            image="/images/ModCloth3600x1024.webp"
+            image="/images/demo/ModCloth3600x1024.webp"
             alt="Custom signage and apparel by Top 5 Percent"
             href="/custom-apparel"
         />
@@ -26,8 +26,8 @@
         </div>
 
         <x-ui.banner-full-bleed-2-image
-            imageLeft="/images/gymshark1.avif"
-            imageRight="/images/gymshark2.avif"
+            imageLeft="/images/demo/gymshark1.avif"
+            imageRight="/images/demo/gymshark2.avif"
             altLeft="Custom apparel"
             altRight="Custom apparel lifestyle"
             title="For every occasion"
@@ -45,7 +45,7 @@
         </div>
 
         <x-ui.banner-full-bleed-video
-            video="/images/video-web-banner.8x3.mp4"
+            video="/images/demo/video-web-banner.8x3.mp4"
             type="video/mp4"
             alt="Custom signage showcase"
             height="400px"
@@ -57,7 +57,7 @@
         </div>
 
         <x-ui.banner-full-bleed-video
-            video="/images/video-banner.running.8x3.mp4"
+            video="/images/demo/video-banner.running.8x3.mp4"
             type="video/mp4"
             alt="Custom apparel in action"
             height="400px"
@@ -71,8 +71,8 @@
         </div>
 
         <x-ui.banner-full-bleed-2-video
-            videoLeft="/images/video-web-banner.8x3.mp4"
-            videoRight="/images/video-banner.running.8x3.mp4"
+            videoLeft="/images/demo/video-web-banner.8x3.mp4"
+            videoRight="/images/demo/video-banner.running.8x3.mp4"
             type="video/mp4"
             altLeft="Custom signage"
             altRight="Custom apparel"

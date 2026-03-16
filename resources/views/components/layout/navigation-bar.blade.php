@@ -110,9 +110,9 @@
                     Top 5% Merchandise
                 </a>
 
-                <a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-base font-semibold text-charcoal hover:text-[#FBCDCE] transition-colors text-center">
+                <!--a href="https://blackdollbytop5.com/" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-base font-semibold text-charcoal hover:text-[#FBCDCE] transition-colors text-center">
                     Black Doll Apparel
-                </a>
+                </a-->
 
                 <div class="relative" @mouseenter="openDropdown = 'about'" @mouseleave="openDropdown = null">
                     <button class="px-3 py-2 text-base font-semibold text-charcoal hover:text-sunburst transition-colors inline-flex items-center gap-0.5 text-center">

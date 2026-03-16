@@ -24,7 +24,11 @@
         x-transition:leave-end="opacity-0 -translate-y-2"
     >
         <div class="px-5 pb-5 pt-2 border-l-4 border-sunburst">
-            <p class="text-sm text-charcoal-light leading-relaxed">{{ $answer }}</p>
+            @if($slot->isNotEmpty())
+                {{ $slot }}
+            @else
+                <p class="text-sm text-charcoal-light leading-relaxed">{{ $answer }}</p>
+            @endif
         </div>
     </div>
 </div>

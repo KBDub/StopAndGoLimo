@@ -897,6 +897,32 @@
                     </x-ui.card-2image-with-text>
                 </div>
 
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Landing Page Banner Images</h3>
+                <p class="text-sm text-charcoal-light mb-6">Two-up banner grid linking to sub-category pages. Hover reveals the category name centered over a transparent charcoal overlay with olive text and sunburst underbar. Odd last banner centers at half width. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-lp-banner-images</code> with a <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">:banners</code> array (keys: image, alt, title, href).</p>
+
+                <div class="mb-12">
+                    <x-ui.card-lp-banner-images :banners="[
+                        [
+                            'image' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
+                            'alt'   => 'Custom shirts, hoodies, and caps in Joliet',
+                            'title' => 'Custom Shirts',
+                            'href'  => '/custom-apparel/custom-shirts',
+                        ],
+                        [
+                            'image' => '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',
+                            'alt'   => 'DTF transfers printing in Joliet',
+                            'title' => 'DTF Transfers',
+                            'href'  => '/custom-apparel/dtf-transfers',
+                        ],
+                        [
+                            'image' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg',
+                            'alt'   => 'Family and class reunion shirts in Joliet and Shorewood',
+                            'title' => 'Reunion Shirts',
+                            'href'  => '/custom-apparel/reunion-shirts',
+                        ],
+                    ]" />
+                </div>
+
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">FAQ Accordion Cards</h3>
                 <p class="text-sm text-charcoal-light mb-4">SEO-friendly expandable mini-FAQ cards using <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-faq</code>. Great for structured data and voice search.</p>
                 <div class="space-y-3 max-w-2xl">

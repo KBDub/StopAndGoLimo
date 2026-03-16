@@ -25,12 +25,12 @@
             <div class="space-y-3">
                 <x-ui.card-faq question="1. Know What You Want" :open="true">
                     <p class="text-charcoal-light mb-3">Before you can find the perfect custom t-shirt maker, you need to know what you want. Create a checklist to help you decide what you need. Be as specific as possible so you can determine what requirements you need from the printing company. The list should include different factors, including:</p>
-                    <ul class="list-disc list-inside text-charcoal-light space-y-1 mb-3">
+                    <ul class="grid grid-cols-2 list-disc list-inside text-charcoal-light gap-x-6 gap-y-1 mb-3">
                         <li>Quantity</li>
-                        <li>Apparel type</li>
-                        <li>Sizes</li>
                         <li>Printing techniques</li>
+                        <li>Apparel type</li>
                         <li>Turnaround time</li>
+                        <li>Sizes</li>
                         <li>Delivery policy</li>
                     </ul>
                     <p class="text-charcoal-light">There are a variety of other factors you can consider when choosing a custom printing company, but the factors mentioned above will help point you in the right direction.</p>

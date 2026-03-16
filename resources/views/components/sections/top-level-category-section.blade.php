@@ -16,7 +16,7 @@
                     @endif
                 </h2>
                 @if($description)
-                    <p class="text-charcoal-light max-w-2xl mx-auto">{{ $description }}</p>
+                    <p class="text-charcoal-light max-w-4xl mx-auto">{{ $description }}</p>
                 @endif
             </div>
         @endif

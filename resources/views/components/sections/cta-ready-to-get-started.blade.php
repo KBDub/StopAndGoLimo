@@ -9,7 +9,7 @@
         </h5>
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
         <div class="w-20 h-1 bg-sunburst mx-auto rounded mb-6"></div>
-        <p class="text-white/70 mb-8 text-lg max-w-2xl mx-auto">
+        <p class="text-white/70 mb-8 text-lg max-w-4xl mx-auto">
             Contact us today for a free quote on your custom project.
             Veteran-owned and proudly serving Joliet, IL and the surrounding area.
         </p>

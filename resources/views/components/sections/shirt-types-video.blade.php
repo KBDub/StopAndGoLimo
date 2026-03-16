@@ -3,7 +3,7 @@
         <div class="text-center mb-10">
             <p class="text-sunburst font-semibold mb-2">See our craft in action</p>
             <h2 class="text-white mb-4">Watch Us Work</h2>
-            <p class="text-white/70 max-w-2xl mx-auto">From design to finished product — see the quality and care that goes into every shirt we produce at Top 5 Percent in Joliet, Illinois.</p>
+            <p class="text-white/70 max-w-4xl mx-auto">From design to finished product — see the quality and care that goes into every shirt we produce at Top 5 Percent in Joliet, Illinois.</p>
         </div>
         <div class="relative w-full rounded-xl overflow-hidden shadow-2xl" style="padding-top: 56.25%;">
             <iframe

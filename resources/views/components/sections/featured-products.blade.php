@@ -4,7 +4,7 @@
             Products &amp; Services for Every Need
         </h2>
 
-        <p class="text-charcoal-light leading-relaxed text-center max-w-3xl mx-auto mb-10">
+        <p class="text-charcoal-light leading-relaxed text-center max-w-4xl mx-auto mb-10">
             From custom apparel to business signage, vehicle graphics, and promotional items &mdash; Top 5 Percent is your one stop shop in Joliet for high-quality, locally produced products.
         </p>
 

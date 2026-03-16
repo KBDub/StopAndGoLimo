@@ -7,7 +7,7 @@
                 </h5>
                 <h2 class="text-h2 font-bold text-charcoal mb-4">Design It Yourself</h2>
                 <div class="w-20 h-1 bg-sunburst rounded mb-6"></div>
-                <p class="text-charcoal-light mb-8 text-lg">
+                <p class="text-charcoal-light mb-8 text-lg max-w-4xl">
                     Use our easy online design tool to create custom t-shirts, signs, and more.
                     Upload your own artwork or choose from thousands of templates.
                 </p>

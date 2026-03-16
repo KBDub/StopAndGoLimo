@@ -3,7 +3,7 @@
         <div class="text-center mb-12">
             <p class="text-olive font-semibold mb-2">Every technique, one shop</p>
             <h2 class="text-charcoal mb-4">Choose Your Printing Style</h2>
-            <p class="text-charcoal-light max-w-2xl mx-auto">Whether you want maximum sparkle, professional embroidery, or a photo printed directly on fabric — we have the technique for you. Click any style below to learn more.</p>
+            <p class="text-charcoal-light max-w-4xl mx-auto">Whether you want maximum sparkle, professional embroidery, or a photo printed directly on fabric — we have the technique for you. Click any style below to learn more.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

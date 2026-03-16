@@ -12,11 +12,11 @@
 
             {{-- Left column: image upper-left + tips 1–3 --}}
             <div class="flex flex-col gap-4">
-                <div>
+                <div class="flex justify-center">
                     <img
                         src="/images/top5pct-t-shirt-maker-7-tips.jpg"
                         alt="Custom t-shirt printing at Top 5 Percent, Joliet IL"
-                        class="w-[220px] h-[293px] object-cover rounded-xl shadow-lg"
+                        class="w-[400px] h-[533px] object-cover rounded-xl shadow-lg"
                     >
                 </div>
 
@@ -65,11 +65,11 @@
                     </x-ui.card-faq>
                 </div>
 
-                <div class="flex justify-end">
+                <div class="flex justify-center">
                     <img
                         src="/images/top5pct-t-shirt-maker-7-tips2.jpg"
                         alt="Top 5 Percent custom shirt maker in Joliet, Illinois"
-                        class="w-[220px] h-[293px] object-cover rounded-xl shadow-lg"
+                        class="w-[400px] h-[533px] object-cover rounded-xl shadow-lg"
                     >
                 </div>
             </div>

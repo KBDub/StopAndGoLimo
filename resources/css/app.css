@@ -277,6 +277,16 @@
     }
 }
 
+@keyframes sway {
+    0%, 100% { transform: rotate(-0.2deg) translateX(-2px); }
+    50% { transform: rotate(0.2deg) translateX(2px); }
+}
+
+.card-text-sway {
+    animation: sway 4s ease-in-out infinite;
+    transform-origin: center center;
+}
+
 @media (max-width: 768px) {
     :root {
         --font-size-h1: var(--font-size-h1-mobile);

@@ -752,6 +752,40 @@
                     </div>
                 </div>
 
+                <h3 class="text-lg font-semibold mb-4 text-charcoal">Image with Text Card</h3>
+                <p class="text-sm text-charcoal-light mb-6">Full-bleed image (600x450, 4:3, sharp corners) paired with branded text. Supports <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">imagePosition="left"</code> (default) and <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">imagePosition="right"</code>. Hover to see image scale animation.</p>
+
+                <div class="space-y-8 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-image-with-text</code> — image left (default)</p>
+                        <x-ui.card-image-with-text
+                            image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+                            alt="Custom vinyl shirts, caps, and hoodies"
+                            title="Vinyl Heat-Press Apparel"
+                            href="/custom-apparel/vinyl-shirts"
+                            linkText="Shop Vinyl Shirts"
+                        >
+                            <p class="mb-4">Bold, durable vinyl printing is one of our most popular techniques. Using commercial heat-press equipment, we apply precision-cut vinyl in any color to shirts, hoodies, caps, and more. The result is a sharp, professional finish that holds up wash after wash.</p>
+                            <p>Ideal for team names, business logos, reunion shirts, and custom numbers. No minimum order and <span class="text-azure underline underline-offset-2">same-day service available</span> on most orders.</p>
+                        </x-ui.card-image-with-text>
+                    </div>
+
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-image-with-text</code> — image right</p>
+                        <x-ui.card-image-with-text
+                            image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
+                            alt="Custom rhinestone shirts and caps"
+                            title="Rhinestone and Bling Apparel"
+                            imagePosition="right"
+                            href="/custom-apparel/rhinestone-shirts"
+                            linkText="Shop Rhinestone Shirts"
+                        >
+                            <p class="mb-4">For events that demand maximum sparkle, our rhinestone apparel delivers. We use crystal rhinestones in custom patterns, logos, and text, hand-set and heat-bonded for a finish that catches every eye in the room.</p>
+                            <p>Popular for <span class="text-azure underline underline-offset-2">birthday parties, pageants, and dance teams</span>. Available on any garment, in any color combination.</p>
+                        </x-ui.card-image-with-text>
+                    </div>
+                </div>
+
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">FAQ Accordion Cards</h3>
                 <p class="text-sm text-charcoal-light mb-4">SEO-friendly expandable mini-FAQ cards using <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-faq</code>. Great for structured data and voice search.</p>
                 <div class="space-y-3 max-w-2xl">

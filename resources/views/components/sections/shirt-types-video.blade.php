@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-10">
             <p class="text-olive font-semibold mb-2">See our craft in action</p>
-            <h2 class="text-charcoal mb-4">Watch Us Work</h2>
+            <h2 class="text-charcoal mb-4">Check Out Our Work</h2>
             <p class="text-charcoal-light max-w-4xl mx-auto">From design to finished product, see the quality and care that goes into every shirt we produce at Top 5 Percent in Joliet, Illinois.</p>
         </div>
         <div class="max-w-7xl mx-auto">

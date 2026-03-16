@@ -16,11 +16,11 @@
     </div>
     <div class="relative bg-white rounded-xl m-[3px] p-6">
         @if($image)
-            <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-40 object-cover rounded-lg mb-4">
+            <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-56 object-cover rounded-lg mb-4">
         @else
-            <div class="w-full h-40 bg-linen rounded-lg mb-4"></div>
+            <div class="w-full h-56 bg-linen rounded-lg mb-4"></div>
         @endif
-        <h3 class="font-semibold mb-2 text-olive">{{ $title }}</h3>
+        <h3 class="font-semibold mb-2 text-olive underline decoration-olive underline-offset-4">{{ $title }}</h3>
         @if($slot->isNotEmpty())
             {{ $slot }}
         @else

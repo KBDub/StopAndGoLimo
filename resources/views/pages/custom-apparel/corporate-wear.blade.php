@@ -39,17 +39,28 @@
         </x-ui.card-image-with-text>
 
         <x-ui.card-2image-with-text
-            image1="/images/corporate-wear/toptpct-article-corporate-wear-pic1.jpg"
-            alt1="Corporate branded apparel worn by a business team in Joliet Illinois"
-            image2="/images/corporate-wear/toptpct-article-corporate-wear-pic2.jpg"
-            alt2="Custom corporate clothing printed and embroidered by Top 5 Percent in Joliet"
+            image1="/images/corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg"
+            alt1="Custom corporate t shirts printed for businesses in Joliet and Shorewood Illinois"
+            image2="/images/corporate-wear/toptpct-custom-hoodie-pullover-joliet-shorewood.jpg"
+            alt2="Custom branded hoodies and pullovers printed for companies in Joliet and Shorewood Illinois"
             title="Corporate Wear Builds Your Brand"
         >
-            <p class="mb-4">We know how important corporate apparel is for your business. When your employees wear branded clothing, they become walking advertisements for your company. Customers can spot your team from across the room. Your business looks organized, professional, and trustworthy. That kind of image is hard to put a price on, but it has a direct and measurable impact on the way people perceive your brand in the marketplace.</p>
-            <p class="mb-4">Building a brand starts with standing out. Many businesses in Joliet and the surrounding suburbs offer similar products and services. Custom branded t shirts and corporate apparel help your team stand out in a crowd. When people see your employees wearing your shirts in public, they recognize your brand. That recognition builds trust over time. Customers who trust your brand keep coming back and they bring their friends and colleagues along with them.</p>
-            <p class="mb-4">We also help create unity among your employees. When everyone wears the same branded clothing, it sends a clear message that you are all on the same team. Employees who feel valued and included are more productive and more committed to delivering great results. Corporate wear is not just about looking good on the outside. It is about building a workplace culture that people are genuinely proud to be a part of each day.</p>
+            <p class="mb-4">We know how important corporate apparel is for your business. When your employees wear branded clothing, they become walking advertisements for your company. Customers can spot your team from across the room. Your business looks organized, professional, and trustworthy. That kind of image is hard to put a price on, but it has a direct and measurable impact on the way people perceive your brand in the marketplace every single day.</p>
+            <p class="mb-4">Building a brand starts with standing out. Many businesses in Joliet and the surrounding suburbs offer similar products and services. Custom branded t shirts, hoodies, and corporate apparel help your team stand out in a crowd. When people see your employees wearing your logo in public, they recognize your brand. That recognition builds trust over time. Customers who trust your brand keep coming back and they bring their colleagues and friends along with them.</p>
+            <p class="mb-4">We also help create unity among your employees. When everyone wears the same branded clothing, it sends a clear message that you are all on the same team. Employees who feel valued and included are more productive and more committed to delivering great results. Corporate wear is not just about looking good on the outside. It is about building a workplace culture that people are genuinely proud to be a part of each and every day.</p>
             <p>We serve businesses in Joliet, Shorewood, Plainfield, Bolingbrook, New Lenox, and throughout the entire Will County area. Whether you need 10 shirts or 500, we are ready to help. We are a veteran owned printing company in Joliet and we hold ourselves to the same high standards our military service taught us. Call us today and let us help your business look like it belongs at the top.</p>
         </x-ui.card-2image-with-text>
+
+        <x-ui.card-image-with-text
+            image="/images/corporate-wear/toptpct-custom-cap-hat-joliet-shorewood-rockdale.jpg"
+            alt="Custom branded caps and hats printed for businesses in Joliet Shorewood and Rockdale Illinois"
+            title="Custom Caps and Accessories"
+        >
+            <p class="mb-4">We print and embroider custom caps and hats for businesses, teams, and organizations all across the Chicagoland area. A branded cap is one of the most visible and affordable ways to get your logo in front of new people every day. Whether your team works outdoors, attends trade shows, or represents your company at community events, a sharp custom cap ties the whole uniform together and makes your team look like they mean business.</p>
+            <p class="mb-4">We offer structured and unstructured caps, trucker styles, beanies, and more. We can embroider your logo directly onto the cap or use heat transfer vinyl for a clean printed look. We work with a wide range of cap brands and styles so you can find the right fit and feel for your team. From classic baseball caps to modern flat brim styles, we have options that work for every industry and every look.</p>
+            <p class="mb-4">Caps work especially well when paired with a complete uniform package. When your team walks in wearing matching shirts, pants, and caps all carrying your brand, the effect is powerful. It signals professionalism and consistency. It tells your customers that you pay attention to every detail. We help businesses in Joliet, Shorewood, Rockdale, Bolingbrook, and throughout Will County build complete uniform programs that make a strong first impression every time.</p>
+            <p>When you order your custom caps and accessories from Top 5 Percent, you get the same commitment to quality and service that we bring to every product we make. We are a veteran owned business in Joliet, Illinois and we take pride in helping local companies represent their brand the right way. Call us at (815) 349 8600 and let us put together the complete corporate wear package your team deserves.</p>
+        </x-ui.card-image-with-text>
 
     </x-sections.editorial-cards>
 

@@ -1,5 +1,5 @@
 <section class="py-10 bg-linen">
-    <div class="max-w-5xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-8">
             <h5 class="text-azure font-semibold tracking-wide mb-3">
                 What Our Customers Say

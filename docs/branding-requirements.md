@@ -29,13 +29,32 @@ All HTML elements must use Laravel Blade Components with the `x-` prefix syntax.
 | **Layout** | `x-layout.<name>` | `x-layout.navigation-bar`, `x-layout.footer` |
 | **UI Elements** | `x-ui.<name>` | `x-ui.button-charcoal-gold` |
 
-### Standard Section Padding
+### Standard Section Layout (MANDATORY)
 
-**All sections use `py-10` for vertical padding.**
+**All sections must use `py-10` for vertical padding and `max-w-7xl` for the inner container width.**
 
 ```blade
 <section class="py-10 bg-white">
-    <!-- Section content -->
+    <div class="max-w-7xl mx-auto px-6">
+        <!-- Section content -->
+    </div>
+</section>
+```
+
+- **Outer `<section>`:** Always `py-10` — no other vertical padding value is permitted.
+- **Inner container `<div>`:** Always `max-w-7xl mx-auto px-6` — do not use `max-w-6xl`, `max-w-5xl`, `max-w-4xl`, or any narrower container as the primary layout wrapper.
+- **Inner text readability constraints:** Nested elements may still use narrower max-widths (e.g., `max-w-2xl mx-auto` for description paragraphs) — these are text readability helpers, not layout containers.
+
+```blade
+{{-- Correct: section with max-w-7xl container and inner text constraint --}}
+<section class="py-10 bg-linen">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-10">
+            <h2 class="text-charcoal mb-4">Section Title</h2>
+            <p class="text-charcoal-light max-w-2xl mx-auto">Description text constrained for readability.</p>
+        </div>
+        <!-- Grid content spans full max-w-7xl -->
+    </div>
 </section>
 ```
 

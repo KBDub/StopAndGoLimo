@@ -1,5 +1,5 @@
 <section class="py-10 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
             <span class="text-olive">Veteran Owned</span>
             <span class="text-charcoal"> Custom Signage &amp; Apparel Experts Serving Joliet &amp; Will County Since 2017</span>

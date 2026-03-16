@@ -6,7 +6,7 @@
 ])
 
 <section class="py-10 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         @if($heading)
             <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-3">

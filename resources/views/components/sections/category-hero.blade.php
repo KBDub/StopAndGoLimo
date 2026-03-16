@@ -20,7 +20,7 @@
         <div class="absolute inset-0 bg-charcoal-dark/70"></div>
     </div>
 
-    <div class="relative z-10 max-w-6xl mx-auto px-6 w-full">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
         <div class="max-w-2xl">
             <h5 class="text-sunburst font-semibold tracking-wide mb-4">
                 {{ $preHeading }}

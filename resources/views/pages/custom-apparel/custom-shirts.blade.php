@@ -17,7 +17,7 @@
     <x-sections.top5pct-same-day-service serviceType="custom-shirts" displayServiceType="Custom Shirts" />
 
     {{-- Shirt Types Grid --}}
-    <section id="shirt-types" class="py-16 bg-linen">
+    <section id="shirt-types" class="py-10 bg-linen">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <p class="text-olive font-semibold mb-2">Every technique, one shop</p>
@@ -116,8 +116,8 @@
     <x-ui.banner-medium-sunburst />
 
     {{-- YouTube Video Banner --}}
-    <section class="py-16 bg-charcoal">
-        <div class="max-w-5xl mx-auto px-6">
+    <section class="py-10 bg-charcoal">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-10">
                 <p class="text-sunburst font-semibold mb-2">See our craft in action</p>
                 <h2 class="text-white mb-4">Watch Us Work</h2>
@@ -144,7 +144,7 @@
     <x-ui.banner-medium-charcoal />
 
     {{-- Represent Yourself — Brand Statement Section --}}
-    <section class="py-20 bg-charcoal-dark">
+    <section class="py-10 bg-charcoal-dark">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
@@ -187,8 +187,8 @@
     <x-ui.banner-medium-sunburst />
 
     {{-- FAQ — 7 Tips for Choosing a Custom T-Shirt Maker --}}
-    <section class="py-16 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
+    <section class="py-10 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <p class="text-olive font-semibold mb-2">Buyer's guide</p>
                 <h2 class="text-charcoal mb-4">7 Tips for Choosing a Custom T-Shirt Maker</h2>

@@ -4,7 +4,7 @@
         <div class="absolute bottom-0 right-1/3 w-48 h-48 bg-azure rounded-full blur-3xl"></div>
     </div>
 
-    <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
         <div class="grid lg:grid-cols-2 gap-10 items-start">
 
             <div>

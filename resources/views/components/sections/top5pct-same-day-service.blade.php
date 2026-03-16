@@ -4,7 +4,7 @@
 ])
 
 <section class="py-10 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-8">
 
             <div class="border-t-4 border-sunburst rounded-lg bg-white shadow-md p-8">

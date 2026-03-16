@@ -856,6 +856,132 @@
                         <p>If you need custom shirts in Joliet or the surrounding area, <a href="/contact">contact Top 5 Percent</a> today. We specialize in <a href="/custom-apparel/custom-shirts">custom t-shirts</a>, <a href="/custom-apparel/custom-shirts/vinyl">vinyl printing</a>, <a href="/custom-apparel/custom-shirts/embroidery">embroidery</a>, and a full range of <a href="/custom-apparel">custom apparel</a>. Same-day service is available on most orders.</p>
                     </x-slot>
                 </x-ui.card-detailed-info>
+
+                {{-- Campaign Themes --}}
+                <div class="mt-14 mb-12">
+                    <h3 class="text-xl font-bold text-charcoal mb-1">Campaign Themes</h3>
+                    <div class="h-1 bg-sunburst rounded w-32 mb-6"></div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best hoodies in town</span>
+                        <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best bling around</span>
+                        <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">The Gold Collection</span>
+                        <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Represent Yourself</span>
+                        <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Custom made bling</span>
+                        <span class="bg-sunburst text-charcoal font-semibold px-5 py-2 rounded-full text-body-sm">Best rhinestone shirt around</span>
+                    </div>
+                </div>
+
+                {{-- Brand Persona Pillars --}}
+                <div class="mb-14">
+                    <h3 class="text-xl font-bold text-charcoal mb-1">Brand Persona Pillars</h3>
+                    <div class="h-1 bg-sunburst rounded w-48 mb-6"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white shadow-gold p-6">
+                            <div class="inline-block mb-3">
+                                <h4 class="text-olive font-bold text-h4 mb-1">Empowerment Through Creative Agency</h4>
+                                <div class="h-1 bg-sunburst rounded"></div>
+                            </div>
+                            <p class="text-charcoal-light leading-relaxed">Customers express who they are through what they wear and display. The brand enables that self-expression at the highest quality level.</p>
+                        </div>
+                        <div class="bg-white shadow-gold p-6">
+                            <div class="inline-block mb-3">
+                                <h4 class="text-olive font-bold text-h4 mb-1">Local Community Kinship</h4>
+                                <div class="h-1 bg-sunburst rounded"></div>
+                            </div>
+                            <p class="text-charcoal-light leading-relaxed">Rooted in Joliet, IL. Neighbors serving neighbors. The brand feels personal, not corporate.</p>
+                        </div>
+                        <div class="bg-white shadow-gold p-6">
+                            <div class="inline-block mb-3">
+                                <h4 class="text-olive font-bold text-h4 mb-1">Veteran-Grade Trustworthiness</h4>
+                                <div class="h-1 bg-sunburst rounded"></div>
+                            </div>
+                            <p class="text-charcoal-light leading-relaxed">Reliability, precision, and integrity in every order. Backed by veteran ownership and work ethic.</p>
+                        </div>
+                        <div class="bg-white shadow-gold p-6">
+                            <div class="inline-block mb-3">
+                                <h4 class="text-olive font-bold text-h4 mb-1">Local Expert Energy</h4>
+                                <div class="h-1 bg-sunburst rounded"></div>
+                            </div>
+                            <p class="text-charcoal-light leading-relaxed">The go-to authority for custom signage and apparel in the region. Deep craft knowledge with a friendly, approachable delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Customer Personas --}}
+                <div>
+                    <h3 class="text-xl font-bold text-charcoal mb-1">Customer Personas</h3>
+                    <div class="h-1 bg-sunburst rounded w-44 mb-6"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
+                            <h4 class="text-olive font-bold text-h4 mb-1">The Trades Hustler</h4>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Miguel, 34 — independent plumber/HVAC tech, Joliet/Romeoville area</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Running a one- or two-man operation, his truck is his storefront. He needs door lettering, a magnetic sign, maybe a partial wrap — yesterday. Budget-conscious, no time for back-and-forth, values same-day service heavily.</p>
+                            <div class="space-y-1 text-body-sm">
+                                <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Speed, simplicity, same-day service, clear pricing</span></p>
+                                <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Vehicle graphics, door lettering, magnetic signs, partial wraps</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Your truck is your billboard — make it work for you</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
+                            <h4 class="text-olive font-bold text-h4 mb-1">The Family Reunion Organizer</h4>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Denise, 52 — matriarch-type, community-rooted, South Side Chicago / south suburbs</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Coordinating 80+ people for a summer reunion and needs matching custom shirts that actually look good. She wants rhinestone or foil options, she has opinions about colors, and she has probably been burned by a cheaper shop before.</p>
+                            <div class="space-y-1 text-body-sm">
+                                <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Quality assurance, specialty options, local presence, reliability</span></p>
+                                <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Custom shirts, rhinestone apparel, foil prints, group orders</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Do not settle for cheap — your family deserves the best bling around</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
+                            <h4 class="text-olive font-bold text-h4 mb-1">The School Spirit Coordinator</h4>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">James, 41 — athletic director or booster club chair, Plainfield or New Lenox</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Ordering spirit wear in bulk — hoodies, shirts, possibly banners for the gym. He needs to manage multiple SKUs, sizes, and tight event deadlines. The free web store offering is a massive draw.</p>
+                            <div class="space-y-1 text-body-sm">
+                                <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Bulk ordering, deadline reliability, size management, web store convenience</span></p>
+                                <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Custom hoodies, spirit shirts, gym banners, online store setup</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Easiest spirit wear season you have ever had — we handle the logistics</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
+                            <h4 class="text-olive font-bold text-h4 mb-1">The Boutique Brand Builder</h4>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Aisha, 27 — launching a small clothing or lifestyle brand, Joliet area</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">She has a concept, a logo, and a dream of selling her own apparel. The Top 5% Clothing and Black Doll brand lines signal to her that this is not just a print shop — it is a place that gets brand identity.</p>
+                            <div class="space-y-1 text-body-sm">
+                                <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Low minimums, design support, DTF transfers, brand identity understanding</span></p>
+                                <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">DTF transfers, custom apparel, design services, small-batch runs</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Start your brand here — we built ours the same way</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
+                            <h4 class="text-olive font-bold text-h4 mb-1">The Small Business Owner Leveling Up</h4>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Rick, 48 — owns a landscaping or cleaning company, Crest Hill or Lockport</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">He has been in business 10 years on word-of-mouth alone and is finally ready to look professional. He needs yard signs, a vehicle wrap, window decals — the full kit. He does not want to coordinate five vendors.</p>
+                            <div class="space-y-1 text-body-sm">
+                                <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">One-stop shop, full business identity package, professionalism, veteran respect</span></p>
+                                <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Yard signs, vehicle wraps, window decals, banners, branded apparel</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">One shop, everything you need to finally look as good as your work</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
+                            <h4 class="text-olive font-bold text-h4 mb-1">The Event and Nonprofit Coordinator</h4>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Sandra, 39 — church event planner or nonprofit program director, Will County</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Ordering banners, table runners, and event shirts on a shoestring budget with a hard event date. She needs creative flexibility and a shop that will not nickel-and-dime her for design help.</p>
+                            <div class="space-y-1 text-body-sm">
+                                <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Budget flexibility, design consultation, deadline certainty, quantity discounts</span></p>
+                                <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Event banners, table runners, event shirts, printed materials</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">We are your creative partner, not just your printer</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </section>
 

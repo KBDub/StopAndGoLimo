@@ -594,6 +594,103 @@
 
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold mb-2 border-l-4 border-sunburst pl-5">CTA Banners and Testimonials</h2>
+                <p class="text-charcoal-light mb-10">All banner bars, CTA section blocks, testimonial banner, and testimonial cards.</p>
+
+                {{-- Thin Banner Bars --}}
+                <h3 class="text-lg font-semibold text-charcoal mb-4">Thin Banner Bars <span class="text-sm font-normal text-charcoal-light">(3px rule lines)</span></h3>
+                <div class="space-y-5 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-sunburst</code></p>
+                        <x-ui.banner-thin-sunburst />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-azure</code></p>
+                        <x-ui.banner-thin-azure />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-charcoal</code></p>
+                        <x-ui.banner-thin-charcoal />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-linen</code></p>
+                        <x-ui.banner-thin-linen />
+                    </div>
+                </div>
+
+                {{-- Medium Banner Bars --}}
+                <h3 class="text-lg font-semibold text-charcoal mb-4">Medium Banner Bars <span class="text-sm font-normal text-charcoal-light">(solid color dividers)</span></h3>
+                <div class="space-y-5 mb-12">
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-sunburst</code> — h-16</p>
+                        <x-ui.banner-medium-sunburst />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-azure</code> — h-8</p>
+                        <x-ui.banner-medium-azure />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-charcoal</code> — h-8</p>
+                        <x-ui.banner-medium-charcoal />
+                    </div>
+                    <div>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-linen</code> — h-8</p>
+                        <x-ui.banner-medium-linen />
+                    </div>
+                </div>
+
+                {{-- Card Testimonial --}}
+                <h3 class="text-lg font-semibold text-charcoal mb-2">Card Testimonial</h3>
+                <p class="text-xs text-charcoal-light mb-4">Use <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-testimonial</code> with <code class="bg-gray-100 px-1.5 py-0.5 rounded">quote</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded">name</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded">label</code>, and optional <code class="bg-gray-100 px-1.5 py-0.5 rounded">avatar</code>.</p>
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <x-ui.card-testimonial
+                        quote="Top 5 Percent did an amazing job on our company shirts. The quality is outstanding and they delivered ahead of schedule!"
+                        name="Maria R."
+                        label="Business Owner"
+                    />
+                    <x-ui.card-testimonial
+                        quote="Best signage company in Joliet. They made our storefront look incredible. Highly recommend to anyone needing custom signs!"
+                        name="James T."
+                        label="Restaurant Owner"
+                    />
+                    <x-ui.card-testimonial
+                        quote="Love my vehicle graphics! Professional work and great customer service. Will definitely be back for more."
+                        name="David P."
+                        label="Contractor"
+                    />
+                </div>
+            </div>
+        </section>
+
+        {{-- Banner Testimonial --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-testimonial</code> — default props</p>
+        <x-ui.banner-testimonial />
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-testimonial</code> — custom quote</p>
+        <x-ui.banner-testimonial
+            quote="Our reunion shirts were absolutely perfect. Everyone loved them and we got so many compliments at the event."
+            name="Denise W."
+            location="Shorewood, IL"
+            :stars="5"
+        />
+
+        {{-- CTA: Free Quote --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-8 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote</code></p>
+        <x-sections.cta-free-quote />
+
+        {{-- CTA: Design Your Own --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-design-your-own</code></p>
+        <x-sections.cta-design-your-own />
+
+        {{-- CTA: Ready to Get Started --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-ready-to-get-started</code></p>
+        <x-sections.cta-ready-to-get-started />
+
+        {{-- Review Banner Section --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.review-banner</code></p>
+        <x-sections.review-banner />
+
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Visual Combinations</h2>
                 
                 <div class="grid md:grid-cols-2 gap-6">

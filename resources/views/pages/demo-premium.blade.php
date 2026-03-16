@@ -38,13 +38,13 @@
             </div>
         </section>
 
-        @include('pages.demo-premium.section-full-bleed-banners')
-        @include('pages.demo-premium.section-hero-full-bleed')
-        @include('pages.demo-premium.section-product-cards')
-        @include('pages.demo-premium.section-category-grid')
-        @include('pages.demo-premium.section-carousel')
-        @include('pages.demo-premium.section-sticky-cart')
-        @include('pages.demo-premium.section-quick-view')
+        @include('partials.demo-premium.section-full-bleed-banners')
+        @include('partials.demo-premium.section-hero-full-bleed')
+        @include('partials.demo-premium.section-product-cards')
+        @include('partials.demo-premium.section-category-grid')
+        @include('partials.demo-premium.section-carousel')
+        @include('partials.demo-premium.section-sticky-cart')
+        @include('partials.demo-premium.section-quick-view')
 
         <section class="py-16 bg-gold-gradient">
             <div class="max-w-7xl mx-auto px-6 text-center">

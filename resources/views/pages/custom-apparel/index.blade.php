@@ -11,6 +11,39 @@
     />
     <x-ui.banner-medium-sunburst />
 
+    <x-sections.lp-category-banners :banners="[
+        [
+            'image' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
+            'alt'   => 'Custom shirts, hoodies, and caps in Joliet',
+            'title' => 'Custom Shirts',
+            'href'  => '/custom-apparel/custom-shirts',
+        ],
+        [
+            'image' => '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',
+            'alt'   => 'DTF transfers printing in Joliet',
+            'title' => 'DTF Transfers',
+            'href'  => '/custom-apparel/dtf-transfers',
+        ],
+        [
+            'image' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg',
+            'alt'   => 'Family and class reunion shirts in Joliet and Shorewood',
+            'title' => 'Reunion Shirts',
+            'href'  => '/custom-apparel/reunion-shirts',
+        ],
+        [
+            'image' => '/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg',
+            'alt'   => 'Corporate shirts and uniforms in Joliet and Shorewood',
+            'title' => 'Corporate Wear',
+            'href'  => '/custom-apparel/corporate-wear',
+        ],
+        [
+            'image' => '/images/spirit-wear/top5pct-banner-fanwear-spiritwear-uniforms-joliet-shorewood.jpg',
+            'alt'   => 'Fan wear, spirit wear, and uniforms in Joliet and Shorewood',
+            'title' => 'Spirit Wear',
+            'href'  => '/custom-apparel/spirit-wear',
+        ],
+    ]" />
+
     <x-sections.top5pct-same-day-service serviceType="custom-apparel" displayServiceType="Custom Apparel" />
     <x-sections.product-grid collectionSlug="custom-apparel" />
     <x-sections.why-choose-us />

@@ -1,11 +1,5 @@
 # Top 5 Percent — Customer Personas
 
-## Brand Personality
-
-Each persona page should feel written for that specific person — not a generic audience. Use plain language at a 7th-grade reading level. Lead with their pain point, then pivot to the outcome Top 5 Percent delivers. Never use all-caps, em dashes, or corporate-speak.
-
-**Recommended component:** Use `x-ui.card-detailed-info` when building editorial content pages targeted at a specific persona. Pass persona-relevant images as `image1` and `image2`, write the `$intro` slot to address their primary need, use `$mid` for supporting context and use cases, `$lower` for practical how-to or logistics, and `$footer` for local closing copy with internal links. Wrap the first 4 words of the `$intro` first paragraph in `<span class="text-olive font-semibold">` to create a branded lead-in.
-
 ---
 
 ## 1. The Trades Hustler

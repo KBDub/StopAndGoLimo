@@ -810,7 +810,7 @@
 
         <section class="py-16 bg-linen">
             <div class="max-w-7xl mx-auto px-6">
-                <h2 class="text-2xl font-bold mb-4 border-l-4 border-sunburst pl-5">Detailed Info Card</h2>
+                <h2 class="text-2xl font-bold mb-4 border-l-4 border-sunburst pl-5">Brand Personality</h2>
                 <p class="text-sm text-charcoal-light mb-8">Long-form editorial layout with asymmetric image inlays and flowing text. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-detailed-info</code> with named slots: <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$intro</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$mid</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$lower</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$footer</code>.</p>
 
                 <x-ui.card-detailed-info

@@ -34,12 +34,12 @@
     </div>
 
     {{-- Text div centered underneath --}}
-    <div class="p-10 bg-white shadow-gold-lg card-text-sway text-center">
+    <div class="p-10 bg-white shadow-gold-lg text-center">
         <div class="inline-block mx-auto mb-5">
             <h3 class="text-olive font-bold text-h3 mb-2">{{ $title }}</h3>
             <div class="h-1 bg-sunburst rounded"></div>
         </div>
-        <div class="text-charcoal-light leading-relaxed max-w-3xl mx-auto">
+        <div class="text-charcoal-light leading-relaxed max-w-5xl mx-auto">
             {{ $slot }}
         </div>
     </div>

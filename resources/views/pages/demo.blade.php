@@ -763,7 +763,7 @@
                             alt="Custom vinyl shirts, caps, and hoodies"
                             title="Vinyl Heat-Press Apparel"
                         >
-                            <p class="mb-4">Bold, durable vinyl printing is one of our most popular techniques. Using commercial heat-press equipment, we apply precision-cut vinyl in any color to shirts, hoodies, caps, and more. The result is a sharp, professional finish that holds up wash after wash.</p>
+                            <p class="mb-4">Bold, durable vinyl printing is one of our most popular techniques. Using commercial <span class="text-azure underline underline-offset-2">heat-press equipment</span>, we apply precision-cut vinyl in any color to shirts, hoodies, caps, and more. The result is a sharp, professional finish that holds up wash after wash.</p>
                             <p>Ideal for team names, business logos, reunion shirts, and custom numbers. No minimum order and <span class="text-azure underline underline-offset-2">same-day service available</span> on most orders.</p>
                         </x-ui.card-image-with-text>
                     </div>

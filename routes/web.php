@@ -106,10 +106,6 @@ Route::get('/signs', function () {
     return view('pages.signs.index');
 })->name('signs');
 
-Route::get('/signs/coronavirus-signs', function () {
-    return view('pages.signs.coronavirus-signs');
-})->name('signs.coronavirus-signs');
-
 Route::get('/signs/business-signs', function () {
     return view('pages.signs.business-signs');
 })->name('signs.business-signs');
@@ -137,10 +133,6 @@ Route::get('/signs/yard-signs', function () {
 Route::get('/decals', function () {
     return view('pages.decals.index');
 })->name('decals');
-
-Route::get('/decals/coronavirus-decals', function () {
-    return view('pages.decals.coronavirus-decals');
-})->name('decals.coronavirus-decals');
 
 Route::get('/decals/stickers', function () {
     return view('pages.decals.stickers');

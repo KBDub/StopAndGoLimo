@@ -12,7 +12,7 @@
         primaryButtonHref="#sign-categories"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
-        image="/images/top5pct-banner-joliet.jpg"
+        image="/images/posters/top5pct-banner-poster-maker-joliet-romeoville-shorewood.jpg"
     />
     <x-ui.banner-medium-sunburst />
 
@@ -66,12 +66,6 @@
             'alt'   => 'Custom table cloths and table runners in Joliet Illinois',
             'title' => 'Table Runners',
             'href'  => '/signs/table-runners',
-        ],
-        [
-            'image' => '/images/corona-virus-signs/top5pct-banner-coronavirus-signs-stickers-joliet-shorewood.png',
-            'alt'   => 'Coronavirus safety signs and social distancing decals in Joliet and Shorewood',
-            'title' => 'Safety Signs',
-            'href'  => '/signs/coronavirus-signs',
         ],
     ]" />
 

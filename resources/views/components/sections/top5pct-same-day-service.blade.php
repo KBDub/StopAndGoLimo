@@ -13,7 +13,7 @@
                     The <span class="text-sunburst">Top 5 Percent</span> Difference
                 </h2>
                 <p class="text-body-sm text-charcoal-light mb-6">
-                    Veteran owned, in-house manufacturing, experienced and professional.
+                    In-house manufacturing, experienced and professional.
                     Here is why businesses and residents across Chicagoland choose us:
                 </p>
 
@@ -26,7 +26,7 @@
                             'We have no minimums on custom shirts',
                             'Our in-house design team handles your artwork',
                             'We use top quality materials and premium inks',
-                            'We are veteran and minority owned',
+                            'We produce every order in-house from start to finish',
                             'Our team brings 40+ years of combined experience',
                             'We send a free proof before any production',
                             'We welcome rush orders with fast turnaround',
@@ -35,12 +35,16 @@
                     @endphp
                     @foreach($benefits as $benefit)
                         @if($loop->even)
-                            <div class="whitespace-nowrap border-l-2 border-sunburst pl-3 ml-10">
+                            <div class="flex items-center justify-end gap-2 whitespace-nowrap">
+                                <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
+                                <div class="w-1 h-5 bg-sunburst shrink-0"></div>
+                            </div>
                         @else
-                            <div class="whitespace-nowrap border-l-2 border-sunburst pl-3 ml-0">
+                            <div class="flex items-center gap-2 whitespace-nowrap">
+                                <div class="w-1 h-5 bg-sunburst shrink-0"></div>
+                                <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
+                            </div>
                         @endif
-                            <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
-                        </div>
                     @endforeach
                 </div>
             </div>
@@ -65,14 +69,20 @@
                     @endphp
                     @foreach($services as $service)
                         @if($loop->even)
-                            <div class="whitespace-nowrap border-l-2 border-azure pl-3 ml-10">
+                            <div class="flex items-center justify-end gap-2 whitespace-nowrap">
+                                <p class="text-body-sm text-charcoal">
+                                    <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}
+                                </p>
+                                <div class="w-1 h-5 bg-azure shrink-0"></div>
+                            </div>
                         @else
-                            <div class="whitespace-nowrap border-l-2 border-azure pl-3 ml-0">
+                            <div class="flex items-center gap-2 whitespace-nowrap">
+                                <div class="w-1 h-5 bg-azure shrink-0"></div>
+                                <p class="text-body-sm text-charcoal">
+                                    <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}
+                                </p>
+                            </div>
                         @endif
-                            <p class="text-body-sm text-charcoal">
-                                <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}
-                            </p>
-                        </div>
                     @endforeach
                 </div>
 

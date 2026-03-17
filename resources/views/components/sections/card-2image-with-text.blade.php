@@ -30,21 +30,21 @@
             @endisset
 
             {{-- Two images side by side --}}
-            <div class="flex flex-col sm:flex-row gap-6 mb-6">
-                <div class="flex-1 shadow-gold hover:scale-[1.03] transition-transform duration-500 flex items-center justify-center">
+            <div class="flex flex-col sm:flex-row gap-8 mb-6">
+                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-lg transition-shadow duration-500">
                     <img
                         src="{{ $image1 }}"
                         alt="{{ $alt1 }}"
-                        class="block object-cover w-full"
+                        class="block object-cover w-full hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                         style="aspect-ratio: 4/3;"
                     >
                 </div>
 
-                <div class="flex-1 shadow-gold hover:scale-[1.03] transition-transform duration-500 flex items-center justify-center">
+                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-lg transition-shadow duration-500">
                     <img
                         src="{{ $image2 }}"
                         alt="{{ $alt2 }}"
-                        class="block object-cover w-full"
+                        class="block object-cover w-full hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                         style="aspect-ratio: 4/3;"
                     >
                 </div>

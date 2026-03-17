@@ -24,26 +24,30 @@
             {{-- Float-based image + wrapping text --}}
             <div class="overflow-hidden">
                 @if($imagePosition === 'right')
-                    <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl transition-all duration-700 ease-out" style="margin-left: 3rem;">
+                    <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-left: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block object-cover hover:scale-[1.15] hover:brightness-105 transition-all duration-700 ease-out"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                             style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @else
-                    <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl transition-all duration-700 ease-out" style="margin-right: 3rem;">
+                    <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-right: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block object-cover hover:scale-[1.15] hover:brightness-105 transition-all duration-700 ease-out"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                             style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @endif
 
-                <div class="text-charcoal-light leading-relaxed">
+                <div
+                    x-data
+                    x-init="$el.querySelectorAll('p').forEach(p => { p.classList.add('pl-6'); const w = p.innerHTML.trim().split(/\s+/); if(w.length > 4){ p.innerHTML = '<strong>' + w.slice(0,4).join(' ') + '</strong> ' + w.slice(4).join(' '); } })"
+                    class="text-charcoal-light leading-relaxed"
+                >
                     {{ $slot }}
                 </div>
             </div>

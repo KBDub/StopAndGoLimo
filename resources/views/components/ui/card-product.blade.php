@@ -3,6 +3,7 @@
     'description' => '',
     'price' => '',
     'image' => null,
+    'href' => null,
 ])
 
 <div {{ $attributes->merge(['class' => 'relative shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1']) }}>
@@ -16,16 +17,33 @@
     </div>
     <div class="relative bg-white m-[3px] p-6">
         @if($image)
-            <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-56 object-cover mb-4">
+            @if($href)
+                <a href="{{ $href }}" class="block overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out mb-4">
+                    <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-56 object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out">
+                </a>
+            @else
+                <div class="overflow-hidden shadow-gold mb-4">
+                    <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-56 object-cover">
+                </div>
+            @endif
         @else
             <div class="w-full h-56 bg-linen mb-4"></div>
         @endif
-        <h3 class="font-semibold mb-2 text-olive underline decoration-olive underline-offset-4">{{ $title }}</h3>
+
+        <h3 class="font-semibold mb-2 text-center">
+            @if($href)
+                <a href="{{ $href }}" class="text-olive hover:text-azure transition-colors underline decoration-olive underline-offset-4">{{ $title }}</a>
+            @else
+                <span class="text-olive underline decoration-olive underline-offset-4">{{ $title }}</span>
+            @endif
+        </h3>
+
         @if($slot->isNotEmpty())
             {{ $slot }}
         @else
             <p class="text-sm text-charcoal-light mb-3">{{ $description }}</p>
         @endif
+
         @if($price)
             <p class="font-bold text-charcoal">{{ $price }}</p>
         @endif

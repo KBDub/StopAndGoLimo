@@ -22,7 +22,7 @@
             </div>
 
             {{-- Float-based image + wrapping text --}}
-            <div class="overflow-hidden">
+            <div class="[display:flow-root]">
                 @if($imagePosition === 'right')
                     <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-left: 3rem;">
                         <img

@@ -9,35 +9,36 @@
 
             {{-- Left card: brand differentiators --}}
             <div class="border-t-4 border-sunburst bg-white shadow-md p-8 overflow-hidden">
-                <h2 class="text-h2 font-bold text-charcoal mb-3">The Top 5 Percent Difference</h2>
+                <h2 class="text-h2 font-bold text-charcoal mb-3">
+                    The <span class="text-sunburst">Top 5 Percent</span> Difference
+                </h2>
                 <p class="text-body-sm text-charcoal-light mb-6">
                     Veteran owned, in-house manufacturing, experienced and professional.
-                    Local businesses and residents choose Top 5 Percent for:
+                    Here is why businesses and residents across Chicagoland choose us:
                 </p>
 
-                <div class="flex flex-col gap-y-2">
+                <div class="flex flex-col gap-y-3">
                     @php
                         $benefits = [
-                            'Five Star Rating on Google',
-                            'Same Day Service Available',
-                            'Transparent, Upfront Pricing',
-                            'No Minimum Orders on Custom Shirts',
-                            'In-House Graphic Design Team',
-                            'Top Quality Materials and Premium Inks',
-                            'Veteran and Minority Owned Business',
-                            '40+ Years Combined Experience',
-                            'Free Artwork Proof Before Production',
-                            'Rush Orders Welcome',
-                            'Bulk Pricing Available on All Products',
+                            'We carry a five star rating on Google',
+                            'We offer same day service on most orders',
+                            'Our pricing is always transparent and upfront',
+                            'We have no minimums on custom shirts',
+                            'Our in-house design team handles your artwork',
+                            'We use top quality materials and premium inks',
+                            'We are veteran and minority owned',
+                            'Our team brings 40+ years of combined experience',
+                            'We send a free proof before any production',
+                            'We welcome rush orders with fast turnaround',
+                            'Our bulk pricing is available on all products',
                         ];
                     @endphp
                     @foreach($benefits as $benefit)
                         @if($loop->even)
-                            <div class="flex items-center gap-2 whitespace-nowrap ml-10">
+                            <div class="whitespace-nowrap border-l-2 border-sunburst pl-3 ml-10">
                         @else
-                            <div class="flex items-center gap-2 whitespace-nowrap ml-0">
+                            <div class="whitespace-nowrap border-l-2 border-sunburst pl-3 ml-0">
                         @endif
-                            <div class="w-3 h-3 bg-sunburst shrink-0 rotate-45"></div>
                             <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
                         </div>
                     @endforeach
@@ -52,7 +53,7 @@
 
                 <h4 class="text-h4 font-semibold text-charcoal mb-3">Overview of Services:</h4>
 
-                <div class="flex flex-col gap-y-2 mb-6">
+                <div class="flex flex-col gap-y-3 mb-6">
                     @php
                         $services = [
                             ['label' => 'Custom Shirts', 'detail' => 'DTF, screen print, embroidery, vinyl, no minimums'],
@@ -64,11 +65,10 @@
                     @endphp
                     @foreach($services as $service)
                         @if($loop->even)
-                            <div class="flex items-center gap-2 whitespace-nowrap ml-10">
+                            <div class="whitespace-nowrap border-l-2 border-azure pl-3 ml-10">
                         @else
-                            <div class="flex items-center gap-2 whitespace-nowrap ml-0">
+                            <div class="whitespace-nowrap border-l-2 border-azure pl-3 ml-0">
                         @endif
-                            <div class="w-3 h-3 bg-sunburst shrink-0 rotate-45"></div>
                             <p class="text-body-sm text-charcoal">
                                 <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}
                             </p>

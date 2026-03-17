@@ -66,6 +66,37 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="dot-decals" parentSlug="vehicle-graphics" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="Why Do Truck Drivers Need DOT Decals and DOT Stickers?"
+                image1="/images/dot-decals/top5pct-article-DOT-decals-vinyl-lettering.jpg"
+                alt1="DOT decals DOT stickers and truck lettering printed in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">DOT decals and DOT stickers are not optional for commercial truck drivers. They are a federal requirement. Any commercial motor vehicle that operates in interstate commerce must display a valid USDOT number, the legal company name, the city and state of the principal place of business, and in many cases the MC number, GVW rating, and KYU number as well. These markings must be legible, in contrasting colors, and visible from 50 feet. They must be at least two inches tall and placed on both sides of the power unit. Failure to display the correct DOT markings can result in fines, out of service orders, and violations that follow your carrier record. We produce DOT decals and commercial vehicle lettering for truckers and fleet operators throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will County.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">We Know Trucking Because We Have Lived It</h3>
+                    <p class="mb-4">Both owners of Top 5 Percent, LLC drove trucks in the military and understand the commercial vehicle world from the inside. One of our owners still holds a valid CDL Class A license with over 15 years of tractor trailer driving experience. When you call us about DOT decals, you are not talking to someone who just prints stickers. You are talking to a fellow trucker who understands exactly what needs to go on your doors, why it matters, and how to do it right. We take DOT compliance seriously because we know what is at stake when inspectors pull you over and start checking your markings at a weigh station on I-80.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Vinyl Cut or Digitally Printed: Your Choice</h3>
+                    <p class="mb-4">Not all DOT decals are the same and the right option depends on what you need displayed. Vinyl cut decals are clean, precise, and great for simple number sets and lettering that does not require color fills or complex graphics. The letters and numbers are cut directly from solid colored vinyl and applied individually, giving a professional look that blends well with most truck door colors. Digitally printed decals handle more complex jobs including full color trucking logos, multi-color designs, and complete door graphic packages. We can laminate digitally printed decals for added protection against road debris, fuel spills, and UV exposure so your markings stay legible and compliant for years.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Same Day Local Service in Joliet</h3>
+                    <p class="mb-4">Because we are a local print shop based in Joliet, you do not have to wait for a mail order company to ship your decals and then wait again for them to arrive. You can call us, stop by our shop at 121 Springfield Avenue, and in many cases leave the same day with your DOT markings ready to apply. For drivers who are running a tight schedule or need to get a vehicle back on the road fast after a DOT inspection that flagged missing markings, same day service is not just convenient. It is essential. We understand that a truck sitting in the lot is not earning, and we do everything we can to get your vehicle back on the road legally and quickly.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Everything We Produce for Commercial Vehicles</h3>
+                    <p class="mb-4">We produce a full range of commercial vehicle compliance markings and graphics for trucking companies, owner operators, and fleet managers throughout Will County and the Chicagoland area. Our services include USDOT number decals, MC number decals, KYU number decals, GVW rating stickers, legal company name and address lettering, trucking logo design and printing, and complete door graphic packages that combine all required markings with your company branding in a single professional layout. We work with single truck owner operators and multi-vehicle fleets and we can match existing door graphics on your other trucks so everything in your fleet stays consistent and compliant.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we are proud to serve the trucking community that keeps the Chicagoland area and the entire country moving. We know what it takes to stay compliant and we are here to make the process as fast and straightforward as possible for every driver and fleet operator who walks through our door.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to order your DOT decals today. We are ready to help you stay on the road and stay compliant.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

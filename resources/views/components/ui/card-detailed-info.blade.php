@@ -53,9 +53,13 @@
             {{ $footer }}
         </div>
     @else
-        {{-- Single-image layout: flex row, image vertically centered on the left --}}
-        <div class="flex gap-12 items-center mb-6">
-            <div class="flex-shrink-0 shadow-gold">
+        {{-- Single-image layout: intro full width, image floated left with mid wrapping, lower full width below --}}
+        <div class="mb-4 card-detail-content">
+            {{ $intro }}
+        </div>
+
+        <div class="overflow-hidden mb-4">
+            <div class="float-left mb-4 shadow-gold flex-shrink-0" style="margin-right: 3rem;">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
@@ -63,16 +67,12 @@
                     style="width: 400px; height: 300px;"
                 >
             </div>
-            <div class="flex-1 card-detail-content">
-                {{ $intro }}
+            <div class="card-detail-content">
+                {{ $mid }}
             </div>
         </div>
 
-        <div class="mb-4 card-detail-content">
-            {{ $mid }}
-        </div>
-
-        <div class="mb-4 card-detail-content">
+        <div class="clear-both mb-4 card-detail-content">
             {{ $lower }}
         </div>
 

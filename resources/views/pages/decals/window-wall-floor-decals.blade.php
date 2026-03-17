@@ -68,6 +68,38 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="window-wall-floor-decals" parentSlug="decals" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="The Effects Window, Wall, and Floor Decals Have on Your Business or Home"
+                image1="/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg"
+                alt1="Custom window wall and floor decals printed and installed in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Window decals, wall decals, and floor decals are some of the most versatile and cost effective ways to transform a space, promote a business, or personalize a home in the Chicagoland area. We produce and install custom decals for businesses and homeowners throughout Joliet, Shorewood, Plainfield, Lockport, and all of Will County. Whether you want to brand your storefront windows, decorate a room in your home, or guide customers through your retail space with floor graphics, we have the materials, the printing capability, and the installation experience to make it happen. Here is how each type of decal can make a meaningful difference for your business or your home.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Window Decals That Work for Your Business</h3>
+                    <p class="mb-4">As a business owner, window decals are one of the smartest investments you can make in your storefront. They bring awareness to your company and add character and professionalism to your building exterior and interior at the same time. Window decals are cost effective, available in both indoor and outdoor options, and can be produced as printed full color graphics or precision vinyl cut lettering depending on the look you want. A storefront window with clean, well designed decals communicates to passing customers that your business is active, professional, and worth stepping inside to visit.</p>
+                    <p class="mb-4">We also produce perforated window film, sometimes called window perf or one-way vision film, which allows you to display a full graphic on the outside of your window while still being able to see through it from the inside. This is a popular option for retail businesses, restaurants, and service companies in Joliet and throughout Will County who want bold exterior visuals without sacrificing natural light or interior sightlines.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Wall Decals That Transform Any Room</h3>
+                    <p class="mb-4">Wall decals are a beautiful and practical way to add a theme or a personal touch to any room in your home or any space in your business. We help homeowners across the Chicagoland area turn bare walls into works of art without the permanence or expense of custom paint or wallpaper. What makes vinyl wall decals especially appealing is that they are repositionable. If you place a decal on one wall and decide it would look better somewhere else, you can carefully remove it and move it to a new location. They hold up well through normal indoor conditions and look just as clean on the wall as the day they were applied.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Floor Decals That Guide and Impress</h3>
+                    <p class="mb-4">Floor decals are an underused but highly effective tool for businesses that want to guide customers through their space, highlight specific products or promotions, or add branded visuals to their retail floor. We print floor decals on durable non-slip material rated for foot traffic so they hold up through daily use without curling or peeling. Directional floor graphics work great in large retail stores, trade show booths, event venues, and any space where you want to steer customers toward a specific area or destination without putting up additional signage overhead.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Stained Glass Window Film for Privacy and Style</h3>
+                    <p class="mb-4">We also offer decorative stained glass window film as an option for businesses and homeowners who want privacy without blocking natural light. This film mimics the look of real stained glass at a fraction of the cost and without the permanence of actual glass installation. It is a popular choice for office windows, conference room glass partitions, residential front doors, and bathroom windows throughout Joliet, Shorewood, and Plainfield. We can cut it to fit any window size and apply it cleanly so the finished result looks intentional and polished.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we have been helping businesses and homeowners throughout Will County and the greater Chicagoland area enhance their spaces with custom decals since 2017. Every project we take on receives the same level of care and craftsmanship regardless of the size of the order.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your window, wall, or floor decal project. We are here to help you make your space look exactly the way you want it to.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

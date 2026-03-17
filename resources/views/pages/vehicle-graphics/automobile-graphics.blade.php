@@ -66,6 +66,39 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="automobile-graphics" parentSlug="vehicle-graphics" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="5 Benefits of Vehicle Graphics for Your Business"
+                image1="/images/automobile-graphics/top5pct-article-car-wraps-vinyl-lettering.jpg"
+                alt1="Vehicle graphics car wraps and vinyl lettering for businesses in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Vehicle graphics are one of the most powerful and cost effective advertising tools available to businesses of any size in the Chicagoland area. When your vehicle is branded with your logo, your phone number, and the services you offer, it becomes a mobile billboard that reaches potential customers in every neighborhood it drives through. We have been producing custom vehicle graphics, vinyl lettering, and vehicle wraps for businesses throughout Joliet, Shorewood, Plainfield, and all of Will County since 2017. Here are five reasons why investing in vehicle graphics is one of the smartest marketing decisions a local business can make.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Your Vehicle Stands Out and Gets Noticed</h3>
+                    <p class="mb-4">A vehicle with professional graphics captures the attention of nearly everyone who sees it. A well designed wrap or a clean set of vinyl lettering adds character and identity to what would otherwise be an anonymous truck or van. When you drive down Route 30 or Route 59 in Joliet with your business name and logo displayed boldly on your vehicle, thousands of potential customers see your brand without you having to do anything extra. There are no limits to what can be achieved with full or partial vehicle wraps, and we work with each customer to design graphics that represent their business in the best possible light.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Your Vehicle Becomes a Mobile Billboard</h3>
+                    <p class="mb-4">Vinyl lettering and car signs turn every mile you drive into a marketing opportunity. Before a business owner applies graphics to their work van, no one on the road knows what they do or how to reach them. After the graphics go on, every person who sees that vehicle in a parking lot, at a job site, or driving through a neighborhood in Shorewood, Crest Hill, or Romeoville gets exposed to the business name and contact information. That kind of passive, continuous advertising works around the clock without any additional effort or ongoing cost from you.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Cost Effective Advertising With No Recurring Fees</h3>
+                    <p class="mb-4">Compared to billboards, radio spots, or digital advertising that charge ongoing fees, a vehicle wrap or graphic package is a one time investment that keeps delivering impressions for the life of the vehicle. Quality vehicle graphics made from premium cast vinyl can last five or more years with normal care. When you calculate the total number of people who see your vehicle over that time, the cost per impression is lower than almost any other form of local advertising available to small businesses in the Chicagoland area.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Builds Brand Credibility and Professional Image</h3>
+                    <p class="mb-4">A professionally wrapped vehicle communicates to potential customers that your business is established, organized, and serious about its image. When a contractor, plumber, landscaper, or service technician shows up to a job in a vehicle with clean, professional graphics, the homeowner immediately feels more confident in their choice. An unmarked vehicle does the opposite. In competitive markets throughout Will County, where customers have many choices for the services they need, a branded vehicle is a simple but powerful way to set yourself apart before you even walk through the door.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Fleet Consistency Grows Your Brand Recognition</h3>
+                    <p class="mb-4">If you operate more than one vehicle, having a consistent look across your entire fleet multiplies the effect of every individual vehicle. When all of your trucks, vans, or cars share the same logo placement, the same colors, and the same design style, your company looks larger, more organized, and more trustworthy. Customers who see multiple vehicles in your fleet throughout Joliet, Plainfield, Romeoville, and across Will County start to recognize your brand and associate it with reliability and presence in their community.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned vehicle graphics shop in Joliet, Illinois and we are proud to help local businesses make a stronger impression on the road every single day. We produce full wraps, partial wraps, vinyl lettering, window perf, and complete fleet graphic packages for businesses of all sizes throughout the greater Chicagoland area.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your vehicle graphics project. We are here to help your business get noticed.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -68,6 +68,39 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="stickers" parentSlug="decals" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="5 Benefits of Sticker Decals and the Role They Play in Promoting Your Business"
+                image1="/images/stickers-decals/top5pct-article-buy-stickers-decals-joliet.jpg"
+                alt1="Custom stickers and decals printed in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Custom stickers and decals are one of the most affordable and effective ways to promote your business, spread your message, or add personality to your products in the Chicagoland area. We print custom stickers and decals for businesses, organizations, schools, and individuals throughout Joliet, Shorewood, Plainfield, and all of Will County. Whether you need a handful of stickers for a small launch or thousands for a large promotional campaign, we have the printing capability and the materials to deliver exactly what you need. Here are five benefits of sticker decals and how we use them to help our customers stand out.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">High Detail Print Quality on Any Surface</h3>
+                    <p class="mb-4">We print our stickers in high resolution so every detail of your design comes through clearly. Fine lines, small text, and complex logos all reproduce accurately. We print on material with an opaque backing that prevents the color of the surface beneath from showing through, so your sticker looks exactly as intended whether it goes on a white background, a dark container, or a colored vehicle panel. Your brand colors stay true and your design reads cleanly no matter where the sticker is applied.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Repositionable Without Leaving a Mess</h3>
+                    <p class="mb-4">We print on air egress vinyl, which means your stickers can be repositioned after application without leaving peel marks or adhesive residue behind. If you place a sticker on your vehicle, your laptop, or your storefront window and decide it would look better in a different spot, you can remove it cleanly and reapply it without the frustration of sticky residue or tearing. Our vinyl stickers do not rip as easily as standard paper stickers, which means they hold up better through daily handling and normal wear and tear.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">No Minimums and Multiple Adhesion Options</h3>
+                    <p class="mb-4">We offer no minimum order quantities on custom stickers and decals. Whether you need one sticker or ten thousand, we will take care of your order with the same level of care and attention. We also offer a range of adhesion levels from light temporary adhesion to strong permanent adhesion so you can choose the right option for how and where your sticker will be used. Temporary adhesion works great for promotional campaigns and events. Permanent adhesion is ideal for product labels, vehicle decals, and long term outdoor applications.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Outdoor Durability That Lasts</h3>
+                    <p class="mb-4">Our outdoor stickers and decals are printed with UV resistant inks on weather resistant vinyl so they hold up through Illinois sun, rain, and cold without fading or peeling. We also offer lamination as an optional upgrade that adds an extra layer of protection and significantly extends the lifespan of your decals. Laminated decals are especially recommended for vehicle applications, outdoor signage, and any decal that will be exposed to weather on a regular basis. When you invest in a great looking decal, we want it to keep looking great for as long as possible.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Versatile Uses That Expand Your Brand Reach</h3>
+                    <p class="mb-4">Custom stickers and decals serve an enormous range of purposes. Businesses in Joliet and throughout Will County use them for product labels, packaging seals, promotional giveaways, vehicle branding, storefront window graphics, laptop and gear stickers, and trade show handouts. Every sticker that leaves our shop and goes out into the world with your logo or your message on it is a tiny advertisement for your business. When someone puts your sticker on their water bottle or their car, your brand travels with them everywhere they go across the Chicagoland area and beyond.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we have been producing high quality custom stickers and decals for customers throughout Will County and the greater Chicagoland area since 2017. We take pride in the detail and durability of everything we produce and we want every sticker we print to represent your brand at its best.</p>
+                    <p>Call us at (815) 349 8600 or stop by our shop at 121 Springfield Avenue in Joliet to talk about your sticker and decal needs. We are ready to help.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

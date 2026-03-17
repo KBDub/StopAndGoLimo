@@ -56,6 +56,39 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="vehicle-magnets" parentSlug="vehicle-graphics" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="Top 5 Reasons Car Magnets Can Help Your Business"
+                image1="/images/vehicle-magnets/top5pct-article-car-magnets-truck-magnets.jpg"
+                alt1="Custom car magnets and vehicle magnets printed for businesses in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Vehicle magnets are one of the most practical and affordable ways for a small business to get its name in front of potential customers in the Chicagoland area. They attach to any metal surface on your vehicle, display your business name and contact information clearly, and come off just as easily when you want your vehicle back to its everyday look. We produce custom vehicle magnets for businesses throughout Joliet, Shorewood, Plainfield, Romeoville, and all of Will County. Here are the top five reasons car magnets can help your business grow.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Removable When You Need Your Personal Vehicle Back</h3>
+                    <p class="mb-4">One of the biggest advantages of a vehicle magnet over a permanent vinyl graphic is the ability to remove it whenever you want. Many business owners use their personal vehicles for both business and personal driving. During your personal time, you may not want to ride around with a business sign on your door. With a magnet, you simply pull it off, store it safely, and drive without any visible branding. When it is time to go back to work, wipe down the door panel and put the magnet back on. It takes less than a minute and requires no tools. This flexibility makes magnets a perfect solution for sole proprietors and small business owners who share their personal vehicle between work and everyday life.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Custom Sized to Fit Your Specific Vehicle</h3>
+                    <p class="mb-4">Our vehicle magnets come in a range of sizes because one size does not fit every situation. Pickup trucks, compact cars, full size vans, and box trucks all have different door dimensions and different amounts of flat magnetic surface available. We also advise customers not to place magnets over door molding or raised trim pieces because this can create air pockets that allow the magnet to lift at the edges during highway driving. We help each customer choose the right size for their specific vehicle and design the magnet to fit cleanly within the flat panel area for the most secure and professional fit possible.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">An Affordable Entry Point Into Vehicle Advertising</h3>
+                    <p class="mb-4">For businesses that are not yet ready to commit to a full vehicle wrap, a magnet is an excellent and affordable way to start advertising on your vehicle right away. The upfront cost is significantly lower than a wrap, there is no vehicle modification required, and you can update or replace a magnet far more easily than a wrap if your branding changes or if you get a new vehicle. Many business owners in Joliet and throughout Will County start with a set of magnets and then graduate to a partial or full wrap once they experience the results firsthand.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Built Thick to Hold in Wind and Weather</h3>
+                    <p class="mb-4">Our vehicle magnets are produced on 30 mil thick magnetic material, which is significantly heavier and more durable than the thin magnets sold at office supply stores. The extra thickness means our magnets hold securely to your vehicle door at highway speeds without sliding, lifting, or blowing off. We print in full color using UV resistant inks and apply a protective laminate coating so the print stays vivid and weather resistant through Illinois rain, snow, and sun. As long as you apply the magnet to a clean, flat metal surface and store it properly when not in use, our magnets will serve your business well for years.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Brand Multiple Vehicles Including Employee Cars</h3>
+                    <p class="mb-4">Magnets make it easy and affordable to brand more than just your own vehicle. If you have employees who use their personal vehicles for work, you can provide them each with a set of magnets so every vehicle in your operation carries your brand. This expands your reach across Joliet, Shorewood, Bolingbrook, Crest Hill, and throughout the Chicagoland area without requiring a large investment in permanent vehicle graphics. When multiple vehicles displaying your business name are visible throughout your service area, customers begin to associate your brand with reliability and local presence in their community.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we are proud to help local businesses get their name on the road without breaking the budget. We design and produce custom vehicle magnets for businesses of all sizes throughout Will County and the greater Chicagoland area.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to order your custom vehicle magnets. We are ready to help your business get moving.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

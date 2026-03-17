@@ -18,9 +18,8 @@
 
     <x-sections.top5pct-same-day-service serviceType="table-runners" displayServiceType="Table Runners" />
 
-    <x-sections.editorial-cards>
 
-        <x-ui.card-image-with-text
+        <x-sections.card-image-with-text
             image="/images/table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg"
             alt="Custom printed table cloth for a business in Joliet and Crest Hill Illinois"
             title="Custom Printed Table Cloths"
@@ -28,9 +27,9 @@
             <p class="mb-4">We print custom table cloths for businesses, event organizers, and individuals throughout Joliet and the greater Chicagoland area. A custom printed table cloth is one of the most powerful promotional tools you can bring to a trade show, community event, or popup booth. It instantly brands your table and communicates your identity to everyone who walks past. We print on 100% polyester table cloth material that is lightweight, wrinkle resistant, and machine washable. Your logo and design stay vibrant even after multiple uses and laundering.</p>
             <p class="mb-4">We print table cloths in standard sizes including 4 foot, 6 foot, and 8 foot options to fit the most common folding tables used at events and trade shows. We also print round and square table cloth styles for customers who need them. Draped table cloths and fitted stretch table cloths are both available depending on the style you prefer. Fitted table cloths with a snug fit give a clean, professional look that stays in place throughout your event.</p>
             <p>Our team will help you choose the right size and style based on your tables and your venue. We serve businesses and event organizers in Joliet, Crest Hill, Shorewood, Plainfield, and all of Will County. Call us at (815) 349 8600 to place your order or stop by our shop at 121 Springfield Avenue in Joliet today.</p>
-        </x-ui.card-image-with-text>
+        </x-sections.card-image-with-text>
 
-        <x-ui.card-image-with-text
+        <x-sections.card-image-with-text
             image="/images/table-runners/top5pct-custom-table-runner-joliet-new-lenox.jpg"
             alt="Custom printed table runner for an event in Joliet and New Lenox Illinois"
             title="Custom Table Runners"
@@ -39,9 +38,9 @@
             <p class="mb-4">We print custom table runners that add a branded, polished look to any table without covering it completely. A table runner is the perfect solution when you have a beautiful table that you want to show off while still displaying your logo and brand colors. Table runners are slimmer and lighter than full table cloths, making them easy to transport, store, and reuse at multiple events. We print table runners on the same high quality polyester fabric we use for our table cloths so you get consistent colors and sharp graphics every time.</p>
             <p class="mb-4">Custom table runners are popular among wedding planners, caterers, event venues, churches, and nonprofit organizations throughout Will County. They work beautifully on banquet tables, head tables, registration tables, and auction display tables. We print runners in any length and width so you can get exactly the fit you need for your table. Full color printing means your logo, your event name, or your design looks exactly the way you envisioned it.</p>
             <p>We are proud to serve clients in Joliet, New Lenox, Shorewood, and across the entire Chicagoland area with event quality table runners that make every table look its best. Whether you need one runner for a wedding or a set of runners for a trade show booth, we are ready to take your order. Give us a call at (815) 349 8600 to get started.</p>
-        </x-ui.card-image-with-text>
+        </x-sections.card-image-with-text>
 
-        <x-ui.card-2image-with-text
+        <x-sections.card-2image-with-text
             image1="/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg"
             alt1="Custom table runner printed in Joliet and Shorewood Illinois"
             image2="/images/table-runners/top5pct-custom-table-skirt-joliet-shorewood-plainfield.jpg"
@@ -51,9 +50,9 @@
             <p class="mb-4">We offer a full range of table covering products including table runners, table cloths, and table skirts to help you create a cohesive and professional look at any event. Table skirts attach to the front and sides of your table to create a finished, draped look that hides the legs and any storage underneath. We print table skirts in full color so your branding is visible from every angle of your event space. Table skirts are especially popular for trade shows, gala dinners, and corporate presentations where the appearance of every detail matters.</p>
             <p class="mb-4">We work closely with event organizers in Joliet, Shorewood, Plainfield, and Romeoville to create table covering sets that match each other and fit the overall design theme of the event. Whether you want your table cloths, runners, and skirts to all share the same pattern and color scheme or each have their own distinct purpose, we can make it happen. Our wide format printers produce edge to edge coverage with no fading at the seams or borders.</p>
             <p>The result is a clean, professional table setup that looks like it came from a high end event styling company. We are experienced in outfitting tables for all types of events across Will County and the Chicagoland area. Tell us what you are planning and we will help you design a table covering package that fits your event perfectly and represents your brand with pride.</p>
-        </x-ui.card-2image-with-text>
+        </x-sections.card-2image-with-text>
 
-        <x-ui.card-image-with-text
+        <x-sections.card-image-with-text
             image="/images/table-runners/top5pct-table-runner-popus-gourmet-popcorn-joliet.jpg"
             alt="Branded table runner printed for Popus Gourmet Popcorn in Joliet Illinois"
             title="Branded Event Table Products"
@@ -61,9 +60,8 @@
             <p class="mb-4">We help local businesses in Joliet and across Will County use custom table cloths and runners as a key part of their brand promotion strategy. A branded table at a community event, farmer's market, or business expo tells everyone who walks by exactly who you are. It sets the tone for every conversation you have at that event. People see your logo before they even stop to talk to you. That first impression matters and a professionally printed table cloth is one of the easiest ways to make it count.</p>
             <p class="mb-4">We have printed branded table products for companies like Popus Gourmet Popcorn and many other local businesses who participate regularly in events across the Chicagoland area. Our clients come back to us repeatedly because the quality is consistent and the turnaround is fast. Whether you are preparing for one event or planning a full season of appearances, we can supply everything you need to show up looking professional every single time.</p>
             <p>We also help businesses coordinate their table covering with their other branded event materials like banners, posters, and promotional items for a fully unified booth appearance. Everything matching and everything printed by the same shop means consistent colors and consistent quality from top to bottom. Contact Top 5 Percent today and let us help you make your brand impossible to ignore at your next event. Call us at (815) 349 8600 or visit us at 121 Springfield Avenue in Joliet, Illinois.</p>
-        </x-ui.card-image-with-text>
+        </x-sections.card-image-with-text>
 
-    </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="table-runners" parentSlug="signs" />
 

@@ -856,20 +856,20 @@
 
                 <div class="space-y-8 mb-12">
                     <div>
-                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-image-with-text</code> — image left (default)</p>
-                        <x-ui.card-image-with-text
+                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.card-image-with-text</code> — image left (default)</p>
+                        <x-sections.card-image-with-text
                             image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
                             alt="Custom vinyl shirts, caps, and hoodies"
                             title="Vinyl Heat-Press Apparel"
                         >
                             <p class="mb-4">Bold, durable vinyl printing is one of our most popular techniques. Using commercial <span class="text-azure underline underline-offset-2">heat-press equipment</span>, we apply precision-cut vinyl in any color to shirts, hoodies, caps, and more. The result is a sharp, professional finish that holds up wash after wash.</p>
                             <p>Ideal for team names, business logos, reunion shirts, and custom numbers. No minimum order and <span class="text-azure underline underline-offset-2">same-day service available</span> on most orders.</p>
-                        </x-ui.card-image-with-text>
+                        </x-sections.card-image-with-text>
                     </div>
 
                     <div>
-                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.card-image-with-text</code> — image right</p>
-                        <x-ui.card-image-with-text
+                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.card-image-with-text</code> — image right</p>
+                        <x-sections.card-image-with-text
                             image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
                             alt="Custom rhinestone shirts and caps"
                             title="Rhinestone and Bling Apparel"
@@ -877,15 +877,15 @@
                         >
                             <p class="mb-4">For events that demand maximum sparkle, our rhinestone apparel delivers. We use crystal rhinestones in custom patterns, logos, and text, hand-set and heat-bonded for a finish that catches every eye in the room.</p>
                             <p>Popular for <span class="text-azure underline underline-offset-2">birthday parties, pageants, and dance teams</span>. Available on any garment, in any color combination.</p>
-                        </x-ui.card-image-with-text>
+                        </x-sections.card-image-with-text>
                     </div>
                 </div>
 
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">Two Images with Text Card</h3>
-                <p class="text-sm text-charcoal-light mb-6">Two image divs side by side with a centered text div underneath. Each image uses a 4:3 aspect ratio. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-2image-with-text</code>.</p>
+                <p class="text-sm text-charcoal-light mb-6">Two image divs side by side with a centered text div underneath. Each image uses a 4:3 aspect ratio. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-sections.card-2image-with-text</code>.</p>
 
                 <div class="mb-12">
-                    <x-ui.card-2image-with-text
+                    <x-sections.card-2image-with-text
                         image1="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
                         alt1="Custom glitter shirts and caps"
                         image2="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
@@ -894,7 +894,7 @@
                     >
                         <p class="mb-4">Take your custom apparel to the next level with glitter and foil heat-transfer printing. Both techniques use precision heat-press equipment to bond specialty materials directly to the fabric for a finish that looks as good as it feels.</p>
                         <p><span class="text-azure underline underline-offset-2">Glitter prints</span> catch light and shimmer from every angle. <span class="text-azure underline underline-offset-2">Foil prints</span> deliver a high-shine metallic finish in gold, silver, or custom colors. Both are available on shirts, hoodies, caps, and more.</p>
-                    </x-ui.card-2image-with-text>
+                    </x-sections.card-2image-with-text>
                 </div>
 
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">Landing Page Banner Images</h3>

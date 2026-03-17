@@ -24,20 +24,20 @@
             {{-- Float-based image + wrapping text --}}
             <div class="overflow-hidden">
                 @if($imagePosition === 'right')
-                    <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-lg transition-shadow duration-700" style="margin-left: 3rem;">
+                    <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl transition-all duration-700 ease-out" style="margin-left: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block object-cover hover:scale-110 hover:brightness-105 transition-all duration-700 ease-out"
+                            class="block object-cover hover:scale-[1.15] hover:brightness-105 transition-all duration-700 ease-out"
                             style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @else
-                    <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-lg transition-shadow duration-700" style="margin-right: 3rem;">
+                    <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl transition-all duration-700 ease-out" style="margin-right: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block object-cover hover:scale-110 hover:brightness-105 transition-all duration-700 ease-out"
+                            class="block object-cover hover:scale-[1.15] hover:brightness-105 transition-all duration-700 ease-out"
                             style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>

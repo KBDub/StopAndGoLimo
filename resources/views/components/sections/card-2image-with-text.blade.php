@@ -31,7 +31,7 @@
 
             {{-- Two images side by side --}}
             <div class="flex flex-col sm:flex-row gap-8 mb-6">
-                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-lg transition-shadow duration-500">
+                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
                     <img
                         src="{{ $image1 }}"
                         alt="{{ $alt1 }}"
@@ -40,7 +40,7 @@
                     >
                 </div>
 
-                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-lg transition-shadow duration-500">
+                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
                     <img
                         src="{{ $image2 }}"
                         alt="{{ $alt2 }}"

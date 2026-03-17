@@ -6,7 +6,11 @@
     'alt2'    => '',
 ])
 
-<div class="bg-white shadow-gold-lg p-8 lg:p-12">
+<div
+    x-data
+    x-init="$el.querySelectorAll('p').forEach(p => { p.style.paddingLeft = '1.5rem'; const w = p.innerHTML.trim().split(/\s+/); if(w.length > 4){ p.innerHTML = '<strong>' + w.slice(0,4).join(' ') + '</strong> ' + w.slice(4).join(' '); } })"
+    class="bg-white shadow-gold-lg p-8 lg:p-12"
+>
 
     <div class="text-center mb-6">
         <div class="inline-block">
@@ -17,12 +21,12 @@
 
     @if($image2)
         {{-- Two-image layout: image1 floated left with intro, image2 floated right with lower --}}
-        <div class="overflow-hidden mb-4">
-            <div class="float-left mb-4 shadow-gold flex-shrink-0" style="margin-right: 3rem;">
+        <div class="[display:flow-root] mb-4">
+            <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
-                    class="block object-cover"
+                    class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                     style="width: 400px; height: 300px;"
                 >
             </div>
@@ -35,12 +39,12 @@
             {{ $mid }}
         </div>
 
-        <div class="overflow-hidden mb-4">
-            <div class="float-right ml-6 mb-4 shadow-gold flex-shrink-0">
+        <div class="[display:flow-root] mb-4">
+            <div class="float-right ml-6 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
                 <img
                     src="{{ $image2 }}"
                     alt="{{ $alt2 }}"
-                    class="block object-cover"
+                    class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                     style="width: 400px; height: 300px;"
                 >
             </div>
@@ -58,12 +62,12 @@
             {{ $intro }}
         </div>
 
-        <div class="overflow-hidden mb-4">
-            <div class="float-left mb-4 shadow-gold flex-shrink-0" style="margin-right: 3rem;">
+        <div class="[display:flow-root] mb-4">
+            <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
-                    class="block object-cover"
+                    class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                     style="width: 400px; height: 300px;"
                 >
             </div>

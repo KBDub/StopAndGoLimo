@@ -56,6 +56,36 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="yard-signs" parentSlug="signs" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="How to Effectively Use Yard Signs to Promote Your Business"
+                image1="/images/yard-signs/top5pct-article-yard-signs-buy.jpg"
+                alt1="Custom yard signs printed for businesses and campaigns in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Yard signs are one of the most direct and affordable ways to get your message in front of local customers in Joliet, Plainfield, Shorewood, Romeoville, and throughout the greater Chicagoland area. A well placed yard sign on a busy corner or in front of a property where work is being done can generate dozens of new inquiries without any ongoing cost once the sign is in the ground. We print custom yard signs for businesses, real estate agents, political campaigns, contractors, event organizers, and community groups all across Will County. Here is how to get the most out of your yard sign investment and make sure every sign you put out is working as hard as possible for you.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Placement Strategy Makes All the Difference</h3>
+                    <p class="mb-4">Where you put your sign matters just as much as what it says. The goal is to place your yard signs where as many relevant eyes as possible will see them. High traffic intersections, busy residential streets near your service area, and the properties where you are actively working are all prime locations. A contractor in Joliet who places a yard sign at every job site throughout Shorewood, Crest Hill, and Plainfield is essentially turning each project into a billboard for future work in that neighborhood. Real estate agents who plant signs at busy corners throughout their farm area create a feeling of familiarity that builds name recognition over time and keeps their name top of mind when a neighbor is ready to buy or sell.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Design Your Sign to Be Read at Speed</h3>
+                    <p class="mb-4">Yard signs need to be readable by someone driving past at 25 to 35 miles per hour. That means short messages, big text, and strong contrast between the text color and the background color. Your most important information, usually your business name or your primary message, needs to be readable at a quick glance from the road. Secondary information like your phone number or website should be there for people who slow down or circle back for a second look. We design yard signs with readability as the primary goal. Our designers know how to lay out a sign that communicates quickly and clearly without feeling cluttered or difficult to process in the short window of time a passing driver has to absorb the message.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Use Cases Across Many Industries</h3>
+                    <p class="mb-4">Yard signs serve businesses in almost every industry across the Chicagoland area. Contractors, landscapers, and home service providers use them to generate referrals in the neighborhoods where they are actively working. Real estate agents use them to advertise listings and open houses throughout Will County. Political candidates use them to build name recognition and signal community support during election season. Event organizers use them to direct attendees to the right location when signage is not otherwise available. Restaurants and retailers use them to announce grand openings, special promotions, and seasonal sales that might not get enough visibility from their permanent storefront signs alone.</p>
+                    <p class="mb-4">Whatever your industry, there is a way to put a yard sign to work for your business. We have printed yard signs for clients in virtually every category you can think of and we are always happy to share ideas for how to maximize the impact of your sign campaign in Joliet and throughout the greater Chicagoland area.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We print corrugated plastic yard signs in full color using UV resistant inks that hold up through Illinois weather without fading or peeling. We offer single sided and double sided printing, optional metal H-stakes for easy installation, and bulk pricing that rewards larger orders. Same day printing is available on select sizes so even last minute campaigns can be covered.</p>
+                    <p>We are a veteran owned business in Joliet, Illinois and we are proud to produce signs for the businesses and community members who make Will County a great place to live and work. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to place your order today.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -68,6 +68,36 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="banners" parentSlug="signs" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="Why Vinyl Banners Are Great for Your Business or Special Event"
+                image1="/images/banners/top5pct-article-vinyl-banners-pic1.jpg"
+                alt1="Custom vinyl banners printed for businesses and events in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Vinyl banners are one of the most cost effective and versatile promotional tools available to businesses and event organizers in the Chicagoland area. We have produced thousands of custom vinyl banners for businesses, schools, community organizations, and event planners throughout Joliet, Shorewood, Plainfield, Lockport, and all of Will County. Whether you are promoting a grand opening, announcing a sale, advertising an event, or building brand visibility at a trade show, a well printed banner gets the job done at a price that makes sense for almost any budget.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Affordability and Reusability</h3>
+                    <p class="mb-4">One of the biggest advantages of a vinyl banner is the price per impression it delivers. Compared to print advertising, television spots, or even social media ads, a vinyl banner is remarkably affordable given how long it lasts and how many people it reaches. A well produced banner made from quality 13oz scrim vinyl can last for several years when properly stored and cared for. Many of our customers in Joliet, Romeoville, and Bolingbrook reuse the same banner season after season for annual events and ongoing promotions. The investment you make in a great banner pays itself off many times over every time you hang it up and put it to work for your business or your event.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Versatility for Indoor and Outdoor Use</h3>
+                    <p class="mb-4">Vinyl banners are equally at home indoors and outdoors, which is what makes them such a flexible marketing tool. We print banners for retail storefronts, fences around sports fields, gymnasium walls, trade show booths, parking lot displays, and community event stages throughout Will County. Our banners come with grommets at the corners and along the edges so hanging them securely is straightforward no matter where you need them placed. We also offer pole pockets for banners that need to be mounted between two posts. Whatever your venue and whatever your mounting situation, we can produce a banner that fits exactly right and displays your message the way it was designed to be seen.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Durability and Weather Resistance</h3>
+                    <p class="mb-4">Illinois weather can be rough on outdoor displays. We use 13oz scrim vinyl for our outdoor banners because it is tough enough to handle wind, rain, sun, and cold temperatures without cracking or peeling. The inks we use are UV resistant so your colors stay bright and readable even after months of outdoor exposure. We reinforce the edges with heat welded hems so the banner holds up at the grommets under tension without tearing over time.</p>
+                    <p class="mb-4">For applications where wind is a serious concern, we also offer mesh banner material that allows air to pass through rather than catching it like a sail. We recommend mesh for fence mounted banners and large outdoor event displays in open areas where the wind can be unpredictable. Mesh banners give you the visibility you need without the risk of the banner pulling loose or putting stress on the mounting points during high wind conditions in the Chicagoland area.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we print custom vinyl banners for customers throughout the greater Chicagoland area. We serve businesses, schools, nonprofits, churches, and event organizers in Joliet, Shorewood, Crest Hill, Plainfield, Romeoville, New Lenox, and beyond. No order is too big or too small and we offer same day printing on select banner sizes for customers who need something fast.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your next banner project. We are here to help you make an impression that lasts.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

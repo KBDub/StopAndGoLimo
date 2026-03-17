@@ -54,6 +54,37 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="sidewalk-signs" parentSlug="signs" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="4 Reasons Sidewalk Signs Are Important and How They Benefit Your Business"
+                image1="/images/sidewalk-signs/top5pct-article-a-frame-sidewalk-signs.jpg"
+                alt1="A-frame sidewalk signs and sandwich boards for businesses in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">A sidewalk sign might seem like a small thing, but for a business on a busy street in Joliet, Shorewood, Crest Hill, or anywhere in the greater Chicagoland area, it can make a significant difference in how many people walk through your door. Sidewalk signs, also called A-frame signs or sandwich boards, give businesses a flexible and affordable way to communicate directly with the foot traffic and vehicle traffic passing by their location every single day. We produce and supply custom sidewalk signs for businesses throughout Will County and we have seen what a difference the right placement and the right message can make for local shops and service providers who want to grow their walk-in customer base.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Capture Foot Traffic Right at Street Level</h3>
+                    <p class="mb-4">Unlike a sign mounted high on a wall or a banner strung above your entrance, an A-frame sign sits right at eye level where people are already looking as they walk down the sidewalk. It meets your potential customer exactly where they are without requiring them to look up or notice something above their natural line of sight. A well written message on a sidewalk sign can stop a passing pedestrian in their tracks and turn a casual browser into a paying customer in a matter of seconds. In neighborhoods and downtown commercial areas in Joliet, Crest Hill, and Lockport where foot traffic is a major driver of business, a sidewalk sign is not optional. It is essential to capturing the attention of people who are already right outside your door.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Cost Effective and Easy to Move</h3>
+                    <p class="mb-4">Sidewalk signs are one of the most affordable signage investments a small business can make. The initial cost is low, there is no installation required, and you can move the sign inside at the end of the day and bring it back out in the morning without any tools or effort. There are no ongoing fees, no subscription costs, and no maintenance to worry about beyond keeping it clean and replacing the printed insert when your message changes. We offer printed inserts for standard A-frame sign sizes so updating your message is as simple as sliding in a new panel. The ability to change your message frequently gives you marketing flexibility that permanent mounted signs simply cannot provide.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Promote Daily Specials and Changing Messages</h3>
+                    <p class="mb-4">One of the biggest advantages of a sidewalk sign is how easy it is to change the message whenever you need to. Restaurants in Joliet can promote daily specials and happy hour deals. Salons can advertise open appointment slots throughout the day. Retail stores can highlight a new arrival or a sale that just started. The ability to speak in real time to the people walking past your door is a marketing opportunity that most businesses do not fully take advantage of. We produce high quality printed inserts in a range of sizes and materials so your daily message always looks professional and is easy to read from a distance even for someone walking by at a normal pace.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Stand Out on a Busy Commercial Block</h3>
+                    <p class="mb-4">On a block where multiple businesses are competing for the same foot traffic, your sidewalk sign gives you one more way to differentiate yourself and grab the attention of people who might otherwise walk right past. A bold color scheme that matches your brand, a clever message that makes someone smile, or a special offer they were not expecting can all be the deciding factor that makes someone choose your business over the one next door. We have helped businesses in Joliet, Romeoville, and Plainfield design sidewalk signs that become a recognizable part of their daily street presence. Regular passersby start to look forward to seeing what the message says each day, and that kind of habitual attention builds familiarity and trust over time.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned business in Joliet, Illinois and we are proud to support the businesses that make our local communities thrive. Whether you need a complete A-frame sign with your first set of inserts or just replacement panels for a frame you already own, we can help you get exactly what you need. We serve businesses in Joliet, Crest Hill, Shorewood, Lockport, Plainfield, and throughout the greater Chicagoland area.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your sidewalk sign needs. We are here to help your storefront work harder for your business every single day.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

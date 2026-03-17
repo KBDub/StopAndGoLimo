@@ -69,6 +69,40 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="spirit-wear" parentSlug="custom-apparel" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="How Spirit Wear Fundraising Can Help Your School"
+                image1="/images/spirit-wear/top5pct-article-spirit-wear-pic1.jpg"
+                alt1="Custom spirit wear fundraising shirts for schools in Joliet and Will County"
+                image2="/images/spirit-wear/top5pct-article-fan-wear-pic2.jpg"
+                alt2="School fan wear and spirit shirts printed in the Chicagoland area"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Spirit wear is one of the best fundraising tools available to schools, booster clubs, and parent organizations across the Chicagoland area. We have helped schools in Joliet, Plainfield, Shorewood, and throughout Will County raise money, build pride, and strengthen their communities through custom printed apparel. From hoodies and t-shirts to hats and bags, the right spirit wear program can do a lot more than just cover costs. Here is how a well run spirit wear fundraiser can make a real difference for your school and for everyone who supports it.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Show School Pride Every Day</h3>
+                    <p class="mb-4">Wearing your school colors and your school name is a simple but powerful act. It tells the world that you belong to something and that you are proud of it. When students, parents, and teachers all wear matching spirit wear to sporting events, pep rallies, and school activities, it creates a sense of unity that lifts the entire school community. We design school spirit wear that students actually want to wear, not just something that ends up at the back of the closet. Our designs are fresh, modern, and built around the identity that makes your school unique. When students are excited to wear their school gear, the whole school benefits from that energy.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Involve Everyone in the Fundraiser</h3>
+                    <p class="mb-4">A spirit wear fundraiser works because it gives everyone in the school community a way to participate. Students want the gear. Parents want to support the school. Teachers and staff want to show they are part of the team. The more people who buy, the more money your program raises and the more visible your school becomes in the community. We can help you set up a simple ordering process so the fundraiser runs smoothly and efficiently from start to finish. We have experience working with booster clubs, PTOs, and athletic departments at schools all across Will County to build spirit wear programs that actually deliver results and exceed fundraising goals year after year.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Raise School Awareness in the Community</h3>
+                    <p class="mb-4">Custom spirit wear with your school name and logo does more than just look good on game night. It puts your school brand in front of the broader community every time someone wears it out in public. A student wearing their Joliet West hoodie at the grocery store or a parent wearing a Plainfield South spirit shirt at a local event is spreading awareness for the school without even thinking about it. That kind of organic community level visibility is something you simply cannot buy through traditional advertising. It builds familiarity and goodwill toward the school in a way that feels natural and genuine.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Use Spirit Wear as Incentives and Rewards</h3>
+                    <p class="mb-4">Schools can also use spirit wear as a reward and incentive tool throughout the year. Perfect attendance awards, academic achievement recognition, athletic milestones, and club participation can all be celebrated with a custom printed item that the student takes home with pride. We print individual items with no minimums so you can order exactly what you need for your recognition program without being locked into large quantities. A personalized reward that a student actually wants to wear carries far more meaning than a certificate on a shelf, and it keeps your school name visible in the community at the same time.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Custom Apparel for Field Trips</h3>
+                    <p class="mb-4">Field trips are another great opportunity to use custom spirit wear. When your entire group wears the same custom shirt, teachers and chaperones can keep track of every student in a crowded museum, zoo, or science center. It removes the guesswork of trying to spot your students in a sea of strangers. We have produced field trip shirts for schools across Will County and we know how to turn them around quickly so you have them ready well before departure day.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your spirit wear needs. We are a veteran owned business and we are proud to support the schools that shape the future of our community.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

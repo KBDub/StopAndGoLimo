@@ -66,6 +66,36 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="table-runners" parentSlug="signs" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="The Benefits of Custom Tablecloths for Your Business"
+                image1="/images/table-runners/top5pct-article-custom-table-cloths-joliet.jpg"
+                alt1="Custom printed tablecloths and table runners for businesses in Joliet and Will County Illinois"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">A custom tablecloth is one of the most underrated branding tools available to small businesses and organizations in the Chicagoland area. When you set up at a trade show, a community event, a craft fair, or an outdoor market in Joliet, Shorewood, Plainfield, or anywhere in Will County, your table is often the first thing people see before they see you. A plain folding table with a generic drape blends into the background. A fully branded custom tablecloth with your logo, your colors, and your name printed in full color commands attention from across the room. We have helped businesses of every kind in the greater Chicagoland area make a stronger impression at events with custom printed table covers and table runners.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Make a Professional First Impression at Every Event</h3>
+                    <p class="mb-4">The first impression your booth makes at a trade show or local event can determine whether a potential customer stops to talk to you or keeps walking. A branded tablecloth signals immediately that you are a professional operation that takes its image seriously. Visitors at events in Joliet and throughout Will County are often browsing dozens of vendors in quick succession. Your booth needs to stand out from the crowd and communicate who you are in the first few seconds. A custom tablecloth does exactly that without you having to say a word. It starts the conversation before anyone even looks up from the display.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Keep Your Branding Consistent Across Every Event</h3>
+                    <p class="mb-4">Every marketing touchpoint your business has should look like it belongs to the same brand. Your website, your shirts, your business cards, and your event display should all use the same colors, the same fonts, and the same logo treatment. A custom tablecloth that matches your brand identity ties all of these elements together at the physical level. When everything coordinates and everything looks intentional, customers trust that your product or service will be delivered with the same level of attention to detail. We work with businesses in Joliet, Romeoville, Bolingbrook, Lockport, and throughout the Chicagoland area to create tablecloths that fit seamlessly into their existing brand identity and make a cohesive impression at every event they attend.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Reusability and Quality That Lasts</h3>
+                    <p class="mb-4">A high quality custom tablecloth is a one time investment that pays dividends at every event you attend for years to come. We print on durable polyester fabric that holds its color and shape through many uses and many wash cycles. Unlike disposable paper covers or cheap generic drapes, our custom tablecloths look just as sharp at your tenth event as they did at your first. We offer fitted styles that hug the table tightly for a clean tailored look, as well as throw styles that drape naturally over the table with fabric that reaches the floor on all sides.</p>
+                    <p class="mb-4">Both options are available in standard folding table sizes so you always have a perfect fit no matter what size table the event provides. We also produce table runners for businesses that want to add a branded accent across the top of the table without covering the full surface. Whether you need a full cover or just a runner, we can produce the right piece for your display.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned business in Joliet, Illinois and we are proud to help local businesses make a stronger impression at events throughout Will County and the greater Chicagoland area. From trade shows at Joliet venues to craft fairs in Shorewood and Plainfield, we want your table to be the one people remember.</p>
+                    <p>Call us at (815) 349 8600 or stop by our shop at 121 Springfield Avenue in Joliet to order your custom tablecloth. We are here to help your business look its absolute best at every event you attend.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

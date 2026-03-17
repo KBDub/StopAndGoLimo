@@ -79,6 +79,41 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="reunion-shirts" parentSlug="custom-apparel" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="How Reunion T-Shirts Make Your Reunion Special"
+                image1="/images/reunion-shirts/toptpct-article-family-reunion-pic1.jpg"
+                alt1="Custom family reunion shirts printed in Joliet and Will County Illinois"
+                image2="/images/reunion-shirts/toptpct-article-family-reunion-pic2.jpg"
+                alt2="Group reunion shirts for families and classes in the Chicagoland area"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Reunion shirts are one of the best ways to bring a group together and make a special occasion feel truly unforgettable. Whether you are planning a family reunion in a Joliet park, a class reunion at a local venue, or a group gathering for any special occasion in the Chicagoland area, matching custom shirts help everyone feel like they belong. We have helped hundreds of reunion groups across Will County create shirts that made their event feel memorable and meaningful. Here is how the right shirt can take your reunion from good to something your group talks about for years.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Stand Out and Stay Safe as a Group</h3>
+                    <p class="mb-4">Custom reunion shirts make it easy to spot your group in a crowd. If you are hosting your reunion at a park, a water park, or a community center in Joliet, Shorewood, or Plainfield, a matching shirt means no one gets separated and everyone stays connected throughout the day. Group leaders and organizers are easy to identify at a glance. Parents know exactly where their kids are and kids know who to look for when they need help. Beyond safety, matching shirts create an instant sense of excitement. When everyone arrives wearing the same custom design, you can feel the energy in the room go up right away. That shared excitement sets a positive tone for the entire event before a single game is played or a single meal is served.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Create Keepsakes That Last for Years</h3>
+                    <p class="mb-4">A reunion shirt is not just clothing. It is a keepsake that the people at your event will hold on to long after the reunion is over. We have heard from customers in Joliet and across Will County who still wear their reunion shirts years later because of the memories attached to them. The shirt becomes a reminder of the people who were there, the laughs you shared, and the stories you told. We use high quality printing methods and quality blank shirts so your shirt holds up through many washes and still looks great the next time you pull it out of the drawer. A reunion shirt that falls apart after a few washes does not carry those memories the way you want it to.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Embrace Family or Class Spirit</h3>
+                    <p class="mb-4">There is something powerful about putting on a shirt that shows you belong to something bigger than yourself. A well designed family reunion shirt can capture your family name, your family colors, your reunion theme, and even a family motto or quote. A class reunion shirt can feature your graduation year, your school colors, and a design that takes everyone back to the moment they walked across that stage. We work with reunion organizers across the Chicagoland area to design shirts that feel personal and meaningful. When Grandma sees the whole family lined up in matching shirts for the group photo, that is a moment that gets framed and hung on the wall.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Showcase Your Creativity with the Design</h3>
+                    <p class="mb-4">Your reunion shirt does not have to be basic. We offer full color digital printing, screen printing, vinyl lettering, and even specialty materials like glitter and foil so your design can be as creative as your family or your class. Tell us your theme and we will build a design that captures it. Tropical vacation theme? A decade themed class reunion? A family crest and heritage design? We have done them all and we are always excited to tackle something new for customers in Joliet, Romeoville, Bolingbrook, and across Will County. Great design is what turns a shirt into a truly memorable keepsake.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Tips for Planning Your Reunion Order</h3>
+                    <p class="mb-4">Start planning your shirts at least three to four months before your reunion date. This gives you enough time to gather sizes, finalize your design, and place your order without any last minute stress. We recommend collecting a small deposit from each attendee when they commit to coming so you cover your shirt costs upfront. We can help you put together a simple order form so the size collection process is easy for whoever is organizing the event. Reach out to us early and we will walk you through the entire process from first conversation to finished shirts, ready to pick up at our shop in Joliet.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned business in Joliet, Illinois and we love helping families and groups create something they will treasure for years. Our team knows the Chicagoland area inside and out. We have worked with groups from Joliet, Crest Hill, Lockport, Plainfield, New Lenox, and every corner of Will County. No matter how big or how small your group is, we are here to make your reunion special.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet and let us help you design the perfect reunion shirt. We are ready to get started whenever you are.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

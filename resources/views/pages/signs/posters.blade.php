@@ -66,6 +66,36 @@
     </x-sections.editorial-cards>
 
     <x-sections.product-grid collectionSlug="posters" parentSlug="signs" />
+
+    <section class="py-10 bg-linen">
+        <div class="max-w-7xl mx-auto px-6">
+            <x-ui.card-detailed-info
+                heading="How to Use Posters to Advertise and Promote Your Business or Event"
+                image1="/images/posters/top5pct-article-posters-joliet-pic1.jpg"
+                alt1="Custom posters printed for businesses and events in Joliet Illinois and Will County"
+            >
+                <x-slot name="intro">
+                    <p class="mb-4">Posters are one of the oldest and most reliable forms of advertising. They work because they are simple, affordable, and highly visible when placed in the right locations. We print custom posters for businesses, event organizers, schools, and community groups throughout Joliet, Shorewood, Plainfield, and all of Will County. A great poster in the right spot can drive real traffic to your business or your event and keep your message in front of potential customers all day long without any additional effort on your part. Here is how to use posters effectively to get your message out to the people in your community who are most likely to respond.</p>
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Place Posters Where Your Customers Already Spend Time</h3>
+                    <p class="mb-4">The most important thing about a poster is where you put it. A poster in a high traffic location does all the work for you. Think about the places where your target customers already spend their time. Coffee shops, grocery store bulletin boards, community centers, laundromats, libraries, and local restaurants are all places where people stop and look at what is posted on the wall. In Joliet and the surrounding communities of Shorewood, Plainfield, and Crest Hill, there are dozens of high traffic locations where a single well placed poster can reach hundreds of people every week. We can help you think through the best placement strategy for your specific audience and your specific message.</p>
+                </x-slot>
+                <x-slot name="mid">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Design Your Poster for Instant Readability</h3>
+                    <p class="mb-4">A poster that cannot be read at a glance is a missed opportunity. We design our posters with readability as the top priority. That means bold headlines, strong contrast between text and background, and a clear hierarchy of information. The most important detail, whether that is your event name, your phone number, or your offer, should be the first thing the eye lands on. Supporting details like dates, locations, and descriptions come secondary. We have produced posters for concerts, school events, business grand openings, restaurant specials, and political campaigns throughout the Chicagoland area and we know what makes a poster stop people in their tracks and hold their attention long enough to read the message.</p>
+                </x-slot>
+                <x-slot name="lower">
+                    <h3 class="text-h3 font-bold text-charcoal mb-2">Promote Events, Products, and Time Sensitive Specials</h3>
+                    <p class="mb-4">Posters are especially effective for time sensitive promotions where you need to create awareness quickly and efficiently. A limited time sale, an upcoming community event, a new product launch, or a seasonal special all benefit from the visibility that a well distributed poster campaign provides. We can print posters in a range of standard sizes so you have options for different placement locations. Smaller sizes work well for countertop displays and cork boards. Larger sizes are great for window placements and wall displays.</p>
+                    <p class="mb-4">We print on heavy weight paper stock with vibrant full color inks so your poster looks professional and gets noticed in any setting from a community bulletin board in Lockport to a busy storefront window in downtown Joliet. We serve businesses and organizations across all of Will County and the greater Chicagoland area and we are always happy to help you figure out the best approach for your specific promotion or event.</p>
+                </x-slot>
+                <x-slot name="footer">
+                    <p class="mb-4">We are a veteran owned print shop in Joliet and we produce custom posters for customers throughout Will County and the greater Chicagoland area. We offer fast turnaround times and same day printing on select sizes for customers with urgent deadlines. Whether you need 10 posters for a local event or 500 for a large scale promotion, we are ready to handle your order with the same level of care and attention we give to every project.</p>
+                    <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your poster project. We are proud to help local businesses and organizations get their message out to the community.</p>
+                </x-slot>
+            </x-ui.card-detailed-info>
+        </div>
+    </section>
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

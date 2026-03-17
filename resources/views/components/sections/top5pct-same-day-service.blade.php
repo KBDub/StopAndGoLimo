@@ -8,7 +8,7 @@
         <div class="grid lg:grid-cols-2 gap-8">
 
             {{-- Left card: brand differentiators --}}
-            <div class="border-t-4 border-sunburst bg-white shadow-md p-8">
+            <div class="border-t-4 border-sunburst bg-white shadow-md p-8 overflow-hidden">
                 <h2 class="text-h2 font-bold text-charcoal mb-3">The Top 5 Percent Difference</h2>
                 <p class="text-body-sm text-charcoal-light mb-6">
                     Veteran owned, in-house manufacturing, experienced and professional.
@@ -31,8 +31,12 @@
                             'Bulk Pricing Available on All Products',
                         ];
                     @endphp
-                    @foreach($benefits as $i => $benefit)
-                        <div class="flex items-center gap-2 whitespace-nowrap {{ $i % 2 === 1 ? 'ml-10' : 'ml-0' }}">
+                    @foreach($benefits as $benefit)
+                        @if($loop->even)
+                            <div class="flex items-center gap-2 whitespace-nowrap ml-10">
+                        @else
+                            <div class="flex items-center gap-2 whitespace-nowrap ml-0">
+                        @endif
                             <div class="w-3 h-3 bg-sunburst shrink-0 rotate-45"></div>
                             <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
                         </div>
@@ -41,7 +45,7 @@
             </div>
 
             {{-- Right card: services overview --}}
-            <div class="border-t-4 border-azure bg-linen-light shadow-md p-8">
+            <div class="border-t-4 border-azure bg-linen-light shadow-md p-8 overflow-hidden">
                 <h2 class="text-h2 font-bold text-charcoal mb-5">
                     <span class="text-sunburst">Top 5 Percent</span> Will Handle Your {{ $displayServiceType }} Needs, Same Day
                 </h2>
@@ -51,15 +55,19 @@
                 <div class="flex flex-col gap-y-2 mb-6">
                     @php
                         $services = [
-                            ['label' => 'Custom Shirts', 'detail' => 'DTF, screen print, embroidery, vinyl — no minimums'],
+                            ['label' => 'Custom Shirts', 'detail' => 'DTF, screen print, embroidery, vinyl, no minimums'],
                             ['label' => 'Turnaround', 'detail' => 'Same day available, typical 1-3 business days'],
-                            ['label' => 'Signs & Banners', 'detail' => 'Business signage, yard signs, banners, trade show displays'],
-                            ['label' => 'Vehicle Graphics', 'detail' => 'Wraps, lettering, magnets, DOT compliance decals'],
-                            ['label' => 'Guarantee', 'detail' => 'Quality workmanship backed by our satisfaction promise'],
+                            ['label' => 'Signs and Banners', 'detail' => 'Business signage, yard signs, banners'],
+                            ['label' => 'Vehicle Graphics', 'detail' => 'Wraps, lettering, magnets, DOT decals'],
+                            ['label' => 'Guarantee', 'detail' => 'Quality workmanship, satisfaction guaranteed'],
                         ];
                     @endphp
-                    @foreach($services as $i => $service)
-                        <div class="flex items-center gap-2 whitespace-nowrap {{ $i % 2 === 1 ? 'ml-10' : 'ml-0' }}">
+                    @foreach($services as $service)
+                        @if($loop->even)
+                            <div class="flex items-center gap-2 whitespace-nowrap ml-10">
+                        @else
+                            <div class="flex items-center gap-2 whitespace-nowrap ml-0">
+                        @endif
                             <div class="w-3 h-3 bg-sunburst shrink-0 rotate-45"></div>
                             <p class="text-body-sm text-charcoal">
                                 <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}

@@ -45,7 +45,7 @@
 
                 <div
                     x-data
-                    x-init="$el.querySelectorAll('p').forEach(p => { p.classList.add('pl-6'); const w = p.innerHTML.trim().split(/\s+/); if(w.length > 4){ p.innerHTML = '<strong>' + w.slice(0,4).join(' ') + '</strong> ' + w.slice(4).join(' '); } })"
+                    x-init="$el.querySelectorAll('p').forEach(p => { p.style.paddingLeft = '1.5rem'; const w = p.innerHTML.trim().split(/\s+/); if(w.length > 4){ p.innerHTML = '<strong>' + w.slice(0,4).join(' ') + '</strong> ' + w.slice(4).join(' '); } })"
                     class="text-charcoal-light leading-relaxed"
                 >
                     {{ $slot }}

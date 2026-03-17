@@ -6,7 +6,7 @@
     'href' => null,
 ])
 
-<div {{ $attributes->merge(['class' => 'relative shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1']) }}>
+<div {{ $attributes->merge(['class' => 'relative shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1 h-full']) }}>
     <div class="absolute inset-0 bg-gold-gradient-dark"
          style="-webkit-mask:
             radial-gradient(circle at 100% 0%, black 0%, transparent 70%) top right / 50% 50% no-repeat,
@@ -15,7 +15,7 @@
             radial-gradient(circle at 100% 0%, black 0%, transparent 70%) top right / 50% 50% no-repeat,
             radial-gradient(circle at 0% 100%, black 0%, transparent 70%) bottom left / 50% 50% no-repeat;">
     </div>
-    <div class="relative bg-white m-[3px] p-6">
+    <div class="relative bg-white m-[3px] p-6 flex flex-col h-full">
         @if($image)
             @if($href)
                 <a href="{{ $href }}" class="block overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out mb-4">
@@ -38,14 +38,16 @@
             @endif
         </h3>
 
-        @if($slot->isNotEmpty())
-            {{ $slot }}
-        @else
-            <p class="text-sm text-charcoal-light mb-3">{{ $description }}</p>
-        @endif
+        <div class="flex-1">
+            @if($slot->isNotEmpty())
+                {{ $slot }}
+            @else
+                <p class="text-sm text-charcoal-light mb-3">{{ $description }}</p>
+            @endif
+        </div>
 
         @if($price)
-            <p class="font-bold text-charcoal">{{ $price }}</p>
+            <p class="font-bold text-charcoal mt-2">{{ $price }}</p>
         @endif
     </div>
 </div>

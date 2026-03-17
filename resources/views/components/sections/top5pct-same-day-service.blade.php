@@ -17,30 +17,30 @@
                     Here is why businesses and residents across Chicagoland choose us:
                 </p>
 
-                <div class="flex flex-col gap-y-3">
+                <div class="flex flex-col gap-y-1.5">
                     @php
                         $benefits = [
-                            'We carry a five star rating on Google',
-                            'We offer same day service on most orders',
-                            'Our pricing is always transparent and upfront',
-                            'We have no minimums on custom shirts',
-                            'Our in-house design team handles your artwork',
-                            'We use top quality materials and premium inks',
-                            'We produce every order in-house from start to finish',
-                            'Our team brings 40+ years of combined experience',
-                            'We welcome rush orders with fast turnaround',
+                            'We carry a <strong>five star rating</strong> on Google',
+                            'We offer <strong>same day service</strong> on most orders',
+                            'Our pricing is <strong>always transparent</strong> and upfront',
+                            'We have <strong>no minimums</strong> on custom shirts',
+                            'Our <strong>in-house design team</strong> handles your artwork',
+                            'We use <strong>top quality materials</strong> and premium inks',
+                            'We produce every order <strong>in-house</strong> from start to finish',
+                            'Our team brings <strong>40+ years</strong> of combined experience',
+                            'We welcome <strong>rush orders</strong> with fast turnaround',
                         ];
                     @endphp
                     @foreach($benefits as $benefit)
                         @if($loop->even)
                             <div class="flex items-center justify-end gap-2 whitespace-nowrap">
-                                <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
+                                <span class="text-body-sm text-charcoal">{!! $benefit !!}</span>
                                 <div class="w-1 h-5 bg-sunburst shrink-0"></div>
                             </div>
                         @else
                             <div class="flex items-center gap-2 whitespace-nowrap">
                                 <div class="w-1 h-5 bg-sunburst shrink-0"></div>
-                                <span class="text-body-sm text-charcoal font-medium">{{ $benefit }}</span>
+                                <span class="text-body-sm text-charcoal">{!! $benefit !!}</span>
                             </div>
                         @endif
                     @endforeach
@@ -55,7 +55,7 @@
 
                 <h4 class="text-h4 font-semibold text-charcoal mb-3">Overview of Services:</h4>
 
-                <div class="flex flex-col gap-y-3 mb-6">
+                <div class="flex flex-col gap-y-1.5 mb-6">
                     @php
                         $services = [
                             ['label' => 'Custom Shirts', 'detail' => 'DTF, screen print, embroidery, vinyl, no minimums'],

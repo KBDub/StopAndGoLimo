@@ -28,9 +28,7 @@
                             'We use top quality materials and premium inks',
                             'We produce every order in-house from start to finish',
                             'Our team brings 40+ years of combined experience',
-                            'We send a free proof before any production',
                             'We welcome rush orders with fast turnaround',
-                            'Our bulk pricing is available on all products',
                         ];
                     @endphp
                     @foreach($benefits as $benefit)

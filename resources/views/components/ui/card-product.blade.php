@@ -16,18 +16,22 @@
             radial-gradient(circle at 0% 100%, black 0%, transparent 70%) bottom left / 50% 50% no-repeat;">
     </div>
     <div class="relative bg-white m-[3px] p-6 flex flex-col h-full">
-        @if($image)
-            @if($href)
-                <a href="{{ $href }}" class="block overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out mb-4">
+        @if($href)
+            <a href="{{ $href }}" class="block overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out mb-4">
+                @if($image)
                     <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-56 object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out">
-                </a>
-            @else
+                @else
+                    <div class="w-full h-56 bg-linen"></div>
+                @endif
+            </a>
+        @else
+            @if($image)
                 <div class="overflow-hidden shadow-gold mb-4">
                     <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-56 object-cover">
                 </div>
+            @else
+                <div class="w-full h-56 bg-linen mb-4"></div>
             @endif
-        @else
-            <div class="w-full h-56 bg-linen mb-4"></div>
         @endif
 
         <h3 class="font-semibold mb-2 text-center">

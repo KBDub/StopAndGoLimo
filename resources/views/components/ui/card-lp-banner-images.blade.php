@@ -6,15 +6,29 @@
     $count = count($banners);
 @endphp
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div
+    class="grid grid-cols-1 sm:grid-cols-2 gap-6"
+    x-data="{ visible: false }"
+    x-init="
+        const obs = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) { visible = true; obs.disconnect(); }
+        }, { threshold: 0.1 });
+        obs.observe($el);
+    "
+>
     @foreach($banners as $i => $banner)
         @php
             $isLastOdd = ($count % 2 !== 0) && ($i === $count - 1);
+            $delay     = $i * 80;
         @endphp
 
         @if($isLastOdd)
             <div class="sm:col-span-2 flex justify-center">
-                <div class="lp-banner-wrap w-full sm:w-1/2">
+                <div
+                    class="lp-banner-wrap w-full sm:w-1/2 transition-all duration-700 ease-out"
+                    :class="visible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.97]'"
+                    style="transition-delay: {{ $delay }}ms"
+                >
                     <a href="{{ $banner['href'] }}" class="group relative block overflow-hidden">
                         <div class="relative w-full aspect-[16/7] overflow-hidden bg-linen">
                             <img
@@ -33,7 +47,11 @@
                 </div>
             </div>
         @else
-            <div class="lp-banner-wrap">
+            <div
+                class="lp-banner-wrap transition-all duration-700 ease-out"
+                :class="visible ? 'opacity-100 scale-100' : 'opacity-0 scale-[0.97]'"
+                style="transition-delay: {{ $delay }}ms"
+            >
                 <a href="{{ $banner['href'] }}" class="group relative block overflow-hidden">
                     <div class="relative w-full aspect-[16/7] overflow-hidden bg-linen">
                         <img

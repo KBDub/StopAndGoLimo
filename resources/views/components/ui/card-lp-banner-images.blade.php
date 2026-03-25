@@ -6,7 +6,7 @@
     $count = count($banners);
 @endphp
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
     @foreach($banners as $i => $banner)
         @php
             $isLastOdd = ($count % 2 !== 0) && ($i === $count - 1);
@@ -15,7 +15,7 @@
         @if($isLastOdd)
             <div class="sm:col-span-2 flex justify-center">
                 <div
-                    class="w-full sm:w-1/2 transition-all duration-1000 ease-out"
+                    class="w-full sm:w-1/2 transition-all duration-700 ease-out"
                     x-data="{ visible: false }"
                     x-init="
                         const observer = new IntersectionObserver(function(entries) {
@@ -47,7 +47,7 @@
             </div>
         @else
             <div
-                class="transition-all duration-1000 ease-out"
+                class="transition-all duration-700 ease-out"
                 x-data="{ visible: false }"
                 x-init="
                     const observer = new IntersectionObserver(function(entries) {

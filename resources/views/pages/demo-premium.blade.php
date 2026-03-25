@@ -40,6 +40,7 @@
 
         @include('partials.demo-premium.section-lp-banner-images')
         @include('partials.demo-premium.section-banner-slide-in')
+        @include('partials.demo-premium.section-carousel-rotating-images')
         @include('partials.demo-premium.section-full-bleed-banners')
         @include('partials.demo-premium.section-hero-full-bleed')
         @include('partials.demo-premium.section-product-cards')

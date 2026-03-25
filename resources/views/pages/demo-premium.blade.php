@@ -38,6 +38,11 @@
             </div>
         </section>
 
+        <div class="bg-linen py-48 flex flex-col items-center justify-center gap-3">
+            <p class="text-charcoal-light text-sm tracking-widest">Scroll down to preview each component</p>
+            <svg class="w-6 h-6 text-sunburst animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </div>
+
         @include('partials.demo-premium.section-lp-banner-images')
         @include('partials.demo-premium.section-banner-slide-in')
         @include('partials.demo-premium.section-carousel-rotating-images')

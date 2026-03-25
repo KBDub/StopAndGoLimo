@@ -591,6 +591,41 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="mt-10 bg-linen p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-charcoal mb-1">Components</h3>
+                    <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.button-* &mdash; resources/views/components/ui/button-*.blade.php</p>
+
+                    <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
+                    <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>{{-- As a link --}}
+&lt;x-ui.button-gold-gradient href="/custom-apparel"&gt;Shop custom apparel&lt;/x-ui.button-gold-gradient&gt;
+
+{{-- As a button (no href) --}}
+&lt;x-ui.button-gold-gradient&gt;Add to cart&lt;/x-ui.button-gold-gradient&gt;
+
+{{-- Size override via class --}}
+&lt;x-ui.button-gold-gradient href="#" class="!px-4 !py-2 !text-xs"&gt;Small&lt;/x-ui.button-gold-gradient&gt;
+
+{{-- Available button components --}}
+{{-- Primary:   button-gold-gradient, button-gold-charcoal, button-blue-white, button-charcoal-gold --}}
+{{-- Secondary: button-outline-charcoal, button-outline-gold, button-white-charcoal, button-gold-white --}}
+{{-- Inline:    button-text-link --}}</code></pre>
+
+                    <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Renders as <code>&lt;a&gt;</code> with <code>href</code>, <code>&lt;button&gt;</code> without</li>
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> 9 variants — primary, secondary, text link</li>
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Size overrideable via <code>!px-*</code> / <code>!py-*</code> classes</li>
+                        </ul>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> No <code>rounded-*</code> — square branding</li>
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> All support slotted text content</li>
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Alpine.js attributes pass through</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -798,6 +833,19 @@
                     </div>
                 </div>
 
+                <div class="mt-6 mb-10 bg-linen p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-charcoal mb-1">Components: standard cards</h3>
+                    <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.card-product, x-ui.card-service, x-ui.card-testimonial, x-ui.card-info-dark, x-ui.card-info-light, x-ui.card-feature, x-ui.card-showcase &mdash; resources/views/components/ui/card-*.blade.php</p>
+                    <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto"><code>&lt;x-ui.card-product title="Custom T-Shirt" description="Vinyl graphics." price="$24.99" /&gt;
+&lt;x-ui.card-service title="Custom Signage" description="Professional signage solutions." /&gt;
+&lt;x-ui.card-testimonial quote="Outstanding quality!" name="John D." label="Verified Customer" /&gt;
+&lt;x-ui.card-info-dark title="Free Shipping" description="On orders over $50." linkText="Learn more" linkHref="#" /&gt;
+&lt;x-ui.card-info-light title="Shipping Info" description="Standard delivery in 5-7 days." linkText="View policy" linkHref="#" /&gt;
+&lt;x-ui.card-feature step="01" title="Upload Your Design" description="Start by uploading your artwork." /&gt;
+&lt;x-ui.card-showcase title="Design Studio" description="Create designs in minutes." /&gt;
+{{-- No aspect ratio — all cards are height-auto, width determined by grid column --}}</code></pre>
+                </div>
+
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">Info Card Variants</h3>
                 <div class="grid md:grid-cols-2 gap-6 mb-12">
                     <div>
@@ -881,6 +929,21 @@
                     </div>
                 </div>
 
+                <div class="mt-2 mb-10 bg-white p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-charcoal mb-1">Component: image with text</h3>
+                    <p class="text-sm text-charcoal-light font-mono mb-4">x-sections.card-image-with-text &mdash; resources/views/components/sections/card-image-with-text.blade.php</p>
+                    <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto"><code>&lt;x-sections.card-image-with-text
+    image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+    alt="Custom vinyl shirts, caps, and hoodies"
+    title="Vinyl Heat-Press Apparel"
+    imagePosition="left"
+&gt;
+    &lt;p&gt;Your editorial body text goes here.&lt;/p&gt;
+&lt;/x-sections.card-image-with-text&gt;
+{{-- Image display: 600&times;450px (4:3) — project standard size --}}
+{{-- imagePosition: "left" (default) | "right" --}}</code></pre>
+                </div>
+
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">Two Images with Text Card</h3>
                 <p class="text-sm text-charcoal-light mb-6">Two image divs side by side with a centered text div underneath. Each image uses a 4:3 aspect ratio. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-sections.card-2image-with-text</code>.</p>
 
@@ -897,6 +960,22 @@
                     </x-sections.card-2image-with-text>
                 </div>
 
+                <div class="mt-2 mb-10 bg-linen p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-charcoal mb-1">Component: two images with text</h3>
+                    <p class="text-sm text-charcoal-light font-mono mb-4">x-sections.card-2image-with-text &mdash; resources/views/components/sections/card-2image-with-text.blade.php</p>
+                    <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto"><code>&lt;x-sections.card-2image-with-text
+    image1="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
+    alt1="Custom glitter shirts and caps"
+    image2="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
+    alt2="Custom foil shirts, hoodies, and caps"
+    title="Glitter and Foil Apparel"
+&gt;
+    &lt;p&gt;Your editorial body text goes here.&lt;/p&gt;
+&lt;/x-sections.card-2image-with-text&gt;
+{{-- Each image: 600&times;450px (4:3) — project standard size, side by side --}}
+{{-- Text block centered below both images --}}</code></pre>
+                </div>
+
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">FAQ Accordion Cards</h3>
                 <p class="text-sm text-charcoal-light mb-4">SEO-friendly expandable mini-FAQ cards using <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-faq</code>. Great for structured data and voice search.</p>
                 <div class="space-y-3 max-w-2xl">
@@ -904,13 +983,49 @@
                     <x-ui.card-faq question="How long does production take?" answer="Standard production is 5-7 business days. Rush orders can be completed in 2-3 business days for an additional fee. Large bulk orders may require additional time." />
                     <x-ui.card-faq question="Do you offer bulk discounts?" answer="Yes! We offer tiered pricing on orders of 12 or more items. The more you order, the more you save. Contact us for a custom quote on large orders." />
                 </div>
+
+                <div class="mt-6 bg-white p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-charcoal mb-1">Component: FAQ accordion</h3>
+                    <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.card-faq &mdash; resources/views/components/ui/card-faq.blade.php</p>
+                    <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto"><code>&lt;x-ui.card-faq
+    question="What file formats do you accept?"
+    answer="We accept PNG, JPG, SVG, AI, PSD, and PDF. Vector files preferred at 300 DPI."
+    :open="true"
+/&gt;
+&lt;x-ui.card-faq
+    question="How long does production take?"
+    answer="Standard 5-7 business days. Rush orders 2-3 days with additional fee."
+/&gt;
+{{-- No aspect ratio — height-auto accordion --}}
+{{-- open prop: first item expanded by default, rest collapsed --}}</code></pre>
+                </div>
+
             </div>
         </section>
 
         <section class="py-16 bg-linen">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-4 border-l-4 border-sunburst pl-5">Brand Personality</h2>
-                <p class="text-sm text-charcoal-light mb-8">Long-form editorial layout with asymmetric image inlays and flowing text. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-detailed-info</code> with named slots: <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$intro</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$mid</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$lower</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$footer</code>.</p>
+                <p class="text-sm text-charcoal-light mb-4">Long-form editorial layout with asymmetric image inlays and flowing text. Use <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">x-ui.card-detailed-info</code> with named slots: <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$intro</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$mid</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$lower</code>, <code class="bg-gray-100 px-1.5 py-0.5 rounded text-xs">$footer</code>.</p>
+
+                <div class="mb-8 bg-white p-6 shadow-sm">
+                    <h3 class="text-lg font-semibold text-charcoal mb-1">Component: detailed info card</h3>
+                    <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.card-detailed-info &mdash; resources/views/components/sections/card-detailed-info.blade.php</p>
+                    <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto"><code>&lt;x-ui.card-detailed-info
+    heading="How Custom Shirts Can Help Your Business or School"
+    image1="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"
+    alt1="Custom shirts printed in Joliet IL"
+    image2="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+    alt2="Vinyl printed shirts caps and hoodies"
+&gt;
+    &lt;x-slot name="intro"&gt;&lt;p&gt;Intro content with floated image1 (right).&lt;/p&gt;&lt;/x-slot&gt;
+    &lt;x-slot name="mid"&gt;&lt;p&gt;Mid content with floated image2 (left).&lt;/p&gt;&lt;/x-slot&gt;
+    &lt;x-slot name="lower"&gt;&lt;p&gt;Lower body content — no image.&lt;/p&gt;&lt;/x-slot&gt;
+    &lt;x-slot name="footer"&gt;&lt;p&gt;Closing paragraph with internal links.&lt;/p&gt;&lt;/x-slot&gt;
+&lt;/x-ui.card-detailed-info&gt;
+{{-- Images: floated at 300px wide (max-w-xs), 4:3 ratio — project standard --}}
+{{-- image1 floats right in intro slot; image2 floats left in mid slot --}}</code></pre>
+                </div>
 
                 <x-ui.card-detailed-info
                     heading="How Custom Shirts Can Help Your Business or School"

@@ -1,7 +1,13 @@
-<section class="py-16 bg-white">
+<section class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-2xl font-bold mb-3 border-l-4 border-sunburst pl-5">Quick-view modal</h2>
-        <p class="text-charcoal-light mb-10 pl-5">Product quick-view modal with image gallery, variant selector, quantity picker, and add-to-cart. Opens without page navigation for faster browsing.</p>
+
+        <div class="mb-8">
+            <div class="inline-block mb-4">
+                <h2 class="text-h2 font-bold text-charcoal mb-2">Quick-view modal</h2>
+                <div class="h-1 bg-sunburst"></div>
+            </div>
+            <p class="text-charcoal-light max-w-4xl mx-auto">Product quick-view modal with image gallery, variant selector, quantity picker, and add-to-cart. Opens without page navigation for faster browsing.</p>
+        </div>
 
         <div class="bg-white p-6 shadow-sm">
             <h3 class="text-lg font-semibold text-charcoal mb-4">Preview</h3>
@@ -24,7 +30,34 @@
             </div>
         </div>
 
-        <div class="mt-8 bg-white p-6 shadow-sm">
+        <div class="mt-10 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-charcoal mb-1">Component</h3>
+            <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.modal-quick-view &mdash; resources/views/components/ui/modal-quick-view.blade.php</p>
+
+            <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
+            <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>{{-- Trigger button (anywhere on page) --}}
+&lt;button x-data x-on:click="$dispatch('open-quick-view', { id: 'qv-product-1' })"&gt;
+    Quick view
+&lt;/button&gt;
+
+{{-- Modal (placed once, anywhere in the page) --}}
+&lt;x-ui.modal-quick-view
+    id="qv-product-1"
+    title="Classic crew neck t-shirt"
+    price="$24.99"
+    originalPrice="$34.99"
+    description="Premium cotton crew neck with custom screen printing."
+    href="/products/classic-crew-neck"
+    :variants="['S', 'M', 'L', 'XL', '2XL', '3XL']"
+    :images="[
+        ['src' =&gt; '/images/product-photo-1.jpg', 'alt' =&gt; 'Front view'],
+        ['src' =&gt; '/images/product-photo-2.jpg', 'alt' =&gt; 'Back view'],
+    ]"
+/&gt;
+{{-- images prop optional; shows placeholder if omitted --}}
+{{-- variants prop optional; hides variant selector if omitted --}}
+{{-- originalPrice triggers strikethrough sale display --}}</code></pre>
+
             <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                 <ul class="space-y-2">
@@ -36,11 +69,12 @@
                 <ul class="space-y-2">
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Sale price with strikethrough</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Gold gradient add-to-cart button</li>
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> "View full details" link</li>
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Event-driven open via Alpine.js</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> "View full details" link to PDP</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Event-driven open via Alpine.js dispatch</li>
                 </ul>
             </div>
         </div>
+
     </div>
 </section>
 

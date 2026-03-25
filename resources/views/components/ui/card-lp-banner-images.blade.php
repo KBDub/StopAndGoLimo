@@ -15,7 +15,7 @@
         @if($isLastOdd)
             <div class="sm:col-span-2 flex justify-center">
                 <div
-                    class="w-full sm:w-1/2 transition-all duration-1000 ease-out"
+                    class="w-full sm:w-1/2 transition-all duration-[1500ms] ease-out"
                     x-data="{ visible: false }"
                     x-init="
                         const observer = new IntersectionObserver(function(entries) {
@@ -47,7 +47,7 @@
             </div>
         @else
             <div
-                class="transition-all duration-1000 ease-out"
+                class="transition-all duration-[1500ms] ease-out"
                 x-data="{ visible: false }"
                 x-init="
                     const observer = new IntersectionObserver(function(entries) {

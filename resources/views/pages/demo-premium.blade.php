@@ -28,7 +28,7 @@
     <x-ui.banner-thin-charcoal />
 
     <main>
-        <section class="bg-white py-16 shadow-gold">
+        <section class="bg-white py-24 shadow-gold">
             <div class="max-w-7xl mx-auto px-6 text-center">
                 <div class="inline-block mb-6">
                     <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-2">Premium components</h2>

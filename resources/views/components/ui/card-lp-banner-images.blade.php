@@ -10,10 +10,13 @@
     class="grid grid-cols-1 sm:grid-cols-2 gap-6"
     x-data="{ visible: false }"
     x-init="
-        const obs = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) { visible = true; obs.disconnect(); }
-        }, { threshold: 0.1 });
-        obs.observe($el);
+        const observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+                visible = true;
+                observer.disconnect();
+            }
+        }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+        observer.observe($el);
     "
 >
     @foreach($banners as $i => $banner)

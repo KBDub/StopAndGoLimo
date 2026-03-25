@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="table-runners" displayServiceType="Table Runners" />
 
+    <x-ui.banner-testimonial
+        quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
+        name="Datjaeda"
+    />
 
         <x-sections.card-image-with-text
             image="/images/table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg"
@@ -90,6 +94,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Fast and professional service, the experience by far was the best. The customer service was great and the friendly environment made everything easy. Everyone loved the family reunion banner. It was perfect! Thanks Ezra and team."
+        name="Yolanda S. Flowers"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

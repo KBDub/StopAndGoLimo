@@ -15,7 +15,15 @@
     />
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="glitter-shirts" displayServiceType="Glitter Shirts" />
+    <x-ui.banner-testimonial
+        quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
+        name="Gerardo Munoz Jr"
+    />
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
+    <x-ui.banner-testimonial
+        quote="Great service, good customer service, excellent work. Very satisfied."
+        name="Arleen Van Hook"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -13,6 +13,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="design-it-yourself" displayServiceType="Design It Yourself" />
 
+    <x-ui.banner-testimonial
+        quote="Amazing service and quality!"
+        name="Jonathan Young"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

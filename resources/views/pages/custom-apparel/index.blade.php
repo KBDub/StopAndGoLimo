@@ -47,6 +47,10 @@
         ],
     ]" />
     <x-sections.product-grid collectionSlug="custom-apparel" />
+    <x-ui.banner-testimonial
+        quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
+        name="Brittany Harvey"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

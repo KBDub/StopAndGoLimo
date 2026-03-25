@@ -52,6 +52,10 @@
     ]" />
 
     <x-sections.product-grid collectionSlug="decals" />
+    <x-ui.banner-testimonial
+        quote="Outstanding and excellent service. The quality of the decals are flawless. I will definitely be doing more business in the future."
+        name="Chewy Orkwiszewski"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

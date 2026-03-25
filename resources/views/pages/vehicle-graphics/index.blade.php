@@ -52,6 +52,10 @@
     ]" />
 
     <x-sections.product-grid collectionSlug="vehicle-graphics" />
+    <x-ui.banner-testimonial
+        quote="Top 5 Percent did an awesome job for us. First they created and produced two door magnets for our car and then they created, produced and installed decals on our business truck. They do very nice work, have very fair pricing and communicate well! I will definitely be back."
+        name="Ken McCafferty"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

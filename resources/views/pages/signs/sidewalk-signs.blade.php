@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="sidewalk-signs" displayServiceType="Sidewalk Signs" />
 
+    <x-ui.banner-testimonial
+        quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
+        name="Anita Estella"
+    />
 
         <x-sections.card-image-with-text
             image="/images/sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg"
@@ -79,6 +83,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="I needed a banner quickly. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was very helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent. Professional and efficient in meeting the needs of their customers."
+        name="Jerry E Olson"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

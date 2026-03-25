@@ -70,6 +70,10 @@
     ]" />
 
     <x-sections.product-grid collectionSlug="signs" />
+    <x-ui.banner-testimonial
+        quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
+        name="Anita Estella"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -14,6 +14,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="reunion-shirts" displayServiceType="Reunion Shirts" />
 
+    <x-ui.banner-testimonial
+        quote="Excellence and Professionalism! Top 5 Percent, LLC job well done! We celebrated our family reunion and ordered over 150 t-shirts for toddlers to adults. Ezra remained in communication throughout and delivered everything on time. We were so very appreciative."
+        name="Chamille Doss"
+    />
 
         <x-sections.card-image-with-text
             image="/images/reunion-shirts/toptpct-class-reunion-shirts-joliet-shorewood.jpg"
@@ -108,6 +112,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Top 5 Percent is my number one go to for any custom made items. They have made shirts for several events and did a wonderful job. Duke keeps you updated on the order and works extremely fast and efficient. They have a customer in me for life!"
+        name="Euneke Rembert"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

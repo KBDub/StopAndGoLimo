@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="yard-signs" displayServiceType="Yard Signs" />
 
+    <x-ui.banner-testimonial
+        quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
+        name="Anita Estella"
+    />
 
         <x-sections.card-image-with-text
             image="/images/yard-signs/top5pct-yard-signs-joliet.jpg"
@@ -80,6 +84,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
+        name="Datjaeda"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

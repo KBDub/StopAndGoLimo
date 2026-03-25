@@ -15,7 +15,15 @@
     />
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="flock-shirts" displayServiceType="Flock Shirts" />
+    <x-ui.banner-testimonial
+        quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
+        name="Gerardo Munoz Jr"
+    />
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
+    <x-ui.banner-testimonial
+        quote="I love working with this company! They make sure we like what we are ordering before we place the order, the quality of materials and durability of the apparel we've made with them is outstanding. Always on time, clear communication and they listen to what we need. Never disappointed!"
+        name="Vicky Donis"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

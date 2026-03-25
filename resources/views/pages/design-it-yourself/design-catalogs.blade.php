@@ -12,6 +12,10 @@
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="design-catalogs" displayServiceType="Design Catalogs" />
+    <x-ui.banner-testimonial
+        quote="Great service, good customer service, excellent work. Very satisfied."
+        name="Arleen Van Hook"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

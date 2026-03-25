@@ -1,8 +1,8 @@
 @props([
-    'quote' => 'Fast, professional service! Our custom shirts turned out amazing and were ready the same day.',
-    'name' => 'Sarah M.',
-    'location' => 'Joliet, IL',
-    'stars' => 5,
+    'quote'    => 'Fast, professional service! Our custom shirts turned out amazing and were ready the same day.',
+    'name'     => 'Sarah M.',
+    'location' => '',
+    'stars'    => 5,
 ])
 
 <div {{ $attributes->merge(['class' => 'bg-sunburst-light py-4']) }}>
@@ -18,7 +18,7 @@
 
         <div class="text-center md:text-left">
             <p class="text-charcoal font-semibold text-sm md:text-base">"{{ $quote }}"</p>
-            <p class="text-charcoal-light text-xs mt-1">&mdash; {{ $name }}, {{ $location }}</p>
+            <p class="text-charcoal-light text-xs mt-1">&mdash; {{ $name }}{{ $location ? ', ' . $location : '' }}</p>
         </div>
     </div>
 </div>

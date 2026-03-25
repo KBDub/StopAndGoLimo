@@ -17,6 +17,10 @@
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="custom-shirts" displayServiceType="Custom Shirts" />
 
+    <x-ui.banner-testimonial
+        quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
+        name="Brittany Harvey"
+    />
     <x-sections.shirt-types-grid />
     <x-ui.banner-medium-sunburst />
 
@@ -62,6 +66,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Excellence and Professionalism! Top 5 Percent, LLC job well done! We celebrated our family reunion and ordered over 150 t-shirts for toddlers to adults. Ezra remained in communication throughout and delivered everything on time. We were so very appreciative."
+        name="Chamille Doss"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

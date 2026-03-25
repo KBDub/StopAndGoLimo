@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="banners" displayServiceType="Custom Banners" />
 
+    <x-ui.banner-testimonial
+        quote="I needed a banner quickly. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was very helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent. Professional and efficient in meeting the needs of their customers."
+        name="Jerry E Olson"
+    />
 
         <x-sections.card-image-with-text
             image="/images/banners/top5pct-banners-business-joliet-shorewood-crest-hill.jpg"
@@ -92,6 +96,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Fast and professional service, the experience by far was the best. The customer service was great and the friendly environment made everything easy. Everyone loved the family reunion banner. It was perfect! Thanks Ezra and team."
+        name="Yolanda S. Flowers"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

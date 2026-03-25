@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="automobile-graphics" displayServiceType="Automobile Graphics" />
 
+    <x-ui.banner-testimonial
+        quote="Many thanks to Ezra and his crew. I am beyond impressed with the custom decals created for my car. The quality of the decals is superb and they were installed perfectly. I've already received numerous compliments and inquiries about the work."
+        name="Sam"
+    />
 
         <x-sections.card-image-with-text
             image="/images/automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg"
@@ -93,6 +97,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Top 5 Percent is a great place to get truck decals. Ezra took the time to explain the process and answered all my questions. He responded promptly to emails and phone calls. I highly recommend this business."
+        name="Rachel James"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

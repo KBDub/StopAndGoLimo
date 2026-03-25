@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="dot-decals" displayServiceType="DOT Decals" />
 
+    <x-ui.banner-testimonial
+        quote="Ezra is the most helpful individual I know in this field. I came in looking for vinyl decals for my trucking company and he made me exactly what I needed at a price that was fair and honest. I would highly recommend this place for all of your signage needs."
+        name="Jack Smith"
+    />
 
         <x-sections.card-image-with-text
             image="/images/dot-decals/top5pct-DOT-stickers-joliet-shorewood-rockdale.jpg"
@@ -91,6 +95,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Went to see them about doing truck signs, needed quickly. Walked in at 5:30 pm and had my signs on my truck by 12:30 pm the next day. Incredible service and very friendly. Also good prices. The owner Ezra was awesome."
+        name="John Kiesow"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

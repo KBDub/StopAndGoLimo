@@ -17,6 +17,10 @@
         displayServiceType="Spirit Wear"
     />
 
+    <x-ui.banner-testimonial
+        quote="Top 5 Percent is my number one go to for any custom made items. They have made shirts for several events and did a wonderful job. Duke keeps you updated on the order and works extremely fast and efficient. They have a customer in me for life!"
+        name="Euneke Rembert"
+    />
 
         <x-sections.card-image-with-text
             image="/images/spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg"
@@ -97,6 +101,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
+        name="Gerardo Munoz Jr"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -15,7 +15,15 @@
     />
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="glow-in-the-dark-shirts" displayServiceType="Glow In The Dark Shirts" />
+    <x-ui.banner-testimonial
+        quote="I love working with this company! They make sure we like what we are ordering before we place the order, the quality of materials and durability of the apparel we've made with them is outstanding. Always on time, clear communication and they listen to what we need. Never disappointed!"
+        name="Vicky Donis"
+    />
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
+    <x-ui.banner-testimonial
+        quote="Amazing service and quality!"
+        name="Jonathan Young"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

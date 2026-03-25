@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="window-wall-floor-decals" displayServiceType="Window, Wall & Floor Decals" />
 
+    <x-ui.banner-testimonial
+        quote="Outstanding and excellent service. The quality of the decals are flawless. I will definitely be doing more business in the future."
+        name="Chewy Orkwiszewski"
+    />
 
         <x-sections.card-image-with-text
             image="/images/window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg"
@@ -94,6 +98,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Many thanks to Ezra and his crew. I am beyond impressed with the custom decals created for my car. The quality of the decals is superb and they were installed perfectly. I've already received numerous compliments and inquiries about the work."
+        name="Sam"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

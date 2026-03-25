@@ -15,7 +15,15 @@
     />
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="embroidery-shirts" displayServiceType="Embroidery Shirts" />
+    <x-ui.banner-testimonial
+        quote="I had a onesie embroidered for our baby announcement and it came out perfect! Was ready in 2 days and very reasonably priced! Will definitely be going back!"
+        name="Toni Rincon"
+    />
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
+    <x-ui.banner-testimonial
+        quote="Beautiful stitching! We are very happy with the results! Thank you!"
+        name="Ania Jarosz"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

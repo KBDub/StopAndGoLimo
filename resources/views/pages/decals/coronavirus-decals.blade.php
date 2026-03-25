@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="coronavirus-decals" displayServiceType="Safety Decals" />
 
+    <x-ui.banner-testimonial
+        quote="Outstanding and excellent service. The quality of the decals are flawless. I will definitely be doing more business in the future."
+        name="Chewy Orkwiszewski"
+    />
 
         <x-sections.card-image-with-text
             image="/images/corona-virus-signs/top5pct-coronavirus-decals-joliet-shorewood-crest-hill.jpg"
@@ -52,6 +56,10 @@
 
 
     <x-sections.product-grid collectionSlug="coronavirus-decals" parentSlug="decals" />
+    <x-ui.banner-testimonial
+        quote="Amazing service and quality!"
+        name="Jonathan Young"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

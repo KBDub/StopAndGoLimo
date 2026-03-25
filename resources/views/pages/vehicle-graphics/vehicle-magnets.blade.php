@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="vehicle-magnets" displayServiceType="Vehicle Magnets" />
 
+    <x-ui.banner-testimonial
+        quote="Top 5 Percent did an awesome job for us. First they created and produced two door magnets for our car and then they created, produced and installed decals on our business truck. They do very nice work, have very fair pricing and communicate well! I will definitely be back."
+        name="Ken McCafferty"
+    />
 
         <x-sections.card-image-with-text
             image="/images/vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg"
@@ -83,6 +87,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="My husband and I went to Top 5 Percent to speak with the owner about their different services, including vehicle magnets and custom apparel. He was so very nice and patient. He took the time to explain options and pricing. Excellent customer service! We will definitely be back."
+        name="Renea F"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

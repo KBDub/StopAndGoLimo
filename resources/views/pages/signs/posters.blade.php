@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="posters" displayServiceType="Custom Posters" />
 
+    <x-ui.banner-testimonial
+        quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
+        name="Datjaeda"
+    />
 
         <x-sections.card-image-with-text
             image="/images/posters/top5pct-poster-printing-joliet-shorewood-romeoville.jpg"
@@ -90,6 +94,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
+        name="Anita Estella"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

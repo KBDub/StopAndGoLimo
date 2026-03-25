@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="coronavirus-signs" displayServiceType="Safety Signs" />
 
+    <x-ui.banner-testimonial
+        quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
+        name="Anita Estella"
+    />
 
         <x-sections.card-image-with-text
             image="/images/corona-virus-signs/top5pct-coronavirus-signs-joliet-shorewood-lockport.jpg"
@@ -66,6 +70,10 @@
 
 
     <x-sections.product-grid collectionSlug="coronavirus-signs" parentSlug="signs" />
+    <x-ui.banner-testimonial
+        quote="Amazing service and quality!"
+        name="Jonathan Young"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

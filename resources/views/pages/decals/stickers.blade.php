@@ -18,6 +18,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="stickers" displayServiceType="Custom Stickers" />
 
+    <x-ui.banner-testimonial
+        quote="The owner Ezra was extremely knowledgeable and helpful. He gave great marketing ideas for my stickers. The quality of my product was top of the line. I would recommend Top 5 Percent to any business or organization that needs print services."
+        name="Eric Murff"
+    />
 
         <x-sections.card-image-with-text
             image="/images/stickers-decals/top5pct-stickers-decals-joliet-beer-brewery.jpg"
@@ -95,6 +99,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="Outstanding and excellent service. The quality of the decals are flawless. I will definitely be doing more business in the future."
+        name="Chewy Orkwiszewski"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

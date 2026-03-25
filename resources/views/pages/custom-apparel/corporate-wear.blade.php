@@ -14,6 +14,10 @@
 
     <x-sections.top5pct-same-day-service serviceType="corporate-wear" displayServiceType="Corporate Wear" />
 
+    <x-ui.banner-testimonial
+        quote="Ezra and Kim are incredible to work with for your personal or business shirts or decals. Highly recommend Top 5 Percent and very reasonable pricing."
+        name="Matt Heath"
+    />
 
         <x-sections.card-image-with-text
             image="/images/corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg"
@@ -93,6 +97,10 @@
                 </x-slot>
             </x-sections.card-detailed-info>
 
+    <x-ui.banner-testimonial
+        quote="I love working with this company! They make sure we like what we are ordering before we place the order, the quality of materials and durability of the apparel we've made with them is outstanding. Always on time, clear communication and they listen to what we need. Never disappointed!"
+        name="Vicky Donis"
+    />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

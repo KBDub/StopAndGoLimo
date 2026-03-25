@@ -7,6 +7,7 @@ This project is a premium e-commerce website for "Top 5 Percent," a custom signa
 ## User Preferences
 
 - Always use PHP for scripting and automation tasks — never any other language
+- Always ask the user when unsure about something rather than making assumptions
 - Maintain modular, small files (max 800 lines)
 - Follow exact branding from top5pct.com
 - Use semantic HTML (H2-H5 for structure)

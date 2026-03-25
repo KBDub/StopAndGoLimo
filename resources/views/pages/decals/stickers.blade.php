@@ -67,9 +67,7 @@
 
     <x-sections.product-grid collectionSlug="stickers" parentSlug="decals" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="5 Benefits of Sticker Decals and the Role They Play in Promoting Your Business"
                 image1="/images/stickers-decals/top5pct-article-buy-stickers-decals-joliet.jpg"
                 alt1="Custom stickers and decals printed in Joliet and Will County Illinois"
@@ -95,9 +93,7 @@
                     <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we have been producing high quality custom stickers and decals for customers throughout Will County and the greater Chicagoland area since 2017. We take pride in the detail and durability of everything we produce and we want every sticker we print to represent your brand at its best.</p>
                     <p>Call us at (815) 349 8600 or stop by our shop at 121 Springfield Avenue in Joliet to talk about your sticker and decal needs. We are ready to help.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

@@ -53,9 +53,7 @@
 
     <x-sections.product-grid collectionSlug="sidewalk-signs" parentSlug="signs" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="4 Reasons Sidewalk Signs Are Important and How They Benefit Your Business"
                 image1="/images/sidewalk-signs/top5pct-article-a-frame-sidewalk-signs.jpg"
                 alt1="A-frame sidewalk signs and sandwich boards for businesses in Joliet and Will County Illinois"
@@ -79,9 +77,7 @@
                     <p class="mb-4">We are a veteran owned business in Joliet, Illinois and we are proud to support the businesses that make our local communities thrive. Whether you need a complete A-frame sign with your first set of inserts or just replacement panels for a frame you already own, we can help you get exactly what you need. We serve businesses in Joliet, Crest Hill, Shorewood, Lockport, Plainfield, and throughout the greater Chicagoland area.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your sidewalk sign needs. We are here to help your storefront work harder for your business every single day.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

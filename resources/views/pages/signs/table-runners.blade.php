@@ -65,9 +65,7 @@
 
     <x-sections.product-grid collectionSlug="table-runners" parentSlug="signs" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="The Benefits of Custom Tablecloths for Your Business"
                 image1="/images/table-runners/top5pct-article-custom-table-cloths-joliet.jpg"
                 alt1="Custom printed tablecloths and table runners for businesses in Joliet and Will County Illinois"
@@ -90,9 +88,7 @@
                     <p class="mb-4">We are a veteran owned business in Joliet, Illinois and we are proud to help local businesses make a stronger impression at events throughout Will County and the greater Chicagoland area. From trade shows at Joliet venues to craft fairs in Shorewood and Plainfield, we want your table to be the one people remember.</p>
                     <p>Call us at (815) 349 8600 or stop by our shop at 121 Springfield Avenue in Joliet to order your custom tablecloth. We are here to help your business look its absolute best at every event you attend.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

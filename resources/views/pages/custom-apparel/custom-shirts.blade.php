@@ -16,18 +16,20 @@
     />
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="custom-shirts" displayServiceType="Custom Shirts" />
+
     <x-sections.shirt-types-grid />
     <x-ui.banner-medium-sunburst />
+
     <x-sections.shirt-types-video />
     <x-ui.banner-medium-charcoal />
+
     <x-sections.represent-yourself />
     <x-ui.banner-medium-sunburst />
+
     <x-sections.shirt-types-faq />
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="7 Tips for Choosing a Custom T-Shirt Maker"
                 image1="/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg"
                 alt1="Custom t-shirt printing tips from Top 5 Percent in Joliet Illinois"
@@ -58,9 +60,7 @@
                     <p class="mb-4">Look at what other local customers are saying. Read reviews and ask around in your community. A shop with a great reputation in Joliet, Plainfield, or anywhere in the Chicagoland area has earned it by doing good work consistently over time. We are a veteran owned business and we have built our reputation one customer at a time. We are proud of the relationships we have built with schools, churches, businesses, and families across Will County over the years.</p>
                     <p>When you are ready to place your order, give us a call at (815) 349 8600 or stop by our shop at 121 Springfield Avenue in Joliet. We are ready to help you find the perfect custom t-shirt solution for whatever you have coming up next.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

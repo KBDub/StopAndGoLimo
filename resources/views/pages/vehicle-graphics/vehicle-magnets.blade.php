@@ -55,9 +55,7 @@
 
     <x-sections.product-grid collectionSlug="vehicle-magnets" parentSlug="vehicle-graphics" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="Top 5 Reasons Car Magnets Can Help Your Business"
                 image1="/images/vehicle-magnets/top5pct-article-car-magnets-truck-magnets.jpg"
                 alt1="Custom car magnets and vehicle magnets printed for businesses in Joliet and Will County Illinois"
@@ -83,9 +81,7 @@
                     <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we are proud to help local businesses get their name on the road without breaking the budget. We design and produce custom vehicle magnets for businesses of all sizes throughout Will County and the greater Chicagoland area.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to order your custom vehicle magnets. We are ready to help your business get moving.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

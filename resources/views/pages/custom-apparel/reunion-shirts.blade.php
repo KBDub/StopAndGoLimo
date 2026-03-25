@@ -78,9 +78,7 @@
 
     <x-sections.product-grid collectionSlug="reunion-shirts" parentSlug="custom-apparel" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="How Reunion T-Shirts Make Your Reunion Special"
                 image1="/images/reunion-shirts/toptpct-article-family-reunion-pic1.jpg"
                 alt1="Custom family reunion shirts printed in Joliet and Will County Illinois"
@@ -108,9 +106,7 @@
                     <p class="mb-4">We are a veteran owned business in Joliet, Illinois and we love helping families and groups create something they will treasure for years. Our team knows the Chicagoland area inside and out. We have worked with groups from Joliet, Crest Hill, Lockport, Plainfield, New Lenox, and every corner of Will County. No matter how big or how small your group is, we are here to make your reunion special.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet and let us help you design the perfect reunion shirt. We are ready to get started whenever you are.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

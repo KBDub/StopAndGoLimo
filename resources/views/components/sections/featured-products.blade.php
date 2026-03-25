@@ -1,7 +1,7 @@
 <section class="py-10 bg-linen">
     <div class="max-w-7xl mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-olive">
-            Products &amp; Services for Your Every Need
+            Products & Services for Your Every Need
         </h2>
 
         <p class="text-charcoal-light leading-relaxed text-center max-w-4xl mx-auto mb-10">

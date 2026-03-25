@@ -65,9 +65,7 @@
 
     <x-sections.product-grid collectionSlug="corporate-wear" parentSlug="custom-apparel" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="The Importance of Corporate Wear for Your Business"
                 image1="/images/corporate-wear/toptpct-article-corporate-wear-pic1.jpg"
                 alt1="Custom corporate wear and branded employee uniforms in Joliet Illinois"
@@ -93,9 +91,7 @@
                     <p class="mb-4">We are proud to serve the business community in Joliet, Shorewood, Plainfield, Lockport, and throughout the greater Chicagoland area. As a veteran owned business we believe in the value of discipline, quality, and taking pride in your work. We bring that same mentality to every corporate wear order we produce.</p>
                     <p>If you are ready to build a more professional image for your team, give us a call at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet. We are here to help your business look like it belongs in the top five percent.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

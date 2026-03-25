@@ -67,9 +67,7 @@
 
     <x-sections.product-grid collectionSlug="business-signs" parentSlug="signs" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="4 Ways Business Signs Help Promote Your Business"
                 image1="/images/business-signs/top5pct-article-business-signs-pic1.jpg"
                 alt1="Custom business signs that promote local companies in Joliet and Will County Illinois"
@@ -94,9 +92,7 @@
                     <p class="mb-4">We are a veteran owned sign shop located at 121 Springfield Avenue in Joliet, Illinois. We serve businesses of every size across Will County and the Chicagoland area. Whether you need a single window graphic or a complete exterior signage package, we have the design experience and the production capability to make it happen.</p>
                     <p>Call us at (815) 349 8600 to schedule a consultation and let us help your business make a stronger statement every single day.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

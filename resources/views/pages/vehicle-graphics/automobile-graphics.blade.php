@@ -65,9 +65,7 @@
 
     <x-sections.product-grid collectionSlug="automobile-graphics" parentSlug="vehicle-graphics" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="5 Benefits of Vehicle Graphics for Your Business"
                 image1="/images/automobile-graphics/top5pct-article-car-wraps-vinyl-lettering.jpg"
                 alt1="Vehicle graphics car wraps and vinyl lettering for businesses in Joliet and Will County Illinois"
@@ -93,9 +91,7 @@
                     <p class="mb-4">We are a veteran owned vehicle graphics shop in Joliet, Illinois and we are proud to help local businesses make a stronger impression on the road every single day. We produce full wraps, partial wraps, vinyl lettering, window perf, and complete fleet graphic packages for businesses of all sizes throughout the greater Chicagoland area.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your vehicle graphics project. We are here to help your business get noticed.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

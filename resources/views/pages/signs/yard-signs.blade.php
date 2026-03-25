@@ -55,9 +55,7 @@
 
     <x-sections.product-grid collectionSlug="yard-signs" parentSlug="signs" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="How to Effectively Use Yard Signs to Promote Your Business"
                 image1="/images/yard-signs/top5pct-article-yard-signs-buy.jpg"
                 alt1="Custom yard signs printed for businesses and campaigns in Joliet and Will County Illinois"
@@ -80,9 +78,7 @@
                     <p class="mb-4">We print corrugated plastic yard signs in full color using UV resistant inks that hold up through Illinois weather without fading or peeling. We offer single sided and double sided printing, optional metal H-stakes for easy installation, and bulk pricing that rewards larger orders. Same day printing is available on select sizes so even last minute campaigns can be covered.</p>
                     <p>We are a veteran owned business in Joliet, Illinois and we are proud to produce signs for the businesses and community members who make Will County a great place to live and work. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to place your order today.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

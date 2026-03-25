@@ -65,9 +65,7 @@
 
     <x-sections.product-grid collectionSlug="dot-decals" parentSlug="vehicle-graphics" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="Why Do Truck Drivers Need DOT Decals and DOT Stickers?"
                 image1="/images/dot-decals/top5pct-article-DOT-decals-vinyl-lettering.jpg"
                 alt1="DOT decals DOT stickers and truck lettering printed in Joliet and Will County Illinois"
@@ -91,9 +89,7 @@
                     <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we are proud to serve the trucking community that keeps the Chicagoland area and the entire country moving. We know what it takes to stay compliant and we are here to make the process as fast and straightforward as possible for every driver and fleet operator who walks through our door.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to order your DOT decals today. We are ready to help you stay on the road and stay compliant.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

@@ -65,9 +65,7 @@
 
     <x-sections.product-grid collectionSlug="posters" parentSlug="signs" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="How to Use Posters to Advertise and Promote Your Business or Event"
                 image1="/images/posters/top5pct-article-posters-joliet-pic1.jpg"
                 alt1="Custom posters printed for businesses and events in Joliet Illinois and Will County"
@@ -90,9 +88,7 @@
                     <p class="mb-4">We are a veteran owned print shop in Joliet and we produce custom posters for customers throughout Will County and the greater Chicagoland area. We offer fast turnaround times and same day printing on select sizes for customers with urgent deadlines. Whether you need 10 posters for a local event or 500 for a large scale promotion, we are ready to handle your order with the same level of care and attention we give to every project.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your poster project. We are proud to help local businesses and organizations get their message out to the community.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

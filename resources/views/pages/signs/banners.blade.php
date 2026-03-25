@@ -67,9 +67,7 @@
 
     <x-sections.product-grid collectionSlug="banners" parentSlug="signs" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="Why Vinyl Banners Are Great for Your Business or Special Event"
                 image1="/images/banners/top5pct-article-vinyl-banners-pic1.jpg"
                 alt1="Custom vinyl banners printed for businesses and events in Joliet and Will County Illinois"
@@ -92,9 +90,7 @@
                     <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we print custom vinyl banners for customers throughout the greater Chicagoland area. We serve businesses, schools, nonprofits, churches, and event organizers in Joliet, Shorewood, Crest Hill, Plainfield, Romeoville, New Lenox, and beyond. No order is too big or too small and we offer same day printing on select banner sizes for customers who need something fast.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your next banner project. We are here to help you make an impression that lasts.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

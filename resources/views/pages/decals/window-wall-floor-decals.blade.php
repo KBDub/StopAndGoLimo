@@ -67,9 +67,7 @@
 
     <x-sections.product-grid collectionSlug="window-wall-floor-decals" parentSlug="decals" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="The Effects Window, Wall, and Floor Decals Have on Your Business or Home"
                 image1="/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg"
                 alt1="Custom window wall and floor decals printed and installed in Joliet and Will County Illinois"
@@ -94,9 +92,7 @@
                     <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois and we have been helping businesses and homeowners throughout Will County and the greater Chicagoland area enhance their spaces with custom decals since 2017. Every project we take on receives the same level of care and craftsmanship regardless of the size of the order.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your window, wall, or floor decal project. We are here to help you make your space look exactly the way you want it to.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

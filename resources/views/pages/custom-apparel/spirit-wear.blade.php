@@ -68,9 +68,7 @@
 
     <x-sections.product-grid collectionSlug="spirit-wear" parentSlug="custom-apparel" />
 
-    <section class="py-10 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-            <x-ui.card-detailed-info
+            <x-sections.card-detailed-info
                 heading="How Spirit Wear Fundraising Can Help Your School"
                 image1="/images/spirit-wear/top5pct-article-spirit-wear-pic1.jpg"
                 alt1="Custom spirit wear fundraising shirts for schools in Joliet and Will County"
@@ -97,9 +95,7 @@
                     <p class="mb-4">Field trips are another great opportunity to use custom spirit wear. When your entire group wears the same custom shirt, teachers and chaperones can keep track of every student in a crowded museum, zoo, or science center. It removes the guesswork of trying to spot your students in a sea of strangers. We have produced field trip shirts for schools across Will County and we know how to turn them around quickly so you have them ready well before departure day.</p>
                     <p>Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to talk about your spirit wear needs. We are a veteran owned business and we are proud to support the schools that shape the future of our community.</p>
                 </x-slot>
-            </x-ui.card-detailed-info>
-        </div>
-    </section>
+            </x-sections.card-detailed-info>
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

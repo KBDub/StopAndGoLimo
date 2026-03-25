@@ -7,10 +7,8 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'relative shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1 h-full']) }}>
-    <div class="absolute top-0 inset-x-0 h-[3px] bg-sunburst"></div>
-    <div class="absolute bottom-0 inset-x-0 h-[3px] bg-sunburst"></div>
-    <div class="absolute left-0 inset-y-0 w-[3px] bg-sunburst"></div>
-    <div class="absolute right-0 inset-y-0 w-[3px] bg-sunburst"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-1/2 pointer-events-none" style="border-top: 3px solid #FFC20E; border-right: 3px solid #FFC20E;"></div>
+    <div class="absolute bottom-0 left-0 w-1/2 h-1/2 pointer-events-none" style="border-bottom: 3px solid #FFC20E; border-left: 3px solid #FFC20E;"></div>
     <div class="relative bg-white m-[3px] p-6 flex flex-col h-full">
         @if($href)
             <a href="{{ $href }}" class="block overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out mb-4">

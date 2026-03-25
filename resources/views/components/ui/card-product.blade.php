@@ -7,14 +7,10 @@
 ])
 
 <div {{ $attributes->merge(['class' => 'relative shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1 h-full']) }}>
-    <div class="absolute inset-0 bg-gold-gradient-dark"
-         style="-webkit-mask: radial-gradient(circle at 100% 0%, black 0%, transparent 70%) top right / 50% 50% no-repeat;
-                mask: radial-gradient(circle at 100% 0%, black 0%, transparent 70%) top right / 50% 50% no-repeat;">
-    </div>
-    <div class="absolute inset-0 bg-gold-gradient-dark"
-         style="-webkit-mask: radial-gradient(circle at 0% 100%, black 0%, transparent 70%) bottom left / 50% 50% no-repeat;
-                mask: radial-gradient(circle at 0% 100%, black 0%, transparent 70%) bottom left / 50% 50% no-repeat;">
-    </div>
+    <div class="absolute top-0 inset-x-0 h-[3px] bg-sunburst"></div>
+    <div class="absolute bottom-0 inset-x-0 h-[3px] bg-sunburst"></div>
+    <div class="absolute left-0 inset-y-0 w-[3px] bg-sunburst"></div>
+    <div class="absolute right-0 inset-y-0 w-[3px] bg-sunburst"></div>
     <div class="relative bg-white m-[3px] p-6 flex flex-col h-full">
         @if($href)
             <a href="{{ $href }}" class="block overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out mb-4">

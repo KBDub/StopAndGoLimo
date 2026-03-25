@@ -4,6 +4,13 @@
     'interval' => 3500,
 ])
 
+{{--
+    Image display standard: 600×450px (4:3) for center slot.
+    Side slots (visible=3): 300×225px (4:3, half of center).
+    visible=2: two 600×450 slots side by side.
+    visible=1: single 600×450 slot, centered.
+--}}
+
 <div
     x-data="{
         images: @js($images),
@@ -33,8 +40,6 @@
             if (idx === this.current) return;
             this.fading = true;
             setTimeout(() => { this.current = idx; this.fading = false; }, 280);
-            this.stopTimer();
-            this.startTimer();
         },
         startTimer() {
             this.stopTimer();
@@ -45,8 +50,6 @@
         }
     }"
     x-init="startTimer()"
-    x-on:mouseenter="stopTimer()"
-    x-on:mouseleave="startTimer()"
     {{ $attributes->merge(['class' => 'w-full']) }}
 >
     <template x-if="images.length > 0">
@@ -55,13 +58,13 @@
             <div class="relative">
 
                 {{-- Image track --}}
-                <div class="flex items-stretch gap-3">
+                <div class="flex items-center justify-center gap-3">
 
-                    {{-- Left slot — visible=3 only --}}
+                    {{-- Left slot — visible=3 only — 300×225px --}}
                     <template x-if="vis >= 3">
                         <div
-                            class="flex-none overflow-hidden bg-linen aspect-[4/3] transition-all duration-300 ease-out"
-                            style="flex-basis: 25%;"
+                            class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
+                            style="width:300px; height:225px; max-width:100%;"
                             :class="fading ? 'opacity-0' : 'opacity-60'"
                         >
                             <img
@@ -73,11 +76,11 @@
                         </div>
                     </template>
 
-                    {{-- Center slot --}}
+                    {{-- Center slot — 600×450px --}}
                     <div
-                        class="flex-none overflow-hidden bg-linen aspect-[4/3] transition-all duration-300 ease-out relative"
+                        class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out relative"
                         :class="fading ? 'opacity-0' : 'opacity-100'"
-                        :style="vis === 1 ? 'flex-basis:100%' : vis === 2 ? 'flex-basis:50%' : 'flex-basis:50%'"
+                        :style="vis === 2 ? 'width:600px; height:450px; max-width:calc(50% - 6px);' : 'width:600px; height:450px; max-width:100%;'"
                     >
                         <template x-if="vis >= 3">
                             <div class="absolute inset-0 ring-2 ring-sunburst shadow-gold-xl pointer-events-none z-10"></div>
@@ -93,9 +96,9 @@
                     {{-- Right slot — visible >= 2 --}}
                     <template x-if="vis >= 2">
                         <div
-                            class="flex-none overflow-hidden bg-linen aspect-[4/3] transition-all duration-300 ease-out"
+                            class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
                             :class="fading ? 'opacity-0' : vis >= 3 ? 'opacity-60' : 'opacity-100'"
-                            :style="vis === 2 ? 'flex-basis:50%' : 'flex-basis:25%'"
+                            :style="vis === 2 ? 'width:600px; height:450px; max-width:calc(50% - 6px);' : 'width:300px; height:225px; max-width:100%;'"
                         >
                             <img
                                 :src="rImg.src"

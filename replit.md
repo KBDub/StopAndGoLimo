@@ -15,6 +15,8 @@ This project is a premium e-commerce website for "Top 5 Percent," a custom signa
 - Never use all caps / uppercase text anywhere on the site
 - Always read docs/branding-requirements.md before making changes
 - Always read docs/themes.md before making UI or design changes
+- Default image display size: 600×450px (4:3 ratio) — use `style="width:600px; height:450px; max-width:100%;"` as per card-image-with-text.blade.php
+- Both demo pages (/demo and /demo/premium) must always show the actual blade component name, file path, and a full usage example (including aspect ratio) in every section's info block
 
 ## System Architecture
 

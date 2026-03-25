@@ -6,7 +6,7 @@
                 <h2 class="text-h2 font-bold text-charcoal mb-2">Rotating image carousel</h2>
                 <div class="h-1 bg-sunburst"></div>
             </div>
-            <p class="text-charcoal-light max-w-4xl mx-auto">Auto-rotating carousel showing 1, 2, or 3 images at a time. In 3-image mode the center image is highlighted with a sunburst border and full opacity while the flanking images are dimmed. Pauses on hover, resumes on mouse leave. Arrow buttons and dot indicators for manual control.</p>
+            <p class="text-charcoal-light max-w-4xl mx-auto">Auto-rotating carousel showing 1, 2, or 3 images at a time. In 3-image mode the center image is highlighted with a sunburst border and full opacity while the flanking images are dimmed. Click prev/next or a dot to pause and jump manually.</p>
         </div>
 
         @php
@@ -42,17 +42,33 @@
         </div>
 
         <div class="mt-10 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-charcoal mb-1">Component</h3>
+            <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.carousel-rotating-images &mdash; resources/views/components/ui/carousel-rotating-images.blade.php</p>
+
+            <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
+            <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.carousel-rotating-images
+    :images="[
+        ['src' =&gt; '/images/custom-shirts/top5pct-custom-t-shirts-main.jpg', 'alt' =&gt; 'Custom t-shirts in Joliet'],
+        ['src' =&gt; '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg', 'alt' =&gt; 'Vinyl shirts'],
+        ['src' =&gt; '/images/spirit-wear/top5pct-spiritwear-fanwear-joliet-plainfield-shorewood.jpg', 'alt' =&gt; 'Spirit wear'],
+    ]"
+    :visible="3"
+    :interval="3500"
+/&gt;
+{{-- Image sizes: center 600&times;450px (4:3), sides 300&times;225px (4:3) --}}
+{{-- visible=1: 600&times;450px | visible=2: two 600&times;450px | visible=3: 300/600/300px --}}</code></pre>
+
             <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                 <ul class="space-y-2">
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> 1, 2, or 3 images visible at once via <code>visible</code> prop</li>
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Center image highlighted — sunburst ring, full opacity</li>
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Side images dimmed to 60% opacity</li>
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Accepts any number of images</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Center image: 600&times;450px (4:3) — project standard size</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Side images: 300&times;225px (4:3), dimmed to 60% opacity</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Center highlighted with sunburst ring border</li>
                 </ul>
                 <ul class="space-y-2">
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Auto-rotates — configurable interval via <code>interval</code> prop</li>
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Pauses on hover, resumes on mouse leave</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Auto-rotates — configurable via <code>interval</code> prop (ms)</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Accepts any number of images</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Prev/next arrows — hover turns sunburst gold</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Dot indicators — click any to jump directly</li>
                 </ul>

@@ -36,10 +36,24 @@
         </div>
 
         <div class="mt-10 bg-linen p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-charcoal mb-1">Component</h3>
+            <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.card-banner-slide-in &mdash; resources/views/components/ui/card-banner-slide-in.blade.php</p>
+
+            <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
+            <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.card-banner-slide-in
+    image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+    alt="Custom shirts, hoodies, and caps in Joliet"
+    title="Custom Shirts"
+    href="/custom-apparel/custom-shirts"
+    direction="left"
+/&gt;
+{{-- Aspect ratio: 16:7 (full width) --}}
+{{-- direction: "left" or "right" --}}</code></pre>
+
             <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                 <ul class="space-y-2">
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> 16:7 landscape banner ratio</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Aspect ratio: 16:7 (full width banner)</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Slides in from left or right via <code>direction</code> prop</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Intersection Observer — fires once on scroll into view</li>
                 </ul>

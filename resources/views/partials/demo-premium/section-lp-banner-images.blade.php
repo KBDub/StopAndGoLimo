@@ -31,10 +31,31 @@
         ]" />
 
         <div class="mt-10 bg-white p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-charcoal mb-1">Component</h3>
+            <p class="text-sm text-charcoal-light font-mono mb-4">x-ui.card-lp-banner-images &mdash; resources/views/components/ui/card-lp-banner-images.blade.php</p>
+
+            <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
+            <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.card-lp-banner-images :banners="[
+    [
+        'image' =&gt; '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
+        'alt'   =&gt; 'Custom shirts, hoodies, and caps in Joliet',
+        'title' =&gt; 'Custom Shirts',
+        'href'  =&gt; '/custom-apparel/custom-shirts',
+    ],
+    [
+        'image' =&gt; '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',
+        'alt'   =&gt; 'DTF transfers printing in Joliet',
+        'title' =&gt; 'DTF Transfers',
+        'href'  =&gt; '/custom-apparel/dtf-transfers',
+    ],
+]" /&gt;
+{{-- Aspect ratio: 16:7 (full width per banner) --}}
+{{-- Odd last banner auto-centers at half width --}}</code></pre>
+
             <h3 class="text-lg font-semibold text-charcoal mb-3">Component features</h3>
             <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                 <ul class="space-y-2">
-                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> 16:7 landscape banner ratio</li>
+                    <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Aspect ratio: 16:7 per banner</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Two-up grid, full-width on mobile</li>
                     <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Odd last banner centers at half width</li>
                 </ul>

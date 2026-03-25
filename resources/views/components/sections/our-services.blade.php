@@ -27,7 +27,7 @@
             />
 
             <x-ui.card-service
-                title="Decals &amp; Stickers"
+                title="Decals & Stickers"
                 description="Custom wall decals, window graphics, floor decals, and vinyl stickers for personal or commercial use."
             />
 

@@ -264,7 +264,7 @@
                 
                 <div class="space-y-4">
                     <div class="flex items-center gap-4 p-4 bg-linen">
-                        <div class="w-16 h-16 bg-sunburst-lg flex-shrink-0"></div>
+                        <div class="w-16 h-16 flex-shrink-0" style="background-color: var(--color-sunburst)"></div>
                         <div>
                             <h3 class="font-bold text-charcoal">1. Sunburst Gold (#FFC20E)</h3>
                             <p class="text-charcoal-light text-sm">Primary brand color - Hero elements, primary CTAs, brand moments</p>

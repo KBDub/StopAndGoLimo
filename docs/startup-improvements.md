@@ -194,3 +194,139 @@ This can be done with a `curl` call inside a startup shell script after both ser
 | F — Startup warming request | No (warms OPcache before users) | Low | Yes (startup shell script) |
 
 **Recommended approach:** A (uptime monitor) prevents the problem. C + D + E + F reduce the impact when a cold start does occur. B is a deeper optimization worth considering if startup time remains a pain point after A is in place.
+
+---
+
+### Solution G — Meilisearch Log Level: INFO (Deployed 2026-03-28)
+
+**Status: Implemented**
+
+By default, Meilisearch in `--env production` mode runs at a reduced log verbosity. Individual search operations, index tasks, and health events are not printed to output. In Replit's deployment log viewer, this means Meilisearch appears nearly silent after startup — making it impossible to diagnose slow queries or indexing problems in production.
+
+The fix is to pass `--log-level INFO` to both the production startup script and the dev workflow:
+
+**`scripts/startup.sh` (production):**
+```bash
+meilisearch \
+    --http-addr 0.0.0.0:8000 \
+    --master-key "$MEILISEARCH_KEY" \
+    --db-path ./storage/meilisearch \
+    --env production \
+    --log-level INFO &
+```
+
+**Dev workflow command:**
+```bash
+meilisearch --http-addr 0.0.0.0:8000 --master-key <key> --db-path ./storage/meilisearch --env production --log-level INFO
+```
+
+**Note on how Meilisearch logs appear in Replit:** Meilisearch writes all of its output — including the startup ASCII banner, server info, and operational log lines — to **stderr** rather than stdout. Replit's deployment log collector labels all stderr as `[Error]` regardless of actual severity. Meilisearch startup messages appearing as `[Error]` entries in the deployment log viewer are **not actual errors** — they are informational output routed through the wrong stream. This is a Meilisearch behavior, not a Replit misconfiguration, and cannot be changed without patching Meilisearch itself.
+
+**Available log levels (lowest to highest verbosity):** `OFF`, `ERROR`, `WARN`, `INFO`, `DEBUG`, `TRACE`
+
+- `INFO` is the right balance for production: shows task processing, search operations, indexing, and health checks without overwhelming the log stream with internal trace data.
+- `DEBUG` or `TRACE` should only be used during active debugging — they produce very high log volume.
+
+---
+
+## Production Web Server Problem
+
+### The Problem: `php artisan serve` in Production
+
+The current startup script runs Laravel using:
+
+```bash
+php artisan serve --host=0.0.0.0 --port=5000
+```
+
+`php artisan serve` is Laravel's built-in development server. It wraps PHP's built-in web server (`php -S`) and is **not designed for production use**. Its critical limitation in production is **poor concurrency handling** — when one request is processing, additional requests block and queue behind it rather than being handled in parallel.
+
+**Evidence from production logs (2026-03-28):**
+```
+~ 15s
+~ 15s  (request logged 8 seconds after the previous)
+~ 16s  (8 seconds later again)
+~ 16s  (repeating for ~90 straight seconds)
+```
+
+Each page serving the Livewire product grid fires a Meilisearch search query, which takes 1-2 seconds on its own. With a single-threaded dev server, that 1-2 second query becomes a 15-16 second wait because every subsequent request queues behind it. The 8-second gap between logged completions is the approximate processing time per request in the queue.
+
+Static assets (CSS, JS, images served directly from `public/`) respond in sub-milliseconds because they bypass PHP entirely. Pages without the Livewire product grid component respond in ~1 second. Only pages with the Meilisearch-backed product grid hit 15-16 seconds under any load.
+
+This is **not a Meilisearch performance problem** — Meilisearch itself is fast. It is a web server concurrency problem.
+
+---
+
+### Option A — Laravel Octane (Recommended Long-Term Fix)
+
+**Laravel Octane** keeps the Laravel application bootstrapped in memory between requests. Instead of running the full Laravel startup sequence (service providers, config loading, route compilation, database connection establishment) on every single request, the app boots once and stays resident in memory. Requests are dispatched to the already-running application, dramatically cutting per-request overhead.
+
+Octane supports two drivers:
+
+**FrankenPHP (preferred for Replit VM):**
+- A single binary that acts as both the web server and PHP runtime.
+- Built on top of Caddy (a modern Go-based web server).
+- No separate nginx or php-fpm processes to manage.
+- Excellent performance, HTTP/2 and HTTP/3 support built in.
+- Install via a single binary download or `composer require laravel/octane` + `php artisan octane:install --server=frankenphp`.
+
+**RoadRunner:**
+- A Go-based PHP application server.
+- Also a single binary, but requires a separate `.rr.yaml` config file.
+- Very high performance, commonly used in high-traffic Laravel apps.
+- Install via `composer require laravel/octane spiral/roadrunner`.
+
+**Expected improvement:** Response times for warm requests should drop from 1-2 seconds to under 100ms. Concurrency handling improves dramatically — Octane processes requests in parallel workers.
+
+**Startup script change needed:** Replace `php artisan serve` with `php artisan octane:start --host=0.0.0.0 --port=5000`.
+
+**Caveats:**
+- Octane holds application state in memory between requests. Code that stores state in static properties or global variables can bleed between requests. Lunar, Livewire, and most well-written packages handle this correctly, but it requires testing.
+- Blade view caching and route caching must be valid — stale caches can cause issues. These are already cleared and rebuilt on every deploy.
+
+---
+
+### Option B — Nginx + PHP-FPM (Traditional Production Stack)
+
+The classic production PHP stack: Nginx acts as the web server and reverse proxy, PHP-FPM manages a pool of PHP worker processes that handle requests in parallel.
+
+**How it works:**
+- Nginx serves static files directly (no PHP involved — already near-zero latency).
+- PHP requests are proxied by Nginx to PHP-FPM via a Unix socket or TCP port.
+- PHP-FPM maintains a pool of pre-forked PHP workers (e.g., 4-8 workers). Requests are dispatched to any available worker in parallel.
+- Each worker still runs the full Laravel bootstrap per request (unlike Octane), but multiple requests are processed simultaneously.
+
+**On Replit Reserved VM:** Both `nginx` and `php8.4-fpm` (or `php-fpm`) are available as Nix packages and can be added to `replit.nix`. A minimal nginx config and php-fpm pool config would need to be written. The startup script would need to start both services and wait for them to be ready before warm-up requests.
+
+**Expected improvement:** Concurrency is fully resolved — 8 parallel workers means 8 simultaneous requests can process without queuing. Response times per request remain similar to the current dev server for a single request, but throughput under load improves enormously.
+
+**Effort:** Medium. Requires nginx config, php-fpm pool config, nix package additions, and startup script changes.
+
+---
+
+### Option C — PHP Built-in Server with `-S` (Quick Stopgap)
+
+Replace `php artisan serve` with PHP's raw built-in web server pointed directly at the `public/` directory:
+
+```bash
+php -S 0.0.0.0:5000 -t public/
+```
+
+This is still not a production-grade server, but PHP 8's built-in server does handle a small degree of concurrency better than `php artisan serve`'s wrapper around it. It eliminates the extra artisan bootstrap overhead on top of the server itself.
+
+**Expected improvement:** Marginal. Still single-threaded in practice for PHP requests. Not recommended as anything other than a temporary diagnostic step to isolate whether the bottleneck is artisan serve itself or something deeper.
+
+**Effort:** Trivial. One line change in `scripts/startup.sh`.
+
+---
+
+### Production Server Recommendation
+
+| Option | Concurrency | Per-Request Speed | Effort | Production-Grade |
+|---|---|---|---|---|
+| Current (`php artisan serve`) | Poor | ~1-2s (queues to 15s+) | — | No |
+| C — `php -S` direct | Poor | ~1-2s | Trivial | No |
+| B — Nginx + PHP-FPM | Excellent | ~1-2s | Medium | Yes |
+| A — Laravel Octane | Excellent | <100ms | Low-Medium | Yes |
+
+**Recommended path:** Option A (Octane + FrankenPHP). It solves both concurrency and per-request speed in one change, requires no additional services to manage, and is the direction Laravel itself recommends for production performance.

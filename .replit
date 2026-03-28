@@ -87,5 +87,4 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "meilisearch --http-addr 0.0.0.0:8000 --master-key OK51DYdyix57qXmQLGkDaq2L4ieZzFB3 --db-path ./storage/meilisearch --env production"
-waitForPort = 8000
+args = "meilisearch --http-addr 0.0.0.0:8000 --master-key OK51DYdyix57qXmQLGkDaq2L4ieZzFB3 --db-path ./storage/meilisearch --env production --log-level INFO"

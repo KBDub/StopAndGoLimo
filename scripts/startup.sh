@@ -10,7 +10,8 @@ meilisearch \
     --http-addr 0.0.0.0:8000 \
     --master-key "$MEILISEARCH_KEY" \
     --db-path ./storage/meilisearch \
-    --env production &
+    --env production \
+    --log-level INFO &
 MEILISEARCH_PID=$!
 
 # C: Wait for Meilisearch health endpoint to confirm it is ready

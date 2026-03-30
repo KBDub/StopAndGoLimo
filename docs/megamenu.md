@@ -2,6 +2,7 @@
 
 | Main menu item | Top Level Parent Category (current cat lp) | Sub Category page |
 | :---- | :---- | :---- |
+| **Home** |  |  |
 | **Custom Apparel** |  |  |
 |  | Printing Options |  |
 |  |  | Direct to Film (DTF) |
@@ -70,7 +71,10 @@
 | **Design Services** |  |  |
 |  | Logo Design |  |
 |  | Layout/Graphic Design |  |
+|  |  |  |
+| **About Us** |  |  |
+|  | About Us |  |
+|  | Company |  |
+|  | Portfolio |  |
+|  | Resources |  |
 
-
-we want to create our own branded version of style 1, but with the ads on the right
-https://overflow-megamenu-1.webflow.io/

@@ -16,22 +16,23 @@
         mobileMenuOpen: false,
         openMenu: null,
         scrolled: false,
-        openMobile: null
+        openMobile: null,
+        menuTimeout: null
     }"
     x-on:scroll.window="if (window.scrollY > 50) { scrolled = true } else { scrolled = false; openMenu = null }"
     x-on:keydown.escape.window="openMenu = null; mobileMenuOpen = false"
 >
     {{-- ── Top Bar ─────────────────────────────────────────────────────── --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="flex items-center gap-4 transition-all duration-300" x-bind:class="scrolled ? 'py-1' : 'py-2'">
+        <div class="flex items-center gap-4 transition-all duration-300 h-24" x-bind:class="scrolled ? 'h-16' : 'h-24'">
 
             {{-- Logo --}}
             <a href="/" class="flex items-center flex-shrink-0">
                 <img
                     src="/images/logos/top5-logo.gif"
                     alt="Top 5 Percent — Custom Signage & Apparel Joliet IL"
-                    class="transition-all duration-300"
-                    x-bind:class="scrolled ? 'h-14' : 'h-24'"
+                    class="transition-all duration-300 transform-gpu"
+                    x-bind:class="scrolled ? 'h-12' : 'h-20'"
                 >
             </a>
 
@@ -48,16 +49,20 @@
             </button>
 
             {{-- ── Desktop Nav Links ────────────────────────────────────── --}}
-            <div class="hidden lg:flex flex-1 items-center justify-between">
+            <div class="hidden lg:flex flex-1 self-stretch items-stretch justify-between relative z-50">
 
                 {{-- Home (no dropdown) --}}
-                <a href="/" class="px-2 py-2 text-sm font-semibold whitespace-nowrap {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
+                <a href="/" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
 
                 {{-- ══ Custom Apparel ═══════════════════════════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'apparel'" @mouseleave="openMenu = null">
-                    <a href="/custom-apparel" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'apparel'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/custom-apparel" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Custom Apparel
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'apparel' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'apparel' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'apparel'"
@@ -67,7 +72,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50"
+                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
                         style="width:700px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">
@@ -135,10 +140,14 @@
                 </div>
 
                 {{-- ══ Select a Sign ════════════════════════════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'signs'" @mouseleave="openMenu = null">
-                    <a href="/signs" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'signs'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/signs" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Select a Sign
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'signs' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'signs' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'signs'"
@@ -148,7 +157,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50"
+                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
                         style="width:700px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">
@@ -213,10 +222,14 @@
                 </div>
 
                 {{-- ══ Stickers ═════════════════════════════════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'stickers'" @mouseleave="openMenu = null">
-                    <a href="/stickers" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'stickers'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/stickers" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Stickers
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'stickers' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'stickers' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'stickers'"
@@ -226,7 +239,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50"
+                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
                         style="width:620px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">
@@ -274,10 +287,14 @@
                 </div>
 
                 {{-- ══ Vehicle Decals ═══════════════════════════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'vehicle'" @mouseleave="openMenu = null">
-                    <a href="/vehicle-graphics" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'vehicle'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/vehicle-graphics" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Vehicle Decals
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'vehicle' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'vehicle' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'vehicle'"
@@ -287,7 +304,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50"
+                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
                         style="width:620px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">
@@ -335,10 +352,14 @@
                 </div>
 
                 {{-- ══ Promotional Items ════════════════════════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'promo'" @mouseleave="openMenu = null">
-                    <a href="/promotional-items" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'promo'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/promotional-items" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Promo Items
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'promo' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'promo' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'promo'"
@@ -348,7 +369,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50"
+                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
                         style="width:700px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">
@@ -413,15 +434,19 @@
                 </div>
 
                 {{-- Top 5% Merchandise — plain link, no dropdown --}}
-                <a href="/top5pct-merchandise" class="px-2 py-2 text-sm font-semibold whitespace-nowrap {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <a href="/top5pct-merchandise" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                     Top 5% Merchandise
                 </a>
 
                 {{-- ══ Design Services — RIGHT-aligned panel ════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'design'" @mouseleave="openMenu = null">
-                    <a href="/design-services" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'design'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/design-services" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Design Services
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'design'"
@@ -431,7 +456,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full right-0 z-50"
+                        class="absolute top-full right-0 z-50 pt-2 -mt-2"
                         style="width:620px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">
@@ -479,10 +504,14 @@
                 </div>
 
                 {{-- ══ About Us — RIGHT-aligned panel ══════════════════════ --}}
-                <div class="relative self-stretch flex items-center" @mouseenter="openMenu = 'about'" @mouseleave="openMenu = null">
-                    <a href="/company" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                <div
+                    class="relative self-stretch flex items-stretch"
+                    @mouseenter="openMenu = 'about'"
+                    @mouseleave="openMenu = null"
+                >
+                    <a href="/company" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         About Us
-                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+                        <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
                     <div
                         x-cloak x-show="openMenu === 'about'"
@@ -492,7 +521,7 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full right-0 z-50"
+                        class="absolute top-full right-0 z-50 pt-2 -mt-2"
                         style="width:580px"
                     >
                         <div class="flex items-stretch bg-white shadow-2xl border-t-2 border-sunburst">

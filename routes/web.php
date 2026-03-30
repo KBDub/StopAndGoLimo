@@ -18,6 +18,8 @@ Route::get('/demo/premium', function () {
     return view('pages.demo-premium');
 })->name('demo.premium');
 
+// ─── Custom Apparel ─────────────────────────────────────────────────────────
+
 Route::get('/custom-apparel', function () {
     return view('pages.custom-apparel.index');
 })->name('custom-apparel');
@@ -66,9 +68,11 @@ Route::get('/custom-apparel/pattern-shirts', function () {
     return view('pages.custom-apparel.pattern-shirts');
 })->name('custom-apparel.pattern-shirts');
 
-Route::get('/custom-apparel/embroidery-shirts', function () {
-    return view('pages.custom-apparel.embroidery-shirts');
-})->name('custom-apparel.embroidery-shirts');
+// Renamed: embroidery-shirts → embroidery (301 redirect for old URL)
+Route::redirect('/custom-apparel/embroidery-shirts', '/custom-apparel/embroidery', 301);
+Route::get('/custom-apparel/embroidery', function () {
+    return view('pages.custom-apparel.embroidery');
+})->name('custom-apparel.embroidery');
 
 Route::get('/custom-apparel/picture-shirts', function () {
     return view('pages.custom-apparel.picture-shirts');
@@ -82,25 +86,59 @@ Route::get('/custom-apparel/reunion-shirts', function () {
     return view('pages.custom-apparel.reunion-shirts');
 })->name('custom-apparel.reunion-shirts');
 
-Route::get('/custom-apparel/corporate-wear', function () {
-    return view('pages.custom-apparel.corporate-wear');
-})->name('custom-apparel.corporate-wear');
+// Renamed: corporate-wear → corporate-wear-shirts (301 redirect for old URL)
+Route::redirect('/custom-apparel/corporate-wear', '/custom-apparel/corporate-wear-shirts', 301);
+Route::get('/custom-apparel/corporate-wear-shirts', function () {
+    return view('pages.custom-apparel.corporate-wear-shirts');
+})->name('custom-apparel.corporate-wear-shirts');
 
-Route::get('/custom-apparel/spirit-wear', function () {
-    return view('pages.custom-apparel.spirit-wear');
-})->name('custom-apparel.spirit-wear');
+// Renamed: spirit-wear → spirit-wear-shirts (301 redirect for old URL)
+Route::redirect('/custom-apparel/spirit-wear', '/custom-apparel/spirit-wear-shirts', 301);
+Route::get('/custom-apparel/spirit-wear-shirts', function () {
+    return view('pages.custom-apparel.spirit-wear-shirts');
+})->name('custom-apparel.spirit-wear-shirts');
 
-Route::get('/design-it-yourself', function () {
-    return view('pages.design-it-yourself.index');
-})->name('design-it-yourself');
+// New custom apparel sub-pages
+Route::get('/custom-apparel/dye-sublimation', function () {
+    return view('pages.custom-apparel.dye-sublimation');
+})->name('custom-apparel.dye-sublimation');
 
-Route::get('/design-it-yourself/online-designer', function () {
-    return view('pages.design-it-yourself.online-designer');
-})->name('design-it-yourself.online-designer');
+Route::get('/custom-apparel/screen-printing', function () {
+    return view('pages.custom-apparel.screen-printing');
+})->name('custom-apparel.screen-printing');
 
-Route::get('/design-it-yourself/design-catalogs', function () {
-    return view('pages.design-it-yourself.design-catalogs');
-})->name('design-it-yourself.design-catalogs');
+Route::get('/custom-apparel/puff-shirts', function () {
+    return view('pages.custom-apparel.puff-shirts');
+})->name('custom-apparel.puff-shirts');
+
+// ─── Design Services (was Design It Yourself) ────────────────────────────────
+
+// 301 redirects from old design-it-yourself URLs
+Route::redirect('/design-it-yourself', '/design-services', 301);
+Route::redirect('/design-it-yourself/online-designer', '/design-services/online-designer', 301);
+Route::redirect('/design-it-yourself/design-catalogs', '/design-services/design-catalogs', 301);
+
+Route::get('/design-services', function () {
+    return view('pages.design-services.index');
+})->name('design-services');
+
+Route::get('/design-services/online-designer', function () {
+    return view('pages.design-services.online-designer');
+})->name('design-services.online-designer');
+
+Route::get('/design-services/design-catalogs', function () {
+    return view('pages.design-services.design-catalogs');
+})->name('design-services.design-catalogs');
+
+Route::get('/design-services/logo-design', function () {
+    return view('pages.design-services.logo-design');
+})->name('design-services.logo-design');
+
+Route::get('/design-services/graphic-design', function () {
+    return view('pages.design-services.graphic-design');
+})->name('design-services.graphic-design');
+
+// ─── Signs ───────────────────────────────────────────────────────────────────
 
 Route::get('/signs', function () {
     return view('pages.signs.index');
@@ -130,17 +168,51 @@ Route::get('/signs/yard-signs', function () {
     return view('pages.signs.yard-signs');
 })->name('signs.yard-signs');
 
-Route::get('/decals', function () {
-    return view('pages.decals.index');
-})->name('decals');
+// New signs sub-pages
+Route::get('/signs/window-signs', function () {
+    return view('pages.signs.window-signs');
+})->name('signs.window-signs');
 
-Route::get('/decals/stickers', function () {
-    return view('pages.decals.stickers');
-})->name('decals.stickers');
+Route::get('/signs/wall-signs', function () {
+    return view('pages.signs.wall-signs');
+})->name('signs.wall-signs');
 
-Route::get('/decals/window-wall-floor-decals', function () {
-    return view('pages.decals.window-wall-floor-decals');
-})->name('decals.window-wall-floor-decals');
+Route::get('/signs/floor-signs', function () {
+    return view('pages.signs.floor-signs');
+})->name('signs.floor-signs');
+
+Route::get('/signs/door-signs', function () {
+    return view('pages.signs.door-signs');
+})->name('signs.door-signs');
+
+Route::get('/signs/parking-signs', function () {
+    return view('pages.signs.parking-signs');
+})->name('signs.parking-signs');
+
+Route::get('/signs/table-cloths', function () {
+    return view('pages.signs.table-cloths');
+})->name('signs.table-cloths');
+
+// ─── Stickers (was Decals) ───────────────────────────────────────────────────
+
+// Keep old /decals routes alive with 301 redirects
+Route::redirect('/decals', '/stickers', 301);
+Route::redirect('/decals/stickers', '/stickers/standard-stickers', 301);
+Route::redirect('/decals/window-wall-floor-decals', '/vehicle-graphics/automobile-graphics', 301);
+
+Route::get('/stickers', function () {
+    return view('pages.stickers.index');
+})->name('stickers');
+
+Route::get('/stickers/standard-stickers', function () {
+    return view('pages.stickers.standard-stickers');
+})->name('stickers.standard-stickers');
+
+Route::get('/stickers/custom-shaped-stickers', function () {
+    return view('pages.stickers.custom-shaped-stickers');
+})->name('stickers.custom-shaped-stickers');
+
+// ─── Vehicle Graphics ────────────────────────────────────────────────────────
 
 Route::get('/vehicle-graphics', function () {
     return view('pages.vehicle-graphics.index');
@@ -158,9 +230,37 @@ Route::get('/vehicle-graphics/dot-decals', function () {
     return view('pages.vehicle-graphics.dot-decals');
 })->name('vehicle-graphics.dot-decals');
 
+// ─── Promotional Items ───────────────────────────────────────────────────────
+
 Route::get('/promotional-items', function () {
     return view('pages.promotional-items');
 })->name('promotional-items');
+
+Route::get('/promotional-items/mugs', function () {
+    return view('pages.promotional-items.mugs');
+})->name('promotional-items.mugs');
+
+Route::get('/promotional-items/can-koozies', function () {
+    return view('pages.promotional-items.can-koozies');
+})->name('promotional-items.can-koozies');
+
+Route::get('/promotional-items/towels', function () {
+    return view('pages.promotional-items.towels');
+})->name('promotional-items.towels');
+
+Route::get('/promotional-items/drink-coasters', function () {
+    return view('pages.promotional-items.drink-coasters');
+})->name('promotional-items.drink-coasters');
+
+Route::get('/promotional-items/tote-bags', function () {
+    return view('pages.promotional-items.tote-bags');
+})->name('promotional-items.tote-bags');
+
+Route::get('/promotional-items/mouse-pads', function () {
+    return view('pages.promotional-items.mouse-pads');
+})->name('promotional-items.mouse-pads');
+
+// ─── Company / About ─────────────────────────────────────────────────────────
 
 Route::get('/stores', function () {
     return view('pages.stores');
@@ -178,11 +278,23 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
+Route::get('/company', function () {
+    return view('pages.company.index');
+})->name('company');
+
+Route::get('/resources', function () {
+    return view('pages.company.resources');
+})->name('resources');
+
+// ─── Page Management ─────────────────────────────────────────────────────────
+
 Route::get('/page-management', function () {
     $scanner = new \App\Actions\ScanPageComponents();
     $groups = $scanner->execute();
     return view('pages.page-management', compact('groups'));
 })->name('page-management');
+
+// ─── Collections ─────────────────────────────────────────────────────────────
 
 Route::get('/collections/{slug}', function (string $slug) {
     $collection = \Lunar\Models\Collection::whereHas('urls', function ($q) use ($slug) {
@@ -250,6 +362,8 @@ Route::get('/collections/{parent}/{child}', function (string $parent, string $ch
     ]);
 })->name('collections.child');
 
+// ─── Products ────────────────────────────────────────────────────────────────
+
 Route::get('/products/{slug}', function (string $slug) {
     $product = \Lunar\Models\Product::whereHas('urls', function ($q) use ($slug) {
         $q->where('slug', $slug);
@@ -266,6 +380,7 @@ Route::get('/products/{slug}', function (string $slug) {
     ]);
 })->name('products.show');
 
+// ─── Cart & Checkout ─────────────────────────────────────────────────────────
 
 Route::get('/cart', function () {
     return view('pages.cart');

@@ -62,6 +62,19 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 
 ## Recent Changes
 
+-   **Mega Menu Rebuild + 22 New/Refactored Pages (Mar 2026):**
+    -   **Navigation bar** rebuilt as Mega Menu Style 1: full-width flyout panels per category, 3-column sub-link layout + right-side dark ad panel with image/CTA. Alpine.js hover for desktop, accordion for mobile. 7 mega menu panels: Custom Apparel, Select a Sign, Stickers, Vehicle Decals, Promo Items, Design Services, About Us. Nav label changes: "Signs"→"Select a Sign", "Vehicle Graphics"→"Vehicle Decals", "Design It Yourself"→"Design Services".
+    -   **New mega-menu-ad partial** at `resources/views/components/layout/mega-menu-ad.blade.php`.
+    -   **File renames** (with 301 redirects from old URLs): `embroidery-shirts`→`embroidery`, `corporate-wear`→`corporate-wear-shirts`, `spirit-wear`→`spirit-wear-shirts`, `design-it-yourself`→`design-services`, `decals/stickers`→`stickers/standard-stickers`.
+    -   **New stickers pages**: `/stickers` (landing), `/stickers/standard-stickers`, `/stickers/custom-shaped-stickers`.
+    -   **New custom apparel pages**: `/custom-apparel/dye-sublimation`, `/custom-apparel/screen-printing`, `/custom-apparel/puff-shirts`.
+    -   **New signs sub-pages**: `/signs/window-signs`, `/signs/wall-signs`, `/signs/floor-signs`, `/signs/door-signs`, `/signs/parking-signs`, `/signs/table-cloths`.
+    -   **New promotional items sub-pages**: `/promotional-items/mugs`, `/promotional-items/can-koozies`, `/promotional-items/towels`, `/promotional-items/drink-coasters`, `/promotional-items/tote-bags`, `/promotional-items/mouse-pads`.
+    -   **New design services sub-pages**: `/design-services/logo-design`, `/design-services/graphic-design`.
+    -   **New company/about pages**: `/company` (using `x-sections.about-preview`), `/resources` (tips & articles hub).
+    -   **Routes** fully updated in `routes/web.php` with organized sections, all new routes, and 301 redirects for all renamed URLs.
+    -   All pages follow the mandatory section layout standard documented in `docs/megamenu.md`.
+
 -   **Signs Landing Page & All Sub-Category Pages (Mar 2026):** Built `/signs` landing page with hero image (`top5pct-banner-joliet.jpg`), "Signs for Every Need" intro section, and `x-sections.lp-category-banners` with all 7 sub-categories (yard-signs, sidewalk-signs, banners, business-signs, posters, table-runners, coronavirus-signs). Rebuilt all 7 sub-category pages with full SEO titles/meta, hero images, and `x-sections.editorial-cards` blocks: yard-signs (3 cards, 4 images), sidewalk-signs (3 cards, 3 images), banners (4 cards, 6 images), posters (4 cards, 6 images), business-signs (4 cards, 6 images), coronavirus-signs (4 cards, 6 images), table-runners (4 cards, 5 images). Source content from top5pct.com PHP pages. SEO writing: 7th grade level, "we" statements, Joliet/Shorewood/Plainfield/Will County/Chicagoland geo terms, no em dashes, no hyphens. Note: corona-virus-signs image folder uses a hyphen in the directory name.
 
 -   **Custom Shirts Page Rebuild (Mar 2026):** Replaced `/custom-apparel/custom-shirts` (legacy top5pct.com/php/t-shirt-maker-joliet.php) with full SEO content page. Added 12-card shirt type grid, YouTube video banner (ID: F3J9nyiM3So), "Represent Yourself" brand statement section, and 7-tip FAQ accordion. Created 12 shell pages for each shirt type (vinyl, rhinestone, glitter, foil, glow-in-the-dark, flock, reflective, holographic, brick, pattern, embroidery, picture-shirts) with routes. Documented in `docs/page-replacement.md`.

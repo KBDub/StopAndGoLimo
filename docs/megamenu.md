@@ -271,3 +271,50 @@ All category landing pages and sub-category pages must follow this exact section
 - **"Decals"** as a top-level item — Stickers promoted to its own top-level entry
 - **"Signs"** label — renamed to "Select a Sign"
 - **"Vehicle Graphics"** label — renamed to "Vehicle Decals"
+
+---
+
+## Navigation Jitter & Performance Fixes (2026-03-30)
+
+### 1. Issue: Desktop Hover Jitter
+**Symptom:** The mouse cursor and menu icons "jitter" or "flicker" rapidly when hovering over the top-level menu items or moving between the link and the dropdown.
+
+**Root Causes:**
+- **Layout Shifts:** The navigation bar changed padding/height on scroll, causing the hover target to move out from under the cursor.
+- **Hover Gaps:** Tiny gaps (sub-pixel or intentional) between the trigger link and the absolute-positioned dropdown caused `@mouseleave` to fire prematurely.
+- **Race Conditions:** Rapid mouse movements triggered multiple Alpine.js state changes faster than the CSS transitions could complete.
+
+### 2. Implemented Solutions
+
+#### A. Stabilized Layout (Fixed Heights)
+- Replaced dynamic padding (`py-1`/`py-2`) with fixed container heights (`h-16` when scrolled, `h-24` normally).
+- This ensures the navigation bar never "jumps" while the user is hovering, preventing an infinite loop of enter/leave events.
+
+#### B. Seamless Hover Zone (Full-Height Links)
+- Updated desktop links to use `h-full` and `inline-flex items-center`.
+- Since the parent containers use `self-stretch`, the links now cover 100% of the navigation bar's vertical height.
+- This eliminates any physical gap between the trigger area and the dropdown panel.
+
+#### C. Hover Intent (Immediate State)
+- Removed `menuTimeout` and `setTimeout` delays.
+- **Immediate Response:** The menu now opens and closes instantly upon mouse entry/leave.
+- **Stability:** By combining immediate state changes with the **Hover Bridge** and **Stretched Hit-Areas**, the navigation is more robust than using timers, which could create race conditions during rapid movement.
+- **Implementation:**
+  ```html
+  <div 
+      @mouseenter="openMenu = 'apparel'" 
+      @mouseleave="openMenu = null"
+  >
+  ```
+
+#### D. Visual Stability
+- Added `transform-gpu` and `transition-transform` to icons and the logo to ensure hardware-accelerated, jitter-free animations.
+
+#### E. Pointer Event Isolation
+- Applied `pointer-events-none` to chevron icons so they don't interfere with hover detection on the parent link.
+
+#### F. Structural Stability (Final Stabilization)
+- **Stretched Desktop Container**: Added `self-stretch` and `items-stretch` to the main desktop navigation container (`hidden lg:flex`). This ensures the container always fills 100% of the navigation bar's height, preventing "dead zones" where the mouse could accidentally trigger a `mouseleave` event.
+- **Z-Index Layering**: Applied `relative z-50` to the desktop navigation container. This ensures that the menu trigger areas remain above the global backdrop (`z-40`), preventing the backdrop from "stealing" the mouse focus and causing a flicker loop as soon as the menu opens.
+- **Unified Flex Alignment**: Standardized all menu item wrappers and links to use `items-stretch` and `h-full`. This creates a perfectly stable, rectangular hit-area that covers the entire vertical space of the navbar.
+- **Hover Bridge (Overlap Zone)**: Added a "hover bridge" to all dropdown panels using `pt-2` (padding) and `-mt-2` (negative margin). This creates a physical overlap between the trigger link and the absolute-positioned panel, ensuring the mouse never enters a "no-man's land" gap, even at different browser zoom levels or sub-pixel rendering.

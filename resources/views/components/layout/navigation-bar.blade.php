@@ -37,7 +37,7 @@
             {{-- Mobile hamburger --}}
             <button
                 @click="mobileMenuOpen = !mobileMenuOpen"
-                class="xl:hidden p-2 text-charcoal hover:text-sunburst"
+                class="lg:hidden p-2 text-charcoal hover:text-sunburst"
                 aria-label="Toggle menu"
             >
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,10 +47,10 @@
             </button>
 
             {{-- ── Desktop Nav Links ───────────────────────────────────── --}}
-            <div class="hidden xl:flex items-center gap-0">
+            <div class="hidden lg:flex items-center gap-0">
 
                 {{-- Home --}}
-                <a href="/" class="px-3 py-2 text-sm font-semibold whitespace-nowrap {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
+                <a href="/" class="px-2 py-2 text-sm font-semibold whitespace-nowrap {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
 
                 {{-- Custom Apparel --}}
                 <div
@@ -58,7 +58,7 @@
                     @mouseenter="openMenu = 'apparel'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/custom-apparel" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/custom-apparel" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Custom Apparel
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'apparel' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -70,7 +70,7 @@
                     @mouseenter="openMenu = 'signs'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/signs" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/signs" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Select a Sign
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'signs' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -82,7 +82,7 @@
                     @mouseenter="openMenu = 'stickers'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/stickers" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/stickers" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Stickers
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'stickers' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -94,7 +94,7 @@
                     @mouseenter="openMenu = 'vehicle'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/vehicle-graphics" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/vehicle-graphics" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Vehicle Decals
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'vehicle' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -106,7 +106,7 @@
                     @mouseenter="openMenu = 'promo'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/promotional-items" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/promotional-items" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Promo Items
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'promo' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -118,7 +118,7 @@
                     @mouseenter="openMenu = 'design'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/design-services" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/design-services" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Design Services
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -130,7 +130,7 @@
                     @mouseenter="openMenu = 'about'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/company" class="px-3 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ in_array($currentPage, ['about']) ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/company" class="px-2 py-2 text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ in_array($currentPage, ['about']) ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         About Us
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200" :class="openMenu === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -585,7 +585,7 @@
          MOBILE MENU
          Accordion style — each section collapsible
          ================================================================== --}}
-    <div x-cloak x-show="mobileMenuOpen" x-transition class="xl:hidden border-t border-linen-dark">
+    <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden border-t border-linen-dark">
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
 
             <a href="/" class="block px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">Home</a>

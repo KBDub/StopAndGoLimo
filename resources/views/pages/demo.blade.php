@@ -43,7 +43,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Palette (5 + White)</h2>
                 <p class="text-charcoal-light mb-8">Each core color has up to 3 variants: Light, Default, and Dark</p>
-                
+
                 <div class="overflow-hidden shadow-lg mb-8">
                     <div class="p-6 bg-linen-light border-b border-linen-dark">
                         <h3 class="text-xl font-bold text-charcoal">Olive</h3>
@@ -211,7 +211,7 @@
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Semantic Colors (3)</h2>
-                
+
                 <div class="grid md:grid-cols-3 gap-6">
                     <div class="overflow-hidden shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1">
                         <div class="h-36 bg-success flex items-center justify-center">
@@ -261,7 +261,7 @@
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Color Hierarchy</h2>
-                
+
                 <div class="space-y-4">
                     <div class="flex items-center gap-4 p-4 bg-linen">
                         <div class="w-16 h-16 flex-shrink-0" style="background-color: var(--color-sunburst)"></div>
@@ -312,7 +312,7 @@
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Brand Gradients</h2>
-                
+
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="overflow-hidden shadow-lg">
                         <div class="h-40 bg-gold-gradient flex items-center justify-center">
@@ -421,46 +421,46 @@
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Typography</h2>
-                
+
                 <div class="bg-white p-8 shadow-lg">
                     <h3 class="text-lg font-semibold mb-6 text-charcoal-light">Font Family: Titillium Web</h3>
-                    
+
                     <div class="space-y-6">
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">H1 - 32px / Bold / Line Height 1.2</p>
                             <h1 class="text-h1 font-bold text-charcoal">Main Page Heading</h1>
                         </div>
-                        
+
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">H2 - 32px / Bold / Line Height 1.3</p>
                             <h2 class="text-h2 font-bold text-charcoal">Section Title</h2>
                         </div>
-                        
+
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">H3 - 28px / SemiBold / Line Height 1.3</p>
                             <h3 class="text-h3 font-semibold text-charcoal">Subsection Heading</h3>
                         </div>
-                        
+
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">H4 - 24px / SemiBold / Line Height 1.4</p>
                             <h4 class="text-h4 font-semibold text-charcoal">Card Title</h4>
                         </div>
-                        
+
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">H5 - 20px / SemiBold / Line Height 1.4</p>
                             <h5 class="text-h5 font-semibold text-charcoal">Minor Heading</h5>
                         </div>
-                        
+
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">Body Large - 22px / Regular</p>
                             <p class="text-lg text-charcoal">Premium custom signage and apparel. Veteran-owned business specializing in custom shirts, signs, decals, and vehicle graphics.</p>
                         </div>
-                        
+
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">Body - 20px / Regular</p>
                             <p class="text-base text-charcoal">Our team delivers exceptional quality with attention to detail. From custom t-shirts to full vehicle wraps, we bring your vision to life.</p>
                         </div>
-                        
+
                         <div>
                             <p class="text-xs text-charcoal-light mb-2">Caption - 16px / Regular</p>
                             <p class="text-xs text-charcoal-light">Image caption or fine print text styling.</p>
@@ -480,11 +480,11 @@
                             <p class="text-base text-charcoal">Learn more about <a href="#" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline">vinyl lettering &amp; car wraps</a> and our <a href="#" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline">vehicle graphics</a> services.</p>
                         </div>
                         <div class="pb-4 border-b border-gray-200">
-                            <p class="text-xs text-charcoal-light mb-2">Navigation Link - Charcoal default, Sunburst hover</p>
+                            <p class="text-xs text-charcoal-light mb-2">Navigation Link - Charcoal default, Sunburst hover, 18px</p>
                             <div class="flex gap-6">
-                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-sm transition-colors no-underline">Custom Apparel</a>
-                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-sm transition-colors no-underline">Signs</a>
-                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-sm transition-colors no-underline">Decals</a>
+                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-lg transition-colors no-underline">Custom Apparel</a>
+                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-lg transition-colors no-underline">Signs</a>
+                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-lg transition-colors no-underline">Decals</a>
                             </div>
                         </div>
                         <div>
@@ -729,7 +729,7 @@
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Visual Combinations</h2>
-                
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="overflow-hidden shadow-lg">
                         <div class="py-5 px-6 bg-azure">
@@ -777,7 +777,7 @@
         <section class="py-16 bg-white">
             <div class="max-w-7xl mx-auto px-6">
                 <h2 class="text-2xl font-bold mb-8 border-l-4 border-sunburst pl-5">Form Elements</h2>
-                
+
                 <div class="bg-linen p-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="space-y-6">
@@ -785,7 +785,7 @@
                                 <label class="block text-sm font-semibold mb-2 text-charcoal">Text Input</label>
                                 <input type="text" placeholder="Enter your name" class="w-full h-12 px-4 bg-white border border-gray-300 focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors">
                             </div>
-                            
+
                             <div>
                                 <label class="block text-sm font-semibold mb-2 text-charcoal">Select Menu</label>
                                 <select class="w-full h-12 px-4 bg-white border border-gray-300 focus:border-sunburst focus:ring-2 focus:ring-sunburst/20 outline-none transition-colors">
@@ -796,7 +796,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold mb-2 text-charcoal">Textarea</label>
@@ -1244,7 +1244,7 @@
                             <p class="text-sm text-charcoal-light">Your order has been placed successfully.</p>
                         </div>
                     </div>
-                    
+
                     <div class="p-4 bg-warning/10 border-l-4 border-warning flex items-start gap-3">
                         <svg class="w-5 h-5 text-warning mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
                         <div>
@@ -1252,7 +1252,7 @@
                             <p class="text-sm text-charcoal-light">Your session will expire in 5 minutes.</p>
                         </div>
                     </div>
-                    
+
                     <div class="p-4 bg-azure/10 border-l-4 border-azure flex items-start gap-3">
                         <svg class="w-5 h-5 text-azure mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
                         <div>

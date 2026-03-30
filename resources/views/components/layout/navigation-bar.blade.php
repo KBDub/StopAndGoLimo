@@ -53,7 +53,7 @@
 
                 {{-- Home (no dropdown) --}}
                 <div class="relative self-stretch flex items-stretch">
-                    <a href="/" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
+                    <a href="/" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
                 </div>
 
                 {{-- ══ Custom Apparel ═══════════════════════════════════════ --}}
@@ -62,7 +62,7 @@
                     @mouseenter="openMenu = 'apparel'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/custom-apparel" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/custom-apparel" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Custom Apparel
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'apparel' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -128,15 +128,15 @@
                                 </div>
                             </div>
                             {{-- Right ad panel --}}
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg" alt="Custom apparel same day" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">Same Day Available</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Custom Shirts & Apparel</h4>
-                                    <p class="text-white/70 text-xs mb-3">Any style. Any print method. Veteran owned in Joliet, IL.</p>
-                                    <a href="/custom-apparel" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Shop Apparel →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+                                alt="Custom apparel same day"
+                                tag="Same Day Available"
+                                title="Custom Shirts & Apparel"
+                                desc="Any style. Any print method. Veteran owned in Joliet, IL."
+                                cta="Shop Apparel"
+                                href="/custom-apparel"
+                            />
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                     @mouseenter="openMenu = 'signs'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/signs" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/signs" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Select a Sign
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'signs' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -210,15 +210,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg" alt="Same day signs" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">Same Day Available</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Custom Signs & Banners</h4>
-                                    <p class="text-white/70 text-xs mb-3">Indoor & outdoor. Any size. Fast turnaround in Joliet, IL.</p>
-                                    <a href="/signs" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Get a Sign →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg"
+                                alt="Same day signs"
+                                tag="Same Day Available"
+                                title="Custom Signs & Banners"
+                                desc="Indoor & outdoor. Any size. Fast turnaround in Joliet, IL."
+                                cta="Get a Sign"
+                                href="/signs"
+                            />
                         </div>
                     </div>
                 </div>
@@ -229,7 +229,7 @@
                     @mouseenter="openMenu = 'stickers'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/stickers" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/stickers" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Stickers
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'stickers' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -275,15 +275,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg" alt="Custom stickers same day" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">Fast Turnaround</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Custom Stickers</h4>
-                                    <p class="text-white/70 text-xs mb-3">Vinyl, weatherproof, any shape. No minimums in Joliet, IL.</p>
-                                    <a href="/stickers" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Order Now →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg"
+                                alt="Custom stickers same day"
+                                tag="Fast Turnaround"
+                                title="Custom Stickers"
+                                desc="Vinyl, weatherproof, any shape. No minimums in Joliet, IL."
+                                cta="Order Now"
+                                href="/stickers"
+                            />
                         </div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                     @mouseenter="openMenu = 'vehicle'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/vehicle-graphics" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/vehicle-graphics" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Vehicle Decals
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'vehicle' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -340,15 +340,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg" alt="Vehicle decals same day" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">Same Day Available</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Vehicle Graphics & Wraps</h4>
-                                    <p class="text-white/70 text-xs mb-3">Mobile advertising that pays for itself. Joliet, IL.</p>
-                                    <a href="/vehicle-graphics" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Get a Quote →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg"
+                                alt="Vehicle decals same day"
+                                tag="Same Day Available"
+                                title="Vehicle Graphics & Wraps"
+                                desc="Mobile advertising that pays for itself. Joliet, IL."
+                                cta="Get a Quote"
+                                href="/vehicle-graphics"
+                            />
                         </div>
                     </div>
                 </div>
@@ -359,7 +359,7 @@
                     @mouseenter="openMenu = 'promo'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/promotional-items" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/promotional-items" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Promo Items
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'promo' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -422,22 +422,22 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg" alt="Promo items same day" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">In Stock & Ready</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Promo Products</h4>
-                                    <p class="text-white/70 text-xs mb-3">Branded gifts for events, offices & trade shows.</p>
-                                    <a href="/promotional-items" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Shop Promo →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg"
+                                alt="Promo items same day"
+                                tag="In Stock & Ready"
+                                title="Promo Products"
+                                desc="Branded gifts for events, offices & trade shows."
+                                cta="Shop Promo"
+                                href="/promotional-items"
+                            />
                         </div>
                     </div>
                 </div>
 
                 {{-- Top 5% Merchandise — plain link, no dropdown --}}
                 <div class="relative self-stretch flex items-stretch">
-                    <a href="/top5pct-merchandise" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/top5pct-merchandise" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Top 5% Merchandise
                     </a>
                 </div>
@@ -448,7 +448,7 @@
                     @mouseenter="openMenu = 'design'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/design-services" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/design-services" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Design Services
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -494,15 +494,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg" alt="Professional design services" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">Print-Ready Files</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Pro Design Team</h4>
-                                    <p class="text-white/70 text-xs mb-3">Logos, layouts, and custom artwork. Fast turnaround.</p>
-                                    <a href="/design-services" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Get Designed →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
+                                alt="Professional design services"
+                                tag="Print-Ready Files"
+                                title="Pro Design Team"
+                                desc="Logos, layouts, and custom artwork. Fast turnaround."
+                                cta="Get Designed"
+                                href="/design-services"
+                            />
                         </div>
                     </div>
                 </div>
@@ -513,7 +513,7 @@
                     @mouseenter="openMenu = 'about'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/company" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/company" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         About Us
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -559,24 +559,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative w-40 flex-shrink-0 overflow-hidden flex flex-col justify-end p-4" style="min-height:220px; background-color:var(--color-charcoal)">
-                                <img src="/images/about-preview.jpg" alt="Veteran owned Joliet IL" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
-                                <div class="relative z-10">
-                                    <p class="text-xs font-bold uppercase tracking-widest mb-1" style="color:var(--color-sunburst)">Veteran Owned</p>
-                                    <h4 class="text-white font-bold text-sm leading-tight mb-1">Top 5 Percent</h4>
-                                    <p class="text-white/70 text-xs mb-3">Joliet, IL. Serving our community since 2017.</p>
-                                    <a href="/company" class="block text-center text-xs font-bold px-3 py-1.5 text-charcoal transition-colors" style="background-color:var(--color-sunburst)">Our Story →</a>
-                                </div>
-                            </div>
+                            <x-layout.mega-menu-ad
+                                image="/images/about-preview.jpg"
+                                alt="Veteran owned Joliet IL"
+                                tag="Veteran Owned"
+                                title="Top 5 Percent"
+                                desc="Joliet, IL. Serving our community since 2017."
+                                cta="Our Story"
+                                href="/company"
+                            />
                         </div>
                     </div>
-                </div>
-
-                {{-- Contact CTA --}}
-                <div class="self-stretch flex items-center">
-                    <a href="/contact" class="px-4 py-2 text-sm font-bold bg-sunburst text-charcoal hover:bg-sunburst-dark transition-colors whitespace-nowrap">
-                        Free Quote
-                    </a>
                 </div>
 
             </div>
@@ -696,38 +689,6 @@
             </div>
 
             <a href="/top5pct-merchandise" class="block px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">Top 5% Merchandise</a>
-
-            <div>
-                <button @click="openMobile = openMobile === 'design' ? null : 'design'" class="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">
-                    <span>Design Services</span>
-                    <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="openMobile === 'design'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
-                    <a href="/design-services" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All Design Services</a>
-                    <a href="/design-services/online-designer" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Free Online Designer</a>
-                    <a href="/design-services/design-catalogs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Design Catalogs</a>
-                    <a href="/design-services/logo-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Logo Design</a>
-                    <a href="/design-services/graphic-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Graphic Design</a>
-                </div>
-            </div>
-
-            <div>
-                <button @click="openMobile = openMobile === 'about' ? null : 'about'" class="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">
-                    <span>About Us</span>
-                    <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="openMobile === 'about'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
-                    <a href="/company" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">About Our Company</a>
-                    <a href="/resources" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Resources & Articles</a>
-                    <a href="/portfolio" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Portfolio</a>
-                    <a href="/contact" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Contact Us</a>
-                </div>
-            </div>
-
-            <div class="pt-2 border-t border-linen-dark">
-                <a href="/contact" class="block w-full text-center px-4 py-3 text-sm font-bold bg-sunburst text-charcoal hover:bg-sunburst-dark transition-colors">Get a Free Quote</a>
-            </div>
-
         </div>
     </div>
 </nav>

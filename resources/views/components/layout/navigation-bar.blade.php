@@ -52,7 +52,9 @@
             <div class="hidden lg:flex flex-1 self-stretch items-stretch justify-between relative z-50">
 
                 {{-- Home (no dropdown) --}}
-                <a href="/" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
+                <div class="relative self-stretch flex items-stretch">
+                    <a href="/" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
+                </div>
 
                 {{-- ══ Custom Apparel ═══════════════════════════════════════ --}}
                 <div
@@ -434,9 +436,11 @@
                 </div>
 
                 {{-- Top 5% Merchandise — plain link, no dropdown --}}
-                <a href="/top5pct-merchandise" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
-                    Top 5% Merchandise
-                </a>
+                <div class="relative self-stretch flex items-stretch">
+                    <a href="/top5pct-merchandise" class="px-2 h-full text-sm font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                        Top 5% Merchandise
+                    </a>
+                </div>
 
                 {{-- ══ Design Services — RIGHT-aligned panel ════════════════ --}}
                 <div
@@ -569,9 +573,11 @@
                 </div>
 
                 {{-- Contact CTA --}}
-                <a href="/contact" class="px-4 py-2 text-sm font-bold bg-sunburst text-charcoal hover:bg-sunburst-dark transition-colors whitespace-nowrap">
-                    Free Quote
-                </a>
+                <div class="self-stretch flex items-center">
+                    <a href="/contact" class="px-4 py-2 text-sm font-bold bg-sunburst text-charcoal hover:bg-sunburst-dark transition-colors whitespace-nowrap">
+                        Free Quote
+                    </a>
+                </div>
 
             </div>
         </div>

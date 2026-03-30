@@ -5,7 +5,7 @@
 
 ## Standard Page Section Layout (MANDATORY)
 
-All category landing pages and sub-category pages must follow this exact section order. No exceptions. New pages must replicate this structure.
+All category landing pages and sub-category pages must follow this exact section order. No exceptions. New pages must replicate this structure. New pages should use existing graphics and pull idea/content from other related pages.
 
 ### Category Landing Page (index) Layout
 
@@ -72,29 +72,29 @@ All category landing pages and sub-category pages must follow this exact section
 - **Page Status:** ✅ Exists (`resources/views/pages/custom-apparel/index.blade.php`)
 - **Dropdown:** Yes — 3-level mega menu
 
-| Category Title | Sub-link | URL | Page Status |
-|---|---|---|---|
-| **Overview** | Custom Apparel (overview) | `/custom-apparel` | ✅ Exists |
-| **Printing Options** | | | |
-| | Direct to Film (DTF) | `/custom-apparel/dtf-transfers` | ✅ Exists |
-| | Dye-Sublimation | `/custom-apparel/dye-sublimation` | ❌ New page needed |
-| | Screen Printing | `/custom-apparel/screen-printing` | ❌ New page needed |
-| | Embroidery | `/custom-apparel/embroidery-shirts` | ✅ Exists |
-| | Rhinestone | `/custom-apparel/rhinestone-shirts` | ✅ Exists |
-| | Digital Vinyl | `/custom-apparel/vinyl-shirts` | ✅ Exists |
-| **Specialty Materials** | | | |
-| | Glitter | `/custom-apparel/glitter-shirts` | ✅ Exists |
-| | Puff | `/custom-apparel/puff-shirts` | ❌ New page needed |
-| | Glow in the Dark | `/custom-apparel/glow-in-the-dark-shirts` | ✅ Exists |
-| | Flock | `/custom-apparel/flock-shirts` | ✅ Exists |
-| | Brick | `/custom-apparel/brick-shirts` | ✅ Exists |
-| | Holographic | `/custom-apparel/holographic-shirts` | ✅ Exists |
-| | Foil | `/custom-apparel/foil-shirts` | ✅ Exists |
-| | Reflective | `/custom-apparel/reflective-shirts` | ✅ Exists |
-| **Group Shirts** | | | |
-| | Family Reunion | `/custom-apparel/reunion-shirts` | ✅ Exists |
-| | Spirit Wear | `/custom-apparel/spirit-wear` | ✅ Exists |
-| | Corporate Wear | `/custom-apparel/corporate-wear` | ✅ Exists |
+| Category Title | Sub-link | URL | Page Status | Notes |
+|---|---|---|---|---|
+| **Overview** | Custom Apparel | `/custom-apparel` | ✅ Exists | |
+| **Printing Options** | | | | |
+| | Direct to Film (DTF) | `/custom-apparel/dtf-transfers` | ✅ Exists | |
+| | Dye-Sublimation | `/custom-apparel/dye-sublimation` | ❌ New page | Use existing shirt graphics |
+| | Screen Printing | `/custom-apparel/screen-printing` | ❌ New page | Use existing shirt graphics |
+| | Embroidery | `/custom-apparel/embroidery` | ✅ Exists | URL changed from `/embroidery-shirts` → `/embroidery` (may add sub-sub pages) |
+| | Rhinestone | `/custom-apparel/rhinestone-shirts` | ✅ Exists | |
+| | Digital Vinyl | `/custom-apparel/vinyl-shirts` | ✅ Exists | |
+| **Specialty Materials** | | | | |
+| | Glitter | `/custom-apparel/glitter-shirts` | ✅ Exists | |
+| | Puff | `/custom-apparel/puff-shirts` | ❌ New page | Use existing shirt graphics |
+| | Glow in the Dark | `/custom-apparel/glow-in-the-dark-shirts` | ✅ Exists | |
+| | Flock | `/custom-apparel/flock-shirts` | ✅ Exists | |
+| | Brick | `/custom-apparel/brick-shirts` | ✅ Exists | |
+| | Holographic | `/custom-apparel/holographic-shirts` | ✅ Exists | |
+| | Foil | `/custom-apparel/foil-shirts` | ✅ Exists | |
+| | Reflective | `/custom-apparel/reflective-shirts` | ✅ Exists | |
+| **Group Shirts** | | | | |
+| | Family Reunion | `/custom-apparel/reunion-shirts` | ✅ Exists | |
+| | Spirit Wear | `/custom-apparel/spirit-wear-shirts` | ✅ Exists | URL changed from `/spirit-wear` → `/spirit-wear-shirts` |
+| | Corporate Wear | `/custom-apparel/corporate-wear-shirts` | ✅ Exists | URL changed from `/corporate-wear` → `/corporate-wear-shirts` |
 
 ---
 
@@ -104,23 +104,23 @@ All category landing pages and sub-category pages must follow this exact section
 - **Page Status:** ✅ Exists (`resources/views/pages/signs/index.blade.php`)
 - **Dropdown:** Yes — 3-level mega menu
 
-| Category Title | Sub-link | URL | Page Status |
-|---|---|---|---|
-| **Overview** | Select a Sign (overview) | `/signs` | ✅ Exists |
-| **Business Signs** | | | |
-| | Banners | `/signs/banners` | ✅ Exists |
-| | Window Signs | `/signs/window-signs` | ❌ New page needed |
-| | Wall Signs | `/signs/wall-signs` | ❌ New page needed |
-| | Floor Signs | `/signs/floor-signs` | ❌ New page needed |
-| | Door Signs | `/signs/door-signs` | ❌ New page needed |
-| | Posters | `/signs/posters` | ✅ Exists |
-| **Ground Signs** | | | |
-| | Yard Signs | `/signs/yard-signs` | ✅ Exists |
-| | A-Frame / Sidewalk Signs | `/signs/sidewalk-signs` | ✅ Exists |
-| | Parking Signs | `/signs/parking-signs` | ❌ New page needed |
-| **Table Signs** | | | |
-| | Table Cloths | `/signs/table-cloths` | ❌ New page needed |
-| | Table Runners | `/signs/table-runners` | ✅ Exists |
+| Category Title | Sub-link | URL | Page Status | Notes |
+|---|---|---|---|---|
+| **Overview** | Select a Sign | `/signs` | ✅ Exists | |
+| **Business Signs** | | | | |
+| | Banners | `/signs/banners` | ✅ Exists | |
+| | Window Signs | `/signs/window-signs` | ❌ New page | Pull content from business-signs page |
+| | Wall Signs | `/signs/wall-signs` | ❌ New page | Pull content from business-signs page |
+| | Floor Signs | `/signs/floor-signs` | ❌ New page | Pull content from business-signs page |
+| | Door Signs | `/signs/door-signs` | ❌ New page | Pull content from business-signs page |
+| | Posters | `/signs/posters` | ✅ Exists | |
+| **Ground Signs** | | | | |
+| | Yard Signs | `/signs/yard-signs` | ✅ Exists | |
+| | A-Frame / Sidewalk Signs | `/signs/sidewalk-signs` | ✅ Exists | |
+| | Parking Signs | `/signs/parking-signs` | ❌ New page | Use existing signs graphics |
+| **Table Signs** | | | | |
+| | Table Cloths | `/signs/table-cloths` | ❌ New page | Use existing table-runners graphics |
+| | Table Runners | `/signs/table-runners` | ✅ Exists | |
 
 ---
 
@@ -130,13 +130,13 @@ All category landing pages and sub-category pages must follow this exact section
 - **Page Status:** ✅ Exists (`resources/views/pages/vehicle-graphics/index.blade.php`)
 - **Dropdown:** Yes — 2-level mega menu
 
-| Category Title | Sub-link | URL | Page Status |
-|---|---|---|---|
-| **Overview** | Vehicle Decals (overview) | `/vehicle-graphics` | ✅ Exists |
-| **Vehicle Graphic Options** | | | |
-| | Automobile Graphics | `/vehicle-graphics/automobile-graphics` | ✅ Exists |
-| | Vehicle Magnets | `/vehicle-graphics/vehicle-magnets` | ✅ Exists |
-| | DOT Decals | `/vehicle-graphics/dot-decals` | ✅ Exists |
+| Category Title | Sub-link | URL | Page Status | Notes |
+|---|---|---|---|---|
+| **Overview** | Vehicle Decals | `/vehicle-graphics` | ✅ Exists | |
+| **Vehicle Graphic Options** | | | | |
+| | Automobile Graphics | `/vehicle-graphics/automobile-graphics` | ✅ Exists | |
+| | Vehicle Magnets | `/vehicle-graphics/vehicle-magnets` | ✅ Exists | |
+| | DOT Decals | `/vehicle-graphics/dot-decals` | ✅ Exists | |
 
 ---
 
@@ -146,13 +146,13 @@ All category landing pages and sub-category pages must follow this exact section
 - **Page Status:** ❌ New landing page needed
 - **Dropdown:** Yes — 2-level mega menu
 
-| Category Title | Sub-link | URL | Page Status |
-|---|---|---|---|
-| **Overview** | Stickers (overview) | `/stickers` | ❌ New page needed |
-| **Standard** | | | |
-| | Standard Stickers | `/stickers/standard` | ❌ New page needed |
-| **Custom Shaped** | | | |
-| | Custom Shaped Stickers | `/stickers/custom-shaped` | ❌ New page needed |
+| Category Title | Sub-link | URL | Page Status | Notes |
+|---|---|---|---|---|
+| **Overview** | Stickers | `/stickers` | ❌ New landing page | |
+| **Standard** | | | | |
+| | Standard Stickers | `/stickers/standard-stickers` | ♻️ Refactor existing | Refactor current `/decals/stickers` page — modify only, do not rebuild |
+| **Custom Shaped** | | | | |
+| | Custom Shaped Stickers | `/stickers/custom-shaped-stickers` | ❌ New page | Use existing sticker/decal graphics |
 
 ---
 
@@ -161,16 +161,16 @@ All category landing pages and sub-category pages must follow this exact section
 - **Page Status:** ✅ Exists (`resources/views/pages/promotional-items.blade.php`)
 - **Dropdown:** Yes — 2-level mega menu
 
-| Category Title | Sub-link | URL | Page Status |
-|---|---|---|---|
-| **Overview** | Promotional Items (overview) | `/promotional-items` | ✅ Exists |
-| **Promo Products** | | | |
-| | Mugs | `/promotional-items/mugs` | ❌ New page needed |
-| | Can Koozies | `/promotional-items/can-koozies` | ❌ New page needed |
-| | Towels | `/promotional-items/towels` | ❌ New page needed |
-| | Drink Coasters | `/promotional-items/drink-coasters` | ❌ New page needed |
-| | Drawstring / Tote Bags | `/promotional-items/tote-bags` | ❌ New page needed |
-| | Mouse Pads | `/promotional-items/mouse-pads` | ❌ New page needed |
+| Category Title | Sub-link | URL | Page Status | Notes |
+|---|---|---|---|---|
+| **Overview** | Promotional Items | `/promotional-items` | ✅ Exists | |
+| **Promo Products** | | | | |
+| | Mugs | `/promotional-items/mugs` | ❌ New page | Use existing promo graphics |
+| | Can Koozies | `/promotional-items/can-koozies` | ❌ New page | Use existing promo graphics |
+| | Towels | `/promotional-items/towels` | ❌ New page | Use existing promo graphics |
+| | Drink Coasters | `/promotional-items/drink-coasters` | ❌ New page | Use existing promo graphics |
+| | Drawstring / Tote Bags | `/promotional-items/tote-bags` | ❌ New page | Use existing promo graphics |
+| | Mouse Pads | `/promotional-items/mouse-pads` | ❌ New page | Use existing promo graphics |
 
 ---
 
@@ -184,16 +184,22 @@ All category landing pages and sub-category pages must follow this exact section
 ### 8. Design Services
 - **URL:** `/design-services`
 - **Nav Label Change:** Renamed from "Design It Yourself" → "Design Services"
-- **Page Status:** ❌ New landing page needed
+- **Page Status:** ♻️ Refactor existing (`resources/views/pages/design-it-yourself/`)
 - **Dropdown:** Yes — 2-level mega menu
+- **Source pages to refactor (do not rebuild):**
+  - `/design-it-yourself` (index) → becomes `/design-services`
+  - `/design-it-yourself/online-designer` → becomes `/design-services/online-designer`
+  - `/design-it-yourself/design-catalogs` → becomes `/design-services/design-catalogs`
 
-| Category Title | Sub-link | URL | Page Status |
-|---|---|---|---|
-| **Overview** | Design Services (overview) | `/design-services` | ❌ New page needed |
-| **Logo Design** | | | |
-| | Logo Design | `/design-services/logo-design` | ❌ New page needed |
-| **Layout / Graphic Design** | | | |
-| | Layout & Graphic Design | `/design-services/graphic-design` | ❌ New page needed |
+| Category Title | Sub-link | URL | Page Status | Notes |
+|---|---|---|---|---|
+| **Overview** | Design Services | `/design-services` | ♻️ Refactor | Refactor from `/design-it-yourself` index |
+| **Logo Design** | | | | |
+| | Logo Design | `/design-services/logo-design` | ❌ New page | New sub-page |
+| **Layout / Graphic Design** | | | | |
+| | Layout & Graphic Design | `/design-services/graphic-design` | ❌ New page | New sub-page |
+| | Online Designer | `/design-services/online-designer` | ♻️ Refactor | Refactor from `/design-it-yourself/online-designer` |
+| | Design Catalogs | `/design-services/design-catalogs` | ♻️ Refactor | Refactor from `/design-it-yourself/design-catalogs` |
 
 ---
 
@@ -202,51 +208,66 @@ All category landing pages and sub-category pages must follow this exact section
 - **Page Status:** ✅ Exists (`resources/views/pages/about.blade.php`)
 - **Dropdown:** Yes — simple dropdown (not a full mega menu panel)
 
-| Sub-link | URL | Page Status |
-|---|---|---|
-| About Us | `/about` | ✅ Exists |
-| Company | `/about` | ✅ Exists (same page, anchor) |
-| Portfolio | `/portfolio` | ✅ Exists |
-| Resources | `/resources` | ❌ New page needed |
+| Sub-link | URL | Page Status | Notes |
+|---|---|---|---|
+| About Us | `/about` | ✅ Exists | |
+| Company | `/company` | ❌ New page | New page using `x-sections.about-preview` component |
+| Portfolio | `/portfolio` | ✅ Exists | |
+| Resources | `/resources` | ❌ New page | |
 
 ---
 
-## Summary of New Pages Required
+## Summary of Work Required
+
+### URL Changes (existing pages — route + file rename only)
+| Old URL | New URL | File |
+|---|---|---|
+| `/custom-apparel/embroidery-shirts` | `/custom-apparel/embroidery` | `embroidery-shirts.blade.php` → `embroidery.blade.php` |
+| `/custom-apparel/spirit-wear` | `/custom-apparel/spirit-wear-shirts` | `spirit-wear.blade.php` → `spirit-wear-shirts.blade.php` |
+| `/custom-apparel/corporate-wear` | `/custom-apparel/corporate-wear-shirts` | `corporate-wear.blade.php` → `corporate-wear-shirts.blade.php` |
+
+### Refactored Pages (modify existing — do not rebuild)
+| Source | New URL | Notes |
+|---|---|---|
+| `/decals/stickers` | `/stickers/standard-stickers` | Modify only |
+| `/design-it-yourself` (index) | `/design-services` | Refactor — rename, update content |
+| `/design-it-yourself/online-designer` | `/design-services/online-designer` | Refactor — rename, update content |
+| `/design-it-yourself/design-catalogs` | `/design-services/design-catalogs` | Refactor — rename, update content |
 
 ### New Landing Pages (2)
-| Page | URL |
-|---|---|
-| Stickers | `/stickers` |
-| Design Services | `/design-services` |
-
-### New Sub-Category Pages (20)
-| Page | URL | Parent |
+| Page | URL | Notes |
 |---|---|---|
-| Dye-Sublimation | `/custom-apparel/dye-sublimation` | Custom Apparel |
-| Screen Printing | `/custom-apparel/screen-printing` | Custom Apparel |
-| Puff Shirts | `/custom-apparel/puff-shirts` | Custom Apparel |
-| Window Signs | `/signs/window-signs` | Select a Sign |
-| Wall Signs | `/signs/wall-signs` | Select a Sign |
-| Floor Signs | `/signs/floor-signs` | Select a Sign |
-| Door Signs | `/signs/door-signs` | Select a Sign |
-| Parking Signs | `/signs/parking-signs` | Select a Sign |
-| Table Cloths | `/signs/table-cloths` | Select a Sign |
-| Stickers — Standard | `/stickers/standard` | Stickers |
-| Stickers — Custom Shaped | `/stickers/custom-shaped` | Stickers |
-| Mugs | `/promotional-items/mugs` | Promotional Items |
-| Can Koozies | `/promotional-items/can-koozies` | Promotional Items |
-| Towels | `/promotional-items/towels` | Promotional Items |
-| Drink Coasters | `/promotional-items/drink-coasters` | Promotional Items |
-| Drawstring / Tote Bags | `/promotional-items/tote-bags` | Promotional Items |
-| Mouse Pads | `/promotional-items/mouse-pads` | Promotional Items |
-| Logo Design | `/design-services/logo-design` | Design Services |
-| Layout & Graphic Design | `/design-services/graphic-design` | Design Services |
-| Resources | `/resources` | About Us |
+| Stickers | `/stickers` | Use existing sticker/decal graphics |
+| Design Services | `/design-services` | Refactored from design-it-yourself |
+
+### New Sub-Category Pages (21)
+| Page | URL | Parent | Source Material |
+|---|---|---|---|
+| Dye-Sublimation | `/custom-apparel/dye-sublimation` | Custom Apparel | Existing shirt graphics |
+| Screen Printing | `/custom-apparel/screen-printing` | Custom Apparel | Existing shirt graphics |
+| Puff Shirts | `/custom-apparel/puff-shirts` | Custom Apparel | Existing shirt graphics |
+| Window Signs | `/signs/window-signs` | Select a Sign | business-signs page content |
+| Wall Signs | `/signs/wall-signs` | Select a Sign | business-signs page content |
+| Floor Signs | `/signs/floor-signs` | Select a Sign | business-signs page content |
+| Door Signs | `/signs/door-signs` | Select a Sign | business-signs page content |
+| Parking Signs | `/signs/parking-signs` | Select a Sign | Existing signs graphics |
+| Table Cloths | `/signs/table-cloths` | Select a Sign | table-runners graphics |
+| Custom Shaped Stickers | `/stickers/custom-shaped-stickers` | Stickers | Existing sticker/decal graphics |
+| Mugs | `/promotional-items/mugs` | Promotional Items | Existing promo graphics |
+| Can Koozies | `/promotional-items/can-koozies` | Promotional Items | Existing promo graphics |
+| Towels | `/promotional-items/towels` | Promotional Items | Existing promo graphics |
+| Drink Coasters | `/promotional-items/drink-coasters` | Promotional Items | Existing promo graphics |
+| Drawstring / Tote Bags | `/promotional-items/tote-bags` | Promotional Items | Existing promo graphics |
+| Mouse Pads | `/promotional-items/mouse-pads` | Promotional Items | Existing promo graphics |
+| Logo Design | `/design-services/logo-design` | Design Services | Existing design graphics |
+| Layout & Graphic Design | `/design-services/graphic-design` | Design Services | Existing design graphics |
+| Company | `/company` | About Us | Uses `x-sections.about-preview` component |
+| Resources | `/resources` | About Us | New page |
 
 ---
 
 ## Removed from Current Navigation
-- **"Design It Yourself"** — replaced by Design Services
-- **"Decals"** as a top-level item — Stickers promoted to its own top-level entry; remaining decal items absorbed into other categories
+- **"Design It Yourself"** — replaced by Design Services (pages refactored, not deleted)
+- **"Decals"** as a top-level item — Stickers promoted to its own top-level entry
 - **"Signs"** label — renamed to "Select a Sign"
 - **"Vehicle Graphics"** label — renamed to "Vehicle Decals"

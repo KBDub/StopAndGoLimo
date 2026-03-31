@@ -84,43 +84,40 @@
                                     <span class="text-sm text-charcoal-light truncate">All custom shirts, hoodies, caps & apparel</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="space-y-4">
-                                    {{-- Row 1 --}}
-                                    <div class="grid grid-cols-2 gap-x-6 pb-4 border-b border-linen-dark">
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Printing Options</p>
-                                            <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                                <a href="/custom-apparel/dtf-transfers" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Direct to Film (DTF)</a>
-                                                <a href="/custom-apparel/dye-sublimation" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Dye-Sublimation</a>
-                                                <a href="/custom-apparel/screen-printing" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Screen Printing</a>
-                                                <a href="/custom-apparel/embroidery" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Embroidery</a>
-                                                <a href="/custom-apparel/rhinestone-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Rhinestone</a>
-                                                <a href="/custom-apparel/vinyl-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Digital Vinyl</a>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Specialty Materials</p>
-                                            <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                                <a href="/custom-apparel/glitter-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Glitter</a>
-                                                <a href="/custom-apparel/puff-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Puff</a>
-                                                <a href="/custom-apparel/glow-in-the-dark-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Glow in the Dark</a>
-                                                <a href="/custom-apparel/flock-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Flock</a>
-                                                <a href="/custom-apparel/brick-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Brick</a>
-                                                <a href="/custom-apparel/holographic-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Holographic</a>
-                                                <a href="/custom-apparel/foil-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Foil</a>
-                                                <a href="/custom-apparel/reflective-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Reflective</a>
-                                            </div>
+                                <div class="space-y-3">
+                                    {{-- Row 1: Printing Options --}}
+                                    <div class="pb-3 border-b border-linen-dark">
+                                        <p class="text-xs font-bold uppercase tracking-widest mb-1.5" style="color:var(--color-olive)">Printing Options</p>
+                                        <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                            <a href="/custom-apparel/dtf-transfers" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Direct to Film (DTF)</a>
+                                            <a href="/custom-apparel/dye-sublimation" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Dye-Sublimation</a>
+                                            <a href="/custom-apparel/screen-printing" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Screen Printing</a>
+                                            <a href="/custom-apparel/embroidery" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Embroidery</a>
+                                            <a href="/custom-apparel/rhinestone-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Rhinestone</a>
+                                            <a href="/custom-apparel/vinyl-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Digital Vinyl</a>
                                         </div>
                                     </div>
-                                    {{-- Row 2 --}}
-                                    <div class="grid grid-cols-2 gap-x-6">
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Group Shirts</p>
-                                            <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                                <a href="/custom-apparel/reunion-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Family Reunion</a>
-                                                <a href="/custom-apparel/spirit-wear-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Spirit Wear</a>
-                                                <a href="/custom-apparel/corporate-wear-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Corporate Wear</a>
-                                            </div>
+                                    {{-- Row 2: Specialty Materials --}}
+                                    <div class="pb-3 border-b border-linen-dark">
+                                        <p class="text-xs font-bold uppercase tracking-widest mb-1.5" style="color:var(--color-olive)">Specialty Materials</p>
+                                        <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                            <a href="/custom-apparel/glitter-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Glitter</a>
+                                            <a href="/custom-apparel/puff-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Puff</a>
+                                            <a href="/custom-apparel/glow-in-the-dark-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Glow in the Dark</a>
+                                            <a href="/custom-apparel/flock-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Flock</a>
+                                            <a href="/custom-apparel/brick-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Brick</a>
+                                            <a href="/custom-apparel/holographic-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Holographic</a>
+                                            <a href="/custom-apparel/foil-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Foil</a>
+                                            <a href="/custom-apparel/reflective-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Reflective</a>
+                                        </div>
+                                    </div>
+                                    {{-- Row 3: Group Shirts --}}
+                                    <div>
+                                        <p class="text-xs font-bold uppercase tracking-widest mb-1.5" style="color:var(--color-olive)">Group Shirts</p>
+                                        <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                            <a href="/custom-apparel/reunion-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Family Reunion</a>
+                                            <a href="/custom-apparel/spirit-wear-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Spirit Wear</a>
+                                            <a href="/custom-apparel/corporate-wear-shirts" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Corporate Wear</a>
                                         </div>
                                     </div>
                                 </div>
@@ -166,37 +163,34 @@
                                     <span class="text-sm text-charcoal-light truncate">All banners, signs, and surface graphics</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="space-y-4">
-                                    {{-- Row 1 --}}
-                                    <div class="grid grid-cols-2 gap-x-6 pb-4 border-b border-linen-dark">
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Business Signs</p>
-                                            <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                                <a href="/signs/banners" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Banners</a>
-                                                <a href="/signs/window-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Window Signs</a>
-                                                <a href="/signs/wall-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Wall Signs</a>
-                                                <a href="/signs/floor-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Floor Signs</a>
-                                                <a href="/signs/door-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Door Signs</a>
-                                                <a href="/signs/posters" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Posters</a>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Ground Signs</p>
-                                            <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                                <a href="/signs/yard-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Yard Signs</a>
-                                                <a href="/signs/sidewalk-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">A-Frame/Sidewalk Signs</a>
-                                                <a href="/signs/parking-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Parking Signs</a>
-                                            </div>
+                                <div class="space-y-3">
+                                    {{-- Row 1: Business Signs --}}
+                                    <div class="pb-3 border-b border-linen-dark">
+                                        <p class="text-xs font-bold uppercase tracking-widest mb-1.5" style="color:var(--color-olive)">Business Signs</p>
+                                        <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                            <a href="/signs/banners" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Banners</a>
+                                            <a href="/signs/window-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Window Signs</a>
+                                            <a href="/signs/wall-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Wall Signs</a>
+                                            <a href="/signs/floor-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Floor Signs</a>
+                                            <a href="/signs/door-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Door Signs</a>
+                                            <a href="/signs/posters" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Posters</a>
                                         </div>
                                     </div>
-                                    {{-- Row 2 --}}
-                                    <div class="grid grid-cols-2 gap-x-6">
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Table Signs</p>
-                                            <div class="flex flex-wrap gap-x-3 gap-y-1">
-                                                <a href="/signs/table-cloths" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Table Cloths</a>
-                                                <a href="/signs/table-runners" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Table Runners</a>
-                                            </div>
+                                    {{-- Row 2: Ground Signs --}}
+                                    <div class="pb-3 border-b border-linen-dark">
+                                        <p class="text-xs font-bold uppercase tracking-widest mb-1.5" style="color:var(--color-olive)">Ground Signs</p>
+                                        <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                            <a href="/signs/yard-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Yard Signs</a>
+                                            <a href="/signs/sidewalk-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">A-Frame/Sidewalk Signs</a>
+                                            <a href="/signs/parking-signs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Parking Signs</a>
+                                        </div>
+                                    </div>
+                                    {{-- Row 3: Table Signs --}}
+                                    <div>
+                                        <p class="text-xs font-bold uppercase tracking-widest mb-1.5" style="color:var(--color-olive)">Table Signs</p>
+                                        <div class="flex flex-wrap gap-x-3 gap-y-1">
+                                            <a href="/signs/table-cloths" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Table Cloths</a>
+                                            <a href="/signs/table-runners" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Table Runners</a>
                                         </div>
                                     </div>
                                 </div>
@@ -242,9 +236,9 @@
                                     <span class="text-sm text-charcoal-light truncate">All custom vinyl stickers and labels</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="flex flex-wrap gap-x-4 gap-y-1.5">
-                                    <a href="/stickers/standard-stickers" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Standard</a>
-                                    <a href="/stickers/custom-shaped-stickers" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Custom Shaped</a>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                                    <a href="/stickers/standard-stickers" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Standard</a>
+                                    <a href="/stickers/custom-shaped-stickers" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Custom Shaped</a>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -288,10 +282,10 @@
                                     <span class="text-sm text-charcoal-light truncate">All vehicle graphics, wraps, and magnets</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="flex flex-wrap gap-x-4 gap-y-1.5">
-                                    <a href="/vehicle-graphics/automobile-graphics" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Automobile Graphics</a>
-                                    <a href="/vehicle-graphics/vehicle-magnets" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Vehicle Magnets</a>
-                                    <a href="/vehicle-graphics/dot-decals" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">DOT Decals</a>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                                    <a href="/vehicle-graphics/automobile-graphics" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Automobile Graphics</a>
+                                    <a href="/vehicle-graphics/vehicle-magnets" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Vehicle Magnets</a>
+                                    <a href="/vehicle-graphics/dot-decals" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">DOT Decals</a>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -336,13 +330,13 @@
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Promo Products</p>
-                                <div class="flex flex-wrap gap-x-4 gap-y-1.5">
-                                    <a href="/promotional-items/mugs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Mugs</a>
-                                    <a href="/promotional-items/can-koozies" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Can Koozies</a>
-                                    <a href="/promotional-items/towels" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Towels</a>
-                                    <a href="/promotional-items/drink-coasters" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Drink Coasters</a>
-                                    <a href="/promotional-items/tote-bags" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Drawstring/Tote Bags</a>
-                                    <a href="/promotional-items/mouse-pads" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Mouse Pads</a>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                                    <a href="/promotional-items/mugs" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Mugs</a>
+                                    <a href="/promotional-items/can-koozies" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Can Koozies</a>
+                                    <a href="/promotional-items/towels" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Towels</a>
+                                    <a href="/promotional-items/drink-coasters" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Drink Coasters</a>
+                                    <a href="/promotional-items/tote-bags" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Drawstring/Tote Bags</a>
+                                    <a href="/promotional-items/mouse-pads" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Mouse Pads</a>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -393,9 +387,9 @@
                                     <span class="text-sm text-charcoal-light truncate">Design tools & professional services</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="flex flex-wrap gap-x-4 gap-y-1.5">
-                                    <a href="/design-services/logo-design" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Logo Design</a>
-                                    <a href="/design-services/graphic-design" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Layout/Graphic Design</a>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                                    <a href="/design-services/logo-design" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Logo Design</a>
+                                    <a href="/design-services/graphic-design" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Layout/Graphic Design</a>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -439,11 +433,11 @@
                                     <span class="text-sm text-charcoal-light truncate">Learn about Top 5 Percent</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="flex flex-wrap gap-x-4 gap-y-1.5">
-                                    <a href="/about" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">About Us</a>
-                                    <a href="/company" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Company</a>
-                                    <a href="/portfolio" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Portfolio</a>
-                                    <a href="/resources" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors whitespace-nowrap">Resources</a>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2">
+                                    <a href="/about" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">About Us</a>
+                                    <a href="/company" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Company</a>
+                                    <a href="/portfolio" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Portfolio</a>
+                                    <a href="/resources" class="text-sm font-semibold text-charcoal hover:text-sunburst transition-colors">Resources</a>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad

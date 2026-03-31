@@ -156,7 +156,11 @@ This removes development-mode overhead (verbose logging, analytics calls) and is
 
 ---
 
-### Solution E — Laravel Caches Pre-Warmed at Deploy Time (Low-Hanging Fruit)
+### Solution E — Laravel Caches Pre-Warmed at Startup (Deployed 2026-03-31)
+
+**Status: Implemented**
+
+`config:cache`, `route:cache`, and `event:cache` are now run in `scripts/startup.sh` immediately before `php artisan octane:start`. This is required for FrankenPHP worker mode: without cached configs and routes, each worker must read and compile 20+ config files and all routes during boot. This takes long enough to exceed FrankenPHP's internal worker startup timeout, causing "too many consecutive failures: worker has not reached frankenphp_handle_request()" — the production error seen on 2026-03-31. Running the caches reduces worker boot to reading a single compiled file per cache.
 
 Confirm that the following Artisan commands are run as part of every deployment:
 

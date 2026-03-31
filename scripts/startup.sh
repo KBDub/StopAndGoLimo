@@ -35,6 +35,15 @@ if [ ! -f "./frankenphp" ]; then
     echo "[startup] FrankenPHP download complete."
 fi
 
+# E: Rebuild Laravel caches so the worker boots from a single compiled file
+# Without these, workers must read 20+ config files and compile all routes
+# on every boot — too slow for FrankenPHP's worker startup timeout.
+echo "[startup] Rebuilding Laravel caches..."
+php artisan config:cache
+php artisan route:cache
+php artisan event:cache
+echo "[startup] Laravel caches rebuilt."
+
 # Start Laravel via Octane + FrankenPHP in background
 echo "[startup] Starting Laravel (Octane + FrankenPHP)..."
 php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019 &

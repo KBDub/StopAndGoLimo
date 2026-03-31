@@ -263,6 +263,8 @@ This is **not a Meilisearch performance problem** — Meilisearch itself is fast
 
 `laravel/octane` v2.17.1 installed. FrankenPHP v1.12.1 binary downloaded to project root. `config/octane.php` published. `OCTANE_SERVER=frankenphp` set in `.env`. `scripts/startup.sh` updated to use `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019`. The `--admin-port` flag is required because FrankenPHP calculates its Caddy admin port as `2019 + (port - 8000)`, which goes negative for port 5000.
 
+**Important — binary not in git:** `php artisan octane:install` automatically adds `frankenphp` to `.gitignore`. The 56MB binary is therefore never committed and is absent from fresh production containers. The startup script handles this by checking for the binary and running `php artisan octane:install --server=frankenphp --no-interaction` on first run if it's missing. The Laravel health-gate timeout was raised from 30s to 120s to accommodate the one-time download on first deploy.
+
 **Laravel Octane** keeps the Laravel application bootstrapped in memory between requests. Instead of running the full Laravel startup sequence (service providers, config loading, route compilation, database connection establishment) on every single request, the app boots once and stays resident in memory. Requests are dispatched to the already-running application, dramatically cutting per-request overhead.
 
 Octane supports two drivers:

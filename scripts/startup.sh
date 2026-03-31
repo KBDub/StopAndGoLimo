@@ -28,6 +28,13 @@ until curl --silent --output /dev/null --max-time 2 http://localhost:8000/health
 done
 echo "[startup] Meilisearch ready after ${ELAPSED}s."
 
+# Download FrankenPHP binary if not present (gitignored, must be fetched at runtime)
+if [ ! -f "./frankenphp" ]; then
+    echo "[startup] FrankenPHP binary not found. Downloading via Octane installer..."
+    php artisan octane:install --server=frankenphp --no-interaction
+    echo "[startup] FrankenPHP download complete."
+fi
+
 # Start Laravel via Octane + FrankenPHP in background
 echo "[startup] Starting Laravel (Octane + FrankenPHP)..."
 php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019 &
@@ -39,8 +46,8 @@ ELAPSED=0
 until curl --silent --output /dev/null --max-time 2 http://localhost:5000; do
     sleep 1
     ELAPSED=$((ELAPSED + 1))
-    if [ "$ELAPSED" -ge 30 ]; then
-        echo "[startup] Warning: Laravel did not respond within 30s."
+    if [ "$ELAPSED" -ge 120 ]; then
+        echo "[startup] Warning: Laravel did not respond within 120s."
         break
     fi
 done

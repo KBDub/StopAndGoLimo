@@ -35,13 +35,6 @@ if [ ! -f "./frankenphp" ]; then
     echo "[startup] FrankenPHP download complete."
 fi
 
-# E: Rebuild Laravel caches in a single PHP process (config + routes + events).
-# Using optimize instead of three separate artisan calls avoids two extra PHP
-# cold-start costs (~15s each on the production container), saving ~30s.
-echo "[startup] Running php artisan optimize..."
-php artisan optimize
-echo "[startup] Optimize complete."
-
 # Start Laravel via Octane + FrankenPHP in background
 echo "[startup] Starting Laravel (Octane + FrankenPHP)..."
 php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019 --no-interaction 2>&1 &

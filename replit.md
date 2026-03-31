@@ -62,6 +62,8 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 
 ## Recent Changes
 
+-   **Laravel Octane + FrankenPHP Production Server (Mar 2026):** Replaced `php artisan serve` (single-threaded dev server) with Laravel Octane v2.17.1 + FrankenPHP v1.12.1 in `scripts/startup.sh`. Octane keeps Laravel bootstrapped in memory between requests, eliminating per-request bootstrap overhead. FrankenPHP handles concurrent requests in parallel workers. Startup command: `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019` (the `--admin-port` flag is required because FrankenPHP auto-calculates it as `2019 + (port - 8000)`, which is negative for port 5000). `OCTANE_SERVER=frankenphp` set in `.env` and `.env.example`.
+
 -   **Mega Menu Rebuild + 22 New/Refactored Pages (Mar 2026):**
     -   **Navigation bar** rebuilt as Mega Menu Style 1: full-width flyout panels per category, 3-column sub-link layout + right-side dark ad panel with image/CTA. Alpine.js hover for desktop, accordion for mobile. 7 mega menu panels: Custom Apparel, Select a Sign, Stickers, Vehicle Decals, Promo Items, Design Services, About Us. Nav label changes: "Signs"→"Select a Sign", "Vehicle Graphics"→"Vehicle Decals", "Design It Yourself"→"Design Services".
     -   **New mega-menu-ad partial** at `resources/views/components/layout/mega-menu-ad.blade.php`.

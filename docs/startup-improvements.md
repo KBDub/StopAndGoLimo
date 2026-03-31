@@ -257,7 +257,11 @@ This is **not a Meilisearch performance problem** — Meilisearch itself is fast
 
 ---
 
-### Option A — Laravel Octane (Recommended Long-Term Fix)
+### Option A — Laravel Octane + FrankenPHP (Deployed 2026-03-31)
+
+**Status: Implemented**
+
+`laravel/octane` v2.17.1 installed. FrankenPHP v1.12.1 binary downloaded to project root. `config/octane.php` published. `OCTANE_SERVER=frankenphp` set in `.env`. `scripts/startup.sh` updated to use `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019`. The `--admin-port` flag is required because FrankenPHP calculates its Caddy admin port as `2019 + (port - 8000)`, which goes negative for port 5000.
 
 **Laravel Octane** keeps the Laravel application bootstrapped in memory between requests. Instead of running the full Laravel startup sequence (service providers, config loading, route compilation, database connection establishment) on every single request, the app boots once and stays resident in memory. Requests are dispatched to the already-running application, dramatically cutting per-request overhead.
 

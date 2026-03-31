@@ -28,9 +28,9 @@ until curl --silent --output /dev/null --max-time 2 http://localhost:8000/health
 done
 echo "[startup] Meilisearch ready after ${ELAPSED}s."
 
-# Start Laravel server in background
-echo "[startup] Starting Laravel..."
-php artisan serve --host=0.0.0.0 --port=5000 &
+# Start Laravel via Octane + FrankenPHP in background
+echo "[startup] Starting Laravel (Octane + FrankenPHP)..."
+php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019 &
 LARAVEL_PID=$!
 
 # F: Wait for Laravel to be accepting requests

@@ -28,31 +28,19 @@ until curl --silent --output /dev/null --max-time 2 http://localhost:8000/health
 done
 echo "[startup] Meilisearch ready after ${ELAPSED}s."
 
-# Diagnostics: log working directory and PHP base_path so mismatches are visible
-echo "[startup] CWD: $(pwd)"
-echo "[startup] PHP base_path: $(php -r 'require __DIR__.\"/vendor/autoload.php\"; $app = require __DIR__.\"/bootstrap/app.php\"; echo $app->basePath();' 2>/dev/null || echo 'unknown')"
-
 # Download FrankenPHP binary if not present (gitignored, must be fetched at runtime)
 if [ ! -f "./frankenphp" ]; then
-    echo "[startup] FrankenPHP binary not found at $(pwd)/frankenphp. Downloading via Octane installer..."
-    php artisan octane:install --server=frankenphp --no-interaction 2>&1
-    echo "[startup] FrankenPHP download complete (exit $?)."
-else
-    echo "[startup] FrankenPHP binary present: $(ls -la ./frankenphp)"
+    echo "[startup] FrankenPHP binary not found. Downloading via Octane installer..."
+    php artisan octane:install --server=frankenphp --no-interaction
+    echo "[startup] FrankenPHP download complete."
 fi
 
-# Verify the binary is executable before attempting to start
-echo "[startup] Testing FrankenPHP binary..."
-./frankenphp --version 2>&1 | head -3 || echo "[startup] WARNING: FrankenPHP binary test failed (exit $?)"
-
-# E: Rebuild Laravel caches so the worker boots from a single compiled file
-# Without these, workers must read 20+ config files and compile all routes
-# on every boot — too slow for FrankenPHP's worker startup timeout.
-echo "[startup] Rebuilding Laravel caches..."
-php artisan config:cache
-php artisan route:cache
-php artisan event:cache
-echo "[startup] Laravel caches rebuilt."
+# E: Rebuild Laravel caches in a single PHP process (config + routes + events).
+# Using optimize instead of three separate artisan calls avoids two extra PHP
+# cold-start costs (~15s each on the production container), saving ~30s.
+echo "[startup] Running php artisan optimize..."
+php artisan optimize
+echo "[startup] Optimize complete."
 
 # Start Laravel via Octane + FrankenPHP in background
 echo "[startup] Starting Laravel (Octane + FrankenPHP)..."

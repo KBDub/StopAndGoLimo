@@ -74,8 +74,8 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
-                        style="width:700px"
+                        class="absolute top-full left-0 z-50 pt-2 -mt-2"
+                        style="width: 960px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             {{-- Center content --}}
@@ -85,36 +85,37 @@
                                     <span class="text-sm text-charcoal-light truncate">All custom shirts, hoodies, caps & apparel</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
+                                <div class="grid grid-cols-3 gap-x-10">
                                     <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Print Methods</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/custom-apparel/custom-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Custom Shirts</a><p class="text-sm text-charcoal-light">Full color digital, any design</p></div>
-                                            <div><a href="/custom-apparel/dtf-transfers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">DTF Transfers</a><p class="text-sm text-charcoal-light">High-detail heat transfers</p></div>
+                                        <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color:var(--color-olive)">Printing Options</p>
+                                        <div class="space-y-4">
+                                            <div><a href="/custom-apparel/dtf-transfers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Direct to Film (DTF)</a><p class="text-sm text-charcoal-light">High-detail heat transfers</p></div>
+                                            <div><a href="/custom-apparel/dye-sublimation" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Dye-Sublimation</a><p class="text-sm text-charcoal-light">Edge-to-edge full color</p></div>
+                                            <div><a href="/custom-apparel/screen-printing" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Screen Printing</a><p class="text-sm text-charcoal-light">Classic bulk production</p></div>
+                                            <div><a href="/custom-apparel/embroidery" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Embroidery</a><p class="text-sm text-charcoal-light">Premium stitched branding</p></div>
+                                            <div><a href="/custom-apparel/rhinestone-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Rhinestone</a><p class="text-sm text-charcoal-light">Crystal embellishments</p></div>
+                                            <div><a href="/custom-apparel/vinyl-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Digital Vinyl</a><p class="text-sm text-charcoal-light">Sharp, durable graphics</p></div>
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Specialty Styles</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/custom-apparel/glitter-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Glitter Shirts</a><p class="text-sm text-charcoal-light">Shimmer and sparkle effects</p></div>
-                                            <div><a href="/custom-apparel/rhinestone-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Rhinestone Shirts</a><p class="text-sm text-charcoal-light">Crystal embellishments</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border-t border-linen-dark my-4"></div>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">All-Over & Stitch</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/custom-apparel/dye-sublimation" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Dye Sublimation</a><p class="text-sm text-charcoal-light">Edge-to-edge full color printing</p></div>
-                                            <div><a href="/custom-apparel/embroidery" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Embroidery</a><p class="text-sm text-charcoal-light">Classic stitched logo branding</p></div>
+                                        <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color:var(--color-olive)">Specialty Materials</p>
+                                        <div class="space-y-4">
+                                            <div><a href="/custom-apparel/glitter-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Glitter</a><p class="text-sm text-charcoal-light">Shimmer and sparkle</p></div>
+                                            <div><a href="/custom-apparel/puff-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Puff</a><p class="text-sm text-charcoal-light">Raised 3D texture</p></div>
+                                            <div><a href="/custom-apparel/glow-in-the-dark-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Glow in the Dark</a><p class="text-sm text-charcoal-light">Luminous night effects</p></div>
+                                            <div><a href="/custom-apparel/flock-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Flock</a><p class="text-sm text-charcoal-light">Velvet-like soft feel</p></div>
+                                            <div><a href="/custom-apparel/brick-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Brick</a><p class="text-sm text-charcoal-light">Extra thick, bold look</p></div>
+                                            <div><a href="/custom-apparel/holographic-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Holographic</a><p class="text-sm text-charcoal-light">Iridescent color shifting</p></div>
+                                            <div><a href="/custom-apparel/foil-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Foil</a><p class="text-sm text-charcoal-light">Shiny metallic finish</p></div>
+                                            <div><a href="/custom-apparel/reflective-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Reflective</a><p class="text-sm text-charcoal-light">High-visibility safety</p></div>
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Team Apparel</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/custom-apparel/corporate-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Corporate Wear</a><p class="text-sm text-charcoal-light">Branded uniforms & business shirts</p></div>
-                                            <div><a href="/custom-apparel/spirit-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Spirit Wear</a><p class="text-sm text-charcoal-light">School, sports, and fan apparel</p></div>
+                                        <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color:var(--color-olive)">Group Shirts</p>
+                                        <div class="space-y-4">
+                                            <div><a href="/custom-apparel/reunion-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Family Reunion</a><p class="text-sm text-charcoal-light">Custom matching apparel</p></div>
+                                            <div><a href="/custom-apparel/spirit-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Spirit Wear</a><p class="text-sm text-charcoal-light">School and sports fans</p></div>
+                                            <div><a href="/custom-apparel/corporate-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Corporate Wear</a><p class="text-sm text-charcoal-light">Branded staff uniforms</p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -151,8 +152,8 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
-                        style="width:700px"
+                        class="absolute top-full left-0 z-50 pt-2 -mt-2"
+                        style="width: 960px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -161,36 +162,31 @@
                                     <span class="text-sm text-charcoal-light truncate">All banners, signs, and surface graphics</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
+                                <div class="grid grid-cols-3 gap-x-10">
                                     <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Outdoor Signs</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/signs/banners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Banners</a><p class="text-sm text-charcoal-light">Custom vinyl banners, any size</p></div>
-                                            <div><a href="/signs/yard-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Yard Signs</a><p class="text-sm text-charcoal-light">Wire-stake and corrugated signs</p></div>
+                                        <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color:var(--color-olive)">Business Signs</p>
+                                        <div class="space-y-4">
+                                            <div><a href="/signs/banners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Banners</a><p class="text-sm text-charcoal-light">Custom vinyl banners</p></div>
+                                            <div><a href="/signs/window-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Window Signs</a><p class="text-sm text-charcoal-light">Storefront decals & perf</p></div>
+                                            <div><a href="/signs/wall-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Wall Signs</a><p class="text-sm text-charcoal-light">Interior murals & graphics</p></div>
+                                            <div><a href="/signs/floor-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Floor Signs</a><p class="text-sm text-charcoal-light">Durable surface branding</p></div>
+                                            <div><a href="/signs/door-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Door Signs</a><p class="text-sm text-charcoal-light">Hours & office identifiers</p></div>
+                                            <div><a href="/signs/posters" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Posters</a><p class="text-sm text-charcoal-light">Large format printing</p></div>
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Surface Graphics</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/signs/window-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Window Signs</a><p class="text-sm text-charcoal-light">Perforated vinyl & window decals</p></div>
-                                            <div><a href="/signs/wall-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Wall Signs & Murals</a><p class="text-sm text-charcoal-light">Interior murals and wall graphics</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border-t border-linen-dark my-4"></div>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Indoor Displays</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/signs/business-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Business Signs</a><p class="text-sm text-charcoal-light">Aluminum, foam board, and mounted</p></div>
-                                            <div><a href="/signs/posters" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Posters</a><p class="text-sm text-charcoal-light">Large format full-color printing</p></div>
+                                        <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color:var(--color-olive)">Ground Signs</p>
+                                        <div class="space-y-4">
+                                            <div><a href="/signs/yard-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Yard Signs</a><p class="text-sm text-charcoal-light">Corrugated wire-stake signs</p></div>
+                                            <div><a href="/signs/sidewalk-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">A-Frame/Sidewalk Signs</a><p class="text-sm text-charcoal-light">Portable sandwich boards</p></div>
+                                            <div><a href="/signs/parking-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Parking Signs</a><p class="text-sm text-charcoal-light">Aluminum & compliance signs</p></div>
                                         </div>
                                     </div>
                                     <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Event Displays</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/signs/table-cloths" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Table Cloths</a><p class="text-sm text-charcoal-light">Full-color branded event covers</p></div>
-                                            <div><a href="/signs/sidewalk-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Sidewalk Signs</a><p class="text-sm text-charcoal-light">A-frame and sidewalk displays</p></div>
+                                        <p class="text-sm font-bold uppercase tracking-widest mb-4" style="color:var(--color-olive)">Table Signs</p>
+                                        <div class="space-y-4">
+                                            <div><a href="/signs/table-cloths" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Table Cloths</a><p class="text-sm text-charcoal-light">Full-color branded covers</p></div>
+                                            <div><a href="/signs/table-runners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Table Runners</a><p class="text-sm text-charcoal-light">Accent event branding</p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -226,8 +222,8 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
-                        style="width:620px"
+                        class="absolute top-full left-0 z-50 pt-2 -mt-2"
+                        style="width: 700px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -236,21 +232,9 @@
                                     <span class="text-sm text-charcoal-light truncate">All custom vinyl stickers and labels</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Sticker Types</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/stickers/standard-stickers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Standard Stickers</a><p class="text-sm text-charcoal-light">Round, square, and rectangle shapes</p></div>
-                                            <div><a href="/stickers/custom-shaped-stickers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Custom Shaped Stickers</a><p class="text-sm text-charcoal-light">Die cut to any shape you design</p></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Why Top 5%</p>
-                                        <div class="space-y-2">
-                                            <div><p class="text-lg font-bold text-charcoal">No Minimum Order</p><p class="text-sm text-charcoal-light">Order 1 or 1,000 — your call</p></div>
-                                            <div><p class="text-lg font-bold text-charcoal">Weatherproof Vinyl</p><p class="text-sm text-charcoal-light">UV-resistant, built to last outdoors</p></div>
-                                        </div>
-                                    </div>
+                                <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                                    <div><a href="/stickers/standard-stickers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Standard</a><p class="text-sm text-charcoal-light">Round, square, and rectangle</p></div>
+                                    <div><a href="/stickers/custom-shaped-stickers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Custom Shaped</a><p class="text-sm text-charcoal-light">Die cut to any design shape</p></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -284,8 +268,8 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
-                        style="width:620px"
+                        class="absolute top-full left-0 z-50 pt-2 -mt-2"
+                        style="width: 700px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -294,21 +278,10 @@
                                     <span class="text-sm text-charcoal-light truncate">All vehicle graphics, wraps, and magnets</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Vehicle Products</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/vehicle-graphics/automobile-graphics" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Automobile Graphics & Wraps</a><p class="text-sm text-charcoal-light">Full wraps and vinyl lettering</p></div>
-                                            <div><a href="/vehicle-graphics/vehicle-magnets" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Vehicle Magnets</a><p class="text-sm text-charcoal-light">Removable magnetic door signs</p></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Fleet & Compliance</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/vehicle-graphics/dot-decals" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">DOT Decals</a><p class="text-sm text-charcoal-light">Compliant DOT number lettering</p></div>
-                                            <div><a href="/contact" class="block text-lg font-bold text-sunburst hover:text-sunburst-dark transition-colors">Get a Free Vehicle Quote →</a><p class="text-sm text-charcoal-light">Custom pricing for any vehicle</p></div>
-                                        </div>
-                                    </div>
+                                <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                                    <div><a href="/vehicle-graphics/automobile-graphics" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Automobile Graphics</a><p class="text-sm text-charcoal-light">Full wraps & vinyl lettering</p></div>
+                                    <div><a href="/vehicle-graphics/vehicle-magnets" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Vehicle Magnets</a><p class="text-sm text-charcoal-light">Removable magnetic signs</p></div>
+                                    <div><a href="/vehicle-graphics/dot-decals" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">DOT Decals</a><p class="text-sm text-charcoal-light">Compliant number lettering</p></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -342,8 +315,8 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-[-12px] z-50 pt-2 -mt-2"
-                        style="width:700px"
+                        class="absolute top-full right-0 z-50 pt-2 -mt-2"
+                        style="width: 960px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -352,38 +325,13 @@
                                     <span class="text-sm text-charcoal-light truncate">All branded promotional products</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Drinkware</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/promotional-items/mugs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Custom Mugs</a><p class="text-sm text-charcoal-light">Full color sublimation mugs</p></div>
-                                            <div><a href="/promotional-items/can-koozies" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Can Koozies</a><p class="text-sm text-charcoal-light">Branded foam & neoprene koozies</p></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Bags & Textiles</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/promotional-items/tote-bags" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Tote Bags</a><p class="text-sm text-charcoal-light">Branded drawstring & canvas bags</p></div>
-                                            <div><a href="/promotional-items/towels" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Custom Towels</a><p class="text-sm text-charcoal-light">Sublimation beach & sport towels</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="border-t border-linen-dark my-4"></div>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Office & Desk</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/promotional-items/mouse-pads" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Mouse Pads</a><p class="text-sm text-charcoal-light">Branded full-surface desk pads</p></div>
-                                            <div><a href="/promotional-items/drink-coasters" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Drink Coasters</a><p class="text-sm text-charcoal-light">Ceramic, neoprene, hardboard</p></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Perfect For</p>
-                                        <div class="space-y-2">
-                                            <div><p class="text-lg font-bold text-charcoal">Corporate Gifting</p><p class="text-sm text-charcoal-light">Employee and client recognition</p></div>
-                                            <div><p class="text-lg font-bold text-charcoal">Events & Trade Shows</p><p class="text-sm text-charcoal-light">Giveaways that keep brands visible</p></div>
-                                        </div>
-                                    </div>
+                                <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                                    <div><a href="/promotional-items/mugs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Mugs</a><p class="text-sm text-charcoal-light">Full color sublimation</p></div>
+                                    <div><a href="/promotional-items/can-koozies" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Can Koozies</a><p class="text-sm text-charcoal-light">Branded foam & neoprene</p></div>
+                                    <div><a href="/promotional-items/towels" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Towels</a><p class="text-sm text-charcoal-light">Beach & sport towels</p></div>
+                                    <div><a href="/promotional-items/drink-coasters" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Drink Coasters</a><p class="text-sm text-charcoal-light">Ceramic, neoprene, board</p></div>
+                                    <div><a href="/promotional-items/tote-bags" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Drawstring/Tote Bags</a><p class="text-sm text-charcoal-light">Branded canvas bags</p></div>
+                                    <div><a href="/promotional-items/mouse-pads" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Mouse Pads</a><p class="text-sm text-charcoal-light">Full-surface desk pads</p></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -425,7 +373,7 @@
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
                         class="absolute top-full right-0 z-50 pt-2 -mt-2"
-                        style="width:620px"
+                        style="width: 700px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -434,21 +382,9 @@
                                     <span class="text-sm text-charcoal-light truncate">Design tools & professional services</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Online Tools</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/design-services/online-designer" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Free Online Designer</a><p class="text-sm text-charcoal-light">Create your design right now</p></div>
-                                            <div><a href="/design-services/design-catalogs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Browse Design Catalogs</a><p class="text-sm text-charcoal-light">Thousands of design ideas</p></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Pro Design</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/design-services/logo-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Logo Design</a><p class="text-sm text-charcoal-light">Concept to final files</p></div>
-                                            <div><a href="/design-services/graphic-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Layout & Graphic Design</a><p class="text-sm text-charcoal-light">Print-ready artwork prep</p></div>
-                                        </div>
-                                    </div>
+                                <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                                    <div><a href="/design-services/logo-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Logo Design</a><p class="text-sm text-charcoal-light">Concept to final files</p></div>
+                                    <div><a href="/design-services/graphic-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Layout/Graphic Design</a><p class="text-sm text-charcoal-light">Online designer & catalogs</p></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -483,7 +419,7 @@
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
                         class="absolute top-full right-0 z-50 pt-2 -mt-2"
-                        style="width:580px"
+                        style="width: 700px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -492,21 +428,11 @@
                                     <span class="text-sm text-charcoal-light truncate">Learn about Top 5 Percent</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
-                                <div class="grid grid-cols-2 gap-x-6">
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Company</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/resources" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Resources & Articles</a><p class="text-sm text-charcoal-light">Tips, guides, and helpful articles</p></div>
-                                            <div><a href="/portfolio" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Portfolio</a><p class="text-sm text-charcoal-light">View our past work and projects</p></div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Connect</p>
-                                        <div class="space-y-2">
-                                            <div><a href="/contact" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Contact Us</a><p class="text-sm text-charcoal-light">Free quote or visit our Joliet shop</p></div>
-                                            <div><a href="/stores" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Store Location</a><p class="text-sm text-charcoal-light">121 Springfield Ave, Joliet, IL</p></div>
-                                        </div>
-                                    </div>
+                                <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                                    <div><a href="/about" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">About Us</a><p class="text-sm text-charcoal-light">Our mission & team</p></div>
+                                    <div><a href="/company" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Company</a><p class="text-sm text-charcoal-light">Veteran-owned story</p></div>
+                                    <div><a href="/portfolio" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Portfolio</a><p class="text-sm text-charcoal-light">View our past work</p></div>
+                                    <div><a href="/resources" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Resources</a><p class="text-sm text-charcoal-light">Tips & helpful guides</p></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad

@@ -28,12 +28,22 @@ until curl --silent --output /dev/null --max-time 2 http://localhost:8000/health
 done
 echo "[startup] Meilisearch ready after ${ELAPSED}s."
 
+# Diagnostics: log working directory and PHP base_path so mismatches are visible
+echo "[startup] CWD: $(pwd)"
+echo "[startup] PHP base_path: $(php -r 'require __DIR__.\"/vendor/autoload.php\"; $app = require __DIR__.\"/bootstrap/app.php\"; echo $app->basePath();' 2>/dev/null || echo 'unknown')"
+
 # Download FrankenPHP binary if not present (gitignored, must be fetched at runtime)
 if [ ! -f "./frankenphp" ]; then
-    echo "[startup] FrankenPHP binary not found. Downloading via Octane installer..."
-    php artisan octane:install --server=frankenphp --no-interaction
-    echo "[startup] FrankenPHP download complete."
+    echo "[startup] FrankenPHP binary not found at $(pwd)/frankenphp. Downloading via Octane installer..."
+    php artisan octane:install --server=frankenphp --no-interaction 2>&1
+    echo "[startup] FrankenPHP download complete (exit $?)."
+else
+    echo "[startup] FrankenPHP binary present: $(ls -la ./frankenphp)"
 fi
+
+# Verify the binary is executable before attempting to start
+echo "[startup] Testing FrankenPHP binary..."
+./frankenphp --version 2>&1 | head -3 || echo "[startup] WARNING: FrankenPHP binary test failed (exit $?)"
 
 # E: Rebuild Laravel caches so the worker boots from a single compiled file
 # Without these, workers must read 20+ config files and compile all routes
@@ -46,7 +56,7 @@ echo "[startup] Laravel caches rebuilt."
 
 # Start Laravel via Octane + FrankenPHP in background
 echo "[startup] Starting Laravel (Octane + FrankenPHP)..."
-php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019 &
+php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019 --no-interaction 2>&1 &
 LARAVEL_PID=$!
 
 # F: Wait for Laravel to be accepting requests

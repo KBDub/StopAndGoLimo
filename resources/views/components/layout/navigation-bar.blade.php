@@ -88,7 +88,7 @@
                                     {{-- Row 1: Printing Options --}}
                                     <div class="pb-4 border-b border-linen-dark">
                                         <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Printing Options</p>
-                                        <div class="grid grid-cols-2 gap-x-4 gap-y-3">
+                                        <div class="grid grid-cols-2 gap-x-4 gap-y-0">
                                             <div><a href="/custom-apparel/dtf-transfers" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Direct to Film (DTF)</a><p class="text-xs text-charcoal-light leading-tight">High-detail heat transfers</p></div>
                                             <div><a href="/custom-apparel/dye-sublimation" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Dye-Sublimation</a><p class="text-xs text-charcoal-light leading-tight">Edge-to-edge full color</p></div>
                                             <div><a href="/custom-apparel/screen-printing" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Screen Printing</a><p class="text-xs text-charcoal-light leading-tight">Classic bulk production</p></div>

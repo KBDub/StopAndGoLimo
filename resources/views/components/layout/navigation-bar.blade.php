@@ -316,7 +316,7 @@
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
                         class="absolute top-full right-0 z-50 pt-2 -mt-2"
-                        style="width: 960px; max-width: calc(100vw - 20px);"
+                        style="width: 700px; max-width: calc(100vw - 20px);"
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 px-6 py-6">
@@ -325,6 +325,7 @@
                                     <span class="text-sm text-charcoal-light truncate">All branded promotional products</span>
                                     <svg class="w-4 h-4 ml-auto text-sunburst shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
+                                <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:var(--color-olive)">Promo Products</p>
                                 <div class="grid grid-cols-2 gap-x-8 gap-y-4">
                                     <div><a href="/promotional-items/mugs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Mugs</a><p class="text-sm text-charcoal-light">Full color sublimation</p></div>
                                     <div><a href="/promotional-items/can-koozies" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors">Can Koozies</a><p class="text-sm text-charcoal-light">Branded foam & neoprene</p></div>

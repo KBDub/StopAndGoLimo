@@ -5,7 +5,7 @@
 
 ## Standard Page Section Layout (MANDATORY)
 
-All category landing pages and sub-category pages must follow this exact section order. No exceptions. New pages must replicate this structure. New pages should use existing graphics and pull idea/content from other related pages.
+All category landing pages and sub-category pag![img.png](img.png)es must follow this exact section order. No exceptions. New pages must replicate this structure. New pages should use existing graphics and pull idea/content from other related pages.
 
 ### Category Landing Page (index) Layout
 
@@ -53,8 +53,11 @@ All category landing pages and sub-category pages must follow this exact section
 **Style:** Mega Menu Style 1 (modeled on https://overflow-megamenu-1.webflow.io/)
 
 **Dropdown Panel Layout:**
-- **Left/Center:** Overview link at top → Category groups in a 2-column grid, each with a category title label and 2–3 sub-links with short descriptions
-- **Right:** Branded image/ad panel (Top 5 Percent branded — ad panel is on the RIGHT, not the left as in the reference site)
+- **Left/Center:** Overview link at top → Category groups (Level 2) and sub-links (Level 3) per `docs/MegaMenuItems.csv`.
+- **Three-Level Menus:** Grouped by Level 2 Category (e.g., "Printing Options").
+- **Two-Level Menus:** Displayed as standard links without group headers.
+- **Right:** Single branded ad panel (Top 5 Percent branded — always on the RIGHT)
+- **Viewport Adjustments:** Panels should be widened (e.g., 960px) on 1280px viewports to ensure the 3-column grid layout for larger categories (like Apparel's 17 items) is legible. 2-level menus (Stickers, Vehicle, Promo, Design, About) use a standard 700px width.
 
 ---
 
@@ -164,7 +167,6 @@ All category landing pages and sub-category pages must follow this exact section
 | Category Title | Sub-link | URL | Page Status | Notes |
 |---|---|---|---|---|
 | **Overview** | Promotional Items | `/promotional-items` | ✅ Exists | |
-| **Promo Products** | | | | |
 | | Mugs | `/promotional-items/mugs` | ❌ New page | Use existing promo graphics |
 | | Can Koozies | `/promotional-items/can-koozies` | ❌ New page | Use existing promo graphics |
 | | Towels | `/promotional-items/towels` | ❌ New page | Use existing promo graphics |
@@ -318,3 +320,31 @@ All category landing pages and sub-category pages must follow this exact section
 - **Z-Index Layering**: Applied `relative z-50` to the desktop navigation container. This ensures that the menu trigger areas remain above the global backdrop (`z-40`), preventing the backdrop from "stealing" the mouse focus and causing a flicker loop as soon as the menu opens.
 - **Unified Flex Alignment**: Standardized all menu item wrappers and links to use `items-stretch` and `h-full`. This creates a perfectly stable, rectangular hit-area that covers the entire vertical space of the navbar.
 - **Hover Bridge (Overlap Zone)**: Added a "hover bridge" to all dropdown panels using `pt-2` (padding) and `-mt-2` (negative margin). This creates a physical overlap between the trigger link and the absolute-positioned panel, ensuring the mouse never enters a "no-man's land" gap, even at different browser zoom levels or sub-pixel rendering.
+
+#### G. Component-Based Branding
+- **Mega Menu Ads**: All right-aligned ad panels in the mega menu must use the `<x-layout.mega-menu-ad>` component. This ensures consistent styling, image hover effects, and brand color application (Charcoal background with Sunburst accents).
+- **Consistent Sectioning**: Internal mega menu panels follow a standardized layout:
+  - Center/Left: Grid-based navigation with defined category headers and sub-links.
+  - Right: Branded ad component (single image panel).
+
+#### H. Visual Distinction & Glow (2026-03-30)
+- **Enhanced Separation**: The top border of all mega menu panels was increased from `border-t-2` to `border-t-[6px]` (Sunburst Gold) to create a more prominent brand anchor.
+- **Orange Glow Effect**: Applied `shadow-gold-xl` to the dropdown panels. This creates a vibrant Sunburst "glow" on the left, right, and bottom edges, matching the aesthetic of the `card-image-with-text` components.
+- **Typography Normalization**: Increased the font scale throughout the mega menu to match the main navigation bar (`text-lg` for links).
+- **Internal Spacing**: Increased padding and column gaps (`px-6`, `py-6`, `gap-x-6`) to accommodate the larger text size and maintain a premium, spacious feel.
+
+#### I. Single Image Panel Strategy (2026-03-30)
+- **Unified Visual Anchor**: Removed the secondary left-aligned thematic image panels from all mega menu dropdowns.
+- **Consistent Layout**: Each mega menu now features a clean, two-part structure:
+    - **Navigation Zone (Left/Center)**: Links and categories.
+    - **Ad Zone (Right)**: A single `<x-layout.mega-menu-ad>` component.
+- **Improved Scannability**: Removing the extra imagery on the left reduces visual clutter and allows users to focus on navigation links immediately.
+
+#### J. Layout Refinements (2026-03-30)
+- **Viewport Safety Margins**: Dropdown panels now use `max-width: calc(100vw - 20px)` to ensure they never exceed the screen width and maintain a 10px safety margin on small desktop viewports.
+- **Centered Positioning**: Dropdown panels use centered positioning (`left-1/2 -translate-x-1/2`) by default, but items near the edges use `left-0` or `right-0` to prevent viewport overflow while maintaining a 10px safety margin on small desktop viewports.
+- **Right Alignment**: Far-right menu items (Promo Items, Design Services, About Us) use `right-0` to ensure they align to the right edge of their respective trigger items and stay within the viewport.
+- **Left Alignment**: Left-side menu items (Apparel, Signs, Stickers, Vehicle) use `left-0` to ensure they align with the left edge of their respective trigger items while remaining within the navigation container's bounds.
+- **Typography & Wrapping**: Increased grid column gaps (`gap-x-10`) in complex 3-level menus (Apparel, Signs) to provide more room for long sub-category headers like "Specialty Materials," preventing unnecessary text wrapping.
+- **Grid Standardization**: Standardized all menus without sub-category groups (Stickers, Vehicle Decals, Promo Items, Design Services, About Us) to use a **2-column grid layout with a 32px horizontal gap and a 16px vertical gap** (`gap-x-8 gap-y-4`).
+- **Standardized Vertical Spacing**: Standardized all mega menu panels to use a **16px (4 unit)** vertical gap between headers and items, and between individual items, ensuring a spacious and premium feel.

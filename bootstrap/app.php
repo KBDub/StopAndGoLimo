@@ -17,9 +17,6 @@ return Application::configure(basePath: dirname(__DIR__))
             'cacheResponse' => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
             'doNotCacheResponse' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
         ]);
-        $middleware->web(append: [
-            \Spatie\ResponseCache\Middlewares\CacheResponse::class,
-        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

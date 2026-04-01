@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Livewire\Catalog;
 
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 use Lunar\Models\Collection;
 use Lunar\Models\Product;
@@ -83,9 +84,13 @@ class CollectionPage extends Component
             return null;
         }
 
-        return Collection::whereHas('urls', function ($q) {
-            $q->where('slug', $this->collectionSlug);
-        })->with('children.urls')->first();
+        $cacheKey = 'collection-model-' . $this->collectionSlug;
+
+        return Cache::store('file')->remember($cacheKey, 60 * 60 * 8, function () {
+            return Collection::whereHas('urls', function ($q) {
+                $q->where('slug', $this->collectionSlug);
+            })->with('children.urls')->first();
+        });
     }
 
     public function render()
@@ -146,31 +151,56 @@ class CollectionPage extends Component
 
         $offset = ($this->page - 1) * $this->perPage;
 
-        $client = new Client(config('scout.meilisearch.host'), config('scout.meilisearch.key'));
-        $searchResult = $client->index('products')->search($this->searchQuery ?: '', [
-            'filter' => implode(' AND ', $filterParts),
-            'facets' => $facetFields,
-            'sort' => $sortAttr,
-            'limit' => $this->perPage,
+        $searchCacheKey = 'collection-search-' . md5(json_encode([
+            'collectionSlug' => $this->collectionSlug,
+            'searchQuery' => $this->searchQuery,
+            'sortBy' => $this->sortBy,
+            'page' => $this->page,
+            'perPage' => $this->perPage,
+            'filters' => $this->filters,
+            'filterParts' => $filterParts,
+            'facetFields' => $facetFields,
+            'sortAttr' => $sortAttr,
             'offset' => $offset,
-        ]);
+        ]));
 
-        $rawResult = $searchResult->getRaw();
-        $hits = $rawResult['hits'] ?? [];
-        $totalHits = $rawResult['nbHits'] ?? $rawResult['estimatedTotalHits'] ?? count($hits);
-        $facets = $rawResult['facetDistribution'] ?? [];
+        $searchData = Cache::store('file')->remember($searchCacheKey, 60 * 60 * 8, function () use ($filterParts, $facetFields, $sortAttr, $offset) {
+            $client = new Client(config('scout.meilisearch.host'), config('scout.meilisearch.key'));
+            $searchResult = $client->index('products')->search($this->searchQuery ?: '', [
+                'filter' => implode(' AND ', $filterParts),
+                'facets' => $facetFields,
+                'sort' => $sortAttr,
+                'limit' => $this->perPage,
+                'offset' => $offset,
+            ]);
 
-        $productIds = collect($hits)->pluck('id')->toArray();
-        $productsQuery = Product::with(['thumbnail', 'variants.prices', 'urls'])
-            ->whereIn('id', $productIds);
+            $rawResult = $searchResult->getRaw();
+            $hits = $rawResult['hits'] ?? [];
+            $totalHits = $rawResult['nbHits'] ?? $rawResult['estimatedTotalHits'] ?? count($hits);
+            $facets = $rawResult['facetDistribution'] ?? [];
+            $productIds = collect($hits)->pluck('id')->toArray();
 
-        $productsMap = $productsQuery->get()->keyBy('id');
+            $productsMap = Product::with(['thumbnail', 'variants.prices', 'urls'])
+                ->whereIn('id', $productIds)
+                ->get()
+                ->keyBy('id');
 
-        $orderedProducts = collect($productIds)->map(fn ($id) => $productsMap[$id] ?? null)->filter();
+            $orderedProducts = collect($productIds)
+                ->map(fn ($id) => $productsMap[$id] ?? null)
+                ->filter()
+                ->values();
+
+            return [
+                'productIds' => $productIds,
+                'orderedProducts' => $orderedProducts,
+                'totalHits' => $totalHits,
+                'facets' => $facets,
+            ];
+        });
 
         $products = new LengthAwarePaginator(
-            $orderedProducts,
-            $totalHits,
+            $searchData['orderedProducts'],
+            $searchData['totalHits'],
             $this->perPage,
             $this->page,
             ['path' => request()->url()]
@@ -185,20 +215,24 @@ class CollectionPage extends Component
 
         $collectionName = $collection?->translateAttribute('name') ?? 'All Products';
 
-        $parentCollection = null;
-        if ($this->parentSlug) {
-            $parentCollection = Collection::whereHas('urls', function ($q) {
+        $parentCollectionCacheKey = 'parent-collection-' . ($this->parentSlug ?? 'none');
+        $parentCollection = Cache::store('file')->remember($parentCollectionCacheKey, 60 * 60 * 8, function () {
+            if (! $this->parentSlug) {
+                return null;
+            }
+
+            return Collection::whereHas('urls', function ($q) {
                 $q->where('slug', $this->parentSlug);
             })->first();
-        }
+        });
 
         return view('livewire.catalog.collection-page', [
             'products' => $products,
-            'facets' => $facets,
+            'facets' => $searchData['facets'],
             'collectionName' => $collectionName,
             'childCollections' => $childCollections,
             'parentCollection' => $parentCollection,
-            'totalProducts' => $totalHits,
+            'totalProducts' => $searchData['totalHits'],
         ]);
     }
 

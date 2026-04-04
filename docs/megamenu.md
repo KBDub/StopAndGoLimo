@@ -198,7 +198,6 @@ All category landing pages and sub-category pag![img.png](img.png)es must follow
 | **Overview** | Design Services | `/design-services` | ♻️ Refactor | Refactor from `/design-it-yourself` index |
 | **Logo Design** | | | | |
 | | Logo Design | `/design-services/logo-design` | ❌ New page | New sub-page |
-| **Layout / Graphic Design** | | | | |
 | | Layout & Graphic Design | `/design-services/graphic-design` | ❌ New page | New sub-page |
 | | Online Designer | `/design-services/online-designer` | ♻️ Refactor | Refactor from `/design-it-yourself/online-designer` |
 | | Design Catalogs | `/design-services/design-catalogs` | ♻️ Refactor | Refactor from `/design-it-yourself/design-catalogs` |

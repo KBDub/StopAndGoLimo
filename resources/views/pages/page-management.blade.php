@@ -82,6 +82,22 @@
                         $totalComponents += $page['total_count'];
                     }
                 }
+
+                $componentUsageMap = [];
+                foreach ($groups as $group) {
+                    foreach ($group['pages'] as $page) {
+                        foreach ($page['all_components'] as $comp) {
+                            if (!isset($componentUsageMap[$comp])) {
+                                $componentUsageMap[$comp] = [];
+                            }
+                            $componentUsageMap[$comp][] = [
+                                'name' => $page['name'],
+                                'url'  => $page['url'],
+                            ];
+                        }
+                    }
+                }
+                uasort($componentUsageMap, fn($a, $b) => count($b) - count($a));
             @endphp
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
@@ -212,6 +228,88 @@
                 </div>
             @endforeach
 
+            {{-- ── Component Registry ─────────────────────────────────────────── --}}
+            <div class="mt-12">
+                <h2 class="text-xl font-bold text-charcoal mb-1 flex items-center gap-2">
+                    <span class="w-3 h-3 bg-sunburst-full"></span>
+                    Component Registry
+                </h2>
+                <p class="text-sm text-charcoal-light mb-6 ml-5">
+                    {{ count($componentUsageMap) }} unique components · {{ $totalComponents }} total usages across {{ $totalPages }} pages · sorted by usage count
+                </p>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+                    @foreach($componentUsageMap as $comp => $pages)
+                        @php
+                            $isLivewire = Str::startsWith($comp, 'livewire:');
+                            $displayComp = $isLivewire ? Str::after($comp, 'livewire:') : $comp;
+                            $color = $componentColorMap[$comp];
+                            $usageCount = count($pages);
+
+                            if ($isLivewire) {
+                                $label    = Str::of($displayComp)->replace(['.', '-', '_'], ' ')->title();
+                                $typeLabel = 'Livewire';
+                            } elseif (Str::startsWith($comp, 'sections.')) {
+                                $label    = Str::of(Str::after($comp, 'sections.'))->replace(['-', '_'], ' ')->title();
+                                $typeLabel = 'Section';
+                            } elseif (Str::startsWith($comp, 'layout.')) {
+                                $label    = Str::of(Str::after($comp, 'layout.'))->replace(['-', '_'], ' ')->title();
+                                $typeLabel = 'Layout';
+                            } elseif (Str::startsWith($comp, 'ui.')) {
+                                $label    = Str::of(Str::after($comp, 'ui.'))->replace(['-', '_'], ' ')->title();
+                                $typeLabel = 'Ui';
+                            } else {
+                                $label    = Str::of($comp)->replace(['-', '_'], ' ')->title();
+                                $typeLabel = 'Other';
+                            }
+                        @endphp
+                        <div
+                            x-data="{ expanded: false }"
+                            class="bg-white rounded-lg shadow-sm border border-linen-dark/20 overflow-hidden"
+                        >
+                            <button
+                                @click="expanded = !expanded"
+                                class="w-full text-left p-4 hover:bg-linen-light/50 transition-colors"
+                            >
+                                <div class="flex items-center gap-3">
+                                    <svg
+                                        class="w-4 h-4 text-charcoal-light transition-transform shrink-0"
+                                        :class="{ 'rotate-90': expanded }"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    >
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                    <span class="w-2.5 h-2.5 rounded-full shrink-0 {{ $color['dot'] }}"></span>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex items-baseline gap-2">
+                                            <span class="font-bold text-charcoal truncate">{{ $label }}</span>
+                                            <span class="text-xs text-charcoal-light shrink-0">{{ $typeLabel }}</span>
+                                        </div>
+                                        <p class="text-xs text-charcoal-light truncate mt-0.5 font-mono">{{ $isLivewire ? 'livewire:'.$displayComp : $comp }}</p>
+                                    </div>
+                                    <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-sm font-bold {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
+                                        {{ $usageCount }}
+                                    </span>
+                                </div>
+                            </button>
+
+                            <div x-show="expanded" x-cloak x-transition class="border-t border-linen-dark/20 p-4">
+                                <h4 class="text-xs font-semibold text-charcoal-light mb-2">Used on {{ $usageCount }} {{ Str::plural('page', $usageCount) }}</h4>
+                                <div class="space-y-1">
+                                    @foreach($pages as $p)
+                                        <div class="flex items-center justify-between gap-2 text-sm">
+                                            <span class="text-charcoal font-medium truncate">{{ $p['name'] }}</span>
+                                            <span class="text-charcoal-light font-mono text-xs shrink-0">{{ $p['url'] }}</span>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            {{-- ── Color Legend ────────────────────────────────────────────────── --}}
             <div class="mt-12 bg-white rounded-lg shadow-sm border border-linen-dark/20 p-6">
                 <h2 class="text-lg font-bold text-charcoal mb-4">Color Legend</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">

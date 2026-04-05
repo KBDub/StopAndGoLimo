@@ -100,6 +100,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg"
+        alt="Branded promotional products and custom giveaways from Top 5 Percent in Joliet Illinois"
+        title="Giveaways That Make Impressions — No Minimums"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.product-grid collectionSlug="promotional-items" />
 

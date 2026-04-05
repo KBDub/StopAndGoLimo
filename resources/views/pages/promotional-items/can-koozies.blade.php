@@ -92,6 +92,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg"
+        alt="Custom branded shirts and promotional apparel from Top 5 Percent in Joliet Illinois"
+        title="Add Custom Shirts to Your Koozie Order — Team Packages Available"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

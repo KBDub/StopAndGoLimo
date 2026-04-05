@@ -93,6 +93,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg"
+        alt="Custom window graphics and decals installed by Top 5 Percent in Joliet Illinois"
+        title="Window Graphics and Door Signs Available Too"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

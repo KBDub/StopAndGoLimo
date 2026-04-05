@@ -167,6 +167,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
+        alt="Custom embroidery and specialty apparel printing at Top 5 Percent in Joliet Illinois"
+        title="Embroidery, Screen Print, DTF — We Do It All"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.product-grid collectionSlug="custom-apparel" />
 

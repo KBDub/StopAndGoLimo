@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
+        alt="Custom rhinestone bling shirts from Top 5 Percent in Joliet Illinois"
+        title="Combine Glitter With Rhinestone for Maximum Sparkle"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

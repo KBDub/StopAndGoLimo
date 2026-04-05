@@ -93,6 +93,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
+        alt="Custom glitter shirts and sparkle apparel from Top 5 Percent in Joliet Illinois"
+        title="Combine Foil With Glitter or Rhinestone for Custom Apparel"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

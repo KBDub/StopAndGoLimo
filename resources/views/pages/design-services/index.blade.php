@@ -88,6 +88,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
+        alt="Custom business signs and print design services from Top 5 Percent in Joliet Illinois"
+        title="From Logo to Finished Product — All Under One Roof"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.product-grid collectionSlug="design-services" />
 

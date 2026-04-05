@@ -82,6 +82,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg"
+        alt="Custom removable vehicle magnets from Top 5 Percent in Joliet Illinois"
+        title="Removable Vehicle Magnets — No Commitment Required"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.product-grid collectionSlug="vehicle-graphics" />
 

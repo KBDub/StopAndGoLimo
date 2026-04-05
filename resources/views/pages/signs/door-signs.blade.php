@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/window-wall-floor-decals/top5pct-wall-decals-joliet.jpg"
+        alt="Custom wall graphics and interior signage installed by Top 5 Percent in Joliet Illinois"
+        title="Wall Graphics and Window Signs — Same Fast Turnaround"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

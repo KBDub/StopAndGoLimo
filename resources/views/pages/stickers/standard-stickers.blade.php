@@ -120,6 +120,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg"
+        alt="Custom die cut stickers and sports decals printed by Top 5 Percent in Joliet Illinois"
+        title="Die Cut Custom Stickers in Any Shape"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

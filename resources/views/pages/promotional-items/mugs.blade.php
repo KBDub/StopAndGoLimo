@@ -92,6 +92,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
+        alt="Custom branded apparel and promotional items from Top 5 Percent in Joliet Illinois"
+        title="Bundle Mugs With Custom Apparel for Event Packages"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

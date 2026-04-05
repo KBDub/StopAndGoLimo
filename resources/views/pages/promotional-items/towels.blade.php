@@ -92,6 +92,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg"
+        alt="Custom branded apparel and promotional products from Top 5 Percent in Joliet Illinois"
+        title="Pair Your Towels With Branded Shirts or Apparel"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

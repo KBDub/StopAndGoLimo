@@ -133,6 +133,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg"
+        alt="Custom printed shirts and apparel for any occasion from Top 5 Percent in Joliet Illinois"
+        title="Need Custom Shirts for Another Event? We've Got You"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

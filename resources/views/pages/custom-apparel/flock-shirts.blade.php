@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
+        alt="Custom holographic and specialty shirts from Top 5 Percent in Joliet Illinois"
+        title="Mix Flock With Holographic or Glitter for Custom Shirts"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

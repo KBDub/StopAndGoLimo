@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg"
+        alt="Custom flock velvet shirts from Top 5 Percent in Joliet Illinois"
+        title="Add Flock, Puff, or Glitter to Your Shirt Order"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

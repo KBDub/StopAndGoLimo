@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banner-joliet-romeoville-rockdale-plainfield.jpg"
+        alt="Custom banners and event signage from Top 5 Percent in Joliet Illinois"
+        title="Banners, Runners, and More — Complete Your Event Setup"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

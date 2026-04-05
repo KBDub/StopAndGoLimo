@@ -92,6 +92,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
+        alt="Custom embroidered apparel and branded products from Top 5 Percent in Joliet Illinois"
+        title="Bundle Mouse Pads With Other Branded Desk Items"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

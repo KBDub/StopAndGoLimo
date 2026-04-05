@@ -93,6 +93,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
+        alt="Custom holographic color-shifting shirts from Top 5 Percent in Joliet Illinois"
+        title="Pair Glow-in-the-Dark With Holographic for a Bold Look"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

@@ -117,6 +117,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banner-custom-banners-joliet-shorewood-will-county.jpg"
+        alt="Custom vinyl banners for birthdays, graduations, and events printed by Top 5 Percent in Joliet Illinois"
+        title="Birthday, Graduation, Event Banners — We Print Same Day"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

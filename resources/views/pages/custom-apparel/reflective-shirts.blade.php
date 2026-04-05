@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg"
+        alt="Custom glow in the dark shirts from Top 5 Percent in Joliet Illinois"
+        title="Glow in the Dark or Reflective — Both Built for Visibility"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

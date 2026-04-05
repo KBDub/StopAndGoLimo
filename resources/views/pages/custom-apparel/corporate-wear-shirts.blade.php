@@ -118,6 +118,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/spirit-wear/top5pct-plainfield-south-high-school-hoodie.jpg"
+        alt="Custom spirit wear and team apparel from Top 5 Percent in Joliet Illinois"
+        title="Employee Uniforms and Team Apparel — Ask About Group Pricing"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

@@ -92,6 +92,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+        alt="Custom branded shirts and promotional apparel from Top 5 Percent in Joliet Illinois"
+        title="Customize Tote Bags With Your Logo or Design"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

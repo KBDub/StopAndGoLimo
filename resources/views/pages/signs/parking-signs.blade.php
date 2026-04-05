@@ -93,6 +93,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
+        alt="Custom business banners and outdoor signage from Top 5 Percent in Joliet Illinois"
+        title="Banners, Sidewalk Signs, and More — Ask About Our Full Sign Menu"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

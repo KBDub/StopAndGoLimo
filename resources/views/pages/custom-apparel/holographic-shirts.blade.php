@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
+        alt="Custom metallic foil shirts from Top 5 Percent in Joliet Illinois"
+        title="Holographic, Foil, or Glitter — Shine Your Way"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

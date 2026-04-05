@@ -93,6 +93,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+        alt="Custom vinyl heat press shirts and apparel from Top 5 Percent in Joliet Illinois"
+        title="Combine Embroidery With Vinyl or Screen Print"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

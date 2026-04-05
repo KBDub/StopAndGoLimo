@@ -77,6 +77,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg"
+        alt="Custom die cut stickers and labels printed by Top 5 Percent in Joliet Illinois"
+        title="Die Cut Stickers for Businesses and Creators"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.product-grid collectionSlug="stickers" />
 

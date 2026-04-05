@@ -60,6 +60,13 @@
         href="#all-products"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
+        alt="Custom holographic and specialty apparel at Top 5 Percent in Joliet Illinois"
+        title="Step Up Your Brand — Custom Prints From Top 5 Percent"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.product-grid :alwaysShow="true" />
 

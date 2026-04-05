@@ -90,6 +90,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banner-joliet-romeoville-rockdale-plainfield.jpg"
+        alt="Custom printed products from design catalog templates at Top 5 Percent in Joliet Illinois"
+        title="Pick a Template and We'll Print It Same Day"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

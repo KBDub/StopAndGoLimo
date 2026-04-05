@@ -90,6 +90,13 @@
         href="/contact"
         direction="left"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banner-custom-banners-joliet-shorewood-will-county.jpg"
+        alt="Custom banners and printed products designed by Top 5 Percent in Joliet Illinois"
+        title="Your Logo on Everything — Shirts, Signs, Banners, and More"
+        href="/contact"
+        direction="right"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

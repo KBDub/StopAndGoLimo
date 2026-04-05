@@ -115,6 +115,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banners-business-joliet-shorewood-crest-hill.jpg"
+        alt="Custom banners and signs printed by Top 5 Percent in Joliet, Shorewood, and Crest Hill Illinois"
+        title="Posters, Banners, and More — Full Color Printing in Joliet"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

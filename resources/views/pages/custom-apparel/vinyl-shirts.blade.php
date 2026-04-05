@@ -93,6 +93,13 @@
         href="/contact"
         direction="right"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
+        alt="Custom glitter and specialty print shirts from Top 5 Percent in Joliet Illinois"
+        title="Upgrade Your Vinyl Shirt With Glitter, Flock, or Foil"
+        href="/contact"
+        direction="left"
+    />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />

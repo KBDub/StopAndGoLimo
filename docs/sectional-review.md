@@ -7,6 +7,49 @@
 
 ---
 
+## Sectionalization Project — COMPLETE ✅
+
+**Completed 2026-04-05.** All 78 active pages have been audited and brought to standard across T001–T007 plus the second slide-in pass.
+
+| Task | Scope | Status |
+|---|---|---|
+| T001 | Audit all 78 pages — classify CLP / Sub-Full / Sub-Partial / Sub-Basic / Special | ✅ Done |
+| T002 | Add `ui.carousel-rotating-images` (×2 on CLPs, ×1 on sub-pages) to all content pages | ✅ Done |
+| T003 | Add `ui.card-banner-slide-in` (first pass) to all content pages | ✅ Done |
+| T004 | Add second `ui.banner-testimonial` to every page missing it | ✅ Done |
+| T005 | Add `sections.lp-category-banners` full count to all 7 CLPs | ✅ Done |
+| T006 | Upgrade Sub-Partial and Sub-Basic pages to Sub-Full content structure | ✅ Done |
+| T007 | Orphaned page cleanup (redirects + deletions) | ✅ Done |
+| Second slide-in pass | Confirm every content page has exactly 2× `ui.card-banner-slide-in` | ✅ Done |
+
+> All 50 content pages confirmed with 2× `card-banner-slide-in`. All 7 CLPs confirmed with `sections.lp-category-banners`, 2× carousel, 2× testimonial. All sub-pages at Sub-Full structure minimum.
+
+---
+
+## New Page Standard
+
+**Any new content page added to this project must follow the appropriate template below.** This is the enforced standard going forward.
+
+### Exceptions — pages NOT subject to this standard
+
+| Exception | Reason |
+|---|---|
+| **Homepage** (`/`) | Uses unique hero, services accordion, and featured products. Governed separately. |
+| **Pure Lunar Livewire pages** (`/cart`, `/checkout`, `/order-confirmation`, and any future Livewire-driven pages) | Rendered entirely by Lunar's Livewire components. No Blade sections apply. |
+| **Utility / Admin pages** (`/page-management`, and similar internal tools) | Internal tooling — not customer-facing. |
+
+### Which template to use for a new page
+
+| New page type | Template |
+|---|---|
+| A new top-level menu group index (i.e. a new CLP) | **Template A — Category Landing Page** |
+| A new sub-page under any existing or new menu group | **Template B — Sub-Category Page (Full)** |
+| A new standalone content page (About Us group, company pages, etc.) | Use templates as a baseline; `same-day`, `carousel`, `why-choose-us`, `cta-free-quote`, `cta-ready-to-get-started`, `review-banner`, `map-section` are always required. Slide-in and testimonials are strongly recommended. |
+
+> When in doubt, default to **Template B**. The only reason to deviate is when the page is a true Livewire utility page or the Homepage.
+
+---
+
 ## Standard Section Templates
 
 All active pages must conform to one of the two templates below. Every mandatory component is required. The new carousel and slide-in UI components are now part of both standards.
@@ -577,7 +620,9 @@ Pages that exist in `resources/views/pages/` but have no place in the current me
 
 ## 13. Action Items — Priority Order
 
-### Priority 1 — CLP `lp-category-banners` (5 missing)
+> **All priorities below are COMPLETE as of 2026-04-05.** This section is retained as a historical record of the sectionalization project plan. For the current new-page standard, see the **New Page Standard** section above.
+
+### Priority 1 — CLP `lp-category-banners` (5 missing) ✅ DONE
 
 | Page | Action |
 |---|---|

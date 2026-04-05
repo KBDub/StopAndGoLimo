@@ -1,78 +1,87 @@
-,Main menu item,"Top Level Parent Category
- (current cat lp)",Sub Category page,URL,Needs Section Updates
-,Home,,,/,n
-,Custom Apparel,,,/custom-apparel,n
-,,Printing Options,,,
-,,,Direct to Film (DTF),/custom-apparel/dtf-transfers,n
-,,,Dye-Sublimation,/custom-apparel/dye-sublimation,y
-,,,Screen Printing,/custom-apparel/screen-printing,y
-,,,Embroidery,/custom-apparel/embroidery,n
-,,,Rhinestone,/custom-apparel/rhinestone-shirts,n
-,,,Digital Vinyl,/custom-apparel/vinyl-shirts,n
-,,,,,
-,,Specialty Materials,,,
-,,,Glitter,/custom-apparel/glitter-shirts,n
-,,,Puff,/custom-apparel/puff-shirts,y
-,,,Glow in the Dark,/custom-apparel/glow-in-the-dark-shirts,n
-,,,Flock,/custom-apparel/flock-shirts,n
-,,,Brick,/custom-apparel/brick-shirts,n
-,,,Holographic,/custom-apparel/holographic-shirts,n
-,,,Foil,/custom-apparel/foil-shirts,n
-,,,Reflective,/custom-apparel/reflective-shirts,n
-,,,,,
-,,Group Shirts,,,
-,,,Family Reunion,/custom-apparel/reunion-shirts,n
-,,,Spirit Wear,/custom-apparel/spirit-wear-shirts,n
-,,,Corporate Wear,/custom-apparel/corporate-wear-shirts,n
-,,,,,
-,Select a Sign,,,/signs,n
-,,Business Signs,,,
-,,,Banners,/signs/banners,n
-,,,Window Signs,/signs/window-signs,y
-,,,Wall Signs,/signs/wall-signs,y
-,,,Floor Signs,/signs/floor-signs,y
-,,,Door Signs,/signs/door-signs,y
-,,,Posters,/signs/posters,n
-,,,,,
-,,Ground Signs,,,
-,,,Yard Signs,/signs/yard-signs,y
-,,,A-Frame/Sidewalk Signs,/signs/sidewalk-signs,y
-,,,Parking Signs,/signs/parking-signs,n
-,,,,,
-,,Table Signs,,,
-,,,Table Cloths,/signs/table-cloths,n
-,,,Table Runners,/signs/table-runners,y
-,,,,,
-,Vehicle Decals,,,/vehicle-graphics,n
-,,Vehicle Graphic Options,,,
-,,,Automobile Graphics,/vehicle-graphics/automobile-graphics,n
-,,,Vehicle Magnets,/vehicle-graphics/vehicle-magnets,n
-,,,DOT Decals,/vehicle-graphics/dot-decals,n
-,,,,,
-,Stickers,,,/stickers,y
-,,Standard,,/stickers/standard-stickers,n
-,,Custom Shaped,,/stickers/custom-shaped-stickers,y
-,,,,,
-,,,,,
-,Promotional Items,,,/promotional-items,n
-,,Promo Products,,,
-,,,Mugs,/promotional-items/mugs,y
-,,,Can Koozies,/promotional-items/can-koozies,y
-,,,Towels,/promotional-items/towels,y
-,,,Drink Coasters,/promotional-items/drink-coasters,y
-,,,Drawstring/Tote Bags,/promotional-items/tote-bags,y
-,,,Mouse Pads,/promotional-items/mouse-pads,y
-,,,,,
-,Top 5% Merchandise,,,/top5pct-merchandise,n
-,,,,,
-,,,,,
-,Design Services,,,/design-services,n
-,,Logo Design,,/design-services/logo-design,y
-,,Layout/Graphic Design,,/design-services/graphic-design,y
-,,Online Designer,,/design-services/online-designer,n
-,,Design Catalogs,,/design-services/design-catalogs,n
-,,,,,
-,About Us,,,/about,n
-,,Company,,/company,y
-,,Portfolio,,/portfolio,n
-,,Resources,,/resources,y
+,Main Menu Item,Sub Category Group,Sub Category page,URL,Is Category Landing Page,Needs Section Updates
+,Home,,,/,,n
+,Custom Apparel,,,/custom-apparel,y,n
+,,Printing Options,,,,
+,,,Direct to Film (DTF),/custom-apparel/dtf-transfers,,n
+,,,Dye-Sublimation,/custom-apparel/dye-sublimation,,y
+,,,Screen Printing,/custom-apparel/screen-printing,,y
+,,,Embroidery,/custom-apparel/embroidery,,n
+,,,Rhinestone,/custom-apparel/rhinestone-shirts,,n
+,,,Digital Vinyl,/custom-apparel/vinyl-shirts,,n
+,,,,,,
+,,Specialty Materials,,,,
+,,,Glitter,/custom-apparel/glitter-shirts,,n
+,,,Puff,/custom-apparel/puff-shirts,,y
+,,,Glow in the Dark,/custom-apparel/glow-in-the-dark-shirts,,n
+,,,Flock,/custom-apparel/flock-shirts,,n
+,,,Brick,/custom-apparel/brick-shirts,,n
+,,,Holographic,/custom-apparel/holographic-shirts,,n
+,,,Foil,/custom-apparel/foil-shirts,,n
+,,,Reflective,/custom-apparel/reflective-shirts,,n
+,,,,,,
+,,Group Shirts,,,,
+,,,Family Reunion,/custom-apparel/reunion-shirts,,n
+,,,Spirit Wear,/custom-apparel/spirit-wear-shirts,,n
+,,,Corporate Wear,/custom-apparel/corporate-wear-shirts,,n
+,,,,,,
+,Select a Sign,,20,/signs,y,n
+,,Business Signs,,,,
+,,,Banners,/signs/banners,,n
+,,,Window Signs,/signs/window-signs,,y
+,,,Wall Signs,/signs/wall-signs,,y
+,,,Floor Signs,/signs/floor-signs,,y
+,,,Door Signs,/signs/door-signs,,y
+,,,Posters,/signs/posters,,n
+,,,,,,
+,,Ground Signs,,,,
+,,,Yard Signs,/signs/yard-signs,,y
+,,,A-Frame/Sidewalk Signs,/signs/sidewalk-signs,,y
+,,,Parking Signs,/signs/parking-signs,,n
+,,,,,,
+,,Table Signs,,,,
+,,,Table Cloths,/signs/table-cloths,,n
+,,,Table Runners,/signs/table-runners,,y
+,,,,,,
+,Vehicle Decals,,,/vehicle-graphics,y,n
+,,Vehicle Graphic Options,,,,
+,,,Automobile Graphics,/vehicle-graphics/automobile-graphics,,n
+,,,Vehicle Magnets,/vehicle-graphics/vehicle-magnets,,n
+,,,DOT Decals,/vehicle-graphics/dot-decals,,n
+,,,,,,
+,Stickers,,,/stickers,y,y
+,,Standard,,/stickers/standard-stickers,,n
+,,Custom Shaped,,/stickers/custom-shaped-stickers,,y
+,,,,,,
+,,,,,,
+,Promotional Items,,39,/promotional-items,y,n
+,,Promo Products,,,,
+,,,Mugs,/promotional-items/mugs,,y
+,,,Can Koozies,/promotional-items/can-koozies,,y
+,,,Towels,/promotional-items/towels,,y
+,,,Drink Coasters,/promotional-items/drink-coasters,,y
+,,,Drawstring/Tote Bags,/promotional-items/tote-bags,,y
+,,,Mouse Pads,/promotional-items/mouse-pads,,y
+,,,,,,
+,Top 5% Merchandise,,,/top5pct-merchandise,y,n
+,,,,,,
+,,,,,,
+,Design Services,,,/design-services,y,n
+,,Logo Design,,/design-services/logo-design,,y
+,,Layout/Graphic Design,,/design-services/graphic-design,,y
+,,Online Designer,,/design-services/online-designer,,n
+,,Design Catalogs,,/design-services/design-catalogs,,n
+,,,,,,
+,About Us,,52,/about,,n
+,,Company,,/company,,y
+,,Portfolio,,/portfolio,,n
+,,Resources,,/resources,,y
+,,,,,,
+,,,,,,
+,,,,,,
+,Cart,,,,,
+,,,,,,
+,Checkout,,,,,
+,,,,,,
+,Collection,,,,,
+,,,,,,
+,Contact,,,,,

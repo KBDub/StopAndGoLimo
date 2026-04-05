@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="stickers" displayServiceType="Custom Shaped Stickers" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-ocean-viewz.jpg',      'alt' => 'Custom shaped stickers and branded decals printed in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg',    'alt' => 'Custom die cut stickers for a sports organization in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg',  'alt' => 'Custom die cut stickers for a restaurant in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg',           'alt' => 'Custom shaped product labels and die cut stickers in Joliet Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="The owner Ezra was extremely knowledgeable and helpful. He gave great marketing ideas for my stickers. The quality of my product was top of the line. I would recommend Top 5 Percent to any business or organization that needs print services."
         name="Eric Murff"
@@ -76,6 +86,14 @@
         quote="Outstanding and excellent service. The quality of the decals are flawless. I will definitely be doing more business in the future."
         name="Chewy Orkwiszewski"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg"
+        alt="Custom shaped die cut stickers printed by Top 5 Percent in Joliet Illinois"
+        title="Custom Stickers Die Cut to Any Shape"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

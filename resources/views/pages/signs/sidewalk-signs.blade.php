@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="sidewalk-signs" displayServiceType="Sidewalk Signs" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/sidewalk-signs/top5pct-banner-a-frame-sidewalk-signs-joliet-romeoville.jpg', 'alt' => 'Custom a frame sidewalk signs and sandwich boards in Joliet and Romeoville Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg',                   'alt' => 'Custom a frame sidewalk sign printed and built in Joliet Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-sidewalk-a-frames-joliet-shorewood.jpg',              'alt' => 'A frame sidewalk signs displayed outside businesses in Joliet and Shorewood Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-sidewalk-signs-joliet-shorewood-crest-hill.jpg',      'alt' => 'Durable a frame sidewalk signs in Joliet, Shorewood, and Crest Hill Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
@@ -87,6 +97,14 @@
         quote="I needed a banner quickly. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was very helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent. Professional and efficient in meeting the needs of their customers."
         name="Jerry E Olson"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg"
+        alt="Custom a frame sidewalk signs built and printed by Top 5 Percent in Joliet Illinois"
+        title="Drive Foot Traffic With a Sidewalk Sign"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

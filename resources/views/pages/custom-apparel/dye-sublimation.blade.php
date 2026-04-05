@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="dye-sublimation" displayServiceType="Dye Sublimation" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom dye sublimation apparel and all over print shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',                         'alt' => 'Custom all over print sublimation shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg',                     'alt' => 'Custom sublimation jerseys and performance wear printed in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom apparel and shirts made in Joliet Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
@@ -46,10 +56,44 @@
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
+    <x-sections.card-detailed-info
+        heading="Why Dye Sublimation Is the Best Choice for Full Color Custom Apparel"
+        image1="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+        alt1="Custom dye sublimation all over print shirts and apparel in Joliet Illinois"
+    >
+        <x-slot name="intro">
+            <p class="mb-4">Dye sublimation printing is the only method that produces a truly all-over, edge-to-edge full color graphic on a garment. Unlike screen printing or heat transfer vinyl, dye sublimation converts ink into a gas that bonds permanently with the polyester fibers at the molecular level. The result is a print that is literally part of the garment — it cannot crack, peel, fade, or wash off because it is embedded in the fabric itself rather than sitting on top of it. For brands and organizations that need a complex, photographic, or all-over design, sublimation is the only method that delivers that result at a professional level.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Unlimited Colors, Zero Extra Cost</h3>
+            <p class="mb-4">Traditional screen printing charges per color, which means complex full-color designs become expensive quickly. Dye sublimation has no color limitations — a design with fifty colors costs exactly the same to print as a design with two. This makes sublimation ideal for photographic images, gradient designs, watercolor effects, intricate patterns, and any artwork that uses the full color spectrum. Sports jerseys, gaming team apparel, festival merchandise, and branded activewear all benefit enormously from the freedom that all-over sublimation printing provides.</p>
+        </x-slot>
+        <x-slot name="mid">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Performance Fabric Compatible</h3>
+            <p class="mb-4">Dye sublimation works on polyester and polyester-blend performance fabrics, which makes it the preferred printing method for athletic and activewear. Moisture-wicking jerseys, lightweight performance tees, compression garments, and team uniforms all accept sublimation printing beautifully, and the print remains fully breathable because it does not add any ink layer on top of the fabric. Teams throughout Joliet and Will County use sublimated jerseys and uniforms because they combine comfort, performance, and premium appearance in a single garment.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Personalization at No Extra Cost</h3>
+            <p class="mb-4">If you need matching custom uniforms for a sports team, esports team, or organized group, dye sublimation is the gold standard. Every jersey can be printed with identical artwork and personalized with individual names and numbers without any additional cost per personalization. The sublimation process handles fine text, detailed logos, and multi-color designs equally well, so your entire team looks sharp and consistent regardless of design complexity.</p>
+        </x-slot>
+        <x-slot name="lower">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">No Minimums and Fast Turnaround</h3>
+            <p class="mb-4">We offer no minimums on dye sublimation printing. You can order a single custom jersey or a full team set without any minimum quantity requirement. Most sublimation orders are completed within two to three business days, and we offer rush service for urgent needs. We review every design before production to make sure colors, layout, and sizing translate correctly to the final garment so you never receive a surprise when your order arrives.</p>
+        </x-slot>
+        <x-slot name="footer">
+            <p class="mb-4">We are a veteran owned print shop at 121 Springfield Avenue in Joliet, Illinois. We serve businesses, sports teams, schools, gyms, and organizations throughout Will County and the greater Chicagoland area with premium custom dye sublimation apparel.</p>
+            <p>Call us at (815) 349 8600 to discuss your dye sublimation project today.</p>
+        </x-slot>
+    </x-sections.card-detailed-info>
+
     <x-ui.banner-testimonial
         quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars!"
         name="Gerardo Munoz Jr"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
+        alt="Custom dye sublimation all over print apparel printed by Top 5 Percent in Joliet Illinois"
+        title="All Over Print Apparel With No Minimums"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

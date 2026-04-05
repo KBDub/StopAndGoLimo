@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="posters" displayServiceType="Custom Posters" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/posters/top5pct-banner-poster-maker-joliet-romeoville-shorewood.jpg', 'alt' => 'Custom poster printing and large format posters in Joliet, Romeoville, and Shorewood Illinois'],
+            ['src' => '/images/posters/top5pct-poster-printing-joliet-shorewood-romeoville.jpg',     'alt' => 'Full color poster prints made in Joliet, Shorewood, and Romeoville Illinois'],
+            ['src' => '/images/posters/top5pct-poster-maker-joliet-shorewood-plainfield.jpg',        'alt' => 'Large format poster maker in Joliet, Shorewood, and Plainfield Illinois'],
+            ['src' => '/images/posters/top5pct-poster-board-joliet-shorewood-romeoville.jpg',        'alt' => 'Mounted poster board displays printed in Joliet, Shorewood, and Romeoville Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
         name="Datjaeda"
@@ -98,6 +108,14 @@
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/posters/top5pct-poster-printing-joliet-shorewood-romeoville.jpg"
+        alt="Full color poster printing at Top 5 Percent in Joliet, Shorewood, and Romeoville Illinois"
+        title="High Quality Poster Printing in Joliet"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

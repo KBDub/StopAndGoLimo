@@ -199,6 +199,7 @@ Route::get('/signs/table-cloths', function () {
 Route::redirect('/decals', '/stickers', 301);
 Route::redirect('/decals/stickers', '/stickers/standard-stickers', 301);
 Route::redirect('/decals/window-wall-floor-decals', '/vehicle-graphics/automobile-graphics', 301);
+Route::redirect('/decals/coronavirus-decals', '/stickers/standard-stickers', 301);
 
 Route::get('/stickers', function () {
     return view('pages.stickers.index');

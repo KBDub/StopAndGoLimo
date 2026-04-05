@@ -14,6 +14,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="reunion-shirts" displayServiceType="Reunion Shirts" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg', 'alt' => 'Custom family and class reunion shirts in Joliet and Shorewood Illinois'],
+            ['src' => '/images/reunion-shirts/toptpct-class-reunion-shirts-joliet-shorewood.jpg',                'alt' => 'Class reunion shirts printed in Joliet and Shorewood Illinois'],
+            ['src' => '/images/reunion-shirts/toptpct-family-reunion-shirts-joliet-plainfield.jpg',             'alt' => 'Custom family reunion shirts in Joliet and Plainfield Illinois'],
+            ['src' => '/images/reunion-shirts/toptpct-westinghouse-class-reunion-shirt-joliet-shorewood.jpg',   'alt' => 'Westinghouse class reunion shirts in Joliet and Shorewood Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Excellence and Professionalism! Top 5 Percent, LLC job well done! We celebrated our family reunion and ordered over 150 t-shirts for toddlers to adults. Ezra remained in communication throughout and delivered everything on time. We were so very appreciative."
         name="Chamille Doss"
@@ -116,6 +126,14 @@
         quote="Top 5 Percent is my number one go to for any custom made items. They have made shirts for several events and did a wonderful job. Duke keeps you updated on the order and works extremely fast and efficient. They have a customer in me for life!"
         name="Euneke Rembert"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/reunion-shirts/toptpct-family-reunion-shirts-joliet-romeoville.jpg"
+        alt="Custom family reunion shirts printed in Joliet and Romeoville Illinois"
+        title="Order Your Reunion Shirts Today"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="table-runners" displayServiceType="Table Runners" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg', 'alt' => 'Custom printed table cloths and table runners for events in Joliet Illinois'],
+            ['src' => '/images/table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg',                 'alt' => 'Custom branded table cloth printed for a business in Joliet and Crest Hill Illinois'],
+            ['src' => '/images/table-runners/top5pct-custom-table-runner-joliet-new-lenox.jpg',                 'alt' => 'Custom table runner printed for an event in Joliet and New Lenox Illinois'],
+            ['src' => '/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg',                 'alt' => 'Custom printed table runner in Joliet and Shorewood Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
         name="Datjaeda"
@@ -98,6 +108,14 @@
         quote="Fast and professional service, the experience by far was the best. The customer service was great and the friendly environment made everything easy. Everyone loved the family reunion banner. It was perfect! Thanks Ezra and team."
         name="Yolanda S. Flowers"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg"
+        alt="Custom printed table runners and table cloths for events from Top 5 Percent in Joliet and Shorewood Illinois"
+        title="Custom Table Runners for Any Event"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

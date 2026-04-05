@@ -14,6 +14,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="corporate-wear-shirts" displayServiceType="Corporate Wear" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg', 'alt' => 'Custom corporate shirts and uniforms in Joliet and Shorewood Illinois'],
+            ['src' => '/images/corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg',   'alt' => 'Custom embroidered polo shirts for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg',       'alt' => 'Custom branded corporate t-shirts in Joliet and Shorewood Illinois'],
+            ['src' => '/images/corporate-wear/toptpct-custom-hoodie-pullover-joliet-shorewood.jpg',          'alt' => 'Custom branded hoodies and pullovers for businesses in Joliet and Shorewood Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Ezra and Kim are incredible to work with for your personal or business shirts or decals. Highly recommend Top 5 Percent and very reasonable pricing."
         name="Matt Heath"
@@ -101,6 +111,14 @@
         quote="I love working with this company! They make sure we like what we are ordering before we place the order, the quality of materials and durability of the apparel we've made with them is outstanding. Always on time, clear communication and they listen to what we need. Never disappointed!"
         name="Vicky Donis"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/corporate-wear/toptpct-custom-button-up-shirt-joliet-shorewood.jpg"
+        alt="Custom corporate wear and branded employee uniforms in Joliet and Shorewood Illinois"
+        title="Professional Corporate Wear in Joliet"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

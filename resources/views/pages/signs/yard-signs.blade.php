@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="yard-signs" displayServiceType="Yard Signs" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg',  'alt' => 'Custom yard signs and lawn signs printed in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet.jpg',                              'alt' => 'Custom yard signs for businesses and events in Joliet Illinois'],
+            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet-plainfied-new-lenox.jpg',          'alt' => 'Real estate and campaign yard signs in Joliet, Plainfield, and New Lenox Illinois'],
+            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet-shorewood-romeoville.jpg',         'alt' => 'Corrugated plastic yard signs printed in Joliet, Shorewood, and Romeoville Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
@@ -88,6 +98,14 @@
         quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
         name="Datjaeda"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/yard-signs/top5pct-yard-signs-joliet-plainfied-new-lenox.jpg"
+        alt="Custom yard signs and lawn signs printed by Top 5 Percent in Joliet, Plainfield, and New Lenox Illinois"
+        title="Custom Yard Signs for Business and Events"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

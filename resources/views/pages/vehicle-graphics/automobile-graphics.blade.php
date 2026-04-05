@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="automobile-graphics" displayServiceType="Automobile Graphics" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg',     'alt' => 'Custom car wraps and vinyl lettering in Joliet Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg',  'alt' => 'Professional vehicle wraps and vinyl lettering in Joliet and Shorewood Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-boat-decals-joliet-shorewood-crest-hill.jpg',     'alt' => 'Custom boat decals and marine vinyl graphics in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-truck-decal-joliet-shorewood-rockdale.jpg',       'alt' => 'Custom truck decals and door graphics in Joliet, Shorewood, and Rockdale Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Many thanks to Ezra and his crew. I am beyond impressed with the custom decals created for my car. The quality of the decals is superb and they were installed perfectly. I've already received numerous compliments and inquiries about the work."
         name="Sam"
@@ -101,6 +111,14 @@
         quote="Top 5 Percent is a great place to get truck decals. Ezra took the time to explain the process and answered all my questions. He responded promptly to emails and phone calls. I highly recommend this business."
         name="Rachel James"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-crest-hill.jpg"
+        alt="Vehicle wraps and vinyl lettering installed by Top 5 Percent in Joliet and Crest Hill Illinois"
+        title="Turn Your Vehicle Into a Mobile Billboard"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

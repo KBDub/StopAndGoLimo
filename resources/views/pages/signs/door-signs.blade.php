@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="door-signs" displayServiceType="Door Signs" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg', 'alt' => 'Custom door signs and door graphics for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg',    'alt' => 'Custom door graphics and window signs for businesses in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg', 'alt' => 'Custom door vinyl and window decals in Joliet, Shorewood, and Rockdale Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg',    'alt' => 'Custom door clings and window graphics for businesses in Joliet and Shorewood Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
@@ -33,12 +43,57 @@
         <p>Our team handles measurement, production, and professional installation for all door sign projects. We prepare every glass surface before application and use professional-grade techniques to ensure clean, straight placement every time. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your door sign project.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.card-image-with-text
+        image="/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg"
+        alt="Custom frosted vinyl and privacy door graphics for businesses in Joliet Illinois"
+        title="Frosted, Perforated, and Full-Color Options"
+        imagePosition="right"
+    >
+        <p class="mb-4">Not every door graphic application calls for the same material. Frosted vinyl is one of our most popular door sign products for professional office environments — it creates the look of etched or sandblasted glass at a fraction of the cost and can be removed cleanly when you move or rebrand. Frosted vinyl is ideal for conference room doors, private office doors, medical consultation rooms, and any space where you want a professional privacy treatment without permanent alteration to the glass.</p>
+        <p class="mb-4">Perforated vinyl allows you to print a full-color graphic on the outside of a glass door while maintaining visibility from the inside. It is commonly used for entrance doors, storefront glass panels, and large display windows where you want maximum graphic coverage without blocking your interior view. From outside, the image is vivid and complete. From inside, you see through the tiny perforations in the material with minimal visual obstruction.</p>
+        <p>We also produce rigid door signs on aluminum, acrylic, and PVC for suite directories, office identification, ADA-compliant signage, and building identification. Whatever your door sign need, we have the materials, equipment, and expertise to produce and install it correctly. Call us at (815) 349 8600 to get started on your door sign project today.</p>
+    </x-sections.card-image-with-text>
+
     <x-sections.product-grid collectionSlug="business-signs" parentSlug="signs" />
+
+    <x-sections.card-detailed-info
+        heading="What Your Door Signage Communicates Before You Say a Word"
+        image1="/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg"
+        alt1="Custom door signs and door graphics installed for businesses in Joliet and Will County Illinois"
+    >
+        <x-slot name="intro">
+            <p class="mb-4">Customers form opinions about your business in the first few seconds of encountering it. Your door is part of that first impression — and what your door sign communicates, or fails to communicate, directly affects whether someone chooses to enter, whether they feel confident about your business, and how they perceive the quality of what you offer inside. A professionally designed and applied door graphic is one of the simplest investments you can make in your business's curb appeal and customer experience.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Essential Information Displayed Clearly</h3>
+            <p class="mb-4">Your door sign should answer the questions every first-time customer has before they walk in. Is this the right business? Are you open? What are your hours? How do I reach you? A well-designed door graphic presents this information clearly, professionally, and in a format that matches your overall brand aesthetic. Customers who can get these answers from your door before they enter have a smoother, more confident experience from the very first moment.</p>
+        </x-slot>
+        <x-slot name="mid">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Building and Suite Identification</h3>
+            <p class="mb-4">For businesses in professional office buildings, multi-tenant commercial spaces, or business parks, door signs serve a critical wayfinding function. Suite numbers, company names, and directional graphics help visitors navigate to the right space without frustration. We produce ADA-compliant suite identification signage, directory panels, and building identification signs in addition to glass-applied door graphics, giving us the ability to cover every door signage need your facility has.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Brand Consistency From the Outside In</h3>
+            <p class="mb-4">A door graphic that uses your brand colors, logo, and typography extends your brand identity to the very entry point of your business. Customers who see consistent branding at every touchpoint — from your marketing materials to your exterior signage to your door graphic — build stronger associations with your business and perceive it as more professional and trustworthy. We design door graphics to match your existing brand standards precisely.</p>
+        </x-slot>
+        <x-slot name="lower">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Easy to Update When You Need a Change</h3>
+            <p class="mb-4">Hours change, businesses move, and brands evolve. Vinyl door graphics can be removed cleanly from glass surfaces without leaving residue, which means updating your door sign when your information changes is straightforward and affordable. We can produce replacement graphics quickly and install them efficiently so your door always reflects your current brand and current information.</p>
+        </x-slot>
+        <x-slot name="footer">
+            <p class="mb-4">We are a veteran owned sign shop at 121 Springfield Avenue in Joliet, Illinois. We design, print, and install custom door signs for businesses throughout Will County and the greater Chicagoland area. Every installation is handled by our experienced team with professional care.</p>
+            <p>Call us at (815) 349 8600 to discuss your door sign project today.</p>
+        </x-slot>
+    </x-sections.card-detailed-info>
 
     <x-ui.banner-testimonial
         quote="I needed a banner quickly. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was very helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent."
         name="Jerry E Olson"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg"
+        alt="Custom door signs and door graphics printed and installed by Top 5 Percent in Joliet Illinois"
+        title="Professional Door Graphics for Any Business"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

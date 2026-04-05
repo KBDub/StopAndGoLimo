@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="wall-signs" displayServiceType="Wall Signs" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/window-wall-floor-decals/top5pct-wall-signs-joliet.jpg',             'alt' => 'Custom wall signs and wall graphics for businesses in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-wall-decals-joliet.jpg',             'alt' => 'Custom wall decals and branded wall graphics installed in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg',      'alt' => 'Office murals and lobby wall graphics in Joliet and Will County Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg', 'alt' => 'Wall decals and door signs for businesses in Joliet Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
@@ -46,10 +56,44 @@
 
     <x-sections.product-grid collectionSlug="business-signs" parentSlug="signs" />
 
+    <x-sections.card-detailed-info
+        heading="How Wall Graphics Transform Your Business Environment Into a Brand Statement"
+        image1="/images/window-wall-floor-decals/top5pct-wall-signs-joliet.jpg"
+        alt1="Custom wall signs and wall graphics for businesses in Joliet Illinois"
+    >
+        <x-slot name="intro">
+            <p class="mb-4">The walls of your business are a blank canvas that most business owners never fully use. Wall graphics turn empty wall space into powerful brand communication that works on every person who walks through your door. A professionally designed and installed wall graphic in your lobby, showroom, or workspace immediately elevates the perceived quality of your business and creates an environment that feels intentional, polished, and professional. When clients and visitors see your brand expressed through bold wall graphics, it builds confidence in your business before a single conversation takes place.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">More Than Just Decoration</h3>
+            <p class="mb-4">Wall graphics serve multiple functions simultaneously. A lobby feature wall with your logo and brand statement communicates your identity. A values statement or mission graphic in a conference room reinforces company culture for employees and impresses visiting clients. A product showcase mural in a showroom space helps customers understand what you offer. Each of these applications makes your wall space work harder for your business while improving the experience of everyone who spends time in your facility.</p>
+        </x-slot>
+        <x-slot name="mid">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Printed at Any Scale</h3>
+            <p class="mb-4">Our large-format printing equipment handles wall graphics at virtually any scale, from a modest feature graphic above a reception desk to a full-floor-to-ceiling mural spanning an entire conference room. We can match colors precisely to your established brand standards and work from your existing artwork files or create something new specifically designed for your space and its dimensions. Every wall graphic project starts with a consultation to understand your space, your goals, and your brand identity.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Removable and Updatable</h3>
+            <p class="mb-4">Our wall graphics are applied as vinyl film, which means they can be removed cleanly when you want to update your space, change your branding, or relocate your business. Unlike painted murals, vinyl wall graphics do not require repainting over old artwork when you want a change. This flexibility makes wall graphics an especially smart investment for businesses that want the impact of a feature wall without permanent commitment to a specific design.</p>
+        </x-slot>
+        <x-slot name="lower">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Professional Installation Included</h3>
+            <p class="mb-4">We handle the full installation of all wall graphic projects. Our installation team prepares the wall surface, aligns the graphic precisely, and ensures a smooth, bubble-free application that looks perfect from every angle. Large-scale wall installations require experience and the right tools — we have both. We inspect every installation before we leave and make any needed adjustments on the spot.</p>
+        </x-slot>
+        <x-slot name="footer">
+            <p class="mb-4">We serve businesses in Joliet, Shorewood, Crest Hill, Romeoville, Plainfield, Lockport, and all of Will County with premium wall graphic design, printing, and installation. We are a veteran owned business committed to quality on every project, regardless of size.</p>
+            <p>Call us at (815) 349 8600 to schedule a consultation for your wall graphic project today.</p>
+        </x-slot>
+    </x-sections.card-detailed-info>
+
     <x-ui.banner-testimonial
         quote="I needed a banner quickly. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was very helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent."
         name="Jerry E Olson"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/window-wall-floor-decals/top5pct-wall-decals-joliet.jpg"
+        alt="Custom wall graphics and wall decals installed by Top 5 Percent in Joliet Illinois"
+        title="Turn Your Walls Into a Brand Statement"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="puff-shirts" displayServiceType="Puff Print Shirts" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom puff print shirts and 3D raised apparel in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg',                         'alt' => 'Custom 3D puff print shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-pattern-shirts-caps-hoodies-joliet.jpg',                      'alt' => 'Premium custom puff print shirts for brands in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom apparel and puff print shirts made in Joliet Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
@@ -46,10 +56,44 @@
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
+    <x-sections.card-detailed-info
+        heading="Why Puff Print Makes Your Custom Shirts Stand Out From the Rest"
+        image1="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg"
+        alt1="Custom puff print shirts and 3D raised apparel in Joliet Illinois"
+    >
+        <x-slot name="intro">
+            <p class="mb-4">Puff printing is a specialty screen printing technique that produces a three-dimensional raised texture on the printed design. A puff additive mixed into the plastisol ink expands when heated during the curing process, causing the print to rise above the surface of the garment and create a soft, tactile embossed look. The result is a shirt that immediately communicates a higher level of quality and craftsmanship than a standard flat print — something that customers and wearers notice immediately when they see and touch the garment.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">The Texture That Communicates Quality</h3>
+            <p class="mb-4">In a market saturated with flat-printed custom shirts, puff print is one of the most effective ways to make your apparel feel premium and intentional. The raised texture adds a dimension of quality that photographs well, photographs distinctively, and creates a tactile experience that standard prints cannot match. Streetwear brands, lifestyle labels, gyms, sports teams, and boutique businesses throughout the Chicagoland area use puff printing to elevate their apparel above the average custom shirt.</p>
+        </x-slot>
+        <x-slot name="mid">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Best Applications for Puff Print</h3>
+            <p class="mb-4">Puff printing works best for designs with bold, clear shapes and text rather than highly detailed fine-line artwork. Large logos, brand names, block lettering, and simple graphic marks translate beautifully into puff print and create a strong visual statement. The technique is especially popular for chest prints, sleeve graphics, and back designs on t-shirts and hoodies where the raised texture catches the eye.</p>
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Combining Puff With Other Techniques</h3>
+            <p class="mb-4">We can combine puff printing with flat screen printing, metallic inks, or other specialty techniques to create multi-texture designs where certain elements are raised and others are flat. This combination approach gives your design additional visual complexity and makes it even more distinctive. Many brands use a puff-printed logo alongside flat-printed supporting text or design elements to create a layered look that reads as truly custom.</p>
+        </x-slot>
+        <x-slot name="lower">
+            <h3 class="text-h3 font-bold text-charcoal mb-2">Works on Cotton and Cotton Blends</h3>
+            <p class="mb-4">Puff printing works on cotton, cotton-polyester blends, and most standard garment materials. T-shirts and hoodies are the most popular substrate for puff print, though we also apply the technique to sweatshirts and other garment types. We review every puff print order before production to make sure the design is set up correctly to achieve the full three-dimensional effect you are looking for.</p>
+        </x-slot>
+        <x-slot name="footer">
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We take pride in every shirt we produce and we want your puff print shirts to represent your brand at its best. No minimums, fast turnaround, and expert guidance from concept to finished garment.</p>
+            <p>Call us at (815) 349 8600 to get started on your puff print shirt order today.</p>
+        </x-slot>
+    </x-sections.card-detailed-info>
+
     <x-ui.banner-testimonial
         quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars!"
         name="Gerardo Munoz Jr"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg"
+        alt="Custom puff print shirts with 3D raised texture printed by Top 5 Percent in Joliet Illinois"
+        title="3D Puff Print Shirts With No Minimums"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

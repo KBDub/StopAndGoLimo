@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="vehicle-magnets" displayServiceType="Vehicle Magnets" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/vehicle-magnets/top5pct-banner-car-magnets-joliet-shorewood-crest-hill.jpg', 'alt' => 'Custom vehicle magnets and car door magnetic signs in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg',               'alt' => 'Custom car magnets and truck magnetic signs printed in Joliet Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg',             'alt' => 'Full color vehicle magnets and removable car door signs in Joliet Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-business-magnets-car-magnets-joliet.jpg',            'alt' => 'Custom business car magnets and magnetic vehicle signs printed in Joliet Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Top 5 Percent did an awesome job for us. First they created and produced two door magnets for our car and then they created, produced and installed decals on our business truck. They do very nice work, have very fair pricing and communicate well! I will definitely be back."
         name="Ken McCafferty"
@@ -91,6 +101,14 @@
         quote="My husband and I went to Top 5 Percent to speak with the owner about their different services, including vehicle magnets and custom apparel. He was so very nice and patient. He took the time to explain options and pricing. Excellent customer service! We will definitely be back."
         name="Renea F"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg"
+        alt="Custom vehicle magnets and removable car door signs printed by Top 5 Percent in Joliet Illinois"
+        title="Brand Your Vehicle With Removable Magnets"
+        href="/contact"
+        direction="right"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

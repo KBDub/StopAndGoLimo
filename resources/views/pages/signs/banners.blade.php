@@ -18,6 +18,16 @@
 
     <x-sections.top5pct-same-day-service serviceType="banners" displayServiceType="Custom Banners" />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg', 'alt' => 'Custom vinyl banners for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/banners/top5pct-banner-joliet-romeoville-rockdale-plainfield.jpg',        'alt' => 'Custom banners printed in Joliet, Romeoville, Rockdale, and Plainfield Illinois'],
+            ['src' => '/images/banners/top5pct-birthday-banner-joliet-shorewood-plainfield.jpg',        'alt' => 'Custom birthday banners in Joliet, Shorewood, and Plainfield Illinois'],
+            ['src' => '/images/banners/top5pct-family-reunion-banners-joliet-crest-hill.jpg',           'alt' => 'Custom family reunion banners in Joliet and Crest Hill Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="I needed a banner quickly. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was very helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent. Professional and efficient in meeting the needs of their customers."
         name="Jerry E Olson"
@@ -100,6 +110,14 @@
         quote="Fast and professional service, the experience by far was the best. The customer service was great and the friendly environment made everything easy. Everyone loved the family reunion banner. It was perfect! Thanks Ezra and team."
         name="Yolanda S. Flowers"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/banners/top5pct-banners-business-joliet-shorewood-crest-hill.jpg"
+        alt="Custom vinyl banner printing at Top 5 Percent in Joliet, Shorewood, and Crest Hill Illinois"
+        title="Same-Day Banner Printing in Joliet"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

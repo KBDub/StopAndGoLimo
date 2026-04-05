@@ -17,6 +17,16 @@
         displayServiceType="Spirit Wear"
     />
 
+    <x-ui.carousel-rotating-images
+        :images="[
+            ['src' => '/images/spirit-wear/top5pct-banner-fanwear-spiritwear-uniforms-joliet-shorewood.jpg', 'alt' => 'Custom spirit wear and fan wear for schools in Joliet and Shorewood Illinois'],
+            ['src' => '/images/spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg',            'alt' => 'Joliet West spirit wear hoodie printed in Shorewood Illinois'],
+            ['src' => '/images/spirit-wear/top5pct-spiritwear-fanwear-joliet-plainfield-shorewood.jpg',      'alt' => 'Custom fan wear and spirit wear in Joliet, Plainfield, and Shorewood Illinois'],
+            ['src' => '/images/spirit-wear/top5pct-bowling-shirts-joliet-shorewood-crest-hill.jpg',          'alt' => 'Custom bowling league shirts in Joliet, Shorewood, and Crest Hill Illinois'],
+        ]"
+        visible=2
+    />
+
     <x-ui.banner-testimonial
         quote="Top 5 Percent is my number one go to for any custom made items. They have made shirts for several events and did a wonderful job. Duke keeps you updated on the order and works extremely fast and efficient. They have a customer in me for life!"
         name="Euneke Rembert"
@@ -105,6 +115,14 @@
         quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
         name="Gerardo Munoz Jr"
     />
+    <x-ui.card-banner-slide-in
+        image="/images/spirit-wear/top5pct-plainfield-south-high-school-hoodie.jpg"
+        alt="Custom spirit wear and school hoodies printed by Top 5 Percent in Joliet Illinois"
+        title="Spirit Wear for Your School or Team"
+        href="/contact"
+        direction="left"
+    />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
     <x-sections.cta-ready-to-get-started />

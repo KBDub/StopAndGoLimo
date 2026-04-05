@@ -12,7 +12,7 @@
 
     <x-sections.featured-products />
 
-    @livewire('catalog.featured-products')
+    {{-- @livewire('catalog.featured-products') --}}
 
     <x-ui.banner-thin-charcoal />
 

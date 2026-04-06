@@ -17,7 +17,7 @@
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Where You Can Find Our Work"
-        label="Custom Apparel &amp; Sign Stores"
+        label="Custom Apparel & Sign Stores"
         subheading="Top 5 Percent works with local retailers, boutiques, and online stores. See how our custom apparel and signage reaches customers across Joliet and the greater Chicago area."
     />
     <x-sections.cta-ready-to-get-started />

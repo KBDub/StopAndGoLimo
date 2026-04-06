@@ -364,17 +364,15 @@ These are generic placeholder names, not from `docs/top5pct_reviews.csv`. The co
 | `demo.blade.php` inline body text links | Developer demo page — not customer-facing |
 | `demo.blade.php` charcoal-gold button | Demo showcase of button styles — intentional |
 | `map-section` phone link | Phone only — no change needed |
-| Issue 5 (`top5pct-merchandise` secondary → `/contact`) | Still open — see Issue 5 |
+| Issue 5 (`top5pct-merchandise` secondary → `/contact`) | ✅ Fixed 2026-04-06 — now "Call Us Today" → `tel:+18153498600` |
 
 ---
 
-### ~~Issue 5 — `top5pct-merchandise` Secondary Button Is Contact, Not Phone~~ ⏳ PENDING FIX
+### ~~Issue 5 — `top5pct-merchandise` Secondary Button Is Contact, Not Phone~~ ✅ FIXED (2026-04-06)
 
 **Page:** `/top5pct-merchandise`
-**Current:** Secondary button — "Contact Us" → `/contact` (now triggers modal via Issue 8 fix)
-**Target:** "Call Us Today" → `tel:+18153498600` (matches every other content page)
-
-> **Decision made 2026-04-06:** Change secondary button text to "Call Us Today" and point it to the phone number. This requires passing `secondaryButtonText="Call Us Today"` and `secondaryButtonHref="tel:+18153498600"` to the `category-hero` on `/top5pct-merchandise`. Implementation is part of the next code pass.
+**Was:** "Contact Us" → `/contact` (triggered modal after Issue 8 fix)
+**Now:** "Call Us Today" → `tel:+18153498600` — matches every other content page pattern.
 
 ---
 
@@ -384,10 +382,9 @@ Items confirmed for implementation, not yet executed. Ordered roughly by effort 
 
 ---
 
-### TODO-1 — Fix Issue 5: `top5pct-merchandise` Secondary Hero Button
+### ~~TODO-1 — Fix Issue 5: `top5pct-merchandise` Secondary Hero Button~~ ✅ DONE (2026-04-06)
 
-**File:** `resources/views/pages/top5pct-merchandise.blade.php`
-**Change:** Pass `secondaryButtonText="Call Us Today"` and `secondaryButtonHref="tel:+18153498600"` to `x-sections.category-hero`.
+`secondaryButtonText="Call Us Today"` and `secondaryButtonHref="tel:+18153498600"` applied to `x-sections.category-hero` on `/top5pct-merchandise`.
 
 ---
 

@@ -10,8 +10,8 @@
         description="Shop our exclusive line of Top 5 Percent branded merchandise. Premium quality t-shirts, hoodies, hats, and accessories that represent the Top 5% standard of excellence."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
-        secondaryButtonText="Contact Us"
-        secondaryButtonHref="/contact"
+        secondaryButtonText="Call Us Today"
+        secondaryButtonHref="tel:+18153498600"
         image="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"
     />
     <x-ui.banner-medium-sunburst />

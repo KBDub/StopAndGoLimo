@@ -75,7 +75,7 @@
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Shirts Made to Stand Out"
-        label="Custom T-Shirts &amp; Apparel"
+        label="Custom T-Shirts & Apparel"
         subheading="Explore the craftsmanship behind every custom shirt we produce. Top 5 Percent offers the widest range of shirt decoration techniques in the Joliet area — from heat transfers to embroidery and beyond."
     />
     <x-sections.cta-ready-to-get-started />

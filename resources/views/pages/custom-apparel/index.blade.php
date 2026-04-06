@@ -186,7 +186,7 @@
     <x-sections.cta-free-quote />
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
-        heading="Quality You Can See &amp; Feel"
+        heading="Quality You Can See & Feel"
         label="Custom Apparel in Joliet, IL"
         subheading="From screen printing to embroidery, brick shirts to rhinestone designs — watch how Top 5 Percent brings your custom apparel vision to life, right here in Joliet, Illinois."
     />

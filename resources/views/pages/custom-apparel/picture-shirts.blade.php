@@ -29,7 +29,7 @@
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Print Any Image on a Shirt"
-        label="Custom Photo &amp; Picture Shirts"
+        label="Custom Photo & Picture Shirts"
         subheading="Picture shirts turn your photo, artwork, or graphic into wearable custom apparel. Watch how Top 5 Percent produces high-resolution, photo-quality prints on shirts and hoodies in Joliet, IL."
     />
     <x-sections.cta-ready-to-get-started />

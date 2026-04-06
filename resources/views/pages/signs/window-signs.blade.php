@@ -106,7 +106,7 @@
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Turn Your Windows Into Marketing"
-        label="Custom Window Signs &amp; Decals"
+        label="Custom Window Signs & Decals"
         subheading="Custom window graphics promote your brand, products, and hours to everyone who passes by. Watch how Top 5 Percent designs and installs window signs for businesses across Joliet and the Chicago area."
     />
     <x-sections.cta-ready-to-get-started />

@@ -92,7 +92,7 @@
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Everything You Need to Get Started"
-        label="Resources &amp; Helpful Guides"
+        label="Resources & Helpful Guides"
         subheading="From design tips to sizing guides, Top 5 Percent provides the resources you need to order custom apparel and signage with confidence. Serving businesses across Joliet and the surrounding area."
     />
     <x-sections.cta-ready-to-get-started />

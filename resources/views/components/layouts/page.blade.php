@@ -43,5 +43,9 @@
     @livewire('cart.cart-drawer')
 
     <x-layout.footer />
+
+    @if(!in_array($currentPage ?? '', ['cart', 'checkout', 'order-confirmation']))
+        <x-ui.contact-modal />
+    @endif
 </body>
 </html>

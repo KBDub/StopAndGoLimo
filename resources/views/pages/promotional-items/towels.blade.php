@@ -102,6 +102,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Quality Towels, Lasting Impressions"
+        label="Custom Branded Towels"
+        subheading="Custom towels are perfect for gyms, spas, sports teams, and corporate gifts. Watch how Top 5 Percent produces high-quality branded towels for businesses and events in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

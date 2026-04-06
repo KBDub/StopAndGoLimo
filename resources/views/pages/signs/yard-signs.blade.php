@@ -115,6 +115,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Get the Word Out — Fast"
+        label="Custom Yard Signs"
+        subheading="Yard signs are a cost-effective way to promote events, candidates, real estate, and businesses. See how Top 5 Percent produces full-color, weather-resistant yard signs in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

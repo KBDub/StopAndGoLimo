@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Your Brand at Every Table"
+        label="Custom Table Covers"
+        subheading="Custom table covers transform any display into a branded experience at trade shows, events, and storefronts. Watch how Top 5 Percent produces fitted and draped table covers in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

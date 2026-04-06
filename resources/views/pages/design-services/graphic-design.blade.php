@@ -100,6 +100,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="From Concept to Print-Ready Artwork"
+        label="Custom Graphic Design"
+        subheading="Professional graphic design takes your idea and turns it into production-ready artwork. See how the Top 5 Percent design team works with businesses in Joliet and the Chicago area to build brand-right visuals."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

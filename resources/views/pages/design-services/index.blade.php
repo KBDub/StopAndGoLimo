@@ -105,6 +105,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Great Products Start With Great Design"
+        label="Graphic Design Services in Joliet, IL"
+        subheading="Every print, sign, and garment starts with the right design. See how the Top 5 Percent design team creates logos, marketing materials, and print-ready artwork for businesses in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

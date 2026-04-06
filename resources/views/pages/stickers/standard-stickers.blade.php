@@ -130,6 +130,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Simple. Sharp. Affordable."
+        label="Standard Custom Stickers"
+        subheading="Standard rectangle and square stickers deliver maximum branding at a budget-friendly price. See how Top 5 Percent produces crisp, full-color custom stickers for businesses in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

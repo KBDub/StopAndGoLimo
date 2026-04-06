@@ -118,6 +118,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="On When You Need It. Off When You Don't."
+        label="Custom Vehicle Magnets"
+        subheading="Vehicle magnets let you brand your personal vehicle during business hours and remove it after. Watch how Top 5 Percent produces durable, full-color vehicle magnets for businesses in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

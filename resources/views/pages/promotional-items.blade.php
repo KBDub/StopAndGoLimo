@@ -117,6 +117,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Giveaways That Keep Working"
+        label="Custom Promo Items in Joliet, IL"
+        subheading="Custom promotional products put your brand in the hands of customers every single day. Watch how Top 5 Percent produces quality branded promotional items for businesses and events in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

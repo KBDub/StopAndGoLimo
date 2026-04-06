@@ -14,6 +14,12 @@
     <x-sections.top5pct-same-day-service serviceType="about" displayServiceType="Custom Signage & Apparel" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Veteran-Owned. Community Trusted."
+        label="About Top 5 Percent"
+        subheading="Top 5 Percent was built on integrity, craftsmanship, and a commitment to serving Joliet and the surrounding community. Learn more about who we are, how we work, and why customers keep coming back."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

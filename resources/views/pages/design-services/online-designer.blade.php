@@ -100,6 +100,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Design It Yourself in Minutes"
+        label="Free Online Design Tool"
+        subheading="Our free online designer lets you create custom products without any design experience. Watch how easy it is to build and order your custom apparel, signs, or promotional items with Top 5 Percent."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

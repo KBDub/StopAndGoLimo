@@ -100,6 +100,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Your Brand Starts With Your Logo"
+        label="Custom Logo Design"
+        subheading="A strong logo is the foundation of every brand. See how Top 5 Percent works with businesses in Joliet, IL to create custom logos that are distinctive, versatile, and built to last."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

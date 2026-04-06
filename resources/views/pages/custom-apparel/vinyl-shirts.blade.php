@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Sharp Cuts. Lasting Color."
+        label="Vinyl Heat Transfer Shirts"
+        subheading="Vinyl heat transfers deliver clean edges and rich, solid colors on custom shirts and jackets. See how Top 5 Percent cuts and presses custom vinyl designs on apparel in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

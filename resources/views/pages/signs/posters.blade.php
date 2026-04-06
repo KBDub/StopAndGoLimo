@@ -125,6 +125,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Large Format Prints That Command Attention"
+        label="Custom Posters &amp; Prints"
+        subheading="Custom posters amplify your message in lobbies, classrooms, retail spaces, and events. See how Top 5 Percent produces high-resolution, large format poster prints in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

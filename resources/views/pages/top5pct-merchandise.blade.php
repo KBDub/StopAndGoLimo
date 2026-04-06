@@ -77,6 +77,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Rep the Brand. Look the Part."
+        label="Top 5 Percent Merchandise"
+        subheading="Top 5 Percent branded merchandise lets you wear the mission. Browse shirts, hats, and accessories that represent veteran-owned, locally-made quality from Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

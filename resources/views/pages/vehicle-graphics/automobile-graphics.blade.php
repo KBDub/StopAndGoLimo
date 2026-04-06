@@ -128,6 +128,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Your Brand on the Road"
+        label="Car &amp; Truck Graphics"
+        subheading="Custom car and truck graphics transform your vehicle into a moving billboard for your business. See how Top 5 Percent designs and applies durable automobile graphics in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

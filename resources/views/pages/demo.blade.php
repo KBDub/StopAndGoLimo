@@ -718,6 +718,15 @@
         <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-design-your-own</code></p>
         <x-sections.cta-design-your-own />
 
+        {{-- Video Banner --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.video-banner</code></p>
+        <x-sections.video-banner
+            videoId="F3J9nyiM3So"
+            heading="See Our Work in Action"
+            label="Component Showcase"
+            subheading="From custom apparel to signage and promotional products, Top 5 Percent brings every design to life with precision and care. This demo showcases the components and layouts used across the site."
+        />
+
         {{-- CTA: Ready to Get Started --}}
         <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-ready-to-get-started</code></p>
         <x-sections.cta-ready-to-get-started />

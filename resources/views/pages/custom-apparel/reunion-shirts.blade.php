@@ -143,6 +143,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Reunions Worth Remembering"
+        label="Custom Reunion Shirts"
+        subheading="Custom reunion shirts bring your family, class, or group together with a shared design everyone will keep. See how Top 5 Percent helps plan and produce memorable reunion apparel in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

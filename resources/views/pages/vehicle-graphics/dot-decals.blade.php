@@ -126,6 +126,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Compliance Decals Done Right"
+        label="DOT Decals &amp; Compliance Markings"
+        subheading="DOT-compliant decals keep your commercial vehicles road-legal without sacrificing professional appearance. See how Top 5 Percent produces accurate, durable DOT decals for fleet businesses in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

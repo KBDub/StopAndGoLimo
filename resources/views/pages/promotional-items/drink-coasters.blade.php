@@ -102,6 +102,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Brand Every Table Setting"
+        label="Custom Drink Coasters"
+        subheading="Custom coasters put your logo in front of customers at every drink. Watch how Top 5 Percent produces branded promotional coasters for restaurants, offices, and events in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

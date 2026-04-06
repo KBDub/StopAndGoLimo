@@ -102,6 +102,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Start Every Morning With Your Brand"
+        label="Custom Branded Mugs"
+        subheading="Custom mugs are one of the most-used branded promotional products in any office or home. Watch how Top 5 Percent produces full-color custom mugs for businesses and events in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

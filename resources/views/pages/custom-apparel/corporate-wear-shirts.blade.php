@@ -128,6 +128,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Professional Wear for Your Team"
+        label="Corporate Custom Apparel"
+        subheading="Corporate apparel reinforces your brand image every time your team shows up. See how Top 5 Percent outfits businesses across Joliet and the Chicago area with professional custom shirts and polos."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

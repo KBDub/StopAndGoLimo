@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Transform Any Wall Into a Statement"
+        label="Custom Wall Signs &amp; Graphics"
+        subheading="Wall signs and graphics reinforce your brand in offices, retail spaces, lobbies, and showrooms. See how Top 5 Percent produces professional wall graphics and mounted signage in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

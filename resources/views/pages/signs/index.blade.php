@@ -154,6 +154,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Signs That Work as Hard as You Do"
+        label="Custom Signs in Joliet, IL"
+        subheading="From banners and yard signs to wall graphics and window displays — see how Top 5 Percent produces professional, custom signage for businesses and events in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

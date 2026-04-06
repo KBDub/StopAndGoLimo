@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Clear Parking. Happy Customers."
+        label="Custom Parking Signs"
+        subheading="Custom parking signs keep your lot organized and visitors informed. Watch how Top 5 Percent designs and produces compliant, branded parking signage for businesses and properties in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

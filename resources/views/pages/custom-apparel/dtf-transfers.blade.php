@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Full-Color Prints on Any Fabric"
+        label="DTF Transfer Printing"
+        subheading="Direct-to-film transfers deliver vibrant, durable prints on virtually any garment. See how Top 5 Percent uses DTF technology to produce detailed, full-color custom transfers in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

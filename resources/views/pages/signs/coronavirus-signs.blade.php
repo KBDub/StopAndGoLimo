@@ -76,6 +76,12 @@
     />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Clear Signage Keeps People Safe"
+        label="Safety &amp; Health Signage"
+        subheading="Custom safety signage communicates important information quickly and clearly. See how Top 5 Percent produces professional health and safety signs for businesses in Joliet and the surrounding area."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

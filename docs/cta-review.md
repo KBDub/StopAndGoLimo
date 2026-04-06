@@ -108,7 +108,7 @@ Used on specialty apparel techniques and design services where no live e-commerc
 
 | Page | Primary Text | Primary Href | Secondary Text | Secondary Href | Notes |
 |---|---|---|---|---|---|
-| `/` (Home) | Shop Now | `/shop` ⚠️ | Get a Free Quote | `/contact` | Default props — no overrides passed |
+| `/` (Home) | Shop Now | `/top5pct-merchandise` | Get a Free Quote | `/contact` | Default props — no overrides passed |
 | `/custom-apparel/custom-shirts` | Browse All Techniques | `#shirt-types` | Call Us Today | `tel:+18153498600` | In-page anchor |
 | `/top5pct-merchandise` | Shop Now | `#all-products` | Contact Us | `/contact` | Secondary goes to contact, not phone ⚠️ |
 | `/about` | Get a Free Quote | `/contact` | Call Us Today | `tel:+18153498600` | — |
@@ -210,9 +210,9 @@ Used on specialty apparel techniques and design services where no live e-commerc
 **Props:** `videoId`, `heading`, `label`, `subheading`, `ctaText` (default: `'Get a Free Quote'`), `ctaHref` (default: `'/contact'`)
 **Button:** When `ctaHref` is `/contact` (the default), dispatches `open-contact-modal`. Other values navigate normally.
 
-**Present on:** `/custom-apparel/custom-shirts` only (currently).
+**Present on:** All 65 non-checkout content pages (as of 2026-04-06). Video ID: `F3J9nyiM3So` (same sitewide — page-specific videos to be swapped in later). Each page has unique `heading`, `label`, and `subheading` copy matched to page topic and SEO context.
 
-> **Planned:** Extend to all non-checkout content pages, placed between `cta-free-quote` and `cta-ready-to-get-started`. Same YouTube video ID throughout; `heading`, `label`, and `subheading` will be customized per page. See Remaining TODOs.
+**Placement:** Between `cta-free-quote` and `cta-ready-to-get-started` on all standard pages. On `/` (Home) it sits directly after `cta-free-quote`, before `home-page-services-accordion`. On `/demo` it appears in the component showcase sequence.
 
 ---
 
@@ -410,14 +410,10 @@ A thin standalone banner/button component that smooth-scrolls to `#map-section` 
 
 ---
 
-### TODO-4 — Video Banner on All Non-Checkout Pages
+### ~~TODO-4 — Video Banner on All Non-Checkout Pages~~ ✅ DONE (2026-04-06)
 
 **Component:** `sections.video-banner`
-**Placement rule:** Between `x-sections.cta-free-quote` and `x-sections.cta-ready-to-get-started` on all 64 non-checkout content pages.
-**Video ID:** Same YouTube ID sitewide for now — will be updated to page-specific videos later.
-**Per-page props:** `heading`, `label`, and `subheading` customized per page; `ctaText` and `ctaHref` use defaults.
-
-> After this is implemented, the §F inventory entry above should be updated to list all affected pages.
+65 pages updated. Video ID `F3J9nyiM3So` used sitewide. Per-page `heading`, `label`, and `subheading` written for each page. See §F for full placement details.
 
 ---
 

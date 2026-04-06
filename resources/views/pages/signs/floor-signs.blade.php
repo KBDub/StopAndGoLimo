@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Guide Every Visitor on the Right Path"
+        label="Custom Floor Graphics"
+        subheading="Floor graphics direct customers, reinforce branding, and add wayfinding to any space. See how Top 5 Percent produces durable, slip-resistant custom floor signs for businesses in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

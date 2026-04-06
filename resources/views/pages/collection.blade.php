@@ -26,6 +26,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Find the Right Product for Your Project"
+        label="Custom Product Collections"
+        subheading="Browse the Top 5 Percent product collection to find the right custom apparel, signage, or promotional item for your next project. Veteran-owned and proudly serving Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

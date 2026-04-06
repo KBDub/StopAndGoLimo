@@ -100,6 +100,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Start With a Design That's Already Working"
+        label="Design Catalogs &amp; Templates"
+        subheading="Browse our design catalog to find a starting point for your custom project. Watch how Top 5 Percent helps businesses in Joliet, IL select and customize pre-built designs for apparel, signs, and more."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

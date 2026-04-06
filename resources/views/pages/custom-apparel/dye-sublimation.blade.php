@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Vivid All-Over Custom Prints"
+        label="Dye Sublimation Printing"
+        subheading="Dye sublimation bonds color directly into the fabric for prints that won't crack, fade, or peel. See how we produce vibrant all-over designs for teams, businesses, and events in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

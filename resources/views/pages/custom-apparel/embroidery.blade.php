@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Precision Stitching, Every Time"
+        label="Custom Embroidery"
+        subheading="Embroidery adds a professional, lasting finish to polos, hats, jackets, and more. Watch our team digitize and stitch custom designs with care at our Joliet embroidery shop."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

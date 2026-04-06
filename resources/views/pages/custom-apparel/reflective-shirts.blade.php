@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Stay Visible, Look Professional"
+        label="Reflective Safety Apparel"
+        subheading="Reflective shirts increase visibility in low-light environments while keeping your team looking sharp. See how Top 5 Percent produces custom reflective apparel for safety and style in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

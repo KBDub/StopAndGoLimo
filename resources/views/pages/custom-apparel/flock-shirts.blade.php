@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Soft, Velvety Custom Flock Shirts"
+        label="Flock Print Apparel"
+        subheading="Flock printing adds a raised, velvet-like texture to custom apparel that's unmistakable to the touch. See how Top 5 Percent applies flock designs to shirts, hoodies, and caps in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

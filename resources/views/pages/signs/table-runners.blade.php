@@ -125,6 +125,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Branded Details That Elevate Your Event"
+        label="Custom Table Runners"
+        subheading="Custom table runners add a polished, professional finish to any event display or hospitality setup. See how Top 5 Percent produces full-color, branded table runners for businesses in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

@@ -114,6 +114,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Stop Foot Traffic in Its Tracks"
+        label="Custom Sidewalk Signs"
+        subheading="Sidewalk signs bring customers in off the street with bold messaging and eye-catching design. See how Top 5 Percent produces custom A-frame and sidewalk signs for businesses in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

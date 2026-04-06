@@ -102,6 +102,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Your Brand at Every Workstation"
+        label="Custom Mouse Pads"
+        subheading="Custom mouse pads keep your brand in front of employees and clients all day, every day. See how Top 5 Percent produces full-color branded mouse pads for businesses in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

@@ -102,6 +102,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="A Walking Billboard for Your Brand"
+        label="Custom Tote Bags"
+        subheading="Custom tote bags go everywhere your customers go — grocery stores, farmers markets, offices, and beyond. See how Top 5 Percent produces branded tote bags for businesses and events in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

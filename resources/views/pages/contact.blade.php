@@ -14,6 +14,12 @@
     <x-sections.top5pct-same-day-service serviceType="contact" displayServiceType="Custom Signage & Apparel" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Let's Build Something Together"
+        label="Contact Top 5 Percent"
+        subheading="Have a question, quote request, or project in mind? See how easy it is to connect with the Top 5 Percent team in Joliet, Illinois — we're ready to help with your next custom project."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

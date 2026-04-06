@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Sparkle That Lasts"
+        label="Glitter Print Custom Apparel"
+        subheading="Custom glitter shirts bring eye-catching sparkle to any event, team, or brand. See how Top 5 Percent applies durable glitter graphics to apparel right here in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

@@ -26,6 +26,12 @@
     />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="All-Over Patterns, Your Design"
+        label="Custom Pattern Shirts"
+        subheading="Pattern shirts let you cover every inch of fabric with your custom design or graphic. See how Top 5 Percent produces bold, all-over pattern apparel for teams and businesses in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

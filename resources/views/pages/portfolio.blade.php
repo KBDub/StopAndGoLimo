@@ -14,6 +14,12 @@
     <x-sections.top5pct-same-day-service serviceType="portfolio" displayServiceType="Custom Projects" />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="See What We've Built"
+        label="Our Work Portfolio"
+        subheading="Every project in our portfolio represents a real business, a real brand, and a real relationship. Browse custom apparel, signage, and promotional work produced by Top 5 Percent right here in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

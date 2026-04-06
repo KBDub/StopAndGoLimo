@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Cut to the Shape of Your Brand"
+        label="Custom Die-Cut Stickers"
+        subheading="Custom shaped stickers are cut to the exact outline of your design for a clean, professional look. Watch how Top 5 Percent produces precision die-cut stickers for brands and businesses in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

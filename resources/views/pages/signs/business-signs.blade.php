@@ -104,6 +104,12 @@
     />
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Your Brand, Boldly Displayed"
+        label="Custom Business Signs"
+        subheading="The right business sign makes your location easy to find and your brand impossible to forget. See how Top 5 Percent produces custom indoor and outdoor business signs in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

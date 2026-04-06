@@ -102,6 +102,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Your Brand at Every Gathering"
+        label="Custom Can Koozies"
+        subheading="Custom can koozies are a fan favorite at events, parties, and corporate functions. See how Top 5 Percent produces branded can koozies for businesses and events in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Raised, 3D Puff Prints"
+        label="Puff Print Custom Apparel"
+        subheading="Puff printing adds a raised, three-dimensional look to logos and lettering. See how Top 5 Percent creates durable, eye-catching puff designs on custom shirts and apparel in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

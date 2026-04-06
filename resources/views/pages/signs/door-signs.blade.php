@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Make the Right First Impression"
+        label="Custom Door Signs"
+        subheading="Door signs set the tone for every visitor who walks through your entrance. Watch how Top 5 Percent produces custom door signs for offices, retail spaces, and facilities in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

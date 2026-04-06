@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Color-Shifting Designs That Shine"
+        label="Holographic Custom Apparel"
+        subheading="Holographic printing creates iridescent, color-shifting effects that turn heads at any angle. Watch how we produce custom holographic shirts, hoodies, and caps in Joliet, Illinois."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

@@ -103,6 +103,12 @@
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote />
+    <x-sections.video-banner
+        videoId="F3J9nyiM3So"
+        heading="Bold Prints. Built to Last."
+        label="Custom Screen Printing"
+        subheading="Screen printing delivers sharp, vibrant colors on bulk orders at a price that makes sense. See how Top 5 Percent produces professional screen-printed apparel for businesses, teams, and events in Joliet, IL."
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

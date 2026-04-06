@@ -110,6 +110,12 @@ Every `<section>` must be its own file in `resources/views/components/sections/`
 | `x-sections.cta-free-quote` | Free quote CTA bar | `resources/views/components/sections/cta-free-quote.blade.php` |
 | `x-sections.cta-design-your-own` | Design-it-yourself CTA bar | `resources/views/components/sections/cta-design-your-own.blade.php` |
 | `x-sections.cta-ready-to-get-started` | Full-width charcoal CTA | `resources/views/components/sections/cta-ready-to-get-started.blade.php` |
+| `x-sections.lp-category-banners` | CLP banner image grid (wraps `x-ui.card-lp-banner-images`) | `resources/views/components/sections/lp-category-banners.blade.php` |
+| `x-sections.video-banner` | YouTube video embed section with heading and CTA | `resources/views/components/sections/video-banner.blade.php` |
+| `x-sections.page-faq` | Two-column FAQ accordion with optional image | `resources/views/components/sections/page-faq.blade.php` |
+| `x-sections.card-image-with-text` | Float-image + text wrap with slide-in animation | `resources/views/components/sections/card-image-with-text.blade.php` |
+| `x-sections.card-2image-with-text` | Two float-images + text wrap | `resources/views/components/sections/card-2image-with-text.blade.php` |
+| `x-sections.card-detailed-info` | Two-image section; auto-bolds first 4 words of each paragraph | `resources/views/components/sections/card-detailed-info.blade.php` |
 
 ### UI Button Components
 
@@ -249,6 +255,253 @@ Thin banners (3px height) wrap the navigation bar in a dual-line sandwich patter
 - Title: `font-semibold text-charcoal`
 - Description: `text-sm text-charcoal-light`
 
+### UI Full-Bleed Banner Components
+
+Full-width image and video banners for visual breaks between sections. All accept optional `href` to make the entire banner a link.
+
+| Component | Props | Description |
+|-----------|-------|-------------|
+| `x-ui.banner-full-bleed-image` | `image`, `alt`, `href`, `height` | Full-width image; `height` CSS value (default `auto`) |
+| `x-ui.banner-full-bleed-2-image` | `image1`, `alt1`, `image2`, `alt2`, `href1`, `href2`, `height` | Two side-by-side full-bleed images |
+| `x-ui.banner-full-bleed-video` | `src`, `height`, `poster` | Full-width autoplaying muted video |
+| `x-ui.banner-full-bleed-2-video` | `src1`, `src2`, `height` | Two side-by-side full-bleed videos |
+| `x-ui.banner-testimonial` | `quote`, `name`, `location`, `stars` | Sunburst-light inline review strip with star rating |
+
+```blade
+{{-- Single full-bleed image (clickable) --}}
+<x-ui.banner-full-bleed-image
+    image="/images/category/banner.jpg"
+    alt="Custom Apparel"
+    href="/custom-apparel"
+    height="320px"
+/>
+
+{{-- Inline testimonial strip --}}
+<x-ui.banner-testimonial
+    quote="Fast turnaround and amazing quality!"
+    name="Maria R."
+    location="Joliet, IL"
+    :stars="5"
+/>
+```
+
+### UI Carousel Components
+
+| Component | Props | Description |
+|-----------|-------|-------------|
+| `x-ui.carousel-rotating-images` | `images` (array of `{src,alt}`), `visible` (1/2/3), `interval` (ms, default 3500) | Auto-rotating image carousel with fade. Standard slot sizes: center 600×450, side 300×225 (4:3 ratio) |
+| `x-ui.carousel-product` | `images` (array of strings/objects), `alt` | Product detail image carousel with hover zoom and thumbnail dots |
+
+```blade
+{{-- Category image carousel (3 visible) --}}
+<x-ui.carousel-rotating-images
+    :images="[
+        ['src' => '/images/shirts/banner.jpg', 'alt' => 'Custom Shirts'],
+        ['src' => '/images/shirts/foil.jpg',   'alt' => 'Foil Shirts'],
+        ['src' => '/images/shirts/rhine.jpg',  'alt' => 'Rhinestone'],
+    ]"
+    :visible="3"
+/>
+
+{{-- Smaller two-up carousel (sub-pages) --}}
+<x-ui.carousel-rotating-images :images="$images" :visible="2" />
+```
+
+### UI Slide-In & Visual Card Components
+
+| Component | Props | Description |
+|-----------|-------|-------------|
+| `x-ui.card-banner-slide-in` | `image`, `alt`, `title`, `href`, `direction` (left/right) | Slides in from left or right on scroll entry; contains image + title CTA |
+| `x-ui.card-category-visual` | `title`, `subtitle`, `image`, `href`, `featured` | Category link card; hover scales image. `featured` spans 2 columns on md+ |
+| `x-ui.card-showcase` | `title`, `description`, `image`, `imageAlt`, `minHeight` | Linen card with decorative circle accents; centers content |
+| `x-ui.card-detailed-info` | `title`, `description`, `linkText`, `linkHref`, `image`, `imageAlt` | Linen card with decorative corner circles and optional image |
+| `x-ui.card-lp-banner-images` | `banners` (array) | Internal card used by `x-sections.lp-category-banners` |
+| `x-ui.card-product-hover` | `title`, `price`, `image`, `href` | Product card with zoom-on-hover image and gold hover shadow |
+
+```blade
+{{-- Slide-in (alternates direction per pair) --}}
+<x-ui.card-banner-slide-in
+    image="/images/shirts/brick.jpg"
+    alt="Brick Shirts"
+    title="Brick Pattern Custom Shirts"
+    href="/custom-apparel/brick-shirts"
+    direction="left"
+/>
+<x-ui.card-banner-slide-in
+    image="/images/shirts/foil.jpg"
+    alt="Foil Shirts"
+    title="Foil Printed Custom Shirts"
+    href="/custom-apparel/foil-shirts"
+    direction="right"
+/>
+
+{{-- Category visual card (featured = double-wide) --}}
+<x-ui.card-category-visual
+    title="Custom T-Shirts"
+    image="/images/shirts/main.jpg"
+    href="/custom-apparel"
+    :featured="true"
+/>
+```
+
+### UI Product Components
+
+| Component | Props | Description |
+|-----------|-------|-------------|
+| `x-ui.modal-quick-view` | `title`, `price`, `originalPrice`, `description`, `image`, `images`, `href`, `variants` | Quick product preview modal with carousel, variant picker, and quantity |
+| `x-ui.sticky-add-to-cart` | `productName`, `price`, `variantLabel` | Sticky bottom bar; shown/hidden via `sticky-cart-show` / `sticky-cart-hide` window events |
+
+### Modal System
+
+The modal system is the authoritative interactive overlay mechanism for the site. Four components work together.
+
+#### x-ui.modal
+
+Named, slot-driven modal. Unlimited instances can coexist on a page without conflict — each is identified by a unique `name`.
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `name` | string | required | Unique ID used for open/close events |
+| `title` | string | `null` | Heading text in the header bar |
+| `size` | string | `md` | `sm` (22rem) / `md` (34rem) / `lg` (46rem) / `xl` (58rem) / `full` (95vw) |
+| `variant` | string | `default` | `default` / `dark` / `gold` / `success` / `warning` / `danger` |
+| `dismissible` | bool | `true` | Shows ✕ button and allows backdrop/Escape to close |
+| `scrollBody` | bool | `true` | Inner body scrolls; header and footer remain sticky |
+| `maxHeight` | string | `92dvh` | CSS max-height override |
+| `headerClass` | string | `''` | Extra classes on the header div |
+| `bodyClass` | string | `''` | Extra classes on the body div |
+| `footerClass` | string | `''` | Extra classes on the footer div |
+
+**Slots:** `default` (body), `title` (HTML heading), `header` (full header override), `icon` (left of title), `footer` (action buttons)
+
+**Events (window):**
+
+| Event | Payload | Direction |
+|-------|---------|-----------|
+| `open-modal` | `{ name }` | dispatch to open |
+| `close-modal` | `{ name }` | dispatch to close |
+| `modal-opened` | `{ name }` | fires after open animation |
+| `modal-closed` | `{ name }` | fires after close |
+
+**Branding rule — square corners:** Modal panels use `0` border-radius. Do not add `rounded`, `rounded-lg`, or any other border-radius to modal panels, overlays, or form inputs inside modals. Only the pulse halo ring on the FAB button retains `rounded-full`.
+
+**Z-index:** Backdrop at `z-[9800]`, panel inside the backdrop.
+
+```blade
+<x-ui.modal-trigger modal="quote-form">Get a Quote</x-ui.modal-trigger>
+
+<x-ui.modal name="quote-form" title="Request a Quote" size="lg">
+    <p>Modal body content.</p>
+    <x-slot:footer>
+        <x-ui.modal-trigger modal="quote-form" as="close"
+            class="px-4 py-2 text-sm font-semibold border border-linen-dark hover:bg-linen transition-colors">
+            Cancel
+        </x-ui.modal-trigger>
+        <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold">
+            Submit
+        </button>
+    </x-slot:footer>
+</x-ui.modal>
+
+{{-- Open from Livewire --}}
+$this->dispatch('open-modal', name: 'quote-form');
+```
+
+#### x-ui.modal-trigger
+
+Renders the trigger element that dispatches `open-modal`. Can also act as a close button inside a modal.
+
+**Props:** `modal` (name to open/close), `as` (`button` / `a` / `span` / `div` / `close`), `href` (for `as="a"`)
+
+```blade
+{{-- Default button trigger --}}
+<x-ui.modal-trigger modal="my-modal" class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold">
+    Open Modal
+</x-ui.modal-trigger>
+
+{{-- Link trigger --}}
+<x-ui.modal-trigger modal="my-modal" as="a" href="#" class="text-azure font-semibold underline">
+    Open as link
+</x-ui.modal-trigger>
+
+{{-- Close button inside a modal footer --}}
+<x-ui.modal-trigger modal="my-modal" as="close" class="px-4 py-2 text-sm border hover:bg-linen">
+    Cancel
+</x-ui.modal-trigger>
+```
+
+#### x-ui.modal-wizard
+
+Multi-step non-dismissible wizard. No close button, no backdrop dismiss, no Escape key. Dot step indicators and Back/Next/Finish navigation are automatic. Step content passed via named slots.
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `name` | string | required | Unique ID for open/close events |
+| `size` | string | `md` | Same size tokens as `x-ui.modal` |
+| `steps` | int | `3` | Total step count |
+| `step1Title` | string | `'Step 1'` | Header title for step 1 |
+| `step2Title` | string | `'Step 2'` | Header title for step 2 |
+| `step3Title` | string | `'Step 3'` | Header title for step 3 |
+| `finishLabel` | string | `'Finish'` | Label on the last-step button |
+| `cancelLabel` | string | `''` | If set, shows a cancel link on step 1 only |
+
+**Slots:** `step1`, `step2`, `step3`
+
+**Events dispatched:** `wizard-done { name }` when Finish is clicked; `modal-closed { name }` on close.
+
+```blade
+<x-ui.modal-trigger modal="setup-wizard" class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold">
+    Start Setup
+</x-ui.modal-trigger>
+
+<x-ui.modal-wizard
+    name="setup-wizard"
+    step1Title="Welcome"
+    step2Title="Choose Your Preference"
+    step3Title="You're All Set!"
+    finishLabel="Done"
+    cancelLabel="Cancel"
+>
+    <x-slot:step1>
+        <p>Introduction content for step one.</p>
+    </x-slot:step1>
+    <x-slot:step2>
+        {{-- Radio buttons, form fields, etc. --}}
+    </x-slot:step2>
+    <x-slot:step3>
+        <p>Confirmation or summary content.</p>
+    </x-slot:step3>
+</x-ui.modal-wizard>
+```
+
+#### x-ui.contact-modal
+
+Anchored FAB (floating action button) fixed to the bottom-right of every page. Opens a full branded quote/contact form on click. **Globally injected in `layouts/page.blade.php`** — automatically skipped on `cart`, `checkout`, and `order-confirmation` pages.
+
+Do not add this component to individual page files — it is already present via the layout.
+
+**Props (all optional):**
+
+| Prop | Type | Default |
+|------|------|---------|
+| `buttonLabel` | string | `'Contact Us Now'` |
+| `modalTitle` | string | `'Get a Free Quote'` |
+| `modalSubtitle` | string | Brand tagline |
+| `logoSrc` | string | `/images/logos/top5-logo.gif` |
+| `logoAlt` | string | `'Top 5 Percent'` |
+
+**Z-index:** FAB at `z-[9990]`, overlay at `z-[9999]`.
+
+```blade
+{{-- Already in layouts/page.blade.php — do not add to page files --}}
+{{-- Override props only if you need a custom label on a specific page --}}
+<x-ui.contact-modal button-label="Get a Quote" />
+```
+
 ```blade
 {{-- Product card with image --}}
 <x-ui.card-product
@@ -310,22 +563,34 @@ Thin banners (3px height) wrap the navigation bar in a dual-line sandwich patter
 
 ### Example Page Structure
 
+All pages use the `x-layouts.page` Blade component, which already includes the navigation sandwich pattern, header, footer, cart drawer Livewire component, and the global contact FAB. Page files contain only `x-sections.*` and `x-ui.*` tags inside the default slot.
+
 ```blade
-<body>
-    <x-layout.top-notification-bar message="Free Shipping on Orders Over $50!" />
-    <x-layout.navigation-bar currentPage="home" />
-    
-    <main>
-        <x-sections.hero />
-        <x-sections.our-services />
-        <x-sections.why-choose-us />
-        <x-sections.design-it-yourself />
-        <x-sections.cta-ready-to-get-started />
-    </main>
-    
-    <x-layout.footer />
-</body>
+{{-- resources/views/pages/custom-apparel/index.blade.php --}}
+<x-layouts.page
+    title="Custom Apparel"
+    metaDescription="Custom shirts, hoodies, and caps in Joliet, IL."
+    currentPage="custom-apparel"
+>
+    <x-sections.hero-full-bleed
+        heading="Custom Apparel Made Your Way"
+        image="/images/custom-shirts/banner.jpg"
+    />
+    <x-sections.lp-category-banners :banners="$banners" />
+    <x-sections.our-services />
+    <x-sections.carousel-rotating-images :images="$carouselImages" :visible="3" />
+    <x-sections.card-banner-slide-in image="..." direction="left" />
+    <x-sections.review-banner />
+    <x-sections.cta-ready-to-get-started />
+</x-layouts.page>
 ```
+
+**What `x-layouts.page` provides automatically (do not add these to page files):**
+- Top notification bar
+- Navigation banners + nav bar
+- Cart drawer (Livewire)
+- Footer
+- `x-ui.contact-modal` FAB (skipped on `cart`, `checkout`, `order-confirmation`)
 
 Reference: [Laravel Blade Components Documentation](https://laravel.com/docs/11.x/blade#components)
 
@@ -376,6 +641,7 @@ Navigation bar background, all body text and headers
 
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
+| Lighter | Charcoal Lighter | `#999999` | 153, 153, 153 | 0°, 0%, 60% |
 | Light | Charcoal Light | `#555555` | 85, 85, 85 | 0°, 0%, 33% |
 | Default | Charcoal | `#2C2C2C` | 44, 44, 44 | 0°, 0%, 17% |
 | Dark | Charcoal Dark | `#1A1A1A` | 26, 26, 26 | 0°, 0%, 10% |
@@ -386,6 +652,13 @@ Cards, containers, alternating backgrounds
 | Variant | Name | Hex Code | RGB | HSL |
 |---------|------|----------|-----|-----|
 | Default | White | `#FFFFFF` | 255, 255, 255 | 0°, 0%, 100% |
+
+#### Blush Pink
+Decorative accent; use sparingly for promotional or seasonal highlights
+
+| Variant | Name | Hex Code | RGB | HSL |
+|---------|------|----------|-----|-----|
+| Default | Blush Pink | `#FBCDCE` | 251, 205, 206 | 359°, 88%, 89% |
 
 ### Semantic Colors (3)
 

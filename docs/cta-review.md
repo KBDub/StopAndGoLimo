@@ -319,12 +319,20 @@ Added `ctaText` (default: `'Get a Free Quote'`) and `ctaHref` (default: `'/conta
 
 ---
 
+### ~~Issue 9 — `banner-testimonial` Displayed Full Last Names~~ ✅ FIXED (2026-04-06)
+
+**Component:** `ui.banner-testimonial`
+**Was:** `{{ $name }}` rendered the full name string as passed — e.g. `"Abdul Jirreh"`.
+**Now:** A `@php` block splits the name on whitespace and reconstructs it as `"FirstName L."` (first letter of last name + period). Names already formatted as `"Sarah M."` are handled cleanly with no double-period. Single-word names are displayed as-is.
+
+---
+
 ### Issue 7 — `review-banner` Testimonials Are Hardcoded Placeholders
 
 **Component:** `sections.review-banner`
 **Current reviewers:** Maria R. (Business Owner), James T. (Restaurant Owner), David P. (Contractor)
 
-These are generic placeholder names, not from `docs/top5pct_reviews.csv`. The component renders the same three testimonials on every page it appears on. This is a separate concern from the per-page `ui.banner-testimonial` instances which are page-specific and sourced from real reviews.
+These are generic placeholder names, not from `docs/top5pct_reviews.csv`. The component renders the same three testimonials on every page it appears on. This is a separate concern from the per-page `ui.banner-testimonial` instances (which are page-specific, sourced from real reviews, and now display names in `"FirstName L."` format — see Issue 9 above).
 
 ---
 

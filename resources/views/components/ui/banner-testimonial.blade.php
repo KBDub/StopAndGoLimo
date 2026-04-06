@@ -16,9 +16,15 @@
             <span class="font-bold text-charcoal text-lg">{{ $stars }} Stars!</span>
         </div>
 
+        @php
+            $nameParts = preg_split('/\s+/', trim($name));
+            $displayName = count($nameParts) >= 2
+                ? $nameParts[0] . ' ' . substr($nameParts[count($nameParts) - 1], 0, 1) . '.'
+                : $nameParts[0];
+        @endphp
         <div class="text-center md:text-left">
             <p class="text-charcoal font-semibold text-sm md:text-base">"{{ $quote }}"</p>
-            <p class="text-charcoal-light text-xs mt-1">&mdash; {{ $name }}{{ $location ? ', ' . $location : '' }}</p>
+            <p class="text-charcoal-light text-xs mt-1">&mdash; {{ $displayName }}{{ $location ? ', ' . $location : '' }}</p>
         </div>
     </div>
 </div>

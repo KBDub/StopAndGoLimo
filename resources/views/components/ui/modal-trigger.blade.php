@@ -52,8 +52,9 @@
 @endphp
 
 <{{ $tag }}
-    {{ $typeAttr }}
-    {{ $hrefAttr }}
-    @click.prevent="{{ $dispatchExpr }}"
+    x-data="{}"
+    {!! $typeAttr !!}
+    {!! $hrefAttr !!}
+    @click.prevent="{!! $dispatchExpr !!}"
     {{ $attributes }}
 >{{ $slot }}</{{ $tag }}>

@@ -32,7 +32,7 @@
         </div>
         <div class="text-center mt-8">
             @if($ctaHref === '/contact')
-                <x-ui.button-gold-gradient @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">{{ $ctaText }}</x-ui.button-gold-gradient>
+                <x-ui.button-gold-gradient onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">{{ $ctaText }}</x-ui.button-gold-gradient>
             @else
                 <x-ui.button-gold-gradient :href="$ctaHref">{{ $ctaText }}</x-ui.button-gold-gradient>
             @endif

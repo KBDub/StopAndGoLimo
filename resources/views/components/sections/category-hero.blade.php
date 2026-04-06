@@ -43,7 +43,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 @if($primaryIsModal)
-                    <x-ui.button-gold-gradient @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+                    <x-ui.button-gold-gradient onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
                         {{ $primaryButtonText }}
                     </x-ui.button-gold-gradient>
                 @else
@@ -52,7 +52,7 @@
                     </x-ui.button-gold-gradient>
                 @endif
                 @if($secondaryIsModal)
-                    <x-ui.button-outline-gold @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+                    <x-ui.button-outline-gold onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
                         {{ $secondaryButtonText }}
                     </x-ui.button-outline-gold>
                 @else

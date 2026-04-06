@@ -16,7 +16,7 @@
             Veteran-owned and proudly serving Joliet, IL and the surrounding area.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <x-ui.button-gold-gradient @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+            <x-ui.button-gold-gradient onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
                 Get a Free Quote
             </x-ui.button-gold-gradient>
             <x-ui.button-outline-gold href="tel:+18153498600">

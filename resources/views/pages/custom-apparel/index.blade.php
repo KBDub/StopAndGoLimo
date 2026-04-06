@@ -35,6 +35,7 @@
     />
 
     <x-sections.lp-category-banners
+        id="apparel-categories"
         :banners="[
         [
             'image' => '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',

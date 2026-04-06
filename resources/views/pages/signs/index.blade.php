@@ -35,6 +35,7 @@
     />
 
     <x-sections.lp-category-banners
+        id="sign-categories"
         :banners="[
         [
             'image' => '/images/yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg',

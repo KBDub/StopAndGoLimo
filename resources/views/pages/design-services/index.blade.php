@@ -34,6 +34,7 @@
     />
 
     <x-sections.lp-category-banners
+        id="design-categories"
         :banners="[
         [
             'image' => '/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg',

@@ -34,6 +34,7 @@
     />
 
     <x-sections.lp-category-banners
+        id="vehicle-categories"
         :banners="[
         [
             'image' => '/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg',

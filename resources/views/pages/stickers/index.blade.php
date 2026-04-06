@@ -35,6 +35,7 @@
     />
 
     <x-sections.lp-category-banners
+        id="sticker-categories"
         :banners="[
         [
             'image' => '/images/stickers-decals/top5pct-stickers-decals-joliet-beer-brewery.jpg',

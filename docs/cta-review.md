@@ -422,10 +422,14 @@ A thin standalone banner/button component that smooth-scrolls to `#map-section` 
 
 ---
 
-### TODO-5 — Verify A1/A2 Anchor Targets Exist
+### ~~TODO-5 — Verify A1/A2 Anchor Targets Exist~~ ✅ DONE (2026-04-06)
 
-**Type:** Spot-check / verification only.
-The CLP primary buttons (A1) use in-page anchors (`#apparel-categories`, `#sign-categories`, etc.). Sub-page "Shop Now" buttons (A2) use `#all-products`. These scroll silently if the anchor is missing. Confirm that each target `id=` exists on the page before the sectionalization pass populates those sections.
+**Type:** Spot-check + fix.
+Full audit documented in `docs/hero.ctas.md`.
+
+- **A2 sub-pages (`#all-products`):** `sections.product-grid` already had `id="all-products"` hardcoded. No changes needed — all 51 product-grid pages resolve correctly.
+- **`/custom-apparel/custom-shirts` (`#shirt-types`):** `sections.shirt-types-grid` already had `id="shirt-types"` hardcoded. Resolved.
+- **A1 CLP pages (`#[category]-categories`):** `sections.lp-category-banners` had no `id=` on its root element. Fixed by adding an `id` prop to the component and passing the correct value on each of the six CLP pages.
 
 ---
 

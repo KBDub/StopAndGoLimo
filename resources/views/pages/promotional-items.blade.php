@@ -34,6 +34,7 @@
     />
 
     <x-sections.lp-category-banners
+        id="promo-categories"
         :banners="[
         [
             'image' => '/images/custom-shirts/top5pct-custom-t-shirts-main.jpg',

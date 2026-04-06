@@ -4,6 +4,8 @@
 > **Scope:** All non-checkout pages that use an in-page anchor (`#fragment`) as the hero primary button href. Drawn from §2-A (A1, A2, A4) of `docs/cta-review.md`. Audit run 2026-04-06.
 >
 > **Goal (TODO-5):** Confirm that every in-page anchor used by a hero CTA has a matching `id=` target on that page. Pages whose primary goes to `/contact` (modal) or an external URL are excluded — no anchor target is needed.
+>
+> **Result:** All anchors now resolve. See fix summary below.
 
 ---
 
@@ -13,12 +15,12 @@
 |---|---|---|---|---|
 | `#all-products` | All A2 sub-pages + `/top5pct-merchandise` | `sections.product-grid` | Yes — hardcoded in component root `<section>` | ✅ Resolved |
 | `#shirt-types` | `/custom-apparel/custom-shirts` | `sections.shirt-types-grid` | Yes — hardcoded in component root `<section>` | ✅ Resolved |
-| `#apparel-categories` | `/custom-apparel` | `sections.lp-category-banners` | **No** | ❌ Missing |
-| `#sign-categories` | `/signs` | `sections.lp-category-banners` | **No** | ❌ Missing |
-| `#vehicle-categories` | `/vehicle-graphics` | `sections.lp-category-banners` | **No** | ❌ Missing |
-| `#sticker-categories` | `/stickers` | `sections.lp-category-banners` | **No** | ❌ Missing |
-| `#promo-categories` | `/promotional-items` | `sections.lp-category-banners` | **No** | ❌ Missing |
-| `#design-categories` | `/design-services` | `sections.lp-category-banners` | **No** | ❌ Missing |
+| `#apparel-categories` | `/custom-apparel` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
+| `#sign-categories` | `/signs` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
+| `#vehicle-categories` | `/vehicle-graphics` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
+| `#sticker-categories` | `/stickers` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
+| `#promo-categories` | `/promotional-items` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
+| `#design-categories` | `/design-services` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
 
 ---
 

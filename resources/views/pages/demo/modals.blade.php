@@ -604,9 +604,15 @@
             <p class="text-charcoal-light mb-4">Select your preferred contact method so we can follow up on your order:</p>
             <div class="space-y-2" x-data="{ contact: 'phone' }">
                 @foreach(['email' => 'Email', 'phone' => 'Phone', 'text' => 'Text Message'] as $val => $label)
-                    <label class="flex items-center gap-3 w-full px-4 py-3 border border-linen-dark bg-white cursor-pointer hover:border-sunburst transition-colors">
+                    <label
+                        class="flex items-center gap-3 w-full px-4 py-3 border-2 bg-white cursor-pointer transition-colors"
+                        :class="contact === '{{ $val }}' ? 'border-azure' : 'border-linen-dark hover:border-azure/40'"
+                        @click="contact = '{{ $val }}'"
+                    >
                         <input type="radio" name="demo_contact" value="{{ $val }}"
-                            class="accent-sunburst w-4 h-4 flex-shrink-0"
+                            class="w-4 h-4 flex-shrink-0 cursor-pointer"
+                            style="accent-color:#3273DC;"
+                            x-bind:checked="contact === '{{ $val }}'"
                             {{ $val === 'phone' ? 'checked' : '' }}>
                         <span class="text-sm font-medium text-charcoal">{{ $label }}</span>
                     </label>

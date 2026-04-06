@@ -8,6 +8,7 @@
 
 @php
     $translateStart = $direction === 'right' ? '100%' : '-100%';
+    $isModal = $href === '/contact';
 @endphp
 
 {{-- Outer div: observation target only — no transform, stays in layout position --}}
@@ -32,7 +33,11 @@
             transition: 'transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 600ms ease-out'
         }"
     >
-        <a href="{{ $href }}" class="group relative block overflow-hidden">
+        @if($isModal)
+            <button type="button" @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))" class="group relative block overflow-hidden w-full text-left cursor-pointer">
+        @else
+            <a href="{{ $href }}" class="group relative block overflow-hidden">
+        @endif
             <div class="relative w-full aspect-[16/7] overflow-hidden bg-linen">
                 <img
                     src="{{ $image }}"
@@ -46,6 +51,10 @@
                     </div>
                 </div>
             </div>
-        </a>
+        @if($isModal)
+            </button>
+        @else
+            </a>
+        @endif
     </div>
 </div>

@@ -58,6 +58,7 @@
         },
     }"
     @keydown.escape.window="if (open) closeModal()"
+    @open-contact-modal.window="openModal()"
 >
     {{-- ── Floating Action Button ─────────────────────────────────────────── --}}
     <div class="fixed bottom-6 right-6 z-[9990]">

@@ -10,6 +10,11 @@
     'image' => '/images/top5pct-banner-joliet.jpg',
 ])
 
+@php
+    $primaryIsModal  = $primaryButtonHref  === '/contact';
+    $secondaryIsModal = $secondaryButtonHref === '/contact';
+@endphp
+
 <section class="relative h-[28rem] md:h-[32rem] lg:h-[36rem] flex items-center py-10 overflow-hidden">
     <div class="absolute inset-0">
         <img
@@ -37,12 +42,24 @@
                 {{ $description }}
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <x-ui.button-gold-gradient href="{{ $primaryButtonHref }}">
-                    {{ $primaryButtonText }}
-                </x-ui.button-gold-gradient>
-                <x-ui.button-outline-gold href="{{ $secondaryButtonHref }}">
-                    {{ $secondaryButtonText }}
-                </x-ui.button-outline-gold>
+                @if($primaryIsModal)
+                    <x-ui.button-gold-gradient @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+                        {{ $primaryButtonText }}
+                    </x-ui.button-gold-gradient>
+                @else
+                    <x-ui.button-gold-gradient href="{{ $primaryButtonHref }}">
+                        {{ $primaryButtonText }}
+                    </x-ui.button-gold-gradient>
+                @endif
+                @if($secondaryIsModal)
+                    <x-ui.button-outline-gold @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+                        {{ $secondaryButtonText }}
+                    </x-ui.button-outline-gold>
+                @else
+                    <x-ui.button-outline-gold href="{{ $secondaryButtonHref }}">
+                        {{ $secondaryButtonText }}
+                    </x-ui.button-outline-gold>
+                @endif
             </div>
         </div>
     </div>

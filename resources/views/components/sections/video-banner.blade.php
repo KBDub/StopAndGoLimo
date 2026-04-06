@@ -31,7 +31,11 @@
             </iframe>
         </div>
         <div class="text-center mt-8">
-            <x-ui.button-gold-gradient :href="$ctaHref">{{ $ctaText }}</x-ui.button-gold-gradient>
+            @if($ctaHref === '/contact')
+                <x-ui.button-gold-gradient @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))">{{ $ctaText }}</x-ui.button-gold-gradient>
+            @else
+                <x-ui.button-gold-gradient :href="$ctaHref">{{ $ctaText }}</x-ui.button-gold-gradient>
+            @endif
         </div>
     </div>
 </section>

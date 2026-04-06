@@ -307,15 +307,7 @@ Updated to `/design-services`.
 **Component:** `sections.category-hero` (default props)
 Default `primaryButtonHref` updated from `/shop` to `/top5pct-merchandise`.
 
----
-
-### Issue 5 — `top5pct-merchandise` Secondary Button Is Contact, Not Phone
-
-**Page:** `/top5pct-merchandise`
-**Secondary button:** "Contact Us" → `/contact`
-**Standard pattern:** "Call Us Today" → `tel:+18153498600`
-
-All other pages use the phone number for their hero secondary button. This page sends users to the contact form instead. Decide: keep as intentional, or align to the phone standard.
+> ✅ Confirmed 2026-04-06: full codebase scan found zero remaining `/shop` href references.
 
 ---
 
@@ -332,6 +324,56 @@ Added `ctaText` (default: `'Get a Free Quote'`) and `ctaHref` (default: `'/conta
 **Current reviewers:** Maria R. (Business Owner), James T. (Restaurant Owner), David P. (Contractor)
 
 These are generic placeholder names, not from `docs/top5pct_reviews.csv`. The component renders the same three testimonials on every page it appears on. This is a separate concern from the per-page `ui.banner-testimonial` instances which are page-specific and sourced from real reviews.
+
+---
+
+### ~~Issue 8 — All `/contact` CTAs Navigate Away Instead of Opening a Modal~~ ✅ FIXED (2026-04-06)
+
+**Problem:** Every "Get a Free Quote" button and every slide-in banner linked to `/contact`, navigating the user away from the page. The global contact FAB (`x-ui.contact-modal`) already had an inline quote form — it was never being triggered by site CTAs.
+
+**Solution:** A single `open-contact-modal` window event connects all CTAs to the existing FAB modal. Six component-level changes — no page files were modified.
+
+#### What changed (component level only)
+
+| Component | Change |
+|---|---|
+| `ui.contact-modal` | Added `@open-contact-modal.window="openModal()"` listener to its Alpine `x-data` root div |
+| `sections.cta-free-quote` | "Get a Free Quote" button — removed `href="/contact"`, now dispatches `open-contact-modal` |
+| `sections.cta-ready-to-get-started` | "Get a Free Quote" button — same treatment; "Call (815) 349-8600" is unchanged |
+| `ui.card-banner-slide-in` | When `href="/contact"` is passed, renders as `<button>` dispatching `open-contact-modal` instead of `<a href>`. All other `href` values navigate normally |
+| `sections.category-hero` | When `primaryButtonHref` or `secondaryButtonHref` is `/contact`, renders a dispatching `<button>` instead of an `<a>`. All other hrefs navigate normally |
+| `sections.video-banner` | When `ctaHref` is `/contact` (the default), CTA button dispatches `open-contact-modal`. Other `ctaHref` values navigate normally |
+
+#### Coverage
+
+| CTA Type | Pages affected | How covered |
+|---|---|---|
+| Slide-in banners (`card-banner-slide-in`) | All 50 content pages (100 instances) | Component-level — `href="/contact"` auto-detected |
+| "Get a Free Quote" strip (`cta-free-quote`) | All content pages | Component-level |
+| "Ready to Get Started" CTA | All content pages | Component-level |
+| Hero "Get a Free Quote" primary button (A3 group) | 17 specialty apparel & design services pages | Component-level — `primaryButtonHref="/contact"` auto-detected |
+| Hero secondary default (`secondaryButtonHref="/contact"`) | Any page that doesn't override the secondary | Component-level — auto-detected |
+| Video banner CTA (`video-banner`) | `/custom-apparel/custom-shirts` | Component-level |
+
+#### Not changed (intentional)
+
+| Item | Reason |
+|---|---|
+| `/contact` page itself | Still exists and reachable by direct URL or nav |
+| `demo.blade.php` inline body text links | Developer demo page — not customer-facing |
+| `demo.blade.php` charcoal-gold button | Demo showcase of button styles — intentional |
+| `map-section` phone link | Phone only — no change needed |
+| Issue 5 (`top5pct-merchandise` secondary → `/contact`) | Still open — see Issue 5 |
+
+---
+
+### Issue 5 — `top5pct-merchandise` Secondary Button Is Contact, Not Phone
+
+**Page:** `/top5pct-merchandise`
+**Secondary button:** "Contact Us" → `/contact`
+**Standard pattern:** "Call Us Today" → `tel:+18153498600`
+
+> **Status:** Still open. The secondary button on this page passes `secondaryButtonHref="/contact"`. After the Issue 8 fix, this button now opens the contact modal instead of navigating. Whether to change the button text to "Call Us Today" and point it to the phone number is a separate decision.
 
 ---
 

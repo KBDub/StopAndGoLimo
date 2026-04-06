@@ -5,7 +5,7 @@
                 <h3 class="text-lg font-bold text-charcoal">Need help with a custom project?</h3>
                 <p class="text-sm text-charcoal-light">Get a free, no-obligation quote from our team. Veteran-owned, locally trusted.</p>
             </div>
-            <x-ui.button-blue-white href="/contact" class="px-6 py-3 text-sm whitespace-nowrap flex-shrink-0">
+            <x-ui.button-blue-white @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))" class="px-6 py-3 text-sm whitespace-nowrap flex-shrink-0">
                 Get a Free Quote
             </x-ui.button-blue-white>
         </div>

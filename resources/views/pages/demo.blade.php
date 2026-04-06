@@ -1281,6 +1281,7 @@
                 <p class="text-lg text-charcoal/80 mb-8 max-w-2xl mx-auto">Contact us today to discuss your custom signage and apparel needs. Veteran-owned and proudly serving Joliet, IL.</p>
                 <div class="flex flex-wrap justify-center gap-4">
                     <x-ui.button-charcoal-gold href="/contact">Contact us today</x-ui.button-charcoal-gold>
+                    <x-ui.button-white-charcoal href="/demo/modals">View modal components</x-ui.button-white-charcoal>
                     <x-ui.button-white-charcoal href="/demo/premium">View premium components</x-ui.button-white-charcoal>
                 </div>
             </div>

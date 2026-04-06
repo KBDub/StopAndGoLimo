@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>x-ui.modal — Component Demo · Top 5 Percent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<style>
+:root {
+    --gold:#FFC20E; --gold-l:#FFD93D; --gold-d:#E6A500;
+    --azure:#3273DC; --linen:#F2F0E6; --linen-d:#E8E5D8;
+    --coal:#2C2C2C; --coal-m:#555; --wht:#FFFFFF;
+    --success:#4CAF50; --warning:#F9A825; --danger:#C62828;
+    --font:'Titillium Web','Segoe UI',sans-serif;
+    --grad:linear-gradient(135deg,#FFC20E 0%,#FFD93D 100%);
+}
+[x-cloak]{display:none!important}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--linen);color:var(--coal);line-height:1.6}
+
+/* PAGE */
+.page-header{background:var(--coal);padding:0}
+.page-stripe{height:.5rem;background:var(--grad)}
+.page-header-inner{max-width:58rem;margin:0 auto;padding:1.75rem 1.25rem 1.875rem}
+.page-header h1{font-size:1.75rem;font-weight:700;color:#fff;line-height:1.2}
+.page-header p{font-size:.9375rem;color:#AAA;margin-top:.25rem}
+.badge{display:inline-flex;align-items:center;gap:.35rem;padding:.3rem .75rem;border-radius:9999px;
+    background:rgba(255,194,14,.14);border:1px solid rgba(255,194,14,.32);
+    font-size:.75rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem}
+.page{max-width:58rem;margin:0 auto;padding:0 1.25rem 4rem}
+
+/* SECTIONS */
+.section{margin-bottom:2.25rem}
+.section-head{display:flex;align-items:center;gap:.625rem;margin-bottom:1rem}
+.section-head h2{font-size:1rem;font-weight:700;color:var(--coal);letter-spacing:.01em}
+.section-head::after{content:'';flex:1;height:1.5px;background:var(--linen-d)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.75rem}
+
+/* TRIGGER BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;
+    padding:.625rem 1.125rem;border-radius:.4375rem;font-family:var(--font);
+    font-size:.875rem;font-weight:600;cursor:pointer;border:none;
+    transition:transform .14s,box-shadow .14s,filter .14s;white-space:nowrap;
+    text-align:center;width:100%}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn:active{transform:translateY(0)}
+.btn-gold{background:var(--grad);color:var(--coal);box-shadow:0 2px 10px rgba(255,194,14,.35)}
+.btn-azure{background:var(--azure);color:#fff;box-shadow:0 2px 10px rgba(50,115,220,.28)}
+.btn-dark{background:var(--coal);color:#fff}
+.btn-green{background:#4CAF50;color:#fff}
+.btn-amber{background:#F9A825;color:var(--coal)}
+.btn-red{background:#C62828;color:#fff}
+.btn-ghost{background:transparent;color:var(--coal-m);border:1.5px solid #D0CECC}
+.btn-ghost:hover{background:var(--linen-d)}
+
+/* CODE BLOCK */
+.code{background:var(--coal);color:#E0E0E0;border-radius:.5rem;
+    padding:1.125rem 1.25rem;font-family:'Courier New',monospace;font-size:.8rem;
+    line-height:1.65;overflow-x:auto;margin-top:.5rem;border-left:3px solid var(--gold)}
+.kw{color:var(--gold)} .attr{color:#82AAFF} .val{color:#C3E88D} .cmt{color:#546E7A;font-style:italic}
+
+/* BACKDROP */
+.backdrop{position:fixed;inset:0;z-index:9800;display:flex;align-items:center;
+    justify-content:center;padding:1rem;background:rgba(26,26,26,.82);
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+
+/* PANEL */
+.panel{position:relative;width:100%;display:flex;flex-direction:column;
+    border-radius:.625rem;overflow:hidden;
+    box-shadow:0 28px 70px rgba(0,0,0,.40),0 10px 28px rgba(0,0,0,.24);
+    overscroll-behavior:contain}
+.stripe{height:.5rem;flex-shrink:0}
+
+/* HEADER */
+.mhdr{display:flex;align-items:center;gap:.75rem;padding:1.125rem 1.375rem 1.125rem 1.25rem;
+    flex-shrink:0;border-bottom:2px solid transparent}
+.icon-box{display:flex;align-items:center;justify-content:center;
+    width:2.25rem;height:2.25rem;border-radius:.5rem;flex-shrink:0}
+.mtitle{font-family:var(--font);font-size:1.125rem;font-weight:700;line-height:1.25;
+    margin:0;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.close-btn{display:flex;align-items:center;justify-content:center;
+    width:2rem;height:2rem;border-radius:9999px;border:none;background:transparent;
+    cursor:pointer;flex-shrink:0;transition:background .15s;padding:0}
+
+/* BODY */
+.mbody{padding:1.375rem;font-family:var(--font);font-size:.9375rem;line-height:1.6;
+    flex:1;overflow-y:auto;overflow-x:hidden;
+    scrollbar-width:thin;scrollbar-color:#D0CECC transparent}
+.mbody::-webkit-scrollbar{width:5px}
+.mbody::-webkit-scrollbar-thumb{background:#D0CECC;border-radius:9999px}
+
+/* FOOTER */
+.mfoot{display:flex;align-items:center;justify-content:flex-end;
+    gap:.625rem;padding:.875rem 1.375rem;flex-shrink:0;flex-wrap:wrap;
+    border-top:1px solid transparent}
+
+/* MODAL BUTTONS */
+.mbtn{display:inline-flex;align-items:center;gap:.375rem;
+    padding:.5625rem 1.125rem;border-radius:.4375rem;font-family:var(--font);
+    font-size:.875rem;font-weight:600;cursor:pointer;border:none;
+    transition:transform .14s,filter .14s;white-space:nowrap}
+.mbtn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.mbtn:active{transform:translateY(0)}
+.mbtn-gold{background:var(--grad);color:var(--coal);box-shadow:0 2px 10px rgba(255,194,14,.35)}
+.mbtn-azure{background:var(--azure);color:#fff}
+.mbtn-ghost{background:transparent;color:var(--coal-m);border:1.5px solid #D0CECC}
+.mbtn-ghost:hover{background:var(--linen-d)}
+.mbtn-danger{background:#C62828;color:#fff}
+.mbtn-ghost-d{background:transparent;color:#AAA;border:1.5px solid rgba(255,255,255,.2)}
+.mbtn-ghost-d:hover{background:rgba(255,255,255,.08);color:#fff}
+
+/* TEXT UTILS */
+.p{color:var(--coal);font-size:.9375rem;line-height:1.65;margin-bottom:.75rem}
+.p:last-child{margin-bottom:0}
+.dp{color:#D0D0D0;font-size:.9375rem;line-height:1.65;margin-bottom:.75rem}
+.dp:last-child{margin-bottom:0}
+.tag{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .625rem;
+    border-radius:9999px;font-size:.75rem;font-weight:600;letter-spacing:.04em}
+.tag-gold{background:rgba(255,194,14,.15);color:var(--gold-d);border:1px solid rgba(255,194,14,.3)}
+.tag-az{background:rgba(50,115,220,.1);color:var(--azure);border:1px solid rgba(50,115,220,.22)}
+.tag-gr{background:rgba(76,175,80,.1);color:#388E3C;border:1px solid rgba(76,175,80,.22)}
+.tag-rd{background:rgba(198,40,40,.1);color:var(--danger);border:1px solid rgba(198,40,40,.22)}
+.tag-am{background:rgba(249,168,37,.12);color:#a86800;border:1px solid rgba(249,168,37,.3)}
+hr.t5{border:none;border-top:1px solid var(--linen-d);margin:.875rem 0}
+
+/* FORM */
+.fgrp{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.875rem}
+.flbl{font-size:.8125rem;font-weight:600;color:var(--coal)}
+.finput{padding:.5625rem .875rem;border:1.5px solid #D0CECC;border-radius:.375rem;
+    font-family:var(--font);font-size:.9375rem;color:var(--coal);background:#fff;
+    transition:border-color .15s,box-shadow .15s;width:100%}
+.finput:focus{outline:none;border-color:var(--azure);box-shadow:0 0 0 3px rgba(50,115,220,.14)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+
+/* SIZE DEMOS */
+.size-pill{display:inline-block;padding:.2rem .625rem;border-radius:9999px;
+    font-size:.75rem;font-weight:600;background:rgba(50,115,220,.1);
+    color:var(--azure);border:1px solid rgba(50,115,220,.2);margin-bottom:.5rem}
+</style>
+</head>
+<body x-data>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+    <div class="page-stripe"></div>
+    <div class="page-header-inner">
+        <div class="badge">Blade Component · TALL Stack</div>
+        <h1>x-ui.modal</h1>
+        <p>Generic slot-driven modal &mdash; all variants, sizes &amp; patterns &mdash; Top 5 Percent design system</p>
+    </div>
+</header>
+
+<div class="page">
+
+    <!-- VARIANTS -->
+    <section class="section">
+        <div class="section-head"><h2>Variants</h2></div>
+        <div class="grid">
+            <button class="btn btn-gold" @click="$dispatch('open-modal',{name:'v-default'})">Default (Gold Stripe)</button>
+            <button class="btn btn-dark" @click="$dispatch('open-modal',{name:'v-dark'})">Dark</button>
+            <button class="btn btn-azure" @click="$dispatch('open-modal',{name:'v-gold'})">Gold Header</button>
+            <button class="btn btn-green" @click="$dispatch('open-modal',{name:'v-success'})">Success</button>
+            <button class="btn btn-amber" @click="$dispatch('open-modal',{name:'v-warning'})">Warning</button>
+            <button class="btn btn-red" @click="$dispatch('open-modal',{name:'v-danger'})">Danger / Destructive</button>
+        </div>
+    </section>
+
+    <!-- SIZES -->
+    <section class="section">
+        <div class="section-head"><h2>Sizes</h2></div>
+        <div class="grid">
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'s-sm'})">Small &mdash; 22rem</button>
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'s-md'})">Medium &mdash; 34rem (default)</button>
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'s-lg'})">Large &mdash; 46rem</button>
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'s-xl'})">Extra Large &mdash; 58rem</button>
+        </div>
+    </section>
+
+    <!-- PATTERNS -->
+    <section class="section">
+        <div class="section-head"><h2>Use-Case Patterns</h2></div>
+        <div class="grid">
+            <button class="btn btn-red" @click="$dispatch('open-modal',{name:'p-confirm'})">Confirm / Destructive</button>
+            <button class="btn btn-gold" @click="$dispatch('open-modal',{name:'p-form'})">Quick Inline Form</button>
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'p-scroll'})">Long / Scrollable Body</button>
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'p-nofooter'})">No Footer</button>
+            <button class="btn btn-ghost" @click="$dispatch('open-modal',{name:'p-nodismiss'})">Non-Dismissible</button>
+            <button class="btn btn-dark" @click="$dispatch('open-modal',{name:'p-custom-hdr'})">Custom Header Slot</button>
+        </div>
+    </section>
+
+    <!-- USAGE CODE -->
+    <section class="section">
+        <div class="section-head"><h2>Blade Usage</h2></div>
+        <pre class="code"
+><span class="cmt">{{-- Trigger anywhere on the page --}}</span>
+<span class="kw">&lt;x-ui.modal-trigger</span> <span class="attr">modal</span>=<span class="val">"confirm-delete"</span><span class="kw">&gt;</span>Delete Item<span class="kw">&lt;/x-ui.modal-trigger&gt;</span>
+
+<span class="cmt">{{-- Raw Alpine dispatch (works from any element) --}}</span>
+<span class="kw">&lt;button</span> <span class="attr">@click</span>=<span class="val">"$dispatch('open-modal',{name:'confirm-delete'})"</span><span class="kw">&gt;</span>Open<span class="kw">&lt;/button&gt;</span>
+
+<span class="cmt">{{-- Livewire: $this->dispatch('open-modal', name: 'confirm-delete'); --}}</span>
+
+<span class="cmt">{{-- Modal definition --}}</span>
+<span class="kw">&lt;x-ui.modal</span>
+    <span class="attr">name</span>=<span class="val">"confirm-delete"</span>
+    <span class="attr">title</span>=<span class="val">"Confirm Delete"</span>
+    <span class="attr">variant</span>=<span class="val">"danger"</span>
+    <span class="attr">size</span>=<span class="val">"sm"</span>
+<span class="kw">&gt;</span>
+    <span class="kw">&lt;p&gt;</span>Are you sure? This cannot be undone.<span class="kw">&lt;/p&gt;</span>
+
+    <span class="kw">&lt;x-slot:footer&gt;</span>
+        <span class="kw">&lt;x-ui.modal-trigger</span> <span class="attr">modal</span>=<span class="val">"confirm-delete"</span> <span class="attr">as</span>=<span class="val">"close"</span>
+            <span class="attr">class</span>=<span class="val">"t5-modal-btn t5-modal-btn-ghost"</span><span class="kw">&gt;</span>Cancel<span class="kw">&lt;/x-ui.modal-trigger&gt;</span>
+        <span class="kw">&lt;button</span> <span class="attr">wire:click</span>=<span class="val">"delete"</span> <span class="attr">class</span>=<span class="val">"t5-modal-btn t5-modal-btn-danger"</span><span class="kw">&gt;</span>Delete<span class="kw">&lt;/button&gt;</span>
+    <span class="kw">&lt;/x-slot:footer&gt;</span>
+<span class="kw">&lt;/x-ui.modal&gt;</span></pre>
+    </section>
+
+    <!-- PROPS TABLE -->
+    <section class="section">
+        <div class="section-head"><h2>Props Reference</h2></div>
+        <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:.875rem;font-family:var(--font);">
+            <thead>
+                <tr style="background:var(--coal);color:#fff;">
+                    <th style="padding:.625rem 1rem;text-align:left;font-weight:600;">Prop</th>
+                    <th style="padding:.625rem 1rem;text-align:left;font-weight:600;">Type</th>
+                    <th style="padding:.625rem 1rem;text-align:left;font-weight:600;">Default</th>
+                    <th style="padding:.625rem 1rem;text-align:left;font-weight:600;">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background:#fff;border-bottom:1px solid var(--linen-d);">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">name</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">string</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">required</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">Unique ID per page</td>
+                </tr>
+                <tr style="background:var(--linen);border-bottom:1px solid var(--linen-d);">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">title</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">string</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">null</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">Any text; or use the title slot</td>
+                </tr>
+                <tr style="background:#fff;border-bottom:1px solid var(--linen-d);">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">size</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">string</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">md</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">sm &bull; md &bull; lg &bull; xl &bull; full</td>
+                </tr>
+                <tr style="background:var(--linen);border-bottom:1px solid var(--linen-d);">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">variant</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">string</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">default</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">default &bull; dark &bull; gold &bull; success &bull; warning &bull; danger</td>
+                </tr>
+                <tr style="background:#fff;border-bottom:1px solid var(--linen-d);">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">dismissible</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">bool</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">true</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">Shows ✕ + backdrop click</td>
+                </tr>
+                <tr style="background:var(--linen);border-bottom:1px solid var(--linen-d);">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">scrollBody</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">bool</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">true</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">Body scrolls; header+footer sticky</td>
+                </tr>
+                <tr style="background:#fff;">
+                    <td style="padding:.5rem 1rem;"><code style="color:var(--azure);font-size:.8125rem;">maxHeight</code></td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">string</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">92dvh</td>
+                    <td style="padding:.5rem 1rem;color:var(--coal-m);">Any valid CSS height</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </section>
+
+</div><!-- /.page -->
+
+
+<!-- ======================================================= MODALS ======= -->
+
+<!-- Helper macro: close handler -->
+<script>
+function closeM(n){ document.dispatchEvent(new CustomEvent('close-modal',{detail:{name:n},bubbles:true})); document.body.style.overflow=''; }
+function openHandler(n){ return `$event.detail.name==='${n}'&&(isOpen=true,document.body.style.overflow='hidden')`; }
+</script>
+
+<!-- VARIANT: default -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='v-default'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='v-default'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:34rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 translate-y-2" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E">
+    <h2 class="mtitle" style="color:#2C2C2C">Default Variant</h2>
+    <button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">The <strong>default</strong> variant uses a linen header with a Sunburst Gold accent stripe — the clean workhorse for general content, information panels, and feature announcements.</p>
+    <p class="p">Slot in any content: paragraphs, images, lists, Livewire components, product cards — anything your use case needs.</p>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem">
+        <span class="tag tag-gold">variant="default"</span>
+        <span class="tag tag-az">size="md"</span>
+    </div>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Dismiss</button>
+    <button class="mbtn mbtn-gold">Got It</button>
+</div>
+</div></div></div>
+
+<!-- VARIANT: dark -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='v-dark'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='v-dark'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:34rem;max-height:92dvh;background:#2C2C2C;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 translate-y-2" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#1A1A1A;border-bottom-color:#FFC20E">
+    <div class="icon-box" style="background:rgba(255,194,14,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#FFC20E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div>
+    <h2 class="mtitle" style="color:#fff">Dark Variant</h2>
+    <button class="close-btn" style="color:#AAA" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='rgba(255,255,255,.08)'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#E0E0E0">
+    <p class="dp">The <strong style="color:#FFC20E">dark</strong> variant flips to charcoal body with a gold accent header rule — premium feel for featured promotions, special announcements, or product spotlights.</p>
+    <p class="dp">Pairs naturally with the site's dark CTA sections and the charcoal footer.</p>
+    <span style="display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .625rem;border-radius:9999px;font-size:.75rem;font-weight:600;background:rgba(255,194,14,.12);color:#FFC20E;border:1px solid rgba(255,194,14,.28)">variant="dark"</span>
+</div>
+<div class="mfoot" style="border-top-color:rgba(255,255,255,.10);background:#222">
+    <button class="mbtn mbtn-ghost-d" @click="isOpen=false;document.body.style.overflow=''">Not Now</button>
+    <button class="mbtn mbtn-gold">Explore Now →</button>
+</div>
+</div></div></div>
+
+<!-- VARIANT: gold header -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='v-gold'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='v-gold'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:34rem;max-height:92dvh;background:#FAF9F5;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95 translate-y-2" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#E6A500,#FFC20E)"></div>
+<div class="mhdr" style="background:linear-gradient(135deg,#FFC20E 0%,#E6A500 100%);border-bottom-color:#E6A500">
+    <h2 class="mtitle" style="color:#2C2C2C">Gold Header Variant</h2>
+    <button class="close-btn" style="color:#2C2C2C" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='rgba(0,0,0,.12)'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">Full gold gradient header — high impact for deal announcements, promo callouts, or award-style content that needs max brand energy. Linen body keeps readability comfortable.</p>
+    <span class="tag tag-gold">variant="gold"</span>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#F2F0E6">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Maybe Later</button>
+    <button class="mbtn mbtn-gold">Claim Offer</button>
+</div>
+</div></div></div>
+
+<!-- VARIANT: success -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='v-success'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='v-success'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:28rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:#4CAF50"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#4CAF50">
+    <div class="icon-box" style="background:rgba(76,175,80,.12)"><svg viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h2 class="mtitle" style="color:#2C2C2C">Order Confirmed!</h2>
+    <button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">Your custom order has been placed. Our team will reach out within 1 business day to confirm details and review your design.</p>
+    <span class="tag tag-gr">variant="success"</span>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-gold" @click="isOpen=false;document.body.style.overflow=''">Great, Thanks!</button>
+</div>
+</div></div></div>
+
+<!-- VARIANT: warning -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='v-warning'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='v-warning'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:30rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:#F9A825"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#F9A825">
+    <div class="icon-box" style="background:rgba(249,168,37,.13)"><svg viewBox="0 0 24 24" fill="none" stroke="#F9A825" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+    <h2 class="mtitle" style="color:#2C2C2C">Session Expiring Soon</h2>
+    <button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">Your cart will be cleared in <strong>5 minutes</strong> due to inactivity. Stay on the page to keep your items.</p>
+    <span class="tag tag-am">variant="warning"</span>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Dismiss</button>
+    <button class="mbtn mbtn-gold">Keep My Cart</button>
+</div>
+</div></div></div>
+
+<!-- VARIANT: danger -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='v-danger'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='v-danger'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:28rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:#C62828"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#C62828">
+    <div class="icon-box" style="background:rgba(198,40,40,.10)"><svg viewBox="0 0 24 24" fill="none" stroke="#C62828" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+    <h2 class="mtitle" style="color:#2C2C2C">Delete This Order?</h2>
+    <button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">This action is <strong>permanent</strong> and cannot be undone. The order and all associated files will be removed immediately.</p>
+    <span class="tag tag-rd">variant="danger"</span>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Cancel</button>
+    <button class="mbtn mbtn-danger">Yes, Delete</button>
+</div>
+</div></div></div>
+
+<!-- SIZE: sm -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='s-sm'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='s-sm'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:22rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">Small — 22rem</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C"><p class="p">Tight format, great for quick confirmations, alerts, or single-action prompts.</p><div class="size-pill">max-width: 22rem</div></div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5"><button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Close</button><button class="mbtn mbtn-gold">OK</button></div>
+</div></div></div>
+
+<!-- SIZE: md -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='s-md'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='s-md'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:34rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">Medium — 34rem (default)</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C"><p class="p">The default size — comfortable for forms, descriptions, and general content. Most use cases will live here.</p><div class="size-pill">max-width: 34rem</div></div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5"><button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Close</button><button class="mbtn mbtn-gold">Continue</button></div>
+</div></div></div>
+
+<!-- SIZE: lg -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='s-lg'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='s-lg'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:46rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">Large — 46rem</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C"><p class="p">Wider canvas for rich content — order details, product galleries, image previews, multi-column layouts, or detailed service information.</p><div class="size-pill">max-width: 46rem</div></div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5"><button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Close</button><button class="mbtn mbtn-azure">View Full Details</button></div>
+</div></div></div>
+
+<!-- SIZE: xl -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='s-xl'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='s-xl'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:58rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">Extra Large — 58rem</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">Maximum width for wide tables, side-by-side product comparisons, full invoice views, admin data panels, or embedded media.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin-top:.875rem">
+        <div style="background:var(--linen);border-radius:.375rem;padding:.875rem;text-align:center;border:1px solid var(--linen-d)"><div style="font-weight:700;font-size:1.25rem;color:var(--azure)">48</div><div style="font-size:.8125rem;color:var(--coal-m)">Orders</div></div>
+        <div style="background:var(--linen);border-radius:.375rem;padding:.875rem;text-align:center;border:1px solid var(--linen-d)"><div style="font-weight:700;font-size:1.25rem;color:#4CAF50">$3,240</div><div style="font-size:.8125rem;color:var(--coal-m)">Revenue</div></div>
+        <div style="background:var(--linen);border-radius:.375rem;padding:.875rem;text-align:center;border:1px solid var(--linen-d)"><div style="font-weight:700;font-size:1.25rem;color:var(--gold-d)">4.9★</div><div style="font-size:.8125rem;color:var(--coal-m)">Rating</div></div>
+    </div>
+    <div class="size-pill" style="margin-top:.875rem">max-width: 58rem</div>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5"><button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Close</button><button class="mbtn mbtn-gold">Export Report</button></div>
+</div></div></div>
+
+<!-- PATTERN: confirm/destructive -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='p-confirm'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='p-confirm'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:26rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:#C62828"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#C62828">
+    <div class="icon-box" style="background:rgba(198,40,40,.10)"><svg viewBox="0 0 24 24" fill="none" stroke="#C62828" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+    <h2 class="mtitle" style="color:#2C2C2C">Remove Design File?</h2>
+    <button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <p class="p">You are about to permanently delete <strong>custom-logo-v3.png</strong>. This cannot be undone.</p>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Cancel</button>
+    <button class="mbtn mbtn-danger">Delete File</button>
+</div>
+</div></div></div>
+
+<!-- PATTERN: quick form -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='p-form'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='p-form'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:34rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">Request a Sample Pack</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C">
+    <div class="row2">
+        <div class="fgrp"><label class="flbl">First Name</label><input class="finput" type="text" placeholder="Maria"></div>
+        <div class="fgrp"><label class="flbl">Last Name</label><input class="finput" type="text" placeholder="Rodriguez"></div>
+    </div>
+    <div class="fgrp"><label class="flbl">Email Address</label><input class="finput" type="email" placeholder="maria@example.com"></div>
+    <div class="fgrp">
+        <label class="flbl">What are you interested in?</label>
+        <select class="finput">
+            <option value="">Select a category…</option>
+            <option>Custom Apparel</option>
+            <option>Business Signs</option>
+            <option>Vehicle Graphics</option>
+            <option>Decals &amp; Stickers</option>
+        </select>
+    </div>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Cancel</button>
+    <button class="mbtn mbtn-gold">Send Request</button>
+</div>
+</div></div></div>
+
+<!-- PATTERN: scrollable -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='p-scroll'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='p-scroll'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:36rem;max-height:60vh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">Terms &amp; Conditions</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C;max-height:none">
+    <p class="p">Welcome to Top 5 Percent. By using our services, you agree to the following terms and conditions. Please read them carefully before placing an order.</p>
+    <hr class="t5"><p class="p"><strong>1. Order Processing</strong><br>All orders are subject to review before production begins. We reserve the right to contact you for design clarification or file quality concerns. Production begins only after written or digital approval.</p>
+    <p class="p"><strong>2. Design Ownership</strong><br>Customers submitting original artwork retain full ownership of their designs. By submitting files to Top 5 Percent, you grant us a limited license to reproduce your design solely for the purpose of fulfilling your order.</p>
+    <p class="p"><strong>3. Rush Orders</strong><br>Rush processing is available for an additional fee and is subject to current production capacity. Rush status does not guarantee same-day completion but prioritizes your order in the production queue.</p>
+    <p class="p"><strong>4. Returns &amp; Refunds</strong><br>Custom printed items are non-refundable unless there is a manufacturing defect or a significant deviation from the approved proof. All claims must be submitted within 7 business days of delivery.</p>
+    <p class="p"><strong>5. Shipping</strong><br>We ship to the continental United States. Estimated delivery times are subject to carrier delays. Top 5 Percent is not responsible for delays caused by shipping carriers once the package has left our facility.</p>
+    <p class="p"><strong>6. Contact</strong><br>Questions about these terms may be directed to our team via the contact form on our website. We are available Monday–Friday, 9am–5pm CST.</p>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button class="mbtn mbtn-ghost" @click="isOpen=false;document.body.style.overflow=''">Decline</button>
+    <button class="mbtn mbtn-gold" @click="isOpen=false;document.body.style.overflow=''">I Agree</button>
+</div>
+</div></div></div>
+
+<!-- PATTERN: no footer -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='p-nofooter'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='p-nofooter'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:30rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E"><h2 class="mtitle" style="color:#2C2C2C">No Footer Slot</h2><button class="close-btn" style="color:#555" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='#E8E5D8'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+<div class="mbody" style="color:#2C2C2C;padding-bottom:1.375rem">
+    <p class="p">When no <code style="font-size:.8125rem;background:#F2F0E6;padding:.1rem .35rem;border-radius:.25rem">$footer</code> slot is provided, the footer row is omitted entirely — no empty strip, no wasted space. Close via ✕ or backdrop click.</p>
+    <p class="p">Ideal for informational panels, image lightboxes, or any content that doesn't require a call to action.</p>
+</div>
+</div></div></div>
+
+<!-- PATTERN: non-dismissible -->
+<div x-data="{isOpen:false,step:1}" @open-modal.window="if($event.detail.name==='p-nodismiss'){isOpen=true;step=1;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='p-nodismiss'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
+<div class="panel" style="max-width:32rem;max-height:92dvh;background:#fff;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<div class="mhdr" style="background:#F2F0E6;border-bottom-color:#FFC20E">
+    <h2 class="mtitle" style="color:#2C2C2C" x-text="step===1 ? 'Welcome! Quick Setup' : step===2 ? 'Choose Your Preference' : 'All Set!'"></h2>
+</div>
+<div class="mbody" style="color:#2C2C2C">
+    <div x-show="step===1">
+        <p class="p">No close button, no backdrop dismiss — the user must complete the flow. Useful for mandatory onboarding steps, required agreements, or critical setup wizards.</p>
+        <p class="p">The escape key is also disabled for this variant.</p>
+    </div>
+    <div x-show="step===2">
+        <p class="p">Select your preferred contact method so we can follow up on your order:</p>
+        <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem">
+            <label style="display:flex;align-items:center;gap:.625rem;cursor:pointer;padding:.5rem .75rem;border:1.5px solid #D0CECC;border-radius:.375rem;font-size:.9375rem"><input type="radio" name="pref" value="email"> Email</label>
+            <label style="display:flex;align-items:center;gap:.625rem;cursor:pointer;padding:.5rem .75rem;border:1.5px solid #D0CECC;border-radius:.375rem;font-size:.9375rem"><input type="radio" name="pref" value="phone"> Phone</label>
+            <label style="display:flex;align-items:center;gap:.625rem;cursor:pointer;padding:.5rem .75rem;border:1.5px solid #D0CECC;border-radius:.375rem;font-size:.9375rem"><input type="radio" name="pref" value="text"> Text Message</label>
+        </div>
+    </div>
+    <div x-show="step===3" style="text-align:center;padding:.75rem 0">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:3.5rem;height:3.5rem;border-radius:9999px;background:linear-gradient(135deg,#FFC20E,#FFD93D);box-shadow:0 4px 18px rgba(255,194,14,.45);margin-bottom:.875rem"><svg viewBox="0 0 24 24" fill="none" stroke="#2C2C2C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="width:1.75rem;height:1.75rem"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <p class="p"><strong>You're all set!</strong> We'll reach out using your preferred method within 1 business day.</p>
+    </div>
+    <!-- Step dots -->
+    <div style="display:flex;justify-content:center;gap:.5rem;margin-top:1rem">
+        <template x-for="i in 3" :key="i"><div :style="'width:.625rem;height:.625rem;border-radius:9999px;transition:background .2s;background:'+(step>=i?'#FFC20E':'#D0CECC')"></div></template>
+    </div>
+</div>
+<div class="mfoot" style="border-top-color:#E8E5D8;background:#FAF9F5">
+    <button x-show="step>1&&step<3" class="mbtn mbtn-ghost" @click="step--">← Back</button>
+    <button x-show="step<3" class="mbtn mbtn-gold" @click="step<3&&step++">
+        <span x-text="step===2?'Finish':'Next →'"></span>
+    </button>
+    <button x-show="step===3" class="mbtn mbtn-gold" @click="isOpen=false;document.body.style.overflow=''">Close</button>
+</div>
+</div></div></div>
+
+<!-- PATTERN: custom header -->
+<div x-data="{isOpen:false}" @open-modal.window="if($event.detail.name==='p-custom-hdr'){isOpen=true;document.body.style.overflow='hidden'}" @close-modal.window="if($event.detail.name==='p-custom-hdr'){isOpen=false;document.body.style.overflow=''}" @keydown.escape.window="if(isOpen){isOpen=false;document.body.style.overflow=''}">
+<div x-show="isOpen" x-cloak class="backdrop" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click.self="isOpen=false;document.body.style.overflow=''">
+<div class="panel" style="max-width:36rem;max-height:92dvh;background:#2C2C2C;" x-transition:enter="transition ease-out duration-230" x-transition:enter-start="opacity-0 scale-95 translate-y-4" x-transition:enter-end="opacity-100 scale-100 translate-y-0" x-transition:leave="transition ease-in duration-160" x-transition:leave-start="opacity-100 scale-100 translate-y-0" x-transition:leave-end="opacity-0 scale-95" @click.stop>
+<div class="stripe" style="background:linear-gradient(90deg,#FFC20E,#FFD93D)"></div>
+<!-- Custom header slot -->
+<div style="padding:1.375rem 1.375rem 1.125rem;background:#1A1A1A;border-bottom:2px solid #FFC20E;display:flex;align-items:center;justify-content:space-between;gap:1rem">
+    <div style="display:flex;align-items:center;gap:.875rem">
+        <div style="display:flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;border-radius:.5rem;background:linear-gradient(135deg,#FFC20E,#E6A500);flex-shrink:0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2C2C2C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:1.25rem;height:1.25rem"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8H3.5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+        </div>
+        <div>
+            <div style="font-family:var(--font);font-size:1.0625rem;font-weight:700;color:#fff;line-height:1.2">Deal of the Day</div>
+            <div style="font-family:var(--font);font-size:.8125rem;color:#AAA;margin-top:.15rem">Expires at midnight · Joliet, IL</div>
+        </div>
+    </div>
+    <button class="close-btn" style="color:#AAA" @click="isOpen=false;document.body.style.overflow=''" @mouseover="$el.style.background='rgba(255,255,255,.08)'" @mouseout="$el.style.background='transparent'"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+</div>
+<div class="mbody" style="color:#E0E0E0">
+    <div style="background:rgba(255,194,14,.08);border:1px solid rgba(255,194,14,.2);border-radius:.5rem;padding:1rem;margin-bottom:.875rem;display:flex;align-items:center;gap:.75rem">
+        <div style="font-size:2rem;line-height:1;flex-shrink:0">🎽</div>
+        <div>
+            <div style="font-weight:700;color:#fff;font-size:1rem">20% Off All Custom T-Shirts</div>
+            <div style="font-size:.875rem;color:#AAA;margin-top:.2rem">Use code JOLIET20 at checkout</div>
+        </div>
+    </div>
+    <p class="dp" style="font-size:.875rem">The <code style="font-size:.8125rem;background:rgba(255,255,255,.1);padding:.1rem .35rem;border-radius:.25rem">$header</code> slot replaces the entire header block — full control over layout, branding treatments, multi-line content, or custom badge patterns.</p>
+</div>
+<div class="mfoot" style="border-top-color:rgba(255,255,255,.1);background:#222">
+    <button class="mbtn mbtn-ghost-d" @click="isOpen=false;document.body.style.overflow=''">No Thanks</button>
+    <button class="mbtn mbtn-gold">Shop Now →</button>
+</div>
+</div></div></div>
+
+</body>
+</html>

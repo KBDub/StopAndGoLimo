@@ -207,11 +207,12 @@ Used on specialty apparel techniques and design services where no live e-commerc
 
 **Component:** `sections.video-banner`
 **Content:** YouTube embed + CTA below
-**Button:** "Get a Free Quote" → `/contact` (gold gradient)
+**Props:** `videoId`, `heading`, `label`, `subheading`, `ctaText` (default: `'Get a Free Quote'`), `ctaHref` (default: `'/contact'`)
+**Button:** When `ctaHref` is `/contact` (the default), dispatches `open-contact-modal`. Other values navigate normally.
 
-**Present on:** `/custom-apparel/custom-shirts` only.
+**Present on:** `/custom-apparel/custom-shirts` only (currently).
 
-> This component will be extended to more pages once it is confirmed to be generalized (currently it was `sections.shirt-types-video` and was refactored). The CTA is hardcoded inside the component — not configurable as a prop.
+> **Planned:** Extend to all non-checkout content pages, placed between `cta-free-quote` and `cta-ready-to-get-started`. Same YouTube video ID throughout; `heading`, `label`, and `subheading` will be customized per page. See Remaining TODOs.
 
 ---
 
@@ -367,13 +368,72 @@ These are generic placeholder names, not from `docs/top5pct_reviews.csv`. The co
 
 ---
 
-### Issue 5 — `top5pct-merchandise` Secondary Button Is Contact, Not Phone
+### ~~Issue 5 — `top5pct-merchandise` Secondary Button Is Contact, Not Phone~~ ⏳ PENDING FIX
 
 **Page:** `/top5pct-merchandise`
-**Secondary button:** "Contact Us" → `/contact`
-**Standard pattern:** "Call Us Today" → `tel:+18153498600`
+**Current:** Secondary button — "Contact Us" → `/contact` (now triggers modal via Issue 8 fix)
+**Target:** "Call Us Today" → `tel:+18153498600` (matches every other content page)
 
-> **Status:** Still open. The secondary button on this page passes `secondaryButtonHref="/contact"`. After the Issue 8 fix, this button now opens the contact modal instead of navigating. Whether to change the button text to "Call Us Today" and point it to the phone number is a separate decision.
+> **Decision made 2026-04-06:** Change secondary button text to "Call Us Today" and point it to the phone number. This requires passing `secondaryButtonText="Call Us Today"` and `secondaryButtonHref="tel:+18153498600"` to the `category-hero` on `/top5pct-merchandise`. Implementation is part of the next code pass.
+
+---
+
+## Remaining TODOs
+
+Items confirmed for implementation, not yet executed. Ordered roughly by effort (smallest first).
+
+---
+
+### TODO-1 — Fix Issue 5: `top5pct-merchandise` Secondary Hero Button
+
+**File:** `resources/views/pages/top5pct-merchandise.blade.php`
+**Change:** Pass `secondaryButtonText="Call Us Today"` and `secondaryButtonHref="tel:+18153498600"` to `x-sections.category-hero`.
+
+---
+
+### TODO-2 — Global Smooth Scrolling
+
+**File:** `resources/css/app.css`
+**Change:** Add `html { scroll-behavior: smooth; }` globally. Ensures all in-page anchor navigation (A1/A2 hero buttons, Get Directions, any `#section` link) scrolls smoothly instead of jumping.
+
+---
+
+### TODO-3 — New Component: `ui.banner-get-directions`
+
+A thin standalone banner/button component that smooth-scrolls to `#map-section` on the current page. Dispatches a scroll event rather than navigating away — keeps user on page.
+
+**Props:** `label` (optional display text, default: `'View Our Location'`)
+**Action:** `onclick` → `document.getElementById('map-section')?.scrollIntoView({ behavior: 'smooth' })`
+**Placement:** Demo page only initially. Add to any content page alongside the map-section as needed.
+
+> Note: `map-section` must have `id="map-section"` on its root element for this to resolve. Verify before placing.
+
+---
+
+### TODO-4 — Video Banner on All Non-Checkout Pages
+
+**Component:** `sections.video-banner`
+**Placement rule:** Between `x-sections.cta-free-quote` and `x-sections.cta-ready-to-get-started` on all 64 non-checkout content pages.
+**Video ID:** Same YouTube ID sitewide for now — will be updated to page-specific videos later.
+**Per-page props:** `heading`, `label`, and `subheading` customized per page; `ctaText` and `ctaHref` use defaults.
+
+> After this is implemented, the §F inventory entry above should be updated to list all affected pages.
+
+---
+
+### TODO-5 — Verify A1/A2 Anchor Targets Exist
+
+**Type:** Spot-check / verification only.
+The CLP primary buttons (A1) use in-page anchors (`#apparel-categories`, `#sign-categories`, etc.). Sub-page "Shop Now" buttons (A2) use `#all-products`. These scroll silently if the anchor is missing. Confirm that each target `id=` exists on the page before the sectionalization pass populates those sections.
+
+---
+
+### TODO-6 — Issue 7: Real Testimonials in `review-banner`
+
+**Component:** `sections.review-banner`
+**Change:** Replace 3 hardcoded placeholder testimonials with real reviews sourced from `docs/top5pct_reviews.csv` (95 entries). Options: hardcode 3 real ones, or make the component accept a prop array.
+
+> Deferred — implement separately after sectionalization pass is complete.
 
 ---
 

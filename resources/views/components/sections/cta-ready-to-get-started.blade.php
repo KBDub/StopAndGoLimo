@@ -19,8 +19,8 @@
             <x-ui.button-gold-gradient href="/contact">
                 Get a Free Quote
             </x-ui.button-gold-gradient>
-            <x-ui.button-outline-gold href="tel:+18155551234">
-                Call (815) 555-1234
+            <x-ui.button-outline-gold href="tel:+18153498600">
+                Call (815) 349-8600
             </x-ui.button-outline-gold>
         </div>
     </div>

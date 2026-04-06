@@ -32,13 +32,13 @@
 |---|---|---|---|---|
 | `sections.category-hero` | Top of every content page | 2 buttons — primary + secondary | Varies per page (see §2-A) | All content pages |
 | `sections.cta-free-quote` | Mid-page | 1 button — "Get a Free Quote" | `/contact` | All content pages except Lunar/admin |
-| `sections.cta-ready-to-get-started` | Near bottom | 2 buttons — quote + phone | `/contact` · `tel:+18155551234` ⚠️ | All content pages except Lunar/admin |
-| `sections.cta-design-your-own` | Mid-page | 1 button — "Start Designing" | `/design-it-yourself/online-designer` ⚠️ | Home, Demo only |
+| `sections.cta-ready-to-get-started` | Near bottom | 2 buttons — quote + phone | `/contact` · `tel:+18153498600` | All content pages except Lunar/admin |
+| `sections.cta-design-your-own` | Mid-page | 1 button — "Start Designing" | `/design-services/online-designer` | Home, Demo only |
 | `ui.card-banner-slide-in` | Inline (×2 per content page) | Full-width clickable image | `/contact` | All 50 content pages |
 | `sections.video-banner` | Inline | 1 button — "Get a Free Quote" | `/contact` | `/custom-apparel/custom-shirts` only |
-| `sections.map-section` | Bottom of every content page | Phone number link | `tel:+18155551234` ⚠️ | All content pages except Lunar/admin |
+| `sections.map-section` | Bottom of every content page | Phone number link | `tel:+18153498600` | All content pages except Lunar/admin |
 | `sections.our-services` | Home mid-section | 1 text-link — "View All Products" | `/top5pct-merchandise` | Home only |
-| `sections.design-it-yourself` | Home mid-section | 1 button — (label TBD) | `/design-it-yourself` ⚠️ | Home only |
+| `sections.design-it-yourself` | Home mid-section | 1 button — "Start Designing" | `/design-services` | Home only |
 | `sections.review-banner` | Near bottom | None | Display only | All content pages |
 | `sections.why-choose-us` | Near bottom | None | Display only | All content pages |
 
@@ -157,9 +157,7 @@ Used on specialty apparel techniques and design services where no live e-commerc
 **Headline:** "Ready to Get Started?"
 **Body:** "Contact us today for a free quote on your custom project. Veteran-owned and proudly serving Joliet, IL and the surrounding area."
 **Button 1 (primary):** "Get a Free Quote" → `/contact` (gold gradient)
-**Button 2 (secondary):** "Call (815) 555-1234" → `tel:+18155551234` ⚠️ (outline gold)
-
-> ⚠️ **Phone number is a placeholder** — `(815) 555-1234` is not a real number. Must be replaced with the actual business number. See Section 6.
+**Button 2 (secondary):** "Call (815) 349-8600" → `tel:+18153498600` (outline gold)
 
 **Present on:** Same page set as §B above (all content pages, excludes Lunar/admin pages).
 
@@ -220,9 +218,7 @@ Used on specialty apparel techniques and design services where no live e-commerc
 ### G. Map Section Phone Link
 
 **Component:** `sections.map-section`
-**Action:** Inline phone number `tel:+18155551234` ⚠️ styled as a sunburst link
-
-> ⚠️ **Placeholder number** — same issue as §C. Must be updated to the real business phone number.
+**Action:** Inline phone number `tel:+18153498600` styled as a sunburst link
 
 **Present on:** Same page set as §B and §C (all content pages, excludes Lunar/admin).
 
@@ -285,15 +281,10 @@ These components are built and available but not currently embedded on any live 
 
 ## 6. Issues & Inconsistencies
 
-### Issue 1 — Placeholder Phone Number (Critical)
+### ~~Issue 1 — Placeholder Phone Number (Critical)~~ ✅ FIXED (2026-04-06)
 
 **Affected components:** `sections.cta-ready-to-get-started` · `sections.map-section`
-**Current value:** `(815) 555-1234` → `tel:+18155551234`
-**Hero secondary button (most pages):** `tel:+18153498600`
-
-These are two **different** numbers. One of them is the real business number and one is a placeholder. The `tel:+18153498600` in the hero buttons is likely the real number since it was manually set per-page. The `+18155551234` in the shared components is very likely the placeholder.
-
-**Action required:** Confirm the real business phone number and update both `cta-ready-to-get-started` and `map-section` to use it consistently.
+Updated from placeholder `(815) 555-1234` to real number `(815) 349-8600` → `tel:+18153498600`. Now consistent with all hero secondary buttons site-wide.
 
 ---
 

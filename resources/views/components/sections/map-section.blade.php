@@ -82,8 +82,8 @@
                         Friendly, reliable service.
                     </p>
                     <p class="text-white/50 text-sm mt-3">
-                        <a href="tel:+18155551234" class="text-sunburst hover:text-sunburst-light transition-colors">
-                            (815) 555-1234
+                        <a href="tel:+18153498600" class="text-sunburst hover:text-sunburst-light transition-colors">
+                            (815) 349-8600
                         </a>
                     </p>
                 </div>

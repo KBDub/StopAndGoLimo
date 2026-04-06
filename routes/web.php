@@ -68,8 +68,6 @@ Route::get('/custom-apparel/pattern-shirts', function () {
     return view('pages.custom-apparel.pattern-shirts');
 })->name('custom-apparel.pattern-shirts');
 
-// Renamed: embroidery-shirts → embroidery (301 redirect for old URL)
-Route::redirect('/custom-apparel/embroidery-shirts', '/custom-apparel/embroidery', 301);
 Route::get('/custom-apparel/embroidery', function () {
     return view('pages.custom-apparel.embroidery');
 })->name('custom-apparel.embroidery');
@@ -86,14 +84,10 @@ Route::get('/custom-apparel/reunion-shirts', function () {
     return view('pages.custom-apparel.reunion-shirts');
 })->name('custom-apparel.reunion-shirts');
 
-// Renamed: corporate-wear → corporate-wear-shirts (301 redirect for old URL)
-Route::redirect('/custom-apparel/corporate-wear', '/custom-apparel/corporate-wear-shirts', 301);
 Route::get('/custom-apparel/corporate-wear-shirts', function () {
     return view('pages.custom-apparel.corporate-wear-shirts');
 })->name('custom-apparel.corporate-wear-shirts');
 
-// Renamed: spirit-wear → spirit-wear-shirts (301 redirect for old URL)
-Route::redirect('/custom-apparel/spirit-wear', '/custom-apparel/spirit-wear-shirts', 301);
 Route::get('/custom-apparel/spirit-wear-shirts', function () {
     return view('pages.custom-apparel.spirit-wear-shirts');
 })->name('custom-apparel.spirit-wear-shirts');
@@ -111,12 +105,7 @@ Route::get('/custom-apparel/puff-shirts', function () {
     return view('pages.custom-apparel.puff-shirts');
 })->name('custom-apparel.puff-shirts');
 
-// ─── Design Services (was Design It Yourself) ────────────────────────────────
-
-// 301 redirects from old design-it-yourself URLs
-Route::redirect('/design-it-yourself', '/design-services', 301);
-Route::redirect('/design-it-yourself/online-designer', '/design-services/online-designer', 301);
-Route::redirect('/design-it-yourself/design-catalogs', '/design-services/design-catalogs', 301);
+// ─── Design Services ─────────────────────────────────────────────────────────
 
 Route::get('/design-services', function () {
     return view('pages.design-services.index');
@@ -193,13 +182,7 @@ Route::get('/signs/table-cloths', function () {
     return view('pages.signs.table-cloths');
 })->name('signs.table-cloths');
 
-// ─── Stickers (was Decals) ───────────────────────────────────────────────────
-
-// Keep old /decals routes alive with 301 redirects
-Route::redirect('/decals', '/stickers', 301);
-Route::redirect('/decals/stickers', '/stickers/standard-stickers', 301);
-Route::redirect('/decals/window-wall-floor-decals', '/vehicle-graphics/automobile-graphics', 301);
-Route::redirect('/decals/coronavirus-decals', '/stickers/standard-stickers', 301);
+// ─── Stickers ────────────────────────────────────────────────────────────────
 
 Route::get('/stickers', function () {
     return view('pages.stickers.index');

@@ -47,7 +47,7 @@
                 <p class="text-charcoal-light mb-4">Custom pattern printing for <span class="text-azure underline underline-offset-2">all-over designs</span>, sports uniforms, and more. Consistent, vibrant results for <span class="text-azure underline underline-offset-2">branded team apparel</span>.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Embroidery Shirts" href="/custom-apparel/embroidery-shirts" image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg">
+            <x-ui.card-product title="Embroidery Shirts" href="/custom-apparel/embroidery" image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Classic <span class="text-azure underline underline-offset-2">embroidered logos and text</span> stitched with precision. The most professional, long-lasting finish for <span class="text-azure underline underline-offset-2">corporate apparel</span>.</p>
             </x-ui.card-product>
 

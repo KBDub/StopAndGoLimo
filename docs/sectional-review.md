@@ -575,13 +575,15 @@ These pages exist and are functional but do not follow the standard section temp
 
 Pages that exist in `resources/views/pages/` but have no place in the current megamenu plan.
 
-### A. Old/Duplicate Routes — Delete After Redirect
+### A. Old/Duplicate Routes — ✅ DELETED (2026-04-06)
 
-| URL | Total | Superseded By | Action |
-|---|---|---|---|
-| `/custom-apparel/embroidery-shirts` | 11 | `/custom-apparel/embroidery` | 301 redirect → delete |
-| `/custom-apparel/spirit-wear` | 15 | `/custom-apparel/spirit-wear-shirts` | 301 redirect → delete |
-| `/custom-apparel/corporate-wear` | 15 | `/custom-apparel/corporate-wear-shirts` | 301 redirect → delete |
+Page files and redirect routes for the following have been removed. No redirects were added (pre-launch).
+
+| URL | Superseded By | Status |
+|---|---|---|
+| `/custom-apparel/embroidery-shirts` | `/custom-apparel/embroidery` | ✅ File deleted, route removed |
+| `/custom-apparel/spirit-wear` | `/custom-apparel/spirit-wear-shirts` | ✅ File deleted, route removed |
+| `/custom-apparel/corporate-wear` | `/custom-apparel/corporate-wear-shirts` | ✅ File deleted, route removed |
 
 ### B. Orphaned Apparel Pages — Decision Required
 
@@ -591,22 +593,26 @@ Pages that exist in `resources/views/pages/` but have no place in the current me
 | `/custom-apparel/pattern-shirts` | 11 | Sub-Basic | No mega menu entry. Decide: add to Specialty Materials group or delete |
 | `/custom-apparel/picture-shirts` | 11 | Sub-Basic | No mega menu entry. Decide: add to Specialty Materials group or delete |
 
-### C. Old Decals Group — Refactored, Originals Still Live
+### C. Old Decals Group — ✅ DELETED (2026-04-06)
 
-| URL | Total | Refactored Into | Action |
-|---|---|---|---|
-| `/decals` (index) | 12 | Removed from nav | 301 redirect to `/stickers` → delete |
-| `/decals/stickers` | 15 | `/stickers/standard-stickers` | 301 redirect → delete |
-| `/decals/window-wall-floor-decals` | 15 | No single replacement | Decide: split content across window/wall/floor-signs pages, then 301 → `/signs` |
-| `/decals/coronavirus-decals` | 12 | None | Keep for SEO or 301 → `/stickers` |
+Page files and redirect routes removed (pre-launch, no redirects needed).
 
-### D. Old Design-It-Yourself Group — Refactored, Originals Still Live
+| URL | Refactored Into | Status |
+|---|---|---|
+| `/decals` (index) | `/stickers` | ✅ File deleted, route removed |
+| `/decals/stickers` | `/stickers/standard-stickers` | ✅ File deleted, route removed |
+| `/decals/window-wall-floor-decals` | `/signs/window-signs` | ✅ File deleted, route removed |
+| `/decals/coronavirus-decals` | `/stickers/standard-stickers` | ✅ File deleted, route removed |
 
-| URL | Total | Refactored Into | Action |
-|---|---|---|---|
-| `/design-it-yourself` (index) | 10 | `/design-services` | 301 redirect → delete |
-| `/design-it-yourself/online-designer` | 10 | `/design-services/online-designer` | 301 redirect → delete |
-| `/design-it-yourself/design-catalogs` | 10 | `/design-services/design-catalogs` | 301 redirect → delete |
+### D. Old Design-It-Yourself Group — ✅ DELETED (2026-04-06)
+
+Page files and redirect routes removed (pre-launch, no redirects needed).
+
+| URL | Refactored Into | Status |
+|---|---|---|
+| `/design-it-yourself` (index) | `/design-services` | ✅ File deleted, route removed |
+| `/design-it-yourself/online-designer` | `/design-services/online-designer` | ✅ File deleted, route removed |
+| `/design-it-yourself/design-catalogs` | `/design-services/design-catalogs` | ✅ File deleted, route removed |
 
 ### E. Other Orphaned Pages
 

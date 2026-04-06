@@ -22,11 +22,11 @@
 
             <x-ui.card-product
                 title="Corporate Wear"
-                href="/custom-apparel/corporate-wear"
+                href="/custom-apparel/corporate-wear-shirts"
                 image="/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/corporate-wear" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
+                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/corporate-wear-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
                 </p>
             </x-ui.card-product>
 
@@ -62,11 +62,11 @@
 
             <x-ui.card-product
                 title="Custom Stickers"
-                href="/decals/stickers"
+                href="/stickers/standard-stickers"
                 image="/images/stickers-decals/top5pct-banner-stickers-decals-joliet.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for custom stickers or labels?</strong> High-quality <a href="/decals/stickers" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">die-cut stickers and labels</a> for branding, packaging, giveaways, and promotions. We also offer <a href="/decals/window-wall-floor-decals" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">window and wall decals</a> for storefronts and office spaces.
+                    <strong class="text-charcoal">Looking for custom stickers or labels?</strong> High-quality <a href="/stickers/standard-stickers" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">die-cut stickers and labels</a> for branding, packaging, giveaways, and promotions. We also offer <a href="/signs/window-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">window and wall decals</a> for storefronts and office spaces.
                 </p>
             </x-ui.card-product>
 
@@ -76,7 +76,7 @@
                 image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/dtf-transfers" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. You can even <a href="/design-it-yourself" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">design your own transfer online</a> and we will handle the rest.
+                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/dtf-transfers" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. You can even <a href="/design-services/online-designer" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">design your own transfer online</a> and we will handle the rest.
                 </p>
             </x-ui.card-product>
 

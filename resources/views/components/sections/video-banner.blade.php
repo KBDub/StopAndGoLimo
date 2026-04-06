@@ -3,6 +3,8 @@
     'heading'    => 'See Our Work',
     'label'      => 'See our craft in action',
     'subheading' => 'From design to finished product, see the quality and care that goes into every product we produce at Top 5 Percent in Joliet, Illinois.',
+    'ctaText'    => 'Get a Free Quote',
+    'ctaHref'    => '/contact',
 ])
 
 <section class="py-10 bg-linen">
@@ -29,7 +31,7 @@
             </iframe>
         </div>
         <div class="text-center mt-8">
-            <x-ui.button-gold-gradient href="/contact">Get a Free Quote</x-ui.button-gold-gradient>
+            <x-ui.button-gold-gradient :href="$ctaHref">{{ $ctaText }}</x-ui.button-gold-gradient>
         </div>
     </div>
 </section>

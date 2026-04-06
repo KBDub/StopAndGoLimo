@@ -39,7 +39,7 @@
                         <span class="text-charcoal">See instant pricing as you design</span>
                     </li>
                 </ul>
-                <x-ui.button-blue-white href="/design-it-yourself">
+                <x-ui.button-blue-white href="/design-services">
                     Start Designing
                 </x-ui.button-blue-white>
             </div>

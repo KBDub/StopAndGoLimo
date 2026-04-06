@@ -102,11 +102,7 @@ Used on specialty apparel techniques and design services where no live e-commerc
 **Design Services:**
 `/design-services/logo-design` · `/design-services/graphic-design` · `/design-services/online-designer` · `/design-services/design-catalogs`
 
-**Orphaned — Old Design-It-Yourself:**
-`/design-it-yourself` · `/design-it-yourself/online-designer` · `/design-it-yourself/design-catalogs`
-
-**Orphaned — Old Apparel duplicates:**
-`/custom-apparel/embroidery-shirts` · `/custom-apparel/pattern-shirts` · `/custom-apparel/picture-shirts`
+> `pattern-shirts` and `picture-shirts` remain as pages without a mega menu entry — see `docs/sectional-review.md` Section 12B.
 
 #### A4 — Unique / Special Variants
 
@@ -138,15 +134,13 @@ Used on specialty apparel techniques and design services where no live e-commerc
 | Group | Pages |
 |---|---|
 | Home | `/` |
-| Custom Apparel | `/custom-apparel` · all sub-pages · orphaned apparel pages |
-| Signs | `/signs` · all sub-pages · orphaned signs pages |
+| Custom Apparel | `/custom-apparel` · all sub-pages |
+| Signs | `/signs` · all sub-pages |
 | Vehicle Graphics | `/vehicle-graphics` · all sub-pages |
 | Stickers | `/stickers` · all sub-pages |
 | Promotional Items | `/promotional-items` · all sub-pages |
 | Design Services | `/design-services` · all sub-pages |
 | Merchandise | `/top5pct-merchandise` |
-| Decals (orphaned) | `/decals` · all decals sub-pages |
-| Design-It-Yourself (orphaned) | `/design-it-yourself` · all sub-pages |
 | About Us | `/about` · `/portfolio` · `/stores` · `/contact` · `/company` · `/company/resources` |
 | Templates | `/collection` · `/product` |
 | Demo | `/demo` |
@@ -177,9 +171,7 @@ Used on specialty apparel techniques and design services where no live e-commerc
 **Background:** Warm gradient (sunburst accents) — identical styling to `cta-free-quote`
 **Headline:** "Have a design in mind?"
 **Subtext:** "Use our free online tool to create your custom product in minutes."
-**Button:** "Start Designing" → `/design-it-yourself/online-designer` ⚠️ (charcoal/gold style)
-
-> ⚠️ **Old URL** — points to the deprecated `/design-it-yourself/online-designer` path. Should be updated to `/design-services/online-designer`. See Section 6.
+**Button:** "Start Designing" → `/design-services/online-designer` (charcoal/gold style)
 
 **Present on:** `/` (Home) · `/demo`
 
@@ -243,7 +235,7 @@ These CTAs live inside sections that are only rendered on the Home page (`/`).
 | Section Component | Button Text | Destination | Notes |
 |---|---|---|---|
 | `sections.our-services` | View All Products | `/top5pct-merchandise` | Text-link style at bottom of services grid |
-| `sections.design-it-yourself` | *(label TBD — needs reading)* | `/design-it-yourself` ⚠️ | Blue/white button; old URL — see §6 |
+| `sections.design-it-yourself` | Start Designing | `/design-services` | Blue/white button |
 
 ---
 
@@ -305,23 +297,17 @@ These are two **different** numbers. One of them is the real business number and
 
 ---
 
-### Issue 2 — `cta-design-your-own` Points to Old URL
+### ~~Issue 2 — `cta-design-your-own` Points to Old URL~~ ✅ FIXED (2026-04-06)
 
 **Component:** `sections.cta-design-your-own`
-**Current href:** `/design-it-yourself/online-designer`
-**Correct href:** `/design-services/online-designer`
-
-The `/design-it-yourself/` group has been superseded by `/design-services/`. This button needs updating.
+Updated to `/design-services/online-designer`.
 
 ---
 
-### Issue 3 — `sections.design-it-yourself` (Home) Points to Old URL
+### ~~Issue 3 — `sections.design-it-yourself` (Home) Points to Old URL~~ ✅ FIXED (2026-04-06)
 
 **Component:** `sections.design-it-yourself` (home section)
-**Current href:** `/design-it-yourself`
-**Correct href:** `/design-services`
-
-Same issue — the home page section linking to the design tool points at the old route.
+Updated to `/design-services`.
 
 ---
 
@@ -344,12 +330,10 @@ All other pages use the phone number for their hero secondary button. This page 
 
 ---
 
-### Issue 6 — `video-banner` CTA is Hardcoded
+### ~~Issue 6 — `video-banner` CTA is Hardcoded~~ ✅ FIXED (2026-04-06)
 
 **Component:** `sections.video-banner`
-**CTA text:** "Get a Free Quote" → `/contact`
-
-The button text and href are hardcoded inside the component, not exposed as props. If the video banner is ever used on a page that should point somewhere else (e.g. a product collection), the component will need a `ctaText` / `ctaHref` prop added.
+Added `ctaText` (default: `'Get a Free Quote'`) and `ctaHref` (default: `'/contact'`) props. Existing usages are unaffected by the defaults.
 
 ---
 

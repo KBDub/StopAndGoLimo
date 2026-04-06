@@ -17,7 +17,7 @@
     primaryCta="Shop custom apparel"
     primaryHref="/custom-apparel"
     secondaryCta="Design your own"
-    secondaryHref="/design-it-yourself"
+    secondaryHref="/design-services"
     layout="center"
 />
 
@@ -48,7 +48,7 @@
     primaryCta="Shop custom apparel"
     primaryHref="/custom-apparel"
     secondaryCta="Design your own"
-    secondaryHref="/design-it-yourself"
+    secondaryHref="/design-services"
     layout="center"
 /&gt;
 

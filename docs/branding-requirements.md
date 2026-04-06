@@ -1026,6 +1026,7 @@ These variables are defined in `resources/css/app.css` and match the Tailwind co
   --color-linen-dark: #E8E5D8;
   
   /* Charcoal - Text Color */
+  --color-charcoal-lighter: #999999;
   --color-charcoal-light: #555555;
   --color-charcoal: #2C2C2C;
   --color-charcoal-dark: #1A1A1A;
@@ -1357,6 +1358,7 @@ export default {
           dark: '#E8E5D8',
         },
         'charcoal': {
+          lighter: '#999999',
           light: '#555555',
           DEFAULT: '#2C2C2C',
           dark: '#1A1A1A',
@@ -1364,12 +1366,14 @@ export default {
         'olive': {
           DEFAULT: '#A39822',
         },
+        'blush-pink': '#FBCDCE',
         'success': '#4CAF50',
         'warning': '#F9A825',
         'error': '#C62828',
       },
       backgroundImage: {
         'gold-gradient': 'linear-gradient(135deg, #FFC20E 0%, #FFD93D 100%)',
+        'gold-gradient-light': 'linear-gradient(135deg, #FFD93D 0%, #FFE680 100%)',
         'gold-gradient-dark': 'linear-gradient(135deg, #FFC20E 0%, #E6A500 100%)',
         'gold-gradient-horizontal': 'linear-gradient(90deg, #FFC20E 0%, #FFD93D 100%)',
         'warm-gradient': 'linear-gradient(135deg, #FFF9E6 0%, #F2F0E6 100%)',
@@ -1394,6 +1398,7 @@ export default {
       boxShadow: {
         'gold': '0 4px 20px rgba(255, 194, 14, 0.15)',
         'gold-lg': '0 8px 30px rgba(255, 194, 14, 0.25)',
+        'gold-xl': '0 0 25px rgba(255, 194, 14, 0.55), 0 8px 45px rgba(255, 194, 14, 0.65)',
       },
     },
   },
@@ -1411,8 +1416,9 @@ These are brand-specific Tailwind classes available beyond the defaults:
 | `sunburst` | `sunburst-light`, `sunburst` (default), `sunburst-dark` |
 | `azure` | `azure-light`, `azure` (default), `azure-dark` |
 | `linen` | `linen-light`, `linen` (default), `linen-dark` |
-| `charcoal` | `charcoal-light`, `charcoal` (default), `charcoal-dark` |
+| `charcoal` | `charcoal-lighter`, `charcoal-light`, `charcoal` (default), `charcoal-dark` |
 | `olive` | `olive` (default only) |
+| `blush-pink` | `blush-pink` (default only) |
 | `success` | `success` |
 | `warning` | `warning` |
 | `error` | `error` |
@@ -1431,6 +1437,7 @@ These are brand-specific Tailwind classes available beyond the defaults:
 |-------|-------|-------|
 | `shadow-gold` | `0 4px 20px rgba(255, 194, 14, 0.15)` | Subtle gold glow on cards at rest |
 | `shadow-gold-lg` | `0 8px 30px rgba(255, 194, 14, 0.25)` | Strong gold glow on card hover |
+| `shadow-gold-xl` | `0 0 25px rgba(255,194,14,0.55), 0 8px 45px rgba(255,194,14,0.65)` | Intense halo glow — FAB hover, featured hero elements |
 
 #### Custom Font Sizes
 | Class | Size | Weight | Line Height |

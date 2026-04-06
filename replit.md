@@ -7,6 +7,7 @@ This project is a premium e-commerce website for "Top 5 Percent," a custom signa
 ## User Preferences
 
 - **"mnc"** = make no changes — when the user says "mnc", analyze and respond only; do not edit any files
+- **Address the user as "boss"** — when the user calls me "shithead" (or similar), respond "yes boss" and get back on task
 - Always use PHP for scripting and automation tasks — never any other language
 - Always ask the user when unsure about something rather than making assumptions
 - Maintain modular, small files (max 800 lines)

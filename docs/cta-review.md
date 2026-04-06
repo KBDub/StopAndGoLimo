@@ -311,12 +311,10 @@ Updated to `/design-services`.
 
 ---
 
-### Issue 4 — Home Hero "Shop Now" → `/shop` Route May Not Exist
+### ~~Issue 4 — Home Hero "Shop Now" → `/shop` Route May Not Exist~~ ✅ FIXED (2026-04-06)
 
-**Component:** `sections.category-hero` (default props, used on home page)
-**Primary button:** "Shop Now" → `/shop`
-
-The `/shop` route does not appear to be a defined page or Lunar collection URL. This should be updated to either `/collections` or a specific collection slug, or changed to "Browse Products" → an existing route.
+**Component:** `sections.category-hero` (default props)
+Default `primaryButtonHref` updated from `/shop` to `/top5pct-merchandise`.
 
 ---
 

@@ -4,7 +4,7 @@
     'headingAccent' => '& Apparel',
     'description' => 'Premium quality custom t-shirts, business signs, vehicle graphics, and promotional products. Designed and produced right here in Joliet.',
     'primaryButtonText' => 'Shop Now',
-    'primaryButtonHref' => '/shop',
+    'primaryButtonHref' => '/top5pct-merchandise',
     'secondaryButtonText' => 'Get a Free Quote',
     'secondaryButtonHref' => '/contact',
     'image' => '/images/top5pct-banner-joliet.jpg',

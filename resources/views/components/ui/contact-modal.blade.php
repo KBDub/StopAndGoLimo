@@ -71,7 +71,7 @@
 
             <button
                 type="button"
-                class="relative flex items-center gap-2 px-5 py-3 rounded-full bg-gold-gradient text-charcoal text-sm font-semibold tracking-wide shadow-gold-xl transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-gold-xl active:translate-y-0 whitespace-nowrap select-none"
+                class="relative flex items-center gap-2 px-5 py-3 bg-gold-gradient text-charcoal text-sm font-semibold tracking-wide shadow-gold-xl transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-gold-xl active:translate-y-0 whitespace-nowrap select-none"
                 aria-label="{{ $buttonLabel }} — open contact form"
                 @click="openModal()"
             >
@@ -104,7 +104,7 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full bg-white rounded-[0.625rem] shadow-2xl overflow-y-auto overscroll-contain"
+            class="relative w-full bg-white shadow-2xl overflow-y-auto overscroll-contain"
             style="max-width:34rem;max-height:92dvh;"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
@@ -136,7 +136,7 @@
 
                 <button
                     type="button"
-                    class="flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0 -mt-0.5 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
+                    class="flex items-center justify-center w-8 h-8 flex-shrink-0 -mt-0.5 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
                     @click="closeModal()"
                     aria-label="Close contact form"
                 >
@@ -168,7 +168,7 @@
                 novalidate
             >
                 {{-- Error banner --}}
-                <div x-show="error" class="flex items-center gap-2 px-4 py-3 rounded bg-error/10 text-error text-sm font-medium">
+                <div x-show="error" class="flex items-center gap-2 px-4 py-3 bg-error/10 text-error text-sm font-medium">
                     <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
@@ -186,7 +186,7 @@
                             required
                             autocomplete="name"
                             placeholder="Your full name"
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark rounded focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                         >
                     </div>
                     <div>
@@ -197,7 +197,7 @@
                             type="tel"
                             autocomplete="tel"
                             placeholder="(815) 000-0000"
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark rounded focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                         >
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                         required
                         autocomplete="email"
                         placeholder="you@example.com"
-                        class="w-full px-3 py-2.5 text-sm border border-linen-dark rounded focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                     >
                 </div>
 
@@ -223,14 +223,14 @@
                         required
                         rows="4"
                         placeholder="Tell us about your project — product type, quantity, deadline, etc."
-                        class="w-full px-3 py-2.5 text-sm border border-linen-dark rounded focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
+                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
                     ></textarea>
                 </div>
 
                 <button
                     type="submit"
                     :disabled="loading"
-                    class="w-full py-3 px-6 bg-gold-gradient text-charcoal font-semibold rounded text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
+                    class="w-full py-3 px-6 bg-gold-gradient text-charcoal font-semibold text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                     <span x-show="!loading">Send Message</span>
                     <span x-show="loading" class="flex items-center justify-center gap-2">

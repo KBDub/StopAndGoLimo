@@ -216,7 +216,7 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full flex flex-col rounded-[0.625rem] shadow-2xl overflow-hidden"
+            class="relative w-full flex flex-col shadow-2xl overflow-hidden"
             style="max-width:{{ $maxWidth }};max-height:{{ $maxHeight }};background:{{ $vt['bodyBg'] }};"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
@@ -243,7 +243,7 @@
                 >
                     @if ($hasIcon)
                         <div
-                            class="flex items-center justify-center w-9 h-9 rounded-lg flex-shrink-0"
+                            class="flex items-center justify-center w-9 h-9 flex-shrink-0"
                             style="background:{{ $vt['iconBg'] }};"
                             aria-hidden="true"
                         >
@@ -264,7 +264,7 @@
                     @if ($dismissible)
                         <button
                             type="button"
-                            class="flex items-center justify-center w-8 h-8 rounded-full flex-shrink-0 border-none cursor-pointer transition-colors duration-150"
+                            class="flex items-center justify-center w-8 h-8 flex-shrink-0 border-none cursor-pointer transition-colors duration-150"
                             style="color:{{ $vt['closeColor'] }};background:transparent;"
                             @click="close()"
                             aria-label="Close modal"

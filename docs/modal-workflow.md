@@ -355,3 +355,98 @@ The wizard is the intended base for contact and order submission flows. The gene
 4. Optionally swap the final step's slot content to a success/confirmation state after submission.
 
 See the **Demo / Living Documentation Page** (`/demo/modals`) for a working 3-step wizard example.
+
+---
+
+## Branding Compliance Report
+
+**Source of truth:** `docs/branding-requirements.md`
+**Scope:** All five modal components audited against branding rules.
+
+---
+
+### Rule: No inline CSS except when absolutely required
+
+Inline styles are only justified when a value cannot be expressed as a static Tailwind class — for example, a PHP-computed dynamic value that changes per instance at render time.
+
+#### `x-ui.modal` — JUSTIFIED (dynamic variant system)
+
+All inline styles in this component are driven by the `$vt[]` array populated from the `variant` prop at render time. Because the values are dynamic PHP expressions, they cannot be Tailwind classes. This use of inline styles is **acceptable as-is**.
+
+#### `x-ui.modal-wizard` — VIOLATIONS FOUND
+
+The wizard uses hardcoded raw hex values in inline styles where equivalent Tailwind tokens already exist in the project. These are **not** dynamic and have no justification for being inline.
+
+| Element | Current inline style | Should be |
+|---|---|---|
+| Gold accent stripe | `style="background:linear-gradient(90deg,#FFC20E 0%,#FFD93D 100%);"` | `class="bg-gold-gradient"` (or `bg-sunburst`) |
+| Header div | `style="background:#F2F0E6;border-bottom-color:#FFC20E;"` | `class="bg-linen border-b-2 border-sunburst"` |
+| Footer div | `style="background:#FAF9F5;border-top-color:#E8E5D8;"` | `class="bg-linen border-t border-linen-dark"` |
+| Next button | `style="background:linear-gradient(135deg,#FFC20E 0%,#FFD93D 100%);"` | `class="bg-gold-gradient"` |
+| Finish button | `style="background:linear-gradient(135deg,#FFC20E 0%,#FFD93D 100%);"` | `class="bg-gold-gradient"` |
+
+The `max-width` panel style (`style="max-width:{{ $maxWidth }};max-height:92dvh;"`) is dynamic (PHP-computed from the `size` prop) and is **acceptable**.
+
+#### `x-ui.modal-wizard` — ADDITIONAL VIOLATION: bare `<button>` tags
+
+The Back, Next, and Finish navigation buttons are bare `<button>` elements with raw Tailwind classes and inline styles. Per branding requirements, these should use the established `x-ui.button-*` components for consistency.
+
+| Button | Current | Should be |
+|---|---|---|
+| Back | bare `<button>` with `border border-linen-dark` classes | `x-ui.button-outline-charcoal` or `x-ui.button-white-charcoal` |
+| Next | bare `<button>` with inline gradient style | `x-ui.button-gold-gradient` |
+| Finish | bare `<button>` with inline gradient style | `x-ui.button-gold-gradient` |
+
+#### `x-ui.contact-modal` — PARTIALLY JUSTIFIED
+
+The panel `max-width` and `max-height` are hardcoded (`style="max-width:34rem;max-height:92dvh;"`). Unlike `x-ui.modal`, this component has no size prop and these values never change, so they are **not** justified as inline styles — they are magic numbers that should be expressed as Tailwind utility classes or added as a prop.
+
+All other inline styles in this component are within the FAB button's gradient and shadow, which match the `bg-gold-gradient` / `shadow-gold-xl` tokens and should be converted.
+
+#### `x-ui.modal-quick-view` — VIOLATION
+
+Contains `style="display: none;"` directly on the outer wrapper `<div>`. Alpine.js `x-show` already handles visibility — this inline style is redundant and should be removed.
+
+#### `x-ui.modal` (demo page) — VIOLATION in demo, not component
+
+The demo page at `resources/views/pages/demo/modals.blade.php` contains several bare `<button>` tags with raw Tailwind classes (e.g., the Confirm and Delete Permanently buttons in variant demos). These should use `x-ui.button-*` components. This does not affect production pages but sets a bad precedent in the living documentation.
+
+---
+
+### Rule: Square corners — no `rounded-*` on panels, overlays, or form inputs
+
+| Component | Status | Notes |
+|---|---|---|
+| `x-ui.modal` panel | PASS | No border-radius applied |
+| `x-ui.modal-wizard` panel | PASS | No border-radius applied |
+| `x-ui.contact-modal` panel | PASS | No border-radius applied |
+| `x-ui.contact-modal` FAB pulse halo | PASS | `rounded-full` on halo ring only — permitted exception |
+| `x-ui.contact-modal` form inputs | PASS | No border-radius on inputs |
+| `x-ui.modal-quick-view` close button | FAIL | Uses `rounded-full` on the close button inside the panel — not permitted |
+
+---
+
+### Rule: Use established colour tokens, not raw hex values
+
+Outside of the justified dynamic variant system in `x-ui.modal`, raw hex values appear in:
+
+- `x-ui.modal-wizard` — five locations (detailed in the inline CSS section above)
+- `x-ui.contact-modal` — FAB button gradient and shadow match token names but are applied via Tailwind class names correctly (`bg-gold-gradient`, `shadow-gold-xl`) — **PASS**
+- `x-ui.modal-quick-view` — colour classes are token-based throughout — **PASS**
+
+---
+
+### Summary
+
+| Component | Inline CSS | Bare buttons | Square corners | Colour tokens |
+|---|---|---|---|---|
+| `x-ui.modal` | PASS (justified) | N/A | PASS | PASS (justified) |
+| `x-ui.modal-wizard` | **FAIL** | **FAIL** | PASS | **FAIL** |
+| `x-ui.modal-trigger` | PASS | N/A | N/A | PASS |
+| `x-ui.contact-modal` | **FAIL** (hardcoded max-width) | N/A | PASS | PASS |
+| `x-ui.modal-quick-view` | **FAIL** (`display:none`) | N/A | **FAIL** (close btn) | PASS |
+
+**Priority remediation order before building the DTF/order wizard:**
+1. `x-ui.modal-wizard` — replace all hardcoded inline styles with Tailwind tokens and replace bare navigation buttons with `x-ui.button-*` components. This is the base for the new workflow.
+2. `x-ui.modal-quick-view` — remove `style="display:none;"` and `rounded-full` on the close button.
+3. `x-ui.contact-modal` — convert hardcoded panel dimensions to Tailwind utilities or a prop.

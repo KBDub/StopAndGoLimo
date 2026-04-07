@@ -369,9 +369,25 @@ See the **Demo / Living Documentation Page** (`/demo/modals`) for a working 3-st
 
 Inline styles are only justified when a value cannot be expressed as a static Tailwind class — for example, a PHP-computed dynamic value that changes per instance at render time.
 
-#### `x-ui.modal` — JUSTIFIED (dynamic variant system)
+#### `x-ui.modal` — VIOLATION (dynamic variant system)
 
-All inline styles in this component are driven by the `$vt[]` array populated from the `variant` prop at render time. Because the values are dynamic PHP expressions, they cannot be Tailwind classes. This use of inline styles is **acceptable as-is**.
+All inline styles in this component are driven by the `$vt[]` array populated from the `variant` prop at render time. Although the values are dynamic PHP expressions, that does not make them compliant — runtime inline styles are **never processed by Tailwind's compiler**, meaning these colour values exist entirely outside the compiled CSS pipeline. The correct approach is to express each variant as a compiled Tailwind class combination (or CSS custom property set) so the output is static, cacheable, and token-based. The entire variant colour system requires standardisation.
+
+| Element | Current (non-compliant) | Compliant approach |
+|---|---|---|
+| Accent stripe | `style="background:{{ $vt['stripe'] }};"` | Variant-specific Tailwind class e.g. `bg-gold-gradient`, `bg-success` |
+| Header background | `style="background:{{ $vt['headerBg'] }};"` | e.g. `bg-linen`, `bg-charcoal`, `bg-gold-gradient` per variant |
+| Header border | `style="border-bottom-color:{{ $vt['headerBdr'] }};"` | e.g. `border-sunburst`, `border-success`, `border-error` |
+| Body background | `style="background:{{ $vt['bodyBg'] }};"` | e.g. `bg-white`, `bg-charcoal-dark` |
+| Body text colour | `style="color:{{ $vt['bodyColor'] }};"` | e.g. `text-charcoal`, `text-white` |
+| Title colour | `style="color:{{ $vt['titleColor'] }};"` | e.g. `text-charcoal`, `text-white` |
+| Icon background | `style="background:{{ $vt['iconBg'] }};"` | e.g. `bg-sunburst/15`, `bg-success/15` |
+| Icon colour | `style="color:{{ $vt['iconColor'] }};"` | e.g. `text-sunburst`, `text-success` |
+| Close button colour | `style="color:{{ $vt['closeColor'] }};"` | e.g. `text-charcoal-light`, `text-white/60` |
+| Footer background | `style="background:{{ $vt['footerBg'] }};"` | e.g. `bg-linen-light`, `bg-charcoal-dark` |
+| Footer border | `style="border-top-color:{{ $vt['footerBdr'] }};"` | e.g. `border-linen-dark`, `border-white/10` |
+
+The `max-width` and `max-height` panel styles remain acceptable — they are computed from the `size` prop and cannot be expressed as static classes without an exhaustive Tailwind safelist.
 
 #### `x-ui.modal-wizard` — VIOLATIONS FOUND
 
@@ -397,11 +413,11 @@ The Back, Next, and Finish navigation buttons are bare `<button>` elements with 
 | Next | bare `<button>` with inline gradient style | `x-ui.button-gold-gradient` |
 | Finish | bare `<button>` with inline gradient style | `x-ui.button-gold-gradient` |
 
-#### `x-ui.contact-modal` — PARTIALLY JUSTIFIED
+#### `x-ui.contact-modal` — VIOLATIONS FOUND
 
-The panel `max-width` and `max-height` are hardcoded (`style="max-width:34rem;max-height:92dvh;"`). Unlike `x-ui.modal`, this component has no size prop and these values never change, so they are **not** justified as inline styles — they are magic numbers that should be expressed as Tailwind utility classes or added as a prop.
+The panel `max-width` and `max-height` are hardcoded (`style="max-width:34rem;max-height:92dvh;"`). This component has no size prop and these values never change — they are not justified as inline styles. They should be expressed as Tailwind utility classes or exposed as a prop.
 
-All other inline styles in this component are within the FAB button's gradient and shadow, which match the `bg-gold-gradient` / `shadow-gold-xl` tokens and should be converted.
+Additional inline styles exist within the FAB button area that match token names (`bg-gold-gradient`, `shadow-gold-xl`) but are applied as inline styles instead of Tailwind classes. All should be converted.
 
 #### `x-ui.modal-quick-view` — VIOLATION
 
@@ -428,11 +444,12 @@ The demo page at `resources/views/pages/demo/modals.blade.php` contains several 
 
 ### Rule: Use established colour tokens, not raw hex values
 
-Outside of the justified dynamic variant system in `x-ui.modal`, raw hex values appear in:
+Raw hex values (non-compiled, not passing through Tailwind) appear in:
 
-- `x-ui.modal-wizard` — five locations (detailed in the inline CSS section above)
-- `x-ui.contact-modal` — FAB button gradient and shadow match token names but are applied via Tailwind class names correctly (`bg-gold-gradient`, `shadow-gold-xl`) — **PASS**
-- `x-ui.modal-quick-view` — colour classes are token-based throughout — **PASS**
+- `x-ui.modal` — all variant colours are raw hex in inline styles (detailed in the inline CSS section above)
+- `x-ui.modal-wizard` — five additional hardcoded hex locations (detailed in the inline CSS section above)
+- `x-ui.contact-modal` — FAB area inline styles use token names as string values but bypass the compiled CSS pipeline — **FAIL**
+- `x-ui.modal-quick-view` — colour classes are token-based and Tailwind-compiled throughout — **PASS**
 
 ---
 
@@ -440,13 +457,14 @@ Outside of the justified dynamic variant system in `x-ui.modal`, raw hex values 
 
 | Component | Inline CSS | Bare buttons | Square corners | Colour tokens |
 |---|---|---|---|---|
-| `x-ui.modal` | PASS (justified) | N/A | PASS | PASS (justified) |
+| `x-ui.modal` | **FAIL** (entire variant system) | N/A | PASS | **FAIL** (all raw hex) |
 | `x-ui.modal-wizard` | **FAIL** | **FAIL** | PASS | **FAIL** |
 | `x-ui.modal-trigger` | PASS | N/A | N/A | PASS |
-| `x-ui.contact-modal` | **FAIL** (hardcoded max-width) | N/A | PASS | PASS |
+| `x-ui.contact-modal` | **FAIL** | N/A | PASS | **FAIL** |
 | `x-ui.modal-quick-view` | **FAIL** (`display:none`) | N/A | **FAIL** (close btn) | PASS |
 
 **Priority remediation order before building the DTF/order wizard:**
-1. `x-ui.modal-wizard` — replace all hardcoded inline styles with Tailwind tokens and replace bare navigation buttons with `x-ui.button-*` components. This is the base for the new workflow.
-2. `x-ui.modal-quick-view` — remove `style="display:none;"` and `rounded-full` on the close button.
-3. `x-ui.contact-modal` — convert hardcoded panel dimensions to Tailwind utilities or a prop.
+1. `x-ui.modal` — rebuild the variant colour system using compiled Tailwind classes per variant instead of the runtime `$vt[]` PHP array and inline styles. This is the foundation all other components inherit patterns from.
+2. `x-ui.modal-wizard` — replace all hardcoded inline styles with Tailwind tokens and replace bare navigation buttons with `x-ui.button-*` components. This is the direct base for the new order workflow.
+3. `x-ui.modal-quick-view` — remove `style="display:none;"` and `rounded-full` on the close button.
+4. `x-ui.contact-modal` — convert all inline styles to Tailwind utilities.

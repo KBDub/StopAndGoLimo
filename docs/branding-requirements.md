@@ -353,7 +353,7 @@ Full-width image and video banners for visual breaks between sections. All accep
 
 ### Modal System
 
-The modal system is the authoritative interactive overlay mechanism for the site. Four components work together.
+The modal system is the authoritative interactive overlay mechanism for the site. Five components work together.
 
 #### x-ui.modal
 
@@ -369,10 +369,12 @@ Named, slot-driven modal. Unlimited instances can coexist on a page without conf
 | `variant` | string | `default` | `default` / `dark` / `gold` / `success` / `warning` / `danger` |
 | `dismissible` | bool | `true` | Shows ✕ button and allows backdrop/Escape to close |
 | `scrollBody` | bool | `true` | Inner body scrolls; header and footer remain sticky |
-| `maxHeight` | string | `92dvh` | CSS max-height override |
+| `maxHeight` | string | `92dvh` | CSS max-height override (e.g. `"80dvh"`) |
+| `maxWidth` | string | `null` | CSS max-width override — bypasses the `size` preset when set (e.g. `"26rem"`) |
 | `headerClass` | string | `''` | Extra classes on the header div |
 | `bodyClass` | string | `''` | Extra classes on the body div |
 | `footerClass` | string | `''` | Extra classes on the footer div |
+| `panelClass` | string | `''` | Extra classes on the panel div (rare — e.g. layout overrides) |
 
 **Slots:** `default` (body), `title` (HTML heading), `header` (full header override), `icon` (left of title), `footer` (action buttons)
 
@@ -386,6 +388,10 @@ Named, slot-driven modal. Unlimited instances can coexist on a page without conf
 | `modal-closed` | `{ name }` | fires after close |
 
 **Branding rule — square corners:** Modal panels use `0` border-radius. Do not add `rounded`, `rounded-lg`, or any other border-radius to modal panels, overlays, or form inputs inside modals. Only the pulse halo ring on the FAB button retains `rounded-full`.
+
+**Branding rule — footer buttons:** Do **not** use `x-ui.button-*` page components (`px-8 py-4`) inside modal footers — they are designed for page-level CTAs and are too large. Modal footer buttons must use bare `<button>` or `x-ui.modal-trigger` elements with `px-4 py-2` or `px-5 py-2` and `text-sm font-semibold` plus the appropriate brand token classes (`bg-gold-gradient`, `border-linen-dark`, etc.).
+
+**Branding rule — dropdowns inside modals:** The modal body has `overflow-x-hidden` which causes the browser to also clip `overflow-y`, preventing absolutely-positioned dropdown lists from rendering fully. **Never use absolute-positioned dropdowns inside a modal body.** Instead, render option lists inline (in normal document flow) with `max-h-[10rem] overflow-y-auto scrollbar-sunburst` to constrain height and enable branded scrolling.
 
 **Z-index:** Backdrop at `z-[9800]`, panel inside the backdrop.
 
@@ -500,6 +506,50 @@ Do not add this component to individual page files — it is already present via
 {{-- Already in layouts/page.blade.php — do not add to page files --}}
 {{-- Override props only if you need a custom label on a specific page --}}
 <x-ui.contact-modal button-label="Get a Quote" />
+```
+
+#### x-ui.modal-quick-view
+
+Inline product preview overlay. Opens via the `open-quick-view` window event (not `open-modal`). Used on product listing pages to preview a product without navigating away. Each instance is self-contained and matched by its DOM element ID.
+
+**Props:**
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `title` | string | `''` | Product name |
+| `price` | string | `''` | Display price (e.g. `'$49.99'`) |
+| `originalPrice` | string | `null` | Strike-through original price if on sale |
+| `description` | string | `''` | Short product description |
+| `image` | string | `null` | Single image URL (used when `images` is empty) |
+| `images` | array | `[]` | Array of image URLs for the carousel |
+| `href` | string | `'#'` | "View full product" link |
+| `variants` | array | `[]` | Array of variant option strings (e.g. `['S', 'M', 'L']`) |
+
+**Event API:**
+
+| Event | Payload | Direction |
+|-------|---------|-----------|
+| `open-quick-view` | `{ id: elementId }` | dispatch to open a specific instance |
+
+**Z-index:** Overlay at `z-50`.
+
+**Branding notes:** Square corners on the panel. No `rounded-*`. The close button uses `rounded-full` only on the icon circle — this is the one permitted exception alongside the FAB halo.
+
+```blade
+{{-- Trigger (dispatches open-quick-view with the element ID) --}}
+<button @click="$dispatch('open-quick-view', { id: 'qv-banner-001' })">
+    Quick View
+</button>
+
+<x-ui.modal-quick-view
+    id="qv-banner-001"
+    title="Custom Banner"
+    price="$49.99"
+    description="Full-colour indoor/outdoor vinyl banner."
+    :images="['/images/products/banner-1.jpg', '/images/products/banner-2.jpg']"
+    href="/products/custom-banner"
+    :variants="['24×36\"', '36×48\"', '48×72\"']"
+/>
 ```
 
 ```blade

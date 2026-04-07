@@ -396,10 +396,10 @@ Items confirmed for implementation, not yet executed. Ordered roughly by effort 
 
 ---
 
-### TODO-2 — Global Smooth Scrolling
+### ~~TODO-2 — Global Smooth Scrolling~~ ✅ DONE (2026-04-06)
 
 **File:** `resources/css/app.css`
-**Change:** Add `html { scroll-behavior: smooth; }` globally. Ensures all in-page anchor navigation (A1/A2 hero buttons, Get Directions, any `#section` link) scrolls smoothly instead of jumping.
+`html { scroll-behavior: smooth; }` added globally. All in-page anchor navigation (A1/A2 hero buttons, any `#section` link) now scrolls smoothly instead of jumping.
 
 ---
 

@@ -763,7 +763,7 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
-                    class="w-full bg-white border border-linen-dark border-t-0 shadow-gold"
+                    class="w-full bg-white border border-linen-dark border-t-0 shadow-gold max-h-[10rem] overflow-y-auto"
                 >
                     <template x-for="opt in options" :key="opt.value">
                         <button
@@ -905,7 +905,7 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="opacity-100"
                     x-transition:leave-end="opacity-0"
-                    class="w-full bg-white border border-linen-dark border-t-0 shadow-gold"
+                    class="w-full bg-white border border-linen-dark border-t-0 shadow-gold max-h-[10rem] overflow-y-auto"
                 >
                     <template x-for="c in colors" :key="c.value">
                         <button

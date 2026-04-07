@@ -88,13 +88,8 @@
     <x-ui.modal name="demo-default" title="Default Variant" variant="default" size="md">
         <p>White body, linen header, gold stripe. The standard modal for forms and general content.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-default" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Cancel
-            </x-ui.modal-trigger>
-            <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                Confirm
-            </button>
+            <x-ui.button-modal-cancel modal="demo-default">Cancel</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Confirm</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -105,19 +100,14 @@
                 class="px-4 py-2 text-sm font-semibold text-[#aaa] border border-white/20 hover:bg-white/10 transition-colors">
                 Cancel
             </x-ui.modal-trigger>
-            <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                Confirm
-            </button>
+            <x-ui.button-modal-primary>Confirm</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
     <x-ui.modal name="demo-gold" title="Gold Variant" variant="gold" size="md">
         <p>Linen body, deep gold gradient header. Use for premium or featured announcements.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-gold" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Dismiss
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-gold">Dismiss</x-ui.button-modal-cancel>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -145,10 +135,7 @@
         </x-slot:icon>
         <p>Your session is about to expire. Save your progress before the page reloads.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-warning" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Dismiss
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-warning">Dismiss</x-ui.button-modal-cancel>
             <button class="px-5 py-2 bg-warning text-charcoal text-sm font-semibold hover:opacity-90 transition-opacity">
                 Keep Working
             </button>
@@ -163,10 +150,7 @@
         </x-slot:icon>
         <p>This action cannot be undone. Are you sure you want to permanently delete this item?</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-danger" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Cancel
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-danger">Cancel</x-ui.button-modal-cancel>
             <button class="px-5 py-2 bg-error text-white text-sm font-semibold hover:opacity-90 transition-opacity">
                 Delete Permanently
             </button>
@@ -201,10 +185,7 @@
                 and <strong>full</strong> for canvas-style interfaces.
             </p>
             <x-slot:footer>
-                <x-ui.modal-trigger modal="demo-size-{{ $sz }}" as="close"
-                    class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                    Close
-                </x-ui.modal-trigger>
+                <x-ui.button-modal-cancel modal="demo-size-{{ $sz }}">Close</x-ui.button-modal-cancel>
             </x-slot:footer>
         </x-ui.modal>
     @endforeach
@@ -235,10 +216,7 @@
     <x-ui.modal name="demo-dismiss-no" title="Non-dismissible Modal" :dismissible="false">
         <p>There is no ✕ button and clicking outside the panel does nothing. You must use the button below.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-dismiss-no" as="close"
-                class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                I Acknowledge
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-primary modal="demo-dismiss-no">I Acknowledge</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -280,10 +258,7 @@
         </x-slot:icon>
         <p>The icon slot places any SVG or element to the left of the title in the header bar.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-icon-slot" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Close
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-icon-slot">Close</x-ui.button-modal-cancel>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -309,16 +284,11 @@
         <p>The footer slot is flex row, right-aligned. Put any mix of buttons, links, or text.</p>
         <x-slot:footer>
             <a href="#" class="text-sm text-azure hover:text-azure-dark transition-colors font-medium mr-auto">Learn more →</a>
-            <x-ui.modal-trigger modal="demo-rich-footer" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Cancel
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-rich-footer">Cancel</x-ui.button-modal-cancel>
             <button class="px-5 py-2 bg-charcoal text-white text-sm font-semibold hover:bg-charcoal-dark transition-colors">
                 Save Draft
             </button>
-            <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                Submit Order
-            </button>
+            <x-ui.button-modal-primary>Submit Order</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -328,10 +298,7 @@
         </x-slot:title>
         <p>The <code>$title</code> slot lets you inject arbitrary HTML into the heading — useful for badge labels, colored fragments, or icons inline with the text.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-title-slot" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Close
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-title-slot">Close</x-ui.button-modal-cancel>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -365,10 +332,7 @@
     <x-ui.modal name="demo-trigger-types" title="Trigger Element Types" size="sm">
         <p>This modal was opened by a <code>button</code>, <code>a</code>, or <code>span</code> — all using the same <code>modal="demo-trigger-types"</code> prop.</p>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-trigger-types" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Close
-            </x-ui.modal-trigger>
+            <x-ui.button-modal-cancel modal="demo-trigger-types">Close</x-ui.button-modal-cancel>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -438,13 +402,8 @@
         </p>
 
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-promo" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                No Thanks
-            </x-ui.modal-trigger>
-            <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                Shop Now →
-            </button>
+            <x-ui.button-modal-cancel modal="demo-promo">No Thanks</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Shop Now →</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -491,13 +450,8 @@
             </div>
         </form>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-long-form" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Cancel
-            </x-ui.modal-trigger>
-            <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                Request Sample Pack
-            </button>
+            <x-ui.button-modal-cancel modal="demo-long-form">Cancel</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Request Sample Pack</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -532,13 +486,8 @@
             </div>
         </div>
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-terms" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Decline
-            </x-ui.modal-trigger>
-            <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
-                I Agree
-            </button>
+            <x-ui.button-modal-cancel modal="demo-terms">Decline</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>I Agree</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -807,13 +756,8 @@
         </div>
 
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-dropdown-single" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Cancel
-            </x-ui.modal-trigger>
-            <button class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all">
-                Continue
-            </button>
+            <x-ui.button-modal-cancel modal="demo-dropdown-single">Cancel</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Continue</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 
@@ -935,13 +879,8 @@
         </div>
 
         <x-slot:footer>
-            <x-ui.modal-trigger modal="demo-dropdown-grouped" as="close"
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
-                Cancel
-            </x-ui.modal-trigger>
-            <button class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all">
-                Add to Order
-            </button>
+            <x-ui.button-modal-cancel modal="demo-dropdown-grouped">Cancel</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Add to Order</x-ui.button-modal-primary>
         </x-slot:footer>
     </x-ui.modal>
 

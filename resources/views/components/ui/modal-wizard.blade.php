@@ -173,36 +173,24 @@
                 <div class="flex items-center gap-2.5 ml-auto">
 
                     {{-- Back --}}
-                    <button
-                        type="button"
+                    <x-ui.button-modal-cancel
                         x-show="step > 1"
                         x-cloak
                         @click="prev()"
-                        class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
-                    >
-                        ← Back
-                    </button>
+                    >← Back</x-ui.button-modal-cancel>
 
                     {{-- Next --}}
-                    <button
-                        type="button"
+                    <x-ui.button-modal-primary
                         x-show="step < totalSteps"
                         @click="next()"
-                        class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
-                    >
-                        Next →
-                    </button>
+                    >Next →</x-ui.button-modal-primary>
 
                     {{-- Finish --}}
-                    <button
-                        type="button"
+                    <x-ui.button-modal-primary
                         x-show="step === totalSteps"
                         x-cloak
                         @click="finish()"
-                        class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
-                    >
-                        {{ $finishLabel }}
-                    </button>
+                    >{{ $finishLabel }}</x-ui.button-modal-primary>
 
                 </div>
             </div>

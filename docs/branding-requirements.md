@@ -389,7 +389,30 @@ Named, slot-driven modal. Unlimited instances can coexist on a page without conf
 
 **Branding rule — square corners:** Modal panels use `0` border-radius. Do not add `rounded`, `rounded-lg`, or any other border-radius to modal panels, overlays, or form inputs inside modals. Only the pulse halo ring on the FAB button retains `rounded-full`.
 
-**Branding rule — footer buttons:** Do **not** use `x-ui.button-*` page components (`px-8 py-4`) inside modal footers — they are designed for page-level CTAs and are too large. Modal footer buttons must use bare `<button>` or `x-ui.modal-trigger` elements with `px-4 py-2` or `px-5 py-2` and `text-sm font-semibold` plus the appropriate brand token classes (`bg-gold-gradient`, `border-linen-dark`, etc.).
+**Branding rule — footer buttons:** Do **not** use `x-ui.button-*` page components (`px-8 py-4`) inside modal footers — they are designed for page-level CTAs and are too large. Use the two dedicated modal button components instead:
+
+| Component | Role | Style |
+|-----------|------|-------|
+| `x-ui.button-modal-primary` | Primary/gold action | `px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold` |
+| `x-ui.button-modal-cancel` | Cancel/dismiss | `px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen` |
+
+Both accept a `modal` prop (optional) — when provided, clicking the button dispatches `close-modal` for that modal name. Additional HTML/Alpine attributes pass through via `$attributes`.
+
+```blade
+{{-- Standard footer pair --}}
+<x-ui.button-modal-cancel modal="my-modal">Cancel</x-ui.button-modal-cancel>
+<x-ui.button-modal-primary>Submit</x-ui.button-modal-primary>
+
+{{-- Non-dismissible: only button also closes the modal --}}
+<x-ui.button-modal-primary modal="confirm-modal">I Acknowledge</x-ui.button-modal-primary>
+
+{{-- Variant-specific colors (success, danger, warning, dark) stay as raw <button> --}}
+<button class="px-5 py-2 bg-error text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+    Delete Permanently
+</button>
+```
+
+Note: Dark-variant cancel (`border-white/20`, `text-[#aaa]`) and semantic-color buttons (success, warning, danger, charcoal) remain as raw `<button>` elements — they are intentional exceptions that cannot use the standard linen/gold pair.
 
 **Branding rule — dropdowns inside modals:** The modal body has `overflow-x-hidden` which causes the browser to also clip `overflow-y`, preventing absolutely-positioned dropdown lists from rendering fully. **Never use absolute-positioned dropdowns inside a modal body.** Instead, render option lists inline (in normal document flow) with `max-h-[10rem] overflow-y-auto scrollbar-sunburst` to constrain height and enable branded scrolling.
 

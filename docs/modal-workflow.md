@@ -114,6 +114,8 @@ window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'my-modal' 
 
 A multi-step wizard variant. Non-dismissible by default — the user must complete the flow or use an explicit cancel. Step titles swap automatically, and dot progress indicators plus Back / Next / Finish navigation are rendered automatically.
 
+> **Button sizing note:** The page-level `x-ui.button-*` components (`px-8 py-4`) are **not** used in wizard or modal footers — they are too large. Footer buttons always use bare `<button>` elements with `px-4/5 py-2 text-sm font-semibold` and the appropriate brand token classes.
+
 #### Props
 
 | Prop | Type | Default | Description |
@@ -328,6 +330,7 @@ An internal-only page (`noindex, nofollow`) that exercises every component, vari
 6. **Use-Case Patterns** — promotional alert, long scrollable form, terms & conditions agreement
 7. **Wizard** — live `x-ui.modal-wizard` demo (3-step flow)
 8. **Contact Modal** — live `x-ui.contact-modal` FAB demo
+9. **Dropdown Selection** — branded Alpine.js custom dropdown; two variants: Single Select (product type) and Grouped Options (size + colour picker)
 
 Use this page as the first reference when verifying behaviour after any changes to the modal components.
 
@@ -466,6 +469,6 @@ Raw hex values (non-compiled, not passing through Tailwind) appear in:
 
 **Remediation applied:**
 1. `x-ui.modal` — replaced the entire `$vt[]` PHP hex array with `$vc[]` Tailwind class strings. All six variants now resolve to compiled token classes (`bg-gold-gradient-horizontal`, `bg-linen`, `border-sunburst`, `text-charcoal`, `bg-error/15`, etc.). Zero inline hex values remain. The `max-width`/`max-height` panel dimensions are the only remaining inline styles — both are dynamic PHP values that cannot be static classes.
-2. `x-ui.modal-wizard` — removed all five hardcoded inline style blocks. Gold stripe now uses `bg-gold-gradient-horizontal`, header uses `bg-linen border-b-2 border-sunburst`, footer uses `bg-linen-light border-t border-linen-dark`. Back button replaced with `x-ui.button-outline-charcoal`, Next and Finish replaced with `x-ui.button-gold-gradient`. Alpine directives pass through via `$attributes->merge()`.
+2. `x-ui.modal-wizard` — removed all five hardcoded inline style blocks. Gold stripe now uses `bg-gold-gradient-horizontal`, header uses `bg-linen border-b-2 border-sunburst`, footer uses `bg-linen-light border-t border-linen-dark`. Navigation buttons use sized bare `<button>` elements (`px-4/5 py-2 text-sm font-semibold`) with brand token classes (`bg-gold-gradient`, `border-linen-dark`) — the page-level `x-ui.button-*` components (`px-8 py-4`) are intentionally not used in modal footers due to size mismatch. Alpine directives pass through via `$attributes->merge()`.
 3. `x-ui.modal-quick-view` — removed `style="display: none;"` (Alpine `x-cloak` added instead). Removed `rounded-full` from the close button — square corners, branding-compliant.
 4. `x-ui.contact-modal` — converted `style="max-width:34rem;max-height:92dvh;"` to `class="max-w-[34rem] max-h-[92dvh]"`. Zero inline styles remain on the panel.

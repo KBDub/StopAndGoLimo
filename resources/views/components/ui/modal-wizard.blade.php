@@ -173,30 +173,36 @@
                 <div class="flex items-center gap-2.5 ml-auto">
 
                     {{-- Back --}}
-                    <x-ui.button-outline-charcoal
+                    <button
+                        type="button"
                         x-show="step > 1"
                         x-cloak
                         @click="prev()"
+                        class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
                     >
                         ← Back
-                    </x-ui.button-outline-charcoal>
+                    </button>
 
                     {{-- Next --}}
-                    <x-ui.button-gold-gradient
+                    <button
+                        type="button"
                         x-show="step < totalSteps"
                         @click="next()"
+                        class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                     >
                         Next →
-                    </x-ui.button-gold-gradient>
+                    </button>
 
                     {{-- Finish --}}
-                    <x-ui.button-gold-gradient
+                    <button
+                        type="button"
                         x-show="step === totalSteps"
                         x-cloak
                         @click="finish()"
+                        class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                     >
                         {{ $finishLabel }}
-                    </x-ui.button-gold-gradient>
+                    </button>
 
                 </div>
             </div>

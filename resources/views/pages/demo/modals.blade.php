@@ -684,6 +684,273 @@
     </x-ui.modal-wizard>
 
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    {{-- SECTION 9: Dropdown Selection Modal --}}
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    <section>
+        <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Dropdown Selection</h2>
+        <p class="text-charcoal-light text-sm mb-6 pl-5">
+            Branded custom dropdown built with Alpine.js — no native <code>&lt;select&gt;</code> arrow styling hacks required.
+            Uses <code>border-sunburst</code> focus, <code>bg-linen</code> hover, and a sunburst left-border accent on the active option.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+            <x-ui.modal-trigger modal="demo-dropdown-single"
+                class="px-5 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
+                Single Select
+            </x-ui.modal-trigger>
+
+            <x-ui.modal-trigger modal="demo-dropdown-grouped"
+                class="px-5 py-2.5 bg-linen-dark text-charcoal text-sm font-semibold hover:bg-linen transition-colors">
+                Grouped Options
+            </x-ui.modal-trigger>
+        </div>
+    </section>
+
+    {{-- Dropdown: Single Select --}}
+    <x-ui.modal name="demo-dropdown-single" title="Select Product Type" size="md" variant="default">
+        <x-slot:icon>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+            </svg>
+        </x-slot:icon>
+
+        <div
+            class="space-y-5"
+            x-data="{
+                open: false,
+                selected: null,
+                options: [
+                    { value: 'dtf',       label: 'DTF Transfers',      desc: 'Direct-to-film heat transfers' },
+                    { value: 'screen',    label: 'Screen Print',        desc: 'Traditional multi-colour print' },
+                    { value: 'embroid',   label: 'Embroidery',          desc: 'Thread-stitched logo or text' },
+                    { value: 'vinyl',     label: 'Vinyl Decals',        desc: 'Cut vinyl for signs & vehicles' },
+                    { value: 'sublim',    label: 'Sublimation',         desc: 'Full-colour all-over print' },
+                    { value: 'signs',     label: 'Business Signs',      desc: 'Exterior & interior signage' },
+                ],
+                get selectedLabel() {
+                    return this.selected
+                        ? this.options.find(o => o.value === this.selected)?.label
+                        : null;
+                }
+            }"
+            @keydown.escape="open = false"
+        >
+            <div>
+                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                    Product Category <span class="text-error">*</span>
+                </label>
+
+                {{-- Trigger --}}
+                <div class="relative" @click.outside="open = false">
+                    <button
+                        type="button"
+                        @click="open = !open"
+                        class="w-full flex items-center justify-between px-3 py-2.5 text-sm border bg-white transition-colors"
+                        :class="open ? 'border-sunburst ring-1 ring-sunburst/50' : 'border-linen-dark hover:border-charcoal-lighter'"
+                    >
+                        <span :class="selected ? 'text-charcoal' : 'text-charcoal-lighter'" x-text="selectedLabel ?? 'Choose a product type…'"></span>
+                        <svg class="w-4 h-4 text-charcoal-light flex-shrink-0 transition-transform duration-150" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+
+                    {{-- Option list --}}
+                    <div
+                        x-show="open"
+                        x-cloak
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="opacity-0 -translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-1"
+                        class="absolute z-10 w-full mt-1 bg-white border border-linen-dark shadow-gold overflow-hidden"
+                    >
+                        <template x-for="opt in options" :key="opt.value">
+                            <button
+                                type="button"
+                                @click="selected = opt.value; open = false"
+                                class="w-full flex items-start gap-3 px-4 py-2.5 text-left transition-colors border-l-2"
+                                :class="selected === opt.value
+                                    ? 'bg-linen border-sunburst'
+                                    : 'bg-white border-transparent hover:bg-linen hover:border-linen-dark'"
+                            >
+                                <div class="flex-1 min-w-0">
+                                    <div class="text-sm font-semibold text-charcoal" x-text="opt.label"></div>
+                                    <div class="text-xs text-charcoal-light mt-0.5" x-text="opt.desc"></div>
+                                </div>
+                                <svg
+                                    x-show="selected === opt.value"
+                                    class="w-4 h-4 text-sunburst-dark flex-shrink-0 mt-0.5"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+
+                {{-- Inline confirmation of selection --}}
+                <p
+                    x-show="selected"
+                    x-cloak
+                    class="mt-2 text-xs text-charcoal-light"
+                >
+                    Selected: <span class="font-semibold text-charcoal" x-text="selectedLabel"></span>
+                </p>
+            </div>
+
+            <div>
+                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Quantity</label>
+                <input
+                    type="number"
+                    min="1"
+                    placeholder="e.g. 50"
+                    class="w-full px-3 py-2.5 text-sm border border-linen-dark bg-white text-charcoal placeholder:text-charcoal-lighter focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 transition-colors"
+                >
+            </div>
+        </div>
+
+        <x-slot:footer>
+            <x-ui.modal-trigger modal="demo-dropdown-single" as="close"
+                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
+                Cancel
+            </x-ui.modal-trigger>
+            <button class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all">
+                Continue
+            </button>
+        </x-slot:footer>
+    </x-ui.modal>
+
+    {{-- Dropdown: Grouped Options --}}
+    <x-ui.modal name="demo-dropdown-grouped" title="Configure Your Order" size="md" variant="default">
+        <x-slot:icon>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"/>
+                <path d="M7 7h.01"/>
+            </svg>
+        </x-slot:icon>
+
+        <div
+            class="space-y-4"
+            x-data="{
+                sizeOpen: false,
+                colorOpen: false,
+                size: null,
+                color: null,
+                sizes: ['XS', 'S', 'M', 'L', 'XL', '2XL', '3XL'],
+                colors: [
+                    { value: 'white',   label: 'White',        hex: '#FFFFFF', border: '#E8E5D8' },
+                    { value: 'black',   label: 'Black',        hex: '#1A1A1A', border: '#1A1A1A' },
+                    { value: 'charcoal',label: 'Charcoal',     hex: '#2C2C2C', border: '#2C2C2C' },
+                    { value: 'gold',    label: 'Gold',         hex: '#FFC20E', border: '#E6A500' },
+                    { value: 'navy',    label: 'Navy',         hex: '#1B2A4A', border: '#1B2A4A' },
+                    { value: 'red',     label: 'Red',          hex: '#C62828', border: '#C62828' },
+                ],
+            }"
+            @keydown.escape="sizeOpen = false; colorOpen = false"
+        >
+            {{-- Size picker --}}
+            <div>
+                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                    Size <span class="text-error">*</span>
+                </label>
+                <div class="flex flex-wrap gap-2">
+                    <template x-for="s in sizes" :key="s">
+                        <button
+                            type="button"
+                            @click="size = s"
+                            class="px-3 py-1.5 text-sm font-semibold border-2 transition-all"
+                            :class="size === s
+                                ? 'border-charcoal bg-charcoal text-white'
+                                : 'border-linen-dark text-charcoal-light hover:border-charcoal-lighter'"
+                            x-text="s"
+                        ></button>
+                    </template>
+                </div>
+            </div>
+
+            {{-- Colour picker --}}
+            <div>
+                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                    Colour <span class="text-error">*</span>
+                </label>
+
+                <div class="relative" @click.outside="colorOpen = false">
+                    <button
+                        type="button"
+                        @click="colorOpen = !colorOpen"
+                        class="w-full flex items-center justify-between px-3 py-2.5 text-sm border bg-white transition-colors"
+                        :class="colorOpen ? 'border-sunburst ring-1 ring-sunburst/50' : 'border-linen-dark hover:border-charcoal-lighter'"
+                    >
+                        <span class="flex items-center gap-2.5">
+                            <template x-if="color">
+                                <span
+                                    class="w-4 h-4 flex-shrink-0 border"
+                                    :style="'background:' + colors.find(c => c.value === color)?.hex + ';border-color:' + colors.find(c => c.value === color)?.border"
+                                ></span>
+                            </template>
+                            <span
+                                :class="color ? 'text-charcoal' : 'text-charcoal-lighter'"
+                                x-text="color ? colors.find(c => c.value === color)?.label : 'Choose a colour…'"
+                            ></span>
+                        </span>
+                        <svg class="w-4 h-4 text-charcoal-light flex-shrink-0 transition-transform duration-150" :class="colorOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+
+                    <div
+                        x-show="colorOpen"
+                        x-cloak
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="opacity-0 -translate-y-1"
+                        x-transition:enter-end="opacity-100 translate-y-0"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="opacity-100 translate-y-0"
+                        x-transition:leave-end="opacity-0 -translate-y-1"
+                        class="absolute z-10 w-full mt-1 bg-white border border-linen-dark shadow-gold overflow-hidden"
+                    >
+                        <template x-for="c in colors" :key="c.value">
+                            <button
+                                type="button"
+                                @click="color = c.value; colorOpen = false"
+                                class="w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors border-l-2"
+                                :class="color === c.value
+                                    ? 'bg-linen border-sunburst'
+                                    : 'bg-white border-transparent hover:bg-linen hover:border-linen-dark'"
+                            >
+                                <span class="w-5 h-5 flex-shrink-0 border" :style="'background:' + c.hex + ';border-color:' + c.border"></span>
+                                <span class="text-sm font-medium text-charcoal flex-1" x-text="c.label"></span>
+                                <svg x-show="color === c.value" class="w-4 h-4 text-sunburst-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Selection summary --}}
+            <div x-show="size || color" x-cloak class="flex items-center gap-3 px-3 py-2.5 bg-linen border-l-2 border-sunburst text-sm text-charcoal-light">
+                <span x-show="size">Size: <strong class="text-charcoal" x-text="size"></strong></span>
+                <span x-show="size && color" class="text-linen-dark">|</span>
+                <span x-show="color">Colour: <strong class="text-charcoal" x-text="colors.find(c => c.value === color)?.label"></strong></span>
+            </div>
+        </div>
+
+        <x-slot:footer>
+            <x-ui.modal-trigger modal="demo-dropdown-grouped" as="close"
+                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors">
+                Cancel
+            </x-ui.modal-trigger>
+            <button class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all">
+                Add to Order
+            </button>
+        </x-slot:footer>
+    </x-ui.modal>
+
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
     {{-- SECTION 8: Contact FAB — live showcase --}}
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section class="bg-charcoal border-l-4 border-sunburst p-8 shadow-lg">

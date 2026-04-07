@@ -276,7 +276,7 @@
 
             {{-- Body --}}
             <div
-                class="flex-1 px-5 py-4 text-[0.9375rem] leading-relaxed overflow-x-hidden {{ $scrollBody ? 'overflow-y-auto overscroll-contain' : '' }} {{ $vc['bodyText'] }} {{ $bodyClass }}"
+                class="flex-1 px-5 py-4 text-[0.9375rem] leading-relaxed overflow-x-hidden {{ $scrollBody ? 'overflow-y-auto overscroll-contain scrollbar-sunburst' : '' }} {{ $vc['bodyText'] }} {{ $bodyClass }}"
             >
                 {{ $slot }}
             </div>

@@ -979,6 +979,16 @@ See **UI Card Components** in the Component Architecture section above for full 
 - **Global smooth scrolling:** `html { scroll-behavior: smooth; }` set in `app.css`. All in-page anchor navigation (`#section-id` links, hero primary buttons, Get Directions, any same-page jump) scrolls smoothly instead of snapping.
 - **Programmatic scroll:** Components that trigger in-page navigation (e.g. `ui.banner-get-directions`) must use `element.scrollIntoView({ behavior: 'smooth' })` — never `location.hash` assignment, which bypasses the smooth behavior in some browsers.
 
+### Scrollbar Styling (MANDATORY)
+- **All scrollable areas site-wide must use sunburst-branded scrollbars.** Apply the `.scrollbar-sunburst` CSS utility class to any element with `overflow-y-auto` or `overflow-y-scroll`.
+- **Thumb:** `var(--color-sunburst)` — `#FFC20E`
+- **Thumb hover:** `var(--color-sunburst-dark)` — `#E6A500`
+- **Track:** `var(--color-linen)` — `#F2F0E6`
+- **Width:** 6px (webkit); `scrollbar-width: thin` for Firefox
+- **Implementation:** The `.scrollbar-sunburst` component class is defined in `resources/css/app.css` and compiled into the build. Do not use native unstyled scrollbars anywhere in the UI.
+- **Modal bodies** — `scrollbar-sunburst` is applied directly in `x-ui.modal` when `scrollBody` is true; no manual class needed on modal content.
+- **Custom dropdown lists** — add `scrollbar-sunburst` explicitly on the container that receives `overflow-y-auto`.
+
 ### Scroll Animations
 - **Trigger:** When element enters viewport (50% visible)
 - **Effect:** Fade up with subtle Y translation (20px)

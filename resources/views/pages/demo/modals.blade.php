@@ -394,7 +394,7 @@
 
             <x-ui.modal-trigger modal="demo-terms"
                 class="px-5 py-2.5 bg-charcoal text-white text-sm font-semibold hover:bg-charcoal-dark transition-colors">
-                Terms &amp; Conditions
+                Terms & Conditions
             </x-ui.modal-trigger>
         </div>
     </section>
@@ -502,7 +502,7 @@
     </x-ui.modal>
 
     {{-- T&C scrollable modal --}}
-    <x-ui.modal name="demo-terms" title="Terms &amp; Conditions" size="lg" :dismissible="false" maxHeight="80dvh">
+    <x-ui.modal name="demo-terms" title="Terms & Conditions" size="lg" :dismissible="false" maxHeight="80dvh">
         <div class="space-y-4 text-sm text-charcoal leading-relaxed">
             <p>Welcome to Top 5 Percent. By using our services, you agree to the following terms and conditions. Please read them carefully before placing an order.</p>
             <hr class="border-linen-dark">

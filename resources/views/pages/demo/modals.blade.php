@@ -885,6 +885,190 @@
     </x-ui.modal>
 
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    {{-- SECTION 10: Form Controls --}}
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    <section>
+        <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Form Controls</h2>
+        <p class="text-charcoal-light text-sm mb-6 pl-5">Branded radio groups and toggle switches — Alpine-driven, zero JS frameworks.</p>
+
+        <div class="flex flex-wrap gap-3">
+            <x-ui.modal-trigger modal="demo-radio"
+                class="px-5 py-2.5 bg-linen-dark text-charcoal text-sm font-semibold hover:bg-linen transition-colors">
+                Radio Group
+            </x-ui.modal-trigger>
+
+            <x-ui.modal-trigger modal="demo-toggles"
+                class="px-5 py-2.5 bg-linen-dark text-charcoal text-sm font-semibold hover:bg-linen transition-colors">
+                Toggle Switches
+            </x-ui.modal-trigger>
+        </div>
+    </section>
+
+    {{-- Radio Group Modal --}}
+    <x-ui.modal name="demo-radio" title="Select a Turnaround" size="sm">
+        <x-slot:icon>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+        </x-slot:icon>
+
+        <div x-data="{ selected: null }" class="space-y-5">
+            <p class="text-sm text-charcoal-light">Choose your production speed below. Your selection will apply to the entire order.</p>
+
+            <div class="flex gap-3">
+
+                <label
+                    :class="selected === 'standard'
+                        ? 'border-sunburst bg-sunburst/10'
+                        : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+                    class="flex-1 flex flex-col items-center gap-1.5 px-3 py-4 border-2 cursor-pointer text-center transition-colors"
+                >
+                    <input type="radio" name="turnaround" value="standard" class="sr-only" @change="selected = 'standard'">
+                    <span class="text-sm font-bold text-charcoal">Standard</span>
+                    <span class="text-xs text-charcoal-light leading-snug">5–7 business<br>days</span>
+                    <span class="mt-1.5 w-4 h-4 border-2 flex items-center justify-center transition-colors"
+                        :class="selected === 'standard' ? 'border-sunburst' : 'border-linen-dark'">
+                        <span class="w-2 h-2 bg-sunburst transition-opacity"
+                            :class="selected === 'standard' ? 'opacity-100' : 'opacity-0'"></span>
+                    </span>
+                </label>
+
+                <label
+                    :class="selected === 'rush'
+                        ? 'border-sunburst bg-sunburst/10'
+                        : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+                    class="flex-1 flex flex-col items-center gap-1.5 px-3 py-4 border-2 cursor-pointer text-center transition-colors"
+                >
+                    <input type="radio" name="turnaround" value="rush" class="sr-only" @change="selected = 'rush'">
+                    <span class="text-sm font-bold text-charcoal">Rush</span>
+                    <span class="text-xs text-charcoal-light leading-snug">2–3 business<br>days</span>
+                    <span class="mt-1.5 w-4 h-4 border-2 flex items-center justify-center transition-colors"
+                        :class="selected === 'rush' ? 'border-sunburst' : 'border-linen-dark'">
+                        <span class="w-2 h-2 bg-sunburst transition-opacity"
+                            :class="selected === 'rush' ? 'opacity-100' : 'opacity-0'"></span>
+                    </span>
+                </label>
+
+                <label
+                    :class="selected === 'sameday'
+                        ? 'border-sunburst bg-sunburst/10'
+                        : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+                    class="flex-1 flex flex-col items-center gap-1.5 px-3 py-4 border-2 cursor-pointer text-center transition-colors"
+                >
+                    <input type="radio" name="turnaround" value="sameday" class="sr-only" @change="selected = 'sameday'">
+                    <span class="text-sm font-bold text-charcoal">Same Day</span>
+                    <span class="text-xs text-charcoal-light leading-snug">Order by<br>10 a.m.</span>
+                    <span class="mt-1.5 w-4 h-4 border-2 flex items-center justify-center transition-colors"
+                        :class="selected === 'sameday' ? 'border-sunburst' : 'border-linen-dark'">
+                        <span class="w-2 h-2 bg-sunburst transition-opacity"
+                            :class="selected === 'sameday' ? 'opacity-100' : 'opacity-0'"></span>
+                    </span>
+                </label>
+
+            </div>
+
+            <p class="text-xs text-charcoal-lighter italic" x-show="!selected">No option selected yet.</p>
+            <p class="text-xs text-charcoal font-semibold" x-show="selected" x-cloak>
+                Selected: <span class="text-sunburst-dark capitalize" x-text="selected === 'sameday' ? 'Same Day' : selected"></span>
+            </p>
+        </div>
+
+        <x-slot:footer>
+            <x-ui.button-modal-cancel modal="demo-radio">Cancel</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Confirm Selection</x-ui.button-modal-primary>
+        </x-slot:footer>
+    </x-ui.modal>
+
+    {{-- Toggle Switches Modal --}}
+    <x-ui.modal name="demo-toggles" title="Order Options" size="sm">
+        <x-slot:icon>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+            </svg>
+        </x-slot:icon>
+
+        <div
+            x-data="{
+                rush: false,
+                proof: true,
+                digital: false
+            }"
+            class="divide-y divide-linen-dark"
+        >
+
+            {{-- Rush Processing --}}
+            <div class="flex items-center gap-4 py-4">
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-charcoal">Rush Processing</p>
+                    <p class="text-xs text-charcoal-light mt-0.5">Move to front of queue (+$15)</p>
+                </div>
+                <button
+                    type="button"
+                    role="switch"
+                    :aria-checked="rush.toString()"
+                    @click="rush = !rush"
+                    :class="rush ? 'bg-sunburst' : 'bg-linen-dark'"
+                    class="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                >
+                    <span
+                        :class="rush ? 'translate-x-6' : 'translate-x-1'"
+                        class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                    ></span>
+                </button>
+            </div>
+
+            {{-- Proof Approval --}}
+            <div class="flex items-center gap-4 py-4">
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-charcoal">Proof Approval</p>
+                    <p class="text-xs text-charcoal-light mt-0.5">Receive a digital proof before production</p>
+                </div>
+                <button
+                    type="button"
+                    role="switch"
+                    :aria-checked="proof.toString()"
+                    @click="proof = !proof"
+                    :class="proof ? 'bg-sunburst' : 'bg-linen-dark'"
+                    class="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                >
+                    <span
+                        :class="proof ? 'translate-x-6' : 'translate-x-1'"
+                        class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                    ></span>
+                </button>
+            </div>
+
+            {{-- Digital Files --}}
+            <div class="flex items-center gap-4 py-4">
+                <div class="flex-1 min-w-0">
+                    <p class="text-sm font-semibold text-charcoal">Digital Files Included</p>
+                    <p class="text-xs text-charcoal-light mt-0.5">Download print-ready files after order</p>
+                </div>
+                <button
+                    type="button"
+                    role="switch"
+                    :aria-checked="digital.toString()"
+                    @click="digital = !digital"
+                    :class="digital ? 'bg-sunburst' : 'bg-linen-dark'"
+                    class="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                >
+                    <span
+                        :class="digital ? 'translate-x-6' : 'translate-x-1'"
+                        class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                    ></span>
+                </button>
+            </div>
+
+        </div>
+
+        <x-slot:footer>
+            <x-ui.button-modal-cancel modal="demo-toggles">Cancel</x-ui.button-modal-cancel>
+            <x-ui.button-modal-primary>Save Options</x-ui.button-modal-primary>
+        </x-slot:footer>
+    </x-ui.modal>
+
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
     {{-- SECTION 8: Contact FAB — live showcase --}}
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section class="bg-charcoal border-l-4 border-sunburst p-8 shadow-lg">

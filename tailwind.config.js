@@ -72,5 +72,9 @@ export default {
             },
         },
     },
+    safelist: [
+        'translate-x-1',
+        'translate-x-6',
+    ],
     plugins: [],
 };

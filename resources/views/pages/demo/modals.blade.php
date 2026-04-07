@@ -707,7 +707,7 @@
     </section>
 
     {{-- Dropdown: Single Select --}}
-    <x-ui.modal name="demo-dropdown-single" title="Select Product Type" size="sm" variant="default" bodyClass="py-6" panelClass="!overflow-visible">
+    <x-ui.modal name="demo-dropdown-single" title="Select Product Type" size="sm" variant="default" bodyClass="py-6">
         <x-slot:icon>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
@@ -741,53 +741,48 @@
                 </label>
 
                 {{-- Trigger --}}
-                <div class="relative" @click.outside="open = false">
-                    <button
-                        type="button"
-                        @click="open = !open"
-                        class="w-full flex items-center justify-between px-3 py-2.5 text-sm border bg-white transition-colors"
-                        :class="open ? 'border-sunburst ring-1 ring-sunburst/50' : 'border-linen-dark hover:border-charcoal-lighter'"
-                    >
-                        <span :class="selected ? 'text-charcoal' : 'text-charcoal-lighter'" x-text="selectedLabel ?? 'Choose a product type…'"></span>
-                        <svg class="w-4 h-4 text-charcoal-light flex-shrink-0 transition-transform duration-150" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
+                <button
+                    type="button"
+                    @click="open = !open"
+                    class="w-full flex items-center justify-between px-3 py-2.5 text-sm border bg-white transition-colors"
+                    :class="open ? 'border-sunburst ring-1 ring-sunburst/50' : 'border-linen-dark hover:border-charcoal-lighter'"
+                >
+                    <span :class="selected ? 'text-charcoal' : 'text-charcoal-lighter'" x-text="selectedLabel ?? 'Choose a product type…'"></span>
+                    <svg class="w-4 h-4 text-charcoal-light flex-shrink-0 transition-transform duration-150" :class="open ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
 
-                    {{-- Option list --}}
-                    <div
-                        x-show="open"
-                        x-cloak
-                        x-transition:enter="transition ease-out duration-100"
-                        x-transition:enter-start="opacity-0 -translate-y-1"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                        x-transition:leave="transition ease-in duration-75"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 -translate-y-1"
-                        class="absolute z-10 w-full mt-1 bg-white border border-linen-dark shadow-gold overflow-hidden"
-                    >
-                        <template x-for="opt in options" :key="opt.value">
-                            <button
-                                type="button"
-                                @click="selected = opt.value; open = false"
-                                class="w-full flex items-start gap-3 px-4 py-2.5 text-left transition-colors border-l-2"
-                                :class="selected === opt.value
-                                    ? 'bg-linen border-sunburst'
-                                    : 'bg-white border-transparent hover:bg-linen hover:border-linen-dark'"
-                            >
-                                <div class="flex-1 min-w-0">
-                                    <div class="text-sm font-semibold text-charcoal" x-text="opt.label"></div>
-                                    <div class="text-xs text-charcoal-light mt-0.5" x-text="opt.desc"></div>
-                                </div>
-                                <svg
-                                    x-show="selected === opt.value"
-                                    class="w-4 h-4 text-sunburst-dark flex-shrink-0 mt-0.5"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                            </button>
-                        </template>
-                    </div>
+                {{-- Option list — inline (no absolute), no clipping issues --}}
+                <div
+                    x-show="open"
+                    x-cloak
+                    x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="w-full bg-white border border-linen-dark border-t-0 shadow-gold"
+                >
+                    <template x-for="opt in options" :key="opt.value">
+                        <button
+                            type="button"
+                            @click="selected = opt.value; open = false"
+                            class="w-full flex items-center justify-between px-4 py-2.5 text-left transition-colors border-l-2"
+                            :class="selected === opt.value
+                                ? 'bg-linen border-sunburst'
+                                : 'bg-white border-transparent hover:bg-linen hover:border-linen-dark'"
+                        >
+                            <span class="text-sm font-semibold text-charcoal" x-text="opt.label"></span>
+                            <svg
+                                x-show="selected === opt.value"
+                                class="w-4 h-4 text-sunburst-dark flex-shrink-0"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </button>
+                    </template>
                 </div>
 
                 {{-- Inline confirmation of selection --}}
@@ -823,7 +818,7 @@
     </x-ui.modal>
 
     {{-- Dropdown: Grouped Options --}}
-    <x-ui.modal name="demo-dropdown-grouped" title="Configure Your Order" size="md" variant="default" bodyClass="py-6" panelClass="!overflow-visible">
+    <x-ui.modal name="demo-dropdown-grouped" title="Configure Your Order" size="md" variant="default" bodyClass="py-6">
         <x-slot:icon>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"/>
@@ -876,58 +871,58 @@
                     Colour <span class="text-error">*</span>
                 </label>
 
-                <div class="relative" @click.outside="colorOpen = false">
-                    <button
-                        type="button"
-                        @click="colorOpen = !colorOpen"
-                        class="w-full flex items-center justify-between px-3 py-2.5 text-sm border bg-white transition-colors"
-                        :class="colorOpen ? 'border-sunburst ring-1 ring-sunburst/50' : 'border-linen-dark hover:border-charcoal-lighter'"
-                    >
-                        <span class="flex items-center gap-2.5">
-                            <template x-if="color">
-                                <span
-                                    class="w-4 h-4 flex-shrink-0 border"
-                                    :style="'background:' + colors.find(c => c.value === color)?.hex + ';border-color:' + colors.find(c => c.value === color)?.border"
-                                ></span>
-                            </template>
+                {{-- Trigger --}}
+                <button
+                    type="button"
+                    @click="colorOpen = !colorOpen"
+                    class="w-full flex items-center justify-between px-3 py-2.5 text-sm border bg-white transition-colors"
+                    :class="colorOpen ? 'border-sunburst ring-1 ring-sunburst/50' : 'border-linen-dark hover:border-charcoal-lighter'"
+                >
+                    <span class="flex items-center gap-2.5">
+                        <template x-if="color">
                             <span
-                                :class="color ? 'text-charcoal' : 'text-charcoal-lighter'"
-                                x-text="color ? colors.find(c => c.value === color)?.label : 'Choose a colour…'"
+                                class="w-4 h-4 flex-shrink-0 border"
+                                :style="'background:' + colors.find(c => c.value === color)?.hex + ';border-color:' + colors.find(c => c.value === color)?.border"
                             ></span>
-                        </span>
-                        <svg class="w-4 h-4 text-charcoal-light flex-shrink-0 transition-transform duration-150" :class="colorOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-
-                    <div
-                        x-show="colorOpen"
-                        x-cloak
-                        x-transition:enter="transition ease-out duration-100"
-                        x-transition:enter-start="opacity-0 -translate-y-1"
-                        x-transition:enter-end="opacity-100 translate-y-0"
-                        x-transition:leave="transition ease-in duration-75"
-                        x-transition:leave-start="opacity-100 translate-y-0"
-                        x-transition:leave-end="opacity-0 -translate-y-1"
-                        class="absolute z-10 w-full mt-1 bg-white border border-linen-dark shadow-gold overflow-hidden"
-                    >
-                        <template x-for="c in colors" :key="c.value">
-                            <button
-                                type="button"
-                                @click="color = c.value; colorOpen = false"
-                                class="w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors border-l-2"
-                                :class="color === c.value
-                                    ? 'bg-linen border-sunburst'
-                                    : 'bg-white border-transparent hover:bg-linen hover:border-linen-dark'"
-                            >
-                                <span class="w-5 h-5 flex-shrink-0 border" :style="'background:' + c.hex + ';border-color:' + c.border"></span>
-                                <span class="text-sm font-medium text-charcoal flex-1" x-text="c.label"></span>
-                                <svg x-show="color === c.value" class="w-4 h-4 text-sunburst-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
-                                    <polyline points="20 6 9 17 4 12"/>
-                                </svg>
-                            </button>
                         </template>
-                    </div>
+                        <span
+                            :class="color ? 'text-charcoal' : 'text-charcoal-lighter'"
+                            x-text="color ? colors.find(c => c.value === color)?.label : 'Choose a colour…'"
+                        ></span>
+                    </span>
+                    <svg class="w-4 h-4 text-charcoal-light flex-shrink-0 transition-transform duration-150" :class="colorOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+
+                {{-- Option list — inline (no absolute), no clipping issues --}}
+                <div
+                    x-show="colorOpen"
+                    x-cloak
+                    x-transition:enter="transition ease-out duration-100"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="transition ease-in duration-75"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="w-full bg-white border border-linen-dark border-t-0 shadow-gold"
+                >
+                    <template x-for="c in colors" :key="c.value">
+                        <button
+                            type="button"
+                            @click="color = c.value; colorOpen = false"
+                            class="w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors border-l-2"
+                            :class="color === c.value
+                                ? 'bg-linen border-sunburst'
+                                : 'bg-white border-transparent hover:bg-linen hover:border-linen-dark'"
+                        >
+                            <span class="w-5 h-5 flex-shrink-0 border" :style="'background:' + c.hex + ';border-color:' + c.border"></span>
+                            <span class="text-sm font-medium text-charcoal flex-1" x-text="c.label"></span>
+                            <svg x-show="color === c.value" class="w-4 h-4 text-sunburst-dark flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </button>
+                    </template>
                 </div>
             </div>
 

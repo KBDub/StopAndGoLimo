@@ -69,99 +69,97 @@
         default => '34rem',
     };
 
-    // ── Variant → inline style values (dynamic, so inline styles are required) ──
-    // All hex values match tailwind.config.js tokens.
-    $vt = match($variant) {
+    // ── Variant → compiled Tailwind class strings ─────────────────────────
+    // All values are literal class strings so Tailwind's scanner compiles them.
+    // No inline styles. No raw hex values. Approved brand tokens only.
+    $vc = match($variant) {
         'dark' => [
-            'stripe'     => 'linear-gradient(90deg,#FFC20E 0%,#FFD93D 100%)',
-            'headerBg'   => '#1A1A1A',
-            'headerBdr'  => '#FFC20E',
-            'bodyBg'     => '#2C2C2C',
-            'bodyColor'  => '#E0E0E0',
-            'titleColor' => '#FFFFFF',
-            'closeColor' => '#999999',
-            'closeHover' => '#2C2C2C',
-            'iconBg'     => 'rgba(255,194,14,0.14)',
-            'iconColor'  => '#FFC20E',
-            'footerBg'   => '#222222',
-            'footerBdr'  => 'rgba(255,255,255,0.10)',
+            'stripe'     => 'bg-gold-gradient-horizontal',
+            'headerBg'   => 'bg-charcoal-dark',
+            'headerBdr'  => 'border-sunburst',
+            'panelBg'    => 'bg-charcoal',
+            'bodyText'   => 'text-linen',
+            'titleText'  => 'text-white',
+            'iconBg'     => 'bg-sunburst/15',
+            'iconText'   => 'text-sunburst',
+            'closeText'  => 'text-charcoal-lighter',
+            'closeHover' => 'hover:bg-charcoal',
+            'footerBg'   => 'bg-charcoal-dark',
+            'footerBdr'  => 'border-white/10',
         ],
         'gold' => [
-            'stripe'     => 'linear-gradient(90deg,#E6A500 0%,#FFC20E 100%)',
-            'headerBg'   => 'linear-gradient(135deg,#FFC20E 0%,#E6A500 100%)',
-            'headerBdr'  => '#E6A500',
-            'bodyBg'     => '#FAF9F5',
-            'bodyColor'  => '#2C2C2C',
-            'titleColor' => '#2C2C2C',
-            'closeColor' => '#555555',
-            'closeHover' => '#E8E5D8',
-            'iconBg'     => 'rgba(255,194,14,0.18)',
-            'iconColor'  => '#2C2C2C',
-            'footerBg'   => '#F2F0E6',
-            'footerBdr'  => '#E8E5D8',
+            'stripe'     => 'bg-gold-gradient-horizontal',
+            'headerBg'   => 'bg-gold-gradient',
+            'headerBdr'  => 'border-sunburst-dark',
+            'panelBg'    => 'bg-linen-light',
+            'bodyText'   => 'text-charcoal',
+            'titleText'  => 'text-charcoal',
+            'iconBg'     => 'bg-sunburst/20',
+            'iconText'   => 'text-charcoal',
+            'closeText'  => 'text-charcoal-light',
+            'closeHover' => 'hover:bg-linen-dark',
+            'footerBg'   => 'bg-linen',
+            'footerBdr'  => 'border-linen-dark',
         ],
         'success' => [
-            'stripe'     => '#4CAF50',
-            'headerBg'   => '#F2F0E6',
-            'headerBdr'  => '#4CAF50',
-            'bodyBg'     => '#FFFFFF',
-            'bodyColor'  => '#2C2C2C',
-            'titleColor' => '#2C2C2C',
-            'closeColor' => '#555555',
-            'closeHover' => '#E8E5D8',
-            'iconBg'     => 'rgba(76,175,80,0.13)',
-            'iconColor'  => '#4CAF50',
-            'footerBg'   => '#FAF9F5',
-            'footerBdr'  => '#E8E5D8',
+            'stripe'     => 'bg-success',
+            'headerBg'   => 'bg-linen',
+            'headerBdr'  => 'border-success',
+            'panelBg'    => 'bg-white',
+            'bodyText'   => 'text-charcoal',
+            'titleText'  => 'text-charcoal',
+            'iconBg'     => 'bg-success/15',
+            'iconText'   => 'text-success',
+            'closeText'  => 'text-charcoal-light',
+            'closeHover' => 'hover:bg-linen-dark',
+            'footerBg'   => 'bg-linen-light',
+            'footerBdr'  => 'border-linen-dark',
         ],
         'warning' => [
-            'stripe'     => '#F9A825',
-            'headerBg'   => '#F2F0E6',
-            'headerBdr'  => '#F9A825',
-            'bodyBg'     => '#FFFFFF',
-            'bodyColor'  => '#2C2C2C',
-            'titleColor' => '#2C2C2C',
-            'closeColor' => '#555555',
-            'closeHover' => '#E8E5D8',
-            'iconBg'     => 'rgba(249,168,37,0.13)',
-            'iconColor'  => '#F9A825',
-            'footerBg'   => '#FAF9F5',
-            'footerBdr'  => '#E8E5D8',
+            'stripe'     => 'bg-warning',
+            'headerBg'   => 'bg-linen',
+            'headerBdr'  => 'border-warning',
+            'panelBg'    => 'bg-white',
+            'bodyText'   => 'text-charcoal',
+            'titleText'  => 'text-charcoal',
+            'iconBg'     => 'bg-warning/15',
+            'iconText'   => 'text-warning',
+            'closeText'  => 'text-charcoal-light',
+            'closeHover' => 'hover:bg-linen-dark',
+            'footerBg'   => 'bg-linen-light',
+            'footerBdr'  => 'border-linen-dark',
         ],
         'danger' => [
-            'stripe'     => '#C62828',
-            'headerBg'   => '#F2F0E6',
-            'headerBdr'  => '#C62828',
-            'bodyBg'     => '#FFFFFF',
-            'bodyColor'  => '#2C2C2C',
-            'titleColor' => '#2C2C2C',
-            'closeColor' => '#555555',
-            'closeHover' => '#E8E5D8',
-            'iconBg'     => 'rgba(198,40,40,0.13)',
-            'iconColor'  => '#C62828',
-            'footerBg'   => '#FAF9F5',
-            'footerBdr'  => '#E8E5D8',
+            'stripe'     => 'bg-error',
+            'headerBg'   => 'bg-linen',
+            'headerBdr'  => 'border-error',
+            'panelBg'    => 'bg-white',
+            'bodyText'   => 'text-charcoal',
+            'titleText'  => 'text-charcoal',
+            'iconBg'     => 'bg-error/15',
+            'iconText'   => 'text-error',
+            'closeText'  => 'text-charcoal-light',
+            'closeHover' => 'hover:bg-linen-dark',
+            'footerBg'   => 'bg-linen-light',
+            'footerBdr'  => 'border-linen-dark',
         ],
         default => [
-            'stripe'     => 'linear-gradient(90deg,#FFC20E 0%,#FFD93D 100%)',
-            'headerBg'   => '#F2F0E6',
-            'headerBdr'  => '#FFC20E',
-            'bodyBg'     => '#FFFFFF',
-            'bodyColor'  => '#2C2C2C',
-            'titleColor' => '#2C2C2C',
-            'closeColor' => '#555555',
-            'closeHover' => '#E8E5D8',
-            'iconBg'     => 'rgba(255,194,14,0.14)',
-            'iconColor'  => '#FFC20E',
-            'footerBg'   => '#FAF9F5',
-            'footerBdr'  => '#E8E5D8',
+            'stripe'     => 'bg-gold-gradient-horizontal',
+            'headerBg'   => 'bg-linen',
+            'headerBdr'  => 'border-sunburst',
+            'panelBg'    => 'bg-white',
+            'bodyText'   => 'text-charcoal',
+            'titleText'  => 'text-charcoal',
+            'iconBg'     => 'bg-sunburst/15',
+            'iconText'   => 'text-sunburst',
+            'closeText'  => 'text-charcoal-light',
+            'closeHover' => 'hover:bg-linen-dark',
+            'footerBg'   => 'bg-linen-light',
+            'footerBdr'  => 'border-linen-dark',
         ],
     };
 
     // ── Slot presence guards ─────────────────────────────────────────────
-    // In anonymous Blade components, named slots become injected variables.
-    // Non-prop slots (header, icon, footer) are only set when explicitly passed.
-    // $title is a prop (default null), so we check !empty() for it.
     $hasHeader = isset($header) && $header instanceof \Illuminate\View\ComponentSlot && !$header->isEmpty();
     $hasTitle  = !empty($title);
     $hasIcon   = isset($icon) && $icon instanceof \Illuminate\View\ComponentSlot && !$icon->isEmpty();
@@ -216,8 +214,8 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full flex flex-col shadow-2xl overflow-hidden"
-            style="max-width:{{ $maxWidth }};max-height:{{ $maxHeight }};background:{{ $vt['bodyBg'] }};"
+            class="relative w-full flex flex-col shadow-2xl overflow-hidden {{ $vc['panelBg'] }}"
+            style="max-width:{{ $maxWidth }};max-height:{{ $maxHeight }};"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
@@ -228,8 +226,7 @@
         >
             {{-- Accent stripe --}}
             <div
-                class="h-2 flex-shrink-0"
-                style="background:{{ $vt['stripe'] }};"
+                class="h-2 flex-shrink-0 {{ $vc['stripe'] }}"
                 aria-hidden="true"
             ></div>
 
@@ -238,16 +235,14 @@
                 {{ $header }}
             @elseif ($hasTitle || $hasIcon)
                 <div
-                    class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 {{ $headerClass }}"
-                    style="background:{{ $vt['headerBg'] }};border-bottom-color:{{ $vt['headerBdr'] }};"
+                    class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 {{ $vc['headerBg'] }} {{ $vc['headerBdr'] }} {{ $headerClass }}"
                 >
                     @if ($hasIcon)
                         <div
-                            class="flex items-center justify-center w-9 h-9 flex-shrink-0"
-                            style="background:{{ $vt['iconBg'] }};"
+                            class="flex items-center justify-center w-9 h-9 flex-shrink-0 {{ $vc['iconBg'] }}"
                             aria-hidden="true"
                         >
-                            <span style="color:{{ $vt['iconColor'] }};display:flex;align-items:center;justify-content:center;">
+                            <span class="{{ $vc['iconText'] }} flex items-center justify-center">
                                 {{ $icon }}
                             </span>
                         </div>
@@ -255,8 +250,7 @@
 
                     <h2
                         id="{{ $alpineId }}_title"
-                        class="flex-1 min-w-0 text-lg font-bold leading-tight truncate"
-                        style="color:{{ $vt['titleColor'] }};"
+                        class="flex-1 min-w-0 text-lg font-bold leading-tight truncate {{ $vc['titleText'] }}"
                     >
                         {{ $title }}
                     </h2>
@@ -264,12 +258,9 @@
                     @if ($dismissible)
                         <button
                             type="button"
-                            class="flex items-center justify-center w-8 h-8 flex-shrink-0 border-none cursor-pointer transition-colors duration-150"
-                            style="color:{{ $vt['closeColor'] }};background:transparent;"
+                            class="flex items-center justify-center w-8 h-8 flex-shrink-0 cursor-pointer transition-colors duration-150 bg-transparent {{ $vc['closeText'] }} {{ $vc['closeHover'] }}"
                             @click="close()"
                             aria-label="Close modal"
-                            x-on:mouseover="$el.style.background='{{ $vt['closeHover'] }}'"
-                            x-on:mouseout="$el.style.background='transparent'"
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                  stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"
@@ -283,8 +274,7 @@
 
             {{-- Body --}}
             <div
-                class="flex-1 px-5 py-4 text-[0.9375rem] leading-relaxed overflow-x-hidden {{ $scrollBody ? 'overflow-y-auto overscroll-contain' : '' }} {{ $bodyClass }}"
-                style="color:{{ $vt['bodyColor'] }};"
+                class="flex-1 px-5 py-4 text-[0.9375rem] leading-relaxed overflow-x-hidden {{ $scrollBody ? 'overflow-y-auto overscroll-contain' : '' }} {{ $vc['bodyText'] }} {{ $bodyClass }}"
             >
                 {{ $slot }}
             </div>
@@ -292,8 +282,7 @@
             {{-- Footer --}}
             @if ($hasFooter)
                 <div
-                    class="flex items-center justify-end gap-2.5 flex-wrap px-5 py-3.5 flex-shrink-0 border-t {{ $footerClass }}"
-                    style="background:{{ $vt['footerBg'] }};border-top-color:{{ $vt['footerBdr'] }};"
+                    class="flex items-center justify-end gap-2.5 flex-wrap px-5 py-3.5 flex-shrink-0 border-t {{ $vc['footerBg'] }} {{ $vc['footerBdr'] }} {{ $footerClass }}"
                 >
                     {{ $footer }}
                 </div>

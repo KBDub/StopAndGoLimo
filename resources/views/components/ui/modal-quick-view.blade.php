@@ -25,6 +25,7 @@
 >
     <div
         x-show="open"
+        x-cloak
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
@@ -32,7 +33,6 @@
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
         class="fixed inset-0 z-50 flex items-center justify-center p-4"
-        style="display: none;"
     >
         <div class="absolute inset-0 bg-charcoal-dark/60 backdrop-blur-sm" x-on:click="open = false"></div>
 
@@ -48,7 +48,7 @@
         >
             <button
                 x-on:click="open = false"
-                class="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-white shadow text-charcoal hover:text-charcoal-dark transition-colors"
+                class="absolute top-4 right-4 z-20 w-8 h-8 flex items-center justify-center bg-white/90 hover:bg-white shadow text-charcoal hover:text-charcoal-dark transition-colors"
             >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>

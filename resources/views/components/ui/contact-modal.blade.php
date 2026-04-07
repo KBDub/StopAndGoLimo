@@ -105,8 +105,7 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full bg-white shadow-2xl overflow-y-auto overscroll-contain"
-            style="max-width:34rem;max-height:92dvh;"
+            class="relative w-full max-w-[34rem] max-h-[92dvh] bg-white shadow-2xl overflow-y-auto overscroll-contain"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
             x-transition:enter-end="opacity-100 scale-100 translate-y-0"

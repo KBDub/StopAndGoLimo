@@ -123,13 +123,10 @@
             @click.stop
         >
             {{-- Gold accent stripe --}}
-            <div class="h-2 flex-shrink-0" style="background:linear-gradient(90deg,#FFC20E 0%,#FFD93D 100%);" aria-hidden="true"></div>
+            <div class="h-2 flex-shrink-0 bg-gold-gradient-horizontal" aria-hidden="true"></div>
 
             {{-- Header — title swaps per step --}}
-            <div
-                class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2"
-                style="background:#F2F0E6;border-bottom-color:#FFC20E;"
-            >
+            <div class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 bg-linen border-sunburst">
                 <h2 id="{{ $wizId }}_title" class="flex-1 min-w-0 text-lg font-bold text-charcoal leading-tight">
                     <span x-show="step === 1">{{ $step1Title }}</span>
                     <span x-show="step === 2" x-cloak>{{ $step2Title }}</span>
@@ -159,10 +156,8 @@
             </div>
 
             {{-- Footer navigation --}}
-            <div
-                class="flex items-center gap-2.5 px-5 py-3.5 flex-shrink-0 border-t"
-                style="background:#FAF9F5;border-top-color:#E8E5D8;"
-            >
+            <div class="flex items-center gap-2.5 px-5 py-3.5 flex-shrink-0 border-t bg-linen-light border-linen-dark">
+
                 {{-- Optional cancel on step 1 --}}
                 @if($cancelLabel)
                     <button
@@ -176,39 +171,33 @@
                 @endif
 
                 <div class="flex items-center gap-2.5 ml-auto">
+
                     {{-- Back --}}
-                    <button
-                        type="button"
+                    <x-ui.button-outline-charcoal
                         x-show="step > 1"
                         x-cloak
                         @click="prev()"
-                        class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
                     >
                         ← Back
-                    </button>
+                    </x-ui.button-outline-charcoal>
 
                     {{-- Next --}}
-                    <button
-                        type="button"
+                    <x-ui.button-gold-gradient
                         x-show="step < totalSteps"
                         @click="next()"
-                        class="px-5 py-2 text-sm font-semibold text-charcoal hover:shadow-gold transition-all"
-                        style="background:linear-gradient(135deg,#FFC20E 0%,#FFD93D 100%);"
                     >
                         Next →
-                    </button>
+                    </x-ui.button-gold-gradient>
 
                     {{-- Finish --}}
-                    <button
-                        type="button"
+                    <x-ui.button-gold-gradient
                         x-show="step === totalSteps"
                         x-cloak
                         @click="finish()"
-                        class="px-5 py-2 text-sm font-semibold text-charcoal hover:shadow-gold transition-all"
-                        style="background:linear-gradient(135deg,#FFC20E 0%,#FFD93D 100%);"
                     >
                         {{ $finishLabel }}
-                    </button>
+                    </x-ui.button-gold-gradient>
+
                 </div>
             </div>
 

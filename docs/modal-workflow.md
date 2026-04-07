@@ -362,6 +362,7 @@ See the **Demo / Living Documentation Page** (`/demo/modals`) for a working 3-st
 
 **Source of truth:** `docs/branding-requirements.md`
 **Scope:** All five modal components audited against branding rules.
+**Status:** Remediation complete. All violations below are resolved as of this version.
 
 ---
 
@@ -455,16 +456,16 @@ Raw hex values (non-compiled, not passing through Tailwind) appear in:
 
 ### Summary
 
-| Component | Inline CSS | Bare buttons | Square corners | Colour tokens |
-|---|---|---|---|---|
-| `x-ui.modal` | **FAIL** (entire variant system) | N/A | PASS | **FAIL** (all raw hex) |
-| `x-ui.modal-wizard` | **FAIL** | **FAIL** | PASS | **FAIL** |
-| `x-ui.modal-trigger` | PASS | N/A | N/A | PASS |
-| `x-ui.contact-modal` | **FAIL** | N/A | PASS | **FAIL** |
-| `x-ui.modal-quick-view` | **FAIL** (`display:none`) | N/A | **FAIL** (close btn) | PASS |
+| Component | Inline CSS | Bare buttons | Square corners | Colour tokens | Status |
+|---|---|---|---|---|---|
+| `x-ui.modal` | RESOLVED | N/A | PASS | RESOLVED | COMPLIANT |
+| `x-ui.modal-wizard` | RESOLVED | RESOLVED | PASS | RESOLVED | COMPLIANT |
+| `x-ui.modal-trigger` | PASS | N/A | N/A | PASS | COMPLIANT |
+| `x-ui.contact-modal` | RESOLVED | N/A | PASS | PASS | COMPLIANT |
+| `x-ui.modal-quick-view` | RESOLVED | N/A | RESOLVED | PASS | COMPLIANT |
 
-**Priority remediation order before building the DTF/order wizard:**
-1. `x-ui.modal` — rebuild the variant colour system using compiled Tailwind classes per variant instead of the runtime `$vt[]` PHP array and inline styles. This is the foundation all other components inherit patterns from.
-2. `x-ui.modal-wizard` — replace all hardcoded inline styles with Tailwind tokens and replace bare navigation buttons with `x-ui.button-*` components. This is the direct base for the new order workflow.
-3. `x-ui.modal-quick-view` — remove `style="display:none;"` and `rounded-full` on the close button.
-4. `x-ui.contact-modal` — convert all inline styles to Tailwind utilities.
+**Remediation applied:**
+1. `x-ui.modal` — replaced the entire `$vt[]` PHP hex array with `$vc[]` Tailwind class strings. All six variants now resolve to compiled token classes (`bg-gold-gradient-horizontal`, `bg-linen`, `border-sunburst`, `text-charcoal`, `bg-error/15`, etc.). Zero inline hex values remain. The `max-width`/`max-height` panel dimensions are the only remaining inline styles — both are dynamic PHP values that cannot be static classes.
+2. `x-ui.modal-wizard` — removed all five hardcoded inline style blocks. Gold stripe now uses `bg-gold-gradient-horizontal`, header uses `bg-linen border-b-2 border-sunburst`, footer uses `bg-linen-light border-t border-linen-dark`. Back button replaced with `x-ui.button-outline-charcoal`, Next and Finish replaced with `x-ui.button-gold-gradient`. Alpine directives pass through via `$attributes->merge()`.
+3. `x-ui.modal-quick-view` — removed `style="display: none;"` (Alpine `x-cloak` added instead). Removed `rounded-full` from the close button — square corners, branding-compliant.
+4. `x-ui.contact-modal` — converted `style="max-width:34rem;max-height:92dvh;"` to `class="max-w-[34rem] max-h-[92dvh]"`. Zero inline styles remain on the panel.

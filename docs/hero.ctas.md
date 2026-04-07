@@ -13,7 +13,7 @@
 
 | Anchor | Used By | Target Section Component | id= Defined? | Status |
 |---|---|---|---|---|
-| `#all-products` | All A2 sub-pages + `/top5pct-merchandise` | `sections.product-grid` | Yes — hardcoded in component root `<section>` | ✅ Resolved |
+| `#all-products` | All A2 sub-pages + `/top5pct-merchandise` | `sections.product-grid` | Yes — anchor div rendered unconditionally (fixed 2026-04-06) | ✅ Fixed (2026-04-06) |
 | `#shirt-types` | `/custom-apparel/custom-shirts` | `sections.shirt-types-grid` | Yes — hardcoded in component root `<section>` | ✅ Resolved |
 | `#apparel-categories` | `/custom-apparel` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
 | `#sign-categories` | `/signs` | `sections.lp-category-banners` | Yes — `id` prop added | ✅ Fixed (2026-04-06) |
@@ -26,15 +26,22 @@
 
 ## A2 — Sub-pages: `#all-products`
 
-All A2 pages use `primaryButtonHref="#all-products"` and include `x-sections.product-grid`. The `product-grid` component root is:
+All A2 pages use `primaryButtonHref="#all-products"` and include `x-sections.product-grid`.
+
+**Original state:** The `id="all-products"` was on the `<section>` root of `product-grid`, but that entire section is wrapped in `@if($alwaysShow || config('client.product_grid_enabled'))`. With `product_grid_enabled = false` in `config/client.php`, the section (and therefore the anchor) never rendered — the hero "Shop Now" button had no target to scroll to on any sub-page.
+
+**Fix (2026-04-06):** Moved the anchor outside the conditional:
 
 ```html
-<section id="all-products" class="py-10 bg-white">
+<div id="all-products"></div>
+@if($alwaysShow || config('client.product_grid_enabled'))
+<section class="py-10 bg-white"> ... </section>
+@endif
 ```
 
-The `id="all-products"` is hardcoded in the component. No per-page change is needed.
+The `<div id="all-products">` now always renders. The product grid content remains behind the feature flag. The scroll target is unconditionally available on every page that includes the component.
 
-**Status: ✅ All A2 sub-pages are resolved.**
+**Status: ✅ All A2 sub-pages resolved.**
 
 | Page Group | Pages | product-grid present? | id="all-products" resolves? |
 |---|---|---|---|

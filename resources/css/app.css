@@ -279,6 +279,27 @@ html {
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
     }
+
+    .scrollbar-sunburst {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-sunburst) var(--color-linen);
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar-track {
+        background: var(--color-linen);
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar-thumb {
+        background: var(--color-sunburst);
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar-thumb:hover {
+        background: var(--color-sunburst-dark);
+    }
 }
 
 @keyframes rock {

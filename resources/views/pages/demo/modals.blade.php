@@ -551,21 +551,50 @@
 
         <x-slot:step2>
             <p class="text-charcoal-light mb-4">Select your preferred contact method so we can follow up on your order:</p>
-            <div class="space-y-2" x-data="{ contact: 'phone' }">
-                @foreach(['email' => 'Email', 'phone' => 'Phone', 'text' => 'Text Message'] as $val => $label)
-                    <label
-                        class="flex items-center gap-3 w-full px-4 py-3 border-2 bg-white cursor-pointer transition-colors"
-                        :class="contact === '{{ $val }}' ? 'border-azure' : 'border-linen-dark hover:border-azure/40'"
-                        @click="contact = '{{ $val }}'"
-                    >
-                        <input type="radio" name="demo_contact" value="{{ $val }}"
-                            class="w-4 h-4 flex-shrink-0 cursor-pointer"
-                            style="accent-color:#3273DC;"
-                            x-bind:checked="contact === '{{ $val }}'"
-                            {{ $val === 'phone' ? 'checked' : '' }}>
-                        <span class="text-sm font-medium text-charcoal">{{ $label }}</span>
-                    </label>
-                @endforeach
+            <div class="flex gap-2" x-data="{ contact: 'phone' }">
+
+                <label
+                    :class="contact === 'email' ? 'border-sunburst bg-sunburst/10' : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+                    class="flex-1 flex flex-col items-center gap-1.5 px-2 py-4 border-2 cursor-pointer text-center transition-colors"
+                >
+                    <input type="radio" name="demo_contact" value="email" class="sr-only" @change="contact = 'email'">
+                    <span class="text-sm font-bold text-charcoal">Email</span>
+                    <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
+                        :class="contact === 'email' ? 'border-sunburst' : 'border-linen-dark'">
+                        <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
+                            :class="contact === 'email' ? 'opacity-100' : 'opacity-0'"></span>
+                    </span>
+                    <span class="text-xs text-charcoal-light leading-snug">Inbox<br>notification</span>
+                </label>
+
+                <label
+                    :class="contact === 'phone' ? 'border-sunburst bg-sunburst/10' : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+                    class="flex-1 flex flex-col items-center gap-1.5 px-2 py-4 border-2 cursor-pointer text-center transition-colors"
+                >
+                    <input type="radio" name="demo_contact" value="phone" class="sr-only" @change="contact = 'phone'" checked>
+                    <span class="text-sm font-bold text-charcoal">Phone</span>
+                    <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
+                        :class="contact === 'phone' ? 'border-sunburst' : 'border-linen-dark'">
+                        <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
+                            :class="contact === 'phone' ? 'opacity-100' : 'opacity-0'"></span>
+                    </span>
+                    <span class="text-xs text-charcoal-light leading-snug">We'll call<br>you</span>
+                </label>
+
+                <label
+                    :class="contact === 'text' ? 'border-sunburst bg-sunburst/10' : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+                    class="flex-1 flex flex-col items-center gap-1.5 px-2 py-4 border-2 cursor-pointer text-center transition-colors"
+                >
+                    <input type="radio" name="demo_contact" value="text" class="sr-only" @change="contact = 'text'">
+                    <span class="text-sm font-bold text-charcoal">Text</span>
+                    <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
+                        :class="contact === 'text' ? 'border-sunburst' : 'border-linen-dark'">
+                        <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
+                            :class="contact === 'text' ? 'opacity-100' : 'opacity-0'"></span>
+                    </span>
+                    <span class="text-xs text-charcoal-light leading-snug">Quick SMS<br>update</span>
+                </label>
+
             </div>
         </x-slot:step2>
 

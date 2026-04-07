@@ -634,6 +634,88 @@ Inline product preview overlay. Opens via the `open-quick-view` window event (no
 />
 ```
 
+### Form Controls
+
+These are the standard branded patterns for interactive form controls inside modals and wizard steps. Both are Alpine-driven with no external JS dependencies.
+
+#### Radio Button Card Group
+
+Horizontal flex of card-style labels. The native `<input type="radio">` is visually hidden (`sr-only`); the custom circular indicator inside each card provides the visual affordance. Alpine binds `selected` state and toggles border/background via `:class`.
+
+**Structure (per card):** option name → circular radio indicator → description text
+
+**Selected state:** `border-sunburst bg-sunburst/10`
+**Unselected state:** `border-linen-dark bg-white hover:border-sunburst hover:bg-linen`
+**Indicator:** `w-5 h-5 border-2 rounded-full` ring; `w-2.5 h-2.5 bg-sunburst rounded-full` inner dot; dot fades with `opacity-0` → `opacity-100`
+
+**Rules:**
+- Cards use `border-2` (not `border`). No `rounded-*` on the card itself — square corners only.
+- The outer ring and inner dot are always `rounded-full` (circle is the semantic shape of a radio control).
+- Use `bg-sunburst` (never `accent-color` CSS or native radio styling). Do not use `style="accent-color:..."`.
+- Wrap the group in `x-data="{ selected: null }"` (or a pre-selected default value).
+
+```blade
+<div x-data="{ selected: null }" class="flex gap-3">
+
+    <label
+        :class="selected === 'standard'
+            ? 'border-sunburst bg-sunburst/10'
+            : 'border-linen-dark bg-white hover:border-sunburst hover:bg-linen'"
+        class="flex-1 flex flex-col items-center gap-1.5 px-3 py-4 border-2 cursor-pointer text-center transition-colors"
+    >
+        <input type="radio" name="group" value="standard" class="sr-only" @change="selected = 'standard'">
+        <span class="text-sm font-bold text-charcoal">Standard</span>
+        <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
+            :class="selected === 'standard' ? 'border-sunburst' : 'border-linen-dark'">
+            <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
+                :class="selected === 'standard' ? 'opacity-100' : 'opacity-0'"></span>
+        </span>
+        <span class="text-xs text-charcoal-light leading-snug">Description text</span>
+    </label>
+
+    {{-- Repeat for each option --}}
+
+</div>
+```
+
+#### Toggle Switch
+
+A pill-shaped `<button role="switch">` with an absolutely positioned white thumb that slides left/right. Background colour changes with Alpine `:class`. `overflow-hidden` on the track prevents thumb bleed-out. `left-0` on the thumb anchors it to the track's left edge before translation.
+
+**On state:** `bg-sunburst` track, thumb at `translate-x-6`
+**Off state:** `bg-linen-dark` track, thumb at `translate-x-1`
+**Track:** `w-11 h-6 rounded-full relative overflow-hidden`
+**Thumb:** `absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow`
+
+**Rules:**
+- Always include `role="switch"` and `:aria-checked="state.toString()"` for accessibility.
+- `translate-x-1` and `translate-x-6` are safelisted in `tailwind.config.js` — they only appear inside Alpine `:class` bindings and would be purged otherwise.
+- Wrap multiple toggles in a container with `divide-y divide-linen-dark`; each row uses `flex items-center gap-4 py-4`.
+- Use `focus:ring-2 focus:ring-sunburst focus:ring-offset-1` for keyboard focus.
+
+```blade
+<div x-data="{ on: false }" class="flex items-center gap-4 py-4">
+    <div class="flex-1 min-w-0">
+        <p class="text-sm font-semibold text-charcoal">Option Label</p>
+        <p class="text-xs text-charcoal-light mt-0.5">Short description of what this controls</p>
+    </div>
+    <button
+        type="button"
+        role="switch"
+        :aria-checked="on.toString()"
+        @click="on = !on"
+        :class="on ? 'bg-sunburst' : 'bg-linen-dark'"
+        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200
+               focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+    >
+        <span
+            :class="on ? 'translate-x-6' : 'translate-x-1'"
+            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+        ></span>
+    </button>
+</div>
+```
+
 ### Example Page Structure
 
 All pages use the `x-layouts.page` Blade component, which already includes the navigation sandwich pattern, header, footer, cart drawer Livewire component, and the global contact FAB. Page files contain only `x-sections.*` and `x-ui.*` tags inside the default slot.

@@ -925,12 +925,12 @@
                 >
                     <input type="radio" name="turnaround" value="standard" class="sr-only" @change="selected = 'standard'">
                     <span class="text-sm font-bold text-charcoal">Standard</span>
-                    <span class="text-xs text-charcoal-light leading-snug">5–7 business<br>days</span>
-                    <span class="mt-1.5 w-4 h-4 border-2 flex items-center justify-center transition-colors"
+                    <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
                         :class="selected === 'standard' ? 'border-sunburst' : 'border-linen-dark'">
-                        <span class="w-2 h-2 bg-sunburst transition-opacity"
+                        <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
                             :class="selected === 'standard' ? 'opacity-100' : 'opacity-0'"></span>
                     </span>
+                    <span class="text-xs text-charcoal-light leading-snug">5–7 business<br>days</span>
                 </label>
 
                 <label
@@ -941,12 +941,12 @@
                 >
                     <input type="radio" name="turnaround" value="rush" class="sr-only" @change="selected = 'rush'">
                     <span class="text-sm font-bold text-charcoal">Rush</span>
-                    <span class="text-xs text-charcoal-light leading-snug">2–3 business<br>days</span>
-                    <span class="mt-1.5 w-4 h-4 border-2 flex items-center justify-center transition-colors"
+                    <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
                         :class="selected === 'rush' ? 'border-sunburst' : 'border-linen-dark'">
-                        <span class="w-2 h-2 bg-sunburst transition-opacity"
+                        <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
                             :class="selected === 'rush' ? 'opacity-100' : 'opacity-0'"></span>
                     </span>
+                    <span class="text-xs text-charcoal-light leading-snug">2–3 business<br>days</span>
                 </label>
 
                 <label
@@ -957,12 +957,12 @@
                 >
                     <input type="radio" name="turnaround" value="sameday" class="sr-only" @change="selected = 'sameday'">
                     <span class="text-sm font-bold text-charcoal">Same Day</span>
-                    <span class="text-xs text-charcoal-light leading-snug">Order by<br>10 a.m.</span>
-                    <span class="mt-1.5 w-4 h-4 border-2 flex items-center justify-center transition-colors"
+                    <span class="my-1.5 w-5 h-5 border-2 rounded-full flex items-center justify-center transition-colors"
                         :class="selected === 'sameday' ? 'border-sunburst' : 'border-linen-dark'">
-                        <span class="w-2 h-2 bg-sunburst transition-opacity"
+                        <span class="w-2.5 h-2.5 bg-sunburst rounded-full transition-opacity"
                             :class="selected === 'sameday' ? 'opacity-100' : 'opacity-0'"></span>
                     </span>
+                    <span class="text-xs text-charcoal-light leading-snug">Order by<br>10 a.m.</span>
                 </label>
 
             </div>
@@ -1009,11 +1009,11 @@
                     :aria-checked="rush.toString()"
                     @click="rush = !rush"
                     :class="rush ? 'bg-sunburst' : 'bg-linen-dark'"
-                    class="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                    class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
                 >
                     <span
                         :class="rush ? 'translate-x-6' : 'translate-x-1'"
-                        class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                        class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
                     ></span>
                 </button>
             </div>
@@ -1030,11 +1030,11 @@
                     :aria-checked="proof.toString()"
                     @click="proof = !proof"
                     :class="proof ? 'bg-sunburst' : 'bg-linen-dark'"
-                    class="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                    class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
                 >
                     <span
                         :class="proof ? 'translate-x-6' : 'translate-x-1'"
-                        class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                        class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
                     ></span>
                 </button>
             </div>
@@ -1051,11 +1051,11 @@
                     :aria-checked="digital.toString()"
                     @click="digital = !digital"
                     :class="digital ? 'bg-sunburst' : 'bg-linen-dark'"
-                    class="relative flex-shrink-0 w-11 h-6 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                    class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
                 >
                     <span
                         :class="digital ? 'translate-x-6' : 'translate-x-1'"
-                        class="absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                        class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
                     ></span>
                 </button>
             </div>

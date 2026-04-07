@@ -35,7 +35,8 @@ The core, general-purpose modal. All modals on the site are either this componen
 | `variant` | string | `default` | `default` / `dark` / `gold` / `success` / `warning` / `danger` |
 | `dismissible` | bool | `true` | Show ✕ button and allow backdrop click / Escape to close |
 | `scrollBody` | bool | `true` | Inner body scrolls; header and footer stay sticky |
-| `maxHeight` | string | `92dvh` | CSS max-height override |
+| `maxHeight` | string | `92dvh` | CSS max-height override (e.g. `"80dvh"`) |
+| `maxWidth` | string | `null` | CSS max-width override — skips the `size` preset when set (e.g. `"26rem"`) |
 | `headerClass` | string | `''` | Extra Tailwind classes on the header div |
 | `bodyClass` | string | `''` | Extra Tailwind classes on the body div |
 | `panelClass` | string | `''` | Extra Tailwind classes on the panel div (use `!overflow-visible` for modals containing absolute-positioned dropdowns) |

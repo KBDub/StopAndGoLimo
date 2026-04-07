@@ -54,6 +54,7 @@
     'dismissible' => true,
     'scrollBody'  => true,
     'maxHeight'   => '92dvh',
+    'maxWidth'    => null,
     'headerClass' => '',
     'bodyClass'   => '',
     'footerClass' => '',
@@ -62,7 +63,7 @@
 
 @php
     // ── Size → max-width ──────────────────────────────────────────────────
-    $maxWidth = match($size) {
+    $maxWidth = $maxWidth ?? match($size) {
         'sm'   => '22rem',
         'lg'   => '46rem',
         'xl'   => '58rem',

@@ -38,6 +38,7 @@ The core, general-purpose modal. All modals on the site are either this componen
 | `maxHeight` | string | `92dvh` | CSS max-height override |
 | `headerClass` | string | `''` | Extra Tailwind classes on the header div |
 | `bodyClass` | string | `''` | Extra Tailwind classes on the body div |
+| `panelClass` | string | `''` | Extra Tailwind classes on the panel div (use `!overflow-visible` for modals containing absolute-positioned dropdowns) |
 | `footerClass` | string | `''` | Extra Tailwind classes on the footer div |
 
 #### Size → max-width map

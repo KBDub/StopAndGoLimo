@@ -57,6 +57,7 @@
     'headerClass' => '',
     'bodyClass'   => '',
     'footerClass' => '',
+    'panelClass'  => '',
 ])
 
 @php
@@ -214,7 +215,7 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full flex flex-col shadow-2xl overflow-hidden {{ $vc['panelBg'] }}"
+            class="relative w-full flex flex-col shadow-2xl overflow-hidden {{ $vc['panelBg'] }} {{ $panelClass }}"
             style="max-width:{{ $maxWidth }};max-height:{{ $maxHeight }};"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"

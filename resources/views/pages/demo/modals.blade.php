@@ -1113,7 +1113,7 @@
         <div class="flex flex-wrap gap-3">
             <button
                 type="button"
-                @click="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }))"
+                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }))"
                 class="px-5 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
             >
                 Open Custom Request Wizard

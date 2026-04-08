@@ -18,7 +18,6 @@
                 <div
                     x-data="{
                         zip: '',
-                        showModal: false,
                         inRange: false,
                         served: [
                             '60431','60432','60433','60434','60435','60436',
@@ -35,12 +34,10 @@
                         checkZip() {
                             if (this.zip.length === 5) {
                                 this.inRange = this.served.includes(this.zip);
-                                this.showModal = true;
+                                this.$store.zipResult.inRange = this.inRange;
+                                this.$store.zipResult.zip = this.zip;
+                                this.$dispatch('open-modal', { name: 'zip-result' });
                             }
-                        },
-                        sendRequest() {
-                            this.showModal = false;
-                            this.$nextTick(() => window.dispatchEvent(new CustomEvent('open-contact-modal')));
                         }
                     }"
                     class="mb-8"
@@ -71,86 +68,61 @@
                         </button>
                     </div>
 
-                    {{-- Result modal overlay --}}
-                    <template x-teleport="body">
-                        <div
-                            x-show="showModal"
-                            x-cloak
-                            @keydown.escape.window="showModal = false"
-                            class="fixed inset-0 z-[9999] flex items-center justify-center p-4"
-                            role="dialog"
-                            aria-modal="true"
-                        >
-                            {{-- Backdrop --}}
-                            <div class="absolute inset-0 bg-charcoal-dark/80" @click="showModal = false" aria-hidden="true"></div>
+                    {{-- Zip result modal — uses x-ui.modal (md / Promotional Alert pattern) --}}
+                    <x-ui.modal name="zip-result" size="md">
 
-                            {{-- Panel --}}
-                            <div
-                                class="relative w-full max-w-sm bg-white shadow-2xl overflow-hidden"
-                                x-transition:enter="transition ease-out duration-200"
-                                x-transition:enter-start="opacity-0 scale-95"
-                                x-transition:enter-end="opacity-100 scale-100"
-                                x-transition:leave="transition ease-in duration-150"
-                                x-transition:leave-start="opacity-100 scale-100"
-                                x-transition:leave-end="opacity-0 scale-95"
-                                @click.stop
-                            >
-                                {{-- Gold accent stripe --}}
-                                <div class="h-2 bg-gold-gradient-horizontal" aria-hidden="true"></div>
-
-                                {{-- Close button --}}
-                                <button
-                                    type="button"
-                                    @click="showModal = false"
-                                    class="absolute top-3 right-3 flex items-center justify-center w-8 h-8 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors"
-                                    aria-label="Close"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
-                                         stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <x-slot:header>
+                            <div class="h-2 flex-shrink-0 bg-gold-gradient-horizontal" aria-hidden="true"></div>
+                            <div class="flex items-start gap-3 px-5 py-4 bg-charcoal border-b-2 border-sunburst">
+                                {{-- Icon — green check when in range, gold pin when out --}}
+                                <div class="flex items-center justify-center w-12 h-12 flex-shrink-0"
+                                    :class="$store.zipResult.inRange ? 'bg-green-500/15' : 'bg-sunburst/15'">
+                                    {{-- In range: check --}}
+                                    <svg x-show="$store.zipResult.inRange"
+                                        class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    {{-- Out of range: location pin --}}
+                                    <svg x-show="!$store.zipResult.inRange"
+                                        class="w-6 h-6 text-sunburst" fill="currentColor"
+                                        viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <h2 class="text-lg font-bold text-white leading-tight"
+                                        x-text="$store.zipResult.inRange ? 'Great, you are in zip code range!' : 'Shipping &amp; local pickup available'">
+                                    </h2>
+                                    <p class="text-white/60 text-xs mt-0.5"
+                                        x-text="$store.zipResult.inRange ? 'We serve ZIP ' + $store.zipResult.zip + ' directly.' : 'ZIP ' + $store.zipResult.zip + ' is eligible for shipping or local pickup.'">
+                                    </p>
+                                </div>
+                                <x-ui.modal-trigger modal="zip-result" as="close"
+                                    class="flex items-center justify-center w-8 h-8 text-white/50 hover:text-white hover:bg-white/10 transition-colors flex-shrink-0 mt-0.5">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                         stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                         <path d="M18 6 6 18M6 6l12 12"/>
                                     </svg>
-                                </button>
-
-                                <div class="px-6 py-7 text-center space-y-4">
-                                    {{-- In-range message --}}
-                                    <div x-show="inRange">
-                                        <div class="flex items-center justify-center w-12 h-12 bg-green-50 mx-auto mb-4" aria-hidden="true">
-                                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                                 stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
-                                                <polyline points="20 6 9 17 4 12"/>
-                                            </svg>
-                                        </div>
-                                        <p class="text-base font-bold text-charcoal">Great, you are in zip code range!</p>
-                                    </div>
-
-                                    {{-- Out-of-range message --}}
-                                    <div x-show="!inRange">
-                                        <div class="flex items-center justify-center w-12 h-12 bg-sunburst/10 mx-auto mb-4" aria-hidden="true">
-                                            <svg class="w-6 h-6 text-sunburst" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                            </svg>
-                                        </div>
-                                        <p class="text-base font-bold text-charcoal">Your zip code is eligible for shipping or local pickup.</p>
-                                    </div>
-
-                                    <p class="text-sm text-charcoal-light leading-relaxed">Would you like to send in a custom request?</p>
-
-                                    <div class="flex gap-3 justify-center pt-2">
-                                        <button
-                                            type="button"
-                                            @click="showModal = false"
-                                            class="px-5 py-2.5 text-sm font-semibold border border-linen-dark text-charcoal hover:bg-linen transition-colors"
-                                        >No, thanks</button>
-                                        <button
-                                            type="button"
-                                            @click="sendRequest()"
-                                            class="px-5 py-2.5 text-sm font-semibold bg-gold-gradient text-charcoal hover:shadow-gold transition-all"
-                                        >Yes, let's go!</button>
-                                    </div>
-                                </div>
+                                </x-ui.modal-trigger>
                             </div>
-                        </div>
-                    </template>
+                        </x-slot:header>
+
+                        <p class="text-charcoal-light text-sm leading-relaxed">
+                            Would you like to send in a custom request? Our team will reach out promptly to discuss your project.
+                        </p>
+
+                        <x-slot:footer>
+                            <x-ui.button-modal-cancel modal="zip-result">No, thanks</x-ui.button-modal-cancel>
+                            <x-ui.button-modal-primary
+                                modal="zip-result"
+                                @click="$nextTick(() => window.dispatchEvent(new CustomEvent('open-contact-modal')))"
+                            >Yes, let's go! →</x-ui.button-modal-primary>
+                        </x-slot:footer>
+
+                    </x-ui.modal>
+
                 </div>
 
                 <div class="border-t border-white/10 pt-6">

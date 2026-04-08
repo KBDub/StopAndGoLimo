@@ -507,6 +507,119 @@ Multi-step non-dismissible wizard. No close button, no backdrop dismiss, no Esca
 </x-ui.modal-wizard>
 ```
 
+---
+
+### Form Controls (MANDATORY)
+
+All interactive form controls inside modals and wizard panels must use the branded patterns below. **Never invent custom toggle or selection controls** — always use these exact patterns. The demo is at `/demo/modals` → "Form Controls" section.
+
+#### Toggle Switch (MANDATORY)
+
+Used for binary on/off choices. The `rounded-full` pill shape is **the only exception** to the no-rounded-corners rule — toggle thumbs and tracks retain `rounded-full`.
+
+```html
+<div class="flex items-center gap-4 py-4">
+    <div class="flex-1 min-w-0">
+        <p class="text-sm font-semibold text-charcoal">Label Text</p>
+        <p class="text-xs text-charcoal-light mt-0.5">Supporting description</p>
+    </div>
+    <button
+        type="button"
+        role="switch"
+        :aria-checked="myState.toString()"
+        @click="myState = !myState"
+        :class="myState ? 'bg-sunburst' : 'bg-linen-dark'"
+        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+    >
+        <span
+            :class="myState ? 'translate-x-6' : 'translate-x-1'"
+            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+        ></span>
+    </button>
+</div>
+```
+
+**Rules:**
+- Track size: `w-11 h-6` — never smaller
+- Thumb: `w-4 h-4`, `translate-x-6` (on) / `translate-x-1` (off)
+- On color: `bg-sunburst`; Off color: `bg-linen-dark`
+- Always use `role="switch"` and `:aria-checked`
+- Container rows use `divide-y divide-linen-dark` to separate items
+
+**Toggle grid cards** (when toggles need a 3-per-row grid layout — e.g. garment or specialty item selection):
+
+```html
+<div class="grid grid-cols-3 gap-2">
+    <button
+        type="button"
+        role="switch"
+        :aria-checked="myState.toString()"
+        @click="myState = !myState"
+        :class="myState ? 'bg-sunburst border-sunburst' : 'bg-white border-linen-dark hover:border-sunburst/50'"
+        class="flex items-center justify-between gap-2 px-3 py-3 border-2 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
+    >
+        <span class="text-xs font-semibold text-charcoal leading-tight">Label</span>
+        <span
+            :class="myState ? 'bg-charcoal/25' : 'bg-linen-dark'"
+            class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200"
+        >
+            <span
+                :class="myState ? 'translate-x-6' : 'translate-x-1'"
+                class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+            ></span>
+        </span>
+    </button>
+</div>
+```
+
+Card toggle rules: card border `border-2`; selected = `bg-sunburst border-sunburst`; unselected = `bg-white border-linen-dark`; thumb track uses `bg-charcoal/25` (on) / `bg-linen-dark` (off) so the white thumb remains visible on the gold card.
+
+#### Segmented Radio (Compact horizontal row)
+
+Used when there are 2–4 exclusive choices that should all be visible at once on one row. The selected option gets the sunburst fill.
+
+```html
+<div class="flex gap-2">
+    {{-- repeat for each option --}}
+    <label class="flex-1 cursor-pointer group">
+        <input type="radio" name="my-group" value="option-a" x-model="myField" class="sr-only">
+        <span
+            class="flex items-center justify-center px-2 py-2.5 border-2 text-xs font-semibold text-center transition-colors duration-150 w-full"
+            :class="myField === 'option-a' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
+        >Option A</span>
+    </label>
+</div>
+```
+
+Rules: `sr-only` hides the native radio; the `<span>` acts as the visual. Selected = `bg-sunburst border-sunburst`. Each option is `flex-1` so they share equal width. Never use `rounded` on the spans.
+
+#### Standard Text / Email / Tel / Date / Textarea Inputs
+
+```html
+<input
+    type="text"
+    x-model="myField"
+    placeholder="Placeholder…"
+    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+>
+```
+
+Rules: No `rounded-*` ever. Border `border-linen-dark`; focus `border-sunburst ring-1 ring-sunburst/50`. Rush-state inputs add `border-sunburst ring-1 ring-sunburst/30` unconditionally.
+
+#### Field Labels
+
+```html
+<label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+    Field Name <span class="text-error">*</span>
+</label>
+```
+
+- Required indicator: `<span class="text-error">*</span>` — never the word "required"
+- Labels inside modal body sections: `text-xs font-semibold text-charcoal-light uppercase tracking-wide`
+- Section heading labels (non-uppercase): `text-xs font-semibold text-charcoal-light mb-1.5` (omit `uppercase tracking-wide`)
+
+---
+
 #### x-ui.contact-modal
 
 Anchored FAB (floating action button) fixed to the bottom-right of every page. Opens a full branded quote/contact form on click. **Globally injected in `layouts/page.blade.php`** — automatically skipped on `cart`, `checkout`, and `order-confirmation` pages.

@@ -354,19 +354,17 @@
                             role="switch"
                             :aria-checked="garments.{{ $g['key'] }}.toString()"
                             @click="garments.{{ $g['key'] }} = !garments.{{ $g['key'] }}"
-                            :class="garments.{{ $g['key'] }}
-                                ? 'bg-sunburst border-sunburst text-charcoal'
-                                : 'bg-white border-linen-dark text-charcoal hover:border-sunburst/50'"
-                            class="flex items-center justify-between gap-2 px-3 py-3 border-2 text-left transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                            :class="garments.{{ $g['key'] }} ? 'bg-sunburst border-sunburst' : 'bg-white border-linen-dark hover:border-sunburst/50'"
+                            class="flex items-center justify-between gap-2 px-3 py-3 border-2 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
                         >
-                            <span class="text-xs font-semibold leading-tight">{{ $g['label'] }}</span>
+                            <span class="text-xs font-semibold text-charcoal leading-tight">{{ $g['label'] }}</span>
                             <span
-                                :class="garments.{{ $g['key'] }} ? 'bg-charcoal/20' : 'bg-linen-dark'"
-                                class="relative flex-shrink-0 w-8 h-4 overflow-hidden rounded-full transition-colors duration-200"
+                                :class="garments.{{ $g['key'] }} ? 'bg-charcoal/25' : 'bg-linen-dark'"
+                                class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200"
                             >
                                 <span
-                                    :class="garments.{{ $g['key'] }} ? 'translate-x-4' : 'translate-x-0.5'"
-                                    class="absolute top-0.5 w-3 h-3 bg-white rounded-full shadow transition-transform duration-200"
+                                    :class="garments.{{ $g['key'] }} ? 'translate-x-6' : 'translate-x-1'"
+                                    class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
                                 ></span>
                             </span>
                         </button>
@@ -391,15 +389,15 @@
                             <h3 class="text-sm font-semibold text-charcoal mb-3">
                                 Sleeve Length <span class="text-error ml-0.5">*</span>
                             </h3>
-                            <div class="space-y-2.5">
+                            <div class="flex gap-2">
                                 @foreach([['short','Short Sleeve'],['long','Long Sleeve'],['other','Other']] as [$val,$lbl])
-                                <label class="flex items-center gap-3 cursor-pointer group">
+                                <label class="flex-1 cursor-pointer group">
                                     <input type="radio" name="crw-sleeve-type" value="{{ $val }}"
                                         x-model="sleeveType"
-                                        class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                        class="sr-only">
                                     <span
-                                        class="flex-1 px-3 py-2.5 border text-sm font-medium transition-colors duration-150"
-                                        :class="sleeveType === '{{ $val }}' ? 'border-sunburst bg-sunburst/10 text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/40'"
+                                        class="flex items-center justify-center px-2 py-2.5 border-2 text-xs font-semibold text-center transition-colors duration-150 w-full"
+                                        :class="sleeveType === '{{ $val }}' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
                                     >{{ $lbl }}</span>
                                 </label>
                                 @endforeach
@@ -410,15 +408,15 @@
                             <h3 class="text-sm font-semibold text-charcoal mb-3">
                                 Fabric Weight <span class="text-error ml-0.5">*</span>
                             </h3>
-                            <div class="space-y-2.5">
+                            <div class="flex gap-2">
                                 @foreach([['heavyweight','Heavyweight'],['lightweight','Lightweight'],['other','Other']] as [$val,$lbl])
-                                <label class="flex items-center gap-3 cursor-pointer group">
+                                <label class="flex-1 cursor-pointer group">
                                     <input type="radio" name="crw-fabric-weight" value="{{ $val }}"
                                         x-model="fabricWeight"
-                                        class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                        class="sr-only">
                                     <span
-                                        class="flex-1 px-3 py-2.5 border text-sm font-medium transition-colors duration-150"
-                                        :class="fabricWeight === '{{ $val }}' ? 'border-sunburst bg-sunburst/10 text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/40'"
+                                        class="flex items-center justify-center px-2 py-2.5 border-2 text-xs font-semibold text-center transition-colors duration-150 w-full"
+                                        :class="fabricWeight === '{{ $val }}' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
                                     >{{ $lbl }}</span>
                                 </label>
                                 @endforeach
@@ -572,45 +570,41 @@
                                     class="w-4 h-4 flex-shrink-0 accent-sunburst">
                                 <label for="crw-pm-specialty" class="text-sm font-bold text-charcoal cursor-pointer">Specialty Printing</label>
                             </div>
-                            <div x-show="printMethod === 'specialty'" x-cloak class="p-3">
+                            <div x-show="printMethod === 'specialty'" x-cloak class="divide-y divide-linen-dark">
                                 @php
                                     $specialtyItems = [
-                                        ['key' => 'vinyl',       'label' => 'Vinyl'],
+                                        ['key' => 'vinyl',       'label' => 'Vinyl Shirts'],
                                         ['key' => 'rhinestone',  'label' => 'Rhinestone'],
-                                        ['key' => 'glitter',     'label' => 'Glitter'],
-                                        ['key' => 'foil',        'label' => 'Foil'],
-                                        ['key' => 'glowDark',    'label' => 'Glow In Dark'],
-                                        ['key' => 'flock',       'label' => 'Flock'],
-                                        ['key' => 'reflective',  'label' => 'Reflective'],
+                                        ['key' => 'glitter',     'label' => 'Glitter Shirts'],
+                                        ['key' => 'foil',        'label' => 'Foil Shirts'],
+                                        ['key' => 'glowDark',    'label' => 'Glow In The Dark'],
+                                        ['key' => 'flock',       'label' => 'Flock Shirts'],
+                                        ['key' => 'reflective',  'label' => 'Reflective Shirts'],
                                         ['key' => 'holographic', 'label' => 'Holographic'],
-                                        ['key' => 'brick',       'label' => 'Brick'],
-                                        ['key' => 'pattern',     'label' => 'Pattern'],
+                                        ['key' => 'brick',       'label' => 'Brick Shirts'],
+                                        ['key' => 'pattern',     'label' => 'Pattern Shirts'],
                                         ['key' => 'embroidery',  'label' => 'Embroidery'],
-                                        ['key' => 'picture',     'label' => 'Picture'],
+                                        ['key' => 'picture',     'label' => 'Picture Shirts'],
                                     ];
                                 @endphp
-                                <div class="grid grid-cols-3 gap-2">
-                                    @foreach($specialtyItems as $item)
-                                    <button type="button" role="switch"
+                                @foreach($specialtyItems as $item)
+                                <div class="flex items-center gap-4 px-4 py-3.5">
+                                    <p class="flex-1 text-sm font-semibold text-charcoal">{{ $item['label'] }}</p>
+                                    <button
+                                        type="button"
+                                        role="switch"
                                         :aria-checked="specialtyTypes.{{ $item['key'] }}.toString()"
                                         @click="specialtyTypes.{{ $item['key'] }} = !specialtyTypes.{{ $item['key'] }}"
-                                        :class="specialtyTypes.{{ $item['key'] }}
-                                            ? 'bg-sunburst border-sunburst text-charcoal'
-                                            : 'bg-white border-linen-dark text-charcoal hover:border-sunburst/50'"
-                                        class="flex items-center justify-between gap-1 px-2.5 py-2.5 border-2 text-left transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1">
-                                        <span class="text-xs font-semibold leading-tight">{{ $item['label'] }}</span>
+                                        :class="specialtyTypes.{{ $item['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
+                                        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                                    >
                                         <span
-                                            :class="specialtyTypes.{{ $item['key'] }} ? 'bg-charcoal/20' : 'bg-linen-dark'"
-                                            class="relative flex-shrink-0 w-7 h-3.5 overflow-hidden rounded-full transition-colors duration-200"
-                                        >
-                                            <span
-                                                :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-3.5' : 'translate-x-0.5'"
-                                                class="absolute top-0.5 w-2.5 h-2.5 bg-white rounded-full shadow transition-transform duration-200"
-                                            ></span>
-                                        </span>
+                                            :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-6' : 'translate-x-1'"
+                                            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                                        ></span>
                                     </button>
-                                    @endforeach
                                 </div>
+                                @endforeach
                             </div>
                         </div>
 
@@ -633,49 +627,51 @@
                             </div>
                         </div>
 
-                        {{-- Ask about rush delivery if not already set --}}
-                        <div x-show="isRush !== true" x-cloak class="border border-linen-dark p-4">
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">
-                                Is this a rush delivery? <span class="text-error ml-0.5">*</span>
-                            </h3>
-                            <div class="flex gap-6">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-rush-delivery" value="yes"
-                                        @change="isRushDelivery = true"
-                                        :checked="isRushDelivery === true"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">Yes</span>
+                        {{-- Rush question + date on same row when not already a rush order --}}
+                        <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-4 items-start">
+                            <div class="border border-linen-dark p-4">
+                                <h3 class="text-sm font-semibold text-charcoal mb-3">
+                                    Rush delivery? <span class="text-error ml-0.5">*</span>
+                                </h3>
+                                <div class="flex gap-6">
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="crw-rush-delivery" value="yes"
+                                            @change="isRushDelivery = true"
+                                            :checked="isRushDelivery === true"
+                                            class="w-4 h-4 accent-sunburst">
+                                        <span class="text-sm font-medium text-charcoal">Yes</span>
+                                    </label>
+                                    <label class="flex items-center gap-2 cursor-pointer">
+                                        <input type="radio" name="crw-rush-delivery" value="no"
+                                            @change="isRushDelivery = false"
+                                            :checked="isRushDelivery === false"
+                                            class="w-4 h-4 accent-sunburst">
+                                        <span class="text-sm font-medium text-charcoal">No</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
+                                    Desired Completion Date <span class="text-error">*</span>
                                 </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-rush-delivery" value="no"
-                                        @change="isRushDelivery = false"
-                                        :checked="isRushDelivery === false"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">No</span>
-                                </label>
+                                <input
+                                    type="date"
+                                    x-model="completionDate"
+                                    :class="rushActive ? 'border-sunburst ring-1 ring-sunburst/30' : 'border-linen-dark'"
+                                    class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors"
+                                >
                             </div>
                         </div>
 
-                        {{-- Rush delivery confirmation banner --}}
-                        <div x-show="isRush !== true && isRushDelivery === true" x-cloak
-                            class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border-l-4 border-sunburst">
-                            <svg class="w-5 h-5 text-sunburst flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                            <p class="text-sm font-bold text-charcoal">Rush Expediting will be applied</p>
-                        </div>
-
-                        {{-- Date input --}}
-                        <div>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                        {{-- Date input when rush already set in step 1 --}}
+                        <div x-show="isRush === true" x-cloak>
+                            <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
                                 Desired Completion Date <span class="text-error">*</span>
-                                <span x-show="rushActive" x-cloak class="ml-1 px-1.5 py-0.5 bg-sunburst text-charcoal text-[10px] font-bold">RUSH</span>
                             </label>
                             <input
                                 type="date"
                                 x-model="completionDate"
-                                :class="rushActive ? 'border-sunburst ring-1 ring-sunburst/30' : 'border-linen-dark'"
-                                class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors"
+                                class="w-full px-3 py-2.5 text-sm border border-sunburst ring-1 ring-sunburst/30 focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors"
                             >
                         </div>
 

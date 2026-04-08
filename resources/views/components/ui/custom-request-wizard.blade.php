@@ -354,12 +354,11 @@
                             role="switch"
                             :aria-checked="garments.{{ $g['key'] }}.toString()"
                             @click="garments.{{ $g['key'] }} = !garments.{{ $g['key'] }}"
-                            :class="garments.{{ $g['key'] }} ? 'bg-sunburst border-sunburst' : 'bg-white border-linen-dark hover:border-sunburst/50'"
-                            class="flex items-center justify-between gap-2 px-3 py-3 border-2 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
+                            class="flex items-center justify-between gap-2 px-3 py-3 bg-white border-2 border-linen-dark hover:border-sunburst/50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
                         >
                             <span class="text-xs font-semibold text-charcoal leading-tight">{{ $g['label'] }}</span>
                             <span
-                                :class="garments.{{ $g['key'] }} ? 'bg-charcoal/25' : 'bg-linen-dark'"
+                                :class="garments.{{ $g['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
                                 class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200"
                             >
                                 <span
@@ -570,7 +569,7 @@
                                     class="w-4 h-4 flex-shrink-0 accent-sunburst">
                                 <label for="crw-pm-specialty" class="text-sm font-bold text-charcoal cursor-pointer">Specialty Printing</label>
                             </div>
-                            <div x-show="printMethod === 'specialty'" x-cloak class="divide-y divide-linen-dark">
+                            <div x-show="printMethod === 'specialty'" x-cloak class="p-3">
                                 @php
                                     $specialtyItems = [
                                         ['key' => 'vinyl',       'label' => 'Vinyl Shirts'],
@@ -587,24 +586,28 @@
                                         ['key' => 'picture',     'label' => 'Picture Shirts'],
                                     ];
                                 @endphp
-                                @foreach($specialtyItems as $item)
-                                <div class="flex items-center gap-4 px-4 py-3.5">
-                                    <p class="flex-1 text-sm font-semibold text-charcoal">{{ $item['label'] }}</p>
+                                <div class="grid grid-cols-3 gap-2">
+                                    @foreach($specialtyItems as $item)
                                     <button
                                         type="button"
                                         role="switch"
                                         :aria-checked="specialtyTypes.{{ $item['key'] }}.toString()"
                                         @click="specialtyTypes.{{ $item['key'] }} = !specialtyTypes.{{ $item['key'] }}"
-                                        :class="specialtyTypes.{{ $item['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
-                                        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                                        class="flex items-center justify-between gap-2 px-3 py-3 bg-white border-2 border-linen-dark hover:border-sunburst/50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
                                     >
+                                        <span class="text-xs font-semibold text-charcoal leading-tight">{{ $item['label'] }}</span>
                                         <span
-                                            :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-6' : 'translate-x-1'"
-                                            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
-                                        ></span>
+                                            :class="specialtyTypes.{{ $item['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
+                                            class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200"
+                                        >
+                                            <span
+                                                :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-6' : 'translate-x-1'"
+                                                class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                                            ></span>
+                                        </span>
                                     </button>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
                         </div>
 
@@ -628,12 +631,12 @@
                         </div>
 
                         {{-- Rush question + date on same row when not already a rush order --}}
-                        <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-4 items-start">
-                            <div class="border border-linen-dark p-4">
-                                <h3 class="text-sm font-semibold text-charcoal mb-3">
-                                    Rush delivery? <span class="text-error ml-0.5">*</span>
-                                </h3>
-                                <div class="flex gap-6">
+                        <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-6 items-start">
+                            <div>
+                                <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
+                                    Rush delivery? <span class="text-error">*</span>
+                                </label>
+                                <div class="flex gap-6 pt-1">
                                     <label class="flex items-center gap-2 cursor-pointer">
                                         <input type="radio" name="crw-rush-delivery" value="yes"
                                             @change="isRushDelivery = true"

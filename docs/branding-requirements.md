@@ -416,7 +416,7 @@ Note: Dark-variant cancel (`border-white/20`, `text-[#aaa]`) and semantic-color 
 
 **Branding rule — dropdowns inside modals:** The modal body has `overflow-x-hidden` which causes the browser to also clip `overflow-y`, preventing absolutely-positioned dropdown lists from rendering fully. **Never use absolute-positioned dropdowns inside a modal body.** Instead, render option lists inline (in normal document flow) with `max-h-[10rem] overflow-y-auto scrollbar-sunburst` to constrain height and enable branded scrolling.
 
-**Z-index:** Backdrop at `z-[9800]`, panel inside the backdrop.
+**Z-index:** Backdrop at `z-[9999]`, panel inside the backdrop.
 
 ```blade
 <x-ui.modal-trigger modal="quote-form">Get a Quote</x-ui.modal-trigger>
@@ -506,6 +506,100 @@ Multi-step non-dismissible wizard. No close button, no backdrop dismiss, no Esca
     </x-slot:step3>
 </x-ui.modal-wizard>
 ```
+
+---
+
+### Stacking Contexts & Z-Index System (MANDATORY)
+
+Every modal, overlay, and fixed UI element in this project follows a strict, uniform z-index scale. **Never assign arbitrary z-index values to modals or overlays.** Use the table below and follow the rules beneath it.
+
+#### Z-Index Scale
+
+| Layer | Value | Element(s) |
+|---|---|---|
+| Page sections (contained) | `auto` (≈ 0) | All `<section>` elements with `isolate` — their internal z-indexes are self-contained |
+| Navigation bar | `z-50` | `x-layout.navigation-bar` |
+| Contact FAB button | `z-[9990]` | The floating "Contact Us Now" action button |
+| **Modal / wizard overlays** | **`z-[9999]`** | `x-ui.contact-modal` overlay, `x-ui.custom-request-wizard` backdrop, `x-ui.modal` backdrop — **all overlays share this value** |
+
+All future modals and wizard components **must use `z-[9999]`** for their backdrop/overlay. Do not go higher unless there is a documented exceptional reason reviewed by the team.
+
+---
+
+#### Rule 1 — Page Sections Must Use `isolation: isolate`
+
+Any `<section>` element that contains positioned children with an explicit `z-index` **must** have the `isolate` class on its root `<section>` tag. This uses the CSS `isolation: isolate` property to self-contain the section's internal stacking context so nothing inside can ever compete with the modal overlays in the root stacking context.
+
+**Required on:**
+- `x-sections.category-hero` (image hero with `relative z-10` content wrapper)
+- `x-sections.hero-full-bleed` (full-bleed image hero)
+- `x-sections.cta-ready-to-get-started` (also contains `blur-3xl` which creates its own stacking context)
+- `x-sections.map-section` (same as above)
+- Any new section added with a `relative z-*` child or a CSS `filter`/`blur` element
+
+```blade
+{{-- CORRECT --}}
+<section class="relative overflow-hidden isolate">
+    <div class="relative z-10 ...">...</div>
+</section>
+
+{{-- WRONG — missing isolate; hero content will bleed above modal overlays --}}
+<section class="relative overflow-hidden">
+    <div class="relative z-10 ...">...</div>
+</section>
+```
+
+**Why it matters:** Without `isolate`, a `div.relative.z-10` inside a section participates directly in the root stacking context at z-index 10. A modal overlay at z-[9999] should win — but CSS `filter: blur()`, `will-change: transform`, and `overflow: hidden` combined with `position: relative` can create unexpected stacking behaviors across browsers. `isolate` eliminates the ambiguity entirely.
+
+---
+
+#### Rule 2 — Modal Backdrops Must Use `x-teleport="body"`
+
+Any `position: fixed` modal backdrop that lives inside an Alpine.js `x-data` component **must** be wrapped in `<template x-teleport="body">`. This moves the backdrop DOM node to be a direct child of `<body>` at runtime, guaranteeing that CSS `transform`, `will-change`, `filter`, and `perspective` on any ancestor element cannot alter the fixed positioning or stacking context of the backdrop.
+
+```blade
+<div x-data="{ isOpen: false, ... }">
+
+    {{-- ✅ CORRECT — teleported to <body> at runtime --}}
+    <template x-teleport="body">
+        <div
+            x-show="isOpen"
+            class="fixed inset-0 z-[9999] flex items-center justify-center ..."
+            role="dialog"
+            aria-modal="true"
+        >
+            {{-- panel content --}}
+        </div>
+    </template>
+
+</div>
+```
+
+```blade
+<div x-data="{ isOpen: false, ... }">
+
+    {{-- ❌ WRONG — backdrop may be trapped by a transformed ancestor --}}
+    <div
+        x-show="isOpen"
+        class="fixed inset-0 z-[9999] ..."
+    >
+        {{-- panel content --}}
+    </div>
+
+</div>
+```
+
+The `x-teleport` wrapper keeps full access to the parent component's Alpine data scope (`isOpen`, all wizard/modal state). Event listeners on the outer `x-data` div (`@open-modal.window`, `@keydown.escape.window`, etc.) continue to work normally.
+
+**Applied to:**
+- `x-ui.custom-request-wizard` — backdrop teleported to body
+- New wizards or custom overlays added in future phases
+
+---
+
+#### Rule 3 — Never Nest Stacking Context Creators Inside Modals
+
+Inside a modal panel, do not use CSS properties that create new stacking contexts (`transform`, `filter`, `will-change`, `opacity < 1` on a container) unless absolutely required for animation. If you need an animation on the panel entry, apply the transition to the panel wrapper itself, not to inner content divs.
 
 ---
 

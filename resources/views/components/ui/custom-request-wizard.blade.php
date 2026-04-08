@@ -207,7 +207,8 @@
     @close-modal.window="if ($event.detail.name === modalName) close()"
     @keydown.escape.window="if (isOpen) close()"
 >
-    {{-- ── Backdrop ──────────────────────────────────────────────────────── --}}
+    {{-- ── Backdrop — teleported to <body> to escape any ancestor transforms ── --}}
+    <template x-teleport="body">
     <div
         x-show="isOpen"
         x-cloak
@@ -952,4 +953,5 @@
 
         </div>{{-- /panel --}}
     </div>{{-- /backdrop --}}
+    </template>
 </div>

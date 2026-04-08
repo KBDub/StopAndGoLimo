@@ -18,7 +18,8 @@
                 <div
                     x-data="{
                         zip: '',
-                        result: null,
+                        showModal: false,
+                        inRange: false,
                         served: [
                             '60431','60432','60433','60434','60435','60436',
                             '60440','60441','60442','60446','60447','60448',
@@ -27,14 +28,19 @@
                             '60605','60606','60607','60608','60609','60610',
                             '60611','60612','60613','60614','60615','60616',
                             '60617','60618','60619','60620','60621','60622',
-                            '60623','60624','60625','60626','60439','60439',
+                            '60623','60624','60625','60626','60439',
                             '60504','60505','60506','60507','60540','60563',
                             '60404','60408','60410','60481','60484','60468'
                         ],
                         checkZip() {
-                            if (this.zip.length === 5 && /^\d{5}$/.test(this.zip)) {
-                                this.result = this.served.includes(this.zip) ? 'yes' : 'no';
+                            if (this.zip.length === 5) {
+                                this.inRange = this.served.includes(this.zip);
+                                this.showModal = true;
                             }
+                        },
+                        sendRequest() {
+                            this.showModal = false;
+                            this.$nextTick(() => window.dispatchEvent(new CustomEvent('open-contact-modal')));
                         }
                     }"
                     class="mb-8"
@@ -46,8 +52,10 @@
                         <input
                             id="zip-check"
                             type="text"
-                            x-model="zip"
+                            :value="zip"
+                            @input="zip = $el.value.replace(/\D/g,'').substring(0,5); $el.value = zip"
                             @keyup.enter="checkZip()"
+                            inputmode="numeric"
                             maxlength="5"
                             placeholder="Enter zip code"
                             class="flex-1 px-4 py-3 border-2 border-r-0 border-sunburst/30 bg-charcoal-dark text-white placeholder-white/40 focus:border-sunburst focus:outline-none transition-colors"
@@ -62,12 +70,87 @@
                             </svg>
                         </button>
                     </div>
-                    <p x-show="result === 'yes'" x-cloak class="mt-3 text-green-400 text-sm font-medium">
-                        Great news! We serve your area. Contact us for a free quote!
-                    </p>
-                    <p x-show="result === 'no'" x-cloak class="mt-3 text-sunburst text-sm font-medium">
-                        We may still be able to help! Give us a call to discuss your project.
-                    </p>
+
+                    {{-- Result modal overlay --}}
+                    <template x-teleport="body">
+                        <div
+                            x-show="showModal"
+                            x-cloak
+                            @keydown.escape.window="showModal = false"
+                            class="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+                            role="dialog"
+                            aria-modal="true"
+                        >
+                            {{-- Backdrop --}}
+                            <div class="absolute inset-0 bg-charcoal-dark/80" @click="showModal = false" aria-hidden="true"></div>
+
+                            {{-- Panel --}}
+                            <div
+                                class="relative w-full max-w-sm bg-white shadow-2xl overflow-hidden"
+                                x-transition:enter="transition ease-out duration-200"
+                                x-transition:enter-start="opacity-0 scale-95"
+                                x-transition:enter-end="opacity-100 scale-100"
+                                x-transition:leave="transition ease-in duration-150"
+                                x-transition:leave-start="opacity-100 scale-100"
+                                x-transition:leave-end="opacity-0 scale-95"
+                                @click.stop
+                            >
+                                {{-- Gold accent stripe --}}
+                                <div class="h-2 bg-gold-gradient-horizontal" aria-hidden="true"></div>
+
+                                {{-- Close button --}}
+                                <button
+                                    type="button"
+                                    @click="showModal = false"
+                                    class="absolute top-3 right-3 flex items-center justify-center w-8 h-8 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors"
+                                    aria-label="Close"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                                         stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M18 6 6 18M6 6l12 12"/>
+                                    </svg>
+                                </button>
+
+                                <div class="px-6 py-7 text-center space-y-4">
+                                    {{-- In-range message --}}
+                                    <div x-show="inRange">
+                                        <div class="flex items-center justify-center w-12 h-12 bg-green-50 mx-auto mb-4" aria-hidden="true">
+                                            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                 stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="20 6 9 17 4 12"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-base font-bold text-charcoal">Great, you are in zip code range!</p>
+                                    </div>
+
+                                    {{-- Out-of-range message --}}
+                                    <div x-show="!inRange">
+                                        <div class="flex items-center justify-center w-12 h-12 bg-sunburst/10 mx-auto mb-4" aria-hidden="true">
+                                            <svg class="w-6 h-6 text-sunburst" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-base font-bold text-charcoal">Your zip code is eligible for shipping or local pickup.</p>
+                                    </div>
+
+                                    <p class="text-sm text-charcoal-light leading-relaxed">Would you like to send in a custom request?</p>
+
+                                    <div class="flex gap-3 justify-center pt-2">
+                                        <button
+                                            type="button"
+                                            @click="showModal = false"
+                                            class="px-5 py-2.5 text-sm font-semibold border border-linen-dark text-charcoal hover:bg-linen transition-colors"
+                                        >No, thanks</button>
+                                        <button
+                                            type="button"
+                                            @click="sendRequest()"
+                                            class="px-5 py-2.5 text-sm font-semibold bg-gold-gradient text-charcoal hover:shadow-gold transition-all"
+                                        >Yes, let's go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 </div>
 
                 <div class="border-t border-white/10 pt-6">

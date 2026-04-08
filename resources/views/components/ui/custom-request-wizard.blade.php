@@ -225,7 +225,8 @@
     >
         {{-- ── Panel ────────────────────────────────────────────────────── --}}
         <div
-            class="relative w-full max-w-[34rem] max-h-[92dvh] flex flex-col bg-white shadow-2xl overflow-hidden"
+            :class="currentStepName === 'quantity-sizing' ? 'max-w-[58rem]' : 'max-w-[34rem]'"
+            class="relative w-full max-h-[92dvh] flex flex-col bg-white shadow-2xl overflow-hidden"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
@@ -632,12 +633,12 @@
                         </div>
 
                         {{-- Rush question + date on same row when not already a rush order --}}
-                        <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-6 items-start">
-                            <div>
+                        <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-6 items-center">
+                            <div class="text-center">
                                 <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
                                     Rush delivery? <span class="text-error">*</span>
                                 </label>
-                                <div class="flex gap-6 pt-1">
+                                <div class="flex gap-6 pt-1 justify-center">
                                     <label class="flex items-center gap-2 cursor-pointer">
                                         <input type="radio" name="crw-rush-delivery" value="yes"
                                             @change="isRushDelivery = true"
@@ -661,8 +662,9 @@
                                 <input
                                     type="date"
                                     x-model="completionDate"
+                                    @click="if ($el.showPicker) $el.showPicker()"
                                     :class="rushActive ? 'border-sunburst ring-1 ring-sunburst/30' : 'border-linen-dark'"
-                                    class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors"
+                                    class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer"
                                 >
                             </div>
                         </div>
@@ -675,7 +677,8 @@
                             <input
                                 type="date"
                                 x-model="completionDate"
-                                class="w-full px-3 py-2.5 text-sm border border-sunburst ring-1 ring-sunburst/30 focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors"
+                                @click="if ($el.showPicker) $el.showPicker()"
+                                class="w-full px-3 py-2.5 text-sm border border-sunburst ring-1 ring-sunburst/30 focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer"
                             >
                         </div>
 
@@ -699,27 +702,22 @@
                 <div x-show="currentStepName === 'shipping-address'" x-cloak>
                     <div class="space-y-4">
 
-                        {{-- Contact info pre-filled from contact modal --}}
-                        <div class="border border-linen-dark bg-linen p-4">
-                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-3">Contact Info</p>
-                            <div class="space-y-3">
-                                <div>
-                                    <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Name</label>
-                                    <input type="text" x-model="contactName" placeholder="Full name"
-                                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
-                                </div>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                    <div>
-                                        <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Email</label>
-                                        <input type="email" x-model="contactEmail" placeholder="you@example.com"
-                                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Phone</label>
-                                        <input type="tel" x-model="contactPhone" placeholder="(815) 000-0000"
-                                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
-                                    </div>
-                                </div>
+                        {{-- Contact info — pre-filled from contact modal, styled like all other shipping fields --}}
+                        <div>
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Full Name</label>
+                            <input type="text" x-model="contactName" placeholder="Full name"
+                                class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Email</label>
+                                <input type="email" x-model="contactEmail" placeholder="you@example.com"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Phone</label>
+                                <input type="tel" x-model="contactPhone" placeholder="(815) 000-0000"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
 

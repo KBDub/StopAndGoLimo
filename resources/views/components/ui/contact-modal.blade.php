@@ -33,19 +33,40 @@
         loading: false,
         customRequest: false,
         emailError: false,
-        emailTouched: false,
+        firstName: '',
+        lastName: '',
+        cmPhone: '',
+        cmEmail: '',
+        contactMessage: '',
 
-        openModal()  { this.open = true;  document.body.style.overflow = 'hidden'; },
+        get contactReady() {
+            return this.firstName.trim().length > 0
+                && this.lastName.trim().length > 0
+                && this.cmPhone.replace(/\D/g,'').length >= 10
+                && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.cmEmail)
+                && !this.emailError;
+        },
+        get formReady() {
+            return this.contactReady && this.contactMessage.trim().length > 0;
+        },
+
+        openModal()  {
+            this.open = true;
+            this.customRequest = false;
+            document.body.style.overflow = 'hidden';
+        },
         closeModal() { this.open = false; document.body.style.overflow = ''; },
         launchWizard() {
-            const form = this.$el.querySelector('form');
-            const data = form ? Object.fromEntries(new FormData(form)) : {};
             this.closeModal();
             this.$nextTick(() => {
                 window.dispatchEvent(new CustomEvent('open-modal', {
                     detail: {
                         name: 'custom-request-wizard',
-                        prefill: { name: data.name || '', email: data.email || '', phone: data.phone || '' }
+                        prefill: {
+                            name: (this.firstName.trim() + ' ' + this.lastName.trim()).trim(),
+                            email: this.cmEmail,
+                            phone: this.cmPhone
+                        }
                     }
                 }));
             });
@@ -192,81 +213,97 @@
                     Something went wrong. Please try again or call us at (815) 349-8600.
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {{-- ── Row 1: First Name + Last Name ────────────────────── --}}
+                <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <label for="contact-name" class="block text-sm font-semibold text-charcoal mb-1">Name <span class="text-error">*</span></label>
+                        <label for="contact-first-name" class="block text-sm font-semibold text-charcoal mb-1">First Name <span class="text-error">*</span></label>
                         <input
-                            id="contact-name"
-                            name="name"
+                            id="contact-first-name"
+                            name="first_name"
                             type="text"
                             required
-                            autocomplete="name"
-                            placeholder="Your full name"
+                            autocomplete="given-name"
+                            placeholder="First name"
+                            x-model="firstName"
                             class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                         >
                     </div>
                     <div>
-                        <label for="contact-phone" class="block text-sm font-semibold text-charcoal mb-1">Phone</label>
+                        <label for="contact-last-name" class="block text-sm font-semibold text-charcoal mb-1">Last Name <span class="text-error">*</span></label>
+                        <input
+                            id="contact-last-name"
+                            name="last_name"
+                            type="text"
+                            required
+                            autocomplete="family-name"
+                            placeholder="Last name"
+                            x-model="lastName"
+                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                        >
+                    </div>
+                </div>
+
+                {{-- ── Row 2: Phone + Email ──────────────────────────────── --}}
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="contact-phone" class="block text-sm font-semibold text-charcoal mb-1">Phone <span class="text-error">*</span></label>
                         <input
                             id="contact-phone"
                             name="phone"
                             type="tel"
+                            required
                             autocomplete="tel"
                             placeholder="(815) 000-0000"
                             maxlength="14"
+                            :value="cmPhone"
                             @input="
                                 let d = $el.value.replace(/\D/g,'').substring(0,10);
                                 if (d.length >= 7)      $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3,6) + '-' + d.substring(6);
                                 else if (d.length >= 4) $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3);
                                 else if (d.length >= 1) $el.value = '(' + d;
                                 else                    $el.value = '';
+                                cmPhone = $el.value;
                             "
                             class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                         >
                     </div>
+                    <div>
+                        <label for="contact-email" class="block text-sm font-semibold text-charcoal mb-1">Email <span class="text-error">*</span></label>
+                        <input
+                            id="contact-email"
+                            name="email"
+                            type="email"
+                            required
+                            autocomplete="email"
+                            placeholder="you@example.com"
+                            x-model="cmEmail"
+                            @input="emailError = cmEmail.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cmEmail)"
+                            @blur="emailError = cmEmail.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cmEmail)"
+                            :class="emailError ? 'border-error ring-1 ring-error/40 focus:border-error focus:ring-error/40' : 'border-linen-dark focus:border-sunburst focus:ring-1 focus:ring-sunburst/50'"
+                            class="w-full px-3 py-2.5 text-sm border focus:outline-none bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                        >
+                        <p x-show="emailError" x-cloak class="mt-1 text-xs text-error font-medium">Please enter a valid email address.</p>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="contact-email" class="block text-sm font-semibold text-charcoal mb-1">Email <span class="text-error">*</span></label>
-                    <input
-                        id="contact-email"
-                        name="email"
-                        type="email"
-                        required
-                        autocomplete="email"
-                        placeholder="you@example.com"
-                        @input="emailTouched = true; emailError = $el.value.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($el.value)"
-                        @blur="emailTouched = true; emailError = $el.value.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($el.value)"
-                        :class="emailError ? 'border-error ring-1 ring-error/40 focus:border-error focus:ring-error/40' : 'border-linen-dark focus:border-sunburst focus:ring-1 focus:ring-sunburst/50'"
-                        class="w-full px-3 py-2.5 text-sm border focus:outline-none bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                    >
-                    <p x-show="emailError" x-cloak class="mt-1 text-xs text-error font-medium">Please enter a valid email address.</p>
-                </div>
-
-                <div>
-                    <label for="contact-message" class="block text-sm font-semibold text-charcoal mb-1">What can we help you with? <span class="text-error">*</span></label>
-                    <textarea
-                        id="contact-message"
-                        name="message"
-                        required
-                        rows="4"
-                        placeholder="Tell us about your project — product type, quantity, deadline, etc."
-                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
-                    ></textarea>
-                </div>
-
-                {{-- ── Custom Request Toggle ─────────────────────────────── --}}
-                <div class="flex items-center justify-between gap-4 py-3 border-t border-b border-linen-dark my-1">
+                {{-- ── Custom Request Toggle (above textarea, disabled until contact info complete) ── --}}
+                <div class="flex items-center justify-between gap-4 py-3 border-t border-b border-linen-dark">
                     <div class="min-w-0">
-                        <p class="text-sm font-semibold text-charcoal">Do You Have a Custom Request?</p>
-                        <p class="text-xs text-charcoal-light mt-0.5">Use our guided custom order wizard</p>
+                        <p class="text-sm font-semibold text-charcoal">
+                            Do You Have a Custom Request? <span class="text-error">*</span>
+                        </p>
+                        <p class="text-xs text-charcoal-light mt-0.5" x-show="!contactReady">Complete your contact info above to enable</p>
+                        <p class="text-xs text-charcoal-light mt-0.5" x-show="contactReady" x-cloak>Use our guided custom order wizard</p>
                     </div>
                     <button
                         type="button"
                         role="switch"
                         :aria-checked="customRequest.toString()"
-                        @click="customRequest = !customRequest; if (customRequest) launchWizard()"
-                        :class="customRequest ? 'bg-sunburst' : 'bg-linen-dark'"
+                        :disabled="!contactReady"
+                        @click="if (contactReady) { customRequest = !customRequest; if (customRequest) launchWizard(); }"
+                        :class="contactReady
+                            ? (customRequest ? 'bg-sunburst' : 'bg-linen-dark')
+                            : 'bg-linen-dark opacity-40 cursor-not-allowed'"
                         class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
                     >
                         <span
@@ -276,9 +313,23 @@
                     </button>
                 </div>
 
+                {{-- ── What can we help you with? ───────────────────────── --}}
+                <div>
+                    <label for="contact-message" class="block text-sm font-semibold text-charcoal mb-1">What can we help you with? <span class="text-error">*</span></label>
+                    <textarea
+                        id="contact-message"
+                        name="message"
+                        required
+                        rows="4"
+                        x-model="contactMessage"
+                        placeholder="Tell us about your project — product type, quantity, deadline, etc."
+                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
+                    ></textarea>
+                </div>
+
                 <button
                     type="submit"
-                    :disabled="loading"
+                    :disabled="loading || !formReady"
                     class="w-full py-3 px-6 bg-gold-gradient text-charcoal font-semibold text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                     <span x-show="!loading">Send Message</span>

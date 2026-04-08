@@ -7,7 +7,7 @@
  | per page alongside x-ui.contact-modal.
  |
  | ── EVENT API ───────────────────────────────────────────────────────────────
- |   open-modal   { name: 'custom-request-wizard' }  — opens at step 1
+ |   open-modal   { name: 'custom-request-wizard', prefill: { name, email, phone } }
  |   close-modal  { name: 'custom-request-wizard' }  — closes and resets
  |   wizard-done  { name: 'custom-request-wizard' }  — fires on submit
  |
@@ -65,7 +65,6 @@
 
         /* ── Step 6: Print Method ─────────────────────────── */
         printMethod:    '',
-        traditionalType:'',
         specialtyTypes: {
             vinyl:       false, rhinestone: false, glitter:    false,
             foil:        false, glowDark:   false, flock:      false,
@@ -80,10 +79,15 @@
         /* ── Step 8: Extra Notes ──────────────────────────── */
         extraNotes: '',
 
-        /* ── Step 9: Shipping Address ─────────────────────── */
-        firstName: '', lastName:  '',
-        address1:  '', address2:  '',
-        city:      '', state:     '', zip: '',
+        /* ── Step 9: Contact Info (pre-filled) + Shipping ─── */
+        contactName:  '',
+        contactEmail: '',
+        contactPhone: '',
+        address1:     '',
+        address2:     '',
+        city:         '',
+        state:        '',
+        zip:          '',
 
         /* ── Computed ─────────────────────────────────────── */
         get hasShirtType() {
@@ -141,11 +145,40 @@
             return results;
         },
         get rushActive() { return this.isRush === true || this.isRushDelivery === true; },
+        get stepValid() {
+            const s = this.currentStepName;
+            if (s === 'request-type') {
+                return this.requestType !== '' &&
+                       (this.requestType !== 'company' || this.companyName.trim() !== '') &&
+                       this.isRush !== null;
+            }
+            if (s === 'garment-selection') {
+                return Object.values(this.garments).some(v => v);
+            }
+            if (s === 'shirt-length-fabric') {
+                return this.sleeveType !== '' && this.fabricWeight !== '';
+            }
+            if (s === 'color-selection') {
+                return this.selectedColors.length > 0;
+            }
+            if (s === 'quantity-sizing') {
+                return Object.values(this.quantities).some(v => v > 0);
+            }
+            if (s === 'print-method') {
+                if (!this.printMethod) return false;
+                if (this.printMethod === 'specialty') return Object.values(this.specialtyTypes).some(v => v);
+                return true;
+            }
+            if (s === 'completion-date') {
+                return this.completionDate !== '' && (this.isRush === true || this.isRushDelivery !== null);
+            }
+            return true;
+        },
 
         /* ── Methods ──────────────────────────────────────── */
         open()  { this.isOpen = true;  this.step = 1; document.body.style.overflow = 'hidden'; },
         close() { this.isOpen = false; this.step = 1; document.body.style.overflow = ''; this.$dispatch('modal-closed', { name: this.modalName }); },
-        next()  { if (this.step < this.totalSteps) this.step++; },
+        next()  { if (this.stepValid && this.step < this.totalSteps) this.step++; },
         prev()  { if (this.step > 1) this.step--; },
         finish(){ this.$dispatch('wizard-done', { name: this.modalName }); this.close(); },
 
@@ -162,7 +195,15 @@
             this.quantities = q;
         }
     }"
-    @open-modal.window="if ($event.detail.name === modalName) open()"
+    @open-modal.window="
+        if ($event.detail.name === modalName) {
+            const p = $event.detail.prefill || {};
+            contactName  = p.name  || '';
+            contactEmail = p.email || '';
+            contactPhone = p.phone || '';
+            open();
+        }
+    "
     @close-modal.window="if ($event.detail.name === modalName) close()"
     @keydown.escape.window="if (isOpen) close()"
 >
@@ -183,8 +224,7 @@
     >
         {{-- ── Panel ────────────────────────────────────────────────────── --}}
         <div
-            class="relative w-full flex flex-col bg-white shadow-2xl overflow-hidden"
-            style="max-width:58rem;max-height:92dvh;"
+            class="relative w-full max-w-[34rem] max-h-[92dvh] flex flex-col bg-white shadow-2xl overflow-hidden"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
@@ -235,7 +275,10 @@
                     <div class="space-y-6">
 
                         <div>
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">Is this a company or personal request?</h3>
+                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                                Is this a company or personal request?
+                                <span class="text-error ml-0.5">*</span>
+                            </h3>
                             <div class="flex gap-6">
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-request-type" value="company"
@@ -253,7 +296,9 @@
                         </div>
 
                         <div x-show="requestType === 'company'" x-cloak>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Company Name</label>
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                Company Name <span class="text-error">*</span>
+                            </label>
                             <input
                                 type="text"
                                 x-model="companyName"
@@ -263,7 +308,10 @@
                         </div>
 
                         <div class="border-t border-linen-dark pt-6">
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">Is this a rush request?</h3>
+                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                                Is this a rush request?
+                                <span class="text-error ml-0.5">*</span>
+                            </h3>
                             <div class="flex gap-6">
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-is-rush" value="yes"
@@ -287,38 +335,41 @@
 
                 {{-- ══ STEP 2: Garment Selection ════════════════════════════ --}}
                 <div x-show="currentStepName === 'garment-selection'" x-cloak>
-                    <p class="text-xs text-charcoal-light mb-4">Please select all applicable garment types.</p>
-                    <div class="divide-y divide-linen-dark border border-linen-dark">
-                        @php
-                            $garmentList = [
-                                ['key' => 'vNeck',       'label' => 'V-Neck'],
-                                ['key' => 'crewNeck',    'label' => 'Crew Neck'],
-                                ['key' => 'hoodie',      'label' => 'Hoodie'],
-                                ['key' => 'otherShirt',  'label' => 'Other Shirt Style'],
-                                ['key' => 'baseballCap', 'label' => 'Baseball Cap'],
-                                ['key' => 'napSack',     'label' => 'Nap Sack'],
-                                ['key' => 'otherItem',   'label' => 'Other Item'],
-                            ];
-                        @endphp
+                    <p class="text-xs text-charcoal-light mb-4">Select all applicable garment types. <span class="text-error font-semibold">At least one required.</span></p>
+                    @php
+                        $garmentList = [
+                            ['key' => 'vNeck',       'label' => 'V-Neck'],
+                            ['key' => 'crewNeck',    'label' => 'Crew Neck'],
+                            ['key' => 'hoodie',      'label' => 'Hoodie'],
+                            ['key' => 'otherShirt',  'label' => 'Other Shirt'],
+                            ['key' => 'baseballCap', 'label' => 'Baseball Cap'],
+                            ['key' => 'napSack',     'label' => 'Nap Sack'],
+                            ['key' => 'otherItem',   'label' => 'Other Item'],
+                        ];
+                    @endphp
+                    <div class="grid grid-cols-3 gap-2">
                         @foreach($garmentList as $g)
-                        <div class="flex items-center gap-4 px-4 py-3.5">
-                            <div class="flex-1">
-                                <p class="text-sm font-semibold text-charcoal">{{ $g['label'] }}</p>
-                            </div>
-                            <button
-                                type="button"
-                                role="switch"
-                                :aria-checked="garments.{{ $g['key'] }}.toString()"
-                                @click="garments.{{ $g['key'] }} = !garments.{{ $g['key'] }}"
-                                :class="garments.{{ $g['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
-                                class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                        <button
+                            type="button"
+                            role="switch"
+                            :aria-checked="garments.{{ $g['key'] }}.toString()"
+                            @click="garments.{{ $g['key'] }} = !garments.{{ $g['key'] }}"
+                            :class="garments.{{ $g['key'] }}
+                                ? 'bg-sunburst border-sunburst text-charcoal'
+                                : 'bg-white border-linen-dark text-charcoal hover:border-sunburst/50'"
+                            class="flex items-center justify-between gap-2 px-3 py-3 border-2 text-left transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                        >
+                            <span class="text-xs font-semibold leading-tight">{{ $g['label'] }}</span>
+                            <span
+                                :class="garments.{{ $g['key'] }} ? 'bg-charcoal/20' : 'bg-linen-dark'"
+                                class="relative flex-shrink-0 w-8 h-4 overflow-hidden rounded-full transition-colors duration-200"
                             >
                                 <span
-                                    :class="garments.{{ $g['key'] }} ? 'translate-x-6' : 'translate-x-1'"
-                                    class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                                    :class="garments.{{ $g['key'] }} ? 'translate-x-4' : 'translate-x-0.5'"
+                                    class="absolute top-0.5 w-3 h-3 bg-white rounded-full shadow transition-transform duration-200"
                                 ></span>
-                            </button>
-                        </div>
+                            </span>
+                        </button>
                         @endforeach
                     </div>
 
@@ -337,38 +388,40 @@
                     <div class="space-y-6">
 
                         <div>
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">Sleeve Length</h3>
-                            <div class="flex gap-3">
-                                <button type="button"
-                                    @click="sleeveType = 'short'"
-                                    :class="sleeveType === 'short' ? 'bg-sunburst text-charcoal border-sunburst' : 'bg-white text-charcoal border-linen-dark hover:border-sunburst/50'"
-                                    class="flex-1 py-3 px-4 border-2 text-sm font-semibold transition-all duration-150">
-                                    Short Sleeve
-                                </button>
-                                <button type="button"
-                                    @click="sleeveType = 'long'"
-                                    :class="sleeveType === 'long' ? 'bg-sunburst text-charcoal border-sunburst' : 'bg-white text-charcoal border-linen-dark hover:border-sunburst/50'"
-                                    class="flex-1 py-3 px-4 border-2 text-sm font-semibold transition-all duration-150">
-                                    Long Sleeve
-                                </button>
+                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                                Sleeve Length <span class="text-error ml-0.5">*</span>
+                            </h3>
+                            <div class="space-y-2.5">
+                                @foreach([['short','Short Sleeve'],['long','Long Sleeve'],['other','Other']] as [$val,$lbl])
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input type="radio" name="crw-sleeve-type" value="{{ $val }}"
+                                        x-model="sleeveType"
+                                        class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                    <span
+                                        class="flex-1 px-3 py-2.5 border text-sm font-medium transition-colors duration-150"
+                                        :class="sleeveType === '{{ $val }}' ? 'border-sunburst bg-sunburst/10 text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/40'"
+                                    >{{ $lbl }}</span>
+                                </label>
+                                @endforeach
                             </div>
                         </div>
 
                         <div>
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">Fabric Weight</h3>
-                            <div class="flex gap-3">
-                                <button type="button"
-                                    @click="fabricWeight = 'heavyweight'"
-                                    :class="fabricWeight === 'heavyweight' ? 'bg-sunburst text-charcoal border-sunburst' : 'bg-white text-charcoal border-linen-dark hover:border-sunburst/50'"
-                                    class="flex-1 py-3 px-4 border-2 text-sm font-semibold transition-all duration-150">
-                                    Heavyweight
-                                </button>
-                                <button type="button"
-                                    @click="fabricWeight = 'lightweight'"
-                                    :class="fabricWeight === 'lightweight' ? 'bg-sunburst text-charcoal border-sunburst' : 'bg-white text-charcoal border-linen-dark hover:border-sunburst/50'"
-                                    class="flex-1 py-3 px-4 border-2 text-sm font-semibold transition-all duration-150">
-                                    Lightweight
-                                </button>
+                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                                Fabric Weight <span class="text-error ml-0.5">*</span>
+                            </h3>
+                            <div class="space-y-2.5">
+                                @foreach([['heavyweight','Heavyweight'],['lightweight','Lightweight'],['other','Other']] as [$val,$lbl])
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input type="radio" name="crw-fabric-weight" value="{{ $val }}"
+                                        x-model="fabricWeight"
+                                        class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                    <span
+                                        class="flex-1 px-3 py-2.5 border text-sm font-medium transition-colors duration-150"
+                                        :class="fabricWeight === '{{ $val }}' ? 'border-sunburst bg-sunburst/10 text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/40'"
+                                    >{{ $lbl }}</span>
+                                </label>
+                                @endforeach
                             </div>
                         </div>
 
@@ -378,10 +431,12 @@
                 {{-- ══ STEP 4: Color Selection ══════════════════════════════ --}}
                 <div x-show="currentStepName === 'color-selection'" x-cloak>
                     <div class="space-y-4">
-                        <p class="text-xs text-charcoal-light">Type a color name to search, then press Enter or click a suggestion to add it. Multiple colors are allowed.</p>
+                        <p class="text-xs text-charcoal-light">Type a color name to search, then press Enter or click a suggestion to add it. <span class="text-error font-semibold">At least one color required.</span></p>
 
                         <div>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Add a Color</label>
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                Add a Color <span class="text-error">*</span>
+                            </label>
                             <div class="flex gap-2">
                                 <input
                                     type="text"
@@ -391,7 +446,7 @@
                                     class="flex-1 px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                                 >
                                 <button type="button" @click="addColorFromInput()"
-                                    class="px-4 py-2.5 bg-charcoal text-white text-xs font-semibold hover:bg-charcoal-dark transition-colors flex-shrink-0">
+                                    class="px-8 py-2.5 bg-charcoal text-white text-xs font-semibold hover:bg-charcoal-dark transition-colors flex-shrink-0">
                                     Add
                                 </button>
                             </div>
@@ -433,7 +488,7 @@
                 {{-- ══ STEP 5: Quantity & Sizing ════════════════════════════ --}}
                 <div x-show="currentStepName === 'quantity-sizing'" x-cloak>
                     <div class="space-y-5">
-                        <p class="text-xs text-charcoal-light">Enter quantities for each gender and size. Leave blank for zero.</p>
+                        <p class="text-xs text-charcoal-light">Enter quantities for each gender and size. <span class="text-error font-semibold">At least one quantity required.</span></p>
 
                         <div x-show="selectedGarmentTypes.length === 0" class="py-8 text-center text-charcoal-lighter text-sm">
                             No garment types selected — go back to Garment Selection.
@@ -492,6 +547,7 @@
                 {{-- ══ STEP 6: Print Method ═════════════════════════════════ --}}
                 <div x-show="currentStepName === 'print-method'" x-cloak>
                     <div class="space-y-4">
+                        <p class="text-xs text-charcoal-light"><span class="text-error font-semibold">Select a print method.</span> For Specialty, choose at least one type.</p>
 
                         {{-- Traditional Printing --}}
                         <div class="border border-linen-dark">
@@ -502,21 +558,7 @@
                                     class="w-4 h-4 mt-0.5 flex-shrink-0 accent-sunburst">
                                 <div class="flex-1">
                                     <label for="crw-pm-traditional" class="block text-sm font-bold text-charcoal cursor-pointer mb-1">Traditional Printing</label>
-                                    <p x-show="printMethod !== 'traditional'" class="text-xs text-charcoal-light">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
-                                    <div class="flex gap-5 mt-3" x-show="printMethod === 'traditional'" x-cloak>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="radio" name="crw-traditional-type" value="htv" x-model="traditionalType" class="w-3.5 h-3.5 accent-sunburst">
-                                            <span class="text-sm text-charcoal">HTV</span>
-                                        </label>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="radio" name="crw-traditional-type" value="digital" x-model="traditionalType" class="w-3.5 h-3.5 accent-sunburst">
-                                            <span class="text-sm text-charcoal">Digital</span>
-                                        </label>
-                                        <label class="flex items-center gap-2 cursor-pointer">
-                                            <input type="radio" name="crw-traditional-type" value="screenprint" x-model="traditionalType" class="w-3.5 h-3.5 accent-sunburst">
-                                            <span class="text-sm text-charcoal">Screenprint</span>
-                                        </label>
-                                    </div>
+                                    <p class="text-xs text-charcoal-light">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
                                 </div>
                             </div>
                         </div>
@@ -530,40 +572,45 @@
                                     class="w-4 h-4 flex-shrink-0 accent-sunburst">
                                 <label for="crw-pm-specialty" class="text-sm font-bold text-charcoal cursor-pointer">Specialty Printing</label>
                             </div>
-                            <div x-show="printMethod === 'specialty'" x-cloak class="divide-y divide-linen-dark">
+                            <div x-show="printMethod === 'specialty'" x-cloak class="p-3">
                                 @php
                                     $specialtyItems = [
-                                        ['key' => 'vinyl',       'label' => 'Vinyl Shirts'],
-                                        ['key' => 'rhinestone',  'label' => 'Rhinestone Shirts'],
-                                        ['key' => 'glitter',     'label' => 'Glitter Shirts'],
-                                        ['key' => 'foil',        'label' => 'Foil Shirts'],
-                                        ['key' => 'glowDark',    'label' => 'Glow In The Dark'],
-                                        ['key' => 'flock',       'label' => 'Flock Shirts'],
-                                        ['key' => 'reflective',  'label' => 'Reflective Shirts'],
-                                        ['key' => 'holographic', 'label' => 'Holographic Shirts'],
-                                        ['key' => 'brick',       'label' => 'Brick Shirts'],
-                                        ['key' => 'pattern',     'label' => 'Pattern Shirts'],
-                                        ['key' => 'embroidery',  'label' => 'Embroidery Shirts'],
-                                        ['key' => 'picture',     'label' => 'Picture Shirts'],
+                                        ['key' => 'vinyl',       'label' => 'Vinyl'],
+                                        ['key' => 'rhinestone',  'label' => 'Rhinestone'],
+                                        ['key' => 'glitter',     'label' => 'Glitter'],
+                                        ['key' => 'foil',        'label' => 'Foil'],
+                                        ['key' => 'glowDark',    'label' => 'Glow In Dark'],
+                                        ['key' => 'flock',       'label' => 'Flock'],
+                                        ['key' => 'reflective',  'label' => 'Reflective'],
+                                        ['key' => 'holographic', 'label' => 'Holographic'],
+                                        ['key' => 'brick',       'label' => 'Brick'],
+                                        ['key' => 'pattern',     'label' => 'Pattern'],
+                                        ['key' => 'embroidery',  'label' => 'Embroidery'],
+                                        ['key' => 'picture',     'label' => 'Picture'],
                                     ];
                                 @endphp
-                                @foreach($specialtyItems as $item)
-                                <div class="flex items-center gap-4 px-4 py-3">
-                                    <div class="flex-1">
-                                        <p class="text-sm font-semibold text-charcoal">{{ $item['label'] }}</p>
-                                    </div>
+                                <div class="grid grid-cols-3 gap-2">
+                                    @foreach($specialtyItems as $item)
                                     <button type="button" role="switch"
                                         :aria-checked="specialtyTypes.{{ $item['key'] }}.toString()"
                                         @click="specialtyTypes.{{ $item['key'] }} = !specialtyTypes.{{ $item['key'] }}"
-                                        :class="specialtyTypes.{{ $item['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
-                                        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1">
+                                        :class="specialtyTypes.{{ $item['key'] }}
+                                            ? 'bg-sunburst border-sunburst text-charcoal'
+                                            : 'bg-white border-linen-dark text-charcoal hover:border-sunburst/50'"
+                                        class="flex items-center justify-between gap-1 px-2.5 py-2.5 border-2 text-left transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1">
+                                        <span class="text-xs font-semibold leading-tight">{{ $item['label'] }}</span>
                                         <span
-                                            :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-6' : 'translate-x-1'"
-                                            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200">
+                                            :class="specialtyTypes.{{ $item['key'] }} ? 'bg-charcoal/20' : 'bg-linen-dark'"
+                                            class="relative flex-shrink-0 w-7 h-3.5 overflow-hidden rounded-full transition-colors duration-200"
+                                        >
+                                            <span
+                                                :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-3.5' : 'translate-x-0.5'"
+                                                class="absolute top-0.5 w-2.5 h-2.5 bg-white rounded-full shadow transition-transform duration-200"
+                                            ></span>
                                         </span>
                                     </button>
+                                    @endforeach
                                 </div>
-                                @endforeach
                             </div>
                         </div>
 
@@ -588,7 +635,9 @@
 
                         {{-- Ask about rush delivery if not already set --}}
                         <div x-show="isRush !== true" x-cloak class="border border-linen-dark p-4">
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">Is this a rush delivery?</h3>
+                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                                Is this a rush delivery? <span class="text-error ml-0.5">*</span>
+                            </h3>
                             <div class="flex gap-6">
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-rush-delivery" value="yes"
@@ -619,7 +668,7 @@
                         {{-- Date input --}}
                         <div>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
-                                Desired Completion Date
+                                Desired Completion Date <span class="text-error">*</span>
                                 <span x-show="rushActive" x-cloak class="ml-1 px-1.5 py-0.5 bg-sunburst text-charcoal text-[10px] font-bold">RUSH</span>
                             </label>
                             <input
@@ -636,7 +685,7 @@
                 {{-- ══ STEP 8: Extra Notes ══════════════════════════════════ --}}
                 <div x-show="currentStepName === 'extra-notes'" x-cloak>
                     <div class="space-y-3">
-                        <p class="text-xs text-charcoal-light">Include any additional details — artwork requirements, special instructions, references, etc.</p>
+                        <p class="text-xs text-charcoal-light">Include any additional details — artwork requirements, special instructions, references, etc. (optional)</p>
                         <textarea
                             x-model="extraNotes"
                             rows="8"
@@ -650,25 +699,38 @@
                 <div x-show="currentStepName === 'shipping-address'" x-cloak>
                     <div class="space-y-4">
 
+                        {{-- Contact info pre-filled from contact modal --}}
+                        <div class="border border-linen-dark bg-linen p-4">
+                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-3">Contact Info</p>
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Name</label>
+                                    <input type="text" x-model="contactName" placeholder="Full name"
+                                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Email</label>
+                                        <input type="email" x-model="contactEmail" placeholder="you@example.com"
+                                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Phone</label>
+                                        <input type="tel" x-model="contactPhone" placeholder="(815) 000-0000"
+                                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Company name if applicable --}}
                         <div x-show="requestType === 'company'" x-cloak>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Company Name</label>
                             <input type="text" x-model="companyName" placeholder="Company name"
                                 class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                         </div>
 
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">First Name</label>
-                                <input type="text" x-model="firstName" placeholder="First name"
-                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Last Name</label>
-                                <input type="text" x-model="lastName" placeholder="Last name"
-                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
-                            </div>
-                        </div>
-
+                        {{-- Shipping address --}}
                         <div>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Address Line 1</label>
                             <input type="text" x-model="address1" placeholder="Street address"
@@ -787,7 +849,7 @@
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Print Method</span>
                                 <div class="col-span-2 text-sm text-charcoal">
-                                    <span x-show="printMethod === 'traditional'" x-cloak x-text="'Traditional' + (traditionalType ? ' — ' + traditionalType.charAt(0).toUpperCase() + traditionalType.slice(1) : '')"></span>
+                                    <span x-show="printMethod === 'traditional'" x-cloak>Traditional (HTV · Digital · Screenprint)</span>
                                     <span x-show="printMethod === 'specialty'" x-cloak>Specialty</span>
                                     <span x-show="!printMethod" class="text-charcoal-lighter">Not selected</span>
                                 </div>
@@ -802,12 +864,21 @@
                             </div>
 
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
+                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Contact</span>
+                                <div class="col-span-2 text-sm text-charcoal space-y-0.5">
+                                    <p x-text="contactName || '—'"></p>
+                                    <p x-show="contactEmail" x-cloak class="text-charcoal-light" x-text="contactEmail"></p>
+                                    <p x-show="contactPhone" x-cloak class="text-charcoal-light" x-text="contactPhone"></p>
+                                </div>
+                            </div>
+
+                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Ship To</span>
                                 <div class="col-span-2 text-sm text-charcoal space-y-0.5">
                                     <p x-show="requestType === 'company' && companyName" x-cloak class="font-semibold" x-text="companyName"></p>
-                                    <p x-text="(firstName + ' ' + lastName).trim() || '—'"></p>
                                     <p x-show="address1" x-cloak x-text="address1 + (address2 ? ', ' + address2 : '')"></p>
                                     <p x-show="city || state || zip" x-cloak x-text="[city, state, zip].filter(Boolean).join(', ')"></p>
+                                    <p x-show="!address1 && !city" class="text-charcoal-lighter">No address entered</p>
                                 </div>
                             </div>
 
@@ -847,6 +918,13 @@
                     Cancel
                 </button>
 
+                {{-- Validation hint --}}
+                <p
+                    x-show="step > 1 && !stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'shipping-address' && currentStepName !== 'confirm-submit'"
+                    x-cloak
+                    class="text-xs text-error mr-auto"
+                >Complete required fields to continue</p>
+
                 <div class="flex items-center gap-2.5 ml-auto">
 
                     <x-ui.button-modal-cancel
@@ -855,10 +933,14 @@
                         @click="prev()"
                     >← Back</x-ui.button-modal-cancel>
 
-                    <x-ui.button-modal-primary
+                    <button
+                        type="button"
                         x-show="step < totalSteps"
                         @click="next()"
-                    >Next →</x-ui.button-modal-primary>
+                        x-bind:disabled="!stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'shipping-address'"
+                        x-bind:class="(!stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'shipping-address') ? 'opacity-40 cursor-not-allowed' : ''"
+                        class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
+                    >Next →</button>
 
                     <x-ui.button-modal-primary
                         x-show="step === totalSteps"

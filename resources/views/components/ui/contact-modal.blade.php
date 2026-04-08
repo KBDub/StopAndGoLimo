@@ -36,9 +36,16 @@
         openModal()  { this.open = true;  document.body.style.overflow = 'hidden'; },
         closeModal() { this.open = false; document.body.style.overflow = ''; },
         launchWizard() {
+            const form = this.$el.querySelector('form');
+            const data = form ? Object.fromEntries(new FormData(form)) : {};
             this.closeModal();
             this.$nextTick(() => {
-                window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }));
+                window.dispatchEvent(new CustomEvent('open-modal', {
+                    detail: {
+                        name: 'custom-request-wizard',
+                        prefill: { name: data.name || '', email: data.email || '', phone: data.phone || '' }
+                    }
+                }));
             });
         },
 

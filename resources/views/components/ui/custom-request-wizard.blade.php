@@ -891,16 +891,21 @@
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                     State <span class="text-error">*</span>
                                 </label>
-                                <input type="text" x-model="state" required placeholder="IL or Illinois"
-                                    @blur="normalizeState()"
-                                    @keydown.enter="normalizeState()"
+                                <input type="text" required placeholder="IL"
+                                    maxlength="2"
+                                    :value="state"
+                                    @input="state = $el.value.replace(/[^a-zA-Z]/g,'').toUpperCase().substring(0,2); $el.value = state"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors uppercase">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                     ZIP Code <span class="text-error">*</span>
                                 </label>
-                                <input type="text" x-model="zip" required placeholder="60432" maxlength="10"
+                                <input type="text" required placeholder="60432"
+                                    maxlength="5"
+                                    :value="zip"
+                                    @input="zip = $el.value.replace(/\D/g,'').substring(0,5); $el.value = zip"
+                                    inputmode="numeric"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
@@ -1068,7 +1073,7 @@
                 </p>
                 <button
                     type="button"
-                    @click="backToContactModal()"
+                    @click="close()"
                     class="mt-8 px-6 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
                 >Done</button>
             </div>

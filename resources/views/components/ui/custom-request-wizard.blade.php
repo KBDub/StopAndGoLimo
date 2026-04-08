@@ -212,7 +212,7 @@
     <div
         x-show="isOpen"
         x-cloak
-        class="fixed inset-0 z-[10100] flex items-center justify-center p-4 bg-charcoal-dark/80 backdrop-blur-sm"
+        class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-charcoal-dark/80 backdrop-blur-sm"
         role="dialog"
         aria-modal="true"
         aria-labelledby="crw-title"

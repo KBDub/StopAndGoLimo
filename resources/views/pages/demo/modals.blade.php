@@ -1098,6 +1098,57 @@
     </x-ui.modal>
 
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    {{-- SECTION 9: Custom Request Wizard --}}
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    <section>
+        <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Custom Request Wizard</h2>
+        <p class="text-charcoal-light text-sm mb-6 pl-5">
+            A guided multi-step custom order wizard triggered from the
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code> toggle,
+            or opened directly via the button below.
+            Steps are driven by a dynamic <code class="text-sm bg-linen-dark px-1 py-0.5">visibleSteps</code> array
+            — the Shirt Length &amp; Fabric step only appears when a shirt-type garment is selected.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+            <button
+                type="button"
+                @click="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }))"
+                class="px-5 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
+            >
+                Open Custom Request Wizard
+            </button>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs text-charcoal-light">
+            @php
+                $wizSteps = [
+                    ['n' => '1',   'label' => 'Request Details',          'note' => 'Company/Personal · Rush flag'],
+                    ['n' => '2',   'label' => 'Garment Selection',         'note' => 'Toggle each garment type'],
+                    ['n' => '3*',  'label' => 'Shirt Length & Fabric',     'note' => 'Conditional — shirt types only'],
+                    ['n' => '4',   'label' => 'Color Selection',           'note' => 'Smart autocomplete + chips'],
+                    ['n' => '5',   'label' => 'Quantity & Sizing',         'note' => 'Gender × Size matrix per garment'],
+                    ['n' => '6',   'label' => 'Print Method',              'note' => 'Traditional or Specialty'],
+                    ['n' => '7',   'label' => 'Completion Date',           'note' => 'Rush-aware date picker'],
+                    ['n' => '8',   'label' => 'Extra Notes',               'note' => 'Free-text textarea'],
+                    ['n' => '9',   'label' => 'Shipping Address',          'note' => 'Company name if applicable'],
+                    ['n' => '10',  'label' => 'Review & Submit',           'note' => 'Full summary before submit'],
+                ];
+            @endphp
+            @foreach($wizSteps as $ws)
+            <div class="flex items-start gap-3 p-3 bg-white border border-linen-dark">
+                <span class="flex-shrink-0 w-7 h-7 flex items-center justify-center bg-sunburst text-charcoal text-xs font-bold">{{ $ws['n'] }}</span>
+                <div>
+                    <p class="font-semibold text-charcoal">{{ $ws['label'] }}</p>
+                    <p class="text-charcoal-lighter mt-0.5">{{ $ws['note'] }}</p>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <p class="text-xs text-charcoal-lighter mt-3 pl-1">* Step 3 only appears when V-Neck, Crew Neck, Hoodie, or Other Shirt Style is selected.</p>
+    </section>
+
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
     {{-- SECTION 8: Contact FAB — live showcase --}}
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section class="bg-charcoal border-l-4 border-sunburst p-8 shadow-lg">
@@ -1140,6 +1191,9 @@
 
 {{-- Live anchored FAB --}}
 <x-ui.contact-modal />
+
+{{-- Custom Request Wizard --}}
+<x-ui.custom-request-wizard />
 
 </body>
 </html>

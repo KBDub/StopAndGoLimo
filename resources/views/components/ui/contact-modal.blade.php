@@ -31,9 +31,16 @@
         sent: false,
         error: false,
         loading: false,
+        customRequest: false,
 
         openModal()  { this.open = true;  document.body.style.overflow = 'hidden'; },
         closeModal() { this.open = false; document.body.style.overflow = ''; },
+        launchWizard() {
+            this.closeModal();
+            this.$nextTick(() => {
+                window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }));
+            });
+        },
 
         async submit(form) {
             this.loading = true;
@@ -225,6 +232,27 @@
                         placeholder="Tell us about your project — product type, quantity, deadline, etc."
                         class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
                     ></textarea>
+                </div>
+
+                {{-- ── Custom Request Toggle ─────────────────────────────── --}}
+                <div class="flex items-center justify-between gap-4 py-3 border-t border-b border-linen-dark my-1">
+                    <div class="min-w-0">
+                        <p class="text-sm font-semibold text-charcoal">Have a Custom Request?</p>
+                        <p class="text-xs text-charcoal-light mt-0.5">Use our guided custom order wizard</p>
+                    </div>
+                    <button
+                        type="button"
+                        role="switch"
+                        :aria-checked="customRequest.toString()"
+                        @click="customRequest = !customRequest; if (customRequest) launchWizard()"
+                        :class="customRequest ? 'bg-sunburst' : 'bg-linen-dark'"
+                        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                    >
+                        <span
+                            :class="customRequest ? 'translate-x-6' : 'translate-x-1'"
+                            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                        ></span>
+                    </button>
                 </div>
 
                 <button

@@ -89,6 +89,32 @@
         state:        '',
         zip:          '',
 
+        /* ── Step 3 extras ────────────────────────────────── */
+        sleeveTypeOther:   '',
+        fabricWeightOther: '',
+
+        /* ── Step 4 extras ────────────────────────────────── */
+        colorFocusIdx: -1,
+
+        /* ── UI overlays ──────────────────────────────────── */
+        showConfirmation: false,
+        showCloseConfirm: false,
+
+        /* ── US States ────────────────────────────────────── */
+        stateMap: {
+            'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
+            'Colorado':'CO','Connecticut':'CT','Delaware':'DE','Florida':'FL','Georgia':'GA',
+            'Hawaii':'HI','Idaho':'ID','Illinois':'IL','Indiana':'IN','Iowa':'IA',
+            'Kansas':'KS','Kentucky':'KY','Louisiana':'LA','Maine':'ME','Maryland':'MD',
+            'Massachusetts':'MA','Michigan':'MI','Minnesota':'MN','Mississippi':'MS','Missouri':'MO',
+            'Montana':'MT','Nebraska':'NE','Nevada':'NV','New Hampshire':'NH','New Jersey':'NJ',
+            'New Mexico':'NM','New York':'NY','North Carolina':'NC','North Dakota':'ND','Ohio':'OH',
+            'Oklahoma':'OK','Oregon':'OR','Pennsylvania':'PA','Rhode Island':'RI','South Carolina':'SC',
+            'South Dakota':'SD','Tennessee':'TN','Texas':'TX','Utah':'UT','Vermont':'VT',
+            'Virginia':'VA','Washington':'WA','West Virginia':'WV','Wisconsin':'WI','Wyoming':'WY',
+            'District of Columbia':'DC'
+        },
+
         /* ── Computed ─────────────────────────────────────── */
         get hasShirtType() {
             return this.garments.vNeck || this.garments.crewNeck || this.garments.hoodie || this.garments.otherShirt;
@@ -144,7 +170,15 @@
             });
             return results;
         },
-        get rushActive() { return this.isRush === true || this.isRushDelivery === true; },
+        get rushActive()       { return this.isRush === true || this.isRushDelivery === true; },
+        get contactFirstName() { return this.contactName.trim().split(' ')[0] || 'there'; },
+        get garmentsWithNoQty() {
+            return this.selectedGarmentTypes.filter(g =>
+                !this.genders.some(gender =>
+                    this.sizes.some(size => (this.quantities[g.key + '-' + gender.key + '-' + size] || 0) > 0)
+                )
+            );
+        },
         get stepValid() {
             const s = this.currentStepName;
             if (s === 'request-type') {
@@ -156,13 +190,20 @@
                 return Object.values(this.garments).some(v => v);
             }
             if (s === 'shirt-length-fabric') {
-                return this.sleeveType !== '' && this.fabricWeight !== '';
+                const sleeveOk = this.sleeveType !== '' && (this.sleeveType !== 'other' || this.sleeveTypeOther.trim() !== '');
+                const fabricOk = this.fabricWeight !== '' && (this.fabricWeight !== 'other' || this.fabricWeightOther.trim() !== '');
+                return sleeveOk && fabricOk;
             }
             if (s === 'color-selection') {
                 return this.selectedColors.length > 0;
             }
             if (s === 'quantity-sizing') {
-                return Object.values(this.quantities).some(v => v > 0);
+                if (this.selectedGarmentTypes.length === 0) return false;
+                return this.selectedGarmentTypes.every(g =>
+                    this.genders.some(gender =>
+                        this.sizes.some(size => (this.quantities[g.key + '-' + gender.key + '-' + size] || 0) > 0)
+                    )
+                );
             }
             if (s === 'print-method') {
                 if (!this.printMethod) return false;
@@ -172,19 +213,56 @@
             if (s === 'completion-date') {
                 return this.completionDate !== '' && (this.isRush === true || this.isRushDelivery !== null);
             }
+            if (s === 'shipping-address') {
+                return this.contactName.trim() !== ''
+                    && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.contactEmail)
+                    && this.contactPhone.replace(/\D/g,'').length >= 10
+                    && this.address1.trim() !== ''
+                    && this.city.trim() !== ''
+                    && this.state.trim() !== ''
+                    && this.zip.trim() !== '';
+            }
             return true;
         },
 
         /* ── Methods ──────────────────────────────────────── */
-        open()  { this.isOpen = true;  this.step = 1; document.body.style.overflow = 'hidden'; },
-        close() { this.isOpen = false; this.step = 1; document.body.style.overflow = ''; this.$dispatch('modal-closed', { name: this.modalName }); },
-        next()  { if (this.stepValid && this.step < this.totalSteps) this.step++; },
-        prev()  { if (this.step > 1) this.step--; },
-        finish(){ this.$dispatch('wizard-done', { name: this.modalName }); this.close(); },
+        open()  {
+            this.isOpen = true; this.step = 1;
+            this.showConfirmation = false; this.showCloseConfirm = false;
+            document.body.style.overflow = 'hidden';
+        },
+        close() {
+            this.isOpen = false; this.step = 1;
+            this.showConfirmation = false; this.showCloseConfirm = false;
+            document.body.style.overflow = '';
+            this.$dispatch('modal-closed', { name: this.modalName });
+        },
+        next()   { if (this.stepValid && this.step < this.totalSteps) this.step++; },
+        prev()   { if (this.step > 1) this.step--; },
+        finish() { this.showConfirmation = true; this.$dispatch('wizard-done', { name: this.modalName }); },
 
-        addColor(c)       { if (!this.selectedColors.includes(c)) this.selectedColors.push(c); this.colorInput = ''; },
-        removeColor(c)    { this.selectedColors = this.selectedColors.filter(x => x !== c); },
-        addColorFromInput(){ const c = this.colorInput.trim(); if (c && !this.selectedColors.includes(c)) this.selectedColors.push(c); this.colorInput = ''; },
+        backToContactModal() {
+            this.close();
+            this.$nextTick(() => window.dispatchEvent(new CustomEvent('open-contact-modal')));
+        },
+
+        normalizeState() {
+            const v = this.state.trim();
+            if (!v) return;
+            const upper = v.toUpperCase();
+            if (Object.values(this.stateMap).includes(upper)) { this.state = upper; return; }
+            const match = Object.keys(this.stateMap).find(n => n.toLowerCase() === v.toLowerCase());
+            if (match) this.state = this.stateMap[match];
+        },
+
+        addColor(c)        { if (!this.selectedColors.includes(c)) this.selectedColors.push(c); this.colorInput = ''; this.colorFocusIdx = -1; },
+        removeColor(c)     { this.selectedColors = this.selectedColors.filter(x => x !== c); },
+        addColorFromInput(){ const c = this.colorInput.trim(); if (c && !this.selectedColors.includes(c)) this.selectedColors.push(c); this.colorInput = ''; this.colorFocusIdx = -1; },
+        addFocusedColor()  {
+            if (this.filteredColors.length === 0) { this.addColorFromInput(); return; }
+            const idx = this.colorFocusIdx >= 0 ? this.colorFocusIdx : 0;
+            if (this.filteredColors[idx]) this.addColor(this.filteredColors[idx]);
+        },
 
         getQty(g, gender, size) { return this.quantities[g + '-' + gender + '-' + size] || ''; },
         setQty(g, gender, size, val) {
@@ -205,7 +283,7 @@
         }
     "
     @close-modal.window="if ($event.detail.name === modalName) close()"
-    @keydown.escape.window="if (isOpen) close()"
+    @keydown.escape.window="if (isOpen) { if (showCloseConfirm) showCloseConfirm = false; else if (!showConfirmation) showCloseConfirm = true; }"
 >
     {{-- ── Backdrop — teleported to <body> to escape any ancestor transforms ── --}}
     <template x-teleport="body">
@@ -257,7 +335,7 @@
                 </div>
                 <button
                     type="button"
-                    @click="close()"
+                    @click="showCloseConfirm = true"
                     class="flex items-center justify-center w-8 h-8 flex-shrink-0 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
                     aria-label="Close wizard"
                 >
@@ -270,18 +348,18 @@
             </div>
 
             {{-- ── Body ─────────────────────────────────────────────────── --}}
-            <div class="flex-1 px-5 py-5 overflow-y-auto overscroll-contain scrollbar-sunburst text-sm text-charcoal">
+            <div x-show="!showConfirmation" class="flex-1 px-5 py-5 overflow-y-auto overscroll-contain scrollbar-sunburst text-sm text-charcoal">
 
                 {{-- ══ STEP 1: Request Details ═══════════════════════════════ --}}
                 <div x-show="currentStepName === 'request-type'">
                     <div class="space-y-6">
 
                         <div>
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                            <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
                                 Is this a company or personal request?
                                 <span class="text-error ml-0.5">*</span>
                             </h3>
-                            <div class="flex gap-6">
+                            <div class="flex gap-6 justify-center">
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-request-type" value="company"
                                         x-model="requestType"
@@ -310,11 +388,11 @@
                         </div>
 
                         <div class="border-t border-linen-dark pt-6">
-                            <h3 class="text-sm font-semibold text-charcoal mb-3">
+                            <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
                                 Is this a rush request?
                                 <span class="text-error ml-0.5">*</span>
                             </h3>
-                            <div class="flex gap-6">
+                            <div class="flex gap-6 justify-center">
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-is-rush" value="yes"
                                         @change="isRush = true"
@@ -403,6 +481,17 @@
                                 </label>
                                 @endforeach
                             </div>
+                            <div x-show="sleeveType === 'other'" x-cloak class="mt-3">
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    Please describe <span class="text-error">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    x-model="sleeveTypeOther"
+                                    placeholder="Describe your sleeve preference…"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                                >
+                            </div>
                         </div>
 
                         <div>
@@ -422,6 +511,17 @@
                                 </label>
                                 @endforeach
                             </div>
+                            <div x-show="fabricWeight === 'other'" x-cloak class="mt-3">
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    Please describe <span class="text-error">*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    x-model="fabricWeightOther"
+                                    placeholder="Describe your fabric weight preference…"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                                >
+                            </div>
                         </div>
 
                     </div>
@@ -440,7 +540,11 @@
                                 <input
                                     type="text"
                                     x-model="colorInput"
-                                    @keydown.enter.prevent="addColorFromInput()"
+                                    @keydown.enter.prevent="addFocusedColor()"
+                                    @keydown.tab.prevent="if (filteredColors.length > 0) addFocusedColor(); else addColorFromInput()"
+                                    @keydown.arrow-down.prevent="colorFocusIdx = Math.min(colorFocusIdx + 1, filteredColors.length - 1)"
+                                    @keydown.arrow-up.prevent="colorFocusIdx = Math.max(colorFocusIdx - 1, 0)"
+                                    @input="colorFocusIdx = -1"
                                     placeholder="e.g. Navy Blue, Red, White…"
                                     class="flex-1 px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                                 >
@@ -451,8 +555,9 @@
                             </div>
                             {{-- Inline suggestions (never absolute-positioned) --}}
                             <div x-show="filteredColors.length > 0" class="mt-1 border border-linen-dark bg-white max-h-[8rem] overflow-y-auto scrollbar-sunburst">
-                                <template x-for="color in filteredColors" :key="color">
+                                <template x-for="(color, cIdx) in filteredColors" :key="color">
                                     <button type="button" @click="addColor(color)"
+                                        :class="colorFocusIdx === cIdx ? 'bg-linen' : ''"
                                         class="w-full text-left px-3 py-2 text-sm text-charcoal hover:bg-linen transition-colors border-b border-linen-dark last:border-0"
                                         x-text="color">
                                     </button>
@@ -532,6 +637,17 @@
                             </div>
                         </template>
 
+                        {{-- "Did you forget?" warning for garments with no quantities --}}
+                        <div x-show="garmentsWithNoQty.length > 0 && selectedGarmentTypes.length > 0" x-cloak
+                            class="border-l-4 border-sunburst bg-sunburst/5 px-4 py-3">
+                            <p class="text-sm font-semibold text-charcoal mb-1.5">Did you forget to add a quantity?</p>
+                            <template x-for="g in garmentsWithNoQty" :key="g.key">
+                                <p class="text-xs text-charcoal-light mt-0.5">
+                                    <span class="font-semibold text-sunburst-dark" x-text="'• ' + g.label + ' has no quantities entered'"></span>
+                                </p>
+                            </template>
+                        </div>
+
                         <div x-show="quantitySummary.length > 0" x-cloak class="border-t border-linen-dark pt-4">
                             <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Order Summary</p>
                             <div class="flex flex-wrap gap-1.5">
@@ -550,7 +666,7 @@
 
                         {{-- Traditional Printing --}}
                         <div class="border border-linen-dark">
-                            <div class="flex items-start gap-3 p-4">
+                            <div class="flex items-center gap-3 p-4">
                                 <input type="radio" name="crw-print-method" value="traditional"
                                     id="crw-pm-traditional"
                                     x-model="printMethod"
@@ -627,8 +743,7 @@
                                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                             </svg>
                             <div>
-                                <p class="text-sm font-bold text-charcoal">Rush Order — Expediting</p>
-                                <p class="text-xs text-charcoal-light mt-0.5">Your request has been flagged as a rush order. We'll prioritize processing.</p>
+                                <p class="text-sm font-bold text-charcoal">Rush Order — Expediting Active</p>
                             </div>
                         </div>
 
@@ -702,21 +817,40 @@
                 <div x-show="currentStepName === 'shipping-address'" x-cloak>
                     <div class="space-y-4">
 
-                        {{-- Contact info — pre-filled from contact modal, styled like all other shipping fields --}}
+                        {{-- Contact info — pre-filled from contact modal --}}
                         <div>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Full Name</label>
-                            <input type="text" x-model="contactName" placeholder="Full name"
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                Full Name <span class="text-error">*</span>
+                            </label>
+                            <input type="text" x-model="contactName" required placeholder="Full name"
                                 class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                         </div>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Email</label>
-                                <input type="email" x-model="contactEmail" placeholder="you@example.com"
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    Email <span class="text-error">*</span>
+                                </label>
+                                <input type="email" x-model="contactEmail" required placeholder="you@example.com"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Phone</label>
-                                <input type="tel" x-model="contactPhone" placeholder="(815) 000-0000"
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    Phone <span class="text-error">*</span>
+                                </label>
+                                <input
+                                    type="tel"
+                                    required
+                                    :value="contactPhone"
+                                    @input="
+                                        let d = $el.value.replace(/\D/g,'').substring(0,10);
+                                        if (d.length >= 7)      $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3,6) + '-' + d.substring(6);
+                                        else if (d.length >= 4) $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3);
+                                        else if (d.length >= 1) $el.value = '(' + d;
+                                        else                    $el.value = '';
+                                        contactPhone = $el.value;
+                                    "
+                                    maxlength="14"
+                                    placeholder="(815) 000-0000"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
@@ -730,8 +864,10 @@
 
                         {{-- Shipping address --}}
                         <div>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Address Line 1</label>
-                            <input type="text" x-model="address1" placeholder="Street address"
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                Address Line 1 <span class="text-error">*</span>
+                            </label>
+                            <input type="text" x-model="address1" required placeholder="Street address"
                                 class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                         </div>
 
@@ -745,18 +881,26 @@
 
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                             <div class="col-span-2 sm:col-span-1">
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">City</label>
-                                <input type="text" x-model="city" placeholder="City"
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    City <span class="text-error">*</span>
+                                </label>
+                                <input type="text" x-model="city" required placeholder="City"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">State</label>
-                                <input type="text" x-model="state" placeholder="IL" maxlength="2"
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    State <span class="text-error">*</span>
+                                </label>
+                                <input type="text" x-model="state" required placeholder="IL or Illinois"
+                                    @blur="normalizeState()"
+                                    @keydown.enter="normalizeState()"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors uppercase">
                             </div>
                             <div>
-                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">ZIP Code</label>
-                                <input type="text" x-model="zip" placeholder="60432"
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    ZIP Code <span class="text-error">*</span>
+                                </label>
+                                <input type="text" x-model="zip" required placeholder="60432" maxlength="10"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
@@ -897,7 +1041,7 @@
             </div>{{-- /body --}}
 
             {{-- ── Step dot indicators ──────────────────────────────────── --}}
-            <div class="flex items-center justify-center gap-1.5 py-3 flex-shrink-0" aria-hidden="true">
+            <div x-show="!showConfirmation" class="flex items-center justify-center gap-1.5 py-3 flex-shrink-0" aria-hidden="true">
                 <template x-for="i in totalSteps" :key="i">
                     <div
                         class="h-2 transition-all duration-300"
@@ -906,19 +1050,63 @@
                 </template>
             </div>
 
+            {{-- ── Submission Confirmation ───────────────────────────────── --}}
+            <div x-show="showConfirmation" x-cloak
+                class="flex-1 flex flex-col items-center justify-center px-8 py-12 text-center">
+                <div class="flex items-center justify-center w-16 h-16 bg-sunburst/10 mb-6" aria-hidden="true">
+                    <svg class="w-8 h-8 text-sunburst" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                         stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-charcoal mb-2">
+                    Thank you, <span x-text="contactFirstName"></span>!
+                </h3>
+                <p class="text-sm text-charcoal-light max-w-xs leading-relaxed">
+                    Your <span x-show="rushActive" x-cloak class="font-semibold text-sunburst-dark">rush </span>request
+                    has been submitted. We will be in touch shortly.
+                </p>
+                <button
+                    type="button"
+                    @click="backToContactModal()"
+                    class="mt-8 px-6 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
+                >Done</button>
+            </div>
+
+            {{-- ── Close Confirmation Overlay ────────────────────────────── --}}
+            <div x-show="showCloseConfirm" x-cloak
+                class="absolute inset-0 z-20 bg-charcoal-dark/75 flex items-center justify-center p-6">
+                <div class="bg-white shadow-2xl p-6 max-w-xs w-full text-center space-y-4">
+                    <p class="text-base font-bold text-charcoal">Are you sure?</p>
+                    <p class="text-sm text-charcoal-light leading-relaxed">Your progress will not be saved. You'll be returned to the contact form.</p>
+                    <div class="flex gap-3 justify-center">
+                        <button type="button"
+                            @click="showCloseConfirm = false"
+                            class="px-4 py-2 text-sm font-semibold border border-linen-dark text-charcoal hover:bg-linen transition-colors">
+                            Keep Going
+                        </button>
+                        <button type="button"
+                            @click="backToContactModal()"
+                            class="px-4 py-2 text-sm font-semibold bg-charcoal text-white hover:bg-charcoal-dark transition-colors">
+                            Yes, Go Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             {{-- ── Footer navigation ────────────────────────────────────── --}}
-            <div class="flex items-center gap-2.5 px-5 py-3.5 flex-shrink-0 border-t bg-linen-light border-linen-dark">
+            <div x-show="!showConfirmation" class="flex items-center gap-2.5 px-5 py-3.5 flex-shrink-0 border-t bg-linen-light border-linen-dark">
 
                 <button type="button"
                     x-show="step === 1"
-                    @click="close()"
+                    @click="backToContactModal()"
                     class="text-sm font-semibold text-charcoal-light hover:text-charcoal transition-colors mr-auto">
                     Cancel
                 </button>
 
                 {{-- Validation hint --}}
                 <p
-                    x-show="step > 1 && !stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'shipping-address' && currentStepName !== 'confirm-submit'"
+                    x-show="step > 1 && !stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'confirm-submit'"
                     x-cloak
                     class="text-xs text-error mr-auto"
                 >Complete required fields to continue</p>
@@ -926,17 +1114,15 @@
                 <div class="flex items-center gap-2.5 ml-auto">
 
                     <x-ui.button-modal-cancel
-                        x-show="step > 1"
-                        x-cloak
-                        @click="prev()"
+                        @click="step === 1 ? backToContactModal() : prev()"
                     >← Back</x-ui.button-modal-cancel>
 
                     <button
                         type="button"
                         x-show="step < totalSteps"
                         @click="next()"
-                        x-bind:disabled="!stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'shipping-address'"
-                        x-bind:class="(!stepValid && currentStepName !== 'extra-notes' && currentStepName !== 'shipping-address') ? 'opacity-40 cursor-not-allowed' : ''"
+                        x-bind:disabled="!stepValid && currentStepName !== 'extra-notes'"
+                        x-bind:class="(!stepValid && currentStepName !== 'extra-notes') ? 'opacity-40 cursor-not-allowed' : ''"
                         class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                     >Next →</button>
 

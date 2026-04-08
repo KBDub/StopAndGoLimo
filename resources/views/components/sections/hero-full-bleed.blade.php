@@ -12,7 +12,7 @@
     'overlay' => 'bg-gradient-to-t from-charcoal-dark/80 via-charcoal-dark/40 to-charcoal-dark/10',
 ])
 
-<section {{ $attributes->merge(['class' => 'relative w-full overflow-hidden ' . $minHeight]) }}>
+<section {{ $attributes->merge(['class' => 'relative w-full overflow-hidden isolate ' . $minHeight]) }}>
     @if($image)
         <img
             src="{{ $image }}"

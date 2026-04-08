@@ -1,4 +1,4 @@
-<section class="py-10 bg-charcoal relative overflow-hidden">
+<section class="py-10 bg-charcoal relative overflow-hidden isolate">
     <div class="absolute inset-0 opacity-10">
         <div class="absolute top-0 left-1/4 w-64 h-64 blur-3xl" style="background-color: var(--color-sunburst)"></div>
         <div class="absolute bottom-0 right-1/4 w-48 h-48 bg-azure rounded-full blur-3xl"></div>

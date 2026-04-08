@@ -687,6 +687,41 @@ Used when there are 2–4 exclusive choices that should all be visible at once o
 
 Rules: `sr-only` hides the native radio; the `<span>` acts as the visual. Selected = `bg-sunburst border-sunburst`. Each option is `flex-1` so they share equal width. Never use `rounded` on the spans.
 
+#### Radio Group (Inline Yes/No or short option lists) — MANDATORY CENTER ALIGNMENT
+
+Used for small sets of 2–3 labeled native radio inputs inside modals and wizard panels (e.g. "Yes / No", "Company / Personal").
+
+```html
+<div class="flex gap-6 justify-center">
+    <label class="flex items-center gap-2 cursor-pointer">
+        <input type="radio" name="my-group" value="yes"
+            x-model="myField"
+            class="w-4 h-4 accent-sunburst">
+        <span class="text-sm font-medium text-charcoal">Yes</span>
+    </label>
+    <label class="flex items-center gap-2 cursor-pointer">
+        <input type="radio" name="my-group" value="no"
+            x-model="myField"
+            class="w-4 h-4 accent-sunburst">
+        <span class="text-sm font-medium text-charcoal">No</span>
+    </label>
+</div>
+```
+
+**Rules:**
+- The wrapping `<div>` **must** include `justify-center` — radio groups are always horizontally centered inside modal/wizard panels. This is non-negotiable.
+- Input size: `w-4 h-4 accent-sunburst` — never change the size or accent color.
+- Label text: `text-sm font-medium text-charcoal`.
+- Gap between options: `gap-6`; gap between radio and its label: `gap-2`.
+- For card-style radio rows (radio inside a bordered card header), the card's flex container must also use `justify-center`:
+  ```html
+  <div class="flex items-center justify-center gap-3 p-4">
+      <input type="radio" … class="w-4 h-4 flex-shrink-0 accent-sunburst">
+      <label …>Card Option Label</label>
+  </div>
+  ```
+- The group label/question heading above a radio group must also be `text-center`.
+
 #### Standard Text / Email / Tel / Date / Textarea Inputs
 
 ```html

@@ -666,12 +666,12 @@
 
                         {{-- Traditional Printing --}}
                         <div class="border border-linen-dark">
-                            <div class="flex items-center gap-3 p-4">
+                            <div class="flex items-center justify-center gap-3 p-4">
                                 <input type="radio" name="crw-print-method" value="traditional"
                                     id="crw-pm-traditional"
                                     x-model="printMethod"
-                                    class="w-4 h-4 mt-0.5 flex-shrink-0 accent-sunburst">
-                                <div class="flex-1">
+                                    class="w-4 h-4 flex-shrink-0 accent-sunburst">
+                                <div>
                                     <label for="crw-pm-traditional" class="block text-sm font-bold text-charcoal cursor-pointer mb-1">Traditional Printing</label>
                                     <p class="text-xs text-charcoal-light">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
                                 </div>
@@ -680,7 +680,7 @@
 
                         {{-- Specialty Printing --}}
                         <div class="border border-linen-dark">
-                            <div class="flex items-center gap-3 p-4 border-b border-linen-dark">
+                            <div class="flex items-center justify-center gap-3 p-4 border-b border-linen-dark">
                                 <input type="radio" name="crw-print-method" value="specialty"
                                     id="crw-pm-specialty"
                                     x-model="printMethod"

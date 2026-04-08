@@ -46,6 +46,7 @@
 
     @if(!in_array($currentPage ?? '', ['cart', 'checkout', 'order-confirmation']))
         <x-ui.contact-modal />
+        <x-ui.custom-request-wizard />
     @endif
 </body>
 </html>

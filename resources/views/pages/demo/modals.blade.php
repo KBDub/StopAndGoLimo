@@ -38,8 +38,9 @@
         <p class="text-charcoal-light text-lg max-w-2xl mx-auto">
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal</code>,
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal-trigger</code>,
-            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal-wizard</code>, and
-            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code>
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal-wizard</code>,
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code>, and
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.custom-request-wizard</code>
             — all variants live below.
         </p>
     </div>

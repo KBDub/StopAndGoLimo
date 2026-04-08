@@ -1103,13 +1103,20 @@
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Custom Request Wizard</h2>
-        <p class="text-charcoal-light text-sm mb-6 pl-5">
-            A guided multi-step custom order wizard triggered from the
-            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code> toggle,
-            or opened directly via the button below.
+        <p class="text-charcoal-light text-sm mb-3 pl-5">
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.custom-request-wizard</code>
+            — a guided 10-step custom order wizard.
+            Triggered from the <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code> "Do You Have a Custom Request?" toggle,
+            or opened directly via any button dispatching the <code class="text-sm bg-linen-dark px-1 py-0.5">open-modal</code> window event.
             Steps are driven by a dynamic <code class="text-sm bg-linen-dark px-1 py-0.5">visibleSteps</code> array
             — the Shirt Length &amp; Fabric step only appears when a shirt-type garment is selected.
         </p>
+
+        {{-- Usage block --}}
+        <div class="mb-6 ml-5 bg-charcoal px-4 py-3 font-mono text-sm text-sunburst space-y-0.5">
+            <div>&lt;x-ui.contact-modal /&gt;</div>
+            <div>&lt;x-ui.custom-request-wizard /&gt;</div>
+        </div>
 
         <div class="flex flex-wrap gap-3">
             <button

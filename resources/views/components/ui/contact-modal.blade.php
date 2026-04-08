@@ -32,6 +32,8 @@
         error: false,
         loading: false,
         customRequest: false,
+        emailError: false,
+        emailTouched: false,
 
         openModal()  { this.open = true;  document.body.style.overflow = 'hidden'; },
         closeModal() { this.open = false; document.body.style.overflow = ''; },
@@ -211,6 +213,14 @@
                             type="tel"
                             autocomplete="tel"
                             placeholder="(815) 000-0000"
+                            maxlength="14"
+                            @input="
+                                let d = $el.value.replace(/\D/g,'').substring(0,10);
+                                if (d.length >= 7)      $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3,6) + '-' + d.substring(6);
+                                else if (d.length >= 4) $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3);
+                                else if (d.length >= 1) $el.value = '(' + d;
+                                else                    $el.value = '';
+                            "
                             class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                         >
                     </div>
@@ -225,8 +235,12 @@
                         required
                         autocomplete="email"
                         placeholder="you@example.com"
-                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                        @input="emailTouched = true; emailError = $el.value.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($el.value)"
+                        @blur="emailTouched = true; emailError = $el.value.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($el.value)"
+                        :class="emailError ? 'border-error ring-1 ring-error/40 focus:border-error focus:ring-error/40' : 'border-linen-dark focus:border-sunburst focus:ring-1 focus:ring-sunburst/50'"
+                        class="w-full px-3 py-2.5 text-sm border focus:outline-none bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
                     >
+                    <p x-show="emailError" x-cloak class="mt-1 text-xs text-error font-medium">Please enter a valid email address.</p>
                 </div>
 
                 <div>
@@ -244,7 +258,7 @@
                 {{-- ── Custom Request Toggle ─────────────────────────────── --}}
                 <div class="flex items-center justify-between gap-4 py-3 border-t border-b border-linen-dark my-1">
                     <div class="min-w-0">
-                        <p class="text-sm font-semibold text-charcoal">Have a Custom Request?</p>
+                        <p class="text-sm font-semibold text-charcoal">Do You Have a Custom Request?</p>
                         <p class="text-xs text-charcoal-light mt-0.5">Use our guided custom order wizard</p>
                     </div>
                     <button

@@ -350,7 +350,6 @@ The table schema and endpoint are deferred to Phase 2. The wizard component shou
 | Symbol | Meaning |
 |--------|---------|
 | ✅ | Fully built — component or prop exists and is used correctly |
-| ⚠️ | Used in demo with a raw element or pattern not yet extracted into a named component |
 | — | Not applicable |
 
 ---
@@ -365,8 +364,8 @@ Six modals demonstrating the `variant` prop. All use `x-ui.modal`, `size="md"` (
 | `demo-dark` | Dark Variant | `dark` | `x-ui.modal-trigger as="close"` (manual) + `x-ui.button-modal-primary` | ✅ |
 | `demo-gold` | Gold Variant | `gold` | `x-ui.button-modal-cancel` (Dismiss) only | ✅ |
 | `demo-success` | Success Variant | `success` | `$icon` slot (checkmark) + `x-ui.modal-trigger as="close"` (Done) | ✅ |
-| `demo-warning` | Warning Variant | `warning` | `$icon` slot (triangle) + cancel + raw `<button>Keep Working</button>` ⚠️ | ✅ |
-| `demo-danger` | Danger Variant | `danger` | `$icon` slot (circle-i) + cancel + raw `<button>Delete Permanently</button>` ⚠️ | ✅ |
+| `demo-warning` | Warning Variant | `warning` | `$icon` slot (triangle) + cancel + raw `<button>Keep Working</button>` | ✅ |
+| `demo-danger` | Danger Variant | `danger` | `$icon` slot (circle-i) + cancel + raw `<button>Delete Permanently</button>` | ✅ |
 
 > **Note on raw buttons in warning/danger footers:** The demo intentionally uses bare `<button>` elements for the "Keep Working" and "Delete Permanently" actions to show that the footer slot accepts arbitrary HTML. This is expected and correct — not a gap. In production use, these should receive the same styling convention as the danger/warning variant colours.
 

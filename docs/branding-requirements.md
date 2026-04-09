@@ -353,7 +353,24 @@ Full-width image and video banners for visual breaks between sections. All accep
 
 ### Modal System
 
-The modal system is the authoritative interactive overlay mechanism for the site. Five components work together.
+The modal system is the authoritative interactive overlay mechanism for the site. The following components work together — **always use these; never hand-roll a custom Alpine overlay.**
+
+| Component | Purpose |
+|---|---|
+| `x-ui.modal` | Core named, slot-driven modal — the foundation |
+| `x-ui.modal-default` | Shorthand wrapper — `variant="default"` pre-set |
+| `x-ui.modal-dark` | Shorthand wrapper — `variant="dark"` pre-set |
+| `x-ui.modal-gold` | Shorthand wrapper — `variant="gold"` pre-set |
+| `x-ui.modal-success` | Shorthand wrapper — `variant="success"` pre-set |
+| `x-ui.modal-warning` | Shorthand wrapper — `variant="warning"` pre-set |
+| `x-ui.modal-danger` | Shorthand wrapper — `variant="danger"` pre-set |
+| `x-ui.modal-trigger` | Dispatches open/close events; renders as button, a, span, or div |
+| `x-ui.button-modal-primary` | Primary CTA button sized for modal footers |
+| `x-ui.button-modal-cancel` | Cancel/dismiss button sized for modal footers |
+| `x-ui.modal-wizard` | Lightweight 3-step guided wizard (non-dismissible) |
+| `x-ui.contact-modal` | Global FAB + full quote/contact form overlay |
+| `x-ui.custom-request-wizard` | 10-step custom order intake wizard |
+| `x-ui.modal-quick-view` | Product quick-view overlay (triggered by `open-quick-view` event) |
 
 #### x-ui.modal
 
@@ -416,27 +433,95 @@ Note: Dark-variant cancel (`border-white/20`, `text-[#aaa]`) and semantic-color 
 
 **Branding rule — dropdowns inside modals:** The modal body has `overflow-x-hidden` which causes the browser to also clip `overflow-y`, preventing absolutely-positioned dropdown lists from rendering fully. **Never use absolute-positioned dropdowns inside a modal body.** Instead, render option lists inline (in normal document flow) with `max-h-[10rem] overflow-y-auto scrollbar-sunburst` to constrain height and enable branded scrolling.
 
-**Z-index:** Backdrop at `z-[9999]`, panel inside the backdrop.
+**Z-index:** Backdrop at `z-[9800]`. Panel renders inside the backdrop — no additional z-index on the panel itself. This intentionally places `x-ui.modal` below the FAB (`z-[9990]`) and below the contact-modal / custom-request-wizard overlays (`z-[9999]`). See the Stacking Contexts section for the full hierarchy.
 
 ```blade
-<x-ui.modal-trigger modal="quote-form">Get a Quote</x-ui.modal-trigger>
+{{-- Trigger --}}
+<x-ui.modal-trigger modal="quote-form" class="px-5 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold">
+    Get a Quote
+</x-ui.modal-trigger>
 
+{{-- Modal definition (place anywhere on the page, outside x-data wrappers) --}}
 <x-ui.modal name="quote-form" title="Request a Quote" size="lg">
     <p>Modal body content.</p>
     <x-slot:footer>
-        <x-ui.modal-trigger modal="quote-form" as="close"
-            class="px-4 py-2 text-sm font-semibold border border-linen-dark hover:bg-linen transition-colors">
-            Cancel
-        </x-ui.modal-trigger>
-        <button class="px-5 py-2 bg-gold-gradient text-charcoal text-sm font-semibold">
-            Submit
-        </button>
+        <x-ui.button-modal-cancel modal="quote-form">Cancel</x-ui.button-modal-cancel>
+        <x-ui.button-modal-primary>Submit</x-ui.button-modal-primary>
     </x-slot:footer>
 </x-ui.modal>
 
 {{-- Open from Livewire --}}
 $this->dispatch('open-modal', name: 'quote-form');
 ```
+
+#### x-ui.modal Variant Wrappers
+
+Six thin-wrapper components pre-set the `variant` prop so call sites are shorter and self-documenting. They pass all props and all slots through to `x-ui.modal` unchanged — only `variant` is locked.
+
+| Component | `variant` | Use when |
+|---|---|---|
+| `x-ui.modal-default` | `default` | General content, forms, quotes — the standard choice |
+| `x-ui.modal-dark` | `dark` | Emphasis, nighttime aesthetics, charcoal brand moments |
+| `x-ui.modal-gold` | `gold` | Premium announcements, featured deals, promotional content |
+| `x-ui.modal-success` | `success` | Confirmation: order submitted, message sent, action completed |
+| `x-ui.modal-warning` | `warning` | Caution: session expiry, unsaved changes, irreversible steps |
+| `x-ui.modal-danger` | `danger` | Destructive actions: delete, remove, permanently clear |
+
+All accept the same props as `x-ui.modal` (`name`, `title`, `size`, `dismissible`, `scrollBody`, `maxHeight`, `maxWidth`, `headerClass`, `bodyClass`, `footerClass`, `panelClass`) and the same slots (`default`, `title`, `header`, `icon`, `footer`). Do not pass `variant` — it is pre-set.
+
+**Variant colour tokens (read-only reference — derived from `x-ui.modal`):**
+
+| Variant | Stripe | Header bg | Header border | Panel bg | Body text | Icon bg | Icon text | Footer bg | Footer border |
+|---|---|---|---|---|---|---|---|---|---|
+| `default` | `bg-gold-gradient-horizontal` | `bg-linen` | `border-sunburst` | `bg-white` | `text-charcoal` | `bg-sunburst/15` | `text-sunburst` | `bg-linen-light` | `border-linen-dark` |
+| `dark` | `bg-gold-gradient-horizontal` | `bg-charcoal-dark` | `border-sunburst` | `bg-charcoal` | `text-linen` | `bg-sunburst/15` | `text-sunburst` | `bg-charcoal-dark` | `border-white/10` |
+| `gold` | `bg-gold-gradient-horizontal` | `bg-gold-gradient` | `border-sunburst-dark` | `bg-linen-light` | `text-charcoal` | `bg-sunburst/20` | `text-charcoal` | `bg-linen` | `border-linen-dark` |
+| `success` | `bg-success` | `bg-linen` | `border-success` | `bg-white` | `text-charcoal` | `bg-success/15` | `text-success` | `bg-linen-light` | `border-linen-dark` |
+| `warning` | `bg-warning` | `bg-linen` | `border-warning` | `bg-white` | `text-charcoal` | `bg-warning/15` | `text-warning` | `bg-linen-light` | `border-linen-dark` |
+| `danger` | `bg-error` | `bg-linen` | `border-error` | `bg-white` | `text-charcoal` | `bg-error/15` | `text-error` | `bg-linen-light` | `border-linen-dark` |
+
+**Footer button rules per variant:**
+
+| Variant | Cancel | Confirm / Primary |
+|---|---|---|
+| `default` | `x-ui.button-modal-cancel` | `x-ui.button-modal-primary` |
+| `dark` | Raw `<button class="px-4 py-2 text-sm font-semibold text-[#aaa] border border-white/20 hover:bg-white/10 transition-colors">` | `x-ui.button-modal-primary` |
+| `gold` | `x-ui.button-modal-cancel` | `x-ui.button-modal-primary` |
+| `success` | `x-ui.button-modal-cancel` (label: "Done") | Only if a second action is needed; otherwise single Done button suffices |
+| `warning` | `x-ui.button-modal-cancel` | Raw `<button class="px-5 py-2 bg-warning text-charcoal text-sm font-semibold hover:opacity-90 transition-opacity">` |
+| `danger` | `x-ui.button-modal-cancel` | Raw `<button class="px-5 py-2 bg-error text-white text-sm font-semibold hover:opacity-90 transition-opacity">` |
+
+```blade
+{{-- Simplest default modal --}}
+<x-ui.modal-default name="confirm" title="Confirm Order" size="sm">
+    <p>Are you sure you want to place this order?</p>
+    <x-slot:footer>
+        <x-ui.button-modal-cancel modal="confirm">Cancel</x-ui.button-modal-cancel>
+        <x-ui.button-modal-primary>Place Order</x-ui.button-modal-primary>
+    </x-slot:footer>
+</x-ui.modal-default>
+
+{{-- Danger modal — destructive confirm uses raw <button> in error colour --}}
+<x-ui.modal-danger name="delete-item" title="Delete This Item?" :dismissible="false">
+    <x-slot:icon>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+    </x-slot:icon>
+    <p>This action cannot be undone.</p>
+    <x-slot:footer>
+        <x-ui.button-modal-cancel modal="delete-item">Cancel</x-ui.button-modal-cancel>
+        <button class="px-5 py-2 bg-error text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+            Delete Permanently
+        </button>
+    </x-slot:footer>
+</x-ui.modal-danger>
+```
+
+---
 
 #### x-ui.modal-trigger
 
@@ -519,10 +604,14 @@ Every modal, overlay, and fixed UI element in this project follows a strict, uni
 |---|---|---|
 | Page sections (contained) | `auto` (≈ 0) | All `<section>` elements with `isolate` — their internal z-indexes are self-contained |
 | Navigation bar | `z-50` | `x-layout.navigation-bar` |
-| Contact FAB button | `z-[9990]` | The floating "Contact Us Now" action button |
-| **Modal / wizard overlays** | **`z-[9999]`** | `x-ui.contact-modal` overlay, `x-ui.custom-request-wizard` backdrop, `x-ui.modal` backdrop — **all overlays share this value** |
+| **`x-ui.modal` backdrop** | **`z-[9800]`** | All `x-ui.modal` / `x-ui.modal-default` / `x-ui.modal-dark` / `x-ui.modal-gold` / `x-ui.modal-success` / `x-ui.modal-warning` / `x-ui.modal-danger` instances |
+| Contact FAB button | `z-[9990]` | The floating "Contact Us Now" action button — sits above page modals so it remains accessible |
+| **Contact / wizard overlays** | **`z-[9999]`** | `x-ui.contact-modal` overlay and `x-ui.custom-request-wizard` backdrop only — full-page flows that must occlude everything |
 
-All future modals and wizard components **must use `z-[9999]`** for their backdrop/overlay. Do not go higher unless there is a documented exceptional reason reviewed by the team.
+**Why three tiers?**  
+Page modals (`z-[9800]`) render below the FAB (`z-[9990]`) so the contact button remains reachable even when a standard modal is open. The contact-modal and wizard (`z-[9999]`) cover everything — including the FAB — because they are full-page interaction flows.
+
+New `x-ui.modal` instances (and all six variant wrappers) **must stay at `z-[9800]`**. New full-page overlay flows that must occlude the FAB use `z-[9999]`. Never go higher than `z-[9999]` without documented team review.
 
 ---
 
@@ -553,14 +642,16 @@ Any `<section>` element that contains positioned children with an explicit `z-in
 
 ---
 
-#### Rule 2 — Modal Backdrops Must Use `x-teleport="body"`
+#### Rule 2 — Hand-Rolled Overlays Must Use `x-teleport="body"`
 
-Any `position: fixed` modal backdrop that lives inside an Alpine.js `x-data` component **must** be wrapped in `<template x-teleport="body">`. This moves the backdrop DOM node to be a direct child of `<body>` at runtime, guaranteeing that CSS `transform`, `will-change`, `filter`, and `perspective` on any ancestor element cannot alter the fixed positioning or stacking context of the backdrop.
+Any `position: fixed` overlay backdrop that you write by hand inside an Alpine.js `x-data` component **must** be wrapped in `<template x-teleport="body">`. This moves the backdrop DOM node to be a direct child of `<body>` at runtime, guaranteeing that CSS `transform`, `will-change`, `filter`, and `perspective` on any ancestor element cannot alter the fixed positioning or stacking context of the backdrop.
+
+> **`x-ui.modal` is NOT subject to this rule and does NOT use `x-teleport`.** It is included as a top-level Blade component outside any transformed ancestor, so it is already correctly positioned in the DOM. Do not add `x-teleport` to `x-ui.modal` or its six variant wrappers.
 
 ```blade
+{{-- ✅ CORRECT — hand-rolled overlay, teleported to <body> at runtime --}}
 <div x-data="{ isOpen: false, ... }">
 
-    {{-- ✅ CORRECT — teleported to <body> at runtime --}}
     <template x-teleport="body">
         <div
             x-show="isOpen"
@@ -576,9 +667,9 @@ Any `position: fixed` modal backdrop that lives inside an Alpine.js `x-data` com
 ```
 
 ```blade
+{{-- ❌ WRONG — hand-rolled overlay without teleport; may be trapped by a transformed ancestor --}}
 <div x-data="{ isOpen: false, ... }">
 
-    {{-- ❌ WRONG — backdrop may be trapped by a transformed ancestor --}}
     <div
         x-show="isOpen"
         class="fixed inset-0 z-[9999] ..."
@@ -593,7 +684,11 @@ The `x-teleport` wrapper keeps full access to the parent component's Alpine data
 
 **Applied to:**
 - `x-ui.custom-request-wizard` — backdrop teleported to body
-- New wizards or custom overlays added in future phases
+- `x-ui.contact-modal` — overlay teleported to body
+- Any new hand-rolled full-page overlay added in future phases
+
+**Not applied to:**
+- `x-ui.modal` and all six variant wrappers — use the component; never roll your own
 
 ---
 

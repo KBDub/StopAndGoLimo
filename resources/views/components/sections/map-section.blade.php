@@ -110,15 +110,14 @@
                         </x-slot:header>
 
                         <p class="text-charcoal-light text-sm leading-relaxed">
-                            Would you like to send in a custom request? Our team will reach out promptly to discuss your project.
+                            Would you like to send in a custom request for your project?
                         </p>
 
                         <x-slot:footer>
                             <x-ui.button-modal-cancel modal="zip-result">No, thanks</x-ui.button-modal-cancel>
                             <x-ui.button-modal-primary
-                                modal="zip-result"
-                                @click="$nextTick(() => window.dispatchEvent(new CustomEvent('open-contact-modal')))"
-                            >Yes, let's go! →</x-ui.button-modal-primary>
+                                @click="$dispatch('close-modal', { name: 'zip-result' }); $nextTick(() => window.dispatchEvent(new CustomEvent('open-contact-modal')))"
+                            >Yes →</x-ui.button-modal-primary>
                         </x-slot:footer>
 
                     </x-ui.modal>

@@ -529,12 +529,21 @@ Step card grid on the demo page summarises all 10 steps with their labels and no
 
 ### Component Coverage Map
 
-| Component | Built | Demo instances | Production use |
-|---|---|---|---|
-| `x-ui.modal` | ✅ | 27 (modals 1–27) | Any inline modal |
-| `x-ui.modal-trigger` | ✅ | Throughout | Open/close triggers |
-| `x-ui.modal-wizard` | ✅ | 2 (modals 22–23) | Lightweight 3-step flows |
-| `x-ui.contact-modal` | ✅ | 1 (modal 28) | Global FAB, all pages |
-| `x-ui.custom-request-wizard` | ✅ | 1 (modal 29) | Custom order intake |
-| `x-ui.button-modal-primary` | ✅ | Throughout | Primary CTA in footer |
-| `x-ui.button-modal-cancel` | ✅ | Throughout | Cancel/dismiss in footer |
+All modal system components are fully built. No gaps.
+
+| Component | Built | File | Demo instances | Production use |
+|---|---|---|---|---|
+| `x-ui.modal` | ✅ | `ui/modal.blade.php` | 27 (modals 1–27) | Core — any inline modal |
+| `x-ui.modal-default` | ✅ | `ui/modal-default.blade.php` | via modal 1 | Shorthand for `variant="default"` |
+| `x-ui.modal-dark` | ✅ | `ui/modal-dark.blade.php` | via modal 2 | Shorthand for `variant="dark"` |
+| `x-ui.modal-gold` | ✅ | `ui/modal-gold.blade.php` | via modal 3 | Shorthand for `variant="gold"` |
+| `x-ui.modal-success` | ✅ | `ui/modal-success.blade.php` | via modal 4 | Shorthand for `variant="success"` |
+| `x-ui.modal-warning` | ✅ | `ui/modal-warning.blade.php` | via modal 5 | Shorthand for `variant="warning"` |
+| `x-ui.modal-danger` | ✅ | `ui/modal-danger.blade.php` | via modal 6 | Shorthand for `variant="danger"` |
+| `x-ui.modal-trigger` | ✅ | `ui/modal-trigger.blade.php` | Throughout | Open/close triggers |
+| `x-ui.button-modal-primary` | ✅ | `ui/button-modal-primary.blade.php` | Throughout | Primary CTA in footer |
+| `x-ui.button-modal-cancel` | ✅ | `ui/button-modal-cancel.blade.php` | Throughout | Cancel/dismiss in footer |
+| `x-ui.modal-wizard` | ✅ | `ui/modal-wizard.blade.php` | 2 (modals 22–23) | Lightweight 3-step flows |
+| `x-ui.contact-modal` | ✅ | `ui/contact-modal.blade.php` | 1 (modal 28) | Global FAB, all pages |
+| `x-ui.custom-request-wizard` | ✅ | `ui/custom-request-wizard.blade.php` | 1 (modal 29) | 10-step custom order intake |
+| `x-ui.modal-quick-view` | ✅ | `ui/modal-quick-view.blade.php` | — (product pages) | Product quick-view overlay |

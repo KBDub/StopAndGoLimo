@@ -69,7 +69,7 @@
         <span class="text-warning mt-px" aria-hidden="true">&#128161;</span>
         <span>
             Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD. Need help?
-            Call <a href="tel:6307796328" class="text-azure hover:text-azure-dark font-semibold transition-colors">(630) 779-6328</a>.
+            Call <a href="tel:8153498600" class="text-azure hover:text-azure-dark font-semibold transition-colors">(815) 349-8600</a>.
         </span>
     </div>
 </div>

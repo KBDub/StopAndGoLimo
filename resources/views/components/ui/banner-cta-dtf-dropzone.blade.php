@@ -65,15 +65,15 @@
 
             {{-- ── Heading + Subheading ──────────────────────────────────────── --}}
             @if($position === 'right')
-            <div class="flex-1">
+            <div class="flex-1 text-center">
                 <div class="inline-block mb-4">
                     <h3 class="text-h3 font-bold text-white mb-2">{{ $heading }}</h3>
                     <div class="h-1 bg-sunburst"></div>
                 </div>
-                <p class="text-white/70 text-body-small max-w-4xl">
+                <p class="text-white/70 text-body-small max-w-4xl mx-auto">
                     {{ $subheading }}
                 </p>
-                <div class="mt-5 flex items-center gap-2 text-sm text-white/50">
+                <div class="mt-5 flex items-center justify-center gap-2 text-sm text-white/50">
                     <span class="text-warning" aria-hidden="true">&#128161;</span>
                     <span>
                         Need help? Call
@@ -84,15 +84,15 @@
                 </div>
             </div>
             @else
-            <div class="flex-1">
+            <div class="flex-1 text-center">
                 <div class="inline-block mb-4">
                     <h3 class="text-h3 font-bold text-white mb-2">{{ $heading }}</h3>
                     <div class="h-1 bg-sunburst"></div>
                 </div>
-                <p class="text-white/70 text-body-small max-w-4xl">
+                <p class="text-white/70 text-body-small max-w-4xl mx-auto">
                     {{ $subheading }}
                 </p>
-                <div class="mt-5 flex items-center gap-2 text-sm text-white/50">
+                <div class="mt-5 flex items-center justify-center gap-2 text-sm text-white/50">
                     <span class="text-warning" aria-hidden="true">&#128161;</span>
                     <span>
                         Need help? Call

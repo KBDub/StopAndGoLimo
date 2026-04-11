@@ -35,7 +35,7 @@
     {{ $attributes->merge(['class' => 'cursor-pointer transition-colors duration-200']) }}
 >
     <div class="max-w-7xl mx-auto px-6 py-10">
-        <div class="flex flex-col md:flex-row items-center gap-8 {{ $position === 'right' ? 'md:flex-row-reverse' : '' }}">
+        <div class="flex flex-col items-center gap-8 {{ $position === 'right' ? 'md:flex-row-reverse' : 'md:flex-row' }}">
 
             {{-- ── Folder Icon / Drop Visual ─────────────────────────────────── --}}
             <div class="flex-shrink-0 flex flex-col items-center gap-3 text-center">

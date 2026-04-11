@@ -1193,6 +1193,59 @@
         </div>
     </section>
 
+
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    {{-- SECTION: DTF Drop Zones --}}
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    <section class="space-y-10">
+        <div>
+            <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">DTF Drop Zones</h2>
+            <p class="text-charcoal-light text-sm mb-1 pl-5">
+                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.dtf-dropzone</code> and
+                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.banner-cta-dtf-dropzone</code>
+                — file upload entry points that will trigger the DTF upload wizard.
+            </p>
+        </div>
+
+        {{-- Medium Drop Zone --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Medium Drop Zone</h3>
+            <p class="text-charcoal-light text-xs mb-4 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.dtf-dropzone /&gt;</code>
+            </p>
+            <div class="max-w-xl">
+                <x-ui.dtf-dropzone />
+            </div>
+        </div>
+
+        {{-- Banner CTA — Dropzone Left --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Banner CTA — Drop Zone Left</h3>
+            <p class="text-charcoal-light text-xs mb-4 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-dtf-dropzone position="left" /&gt;</code>
+            </p>
+            <x-ui.banner-cta-dtf-dropzone
+                position="left"
+                heading="Upload Your Artwork"
+                subheading="Drop your design file and we'll handle the rest. Our team reviews every order before printing to make sure your artwork looks perfect."
+            />
+        </div>
+
+        {{-- Banner CTA — Dropzone Right --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Banner CTA — Drop Zone Right</h3>
+            <p class="text-charcoal-light text-xs mb-4 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-dtf-dropzone position="right" /&gt;</code>
+            </p>
+            <x-ui.banner-cta-dtf-dropzone
+                position="right"
+                heading="Ready to Print?"
+                subheading="Have your file ready? Drop it right here and we'll get your order started. Fast turnaround, no guesswork."
+            />
+        </div>
+
+    </section>
+
 </main>
 
 <x-layout.footer />

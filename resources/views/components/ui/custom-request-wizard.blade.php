@@ -1083,7 +1083,6 @@
                 class="absolute inset-0 z-20 bg-charcoal-dark/75 flex items-center justify-center p-6">
                 <div class="bg-white shadow-2xl p-6 max-w-xs w-full text-center space-y-4">
                     <p class="text-base font-bold text-charcoal">Are you sure?</p>
-                    <p class="text-sm text-charcoal-light leading-relaxed">Your progress will not be saved. You'll be returned to the contact form.</p>
                     <div class="flex gap-3 justify-center">
                         <button type="button"
                             @click="showCloseConfirm = false"

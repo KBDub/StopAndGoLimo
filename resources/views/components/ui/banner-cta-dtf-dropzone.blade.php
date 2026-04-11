@@ -35,7 +35,11 @@
     {{ $attributes->merge(['class' => 'cursor-pointer transition-colors duration-200']) }}
 >
     <div class="max-w-7xl mx-auto px-6 py-10">
-        <div class="flex flex-col items-center gap-8 {{ $position === 'right' ? 'md:flex-row-reverse' : 'md:flex-row' }}">
+        @if($position === 'right')
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+        @else
+        <div class="flex flex-col md:flex-row items-center gap-8">
+        @endif
 
             {{-- ── Folder Icon / Drop Visual ─────────────────────────────────── --}}
             <div class="flex-shrink-0 flex flex-col items-center gap-3 text-center">
@@ -60,15 +64,16 @@
             <div class="md:hidden w-full h-px bg-sunburst/20"></div>
 
             {{-- ── Heading + Subheading ──────────────────────────────────────── --}}
-            <div class="flex-1 {{ $position === 'right' ? 'md:text-right' : '' }}">
+            @if($position === 'right')
+            <div class="flex-1 md:text-right">
                 <div class="inline-block mb-4">
                     <h3 class="text-h3 font-bold text-white mb-2">{{ $heading }}</h3>
                     <div class="h-1 bg-sunburst"></div>
                 </div>
-                <p class="text-white/70 text-body-small max-w-4xl {{ $position === 'right' ? 'md:ml-auto' : '' }}">
+                <p class="text-white/70 text-body-small max-w-4xl md:ml-auto">
                     {{ $subheading }}
                 </p>
-                <div class="mt-5 flex items-center gap-2 text-sm text-white/50 {{ $position === 'right' ? 'md:justify-end' : '' }}">
+                <div class="mt-5 flex items-center gap-2 text-sm text-white/50 md:justify-end">
                     <span class="text-warning" aria-hidden="true">&#128161;</span>
                     <span>
                         Need help? Call
@@ -78,6 +83,26 @@
                     </span>
                 </div>
             </div>
+            @else
+            <div class="flex-1">
+                <div class="inline-block mb-4">
+                    <h3 class="text-h3 font-bold text-white mb-2">{{ $heading }}</h3>
+                    <div class="h-1 bg-sunburst"></div>
+                </div>
+                <p class="text-white/70 text-body-small max-w-4xl">
+                    {{ $subheading }}
+                </p>
+                <div class="mt-5 flex items-center gap-2 text-sm text-white/50">
+                    <span class="text-warning" aria-hidden="true">&#128161;</span>
+                    <span>
+                        Need help? Call
+                        <a href="tel:8153498600"
+                           @click.stop
+                           class="text-azure-light hover:text-sunburst font-semibold transition-colors">(815) 349-8600</a>
+                    </span>
+                </div>
+            </div>
+            @endif
 
         </div>
     </div>

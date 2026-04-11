@@ -96,6 +96,10 @@
         /* ── Step 4 extras ────────────────────────────────── */
         colorFocusIdx: -1,
 
+        /* ── DTF Upload (step 1a) ─────────────────────────── */
+        dtfFileName: '',
+        hasDtf:      null,
+
         /* ── UI overlays ──────────────────────────────────── */
         showConfirmation: false,
         showCloseConfirm: false,
@@ -120,7 +124,7 @@
             return this.garments.vNeck || this.garments.crewNeck || this.garments.hoodie || this.garments.otherShirt;
         },
         get visibleSteps() {
-            const s = ['request-type','garment-selection'];
+            const s = ['request-type','dtf-upload','garment-selection'];
             if (this.hasShirtType) s.push('shirt-length-fabric');
             s.push('color-selection','quantity-sizing','print-method','completion-date','extra-notes','shipping-address','confirm-submit');
             return s;
@@ -130,6 +134,7 @@
         get currentStepTitle() {
             const t = {
                 'request-type':       'Request Details',
+                'dtf-upload':         'DTF File Upload',
                 'garment-selection':  'Garment Selection',
                 'shirt-length-fabric':'Shirt Length & Fabric Type',
                 'color-selection':    'Color Selection',
@@ -181,6 +186,9 @@
         },
         get stepValid() {
             const s = this.currentStepName;
+            if (s === 'dtf-upload') {
+                return this.hasDtf !== null;
+            }
             if (s === 'request-type') {
                 return this.requestType !== '' &&
                        (this.requestType !== 'company' || this.companyName.trim() !== '') &&
@@ -279,6 +287,8 @@
             contactName  = p.name  || '';
             contactEmail = p.email || '';
             contactPhone = p.phone || '';
+            dtfFileName  = p.dtfFileName || '';
+            hasDtf       = dtfFileName ? true : null;
             open();
         }
     "
@@ -411,6 +421,57 @@
                         </div>
 
                     </div>
+                </div>
+
+                {{-- ══ STEP 1a: DTF File Upload ═══════════════════════════ --}}
+                <div x-show="currentStepName === 'dtf-upload'" x-cloak>
+                    <p class="text-xs text-charcoal-light mb-5">
+                        Do you have a design file (DTF transfer, artwork, etc.) to include with your request?
+                    </p>
+
+                    {{-- Pre-filled file name notice --}}
+                    <div x-show="dtfFileName" x-cloak
+                         class="flex items-center gap-3 px-4 py-3 mb-5 bg-sunburst/10 border border-sunburst/40">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                            <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                        </svg>
+                        <div class="min-w-0">
+                            <p class="text-xs font-semibold text-charcoal">File attached from upload:</p>
+                            <p class="text-sm text-charcoal truncate" x-text="dtfFileName"></p>
+                        </div>
+                    </div>
+
+                    {{-- Yes / No choice --}}
+                    <fieldset>
+                        <legend class="text-sm font-semibold text-charcoal mb-3">
+                            Will you be providing a design file? <span class="text-error">*</span>
+                        </legend>
+                        <div class="flex flex-col gap-3">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="radio" name="hasDtf" :value="true" x-model="hasDtf"
+                                       class="w-4 h-4 accent-sunburst cursor-pointer">
+                                <span class="text-sm text-charcoal group-hover:text-charcoal-dark">
+                                    Yes — I have a file ready (or will email / upload separately)
+                                </span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="radio" name="hasDtf" :value="false" x-model="hasDtf"
+                                       class="w-4 h-4 accent-sunburst cursor-pointer">
+                                <span class="text-sm text-charcoal group-hover:text-charcoal-dark">
+                                    No — I do not have a file; I need design help or have no artwork
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    {{-- Accepted formats note --}}
+                    <p class="mt-5 text-xs text-charcoal-light">
+                        Accepted formats: PDF, AI, EPS, PNG, JPG, SVG, PSD. Max file size 50 MB.
+                        Files can be shared via email to
+                        <a href="mailto:orders@top5pct.com" class="text-azure hover:underline">orders@top5pct.com</a>
+                        or dropped at our Joliet location.
+                    </p>
                 </div>
 
                 {{-- ══ STEP 2: Garment Selection ════════════════════════════ --}}
@@ -1032,6 +1093,16 @@
                             <div x-show="extraNotes" x-cloak class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Notes</span>
                                 <div class="col-span-2 text-sm text-charcoal line-clamp-3" x-text="extraNotes"></div>
+                            </div>
+
+                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
+                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">DTF File</span>
+                                <div class="col-span-2 text-sm text-charcoal">
+                                    <span x-show="hasDtf === true && dtfFileName" x-cloak x-text="dtfFileName"></span>
+                                    <span x-show="hasDtf === true && !dtfFileName" x-cloak>Yes — will provide separately</span>
+                                    <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
+                                    <span x-show="hasDtf === null" class="text-charcoal-lighter">Not answered</span>
+                                </div>
                             </div>
 
                         </div>

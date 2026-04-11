@@ -9,7 +9,7 @@
             this.dragging = false;
             const files = e.dataTransfer.files;
             if (files.length) {
-                window.dispatchEvent(new CustomEvent('open-dtf-upload-wizard', { detail: { files } }));
+                window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true, fileName: files[0].name } }));
             }
         },
         handleClick() {
@@ -18,7 +18,7 @@
         handleFileChange(e) {
             const files = e.target.files;
             if (files.length) {
-                window.dispatchEvent(new CustomEvent('open-dtf-upload-wizard', { detail: { files } }));
+                window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true, fileName: files[0].name } }));
             }
         }
     }"

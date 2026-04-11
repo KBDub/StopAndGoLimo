@@ -32,6 +32,7 @@
         error: false,
         loading: false,
         customRequest: false,
+        dtfFileName: '',
         emailError: false,
         firstName: '',
         lastName: '',
@@ -53,6 +54,7 @@
         openModal()  {
             this.open = true;
             this.customRequest = false;
+            this.dtfFileName = '';
             document.body.style.overflow = 'hidden';
         },
         closeModal() { this.open = false; document.body.style.overflow = ''; },
@@ -65,7 +67,8 @@
                         prefill: {
                             name: (this.firstName.trim() + ' ' + this.lastName.trim()).trim(),
                             email: this.cmEmail,
-                            phone: this.cmPhone
+                            phone: this.cmPhone,
+                            dtfFileName: this.dtfFileName
                         }
                     }
                 }));
@@ -95,7 +98,14 @@
         },
     }"
     @keydown.escape.window="if (open) closeModal()"
-    @open-contact-modal.window="openModal()"
+    @open-contact-modal.window="
+        openModal();
+        const _d = $event.detail || {};
+        if (_d.dtf) {
+            dtfFileName = _d.fileName || '';
+            customRequest = true;
+        }
+    "
 >
     {{-- ── Floating Action Button ─────────────────────────────────────────── --}}
     <div class="fixed bottom-6 right-6 z-[9990]">
@@ -286,31 +296,43 @@
                     </div>
                 </div>
 
-                {{-- ── Custom Request Toggle (above textarea, disabled until contact info complete) ── --}}
-                <div class="flex items-center justify-between gap-4 py-3 border-t border-b border-linen-dark">
-                    <div class="min-w-0">
-                        <p class="text-sm font-semibold text-charcoal">
-                            Do You Have a Custom Request? <span class="text-error">*</span>
-                        </p>
-                        <p class="text-xs text-charcoal-light mt-0.5" x-show="!contactReady">Complete your contact info above to enable</p>
-                        <p class="text-xs text-charcoal-light mt-0.5" x-show="contactReady" x-cloak>Use our guided custom order wizard</p>
+                {{-- ── Custom Request / DTF Toggle ─────────────────────────── --}}
+                <div class="border-t border-b border-linen-dark">
+                    <div class="flex items-center justify-between gap-4 py-3">
+                        <div class="min-w-0">
+                            <p class="text-sm font-semibold text-charcoal">
+                                Do You Have a Custom Request or DTF Upload?
+                            </p>
+                            <p class="text-xs text-charcoal-light mt-0.5" x-show="!contactReady">Complete your contact info above to enable</p>
+                            <p class="text-xs text-charcoal-light mt-0.5" x-show="contactReady && !customRequest" x-cloak>Use our guided custom order wizard</p>
+                            <p class="text-xs text-sunburst-dark font-medium mt-0.5" x-show="contactReady && customRequest" x-cloak>Ready — click "Continue to Wizard" below</p>
+                        </div>
+                        <button
+                            type="button"
+                            role="switch"
+                            :aria-checked="customRequest.toString()"
+                            :disabled="!contactReady || !!dtfFileName"
+                            @click="if (contactReady && !dtfFileName) { customRequest = !customRequest; }"
+                            :class="contactReady
+                                ? (customRequest ? 'bg-sunburst' : 'bg-linen-dark')
+                                : 'bg-linen-dark opacity-40 cursor-not-allowed'"
+                            class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                        >
+                            <span
+                                :class="customRequest ? 'translate-x-6' : 'translate-x-1'"
+                                class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                            ></span>
+                        </button>
                     </div>
-                    <button
-                        type="button"
-                        role="switch"
-                        :aria-checked="customRequest.toString()"
-                        :disabled="!contactReady"
-                        @click="if (contactReady) { customRequest = !customRequest; if (customRequest) launchWizard(); }"
-                        :class="contactReady
-                            ? (customRequest ? 'bg-sunburst' : 'bg-linen-dark')
-                            : 'bg-linen-dark opacity-40 cursor-not-allowed'"
-                        class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
-                    >
-                        <span
-                            :class="customRequest ? 'translate-x-6' : 'translate-x-1'"
-                            class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
-                        ></span>
-                    </button>
+                    {{-- DTF file attached indicator --}}
+                    <div x-show="dtfFileName" x-cloak
+                         class="flex items-center gap-2 px-3 py-2 mb-2 bg-sunburst/10 border border-sunburst/30 text-xs text-charcoal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 text-azure" viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                            <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                        </svg>
+                        <span><span class="font-semibold">DTF file attached:</span> <span x-text="dtfFileName"></span></span>
+                    </div>
                 </div>
 
                 {{-- ── What can we help you with? ───────────────────────── --}}
@@ -327,7 +349,22 @@
                     ></textarea>
                 </div>
 
+                {{-- Continue to Wizard — shown when custom request toggle is ON --}}
                 <button
+                    x-show="customRequest"
+                    x-cloak
+                    type="button"
+                    :disabled="!contactReady"
+                    @click="if (contactReady) launchWizard()"
+                    :class="contactReady ? '' : 'opacity-50 cursor-not-allowed'"
+                    class="w-full py-3 px-6 bg-charcoal text-white font-semibold text-sm tracking-wide transition-all duration-150 hover:bg-charcoal-dark hover:-translate-y-0.5 active:translate-y-0"
+                >
+                    Continue to Custom Request Wizard →
+                </button>
+
+                {{-- Send Message — shown when custom request toggle is OFF --}}
+                <button
+                    x-show="!customRequest"
                     type="submit"
                     :disabled="loading || !formReady"
                     class="w-full py-3 px-6 bg-gold-gradient text-charcoal font-semibold text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"

@@ -148,7 +148,7 @@
             ].filter(g => this.garments[g.key]);
         },
         get visibleSteps() {
-            const s = ['request-type','garment-selection'];
+            const s = ['request-type','dtf-upload','garment-selection'];
             if (this.hasShirtType) s.push('shirt-length-fabric');
             this.selectedGarmentTypes.forEach(g => {
                 s.push('print-method-' + g.key);

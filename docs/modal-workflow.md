@@ -104,7 +104,7 @@ The wizard reads this payload in its `@open-modal.window` handler and populates:
 **Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. The DTF Upload step is always present as step 2. All step numbers and the dot-indicator count adjust automatically.
 
 ---
 
@@ -113,7 +113,8 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | Step | Name (internal) | Title | Conditional |
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
-| 2 | `garment-selection` | Garment Selection | Always |
+| 2 | `dtf-upload` | DTF File Upload | Always |
+| 3 | `garment-selection` | Garment Selection | Always |
 | *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
@@ -123,9 +124,9 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 2 global + 3 per-garment-type selected + 4 closing global steps = variable.
+**Total steps:** 3 global + 3 per-garment-type selected + 4 closing global steps = variable.
 
-**Example:** User selects V-Neck + Baseball Cap → 2 + 6 + 4 = 12 steps.
+**Example:** User selects V-Neck + Baseball Cap → 3 + 6 + 4 = 13 steps.
 
 ---
 
@@ -146,27 +147,45 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 
 ---
 
-#### Step 2 — Garment Selection
+#### Step 2 — DTF File Upload
 
-**Heading:** "Please Select All Applicable Garment Types"
+**Always present.** Asks whether the customer is providing a design file.
 
-Each garment type is a toggle switch (full-row, label left / switch right). Selecting any of the four shirt types (`vNeck`, `crewNeck`, `hoodie`, `otherShirt`) causes Step 3 to be inserted into the wizard flow.
+**Content:**
+- If `dtfFileName` is set (pre-filled from DTF dropzone flow), a gold notice box shows the filename and the step is auto-valid — no prompt shown.
+- Otherwise, a Yes/No radio group: "Would you like to upload a DTF file?"
+  - **Yes** — reveals a file input (PDF, AI, EPS, PNG, JPG, SVG, PSD, max 50 MB). Selecting a file sets `dtfFileName`.
+  - **No** — no file needed; step becomes valid.
 
-| Toggle Label | Alpine key | Notes |
-|---|---|---|
-| V-Neck | `garments.vNeck` | Triggers Step 3 if on |
-| Crew Neck | `garments.crewNeck` | Triggers Step 3 if on |
-| Hoodie | `garments.hoodie` | Triggers Step 3 if on |
-| Other Shirt Style | `garments.otherShirt` | Triggers Step 3 if on |
-| Baseball Cap | `garments.baseballCap` | No effect on Step 3 |
-| Nap Sack | `garments.napSack` | No effect on Step 3 |
-| Other Item | `garments.otherItem` | No effect on Step 3 |
+**Step valid when:** `dtfFileName` is set (auto-valid) OR `hasDtf !== null`.
 
-A summary chip row at the bottom of the step shows all currently selected garment types.
+**Alpine state:** `dtfFileName: ''`, `hasDtf: null`
+
+When opened from the DTF dropzone flow, `dtfFileName` is pre-populated and `hasDtf` is pre-set to `true`.
 
 ---
 
-#### Step 3 — Color Selection
+#### Step 3 — Garment Selection
+
+**Heading:** "Select all applicable garment types"
+
+Each garment type is a toggle switch (full-row, label left / switch right).
+
+| Toggle Label | Alpine key |
+|---|---|
+| V-Neck | `garments.vNeck` |
+| Crew Neck | `garments.crewNeck` |
+| Hoodie | `garments.hoodie` |
+| Other Shirt Style | `garments.otherShirt` |
+| Baseball Cap | `garments.baseballCap` |
+| Nap Sack | `garments.napSack` |
+| Other Item | `garments.otherItem` |
+
+A summary chip row at the bottom shows all currently selected garment types.
+
+---
+
+#### Step 4 — Color Selection
 
 A smart text input with inline (non-absolute) autocomplete against a list of 30 common colors. Users can add multiple colors.
 
@@ -338,7 +357,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | Getter | Returns |
 |---|---|
 | `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
-| `visibleSteps` | Array of step name strings; always starts with `request-type`, `garment-selection`; then `print-method-{key}`, `color-{key}`, `quantity-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
+| `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`; then `print-method-{key}`, `color-{key}`, `quantity-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |
 | `totalSteps` | `visibleSteps.length` (variable based on garment selections) |

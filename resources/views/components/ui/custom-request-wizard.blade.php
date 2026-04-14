@@ -3,11 +3,25 @@
  | Location   : resources/views/components/ui/custom-request-wizard.blade.php
  |
  | Full-featured custom order request wizard. Triggered from the
- | x-ui.contact-modal "Have a Custom Request?" toggle. Include once
- | per page alongside x-ui.contact-modal.
+ | x-ui.contact-modal "Do You Have a Custom Request or DTF Upload?" toggle.
+ | Include once per page alongside x-ui.contact-modal.
+ |
+ | ── STEP ORDER ──────────────────────────────────────────────────────────────
+ |   1. request-type         — Request Details (always)
+ |   2. dtf-upload           — DTF File Upload (always; skip prompt if file pre-attached)
+ |   3. garment-selection    — Garment Selection (always)
+ |   4. shirt-length-fabric  — Shirt Length & Fabric (conditional: shirt types only)
+ |   ↳ Per selected garment (repeated):
+ |       print-method-{key}  — Print Method
+ |       color-{key}         — Color Selection
+ |       quantity-{key}      — Quantity & Sizing
+ |   5. completion-date      — Desired Completion Date (always)
+ |   6. extra-notes          — Extra Notes (always)
+ |   7. shipping-address     — Shipping Address (always)
+ |   8. confirm-submit       — Review & Submit (always)
  |
  | ── EVENT API ───────────────────────────────────────────────────────────────
- |   open-modal   { name: 'custom-request-wizard', prefill: { name, email, phone } }
+ |   open-modal   { name: 'custom-request-wizard', prefill: { name, email, phone, dtfFileName } }
  |   close-modal  { name: 'custom-request-wizard' }  — closes and resets
  |   wizard-done  { name: 'custom-request-wizard' }  — fires on submit
  |
@@ -27,7 +41,11 @@
         companyName:  '',
         isRush:       null,
 
-        /* ── Step 2: Garment Selection ────────────────────── */
+        /* ── Step 2: DTF Upload ───────────────────────────── */
+        dtfFileName: '',
+        hasDtf:      null,
+
+        /* ── Step 3: Garment Selection ────────────────────── */
         garments: {
             vNeck:      false,
             crewNeck:   false,
@@ -38,13 +56,28 @@
             otherItem:  false
         },
 
-        /* ── Step 3: Shirt Length & Fabric (conditional) ──── */
-        sleeveType:   '',
-        fabricWeight: '',
+        /* ── Step 4 (conditional): Shirt Length & Fabric ──── */
+        sleeveType:        '',
+        fabricWeight:      '',
+        sleeveTypeOther:   '',
+        fabricWeightOther: '',
 
-        /* ── Step 4: Color Selection ──────────────────────── */
-        colorInput:    '',
-        selectedColors:[],
+        /* ── Per-Garment: Print Method ────────────────────── */
+        printMethods:          {},
+        traditionalTypes:      {},
+        specialtyTypeByGarment:{},
+        specialtyLabels: {
+            vinyl:'Vinyl Shirts', rhinestone:'Rhinestone', glitter:'Glitter Shirts',
+            foil:'Foil Shirts', glowDark:'Glow In The Dark', flock:'Flock Shirts',
+            reflective:'Reflective Shirts', holographic:'Holographic',
+            brick:'Brick Shirts', pattern:'Pattern Shirts',
+            embroidery:'Embroidery', picture:'Picture Shirts'
+        },
+
+        /* ── Per-Garment: Color Selection ─────────────────── */
+        colorInputs:            {},
+        selectedColorsByGarment:{},
+        colorFocusIdx: -1,
         colorSuggestions: [
             'White','Black','Navy Blue','Red','Royal Blue','Forest Green',
             'Charcoal Gray','Light Gray','Sky Blue','Yellow','Orange','Purple',
@@ -53,33 +86,24 @@
             'Safety Green','Safety Orange','Teal','Coral','Lavender','Olive Green'
         ],
 
-        /* ── Step 5: Quantity & Sizing ────────────────────── */
+        /* ── Per-Garment: Quantity & Sizing ───────────────── */
         quantities: {},
-        sizes:   ['XS','S','M','L','XL','2XL','3XL','4XL','5XL','6XL'],
-        genders: [
-            { key: 'men',     label: 'Men\'s'   },
-            { key: 'women',   label: 'Women\'s' },
-            { key: 'youth',   label: 'Youth'    },
-            { key: 'toddler', label: 'Toddler'  }
+        sizes:  ['XS','S','M','L','XL','2XL','3XL','4XL','5XL','6XL'],
+        genders:[
+            { key:'men',     label:'Men\'s'   },
+            { key:'women',   label:'Women\'s' },
+            { key:'youth',   label:'Youth'    },
+            { key:'toddler', label:'Toddler'  }
         ],
 
-        /* ── Step 6: Print Method ─────────────────────────── */
-        printMethod:    '',
-        specialtyTypes: {
-            vinyl:       false, rhinestone: false, glitter:    false,
-            foil:        false, glowDark:   false, flock:      false,
-            reflective:  false, holographic:false, brick:      false,
-            pattern:     false, embroidery: false, picture:    false
-        },
-
-        /* ── Step 7: Completion Date ──────────────────────── */
+        /* ── Completion Date ──────────────────────────────── */
         completionDate:  '',
         isRushDelivery:  null,
 
-        /* ── Step 8: Extra Notes ──────────────────────────── */
+        /* ── Extra Notes ──────────────────────────────────── */
         extraNotes: '',
 
-        /* ── Step 9: Contact Info (pre-filled) + Shipping ─── */
+        /* ── Shipping + Contact (pre-filled) ─────────────── */
         contactName:  '',
         contactEmail: '',
         contactPhone: '',
@@ -88,17 +112,6 @@
         city:         '',
         state:        '',
         zip:          '',
-
-        /* ── Step 3 extras ────────────────────────────────── */
-        sleeveTypeOther:   '',
-        fabricWeightOther: '',
-
-        /* ── Step 4 extras ────────────────────────────────── */
-        colorFocusIdx: -1,
-
-        /* ── DTF Upload (step 1a) ─────────────────────────── */
-        dtfFileName: '',
-        hasDtf:      null,
 
         /* ── UI overlays ──────────────────────────────────── */
         showConfirmation: false,
@@ -123,76 +136,82 @@
         get hasShirtType() {
             return this.garments.vNeck || this.garments.crewNeck || this.garments.hoodie || this.garments.otherShirt;
         },
+        get selectedGarmentTypes() {
+            return [
+                { key:'vNeck',      label:'V-Neck'       },
+                { key:'crewNeck',   label:'Crew Neck'    },
+                { key:'hoodie',     label:'Hoodie'       },
+                { key:'otherShirt', label:'Other Shirt'  },
+                { key:'baseballCap',label:'Baseball Cap' },
+                { key:'napSack',    label:'Nap Sack'     },
+                { key:'otherItem',  label:'Other Item'   }
+            ].filter(g => this.garments[g.key]);
+        },
         get visibleSteps() {
             const s = ['request-type','dtf-upload','garment-selection'];
             if (this.hasShirtType) s.push('shirt-length-fabric');
-            s.push('color-selection','quantity-sizing','print-method','completion-date','extra-notes','shipping-address','confirm-submit');
+            this.selectedGarmentTypes.forEach(g => {
+                s.push('print-method-' + g.key);
+                s.push('color-' + g.key);
+                s.push('quantity-' + g.key);
+            });
+            s.push('completion-date','extra-notes','shipping-address','confirm-submit');
             return s;
         },
         get currentStepName() { return this.visibleSteps[this.step - 1] ?? ''; },
         get totalSteps()      { return this.visibleSteps.length; },
+        get currentGarmentKey() {
+            const n = this.currentStepName;
+            if (n.startsWith('print-method-')) return n.slice('print-method-'.length);
+            if (n.startsWith('color-'))        return n.slice('color-'.length);
+            if (n.startsWith('quantity-'))     return n.slice('quantity-'.length);
+            return null;
+        },
+        get currentGarmentLabel() {
+            const key = this.currentGarmentKey;
+            if (!key) return '';
+            const g = this.selectedGarmentTypes.find(g => g.key === key);
+            return g ? g.label : '';
+        },
         get currentStepTitle() {
-            const t = {
-                'request-type':       'Request Details',
-                'dtf-upload':         'DTF File Upload',
-                'garment-selection':  'Garment Selection',
+            const n = this.currentStepName;
+            const map = {
+                'request-type':      'Request Details',
+                'dtf-upload':        'DTF File Upload',
+                'garment-selection': 'Garment Selection',
                 'shirt-length-fabric':'Shirt Length & Fabric Type',
-                'color-selection':    'Color Selection',
-                'quantity-sizing':    'Quantity & Sizing',
-                'print-method':       'Print Method',
-                'completion-date':    'Desired Completion Date',
-                'extra-notes':        'Extra Notes',
-                'shipping-address':   'Shipping Address',
-                'confirm-submit':     'Review & Submit'
+                'completion-date':   'Desired Completion Date',
+                'extra-notes':       'Extra Notes',
+                'shipping-address':  'Shipping Address',
+                'confirm-submit':    'Review & Submit'
             };
-            return t[this.currentStepName] ?? '';
+            if (map[n]) return map[n];
+            const lbl = this.currentGarmentLabel;
+            if (n.startsWith('print-method-')) return 'Print Method \u2014 ' + lbl;
+            if (n.startsWith('color-'))        return 'Color Selection \u2014 ' + lbl;
+            if (n.startsWith('quantity-'))     return 'Quantity & Sizing \u2014 ' + lbl;
+            return '';
         },
-        get selectedGarmentTypes() {
-            return [
-                { key: 'vNeck',      label: 'V-Neck'       },
-                { key: 'crewNeck',   label: 'Crew Neck'    },
-                { key: 'hoodie',     label: 'Hoodie'        },
-                { key: 'otherShirt', label: 'Other Shirt'  },
-                { key: 'baseballCap',label: 'Baseball Cap' },
-                { key: 'napSack',    label: 'Nap Sack'     },
-                { key: 'otherItem',  label: 'Other Item'   }
-            ].filter(g => this.garments[g.key]);
-        },
-        get filteredColors() {
-            if (!this.colorInput.trim()) return [];
-            const q = this.colorInput.toLowerCase();
-            return this.colorSuggestions.filter(c => c.toLowerCase().includes(q) && !this.selectedColors.includes(c));
-        },
-        get quantitySummary() {
-            const results = [];
-            this.selectedGarmentTypes.forEach(g => {
-                this.genders.forEach(gender => {
-                    this.sizes.forEach(size => {
-                        const qty = this.quantities[g.key + '-' + gender.key + '-' + size] || 0;
-                        if (qty > 0) results.push(qty + ' ' + gender.label + ' ' + size + ' ' + g.label + (qty !== 1 ? 's' : ''));
-                    });
-                });
-            });
-            return results;
+        get filteredColorsForGarment() {
+            const key = this.currentGarmentKey;
+            if (!key) return [];
+            const input = (this.colorInputs[key] || '').trim();
+            if (!input) return [];
+            const q = input.toLowerCase();
+            const sel = this.selectedColorsByGarment[key] || [];
+            return this.colorSuggestions.filter(c => c.toLowerCase().includes(q) && !sel.includes(c));
         },
         get rushActive()       { return this.isRush === true || this.isRushDelivery === true; },
         get contactFirstName() { return this.contactName.trim().split(' ')[0] || 'there'; },
-        get garmentsWithNoQty() {
-            return this.selectedGarmentTypes.filter(g =>
-                !this.genders.some(gender =>
-                    this.sizes.some(size => (this.quantities[g.key + '-' + gender.key + '-' + size] || 0) > 0)
-                )
-            );
-        },
         get stepValid() {
             const s = this.currentStepName;
-            if (s === 'dtf-upload') {
-                return this.hasDtf !== null;
-            }
             if (s === 'request-type') {
                 return this.requestType !== '' &&
                        (this.requestType !== 'company' || this.companyName.trim() !== '') &&
                        this.isRush !== null;
+            }
+            if (s === 'dtf-upload') {
+                return this.dtfFileName ? true : this.hasDtf !== null;
             }
             if (s === 'garment-selection') {
                 return Object.values(this.garments).some(v => v);
@@ -202,21 +221,22 @@
                 const fabricOk = this.fabricWeight !== '' && (this.fabricWeight !== 'other' || this.fabricWeightOther.trim() !== '');
                 return sleeveOk && fabricOk;
             }
-            if (s === 'color-selection') {
-                return this.selectedColors.length > 0;
+            if (s.startsWith('print-method-')) {
+                const key = this.currentGarmentKey;
+                const method = this.printMethods[key];
+                if (!method) return false;
+                if (method === 'traditional') return !!this.traditionalTypes[key];
+                if (method === 'specialty')   return !!this.specialtyTypeByGarment[key];
+                return false;
             }
-            if (s === 'quantity-sizing') {
-                if (this.selectedGarmentTypes.length === 0) return false;
-                return this.selectedGarmentTypes.every(g =>
-                    this.genders.some(gender =>
-                        this.sizes.some(size => (this.quantities[g.key + '-' + gender.key + '-' + size] || 0) > 0)
-                    )
+            if (s.startsWith('color-')) {
+                return (this.selectedColorsByGarment[this.currentGarmentKey] || []).length > 0;
+            }
+            if (s.startsWith('quantity-')) {
+                const key = this.currentGarmentKey;
+                return this.genders.some(gender =>
+                    this.sizes.some(size => (this.quantities[key + '-' + gender.key + '-' + size] || 0) > 0)
                 );
-            }
-            if (s === 'print-method') {
-                if (!this.printMethod) return false;
-                if (this.printMethod === 'specialty') return Object.values(this.specialtyTypes).some(v => v);
-                return true;
             }
             if (s === 'completion-date') {
                 return this.completionDate !== '' && (this.isRush === true || this.isRushDelivery !== null);
@@ -263,15 +283,36 @@
             if (match) this.state = this.stateMap[match];
         },
 
-        addColor(c)        { if (!this.selectedColors.includes(c)) this.selectedColors.push(c); this.colorInput = ''; this.colorFocusIdx = -1; },
-        removeColor(c)     { this.selectedColors = this.selectedColors.filter(x => x !== c); },
-        addColorFromInput(){ const c = this.colorInput.trim(); if (c && !this.selectedColors.includes(c)) this.selectedColors.push(c); this.colorInput = ''; this.colorFocusIdx = -1; },
-        addFocusedColor()  {
-            if (this.filteredColors.length === 0) { this.addColorFromInput(); return; }
+        /* ── Per-garment color methods ─────────────────────── */
+        addColor(c) {
+            const key = this.currentGarmentKey;
+            if (!key) return;
+            const cur = this.selectedColorsByGarment[key] || [];
+            if (!cur.includes(c)) {
+                this.selectedColorsByGarment = Object.assign({}, this.selectedColorsByGarment, { [key]: [...cur, c] });
+            }
+            this.colorInputs = Object.assign({}, this.colorInputs, { [key]: '' });
+            this.colorFocusIdx = -1;
+        },
+        removeColor(c) {
+            const key = this.currentGarmentKey;
+            if (!key) return;
+            const cur = this.selectedColorsByGarment[key] || [];
+            this.selectedColorsByGarment = Object.assign({}, this.selectedColorsByGarment, { [key]: cur.filter(x => x !== c) });
+        },
+        addColorFromInput() {
+            const key = this.currentGarmentKey;
+            if (!key) return;
+            const c = (this.colorInputs[key] || '').trim();
+            if (c) this.addColor(c);
+        },
+        addFocusedColor() {
+            if (this.filteredColorsForGarment.length === 0) { this.addColorFromInput(); return; }
             const idx = this.colorFocusIdx >= 0 ? this.colorFocusIdx : 0;
-            if (this.filteredColors[idx]) this.addColor(this.filteredColors[idx]);
+            if (this.filteredColorsForGarment[idx]) this.addColor(this.filteredColorsForGarment[idx]);
         },
 
+        /* ── Quantity helpers ──────────────────────────────── */
         getQty(g, gender, size) { return this.quantities[g + '-' + gender + '-' + size] || ''; },
         setQty(g, gender, size, val) {
             const k = g + '-' + gender + '-' + size;
@@ -279,6 +320,18 @@
             const q = Object.assign({}, this.quantities);
             if (n > 0) q[k] = n; else delete q[k];
             this.quantities = q;
+        },
+        garmentQuantitySummary(gKey) {
+            const g = this.selectedGarmentTypes.find(x => x.key === gKey);
+            if (!g) return [];
+            const results = [];
+            this.genders.forEach(gender => {
+                this.sizes.forEach(size => {
+                    const qty = this.quantities[gKey + '-' + gender.key + '-' + size] || 0;
+                    if (qty > 0) results.push(qty + ' ' + gender.label + ' ' + size);
+                });
+            });
+            return results;
         }
     }"
     @open-modal.window="
@@ -313,7 +366,7 @@
     >
         {{-- ── Panel ────────────────────────────────────────────────────── --}}
         <div
-            :class="currentStepName === 'quantity-sizing' ? 'max-w-[58rem]' : 'max-w-[34rem]'"
+            :class="currentStepName.startsWith('quantity-') ? 'max-w-[58rem]' : 'max-w-[34rem]'"
             class="relative w-full max-h-[92dvh] flex flex-col bg-white shadow-2xl overflow-hidden"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
@@ -366,54 +419,47 @@
 
                         <div>
                             <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
-                                Is this a company or personal request?
-                                <span class="text-error ml-0.5">*</span>
+                                Is this a company or personal request? <span class="text-error">*</span>
                             </h3>
-                            <div class="flex gap-6 justify-center">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-request-type" value="company"
-                                        x-model="requestType"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">Company</span>
+                            <div class="grid grid-cols-2 gap-3">
+                                @foreach([['company','Company'],['personal','Personal']] as [$val,$lbl])
+                                <label class="cursor-pointer group">
+                                    <input type="radio" name="crw-request-type" value="{{ $val }}"
+                                        x-model="requestType" class="sr-only">
+                                    <span
+                                        class="flex items-center justify-center py-3 border-2 text-sm font-semibold transition-colors duration-150 w-full"
+                                        :class="requestType === '{{ $val }}' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
+                                    >{{ $lbl }}</span>
                                 </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-request-type" value="personal"
-                                        x-model="requestType"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">Personal</span>
+                                @endforeach
+                            </div>
+                            <div x-show="requestType === 'company'" x-cloak class="mt-3">
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                    Company Name <span class="text-error">*</span>
                                 </label>
+                                <input
+                                    type="text"
+                                    x-model="companyName"
+                                    placeholder="Enter company name…"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                                >
                             </div>
                         </div>
 
-                        <div x-show="requestType === 'company'" x-cloak>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
-                                Company Name <span class="text-error">*</span>
-                            </label>
-                            <input
-                                type="text"
-                                x-model="companyName"
-                                placeholder="Your company name"
-                                class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                            >
-                        </div>
-
-                        <div class="border-t border-linen-dark pt-6">
+                        <div>
                             <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
-                                Is this a rush request?
-                                <span class="text-error ml-0.5">*</span>
+                                Is this a rush request? <span class="text-error">*</span>
                             </h3>
                             <div class="flex gap-6 justify-center">
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-is-rush" value="yes"
-                                        @change="isRush = true"
-                                        :checked="isRush === true"
+                                        @change="isRush = true" :checked="isRush === true"
                                         class="w-4 h-4 accent-sunburst">
                                     <span class="text-sm font-medium text-charcoal">Yes</span>
                                 </label>
                                 <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-is-rush" value="no"
-                                        @change="isRush = false"
-                                        :checked="isRush === false"
+                                        @change="isRush = false" :checked="isRush === false"
                                         class="w-4 h-4 accent-sunburst">
                                     <span class="text-sm font-medium text-charcoal">No</span>
                                 </label>
@@ -423,107 +469,115 @@
                     </div>
                 </div>
 
-                {{-- ══ STEP 1a: DTF File Upload ═══════════════════════════ --}}
+                {{-- ══ STEP 2: DTF File Upload ════════════════════════════════ --}}
                 <div x-show="currentStepName === 'dtf-upload'" x-cloak>
-                    <p class="text-xs text-charcoal-light mb-5">
-                        Do you have a design file (DTF transfer, artwork, etc.) to include with your request?
-                    </p>
 
-                    {{-- Pre-filled file name notice --}}
-                    <div x-show="dtfFileName" x-cloak
-                         class="flex items-center gap-3 px-4 py-3 mb-5 bg-sunburst/10 border border-sunburst/40">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
-                            <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
-                            <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
-                        </svg>
-                        <div class="min-w-0">
-                            <p class="text-xs font-semibold text-charcoal">File attached from upload:</p>
-                            <p class="text-sm text-charcoal truncate" x-text="dtfFileName"></p>
+                    {{-- Case A: file already attached — skip prompt --}}
+                    <div x-show="dtfFileName" x-cloak class="space-y-4">
+                        <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                                <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                                <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                            </svg>
+                            <div class="min-w-0">
+                                <p class="text-xs font-semibold text-charcoal">DTF file attached:</p>
+                                <p class="text-sm text-charcoal truncate" x-text="dtfFileName"></p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-charcoal-light">Your file has been noted and will be processed with your order. You can continue to the next step.</p>
+                    </div>
+
+                    {{-- Case B: no file yet — prompt user --}}
+                    <div x-show="!dtfFileName" class="space-y-5">
+                        <p class="text-xs text-charcoal-light">Would you like to upload a DTF file for this order?</p>
+
+                        <fieldset>
+                            <legend class="text-sm font-semibold text-charcoal mb-3">
+                                Upload a DTF file? <span class="text-error">*</span>
+                            </legend>
+                            <div class="flex flex-col gap-3">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input type="radio" name="crw-has-dtf" :value="true" x-model="hasDtf"
+                                           class="w-4 h-4 accent-sunburst cursor-pointer">
+                                    <span class="text-sm text-charcoal group-hover:text-charcoal-dark">Yes</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input type="radio" name="crw-has-dtf" :value="false" x-model="hasDtf"
+                                           class="w-4 h-4 accent-sunburst cursor-pointer">
+                                    <span class="text-sm text-charcoal group-hover:text-charcoal-dark">No</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        {{-- File input when Yes selected --}}
+                        <div x-show="hasDtf === true" x-cloak class="space-y-2">
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide">
+                                Upload DTF File
+                            </label>
+                            <input
+                                type="file"
+                                accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
+                                @change="
+                                    const f = $event.target.files[0];
+                                    if (f) dtfFileName = f.name;
+                                "
+                                class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark"
+                            >
+                            <div x-show="dtfFileName" x-cloak class="text-xs text-charcoal-light">
+                                Selected: <span class="font-semibold text-charcoal" x-text="dtfFileName"></span>
+                            </div>
+                            <p class="text-xs text-charcoal-lighter">Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD &mdash; max 50 MB.</p>
                         </div>
                     </div>
 
-                    {{-- Yes / No choice --}}
-                    <fieldset>
-                        <legend class="text-sm font-semibold text-charcoal mb-3">
-                            Will you be providing a design file? <span class="text-error">*</span>
-                        </legend>
-                        <div class="flex flex-col gap-3">
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="radio" name="hasDtf" :value="true" x-model="hasDtf"
-                                       class="w-4 h-4 accent-sunburst cursor-pointer">
-                                <span class="text-sm text-charcoal group-hover:text-charcoal-dark">
-                                    Yes — I have a file ready (or will email / upload separately)
-                                </span>
-                            </label>
-                            <label class="flex items-center gap-3 cursor-pointer group">
-                                <input type="radio" name="hasDtf" :value="false" x-model="hasDtf"
-                                       class="w-4 h-4 accent-sunburst cursor-pointer">
-                                <span class="text-sm text-charcoal group-hover:text-charcoal-dark">
-                                    No — I do not have a file; I need design help or have no artwork
-                                </span>
-                            </label>
-                        </div>
-                    </fieldset>
-
-                    {{-- Accepted formats note --}}
-                    <p class="mt-5 text-xs text-charcoal-light">
-                        Accepted formats: PDF, AI, EPS, PNG, JPG, SVG, PSD. Max file size 50 MB.
-                        Files can be shared via email to
-                        <a href="mailto:orders@top5pct.com" class="text-azure hover:underline">orders@top5pct.com</a>
-                        or dropped at our Joliet location.
-                    </p>
                 </div>
 
-                {{-- ══ STEP 2: Garment Selection ════════════════════════════ --}}
+                {{-- ══ STEP 3: Garment Selection ══════════════════════════════ --}}
                 <div x-show="currentStepName === 'garment-selection'" x-cloak>
                     <p class="text-xs text-charcoal-light mb-4">Select all applicable garment types. <span class="text-error font-semibold">At least one required.</span></p>
                     @php
                         $garmentList = [
                             ['key' => 'vNeck',       'label' => 'V-Neck'],
-                            ['key' => 'crewNeck',    'label' => 'Crew Neck'],
-                            ['key' => 'hoodie',      'label' => 'Hoodie'],
-                            ['key' => 'otherShirt',  'label' => 'Other Shirt'],
-                            ['key' => 'baseballCap', 'label' => 'Baseball Cap'],
-                            ['key' => 'napSack',     'label' => 'Nap Sack'],
-                            ['key' => 'otherItem',   'label' => 'Other Item'],
+                            ['key' => 'crewNeck',     'label' => 'Crew Neck'],
+                            ['key' => 'hoodie',       'label' => 'Hoodie'],
+                            ['key' => 'otherShirt',   'label' => 'Other Shirt Style'],
+                            ['key' => 'baseballCap',  'label' => 'Baseball Cap'],
+                            ['key' => 'napSack',      'label' => 'Nap Sack'],
+                            ['key' => 'otherItem',    'label' => 'Other Item'],
                         ];
                     @endphp
-                    <div class="grid grid-cols-3 gap-2">
+                    <div class="space-y-1">
                         @foreach($garmentList as $g)
-                        <button
-                            type="button"
-                            role="switch"
-                            :aria-checked="garments.{{ $g['key'] }}.toString()"
-                            @click="garments.{{ $g['key'] }} = !garments.{{ $g['key'] }}"
-                            class="flex items-center justify-between gap-2 px-3 py-3 bg-white border-2 border-linen-dark hover:border-sunburst/50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
-                        >
-                            <span class="text-xs font-semibold text-charcoal leading-tight">{{ $g['label'] }}</span>
-                            <span
+                        <div class="flex items-center justify-between gap-4 px-4 py-3 border border-linen-dark">
+                            <span class="text-sm font-semibold text-charcoal">{{ $g['label'] }}</span>
+                            <button
+                                type="button"
+                                role="switch"
+                                :aria-checked="garments.{{ $g['key'] }}.toString()"
+                                @click="garments.{{ $g['key'] }} = !garments.{{ $g['key'] }}"
                                 :class="garments.{{ $g['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
-                                class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200"
+                                class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
                             >
                                 <span
                                     :class="garments.{{ $g['key'] }} ? 'translate-x-6' : 'translate-x-1'"
                                     class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
                                 ></span>
-                            </span>
-                        </button>
+                            </button>
+                        </div>
                         @endforeach
                     </div>
 
-                    <div x-show="selectedGarmentTypes.length > 0" x-cloak class="mt-4 pt-4 border-t border-linen-dark">
-                        <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Selected</p>
-                        <div class="flex flex-wrap gap-1.5">
-                            <template x-for="g in selectedGarmentTypes" :key="g.key">
-                                <span class="px-2 py-1 bg-sunburst/10 border border-sunburst/30 text-charcoal text-xs font-semibold" x-text="g.label"></span>
-                            </template>
-                        </div>
+                    <div x-show="selectedGarmentTypes.length > 0" x-cloak class="mt-4 flex flex-wrap gap-1.5">
+                        <template x-for="g in selectedGarmentTypes" :key="g.key">
+                            <span class="px-2 py-1 bg-sunburst text-charcoal text-xs font-semibold" x-text="g.label"></span>
+                        </template>
                     </div>
                 </div>
 
-                {{-- ══ STEP 3: Shirt Length & Fabric (conditional) ══════════ --}}
+                {{-- ══ STEP 4 (conditional): Shirt Length & Fabric ═══════════ --}}
                 <div x-show="currentStepName === 'shirt-length-fabric'" x-cloak>
-                    <div class="space-y-6">
+                    <p class="text-xs text-charcoal-light mb-5">These settings apply to all selected shirt types.</p>
+                    <div class="space-y-5">
 
                         <div>
                             <h3 class="text-sm font-semibold text-charcoal mb-3">
@@ -533,8 +587,7 @@
                                 @foreach([['short','Short Sleeve'],['long','Long Sleeve'],['other','Other']] as [$val,$lbl])
                                 <label class="flex-1 cursor-pointer group">
                                     <input type="radio" name="crw-sleeve-type" value="{{ $val }}"
-                                        x-model="sleeveType"
-                                        class="sr-only">
+                                        x-model="sleeveType" class="sr-only">
                                     <span
                                         class="flex items-center justify-center px-2 py-2.5 border-2 text-xs font-semibold text-center transition-colors duration-150 w-full"
                                         :class="sleeveType === '{{ $val }}' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
@@ -546,12 +599,8 @@
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                     Please describe <span class="text-error">*</span>
                                 </label>
-                                <input
-                                    type="text"
-                                    x-model="sleeveTypeOther"
-                                    placeholder="Describe your sleeve preference…"
-                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                                >
+                                <input type="text" x-model="sleeveTypeOther" placeholder="Describe your sleeve preference…"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
 
@@ -563,8 +612,7 @@
                                 @foreach([['heavyweight','Heavyweight'],['lightweight','Lightweight'],['other','Other']] as [$val,$lbl])
                                 <label class="flex-1 cursor-pointer group">
                                     <input type="radio" name="crw-fabric-weight" value="{{ $val }}"
-                                        x-model="fabricWeight"
-                                        class="sr-only">
+                                        x-model="fabricWeight" class="sr-only">
                                     <span
                                         class="flex items-center justify-center px-2 py-2.5 border-2 text-xs font-semibold text-center transition-colors duration-150 w-full"
                                         :class="fabricWeight === '{{ $val }}' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
@@ -576,179 +624,61 @@
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                     Please describe <span class="text-error">*</span>
                                 </label>
-                                <input
-                                    type="text"
-                                    x-model="fabricWeightOther"
-                                    placeholder="Describe your fabric weight preference…"
-                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                                >
+                                <input type="text" x-model="fabricWeightOther" placeholder="Describe your fabric weight preference…"
+                                    class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-                {{-- ══ STEP 4: Color Selection ══════════════════════════════ --}}
-                <div x-show="currentStepName === 'color-selection'" x-cloak>
-                    <div class="space-y-4">
-                        <p class="text-xs text-charcoal-light">Type a color name to search, then press Enter or click a suggestion to add it. <span class="text-error font-semibold">At least one color required.</span></p>
+                {{-- ══ PER-GARMENT: Print Method ══════════════════════════════ --}}
+                <div x-show="currentStepName.startsWith('print-method-')" x-cloak>
+                    <p class="text-xs text-charcoal-light mb-4">
+                        Select the print method for <strong x-text="currentGarmentLabel"></strong>.
+                        <span class="text-error font-semibold">Required.</span>
+                    </p>
 
-                        <div>
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
-                                Add a Color <span class="text-error">*</span>
-                            </label>
-                            <div class="flex gap-2">
-                                <input
-                                    type="text"
-                                    x-model="colorInput"
-                                    @keydown.enter.prevent="addFocusedColor()"
-                                    @keydown.tab.prevent="if (filteredColors.length > 0) addFocusedColor(); else addColorFromInput()"
-                                    @keydown.arrow-down.prevent="colorFocusIdx = Math.min(colorFocusIdx + 1, filteredColors.length - 1)"
-                                    @keydown.arrow-up.prevent="colorFocusIdx = Math.max(colorFocusIdx - 1, 0)"
-                                    @input="colorFocusIdx = -1"
-                                    placeholder="e.g. Navy Blue, Red, White…"
-                                    class="flex-1 px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                                >
-                                <button type="button" @click="addColorFromInput()"
-                                    class="px-8 py-2.5 bg-charcoal text-white text-xs font-semibold hover:bg-charcoal-dark transition-colors flex-shrink-0">
-                                    Add
-                                </button>
-                            </div>
-                            {{-- Inline suggestions (never absolute-positioned) --}}
-                            <div x-show="filteredColors.length > 0" class="mt-1 border border-linen-dark bg-white max-h-[8rem] overflow-y-auto scrollbar-sunburst">
-                                <template x-for="(color, cIdx) in filteredColors" :key="color">
-                                    <button type="button" @click="addColor(color)"
-                                        :class="colorFocusIdx === cIdx ? 'bg-linen' : ''"
-                                        class="w-full text-left px-3 py-2 text-sm text-charcoal hover:bg-linen transition-colors border-b border-linen-dark last:border-0"
-                                        x-text="color">
-                                    </button>
-                                </template>
-                            </div>
-                        </div>
-
-                        <div x-show="selectedColors.length > 0" x-cloak>
-                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Selected Colors</p>
-                            <div class="flex flex-wrap gap-2">
-                                <template x-for="color in selectedColors" :key="color">
-                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-charcoal text-white text-xs font-semibold">
-                                        <span x-text="color"></span>
-                                        <button type="button" @click="removeColor(color)"
-                                            class="text-white/60 hover:text-white transition-colors"
-                                            :aria-label="'Remove ' + color">
-                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                                <path d="M18 6 6 18M6 6l12 12"/>
-                                            </svg>
-                                        </button>
-                                    </span>
-                                </template>
-                            </div>
-                        </div>
-
-                        <div x-show="selectedColors.length === 0" class="py-6 text-center text-charcoal-lighter text-sm">
-                            No colors added yet — search and select above.
-                        </div>
-                    </div>
-                </div>
-
-                {{-- ══ STEP 5: Quantity & Sizing ════════════════════════════ --}}
-                <div x-show="currentStepName === 'quantity-sizing'" x-cloak>
-                    <div class="space-y-5">
-                        <p class="text-xs text-charcoal-light">Enter quantities for each gender and size. <span class="text-error font-semibold">At least one quantity required.</span></p>
-
-                        <div x-show="selectedGarmentTypes.length === 0" class="py-8 text-center text-charcoal-lighter text-sm">
-                            No garment types selected — go back to Garment Selection.
-                        </div>
-
-                        <template x-for="garment in selectedGarmentTypes" :key="garment.key">
-                            <div class="border border-linen-dark">
-                                <div class="px-3 py-2 bg-linen border-b border-linen-dark">
-                                    <h4 class="text-sm font-bold text-charcoal" x-text="garment.label"></h4>
+                    {{-- Traditional --}}
+                    <div class="border border-linen-dark mb-3">
+                        <div class="flex items-start gap-3 p-4">
+                            <input type="radio" name="crw-print-method"
+                                :id="'crw-pm-trad-' + currentGarmentKey"
+                                :checked="printMethods[currentGarmentKey] === 'traditional'"
+                                @change="printMethods = Object.assign({}, printMethods, { [currentGarmentKey]: 'traditional' })"
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5 cursor-pointer">
+                            <div class="flex-1">
+                                <label :for="'crw-pm-trad-' + currentGarmentKey" class="block text-sm font-bold text-charcoal cursor-pointer mb-1">Traditional Printing</label>
+                                <p class="text-xs text-charcoal-light mb-3">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
+                                <div x-show="printMethods[currentGarmentKey] === 'traditional'" x-cloak class="flex flex-col gap-2">
+                                    @foreach([['htv','HTV'],['digital','Digital'],['screenprint','Screenprint']] as [$val,$lbl])
+                                    <label class="flex items-center gap-3 cursor-pointer px-3 py-2.5 border-2 transition-colors duration-150"
+                                        :class="traditionalTypes[currentGarmentKey] === '{{ $val }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'">
+                                        <input type="radio" name="crw-trad-type"
+                                            :checked="traditionalTypes[currentGarmentKey] === '{{ $val }}'"
+                                            @change="traditionalTypes = Object.assign({}, traditionalTypes, { [currentGarmentKey]: '{{ $val }}' })"
+                                            class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                        <span class="text-sm font-semibold text-charcoal">{{ $lbl }}</span>
+                                    </label>
+                                    @endforeach
                                 </div>
-                                <div class="overflow-x-auto scrollbar-sunburst">
-                                    <table class="w-full border-collapse text-xs">
-                                        <thead>
-                                            <tr class="bg-linen-light">
-                                                <th class="text-left px-2 py-2 font-semibold text-charcoal-light border-r border-linen-dark w-20 whitespace-nowrap">Gender</th>
-                                                <template x-for="size in sizes" :key="size">
-                                                    <th class="px-1 py-2 font-semibold text-charcoal-light text-center min-w-[2.75rem]" x-text="size"></th>
-                                                </template>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <template x-for="gender in genders" :key="gender.key">
-                                                <tr class="border-t border-linen-dark hover:bg-linen-light/50">
-                                                    <td class="px-2 py-1.5 font-semibold text-charcoal border-r border-linen-dark whitespace-nowrap" x-text="gender.label"></td>
-                                                    <template x-for="size in sizes" :key="size">
-                                                        <td class="px-1 py-1 text-center border-l border-linen-dark">
-                                                            <input
-                                                                type="number"
-                                                                min="0"
-                                                                :value="getQty(garment.key, gender.key, size)"
-                                                                @input="setQty(garment.key, gender.key, size, $event.target.value)"
-                                                                class="w-11 text-center text-xs border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
-                                                                placeholder="0"
-                                                            >
-                                                        </td>
-                                                    </template>
-                                                </tr>
-                                            </template>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </template>
-
-                        {{-- "Did you forget?" warning for garments with no quantities --}}
-                        <div x-show="garmentsWithNoQty.length > 0 && selectedGarmentTypes.length > 0" x-cloak
-                            class="border-l-4 border-sunburst bg-sunburst/5 px-4 py-3">
-                            <p class="text-sm font-semibold text-charcoal mb-1.5">Did you forget to add a quantity?</p>
-                            <template x-for="g in garmentsWithNoQty" :key="g.key">
-                                <p class="text-xs text-charcoal-light mt-0.5">
-                                    <span class="font-semibold text-sunburst-dark" x-text="'• ' + g.label + ' has no quantities entered'"></span>
-                                </p>
-                            </template>
-                        </div>
-
-                        <div x-show="quantitySummary.length > 0" x-cloak class="border-t border-linen-dark pt-4">
-                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Order Summary</p>
-                            <div class="flex flex-wrap gap-1.5">
-                                <template x-for="(item, i) in quantitySummary" :key="i">
-                                    <span class="px-2 py-1 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
-                                </template>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                {{-- ══ STEP 6: Print Method ═════════════════════════════════ --}}
-                <div x-show="currentStepName === 'print-method'" x-cloak>
-                    <div class="space-y-4">
-                        <p class="text-xs text-charcoal-light"><span class="text-error font-semibold">Select a print method.</span> For Specialty, choose at least one type.</p>
-
-                        {{-- Traditional Printing --}}
-                        <div class="border border-linen-dark">
-                            <div class="flex items-center justify-center gap-3 p-4">
-                                <input type="radio" name="crw-print-method" value="traditional"
-                                    id="crw-pm-traditional"
-                                    x-model="printMethod"
-                                    class="w-4 h-4 flex-shrink-0 accent-sunburst">
-                                <div>
-                                    <label for="crw-pm-traditional" class="block text-sm font-bold text-charcoal cursor-pointer mb-1">Traditional Printing</label>
-                                    <p class="text-xs text-charcoal-light">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
-                                </div>
-                            </div>
+                    {{-- Specialty --}}
+                    <div class="border border-linen-dark">
+                        <div class="flex items-start gap-3 p-4 border-b border-linen-dark">
+                            <input type="radio" name="crw-print-method"
+                                :id="'crw-pm-spec-' + currentGarmentKey"
+                                :checked="printMethods[currentGarmentKey] === 'specialty'"
+                                @change="printMethods = Object.assign({}, printMethods, { [currentGarmentKey]: 'specialty' })"
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5 cursor-pointer">
+                            <label :for="'crw-pm-spec-' + currentGarmentKey" class="text-sm font-bold text-charcoal cursor-pointer pt-0.5">Specialty Printing</label>
                         </div>
-
-                        {{-- Specialty Printing --}}
-                        <div class="border border-linen-dark">
-                            <div class="flex items-center justify-center gap-3 p-4 border-b border-linen-dark">
-                                <input type="radio" name="crw-print-method" value="specialty"
-                                    id="crw-pm-specialty"
-                                    x-model="printMethod"
-                                    class="w-4 h-4 flex-shrink-0 accent-sunburst">
-                                <label for="crw-pm-specialty" class="text-sm font-bold text-charcoal cursor-pointer">Specialty Printing</label>
-                            </div>
-                            <div x-show="printMethod === 'specialty'" x-cloak class="p-3">
+                        <div x-show="printMethods[currentGarmentKey] === 'specialty'" x-cloak class="p-4">
+                            <p class="text-xs text-charcoal-light mb-3"><span class="text-error font-semibold">Select one specialty type.</span></p>
+                            <div class="flex flex-col gap-2">
                                 @php
                                     $specialtyItems = [
                                         ['key' => 'vinyl',       'label' => 'Vinyl Shirts'],
@@ -765,50 +695,156 @@
                                         ['key' => 'picture',     'label' => 'Picture Shirts'],
                                     ];
                                 @endphp
-                                <div class="grid grid-cols-3 gap-2">
-                                    @foreach($specialtyItems as $item)
-                                    <button
-                                        type="button"
-                                        role="switch"
-                                        :aria-checked="specialtyTypes.{{ $item['key'] }}.toString()"
-                                        @click="specialtyTypes.{{ $item['key'] }} = !specialtyTypes.{{ $item['key'] }}"
-                                        class="flex items-center justify-between gap-2 px-3 py-3 bg-white border-2 border-linen-dark hover:border-sunburst/50 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 w-full text-left"
-                                    >
-                                        <span class="text-xs font-semibold text-charcoal leading-tight">{{ $item['label'] }}</span>
-                                        <span
-                                            :class="specialtyTypes.{{ $item['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
-                                            class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200"
-                                        >
-                                            <span
-                                                :class="specialtyTypes.{{ $item['key'] }} ? 'translate-x-6' : 'translate-x-1'"
-                                                class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
-                                            ></span>
-                                        </span>
-                                    </button>
-                                    @endforeach
-                                </div>
+                                @foreach($specialtyItems as $item)
+                                <label
+                                    class="flex items-center gap-3 cursor-pointer px-3 py-2.5 border-2 transition-colors duration-150"
+                                    :class="specialtyTypeByGarment[currentGarmentKey] === '{{ $item['key'] }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                                >
+                                    <input type="radio" name="crw-specialty-type"
+                                        :checked="specialtyTypeByGarment[currentGarmentKey] === '{{ $item['key'] }}'"
+                                        @change="specialtyTypeByGarment = Object.assign({}, specialtyTypeByGarment, { [currentGarmentKey]: '{{ $item['key'] }}' })"
+                                        class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                    <span class="text-sm font-semibold text-charcoal">{{ $item['label'] }}</span>
+                                </label>
+                                @endforeach
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                {{-- ══ STEP 7: Completion Date ══════════════════════════════ --}}
+                {{-- ══ PER-GARMENT: Color Selection ═══════════════════════════ --}}
+                <div x-show="currentStepName.startsWith('color-')" x-cloak>
+                    <div class="space-y-4">
+                        <p class="text-xs text-charcoal-light">
+                            Select colors for <strong x-text="currentGarmentLabel"></strong>.
+                            <span class="text-error font-semibold">At least one required.</span>
+                        </p>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                Add a Color <span class="text-error">*</span>
+                            </label>
+                            <div class="flex gap-2">
+                                <input
+                                    type="text"
+                                    :value="colorInputs[currentGarmentKey] || ''"
+                                    @input="colorInputs = Object.assign({}, colorInputs, { [currentGarmentKey]: $event.target.value }); colorFocusIdx = -1"
+                                    @keydown.enter.prevent="addFocusedColor()"
+                                    @keydown.tab.prevent="if (filteredColorsForGarment.length > 0) addFocusedColor(); else addColorFromInput()"
+                                    @keydown.arrow-down.prevent="colorFocusIdx = Math.min(colorFocusIdx + 1, filteredColorsForGarment.length - 1)"
+                                    @keydown.arrow-up.prevent="colorFocusIdx = Math.max(colorFocusIdx - 1, 0)"
+                                    placeholder="e.g. Navy Blue, Red, White…"
+                                    class="flex-1 px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                                >
+                                <button type="button" @click="addColorFromInput()"
+                                    class="px-8 py-2.5 bg-charcoal text-white text-xs font-semibold hover:bg-charcoal-dark transition-colors flex-shrink-0">
+                                    Add
+                                </button>
+                            </div>
+                            {{-- Inline suggestions --}}
+                            <div x-show="filteredColorsForGarment.length > 0" class="mt-1 border border-linen-dark bg-white max-h-[8rem] overflow-y-auto scrollbar-sunburst">
+                                <template x-for="(color, cIdx) in filteredColorsForGarment" :key="color">
+                                    <button type="button" @click="addColor(color)"
+                                        :class="colorFocusIdx === cIdx ? 'bg-linen' : ''"
+                                        class="w-full text-left px-3 py-2 text-sm text-charcoal hover:bg-linen transition-colors border-b border-linen-dark last:border-0"
+                                        x-text="color">
+                                    </button>
+                                </template>
+                            </div>
+                        </div>
+
+                        <div x-show="(selectedColorsByGarment[currentGarmentKey] || []).length > 0" x-cloak>
+                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Selected Colors</p>
+                            <div class="flex flex-wrap gap-2">
+                                <template x-for="color in (selectedColorsByGarment[currentGarmentKey] || [])" :key="color">
+                                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-charcoal text-white text-xs font-semibold">
+                                        <span x-text="color"></span>
+                                        <button type="button" @click="removeColor(color)"
+                                            class="text-white/60 hover:text-white transition-colors"
+                                            :aria-label="'Remove ' + color">
+                                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                                <path d="M18 6 6 18M6 6l12 12"/>
+                                            </svg>
+                                        </button>
+                                    </span>
+                                </template>
+                            </div>
+                        </div>
+
+                        <div x-show="!(selectedColorsByGarment[currentGarmentKey] || []).length" class="py-6 text-center text-charcoal-lighter text-sm">
+                            No colors added yet — search and select above.
+                        </div>
+                    </div>
+                </div>
+
+                {{-- ══ PER-GARMENT: Quantity & Sizing ═════════════════════════ --}}
+                <div x-show="currentStepName.startsWith('quantity-')" x-cloak>
+                    <div class="space-y-5">
+                        <p class="text-xs text-charcoal-light">
+                            Enter quantities for <strong x-text="currentGarmentLabel"></strong>.
+                            <span class="text-error font-semibold">At least one required.</span>
+                        </p>
+
+                        <div class="border border-linen-dark">
+                            <div class="px-3 py-2 bg-linen border-b border-linen-dark">
+                                <h4 class="text-sm font-bold text-charcoal" x-text="currentGarmentLabel"></h4>
+                            </div>
+                            <div class="overflow-x-auto scrollbar-sunburst">
+                                <table class="w-full border-collapse text-xs">
+                                    <thead>
+                                        <tr class="bg-linen-light">
+                                            <th class="text-left px-2 py-2 font-semibold text-charcoal-light border-r border-linen-dark w-20 whitespace-nowrap">Gender</th>
+                                            <template x-for="size in sizes" :key="size">
+                                                <th class="px-1 py-2 font-semibold text-charcoal-light text-center min-w-[2.75rem]" x-text="size"></th>
+                                            </template>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <template x-for="gender in genders" :key="gender.key">
+                                            <tr class="border-t border-linen-dark hover:bg-linen-light/50">
+                                                <td class="px-2 py-1.5 font-semibold text-charcoal border-r border-linen-dark whitespace-nowrap" x-text="gender.label"></td>
+                                                <template x-for="size in sizes" :key="size">
+                                                    <td class="px-1 py-1 text-center border-l border-linen-dark">
+                                                        <input
+                                                            type="number"
+                                                            min="0"
+                                                            :value="getQty(currentGarmentKey, gender.key, size)"
+                                                            @input="setQty(currentGarmentKey, gender.key, size, $event.target.value)"
+                                                            class="w-11 text-center text-xs border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                            placeholder="0"
+                                                        >
+                                                    </td>
+                                                </template>
+                                            </tr>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div x-show="garmentQuantitySummary(currentGarmentKey).length > 0" x-cloak class="border-t border-linen-dark pt-3">
+                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Order Summary</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <template x-for="(item, i) in garmentQuantitySummary(currentGarmentKey)" :key="i">
+                                    <span class="px-2 py-1 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- ══ Completion Date ═════════════════════════════════════════ --}}
                 <div x-show="currentStepName === 'completion-date'" x-cloak>
                     <div class="space-y-4">
 
-                        {{-- Rush already set in Step 1 --}}
                         <div x-show="isRush === true" x-cloak
                             class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border-l-4 border-sunburst">
                             <svg class="w-5 h-5 text-sunburst flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                             </svg>
-                            <div>
-                                <p class="text-sm font-bold text-charcoal">Rush Order — Expediting Active</p>
-                            </div>
+                            <p class="text-sm font-bold text-charcoal">Rush Order — Expediting Active</p>
                         </div>
 
-                        {{-- Rush question + date on same row when not already a rush order --}}
                         <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-6 items-center">
                             <div class="text-center">
                                 <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
@@ -817,15 +853,13 @@
                                 <div class="flex gap-6 pt-1 justify-center">
                                     <label class="flex items-center gap-2 cursor-pointer">
                                         <input type="radio" name="crw-rush-delivery" value="yes"
-                                            @change="isRushDelivery = true"
-                                            :checked="isRushDelivery === true"
+                                            @change="isRushDelivery = true" :checked="isRushDelivery === true"
                                             class="w-4 h-4 accent-sunburst">
                                         <span class="text-sm font-medium text-charcoal">Yes</span>
                                     </label>
                                     <label class="flex items-center gap-2 cursor-pointer">
                                         <input type="radio" name="crw-rush-delivery" value="no"
-                                            @change="isRushDelivery = false"
-                                            :checked="isRushDelivery === false"
+                                            @change="isRushDelivery = false" :checked="isRushDelivery === false"
                                             class="w-4 h-4 accent-sunburst">
                                         <span class="text-sm font-medium text-charcoal">No</span>
                                     </label>
@@ -835,50 +869,40 @@
                                 <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
                                     Desired Completion Date <span class="text-error">*</span>
                                 </label>
-                                <input
-                                    type="date"
-                                    x-model="completionDate"
+                                <input type="date" x-model="completionDate"
                                     @click="if ($el.showPicker) $el.showPicker()"
                                     :class="rushActive ? 'border-sunburst ring-1 ring-sunburst/30' : 'border-linen-dark'"
-                                    class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer"
-                                >
+                                    class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer">
                             </div>
                         </div>
 
-                        {{-- Date input when rush already set in step 1 --}}
                         <div x-show="isRush === true" x-cloak>
                             <label class="block text-xs font-semibold text-charcoal-light mb-1.5">
                                 Desired Completion Date <span class="text-error">*</span>
                             </label>
-                            <input
-                                type="date"
-                                x-model="completionDate"
+                            <input type="date" x-model="completionDate"
                                 @click="if ($el.showPicker) $el.showPicker()"
-                                class="w-full px-3 py-2.5 text-sm border border-sunburst ring-1 ring-sunburst/30 focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer"
-                            >
+                                class="w-full px-3 py-2.5 text-sm border border-sunburst ring-1 ring-sunburst/30 focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer">
                         </div>
 
                     </div>
                 </div>
 
-                {{-- ══ STEP 8: Extra Notes ══════════════════════════════════ --}}
+                {{-- ══ Extra Notes ══════════════════════════════════════════════ --}}
                 <div x-show="currentStepName === 'extra-notes'" x-cloak>
                     <div class="space-y-3">
                         <p class="text-xs text-charcoal-light">Include any additional details — artwork requirements, special instructions, references, etc. (optional)</p>
-                        <textarea
-                            x-model="extraNotes"
-                            rows="8"
+                        <textarea x-model="extraNotes" rows="8"
                             placeholder="Add any extra notes, instructions, or details about your custom order…"
                             class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
                         ></textarea>
                     </div>
                 </div>
 
-                {{-- ══ STEP 9: Shipping Address ═════════════════════════════ --}}
+                {{-- ══ Shipping Address ════════════════════════════════════════ --}}
                 <div x-show="currentStepName === 'shipping-address'" x-cloak>
                     <div class="space-y-4">
 
-                        {{-- Contact info — pre-filled from contact modal --}}
                         <div>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                 Full Name <span class="text-error">*</span>
@@ -899,8 +923,7 @@
                                     Phone <span class="text-error">*</span>
                                 </label>
                                 <input
-                                    type="tel"
-                                    required
+                                    type="tel" required
                                     :value="contactPhone"
                                     @input="
                                         let d = $el.value.replace(/\D/g,'').substring(0,10);
@@ -910,20 +933,17 @@
                                         else                    $el.value = '';
                                         contactPhone = $el.value;
                                     "
-                                    maxlength="14"
-                                    placeholder="(815) 000-0000"
+                                    maxlength="14" placeholder="(815) 000-0000"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                             </div>
                         </div>
 
-                        {{-- Company name if applicable --}}
                         <div x-show="requestType === 'company'" x-cloak>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Company Name</label>
                             <input type="text" x-model="companyName" placeholder="Company name"
                                 class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                         </div>
 
-                        {{-- Shipping address --}}
                         <div>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                 Address Line 1 <span class="text-error">*</span>
@@ -931,7 +951,6 @@
                             <input type="text" x-model="address1" required placeholder="Street address"
                                 class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors">
                         </div>
-
                         <div>
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                 Address Line 2 <span class="font-normal text-charcoal-lighter">(optional)</span>
@@ -952,8 +971,7 @@
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                     State <span class="text-error">*</span>
                                 </label>
-                                <input type="text" required placeholder="IL"
-                                    maxlength="2"
+                                <input type="text" required placeholder="IL" maxlength="2"
                                     :value="state"
                                     @input="state = $el.value.replace(/[^a-zA-Z]/g,'').toUpperCase().substring(0,2); $el.value = state"
                                     class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors uppercase">
@@ -962,8 +980,7 @@
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
                                     ZIP Code <span class="text-error">*</span>
                                 </label>
-                                <input type="text" required placeholder="60432"
-                                    maxlength="5"
+                                <input type="text" required placeholder="60432" maxlength="5"
                                     :value="zip"
                                     @input="zip = $el.value.replace(/\D/g,'').substring(0,5); $el.value = zip"
                                     inputmode="numeric"
@@ -974,11 +991,10 @@
                     </div>
                 </div>
 
-                {{-- ══ STEP 10: Review & Submit ══════════════════════════════ --}}
+                {{-- ══ Review & Submit ══════════════════════════════════════════ --}}
                 <div x-show="currentStepName === 'confirm-submit'" x-cloak>
                     <div class="space-y-4">
 
-                        {{-- Rush active banner --}}
                         <div x-show="rushActive" x-cloak
                             class="flex items-center gap-3 px-4 py-3 bg-sunburst text-charcoal font-bold">
                             <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -987,7 +1003,7 @@
                             <span class="text-sm">Rush Order — Expediting Active</span>
                         </div>
 
-                        {{-- Summary grid --}}
+                        {{-- Global summary --}}
                         <div class="divide-y divide-linen-dark border border-linen-dark">
 
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
@@ -1010,14 +1026,12 @@
                             </div>
 
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
-                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Garments</span>
-                                <div class="col-span-2">
-                                    <div x-show="selectedGarmentTypes.length > 0" class="flex flex-wrap gap-1">
-                                        <template x-for="g in selectedGarmentTypes" :key="g.key">
-                                            <span class="px-2 py-0.5 bg-linen text-charcoal text-xs border border-linen-dark" x-text="g.label"></span>
-                                        </template>
-                                    </div>
-                                    <span x-show="selectedGarmentTypes.length === 0" class="text-sm text-charcoal-lighter">None selected</span>
+                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">DTF File</span>
+                                <div class="col-span-2 text-sm text-charcoal">
+                                    <span x-show="dtfFileName" x-cloak x-text="dtfFileName"></span>
+                                    <span x-show="!dtfFileName && hasDtf === true" x-cloak>Yes — will provide separately</span>
+                                    <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
+                                    <span x-show="!dtfFileName && hasDtf === null" class="text-charcoal-lighter">Not answered</span>
                                 </div>
                             </div>
 
@@ -1027,39 +1041,6 @@
                                     <span class="capitalize" x-text="sleeveType ? sleeveType + ' Sleeve' : ''"></span>
                                     <span x-show="sleeveType && fabricWeight"> &nbsp;·&nbsp; </span>
                                     <span class="capitalize" x-text="fabricWeight || ''"></span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
-                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Colors</span>
-                                <div class="col-span-2">
-                                    <div x-show="selectedColors.length > 0" class="flex flex-wrap gap-1">
-                                        <template x-for="color in selectedColors" :key="color">
-                                            <span class="px-2 py-0.5 bg-charcoal text-white text-xs" x-text="color"></span>
-                                        </template>
-                                    </div>
-                                    <span x-show="selectedColors.length === 0" class="text-sm text-charcoal-lighter">None selected</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
-                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Quantities</span>
-                                <div class="col-span-2">
-                                    <div x-show="quantitySummary.length > 0" class="flex flex-wrap gap-1">
-                                        <template x-for="(item, i) in quantitySummary" :key="i">
-                                            <span class="px-2 py-0.5 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
-                                        </template>
-                                    </div>
-                                    <span x-show="quantitySummary.length === 0" class="text-sm text-charcoal-lighter">None entered</span>
-                                </div>
-                            </div>
-
-                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
-                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Print Method</span>
-                                <div class="col-span-2 text-sm text-charcoal">
-                                    <span x-show="printMethod === 'traditional'" x-cloak>Traditional (HTV · Digital · Screenprint)</span>
-                                    <span x-show="printMethod === 'specialty'" x-cloak>Specialty</span>
-                                    <span x-show="!printMethod" class="text-charcoal-lighter">Not selected</span>
                                 </div>
                             </div>
 
@@ -1095,16 +1076,55 @@
                                 <div class="col-span-2 text-sm text-charcoal line-clamp-3" x-text="extraNotes"></div>
                             </div>
 
-                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
-                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">DTF File</span>
-                                <div class="col-span-2 text-sm text-charcoal">
-                                    <span x-show="hasDtf === true && dtfFileName" x-cloak x-text="dtfFileName"></span>
-                                    <span x-show="hasDtf === true && !dtfFileName" x-cloak>Yes — will provide separately</span>
-                                    <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
-                                    <span x-show="hasDtf === null" class="text-charcoal-lighter">Not answered</span>
-                                </div>
-                            </div>
+                        </div>
 
+                        {{-- Per-garment summary --}}
+                        <div x-show="selectedGarmentTypes.length > 0" x-cloak class="space-y-3">
+                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide">Per-Garment Details</p>
+                            <template x-for="g in selectedGarmentTypes" :key="g.key">
+                                <div class="border border-linen-dark divide-y divide-linen-dark">
+                                    <div class="px-4 py-2 bg-linen">
+                                        <span class="text-xs font-bold text-charcoal uppercase tracking-wide" x-text="g.label"></span>
+                                    </div>
+                                    <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
+                                        <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Print</span>
+                                        <div class="col-span-2 text-sm text-charcoal">
+                                            <span x-show="printMethods[g.key] === 'traditional'" x-cloak>
+                                                Traditional
+                                                <span x-show="traditionalTypes[g.key]" x-cloak>
+                                                    &nbsp;&mdash;&nbsp;<span x-text="{ htv:'HTV', digital:'Digital', screenprint:'Screenprint' }[traditionalTypes[g.key]] || ''"></span>
+                                                </span>
+                                            </span>
+                                            <span x-show="printMethods[g.key] === 'specialty'" x-cloak>
+                                                Specialty &mdash; <span x-text="specialtyLabels[specialtyTypeByGarment[g.key]] || ''"></span>
+                                            </span>
+                                            <span x-show="!printMethods[g.key]" class="text-charcoal-lighter">Not selected</span>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
+                                        <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Colors</span>
+                                        <div class="col-span-2">
+                                            <div x-show="(selectedColorsByGarment[g.key] || []).length > 0" x-cloak class="flex flex-wrap gap-1">
+                                                <template x-for="color in (selectedColorsByGarment[g.key] || [])" :key="color">
+                                                    <span class="px-2 py-0.5 bg-charcoal text-white text-xs" x-text="color"></span>
+                                                </template>
+                                            </div>
+                                            <span x-show="!(selectedColorsByGarment[g.key] || []).length" class="text-sm text-charcoal-lighter">None selected</span>
+                                        </div>
+                                    </div>
+                                    <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
+                                        <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Quantities</span>
+                                        <div class="col-span-2">
+                                            <div x-show="garmentQuantitySummary(g.key).length > 0" x-cloak class="flex flex-wrap gap-1">
+                                                <template x-for="(item, i) in garmentQuantitySummary(g.key)" :key="i">
+                                                    <span class="px-2 py-0.5 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
+                                                </template>
+                                            </div>
+                                            <span x-show="garmentQuantitySummary(g.key).length === 0" class="text-sm text-charcoal-lighter">None entered</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
                         </div>
 
                         <p class="text-xs text-charcoal-lighter text-center">

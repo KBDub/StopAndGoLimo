@@ -104,7 +104,7 @@ The wizard reads this payload in its `@open-modal.window` handler and populates:
 **Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. Step 1a (DTF File Upload) is always present. Step 3 (Shirt Length & Fabric) is **conditional** — it only appears when at least one shirt-type garment is selected in Step 2. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. Step 3 (Shirt Length & Fabric) is also **conditional**. All step numbers and the dot-indicator count adjust automatically.
 
 ---
 
@@ -113,18 +113,21 @@ The wizard uses a dynamic `visibleSteps` computed array. Step 1a (DTF File Uploa
 | Step | Name (internal) | Title | Conditional |
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
-| 1a | `dtf-upload` | DTF File Upload | Always |
-| 2 | `garment-selection` | Garment Selection | Always |
-| 3 | `shirt-length-fabric` | Shirt Length & Fabric Type | Only if shirt type selected |
-| 4 (or 3) | `color-selection` | Color Selection | Always |
-| 5 (or 4) | `quantity-sizing` | Quantity & Sizing | Always |
-| 6 (or 5) | `print-method` | Print Method | Always |
-| 7 (or 6) | `completion-date` | Desired Completion Date | Always |
-| 8 (or 7) | `extra-notes` | Extra Notes | Always |
-| 9 (or 8) | `shipping-address` | Shipping Address | Always |
-| 10 (or 9) | `confirm-submit` | Review & Submit | Always |
+| 2 | `dtf-upload` | DTF File Upload | Always |
+| 3 | `garment-selection` | Garment Selection | Always |
+| 4 | `shirt-length-fabric` | Shirt Length & Fabric Type | Only if shirt type selected |
+| *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
+| — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
+| — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
+| — | `quantity-{key}` | Quantity & Sizing — {Garment Label} | Per selected garment |
+| Last | `completion-date` | Desired Completion Date | Always |
+| Last | `extra-notes` | Extra Notes | Always |
+| Last | `shipping-address` | Shipping Address | Always |
+| Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 11 with shirt type selected, 10 without.
+**Total steps:** 4 global + 3 per-garment-type selected + 4 closing global steps (+ 1 if shirt type) = variable.
+
+**Example:** User selects V-Neck + Baseball Cap (no shirt length step skipped) → 4 + 6 + 4 = 14 steps.
 
 ---
 

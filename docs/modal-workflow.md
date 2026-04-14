@@ -185,7 +185,7 @@ A summary chip row at the bottom shows all currently selected garment types.
 
 ---
 
-#### Step 4 — Color Selection
+#### Step 5 — Color Selection
 
 A smart text input with inline (non-absolute) autocomplete against a list of 30 common colors. Users can add multiple colors.
 
@@ -203,7 +203,7 @@ White, Black, Navy Blue, Red, Royal Blue, Forest Green, Charcoal Gray, Light Gra
 
 ---
 
-#### Step 5 — Quantity & Sizing
+#### Step 4 — Quantity & Sizing
 
 A matrix input grid organized by garment type. Only garment types selected in Step 2 are shown. Each garment type renders its own table.
 

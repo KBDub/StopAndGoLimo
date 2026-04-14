@@ -1218,6 +1218,40 @@
             </div>
         </div>
 
+        {{-- Free Quote Banner (cta-free-quote-banner) — two-part section --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Free Quote Banner</h3>
+            <p class="text-charcoal-light text-xs mb-6 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-sections.cta-free-quote-banner /&gt;</code>
+                — two-part section: <code class="bg-linen-dark px-1 py-0.5">x-ui.dtf-dropzone</code> above, CTA row below.
+            </p>
+
+            {{-- Part 1: DTF Dropzone --}}
+            <p class="text-charcoal-light text-xs mb-2 pl-5">
+                Part 1 — <code class="bg-linen-dark px-1 py-0.5">x-ui.dtf-dropzone</code>
+            </p>
+            <div class="max-w-2xl mb-6">
+                <x-ui.dtf-dropzone />
+            </div>
+
+            {{-- Part 2: CTA Row --}}
+            <p class="text-charcoal-light text-xs mb-2 pl-5">
+                Part 2 — CTA row
+            </p>
+            <div class="max-w-2xl py-6 px-8 bg-warm-gradient border border-linen-dark flex flex-col sm:flex-row items-center gap-8">
+                <div class="flex-1 w-full text-center sm:text-left">
+                    <h3 class="text-lg font-bold text-charcoal">Need help with a custom project?</h3>
+                    <p class="text-sm text-charcoal-light">Get a free, no-obligation quote from our team. Veteran-owned, locally trusted.</p>
+                </div>
+                <x-ui.button-blue-white
+                    onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+                    class="px-6 py-3 text-sm whitespace-nowrap flex-shrink-0"
+                >
+                    Get a Free Quote
+                </x-ui.button-blue-white>
+            </div>
+        </div>
+
         {{-- Banner CTA — Dropzone Left --}}
         <div>
             <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Banner CTA — Drop Zone Left</h3>

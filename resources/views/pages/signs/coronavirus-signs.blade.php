@@ -44,6 +44,8 @@
             <p>It also helps create a calm, orderly environment for everyone inside your facility. We offer fast turnaround on safety signage orders so you are never waiting long to get your space properly signed. Reach out to us at (815) 349 8600 and let us build a safety signage package that fits your business and your budget in Will County or anywhere in the Chicagoland area.</p>
         </x-sections.card-image-with-text>
 
+        <x-sections.cta-tripple-button-banner />
+
         <x-sections.card-2image-with-text
             image1="/images/corona-virus-signs/top5pct-coronavirus-decals-joliet-shorewood-crest-hill.jpg"
             alt1="Coronavirus safety decals printed in Joliet, Shorewood, and Crest Hill Illinois"

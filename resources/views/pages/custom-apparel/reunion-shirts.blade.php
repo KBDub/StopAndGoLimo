@@ -52,6 +52,8 @@
             <p>We print on a wide range of shirt styles and sizes so everyone from your class can find something that fits. From classic tees to hoodies and long sleeves, we have options for every season and every preference. Call us today at (815) 349 8600 and let us help your class reunite in shirts that everyone will be proud to wear.</p>
         </x-sections.card-image-with-text>
 
+        <x-sections.cta-tripple-button-banner />
+
         <x-sections.card-2image-with-text
             image1="/images/reunion-shirts/toptpct-class-reunion-shirt-templates.gif"
             alt1="Class reunion shirt templates available at Top 5 Percent in Joliet Illinois"

@@ -52,6 +52,8 @@
             <p>We know that uniforms wear out over time. When your team starts looking worn, it can quietly hurt your brand image. We make it easy to reorder and refresh your corporate clothing on your schedule. Our team keeps records of your previous orders so the reorder process is fast and smooth. We are your local one stop shop for all custom work uniforms in the Chicagoland area.</p>
         </x-sections.card-image-with-text>
 
+        <x-sections.cta-tripple-button-banner />
+
         <x-sections.card-2image-with-text
             image1="/images/corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg"
             alt1="Custom corporate t shirts printed for businesses in Joliet and Shorewood Illinois"

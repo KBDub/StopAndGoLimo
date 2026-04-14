@@ -54,6 +54,8 @@
             <p>We are proud to serve clients in Joliet, New Lenox, Shorewood, and across the entire Chicagoland area with event quality table runners that make every table look its best. Whether you need one runner for a wedding or a set of runners for a trade show booth, we are ready to take your order. Give us a call at (815) 349 8600 to get started.</p>
         </x-sections.card-image-with-text>
 
+        <x-sections.cta-tripple-button-banner />
+
         <x-sections.card-2image-with-text
             image1="/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg"
             alt1="Custom table runner printed in Joliet and Shorewood Illinois"

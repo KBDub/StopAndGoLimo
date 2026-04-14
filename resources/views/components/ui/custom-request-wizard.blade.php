@@ -477,19 +477,19 @@
                         <p class="text-xs text-charcoal-light">Would you like to upload a DTF file for this order?</p>
 
                         <fieldset>
-                            <legend class="text-sm font-semibold text-charcoal mb-3">
+                            <legend class="block text-sm font-semibold text-charcoal mb-3 text-center">
                                 Upload a DTF file? <span class="text-error">*</span>
                             </legend>
-                            <div class="flex flex-col gap-3">
-                                <label class="flex items-center gap-3 cursor-pointer group">
+                            <div class="flex gap-6 justify-center">
+                                <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-has-dtf" :value="true" x-model="hasDtf"
                                            class="w-4 h-4 accent-sunburst cursor-pointer">
-                                    <span class="text-sm text-charcoal group-hover:text-charcoal-dark">Yes</span>
+                                    <span class="text-sm font-medium text-charcoal">Yes</span>
                                 </label>
-                                <label class="flex items-center gap-3 cursor-pointer group">
+                                <label class="flex items-center gap-2 cursor-pointer">
                                     <input type="radio" name="crw-has-dtf" :value="false" x-model="hasDtf"
                                            class="w-4 h-4 accent-sunburst cursor-pointer">
-                                    <span class="text-sm text-charcoal group-hover:text-charcoal-dark">No</span>
+                                    <span class="text-sm font-medium text-charcoal">No</span>
                                 </label>
                             </div>
                         </fieldset>

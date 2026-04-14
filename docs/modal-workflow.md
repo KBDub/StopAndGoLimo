@@ -104,7 +104,7 @@ The wizard reads this payload in its `@open-modal.window` handler and populates:
 **Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. The DTF Upload step is always present as step 2. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array. After the global Quantity & Sizing step, **two per-garment steps** (Print Method, Color Selection) are inserted once for each garment type the user selected — so the total step count scales with selections. The DTF Upload step is always present as step 2. All step numbers and the dot-indicator count adjust automatically.
 
 ---
 
@@ -115,18 +115,18 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | 1 | `request-type` | Request Details | Always |
 | 2 | `dtf-upload` | DTF File Upload | Always |
 | 3 | `garment-selection` | Garment Selection | Always |
+| 4 | `quantity` | Quantity & Sizing | Always (shows all selected garments) |
 | *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
-| — | `quantity-{key}` | Quantity & Sizing — {Garment Label} | Per selected garment |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
 | Last | `completion-date` | Desired Completion Date | Always |
 | Last | `extra-notes` | Extra Notes | Always |
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 3 global + 3 per-garment-type selected + 4 closing global steps = variable.
+**Total steps:** 4 global + 2 per-garment-type selected + 4 closing global steps = variable.
 
-**Example:** User selects V-Neck + Baseball Cap → 3 + 6 + 4 = 13 steps.
+**Example:** User selects V-Neck + Baseball Cap → 4 + 4 + 4 = 12 steps.
 
 ---
 
@@ -357,7 +357,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | Getter | Returns |
 |---|---|
 | `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
-| `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`; then `print-method-{key}`, `quantity-{key}`, `color-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
+| `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`, `quantity`; then `print-method-{key}`, `color-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |
 | `totalSteps` | `visibleSteps.length` (variable based on garment selections) |

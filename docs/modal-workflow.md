@@ -104,7 +104,7 @@ The wizard reads this payload in its `@open-modal.window` handler and populates:
 **Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. Step 3 (Shirt Length & Fabric) is **conditional** — it only appears when at least one shirt-type garment is selected. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. All step numbers and the dot-indicator count adjust automatically.
 
 ---
 
@@ -114,7 +114,6 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
 | 2 | `garment-selection` | Garment Selection | Always |
-| 3 | `shirt-length-fabric` | Shirt Length & Fabric Type | Only if shirt type selected |
 | *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
@@ -124,9 +123,9 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 3 global + 3 per-garment-type selected + 4 closing global steps (+ 1 if shirt type) = variable.
+**Total steps:** 2 global + 3 per-garment-type selected + 4 closing global steps = variable.
 
-**Example:** User selects V-Neck + Baseball Cap (no shirt type = no shirt-length-fabric) → 2 + 6 + 4 = 12 steps.
+**Example:** User selects V-Neck + Baseball Cap → 2 + 6 + 4 = 12 steps.
 
 ---
 
@@ -167,25 +166,7 @@ A summary chip row at the bottom of the step shows all currently selected garmen
 
 ---
 
-#### Step 3 — Shirt Length & Fabric Type *(Conditional)*
-
-Only appears when `hasShirtType` is `true` (at least one of V-Neck, Crew Neck, Hoodie, Other Shirt Style is toggled on in Step 2).
-
-Two rows of selection buttons:
-
-**Row 1 — Sleeve Length** (mutually exclusive, button-toggle style):
-`Short Sleeve` | `Long Sleeve`
-
-**Row 2 — Fabric Weight** (mutually exclusive, button-toggle style):
-`Heavyweight` | `Lightweight`
-
-Selected state uses sunburst gold fill (`bg-sunburst`). Unselected uses white with linen border, with a sunburst border on hover.
-
-**Alpine state:** `sleeveType: ''`, `fabricWeight: ''`
-
----
-
-#### Step 4 — Color Selection
+#### Step 3 — Color Selection
 
 A smart text input with inline (non-absolute) autocomplete against a list of 30 common colors. Users can add multiple colors.
 
@@ -357,7 +338,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | Getter | Returns |
 |---|---|
 | `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
-| `visibleSteps` | Array of step name strings; always starts with `request-type`, `garment-selection`; includes `shirt-length-fabric` only when `hasShirtType`; then `print-method-{key}`, `color-{key}`, `quantity-{key}` per selected garment |
+| `visibleSteps` | Array of step name strings; always starts with `request-type`, `garment-selection`; then `print-method-{key}`, `color-{key}`, `quantity-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |
 | `totalSteps` | `visibleSteps.length` (variable based on garment selections) |

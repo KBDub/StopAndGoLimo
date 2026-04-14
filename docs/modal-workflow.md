@@ -169,19 +169,19 @@ When opened from the DTF dropzone flow, `dtfFileName` is pre-populated and `hasD
 
 **Heading:** "Select all applicable garment types"
 
-Each garment type is a toggle switch (full-row, label left / switch right).
+Each garment type is a toggle switch rendered inside a **3-column grid of bordered cards** (label left / switch right). See the Toggle Grid card pattern in `docs/branding-requirements.md → Form Controls → Toggle Switch → Toggle grid cards`.
 
 | Toggle Label | Alpine key |
 |---|---|
 | V-Neck | `garments.vNeck` |
 | Crew Neck | `garments.crewNeck` |
 | Hoodie | `garments.hoodie` |
-| Other Shirt Style | `garments.otherShirt` |
+| Other Shirt | `garments.otherShirt` |
 | Baseball Cap | `garments.baseballCap` |
 | Nap Sack | `garments.napSack` |
 | Other Item | `garments.otherItem` |
 
-A summary chip row at the bottom shows all currently selected garment types.
+Below the grid, when at least one garment is selected, a **SELECTED** section appears (separated by a full-width `border-t border-linen-dark` divider). It shows one chip per selected garment: `px-3 py-1.5 border border-linen-dark bg-white text-charcoal text-xs font-semibold`.
 
 ---
 
@@ -207,33 +207,35 @@ The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunbu
 
 #### Per-Garment Step — Print Method
 
-Two main radio options, each in its own bordered card row with the radio button on the left.
+Two main radio options. Both card headers use the **centered card radio** pattern: `flex items-center justify-center gap-3 p-4` on the card header div. See `docs/branding-requirements.md → Form Controls → Radio Group → card-style radio rows`.
 
 **Option 1 — Traditional Printing**
-- Main radio selects `printMethod = 'traditional'`
-- When selected, reveals sub-radio group: `HTV` | `Digital` | `Screenprint`
-- When not selected, the three options are listed as plain text for reference.
+- Card header: radio (centered left of label) + bold label + subtitle text `HTV · Digital · Screenprint` — all centered.
+- The subtitle is **always visible** regardless of selection state — it is informational only.
+- Selecting this option passes validation immediately. **No sub-radio buttons are shown** — do not add sub-type selection for Traditional.
+- `stepValid` returns `true` when `printMethods[key] === 'traditional'`.
 
 **Option 2 — Specialty Printing**
-- Main radio selects `printMethod = 'specialty'`
-- When selected, reveals a toggle list for each specialty type (toggle right, label left):
+- Card header: radio (centered) + bold label — same centered layout as Traditional.
+- When selected, the card expands to reveal 12 specialty types as a **3-column Radio Card Grid** (see `docs/branding-requirements.md → Form Controls → Radio Card Grid`). Label left, radio right. Single-select per garment key.
+- `stepValid` returns `true` when `specialtyTypeByGarment[key]` is set.
 
-| Toggle Label | Alpine key |
+| Specialty Option | `specialtyTypeByGarment[key]` value |
 |---|---|
-| Vinyl Shirts | `specialtyTypes.vinyl` |
-| Rhinestone Shirts | `specialtyTypes.rhinestone` |
-| Glitter Shirts | `specialtyTypes.glitter` |
-| Foil Shirts | `specialtyTypes.foil` |
-| Glow In The Dark | `specialtyTypes.glowDark` |
-| Flock Shirts | `specialtyTypes.flock` |
-| Reflective Shirts | `specialtyTypes.reflective` |
-| Holographic Shirts | `specialtyTypes.holographic` |
-| Brick Shirts | `specialtyTypes.brick` |
-| Pattern Shirts | `specialtyTypes.pattern` |
-| Embroidery Shirts | `specialtyTypes.embroidery` |
-| Picture Shirts | `specialtyTypes.picture` |
+| Vinyl Shirts | `vinyl` |
+| Rhinestone | `rhinestone` |
+| Glitter Shirts | `glitter` |
+| Foil Shirts | `foil` |
+| Glow In The Dark | `glowDark` |
+| Flock Shirts | `flock` |
+| Reflective Shirts | `reflective` |
+| Holographic | `holographic` |
+| Brick Shirts | `brick` |
+| Pattern Shirts | `pattern` |
+| Embroidery | `embroidery` |
+| Picture Shirts | `picture` |
 
-**Alpine state:** `printMethod: ''`, `traditionalType: ''`, `specialtyTypes: { vinyl, rhinestone, glitter, foil, glowDark, flock, reflective, holographic, brick, pattern, embroidery, picture }`
+**Alpine state:** `printMethods: {}` (per-garment key → `'traditional'` or `'specialty'`), `specialtyTypeByGarment: {}` (per-garment key → specialty option value)
 
 ---
 
@@ -330,16 +332,13 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | `dtfFileName` | string | `''` | Pre-filled filename from DTF dropzone flow |
 | `hasDtf` | bool\|null | `null` | Whether customer is providing a design file (Step 1a) |
 | `garments` | object | all `false` | Toggle state for each garment type |
-| `sleeveType` | string | `''` | `'short'` or `'long'` |
-| `fabricWeight` | string | `''` | `'heavyweight'` or `'lightweight'` |
 | `colorInput` | string | `''` | Live text in color search input |
 | `selectedColors` | array | `[]` | Array of color name strings |
 | `quantities` | object | `{}` | Flat map of `{garmentKey}-{genderKey}-{size}` → quantity |
 | `sizes` | array | 10 items | `['XS','S','M','L','XL','2XL','3XL','4XL','5XL','6XL']` |
 | `genders` | array | 4 items | `[{key,label}]` for Men's, Women's, Youth, Toddler |
-| `printMethod` | string | `''` | `'traditional'` or `'specialty'` |
-| `traditionalType` | string | `''` | `'htv'`, `'digital'`, or `'screenprint'` |
-| `specialtyTypes` | object | all `false` | Toggle state for each specialty print type |
+| `printMethods` | object | `{}` | Per-garment key → `'traditional'` or `'specialty'` |
+| `specialtyTypeByGarment` | object | `{}` | Per-garment key → selected specialty type string (single value) |
 | `completionDate` | string | `''` | ISO date string from date input |
 | `isRushDelivery` | bool\|null | `null` | Rush flag from Step 7 (if not already set in Step 1) |
 | `extraNotes` | string | `''` | Free-text notes |

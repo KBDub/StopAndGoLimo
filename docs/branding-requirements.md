@@ -808,14 +808,53 @@ Used for small sets of 2–3 labeled native radio inputs inside modals and wizar
 - Input size: `w-4 h-4 accent-sunburst` — never change the size or accent color.
 - Label text: `text-sm font-medium text-charcoal`.
 - Gap between options: `gap-6`; gap between radio and its label: `gap-2`.
-- For card-style radio rows (radio inside a bordered card header), the card's flex container must also use `justify-center`:
+- For card-style radio rows (radio inside a bordered card header), the card's flex container must also use `justify-center`. The radio sits to the left of centered text, which may include a subtitle line below the main label:
   ```html
   <div class="flex items-center justify-center gap-3 p-4">
-      <input type="radio" … class="w-4 h-4 flex-shrink-0 accent-sunburst">
-      <label …>Card Option Label</label>
+      <input type="radio" name="my-group"
+          :checked="myField === 'option-a'"
+          @change="myField = 'option-a'"
+          class="w-4 h-4 flex-shrink-0 accent-sunburst cursor-pointer">
+      <div class="text-center">
+          <label class="block text-sm font-bold text-charcoal cursor-pointer mb-0.5">Card Option Label</label>
+          <p class="text-xs text-charcoal-light">Sub-type A &nbsp;·&nbsp; Sub-type B &nbsp;·&nbsp; Sub-type C</p>
+      </div>
   </div>
   ```
+  The subtitle (`text-xs text-charcoal-light`) is **always visible** — it is purely informational and never conditional on selection state. Do not hide or show it based on the radio's checked state.
 - The group label/question heading above a radio group must also be `text-center`.
+
+#### Radio Card Grid (3-column, single-select from a large set)
+
+Used when a single choice must be made from a large set of options (12 or more). Options render in a `grid grid-cols-3 gap-2` of bordered cards, each with the label on the **left** and a native radio button on the **right**. Only one selection is active at a time per context key (e.g. per garment).
+
+**Selected state:** `border-sunburst bg-sunburst/5`
+**Unselected state:** `border-linen-dark bg-white hover:border-sunburst/40`
+
+```html
+<div class="grid grid-cols-3 gap-2">
+    <label
+        class="flex items-center justify-between gap-2 cursor-pointer px-3 py-3 border transition-colors duration-150"
+        :class="mySelection === 'option-a' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+    >
+        <span class="text-sm font-semibold text-charcoal leading-tight">Option A</span>
+        <input type="radio" name="my-group"
+            :checked="mySelection === 'option-a'"
+            @change="mySelection = 'option-a'"
+            class="w-4 h-4 accent-sunburst flex-shrink-0">
+    </label>
+    {{-- Repeat for each option --}}
+</div>
+```
+
+**Rules:**
+- Grid is always **3 columns** (`grid-cols-3`) — never 2 or 4.
+- Card border is `border` (not `border-2`).
+- Label is on the **left** (`text-sm font-semibold text-charcoal leading-tight`); radio is on the **right** (`flex-shrink-0`).
+- Use `justify-between` so label and radio are pushed to opposite ends of the card.
+- Use `accent-sunburst` on the native radio — do not build a custom circular indicator for this pattern.
+- Do **not** center the card contents — left/right layout is the standard for option grids.
+- Do **not** use this pattern for multi-select — use the Toggle Grid card pattern instead.
 
 #### Standard Text / Email / Tel / Date / Textarea Inputs
 

@@ -571,13 +571,13 @@
 
                     {{-- Traditional --}}
                     <div class="border border-linen-dark mb-3">
-                        <div class="flex items-center gap-3 p-4">
+                        <div class="flex items-center justify-center gap-3 p-4">
                             <input type="radio" name="crw-print-method"
                                 :id="'crw-pm-trad-' + currentGarmentKey"
                                 :checked="printMethods[currentGarmentKey] === 'traditional'"
                                 @change="printMethods = Object.assign({}, printMethods, { [currentGarmentKey]: 'traditional' })"
                                 class="w-4 h-4 flex-shrink-0 accent-sunburst cursor-pointer">
-                            <div>
+                            <div class="text-center">
                                 <label :for="'crw-pm-trad-' + currentGarmentKey" class="block text-sm font-bold text-charcoal cursor-pointer mb-0.5">Traditional Printing</label>
                                 <p class="text-xs text-charcoal-light">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
                             </div>
@@ -586,7 +586,7 @@
 
                     {{-- Specialty --}}
                     <div class="border border-linen-dark">
-                        <div class="flex items-center gap-3 p-4"
+                        <div class="flex items-center justify-center gap-3 p-4"
                             :class="printMethods[currentGarmentKey] === 'specialty' ? 'border-b border-linen-dark' : ''">
                             <input type="radio" name="crw-print-method"
                                 :id="'crw-pm-spec-' + currentGarmentKey"

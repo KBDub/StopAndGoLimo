@@ -24,6 +24,8 @@
         'parentSlug' => $parentSlug ?? null,
     ])
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner

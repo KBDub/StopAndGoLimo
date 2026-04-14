@@ -58,6 +58,8 @@
         quote="The owner Ezra was extremely knowledgeable and helpful. He gave great marketing ideas for my stickers. The quality of my product was top of the line. I would recommend Top 5 Percent to any business or organization that needs print services."
         name="Eric Murff"
     />
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner

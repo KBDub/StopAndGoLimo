@@ -84,6 +84,8 @@
         <p>No minimums on any promotional product — order exactly what you need. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to discuss your promotional product order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',                              'alt' => 'Custom branded promotional merchandise for events in Joliet Illinois'],

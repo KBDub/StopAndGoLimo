@@ -54,6 +54,8 @@
         <p>Our floor graphics are produced with full UV-resistant color printing so your message is vibrant and legible from every angle. We are a veteran owned shop in Joliet serving the full Will County area and beyond. Call us at (815) 349 8600 or stop by 121 Springfield Avenue to discuss your floor graphic project.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="business-signs" parentSlug="signs" />
 
     <x-sections.card-detailed-info

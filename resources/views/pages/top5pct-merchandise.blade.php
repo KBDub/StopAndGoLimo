@@ -43,6 +43,8 @@
         <p>All Top 5% merchandise is available in limited quantities. If you see something you want, grab it — we produce items in small batches to keep the collection exclusive. Visit us at 121 Springfield Avenue in Joliet or call (815) 349 8600 for current availability.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg', 'alt' => 'Premium rhinestone apparel from Top 5 Percent in Joliet Illinois'],

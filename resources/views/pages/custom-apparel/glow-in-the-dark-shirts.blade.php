@@ -54,6 +54,8 @@
         <p>We produce glow shirts with no minimum order quantities. You can order a single piece or a full group set depending on your needs. We are a veteran owned shop in Joliet serving the greater Will County area. Call us at (815) 349 8600 to discuss your glow shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

@@ -54,6 +54,8 @@
         <p>All of our table cover and runner products are portable and easy to store between events. They fold compactly and can be stored in a small bag or box, making them ideal for businesses and organizations that exhibit at multiple events throughout the year. Call us at (815) 349 8600 to discuss your table cloth or runner order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="table-runners" parentSlug="signs" />
 
     <x-sections.card-detailed-info

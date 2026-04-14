@@ -66,6 +66,8 @@
         <p>We are a veteran owned shop at 121 Springfield Avenue in Joliet. We work with contractors, tradespeople, fleet operators, and individual vehicle owners throughout the Chicagoland area. Call us at (815) 349 8600 to talk about your vehicle graphics project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg',            'alt' => 'Custom car magnets and truck magnets for businesses in Joliet Illinois'],

@@ -54,6 +54,8 @@
         <p>We serve teams, schools, businesses, and individuals throughout Joliet, Shorewood, Plainfield, Crest Hill, and the broader Will County area. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to discuss your dye sublimation project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

@@ -53,6 +53,8 @@
         <p>We have no minimums on custom towel orders and can accommodate both small personal orders and large commercial quantities. Design help is available for organizations that need assistance creating artwork that works well at full towel scale. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your custom towel project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="promotional-items" />
 
     <x-sections.card-detailed-info

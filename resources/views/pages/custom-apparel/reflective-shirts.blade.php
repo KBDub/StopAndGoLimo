@@ -54,6 +54,8 @@
         <p>We produce reflective shirts with no minimum order quantities. Whether you need a single shirt for personal use or a full production run for a commercial safety apparel program, we can accommodate your order. We are a veteran owned shop at 121 Springfield Avenue in Joliet, Illinois. Call us at (815) 349 8600 to discuss your reflective shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

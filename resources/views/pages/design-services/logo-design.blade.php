@@ -53,6 +53,8 @@
         <p>We are a veteran owned business serving Joliet, Shorewood, Crest Hill, Romeoville, Plainfield, New Lenox, and all of Will County. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started on your logo design today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.card-detailed-info
         heading="What Makes a Logo Great — and Why It Matters for Your Business"
         image1="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"

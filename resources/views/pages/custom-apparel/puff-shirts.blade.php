@@ -54,6 +54,8 @@
         <p>We are a veteran owned custom apparel shop located at 121 Springfield Avenue in Joliet, Illinois. We take pride in every shirt we produce and we want your puff print shirts to represent your brand at their best. Call us at (815) 349 8600 to get started.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

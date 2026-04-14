@@ -53,6 +53,8 @@
         <p>Custom mugs are also excellent additions to corporate gift sets, holiday gift packages, new employee welcome kits, and branded merchandise bundles. We can produce mugs alongside other branded promotional items — coasters, tote bags, apparel, and more — so your entire gift set has a consistent look. Call us at (815) 349 8600 to discuss your custom mug project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="promotional-items" />
 
     <x-sections.card-detailed-info

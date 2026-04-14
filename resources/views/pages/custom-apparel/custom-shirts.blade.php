@@ -70,6 +70,8 @@
         quote="Excellence and Professionalism! Top 5 Percent, LLC job well done! We celebrated our family reunion and ordered over 150 t-shirts for toddlers to adults. Ezra remained in communication throughout and delivered everything on time. We were so very appreciative."
         name="Chamille Doss"
     />
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner

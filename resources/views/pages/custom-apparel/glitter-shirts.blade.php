@@ -54,6 +54,8 @@
         <p>We have no minimum order quantities on glitter shirts. Same-day production is available for many glitter orders placed before noon. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will County area. Call us at (815) 349 8600 or stop by to discuss your glitter shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

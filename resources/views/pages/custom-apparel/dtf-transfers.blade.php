@@ -58,6 +58,8 @@
         <p>We serve businesses, organizations, and individuals throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will County with fast, high-quality DTF transfer printing. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your DTF transfer order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="dtf-transfers" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

@@ -54,6 +54,8 @@
         <p>We also embroider on bags, towels, blankets, and other accessories beyond standard apparel. If you have a specific embroidery project in mind and you are not sure if it is possible, call us and describe what you need — we will let you know what is achievable. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your embroidery order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

@@ -54,6 +54,8 @@
         <p>We have no minimum order quantities on rhinestone shirts, which means you can order a single statement piece or matching shirts for an entire group. We are a veteran owned shop serving Joliet, Shorewood, Plainfield, and all of Will County. Call us at (815) 349 8600 to discuss your rhinestone shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

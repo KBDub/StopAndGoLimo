@@ -53,6 +53,8 @@
         <p>We also produce non-woven polypropylene bags, which are an economical option for large-quantity event giveaways and trade show distributions where you need a large number of branded bags at a lower per-unit cost. Contact us to discuss which bag type and printing method makes the most sense for your specific application and budget. Call us at (815) 349 8600 to get started.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="promotional-items" />
 
     <x-sections.card-detailed-info

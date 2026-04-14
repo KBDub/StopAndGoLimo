@@ -53,6 +53,8 @@
         <p>Most orders are ready within two to five business days depending on the product and quantity. We offer local pickup at 121 Springfield Avenue in Joliet for customers in the area, as well as shipping for customers throughout Will County and beyond. Call us at (815) 349 8600 to discuss your design needs or to get assistance using the online tool.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.card-detailed-info
         heading="How Our Online Design Tool Makes Custom Printing Accessible to Everyone"
         image1="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"

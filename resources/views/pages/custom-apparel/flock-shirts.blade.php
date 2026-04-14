@@ -54,6 +54,8 @@
         <p>We work with flock vinyl in black, white, red, navy, royal blue, green, and other standard colors. Specialty flock finishes including metallic flock are also available for designs that call for an additional level of visual distinction. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your flock shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.cta-tripple-button-banner />
+
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info

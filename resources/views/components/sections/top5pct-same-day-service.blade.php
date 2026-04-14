@@ -94,7 +94,7 @@
                 </p>
 
                 <div class="text-center">
-                    <x-ui.button-gold-gradient href="/contact">
+                    <x-ui.button-gold-gradient onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
                         Schedule Same Day Service
                     </x-ui.button-gold-gradient>
                 </div>

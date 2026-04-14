@@ -46,13 +46,15 @@
 
         /* ── Step 3: Garment Selection ────────────────────── */
         garments: {
-            vNeck:      false,
-            crewNeck:   false,
-            hoodie:     false,
-            otherShirt: false,
+            poloLong:   false,
+            poloShort:  false,
+            tankTop:    false,
+            beanie:     false,
+            scoopNeck:  false,
             baseballCap:false,
-            napSack:    false,
-            otherItem:  false
+            sweatshirt: false,
+            hoodie:     false,
+            zipHoodie:  false
         },
 
         /* ── Per-Garment: Print Method ────────────────────── */
@@ -127,17 +129,21 @@
 
         /* ── Computed ─────────────────────────────────────── */
         get hasShirtType() {
-            return this.garments.vNeck || this.garments.crewNeck || this.garments.hoodie || this.garments.otherShirt;
+            return this.garments.poloLong || this.garments.poloShort || this.garments.tankTop ||
+                   this.garments.beanie   || this.garments.scoopNeck || this.garments.baseballCap ||
+                   this.garments.sweatshirt || this.garments.hoodie  || this.garments.zipHoodie;
         },
         get selectedGarmentTypes() {
             return [
-                { key:'vNeck',      label:'V-Neck'       },
-                { key:'crewNeck',   label:'Crew Neck'    },
-                { key:'hoodie',     label:'Hoodie'       },
-                { key:'otherShirt', label:'Other Shirt'  },
-                { key:'baseballCap',label:'Baseball Cap' },
-                { key:'napSack',    label:'Nap Sack'     },
-                { key:'otherItem',  label:'Other Item'   }
+                { key:'poloLong',   label:'Polo (Long Sleeve)'  },
+                { key:'poloShort',  label:'Polo (Short Sleeve)' },
+                { key:'tankTop',    label:'Tank Tops'           },
+                { key:'beanie',     label:'Beanies'             },
+                { key:'scoopNeck',  label:'Scoop Neck'          },
+                { key:'baseballCap',label:'Baseball Caps'       },
+                { key:'sweatshirt', label:'Sweatshirts'         },
+                { key:'hoodie',     label:'Hoodies'             },
+                { key:'zipHoodie',  label:'Zip-Up Hoodies'      }
             ].filter(g => this.garments[g.key]);
         },
         get visibleSteps() {
@@ -522,13 +528,15 @@
                     <p class="text-xs text-charcoal-light mb-4">Select all applicable garment types. <span class="text-error font-semibold">At least one required.</span></p>
                     @php
                         $garmentList = [
-                            ['key' => 'vNeck',       'label' => 'V-Neck'],
-                            ['key' => 'crewNeck',     'label' => 'Crew Neck'],
-                            ['key' => 'hoodie',       'label' => 'Hoodie'],
-                            ['key' => 'otherShirt',   'label' => 'Other Shirt'],
-                            ['key' => 'baseballCap',  'label' => 'Baseball Cap'],
-                            ['key' => 'napSack',      'label' => 'Nap Sack'],
-                            ['key' => 'otherItem',    'label' => 'Other Item'],
+                            ['key' => 'poloLong',   'label' => 'Polo (Long Sleeve)'],
+                            ['key' => 'poloShort',  'label' => 'Polo (Short Sleeve)'],
+                            ['key' => 'tankTop',    'label' => 'Tank Tops'],
+                            ['key' => 'beanie',     'label' => 'Beanies'],
+                            ['key' => 'scoopNeck',  'label' => 'Scoop Neck'],
+                            ['key' => 'baseballCap','label' => 'Baseball Caps'],
+                            ['key' => 'sweatshirt', 'label' => 'Sweatshirts'],
+                            ['key' => 'hoodie',     'label' => 'Hoodies'],
+                            ['key' => 'zipHoodie',  'label' => 'Zip-Up Hoodies'],
                         ];
                     @endphp
                     <div class="grid grid-cols-3 gap-2">

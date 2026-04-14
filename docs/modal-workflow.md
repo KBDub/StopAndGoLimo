@@ -173,13 +173,15 @@ Each garment type is a toggle switch rendered inside a **3-column grid of border
 
 | Toggle Label | Alpine key |
 |---|---|
-| V-Neck | `garments.vNeck` |
-| Crew Neck | `garments.crewNeck` |
-| Hoodie | `garments.hoodie` |
-| Other Shirt | `garments.otherShirt` |
-| Baseball Cap | `garments.baseballCap` |
-| Nap Sack | `garments.napSack` |
-| Other Item | `garments.otherItem` |
+| Polo (Long Sleeve) | `garments.poloLong` |
+| Polo (Short Sleeve) | `garments.poloShort` |
+| Tank Tops | `garments.tankTop` |
+| Beanies | `garments.beanie` |
+| Scoop Neck | `garments.scoopNeck` |
+| Baseball Caps | `garments.baseballCap` |
+| Sweatshirts | `garments.sweatshirt` |
+| Hoodies | `garments.hoodie` |
+| Zip-Up Hoodies | `garments.zipHoodie` |
 
 Below the grid, when at least one garment is selected, a **SELECTED** section appears (separated by a full-width `border-t border-linen-dark` divider). It shows one chip per selected garment: `px-3 py-1.5 border border-linen-dark bg-white text-charcoal text-xs font-semibold`.
 
@@ -355,7 +357,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 
 | Getter | Returns |
 |---|---|
-| `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
+| `hasShirtType` | `true` if any garment is toggled on |
 | `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`, `quantity`; then `print-method-{key}`, `color-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |

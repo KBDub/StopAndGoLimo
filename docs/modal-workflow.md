@@ -12,33 +12,99 @@
 
 The Custom Request Workflow is a multi-step guided wizard that collects everything needed to place a custom apparel or product order. It is triggered from inside the `x-ui.contact-modal` FAB via a toggle, and is implemented as a dedicated `x-ui.custom-request-wizard` component that should be included once per page alongside the contact modal.
 
-**Entry point:** `x-ui.contact-modal` → "Have a Custom Request?" toggle row  
-**Wizard component:** `x-ui.custom-request-wizard`  
+**Entry points:**
+- `x-ui.contact-modal` → "Do You Have a Custom Request or DTF Upload?" toggle row (regular flow)
+- Any DTF drop zone component (`x-ui.dtf-dropzone`, `x-ui.banner-cta-dtf-dropzone`) → dispatches `open-contact-modal` with `{ dtf: true, fileName }` → contact modal → wizard (DTF flow)
+
+**Wizard component:** `x-ui.custom-request-wizard`
 **Demo page:** `resources/views/pages/demo/modals.blade.php`
 
 **Data persistence:** Cookie + database table on submit (Phase 2 — not yet implemented). The wizard component collects and holds all state in Alpine.js until submission.
 
 ---
 
+### Trigger Flows
+
+#### Regular Flow
+
+1. User opens the contact modal (FAB or any `open-contact-modal` event).
+2. User fills in **First Name, Last Name, Phone, and Email** — these four fields are the `contactReady` gate.
+3. Once `contactReady` is `true`, the "Do You Have a Custom Request or DTF Upload?" toggle becomes active.
+4. User clicks the toggle ON → the contact modal closes immediately and the wizard opens at Step 1, with name/email/phone pre-filled.
+5. The toggle click handler calls `launchWizard()` only when it transitions to `true`.
+
+#### DTF Dropzone Flow
+
+1. User drops or selects a file on any DTF drop zone component.
+2. The drop zone dispatches `open-contact-modal` with `{ dtf: true, fileName: 'filename.ext' }`.
+3. The contact modal opens with:
+   - `dtfFileName` set to the dropped file name.
+   - `customRequest` pre-set to `true` (toggle ON, locked — cannot be toggled off while a DTF file is attached).
+   - A gold info bar below the toggle showing the attached filename.
+4. The toggle is **disabled** (user cannot interact with it) until `contactReady` is true — same gate as the regular flow.
+5. Once the user fills in all four contact fields, `contactReady` becomes `true`. An Alpine `$watch` on `contactReady` fires and calls `launchWizard()` automatically.
+6. The wizard opens with name/email/phone/dtfFileName pre-filled and `hasDtf` pre-answered as `true`.
+
+#### Submit Button Split
+
+The contact modal submit row shows one of two buttons at all times:
+
+| Condition | Button shown |
+|---|---|
+| `customRequest` is OFF | Gold "Send Message" button (normal contact form submit) |
+| `customRequest` is ON | Charcoal "Continue to Custom Request Wizard →" button (disabled until `contactReady`; clicking it also calls `launchWizard()`) |
+
+The "Continue to Wizard" button serves as a visible fallback CTA for users who enable the toggle but haven't yet triggered auto-launch (e.g. toggled manually before all fields are filled).
+
+---
+
 ### Contact Modal — Toggle Row
 
-A toggle row is added to `x-ui.contact-modal` on its own row, placed below the "What can we help you with?" field and above the submit button.
+- **Label:** "Do You Have a Custom Request or DTF Upload?"
+- **Sub-labels:**
+  - While `!contactReady`: "Complete your contact info above to enable"
+  - While `contactReady && !customRequest`: "Use our guided custom order wizard"
+  - While `contactReady && customRequest`: "Ready — click 'Continue to Wizard' below"
+- **Toggle behavior:**
+  - Disabled (`:disabled="!contactReady || !!dtfFileName"`) until contact info is complete.
+  - In the **regular flow**: clicking it toggles `customRequest`; if it becomes `true`, calls `launchWizard()` immediately.
+  - In the **DTF flow**: toggle is pre-set to `true` and locked (non-interactive). `launchWizard()` is triggered automatically via `$watch` when `contactReady` becomes `true`.
+- **DTF file indicator:** Gold-tinted box shown below the toggle row when `dtfFileName` is set, displaying the attached filename.
+- **Alpine state added to contact-modal:** `customRequest: false`, `dtfFileName: ''`, `launchWizard()` method, `init()` lifecycle hook with `$watch('contactReady', ...)`.
 
-- **Label:** "Have a Custom Request?"  
-- **Sub-label:** "Use our guided custom order wizard"  
-- **Behavior:** When toggled **ON**, the contact modal closes immediately and the `open-modal` window event is dispatched with `{ name: 'custom-request-wizard' }`, opening the wizard at Step 1.  
-- **Alpine state added to contact-modal:** `customRequest: false`, `launchWizard()` method.
+---
+
+### `launchWizard()` — Prefill Payload
+
+When the wizard is opened from the contact modal, a prefill payload is dispatched via the `open-modal` event:
+
+```js
+{
+  name: 'custom-request-wizard',
+  prefill: {
+    name:        contactName,   // firstName + lastName combined
+    email:       cmEmail,
+    phone:       cmPhone,
+    dtfFileName: dtfFileName    // empty string '' when not a DTF flow
+  }
+}
+```
+
+The wizard reads this payload in its `@open-modal.window` handler and populates:
+- `contactName`, `contactEmail`, `contactPhone`
+- `dtfFileName` — pre-fills the DTF step notice
+- `hasDtf` — set to `true` automatically when `dtfFileName` is non-empty
 
 ---
 
 ### Wizard Component — `x-ui.custom-request-wizard`
 
-**File:** `resources/views/components/ui/custom-request-wizard.blade.php`  
-**Size:** `xl` (58rem wide) to accommodate the quantity matrix  
-**Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }))`  
+**File:** `resources/views/components/ui/custom-request-wizard.blade.php`
+**Size:** `xl` (58rem wide) to accommodate the quantity matrix
+**Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. Step 3 (Shirt Length & Fabric) is **conditional** — it only appears when at least one shirt-type garment is selected in Step 2. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array. Step 1a (DTF File Upload) is always present. Step 3 (Shirt Length & Fabric) is **conditional** — it only appears when at least one shirt-type garment is selected in Step 2. All step numbers and the dot-indicator count adjust automatically.
 
 ---
 
@@ -47,6 +113,7 @@ The wizard uses a dynamic `visibleSteps` computed array. Step 3 (Shirt Length & 
 | Step | Name (internal) | Title | Conditional |
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
+| 1a | `dtf-upload` | DTF File Upload | Always |
 | 2 | `garment-selection` | Garment Selection | Always |
 | 3 | `shirt-length-fabric` | Shirt Length & Fabric Type | Only if shirt type selected |
 | 4 (or 3) | `color-selection` | Color Selection | Always |
@@ -57,7 +124,7 @@ The wizard uses a dynamic `visibleSteps` computed array. Step 3 (Shirt Length & 
 | 9 (or 8) | `shipping-address` | Shipping Address | Always |
 | 10 (or 9) | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 10 with shirt type selected, 9 without.
+**Total steps:** 11 with shirt type selected, 10 without.
 
 ---
 
@@ -75,6 +142,25 @@ The wizard uses a dynamic `visibleSteps` computed array. Step 3 (Shirt Length & 
   - If `Yes`, `isRush` is set to `true`. This value persists and affects later steps (Step 7 and Step 10).
 
 **Alpine state:** `requestType: ''`, `companyName: ''`, `isRush: null`
+
+---
+
+#### Step 1a — DTF File Upload
+
+**Always present.** Asks whether the customer is providing a design file.
+
+**Content:**
+- If `dtfFileName` is set (pre-filled from DTF dropzone flow), a gold notice box shows the filename.
+- A Yes/No radio group: "Will you be providing a design file?"
+  - **Yes** — "I have a file ready (or will email / upload separately)"
+  - **No** — "I do not have a file; I need design help or have no artwork"
+- A small note listing accepted formats: PDF, AI, EPS, PNG, JPG, SVG, PSD (max 50 MB), and where to send files.
+
+**Step valid when:** `hasDtf !== null`
+
+**Alpine state:** `dtfFileName: ''`, `hasDtf: null`
+
+When opened from the DTF dropzone flow, `dtfFileName` is pre-populated and `hasDtf` is pre-set to `true`.
 
 ---
 
@@ -104,10 +190,10 @@ Only appears when `hasShirtType` is `true` (at least one of V-Neck, Crew Neck, H
 
 Two rows of selection buttons:
 
-**Row 1 — Sleeve Length** (mutually exclusive, button-toggle style):  
+**Row 1 — Sleeve Length** (mutually exclusive, button-toggle style):
 `Short Sleeve` | `Long Sleeve`
 
-**Row 2 — Fabric Weight** (mutually exclusive, button-toggle style):  
+**Row 2 — Fabric Weight** (mutually exclusive, button-toggle style):
 `Heavyweight` | `Lightweight`
 
 Selected state uses sunburst gold fill (`bg-sunburst`). Unselected uses white with linen border, with a sunburst border on hover.
@@ -127,7 +213,7 @@ A smart text input with inline (non-absolute) autocomplete against a list of 30 
 - Clicking a suggestion adds it and clears the input.
 - Each selected color becomes a **chip** (charcoal background, white text) with an × remove button.
 
-**Color suggestion list (30 colors):**  
+**Color suggestion list (30 colors):**
 White, Black, Navy Blue, Red, Royal Blue, Forest Green, Charcoal Gray, Light Gray, Sky Blue, Yellow, Orange, Purple, Maroon, Pink, Hot Pink, Kelly Green, Burgundy, Lime Green, Gold, Silver, Tan, Brown, Heather Gray, Sport Gray, Safety Green, Safety Orange, Teal, Coral, Lavender, Olive Green
 
 **Alpine state:** `colorInput: ''`, `selectedColors: []`, `colorSuggestions: [...]`
@@ -145,11 +231,11 @@ A matrix input grid organized by garment type. Only garment types selected in St
 
 The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunburst`) to handle narrow viewports.
 
-**Order Summary** — below all tables, a chip row shows every non-zero entry in the format:  
+**Order Summary** — below all tables, a chip row shows every non-zero entry in the format:
 `{qty} {Gender} {Size} {GarmentLabel}s` — e.g. `13 Men's 3XL V-Necks`
 
-**Alpine state:** `quantities: {}` (flat object, keys formatted as `{garmentKey}-{genderKey}-{size}`)  
-**Alpine methods:** `getQty(garment, gender, size)`, `setQty(garment, gender, size, val)`  
+**Alpine state:** `quantities: {}` (flat object, keys formatted as `{garmentKey}-{genderKey}-{size}`)
+**Alpine methods:** `getQty(garment, gender, size)`, `setQty(garment, gender, size, val)`
 **Computed:** `quantitySummary` (array of human-readable strings), `selectedGarmentTypes` (filtered array)
 
 ---
@@ -158,12 +244,12 @@ The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunbu
 
 Two main radio options, each in its own bordered card row with the radio button on the left.
 
-**Option 1 — Traditional Printing**  
+**Option 1 — Traditional Printing**
 - Main radio selects `printMethod = 'traditional'`
 - When selected, reveals sub-radio group: `HTV` | `Digital` | `Screenprint`
 - When not selected, the three options are listed as plain text for reference.
 
-**Option 2 — Specialty Printing**  
+**Option 2 — Specialty Printing**
 - Main radio selects `printMethod = 'specialty'`
 - When selected, reveals a toggle list for each specialty type (toggle right, label left):
 
@@ -195,7 +281,7 @@ Two main radio options, each in its own bordered card row with the radio button 
 
 The date input's border and ring turn sunburst when `rushActive` is true (`isRush === true OR isRushDelivery === true`). A small inline `RUSH` badge also appears next to the label.
 
-**Alpine state:** `completionDate: ''`, `isRushDelivery: null`  
+**Alpine state:** `completionDate: ''`, `isRushDelivery: null`
 **Computed:** `rushActive` — `true` if either `isRush` or `isRushDelivery` is `true`
 
 ---
@@ -236,8 +322,10 @@ A read-only summary of all collected data, displayed as a two-column key/value g
 | Quantities | Chips in `{qty} {Gender} {Size} {Garment}s` format |
 | Print Method | Traditional type or Specialty, as applicable |
 | Date Needed | Completion date with inline `RUSH` badge if rush active |
-| Ship To | Company name (if applicable), full name, address |
+| Contact | Full name, email, phone |
+| Ship To | Company name (if applicable), address lines, city/state/zip |
 | Notes | Extra notes (truncated at 3 lines if long) |
+| DTF File | Filename if pre-filled; "Yes — will provide separately" if hasDtf but no filename; "No file / needs design help" if hasDtf is false |
 
 **Rush banner:** A full-width sunburst gold bar at the top of the step when `rushActive` is true.
 
@@ -256,6 +344,8 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | `requestType` | string | `''` | `'company'` or `'personal'` |
 | `companyName` | string | `''` | Company name (Step 1, reused in Step 9) |
 | `isRush` | bool\|null | `null` | Rush flag from Step 1 |
+| `dtfFileName` | string | `''` | Pre-filled filename from DTF dropzone flow |
+| `hasDtf` | bool\|null | `null` | Whether customer is providing a design file (Step 1a) |
 | `garments` | object | all `false` | Toggle state for each garment type |
 | `sleeveType` | string | `''` | `'short'` or `'long'` |
 | `fabricWeight` | string | `''` | `'heavyweight'` or `'lightweight'` |
@@ -270,8 +360,9 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | `completionDate` | string | `''` | ISO date string from date input |
 | `isRushDelivery` | bool\|null | `null` | Rush flag from Step 7 (if not already set in Step 1) |
 | `extraNotes` | string | `''` | Free-text notes |
-| `firstName` | string | `''` | Shipping first name |
-| `lastName` | string | `''` | Shipping last name |
+| `contactName` | string | `''` | Pre-filled from contact modal |
+| `contactEmail` | string | `''` | Pre-filled from contact modal |
+| `contactPhone` | string | `''` | Pre-filled from contact modal |
 | `address1` | string | `''` | Shipping address line 1 |
 | `address2` | string | `''` | Shipping address line 2 |
 | `city` | string | `''` | Shipping city |
@@ -283,14 +374,15 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | Getter | Returns |
 |---|---|
 | `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
-| `visibleSteps` | Array of step name strings; includes `shirt-length-fabric` only when `hasShirtType` |
+| `visibleSteps` | Array of step name strings; always includes `dtf-upload`; includes `shirt-length-fabric` only when `hasShirtType` |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |
-| `totalSteps` | `visibleSteps.length` (9 or 10) |
+| `totalSteps` | `visibleSteps.length` (10 or 11) |
 | `selectedGarmentTypes` | Filtered array of `{key, label}` objects for selected garments |
 | `filteredColors` | Color suggestions filtered by `colorInput`, excluding already-selected |
 | `quantitySummary` | Array of readable strings like "13 Men's 3XL V-Necks" |
 | `rushActive` | `true` if `isRush === true` or `isRushDelivery === true` |
+| `stepValid` | Validates the current step before allowing Next |
 
 ---
 
@@ -298,7 +390,8 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 
 | Event | Direction | Payload | Description |
 |---|---|---|---|
-| `open-modal` | dispatch → wizard | `{ name: 'custom-request-wizard' }` | Opens wizard at step 1 |
+| `open-contact-modal` | dispatch → contact modal | `{}` or `{ dtf: true, fileName: 'name.ext' }` | Opens contact modal; DTF payload pre-enables toggle and stores filename |
+| `open-modal` | contact modal → wizard | `{ name: 'custom-request-wizard', prefill: { name, email, phone, dtfFileName } }` | Opens wizard at step 1 with pre-filled contact info |
 | `close-modal` | dispatch → wizard | `{ name: 'custom-request-wizard' }` | Closes and resets wizard |
 | `modal-closed` | wizard fires → window | `{ name: 'custom-request-wizard' }` | Fired after wizard closes |
 | `wizard-done` | wizard fires → window | `{ name: 'custom-request-wizard' }` | Fired when Submit is clicked |
@@ -340,7 +433,7 @@ The table schema and endpoint are deferred to Phase 2. The wizard component shou
 
 ## Modal Inventory — Demo Page vs. Built Componentry
 
-> **Source:** `resources/views/pages/demo/modals.blade.php`  
+> **Source:** `resources/views/pages/demo/modals.blade.php`
 > **Purpose:** Complete catalog of every modal instance on the demo page, the props/slots used, and its status against the built component system. Use this section as a quick-reference when adding new modals or verifying component coverage.
 
 ---
@@ -440,7 +533,7 @@ Demonstrates the simpler `x-ui.modal-wizard` component — distinct from the ful
 | `demo-wizard-onboard` | `Done` | *(none — no cancel link)* | "Welcome! Quick Setup" / "Choose Your Preference" / "You're All Set!" | Step 2 contains an inline card-style radio group with Alpine `x-data="{ contact: 'phone' }"`. Step 3 is a success confirmation with green icon. | ✅ |
 | `demo-wizard-cancel` | `Submit` | `Cancel` | "Before You Continue" / "Confirm Your Details" / "Submission Complete" | Cancel link only appears on step 1. Steps 2+ hide it — user can only go Back or Finish. Step 2 has name + email inputs. Step 3 is a confirmation. | ✅ |
 
-**`x-ui.modal-wizard` vs `x-ui.custom-request-wizard`:**  
+**`x-ui.modal-wizard` vs `x-ui.custom-request-wizard`:**
 `x-ui.modal-wizard` is a lightweight 3-step shell — slots, static titles, no internal conditional logic. `x-ui.custom-request-wizard` is the full 10-step order wizard with dynamic `visibleSteps`, full Alpine state, and all production business logic. They are separate components serving different purposes.
 
 ---
@@ -464,85 +557,12 @@ Two modals demonstrating branded inline custom dropdowns (no native `<select>` h
 
 ---
 
-### Section 10 — Form Controls
+### Section 10 — DTF Drop Zones
 
-Two modals demonstrating branded form control patterns — radio card groups and toggle switch rows.
+Three drop zone variants demonstrating `x-ui.dtf-dropzone` and `x-ui.banner-cta-dtf-dropzone`. All variants dispatch `open-contact-modal` with a DTF payload on file drop or file-input selection.
 
-| Modal name | Title | Size | `$icon` | Body content | Footer | Status |
-|---|---|---|---|---|---|---|
-| `demo-radio` | Select a Turnaround | `sm` | Clock icon | Alpine `x-data="{ selected: null }"`. Three card-style radio labels side-by-side: Standard (5–7 days) / Rush (2–3 days) / Same Day (order by 10 a.m.). Selected card gets `border-sunburst bg-sunburst/10`. Radio dot: `rounded-full` border with inner `rounded-full` fill — the only `rounded-full` permitted in modals. | `x-ui.button-modal-cancel` + `x-ui.button-modal-primary` (Confirm Selection) | ✅ |
-| `demo-toggles` | Order Options | `sm` | Coffee-cup icon | Alpine `x-data="{ rush: false, proof: true, digital: false }"`. Three full-row toggle switches in a `divide-y` list: Rush Processing (+$15) / Proof Approval (default on) / Digital Files Included. Toggle track: `rounded-full`, `bg-sunburst` (on) / `bg-linen-dark` (off). Thumb: `rounded-full bg-white`. | `x-ui.button-modal-cancel` + `x-ui.button-modal-primary` (Save Options) | ✅ |
-
----
-
-### Section 11 — Custom Request Wizard
-
-Live demo of `x-ui.custom-request-wizard` opened directly via `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard' } }))`.
-
-| Component | Opens via | Step count | Status |
+| Component | Prop | Description | Status |
 |---|---|---|---|
-| `x-ui.custom-request-wizard` | Button dispatching `open-modal` event, or contact-modal toggle | 9 or 10 (conditional Step 3) | ✅ |
-
-Step card grid on the demo page summarises all 10 steps with their labels and notes. Full step documentation is in the **Wizard Component** section above.
-
----
-
-### Full Modal Inventory Summary
-
-| # | Modal / Component | Component used | Section |
-|---|---|---|---|
-| 1 | `demo-default` | `x-ui.modal` variant=default | Variants |
-| 2 | `demo-dark` | `x-ui.modal` variant=dark | Variants |
-| 3 | `demo-gold` | `x-ui.modal` variant=gold | Variants |
-| 4 | `demo-success` | `x-ui.modal` variant=success + $icon | Variants |
-| 5 | `demo-warning` | `x-ui.modal` variant=warning + $icon | Variants |
-| 6 | `demo-danger` | `x-ui.modal` variant=danger + $icon | Variants |
-| 7 | `demo-size-sm` | `x-ui.modal` size=sm | Sizes |
-| 8 | `demo-size-md` | `x-ui.modal` size=md | Sizes |
-| 9 | `demo-size-lg` | `x-ui.modal` size=lg | Sizes |
-| 10 | `demo-size-xl` | `x-ui.modal` size=xl | Sizes |
-| 11 | `demo-size-full` | `x-ui.modal` size=full | Sizes |
-| 12 | `demo-dismiss-yes` | `x-ui.modal` :dismissible=true | Dismissible Control |
-| 13 | `demo-dismiss-no` | `x-ui.modal` :dismissible=false | Dismissible Control |
-| 14 | `demo-icon-slot` | `x-ui.modal` + $icon slot | Slot Patterns |
-| 15 | `demo-header-override` | `x-ui.modal` + $header slot | Slot Patterns |
-| 16 | `demo-rich-footer` | `x-ui.modal` + $footer slot | Slot Patterns |
-| 17 | `demo-title-slot` | `x-ui.modal` + $title slot | Slot Patterns |
-| 18 | `demo-trigger-types` | `x-ui.modal` + all `x-ui.modal-trigger` as= variants | Trigger Types |
-| 19 | `demo-promo` | `x-ui.modal` + $header override (Promotional Alert) | Use-Case Patterns |
-| 20 | `demo-long-form` | `x-ui.modal` size=lg, multi-field form body | Use-Case Patterns |
-| 21 | `demo-terms` | `x-ui.modal` size=lg, :dismissible=false, maxHeight | Use-Case Patterns |
-| 22 | `demo-wizard-onboard` | `x-ui.modal-wizard` 3-step, no cancel | Workflow Wizard |
-| 23 | `demo-wizard-cancel` | `x-ui.modal-wizard` 3-step, cancelLabel | Workflow Wizard |
-| 24 | `demo-dropdown-single` | `x-ui.modal` size=sm, inline Alpine dropdown | Dropdown Selection |
-| 25 | `demo-dropdown-grouped` | `x-ui.modal` size=md, maxWidth, inline dropdowns | Dropdown Selection |
-| 26 | `demo-radio` | `x-ui.modal` size=sm, card-style radio group | Form Controls |
-| 27 | `demo-toggles` | `x-ui.modal` size=sm, toggle switch rows | Form Controls |
-| 28 | `x-ui.contact-modal` | `x-ui.contact-modal` (FAB) | Contact FAB |
-| 29 | `x-ui.custom-request-wizard` | `x-ui.custom-request-wizard` (10-step wizard) | Custom Request Wizard |
-
-**Total: 29 modal instances / components across 10 demo sections.**  
-**All 29 are backed by built componentry — no gaps.**
-
----
-
-### Component Coverage Map
-
-All modal system components are fully built. No gaps.
-
-| Component | Built | File | Demo instances | Production use |
-|---|---|---|---|---|
-| `x-ui.modal` | ✅ | `ui/modal.blade.php` | 27 (modals 1–27) | Core — any inline modal |
-| `x-ui.modal-default` | ✅ | `ui/modal-default.blade.php` | via modal 1 | Shorthand for `variant="default"` |
-| `x-ui.modal-dark` | ✅ | `ui/modal-dark.blade.php` | via modal 2 | Shorthand for `variant="dark"` |
-| `x-ui.modal-gold` | ✅ | `ui/modal-gold.blade.php` | via modal 3 | Shorthand for `variant="gold"` |
-| `x-ui.modal-success` | ✅ | `ui/modal-success.blade.php` | via modal 4 | Shorthand for `variant="success"` |
-| `x-ui.modal-warning` | ✅ | `ui/modal-warning.blade.php` | via modal 5 | Shorthand for `variant="warning"` |
-| `x-ui.modal-danger` | ✅ | `ui/modal-danger.blade.php` | via modal 6 | Shorthand for `variant="danger"` |
-| `x-ui.modal-trigger` | ✅ | `ui/modal-trigger.blade.php` | Throughout | Open/close triggers |
-| `x-ui.button-modal-primary` | ✅ | `ui/button-modal-primary.blade.php` | Throughout | Primary CTA in footer |
-| `x-ui.button-modal-cancel` | ✅ | `ui/button-modal-cancel.blade.php` | Throughout | Cancel/dismiss in footer |
-| `x-ui.modal-wizard` | ✅ | `ui/modal-wizard.blade.php` | 2 (modals 22–23) | Lightweight 3-step flows |
-| `x-ui.contact-modal` | ✅ | `ui/contact-modal.blade.php` | 1 (modal 28) | Global FAB, all pages |
-| `x-ui.custom-request-wizard` | ✅ | `ui/custom-request-wizard.blade.php` | 1 (modal 29) | 10-step custom order intake |
-| `x-ui.modal-quick-view` | ✅ | `ui/modal-quick-view.blade.php` | — (product pages) | Product quick-view overlay |
+| `x-ui.dtf-dropzone` | *(none — medium default)* | Standard medium drop zone | ✅ |
+| `x-ui.banner-cta-dtf-dropzone` | `position="left"` | Full-width banner, text on left | ✅ |
+| `x-ui.banner-cta-dtf-dropzone` | `position="right"` | Full-width banner, text on right | ✅ |

@@ -51,6 +51,14 @@
             return this.contactReady && this.contactMessage.trim().length > 0;
         },
 
+        init() {
+            this.$watch('contactReady', (ready) => {
+                if (ready && this.customRequest) {
+                    this.launchWizard();
+                }
+            });
+        },
+
         openModal()  {
             this.open = true;
             this.customRequest = false;
@@ -312,7 +320,7 @@
                             role="switch"
                             :aria-checked="customRequest.toString()"
                             :disabled="!contactReady || !!dtfFileName"
-                            @click="if (contactReady && !dtfFileName) { customRequest = !customRequest; }"
+                            @click="if (contactReady && !dtfFileName) { customRequest = !customRequest; if (customRequest) launchWizard(); }"
                             :class="contactReady
                                 ? (customRequest ? 'bg-sunburst' : 'bg-linen-dark')
                                 : 'bg-linen-dark opacity-40 cursor-not-allowed'"

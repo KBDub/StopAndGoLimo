@@ -12,6 +12,7 @@
                 <span class="font-semibold text-charcoal">Add $0.30 per image</span>
                 if individual cuts are needed.
                 Prices shown are per piece at each quantity tier.
+                <span class="block mt-1 text-xs text-sunburst font-semibold">Click any row to start your order.</span>
             </p>
         </div>
 
@@ -20,7 +21,7 @@
             <h3 class="text-base font-bold text-charcoal uppercase tracking-wide mb-4 border-l-4 border-sunburst pl-3">
                 Neck Tags <span class="font-normal text-charcoal-light normal-case tracking-normal">(fit within size)</span>
             </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
                 @php
                     $neckTags = [
                         ['size' => '2″ × 2″', 'tiers' => [
@@ -45,10 +46,14 @@
                             <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
                         </div>
                         @foreach($card['tiers'] as $qty => $price)
-                            <div class="flex items-center justify-between px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark first:border-t-0">
-                                <span class="text-xs text-charcoal-light">{{ $qty }}</span>
+                            <button
+                                type="button"
+                                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true } }))"
+                                class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
+                            >
+                                <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
                                 <span class="text-sm font-bold text-charcoal">{{ $price }} <span class="text-xs font-normal text-charcoal-light">ea</span></span>
-                            </div>
+                            </button>
                         @endforeach
                     </div>
                 @endforeach
@@ -113,10 +118,14 @@
                             <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
                         </div>
                         @foreach($card['tiers'] as $qty => $price)
-                            <div class="flex items-center justify-between px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark first:border-t-0">
-                                <span class="text-xs text-charcoal-light">{{ $qty }}</span>
+                            <button
+                                type="button"
+                                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true } }))"
+                                class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
+                            >
+                                <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
                                 <span class="text-sm font-bold text-charcoal">{{ $price }} <span class="text-xs font-normal text-charcoal-light">ea</span></span>
-                            </div>
+                            </button>
                         @endforeach
                     </div>
                 @endforeach

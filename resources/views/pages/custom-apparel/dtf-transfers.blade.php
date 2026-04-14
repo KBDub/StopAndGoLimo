@@ -43,6 +43,8 @@
         <p>We are a veteran owned print shop in Joliet, Illinois, serving the greater Will County area with premium DTF transfers and custom apparel printing. Call us at (815) 349 8600 to discuss your DTF project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-dtf-dropzone position="left" />
+
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
         alt="DTF transfers applied to custom shirts and apparel in Joliet Illinois"
@@ -81,6 +83,8 @@
             <p>Call us at (815) 349 8600 to discuss your DTF project today — same-day production available, all fabric types accepted, no minimums.</p>
         </x-slot>
     </x-sections.card-detailed-info>
+
+    <x-ui.banner-cta-dtf-dropzone position="right" />
 
     <x-ui.banner-testimonial
         quote="Top 5 Percent came through in a clutch. I had a rush DTF order and needed the print ASAP and Ezra took care of me. Everything here was top tier: the service, the print and the establishment. They definitely have my business!"

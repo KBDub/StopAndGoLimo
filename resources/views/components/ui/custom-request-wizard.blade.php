@@ -216,7 +216,7 @@
                 const key = this.currentGarmentKey;
                 const method = this.printMethods[key];
                 if (!method) return false;
-                if (method === 'traditional') return !!this.traditionalTypes[key];
+                if (method === 'traditional') return true;
                 if (method === 'specialty')   return !!this.specialtyTypeByGarment[key];
                 return false;
             }
@@ -525,15 +525,15 @@
                             ['key' => 'vNeck',       'label' => 'V-Neck'],
                             ['key' => 'crewNeck',     'label' => 'Crew Neck'],
                             ['key' => 'hoodie',       'label' => 'Hoodie'],
-                            ['key' => 'otherShirt',   'label' => 'Other Shirt Style'],
+                            ['key' => 'otherShirt',   'label' => 'Other Shirt'],
                             ['key' => 'baseballCap',  'label' => 'Baseball Cap'],
                             ['key' => 'napSack',      'label' => 'Nap Sack'],
                             ['key' => 'otherItem',    'label' => 'Other Item'],
                         ];
                     @endphp
-                    <div class="space-y-1">
+                    <div class="grid grid-cols-3 gap-2">
                         @foreach($garmentList as $g)
-                        <div class="flex items-center justify-between gap-4 px-4 py-3 border border-linen-dark">
+                        <div class="flex items-center justify-between gap-3 px-4 py-3 border border-linen-dark">
                             <span class="text-sm font-semibold text-charcoal">{{ $g['label'] }}</span>
                             <button
                                 type="button"
@@ -552,10 +552,13 @@
                         @endforeach
                     </div>
 
-                    <div x-show="selectedGarmentTypes.length > 0" x-cloak class="mt-4 flex flex-wrap gap-1.5">
-                        <template x-for="g in selectedGarmentTypes" :key="g.key">
-                            <span class="px-2 py-1 bg-sunburst text-charcoal text-xs font-semibold" x-text="g.label"></span>
-                        </template>
+                    <div x-show="selectedGarmentTypes.length > 0" x-cloak class="mt-5 pt-4 border-t border-linen-dark">
+                        <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Selected</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <template x-for="g in selectedGarmentTypes" :key="g.key">
+                                <span class="px-3 py-1.5 border border-linen-dark bg-white text-charcoal text-xs font-semibold" x-text="g.label"></span>
+                            </template>
+                        </div>
                     </div>
                 </div>
 
@@ -568,70 +571,58 @@
 
                     {{-- Traditional --}}
                     <div class="border border-linen-dark mb-3">
-                        <div class="flex items-start gap-3 p-4">
+                        <div class="flex items-center gap-3 p-4">
                             <input type="radio" name="crw-print-method"
                                 :id="'crw-pm-trad-' + currentGarmentKey"
                                 :checked="printMethods[currentGarmentKey] === 'traditional'"
                                 @change="printMethods = Object.assign({}, printMethods, { [currentGarmentKey]: 'traditional' })"
-                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5 cursor-pointer">
-                            <div class="flex-1">
-                                <label :for="'crw-pm-trad-' + currentGarmentKey" class="block text-sm font-bold text-charcoal cursor-pointer mb-1">Traditional Printing</label>
-                                <p class="text-xs text-charcoal-light mb-3">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
-                                <div x-show="printMethods[currentGarmentKey] === 'traditional'" x-cloak class="flex flex-col gap-2">
-                                    @foreach([['htv','HTV'],['digital','Digital'],['screenprint','Screenprint']] as [$val,$lbl])
-                                    <label class="flex items-center gap-3 cursor-pointer px-3 py-2.5 border-2 transition-colors duration-150"
-                                        :class="traditionalTypes[currentGarmentKey] === '{{ $val }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'">
-                                        <input type="radio" name="crw-trad-type"
-                                            :checked="traditionalTypes[currentGarmentKey] === '{{ $val }}'"
-                                            @change="traditionalTypes = Object.assign({}, traditionalTypes, { [currentGarmentKey]: '{{ $val }}' })"
-                                            class="w-4 h-4 accent-sunburst flex-shrink-0">
-                                        <span class="text-sm font-semibold text-charcoal">{{ $lbl }}</span>
-                                    </label>
-                                    @endforeach
-                                </div>
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst cursor-pointer">
+                            <div>
+                                <label :for="'crw-pm-trad-' + currentGarmentKey" class="block text-sm font-bold text-charcoal cursor-pointer mb-0.5">Traditional Printing</label>
+                                <p class="text-xs text-charcoal-light">HTV &nbsp;·&nbsp; Digital &nbsp;·&nbsp; Screenprint</p>
                             </div>
                         </div>
                     </div>
 
                     {{-- Specialty --}}
                     <div class="border border-linen-dark">
-                        <div class="flex items-start gap-3 p-4 border-b border-linen-dark">
+                        <div class="flex items-center gap-3 p-4"
+                            :class="printMethods[currentGarmentKey] === 'specialty' ? 'border-b border-linen-dark' : ''">
                             <input type="radio" name="crw-print-method"
                                 :id="'crw-pm-spec-' + currentGarmentKey"
                                 :checked="printMethods[currentGarmentKey] === 'specialty'"
                                 @change="printMethods = Object.assign({}, printMethods, { [currentGarmentKey]: 'specialty' })"
-                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5 cursor-pointer">
-                            <label :for="'crw-pm-spec-' + currentGarmentKey" class="text-sm font-bold text-charcoal cursor-pointer pt-0.5">Specialty Printing</label>
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst cursor-pointer">
+                            <label :for="'crw-pm-spec-' + currentGarmentKey" class="text-sm font-bold text-charcoal cursor-pointer">Specialty Printing</label>
                         </div>
                         <div x-show="printMethods[currentGarmentKey] === 'specialty'" x-cloak class="p-4">
-                            <p class="text-xs text-charcoal-light mb-3"><span class="text-error font-semibold">Select one specialty type.</span></p>
-                            <div class="flex flex-col gap-2">
-                                @php
-                                    $specialtyItems = [
-                                        ['key' => 'vinyl',       'label' => 'Vinyl Shirts'],
-                                        ['key' => 'rhinestone',  'label' => 'Rhinestone'],
-                                        ['key' => 'glitter',     'label' => 'Glitter Shirts'],
-                                        ['key' => 'foil',        'label' => 'Foil Shirts'],
-                                        ['key' => 'glowDark',    'label' => 'Glow In The Dark'],
-                                        ['key' => 'flock',       'label' => 'Flock Shirts'],
-                                        ['key' => 'reflective',  'label' => 'Reflective Shirts'],
-                                        ['key' => 'holographic', 'label' => 'Holographic'],
-                                        ['key' => 'brick',       'label' => 'Brick Shirts'],
-                                        ['key' => 'pattern',     'label' => 'Pattern Shirts'],
-                                        ['key' => 'embroidery',  'label' => 'Embroidery'],
-                                        ['key' => 'picture',     'label' => 'Picture Shirts'],
-                                    ];
-                                @endphp
+                            @php
+                                $specialtyItems = [
+                                    ['key' => 'vinyl',       'label' => 'Vinyl Shirts'],
+                                    ['key' => 'rhinestone',  'label' => 'Rhinestone'],
+                                    ['key' => 'glitter',     'label' => 'Glitter Shirts'],
+                                    ['key' => 'foil',        'label' => 'Foil Shirts'],
+                                    ['key' => 'glowDark',    'label' => 'Glow In The Dark'],
+                                    ['key' => 'flock',       'label' => 'Flock Shirts'],
+                                    ['key' => 'reflective',  'label' => 'Reflective Shirts'],
+                                    ['key' => 'holographic', 'label' => 'Holographic'],
+                                    ['key' => 'brick',       'label' => 'Brick Shirts'],
+                                    ['key' => 'pattern',     'label' => 'Pattern Shirts'],
+                                    ['key' => 'embroidery',  'label' => 'Embroidery'],
+                                    ['key' => 'picture',     'label' => 'Picture Shirts'],
+                                ];
+                            @endphp
+                            <div class="grid grid-cols-3 gap-2">
                                 @foreach($specialtyItems as $item)
                                 <label
-                                    class="flex items-center gap-3 cursor-pointer px-3 py-2.5 border-2 transition-colors duration-150"
+                                    class="flex items-center justify-between gap-2 cursor-pointer px-3 py-3 border transition-colors duration-150"
                                     :class="specialtyTypeByGarment[currentGarmentKey] === '{{ $item['key'] }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
                                 >
+                                    <span class="text-sm font-semibold text-charcoal leading-tight">{{ $item['label'] }}</span>
                                     <input type="radio" name="crw-specialty-type"
                                         :checked="specialtyTypeByGarment[currentGarmentKey] === '{{ $item['key'] }}'"
                                         @change="specialtyTypeByGarment = Object.assign({}, specialtyTypeByGarment, { [currentGarmentKey]: '{{ $item['key'] }}' })"
                                         class="w-4 h-4 accent-sunburst flex-shrink-0">
-                                    <span class="text-sm font-semibold text-charcoal">{{ $item['label'] }}</span>
                                 </label>
                                 @endforeach
                             </div>
@@ -748,15 +739,20 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div x-show="garmentQuantitySummary(g.key).length > 0" x-cloak class="px-3 py-2 border-t border-linen-dark">
-                                    <div class="flex flex-wrap gap-1.5">
-                                        <template x-for="(item, i) in garmentQuantitySummary(g.key)" :key="i">
-                                            <span class="px-2 py-1 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
-                                        </template>
-                                    </div>
-                                </div>
                             </div>
                         </template>
+
+                        {{-- Combined ORDER SUMMARY across all garments --}}
+                        <div class="pt-4 border-t border-linen-dark">
+                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Order Summary</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <template x-for="g in selectedGarmentTypes" :key="g.key">
+                                    <template x-for="(item, i) in garmentQuantitySummary(g.key)" :key="g.key + i">
+                                        <span class="px-2 py-1 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item + ' ' + g.label"></span>
+                                    </template>
+                                </template>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

@@ -39,11 +39,12 @@ The Custom Request Workflow is a multi-step guided wizard that collects everythi
 2. The drop zone dispatches `open-contact-modal` with `{ dtf: true, fileName: 'filename.ext' }`.
 3. The contact modal opens with:
    - `dtfFileName` set to the dropped file name.
-   - `customRequest` pre-set to `true` (toggle ON, locked — cannot be toggled off while a DTF file is attached).
    - A gold info bar below the toggle showing the attached filename.
-4. The toggle is **disabled** (user cannot interact with it) until `contactReady` is true — same gate as the regular flow.
-5. Once the user fills in all four contact fields, `contactReady` becomes `true`. An Alpine `$watch` on `contactReady` fires and calls `launchWizard()` automatically.
-6. The wizard opens with name/email/phone/dtfFileName pre-filled and `hasDtf` pre-answered as `true`.
+   - The toggle starts **OFF** — the user must still explicitly click it to proceed, same as the regular flow.
+4. The toggle is disabled until `contactReady` is `true` (all four contact fields filled).
+5. User fills in contact info, then clicks the toggle ON → the contact modal closes and the wizard opens with name/email/phone/dtfFileName pre-filled and `hasDtf` pre-answered as `true`.
+
+> **Key rule:** The user must always click the toggle to invoke the wizard, in both flows. There is no automatic launch.
 
 #### Submit Button Split
 
@@ -64,13 +65,12 @@ The "Continue to Wizard" button serves as a visible fallback CTA for users who e
 - **Sub-labels:**
   - While `!contactReady`: "Complete your contact info above to enable"
   - While `contactReady && !customRequest`: "Use our guided custom order wizard"
-  - While `contactReady && customRequest`: "Ready — click 'Continue to Wizard' below"
 - **Toggle behavior:**
-  - Disabled (`:disabled="!contactReady || !!dtfFileName"`) until contact info is complete.
-  - In the **regular flow**: clicking it toggles `customRequest`; if it becomes `true`, calls `launchWizard()` immediately.
-  - In the **DTF flow**: toggle is pre-set to `true` and locked (non-interactive). `launchWizard()` is triggered automatically via `$watch` when `contactReady` becomes `true`.
-- **DTF file indicator:** Gold-tinted box shown below the toggle row when `dtfFileName` is set, displaying the attached filename.
-- **Alpine state added to contact-modal:** `customRequest: false`, `dtfFileName: ''`, `launchWizard()` method, `init()` lifecycle hook with `$watch('contactReady', ...)`.
+  - Disabled (`:disabled="!contactReady"`) until all four contact fields are filled.
+  - Clicking it toggles `customRequest`; if it becomes `true`, calls `launchWizard()` immediately and closes the contact modal.
+  - Works identically in both the regular flow and the DTF dropzone flow — the user must always explicitly click the toggle.
+- **DTF file indicator:** Gold-tinted box shown below the toggle row when `dtfFileName` is set, displaying the attached filename. This is purely informational — it does not lock or pre-set the toggle.
+- **Alpine state added to contact-modal:** `customRequest: false`, `dtfFileName: ''`, `launchWizard()` method.
 
 ---
 

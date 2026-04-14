@@ -51,14 +51,6 @@
             return this.contactReady && this.contactMessage.trim().length > 0;
         },
 
-        init() {
-            this.$watch('contactReady', (ready) => {
-                if (ready && this.customRequest) {
-                    this.launchWizard();
-                }
-            });
-        },
-
         openModal()  {
             this.open = true;
             this.customRequest = false;
@@ -111,7 +103,6 @@
         const _d = $event.detail || {};
         if (_d.dtf) {
             dtfFileName = _d.fileName || '';
-            customRequest = true;
         }
     "
 >
@@ -319,8 +310,8 @@
                             type="button"
                             role="switch"
                             :aria-checked="customRequest.toString()"
-                            :disabled="!contactReady || !!dtfFileName"
-                            @click="if (contactReady && !dtfFileName) { customRequest = !customRequest; if (customRequest) launchWizard(); }"
+                            :disabled="!contactReady"
+                            @click="if (contactReady) { customRequest = !customRequest; if (customRequest) launchWizard(); }"
                             :class="contactReady
                                 ? (customRequest ? 'bg-sunburst' : 'bg-linen-dark')
                                 : 'bg-linen-dark opacity-40 cursor-not-allowed'"

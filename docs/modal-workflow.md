@@ -104,7 +104,7 @@ The wizard reads this payload in its `@open-modal.window` handler and populates:
 **Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. Step 3 (Shirt Length & Fabric) is also **conditional**. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array. After garment selection, **three per-garment steps** (Print Method, Color Selection, Quantity & Sizing) are inserted once for each garment type the user selected — so the total step count scales with selections. Step 3 (Shirt Length & Fabric) is **conditional** — it only appears when at least one shirt-type garment is selected. All step numbers and the dot-indicator count adjust automatically.
 
 ---
 
@@ -113,9 +113,8 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | Step | Name (internal) | Title | Conditional |
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
-| 2 | `dtf-upload` | DTF File Upload | Always |
-| 3 | `garment-selection` | Garment Selection | Always |
-| 4 | `shirt-length-fabric` | Shirt Length & Fabric Type | Only if shirt type selected |
+| 2 | `garment-selection` | Garment Selection | Always |
+| 3 | `shirt-length-fabric` | Shirt Length & Fabric Type | Only if shirt type selected |
 | *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
@@ -125,9 +124,9 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 4 global + 3 per-garment-type selected + 4 closing global steps (+ 1 if shirt type) = variable.
+**Total steps:** 3 global + 3 per-garment-type selected + 4 closing global steps (+ 1 if shirt type) = variable.
 
-**Example:** User selects V-Neck + Baseball Cap (no shirt length step skipped) → 4 + 6 + 4 = 14 steps.
+**Example:** User selects V-Neck + Baseball Cap (no shirt type = no shirt-length-fabric) → 2 + 6 + 4 = 12 steps.
 
 ---
 
@@ -145,25 +144,6 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
   - If `Yes`, `isRush` is set to `true`. This value persists and affects later steps (Step 7 and Step 10).
 
 **Alpine state:** `requestType: ''`, `companyName: ''`, `isRush: null`
-
----
-
-#### Step 1a — DTF File Upload
-
-**Always present.** Asks whether the customer is providing a design file.
-
-**Content:**
-- If `dtfFileName` is set (pre-filled from DTF dropzone flow), a gold notice box shows the filename.
-- A Yes/No radio group: "Will you be providing a design file?"
-  - **Yes** — "I have a file ready (or will email / upload separately)"
-  - **No** — "I do not have a file; I need design help or have no artwork"
-- A small note listing accepted formats: PDF, AI, EPS, PNG, JPG, SVG, PSD (max 50 MB), and where to send files.
-
-**Step valid when:** `hasDtf !== null`
-
-**Alpine state:** `dtfFileName: ''`, `hasDtf: null`
-
-When opened from the DTF dropzone flow, `dtfFileName` is pre-populated and `hasDtf` is pre-set to `true`.
 
 ---
 
@@ -377,10 +357,10 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | Getter | Returns |
 |---|---|
 | `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
-| `visibleSteps` | Array of step name strings; always includes `dtf-upload`; includes `shirt-length-fabric` only when `hasShirtType` |
+| `visibleSteps` | Array of step name strings; always starts with `request-type`, `garment-selection`; includes `shirt-length-fabric` only when `hasShirtType`; then `print-method-{key}`, `color-{key}`, `quantity-{key}` per selected garment |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |
-| `totalSteps` | `visibleSteps.length` (10 or 11) |
+| `totalSteps` | `visibleSteps.length` (variable based on garment selections) |
 | `selectedGarmentTypes` | Filtered array of `{key, label}` objects for selected garments |
 | `filteredColors` | Color suggestions filtered by `colorInput`, excluding already-selected |
 | `quantitySummary` | Array of readable strings like "13 Men's 3XL V-Necks" |

@@ -33,6 +33,8 @@
         name="Monica Perez"
     />
 
+    <x-ui.banner-cta-dtf-dropzone position="left" />
+
     <x-sections.card-image-with-text
         image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
         alt="Custom DTF direct-to-film transfers printed in Joliet Illinois"
@@ -42,8 +44,6 @@
         <p class="mb-4">DTF transfers are especially popular for low-quantity orders where the cost and setup time of screen printing is not justified. We can produce a single custom DTF transfer for the same quality as a production run of one hundred, which makes DTF the ideal solution for one-off custom shirts, samples, prototypes, and any situation where you need a small number of high-quality custom prints quickly. Same-day production is available for most DTF transfer orders placed before noon.</p>
         <p>We are a veteran owned print shop in Joliet, Illinois, serving the greater Will County area with premium DTF transfers and custom apparel printing. Call us at (815) 349 8600 to discuss your DTF project today.</p>
     </x-sections.card-image-with-text>
-
-    <x-ui.banner-cta-dtf-dropzone position="left" />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"

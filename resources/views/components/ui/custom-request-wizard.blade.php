@@ -152,8 +152,8 @@
             if (this.hasShirtType) s.push('shirt-length-fabric');
             this.selectedGarmentTypes.forEach(g => {
                 s.push('print-method-' + g.key);
-                s.push('color-' + g.key);
                 s.push('quantity-' + g.key);
+                s.push('color-' + g.key);
             });
             s.push('completion-date','extra-notes','shipping-address','confirm-submit');
             return s;

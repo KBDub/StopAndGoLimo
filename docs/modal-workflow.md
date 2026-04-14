@@ -117,8 +117,8 @@ The wizard uses a dynamic `visibleSteps` computed array. After garment selection
 | 3 | `garment-selection` | Garment Selection | Always |
 | *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
-| — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
 | — | `quantity-{key}` | Quantity & Sizing — {Garment Label} | Per selected garment |
+| — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
 | Last | `completion-date` | Desired Completion Date | Always |
 | Last | `extra-notes` | Extra Notes | Always |
 | Last | `shipping-address` | Shipping Address | Always |
@@ -357,7 +357,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | Getter | Returns |
 |---|---|
 | `hasShirtType` | `true` if any of vNeck, crewNeck, hoodie, otherShirt is toggled on |
-| `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`; then `print-method-{key}`, `color-{key}`, `quantity-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
+| `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`; then `print-method-{key}`, `quantity-{key}`, `color-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
 | `currentStepName` | String key for the current step |
 | `currentStepTitle` | Human-readable title for the current step |
 | `totalSteps` | `visibleSteps.length` (variable based on garment selections) |

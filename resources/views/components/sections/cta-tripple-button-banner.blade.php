@@ -1,6 +1,6 @@
 <section class="py-10 bg-warm-gradient border-t border-b border-sunburst/30">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-10">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-20">
             <x-ui.button-blue-white
                 onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
                 class="px-6 py-3 text-sm whitespace-nowrap w-44"

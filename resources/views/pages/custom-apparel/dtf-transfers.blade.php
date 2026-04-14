@@ -35,7 +35,7 @@
 
     <x-ui.banner-cta-dtf-dropzone position="left" />
 
-    <x-sections.dtf-pricing />
+    <x-sections.dtf-pricing-section />
 
     <x-sections.card-image-with-text
         image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"

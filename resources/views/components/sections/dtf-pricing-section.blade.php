@@ -1,13 +1,13 @@
-<section class="py-10 bg-linen">
+<section class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Heading --}}
-        <div class="text-center mb-8">
+        <div class="text-center mb-10">
             <div class="inline-block mb-4">
                 <h2 class="text-h2 font-bold text-charcoal mb-2">DTF Transfer Pricing</h2>
                 <div class="h-1 bg-sunburst"></div>
             </div>
-            <p class="text-sm text-charcoal-light max-w-2xl mx-auto">
+            <p class="text-body-sm text-charcoal-light max-w-2xl mx-auto">
                 Transfers come in a roll.
                 <span class="font-semibold text-charcoal">Add $0.30 per image</span>
                 if individual cuts are needed.
@@ -18,9 +18,13 @@
 
         {{-- Neck Tags --}}
         <div class="mb-10">
-            <h3 class="text-base font-bold text-charcoal uppercase tracking-wide mb-4 border-l-4 border-sunburst pl-3">
-                Neck Tags <span class="font-normal text-charcoal-light normal-case tracking-normal">(fit within size)</span>
-            </h3>
+            <div class="text-center mb-5">
+                <h4 class="text-h4 font-semibold text-charcoal">
+                    Neck Tags
+                    <span class="font-normal text-charcoal-light">(fit within size)</span>
+                </h4>
+                <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
+            </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
                 @php
                     $neckTags = [
@@ -41,7 +45,7 @@
                     ];
                 @endphp
                 @foreach($neckTags as $card)
-                    <div class="border border-linen-dark bg-white overflow-hidden">
+                    <div class="border-t-4 border-sunburst shadow-md bg-white overflow-hidden">
                         <div class="px-4 py-2.5 bg-sunburst text-center">
                             <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
                         </div>
@@ -62,9 +66,10 @@
 
         {{-- Left Chest / Right Chest --}}
         <div class="mb-10">
-            <h3 class="text-base font-bold text-charcoal uppercase tracking-wide mb-4 border-l-4 border-sunburst pl-3">
-                Left Chest or Right Chest Image
-            </h3>
+            <div class="text-center mb-5">
+                <h4 class="text-h4 font-semibold text-charcoal">Left Chest or Right Chest Image</h4>
+                <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
+            </div>
             @php
                 $chestSizes = [
                     ['size' => '3″ × 2″', 'tiers' => [
@@ -113,7 +118,7 @@
             @endphp
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 @foreach($chestSizes as $card)
-                    <div class="border border-linen-dark bg-white overflow-hidden">
+                    <div class="border-t-4 border-sunburst shadow-md bg-white overflow-hidden">
                         <div class="px-4 py-2.5 bg-sunburst text-center">
                             <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
                         </div>
@@ -133,10 +138,10 @@
         </div>
 
         {{-- Drop zone CTA --}}
-        <div class="border border-linen-dark bg-white p-8">
+        <div class="border-t-4 border-sunburst shadow-md bg-linen-light p-8">
             <div class="text-center mb-6">
-                <h3 class="text-lg font-bold text-charcoal mb-1">Ready to order your DTF transfers?</h3>
-                <p class="text-sm text-charcoal-light">Drop your design file below to get started — we'll walk you through the rest.</p>
+                <h4 class="text-h4 font-semibold text-charcoal mb-1">Ready to order your DTF transfers?</h4>
+                <p class="text-body-sm text-charcoal-light">Drop your design file below to get started — we'll walk you through the rest.</p>
             </div>
             <x-ui.dtf-dropzone class="max-w-2xl mx-auto" />
         </div>

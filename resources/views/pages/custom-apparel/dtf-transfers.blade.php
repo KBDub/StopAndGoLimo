@@ -35,6 +35,8 @@
 
     <x-ui.banner-cta-dtf-dropzone position="left" />
 
+    <x-sections.dtf-pricing />
+
     <x-sections.card-image-with-text
         image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
         alt="Custom DTF direct-to-film transfers printed in Joliet Illinois"

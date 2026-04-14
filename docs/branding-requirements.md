@@ -103,6 +103,7 @@ Every `<section>` must be its own file in `resources/views/components/sections/`
 | `x-sections.review-banner` | Customer testimonials | `resources/views/components/sections/review-banner.blade.php` |
 | `x-sections.map-section` | Location map + contact info | `resources/views/components/sections/map-section.blade.php` |
 | `x-sections.home-page-services-accordion` | FAQ / services accordion | `resources/views/components/sections/home-page-services-accordion.blade.php` |
+| `x-sections.dtf-pricing` | DTF transfer pricing tables + drop zone CTA | `resources/views/components/sections/dtf-pricing.blade.php` |
 | `x-sections.shirt-types-grid` | 12-card custom shirt techniques grid | `resources/views/components/sections/shirt-types-grid.blade.php` |
 | `x-sections.shirt-types-video` | YouTube video embed (charcoal bg) | `resources/views/components/sections/shirt-types-video.blade.php` |
 | `x-sections.represent-yourself` | "Represent Yourself" brand statement + stats | `resources/views/components/sections/represent-yourself.blade.php` |

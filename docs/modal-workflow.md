@@ -185,27 +185,9 @@ A summary chip row at the bottom shows all currently selected garment types.
 
 ---
 
-#### Step 5 — Color Selection
-
-A smart text input with inline (non-absolute) autocomplete against a list of 30 common colors. Users can add multiple colors.
-
-**Behavior:**
-- Typing filters the `colorSuggestions` array (case-insensitive, excludes already-selected colors).
-- Suggestions render **inline** below the input (never absolute-positioned — modal overflow rule).
-- Pressing `Enter` or clicking "Add" adds the typed value directly if it is not already selected.
-- Clicking a suggestion adds it and clears the input.
-- Each selected color becomes a **chip** (charcoal background, white text) with an × remove button.
-
-**Color suggestion list (30 colors):**
-White, Black, Navy Blue, Red, Royal Blue, Forest Green, Charcoal Gray, Light Gray, Sky Blue, Yellow, Orange, Purple, Maroon, Pink, Hot Pink, Kelly Green, Burgundy, Lime Green, Gold, Silver, Tan, Brown, Heather Gray, Sport Gray, Safety Green, Safety Orange, Teal, Coral, Lavender, Olive Green
-
-**Alpine state:** `colorInput: ''`, `selectedColors: []`, `colorSuggestions: [...]`
-
----
-
 #### Step 4 — Quantity & Sizing
 
-A matrix input grid organized by garment type. Only garment types selected in Step 2 are shown. Each garment type renders its own table.
+A matrix input grid organized by garment type. Only garment types selected in Step 3 are shown. Each garment type renders its own table.
 
 **Table structure per garment type:**
 - **Rows:** Men's, Women's, Youth, Toddler
@@ -223,7 +205,7 @@ The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunbu
 
 ---
 
-#### Step 6 — Print Method
+#### Per-Garment Step — Print Method
 
 Two main radio options, each in its own bordered card row with the radio button on the left.
 
@@ -252,6 +234,24 @@ Two main radio options, each in its own bordered card row with the radio button 
 | Picture Shirts | `specialtyTypes.picture` |
 
 **Alpine state:** `printMethod: ''`, `traditionalType: ''`, `specialtyTypes: { vinyl, rhinestone, glitter, foil, glowDark, flock, reflective, holographic, brick, pattern, embroidery, picture }`
+
+---
+
+#### Per-Garment Step — Color Selection
+
+A smart text input with inline (non-absolute) autocomplete against a list of 30 common colors. Users can add multiple colors.
+
+**Behavior:**
+- Typing filters the `colorSuggestions` array (case-insensitive, excludes already-selected colors).
+- Suggestions render **inline** below the input (never absolute-positioned — modal overflow rule).
+- Pressing `Enter` or clicking "Add" adds the typed value directly if it is not already selected.
+- Clicking a suggestion adds it and clears the input.
+- Each selected color becomes a **chip** (charcoal background, white text) with an × remove button.
+
+**Color suggestion list (30 colors):**
+White, Black, Navy Blue, Red, Royal Blue, Forest Green, Charcoal Gray, Light Gray, Sky Blue, Yellow, Orange, Purple, Maroon, Pink, Hot Pink, Kelly Green, Burgundy, Lime Green, Gold, Silver, Tan, Brown, Heather Gray, Sport Gray, Safety Green, Safety Orange, Teal, Coral, Lavender, Olive Green
+
+**Alpine state:** `colorInput: ''`, `selectedColors: []`, `colorSuggestions: [...]`
 
 ---
 

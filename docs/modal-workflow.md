@@ -116,7 +116,7 @@ The wizard uses a dynamic `visibleSteps` computed array. After the global Quanti
 | 2 | `dtf-upload` | DTF File Upload | Always |
 | 3 | `garment-selection` | Garment Selection | Always |
 | 4 | `quantity` | Quantity & Sizing | Always (shows all selected garments) |
-| *For each selected garment (e.g. V-Neck, Baseball Cap…):* | | | |
+| *For each selected garment (e.g. Polo (Long Sleeve), Hoodies…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
 | Last | `completion-date` | Desired Completion Date | Always |
@@ -126,7 +126,7 @@ The wizard uses a dynamic `visibleSteps` computed array. After the global Quanti
 
 **Total steps:** 4 global + 2 per-garment-type selected + 4 closing global steps = variable.
 
-**Example:** User selects V-Neck + Baseball Cap → 4 + 4 + 4 = 12 steps.
+**Example:** User selects Polo (Long Sleeve) + Hoodies → 4 + 4 + 4 = 12 steps.
 
 ---
 
@@ -199,7 +199,7 @@ A matrix input grid organized by garment type. Only garment types selected in St
 The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunburst`) to handle narrow viewports.
 
 **Order Summary** — below all tables, a chip row shows every non-zero entry in the format:
-`{qty} {Gender} {Size} {GarmentLabel}s` — e.g. `13 Men's 3XL V-Necks`
+`{qty} {Gender} {Size} {GarmentLabel}s` — e.g. `13 Men's 3XL Hoodies`
 
 **Alpine state:** `quantities: {}` (flat object, keys formatted as `{garmentKey}-{genderKey}-{size}`)
 **Alpine methods:** `getQty(garment, gender, size)`, `setQty(garment, gender, size, val)`
@@ -364,7 +364,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 | `totalSteps` | `visibleSteps.length` (variable based on garment selections) |
 | `selectedGarmentTypes` | Filtered array of `{key, label}` objects for selected garments |
 | `filteredColors` | Color suggestions filtered by `colorInput`, excluding already-selected |
-| `quantitySummary` | Array of readable strings like "13 Men's 3XL V-Necks" |
+| `quantitySummary` | Array of readable strings like "13 Men's 3XL Hoodies" |
 | `rushActive` | `true` if `isRush === true` or `isRushDelivery === true` |
 | `stepValid` | Validates the current step before allowing Next |
 

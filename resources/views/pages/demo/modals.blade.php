@@ -1153,7 +1153,7 @@
             </div>
             @endforeach
         </div>
-        <p class="text-xs text-charcoal-lighter mt-3 pl-1">* Step 3 only appears when V-Neck, Crew Neck, Hoodie, or Other Shirt Style is selected.</p>
+        <p class="text-xs text-charcoal-lighter mt-3 pl-1">* Per-garment Print Method and Color Selection steps appear once for each garment type selected in Step 3.</p>
     </section>
 
     {{-- ═══════════════════════════════════════════════════════════════════ --}}

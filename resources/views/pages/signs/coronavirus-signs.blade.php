@@ -75,7 +75,7 @@
         name="Jonathan Young"
     />
     <x-sections.why-choose-us />
-    <x-sections.cta-free-quote />
+    <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Clear Signage Keeps People Safe"

@@ -1,4 +1,4 @@
-<section class="py-10 bg-charcoal relative overflow-hidden isolate">
+<section id="map-section" class="py-10 bg-charcoal relative overflow-hidden isolate">
     <div class="absolute inset-0 opacity-5">
         <div class="absolute top-0 left-1/4 w-64 h-64 bg-sunburst-full blur-3xl"></div>
         <div class="absolute bottom-0 right-1/3 w-48 h-48 bg-azure rounded-full blur-3xl"></div>

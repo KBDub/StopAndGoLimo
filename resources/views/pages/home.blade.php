@@ -20,10 +20,10 @@
     <x-ui.banner-thin-charcoal />
 
     <x-sections.our-services />
-    <x-sections.cta-design-your-own />
+    <x-sections.cta-design-your-own-banner />
 
     <x-sections.design-it-yourself />
-    <x-sections.cta-free-quote />
+    <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="See Our Craft in Action"

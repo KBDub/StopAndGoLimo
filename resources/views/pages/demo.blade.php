@@ -711,12 +711,16 @@
         />
 
         {{-- CTA: Free Quote --}}
-        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-8 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote</code></p>
-        <x-sections.cta-free-quote />
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-8 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code></p>
+        <x-sections.cta-free-quote-banner />
 
         {{-- CTA: Design Your Own --}}
-        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-design-your-own</code></p>
-        <x-sections.cta-design-your-own />
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-design-your-own-banner</code></p>
+        <x-sections.cta-design-your-own-banner />
+
+        {{-- CTA: Triple Button Banner --}}
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-tripple-button-banner</code></p>
+        <x-sections.cta-tripple-button-banner />
 
         {{-- Video Banner --}}
         <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.video-banner</code></p>

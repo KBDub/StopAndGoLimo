@@ -13,7 +13,7 @@
 
     <x-sections.top5pct-same-day-service serviceType="stores" displayServiceType="Store Services" />
     <x-sections.why-choose-us />
-    <x-sections.cta-free-quote />
+    <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Where You Can Find Our Work"

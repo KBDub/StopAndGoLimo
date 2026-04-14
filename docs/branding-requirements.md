@@ -108,8 +108,10 @@ Every `<section>` must be its own file in `resources/views/components/sections/`
 | `x-sections.shirt-types-video` | YouTube video embed (charcoal bg) | `resources/views/components/sections/shirt-types-video.blade.php` |
 | `x-sections.represent-yourself` | "Represent Yourself" brand statement + stats | `resources/views/components/sections/represent-yourself.blade.php` |
 | `x-sections.shirt-types-faq` | 7-tip shirt maker FAQ accordion | `resources/views/components/sections/shirt-types-faq.blade.php` |
-| `x-sections.cta-free-quote` | Free quote CTA bar | `resources/views/components/sections/cta-free-quote.blade.php` |
-| `x-sections.cta-design-your-own` | Design-it-yourself CTA bar | `resources/views/components/sections/cta-design-your-own.blade.php` |
+| `x-sections.cta-free-quote-banner` | Free quote CTA bar with DTF dropzone | `resources/views/components/sections/cta-free-quote-banner.blade.php` |
+| `x-sections.cta-design-your-own-banner` | Design your own CTA bar | `resources/views/components/sections/cta-design-your-own-banner.blade.php` |
+| `x-sections.cta-tripple-button-banner` | 3-button CTA bar: Free Quote · Start Designing · Get Directions | `resources/views/components/sections/cta-tripple-button-banner.blade.php` |
+| `x-ui.button-map-directions` | Smooth-scroll button targeting `#map-section` | `resources/views/components/ui/button-map-directions.blade.php` |
 | `x-sections.cta-ready-to-get-started` | Full-width charcoal CTA | `resources/views/components/sections/cta-ready-to-get-started.blade.php` |
 | `x-sections.lp-category-banners` | CLP banner image grid (wraps `x-ui.card-lp-banner-images`) | `resources/views/components/sections/lp-category-banners.blade.php` |
 | `x-sections.video-banner` | YouTube video embed section with heading and CTA | `resources/views/components/sections/video-banner.blade.php` |

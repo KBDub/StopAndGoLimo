@@ -24,9 +24,18 @@ class IdentifyStore
             ->where('is_active', true)
             ->first();
 
-        // No matching tenant — fall through to main site routes
         if (! $store) {
-            return $next($request);
+            // Dev preview: the route was explicitly requested — show a plain 404.
+            if (app()->isLocal() && $request->route('previewSubdomain')) {
+                abort(404, "No active store found for subdomain: {$subdomain}");
+            }
+
+            // Real subdomain with no matching tenant (e.g. top5pct.domain.com).
+            // Redirect to the root domain so the main site handles the request.
+            $baseDomain = config('storefront.tenant_base_domain');
+            $scheme     = $request->getScheme();
+
+            return redirect("{$scheme}://{$baseDomain}" . $request->getRequestUri(), 301);
         }
 
         app()->instance('current_store', $store);
@@ -71,7 +80,7 @@ class IdentifyStore
 
         $subdomain = str($host)->before('.' . $baseDomain)->toString();
 
-        // Block pass-through names
+        // Block pass-through names (hub has its own Filament panel)
         if (in_array($subdomain, ['www', 'hub'], true)) {
             return null;
         }

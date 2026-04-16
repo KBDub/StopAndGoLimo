@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Models\Store;
+use App\Observers\StoreObserver;
 use App\Shipping\FreeShippingModifier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -38,5 +40,7 @@ class AppServiceProvider extends ServiceProvider
         }
 
         app(ShippingModifiers::class)->add(FreeShippingModifier::class);
+
+        Store::observe(StoreObserver::class);
     }
 }

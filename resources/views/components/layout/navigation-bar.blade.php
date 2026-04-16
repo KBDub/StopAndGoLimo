@@ -390,6 +390,7 @@
                                 <div class="grid grid-cols-2 gap-x-4 gap-y-3">
                                     <div><a href="/design-services/logo-design" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Logo Design</a><a href="/design-services/logo-design" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Concept to final files</a></div>
                                     <div><a href="/design-services/graphic-design" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Layout/Graphic Design</a><a href="/design-services/graphic-design" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Online designer & catalogs</a></div>
+                                    <div><a href="/design-services/custom-storefronts" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Custom Storefronts</a><a href="/design-services/custom-storefronts" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Branded stores for schools & businesses</a></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -566,6 +567,19 @@
                     <a href="/promotional-items/drink-coasters" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Drink Coasters</a>
                     <a href="/promotional-items/tote-bags" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Tote Bags</a>
                     <a href="/promotional-items/mouse-pads" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Mouse Pads</a>
+                </div>
+            </div>
+
+            <div>
+                <button @click="openMobile = openMobile === 'design' ? null : 'design'" class="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">
+                    <span>Design Services</span>
+                    <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </button>
+                <div x-show="openMobile === 'design'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
+                    <a href="/design-services" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All Design Services</a>
+                    <a href="/design-services/logo-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Logo Design</a>
+                    <a href="/design-services/graphic-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Layout / Graphic Design</a>
+                    <a href="/design-services/custom-storefronts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Custom Storefronts</a>
                 </div>
             </div>
 

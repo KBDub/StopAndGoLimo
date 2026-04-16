@@ -64,6 +64,26 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 
 ## Recent Changes
 
+-   **White-Label Multi-Tenant Storefront System (Apr 2026):** Full implementation of `customer.top5pct.com` subdomain-based storefronts. Single database architecture using Lunar Channels for product scoping. Key files:
+    -   **Database:** `stores` table (name, subdomain, lunar_channel_id, logo, nav_layout, colors JSON tri-palette, font_family, font_custom, features_enabled JSON, events JSON, roster JSON, store_type, is_active), `store_pages` table (store_id, slug, sections JSON, sort_order), `global_overrides` table (name, component, css, is_active).
+    -   **Models:** `app/Models/Store.php` (with `hasFeature()`, `nextCountdownEvent()`, `resolvedFont()`, `color()` helpers), `app/Models/StorePage.php`, `app/Models/GlobalOverride.php`.
+    -   **Middleware:** `app/Http/Middleware/IdentifyStore.php` — resolves subdomain → Store → sets `app('current_store')` singleton + scopes Lunar channel. Registered as `identify.store` alias in `bootstrap/app.php`.
+    -   **Routes:** Subdomain domain group in `routes/web.php` — `{subdomain}.top5pct.com` → `StorefrontController` (index, page, product). New route: `/design-services/custom-storefronts`.
+    -   **Store Layout:** `resources/views/layouts/store.blade.php` — injects tri-palette CSS variables (`--brand-primary`, `--brand-secondary`, `--brand-accent`) from Store model. Applies GlobalOverride patches. Conditional Google Fonts loader for custom font override.
+    -   **Blade Components (store/):** `x-store.nav` (left/center/right logo position, auto-builds nav from store_pages, mobile hamburger), `x-store.footer` (branded, powered-by link), `x-store.hero` (branded hero with logo), `x-store.event-countdown` (Alpine.js live timer to next event with show_countdown=true), `x-store.event-calendar` (static event list from JSON), `x-store.roster-grid` (photo grid with initials fallback).
+    -   **Livewire Components:** `app/Livewire/Store/Catalog.php` (channel-scoped product grid with search + sort), `app/Livewire/Store/ProductDetail.php` (variant selector, qty picker, add-to-cart).
+    -   **Filament StoreResource:** `app/Filament/Resources/StoreResource.php` — 7-tab form (Identity, Branding, Banner, Features, Events, Roster, Pages). Registered in `LunarPanelProvider`. Includes "Visit Store" table action.
+    -   **Super Admin Pages:** `GlobalOverridesPage` (create/edit/delete CSS patches; clears cache on change) and `BulkInventoryPage` (select product+variant, dispatch `BulkUpdateInventoryJob` to set stock across all channels).
+    -   **Jobs:** `CreateTenantStoreJob` (creates Lunar Channel + default home StorePage on store creation), `BulkUpdateInventoryJob` (updates `stocks.quantity` for a variant ID across all channel stock records).
+    -   **Observer:** `StoreObserver::created()` → dispatches `CreateTenantStoreJob`. Registered in `AppServiceProvider`.
+    -   **New Frontend Page:** `/design-services/custom-storefronts` — mirrors DTF Transfers structure. Sections: category-hero, card-image-with-text, use-case cards grid (6 store types), how-it-works 3-step, features section, CTAs, reviews, map.
+    -   **Mega Menu + Mobile Menu:** "Custom Storefronts" link added to Design Services panel (desktop) and Design Services accordion (mobile).
+    -   **Font List (pre-loaded):** Inter, Roboto, Merriweather, Titillium Web, Oswald, Playfair Display. Custom override field loads Google Fonts on demand.
+    -   **SSL Strategy:** Wildcard `*.top5pct.com` cert in Laravel Forge covers all subdomains. Per-store custom CNAME SSL via `ForgeApiService` (future phase).
+    -   **Full plan:** `docs/white-labeling.md`.
+
+
+
 -   **Laravel Octane + FrankenPHP Production Server (Mar 2026):** Replaced `php artisan serve` (single-threaded dev server) with Laravel Octane v2.17.1 + FrankenPHP v1.12.1 in `scripts/startup.sh`. Octane keeps Laravel bootstrapped in memory between requests, eliminating per-request bootstrap overhead. FrankenPHP handles concurrent requests in parallel workers. Startup command: `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019` (the `--admin-port` flag is required because FrankenPHP auto-calculates it as `2019 + (port - 8000)`, which is negative for port 5000). `OCTANE_SERVER=frankenphp` set in `.env` and `.env.example`.
 
 -   **Mega Menu Rebuild + 22 New/Refactored Pages (Mar 2026):**

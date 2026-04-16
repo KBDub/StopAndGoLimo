@@ -5,6 +5,14 @@
 # This script: waits for Meilisearch (C), starts Laravel, then warms up OPcache (F).
 #
 
+# One-time staff password reset — runs only when STAFF_ADMIN_HASH is set.
+# After confirming the password change took effect in production, delete
+# STAFF_ADMIN_HASH from the environment secrets to disable this step.
+if [ -n "${STAFF_ADMIN_HASH}" ]; then
+    echo "[startup] Applying staff password reset..."
+    php artisan staff:reset-passwords
+fi
+
 # C: Wait for Meilisearch health endpoint before serving any requests
 echo "[startup] Waiting for Meilisearch to be ready..."
 MAX_WAIT=90

@@ -6,26 +6,24 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
 
 class ResetStaffPasswords extends Command
 {
     protected $signature   = 'staff:reset-passwords';
-    protected $description = 'One-time: set the Lunar admin staff passwords to the value in STAFF_ADMIN_PASSWORD env var.';
+    protected $description = 'One-time: apply the pre-hashed admin password from STAFF_ADMIN_HASH env var to all staff accounts.';
 
     public function handle(): int
     {
-        $password = env('STAFF_ADMIN_PASSWORD');
+        $hash = env('STAFF_ADMIN_HASH');
 
-        if (! $password) {
-            $this->error('STAFF_ADMIN_PASSWORD env var is not set. Skipping.');
-            return self::FAILURE;
+        if (! $hash) {
+            $this->info('STAFF_ADMIN_HASH not set — skipping.');
+            return self::SUCCESS;
         }
 
-        $hash  = Hash::make($password);
-        $rows  = DB::table('lunar_staff')->update(['password' => $hash]);
+        $rows = DB::table('lunar_staff')->update(['password' => $hash]);
 
-        $this->info("Updated password for {$rows} staff account(s).");
+        $this->info("Staff password reset applied to {$rows} account(s).");
 
         return self::SUCCESS;
     }

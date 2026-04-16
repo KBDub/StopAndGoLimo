@@ -36,8 +36,11 @@ class StorefrontController extends Controller
         ]);
     }
 
-    public function page(Request $request, string $slug, ?string $subdomain = null): View
+    public function page(Request $request): View
     {
+        // Read route param by name to avoid positional injection conflicts
+        // (the preview group also passes {previewSubdomain} as a sibling param).
+        $slug  = $request->route('slug');
         $store = app('current_store');
         $page  = $store->pages()
             ->where('slug', $slug)
@@ -51,8 +54,11 @@ class StorefrontController extends Controller
         ]);
     }
 
-    public function product(Request $request, string $slug, ?string $subdomain = null): View
+    public function product(Request $request): View
     {
+        // Read route param by name — avoids positional injection when the
+        // preview route group adds {previewSubdomain} as a sibling parameter.
+        $slug    = $request->route('slug');
         $store   = app('current_store');
         $product = \Lunar\Models\Product::whereHas('urls', function ($q) use ($slug) {
             $q->where('slug', $slug);

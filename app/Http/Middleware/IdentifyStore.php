@@ -32,6 +32,20 @@ class IdentifyStore
 
         View::share('currentStore', $store);
 
+        // Build context-aware URL bases so views work correctly under both
+        // the real subdomain and the /storefront-preview/{subdomain} dev route.
+        $isDevPreview = app()->isLocal() && $request->route('previewSubdomain');
+        $previewRoot  = $isDevPreview ? '/storefront-preview/' . $subdomain : '';
+
+        // /product/{slug}  →  used by catalog cards
+        View::share('storefrontProductBase', $previewRoot . '/product/');
+
+        // /{slug}  →  used by nav page links
+        View::share('storefrontPageBase', $previewRoot . '/');
+
+        // /  →  used by nav "Home" link
+        View::share('storefrontHomeUrl', $previewRoot ?: '/');
+
         return $next($request);
     }
 

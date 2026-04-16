@@ -37,7 +37,7 @@
                         $image    = $product->thumbnail?->getUrl() ?? '/images/placeholder.jpg';
                         $slug     = $product->urls->first()?->slug ?? '';
                     @endphp
-                    <a href="/product/{{ $slug }}" class="group block border border-gray-100 hover:border-brand-secondary transition-colors">
+                    <a href="{{ $productUrlBase }}{{ $slug }}" class="group block border border-gray-100 hover:border-brand-secondary transition-colors">
                         <div class="overflow-hidden bg-gray-50">
                             <img
                                 src="{{ $image }}"

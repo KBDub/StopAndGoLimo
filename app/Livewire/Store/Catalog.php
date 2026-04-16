@@ -15,12 +15,14 @@ class Catalog extends Component
     public string $search = '';
     public string $sort   = 'name_asc';
 
-    protected array $sortMap = [
-        'name_asc'   => ['name_asc', 'asc'],
-        'name_desc'  => ['name_desc', 'desc'],
-        'price_asc'  => ['price_asc', 'asc'],
-        'price_desc' => ['price_desc', 'desc'],
-    ];
+    // Persisted across Livewire AJAX updates so product links stay correct
+    // even when searching / paginating under the /storefront-preview/ route.
+    public string $productUrlBase = '/product/';
+
+    public function mount(): void
+    {
+        $this->productUrlBase = $this->resolveProductUrlBase();
+    }
 
     public function updatingSearch(): void
     {
@@ -61,6 +63,30 @@ class Catalog extends Component
 
         $products = $query->paginate(12);
 
-        return view('livewire.store.catalog', ['products' => $products]);
+        return view('livewire.store.catalog', [
+            'products'       => $products,
+            'productUrlBase' => $this->productUrlBase,
+        ]);
+    }
+
+    private function resolveProductUrlBase(): string
+    {
+        if (! app()->isLocal()) {
+            return '/product/';
+        }
+
+        // On initial page load: route param is available via the middleware
+        if (request()->route('previewSubdomain')) {
+            $subdomain = request()->route('previewSubdomain');
+            return '/storefront-preview/' . $subdomain . '/product/';
+        }
+
+        // On Livewire AJAX re-renders: check the Referer header
+        $referer = request()->header('Referer', '');
+        if (preg_match('#/storefront-preview/([^/]+)#', $referer, $m)) {
+            return '/storefront-preview/' . $m[1] . '/product/';
+        }
+
+        return '/product/';
     }
 }

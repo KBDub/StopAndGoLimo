@@ -43,11 +43,11 @@
 
             {{-- Desktop nav --}}
             <div class="hidden md:flex items-center gap-6">
-                <a href="/" class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">
+                <a href="{{ $storefrontHomeUrl }}" class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">
                     Home
                 </a>
                 @foreach($pages->where('is_active', true)->where('slug', '!=', '')->sortBy('sort_order') as $page)
-                    <a href="{{ $page->url() }}" class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">
+                    <a href="{{ $storefrontPageBase }}{{ $page->slug }}" class="text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">
                         {{ $page->title }}
                     </a>
                 @endforeach
@@ -58,9 +58,9 @@
 
     {{-- Mobile menu --}}
     <div x-show="mobileOpen" x-cloak class="md:hidden border-t border-gray-200 bg-white px-4 pb-4 pt-2 space-y-2">
-        <a href="/" class="block py-2 text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Home</a>
+        <a href="{{ $storefrontHomeUrl }}" class="block py-2 text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">Home</a>
         @foreach($pages->where('is_active', true)->where('slug', '!=', '')->sortBy('sort_order') as $page)
-            <a href="{{ $page->url() }}" class="block py-2 text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">
+            <a href="{{ $storefrontPageBase }}{{ $page->slug }}" class="block py-2 text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors">
                 {{ $page->title }}
             </a>
         @endforeach

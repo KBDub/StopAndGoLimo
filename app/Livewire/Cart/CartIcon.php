@@ -20,8 +20,13 @@ class CartIcon extends Component
     #[On('cart-updated')]
     public function updateCount(): void
     {
-        $cart = CartSession::current();
-        $this->cartCount = $cart ? $cart->lines->sum('quantity') : 0;
+        try {
+            $cart = CartSession::current();
+            $this->cartCount = $cart ? $cart->lines->sum('quantity') : 0;
+        } catch (\Lunar\Exceptions\MissingCurrencyPriceException $e) {
+            // No currency configured for this storefront session — show zero.
+            $this->cartCount = 0;
+        }
     }
 
     public function render()

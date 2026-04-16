@@ -14,17 +14,9 @@ class IdentifyStore
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $host      = $request->getHost();
-        $parts     = explode('.', $host);
-        $subdomain = $parts[0];
+        $subdomain = $this->resolveSubdomain($request);
 
-        // Pass through for main domain and Lunar Hub
-        if (in_array($subdomain, ['www', 'top5pct', 'hub'], true)) {
-            return $next($request);
-        }
-
-        // Only intercept *.top5pct.com subdomains
-        if (count($parts) < 3) {
+        if ($subdomain === null) {
             return $next($request);
         }
 
@@ -32,17 +24,37 @@ class IdentifyStore
             ->where('is_active', true)
             ->firstOrFail();
 
-        // 1. Bind globally — accessible anywhere via app('current_store')
         app()->instance('current_store', $store);
 
-        // 2. Scope all Lunar product/pricing queries to this store's channel
         if ($store->channel) {
-            \Lunar\Facades\Channels::setCurrent($store->channel->handle);
+            \Lunar\Facades\StorefrontSession::setChannel($store->channel);
         }
 
-        // 3. Share with all Blade views
         View::share('currentStore', $store);
 
         return $next($request);
+    }
+
+    private function resolveSubdomain(Request $request): ?string
+    {
+        // Dev preview routes pass the subdomain as a route parameter
+        if (app()->isLocal() && $request->route('previewSubdomain')) {
+            return $request->route('previewSubdomain');
+        }
+
+        $host  = $request->getHost();
+        $parts = explode('.', $host);
+
+        // Pass through for main domain and Lunar Hub
+        if (in_array($parts[0], ['www', 'top5pct', 'hub'], true)) {
+            return null;
+        }
+
+        // Only intercept *.top5pct.com subdomains (3+ parts)
+        if (count($parts) < 3) {
+            return null;
+        }
+
+        return $parts[0];
     }
 }

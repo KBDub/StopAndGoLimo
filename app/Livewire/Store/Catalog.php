@@ -16,10 +16,10 @@ class Catalog extends Component
     public string $sort   = 'name_asc';
 
     protected array $sortMap = [
-        'name_asc'    => ['name', 'asc'],
-        'name_desc'   => ['name', 'desc'],
-        'price_asc'   => ['price', 'asc'],
-        'price_desc'  => ['price', 'desc'],
+        'name_asc'   => ['name_asc', 'asc'],
+        'name_desc'  => ['name_desc', 'desc'],
+        'price_asc'  => ['price_asc', 'asc'],
+        'price_desc' => ['price_desc', 'desc'],
     ];
 
     public function updatingSearch(): void
@@ -37,22 +37,27 @@ class Catalog extends Component
         $store   = app('current_store');
         $channel = $store->channel;
 
-        $query = Product::active()
+        $query = Product::status('published')
             ->when($channel, function ($q) use ($channel) {
                 $q->whereHas('channels', function ($q2) use ($channel) {
-                    $q2->where('handle', $channel->handle);
+                    $q2->where('lunar_channels.id', $channel->id);
                 });
             })
             ->when($this->search, function ($q) {
-                $q->where(function ($q2) {
-                    $q2->whereRaw("attribute_data->>'$.name.value.en' LIKE ?", ["%{$this->search}%"]);
-                });
+                $term = '%'.mb_strtolower($this->search).'%';
+                $q->whereRaw(
+                    "LOWER(attribute_data->'name'->'value'->>'en') LIKE ?",
+                    [$term]
+                );
             });
 
-        [$col, $dir] = $this->sortMap[$this->sort] ?? ['name', 'asc'];
-        if ($col === 'name') {
-            $query->orderByRaw("attribute_data->>'$.name.value.en' {$dir}");
-        }
+        match (true) {
+            str_starts_with($this->sort, 'name') => $query->orderByRaw(
+                "attribute_data->'name'->'value'->>'en' ".
+                (str_ends_with($this->sort, 'desc') ? 'DESC' : 'ASC')
+            ),
+            default => $query->orderBy('id', 'asc'),
+        };
 
         $products = $query->paginate(12);
 

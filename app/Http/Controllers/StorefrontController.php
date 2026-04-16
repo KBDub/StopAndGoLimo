@@ -18,7 +18,7 @@ class StorefrontController extends Controller
         'roster'    => 'store.roster-grid',
     ];
 
-    public function index(Request $request, string $subdomain): View
+    public function index(Request $request, ?string $subdomain = null): View
     {
         $store = app('current_store');
         $page  = $store->pages()->where('slug', '')->where('is_active', true)->first();
@@ -36,7 +36,7 @@ class StorefrontController extends Controller
         ]);
     }
 
-    public function page(Request $request, string $subdomain, string $slug): View
+    public function page(Request $request, string $slug, ?string $subdomain = null): View
     {
         $store = app('current_store');
         $page  = $store->pages()
@@ -51,7 +51,7 @@ class StorefrontController extends Controller
         ]);
     }
 
-    public function product(Request $request, string $subdomain, string $slug): View
+    public function product(Request $request, string $slug, ?string $subdomain = null): View
     {
         $store   = app('current_store');
         $product = \Lunar\Models\Product::whereHas('urls', function ($q) use ($slug) {

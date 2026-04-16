@@ -14,6 +14,24 @@ Route::domain('{subdomain}.top5pct.com')
             ->name('storefront.page');
     });
 
+// ─── Storefront Dev Preview (local only) ─────────────────────────────────────
+// Usage: /storefront-preview/{subdomain}
+//        /storefront-preview/{subdomain}/product/{slug}
+//        /storefront-preview/{subdomain}/{page-slug}
+if (app()->isLocal()) {
+    Route::prefix('storefront-preview/{previewSubdomain}')
+        ->middleware(['web', 'identify.store'])
+        ->group(function () {
+            Route::get('/', [StorefrontController::class, 'index'])
+                ->name('storefront.preview.index');
+            Route::get('/product/{slug}', [StorefrontController::class, 'product'])
+                ->name('storefront.preview.product');
+            Route::get('/{slug}', [StorefrontController::class, 'page'])
+                ->where('slug', '[a-z0-9\-]+')
+                ->name('storefront.preview.page');
+        });
+}
+
 // ─── Main Site ───────────────────────────────────────────────────────────────
 
 Route::get('/', function () {

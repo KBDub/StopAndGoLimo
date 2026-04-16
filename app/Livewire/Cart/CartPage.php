@@ -32,13 +32,17 @@ class CartPage extends Component
 
     public function getCartProperty(): ?Cart
     {
-        $cart = CartSession::current();
+        try {
+            $cart = CartSession::current();
 
-        if ($cart && $cart->lines->isNotEmpty()) {
-            return $cart->calculate();
+            if ($cart && $cart->lines->isNotEmpty()) {
+                return $cart->calculate();
+            }
+
+            return $cart;
+        } catch (\Lunar\Exceptions\MissingCurrencyPriceException $e) {
+            return null;
         }
-
-        return $cart;
     }
 
     public function render()

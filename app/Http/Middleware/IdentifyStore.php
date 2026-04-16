@@ -22,7 +22,12 @@ class IdentifyStore
 
         $store = Store::where('subdomain', $subdomain)
             ->where('is_active', true)
-            ->firstOrFail();
+            ->first();
+
+        // No matching tenant — fall through to main site routes
+        if (! $store) {
+            return $next($request);
+        }
 
         app()->instance('current_store', $store);
 

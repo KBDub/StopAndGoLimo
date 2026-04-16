@@ -42,19 +42,21 @@ class IdentifyStore
             return $request->route('previewSubdomain');
         }
 
-        $host  = $request->getHost();
-        $parts = explode('.', $host);
+        $host       = $request->getHost();
+        $baseDomain = config('storefront.tenant_base_domain');
 
-        // Pass through for main domain and Lunar Hub
-        if (in_array($parts[0], ['www', 'top5pct', 'hub'], true)) {
+        // Must end with the base domain and have a subdomain prefix
+        if (! str_ends_with($host, '.' . $baseDomain)) {
             return null;
         }
 
-        // Only intercept *.top5pct.com subdomains (3+ parts)
-        if (count($parts) < 3) {
+        $subdomain = str($host)->before('.' . $baseDomain)->toString();
+
+        // Block pass-through names
+        if (in_array($subdomain, ['www', 'hub'], true)) {
             return null;
         }
 
-        return $parts[0];
+        return $subdomain;
     }
 }

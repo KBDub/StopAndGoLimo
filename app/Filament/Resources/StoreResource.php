@@ -36,7 +36,7 @@ class StoreResource extends Resource
                         Forms\Components\TextInput::make('subdomain')
                             ->required()
                             ->unique(ignoreRecord: true)
-                            ->helperText('e.g. "lincoln-high" → lincoln-high.top5pct.com')
+                            ->helperText(fn () => 'e.g. "lincoln-high" → lincoln-high.' . config('storefront.tenant_base_domain'))
                             ->rules(['alpha_dash'])
                             ->maxLength(100),
                         Forms\Components\Select::make('lunar_channel_id')
@@ -176,7 +176,7 @@ class StoreResource extends Resource
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('subdomain')
-                    ->formatStateUsing(fn ($state) => $state . '.top5pct.com')
+                    ->formatStateUsing(fn ($state) => $state . '.' . config('storefront.tenant_base_domain'))
                     ->copyable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('store_type')
@@ -209,7 +209,7 @@ class StoreResource extends Resource
                 Tables\Actions\Action::make('visit')
                     ->label('Visit Store')
                     ->icon('heroicon-o-arrow-top-right-on-square')
-                    ->url(fn (Store $record) => "https://{$record->subdomain}.top5pct.com")
+                    ->url(fn (Store $record) => "https://{$record->subdomain}." . config('storefront.tenant_base_domain'))
                     ->openUrlInNewTab(),
             ])
             ->bulkActions([

@@ -38,7 +38,7 @@ class CreateTenantStoreJob implements ShouldQueue
                     [
                         'name'    => $store->name,
                         'default' => false,
-                        'url'     => "https://{$store->subdomain}.top5pct.com",
+                        'url'     => 'https://' . $store->subdomain . '.' . config('storefront.tenant_base_domain'),
                     ]
                 );
                 $store->update(['lunar_channel_id' => $channel->id]);

@@ -3,8 +3,8 @@
 use App\Http\Controllers\StorefrontController;
 use Illuminate\Support\Facades\Route;
 
-// ─── White-Label Storefronts — customer.top5pct.com ──────────────────────────
-Route::domain('{subdomain}.top5pct.com')
+// ─── White-Label Storefronts — {subdomain}.TENANT_BASE_DOMAIN ────────────────
+Route::domain('{subdomain}.' . env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.com'))
     ->middleware(['web', 'identify.store'])
     ->group(function () {
         Route::get('/', [StorefrontController::class, 'index'])->name('storefront.index');

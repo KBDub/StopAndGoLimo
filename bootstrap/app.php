@@ -13,9 +13,10 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->trustProxies(at: '*');
         $middleware->alias([
-            'throttle' => \App\Http\Middleware\DisableThrottle::class,
-            'cacheResponse' => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
-            'doNotCacheResponse' => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
+            'throttle'            => \App\Http\Middleware\DisableThrottle::class,
+            'cacheResponse'       => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+            'doNotCacheResponse'  => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
+            'identify.store'      => \App\Http\Middleware\IdentifyStore::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

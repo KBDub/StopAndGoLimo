@@ -1,6 +1,20 @@
 <?php
 
+use App\Http\Controllers\StorefrontController;
 use Illuminate\Support\Facades\Route;
+
+// ─── White-Label Storefronts — customer.top5pct.com ──────────────────────────
+Route::domain('{subdomain}.top5pct.com')
+    ->middleware(['web', 'identify.store'])
+    ->group(function () {
+        Route::get('/', [StorefrontController::class, 'index'])->name('storefront.index');
+        Route::get('/product/{slug}', [StorefrontController::class, 'product'])->name('storefront.product');
+        Route::get('/{slug}', [StorefrontController::class, 'page'])
+            ->where('slug', '[a-z0-9\-]+')
+            ->name('storefront.page');
+    });
+
+// ─── Main Site ───────────────────────────────────────────────────────────────
 
 Route::get('/', function () {
     return view('pages.home');
@@ -130,6 +144,10 @@ Route::get('/design-services/logo-design', function () {
 Route::get('/design-services/graphic-design', function () {
     return view('pages.design-services.graphic-design');
 })->name('design-services.graphic-design');
+
+Route::get('/design-services/custom-storefronts', function () {
+    return view('pages.design-services.custom-storefronts');
+})->name('design-services.custom-storefronts');
 
 // ─── Signs ───────────────────────────────────────────────────────────────────
 

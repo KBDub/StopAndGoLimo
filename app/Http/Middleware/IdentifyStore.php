@@ -80,8 +80,9 @@ class IdentifyStore
 
         $subdomain = str($host)->before('.' . $baseDomain)->toString();
 
-        // Block pass-through names (hub has its own Filament panel)
-        if (in_array($subdomain, ['www', 'hub'], true)) {
+        // Block pass-through names — these are first-party subdomains that
+        // should be handled by the main site routes, not the tenant storefront.
+        if (in_array($subdomain, ['www', 'hub', 'top5pct'], true)) {
             return null;
         }
 

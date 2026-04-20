@@ -29,10 +29,15 @@
                 @endif
             </a>
 
+            {{-- Mobile cart icon --}}
+            <div class="md:hidden ml-auto">
+                <livewire:cart.cart-icon />
+            </div>
+
             {{-- Mobile hamburger --}}
             <button
                 @click="mobileOpen = !mobileOpen"
-                class="md:hidden ml-auto p-2 text-brand-primary"
+                class="md:hidden p-2 text-brand-primary"
                 aria-label="Toggle menu"
             >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -56,6 +56,8 @@
 
     <x-store.footer />
 
+    @livewire('cart.cart-drawer')
+
     @livewireScripts
 </body>
 </html>

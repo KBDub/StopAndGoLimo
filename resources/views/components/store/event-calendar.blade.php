@@ -25,7 +25,7 @@
 @endphp
 
 @if($store->hasFeature('calendar') && $events->count())
-<section class="py-10 bg-white">
+<section id="events" class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="text-center mb-8">

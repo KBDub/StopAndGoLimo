@@ -17,4 +17,16 @@ return [
 
     'tenant_base_domain' => env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.com'),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Default Contact Email
+    |--------------------------------------------------------------------------
+    |
+    | Fallback email shown on legal pages (Terms, Privacy, Refund Policy)
+    | when a store has not set its own Contact Email Address.
+    | Override via DEFAULT_CONTACT_EMAIL in your .env file.
+    |
+    */
+    'default_contact_email' => env('DEFAULT_CONTACT_EMAIL', 'info@dreamstudiosolutions.com'),
+
 ];

@@ -1,7 +1,7 @@
 <x-layouts.store title="Terms &amp; Conditions">
     @php
         $store  = app('current_store');
-        $email  = $store->contact_email ?: 'info@dreamstudiosolutions.com';
+        $email  = $store->contact_email ?: config('storefront.default_contact_email');
         $lpage  = $store->pages()->where('slug', 'terms')->first();
     @endphp
 

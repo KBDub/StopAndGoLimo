@@ -91,8 +91,8 @@
             <div class="hidden md:grid items-center py-3 gap-4"
                  style="grid-template-columns: 1fr auto auto;">
 
-                {{-- All links centered --}}
-                <div class="flex items-center justify-center gap-6">
+                {{-- All links spread across center zone --}}
+                <div class="flex items-center justify-between px-8">
                     <a href="{{ $homeUrl }}" class="{{ $linkCls }}">Home</a>
                     @foreach($allLinks as $link)
                         <a href="{{ $link['url'] }}" class="{{ $linkCls }}">{{ $link['label'] }}</a>
@@ -114,7 +114,7 @@
             </div>
 
         @else
-            {{-- Default: Logo Left — 3-column: [logo] [links centered] [cart] --}}
+            {{-- Default: Logo Left — 3-column: [logo] [links spread] [cart] --}}
             <div class="hidden md:grid items-center py-3 gap-4"
                  style="grid-template-columns: auto 1fr auto;">
 
@@ -127,8 +127,8 @@
                     @endif
                 </a>
 
-                {{-- All links centered --}}
-                <div class="flex items-center justify-center gap-6">
+                {{-- All links spread across center zone --}}
+                <div class="flex items-center justify-between px-8">
                     <a href="{{ $homeUrl }}" class="{{ $linkCls }}">Home</a>
                     @foreach($allLinks as $link)
                         <a href="{{ $link['url'] }}" class="{{ $linkCls }}">{{ $link['label'] }}</a>

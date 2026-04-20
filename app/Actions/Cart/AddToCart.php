@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Actions\Cart;
 
+use Lunar\Exceptions\MissingCurrencyPriceException;
 use Lunar\Facades\CartSession;
 use Lunar\Models\Cart;
 use Lunar\Models\Currency;
@@ -21,13 +22,17 @@ class AddToCart
             throw new \RuntimeException('Insufficient stock for this item.');
         }
 
-        $cart = CartSession::current();
+        try {
+            $cart = CartSession::current();
+        } catch (MissingCurrencyPriceException) {
+            $cart = null;
+        }
 
         if (! $cart) {
             $currency = Currency::getDefault();
             $cart = Cart::create([
                 'currency_id' => $currency->id,
-                'channel_id' => \Lunar\Models\Channel::getDefault()->id,
+                'channel_id'  => \Lunar\Models\Channel::getDefault()->id,
             ]);
             CartSession::use($cart);
         }

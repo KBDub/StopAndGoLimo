@@ -26,13 +26,19 @@ class ProductDetail extends Component
 
         $variant = \Lunar\Models\ProductVariant::findOrFail($this->selectedVariantId);
 
-        app(\App\Actions\Cart\AddToCart::class)->execute(
-            $variant->id,
-            $this->quantity
-        );
+        try {
+            app(\App\Actions\Cart\AddToCart::class)->execute(
+                $variant->id,
+                $this->quantity
+            );
 
-        $this->dispatch('cart-updated');
-        session()->flash('cart_message', 'Item added to cart.');
+            $this->dispatch('cart-updated');
+            session()->flash('cart_message', 'Item added to cart.');
+        } catch (\RuntimeException $e) {
+            session()->flash('cart_error', $e->getMessage());
+        } catch (\Throwable) {
+            session()->flash('cart_error', 'Unable to add item to cart. Please try again.');
+        }
     }
 
     public function render()

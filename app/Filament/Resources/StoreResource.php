@@ -41,6 +41,13 @@ class StoreResource extends Resource
                             ->helperText(fn () => 'e.g. "lincoln-high" → lincoln-high.' . config('storefront.tenant_base_domain'))
                             ->rules(['alpha_dash'])
                             ->maxLength(100),
+                        Forms\Components\TextInput::make('contact_email')
+                            ->label('Contact Email Address')
+                            ->email()
+                            ->maxLength(255)
+                            ->placeholder('store@example.com')
+                            ->helperText('Used on Terms, Privacy, and Refund Policy pages as the store\'s contact address.')
+                            ->columnSpanFull(),
                         Forms\Components\Select::make('lunar_channel_id')
                             ->label('Lunar Channel')
                             ->options(\Lunar\Models\Channel::pluck('name', 'id'))

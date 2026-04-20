@@ -14,6 +14,7 @@ class StorePage extends Model
         'slug',
         'title',
         'sections',
+        'custom_html',
         'is_active',
         'sort_order',
     ];

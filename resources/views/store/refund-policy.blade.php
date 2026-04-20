@@ -1,4 +1,13 @@
 <x-layouts.store title="Refund Policy">
+    @php
+        $store  = app('current_store');
+        $email  = $store->contact_email ?: 'info@dreamstudiosolutions.com';
+        $lpage  = $store->pages()->where('slug', 'refund-policy')->first();
+    @endphp
+
+    @if($lpage && $lpage->custom_html)
+        {!! $lpage->custom_html !!}
+    @else
     <section class="py-12 min-h-screen" style="background: var(--brand-bg, #f9f9f9);">
         <div class="max-w-3xl mx-auto px-6">
 
@@ -9,7 +18,6 @@
 
             <div class="prose prose-sm max-w-none space-y-8 text-gray-700">
 
-                {{-- Prominent no-refunds notice --}}
                 <div class="rounded-lg p-5 border-l-4" style="background: var(--brand-primary); border-color: var(--brand-secondary);">
                     <p class="font-bold text-white text-base">All Sales Are Final — No Refunds or Exchanges</p>
                     <p class="text-white/80 text-sm mt-1">Because every product we sell is custom-made or personalized to your specifications, we cannot accept returns, process exchanges, or issue refunds once your order enters production.</p>
@@ -35,7 +43,7 @@
                     <h2 class="text-lg font-bold mb-2" style="color: var(--brand-primary);">Exceptions — Our Error</h2>
                     <p>We stand behind the quality of our work. If we made a production error (printed the wrong design, shipped the wrong item, or delivered a product with a manufacturing defect), we will reprint or replace your order at no charge. To initiate a claim:</p>
                     <ol class="list-decimal pl-6 space-y-1 mt-2">
-                        <li>Email <a href="mailto:info@dreamstudiosolutions.com" style="color: var(--brand-secondary);">info@dreamstudiosolutions.com</a> within <strong>5 business days</strong> of delivery</li>
+                        <li>Email <a href="mailto:{{ $email }}" style="color: var(--brand-secondary);">{{ $email }}</a> within <strong>5 business days</strong> of delivery</li>
                         <li>Include your order number and clear photos of the issue</li>
                         <li>Our team will review and respond within 2 business days</li>
                     </ol>
@@ -44,7 +52,7 @@
 
                 <div>
                     <h2 class="text-lg font-bold mb-2" style="color: var(--brand-primary);">Cancellations</h2>
-                    <p>Order cancellations may be requested within <strong>24 hours</strong> of placing the order, provided production has not yet started. Email us immediately at <a href="mailto:info@dreamstudiosolutions.com" style="color: var(--brand-secondary);">info@dreamstudiosolutions.com</a> with your order number. We cannot guarantee cancellation once production has begun. If a cancellation is approved, a store credit (not a cash refund) may be issued at our discretion.</p>
+                    <p>Order cancellations may be requested within <strong>24 hours</strong> of placing the order, provided production has not yet started. Email us immediately at <a href="mailto:{{ $email }}" style="color: var(--brand-secondary);">{{ $email }}</a> with your order number. We cannot guarantee cancellation once production has begun. If a cancellation is approved, a store credit (not a cash refund) may be issued at our discretion.</p>
                 </div>
 
                 <div>
@@ -54,10 +62,11 @@
 
                 <div>
                     <h2 class="text-lg font-bold mb-2" style="color: var(--brand-primary);">Contact Us</h2>
-                    <p>Questions about your order or this policy? Email us at <a href="mailto:info@dreamstudiosolutions.com" style="color: var(--brand-secondary);">info@dreamstudiosolutions.com</a> — we're happy to help.</p>
+                    <p>Questions about your order or this policy? Email us at <a href="mailto:{{ $email }}" style="color: var(--brand-secondary);">{{ $email }}</a> — we're happy to help.</p>
                 </div>
 
             </div>
         </div>
     </section>
+    @endif
 </x-layouts.store>

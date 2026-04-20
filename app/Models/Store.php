@@ -22,6 +22,7 @@ class Store extends Model
         'features_enabled',
         'has_banner',
         'banner_text',
+        'contact_email',
         'events',
         'roster',
         'store_type',

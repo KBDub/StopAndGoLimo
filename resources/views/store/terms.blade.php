@@ -1,4 +1,13 @@
-<x-layouts.store title="Terms & Conditions">
+<x-layouts.store title="Terms &amp; Conditions">
+    @php
+        $store  = app('current_store');
+        $email  = $store->contact_email ?: 'info@dreamstudiosolutions.com';
+        $lpage  = $store->pages()->where('slug', 'terms')->first();
+    @endphp
+
+    @if($lpage && $lpage->custom_html)
+        {!! $lpage->custom_html !!}
+    @else
     <section class="py-12 min-h-screen" style="background: var(--brand-bg, #f9f9f9);">
         <div class="max-w-3xl mx-auto px-6">
 
@@ -56,10 +65,11 @@
 
                 <div>
                     <h2 class="text-lg font-bold mb-2" style="color: var(--brand-primary);">10. Contact</h2>
-                    <p>Questions about these Terms can be directed to us at <a href="mailto:info@dreamstudiosolutions.com" style="color: var(--brand-secondary);">info@dreamstudiosolutions.com</a>.</p>
+                    <p>Questions about these Terms can be directed to us at <a href="mailto:{{ $email }}" style="color: var(--brand-secondary);">{{ $email }}</a>.</p>
                 </div>
 
             </div>
         </div>
     </section>
+    @endif
 </x-layouts.store>

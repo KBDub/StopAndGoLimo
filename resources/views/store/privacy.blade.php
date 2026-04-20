@@ -1,4 +1,13 @@
 <x-layouts.store title="Privacy Policy">
+    @php
+        $store  = app('current_store');
+        $email  = $store->contact_email ?: 'info@dreamstudiosolutions.com';
+        $lpage  = $store->pages()->where('slug', 'privacy')->first();
+    @endphp
+
+    @if($lpage && $lpage->custom_html)
+        {!! $lpage->custom_html !!}
+    @else
     <section class="py-12 min-h-screen" style="background: var(--brand-bg, #f9f9f9);">
         <div class="max-w-3xl mx-auto px-6">
 
@@ -47,7 +56,7 @@
 
                 <div>
                     <h2 class="text-lg font-bold mb-2" style="color: var(--brand-primary);">7. Your Rights</h2>
-                    <p>You have the right to access, correct, or request deletion of your personal information. To exercise these rights, email us at <a href="mailto:info@dreamstudiosolutions.com" style="color: var(--brand-secondary);">info@dreamstudiosolutions.com</a> with "Privacy Request" in the subject line.</p>
+                    <p>You have the right to access, correct, or request deletion of your personal information. To exercise these rights, email us at <a href="mailto:{{ $email }}" style="color: var(--brand-secondary);">{{ $email }}</a> with "Privacy Request" in the subject line.</p>
                 </div>
 
                 <div>
@@ -62,10 +71,11 @@
 
                 <div>
                     <h2 class="text-lg font-bold mb-2" style="color: var(--brand-primary);">10. Contact</h2>
-                    <p>Privacy questions can be directed to <a href="mailto:info@dreamstudiosolutions.com" style="color: var(--brand-secondary);">info@dreamstudiosolutions.com</a>.</p>
+                    <p>Privacy questions can be directed to <a href="mailto:{{ $email }}" style="color: var(--brand-secondary);">{{ $email }}</a>.</p>
                 </div>
 
             </div>
         </div>
     </section>
+    @endif
 </x-layouts.store>

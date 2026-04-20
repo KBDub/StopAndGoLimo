@@ -137,27 +137,21 @@ class StoreResource extends Resource
                                 Forms\Components\Select::make('category')
                                     ->label('Category')
                                     ->options([
-                                        'School' => [
-                                            'academic'      => 'Academic',
-                                            'social_formal' => 'Social / Formal',
-                                            'spirit_pride'  => 'Spirit / Pride',
-                                            'athletic'      => 'Athletic',
-                                            'creative_arts' => 'Creative Arts',
-                                            'special_days'  => 'Special Days',
-                                        ],
-                                        'Corporate' => [
-                                            'hr_culture'       => 'HR / Culture',
-                                            'ext_marketing'    => 'External Marketing',
-                                            'internal_ops'     => 'Internal Ops',
-                                            'uniformity'       => 'Uniformity',
-                                            'corp_social'      => 'Corporate Social',
-                                            'sales_incentives' => 'Sales Incentives',
-                                        ],
-                                        'Specialized' => [
-                                            'franchise'    => 'Franchise',
-                                            'youth_sports' => 'Youth Sports',
-                                            'camp'         => 'Camp',
-                                        ],
+                                        'academic'         => 'Academic',
+                                        'social_formal'    => 'Social / Formal',
+                                        'spirit_pride'     => 'Spirit / Pride',
+                                        'athletic'         => 'Athletic',
+                                        'creative_arts'    => 'Creative Arts',
+                                        'special_days'     => 'Special Days',
+                                        'hr_culture'       => 'HR / Culture',
+                                        'ext_marketing'    => 'External Marketing',
+                                        'internal_ops'     => 'Internal Ops',
+                                        'uniformity'       => 'Uniformity',
+                                        'corp_social'      => 'Corporate Social',
+                                        'sales_incentives' => 'Sales Incentives',
+                                        'franchise'        => 'Franchise',
+                                        'youth_sports'     => 'Youth Sports',
+                                        'camp'             => 'Camp',
                                     ])
                                     ->placeholder('Select a category')
                                     ->nullable()

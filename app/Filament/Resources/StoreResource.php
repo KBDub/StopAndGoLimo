@@ -7,7 +7,6 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\StoreResource\Pages\CreateStore;
 use App\Filament\Resources\StoreResource\Pages\EditStore;
 use App\Filament\Resources\StoreResource\Pages\ListStores;
-use App\Filament\Resources\StoreResource\RelationManagers\PagesRelationManager;
 use App\Models\EventTemplate;
 use App\Models\Store;
 use Filament\Forms;
@@ -255,6 +254,40 @@ class StoreResource extends Resource
                             ->columnSpanFull(),
                     ]),
 
+                    // ── Pages ─────────────────────────────────────────
+                    Forms\Components\Tabs\Tab::make('Pages')->schema([
+                        Forms\Components\Repeater::make('pages')
+                            ->relationship()
+                            ->schema([
+                                Forms\Components\TextInput::make('title')
+                                    ->required()
+                                    ->maxLength(255),
+                                Forms\Components\TextInput::make('slug')
+                                    ->label('URL Slug')
+                                    ->helperText('Blank = homepage. Legal pages: "terms", "privacy", "refund-policy".')
+                                    ->nullable()
+                                    ->maxLength(100),
+                                Forms\Components\TextInput::make('sort_order')
+                                    ->label('Sort Order')
+                                    ->numeric()
+                                    ->default(10)
+                                    ->helperText('Below 50 = main nav. 50+ = legal / footer only.'),
+                                Forms\Components\Toggle::make('is_active')
+                                    ->label('Active')
+                                    ->default(true),
+                                Forms\Components\Textarea::make('custom_html')
+                                    ->label('Custom HTML')
+                                    ->helperText('When set, replaces the auto-generated branded template for this page.')
+                                    ->rows(12)
+                                    ->columnSpanFull(),
+                            ])
+                            ->columns(2)
+                            ->itemLabel(fn (array $state): ?string => $state['title'] ?? null)
+                            ->addActionLabel('Add Page')
+                            ->collapsible()
+                            ->columnSpanFull(),
+                    ]),
+
                 ])
                 ->columnSpanFull(),
         ]);
@@ -309,13 +342,6 @@ class StoreResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
-    }
-
-    public static function getRelationManagers(): array
-    {
-        return [
-            PagesRelationManager::class,
-        ];
     }
 
     public static function getPages(): array

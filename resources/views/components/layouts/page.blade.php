@@ -21,6 +21,13 @@
     <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
 </head>
+<style>
+    :root {
+        --brand-primary:   #2C2C2C;
+        --brand-secondary: #FFC20E;
+        --brand-accent:    #3273DC;
+    }
+</style>
 <body class="font-sans antialiased bg-linen text-charcoal">
 
     <header class="sticky top-0 z-50">

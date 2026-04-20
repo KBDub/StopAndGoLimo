@@ -26,6 +26,9 @@
         .border-brand-secondary { border-color: var(--brand-secondary); }
         .hover\:text-brand-secondary:hover { color: var(--brand-secondary); }
 
+        .focus\:border-brand-secondary:focus { border-color: var(--brand-secondary); }
+        .focus\:ring-brand-secondary:focus   { --tw-ring-color: var(--brand-secondary); box-shadow: 0 0 0 2px var(--brand-secondary); }
+
         {{-- Global CSS override patches from Super Admin --}}
         @foreach(\App\Models\GlobalOverride::active()->get() as $patch)
             {!! $patch->css !!}

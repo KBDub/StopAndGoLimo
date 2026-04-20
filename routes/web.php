@@ -9,6 +9,8 @@ Route::domain('{subdomain}.' . env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.c
     ->group(function () {
         Route::get('/', [StorefrontController::class, 'index'])->name('storefront.index');
         Route::get('/product/{slug}', [StorefrontController::class, 'product'])->name('storefront.product');
+        Route::get('/cart', fn () => view('store.cart'))->name('storefront.cart');
+        Route::get('/checkout', fn () => view('store.checkout'))->name('storefront.checkout');
         Route::get('/{slug}', [StorefrontController::class, 'page'])
             ->where('slug', '[a-z0-9\-]+')
             ->name('storefront.page');
@@ -26,6 +28,10 @@ if (app()->isLocal()) {
                 ->name('storefront.preview.index');
             Route::get('/product/{slug}', [StorefrontController::class, 'product'])
                 ->name('storefront.preview.product');
+            Route::get('/cart', fn () => view('store.cart'))
+                ->name('storefront.preview.cart');
+            Route::get('/checkout', fn () => view('store.checkout'))
+                ->name('storefront.preview.checkout');
             Route::get('/{slug}', [StorefrontController::class, 'page'])
                 ->where('slug', '[a-z0-9\-]+')
                 ->name('storefront.preview.page');

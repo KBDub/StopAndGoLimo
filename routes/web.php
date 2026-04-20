@@ -11,6 +11,10 @@ Route::domain('{subdomain}.' . env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.c
         Route::get('/product/{slug}', [StorefrontController::class, 'product'])->name('storefront.product');
         Route::get('/cart', fn () => view('store.cart'))->name('storefront.cart');
         Route::get('/checkout', fn () => view('store.checkout'))->name('storefront.checkout');
+        Route::get('/order-confirmation/{orderId}', fn ($subdomain, int $orderId) => view('store.order-confirmation', ['orderId' => $orderId]))->name('storefront.order-confirmation');
+        Route::get('/terms', fn () => view('store.terms'))->name('storefront.terms');
+        Route::get('/privacy', fn () => view('store.privacy'))->name('storefront.privacy');
+        Route::get('/refund-policy', fn () => view('store.refund-policy'))->name('storefront.refund-policy');
         Route::get('/{slug}', [StorefrontController::class, 'page'])
             ->where('slug', '[a-z0-9\-]+')
             ->name('storefront.page');
@@ -32,6 +36,14 @@ if (app()->isLocal()) {
                 ->name('storefront.preview.cart');
             Route::get('/checkout', fn () => view('store.checkout'))
                 ->name('storefront.preview.checkout');
+            Route::get('/order-confirmation/{orderId}', fn ($previewSubdomain, int $orderId) => view('store.order-confirmation', ['orderId' => $orderId]))
+                ->name('storefront.preview.order-confirmation');
+            Route::get('/terms', fn () => view('store.terms'))
+                ->name('storefront.preview.terms');
+            Route::get('/privacy', fn () => view('store.privacy'))
+                ->name('storefront.preview.privacy');
+            Route::get('/refund-policy', fn () => view('store.refund-policy'))
+                ->name('storefront.preview.refund-policy');
             Route::get('/{slug}', [StorefrontController::class, 'page'])
                 ->where('slug', '[a-z0-9\-]+')
                 ->name('storefront.preview.page');

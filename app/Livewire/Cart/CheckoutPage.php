@@ -37,13 +37,15 @@ class CheckoutPage extends Component
     public bool   $processing   = false;
     public string $errorMessage = '';
 
-    public string $cartUrl  = '/cart';
-    public string $shopUrl  = '/top5pct-merchandise';
+    public string $cartUrl             = '/cart';
+    public string $shopUrl             = '/top5pct-merchandise';
+    public string $confirmationBase    = '/order-confirmation/';
 
     public function mount(): void
     {
-        $this->cartUrl = view()->shared('storefrontCartUrl',  '/cart');
-        $this->shopUrl = view()->shared('storefrontHomeUrl',  '/top5pct-merchandise');
+        $this->cartUrl          = view()->shared('storefrontCartUrl',          '/cart');
+        $this->shopUrl          = view()->shared('storefrontHomeUrl',           '/top5pct-merchandise');
+        $this->confirmationBase = view()->shared('storefrontConfirmationBase', '/order-confirmation/');
     }
 
     protected function rules(): array
@@ -156,7 +158,7 @@ class CheckoutPage extends Component
 
             $this->dispatch('cart-updated');
 
-            $this->redirect('/order-confirmation/' . $order->id);
+            $this->redirect($this->confirmationBase . $order->id);
         } catch (\Exception $e) {
             $this->errorMessage = 'There was an issue placing your order. Please try again.';
             $this->processing = false;

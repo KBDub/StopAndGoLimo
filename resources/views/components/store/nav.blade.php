@@ -1,6 +1,7 @@
 @php
     $store      = app('current_store');
-    $pages      = $store->pages()->where('is_active', true)->get();
+    // sort_order < 50 = regular nav pages; sort_order >= 50 = legal/system pages (footer only)
+    $pages      = $store->pages()->where('is_active', true)->where('sort_order', '<', 50)->get();
     $flexClass  = match($store->nav_layout) {
         'center' => 'flex-col items-center gap-2',
         'right'  => 'flex-row-reverse justify-between',

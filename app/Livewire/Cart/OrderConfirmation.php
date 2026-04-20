@@ -9,11 +9,13 @@ use Lunar\Models\Order;
 
 class OrderConfirmation extends Component
 {
-    public int $orderId;
+    public int    $orderId;
+    public string $shopUrl = '/';
 
     public function mount(int $orderId): void
     {
         $this->orderId = $orderId;
+        $this->shopUrl = view()->shared('storefrontHomeUrl', '/');
     }
 
     public function getOrderProperty(): Order

@@ -64,6 +64,9 @@ class IdentifyStore
         View::share('storefrontCartUrl',     $previewRoot . '/cart');
         View::share('storefrontCheckoutUrl', $previewRoot . '/checkout');
 
+        // /order-confirmation  →  used by CheckoutPage redirect after order placed
+        View::share('storefrontConfirmationBase', $previewRoot . '/order-confirmation/');
+
         return $next($request);
     }
 

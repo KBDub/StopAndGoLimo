@@ -1,5 +1,18 @@
 @php
-    $store = app('current_store');
+    $store          = app('current_store');
+    $pageBase       = view()->shared('storefrontPageBase',  '/');
+    $homeUrl        = view()->shared('storefrontHomeUrl',   '/');
+    $termsUrl       = $pageBase . 'terms';
+    $privacyUrl     = $pageBase . 'privacy';
+    $refundUrl      = $pageBase . 'refund-policy';
+    // sort_order < 50 = custom content pages shown in nav/pages section
+    // sort_order >= 50 = legal/system pages (shown only in Legal section via hardcoded links)
+    $contentPages   = $store->pages()
+                        ->where('is_active', true)
+                        ->where('slug', '!=', '')
+                        ->where('sort_order', '<', 50)
+                        ->orderBy('sort_order')
+                        ->get();
 @endphp
 
 <footer class="bg-brand-primary text-white py-10">
@@ -9,29 +22,37 @@
             {{-- Store identity --}}
             <div class="flex-1">
                 @if($store->logo_path)
-                    <img
-                        src="{{ Storage::url($store->logo_path) }}"
-                        alt="{{ $store->name }}"
-                        class="h-12 w-auto object-contain mb-3 brightness-0 invert"
-                    >
+                    <a href="{{ $homeUrl }}">
+                        <img
+                            src="{{ Storage::url($store->logo_path) }}"
+                            alt="{{ $store->name }}"
+                            class="h-12 w-auto object-contain mb-3 brightness-0 invert"
+                        >
+                    </a>
                 @else
-                    <h3 class="text-xl font-bold mb-3">{{ $store->name }}</h3>
+                    <a href="{{ $homeUrl }}" class="text-xl font-bold mb-3 block hover:opacity-80 transition-opacity">
+                        {{ $store->name }}
+                    </a>
                 @endif
                 <p class="text-sm text-white/70 max-w-xs">
                     Your official online store, powered by Top 5 Percent.
                 </p>
             </div>
 
-            {{-- Page links --}}
-            @php $pages = $store->pages()->where('is_active', true)->get(); @endphp
-            @if($pages->count() > 1)
+            {{-- Content pages (store-specific) --}}
+            @if($contentPages->count())
                 <div>
                     <h4 class="text-sm font-bold uppercase tracking-wider text-brand-secondary mb-3">Pages</h4>
                     <ul class="space-y-2">
-                        <li><a href="/" class="text-sm text-white/70 hover:text-brand-secondary transition-colors">Home</a></li>
-                        @foreach($pages->sortBy('sort_order') as $page)
+                        <li>
+                            <a href="{{ $homeUrl }}" class="text-sm text-white/70 hover:text-brand-secondary transition-colors">
+                                Home
+                            </a>
+                        </li>
+                        @foreach($contentPages as $page)
                             <li>
-                                <a href="{{ $page->url() }}" class="text-sm text-white/70 hover:text-brand-secondary transition-colors">
+                                <a href="{{ $pageBase }}{{ ltrim($page->url(), '/') }}"
+                                   class="text-sm text-white/70 hover:text-brand-secondary transition-colors">
                                     {{ $page->title }}
                                 </a>
                             </li>
@@ -40,14 +61,38 @@
                 </div>
             @endif
 
+            {{-- Legal links (always shown) --}}
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-brand-secondary mb-3">Legal</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="{{ $termsUrl }}" class="text-sm text-white/70 hover:text-brand-secondary transition-colors">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ $privacyUrl }}" class="text-sm text-white/70 hover:text-brand-secondary transition-colors">
+                            Privacy Policy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ $refundUrl }}" class="text-sm text-white/70 hover:text-brand-secondary transition-colors">
+                            Refund Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
             {{-- Powered by --}}
             <div class="text-right">
                 <p class="text-xs text-white/50">Powered by</p>
-                <a href="https://top5pct.com" target="_blank" rel="noopener" class="text-sm font-bold text-brand-secondary hover:opacity-80 transition-opacity">
+                <a href="https://top5pct.com" target="_blank" rel="noopener"
+                   class="text-sm font-bold text-brand-secondary hover:opacity-80 transition-opacity">
                     Top 5 Percent
                 </a>
                 <p class="text-xs text-white/40 mt-2">&copy; {{ date('Y') }} {{ $store->name }}</p>
             </div>
+
         </div>
     </div>
 </footer>

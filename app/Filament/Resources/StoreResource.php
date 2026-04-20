@@ -7,9 +7,11 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\StoreResource\Pages\CreateStore;
 use App\Filament\Resources\StoreResource\Pages\EditStore;
 use App\Filament\Resources\StoreResource\Pages\ListStores;
+use App\Models\EventTemplate;
 use App\Models\Store;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -159,12 +161,42 @@ class StoreResource extends Resource
                                     ])
                                     ->placeholder('Select a category')
                                     ->nullable()
-                                    ->searchable(),
-                                Forms\Components\TextInput::make('event_type')
+                                    ->searchable()
+                                    ->live(),
+                                Forms\Components\Select::make('event_type')
                                     ->label('Event Type')
-                                    ->placeholder('e.g. Spirit Week, Trade Show, Graduation')
-                                    ->helperText('Specific event name within the category.')
-                                    ->nullable(),
+                                    ->nullable()
+                                    ->searchable()
+                                    ->live()
+                                    ->helperText('Pick from the list or type a new one and press Enter.')
+                                    ->placeholder(fn (Get $get) => $get('category')
+                                        ? 'Search or add an event type…'
+                                        : 'Select a category first')
+                                    ->options(fn (Get $get): array => EventTemplate::when(
+                                            $get('category'),
+                                            fn ($q) => $q->where('category', $get('category'))
+                                        )
+                                        ->orderBy('name')
+                                        ->pluck('name', 'name')
+                                        ->toArray()
+                                    )
+                                    ->getSearchResultsUsing(function (string $search, Get $get): array {
+                                        $results = EventTemplate::when(
+                                            $get('category'),
+                                            fn ($q) => $q->where('category', $get('category'))
+                                        )
+                                        ->where('name', 'like', '%' . $search . '%')
+                                        ->orderBy('name')
+                                        ->pluck('name', 'name')
+                                        ->toArray();
+
+                                        if (filled($search) && ! array_key_exists($search, $results)) {
+                                            $results[$search] = '＋ Add "' . $search . '"';
+                                        }
+
+                                        return $results;
+                                    })
+                                    ->getOptionLabelUsing(fn (?string $value): ?string => $value),
                                 Forms\Components\DateTimePicker::make('event_date')
                                     ->required()
                                     ->label('Date & Time'),

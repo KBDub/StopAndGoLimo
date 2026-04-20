@@ -7,6 +7,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\StoreResource\Pages\CreateStore;
 use App\Filament\Resources\StoreResource\Pages\EditStore;
 use App\Filament\Resources\StoreResource\Pages\ListStores;
+use App\Filament\Resources\StoreResource\RelationManagers\PagesRelationManager;
 use App\Models\EventTemplate;
 use App\Models\Store;
 use Filament\Forms;
@@ -308,6 +309,13 @@ class StoreResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
+    }
+
+    public static function getRelationManagers(): array
+    {
+        return [
+            PagesRelationManager::class,
+        ];
     }
 
     public static function getPages(): array

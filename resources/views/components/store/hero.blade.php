@@ -8,7 +8,7 @@
             <img
                 src="{{ Storage::url($store->logo_path) }}"
                 alt="{{ $store->name }}"
-                class="h-24 w-auto mx-auto mb-6 object-contain brightness-0 invert"
+                class="h-24 w-auto mx-auto mb-6 object-contain"
             >
         @endif
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">

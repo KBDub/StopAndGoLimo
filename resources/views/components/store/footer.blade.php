@@ -27,7 +27,7 @@
                         <img
                             src="{{ Storage::url($store->logo_path) }}"
                             alt="{{ $store->name }}"
-                            class="h-12 w-auto object-contain mb-3 brightness-0 invert"
+                            class="h-12 w-auto object-contain mb-3"
                         >
                     </a>
                 @else

@@ -13,7 +13,17 @@ use Lunar\Models\Cart;
 
 class CartDrawer extends Component
 {
-    public bool $open = false;
+    public bool   $open        = false;
+    public string $cartUrl     = '/cart';
+    public string $checkoutUrl = '/checkout';
+    public string $shopUrl     = '/top5pct-merchandise';
+
+    public function mount(): void
+    {
+        $this->cartUrl     = view()->shared('storefrontCartUrl',     '/cart');
+        $this->checkoutUrl = view()->shared('storefrontCheckoutUrl', '/checkout');
+        $this->shopUrl     = view()->shared('storefrontHomeUrl',     '/top5pct-merchandise');
+    }
 
     #[On('open-cart-drawer')]
     public function openDrawer(): void

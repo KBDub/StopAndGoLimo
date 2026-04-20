@@ -1,9 +1,6 @@
 <div>
-    @php
-        $shopLink     = isset($storefrontHomeUrl)     ? $storefrontHomeUrl     : '/top5pct-merchandise';
-        $cartLink     = isset($storefrontCartUrl)     ? $storefrontCartUrl     : '/cart';
-        $checkoutLink = isset($storefrontCheckoutUrl) ? $storefrontCheckoutUrl : '/checkout';
-    @endphp
+    {{-- $cartUrl / $checkoutUrl / $shopUrl are Livewire public properties
+         set in mount() from the shared storefront context vars --}}
 
     <div
         x-data="{ show: @entangle('open') }"
@@ -117,7 +114,7 @@
                         <h3 class="font-bold text-lg mb-2" style="color: var(--brand-primary)">Your cart is empty</h3>
                         <p class="text-sm text-gray-500 mb-6">Browse our products and find something you love.</p>
                         <a
-                            href="{{ $shopLink }}"
+                            href="{{ $shopUrl }}"
                             @click="show = false; $wire.closeDrawer()"
                             class="inline-block px-6 py-3 font-semibold text-sm transition-all hover:opacity-90"
                             style="background-color: var(--brand-secondary); color: var(--brand-primary)"
@@ -153,14 +150,14 @@
 
                     <div class="space-y-2">
                         <a
-                            href="{{ $checkoutLink }}"
+                            href="{{ $checkoutUrl }}"
                             class="block w-full text-center py-3 font-bold text-sm transition-all hover:opacity-90"
                             style="background-color: var(--brand-secondary); color: var(--brand-primary)"
                         >
                             Proceed to Checkout
                         </a>
                         <a
-                            href="{{ $cartLink }}"
+                            href="{{ $cartUrl }}"
                             class="block w-full text-center py-2 text-sm font-semibold border-2 transition-all hover:opacity-70"
                             style="border-color: var(--brand-primary); color: var(--brand-primary)"
                         >

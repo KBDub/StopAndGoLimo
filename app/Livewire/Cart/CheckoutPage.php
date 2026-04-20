@@ -33,9 +33,18 @@ class CheckoutPage extends Component
     public string $billingPostcode = '';
     public string $billingCountry = 'US';
 
-    public string $notes = '';
-    public bool $processing = false;
+    public string $notes        = '';
+    public bool   $processing   = false;
     public string $errorMessage = '';
+
+    public string $cartUrl  = '/cart';
+    public string $shopUrl  = '/top5pct-merchandise';
+
+    public function mount(): void
+    {
+        $this->cartUrl = view()->shared('storefrontCartUrl',  '/cart');
+        $this->shopUrl = view()->shared('storefrontHomeUrl',  '/top5pct-merchandise');
+    }
 
     protected function rules(): array
     {

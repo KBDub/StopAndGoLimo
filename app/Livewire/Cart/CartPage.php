@@ -13,6 +13,15 @@ use Lunar\Models\Cart;
 
 class CartPage extends Component
 {
+    public string $checkoutUrl = '/checkout';
+    public string $shopUrl     = '/top5pct-merchandise';
+
+    public function mount(): void
+    {
+        $this->checkoutUrl = view()->shared('storefrontCheckoutUrl', '/checkout');
+        $this->shopUrl     = view()->shared('storefrontHomeUrl',     '/top5pct-merchandise');
+    }
+
     #[On('cart-updated')]
     public function refreshCart(): void
     {

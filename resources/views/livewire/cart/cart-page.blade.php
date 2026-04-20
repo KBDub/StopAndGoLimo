@@ -1,8 +1,5 @@
 <div>
-    @php
-        $shopLink     = isset($storefrontHomeUrl)     ? $storefrontHomeUrl     : '/top5pct-merchandise';
-        $checkoutLink = isset($storefrontCheckoutUrl) ? $storefrontCheckoutUrl : '/checkout';
-    @endphp
+    {{-- $checkoutUrl / $shopUrl are Livewire public properties set in mount() --}}
 
     <section class="py-10 bg-gray-50 min-h-screen">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -120,7 +117,7 @@
                             </div>
 
                             <a
-                                href="{{ $checkoutLink }}"
+                                href="{{ $checkoutUrl }}"
                                 class="block w-full text-center py-3 font-bold text-sm mb-3 transition-all hover:opacity-90"
                                 style="background-color: var(--brand-secondary); color: var(--brand-primary)"
                             >
@@ -128,7 +125,7 @@
                             </a>
 
                             <a
-                                href="{{ $shopLink }}"
+                                href="{{ $shopUrl }}"
                                 class="block w-full text-center py-2 text-sm font-semibold border-2 transition-all hover:opacity-70"
                                 style="border-color: var(--brand-primary); color: var(--brand-primary)"
                             >
@@ -156,7 +153,7 @@
                     <h2 class="text-2xl font-bold mb-3" style="color: var(--brand-primary)">Your cart is empty</h2>
                     <p class="text-gray-500 mb-8">Looks like you haven't added any items yet.</p>
                     <a
-                        href="{{ $shopLink }}"
+                        href="{{ $shopUrl }}"
                         class="inline-block px-8 py-3 font-bold transition-all hover:opacity-90"
                         style="background-color: var(--brand-secondary); color: var(--brand-primary)"
                     >

@@ -6,7 +6,8 @@
     @endphp
 
     @if($lpage && $lpage->custom_html)
-        {!! $lpage->custom_html !!}
+        @php $renderedHtml = str_replace('{{contact_email}}', $email, $lpage->custom_html); @endphp
+        {!! $renderedHtml !!}
     @else
     <section class="py-12 min-h-screen" style="background: var(--brand-bg, #f9f9f9);">
         <div class="max-w-3xl mx-auto px-6">

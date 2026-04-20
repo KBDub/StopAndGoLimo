@@ -266,7 +266,8 @@ class StoreResource extends Resource
                                     ->label('URL Slug')
                                     ->helperText('Blank = homepage. Legal pages: "terms", "privacy", "refund-policy".')
                                     ->nullable()
-                                    ->maxLength(100),
+                                    ->maxLength(100)
+                                    ->dehydrateStateUsing(fn ($state) => $state ?? ''),
                                 Forms\Components\TextInput::make('sort_order')
                                     ->label('Sort Order')
                                     ->numeric()

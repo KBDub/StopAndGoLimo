@@ -570,8 +570,14 @@ From the **Storefronts → Stores** table, any store can be previewed directly:
 
 You can also preview a store before DNS is set up using the preview route:
 
+**Production preview:**
 ```
-https://dreamstudiosolutions.com/preview/{subdomain}
+https://dreamstudiosolutions.com/storefront-preview/{subdomain}
+```
+
+**Development preview:**
+```
+https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker.replit.dev/storefront-preview/{storeName}
 ```
 
 This renders the full storefront in context using the subdomain's settings without requiring a real DNS subdomain to be configured — useful during client onboarding and QA.

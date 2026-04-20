@@ -1,6 +1,7 @@
 <div>
     @php
-        $shopLink = isset($storefrontHomeUrl) ? $storefrontHomeUrl : '/top5pct-merchandise';
+        $shopLink     = isset($storefrontHomeUrl)     ? $storefrontHomeUrl     : '/top5pct-merchandise';
+        $checkoutLink = isset($storefrontCheckoutUrl) ? $storefrontCheckoutUrl : '/checkout';
     @endphp
 
     <section class="py-10 bg-gray-50 min-h-screen">
@@ -119,7 +120,7 @@
                             </div>
 
                             <a
-                                href="/checkout"
+                                href="{{ $checkoutLink }}"
                                 class="block w-full text-center py-3 font-bold text-sm mb-3 transition-all hover:opacity-90"
                                 style="background-color: var(--brand-secondary); color: var(--brand-primary)"
                             >

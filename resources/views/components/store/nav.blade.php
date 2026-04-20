@@ -17,7 +17,7 @@
         <div class="flex items-center {{ $flexClass }} py-3 gap-4 relative">
 
             {{-- Logo --}}
-            <a href="/" class="flex-shrink-0">
+            <a href="{{ $storefrontHomeUrl }}" class="flex-shrink-0">
                 @if($store->logo_path)
                     <img
                         src="{{ Storage::url($store->logo_path) }}"

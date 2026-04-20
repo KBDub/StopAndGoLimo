@@ -1,7 +1,7 @@
 <div>
     @php
         $shopLink = isset($storefrontHomeUrl) ? $storefrontHomeUrl : '/top5pct-merchandise';
-        $cartLink = '/cart';
+        $cartLink = isset($storefrontCartUrl) ? $storefrontCartUrl : '/cart';
     @endphp
 
     <section class="py-10 bg-gray-50 min-h-screen">

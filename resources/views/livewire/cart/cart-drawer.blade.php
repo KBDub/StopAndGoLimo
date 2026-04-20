@@ -1,8 +1,8 @@
 <div>
     @php
-        $shopLink     = isset($storefrontHomeUrl) ? $storefrontHomeUrl : '/top5pct-merchandise';
-        $cartLink     = '/cart';
-        $checkoutLink = '/checkout';
+        $shopLink     = isset($storefrontHomeUrl)     ? $storefrontHomeUrl     : '/top5pct-merchandise';
+        $cartLink     = isset($storefrontCartUrl)     ? $storefrontCartUrl     : '/cart';
+        $checkoutLink = isset($storefrontCheckoutUrl) ? $storefrontCheckoutUrl : '/checkout';
     @endphp
 
     <div

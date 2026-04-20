@@ -57,8 +57,12 @@ class IdentifyStore
         // /{slug}  →  used by nav page links
         View::share('storefrontPageBase', $previewRoot . '/');
 
-        // /  →  used by nav "Home" link
+        // /  →  used by nav "Home" link and logo
         View::share('storefrontHomeUrl', $previewRoot ?: '/');
+
+        // /cart and /checkout  →  used by cart drawer and cart page CTAs
+        View::share('storefrontCartUrl',     $previewRoot . '/cart');
+        View::share('storefrontCheckoutUrl', $previewRoot . '/checkout');
 
         return $next($request);
     }

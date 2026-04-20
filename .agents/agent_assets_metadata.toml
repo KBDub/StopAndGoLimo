@@ -6,3 +6,9 @@ id = "FdFKaxDHIYTUFYqE4ghVh"
 uri = "file://docs/StoreFrontAdminUserGuide.md"
 type = "text"
 title = "StoreFront Admin User Guide"
+
+[[outputs]]
+id = "5rMRQiIPRL-Wx1MREyDDA"
+uri = "file://docs/white-labeling.md"
+type = "text"
+title = "White-Labeling Architecture (updated)"

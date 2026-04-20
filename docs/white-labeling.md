@@ -685,7 +685,80 @@ routes/
 
 ---
 
-## 12. Frontend Page: `/design-services/custom-storefronts`
+## 12. Event Categories and Types
+
+Based on the white-label platform's supported store types, each store can pre-configure its event calendar from a structured set of categories and event types. This enables a "Quick Add" dropdown in the Filament Events repeater rather than forcing admins to type everything from scratch.
+
+---
+
+### 12a. School Store Event Types
+
+School events are typically high-volume, short-duration pop-up windows or seasonal always-on collections.
+
+| Category | Event Types | Key Merchandise / Feature |
+|---|---|---|
+| **Academic** | Book Fairs, Science Olympiad, Honor Society Induction, Graduation | Commemorative "Class of" tees, tassels, stoles |
+| **Social / Formal** | Prom, Homecoming, Winter Formal, Sadie Hawkins | Formal wear accessories, "Promposal" shirts, custom sashes |
+| **Spirit / Pride** | Spirit Week, Pep Rallies, Mascot Launch, Founders Day | Face paint, foam fingers, temporary tattoos, mascot plushies |
+| **Athletic** | Tryouts, Championship Runs, Senior Night, Signing Day | Performance jerseys, "State Bound" hoodies, stadium blankets |
+| **Creative Arts** | Theater Opening Night, Band Competitions, Art Show | "Cast & Crew" hoodies, band polo uniforms, art-printed totes |
+| **Special Days** | Picture Day, Field Day, 100th Day of School, Teacher Appreciation | Volunteer shirts, class-color tees for Field Day |
+
+---
+
+### 12b. Business & Corporate Store Event Types
+
+Corporate stores focus on professional identity, internal culture, and external marketing.
+
+| Category | Event Types | Key Merchandise / Feature |
+|---|---|---|
+| **HR / Culture** | New Hire Onboarding, Work Anniversaries, Employee of the Month | Welcome kits, "Year 5" embroidered jackets, high-end mugs |
+| **External Marketing** | Trade Shows, Product Launches, Client Hospitality, Industry Expos | Low-cost swag (pens, stickers) vs. VIP gifts (tech bags) |
+| **Internal Ops** | Sales Kickoffs (SKO), Annual Summits, Strategic Planning | Themed "Kickoff" tees, branded notebooks, wireless chargers |
+| **Uniformity** | Departmental Rebrands, Seasonal Uniform Refresh (Summer/Winter) | Durable polos, safety vests, branded scrubs for medical |
+| **Corporate Social** | Volunteer Days, Charity Runs (5ks), Holiday Parties | "Company Cares" tees, custom holiday ornaments/socks |
+| **Sales Incentives** | President's Club, Quarterly Contest Winners | Premium brands (Patagonia, North Face, Yeti) with subtle logos |
+
+---
+
+### 12c. Specialized / Hybrid Store Types
+
+The platform is flexible enough to support niche store formats beyond the core school and corporate categories.
+
+| Store Type | Event Types | Notes |
+|---|---|---|
+| **Franchise Stores** | Grand Openings, Local Sponsorships | Centralized branding for multiple locations (e.g. regional gym or restaurant chain) |
+| **Youth Sports Leagues** | Opening Day, Playoffs, All-Star Game | Distinct from school stores — often require Name/Number customization on back |
+| **Camp Stores** | Visiting Day, Color War, Final Campfire | Bunk kits, pre-order gear windows; Color War drives major merchandise spikes |
+
+---
+
+### 12d. EventTemplate Model — Quick Add Logic
+
+When a new store is created, the Filament Events repeater can offer a "Quick Add" dropdown pre-seeded with event templates appropriate for that store's type. This avoids blank-slate setup for every new client.
+
+```php
+// Seed logic concept — can live in CreateTenantStoreJob or a Filament Action
+$templates = [
+    'school'     => ['Spirit Week', 'Pep Rally', 'Homecoming', 'Graduation', 'Senior Night'],
+    'corporate'  => ['New Hire Onboarding', 'Trade Show', 'Sales Kickoff', 'Holiday Party'],
+    'fundraiser' => ['Fundraiser Deadline', 'Pickup Day', 'Goal Announcement'],
+    'general'    => ['Launch Day', 'Sale Window Open', 'Sale Window Close'],
+];
+```
+
+**Implementation path:**
+- Add an `EventTemplate` model with columns: `store_type` (string), `name` (string), `category` (string)
+- Seed the table from the lists above via a database seeder
+- In `StoreResource`, add a Filament `Action` button on the Events tab: "Load Templates for Store Type" — queries `EventTemplate::where('store_type', $store->store_type)` and appends them to the repeater
+
+**This also enables:**
+- Pre-filling `event_date` ranges based on a school year or fiscal year input
+- Auto-toggling `show_countdown` on the nearest upcoming event at store creation time
+
+---
+
+## 13. Frontend Page: `/design-services/custom-storefronts`
 
 A new marketing page targeting potential storefront clients. Structure mirrors `/custom-apparel/dtf-transfers`.
 
@@ -710,7 +783,7 @@ A new marketing page targeting potential storefront clients. Structure mirrors `
 
 ---
 
-## 13. Build Order / Recommended Sequence
+## 14. Build Order / Recommended Sequence
 
 1. **Migrations** — `stores`, `store_pages`, `global_overrides`
 2. **Models** — `Store`, `StorePage`, `GlobalOverride` with casts and relationships
@@ -728,7 +801,7 @@ A new marketing page targeting potential storefront clients. Structure mirrors `
 
 ---
 
-## 14. Open Items / Future Phases
+## 15. Open Items / Future Phases
 
 | Item | Priority | Notes |
 |---|---|---|

@@ -130,14 +130,50 @@ class StoreResource extends Resource
                             ->schema([
                                 Forms\Components\TextInput::make('name')
                                     ->required()
-                                    ->label('Event Name'),
+                                    ->label('Event Name')
+                                    ->columnSpan(2),
+                                Forms\Components\Select::make('category')
+                                    ->label('Category')
+                                    ->options([
+                                        'School' => [
+                                            'academic'      => 'Academic',
+                                            'social_formal' => 'Social / Formal',
+                                            'spirit_pride'  => 'Spirit / Pride',
+                                            'athletic'      => 'Athletic',
+                                            'creative_arts' => 'Creative Arts',
+                                            'special_days'  => 'Special Days',
+                                        ],
+                                        'Corporate' => [
+                                            'hr_culture'       => 'HR / Culture',
+                                            'ext_marketing'    => 'External Marketing',
+                                            'internal_ops'     => 'Internal Ops',
+                                            'uniformity'       => 'Uniformity',
+                                            'corp_social'      => 'Corporate Social',
+                                            'sales_incentives' => 'Sales Incentives',
+                                        ],
+                                        'Specialized' => [
+                                            'franchise'    => 'Franchise',
+                                            'youth_sports' => 'Youth Sports',
+                                            'camp'         => 'Camp',
+                                        ],
+                                    ])
+                                    ->placeholder('Select a category')
+                                    ->nullable()
+                                    ->searchable(),
+                                Forms\Components\TextInput::make('event_type')
+                                    ->label('Event Type')
+                                    ->placeholder('e.g. Spirit Week, Trade Show, Graduation')
+                                    ->helperText('Specific event name within the category.')
+                                    ->nullable(),
                                 Forms\Components\DateTimePicker::make('event_date')
                                     ->required()
                                     ->label('Date & Time'),
                                 Forms\Components\TextInput::make('location')
                                     ->label('Location'),
                                 Forms\Components\Toggle::make('show_countdown')
-                                    ->label('Show Countdown'),
+                                    ->label('Show Countdown')
+                                    ->helperText('Only one event should have this enabled at a time.')
+                                    ->columnSpan(2),
                             ])
                             ->columns(2)
                             ->addActionLabel('Add Event')

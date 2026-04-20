@@ -132,31 +132,48 @@ Core store identity settings. All fields here are required.
 
 ---
 
-### 4.2 Branding Tab
+### 4.2 Navigation Tab
 
-Controls the store's visual identity — logo, navigation layout, colors, and typography.
+Controls the store's navigation bar — logo, layout, link selection, and sticky behavior.
 
-#### Logo Upload
+#### Store Logo
 
 - Upload any image (PNG, JPG, SVG recommended)
 - Stored at `storage/app/public/store-logos/`
-- Displays in the storefront header at all times
+- Displays in the storefront nav bar at all screen sizes
 
-#### Logo / Nav Position
+#### Logo Position
 
-Controls where the logo sits in the navigation bar:
+Controls where the logo sits in the navigation bar and how links are arranged:
 
 | Value | Label | Description |
 |-------|-------|-------------|
-| `left` | Logo Left (default) | Logo on the far left, nav links to the right |
-| `center` | Logo Centered | Logo centered, nav links flanking it |
-| `right` | Logo Right | Logo on the far right, nav links to the left |
+| `left` | Logo Left (default) | Logo left, links centered in the middle zone, cart pinned far right |
+| `center` | Logo Centered — links split left & right | Links split evenly around the logo; Home anchors the left group; cart pinned far right |
+| `right` | Logo Right | Links centered left, logo second-to-last, cart pinned far right |
 
 See [Section 6 — Navigation Layout Options](#6-navigation-layout-options) for visual diagrams.
 
+#### Sticky Navigation
+
+When enabled, the nav bar (and any announcement banner text) stays pinned to the top of the screen as visitors scroll down the page. Recommended for long homepages or stores with many products.
+
+#### Navigation Links
+
+Home is always the first link in the nav. Check any additional section links to display:
+
+| Key | Label | Destination |
+|-----|-------|-------------|
+| `catalog` | Shop / Catalog | Scrolls to the catalog section on the homepage (`#catalog`) |
+| `events` | Events | Scrolls to the events section on the homepage (`#events`) |
+
+Custom store pages (created via the Pages menu) with a sort order below 50 are also added automatically.
+
 ---
 
-### 4.3 Colors & Typography
+### 4.3 Branding Tab
+
+Controls the store's color palette and typography. Logo and layout settings have moved to the **Navigation** tab.
 
 #### Theme Colors
 
@@ -195,15 +212,29 @@ Use the color picker or type in a hex code directly.
 
 ### 4.4 Banner Tab
 
-Controls a site-wide announcement strip that appears above the navigation.
+Controls the site-wide announcement strip and optional hero banner image.
+
+#### Announcement Banner
 
 | Field | Type | Description |
 |-------|------|-------------|
-| **Show Announcement Banner** | Toggle | Turns the banner on or off |
+| **Show Announcement Banner** | Toggle | Turns the text announcement strip on or off |
 | **Banner Message** | Text (max 255 chars) | The message shown to all visitors |
 
-> The banner field is hidden until the toggle is enabled.
-> Use this for deadlines, sale announcements, store open/close windows.
+> The Banner Message field is hidden until the toggle is enabled.
+> Use this for deadlines, sale announcements, or store open/close windows.
+> When Sticky Navigation is on (Navigation tab), this strip sticks to the top along with the nav bar.
+
+#### Banner Image
+
+| Field | Type | Description |
+|-------|------|-------------|
+| **Banner Image** | Image upload | Optional full-width image displayed below the nav bar, above page content |
+
+> Recommended dimensions: **1440 × 300–500 px** (wide landscape).
+> The image scales to fill the full browser width and is capped at 500 px tall.
+> The banner image is independent of the announcement text — both can be active at the same time.
+> Stored at `storage/app/public/store-banners/`.
 
 ---
 

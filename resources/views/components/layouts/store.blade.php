@@ -45,11 +45,28 @@
 </head>
 <body class="bg-white text-charcoal antialiased">
 
-    <x-store.nav />
+    {{-- ── Sticky header block (nav + announcement bar) ─────────────────── --}}
+    <div @if($currentStore->nav_sticky) style="position: sticky; top: 0; z-index: 50;" @endif>
 
-    @if($currentStore->has_banner && $currentStore->banner_text)
-        <div class="bg-brand-accent text-white text-center py-2 text-sm font-semibold px-4">
-            {{ $currentStore->banner_text }}
+        <x-store.nav />
+
+        @if($currentStore->has_banner && $currentStore->banner_text)
+            <div class="bg-brand-accent text-white text-center py-2 text-sm font-semibold px-4">
+                {{ $currentStore->banner_text }}
+            </div>
+        @endif
+
+    </div>
+
+    {{-- ── Full-width banner image (below sticky header, above content) ─── --}}
+    @if($currentStore->banner_image)
+        <div class="w-full overflow-hidden">
+            <img
+                src="{{ Storage::url($currentStore->banner_image) }}"
+                alt="{{ $currentStore->name }} banner"
+                class="w-full object-cover block"
+                style="max-height: 500px;"
+            >
         </div>
     @endif
 

@@ -22,7 +22,10 @@ class Store extends Model
         'features_enabled',
         'has_banner',
         'banner_text',
+        'banner_image',
         'contact_email',
+        'nav_links',
+        'nav_sticky',
         'events',
         'roster',
         'store_type',
@@ -35,6 +38,8 @@ class Store extends Model
         'events'           => 'array',
         'roster'           => 'array',
         'has_banner'       => 'boolean',
+        'nav_links'        => 'array',
+        'nav_sticky'       => 'boolean',
         'is_active'        => 'boolean',
     ];
 

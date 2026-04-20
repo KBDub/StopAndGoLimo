@@ -67,8 +67,8 @@ class StoreResource extends Resource
                             ->default(true),
                     ])->columns(2),
 
-                    // ── Branding ─────────────────────────────────────
-                    Forms\Components\Tabs\Tab::make('Branding')->schema([
+                    // ── Navigation ───────────────────────────────────
+                    Forms\Components\Tabs\Tab::make('Navigation')->schema([
                         Forms\Components\FileUpload::make('logo_path')
                             ->label('Store Logo')
                             ->image()
@@ -78,11 +78,27 @@ class StoreResource extends Resource
                             ->label('Logo Position')
                             ->options([
                                 'left'   => 'Logo Left (default)',
-                                'center' => 'Logo Centered',
+                                'center' => 'Logo Centered — links split left & right',
                                 'right'  => 'Logo Right',
                             ])
                             ->default('left')
                             ->required(),
+                        Forms\Components\Toggle::make('nav_sticky')
+                            ->label('Sticky Navigation')
+                            ->helperText('Pins the nav bar (and announcement bar) to the top of the screen as the page scrolls.')
+                            ->columnSpanFull(),
+                        Forms\Components\CheckboxList::make('nav_links')
+                            ->label('Navigation Links')
+                            ->options([
+                                'catalog' => 'Shop / Catalog — links to the catalog section',
+                                'events'  => 'Events — links to the events section',
+                            ])
+                            ->helperText('Home is always included as the first link. Check additional section links to display in the nav bar.')
+                            ->columnSpanFull(),
+                    ])->columns(2),
+
+                    // ── Branding ─────────────────────────────────────
+                    Forms\Components\Tabs\Tab::make('Branding')->schema([
                         Forms\Components\ColorPicker::make('colors.primary')
                             ->label('Primary Color')
                             ->default('#2C2C2C'),
@@ -118,6 +134,12 @@ class StoreResource extends Resource
                             ->label('Banner Message')
                             ->maxLength(255)
                             ->visible(fn ($get) => $get('has_banner'))
+                            ->columnSpanFull(),
+                        Forms\Components\FileUpload::make('banner_image')
+                            ->label('Banner Image')
+                            ->image()
+                            ->directory('store-banners')
+                            ->helperText('Optional full-width image displayed below the nav bar. Best dimensions: 1440 × 300–500 px. Shown independently of the announcement text.')
                             ->columnSpanFull(),
                     ])->columns(2),
 

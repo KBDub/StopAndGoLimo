@@ -5,7 +5,7 @@
         $images   = $product->images ?? collect();
         $mainImg  = $product->thumbnail?->getUrl() ?? '/images/placeholder.jpg';
         $variants = $product->variants;
-        $store    = app('current_store');
+        $store    = app()->bound('current_store') ? app('current_store') : null;
     @endphp
 
     <div class="flex flex-col lg:flex-row gap-10">

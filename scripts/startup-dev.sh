@@ -5,6 +5,19 @@
 # This script: waits for Meilisearch (C), starts Laravel, then warms up OPcache (F).
 #
 
+# Sync APP_URL to the current Replit dev domain so media/storage URLs are correct.
+if [ -n "${REPLIT_DEV_DOMAIN}" ]; then
+    NEW_APP_URL="https://${REPLIT_DEV_DOMAIN}"
+    echo "[startup] Setting APP_URL=${NEW_APP_URL}"
+    sed -i "s|^APP_URL=.*|APP_URL=${NEW_APP_URL}|" .env
+fi
+
+# Ensure the public/storage symlink exists (needed for Spatie Media Library).
+if [ ! -L public/storage ]; then
+    echo "[startup] Creating storage symlink..."
+    php artisan storage:link
+fi
+
 # One-time staff password reset — runs only when STAFF_ADMIN_HASH is set.
 # After confirming the password change took effect in production, delete
 # STAFF_ADMIN_HASH from the environment secrets to disable this step.

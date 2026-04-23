@@ -10,17 +10,37 @@ Every flyout panel has two columns:
 
 | Column | Role |
 |---|---|
-| **Left — link list** | Category header row + olive-label group(s) + 2-column item grid |
+| **Left — link list** | Category header row + olive-label group(s) + 3-column item grid |
 | **Right — ad panel** | `x-layout.mega-menu-ad` — image, tag badge, title, description, CTA button |
 
 **Category header row** (top of left column):  
 Bold category name → short descriptor sentence → gold arrow (→). Clicking the name or arrow links to the top-level category page.
 
 **Olive-label group** (required on all panels):  
-Small olive-colored all-caps label (`text-xs font-bold uppercase tracking-widest`) identifying a named group of links below it. Used to introduce a block of related subcategory items. On panels with only one set of items, the category name (or a close variant) is reused as the single group label.
+Small olive-colored all-caps label (`text-xs font-bold uppercase tracking-widest text-center`) identifying a named group of links below it. Used to introduce a block of related subcategory items. On panels with only one set of items, the category name (or a close variant) is reused as the single group label.
 
 **Subcategory item** (inside a group):  
 Two stacked links — bold item name on top, lighter descriptor sentence below — each linking to the same page.
+
+---
+
+## Panel dimensions
+
+| Element | Value | Notes |
+|---|---|---|
+| **Panel outer width** | `960px` | `style="width: 960px; max-width: calc(100vw - 20px);"` — applies to all 7 dropdown panels |
+| **Ad panel width** | `200px` | Default in `x-layout.mega-menu-ad` (`$width ?? '200px'`), `shrink-0` so it never compresses |
+| **Link area width** | `~760px` | Panel − ad panel: 960 − 200 = 760px |
+| **Left padding** | `pl-5` (20px) | Applied to the link list container |
+| **Usable grid width** | `~740px` | 760 − 20px padding |
+| **Grid columns** | 3 | `grid-cols-3 gap-x-4 gap-y-3` — all panels |
+| **Per-column width** | `~236px` | (740 − 2 × 16px gap) ÷ 3 ≈ 236px — comfortable for all label text |
+| **Ad image area** | `h-24` (96px tall) | Full-width inside the 200px ad column, `object-cover` |
+| **Ad content area** | `p-4`, `flex-col` | Sunburst tag, bold white title, muted description, gold CTA button |
+
+### Why 960px
+
+The previous width was **760px** (link area ~560px, 2-column grid, ~262px per column). Moving to 3 columns at that width would have compressed each column to ~176px — tight for longer labels like "A-Frame/Sidewalk Signs" or "Drawstring/Tote Bags". At 960px each column gets ~236px, matching the visual density of the former 2-column layout while fitting one more column. The ad panel width (200px) is unchanged.
 
 ---
 

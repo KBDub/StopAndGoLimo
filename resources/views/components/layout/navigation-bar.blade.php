@@ -79,7 +79,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/custom-apparel" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/custom-apparel" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Custom Apparel</span>
                                     <span class="text-sm text-charcoal-light">T-shirts, hoodies, caps & more — any print method, same day.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -158,7 +158,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/signs" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/signs" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Select a Sign</span>
                                     <span class="text-sm text-charcoal-light">Banners, window signs, yard signs & more — same day in Joliet, IL.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -231,7 +231,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/stickers" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/stickers" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Stickers</span>
                                     <span class="text-sm text-charcoal-light">Vinyl stickers & labels — any shape, no minimums, fast turnaround.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -278,7 +278,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/vehicle-graphics" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/vehicle-graphics" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Vehicle Decals</span>
                                     <span class="text-sm text-charcoal-light">Wraps, lettering & magnets for cars, trucks & fleets.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -326,7 +326,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/promotional-items" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/promotional-items" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Promo Items</span>
                                     <span class="text-sm text-charcoal-light">Branded giveaways for events, offices & trade shows.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -384,7 +384,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/design-services" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/design-services" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Design Services</span>
                                     <span class="text-sm text-charcoal-light">Logos, layouts & print-ready artwork — concept to finished files.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -432,7 +432,7 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 py-5 min-w-0">
-                                <a href="/company" class="flex items-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/company" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">About Us</span>
                                     <span class="text-sm text-charcoal-light">Veteran-owned in Joliet, IL — quality custom printing since 2017.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>

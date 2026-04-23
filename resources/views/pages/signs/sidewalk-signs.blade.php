@@ -54,7 +54,7 @@
             <p>We serve clients from Lockport to Minooka and everywhere in between throughout Will County and the Chicagoland region. Reach out today and let us help you plan your next sidewalk sign campaign. Our team is always happy to make recommendations based on your specific location, foot traffic patterns, and budget.</p>
         </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/sidewalk-signs/top5pct-sidewalk-signs-joliet-shorewood-crest-hill.jpg"

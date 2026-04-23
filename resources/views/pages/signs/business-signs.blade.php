@@ -44,7 +44,7 @@
             <p>Our clients in Shorewood, Crest Hill, and Romeoville have trusted us to build outdoor signs that look great from day one and stay looking great for years. We understand the Will County climate and we choose materials that are proven to perform in our environment. Give us a call at (815) 349 8600 and let us help you find the right outdoor sign solution for your business.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/business-signs/top5pct-door-signs-joliet-shorewood-crest-hill.jpg"

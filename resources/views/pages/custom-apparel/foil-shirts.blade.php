@@ -54,7 +54,7 @@
         <p>For milestone events — fiftieth anniversaries, championship seasons, major organization events — gold foil shirts create an immediate sense of ceremony and significance that standard prints cannot convey. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will County area. Call us at (815) 349 8600 to discuss your foil shirt project today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 

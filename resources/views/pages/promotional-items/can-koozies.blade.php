@@ -53,7 +53,7 @@
         <p>We produce custom koozies for events of every scale — from twenty-five pieces for a small family gathering to thousands of pieces for major corporate events and festivals. Contact us early for large orders to ensure we have enough production time to meet your event date. Call us at (815) 349 8600 to discuss your custom koozie order today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="promotional-items" />
 

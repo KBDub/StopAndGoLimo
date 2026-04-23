@@ -24,7 +24,7 @@
         quote="Great service, good customer service, excellent work. Very satisfied."
         name="Arleen Van Hook"
     />
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />

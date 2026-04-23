@@ -53,7 +53,7 @@
         <p>We have an ongoing relationship with many businesses and organizations in Joliet and Will County who use our catalog for recurring orders — seasonal event shirts, annual reunion groups, school spirit campaigns, and other regularly recurring custom print needs where a consistent template provides a reliable, recognizable design year over year. Call us at (815) 349 8600 to discuss how a catalog design can work for your recurring needs.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-detailed-info
         heading="How Design Catalogs Make Custom Printing Faster and More Accessible"

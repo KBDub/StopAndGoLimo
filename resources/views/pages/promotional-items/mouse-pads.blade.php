@@ -53,7 +53,7 @@
         <p>We have no minimum order quantities and can produce mouse pads in standard and extended sizes. Extended size mouse pads that cover a large desk area are popular with gaming and tech-oriented businesses and individuals. Contact us to discuss sizing options and what format makes the most sense for your target audience. Call us at (815) 349 8600 to get started on your custom mouse pad order.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="promotional-items" />
 

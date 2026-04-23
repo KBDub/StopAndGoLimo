@@ -54,7 +54,7 @@
         <p>Hardware and mounting options are also available through our shop. We can provide the stakes, posts, brackets, and mounting hardware needed to install your signs correctly, and we can recommend the right mounting approach for your specific surface and site conditions. Call us at (815) 349 8600 to discuss your full parking signage project.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="signs" parentSlug="signs" />
 

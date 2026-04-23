@@ -54,7 +54,7 @@
             <p>We are proud to support local businesses, real estate professionals, and political campaigns that keep our communities moving forward. Every yard sign we print is an investment in your visibility and your success. Reach out to us today and let us help you stand out in Joliet, Will County, and the entire Chicagoland area.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/yard-signs/top5pct-yard-signs-joliet-shorewood-romeoville.jpg"

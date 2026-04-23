@@ -54,7 +54,7 @@
         <p>We also produce rigid door signs on aluminum, acrylic, and PVC for suite directories, office identification, ADA-compliant signage, and building identification. Whatever your door sign need, we have the materials, equipment, and expertise to produce and install it correctly. Call us at (815) 349 8600 to get started on your door sign project today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="business-signs" parentSlug="signs" />
 

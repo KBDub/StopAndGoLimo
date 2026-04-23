@@ -54,7 +54,7 @@
             <p>We carry magnetic signs in three standard sizes to fit different vehicles. The 20 by 10 inch size works well on compact cars and smaller doors. The 24 by 12 inch size fits mid size sedans and most pickup truck doors. The 24 by 18 inch size is best for SUVs, vans, and larger commercial vehicles where you need maximum visibility. We recommend choosing the largest size that fits comfortably on your door panel for the best readability at a distance. Call us at (815) 349 8600 and our team will help you pick the right size and style for your vehicle.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/vehicle-magnets/top5pct-business-magnets-car-magnets-joliet.jpg"

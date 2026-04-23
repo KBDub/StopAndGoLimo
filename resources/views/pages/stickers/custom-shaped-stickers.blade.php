@@ -54,7 +54,7 @@
         <p>Businesses in Shorewood, Crest Hill, Lockport, and Romeoville trust us for custom shaped stickers that accurately represent their brands. We are a veteran owned shop and we stand behind every sticker we produce. Call (815) 349 8600 to talk about your project today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="stickers" parentSlug="stickers" />
 

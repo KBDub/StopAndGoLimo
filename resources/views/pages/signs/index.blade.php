@@ -121,7 +121,7 @@
         <p>We are located at 121 Springfield Avenue in Joliet and we offer same-day service on many sign products. If your business needs a sign quickly, we are the shop to call. Reach us at (815) 349 8600 seven days a week or stop by during business hours.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-ui.carousel-rotating-images
         :images="[

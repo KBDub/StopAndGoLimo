@@ -53,7 +53,7 @@
         <p>Hardboard coasters offer a middle ground — they have the premium appearance of ceramic without the brittleness, and they have the durability of neoprene without the rubbery aesthetic. They are especially popular for corporate branded gift sets and organizations looking for a distinctive branded coaster that does not look or feel like a standard promotional item. Call us at (815) 349 8600 to discuss which material is right for your custom coaster project.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="promotional-items" />
 

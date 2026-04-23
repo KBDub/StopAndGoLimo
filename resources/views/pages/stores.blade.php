@@ -12,7 +12,7 @@
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="stores" displayServiceType="Store Services" />
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />

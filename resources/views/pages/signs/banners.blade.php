@@ -54,7 +54,7 @@
             <p>Our banners are printed on demand so you can order exactly as many as you need without paying for inventory you will never use. We serve businesses in Joliet, Romeoville, Rockdale, Plainfield, and all across Will County. Whether you need one banner or one hundred, we have the equipment and the team to deliver on time and on budget.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/banners/top5pct-birthday-banner-joliet-shorewood-plainfield.jpg"

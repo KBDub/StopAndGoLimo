@@ -54,7 +54,7 @@
             <p>We also install perforated window vinyl on van side windows and rear windows. Window perf allows your graphic to be seen from the outside while the driver and passengers can still see through the material from the inside. It adds a professional look, provides privacy for cargo, and maximizes the advertising space on the full side of your vehicle. We offer design services so you never need to come in with a finished file. Call us at (815) 349 8600 and let us help you brand your fleet.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-shorewood.jpg"

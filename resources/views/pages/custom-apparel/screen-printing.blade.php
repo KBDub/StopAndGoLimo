@@ -54,7 +54,7 @@
         <p>Our team reviews every screen printing order before production begins to make sure your artwork is set up correctly for the print process. We want every shirt we send out to meet our quality standard and yours. Call us at (815) 349 8600 to get a quote on your custom screen printing order today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 

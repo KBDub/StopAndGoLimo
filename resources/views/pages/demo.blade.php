@@ -719,8 +719,8 @@
         <x-sections.cta-design-your-own-banner />
 
         {{-- CTA: Triple Button Banner --}}
-        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-tripple-button-banner</code></p>
-        <x-sections.cta-tripple-button-banner />
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-quadruple-button-banner</code></p>
+        <x-sections.cta-quadruple-button-banner />
 
         {{-- Video Banner --}}
         <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.video-banner</code></p>

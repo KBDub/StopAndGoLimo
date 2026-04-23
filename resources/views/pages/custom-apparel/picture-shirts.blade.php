@@ -24,7 +24,7 @@
         quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
         name="Gerardo Munoz Jr"
     />
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />

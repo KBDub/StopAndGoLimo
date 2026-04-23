@@ -151,7 +151,7 @@
         <p>Same-day service is available on many of our products, making us the go-to custom apparel shop for businesses, schools, sports teams, churches, and families throughout Will County who need shirts in a hurry. Stop by our shop at 121 Springfield Avenue in Joliet or call us at (815) 349 8600 to get started today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-ui.carousel-rotating-images
         :images="[

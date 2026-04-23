@@ -54,7 +54,7 @@
             <p>Because we are a local printer in Joliet, you do not have to wait for a mail order company to ship your decals and then hope they arrive before your inspection date. You can stop by our shop, place your order, and in many cases take your decals with you the same day. We know what proper DOT lettering looks like, and we will not let a bad looking set of decals leave our shop. Call us at (815) 349 8600 to place your order.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/dot-decals/top5pct-trucking-logo-joliet-shorewood-crest-hill.jpg"

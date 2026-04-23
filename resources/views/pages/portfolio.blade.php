@@ -12,7 +12,7 @@
     <x-ui.banner-medium-sunburst />
 
     <x-sections.top5pct-same-day-service serviceType="portfolio" displayServiceType="Custom Projects" />
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.why-choose-us />
     <x-sections.cta-free-quote-banner />

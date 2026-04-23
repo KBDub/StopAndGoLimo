@@ -55,7 +55,7 @@
             <p>Fast turnaround and genuine customer service are what set us apart from the competition. We are a local veteran owned screen printer and we take pride in every single product we make. When you pick up your fan wear order and see it for the first time, we want you to smile. That moment is exactly why we do what we do. Call us today and let us help your fans show up strong.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/spirit-wear/top5pct-sator-sanchez-school-shirt-joliet-crest-hill.jpg"

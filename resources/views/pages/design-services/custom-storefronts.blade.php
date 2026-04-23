@@ -121,7 +121,7 @@
 
     <x-sections.storefront-demo-preview />
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.why-choose-us />
 

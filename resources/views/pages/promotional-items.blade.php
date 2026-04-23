@@ -84,7 +84,7 @@
         <p>No minimums on any promotional product — order exactly what you need. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to discuss your promotional product order today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-ui.carousel-rotating-images
         :images="[

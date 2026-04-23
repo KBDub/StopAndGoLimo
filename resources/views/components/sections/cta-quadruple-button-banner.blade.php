@@ -15,7 +15,7 @@
 >
     <div class="max-w-7xl mx-auto px-6">
         <h3 class="text-center text-lg font-bold text-charcoal mb-6">Ready to Get Started?</h3>
-        <div class="max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
             <x-ui.button-blue-white
                 onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
                 class="px-6 py-3 text-sm whitespace-nowrap w-44"
@@ -29,6 +29,13 @@
             >
                 Upload DTF File
             </x-ui.button-charcoal-gold>
+
+            <x-ui.button-gold-white
+                href="/design-services/custom-storefronts"
+                class="px-6 py-3 text-sm whitespace-nowrap w-44"
+            >
+                White Label Storefronts
+            </x-ui.button-gold-white>
 
             <x-ui.button-map-directions class="px-6 py-3 text-sm whitespace-nowrap w-44">
                 Get Directions

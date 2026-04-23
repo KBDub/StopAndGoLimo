@@ -54,7 +54,7 @@
             <p>We work with athletes, coaches, gym owners, and event organizers from all over Will County. If you have a logo, we can put it on a sticker. If you need help with the design, our in house team is ready to assist. We offer free design time with every order so you never have to come in with a finished file. Give us a call at (815) 349 8600 and let us help you represent your team or your event in style.</p>
         </x-sections.card-image-with-text>
 
-        <x-sections.cta-tripple-button-banner />
+        <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
             image1="/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg"

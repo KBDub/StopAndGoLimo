@@ -61,7 +61,7 @@
         <p>No minimums means you can order exactly what you need, whether that is five stickers for a small event or five thousand labels for a product launch. Same-day service is available on many sticker orders. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to place your order today.</p>
     </x-sections.card-image-with-text>
 
-    <x-sections.cta-tripple-button-banner />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-ui.carousel-rotating-images
         :images="[

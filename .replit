@@ -42,7 +42,6 @@ expertMode = true
 
 [userenv.shared]
 APP_NAME = "Top 5 Percent"
-APP_URL = "https://4634af69-a684-4f94-be55-4fcaddde2ae2-00-3f36pojhfc1hn.riker.replit.dev"
 DB_CONNECTION = "pgsql"
 DB_HOST = "helium"
 DB_PORT = "5432"
@@ -62,6 +61,9 @@ STAFF_ADMIN_HASH = "$2y$12$TJGTDRPVswe8zdRzH1QYpu3OFlxUc1U4yMtO2D8oKzslEeHJQoGgC
 SESSION_DRIVER = "file"
 CACHE_STORE = "file"
 QUEUE_CONNECTION = "sync"
+
+[userenv.production]
+APP_URL = "https://top5pct.dreamstudiosolutions.com"
 
 [workflows]
 runButton = "Project"

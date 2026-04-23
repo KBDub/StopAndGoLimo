@@ -5,10 +5,21 @@
 # This script: waits for Meilisearch (C), starts Laravel, then warms up OPcache (F).
 #
 
-# Sync APP_URL to the current Replit dev domain so media/storage URLs are correct.
-if [ -n "${REPLIT_DEV_DOMAIN}" ]; then
+# Sync APP_URL so media/storage URLs are correct.
+# In production (REPLIT_DEPLOYMENT=1) use APP_URL from the environment (set via
+# Replit secrets/env vars to the canonical domain).
+# In dev use the current Replit dev tunnel domain so the preview works locally.
+if [ -n "${REPLIT_DEPLOYMENT}" ]; then
+    # Production — APP_URL must already be set as a Replit env var
+    if [ -n "${APP_URL}" ]; then
+        echo "[startup] Production: writing APP_URL=${APP_URL} to .env"
+        sed -i "s|^APP_URL=.*|APP_URL=${APP_URL}|" .env
+    else
+        echo "[startup] WARNING: REPLIT_DEPLOYMENT set but APP_URL env var is empty. Assets may use wrong domain."
+    fi
+elif [ -n "${REPLIT_DEV_DOMAIN}" ]; then
     NEW_APP_URL="https://${REPLIT_DEV_DOMAIN}"
-    echo "[startup] Setting APP_URL=${NEW_APP_URL}"
+    echo "[startup] Dev: Setting APP_URL=${NEW_APP_URL}"
     sed -i "s|^APP_URL=.*|APP_URL=${NEW_APP_URL}|" .env
 fi
 

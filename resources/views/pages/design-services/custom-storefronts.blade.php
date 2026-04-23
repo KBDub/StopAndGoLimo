@@ -26,7 +26,9 @@
         <p class="mb-4">There is no software to install, no platform fees to manage, and no design experience required. We take your branding and build the store for you. The entire setup process takes a few business days from the time we receive your logo, color choices, and product selection.</p>
         <p>We are a veteran owned shop in Joliet, Illinois, and we have worked with schools, youth sports leagues, corporate teams, and booster clubs throughout Will County and the Chicagoland area. Call us at (815) 349 8600 to discuss your custom storefront today.</p>
     </x-sections.card-image-with-text>
-
+    <x-ui.banner-thin-charcoal />
+    
+    <x-sections.storefront-demo-preview />
     <x-ui.banner-thin-charcoal />
 
     {{-- Use case cards --}}

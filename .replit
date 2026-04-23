@@ -56,7 +56,7 @@ DB_PASSWORD = "password"
 STRIPE_KEY = "pk_test_placeholder_top5pct"
 STRIPE_SECRET = "sk_test_placeholder_top5pct"
 PAYMENTS_TYPE = "offline"
-STAFF_ADMIN_HASH = "$2y$12$xVgW9HH8FYQhRpygQBWi0O3zxWv3I54SGgqIlMImJNk4loRfK2fKG"
+STAFF_ADMIN_HASH = "$2y$12$TJGTDRPVswe8zdRzH1QYpu3OFlxUc1U4yMtO2D8oKzslEeHJQoGgC"
 
 [userenv.development]
 SESSION_DRIVER = "file"

@@ -119,6 +119,8 @@
         <p>We serve schools, businesses, and organizations throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will County. Call us at (815) 349 8600 to get your custom storefront started today.</p>
     </x-sections.card-image-with-text>
 
+    <x-sections.storefront-demo-preview />
+
     <x-sections.cta-tripple-button-banner />
 
     <x-sections.why-choose-us />

@@ -35,6 +35,9 @@ Two stacked links — bold item name on top, lighter descriptor sentence below �
 | **Usable grid width** | `~740px` | 760 − 20px padding |
 | **Grid columns** | 3 | `grid-cols-3 gap-x-4 gap-y-3` — all panels |
 | **Per-column width** | `~236px` | (740 − 2 × 16px gap) ÷ 3 ≈ 236px — comfortable for all label text |
+| **Item name font** | `text-base font-bold` (16px) | Centered (`text-center`), charcoal, sunburst on hover |
+| **Item descriptor font** | `text-sm` (14px) | Centered (`text-center`), charcoal-light, sunburst on hover |
+| **Olive group label font** | `text-xs uppercase tracking-widest` (12px) | Centered (`text-center`), olive color via CSS variable |
 | **Ad image area** | `h-24` (96px tall) | Full-width inside the 200px ad column, `object-cover` |
 | **Ad content area** | `p-4`, `flex-col` | Sunburst tag, bold white title, muted description, gold CTA button |
 

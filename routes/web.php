@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 // storefront controller which requires current_store.
 Route::domain('top5pct.' . env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.com'))
     ->middleware(['web'])
+    ->as('top5pct.')
     ->group(base_path('routes/main-site.php'));
 
 // ─── White-Label Storefronts — {subdomain}.TENANT_BASE_DOMAIN ────────────────

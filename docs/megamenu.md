@@ -67,11 +67,11 @@ Each page table uses two status fields sourced from `docs/Top5Pct.MegaMenuItems.
 **Style:** Mega Menu Style 1 (modeled on https://overflow-megamenu-1.webflow.io/)
 
 **Dropdown Panel Layout:**
-- **Left/Center:** Overview link at top → Category groups (Level 2) and sub-links (Level 3) per `docs/MegaMenuItems.csv`.
-- **Three-Level Menus:** Grouped by Level 2 Category (e.g., "Printing Options").
-- **Two-Level Menus:** Displayed as standard links without group headers.
+- **Left/Center:** Overview link at top → Olive-label group(s) (Level 2) and sub-links (Level 3) per `docs/MegaMenuItems.csv`.
+- **Three-Level Menus:** Grouped by multiple Level 2 category labels (e.g., "Printing Options", "Specialty Materials", "Group Shirts"). Used for large categories.
+- **Two-Level Menus:** One olive-label group whose name is derived from the category (e.g., "Promo Products", "Sticker Types", "Vehicle Products", "Service Options", "Our Company"). All panels use an olive group label — the 2-level flat (no label) pattern is not used.
 - **Right:** Single branded ad panel (Top 5 Percent branded — always on the RIGHT)
-- **Viewport Adjustments:** Panels should be widened (e.g., 960px) on 1280px viewports to ensure the 3-column grid layout for larger categories (like Apparel's 17 items) is legible. 2-level menus (Stickers, Vehicle, Promo, Design, About) use a standard 700px width.
+- **Viewport Adjustments:** 3-level panels (Apparel, Signs) use 760px width to accommodate multi-group layouts. 2-level panels (Stickers, Vehicle Decals, Promo Items, Design Services, About Us) also use 760px for visual consistency.
 
 ---
 
@@ -141,42 +141,41 @@ Each page table uses two status fields sourced from `docs/Top5Pct.MegaMenuItems.
 
 ---
 
-### 4. Vehicle Decals
+### 4. Stickers
+- **URL:** `/stickers`
+- **Nav Label Change:** Was buried under "Decals" — now a top-level menu item
+- **Page Status:** ✅ Exists (`resources/views/pages/stickers/index.blade.php`)
+- **Dropdown:** Yes — 2-level mega menu (group label: "Sticker Types")
+
+| Category Title | Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
+|---|---|---|---|---|---|---|
+| **Overview** | Stickers | `/stickers` | ✅ Exists | Y | 12 | Page was built — needs section review |
+| **Sticker Types** | | | | | | |
+| | Standard Stickers | `/stickers/standard-stickers` | ♻️ Refactor existing | N | 15 | Refactor current `/decals/stickers` page — modify only, do not rebuild |
+| | Custom Shaped Stickers | `/stickers/custom-shaped-stickers` | ✅ Exists | Y | 14 | Page was built — needs section review |
+
+---
+
+### 5. Vehicle Decals
 - **URL:** `/vehicle-graphics`
 - **Nav Label Change:** Renamed from "Vehicle Graphics" → "Vehicle Decals"
 - **Page Status:** ✅ Exists (`resources/views/pages/vehicle-graphics/index.blade.php`)
-- **Dropdown:** Yes — 2-level mega menu
+- **Dropdown:** Yes — 2-level mega menu (group label: "Vehicle Products")
 
 | Category Title | Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
 |---|---|---|---|---|---|---|
 | **Overview** | Vehicle Decals | `/vehicle-graphics` | ✅ Exists | N | 12 | |
-| **Vehicle Graphic Options** | | | | | | |
+| **Vehicle Products** | | | | | | |
 | | Automobile Graphics | `/vehicle-graphics/automobile-graphics` | ✅ Exists | N | 15 | |
 | | Vehicle Magnets | `/vehicle-graphics/vehicle-magnets` | ✅ Exists | N | 15 | |
 | | DOT Decals | `/vehicle-graphics/dot-decals` | ✅ Exists | N | 15 | |
 
 ---
 
-### 5. Stickers
-- **URL:** `/stickers`
-- **Nav Label Change:** Was buried under "Decals" — now a top-level menu item
-- **Page Status:** ✅ Exists (`resources/views/pages/stickers/index.blade.php`)
-- **Dropdown:** Yes — 2-level mega menu
-
-| Category Title | Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
-|---|---|---|---|---|---|---|
-| **Overview** | Stickers | `/stickers` | ✅ Exists | Y | 12 | Page was built — needs section review |
-| **Standard** | | | | | | |
-| | Standard Stickers | `/stickers/standard-stickers` | ♻️ Refactor existing | N | 15 | Refactor current `/decals/stickers` page — modify only, do not rebuild |
-| **Custom Shaped** | | | | | | |
-| | Custom Shaped Stickers | `/stickers/custom-shaped-stickers` | ✅ Exists | Y | 14 | Page was built — needs section review |
-
----
-
 ### 6. Promotional Items
 - **URL:** `/promotional-items`
 - **Page Status:** ✅ Exists (`resources/views/pages/promotional-items.blade.php`)
-- **Dropdown:** Yes — 2-level mega menu
+- **Dropdown:** Yes — 2-level mega menu (group label: "Promo Products")
 
 | Category Title | Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
 |---|---|---|---|---|---|---|
@@ -201,41 +200,40 @@ Each page table uses two status fields sourced from `docs/Top5Pct.MegaMenuItems.
 ### 8. Design Services
 - **URL:** `/design-services`
 - **Nav Label Change:** Renamed from "Design It Yourself" → "Design Services"
-- **Page Status:** ♻️ Refactor existing (`resources/views/pages/design-it-yourself/`)
-- **Dropdown:** Yes — 2-level mega menu
-- **Source pages to refactor (do not rebuild):**
-  - `/design-it-yourself` (index) → becomes `/design-services`
-  - `/design-it-yourself/online-designer` → becomes `/design-services/online-designer`
-  - `/design-it-yourself/design-catalogs` → becomes `/design-services/design-catalogs`
+- **Page Status:** ✅ Exists (`resources/views/pages/design-services/index.blade.php`)
+- **Dropdown:** Yes — 2-level mega menu (group label: "Service Options")
+
+**Note:** `/design-services/online-designer` and `/design-services/design-catalogs` exist as pages but are not currently linked from the mega menu. They were planned refactors of the old `/design-it-yourself/*` pages and are tracked under section 10D below.
 
 | Category Title | Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
 |---|---|---|---|---|---|---|
-| **Overview** | Design Services | `/design-services` | ♻️ Refactor | N | 10 | Refactor from `/design-it-yourself` index |
-| **Logo Design** | | | | | | |
+| **Overview** | Design Services | `/design-services` | ✅ Exists | N | 10 | Refactored from `/design-it-yourself` index |
+| **Service Options** | | | | | | |
 | | Logo Design | `/design-services/logo-design` | ✅ Exists | Y | 11 | |
 | | Layout & Graphic Design | `/design-services/graphic-design` | ✅ Exists | Y | 11 | |
-| | Online Designer | `/design-services/online-designer` | ♻️ Refactor | N | 10 | Refactor from `/design-it-yourself/online-designer` |
-| | Design Catalogs | `/design-services/design-catalogs` | ♻️ Refactor | N | 10 | Refactor from `/design-it-yourself/design-catalogs` |
+| | Custom Storefronts | `/design-services/custom-storefronts` | ✅ Exists | N | 12 | Added Apr 2026 — white-label storefront landing page |
 
 ---
 
 ### 9. About Us
-- **URL:** `/about`
-- **Page Status:** ✅ Exists (`resources/views/pages/about.blade.php`)
-- **Dropdown:** Yes — simple dropdown (not a full mega menu panel)
+- **URL:** `/company`
+- **Page Status:** ✅ Exists (`resources/views/pages/company/index.blade.php`)
+- **Dropdown:** Yes — 2-level mega menu (group label: "Our Company")
 
-| Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
-|---|---|---|---|---|---|
-| About Us | `/about` | ✅ Exists | N | 9 | |
-| Company | `/company` | ✅ Exists | Y | 10 | File: `company/index.blade.php` |
-| Portfolio | `/portfolio` | ✅ Exists | N | 9 | |
-| Resources | `/resources` | ❌ New page | Y | — | Does not exist yet; `company/resources.blade.php` (9 total) is a separate page at `/company/resources` |
+| Category Title | Sub-link | URL | Page Status | Needs Sections | Sections | Notes |
+|---|---|---|---|---|---|---|
+| **Overview** | About Us | `/company` | ✅ Exists | N | 10 | Header nav link points to `/company` |
+| **Our Company** | | | | | | |
+| | About Us | `/about` | ✅ Exists | N | 9 | |
+| | Company | `/company` | ✅ Exists | Y | 10 | File: `company/index.blade.php` |
+| | Portfolio | `/portfolio` | ✅ Exists | N | 9 | |
+| | Resources | `/resources` | ✅ Exists | Y | 9 | Built Apr 2026 — tips & articles hub |
 
 ---
 
 ### 10. Pages in Page Management — Not in the Megamenu Plan
 
-These 25 pages exist in `resources/views/pages/` and appear in the page management dashboard but have no place in the current megamenu plan. They fall into four categories.
+These pages exist in `resources/views/pages/` and appear in the page management dashboard but have no place in the current megamenu plan. They fall into four categories.
 
 > **Source:** `php artisan tinker` → `App\Actions\ScanPageComponents` — run 2026-04-04. Total pages at time of scan: **78**.
 
@@ -275,7 +273,7 @@ These apparel sub-pages were built at some point but are not linked from the meg
 
 #### D. Old Decals Hub + Design-It-Yourself Pages (refactored — originals still live)
 
-The plan calls for refactoring these into new URLs, but the original files still exist and are live at their old URLs. Until routes are redirected and old files deleted, both old and new pages are active simultaneously.
+The plan calls for refactoring these into new URLs, but the original files still exist and are live at their old URLs. Until routes are redirected and old files deleted, both old and new pages are active simultaneously. `/design-services/online-designer` and `/design-services/design-catalogs` exist as pages but are not currently linked from the mega menu.
 
 | Old URL | Sections | Refactored Into | Action |
 |---|---|---|---|
@@ -293,56 +291,57 @@ The plan calls for refactoring these into new URLs, but the original files still
 |---|---|---|
 | `/signs/business-signs` | 15 | General business signs hub — content to be split into Window, Wall, Floor, Door pages |
 | `/signs/coronavirus-signs` | 13 | COVID-era page — decide: keep for SEO or delete |
-| `/company/resources` | 9 | File at `company/resources.blade.php`; lives at `/company/resources` not `/resources`. Plan has `/resources` as ❌ New page — these are two different URLs. Decide: rename/redirect this file to `/resources`, or build `/resources` separately. |
+| `/company/resources` | 9 | File at `company/resources.blade.php`; lives at `/company/resources` not `/resources`. Plan has `/resources` built separately — these are two different URLs. Decide: redirect `/company/resources` → `/resources`, or keep both. |
 
 ---
 
 ## Summary of Work Required
 
 ### URL Changes (existing pages — route + file rename only)
-| Old URL | New URL | File |
-|---|---|---|
-| `/custom-apparel/embroidery-shirts` | `/custom-apparel/embroidery` | `embroidery-shirts.blade.php` → `embroidery.blade.php` |
-| `/custom-apparel/spirit-wear` | `/custom-apparel/spirit-wear-shirts` | `spirit-wear.blade.php` → `spirit-wear-shirts.blade.php` |
-| `/custom-apparel/corporate-wear` | `/custom-apparel/corporate-wear-shirts` | `corporate-wear.blade.php` → `corporate-wear-shirts.blade.php` |
+| Old URL | New URL | File | Status |
+|---|---|---|---|
+| `/custom-apparel/embroidery-shirts` | `/custom-apparel/embroidery` | `embroidery-shirts.blade.php` → `embroidery.blade.php` | ✅ Done |
+| `/custom-apparel/spirit-wear` | `/custom-apparel/spirit-wear-shirts` | `spirit-wear.blade.php` → `spirit-wear-shirts.blade.php` | ✅ Done |
+| `/custom-apparel/corporate-wear` | `/custom-apparel/corporate-wear-shirts` | `corporate-wear.blade.php` → `corporate-wear-shirts.blade.php` | ✅ Done |
 
 ### Refactored Pages (modify existing — do not rebuild)
-| Source | New URL | Notes |
-|---|---|---|
-| `/decals/stickers` | `/stickers/standard-stickers` | Modify only |
-| `/design-it-yourself` (index) | `/design-services` | Refactor — rename, update content |
-| `/design-it-yourself/online-designer` | `/design-services/online-designer` | Refactor — rename, update content |
-| `/design-it-yourself/design-catalogs` | `/design-services/design-catalogs` | Refactor — rename, update content |
-
-### New Landing Pages (2)
-| Page | URL | Notes |
-|---|---|---|
-| Stickers | `/stickers` | Use existing sticker/decal graphics |
-| Design Services | `/design-services` | Refactored from design-it-yourself |
-
-### New Sub-Category Pages (21)
-| Page | URL | Parent | Source Material |
+| Source | New URL | Notes | Status |
 |---|---|---|---|
-| Dye-Sublimation | `/custom-apparel/dye-sublimation` | Custom Apparel | Existing shirt graphics |
-| Screen Printing | `/custom-apparel/screen-printing` | Custom Apparel | Existing shirt graphics |
-| Puff Shirts | `/custom-apparel/puff-shirts` | Custom Apparel | Existing shirt graphics |
-| Window Signs | `/signs/window-signs` | Select a Sign | business-signs page content |
-| Wall Signs | `/signs/wall-signs` | Select a Sign | business-signs page content |
-| Floor Signs | `/signs/floor-signs` | Select a Sign | business-signs page content |
-| Door Signs | `/signs/door-signs` | Select a Sign | business-signs page content |
-| Parking Signs | `/signs/parking-signs` | Select a Sign | Existing signs graphics |
-| Table Cloths | `/signs/table-cloths` | Select a Sign | table-runners graphics |
-| Custom Shaped Stickers | `/stickers/custom-shaped-stickers` | Stickers | Existing sticker/decal graphics |
-| Mugs | `/promotional-items/mugs` | Promotional Items | Existing promo graphics |
-| Can Koozies | `/promotional-items/can-koozies` | Promotional Items | Existing promo graphics |
-| Towels | `/promotional-items/towels` | Promotional Items | Existing promo graphics |
-| Drink Coasters | `/promotional-items/drink-coasters` | Promotional Items | Existing promo graphics |
-| Drawstring / Tote Bags | `/promotional-items/tote-bags` | Promotional Items | Existing promo graphics |
-| Mouse Pads | `/promotional-items/mouse-pads` | Promotional Items | Existing promo graphics |
-| Logo Design | `/design-services/logo-design` | Design Services | Existing design graphics |
-| Layout & Graphic Design | `/design-services/graphic-design` | Design Services | Existing design graphics |
-| Company | `/company` | About Us | Uses `x-sections.about-preview` component |
-| Resources | `/resources` | About Us | New page |
+| `/decals/stickers` | `/stickers/standard-stickers` | Modify only | ♻️ Pending |
+| `/design-it-yourself` (index) | `/design-services` | Refactor — rename, update content | ✅ Done |
+| `/design-it-yourself/online-designer` | `/design-services/online-designer` | Refactor — rename, update content | ♻️ Pending |
+| `/design-it-yourself/design-catalogs` | `/design-services/design-catalogs` | Refactor — rename, update content | ♻️ Pending |
+
+### New Landing Pages
+| Page | URL | Notes | Status |
+|---|---|---|---|
+| Stickers | `/stickers` | Use existing sticker/decal graphics | ✅ Done |
+| Design Services | `/design-services` | Refactored from design-it-yourself | ✅ Done |
+| Custom Storefronts | `/design-services/custom-storefronts` | Added Apr 2026 — white-label storefront landing | ✅ Done |
+
+### New Sub-Category Pages
+| Page | URL | Parent | Status |
+|---|---|---|---|
+| Dye-Sublimation | `/custom-apparel/dye-sublimation` | Custom Apparel | ✅ Done |
+| Screen Printing | `/custom-apparel/screen-printing` | Custom Apparel | ✅ Done |
+| Puff Shirts | `/custom-apparel/puff-shirts` | Custom Apparel | ✅ Done |
+| Window Signs | `/signs/window-signs` | Select a Sign | ✅ Done |
+| Wall Signs | `/signs/wall-signs` | Select a Sign | ✅ Done |
+| Floor Signs | `/signs/floor-signs` | Select a Sign | ✅ Done |
+| Door Signs | `/signs/door-signs` | Select a Sign | ✅ Done |
+| Parking Signs | `/signs/parking-signs` | Select a Sign | ✅ Done |
+| Table Cloths | `/signs/table-cloths` | Select a Sign | ✅ Done |
+| Custom Shaped Stickers | `/stickers/custom-shaped-stickers` | Stickers | ✅ Done |
+| Mugs | `/promotional-items/mugs` | Promotional Items | ✅ Done |
+| Can Koozies | `/promotional-items/can-koozies` | Promotional Items | ✅ Done |
+| Towels | `/promotional-items/towels` | Promotional Items | ✅ Done |
+| Drink Coasters | `/promotional-items/drink-coasters` | Promotional Items | ✅ Done |
+| Drawstring / Tote Bags | `/promotional-items/tote-bags` | Promotional Items | ✅ Done |
+| Mouse Pads | `/promotional-items/mouse-pads` | Promotional Items | ✅ Done |
+| Logo Design | `/design-services/logo-design` | Design Services | ✅ Done |
+| Layout & Graphic Design | `/design-services/graphic-design` | Design Services | ✅ Done |
+| Company | `/company` | About Us | ✅ Done |
+| Resources | `/resources` | About Us | ✅ Done |
 
 ---
 
@@ -424,5 +423,5 @@ The plan calls for refactoring these into new URLs, but the original files still
 - **Right Alignment**: Far-right menu items (Promo Items, Design Services, About Us) use `right-0` to ensure they align to the right edge of their respective trigger items and stay within the viewport.
 - **Left Alignment**: Left-side menu items (Apparel, Signs, Stickers, Vehicle) use `left-0` to ensure they align with the left edge of their respective trigger items while remaining within the navigation container's bounds.
 - **Typography & Wrapping**: Increased grid column gaps (`gap-x-10`) in complex 3-level menus (Apparel, Signs) to provide more room for long sub-category headers like "Specialty Materials," preventing unnecessary text wrapping.
-- **Grid Standardization**: Standardized all menus without sub-category groups (Stickers, Vehicle Decals, Promo Items, Design Services, About Us) to use a **2-column grid layout with a 32px horizontal gap and a 16px vertical gap** (`gap-x-8 gap-y-4`).
+- **Grid Standardization**: All 2-level panels (Stickers, Vehicle Decals, Promo Items, Design Services, About Us) use a **2-column grid layout with a 32px horizontal gap and a 16px vertical gap** (`gap-x-8 gap-y-4`). Each panel has exactly one olive group label above its grid.
 - **Standardized Vertical Spacing**: Standardized all mega menu panels to use a **16px (4 unit)** vertical gap between headers and items, and between individual items, ensuring a spacious and premium feel.

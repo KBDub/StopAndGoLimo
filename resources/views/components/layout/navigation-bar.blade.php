@@ -236,6 +236,7 @@
                                     <span class="text-sm text-charcoal-light">Vinyl stickers & labels — any shape, no minimums, fast turnaround.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
+                                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Sticker Types</p>
                                 <div class="grid grid-cols-2 gap-x-4 gap-y-3">
                                     <div><a href="/stickers/standard-stickers" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Standard</a><a href="/stickers/standard-stickers" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Round, square, and rectangle</a></div>
                                     <div><a href="/stickers/custom-shaped-stickers" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Custom Shaped</a><a href="/stickers/custom-shaped-stickers" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Die cut to any design shape</a></div>
@@ -282,6 +283,7 @@
                                     <span class="text-sm text-charcoal-light">Wraps, lettering & magnets for cars, trucks & fleets.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
+                                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Vehicle Products</p>
                                 <div class="grid grid-cols-2 gap-x-4 gap-y-3">
                                     <div><a href="/vehicle-graphics/automobile-graphics" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Automobile Graphics</a><a href="/vehicle-graphics/automobile-graphics" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Full wraps & vinyl lettering</a></div>
                                     <div><a href="/vehicle-graphics/vehicle-magnets" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Vehicle Magnets</a><a href="/vehicle-graphics/vehicle-magnets" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Removable magnetic signs</a></div>
@@ -387,6 +389,7 @@
                                     <span class="text-sm text-charcoal-light">Logos, layouts & print-ready artwork — concept to finished files.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
+                                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Service Options</p>
                                 <div class="grid grid-cols-2 gap-x-4 gap-y-3">
                                     <div><a href="/design-services/logo-design" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Logo Design</a><a href="/design-services/logo-design" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Concept to final files</a></div>
                                     <div><a href="/design-services/graphic-design" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Layout/Graphic Design</a><a href="/design-services/graphic-design" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Online designer & catalogs</a></div>
@@ -434,6 +437,7 @@
                                     <span class="text-sm text-charcoal-light">Veteran-owned in Joliet, IL — quality custom printing since 2017.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
+                                <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:var(--color-olive)">Our Company</p>
                                 <div class="grid grid-cols-2 gap-x-4 gap-y-3">
                                     <div><a href="/about" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">About Us</a><a href="/about" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Our mission & team</a></div>
                                     <div><a href="/company" class="block text-sm font-bold text-charcoal hover:text-sunburst transition-colors">Company</a><a href="/company" class="block text-sm text-charcoal-light leading-tight hover:text-sunburst transition-colors">Veteran-owned story</a></div>

@@ -17,22 +17,21 @@ class IdentifyStore
         $subdomain = $this->resolveSubdomain($request);
 
         if ($subdomain === null) {
-            // In production: first-party subdomains (e.g. top5pct.dreamstudiosolutions.com)
-            // have no tenant store — route the visitor to the admin hub instead of
-            // crashing on any storefront route that calls app('current_store').
-            if (! app()->isLocal()) {
-                $host       = $request->getHost();
-                $baseDomain = config('storefront.tenant_base_domain');
-                $path       = $request->getPathInfo();
+            // If the request host is a subdomain of our base domain but has no matching
+            // tenant (e.g. top5pct.dreamstudiosolutions.com), redirect to /hub instead
+            // of crashing on storefront routes that call app('current_store').
+            // Local dev uses a *.repl.co host, so this branch never fires there.
+            $host       = $request->getHost();
+            $baseDomain = config('storefront.tenant_base_domain');
+            $path       = $request->getPathInfo();
 
-                if (
-                    ($host === $baseDomain || str_ends_with($host, '.' . $baseDomain))
-                    && ! str_starts_with($path, '/hub')
-                    && ! str_starts_with($path, '/api')
-                    && ! str_starts_with($path, '/lunar')
-                ) {
-                    return redirect('/hub', 302);
-                }
+            if (
+                str_ends_with($host, '.' . $baseDomain)
+                && ! str_starts_with($path, '/hub')
+                && ! str_starts_with($path, '/api')
+                && ! str_starts_with($path, '/lunar')
+            ) {
+                return redirect('/hub', 302);
             }
 
             return $next($request);

@@ -31,11 +31,7 @@
 <body class="font-sans antialiased bg-linen text-charcoal">
 
     <header class="sticky top-0 z-50">
-        <x-layout.top-notification-bar
-            message="{{ $notificationMessage ?? 'Free Shipping on Orders Over $50!' }}"
-            link="{{ $notificationLink ?? '/collections/custom-apparel/custom-shirts' }}"
-            linkText="{{ $notificationLinkText ?? 'Shop Now' }}"
-        />
+        <x-layout.top-notification-bar />
         <x-ui.banner-thin-sunburst />
         <x-ui.banner-thin-charcoal />
         <x-layout.navigation-bar currentPage="{{ $currentPage ?? '' }}" />

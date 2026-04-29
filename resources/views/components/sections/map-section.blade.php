@@ -1,3 +1,12 @@
+@php
+    use App\Data\PrimaryLocations;
+    $mapLocations   = PrimaryLocations::forMap();
+    $zips           = PrimaryLocations::zips();
+    $primaryCities  = PrimaryLocations::primaryCityNames();
+    $secondaryCities = PrimaryLocations::secondaryCityNames();
+    $hqCity         = PrimaryLocations::HQ['city'];
+@endphp
+
 <section id="map-section" class="py-10 bg-charcoal relative overflow-hidden isolate">
     <div class="absolute inset-0 opacity-5">
         <div class="absolute top-0 left-1/4 w-64 h-64 bg-sunburst-full blur-3xl"></div>
@@ -19,18 +28,7 @@
                     x-data="{
                         zip: '',
                         inRange: false,
-                        served: [
-                            '60431','60432','60433','60434','60435','60436',
-                            '60440','60441','60442','60446','60447','60448',
-                            '60451','60490','60491','60544','60564','60565',
-                            '60585','60586','60601','60602','60603','60604',
-                            '60605','60606','60607','60608','60609','60610',
-                            '60611','60612','60613','60614','60615','60616',
-                            '60617','60618','60619','60620','60621','60622',
-                            '60623','60624','60625','60626','60439',
-                            '60504','60505','60506','60507','60540','60563',
-                            '60404','60408','60410','60481','60484','60468'
-                        ],
+                        served: {{ Js::from($zips) }},
                         checkZip() {
                             if (this.zip.length === 5) {
                                 this.inRange = this.served.includes(this.zip);
@@ -68,23 +66,20 @@
                         </button>
                     </div>
 
-                    {{-- Zip result modal — uses x-ui.modal (md / Promotional Alert pattern) --}}
+                    {{-- Zip result modal --}}
                     <x-ui.modal name="zip-result" size="md">
 
                         <x-slot:header>
                             <div class="h-2 flex-shrink-0 bg-gold-gradient-horizontal" aria-hidden="true"></div>
                             <div class="flex items-start gap-3 px-5 py-4 bg-charcoal border-b-2 border-sunburst">
-                                {{-- Icon — green check when in range, gold pin when out --}}
                                 <div class="flex items-center justify-center w-12 h-12 flex-shrink-0"
                                     :class="$store.zipResult.inRange ? 'bg-green-500/15' : 'bg-sunburst/15'">
-                                    {{-- In range: check --}}
                                     <svg x-show="$store.zipResult.inRange"
                                         class="w-6 h-6 text-green-400" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"
                                         aria-hidden="true">
                                         <polyline points="20 6 9 17 4 12"/>
                                     </svg>
-                                    {{-- Out of range: location pin --}}
                                     <svg x-show="!$store.zipResult.inRange"
                                         class="w-6 h-6 text-sunburst" fill="currentColor"
                                         viewBox="0 0 24 24" aria-hidden="true">
@@ -127,11 +122,9 @@
                 <div class="border-t border-white/10 pt-6">
                     <p class="text-white/50 text-sm leading-relaxed">
                         Veteran-owned since 2015, Top 5 Percent proudly serves
-                        Joliet, Plainfield, Romeoville, Bolingbrook, Lockport,
-                        Shorewood, Channahon, Minooka, New Lenox, Mokena,
-                        Frankfort, Homer Glen, Lemont, Woodridge, Naperville,
-                        Aurora, Oswego, Yorkville, Morris, Wilmington,
-                        Crest Hill, Elwood, Manhattan, Braidwood,
+                        {{ $hqCity }},
+                        {{ implode(', ', $primaryCities) }},
+                        {{ implode(', ', $secondaryCities) }},
                         and the greater Chicagoland area.
                         Friendly, reliable service.
                     </p>
@@ -175,32 +168,7 @@
                 iconAnchor: [7, 7],
             });
 
-            const locations = [
-                { name: 'Top 5 Percent HQ - Joliet', lat: 41.5250, lng: -88.0817, main: true },
-                { name: 'Plainfield', lat: 41.6270, lng: -88.2037 },
-                { name: 'Romeoville', lat: 41.6475, lng: -88.0895 },
-                { name: 'Bolingbrook', lat: 41.6986, lng: -88.0684 },
-                { name: 'Lockport', lat: 41.5895, lng: -88.0573 },
-                { name: 'Shorewood', lat: 41.5200, lng: -88.2017 },
-                { name: 'Channahon', lat: 41.4286, lng: -88.2284 },
-                { name: 'Minooka', lat: 41.4553, lng: -88.2615 },
-                { name: 'New Lenox', lat: 41.5120, lng: -87.9656 },
-                { name: 'Mokena', lat: 41.5267, lng: -87.8892 },
-                { name: 'Frankfort', lat: 41.4958, lng: -87.8487 },
-                { name: 'Homer Glen', lat: 41.5987, lng: -87.9370 },
-                { name: 'Lemont', lat: 41.6736, lng: -88.0017 },
-                { name: 'Naperville', lat: 41.7508, lng: -88.1535 },
-                { name: 'Aurora', lat: 41.7606, lng: -88.3201 },
-                { name: 'Woodridge', lat: 41.7470, lng: -88.0506 },
-                { name: 'Crest Hill', lat: 41.5548, lng: -88.0987 },
-                { name: 'Oswego', lat: 41.6831, lng: -88.3515 },
-                { name: 'Yorkville', lat: 41.6414, lng: -88.4473 },
-                { name: 'Manhattan', lat: 41.4217, lng: -87.9856 },
-                { name: 'Wilmington', lat: 41.3078, lng: -88.1468 },
-                { name: 'Morris', lat: 41.3572, lng: -88.4212 },
-                { name: 'Elwood', lat: 41.4039, lng: -88.1112 },
-                { name: 'Chicago (Downtown)', lat: 41.8781, lng: -87.6298 },
-            ];
+            const locations = {!! Js::from($mapLocations) !!};
 
             locations.forEach(function (loc) {
                 const marker = L.marker([loc.lat, loc.lng], { icon: goldIcon }).addTo(map);
@@ -214,7 +182,7 @@
                     marker.setIcon(hqIcon);
                     marker.bindPopup('<strong style="color:#2C2C2C;">' + loc.name + '</strong>').openPopup();
                 } else {
-                    marker.bindPopup('<span style="color:#2C2C2C;">' + loc.name + '</span>');
+                    marker.bindPopup('<span style="color:#2C2C2C;">' + loc.city + '</span>');
                 }
             });
         });

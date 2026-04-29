@@ -9,17 +9,15 @@
         {{-- LEFT: Phones (far left) · SM icons (near center) --}}
         <div class="flex-1 flex items-center gap-3 whitespace-nowrap">
 
-            {{-- Phone numbers pushed to far left --}}
-            <div class="flex items-center gap-1.5 mr-auto">
+            {{-- Phone numbers at far left --}}
+            <div class="flex items-center gap-1.5 shrink-0">
                 <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
                 <span class="font-normal text-charcoal opacity-60">or</span>
                 <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-TOP5</a>
             </div>
 
-            <span class="opacity-25 select-none text-xs">|</span>
-
-            {{-- Social media icons sit close to center --}}
-            <div class="flex items-center gap-1.5">
+            {{-- Social media icons centered between phones and Free Shipping --}}
+            <div class="flex items-center gap-1.5 mx-auto shrink-0">
 
                 {{-- Google Maps --}}
                 <a href="https://www.google.com/maps?cid=15797523837573086431" target="_blank" rel="noopener" aria-label="Google Maps" class="opacity-60 hover:opacity-100 transition-opacity">
@@ -78,11 +76,11 @@
             Free Shipping on Orders Over $50!
         </a>
 
-        {{-- RIGHT: Reviews · Service Areas (near center) · Cart (far right) --}}
-        <div class="flex-1 flex items-center gap-3 whitespace-nowrap">
+        {{-- RIGHT: Reviews · Service Areas (centered between Free Shipping and cart) · Cart (far right) --}}
+        <div class="flex-1 flex items-center whitespace-nowrap">
 
-            {{-- Reviews and Service Areas sit close to center --}}
-            <div class="flex items-center gap-3">
+            {{-- Reviews and Service Areas centered between Free Shipping and Cart --}}
+            <div class="flex items-center gap-3 mx-auto shrink-0">
 
                 {{-- Reviews --}}
                 <a href="/reviews" class="flex items-center gap-1 font-semibold hover:underline" style="color:var(--color-azure)">
@@ -91,8 +89,6 @@
                     </svg>
                     Reviews
                 </a>
-
-                <span class="opacity-25 select-none text-xs">|</span>
 
                 {{-- Service Areas --}}
                 <a href="/service-area" class="flex items-center gap-1 font-semibold hover:underline" style="color:var(--color-azure)">
@@ -105,10 +101,8 @@
 
             </div>
 
-            <span class="opacity-25 select-none text-xs">|</span>
-
-            {{-- Cart pushed to far right --}}
-            <div class="ml-auto">
+            {{-- Cart at far right --}}
+            <div class="shrink-0">
                 @livewire('cart.cart-icon')
             </div>
 

@@ -80,7 +80,7 @@
         <div class="flex-1 flex items-center whitespace-nowrap">
 
             {{-- Reviews and Service Areas centered between Free Shipping and Cart --}}
-            <div class="flex items-center gap-3 mx-auto shrink-0">
+            <div class="flex items-center gap-6 mx-auto shrink-0">
 
                 {{-- Reviews --}}
                 <a href="/reviews" class="flex items-center gap-1 font-semibold hover:underline" style="color:var(--color-azure)">

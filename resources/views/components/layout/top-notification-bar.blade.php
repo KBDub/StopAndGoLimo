@@ -6,17 +6,19 @@
 >
     <div class="max-w-7xl mx-auto px-4 flex items-center gap-4">
 
-        {{-- LEFT: Phones · SM icons --}}
-        <div class="flex-1 flex items-center gap-2 text-xs whitespace-nowrap">
+        {{-- LEFT: Phones (far left) · SM icons (near center) --}}
+        <div class="flex-1 flex items-center gap-3 whitespace-nowrap">
 
-            {{-- Phone numbers --}}
-            <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
-            <span class="opacity-40">or</span>
-            <a href="tel:+18153498600" class="font-semibold text-charcoal hover:underline">(815) 349-TOP5</a>
+            {{-- Phone numbers pushed to far left --}}
+            <div class="flex items-center gap-1.5 mr-auto">
+                <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
+                <span class="font-normal text-charcoal opacity-60">or</span>
+                <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-TOP5</a>
+            </div>
 
-            <span class="opacity-25 select-none">|</span>
+            <span class="opacity-25 select-none text-xs">|</span>
 
-            {{-- Social media icons --}}
+            {{-- Social media icons sit close to center --}}
             <div class="flex items-center gap-1.5">
 
                 {{-- Google Maps --}}
@@ -76,32 +78,39 @@
             Free Shipping on Orders Over $50!
         </a>
 
-        {{-- RIGHT: Reviews · Service Areas · Cart --}}
-        <div class="flex-1 flex items-center justify-end gap-2 text-xs whitespace-nowrap">
+        {{-- RIGHT: Reviews · Service Areas (near center) · Cart (far right) --}}
+        <div class="flex-1 flex items-center gap-3 whitespace-nowrap">
 
-            {{-- Reviews --}}
-            <a href="/reviews" class="flex items-center gap-1 opacity-75 hover:opacity-100 transition-opacity hover:underline">
-                <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                Reviews
-            </a>
+            {{-- Reviews and Service Areas sit close to center --}}
+            <div class="flex items-center gap-3">
 
-            <span class="opacity-25 select-none">|</span>
+                {{-- Reviews --}}
+                <a href="/reviews" class="flex items-center gap-1 font-semibold hover:underline" style="color:var(--color-azure)">
+                    <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Reviews
+                </a>
 
-            {{-- Service Areas --}}
-            <a href="/service-area" class="flex items-center gap-1 opacity-75 hover:opacity-100 transition-opacity hover:underline">
-                <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                Service Areas
-            </a>
+                <span class="opacity-25 select-none text-xs">|</span>
 
-            <span class="opacity-25 select-none">|</span>
+                {{-- Service Areas --}}
+                <a href="/service-area" class="flex items-center gap-1 font-semibold hover:underline" style="color:var(--color-azure)">
+                    <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Service Areas
+                </a>
 
-            {{-- Cart --}}
-            @livewire('cart.cart-icon')
+            </div>
+
+            <span class="opacity-25 select-none text-xs">|</span>
+
+            {{-- Cart pushed to far right --}}
+            <div class="ml-auto">
+                @livewire('cart.cart-icon')
+            </div>
 
         </div>
 

@@ -4,9 +4,9 @@
     class="bg-sunburst text-charcoal font-semibold sticky-header-part transition-all duration-300"
     x-bind:class="scrolled ? 'py-0.5 text-xs' : 'py-1 text-sm'"
 >
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-4">
+    <div class="max-w-7xl mx-auto px-4 relative flex items-center">
 
-        {{-- LEFT: Phones · SM icons · Reviews · Service Areas --}}
+        {{-- LEFT: Phones · SM icons --}}
         <div class="flex items-center gap-2 text-xs whitespace-nowrap min-w-0">
 
             {{-- Phone numbers --}}
@@ -69,7 +69,15 @@
                 </a>
             </div>
 
-            <span class="opacity-25 select-none">|</span>
+        </div>
+
+        {{-- MIDDLE: Free Shipping — absolutely centered so it's always true-center --}}
+        <a href="/top5pct-merchandise" class="absolute left-1/2 -translate-x-1/2 font-semibold text-charcoal hover:underline whitespace-nowrap pointer-events-auto">
+            Free Shipping on Orders Over $50!
+        </a>
+
+        {{-- RIGHT: Reviews · Service Areas · Cart --}}
+        <div class="ml-auto flex items-center gap-2 text-xs whitespace-nowrap shrink-0">
 
             {{-- Reviews --}}
             <a href="/reviews" class="flex items-center gap-1 opacity-75 hover:opacity-100 transition-opacity hover:underline">
@@ -90,16 +98,11 @@
                 Service Areas
             </a>
 
-        </div>
+            <span class="opacity-25 select-none">|</span>
 
-        {{-- MIDDLE: Free Shipping --}}
-        <a href="/top5pct-merchandise" class="font-semibold text-charcoal hover:underline whitespace-nowrap shrink-0">
-            Free Shipping on Orders Over $50!
-        </a>
-
-        {{-- RIGHT: Cart --}}
-        <div class="flex justify-end shrink-0">
+            {{-- Cart --}}
             @livewire('cart.cart-icon')
+
         </div>
 
     </div>

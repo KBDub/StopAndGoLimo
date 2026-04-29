@@ -4,10 +4,10 @@
     class="bg-sunburst text-charcoal font-semibold sticky-header-part transition-all duration-300"
     x-bind:class="scrolled ? 'py-0.5 text-xs' : 'py-1 text-sm'"
 >
-    <div class="max-w-7xl mx-auto px-4 relative flex items-center">
+    <div class="max-w-7xl mx-auto px-4 flex items-center gap-4">
 
         {{-- LEFT: Phones · SM icons --}}
-        <div class="flex items-center gap-2 text-xs whitespace-nowrap min-w-0">
+        <div class="flex-1 flex items-center gap-2 text-xs whitespace-nowrap">
 
             {{-- Phone numbers --}}
             <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
@@ -71,13 +71,13 @@
 
         </div>
 
-        {{-- MIDDLE: Free Shipping — absolutely centered so it's always true-center --}}
-        <a href="/top5pct-merchandise" class="absolute left-1/2 -translate-x-1/2 font-semibold text-charcoal hover:underline whitespace-nowrap pointer-events-auto">
+        {{-- MIDDLE: Free Shipping — centered because both sides are flex-1 --}}
+        <a href="/top5pct-merchandise" class="shrink-0 font-semibold text-charcoal hover:underline whitespace-nowrap">
             Free Shipping on Orders Over $50!
         </a>
 
         {{-- RIGHT: Reviews · Service Areas · Cart --}}
-        <div class="ml-auto flex items-center gap-2 text-xs whitespace-nowrap shrink-0">
+        <div class="flex-1 flex items-center justify-end gap-2 text-xs whitespace-nowrap">
 
             {{-- Reviews --}}
             <a href="/reviews" class="flex items-center gap-1 opacity-75 hover:opacity-100 transition-opacity hover:underline">

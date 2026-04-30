@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+use App\Data\PrimaryLocations;
 
 // ─── Main Site ───────────────────────────────────────────────────────────────
 
@@ -257,6 +259,18 @@ Route::get('/promotional-items/mouse-pads', function () {
 Route::get('/service-areas', function () {
     return view('pages.service-areas');
 })->name('service-areas');
+
+Route::get('/service-areas/{slug}', function (string $slug) {
+    $city = collect(PrimaryLocations::all())->first(
+        fn ($loc) => Str::slug(($loc['city'] ?? $loc['name']) . '-' . $loc['state']) === $slug
+    );
+
+    if (! $city) {
+        abort(404);
+    }
+
+    return view('pages.service-areas.show', compact('city'));
+})->name('service-areas.show');
 
 // ─── Company / About ─────────────────────────────────────────────────────────
 

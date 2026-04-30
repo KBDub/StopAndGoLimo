@@ -1,13 +1,13 @@
 @php
     use App\Data\PrimaryLocations;
 
-    $hq             = PrimaryLocations::HQ;
-    $primaryCities  = PrimaryLocations::PRIMARY;
+    $hq              = PrimaryLocations::HQ;
+    $primaryCities   = PrimaryLocations::PRIMARY;
     $secondaryCities = PrimaryLocations::SECONDARY;
-    $allCities      = array_merge($primaryCities, $secondaryCities);
+    $allCities       = array_merge($primaryCities, $secondaryCities);
 
-    $primaryNames   = array_column($primaryCities, 'city');
-    $secondaryNames = array_column($secondaryCities, 'city');
+    $primaryNames    = array_column($primaryCities, 'city');
+    $secondaryNames  = array_column($secondaryCities, 'city');
 
     $cardImages = [
         '/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg',
@@ -38,57 +38,36 @@
 
     <x-ui.banner-medium-sunburst />
 
-    {{-- Company intro: centered headline + 2-column body copy / image --}}
-    <section class="py-14 bg-linen">
-        <div class="max-w-7xl mx-auto px-6">
-
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 leading-snug" style="color:var(--color-sunburst)">
-                Top 5 Percent, providing premium custom signage and apparel across<br class="hidden md:block"> Joliet, Will County, and the greater Chicagoland area.
-            </h2>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-                {{-- Left: body copy --}}
-                <div class="space-y-4 text-charcoal-light leading-relaxed">
-                    <p>
-                        Since 2017, Top 5 Percent has delivered high-quality custom signage and apparel to businesses,
-                        schools, sports teams, and organizations throughout Will County and greater Chicagoland.
-                        We are a veteran-owned shop based in Joliet, Illinois, and we take pride in serving
-                        our local community with fast turnaround and personal service.
-                    </p>
-                    <p>
-                        We offer custom t-shirts, hoodies, embroidery, business signs, banners, vehicle graphics,
-                        promotional products, and white-label storefronts. Whether you need five shirts or five
-                        hundred signs, we have the equipment and the team to deliver on time.
-                    </p>
-                    <p>
-                        We value our community ties in {{ $hq['city'] }},
-                        {{ implode(', ', $primaryNames) }},
-                        {{ implode(', ', $secondaryNames) }},
-                        and the greater Chicagoland area.
-                        If you are nearby, stop in. If not, we ship.
-                    </p>
-                    <p>
-                        Call us at
-                        <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-sunburst)">(815) 349-8600</a>
-                        or
-                        <a href="/contact" class="font-semibold hover:underline" style="color:var(--color-sunburst)">request a free quote online</a>.
-                        Your brand is our business.
-                    </p>
-                </div>
-
-                {{-- Right: image --}}
-                <div class="overflow-hidden shadow-lg">
-                    <img
-                        src="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
-                        alt="Custom business signs and apparel produced by Top 5 Percent in Joliet Illinois"
-                        class="w-full h-full object-cover"
-                    />
-                </div>
-
-            </div>
-        </div>
-    </section>
+    {{-- Company intro — branded card with float image --}}
+    <x-sections.card-image-with-text
+        title="Proudly Serving Joliet, Will County, and Greater Chicagoland"
+        image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
+        alt="Custom business signs and apparel produced by Top 5 Percent in Joliet Illinois"
+        imagePosition="right"
+    >
+        <p>
+            Since 2017, Top 5 Percent has delivered high-quality custom signage and apparel to businesses,
+            schools, sports teams, and organizations throughout Will County and greater Chicagoland.
+            We are a veteran-owned shop based in Joliet, Illinois, and we take pride in serving our
+            local community with fast turnaround and personal service.
+        </p>
+        <p>
+            We offer custom t-shirts, hoodies, embroidery, business signs, banners, vehicle graphics,
+            promotional products, and white-label storefronts. Whether you need five shirts or five hundred
+            signs, we have the equipment and the team to deliver on time, every time.
+        </p>
+        <p>
+            We value our community ties in {{ $hq['city'] }},
+            {{ implode(', ', $primaryNames) }},
+            {{ implode(', ', $secondaryNames) }},
+            and the greater Chicagoland area. If you are nearby, stop in. If not, we ship.
+        </p>
+        <p>
+            Call us at <a href="tel:+18153498600" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 349-8600</a>
+            or <a href="/contact" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">request a free quote online</a>.
+            Your brand is our business.
+        </p>
+    </x-sections.card-image-with-text>
 
     <x-ui.banner-thin-charcoal />
 
@@ -108,40 +87,28 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($allCities as $index => $city)
                 @php $img = $cardImages[$index % count($cardImages)]; @endphp
-                <div class="flex flex-col bg-white border border-charcoal/10 shadow-sm hover:shadow-gold-lg hover:-translate-y-1 transition-all overflow-hidden">
 
-                    {{-- Card image --}}
-                    <div class="overflow-hidden h-48">
-                        <img
-                            src="{{ $img }}"
-                            alt="Custom signage and apparel in {{ $city['city'] }}, {{ $city['state'] }}"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                        />
+                <x-ui.card-product
+                    title="Proudly serving {{ $city['city'] }}, {{ $city['state'] }}"
+                    href="/contact?city={{ urlencode($city['city']) }}"
+                    image="{{ $img }}"
+                >
+                    <div class="flex flex-col gap-2 mt-2">
+                        <a
+                            href="/contact?city={{ urlencode($city['city']) }}"
+                            class="block w-full text-center px-4 py-2.5 text-sm bg-charcoal text-sunburst font-semibold hover:bg-charcoal-dark hover:shadow-lg transition-all hover:-translate-y-0.5"
+                        >
+                            Custom Signage in {{ $city['city'] }}
+                        </a>
+                        <a
+                            href="/contact?service=quote&city={{ urlencode($city['city']) }}"
+                            class="block w-full text-center px-4 py-2.5 text-sm bg-sunburst text-charcoal font-semibold hover:bg-sunburst-dark hover:shadow-gold-lg transition-all hover:-translate-y-0.5"
+                        >
+                            Get a Free Quote
+                        </a>
                     </div>
+                </x-ui.card-product>
 
-                    {{-- Card body --}}
-                    <div class="flex flex-col flex-1 p-5">
-                        <h3 class="text-xl font-bold text-charcoal mb-4">
-                            {{ $city['city'] }}, {{ $city['state'] }}
-                        </h3>
-                        <div class="flex flex-col gap-2 mt-auto">
-                            <a
-                                href="/contact?city={{ urlencode($city['city']) }}"
-                                class="block text-center py-2.5 px-4 bg-charcoal text-white font-semibold text-sm hover:bg-charcoal/80 transition-colors"
-                            >
-                                Custom Signage in {{ $city['city'] }}
-                            </a>
-                            <a
-                                href="/contact?service=quote&city={{ urlencode($city['city']) }}"
-                                class="block text-center py-2.5 px-4 font-semibold text-sm text-charcoal hover:opacity-90 transition-opacity bg-sunburst"
-                            >
-                                Get a Free Quote
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
                 @endforeach
             </div>
 
@@ -150,10 +117,10 @@
 
     <x-ui.banner-thin-charcoal />
 
+    {{-- CTA above the map --}}
+    <x-sections.cta-quadruple-button-banner />
+
     {{-- Map + zip checker --}}
     <x-sections.map-section />
-
-    {{-- CTA --}}
-    <x-sections.cta-quadruple-button-banner />
 
 </x-layouts.page>

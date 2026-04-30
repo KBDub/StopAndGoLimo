@@ -20,6 +20,50 @@
     @if($jsFile)
     <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Top 5 Percent, LLC",
+        "image": "https://www.top5pct.com/images/top5pct-logo.png",
+        "@id": "https://www.top5pct.com",
+        "url": "https://www.top5pct.com",
+        "telephone": "815-349-8600",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "121 Springfield Avenue, Suite 103",
+            "addressLocality": "Joliet",
+            "addressRegion": "IL",
+            "postalCode": "60435",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.5250,
+            "longitude": -88.0817
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "100"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "08:30",
+            "closes": "18:00"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Top 5 Percent",
+        "url": "https://www.top5pct.com"
+    }
+    </script>
+    @stack('structured-data')
 </head>
 <style>
     :root {

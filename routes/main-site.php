@@ -269,7 +269,7 @@ Route::get('/service-areas/{slug}', function (string $slug) {
         abort(404);
     }
 
-    return view('pages.service-areas.show', compact('city'));
+    return view('pages.service-areas.show', compact('city', 'slug'));
 })->name('service-areas.show');
 
 // ─── Company / About ─────────────────────────────────────────────────────────

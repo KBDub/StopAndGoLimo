@@ -64,6 +64,21 @@ The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alp
 
 ## Recent Changes
 
+-   **Service Area City Pages + JSON-LD Framework (Apr 2026):**
+    -   **`app/Data/PrimaryLocations.php`** — Rebuilt to 20 PRIMARY cities (Aurora through Logan Square) + 20 SECONDARY cities (Mokena through Yorkville), all alphabetical after Joliet HQ. Methods: `all()`, `forMap()`, `primaryCityNames()`, `secondaryCityNames()`, `allCityNames()`, `zips()`. All sort via `usort()`.
+    -   **`app/Data/CityContent.php`** — New data class with verbatim PDF content for all 41 service area cities (Joliet + 40 others). Each city entry has `p1`, `p2`, `p3`, `p4`, `faqs` (3 Q&A items), and `review` (author + body, or null). Access via `CityContent::for($slug)`.
+    -   **3 New Blade Sections:**
+        -   `x-sections.city-localized-content` — linen bg, white shadow-gold-lg card, float image + prose (p1+p2), Alpine auto-bolds first 4 words per paragraph. Props: `heading`, `label`, `image`, `alt`, `imagePosition`.
+        -   `x-sections.city-vehicle-and-brand` — white bg 2-col grid, left card sunburst border-top (p3), right card azure border-top (p4). Props: `vehicleHeading`, `brandHeading`, named slots `vehicleContent` + `brandContent`.
+        -   `x-sections.faq` — generic FAQ with 2-col card grid, splits FAQ array into two equal columns. Emits `@push('structured-data')` FAQPage JSON-LD automatically when `$faqs` array is non-empty. Props: `heading`, `label`, `introText`, `image`, `imageAlt`, `faqs`.
+    -   **JSON-LD Framework** — Full rubric-compliant structured data on every city page:
+        -   `resources/views/components/layouts/page.blade.php` — GlobalLocalBusiness (40 pts) + WebSite (15 pts) injected in `<head>` on every page. `@stack('structured-data')` added for page-level schema injection.
+        -   `resources/views/pages/service-areas/show.blade.php` — `@push('structured-data')` injects Service (10 pts) + BreadcrumbList (10 pts) + WebPage (5 pts) per city. Conditional Review schema if city has a review entry.
+        -   `x-sections.faq` — auto-injects FAQPage (20 pts) per city via `@push`.
+        -   Total per city page: 100 pts (max) — LocalBusiness 40 + WebSite 15 + Service 10 + BreadcrumbList 10 + WebPage 5 + FAQPage 20.
+    -   **`routes/main-site.php`** — Service area route now passes both `$city` and `$slug` to the view (`compact('city', 'slug')`).
+    -   **`show.blade.php`** — Renders the 3 new city sections when `CityContent::for($slug)` returns data; falls back to generic `card-image-with-text` content for unregistered cities.
+
 -   **White-Label Multi-Tenant Storefront System (Apr 2026):** Full implementation of `customer.top5pct.com` subdomain-based storefronts. Single database architecture using Lunar Channels for product scoping. Key files:
     -   **Database:** `stores` table (name, subdomain, lunar_channel_id, logo, nav_layout, colors JSON tri-palette, font_family, font_custom, features_enabled JSON, events JSON, roster JSON, store_type, is_active), `store_pages` table (store_id, slug, sections JSON, sort_order), `global_overrides` table (name, component, css, is_active).
     -   **Models:** `app/Models/Store.php` (with `hasFeature()`, `nextCountdownEvent()`, `resolvedFont()`, `color()` helpers), `app/Models/StorePage.php`, `app/Models/GlobalOverride.php`.

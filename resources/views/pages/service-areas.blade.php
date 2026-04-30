@@ -89,7 +89,7 @@
                 @foreach ($allCities as $index => $city)
                 @php
                     $img  = $cardImages[$index % count($cardImages)];
-                    $slug = Str::slug($city['city']);
+                    $slug = Str::slug($city['city'] . '-' . $city['state']);
                     $url  = '/service-areas/' . $slug;
                 @endphp
 

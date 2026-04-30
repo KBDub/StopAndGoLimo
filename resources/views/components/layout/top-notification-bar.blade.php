@@ -91,7 +91,7 @@
                 </a>
 
                 {{-- Service Areas --}}
-                <a href="/service-area" class="flex items-center gap-1 font-semibold text-charcoal hover:underline">
+                <a href="/service-areas" class="flex items-center gap-1 font-semibold text-charcoal hover:underline">
                     <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                         <circle cx="12" cy="10" r="3"/>

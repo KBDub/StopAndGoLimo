@@ -4,6 +4,7 @@
     'price' => '',
     'image' => null,
     'href' => null,
+    'titleSize' => '',
 ])
 
 <div {{ $attributes->merge(['class' => 'relative shadow-lg hover:shadow-gold-lg transition-all hover:-translate-y-1 h-full']) }}>
@@ -34,7 +35,7 @@
             @endif
         @endif
 
-        <h3 class="font-semibold mb-2 text-center">
+        <h3 class="font-semibold mb-2 text-center {{ $titleSize }}">
             @if($href)
                 <a href="{{ $href }}" class="text-olive hover:text-azure transition-colors underline decoration-olive underline-offset-4">{{ $title }}</a>
             @else

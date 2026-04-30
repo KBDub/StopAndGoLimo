@@ -1,5 +1,6 @@
 @php
     use App\Data\PrimaryLocations;
+    use Illuminate\Support\Str;
 
     $hq              = PrimaryLocations::HQ;
     $primaryCities   = PrimaryLocations::PRIMARY;
@@ -80,32 +81,38 @@
                 <div class="h-1 w-16 bg-sunburst mx-auto mt-3 mb-4"></div>
                 <p class="text-charcoal-light max-w-2xl mx-auto">
                     We proudly serve communities across Will County and greater Chicagoland.
-                    Click any city to start your custom order.
+                    Click any city to learn more about our services in your area.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($allCities as $index => $city)
-                @php $img = $cardImages[$index % count($cardImages)]; @endphp
+                @php
+                    $img  = $cardImages[$index % count($cardImages)];
+                    $slug = Str::slug($city['city']);
+                    $url  = '/service-areas/' . $slug;
+                @endphp
 
                 <x-ui.card-product
                     title="Proudly serving {{ $city['city'] }}, {{ $city['state'] }}"
-                    href="/contact?city={{ urlencode($city['city']) }}"
+                    href="{{ $url }}"
                     image="{{ $img }}"
+                    titleSize="text-sm"
                 >
                     <div class="flex flex-col gap-2 mt-2">
                         <a
-                            href="/contact?city={{ urlencode($city['city']) }}"
+                            href="{{ $url }}"
                             class="block w-full text-center px-4 py-2.5 text-sm bg-charcoal text-sunburst font-semibold hover:bg-charcoal-dark hover:shadow-lg transition-all hover:-translate-y-0.5"
                         >
                             Custom Signage in {{ $city['city'] }}
                         </a>
-                        <a
-                            href="/contact?service=quote&city={{ urlencode($city['city']) }}"
+                        <button
+                            type="button"
+                            @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
                             class="block w-full text-center px-4 py-2.5 text-sm bg-sunburst text-charcoal font-semibold hover:bg-sunburst-dark hover:shadow-gold-lg transition-all hover:-translate-y-0.5"
                         >
                             Get a Free Quote
-                        </a>
+                        </button>
                     </div>
                 </x-ui.card-product>
 

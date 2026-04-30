@@ -252,6 +252,12 @@ Route::get('/promotional-items/mouse-pads', function () {
     return view('pages.promotional-items.mouse-pads');
 })->name('promotional-items.mouse-pads');
 
+// ─── Service Area ────────────────────────────────────────────────────────────
+
+Route::get('/service-area', function () {
+    return view('pages.service-area');
+})->name('service-area');
+
 // ─── Company / About ─────────────────────────────────────────────────────────
 
 Route::get('/stores', function () {

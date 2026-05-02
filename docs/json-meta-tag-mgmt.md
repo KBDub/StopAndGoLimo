@@ -228,7 +228,6 @@ The following standard meta tags are in the layout:
 
 - Target length: **120–160 characters** for 100/100 score
 - Current descriptions vary — most are within range but should be audited
-- Must contain "Veteran Owned" per `docs/detailed.seo.md` to improve SERP CTR
 - Must include the city/geo signal (Joliet, IL / Will County / Shorewood / Plainfield)
 
 ---
@@ -694,14 +693,20 @@ when `CityContent::for($slug)['review']` is non-null.
         "@type": "Person",
         "name": "Shannon Blizniak"
     },
-    "reviewBody": "Ezra was great to work with and made our tshirt within hours..."
+    "reviewBody": "Ezra was great to work with and made our tshirt within hours... Great service & quality."
 }
 ```
 
 **Cities with review data populated in `CityContent.php`:**
-- `aurora-il` — Shannon Blizniak
-- `chicago-il` — Chewy Orkwiszewski
-- `joliet-il` — Jerry E. Olson
+
+| Slug | Author | Review Body |
+|------|--------|-------------|
+| `aurora-il` | Shannon Blizniak | "Ezra was great to work with and made our tshirt within hours... Great service & quality." |
+| `chicago-il` | Chewy Orkwiszewski | "The car decals are flawless in quality. Great team to work with." |
+| `joliet-il` | Jerry E. Olson | "Ezra is super helpful and very talented. Premier choice for rush banners and printing services in Joliet." |
+
+The `reviewBody` field in the JSON-LD schema must match the `body` value in `CityContent.php` exactly.
+Do not paraphrase, truncate, or editorialize the review text in the schema output.
 
 **Applied to:** Three city pages only (currently).
 

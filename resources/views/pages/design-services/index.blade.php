@@ -1,7 +1,9 @@
 <x-layouts.page
     title="Design Services Joliet IL | Logo Design, Graphic Design, Online Designer, Design Catalogs | Top 5 Percent"
     metaDescription="Professional design services in Joliet IL. Logo design, graphic design, free online designer, and design inspiration catalogs for custom shirts, signs, decals, and more. Veteran owned, no design skills needed."
-    currentPage="design-services">
+    currentPage="design-services"
+    ogImage="/images/og-tags/top5pct-og-design-services.jpg"
+    ogImageAlt="Design Services in Joliet, IL — Logo Design, Graphic Design — Top 5 Percent">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"

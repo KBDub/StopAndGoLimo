@@ -1,7 +1,9 @@
 <x-layouts.page
     title="Custom Signs & Banners Joliet IL | Yard Signs, Posters, Business Signs, Window Signs | Top 5 Percent"
     metaDescription="We print custom signs, banners, posters, yard signs, sidewalk signs, business signs, window signs, wall signs, door signs, and floor signs in Joliet, Shorewood, Plainfield, and Will County. Veteran owned sign shop with same day service."
-    currentPage="signs">
+    currentPage="signs"
+    ogImage="/images/og-tags/top5pct-og-signs.jpg"
+    ogImageAlt="Custom Signs & Banners in Joliet, IL — Top 5 Percent">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"

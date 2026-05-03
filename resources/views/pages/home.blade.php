@@ -2,6 +2,8 @@
     title="Custom Signage & Apparel"
     metaDescription="Premium custom signage and apparel in Joliet, IL. Veteran-owned business specializing in custom shirts, signs, decals, and vehicle graphics."
     currentPage="home"
+    ogImage="/images/og-tags/top5pct-og-home.jpg"
+    ogImageAlt="Top 5 Percent — Custom Signs & Apparel in Joliet, IL"
 >
     <x-sections.category-hero />
     <x-ui.banner-thin-charcoal />

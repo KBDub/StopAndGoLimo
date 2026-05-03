@@ -89,35 +89,34 @@
                                     <div class="pb-2 border-b border-linen-dark">
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Printing Options</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/custom-apparel/dtf-transfers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Direct to Film (DTF)</a><a href="/custom-apparel/dtf-transfers" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">High-detail heat transfers</a></div>
-                                            <div><a href="/custom-apparel/dye-sublimation" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Dye-Sublimation</a><a href="/custom-apparel/dye-sublimation" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Edge-to-edge full color</a></div>
+                                            <div><a href="/custom-apparel/printing-options/dtf-printing" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Direct to Film (DTF)</a><a href="/custom-apparel/printing-options/dtf-printing" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">High-detail heat transfers</a></div>
+                                            <div><a href="/custom-apparel/printing-options/dye-sublimation-printing" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Dye-Sublimation</a><a href="/custom-apparel/printing-options/dye-sublimation-printing" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Edge-to-edge full color</a></div>
                                             <div><a href="/custom-apparel/screen-printing" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Screen Printing</a><a href="/custom-apparel/screen-printing" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Classic bulk production</a></div>
                                             <div><a href="/custom-apparel/embroidery" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Embroidery</a><a href="/custom-apparel/embroidery" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Premium stitched branding</a></div>
-                                            <div><a href="/custom-apparel/rhinestone-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Rhinestone</a><a href="/custom-apparel/rhinestone-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Crystal embellishments</a></div>
-                                            <div><a href="/custom-apparel/vinyl-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Digital Vinyl</a><a href="/custom-apparel/vinyl-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Sharp, durable graphics</a></div>
+                                            <div><a href="/custom-apparel/rhinestone-apparel" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Rhinestone</a><a href="/custom-apparel/rhinestone-apparel" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Crystal embellishments</a></div>
                                         </div>
                                     </div>
                                     {{-- Row 2: Specialty Materials --}}
                                     <div class="pb-2 border-b border-linen-dark">
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Specialty Materials</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/custom-apparel/glitter-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Glitter</a><a href="/custom-apparel/glitter-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Shimmer and sparkle</a></div>
-                                            <div><a href="/custom-apparel/puff-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Puff</a><a href="/custom-apparel/puff-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Raised 3D texture</a></div>
-                                            <div><a href="/custom-apparel/glow-in-the-dark-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Glow in the Dark</a><a href="/custom-apparel/glow-in-the-dark-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Luminous night effects</a></div>
-                                            <div><a href="/custom-apparel/flock-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Flock</a><a href="/custom-apparel/flock-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Velvet-like soft feel</a></div>
-                                            <div><a href="/custom-apparel/brick-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Brick</a><a href="/custom-apparel/brick-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Extra thick, bold look</a></div>
-                                            <div><a href="/custom-apparel/holographic-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Holographic</a><a href="/custom-apparel/holographic-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Iridescent color shifting</a></div>
-                                            <div><a href="/custom-apparel/foil-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Foil</a><a href="/custom-apparel/foil-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Shiny metallic finish</a></div>
-                                            <div><a href="/custom-apparel/reflective-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Reflective</a><a href="/custom-apparel/reflective-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">High-visibility safety</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/glitter-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Glitter</a><a href="/custom-apparel/specialty-materials/glitter-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Shimmer and sparkle</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/puff-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Puff</a><a href="/custom-apparel/specialty-materials/puff-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Raised 3D texture</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/glow-in-the-dark-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Glow in the Dark</a><a href="/custom-apparel/specialty-materials/glow-in-the-dark-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Luminous night effects</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/flock-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Flock</a><a href="/custom-apparel/specialty-materials/flock-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Velvet-like soft feel</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/brick-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Brick</a><a href="/custom-apparel/specialty-materials/brick-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Extra thick, bold look</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/holographic-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Holographic</a><a href="/custom-apparel/specialty-materials/holographic-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Iridescent color shifting</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/foil-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Foil</a><a href="/custom-apparel/specialty-materials/foil-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Shiny metallic finish</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/reflective-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Reflective</a><a href="/custom-apparel/specialty-materials/reflective-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">High-visibility safety</a></div>
                                         </div>
                                     </div>
                                     {{-- Row 3: Group Shirts --}}
                                     <div>
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Group Shirts</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/custom-apparel/reunion-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Family Reunion</a><a href="/custom-apparel/reunion-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Custom matching apparel</a></div>
-                                            <div><a href="/custom-apparel/spirit-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Spirit Wear</a><a href="/custom-apparel/spirit-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">School and sports fans</a></div>
-                                            <div><a href="/custom-apparel/corporate-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Corporate Wear</a><a href="/custom-apparel/corporate-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Branded staff uniforms</a></div>
+                                            <div><a href="/custom-apparel/group-shirts/reunion-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Family Reunion</a><a href="/custom-apparel/group-shirts/reunion-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Custom matching apparel</a></div>
+                                            <div><a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Spirit Wear</a><a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">School and sports fans</a></div>
+                                            <div><a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Corporate Wear</a><a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Branded staff uniforms</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -168,29 +167,29 @@
                                     <div class="pb-2 border-b border-linen-dark">
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Business Signs</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/signs/banners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Banners</a><a href="/signs/banners" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Custom vinyl banners</a></div>
-                                            <div><a href="/signs/window-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Window Signs</a><a href="/signs/window-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Storefront decals & perf</a></div>
-                                            <div><a href="/signs/wall-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Wall Signs</a><a href="/signs/wall-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Interior murals & graphics</a></div>
-                                            <div><a href="/signs/floor-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Floor Signs</a><a href="/signs/floor-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Durable surface branding</a></div>
-                                            <div><a href="/signs/door-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Door Signs</a><a href="/signs/door-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Hours & office identifiers</a></div>
-                                            <div><a href="/signs/posters" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Posters</a><a href="/signs/posters" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Large format printing</a></div>
+                                            <div><a href="/signs/business-signs/banners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Banners</a><a href="/signs/business-signs/banners" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Custom vinyl banners</a></div>
+                                            <div><a href="/signs/business-signs/window-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Window Signs</a><a href="/signs/business-signs/window-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Storefront decals & perf</a></div>
+                                            <div><a href="/signs/business-signs/wall-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Wall Signs</a><a href="/signs/business-signs/wall-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Interior murals & graphics</a></div>
+                                            <div><a href="/signs/business-signs/floor-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Floor Signs</a><a href="/signs/business-signs/floor-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Durable surface branding</a></div>
+                                            <div><a href="/signs/business-signs/door-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Door Signs</a><a href="/signs/business-signs/door-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Hours & office identifiers</a></div>
+                                            <div><a href="/signs/business-signs/posters" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Posters</a><a href="/signs/business-signs/posters" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Large format printing</a></div>
                                         </div>
                                     </div>
                                     {{-- Row 2: Ground Signs --}}
                                     <div class="pb-2 border-b border-linen-dark">
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Ground Signs</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/signs/yard-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Yard Signs</a><a href="/signs/yard-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Corrugated wire-stake signs</a></div>
-                                            <div><a href="/signs/sidewalk-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">A-Frame/Sidewalk Signs</a><a href="/signs/sidewalk-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Portable sandwich boards</a></div>
-                                            <div><a href="/signs/parking-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Parking Signs</a><a href="/signs/parking-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Aluminum & compliance signs</a></div>
+                                            <div><a href="/signs/ground-signs/yard-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Yard Signs</a><a href="/signs/ground-signs/yard-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Corrugated wire-stake signs</a></div>
+                                            <div><a href="/signs/ground-signs/sidewalk-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">A-Frame/Sidewalk Signs</a><a href="/signs/ground-signs/sidewalk-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Portable sandwich boards</a></div>
+                                            <div><a href="/signs/ground-signs/parking-signs" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Parking Signs</a><a href="/signs/ground-signs/parking-signs" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Aluminum & compliance signs</a></div>
                                         </div>
                                     </div>
                                     {{-- Row 3: Table Signs --}}
                                     <div>
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Table Signs</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/signs/table-cloths" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Table Cloths</a><a href="/signs/table-cloths" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Full-color branded covers</a></div>
-                                            <div><a href="/signs/table-runners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Table Runners</a><a href="/signs/table-runners" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Accent event branding</a></div>
+                                            <div><a href="/signs/table-signs/table-cloths" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Table Cloths</a><a href="/signs/table-signs/table-cloths" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Full-color branded covers</a></div>
+                                            <div><a href="/signs/table-signs/table-runners" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Table Runners</a><a href="/signs/table-signs/table-runners" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Accent event branding</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -238,15 +237,15 @@
                                 </a>
                                 <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Sticker Types</p>
                                 <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                    <div><a href="/stickers/standard-stickers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Standard</a><a href="/stickers/standard-stickers" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Round, square, and rectangle</a></div>
-                                    <div><a href="/stickers/custom-shaped-stickers" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Custom Shaped</a><a href="/stickers/custom-shaped-stickers" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Die cut to any design shape</a></div>
+                                    <div><a href="/stickers/standard-stickers-decals" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Standard</a><a href="/stickers/standard-stickers-decals" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Round, square, and rectangle</a></div>
+                                    <div><a href="/stickers/custom-shaped-stickers-decals" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Custom Shaped</a><a href="/stickers/custom-shaped-stickers-decals" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Die-cut to any shape</a></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
                                 image="/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg"
-                                alt="Custom stickers same day"
-                                tag="Fast Turnaround"
-                                title="Custom Stickers"
+                                alt="Custom stickers and decals"
+                                tag="No Minimums"
+                                title="Stickers & Decals"
                                 desc="Vinyl, weatherproof, any shape. No minimums in Joliet, IL."
                                 cta="Order Now"
                                 href="/stickers"
@@ -392,8 +391,7 @@
                                 <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Service Options</p>
                                 <div class="grid grid-cols-3 gap-x-4 gap-y-3">
                                     <div><a href="/design-services/logo-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Logo Design</a><a href="/design-services/logo-design" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Concept to final files</a></div>
-                                    <div><a href="/design-services/graphic-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Layout/Graphic Design</a><a href="/design-services/graphic-design" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Online designer & catalogs</a></div>
-                                    <div><a href="/design-services/custom-storefronts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Custom Storefronts</a><a href="/design-services/custom-storefronts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Branded stores for schools & businesses</a></div>
+                                    <div><a href="/design-services/graphic-design" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Layout/Graphic Design</a><a href="/design-services/graphic-design" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Print-ready layouts & artwork</a></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad
@@ -415,7 +413,7 @@
                     @mouseenter="openMenu = 'about'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/company" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/about-us" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         About Us
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -432,15 +430,14 @@
                     >
                         <div class="flex items-stretch bg-white shadow-gold-xl border-t-[6px] border-sunburst">
                             <div class="flex-1 pl-5 pt-2 pb-5 min-w-0">
-                                <a href="/company" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
+                                <a href="/about-us" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">About Us</span>
                                     <span class="text-base text-charcoal-light">Veteran-owned in Joliet, IL — quality custom printing since 2017.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Our Company</p>
                                 <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                    <div><a href="/about" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">About Us</a><a href="/about" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Our mission & team</a></div>
-                                    <div><a href="/company" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Company</a><a href="/company" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Veteran-owned story</a></div>
+                                    <div><a href="/about-us" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">About Us</a><a href="/about-us" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Our mission & team</a></div>
                                     <div><a href="/portfolio" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Portfolio</a><a href="/portfolio" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">View our past work</a></div>
                                     <div><a href="/resources" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Resources</a><a href="/resources" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Tips & helpful guides</a></div>
                                 </div>
@@ -452,7 +449,7 @@
                                 title="Top 5 Percent"
                                 desc="Joliet, IL. Serving our community since 2017."
                                 cta="Our Story"
-                                href="/company"
+                                href="/about-us"
                             />
                         </div>
                     </div>
@@ -491,23 +488,21 @@
                 </button>
                 <div x-show="openMobile === 'apparel'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
                     <a href="/custom-apparel" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All</a>
-                    <a href="/custom-apparel/custom-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Custom Shirts</a>
-                    <a href="/custom-apparel/dtf-transfers" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">DTF Transfers</a>
-                    <a href="/custom-apparel/dye-sublimation" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Dye Sublimation</a>
+                    <a href="/custom-apparel/printing-options/dtf-printing" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Direct to Film (DTF)</a>
+                    <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Dye-Sublimation</a>
                     <a href="/custom-apparel/screen-printing" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Screen Printing</a>
                     <a href="/custom-apparel/embroidery" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Embroidery</a>
-                    <a href="/custom-apparel/puff-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Puff Print Shirts</a>
-                    <a href="/custom-apparel/glitter-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Glitter Shirts</a>
-                    <a href="/custom-apparel/rhinestone-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Rhinestone Shirts</a>
-                    <a href="/custom-apparel/vinyl-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Vinyl Shirts</a>
-                    <a href="/custom-apparel/foil-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Foil Shirts</a>
-                    <a href="/custom-apparel/glow-in-the-dark-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Glow in the Dark</a>
-                    <a href="/custom-apparel/flock-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Flock Shirts</a>
-                    <a href="/custom-apparel/reflective-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reflective Shirts</a>
-                    <a href="/custom-apparel/holographic-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Holographic Shirts</a>
-                    <a href="/custom-apparel/corporate-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Corporate Wear</a>
-                    <a href="/custom-apparel/spirit-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Spirit Wear</a>
-                    <a href="/custom-apparel/reunion-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reunion Shirts</a>
+                    <a href="/custom-apparel/rhinestone-apparel" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Rhinestone Apparel</a>
+                    <a href="/custom-apparel/specialty-materials/glitter-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Glitter Shirts</a>
+                    <a href="/custom-apparel/specialty-materials/puff-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Puff Shirts</a>
+                    <a href="/custom-apparel/specialty-materials/foil-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Foil Shirts</a>
+                    <a href="/custom-apparel/specialty-materials/glow-in-the-dark-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Glow in the Dark</a>
+                    <a href="/custom-apparel/specialty-materials/flock-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Flock Shirts</a>
+                    <a href="/custom-apparel/specialty-materials/reflective-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reflective Shirts</a>
+                    <a href="/custom-apparel/specialty-materials/holographic-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Holographic Shirts</a>
+                    <a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Corporate Wear</a>
+                    <a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Spirit Wear</a>
+                    <a href="/custom-apparel/group-shirts/reunion-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reunion Shirts</a>
                 </div>
             </div>
 
@@ -518,18 +513,17 @@
                 </button>
                 <div x-show="openMobile === 'signs'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
                     <a href="/signs" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All Signs</a>
-                    <a href="/signs/banners" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Banners</a>
-                    <a href="/signs/business-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Business Signs</a>
-                    <a href="/signs/yard-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Yard Signs</a>
-                    <a href="/signs/sidewalk-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Sidewalk Signs</a>
-                    <a href="/signs/parking-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Parking Signs</a>
-                    <a href="/signs/window-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Window Signs</a>
-                    <a href="/signs/wall-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Wall Signs</a>
-                    <a href="/signs/floor-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Floor Signs</a>
-                    <a href="/signs/door-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Door Signs</a>
-                    <a href="/signs/posters" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Posters</a>
-                    <a href="/signs/table-runners" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Table Runners</a>
-                    <a href="/signs/table-cloths" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Table Cloths</a>
+                    <a href="/signs/business-signs/banners" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Banners</a>
+                    <a href="/signs/ground-signs/yard-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Yard Signs</a>
+                    <a href="/signs/ground-signs/sidewalk-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Sidewalk Signs</a>
+                    <a href="/signs/ground-signs/parking-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Parking Signs</a>
+                    <a href="/signs/business-signs/window-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Window Signs</a>
+                    <a href="/signs/business-signs/wall-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Wall Signs</a>
+                    <a href="/signs/business-signs/floor-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Floor Signs</a>
+                    <a href="/signs/business-signs/door-signs" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Door Signs</a>
+                    <a href="/signs/business-signs/posters" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Posters</a>
+                    <a href="/signs/table-signs/table-runners" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Table Runners</a>
+                    <a href="/signs/table-signs/table-cloths" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Table Cloths</a>
                 </div>
             </div>
 
@@ -540,8 +534,8 @@
                 </button>
                 <div x-show="openMobile === 'stickers'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
                     <a href="/stickers" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All Stickers</a>
-                    <a href="/stickers/standard-stickers" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Standard Stickers</a>
-                    <a href="/stickers/custom-shaped-stickers" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Custom Shaped Stickers</a>
+                    <a href="/stickers/standard-stickers-decals" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Standard Stickers & Decals</a>
+                    <a href="/stickers/custom-shaped-stickers-decals" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Custom Shaped Stickers & Decals</a>
                 </div>
             </div>
 
@@ -583,7 +577,6 @@
                     <a href="/design-services" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All Design Services</a>
                     <a href="/design-services/logo-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Logo Design</a>
                     <a href="/design-services/graphic-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Layout / Graphic Design</a>
-                    <a href="/design-services/custom-storefronts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Custom Storefronts</a>
                 </div>
             </div>
 

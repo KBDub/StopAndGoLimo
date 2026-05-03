@@ -60,91 +60,100 @@ Route::get('/demo/modals', function () {
     return view('pages.demo.modals');
 })->name('demo.modals');
 
-// ─── Custom Apparel ─────────────────────────────────────────────────────────
+// ─── Custom Apparel ──────────────────────────────────────────────────────────
 
 Route::get('/custom-apparel', function () {
     return view('pages.custom-apparel.index');
 })->name('custom-apparel');
 
+// Keep route; not linked in MM or nav
 Route::get('/custom-apparel/custom-shirts', function () {
     return view('pages.custom-apparel.custom-shirts');
 })->name('custom-apparel.custom-shirts');
-
-Route::get('/custom-apparel/vinyl-shirts', function () {
-    return view('pages.custom-apparel.vinyl-shirts');
-})->name('custom-apparel.vinyl-shirts');
-
-Route::get('/custom-apparel/rhinestone-shirts', function () {
-    return view('pages.custom-apparel.rhinestone-shirts');
-})->name('custom-apparel.rhinestone-shirts');
-
-Route::get('/custom-apparel/glitter-shirts', function () {
-    return view('pages.custom-apparel.glitter-shirts');
-})->name('custom-apparel.glitter-shirts');
-
-Route::get('/custom-apparel/foil-shirts', function () {
-    return view('pages.custom-apparel.foil-shirts');
-})->name('custom-apparel.foil-shirts');
-
-Route::get('/custom-apparel/glow-in-the-dark-shirts', function () {
-    return view('pages.custom-apparel.glow-in-the-dark-shirts');
-})->name('custom-apparel.glow-in-the-dark-shirts');
-
-Route::get('/custom-apparel/flock-shirts', function () {
-    return view('pages.custom-apparel.flock-shirts');
-})->name('custom-apparel.flock-shirts');
-
-Route::get('/custom-apparel/reflective-shirts', function () {
-    return view('pages.custom-apparel.reflective-shirts');
-})->name('custom-apparel.reflective-shirts');
-
-Route::get('/custom-apparel/holographic-shirts', function () {
-    return view('pages.custom-apparel.holographic-shirts');
-})->name('custom-apparel.holographic-shirts');
-
-Route::get('/custom-apparel/brick-shirts', function () {
-    return view('pages.custom-apparel.brick-shirts');
-})->name('custom-apparel.brick-shirts');
-
-Route::get('/custom-apparel/pattern-shirts', function () {
-    return view('pages.custom-apparel.pattern-shirts');
-})->name('custom-apparel.pattern-shirts');
-
-Route::get('/custom-apparel/embroidery', function () {
-    return view('pages.custom-apparel.embroidery');
-})->name('custom-apparel.embroidery');
-
-Route::get('/custom-apparel/picture-shirts', function () {
-    return view('pages.custom-apparel.picture-shirts');
-})->name('custom-apparel.picture-shirts');
-
-Route::get('/custom-apparel/dtf-transfers', function () {
-    return view('pages.custom-apparel.dtf-transfers');
-})->name('custom-apparel.dtf-transfers');
-
-Route::get('/custom-apparel/reunion-shirts', function () {
-    return view('pages.custom-apparel.reunion-shirts');
-})->name('custom-apparel.reunion-shirts');
-
-Route::get('/custom-apparel/corporate-wear-shirts', function () {
-    return view('pages.custom-apparel.corporate-wear-shirts');
-})->name('custom-apparel.corporate-wear-shirts');
-
-Route::get('/custom-apparel/spirit-wear-shirts', function () {
-    return view('pages.custom-apparel.spirit-wear-shirts');
-})->name('custom-apparel.spirit-wear-shirts');
-
-Route::get('/custom-apparel/dye-sublimation', function () {
-    return view('pages.custom-apparel.dye-sublimation');
-})->name('custom-apparel.dye-sublimation');
 
 Route::get('/custom-apparel/screen-printing', function () {
     return view('pages.custom-apparel.screen-printing');
 })->name('custom-apparel.screen-printing');
 
-Route::get('/custom-apparel/puff-shirts', function () {
+Route::get('/custom-apparel/embroidery', function () {
+    return view('pages.custom-apparel.embroidery');
+})->name('custom-apparel.embroidery');
+
+Route::get('/custom-apparel/rhinestone-apparel', function () {
+    return view('pages.custom-apparel.rhinestone-shirts');
+})->name('custom-apparel.rhinestone-apparel');
+
+// Printing Options
+Route::get('/custom-apparel/printing-options/dtf-printing', function () {
+    return view('pages.custom-apparel.dtf-transfers');
+})->name('custom-apparel.dtf-printing');
+
+Route::get('/custom-apparel/printing-options/dye-sublimation-printing', function () {
+    return view('pages.custom-apparel.dye-sublimation');
+})->name('custom-apparel.dye-sublimation-printing');
+
+// Specialty Materials
+Route::get('/custom-apparel/specialty-materials/glitter-shirts', function () {
+    return view('pages.custom-apparel.glitter-shirts');
+})->name('custom-apparel.glitter-shirts');
+
+Route::get('/custom-apparel/specialty-materials/puff-shirts', function () {
     return view('pages.custom-apparel.puff-shirts');
 })->name('custom-apparel.puff-shirts');
+
+Route::get('/custom-apparel/specialty-materials/glow-in-the-dark-shirts', function () {
+    return view('pages.custom-apparel.glow-in-the-dark-shirts');
+})->name('custom-apparel.glow-in-the-dark-shirts');
+
+Route::get('/custom-apparel/specialty-materials/flock-shirts', function () {
+    return view('pages.custom-apparel.flock-shirts');
+})->name('custom-apparel.flock-shirts');
+
+Route::get('/custom-apparel/specialty-materials/brick-shirts', function () {
+    return view('pages.custom-apparel.brick-shirts');
+})->name('custom-apparel.brick-shirts');
+
+Route::get('/custom-apparel/specialty-materials/holographic-shirts', function () {
+    return view('pages.custom-apparel.holographic-shirts');
+})->name('custom-apparel.holographic-shirts');
+
+Route::get('/custom-apparel/specialty-materials/foil-shirts', function () {
+    return view('pages.custom-apparel.foil-shirts');
+})->name('custom-apparel.foil-shirts');
+
+Route::get('/custom-apparel/specialty-materials/reflective-shirts', function () {
+    return view('pages.custom-apparel.reflective-shirts');
+})->name('custom-apparel.reflective-shirts');
+
+// Group Shirts
+Route::get('/custom-apparel/group-shirts/reunion-shirts', function () {
+    return view('pages.custom-apparel.reunion-shirts');
+})->name('custom-apparel.reunion-shirts');
+
+Route::get('/custom-apparel/group-shirts/spirit-wear-shirts', function () {
+    return view('pages.custom-apparel.spirit-wear-shirts');
+})->name('custom-apparel.spirit-wear-shirts');
+
+Route::get('/custom-apparel/group-shirts/corporate-wear-shirts', function () {
+    return view('pages.custom-apparel.corporate-wear-shirts');
+})->name('custom-apparel.corporate-wear-shirts');
+
+// ─── Custom Apparel 301 Redirects ────────────────────────────────────────────
+
+Route::permanentRedirect('/custom-apparel/dtf-transfers',           '/custom-apparel/printing-options/dtf-printing');
+Route::permanentRedirect('/custom-apparel/dye-sublimation',         '/custom-apparel/printing-options/dye-sublimation-printing');
+Route::permanentRedirect('/custom-apparel/rhinestone-shirts',       '/custom-apparel/rhinestone-apparel');
+Route::permanentRedirect('/custom-apparel/glitter-shirts',          '/custom-apparel/specialty-materials/glitter-shirts');
+Route::permanentRedirect('/custom-apparel/puff-shirts',             '/custom-apparel/specialty-materials/puff-shirts');
+Route::permanentRedirect('/custom-apparel/glow-in-the-dark-shirts', '/custom-apparel/specialty-materials/glow-in-the-dark-shirts');
+Route::permanentRedirect('/custom-apparel/flock-shirts',            '/custom-apparel/specialty-materials/flock-shirts');
+Route::permanentRedirect('/custom-apparel/brick-shirts',            '/custom-apparel/specialty-materials/brick-shirts');
+Route::permanentRedirect('/custom-apparel/holographic-shirts',      '/custom-apparel/specialty-materials/holographic-shirts');
+Route::permanentRedirect('/custom-apparel/foil-shirts',             '/custom-apparel/specialty-materials/foil-shirts');
+Route::permanentRedirect('/custom-apparel/reflective-shirts',       '/custom-apparel/specialty-materials/reflective-shirts');
+Route::permanentRedirect('/custom-apparel/reunion-shirts',          '/custom-apparel/group-shirts/reunion-shirts');
+Route::permanentRedirect('/custom-apparel/spirit-wear-shirts',      '/custom-apparel/group-shirts/spirit-wear-shirts');
+Route::permanentRedirect('/custom-apparel/corporate-wear-shirts',   '/custom-apparel/group-shirts/corporate-wear-shirts');
 
 // ─── Design Services ─────────────────────────────────────────────────────────
 
@@ -178,53 +187,67 @@ Route::get('/signs', function () {
     return view('pages.signs.index');
 })->name('signs');
 
-Route::get('/signs/business-signs', function () {
-    return view('pages.signs.business-signs');
-})->name('signs.business-signs');
-
-Route::get('/signs/banners', function () {
+// Business Signs
+Route::get('/signs/business-signs/banners', function () {
     return view('pages.signs.banners');
 })->name('signs.banners');
 
-Route::get('/signs/posters', function () {
-    return view('pages.signs.posters');
-})->name('signs.posters');
-
-Route::get('/signs/table-runners', function () {
-    return view('pages.signs.table-runners');
-})->name('signs.table-runners');
-
-Route::get('/signs/sidewalk-signs', function () {
-    return view('pages.signs.sidewalk-signs');
-})->name('signs.sidewalk-signs');
-
-Route::get('/signs/yard-signs', function () {
-    return view('pages.signs.yard-signs');
-})->name('signs.yard-signs');
-
-Route::get('/signs/window-signs', function () {
+Route::get('/signs/business-signs/window-signs', function () {
     return view('pages.signs.window-signs');
 })->name('signs.window-signs');
 
-Route::get('/signs/wall-signs', function () {
+Route::get('/signs/business-signs/wall-signs', function () {
     return view('pages.signs.wall-signs');
 })->name('signs.wall-signs');
 
-Route::get('/signs/floor-signs', function () {
+Route::get('/signs/business-signs/floor-signs', function () {
     return view('pages.signs.floor-signs');
 })->name('signs.floor-signs');
 
-Route::get('/signs/door-signs', function () {
+Route::get('/signs/business-signs/door-signs', function () {
     return view('pages.signs.door-signs');
 })->name('signs.door-signs');
 
-Route::get('/signs/parking-signs', function () {
+Route::get('/signs/business-signs/posters', function () {
+    return view('pages.signs.posters');
+})->name('signs.posters');
+
+// Ground Signs
+Route::get('/signs/ground-signs/yard-signs', function () {
+    return view('pages.signs.yard-signs');
+})->name('signs.yard-signs');
+
+Route::get('/signs/ground-signs/sidewalk-signs', function () {
+    return view('pages.signs.sidewalk-signs');
+})->name('signs.sidewalk-signs');
+
+Route::get('/signs/ground-signs/parking-signs', function () {
     return view('pages.signs.parking-signs');
 })->name('signs.parking-signs');
 
-Route::get('/signs/table-cloths', function () {
+// Table Signs
+Route::get('/signs/table-signs/table-cloths', function () {
     return view('pages.signs.table-cloths');
 })->name('signs.table-cloths');
+
+Route::get('/signs/table-signs/table-runners', function () {
+    return view('pages.signs.table-runners');
+})->name('signs.table-runners');
+
+// ─── Signs 301 Redirects ─────────────────────────────────────────────────────
+
+Route::permanentRedirect('/signs/banners',        '/signs/business-signs/banners');
+Route::permanentRedirect('/signs/window-signs',   '/signs/business-signs/window-signs');
+Route::permanentRedirect('/signs/wall-signs',     '/signs/business-signs/wall-signs');
+Route::permanentRedirect('/signs/floor-signs',    '/signs/business-signs/floor-signs');
+Route::permanentRedirect('/signs/door-signs',     '/signs/business-signs/door-signs');
+Route::permanentRedirect('/signs/posters',        '/signs/business-signs/posters');
+Route::permanentRedirect('/signs/business-signs', '/signs');
+Route::permanentRedirect('/signs/yard-signs',     '/signs/ground-signs/yard-signs');
+Route::permanentRedirect('/signs/sidewalk-signs', '/signs/ground-signs/sidewalk-signs');
+Route::permanentRedirect('/signs/parking-signs',  '/signs/ground-signs/parking-signs');
+Route::permanentRedirect('/signs/table-cloths',   '/signs/table-signs/table-cloths');
+Route::permanentRedirect('/signs/table-runners',  '/signs/table-signs/table-runners');
 
 // ─── Stickers ────────────────────────────────────────────────────────────────
 
@@ -232,13 +255,18 @@ Route::get('/stickers', function () {
     return view('pages.stickers.index');
 })->name('stickers');
 
-Route::get('/stickers/standard-stickers', function () {
+Route::get('/stickers/standard-stickers-decals', function () {
     return view('pages.stickers.standard-stickers');
-})->name('stickers.standard-stickers');
+})->name('stickers.standard-stickers-decals');
 
-Route::get('/stickers/custom-shaped-stickers', function () {
+Route::get('/stickers/custom-shaped-stickers-decals', function () {
     return view('pages.stickers.custom-shaped-stickers');
-})->name('stickers.custom-shaped-stickers');
+})->name('stickers.custom-shaped-stickers-decals');
+
+// ─── Stickers 301 Redirects ──────────────────────────────────────────────────
+
+Route::permanentRedirect('/stickers/standard-stickers',      '/stickers/standard-stickers-decals');
+Route::permanentRedirect('/stickers/custom-shaped-stickers', '/stickers/custom-shaped-stickers-decals');
 
 // ─── Vehicle Graphics ────────────────────────────────────────────────────────
 
@@ -306,7 +334,14 @@ Route::get('/service-areas/{slug}', function (string $slug) {
     return view('pages.service-areas.show', compact('city', 'slug'));
 })->name('service-areas.show');
 
-// ─── Company / About ─────────────────────────────────────────────────────────
+// ─── About ───────────────────────────────────────────────────────────────────
+
+Route::get('/about-us', function () {
+    return view('pages.about');
+})->name('about');
+
+Route::permanentRedirect('/about',   '/about-us');
+Route::permanentRedirect('/company', '/about-us');
 
 Route::get('/stores', function () {
     return view('pages.stores');
@@ -319,14 +354,6 @@ Route::get('/portfolio', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
-
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
-
-Route::get('/company', function () {
-    return view('pages.company.index');
-})->name('company');
 
 Route::get('/resources', function () {
     return view('pages.company.resources');

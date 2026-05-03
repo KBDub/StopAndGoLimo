@@ -14,7 +14,7 @@
                 <h4 class="font-semibold text-charcoal text-base mb-3">Quick Links</h4>
                 <ul class="space-y-1.5 text-sm">
                     <li><a href="/" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Home</a></li>
-                    <li><a href="/about" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">About Us</a></li>
+                    <li><a href="/about-us" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">About Us</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Service Areas</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Reviews</a></li>
                     <li>
@@ -37,20 +37,18 @@
                         <a href="/custom-apparel" class="hover:text-sunburst transition-colors">Custom Apparel</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
-                        <li><a href="/custom-apparel/custom-shirts"         class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Custom Shirts</a></li>
-                        <li><a href="/custom-apparel/screen-printing"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Screen Printing</a></li>
-                        <li><a href="/custom-apparel/embroidery"            class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Embroidery</a></li>
-                        <li><a href="/custom-apparel/dtf-transfers"         class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">DTF Transfers</a></li>
-                        <li><a href="/custom-apparel/dye-sublimation"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Dye Sublimation</a></li>
-                        <li><a href="/custom-apparel/vinyl-shirts"          class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Vinyl Shirts</a></li>
-                        <li><a href="/custom-apparel/rhinestone-shirts"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Rhinestone Shirts</a></li>
-                        <li><a href="/custom-apparel/glitter-shirts"        class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Glitter Shirts</a></li>
-                        <li><a href="/custom-apparel/foil-shirts"           class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Foil Shirts</a></li>
-                        <li><a href="/custom-apparel/holographic-shirts"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Holographic Shirts</a></li>
-                        <li><a href="/custom-apparel/puff-shirts"           class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Puff Shirts</a></li>
-                        <li><a href="/custom-apparel/spirit-wear-shirts"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Spirit Wear</a></li>
-                        <li><a href="/custom-apparel/corporate-wear-shirts" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Corporate Wear</a></li>
-                        <li><a href="/custom-apparel/reunion-shirts"        class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Reunion Shirts</a></li>
+                        <li><a href="/custom-apparel/screen-printing"                              class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Screen Printing</a></li>
+                        <li><a href="/custom-apparel/embroidery"                                    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Embroidery</a></li>
+                        <li><a href="/custom-apparel/printing-options/dtf-printing"                class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">DTF Printing</a></li>
+                        <li><a href="/custom-apparel/printing-options/dye-sublimation-printing"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Dye Sublimation</a></li>
+                        <li><a href="/custom-apparel/rhinestone-apparel"                            class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Rhinestone Apparel</a></li>
+                        <li><a href="/custom-apparel/specialty-materials/glitter-shirts"           class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Glitter Shirts</a></li>
+                        <li><a href="/custom-apparel/specialty-materials/foil-shirts"              class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Foil Shirts</a></li>
+                        <li><a href="/custom-apparel/specialty-materials/holographic-shirts"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Holographic Shirts</a></li>
+                        <li><a href="/custom-apparel/specialty-materials/puff-shirts"              class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Puff Shirts</a></li>
+                        <li><a href="/custom-apparel/group-shirts/spirit-wear-shirts"              class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Spirit Wear</a></li>
+                        <li><a href="/custom-apparel/group-shirts/corporate-wear-shirts"           class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Corporate Wear</a></li>
+                        <li><a href="/custom-apparel/group-shirts/reunion-shirts"                  class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Reunion Shirts</a></li>
                     </ul>
 
                     {{-- Signs & Banners --}}
@@ -58,18 +56,17 @@
                         <a href="/signs" class="hover:text-sunburst transition-colors">Signs & Banners</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
-                        <li><a href="/signs/banners"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Banners</a></li>
-                        <li><a href="/signs/yard-signs"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Yard Signs</a></li>
-                        <li><a href="/signs/business-signs" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Business Signs</a></li>
-                        <li><a href="/signs/window-signs"   class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Window Signs</a></li>
-                        <li><a href="/signs/wall-signs"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Wall Signs</a></li>
-                        <li><a href="/signs/door-signs"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Door Signs</a></li>
-                        <li><a href="/signs/floor-signs"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Floor Signs</a></li>
-                        <li><a href="/signs/posters"        class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Posters</a></li>
-                        <li><a href="/signs/table-cloths"   class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Table Cloths</a></li>
-                        <li><a href="/signs/table-runners"  class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Table Runners</a></li>
-                        <li><a href="/signs/sidewalk-signs" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Sidewalk Signs</a></li>
-                        <li><a href="/signs/parking-signs"  class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Parking Signs</a></li>
+                        <li><a href="/signs/business-signs/banners"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Banners</a></li>
+                        <li><a href="/signs/ground-signs/yard-signs"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Yard Signs</a></li>
+                        <li><a href="/signs/business-signs/window-signs"  class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Window Signs</a></li>
+                        <li><a href="/signs/business-signs/wall-signs"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Wall Signs</a></li>
+                        <li><a href="/signs/business-signs/door-signs"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Door Signs</a></li>
+                        <li><a href="/signs/business-signs/floor-signs"   class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Floor Signs</a></li>
+                        <li><a href="/signs/business-signs/posters"       class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Posters</a></li>
+                        <li><a href="/signs/table-signs/table-cloths"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Table Cloths</a></li>
+                        <li><a href="/signs/table-signs/table-runners"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Table Runners</a></li>
+                        <li><a href="/signs/ground-signs/sidewalk-signs"  class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Sidewalk Signs</a></li>
+                        <li><a href="/signs/ground-signs/parking-signs"   class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Parking Signs</a></li>
                     </ul>
 
                     {{-- Vehicle Graphics --}}
@@ -87,8 +84,8 @@
                         <a href="/stickers" class="hover:text-sunburst transition-colors">Decals & Stickers</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
-                        <li><a href="/stickers/standard-stickers"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Standard Stickers</a></li>
-                        <li><a href="/stickers/custom-shaped-stickers" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Custom-Shaped Stickers</a></li>
+                        <li><a href="/stickers/standard-stickers-decals"      class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Standard Stickers & Decals</a></li>
+                        <li><a href="/stickers/custom-shaped-stickers-decals" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Custom-Shaped Stickers & Decals</a></li>
                     </ul>
 
                     {{-- Promotional Items --}}
@@ -109,11 +106,8 @@
                         <a href="/design-services" class="hover:text-sunburst transition-colors">Design Services</a>
                     </h5>
                     <ul class="space-y-1">
-                        <li><a href="/design-services/graphic-design"     class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Graphic Design</a></li>
-                        <li><a href="/design-services/logo-design"        class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Logo Design</a></li>
-                        <li><a href="/design-services/online-designer"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Online Designer</a></li>
-                        <li><a href="/design-services/design-catalogs"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Design Catalogs</a></li>
-                        <li><a href="/design-services/custom-storefronts" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Custom Storefronts</a></li>
+                        <li><a href="/design-services/graphic-design" class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Graphic Design</a></li>
+                        <li><a href="/design-services/logo-design"    class="text-azure hover:text-azure-dark border-b border-azure/30 hover:border-azure pb-px transition-all no-underline">Logo Design</a></li>
                     </ul>
 
                 </div>

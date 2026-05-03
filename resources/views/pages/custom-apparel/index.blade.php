@@ -1,3 +1,35 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Apparel in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Veteran-owned custom apparel shop in Joliet, IL offering DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, foil, and specialty shirt printing with no minimums and same day service."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Apparel in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel",
+    "description": "Veteran-owned custom apparel shop in Joliet, IL offering DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, foil, and specialty shirt printing with no minimums and same day service."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Apparel Joliet IL | T-Shirts, Hoodies, Embroidery, DTF, Screen Printing | Top 5 Percent"
     metaDescription="Premium custom apparel in Joliet, IL. Custom t-shirts, DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, and specialty shirts. Veteran owned, no minimums, same day service."
@@ -194,6 +226,18 @@
         heading="Quality You Can See & Feel"
         label="Custom Apparel in Joliet, IL"
         subheading="From screen printing to embroidery, brick shirts to rhinestone designs — watch how Top 5 Percent brings your custom apparel vision to life, right here in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Custom Apparel FAQs"
+        label="Custom Shirts & Apparel in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom apparel printing techniques do you offer?', 'a' => 'We offer DTF transfers, screen printing, embroidery, dye sublimation, rhinestone, glitter, flock, foil, holographic, reflective, puff print, glow in the dark, and brick-style printing — one of the widest selections in the Chicagoland area.'],
+            ['q' => 'Is there a minimum order for custom shirts?', 'a' => 'No. We have no minimum order on any custom apparel service. You can order a single shirt or a thousand and receive the same professional quality.'],
+            ['q' => 'How long does it take to get custom shirts in Joliet?', 'a' => 'Many custom shirt orders are available same day or within 24 hours. Turnaround depends on quantity and technique. Call us at (815) 349-8600 to confirm availability for your order.'],
+            ['q' => 'Can you print on hoodies, hats, jackets, and other garments?', 'a' => 'Yes. We print on t-shirts, hoodies, crewnecks, polo shirts, jackets, caps, and many other garments. Bring in your item or choose from our in-stock blanks.'],
+            ['q' => 'What is the difference between DTF printing and screen printing?', 'a' => 'DTF (direct-to-film) transfers produce full-color photographic prints on any fabric with no setup fees, ideal for small runs. Screen printing uses stenciled ink layers and is more cost-effective for high-volume single-color designs.'],
+            ['q' => 'Do you offer bulk pricing for large custom apparel orders?', 'a' => 'Yes. We offer quantity discounts on larger orders. Contact us for a custom quote based on your quantity, garment type, and printing technique.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

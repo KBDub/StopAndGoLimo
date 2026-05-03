@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Reunion Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom family reunion shirts and group shirts in Joliet, IL. Group pricing available. DTF, screen print, and vinyl printing for reunions, class reunions, and family events. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Reunion Shirts", "item": "https://www.top5pct.com/custom-apparel/reunion-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Reunion Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/reunion-shirts",
+    "description": "Custom family reunion shirts and group shirts in Joliet, IL. Group pricing available. DTF, screen print, and vinyl printing for reunions, class reunions, and family events. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page title="Reunion Shirts" metaDescription="Custom reunion shirts for family gatherings and group events in Joliet IL. Bulk pricing, free design help, veteran owned, and fast turnaround serving all of Will County." currentPage="custom-apparel">
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
@@ -150,6 +183,18 @@
         heading="Reunions Worth Remembering"
         label="Custom Reunion Shirts"
         subheading="Custom reunion shirts bring your family, class, or group together with a shared design everyone will keep. See how Top 5 Percent helps plan and produce memorable reunion apparel in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Reunion Shirt FAQs"
+        label="Custom Reunion Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'Do you make custom family reunion shirts?', 'a' => 'Yes. Custom reunion shirts are one of our most popular orders. We print family reunion shirts, class reunion shirts, and group shirts in any size run with designs tailored to your event.'],
+            ['q' => 'How early should I order reunion shirts?', 'a' => 'We recommend ordering at least one to two weeks before your event for large quantities. However, we offer same-day and rush service for smaller orders — call (815) 349-8600 to discuss your timeline.'],
+            ['q' => 'Is there a group discount for reunion shirt orders?', 'a' => 'Yes. We offer group pricing on larger reunion shirt orders. Contact us for a custom quote based on your quantity, shirt style, and design complexity.'],
+            ['q' => 'Can different family members get different sizes on the same order?', 'a' => 'Yes. We accommodate full size runs from youth to adult XL and beyond. Provide your size breakdown when you place the order.'],
+            ['q' => 'What printing technique is best for reunion shirts?', 'a' => 'DTF transfers and screen printing are both popular for reunion shirts. DTF is best for full-color designs and small runs with no setup cost. Screen printing is more cost-effective for large runs with simpler designs.'],
+            ['q' => 'Can you help us design the reunion shirts?', 'a' => 'Yes. Free design assistance is included. Just share your family name, reunion year, and any specific design ideas and we will build a layout for you.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

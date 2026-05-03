@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Mouse Pads in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed mouse pads in Joliet, IL. Full-color sublimated mouse pads for offices, corporate gifts, and branded promotions. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" },
+        { "@type": "ListItem", "position": 3, "name": "Mouse Pads", "item": "https://www.top5pct.com/promotional-items/mouse-pads" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Mouse Pads in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items/mouse-pads",
+    "description": "Custom printed mouse pads in Joliet, IL. Full-color sublimated mouse pads for offices, corporate gifts, and branded promotions. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Mouse Pads Joliet IL | Branded Desk Accessories | Top 5 Percent"
     metaDescription="We print custom mouse pads for businesses and corporate gifting in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mouse pads. Veteran owned."
@@ -109,6 +142,18 @@
         heading="Your Brand at Every Workstation"
         label="Custom Mouse Pads"
         subheading="Custom mouse pads keep your brand in front of employees and clients all day, every day. See how Top 5 Percent produces full-color branded mouse pads for businesses in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Custom Mouse Pad FAQs"
+        label="Custom Mouse Pads in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom mouse pads do you offer?', 'a' => 'We print full-color sublimated mouse pads in standard desk sizes for offices, corporate gifting, and branded promotions. Your logo or custom artwork is printed edge to edge.'],
+            ['q' => 'How are custom mouse pads printed?', 'a' => 'We use dye sublimation, which permanently bonds full-color ink into the mouse pad surface. The print will not fade, scratch, or peel with regular use.'],
+            ['q' => 'Is there a minimum order for custom mouse pads?', 'a' => 'No. We have no minimum. One mouse pad as a corporate gift or hundreds for an office rollout — both welcome.'],
+            ['q' => 'What size are your custom mouse pads?', 'a' => 'We offer standard 9"x7" desk mouse pads. Custom sizes may be available — ask when you place your order.'],
+            ['q' => 'Do custom mouse pads work with optical and laser mice?', 'a' => 'Yes. Our mouse pads have a smooth, consistent surface that is compatible with both optical and laser mice.'],
+            ['q' => 'How fast can I get custom mouse pads in Joliet?', 'a' => 'Most mouse pad orders are completed within one to two business days. Call (815) 349-8600 to confirm for your order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

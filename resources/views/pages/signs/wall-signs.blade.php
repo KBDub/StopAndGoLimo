@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Wall Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom wall signs and wall graphics in Joliet, IL. Vinyl wall decals, wall wraps, and mounted wall signs for businesses and commercial spaces. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Wall Signs", "item": "https://www.top5pct.com/signs/wall-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Wall Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/wall-signs",
+    "description": "Custom wall signs and wall graphics in Joliet, IL. Vinyl wall decals, wall wraps, and mounted wall signs for businesses and commercial spaces. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Wall Signs Joliet IL | Wall Decals & Wall Graphics | Top 5 Percent"
     metaDescription="We print and install custom wall signs and wall decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Office murals, lobby graphics, vinyl wall art. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Transform Any Wall Into a Statement"
         label="Custom Wall Signs & Graphics"
         subheading="Wall signs and graphics reinforce your brand in offices, retail spaces, lobbies, and showrooms. See how Top 5 Percent produces professional wall graphics and mounted signage in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Wall Sign FAQs"
+        label="Custom Wall Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of custom wall signs do you produce?', 'a' => 'We produce vinyl wall decals, full-color wall wraps, mounted rigid wall signs, and dimensional lettering for interior commercial spaces throughout Joliet and Will County.'],
+            ['q' => 'Will wall decals damage painted walls?', 'a' => 'When applied and removed properly, quality vinyl wall decals should not damage painted drywall. We use adhesives appropriate for the surface type and age of paint.'],
+            ['q' => 'Can you wrap an entire wall with a custom graphic?', 'a' => 'Yes. We produce large-format wall wraps that cover entire wall sections with photographic or branded imagery. This is popular for office lobbies, retail stores, and event venues.'],
+            ['q' => 'What wall surfaces can decals be applied to?', 'a' => 'Vinyl decals work on smooth painted drywall, glass, concrete, brick, and most other interior wall surfaces. Heavily textured walls may require a different adhesive solution.'],
+            ['q' => 'Is there a minimum order for wall signs?', 'a' => 'No. We have no minimum. One wall decal or a full wall wrap installation — both are welcome.'],
+            ['q' => 'How fast can I get wall signs in Joliet?', 'a' => 'Most wall sign orders are completed within one to two business days. Installation scheduling may add time. Call (815) 349-8600 to plan your project.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Yard Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom yard signs and lawn signs in Joliet, IL. Political signs, real estate signs, business yard signs, and event lawn signs. Fast turnaround and same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Yard Signs", "item": "https://www.top5pct.com/signs/yard-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Yard Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/yard-signs",
+    "description": "Custom yard signs and lawn signs in Joliet, IL. Political signs, real estate signs, business yard signs, and event lawn signs. Fast turnaround and same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Yard Signs Joliet IL | Lawn Signs, Real Estate Signs, Political Signs | Top 5 Percent"
     metaDescription="We print custom yard signs and lawn signs in Joliet, Shorewood, Plainfield, and Will County. Corrugated plastic, double sided, and metal stakes. Veteran owned sign shop with same day service."
@@ -122,6 +155,18 @@
         heading="Get the Word Out — Fast"
         label="Custom Yard Signs"
         subheading="Yard signs are a cost-effective way to promote events, candidates, real estate, and businesses. See how Top 5 Percent produces full-color, weather-resistant yard signs in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Yard Sign FAQs"
+        label="Custom Yard Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are yard signs made of?', 'a' => 'Our yard signs are printed on 4mm corrugated plastic (coroplast) — a lightweight, weatherproof material that holds up outdoors. Single-sided and double-sided options are available.'],
+            ['q' => 'What is the standard yard sign size?', 'a' => 'The most common size is 18"x24", which is the standard used for real estate, political campaigns, and small business promotions. Custom sizes are available.'],
+            ['q' => 'Do you include H-stakes with yard signs?', 'a' => 'Yes. Wire H-stakes for ground installation are available. Ask when you place your order.'],
+            ['q' => 'How long do yard signs last outside?', 'a' => 'Corrugated plastic yard signs are weatherproof and UV-resistant. They typically last one to two years in outdoor conditions depending on exposure.'],
+            ['q' => 'Is there a minimum order for yard signs?', 'a' => 'No. We have no minimum. You can order one yard sign or a hundred for a campaign or event.'],
+            ['q' => 'How fast can I get custom yard signs in Joliet?', 'a' => 'Many yard sign orders are completed same day. Call (815) 349-8600 to confirm turnaround for your quantity and design.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

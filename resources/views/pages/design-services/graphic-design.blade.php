@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Graphic Design in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Professional graphic design and print layout services in Joliet, IL. Flyers, business cards, signage layouts, and marketing materials for businesses in Will County. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Design Services", "item": "https://www.top5pct.com/design-services" },
+        { "@type": "ListItem", "position": 3, "name": "Graphic Design", "item": "https://www.top5pct.com/design-services/graphic-design" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Graphic Design in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/design-services/graphic-design",
+    "description": "Professional graphic design and print layout services in Joliet, IL. Flyers, business cards, signage layouts, and marketing materials for businesses in Will County. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Graphic Design Joliet IL | Layout & Print Design Services | Top 5 Percent"
     metaDescription="Professional layout and graphic design services in Joliet, Shorewood, Plainfield, and Will County. Print-ready design for signs, apparel, banners, and promotional products. Veteran owned."
@@ -107,6 +140,18 @@
         heading="From Concept to Print-Ready Artwork"
         label="Custom Graphic Design"
         subheading="Professional graphic design takes your idea and turns it into production-ready artwork. See how the Top 5 Percent design team works with businesses in Joliet and the Chicago area to build brand-right visuals."
+    />
+    <x-sections.faq
+        heading="Graphic Design FAQs"
+        label="Graphic Design in Joliet, IL"
+        :faqs="[
+            ['q' => 'What graphic design services do you offer?', 'a' => 'We offer full graphic design for print including sign and banner layouts, flyer design, business card design, social media graphics, apparel artwork, and any other print application you need.'],
+            ['q' => 'Do you charge for design with my print order?', 'a' => 'Free design help is included with every print order we produce. For standalone design projects not tied to a print order, design fees apply. Contact us for a quote.'],
+            ['q' => 'What file formats do you deliver for graphic design projects?', 'a' => 'We deliver print-ready files in PDF, AI, EPS, and other formats depending on the project. All files are set up with proper bleed, resolution, and color profiles for print.'],
+            ['q' => 'Can you match my brand colors in graphic design?', 'a' => 'Yes. Provide your Pantone, CMYK, or HEX color codes and we will match them throughout your design to ensure brand consistency across all your materials.'],
+            ['q' => 'How long does graphic design take?', 'a' => 'Most design projects are completed within one to three business days. Complex multi-piece campaigns may take longer. Rush delivery is available — ask when you inquire.'],
+            ['q' => 'Can you create social media graphics and digital ads?', 'a' => 'Yes. We design graphics optimized for social media platforms, email campaigns, and digital advertising in addition to print-ready materials.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

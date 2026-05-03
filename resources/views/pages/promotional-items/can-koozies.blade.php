@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Can Koozies in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed can koozies in Joliet, IL. Full-color sublimated foam koozies for events, weddings, parties, and corporate promotions. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" },
+        { "@type": "ListItem", "position": 3, "name": "Can Koozies", "item": "https://www.top5pct.com/promotional-items/can-koozies" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Can Koozies in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items/can-koozies",
+    "description": "Custom printed can koozies in Joliet, IL. Full-color sublimated foam koozies for events, weddings, parties, and corporate promotions. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Can Koozies Joliet IL | Branded Drink Koozies | Top 5 Percent"
     metaDescription="We print custom can koozies for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color foam and neoprene koozies. No minimums. Veteran owned."
@@ -109,6 +142,18 @@
         heading="Your Brand at Every Gathering"
         label="Custom Can Koozies"
         subheading="Custom can koozies are a fan favorite at events, parties, and corporate functions. See how Top 5 Percent produces branded can koozies for businesses and events in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Custom Koozie FAQs"
+        label="Custom Can Koozies in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are custom can koozies?', 'a' => 'Custom can koozies are insulated neoprene or foam sleeves that fit standard 12oz cans. They are printed with your full-color logo or custom design using dye sublimation for a vivid, permanent finish.'],
+            ['q' => 'What events are custom koozies popular for?', 'a' => 'Custom koozies are popular for weddings, bachelor and bachelorette parties, fundraisers, trade shows, birthday parties, company picnics, and sporting events.'],
+            ['q' => 'Is there a minimum order for custom koozies?', 'a' => 'No. We have no minimum. Order one for a personal gift or thousands for a large event or promotional campaign.'],
+            ['q' => 'How are custom koozies printed?', 'a' => 'We use dye sublimation, which bonds full-color ink into the koozie material for a permanent, vivid print that will not crack or peel with regular use and washing.'],
+            ['q' => 'Are custom koozies washable?', 'a' => 'Yes. Our koozies can be hand-washed or spot-cleaned to maintain print quality. Machine washing on delicate is also possible but hand washing is preferred.'],
+            ['q' => 'How fast can I get custom koozies in Joliet?', 'a' => 'Most koozie orders are completed within one to two business days. Rush options may be available — call (815) 349-8600 to discuss your timeline.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

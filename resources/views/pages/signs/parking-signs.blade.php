@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Parking Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom parking signs and lot signs in Joliet, IL. Business parking signs, reserved parking, no parking, and custom property signage for commercial properties. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Parking Signs", "item": "https://www.top5pct.com/signs/parking-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Parking Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/parking-signs",
+    "description": "Custom parking signs and lot signs in Joliet, IL. Business parking signs, reserved parking, no parking, and custom property signage for commercial properties. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Parking Signs Joliet IL | Business Parking & Lot Signs | Top 5 Percent"
     metaDescription="We print custom parking signs for businesses and properties in Joliet, Shorewood, Plainfield, and Will County. Reserved parking, no parking, lot rules, and directional signs. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Clear Parking. Happy Customers."
         label="Custom Parking Signs"
         subheading="Custom parking signs keep your lot organized and visitors informed. Watch how Top 5 Percent designs and produces compliant, branded parking signage for businesses and properties in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Parking Sign FAQs"
+        label="Custom Parking Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of parking signs do you make?', 'a' => 'We print reserved parking signs, no parking signs, handicap parking signs, loading zone signs, customer parking only signs, and fully custom property signs for businesses across Joliet and Will County.'],
+            ['q' => 'What material are parking signs made of?', 'a' => 'Our parking signs are printed on rigid aluminum composite or UV-rated PVC board with weather-resistant laminate for long-term outdoor durability.'],
+            ['q' => 'How long do outdoor parking signs last?', 'a' => 'Parking signs printed on aluminum composite with UV-rated materials typically last five or more years outdoors in Illinois weather conditions.'],
+            ['q' => 'Do you include mounting hardware?', 'a' => 'Post-mounting hardware and sign brackets are available upon request. Ask us about hardware options when you place your order.'],
+            ['q' => 'Is there a minimum order for parking signs?', 'a' => 'No. We have no minimum. One sign or a set for your entire parking lot — both are welcome.'],
+            ['q' => 'How fast can I get parking signs in Joliet?', 'a' => 'Most parking sign orders are completed within one to two business days. Call (815) 349-8600 to confirm turnaround.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

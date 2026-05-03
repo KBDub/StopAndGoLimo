@@ -1,3 +1,35 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Graphic Design Services in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Professional graphic design services in Joliet, IL. Logo design, layout design for print, free online design tool, and design catalogs for custom shirts, signs, and promotional products."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Design Services", "item": "https://www.top5pct.com/design-services" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Graphic Design Services in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/design-services",
+    "description": "Professional graphic design services in Joliet, IL. Logo design, layout design for print, free online design tool, and design catalogs for custom shirts, signs, and promotional products."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Design Services Joliet IL | Logo Design, Graphic Design, Online Designer, Design Catalogs | Top 5 Percent"
     metaDescription="Professional design services in Joliet IL. Logo design, graphic design, free online designer, and design inspiration catalogs for custom shirts, signs, decals, and more. Veteran owned, no design skills needed."
@@ -115,6 +147,18 @@
         heading="Great Products Start With Great Design"
         label="Graphic Design Services in Joliet, IL"
         subheading="Every print, sign, and garment starts with the right design. See how the Top 5 Percent design team creates logos, marketing materials, and print-ready artwork for businesses in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Design Services FAQs"
+        label="Graphic Design in Joliet, IL"
+        :faqs="[
+            ['q' => 'Do you charge extra for design help with my order?', 'a' => 'No. Free design assistance is included with every order we produce. We will build the layout, adjust your existing design, or create artwork from scratch at no additional charge.'],
+            ['q' => 'Can you create a logo from scratch for my business?', 'a' => 'Yes. We offer full logo design services including concept development, multiple revision rounds, and delivery of print-ready vector files you can use across all your marketing materials.'],
+            ['q' => 'What file formats do you accept for print-ready artwork?', 'a' => 'We prefer AI, EPS, and PDF files with outlined text for vector artwork. We also accept high-resolution JPG, PNG, and PSD files at 300 DPI or higher. We will let you know if your file needs adjustments before we go to print.'],
+            ['q' => 'Do you have a free online design tool?', 'a' => 'Yes. Our free online designer lets you create and preview custom designs for shirts, signs, and other products directly in your browser without any software or design experience required.'],
+            ['q' => 'How long does a custom logo design take?', 'a' => 'Most logo projects are completed within two to five business days after an initial consultation. Rush turnaround is available. Contact us to discuss your timeline and scope.'],
+            ['q' => 'Can I see a design proof before my order goes to print?', 'a' => 'Yes. We provide a design proof for your approval before production begins on any custom order. We do not go to press until you confirm the design is exactly what you want.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

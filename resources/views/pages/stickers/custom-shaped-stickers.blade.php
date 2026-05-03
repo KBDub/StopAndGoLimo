@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Shaped Stickers in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom die-cut shaped stickers in Joliet, IL. Stickers cut to the exact outline of any design — logos, characters, and unique shapes. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Stickers", "item": "https://www.top5pct.com/stickers" },
+        { "@type": "ListItem", "position": 3, "name": "Custom Shaped Stickers", "item": "https://www.top5pct.com/stickers/custom-shaped-stickers" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Shaped Stickers in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/stickers/custom-shaped-stickers",
+    "description": "Custom die-cut shaped stickers in Joliet, IL. Stickers cut to the exact outline of any design — logos, characters, and unique shapes. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Shaped Stickers Joliet IL | Die Cut Stickers Any Shape | Top 5 Percent"
     metaDescription="We print custom die cut stickers in any shape in Joliet, Shorewood, Plainfield, and Will County. Full color weatherproof vinyl. No minimums. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Cut to the Shape of Your Brand"
         label="Custom Die-Cut Stickers"
         subheading="Custom shaped stickers are cut to the exact outline of your design for a clean, professional look. Watch how Top 5 Percent produces precision die-cut stickers for brands and businesses in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Custom Shaped Sticker FAQs"
+        label="Die-Cut Custom Stickers in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are custom shaped (die-cut) stickers?', 'a' => 'Die-cut stickers are cut to the exact outline of your artwork rather than into a standard rectangle or circle. The result is a premium sticker with no visible border that makes your brand look polished and professional.'],
+            ['q' => 'Can you cut any shape?', 'a' => 'Yes. We can cut stickers to the precise outline of any design including logos, characters, irregular shapes, and complex illustrations. Provide your artwork and we will handle the cutting path.'],
+            ['q' => 'Are die-cut stickers more expensive than standard stickers?', 'a' => 'Die-cut stickers require an additional cutting step but the price difference is minimal. Contact us for a quote based on your design and quantity.'],
+            ['q' => 'Are die-cut stickers weatherproof?', 'a' => 'Yes. Our die-cut stickers are printed on waterproof vinyl with UV-resistant inks and are durable for outdoor surfaces, vehicle windows, water bottles, and other exposed applications.'],
+            ['q' => 'Is there a minimum order for die-cut stickers?', 'a' => 'No. We have no minimum. Order one die-cut sticker or thousands for a product line or marketing campaign.'],
+            ['q' => 'How fast can I get custom shaped stickers in Joliet?', 'a' => 'Most die-cut sticker orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm turnaround.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

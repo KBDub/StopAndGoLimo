@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Corporate Wear in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom corporate apparel in Joliet, IL. Embroidered polo shirts, branded work uniforms, and corporate clothing for businesses across Will County. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Corporate Wear", "item": "https://www.top5pct.com/custom-apparel/corporate-wear-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Corporate Wear in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/corporate-wear-shirts",
+    "description": "Custom corporate apparel in Joliet, IL. Embroidered polo shirts, branded work uniforms, and corporate clothing for businesses across Will County. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page title="Corporate Wear" metaDescription="Custom corporate apparel in Joliet IL including polo shirts, work uniforms, and branded clothing. Veteran owned, embroidered logos, serving Will County and all of Chicagoland." currentPage="custom-apparel">
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
@@ -135,6 +168,18 @@
         heading="Professional Wear for Your Team"
         label="Corporate Custom Apparel"
         subheading="Corporate apparel reinforces your brand image every time your team shows up. See how Top 5 Percent outfits businesses across Joliet and the Chicago area with professional custom shirts and polos."
+    />
+    <x-sections.faq
+        heading="Corporate Wear FAQs"
+        label="Custom Corporate Apparel in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of corporate apparel do you offer?', 'a' => 'We offer embroidered polo shirts, branded t-shirts, work uniforms, corporate jackets, safety vests, and custom caps. All can be personalized with your company logo or branding.'],
+            ['q' => 'Is embroidery the best option for corporate logos?', 'a' => 'Embroidery is the most professional and durable option for corporate wear, especially on polo shirts, dress shirts, and jackets. For more colorful or photographic designs, DTF or screen print may be better suited.'],
+            ['q' => 'Do you offer group pricing for corporate uniform orders?', 'a' => 'Yes. We offer quantity pricing for corporate uniform programs. Contact us for a custom quote based on your garment type, quantity, and branding requirements.'],
+            ['q' => 'Can you match our brand colors exactly?', 'a' => 'We work to match your brand colors as closely as possible using thread for embroidery and Pantone-referenced inks for print. Provide your brand color codes when you place your order.'],
+            ['q' => 'Is there a minimum order for corporate apparel?', 'a' => 'No. We have no minimum. One embroidered polo or fifty branded uniforms — both are welcome.'],
+            ['q' => 'How fast can we get corporate apparel in Joliet?', 'a' => 'Most corporate wear orders are completed within two to five business days. Rush service may be available — call (815) 349-8600 to discuss your timeline.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

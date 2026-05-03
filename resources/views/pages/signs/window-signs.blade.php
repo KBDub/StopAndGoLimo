@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Window Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom window signs and window graphics in Joliet, IL. Full-color window decals, perforated film, and frosted vinyl for retail storefronts and commercial buildings. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Window Signs", "item": "https://www.top5pct.com/signs/window-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Window Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/window-signs",
+    "description": "Custom window signs and window graphics in Joliet, IL. Full-color window decals, perforated film, and frosted vinyl for retail storefronts and commercial buildings. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Window Signs Joliet IL | Window Decals & Window Graphics | Top 5 Percent"
     metaDescription="We print custom window signs and window decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Perforated vinyl, clear vinyl, and frosted options. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Turn Your Windows Into Marketing"
         label="Custom Window Signs & Decals"
         subheading="Custom window graphics promote your brand, products, and hours to everyone who passes by. Watch how Top 5 Percent designs and installs window signs for businesses across Joliet and the Chicago area."
+    />
+    <x-sections.faq
+        heading="Window Sign FAQs"
+        label="Custom Window Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of window signs do you make?', 'a' => 'We print full-color window decals, perforated see-through window film, frosted privacy film, and custom window graphics for retail storefronts, office buildings, and commercial doors throughout Joliet.'],
+            ['q' => 'What is perforated window film?', 'a' => 'Perforated window film has small holes that allow you to see out from inside while displaying a bold graphic on the exterior. It is commonly used on vehicle windows and large storefront windows for promotions.'],
+            ['q' => 'Do window decals block the view from inside the store?', 'a' => 'Standard solid window vinyl blocks the view where applied. Perforated film allows about 50% visibility from inside while still displaying a full graphic from the outside.'],
+            ['q' => 'How long do window graphics last?', 'a' => 'Interior window graphics last three to five years or more. Exterior-facing window decals are laminated for UV resistance and typically last two to four years.'],
+            ['q' => 'Will window vinyl damage my storefront glass?', 'a' => 'No. Professionally installed vinyl can be removed cleanly from glass without damage or residue, as long as proper removal techniques are used.'],
+            ['q' => 'How fast can I get window signs in Joliet?', 'a' => 'Many window sign orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your project.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

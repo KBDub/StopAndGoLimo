@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Storefronts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom storefront graphics and signage design in Joliet, IL. Window graphics, wall signs, and storefront branding for businesses across Will County. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Design Services", "item": "https://www.top5pct.com/design-services" },
+        { "@type": "ListItem", "position": 3, "name": "Custom Storefronts", "item": "https://www.top5pct.com/design-services/custom-storefronts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Storefronts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/design-services/custom-storefronts",
+    "description": "Custom storefront graphics and signage design in Joliet, IL. Window graphics, wall signs, and storefront branding for businesses across Will County. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Storefronts for Schools & Businesses | Top 5 Percent Joliet IL"
     metaDescription="Launch a fully branded online spirit wear store for your school, team, or corporate event. Custom storefronts with your colors, logo, and products — built and managed by Top 5 Percent in Joliet, IL."
@@ -150,6 +183,18 @@
         direction="left"
     />
 
+    <x-sections.faq
+        heading="Custom Storefront FAQs"
+        label="Storefront Graphics in Joliet, IL"
+        :faqs="[
+            ['q' => 'What storefront graphic services do you offer?', 'a' => 'We design and produce window graphics, wall signs, door decals, sidewalk signs, and full storefront branding packages for retail businesses, restaurants, and service companies in Joliet and Will County.'],
+            ['q' => 'Can you design and produce a full storefront branding package?', 'a' => 'Yes. We work with new and rebranding businesses to develop cohesive storefront signage including window graphics, interior wall signs, door lettering, and exterior signage — all from one shop.'],
+            ['q' => 'How long does storefront graphic production take?', 'a' => 'Most storefront graphic packages are completed within three to five business days. Installation scheduling may add time. Contact us to plan your project timeline.'],
+            ['q' => 'Do you install storefront graphics?', 'a' => 'Yes. We handle production and installation of window decals, wall graphics, and other applied storefront signage. Ask about installation when you place your order.'],
+            ['q' => 'Can you match my existing brand colors for storefront graphics?', 'a' => 'Yes. Provide your brand color codes (Pantone, CMYK, or HEX) and we will match them across all your storefront graphics for consistent brand presentation.'],
+            ['q' => 'Is there a minimum order for storefront graphics?', 'a' => 'No. We have no minimum. One window decal or a complete storefront graphics package — both are welcome.'],
+        ]"
+    />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />
     <x-sections.map-section />

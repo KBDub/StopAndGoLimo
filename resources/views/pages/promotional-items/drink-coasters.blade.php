@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Drink Coasters in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed drink coasters in Joliet, IL. Full-color sublimated coasters for restaurants, bars, events, and corporate promotions. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" },
+        { "@type": "ListItem", "position": 3, "name": "Drink Coasters", "item": "https://www.top5pct.com/promotional-items/drink-coasters" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Drink Coasters in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items/drink-coasters",
+    "description": "Custom printed drink coasters in Joliet, IL. Full-color sublimated coasters for restaurants, bars, events, and corporate promotions. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Drink Coasters Joliet IL | Branded Coasters for Businesses | Top 5 Percent"
     metaDescription="We print custom drink coasters for businesses, restaurants, and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation coasters. Veteran owned."
@@ -109,6 +142,18 @@
         heading="Brand Every Table Setting"
         label="Custom Drink Coasters"
         subheading="Custom coasters put your logo in front of customers at every drink. Watch how Top 5 Percent produces branded promotional coasters for restaurants, offices, and events in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Custom Coaster FAQs"
+        label="Custom Drink Coasters in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of custom drink coasters do you offer?', 'a' => 'We print full-color sublimated round and square coasters for restaurants, bars, corporate gifting, weddings, and branded promotions.'],
+            ['q' => 'How are your coasters printed?', 'a' => 'We use dye sublimation to permanently bond full-color designs into the coaster surface. The print will not fade, scratch, or peel with regular use.'],
+            ['q' => 'Are your custom coasters absorbent?', 'a' => 'Our coasters are produced on materials appropriate for drink use. Ask us about available coaster substrates and their moisture management properties.'],
+            ['q' => 'Is there a minimum order for custom coasters?', 'a' => 'No. We have no minimum. One set of four or hundreds for a restaurant rollout — both welcome.'],
+            ['q' => 'How fast can I get custom coasters in Joliet?', 'a' => 'Most coaster orders are completed within one to two business days. Call (815) 349-8600 to confirm for your quantity.'],
+            ['q' => 'Can custom coasters be used as wedding favors?', 'a' => 'Yes. Custom coasters make excellent personalized wedding favors and party giveaways. We can print names, dates, and custom designs for any event.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

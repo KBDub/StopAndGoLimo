@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Spirit Wear in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom spirit wear and fan apparel in Joliet, IL. School spirit shirts, team fan apparel, and community spirit wear for schools, sports teams, and organizations. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Spirit Wear", "item": "https://www.top5pct.com/custom-apparel/spirit-wear-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Spirit Wear in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/spirit-wear-shirts",
+    "description": "Custom spirit wear and fan apparel in Joliet, IL. School spirit shirts, team fan apparel, and community spirit wear for schools, sports teams, and organizations. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page title="Spirit Wear" metaDescription="Custom spirit wear for schools, teams, and organizations in Joliet IL. T-shirts, hoodies, rhinestone, glow in the dark, and fan wear. Veteran owned, serving all of Will County." currentPage="custom-apparel">
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
@@ -139,6 +172,18 @@
         heading="Show Your School Pride"
         label="Custom Spirit Wear"
         subheading="Spirit wear unites students, staff, and fans with custom designs that represent your school or organization. Watch how Top 5 Percent creates quality spirit wear apparel in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Spirit Wear FAQs"
+        label="Custom Spirit Wear in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is custom spirit wear?', 'a' => 'Spirit wear is branded apparel worn to show support for a school, sports team, organization, or community. It includes t-shirts, hoodies, hats, and other items printed with team colors, mascots, and slogans.'],
+            ['q' => 'Do you make spirit wear for schools and sports teams in Joliet?', 'a' => 'Yes. We produce spirit wear for schools, youth sports teams, travel teams, booster clubs, and community organizations throughout Joliet and Will County.'],
+            ['q' => 'Is there a minimum order for spirit wear?', 'a' => 'No. We have no minimum. You can order individual spirit wear items for specific players or full team sets.'],
+            ['q' => 'Can we sell spirit wear as a fundraiser?', 'a' => 'Yes. We can work with organizations to produce spirit wear for sale at games, events, or through school stores. Contact us to discuss your fundraising program.'],
+            ['q' => 'What printing techniques work best for spirit wear?', 'a' => 'Screen printing is popular for large uniform runs in simple colors. DTF is great for full-color mascot designs in smaller quantities. We will recommend the best option based on your design and budget.'],
+            ['q' => 'How do I order spirit wear for my school or team?', 'a' => 'Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet. Bring your team logo or mascot design and we will guide you through the options.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

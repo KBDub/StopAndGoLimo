@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Holographic Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom holographic shirts in Joliet, IL. Rainbow-shifting holographic vinyl designs on t-shirts and apparel for events, teams, and promotions. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Holographic Shirts", "item": "https://www.top5pct.com/custom-apparel/holographic-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Holographic Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/holographic-shirts",
+    "description": "Custom holographic shirts in Joliet, IL. Rainbow-shifting holographic vinyl designs on t-shirts and apparel for events, teams, and promotions. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Holographic Shirts Joliet IL | Prismatic T-Shirts | Top 5 Percent"
     metaDescription="Custom holographic shirts in Joliet, IL. Color-shifting prismatic designs that catch every eye. Unique, futuristic, unforgettable. No minimums. Veteran-owned."
@@ -110,6 +143,18 @@
         heading="Color-Shifting Designs That Shine"
         label="Holographic Custom Apparel"
         subheading="Holographic printing creates iridescent, color-shifting effects that turn heads at any angle. Watch how we produce custom holographic shirts, hoodies, and caps in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Holographic Shirt FAQs"
+        label="Custom Holographic Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are holographic shirts?', 'a' => 'Holographic shirts use a rainbow-shifting metallic vinyl that changes color as it catches light at different angles. The result is a dynamic, iridescent design that stands out in any lighting condition.'],
+            ['q' => 'Is there a minimum order for holographic shirts?', 'a' => 'No. We have no minimum. Order one shirt for a special event or a set for your whole team.'],
+            ['q' => 'How do I care for holographic shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the holographic finish.'],
+            ['q' => 'What designs work best with holographic vinyl?', 'a' => 'Bold, simple shapes and large text show off the color-shifting effect best. Thin lines and small text can still be done but the effect is more visible on larger design elements.'],
+            ['q' => 'Can holographic vinyl be combined with other finishes?', 'a' => 'Yes. Holographic works well layered with standard vinyl, glitter, or foil for a multi-texture, multi-finish shirt.'],
+            ['q' => 'How fast can I get holographic shirts in Joliet?', 'a' => 'Most holographic shirt orders are completed same day. Call (815) 349-8600 to confirm for your order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

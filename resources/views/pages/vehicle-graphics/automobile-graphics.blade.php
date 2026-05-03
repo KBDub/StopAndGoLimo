@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automobile Graphics in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom automobile graphics, car wraps, and vinyl lettering in Joliet, IL. Full and partial wraps for cars, trucks, vans, and fleets. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Vehicle Graphics", "item": "https://www.top5pct.com/vehicle-graphics" },
+        { "@type": "ListItem", "position": 3, "name": "Automobile Graphics", "item": "https://www.top5pct.com/vehicle-graphics/automobile-graphics" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Automobile Graphics in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/vehicle-graphics/automobile-graphics",
+    "description": "Custom automobile graphics, car wraps, and vinyl lettering in Joliet, IL. Full and partial wraps for cars, trucks, vans, and fleets. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Automobile Graphics Joliet IL | Car Wraps, Vinyl Lettering, Van Graphics, Truck Decals, Boat Graphics | Top 5 Percent"
     metaDescription="We design and install custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics in Joliet, Shorewood, Crest Hill, Rockdale, and Will County. Turn any vehicle into a mobile billboard. Veteran owned."
@@ -135,6 +168,18 @@
         heading="Your Brand on the Road"
         label="Car & Truck Graphics"
         subheading="Custom car and truck graphics transform your vehicle into a moving billboard for your business. See how Top 5 Percent designs and applies durable automobile graphics in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Automobile Graphics FAQs"
+        label="Car Wraps & Vinyl Lettering in Joliet, IL"
+        :faqs="[
+            ['q' => 'What automobile graphic options are available?', 'a' => 'We offer full vehicle wraps, partial wraps, vinyl lettering, color change wraps, and custom graphic packages for cars, trucks, SUVs, and vans.'],
+            ['q' => 'How long does a full car wrap take?', 'a' => 'A full vehicle wrap installation typically takes one to three days depending on the vehicle size and design complexity. Partial wraps and lettering installs are often completed same day or next day.'],
+            ['q' => 'How long does vehicle wrap vinyl last?', 'a' => 'Premium cast vinyl used for vehicle wraps typically lasts five or more years with proper care. Avoid high-pressure car washes and wax periodically to extend the life of your wrap.'],
+            ['q' => 'Can a wrap be removed without damaging my car\'s paint?', 'a' => 'Yes. Professional-grade wrap vinyl can be removed cleanly from factory paint without damage when installed and removed correctly. We use 3M and Avery Dennison materials rated for clean removal.'],
+            ['q' => 'What is a partial wrap versus a full wrap?', 'a' => 'A full wrap covers the entire exterior of the vehicle. A partial wrap covers a section of the vehicle — typically the rear, sides, or hood — and is often combined with vinyl lettering for a more budget-friendly branded look.'],
+            ['q' => 'Do you wrap commercial vans and fleet vehicles?', 'a' => 'Yes. We produce and install graphics for commercial vans, box trucks, fleet vehicles, and trailers throughout Joliet and the Chicagoland area. Contact us for fleet pricing.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

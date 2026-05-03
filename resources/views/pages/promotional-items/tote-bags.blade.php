@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Tote Bags in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed tote bags in Joliet, IL. Branded sublimated tote bags for events, trade shows, and businesses. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" },
+        { "@type": "ListItem", "position": 3, "name": "Tote Bags", "item": "https://www.top5pct.com/promotional-items/tote-bags" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Tote Bags in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items/tote-bags",
+    "description": "Custom printed tote bags in Joliet, IL. Branded sublimated tote bags for events, trade shows, and businesses. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Tote Bags Joliet IL | Branded Drawstring & Tote Bags | Top 5 Percent"
     metaDescription="We print custom tote bags and drawstring bags for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded bags. No minimums. Veteran owned."
@@ -109,6 +142,18 @@
         heading="A Walking Billboard for Your Brand"
         label="Custom Tote Bags"
         subheading="Custom tote bags go everywhere your customers go — grocery stores, farmers markets, offices, and beyond. See how Top 5 Percent produces branded tote bags for businesses and events in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Custom Tote Bag FAQs"
+        label="Custom Tote Bags in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom tote bags do you offer?', 'a' => 'We print full-color custom tote bags for businesses, events, trade shows, schools, and organizations. Both standard tote bags and drawstring bags are available.'],
+            ['q' => 'How are tote bags printed?', 'a' => 'We use dye sublimation for full-color designs on polyester tote bags. This produces a vivid, permanent print that holds up through regular use and washing.'],
+            ['q' => 'Are custom tote bags washable?', 'a' => 'Yes. Sublimated tote bags can be machine washed on cold, gentle cycle. Colors stay vibrant and the print will not crack or peel.'],
+            ['q' => 'Is there a minimum order for custom tote bags?', 'a' => 'No. We have no minimum. One tote for a gift basket or hundreds for an event giveaway are both welcome.'],
+            ['q' => 'What size are your custom tote bags?', 'a' => 'We offer standard tote bag sizes appropriate for shopping, events, and general carrying. Contact us for available dimensions and styles.'],
+            ['q' => 'How fast can I get custom tote bags in Joliet?', 'a' => 'Most tote bag orders are completed within one to two business days. Call (815) 349-8600 to confirm turnaround.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

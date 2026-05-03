@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Mugs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed mugs in Joliet, IL. Full-color sublimated coffee mugs for businesses, events, and corporate gifts. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" },
+        { "@type": "ListItem", "position": 3, "name": "Custom Mugs", "item": "https://www.top5pct.com/promotional-items/mugs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Mugs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items/mugs",
+    "description": "Custom printed mugs in Joliet, IL. Full-color sublimated coffee mugs for businesses, events, and corporate gifts. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Mugs Joliet IL | Branded Coffee Mugs & Drinkware | Top 5 Percent"
     metaDescription="We print custom mugs and branded drinkware for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mugs. Veteran owned."
@@ -109,6 +142,18 @@
         heading="Start Every Morning With Your Brand"
         label="Custom Branded Mugs"
         subheading="Custom mugs are one of the most-used branded promotional products in any office or home. Watch how Top 5 Percent produces full-color custom mugs for businesses and events in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Custom Mug FAQs"
+        label="Custom Mugs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom mugs do you offer?', 'a' => 'We print full-color sublimated coffee mugs in standard 11oz and 15oz sizes. Corporate mugs, personalized gift mugs, and branded promotional mugs are all available.'],
+            ['q' => 'How are your custom mugs printed?', 'a' => 'We use dye sublimation, which permanently bonds your full-color design into the mug\'s coating. The print will not peel, scratch, or fade with regular use.'],
+            ['q' => 'Are your custom mugs dishwasher safe?', 'a' => 'Yes. Our sublimated mugs are top-rack dishwasher safe. We recommend hand washing to maximize print longevity over time.'],
+            ['q' => 'Is there a minimum order for custom mugs?', 'a' => 'No. We have no minimum. One personalized mug for a gift or hundreds for a corporate giveaway campaign.'],
+            ['q' => 'How long does a custom mug order take?', 'a' => 'Most custom mug orders are completed within one to three business days. Call (815) 349-8600 to confirm turnaround for your quantity.'],
+            ['q' => 'Can I use custom mugs as corporate gifts?', 'a' => 'Yes. Branded mugs are one of the most effective corporate gifts because they stay on desks and are used daily. Contact us for volume pricing on corporate mug orders.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

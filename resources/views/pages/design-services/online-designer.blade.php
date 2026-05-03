@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Online Design Tool in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Free online design tool at Top 5 Percent in Joliet, IL. Design custom shirts, signs, and more directly in your browser with no software required. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Design Services", "item": "https://www.top5pct.com/design-services" },
+        { "@type": "ListItem", "position": 3, "name": "Online Designer", "item": "https://www.top5pct.com/design-services/online-designer" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Online Design Tool in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/design-services/online-designer",
+    "description": "Free online design tool at Top 5 Percent in Joliet, IL. Design custom shirts, signs, and more directly in your browser with no software required. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Free Online Designer Joliet IL | Design Custom Shirts & Signs Online | Top 5 Percent"
     metaDescription="Use our free online design tool to create custom shirts, signs, and more right from your browser. Upload your art or start from scratch. Veteran owned in Joliet, IL."
@@ -107,6 +140,18 @@
         heading="Design It Yourself in Minutes"
         label="Free Online Design Tool"
         subheading="Our free online designer lets you create custom products without any design experience. Watch how easy it is to build and order your custom apparel, signs, or promotional items with Top 5 Percent."
+    />
+    <x-sections.faq
+        heading="Online Designer FAQs"
+        label="Free Online Design Tool — Top 5 Percent"
+        :faqs="[
+            ['q' => 'Is the online design tool free to use?', 'a' => 'Yes. Our online designer is completely free to use. Design your custom product in the browser at any time and submit your design when you are ready to place an order.'],
+            ['q' => 'Do I need design software or experience to use the online designer?', 'a' => 'No. The online designer is built for non-designers. Simply pick a template or start from a blank canvas, add your text and images, and preview your design before ordering.'],
+            ['q' => 'What products can I design with the online tool?', 'a' => 'The online designer supports t-shirts, hoodies, signs, banners, stickers, and many other custom products. Product templates are pre-sized to production specifications.'],
+            ['q' => 'Can I save my design and come back to it later?', 'a' => 'Yes. You can save your design progress and return to it later to make changes before finalizing your order.'],
+            ['q' => 'What happens after I design something in the tool?', 'a' => 'Once your design is complete, submit it to us directly from the tool or download the file to bring in. Our team will review and confirm before going to print.'],
+            ['q' => 'Do I still get design help even if I use the online tool?', 'a' => 'Yes. Even if you start a design in the online tool, our team is available to refine it, apply brand standards, or make layout improvements before production — at no extra charge.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

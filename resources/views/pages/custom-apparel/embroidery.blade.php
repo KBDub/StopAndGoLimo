@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Embroidery in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will County. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Embroidery", "item": "https://www.top5pct.com/custom-apparel/embroidery" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Embroidery in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/embroidery",
+    "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will County. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Embroidery Shirts Joliet IL | Embroidered T-Shirts & Polos | Top 5 Percent"
     metaDescription="Custom embroidered shirts, polos, and hats in Joliet, IL. Precise machine embroidery for corporate logos, team names, and branded apparel. No minimums. Veteran-owned."
@@ -110,6 +143,18 @@
         heading="Precision Stitching, Every Time"
         label="Custom Embroidery"
         subheading="Embroidery adds a professional, lasting finish to polos, hats, jackets, and more. Watch our team digitize and stitch custom designs with care at our Joliet embroidery shop."
+    />
+    <x-sections.faq
+        heading="Custom Embroidery FAQs"
+        label="Embroidery in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is custom embroidery?', 'a' => 'Custom embroidery uses a computerized machine to stitch your design directly into fabric using thread. It creates a raised, textured, professional finish that is more durable than most printed alternatives.'],
+            ['q' => 'What garments can you embroider?', 'a' => 'We embroider polo shirts, dress shirts, t-shirts, hats, caps, jackets, fleece, tote bags, and most other fabric items. Bring your garment or choose from our in-stock blanks.'],
+            ['q' => 'Do you charge extra to digitize my logo for embroidery?', 'a' => 'A one-time digitizing fee may apply to convert your artwork into an embroidery file. Once digitized, your file is on file for future reorders at no additional digitizing charge.'],
+            ['q' => 'Is there a minimum order for custom embroidery?', 'a' => 'No. We have no minimum order. You can embroider a single polo shirt or outfit an entire company uniform program.'],
+            ['q' => 'How do I care for embroidered shirts?', 'a' => 'Wash embroidered garments inside out on cold using a gentle cycle. Avoid high heat in the dryer to preserve thread integrity and shape.'],
+            ['q' => 'How long does a custom embroidery order take?', 'a' => 'Most embroidery orders are completed within one to three business days after design approval. Rush turnaround may be available — call (815) 349-8600 to discuss your timeline.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

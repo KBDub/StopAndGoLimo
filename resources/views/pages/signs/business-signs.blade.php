@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Business Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom business signs in Joliet, IL. Storefront signs, outdoor signs, window signs, door signs, and professional signage for businesses across Will County. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Business Signs", "item": "https://www.top5pct.com/signs/business-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Business Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/business-signs",
+    "description": "Custom business signs in Joliet, IL. Storefront signs, outdoor signs, window signs, door signs, and professional signage for businesses across Will County. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Business Signs Joliet IL | Storefront Signs, Window Signs, Door Signs | Top 5 Percent"
     metaDescription="We print and install custom business signs, storefront signs, window signs, door signs, and outdoor signs in Joliet, Shorewood, Plainfield, and Will County. Veteran owned sign shop."
@@ -111,6 +144,18 @@
         heading="Your Brand, Boldly Displayed"
         label="Custom Business Signs"
         subheading="The right business sign makes your location easy to find and your brand impossible to forget. See how Top 5 Percent produces custom indoor and outdoor business signs in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Business Sign FAQs"
+        label="Custom Business Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of business signs do you make in Joliet?', 'a' => 'We produce storefront signs, outdoor business signs, window graphics, door signs, wall signs, sidewalk signs, and interior directional signs for businesses throughout Joliet and Will County.'],
+            ['q' => 'What materials do you use for business signs?', 'a' => 'We use UV-rated vinyl on aluminum composite, corrugated plastic, foamboard, and rigid substrates depending on the application. Indoor vs. outdoor requirements and mounting method determine the right material.'],
+            ['q' => 'Do you help design business signs?', 'a' => 'Yes. Free design assistance is included with every sign order. We will build your sign layout from your logo, brand colors, and direction — no design skills required.'],
+            ['q' => 'How long do outdoor business signs last?', 'a' => 'Outdoor business signs printed on UV-rated materials and properly installed typically last three to five years. We use inks and laminates rated for extended outdoor exposure.'],
+            ['q' => 'Can you make a sign for my storefront window?', 'a' => 'Yes. We print perforated window film, solid vinyl window graphics, and full-color window decals for retail storefronts and office buildings throughout Joliet.'],
+            ['q' => 'How fast can I get business signs in Joliet?', 'a' => 'Many business sign orders are completed within one to two business days. Same-day service is available on select products. Call (815) 349-8600 to confirm for your project.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

@@ -1,3 +1,43 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What should I know before ordering custom t-shirts?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Before ordering, create a checklist covering quantity, printing technique, apparel type, turnaround time, sizes, and delivery policy. Being specific about these factors helps you find a printing company that can meet all your needs." }
+        },
+        {
+            "@type": "Question",
+            "name": "How many custom t-shirts do I need to order?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Consider whether shirts are for employees, promotional giveaways, team uniforms, or a family reunion. Top 5 Percent has no minimums, so you can order as few or as many as you need." }
+        },
+        {
+            "@type": "Question",
+            "name": "Can you print my logo or graphic on a custom t-shirt?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. We specialize in complex logos, photographs, and custom graphics. We recommend asking to see samples to confirm the company can handle your specific design before placing an order." }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the turnaround time for custom t-shirts in Joliet?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Turnaround varies by printing technique and quantity. Many products at Top 5 Percent are available with same-day service. Always confirm lead times when placing your order." }
+        },
+        {
+            "@type": "Question",
+            "name": "How much do custom t-shirts cost?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Pricing depends on quantity, technique, and design complexity. Top 5 Percent balances reasonable pricing with professional quality. Contact us for a free no-obligation quote." }
+        },
+        {
+            "@type": "Question",
+            "name": "How do I evaluate a custom t-shirt company?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Read at least 10 reviews and ask to see samples of their work. Top 5 Percent has hundreds of five-star reviews and a portfolio of custom shirts, signs, and vehicle graphics available for review before ordering." }
+        }
+    ]
+}
+</script>
+@endpush
 <section class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-6">
 

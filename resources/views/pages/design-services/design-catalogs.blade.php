@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Design Catalogs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Design inspiration catalogs and template libraries at Top 5 Percent in Joliet, IL. Browse thousands of ready-to-customize designs for shirts, signs, and promotional products. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Design Services", "item": "https://www.top5pct.com/design-services" },
+        { "@type": "ListItem", "position": 3, "name": "Design Catalogs", "item": "https://www.top5pct.com/design-services/design-catalogs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Design Catalogs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/design-services/design-catalogs",
+    "description": "Design inspiration catalogs and template libraries at Top 5 Percent in Joliet, IL. Browse thousands of ready-to-customize designs for shirts, signs, and promotional products. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Design Idea Catalogs Joliet IL | Custom Print Design Inspiration | Top 5 Percent"
     metaDescription="Browse thousands of design templates and ideas for custom shirts, signs, and promotional products. Pick a design and make it your own. Veteran owned in Joliet, IL."
@@ -107,6 +140,18 @@
         heading="Start With a Design That's Already Working"
         label="Design Catalogs & Templates"
         subheading="Browse our design catalog to find a starting point for your custom project. Watch how Top 5 Percent helps businesses in Joliet, IL select and customize pre-built designs for apparel, signs, and more."
+    />
+    <x-sections.faq
+        heading="Design Catalog FAQs"
+        label="Design Inspiration Catalogs — Top 5 Percent"
+        :faqs="[
+            ['q' => 'What are design catalogs?', 'a' => 'Design catalogs are curated collections of ready-to-customize design templates for shirts, signs, decals, and promotional products. Browse them for inspiration or select a template to customize with your text and colors.'],
+            ['q' => 'Are design catalog templates free?', 'a' => 'Yes. Browsing and selecting from our design catalogs is included as part of our service. The design fee is built into the cost of your print order.'],
+            ['q' => 'Can I fully customize a catalog template?', 'a' => 'Yes. Templates are starting points. We can change colors, text, layout, and imagery to make the design uniquely yours before it goes to print.'],
+            ['q' => 'How many designs are in the catalog?', 'a' => 'Our catalogs contain thousands of designs across categories including sports, business, events, celebrations, and more. New designs are added regularly.'],
+            ['q' => 'Can I browse the design catalogs online?', 'a' => 'Yes. You can access our design catalogs from any device. Contact us for a link or browse in-store on our display system.'],
+            ['q' => 'Can I see a design proof before ordering?', 'a' => 'Yes. Regardless of whether you choose a catalog template or a fully custom design, we provide a proof for your approval before any order goes to production.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

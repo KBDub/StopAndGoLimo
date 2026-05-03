@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom T-Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom t-shirts printed in Joliet, IL using rhinestone, vinyl, DTF, embroidery, screen print, and specialty techniques. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Custom T-Shirts", "item": "https://www.top5pct.com/custom-apparel/custom-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom T-Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/custom-shirts",
+    "description": "Custom t-shirts printed in Joliet, IL using rhinestone, vinyl, DTF, embroidery, screen print, and specialty techniques. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom T-Shirts Joliet IL | Rhinestone, Vinyl, Foil & More | Top 5 Percent"
     metaDescription="Joliet's custom t-shirt experts. Rhinestone, vinyl, foil, glitter, embroidery, glow-in-the-dark and 12 more techniques. No minimums, same-day available. Veteran-owned."
@@ -79,6 +112,18 @@
         heading="Shirts Made to Stand Out"
         label="Custom T-Shirts & Apparel"
         subheading="Explore the craftsmanship behind every custom shirt we produce. Top 5 Percent offers the widest range of shirt decoration techniques in the Joliet area — from heat transfers to embroidery and beyond."
+    />
+    <x-sections.faq
+        heading="Custom T-Shirt FAQs"
+        label="Custom T-Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom t-shirt printing options do you offer in Joliet?', 'a' => 'We offer rhinestone, heat-transfer vinyl, DTF transfers, screen printing, embroidery, dye sublimation, glitter, foil, flock, holographic, reflective, puff print, glow in the dark, and brick-style printing — all on one location at 121 Springfield Avenue in Joliet.'],
+            ['q' => 'Is there a minimum order for custom t-shirts?', 'a' => 'No. We have no minimum on any custom shirt order. You can order a single shirt for a gift or bulk quantities for a company uniform program and receive the same professional quality either way.'],
+            ['q' => 'How fast can I get custom t-shirts in Joliet?', 'a' => 'Many custom shirt styles are available same day or within 24 hours. Call us at (815) 349-8600 before coming in to confirm availability based on your design and quantity.'],
+            ['q' => 'Can I bring my own shirt to be printed?', 'a' => 'Yes. We can print on garments you provide as long as they are clean, appropriate for the printing technique chosen, and made of a compatible fabric. Call us ahead of time to confirm suitability.'],
+            ['q' => 'What is the best printing technique for my custom shirt?', 'a' => 'It depends on your design and garment type. DTF is best for full-color photographic prints with no minimums. Screen printing is best for high-volume single-color jobs. Embroidery is best for a professional, textured look. We will recommend the right technique when you come in.'],
+            ['q' => 'Can I see a proof before my shirt order goes to production?', 'a' => 'Yes. We provide a design proof for approval before every custom shirt order goes to print. Nothing goes to press until you sign off on the design.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

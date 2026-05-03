@@ -1,3 +1,35 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Promotional Items in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Veteran-owned custom promotional products in Joliet, IL. Custom mugs, koozies, tote bags, towels, drink coasters, and mouse pads with full-color sublimation printing. No minimums."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Promotional Items in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items",
+    "description": "Veteran-owned custom promotional products in Joliet, IL. Custom mugs, koozies, tote bags, towels, drink coasters, and mouse pads with full-color sublimation printing. No minimums."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Promotional Items Joliet IL | Mugs, Koozies, Tote Bags, Towels, Mouse Pads | Top 5 Percent"
     metaDescription="We print custom promotional products for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Custom mugs, koozies, tote bags, towels, drink coasters, and mouse pads. Veteran owned."
@@ -125,6 +157,18 @@
         heading="Giveaways That Keep Working"
         label="Custom Promo Items in Joliet, IL"
         subheading="Custom promotional products put your brand in the hands of customers every single day. Watch how Top 5 Percent produces quality branded promotional items for businesses and events in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Promotional Items FAQs"
+        label="Custom Promo Products in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom promotional products do you offer?', 'a' => 'We offer custom mugs, can koozies, tote bags, towels, drink coasters, and mouse pads — all printed with your full-color logo or custom design using dye sublimation for a durable, vibrant finish.'],
+            ['q' => 'Is there a minimum order for custom mugs and koozies?', 'a' => 'No. We have no minimum order on any promotional product. You can order a single custom mug for a gift or thousands of koozies for a trade show giveaway.'],
+            ['q' => 'How are your promotional products printed?', 'a' => 'We use dye sublimation printing, which bonds full-color ink directly into the material surface. This produces a vivid, permanent print that will not peel, crack, or fade with normal use.'],
+            ['q' => 'How long do custom promotional products take?', 'a' => 'Most promotional product orders are completed within one to three business days. Rush same-day service may be available on select items — call (815) 349-8600 to check availability.'],
+            ['q' => 'Do you handle corporate gifting and bulk promotional orders?', 'a' => 'Yes. We work with businesses, nonprofits, schools, and event organizers throughout Will County on bulk promotional product orders with consistent quality at every quantity. Contact us for a volume quote.'],
+            ['q' => 'Are your sublimated mugs and koozies dishwasher safe?', 'a' => 'Our mugs are top-rack dishwasher safe with standard care. Koozies and soft goods should be hand-washed or spot-cleaned to preserve print quality over time.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

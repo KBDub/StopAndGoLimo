@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Rhinestone Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom rhinestone t-shirts and apparel in Joliet, IL. Sparkle and crystal rhinestone designs for events, teams, and businesses. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Rhinestone Shirts", "item": "https://www.top5pct.com/custom-apparel/rhinestone-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Rhinestone Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/rhinestone-shirts",
+    "description": "Custom rhinestone t-shirts and apparel in Joliet, IL. Sparkle and crystal rhinestone designs for events, teams, and businesses. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Rhinestone Shirts Joliet IL | Bling T-Shirts | Top 5 Percent"
     metaDescription="Custom rhinestone bling shirts in Joliet, IL. Crystal rhinestone designs for reunions, events, and celebrations. No minimums, same-day available. Veteran-owned."
@@ -110,6 +143,18 @@
         heading="Sparkle With Every Stitch"
         label="Rhinestone Custom Shirts"
         subheading="Rhinestone shirts bring glamour and shine to any event, performance, or brand. Watch how Top 5 Percent applies rhinestone designs to custom shirts and apparel in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Rhinestone Shirt FAQs"
+        label="Custom Rhinestone Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are rhinestone shirts?', 'a' => 'Rhinestone shirts use heat-applied crystal or acrylic rhinestones to create a sparkling design on fabric. They are popular for birthdays, bachelorette parties, dance teams, cheer squads, and event apparel.'],
+            ['q' => 'Is there a minimum order for rhinestone shirts?', 'a' => 'No. We have no minimum order. You can order a single rhinestone shirt for a birthday or a full set for a dance team.'],
+            ['q' => 'How long do rhinestone designs last on shirts?', 'a' => 'With proper care, rhinestone designs are durable. Wash inside out on cold, gentle cycle, and air dry or tumble dry on low to preserve the stones.'],
+            ['q' => 'What fabrics work for rhinestone shirts?', 'a' => 'Rhinestones can be applied to cotton, polyester, blends, and most standard shirt fabrics. Stretchy fabrics like spandex may affect adhesion so we will advise accordingly.'],
+            ['q' => 'Can I combine rhinestones with other print techniques?', 'a' => 'Yes. Rhinestones can be combined with vinyl lettering, glitter, or flock printing to create layered, multi-texture custom shirts.'],
+            ['q' => 'How fast can I get rhinestone shirts in Joliet?', 'a' => 'Many rhinestone shirt orders are ready same day or within 24 hours depending on design complexity. Call (815) 349-8600 to confirm.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

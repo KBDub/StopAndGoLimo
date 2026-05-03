@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Floor Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom floor decals and floor graphics in Joliet, IL. Anti-slip floor signs for retail, trade shows, and event venues. Same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Floor Signs", "item": "https://www.top5pct.com/signs/floor-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Floor Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/floor-signs",
+    "description": "Custom floor decals and floor graphics in Joliet, IL. Anti-slip floor signs for retail, trade shows, and event venues. Same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Floor Signs Joliet IL | Floor Decals & Floor Graphics | Top 5 Percent"
     metaDescription="We print custom floor signs and floor decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Non-slip floor vinyl for retail, events, and safety. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Guide Every Visitor on the Right Path"
         label="Custom Floor Graphics"
         subheading="Floor graphics direct customers, reinforce branding, and add wayfinding to any space. See how Top 5 Percent produces durable, slip-resistant custom floor signs for businesses in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Floor Sign FAQs"
+        label="Custom Floor Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are custom floor signs?', 'a' => 'Floor signs are large-format graphics printed on anti-slip vinyl and applied directly to hard floors. They are used for directional arrows, promotional messages, social distancing markers, and brand displays in retail stores, trade shows, and event venues.'],
+            ['q' => 'Are your floor decals slip-resistant?', 'a' => 'Yes. Our floor graphics are printed on anti-slip laminated vinyl that meets safety standards for indoor foot traffic.'],
+            ['q' => 'How long do floor decals last?', 'a' => 'Floor decals in moderate traffic areas typically last six to eighteen months. High-traffic areas will show wear faster. Ask about protective overlaminate options to extend durability.'],
+            ['q' => 'Can floor graphics be removed without damaging the floor?', 'a' => 'Yes. Our floor vinyl is designed for clean removal from sealed concrete, tile, hardwood, and other smooth floor surfaces.'],
+            ['q' => 'Is there a minimum order for floor signs?', 'a' => 'No. We have no minimum. One floor decal for a directional arrow or a full set for a trade show booth are equally welcome.'],
+            ['q' => 'How fast can I get custom floor signs in Joliet?', 'a' => 'Many floor sign orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm turnaround.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

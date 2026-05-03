@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "DOT Decals & Truck Lettering in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "USDOT number stickers, MC numbers, GVWR markings, and DOT compliance decals for commercial trucks in Joliet, Shorewood, Channahon, and Will County. Same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Vehicle Graphics", "item": "https://www.top5pct.com/vehicle-graphics" },
+        { "@type": "ListItem", "position": 3, "name": "DOT Decals", "item": "https://www.top5pct.com/vehicle-graphics/dot-decals" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "DOT Decals & Truck Lettering in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/vehicle-graphics/dot-decals",
+    "description": "USDOT number stickers, MC numbers, GVWR markings, and DOT compliance decals for commercial trucks in Joliet, Shorewood, Channahon, and Will County. Same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="DOT Decals & USDOT Number Stickers Joliet IL | Truck Lettering, MC Numbers, FMCSA Compliance | Top 5 Percent"
     metaDescription="We print DOT decals, USDOT number stickers, MC number decals, and truck lettering for commercial vehicles in Joliet, Shorewood, Channahon, and Will County. Same day available. Veteran owned, CDL experience."
@@ -133,6 +166,18 @@
         heading="Compliance Decals Done Right"
         label="DOT Decals & Compliance Markings"
         subheading="DOT-compliant decals keep your commercial vehicles road-legal without sacrificing professional appearance. See how Top 5 Percent produces accurate, durable DOT decals for fleet businesses in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="DOT Decal FAQs"
+        label="DOT Decals & Truck Lettering in Joliet, IL"
+        :faqs="[
+            ['q' => 'What information is required on a USDOT number sticker?', 'a' => 'Your USDOT number sticker must display your USDOT number in letters at least 2 inches tall on both sides of the cab. Many carriers also include the company name and home state. We will ensure your decal meets FMCSA formatting requirements.'],
+            ['q' => 'Do I need a DOT number on my commercial truck in Illinois?', 'a' => 'Vehicles operating in interstate commerce with a GVWR over 10,001 lbs are required to display a USDOT number. Illinois intrastate carriers may also be subject to state requirements. Consult FMCSA or your carrier compliance advisor to confirm your specific obligations.'],
+            ['q' => 'Do you print MC numbers and GVWR markings?', 'a' => 'Yes. We print USDOT numbers, MC authority numbers, GVWR markings, and any other required compliance lettering on vehicles and trailers for commercial carriers throughout the Chicagoland area.'],
+            ['q' => 'What material are DOT compliance decals made of?', 'a' => 'We print DOT decals on high-performance outdoor-rated vinyl with UV-resistant ink. They are designed to withstand road exposure, weather, and truck washing for years of compliant display.'],
+            ['q' => 'Can you do same-day DOT decals in Joliet?', 'a' => 'Yes. Many DOT number decal orders are completed same day. Call (815) 349-8600 with your USDOT number and required markings and we will confirm turnaround.'],
+            ['q' => 'Do you letter an entire fleet of trucks?', 'a' => 'Yes. We produce DOT compliance packages and full truck lettering for fleets of any size. Contact us for fleet pricing and turnaround on multi-vehicle orders.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

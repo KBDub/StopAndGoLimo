@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Sidewalk Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom sidewalk signs and A-frame signs in Joliet, IL. Portable sidewalk boards for businesses, restaurants, and retail stores. Same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Sidewalk Signs", "item": "https://www.top5pct.com/signs/sidewalk-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sidewalk Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/sidewalk-signs",
+    "description": "Custom sidewalk signs and A-frame signs in Joliet, IL. Portable sidewalk boards for businesses, restaurants, and retail stores. Same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Sidewalk Signs Joliet IL | A Frame Signs, Sandwich Boards | Top 5 Percent"
     metaDescription="We print and sell custom a frame sidewalk signs for businesses and events in Joliet, Shorewood, Romeoville, and Will County. Interchangeable inserts, weather resistant, same day service available."
@@ -121,6 +154,18 @@
         heading="Stop Foot Traffic in Its Tracks"
         label="Custom Sidewalk Signs"
         subheading="Sidewalk signs bring customers in off the street with bold messaging and eye-catching design. See how Top 5 Percent produces custom A-frame and sidewalk signs for businesses in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Sidewalk Sign FAQs"
+        label="Custom Sidewalk Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of sidewalk signs do you make?', 'a' => 'We print custom inserts for A-frame sidewalk boards (also called sandwich boards) and produce corrugated plastic sidewalk signs for businesses wanting an easy-swap outdoor display.'],
+            ['q' => 'What material are A-frame sign inserts made of?', 'a' => 'Inserts are typically printed on corrugated plastic for weather resistance and light weight, or on foam board for premium indoor-outdoor display quality.'],
+            ['q' => 'Are sidewalk signs weatherproof?', 'a' => 'Our sidewalk sign inserts are laminated for weather resistance. For sustained outdoor use, corrugated plastic is the most durable option.'],
+            ['q' => 'Can I swap the graphics in my A-frame easily?', 'a' => 'Yes. We produce replacement inserts that fit standard A-frame frames so you can update your message seasonally or for promotions without buying a new frame.'],
+            ['q' => 'Is there a minimum order for sidewalk signs?', 'a' => 'No. We have no minimum. One sidewalk sign insert or a batch for all your locations — both welcome.'],
+            ['q' => 'How fast can I get sidewalk signs in Joliet?', 'a' => 'Most sidewalk sign orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

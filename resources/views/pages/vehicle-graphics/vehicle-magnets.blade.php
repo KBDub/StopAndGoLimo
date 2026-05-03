@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Vehicle Magnets in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom vehicle magnets in Joliet, IL. Removable car and truck magnets for businesses and contractors. Full-color printing on heavy-duty magnetic material. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Vehicle Graphics", "item": "https://www.top5pct.com/vehicle-graphics" },
+        { "@type": "ListItem", "position": 3, "name": "Vehicle Magnets", "item": "https://www.top5pct.com/vehicle-graphics/vehicle-magnets" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Vehicle Magnets in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/vehicle-graphics/vehicle-magnets",
+    "description": "Custom vehicle magnets in Joliet, IL. Removable car and truck magnets for businesses and contractors. Full-color printing on heavy-duty magnetic material. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Vehicle Magnets Joliet IL | Car Door Magnets, Truck Magnetic Signs, Removable Business Magnets | Top 5 Percent"
     metaDescription="We print custom vehicle magnets and car door magnetic signs for businesses in Joliet, Shorewood, Crest Hill, and Will County. Full color, 30mil thick, weather resistant, removable. Veteran owned."
@@ -125,6 +158,18 @@
         heading="On When You Need It. Off When You Don't."
         label="Custom Vehicle Magnets"
         subheading="Vehicle magnets let you brand your personal vehicle during business hours and remove it after. Watch how Top 5 Percent produces durable, full-color vehicle magnets for businesses in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Vehicle Magnet FAQs"
+        label="Custom Vehicle Magnets in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are custom vehicle magnets?', 'a' => 'Vehicle magnets are flexible, removable magnetic signs that attach to the metal surface of your vehicle. They display your business name, logo, and contact information and can be removed whenever you choose, making them ideal for personal vehicles used for business.'],
+            ['q' => 'What size vehicle magnets do you produce?', 'a' => 'Common sizes include 12x18, 12x24, 18x24, and 24x24 inches. Custom sizes are available for larger doors, hoods, or tailgates.'],
+            ['q' => 'Are your vehicle magnets waterproof?', 'a' => 'Yes. We print on waterproof magnetic material with UV-resistant inks and laminate over the surface for durability through rain, car washes, and road exposure.'],
+            ['q' => 'Will vehicle magnets scratch my vehicle\'s paint?', 'a' => 'Magnets can trap dirt underneath if not removed and cleaned regularly. We recommend removing magnets weekly, cleaning both the magnet back and the vehicle surface, and reapplying. Proper care prevents surface damage.'],
+            ['q' => 'How long do custom vehicle magnets last?', 'a' => 'With regular care, quality vehicle magnets last two to four years. Storing magnets flat indoors when not in use extends their life significantly.'],
+            ['q' => 'Is there a minimum order for vehicle magnets?', 'a' => 'No. We have no minimum. Order a pair of door magnets or a full set for your entire fleet.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

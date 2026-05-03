@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Table Cloths in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed table cloths and table covers for events and trade shows in Joliet, IL. Full-color branded table cloths in fitted and throw styles. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Table Cloths", "item": "https://www.top5pct.com/signs/table-cloths" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Table Cloths in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/table-cloths",
+    "description": "Custom printed table cloths and table covers for events and trade shows in Joliet, IL. Full-color branded table cloths in fitted and throw styles. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Table Cloths Joliet IL | Branded Table Covers for Events | Top 5 Percent"
     metaDescription="We print custom table cloths and table covers for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded table covers for trade shows and events. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Your Brand at Every Table"
         label="Custom Table Covers"
         subheading="Custom table covers transform any display into a branded experience at trade shows, events, and storefronts. Watch how Top 5 Percent produces fitted and draped table covers in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Custom Table Cloth FAQs"
+        label="Custom Table Cloths in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are custom branded table cloths?', 'a' => 'Custom branded table cloths are full-color printed fabric covers for event tables. They display your logo, brand colors, and messaging on a professional surface at trade shows, expos, corporate events, and retail displays.'],
+            ['q' => 'What styles of table cloths do you print?', 'a' => 'We print fitted table cloths that wrap snugly around standard 6ft and 8ft tables, as well as throw-style cloths that drape over all four sides.'],
+            ['q' => 'What material are your custom table cloths made of?', 'a' => 'Our table cloths are printed using dye sublimation on wrinkle-resistant polyester fabric for a sharp, professional look that holds up through repeated use and washing.'],
+            ['q' => 'Are custom table cloths washable?', 'a' => 'Yes. Dye sublimation table cloths are machine washable on cold. The print will not fade or crack with regular laundering.'],
+            ['q' => 'How fast can I get a custom table cloth in Joliet?', 'a' => 'Most table cloth orders are completed within two to three business days. Call (815) 349-8600 to discuss rush options if needed.'],
+            ['q' => 'Is there a minimum order for custom table cloths?', 'a' => 'No. We have no minimum. One branded table cloth or a set for your full event team are both welcome.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

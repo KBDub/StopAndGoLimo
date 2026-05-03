@@ -1174,12 +1174,12 @@ the schema. To fix, add to the top of that component:
 | P1 | Add canonical tag to layout | All (70+) | Prevents duplication | Low |
 | P1 | Add robots meta to layout (with noindex override prop) | All (70+) | Protects cart/demo | Low |
 | ~~P2~~ | ~~Expand all 41 city pages from 3 to 6 FAQs in `CityContent.php` (add geo/zip/distance/use-case Qs)~~ | ~~41 pages~~ | ~~Voice search + local signal~~ | **DONE May 2026** |
-| P2 | Add `x-sections.faq` to home page | 1 page | +20 pts JSON-LD | Medium |
-| P2 | Add Service + BreadcrumbList + WebPage @push to all silo landing pages | ~6 pages | +25 pts JSON-LD | Medium |
-| P2 | Add `x-sections.faq` to all silo landing pages | ~6 pages | +20 pts JSON-LD | Medium |
-| P2 | Add FAQPage JSON-LD to `shirt-types-faq` component | 1 component (affects 1 page now) | +20 pts JSON-LD | Low |
-| P3 | Add Service + BreadcrumbList + WebPage @push to all sub-category pages | ~40 pages | +25 pts JSON-LD | High |
-| P3 | Add `x-sections.faq` to all sub-category pages with tailored questions | ~40 pages | +20 pts JSON-LD | High |
+| ~~P2~~ | ~~Add `x-sections.faq` to home page~~ | ~~1 page~~ | ~~+20 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P2~~ | ~~Add Service + BreadcrumbList + WebPage @push to all silo landing pages~~ | ~~7 pages~~ | ~~+25 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P2~~ | ~~Add `x-sections.faq` to all silo landing pages~~ | ~~7 pages~~ | ~~+20 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P2~~ | ~~Add FAQPage JSON-LD to `shirt-types-faq` component~~ | ~~1 component~~ | ~~+20 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P3~~ | ~~Add Service + BreadcrumbList + WebPage @push to all sub-category pages~~ | ~~53 pages~~ | ~~+25 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P3~~ | ~~Add `x-sections.faq` to all sub-category pages with tailored questions~~ | ~~53 pages~~ | ~~+20 pts JSON-LD~~ | **DONE May 2026** |
 | P3 | Add Person schema to About and Company pages | 2 pages | +5 pts JSON-LD | Low |
 | P3 | Add ImageObject schema to Portfolio page | 1 page | +5 pts JSON-LD | Low |
 | P4 | Add Product schema to Lunar product detail pages | Dynamic | E-comm SEO | High |
@@ -1225,21 +1225,21 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 - [x] Silo-specific OG images created for 6 pages: home, custom-apparel, signs, vehicle-graphics, stickers, design-services
 - [x] All 41 city pages expanded from 3 to 6 FAQs in `CityContent.php` (246 total — completed May 2026)
 
-#### REMAINING — P2 (next sprint)
+#### REMAINING — P2 (GTM/GA4 IDs only — schema/FAQ done)
 
 - [ ] **Replace placeholder GTM ID** — swap `GTM-TEMP0001` in `.env` with the real GTM container ID once the GTM account is created
 - [ ] **Replace placeholder GA4 ID** — swap `G-TEMP000001` in `.env` with the real GA4 Measurement ID and link it inside GTM
-- [ ] Add `x-sections.faq` with 6 tailored questions to home page (`pages/home.blade.php`)
-- [ ] Add `x-sections.faq` with 6 tailored questions to each of the 6 silo landing pages (custom-apparel, signs, vehicle-graphics, stickers, design-services, promotional-items)
-- [ ] Add Service + BreadcrumbList + WebPage `@push('structured-data')` to each of the 6 silo landing pages
-- [ ] Add FAQPage JSON-LD `@push` to `x-sections.shirt-types-faq` component (see section 9 for template)
+- [x] ~~Add `x-sections.faq` with 6 tailored questions to home page (`pages/home.blade.php`)~~ — **DONE May 2026**
+- [x] ~~Add `x-sections.faq` with 6 tailored questions to each silo landing page (home, custom-apparel, signs, vehicle-graphics, stickers, design-services, promotional-items)~~ — **DONE May 2026 — 7 pages**
+- [x] ~~Add Service + BreadcrumbList + WebPage `@push('structured-data')` to each silo landing page~~ — **DONE May 2026 — 7 pages**
+- [x] ~~Add FAQPage JSON-LD `@push` to `components/sections/shirt-types-faq.blade.php`~~ — **DONE May 2026**
 
-#### REMAINING — P3
+#### REMAINING — P3 (Person + ImageObject schema only)
 
-- [ ] Add Service + BreadcrumbList + WebPage `@push('structured-data')` to all ~40 sub-category pages
-- [ ] Add `x-sections.faq` with 6 tailored questions to all ~40 sub-category pages
-- [ ] Add Person schema to About and Company pages
-- [ ] Add ImageObject schema to Portfolio page
+- [x] ~~Add Service + BreadcrumbList + WebPage `@push('structured-data')` to all sub-category pages~~ — **DONE May 2026 — 53 pages across 6 silos + about/company/portfolio**
+- [x] ~~Add `x-sections.faq` with 6 tailored questions to all sub-category pages~~ — **DONE May 2026 — 53 pages, 318 unique FAQ entries**
+- [ ] Add Person schema to About and Company pages (`pages/about.blade.php`, `pages/company/index.blade.php`)
+- [ ] Add ImageObject schema to Portfolio page (`pages/portfolio.blade.php`)
 
 #### REMAINING — P4
 
@@ -1258,4 +1258,4 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 
 *Document maintained by: Top 5 Percent development team*
 *Source documents: `docs/DreamStudioSolutions.SEO.TagChecker.Scoring.pdf`, `docs/DeepSEOLocalizedContentForTop5Pct.pdf`, `docs/detailed.seo.md`*
-*Last updated: May 2026 — P1 layout buildout complete; P2 city FAQ expansion complete (246 FAQs across 41 cities); checklist audited and restructured*
+*Last updated: May 2026 — P1 complete; P2 complete (city FAQ expansion 246 FAQs, silo schema+FAQ across 7 pages, shirt-types-faq FAQPage push); P3 complete (Service+BreadcrumbList+WebPage schema + 6-question FAQ on 53 sub-category/about/company/portfolio pages — 318 unique FAQ entries total); remaining P3 items: Person schema (about/company), ImageObject (portfolio)*

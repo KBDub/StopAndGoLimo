@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "DTF Transfers in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom direct-to-film transfers printed in Joliet, IL. Vibrant full-color DTF prints on any fabric with no minimums and same day service available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "DTF Transfers", "item": "https://www.top5pct.com/custom-apparel/dtf-transfers" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "DTF Transfers in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/dtf-transfers",
+    "description": "Custom direct-to-film transfers printed in Joliet, IL. Vibrant full-color DTF prints on any fabric with no minimums and same day service available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom DTF Transfers Joliet IL | Direct-to-Film Shirt Transfers | Top 5 Percent"
     metaDescription="Direct-to-film transfers for vibrant and durable designs on any fabric. No minimums, same day available. Full color DTF prints in Joliet, Shorewood, and Will County. Veteran owned."
@@ -116,6 +149,18 @@
         heading="Full-Color Prints on Any Fabric"
         label="DTF Transfer Printing"
         subheading="Direct-to-film transfers deliver vibrant, durable prints on virtually any garment. See how Top 5 Percent uses DTF technology to produce detailed, full-color custom transfers in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="DTF Transfer FAQs"
+        label="DTF Transfers in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is DTF (direct-to-film) printing?', 'a' => 'DTF printing produces a full-color film transfer that is heat-pressed onto fabric. It works on virtually any material including cotton, polyester, blends, and nylon, and produces vibrant, flexible prints with excellent durability.'],
+            ['q' => 'Is there a minimum order for DTF transfers?', 'a' => 'No. We have no minimum order for DTF transfers. You can order a single transfer or hundreds at any quantity that fits your project.'],
+            ['q' => 'How long do DTF prints last on shirts?', 'a' => 'With proper care, DTF prints last as long as the garment. Wash inside out on cold and tumble dry on low to maximize print life.'],
+            ['q' => 'What garments can you apply DTF transfers to?', 'a' => 'DTF transfers work on cotton, polyester, poly-cotton blends, nylon, and most other fabrics. They also work on hats, bags, and other textile accessories.'],
+            ['q' => 'How is DTF different from screen printing?', 'a' => 'DTF prints full-color photographic designs directly from a digital file with no screens, no setup fees, and no minimums. Screen printing uses stenciled layers of ink and is more cost-effective at high volumes for simpler designs.'],
+            ['q' => 'How fast can I get DTF transfers in Joliet?', 'a' => 'Many DTF transfer orders are ready same day. Call us at (815) 349-8600 to confirm turnaround for your specific order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

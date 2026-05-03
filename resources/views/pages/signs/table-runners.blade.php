@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Table Runners in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed table runners for events and trade shows in Joliet, IL. Branded dye sublimation table runners for businesses and organizations. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Table Runners", "item": "https://www.top5pct.com/signs/table-runners" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Table Runners in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/table-runners",
+    "description": "Custom printed table runners for events and trade shows in Joliet, IL. Branded dye sublimation table runners for businesses and organizations. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Table Runners Joliet IL | Custom Table Cloths, Table Skirts | Top 5 Percent"
     metaDescription="We print custom table runners, table cloths, and table skirts for trade shows, events, and brand promotions in Joliet, Shorewood, Plainfield, and Will County. Full color polyester fabric. Veteran owned."
@@ -132,6 +165,18 @@
         heading="Branded Details That Elevate Your Event"
         label="Custom Table Runners"
         subheading="Custom table runners add a polished, professional finish to any event display or hospitality setup. See how Top 5 Percent produces full-color, branded table runners for businesses in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Custom Table Runner FAQs"
+        label="Custom Table Runners in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is a custom branded table runner?', 'a' => 'A custom table runner is a printed fabric strip that runs down the center of an event table displaying your logo or brand design. It is a popular display accessory for trade shows, banquets, and retail events.'],
+            ['q' => 'How are your table runners printed?', 'a' => 'We use dye sublimation printing on polyester fabric for vibrant, full-color prints that resist fading and hold up through repeated use and washing.'],
+            ['q' => 'What size table runners do you make?', 'a' => 'We produce table runners in standard lengths to fit 6ft and 8ft tables, and custom sizes are available for non-standard table dimensions.'],
+            ['q' => 'Are table runners machine washable?', 'a' => 'Yes. Dye sublimation table runners are machine washable on cold. Colors stay vivid and the print will not crack or peel.'],
+            ['q' => 'Is there a minimum order for table runners?', 'a' => 'No. We have no minimum. One table runner or a set for your entire trade show team are both welcome.'],
+            ['q' => 'How fast can I get a custom table runner in Joliet?', 'a' => 'Most table runner orders are completed within two to three business days. Call (815) 349-8600 to discuss rush options if needed.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

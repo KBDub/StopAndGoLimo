@@ -1,3 +1,35 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Signs & Banners in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Veteran-owned sign shop in Joliet, IL printing yard signs, vinyl banners, posters, sidewalk signs, business signs, window graphics, wall signs, floor signs, door signs, and table runners with same day service."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Signs & Banners in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs",
+    "description": "Veteran-owned sign shop in Joliet, IL printing yard signs, vinyl banners, posters, sidewalk signs, business signs, window graphics, wall signs, floor signs, door signs, and table runners with same day service."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Signs & Banners Joliet IL | Yard Signs, Posters, Business Signs, Window Signs | Top 5 Percent"
     metaDescription="We print custom signs, banners, posters, yard signs, sidewalk signs, business signs, window signs, wall signs, door signs, and floor signs in Joliet, Shorewood, Plainfield, and Will County. Veteran owned sign shop with same day service."
@@ -164,6 +196,18 @@
         heading="Signs That Work as Hard as You Do"
         label="Custom Signs in Joliet, IL"
         subheading="From banners and yard signs to wall graphics and window displays — see how Top 5 Percent produces professional, custom signage for businesses and events in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Custom Signs FAQs"
+        label="Custom Signs & Banners in Joliet, IL"
+        :faqs="[
+            ['q' => 'Do you offer same-day banner printing in Joliet?', 'a' => 'Yes. Same-day vinyl banner printing is available for many sizes. Call us at (815) 349-8600 with your dimensions and design details so we can confirm turnaround before you come in.'],
+            ['q' => 'What materials do you use for outdoor signs and banners?', 'a' => 'We use 13oz scrim vinyl for outdoor banners, UV-laminated corrugated plastic for yard signs, and weather-resistant substrates for business signs. All outdoor products are finished to handle Illinois heat, cold, and humidity.'],
+            ['q' => 'How long do your outdoor vinyl banners last?', 'a' => 'Our outdoor banners are printed with UV-resistant inks on hemmed and grommeted 13oz vinyl and typically last two or more years in outdoor conditions with normal care.'],
+            ['q' => 'Do you offer design help for signs and banners?', 'a' => 'Yes. Free design assistance is included with every sign order. You can describe what you want, share a logo or reference image, and our team will build the layout for you at no extra charge.'],
+            ['q' => 'What is the smallest custom yard sign you print?', 'a' => 'We print yard signs starting at 18"x24", the standard single-stake size used for real estate, political campaigns, and business promotions. Custom sizes are also available.'],
+            ['q' => 'Do you install window decals and graphics for businesses?', 'a' => 'Yes. We print and can install professional window decals, perforated window films, and full window graphics for storefronts throughout Joliet and Will County.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

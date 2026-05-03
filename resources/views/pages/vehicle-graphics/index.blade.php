@@ -1,3 +1,35 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Vehicle Graphics & Wraps in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will County."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Vehicle Graphics", "item": "https://www.top5pct.com/vehicle-graphics" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Vehicle Graphics & Wraps in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/vehicle-graphics",
+    "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will County."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Vehicle Graphics & Wraps Joliet IL | Car Wraps, Truck Lettering, Vehicle Magnets, DOT Decals | Top 5 Percent"
     metaDescription="We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals in Joliet, Shorewood, Channahon, and all of Will County. Veteran owned."
@@ -109,6 +141,18 @@
         heading="Turn Every Drive Into Advertising"
         label="Vehicle Graphics in Joliet, IL"
         subheading="Custom vehicle graphics and wraps put your brand in front of thousands of people every day. Watch how Top 5 Percent designs and applies professional vehicle graphics for businesses in the Joliet area."
+    />
+    <x-sections.faq
+        heading="Vehicle Graphics FAQs"
+        label="Vehicle Graphics & Wraps in Joliet, IL"
+        :faqs="[
+            ['q' => 'How long does cast vinyl vehicle wrap last?', 'a' => 'Premium cast vinyl used for vehicle graphics typically lasts five or more years with normal care. Avoid high-pressure car washes and wax periodically to extend the life of your graphics.'],
+            ['q' => 'Do you print and install DOT compliance decals for commercial trucks?', 'a' => 'Yes. We specialize in USDOT number stickers, MC numbers, GVWR markings, and full DOT compliance packages for commercial carriers operating in Illinois and interstate commerce.'],
+            ['q' => 'What is the difference between a full wrap and a partial wrap?', 'a' => 'A full wrap covers the entire vehicle surface with custom printed vinyl. A partial wrap covers a portion of the vehicle, often combined with vinyl lettering, and is more budget-friendly while still delivering high visibility.'],
+            ['q' => 'Can I get removable vehicle magnets instead of permanent vinyl graphics?', 'a' => 'Yes. We print custom vehicle magnets that attach and remove easily, making them ideal for business owners who use their personal vehicle for work and want to maintain a professional appearance without permanent installation.'],
+            ['q' => 'How long does vehicle graphic installation take?', 'a' => 'Most vehicle magnet and decal orders are completed same day or within 24 hours. Full wraps and complex installs typically take one to three days depending on scope.'],
+            ['q' => 'Do you design and install boat and watercraft graphics?', 'a' => 'Yes. We produce custom boat decals, registration numbers, and marine graphics on materials rated for prolonged water and UV exposure. Stop by our Joliet shop to discuss your watercraft project.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Vinyl Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom heat-transfer vinyl shirts in Joliet, IL. Single and multi-color vinyl lettering and designs on t-shirts, hoodies, and apparel. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Vinyl Shirts", "item": "https://www.top5pct.com/custom-apparel/vinyl-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Vinyl Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/vinyl-shirts",
+    "description": "Custom heat-transfer vinyl shirts in Joliet, IL. Single and multi-color vinyl lettering and designs on t-shirts, hoodies, and apparel. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Vinyl Shirts Joliet IL | Heat Press Vinyl T-Shirts | Top 5 Percent"
     metaDescription="Custom vinyl heat-press shirts in Joliet, IL. Bold, durable designs in any color. No minimums, same-day available. Veteran-owned. Call (815) 349-8600."
@@ -110,6 +143,18 @@
         heading="Sharp Cuts. Lasting Color."
         label="Vinyl Heat Transfer Shirts"
         subheading="Vinyl heat transfers deliver clean edges and rich, solid colors on custom shirts and jackets. See how Top 5 Percent cuts and presses custom vinyl designs on apparel in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Vinyl Shirt FAQs"
+        label="Custom Vinyl Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is heat-transfer vinyl printing on shirts?', 'a' => 'Heat-transfer vinyl (HTV) is a colored film cut into your design and pressed onto fabric with heat. It produces clean, crisp designs with a smooth finish and is excellent for text-based and single-color designs.'],
+            ['q' => 'Is there a minimum order for vinyl shirts?', 'a' => 'No. We have no minimum on vinyl shirt orders. You can order one shirt or a full batch for your team or event.'],
+            ['q' => 'How durable is vinyl on shirts?', 'a' => 'Heat-transfer vinyl is very durable when cared for properly. Wash inside out on cold and avoid high heat in the dryer to extend the life of your design.'],
+            ['q' => 'What colors of vinyl do you carry?', 'a' => 'We stock a wide range of vinyl colors including standard colors, neon, metallic, glitter, holographic, and specialty finishes. Ask us about available colors when you place your order.'],
+            ['q' => 'Can you do multi-color vinyl designs?', 'a' => 'Yes. We layer multiple vinyl colors to produce multi-color designs. Each color is cut, weeded, and pressed individually.'],
+            ['q' => 'How fast can I get vinyl shirts in Joliet?', 'a' => 'Vinyl shirt orders are among our fastest. Many can be completed same day. Call (815) 349-8600 to confirm availability.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

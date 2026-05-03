@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Safety Signs in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom safety signs, social distancing signs, and coronavirus decals in Joliet, IL. Floor decals, window signs, and safety protocol signage for businesses. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Safety Signs", "item": "https://www.top5pct.com/signs/coronavirus-signs" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Safety Signs in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/coronavirus-signs",
+    "description": "Custom safety signs, social distancing signs, and coronavirus decals in Joliet, IL. Floor decals, window signs, and safety protocol signage for businesses. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Safety Signs Joliet IL | Social Distancing Signs, Coronavirus Decals | Top 5 Percent"
     metaDescription="We print social distancing signs, coronavirus safety signs, floor decals, and open for business signs in Joliet, Shorewood, Plainfield, and Will County. Veteran owned sign shop with fast turnaround."
@@ -83,6 +116,18 @@
         heading="Clear Signage Keeps People Safe"
         label="Safety & Health Signage"
         subheading="Custom safety signage communicates important information quickly and clearly. See how Top 5 Percent produces professional health and safety signs for businesses in Joliet and the surrounding area."
+    />
+    <x-sections.faq
+        heading="Safety Sign FAQs"
+        label="Safety & Social Distancing Signs in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of safety signs do you print?', 'a' => 'We print social distancing floor decals, directional arrows, occupancy limit signs, handwashing reminder signs, mask required signs, and other safety protocol signage for businesses and public spaces.'],
+            ['q' => 'What materials are used for floor safety decals?', 'a' => 'Our floor decals are printed on anti-slip laminated vinyl rated for foot traffic on hard floors. They adhere firmly and are repositionable without leaving residue.'],
+            ['q' => 'Can you print custom safety messaging for my business?', 'a' => 'Yes. We can print any custom safety or operational message on signs, decals, banners, or posters. Bring your message or policy and we will lay it out professionally.'],
+            ['q' => 'Are your safety signs ADA compliant?', 'a' => 'We can produce ADA-compliant signage with tactile text and Braille upon request. Ask us about ADA sign requirements when you place your order.'],
+            ['q' => 'Is there a minimum order for safety signs?', 'a' => 'No. We have no minimum. One sign or a package of signage for your entire facility — both are welcome.'],
+            ['q' => 'How fast can I get safety signs in Joliet?', 'a' => 'Many safety sign orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your specific order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

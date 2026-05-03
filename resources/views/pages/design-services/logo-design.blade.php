@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Logo Design in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Professional logo design services in Joliet, IL. Custom logo creation for businesses and organizations in Will County. Print-ready vector files delivered. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Design Services", "item": "https://www.top5pct.com/design-services" },
+        { "@type": "ListItem", "position": 3, "name": "Logo Design", "item": "https://www.top5pct.com/design-services/logo-design" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Logo Design in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/design-services/logo-design",
+    "description": "Professional logo design services in Joliet, IL. Custom logo creation for businesses and organizations in Will County. Print-ready vector files delivered. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Logo Design Joliet IL | Professional Logo Design Services | Top 5 Percent"
     metaDescription="Professional logo design services in Joliet, Shorewood, Plainfield, and Will County. Custom logo creation for businesses, organizations, and events. Veteran owned."
@@ -107,6 +140,18 @@
         heading="Your Brand Starts With Your Logo"
         label="Custom Logo Design"
         subheading="A strong logo is the foundation of every brand. See how Top 5 Percent works with businesses in Joliet, IL to create custom logos that are distinctive, versatile, and built to last."
+    />
+    <x-sections.faq
+        heading="Logo Design FAQs"
+        label="Logo Design in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is included in your logo design service?', 'a' => 'Our logo design service includes an initial consultation, concept development, revision rounds, and delivery of final print-ready vector files (AI, EPS, PDF) plus PNG and JPG formats for digital use.'],
+            ['q' => 'How much does logo design cost in Joliet?', 'a' => 'Logo design pricing depends on complexity and the number of concepts requested. Contact us for a custom quote. Free logo adjustments are included with any print order.'],
+            ['q' => 'How long does logo design take?', 'a' => 'Most logo projects are completed within two to five business days after an initial consultation. Rush delivery is available for time-sensitive needs.'],
+            ['q' => 'Do I own the logo after it is designed?', 'a' => 'Yes. Once payment is complete, you own full rights to the logo artwork. We will deliver the original vector files for your use across all media.'],
+            ['q' => 'Can you redesign or update my existing logo?', 'a' => 'Yes. We can modernize, clean up, or reconstruct an existing logo. Bring in your current logo file or printed sample and we will discuss the best approach.'],
+            ['q' => 'What file formats will I receive?', 'a' => 'We deliver your final logo in AI or EPS (vector), PDF, PNG with transparent background, and JPG — all the formats needed for print and digital applications.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

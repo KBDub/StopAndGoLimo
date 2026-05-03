@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Glitter Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom glitter heat-transfer shirts in Joliet, IL. Sparkling glitter designs for events, teams, and celebrations. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Glitter Shirts", "item": "https://www.top5pct.com/custom-apparel/glitter-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Glitter Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/glitter-shirts",
+    "description": "Custom glitter heat-transfer shirts in Joliet, IL. Sparkling glitter designs for events, teams, and celebrations. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Glitter Shirts Joliet IL | Glitter Heat Transfer T-Shirts | Top 5 Percent"
     metaDescription="Custom glitter shirts in Joliet, IL. Eye-catching glitter heat-transfer prints that shine in any light. Perfect for birthdays and celebrations. Veteran-owned."
@@ -110,6 +143,18 @@
         heading="Sparkle That Lasts"
         label="Glitter Print Custom Apparel"
         subheading="Custom glitter shirts bring eye-catching sparkle to any event, team, or brand. See how Top 5 Percent applies durable glitter graphics to apparel right here in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Glitter Shirt FAQs"
+        label="Custom Glitter Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'What are glitter shirts?', 'a' => 'Glitter shirts use a glitter-finish heat-transfer vinyl that creates a sparkling, eye-catching design. They are popular for birthday parties, dance teams, bachelorette events, and promotional apparel.'],
+            ['q' => 'Is there a minimum order for glitter shirts?', 'a' => 'No. We have no minimum. Order one shirt for a special occasion or an entire team set.'],
+            ['q' => 'How do I wash glitter shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the glitter finish over time.'],
+            ['q' => 'What glitter colors are available?', 'a' => 'We carry gold, silver, rose gold, black, red, blue, green, and many other glitter vinyl colors. Ask about current stock when you place your order.'],
+            ['q' => 'Can glitter be combined with other print techniques?', 'a' => 'Yes. Glitter vinyl can be layered with standard vinyl, rhinestones, or flock for a multi-texture custom design.'],
+            ['q' => 'How fast can I get glitter shirts in Joliet?', 'a' => 'Most glitter shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Flock Shirts in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom flock velvet shirts in Joliet, IL. Soft velvet-textured flock designs on t-shirts and apparel for teams, events, and businesses. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Flock Shirts", "item": "https://www.top5pct.com/custom-apparel/flock-shirts" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Flock Shirts in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/flock-shirts",
+    "description": "Custom flock velvet shirts in Joliet, IL. Soft velvet-textured flock designs on t-shirts and apparel for teams, events, and businesses. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Flock Shirts Joliet IL | Velvet Flock T-Shirts | Top 5 Percent"
     metaDescription="Custom flock velvet shirts in Joliet, IL. Soft, raised flock printing with a premium tactile feel. Bold and distinctive. No minimums. Veteran-owned."
@@ -110,6 +143,18 @@
         heading="Soft, Velvety Custom Flock Shirts"
         label="Flock Print Apparel"
         subheading="Flock printing adds a raised, velvet-like texture to custom apparel that's unmistakable to the touch. See how Top 5 Percent applies flock designs to shirts, hoodies, and caps in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Flock Shirt FAQs"
+        label="Custom Flock Shirts in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is flock printing on shirts?', 'a' => 'Flock printing applies tiny textile fibers to an adhesive design, creating a soft, velvet-like texture on your shirt. It gives a premium, raised tactile finish that stands out visually and to the touch.'],
+            ['q' => 'Is there a minimum order for flock shirts?', 'a' => 'No. We have no minimum. You can order one flock shirt or a full set for your team or organization.'],
+            ['q' => 'How do I wash flock-printed shirts?', 'a' => 'Wash flock shirts inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the velvet texture.'],
+            ['q' => 'What colors of flock are available?', 'a' => 'We carry a range of flock colors. Ask us about current inventory when you place your order and we will show you available swatches.'],
+            ['q' => 'Can flock be combined with other print techniques on the same shirt?', 'a' => 'Yes. Flock works well layered with rhinestones, glitter vinyl, or standard vinyl lettering for a multi-texture custom design.'],
+            ['q' => 'How fast can I get flock shirts in Joliet?', 'a' => 'Most flock shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your design.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

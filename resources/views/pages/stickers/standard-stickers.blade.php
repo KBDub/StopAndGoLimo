@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Standard Custom Stickers in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom standard stickers in Joliet, IL. Rectangle, square, circle, and oval stickers for businesses, events, and promotions. No minimums, same day available. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Stickers", "item": "https://www.top5pct.com/stickers" },
+        { "@type": "ListItem", "position": 3, "name": "Standard Stickers", "item": "https://www.top5pct.com/stickers/standard-stickers" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Standard Custom Stickers in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/stickers/standard-stickers",
+    "description": "Custom standard stickers in Joliet, IL. Rectangle, square, circle, and oval stickers for businesses, events, and promotions. No minimums, same day available. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Stickers & Decals Joliet IL | Die Cut Stickers, Labels, Business Decals | Top 5 Percent"
     metaDescription="We print custom stickers, die cut decals, product labels, and business stickers in Joliet, Shorewood, Plainfield, and Will County. No minimums, full color, weatherproof vinyl. Veteran owned."
@@ -137,6 +170,18 @@
         heading="Simple. Sharp. Affordable."
         label="Standard Custom Stickers"
         subheading="Standard rectangle and square stickers deliver maximum branding at a budget-friendly price. See how Top 5 Percent produces crisp, full-color custom stickers for businesses in Joliet, Illinois."
+    />
+    <x-sections.faq
+        heading="Standard Sticker FAQs"
+        label="Custom Standard Stickers in Joliet, IL"
+        :faqs="[
+            ['q' => 'What shapes are available for standard stickers?', 'a' => 'Standard stickers are available in rectangle, square, circle, and oval shapes — the most common options for business labels, promotional stickers, and event giveaways.'],
+            ['q' => 'Are your standard stickers weatherproof?', 'a' => 'Yes. We print on premium adhesive vinyl with UV-resistant, waterproof inks. Our stickers hold up outdoors, on vehicles, and on water bottles.'],
+            ['q' => 'What is the minimum order for standard stickers?', 'a' => 'There is no minimum order. You can order as few as one sticker or as many as several thousand for a product launch or marketing campaign.'],
+            ['q' => 'What sizes do standard stickers come in?', 'a' => 'We print standard stickers in any size from 1x1 inches up to large-format decal sizes. Tell us your target size and we will confirm production feasibility.'],
+            ['q' => 'How fast can I get standard stickers in Joliet?', 'a' => 'Most standard sticker orders are completed same day. Call (815) 349-8600 to confirm turnaround for your quantity and design.'],
+            ['q' => 'Can you print stickers from my logo file?', 'a' => 'Yes. Provide your logo in a high-resolution format (AI, EPS, PDF, or 300 DPI PNG/JPG) and we will set it up for sticker production. We can also recreate or clean up artwork if needed.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

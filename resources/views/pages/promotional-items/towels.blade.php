@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Towels in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom printed towels in Joliet, IL. Full-color sublimated towels for sports teams, gyms, events, and corporate promotions. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Promotional Items", "item": "https://www.top5pct.com/promotional-items" },
+        { "@type": "ListItem", "position": 3, "name": "Custom Towels", "item": "https://www.top5pct.com/promotional-items/towels" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Towels in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/promotional-items/towels",
+    "description": "Custom printed towels in Joliet, IL. Full-color sublimated towels for sports teams, gyms, events, and corporate promotions. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Towels Joliet IL | Branded Beach & Sport Towels | Top 5 Percent"
     metaDescription="We print custom towels for businesses, sports teams, and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation beach towels and sport towels. Veteran owned."
@@ -109,6 +142,18 @@
         heading="Quality Towels, Lasting Impressions"
         label="Custom Branded Towels"
         subheading="Custom towels are perfect for gyms, spas, sports teams, and corporate gifts. Watch how Top 5 Percent produces high-quality branded towels for businesses and events in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Custom Towel FAQs"
+        label="Custom Towels in Joliet, IL"
+        :faqs="[
+            ['q' => 'What custom towels do you print?', 'a' => 'We print full-color sublimated sports towels, rally towels, gym towels, and custom branded towels for teams, businesses, events, and promotional use.'],
+            ['q' => 'How are custom towels printed?', 'a' => 'We use dye sublimation, which produces a full-color, all-over print by bonding ink into the fabric fibers. The result is a vibrant, permanent design that will not crack or fade.'],
+            ['q' => 'Are sublimated towels washable?', 'a' => 'Yes. Dye sublimation towels are machine washable. Colors stay vivid and the print remains intact through regular laundering.'],
+            ['q' => 'Is there a minimum order for custom towels?', 'a' => 'No. We have no minimum. One custom towel or a set for an entire sports team are both welcome.'],
+            ['q' => 'What size towels do you print?', 'a' => 'We print on standard rally towel sizes and larger sport and gym towels. Contact us for available sizes and dimensions.'],
+            ['q' => 'How fast can I get custom towels in Joliet?', 'a' => 'Most towel orders are completed within one to three business days. Call (815) 349-8600 to confirm turnaround for your order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

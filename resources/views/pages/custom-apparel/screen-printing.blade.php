@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Screen Printing in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Professional screen printing on t-shirts and apparel in Joliet, IL. Ideal for high-volume single-color and multi-color designs. No minimums. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
+        { "@type": "ListItem", "position": 3, "name": "Screen Printing", "item": "https://www.top5pct.com/custom-apparel/screen-printing" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Screen Printing in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/custom-apparel/screen-printing",
+    "description": "Professional screen printing on t-shirts and apparel in Joliet, IL. Ideal for high-volume single-color and multi-color designs. No minimums. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Screen Printing Joliet IL | Custom Screen Printed Shirts & Apparel | Top 5 Percent"
     metaDescription="Custom screen printed shirts and apparel in Joliet IL. Bold, long-lasting prints ideal for bulk orders, uniforms, and events. No minimums. Veteran owned."
@@ -110,6 +143,18 @@
         heading="Bold Prints. Built to Last."
         label="Custom Screen Printing"
         subheading="Screen printing delivers sharp, vibrant colors on bulk orders at a price that makes sense. See how Top 5 Percent produces professional screen-printed apparel for businesses, teams, and events in Joliet, IL."
+    />
+    <x-sections.faq
+        heading="Screen Printing FAQs"
+        label="Screen Printing in Joliet, IL"
+        :faqs="[
+            ['q' => 'What is screen printing?', 'a' => 'Screen printing pushes ink through a mesh stencil screen directly onto fabric. Each color in the design requires a separate screen. It produces vibrant, long-lasting prints and is the most cost-effective method for high-volume orders.'],
+            ['q' => 'Is there a minimum order for screen printed shirts?', 'a' => 'No. We have no minimum order. We print single shirts and small runs as readily as large bulk orders.'],
+            ['q' => 'How many colors can be screen printed on one shirt?', 'a' => 'We can print multiple colors in a single design. Each additional color adds a screen and setup step. For full-color photographic designs, DTF transfers may be a better option with no screen setup.'],
+            ['q' => 'How durable are screen-printed shirts?', 'a' => 'Screen printing produces thick, durable ink layers that hold up well through years of regular washing when cared for properly. Wash inside out on cold to extend print life.'],
+            ['q' => 'What is the best use case for screen printing?', 'a' => 'Screen printing is most cost-effective for high-volume orders with simple designs and limited colors. For small runs or full-color images, we recommend DTF or dye sublimation.'],
+            ['q' => 'How long does a screen printing order take in Joliet?', 'a' => 'Most screen printing orders are completed within one to three business days. Rush turnaround may be available — call (815) 349-8600 to confirm.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

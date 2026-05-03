@@ -1,3 +1,36 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Custom Banners in Joliet, IL",
+    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
+    "description": "Custom vinyl banners, birthday banners, business banners, and event banners in Joliet, IL. Full color, any size, same day service. Veteran owned."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
+        { "@type": "ListItem", "position": 3, "name": "Banners", "item": "https://www.top5pct.com/signs/banners" }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Custom Banners in Joliet, IL | Top 5 Percent",
+    "url": "https://www.top5pct.com/signs/banners",
+    "description": "Custom vinyl banners, birthday banners, business banners, and event banners in Joliet, IL. Full color, any size, same day service. Veteran owned."
+}
+</script>
+@endpush
+
 <x-layouts.page
     title="Custom Banners Joliet IL | Vinyl Banners, Birthday Banners, Team Banners | Top 5 Percent"
     metaDescription="We print custom vinyl banners, birthday banners, reunion banners, and team banners in Joliet, Shorewood, Plainfield, and Will County. Full color, any size, same day service available. Veteran owned."
@@ -134,6 +167,18 @@
         heading="Banners Built for Impact"
         label="Custom Banners"
         subheading="Custom banners grab attention at events, storefronts, and trade shows. Watch how Top 5 Percent designs and produces durable vinyl and fabric banners for businesses in the Joliet area."
+    />
+    <x-sections.faq
+        heading="Custom Banner FAQs"
+        label="Custom Banners in Joliet, IL"
+        :faqs="[
+            ['q' => 'What types of custom banners do you print in Joliet?', 'a' => 'We print vinyl banners, fabric banners, birthday banners, business grand opening banners, team banners, family reunion banners, and event banners in any size. Full-color printing with grommets and hemmed edges standard.'],
+            ['q' => 'What size vinyl banners can you print?', 'a' => 'We print banners in any size from small table banners to large building-scale spans. Common sizes include 2x4, 3x6, 3x8, 4x8, and 4x12. Custom widths and lengths are available.'],
+            ['q' => 'How long do vinyl banners last outdoors?', 'a' => 'Our outdoor vinyl banners use UV-resistant inks on 13oz scrim vinyl and are finished with hemmed edges and grommets. With normal outdoor exposure, they last two or more years.'],
+            ['q' => 'Do you offer same-day banner printing in Joliet?', 'a' => 'Yes. Same-day vinyl banner printing is available for most standard sizes. Call (815) 349-8600 before coming in to confirm availability for your dimensions and design.'],
+            ['q' => 'Can you help me design my banner?', 'a' => 'Yes. Free design help is included with every banner order. Share your text, logo, colors, and any reference images and we will build the layout for you.'],
+            ['q' => 'How do I hang a vinyl banner?', 'a' => 'Our banners come with grommets along the edges so you can hang them with zip ties, bungee cords, or rope. We can also advise on hardware and installation options when you pick up your order.'],
+        ]"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

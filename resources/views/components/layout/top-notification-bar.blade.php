@@ -1,7 +1,7 @@
 <div
     x-data="{ scrolled: false }"
     x-on:scroll.window="if (!scrolled && window.scrollY > 50) scrolled = true; else if (scrolled && window.scrollY < 10) scrolled = false"
-    class="bg-sunburst text-charcoal font-semibold sticky-header-part transition-all duration-300"
+    class="bg-sunburst text-charcoal font-semibold sticky-header-part transition-all duration-300 py-1 text-sm"
     x-bind:class="scrolled ? 'py-0.5 text-xs' : 'py-1 text-sm'"
 >
     <div class="max-w-7xl mx-auto px-4 flex items-center gap-4">

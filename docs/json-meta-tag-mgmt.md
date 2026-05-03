@@ -1180,11 +1180,11 @@ the schema. To fix, add to the top of that component:
 | ~~P2~~ | ~~Add FAQPage JSON-LD to `shirt-types-faq` component~~ | ~~1 component~~ | ~~+20 pts JSON-LD~~ | **DONE May 2026** |
 | ~~P3~~ | ~~Add Service + BreadcrumbList + WebPage @push to all sub-category pages~~ | ~~53 pages~~ | ~~+25 pts JSON-LD~~ | **DONE May 2026** |
 | ~~P3~~ | ~~Add `x-sections.faq` to all sub-category pages with tailored questions~~ | ~~53 pages~~ | ~~+20 pts JSON-LD~~ | **DONE May 2026** |
-| P3 | Add Person schema to About and Company pages | 2 pages | +5 pts JSON-LD | Low |
-| P3 | Add ImageObject schema to Portfolio page | 1 page | +5 pts JSON-LD | Low |
-| P4 | Add Product schema to Lunar product detail pages | Dynamic | E-comm SEO | High |
-| P4 | Add WebSite.potentialAction (SearchAction) to WebSite schema | All (via layout) | Sitelinks search box | Low |
-| P4 | Enrich LocalBusiness schema with sameAs, priceRange, founder | All (via layout) | Trust signals | Low |
+| ~~P3~~ | ~~Add Person schema to About and Company pages~~ | ~~2 pages~~ | ~~+5 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P3~~ | ~~Add ImageObject schema to Portfolio page~~ | ~~1 page~~ | ~~+5 pts JSON-LD~~ | **DONE May 2026** |
+| ~~P4~~ | ~~Add Product schema to Lunar product detail pages~~ | ~~Dynamic~~ | ~~E-comm SEO~~ | **DONE May 2026** |
+| ~~P4~~ | ~~Add WebSite.potentialAction (SearchAction) to WebSite schema~~ | ~~All (via layout)~~ | ~~Sitelinks search box~~ | **DONE May 2026** |
+| ~~P4~~ | ~~Enrich LocalBusiness schema with sameAs, priceRange, founder~~ | ~~All (via layout)~~ | ~~Trust signals~~ | **DONE May 2026** |
 | ~~P4~~ | ~~Add geo meta tags (geo.region, geo.placename, geo.position)~~ | ~~All (via layout)~~ | ~~Local SEO~~ | **DONE — completed early with P1 layout buildout** |
 | P4 | Add Article schema to resources/blog pages | Future pages | +10 pts JSON-LD | N/A now |
 
@@ -1238,15 +1238,15 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 
 - [x] ~~Add Service + BreadcrumbList + WebPage `@push('structured-data')` to all sub-category pages~~ — **DONE May 2026 — 53 pages across 6 silos + about/company/portfolio**
 - [x] ~~Add `x-sections.faq` with 6 tailored questions to all sub-category pages~~ — **DONE May 2026 — 53 pages, 318 unique FAQ entries**
-- [ ] Add Person schema to About and Company pages (`pages/about.blade.php`, `pages/company/index.blade.php`)
-- [ ] Add ImageObject schema to Portfolio page (`pages/portfolio.blade.php`)
+- [x] ~~Add Person schema to About and Company pages (`pages/about.blade.php`, `pages/company/index.blade.php`)~~ — **DONE May 2026**
+- [x] ~~Add ImageObject schema to Portfolio page (`pages/portfolio.blade.php`)~~ — **DONE May 2026 — 4 ImageObject blocks (shirts, signs, vehicle, stickers)**
 
-#### REMAINING — P4
+#### REMAINING — P4 (GTM/GA4 IDs only — all schema done)
 
-- [ ] Add Product schema to Lunar product detail pages
-- [ ] Add `WebSite.potentialAction` (SearchAction) to the WebSite schema in the layout
-- [ ] Enrich LocalBusiness schema with `sameAs`, `priceRange`, and `founder` fields
-- [ ] Add Article schema to resources/blog pages (future — no pages exist yet)
+- [x] ~~Add Product schema to Lunar product detail pages~~ — **DONE May 2026 — dynamic Product + BreadcrumbList on `pages/product.blade.php` using `$productName`, `$productDescription`, `$slug`**
+- [x] ~~Add `WebSite.potentialAction` (SearchAction) to the WebSite schema in the layout~~ — **DONE May 2026 — targets `/collections?q={search_term_string}`**
+- [x] ~~Enrich LocalBusiness schema with `sameAs`, `priceRange`, and `founder` fields~~ — **DONE May 2026 — 7 sameAs URLs (Facebook, Instagram, Twitter, YouTube, Pinterest, LinkedIn, Google Maps CID), priceRange "$", founder Ezra**
+- [ ] Add Article schema to resources/blog pages (future — no blog pages exist yet)
 
 #### VALIDATION (do after each sprint)
 
@@ -1258,4 +1258,4 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 
 *Document maintained by: Top 5 Percent development team*
 *Source documents: `docs/DreamStudioSolutions.SEO.TagChecker.Scoring.pdf`, `docs/DeepSEOLocalizedContentForTop5Pct.pdf`, `docs/detailed.seo.md`*
-*Last updated: May 2026 — P1 complete; P2 complete (city FAQ expansion 246 FAQs, silo schema+FAQ across 7 pages, shirt-types-faq FAQPage push); P3 complete (Service+BreadcrumbList+WebPage schema + 6-question FAQ on 53 sub-category/about/company/portfolio pages — 318 unique FAQ entries total); remaining P3 items: Person schema (about/company), ImageObject (portfolio)*
+*Last updated: May 2026 — P1 complete; P2 complete; P3 complete (Person schema on about+company, 4x ImageObject on portfolio); P4 complete (Product schema on product.blade.php, WebSite SearchAction, LocalBusiness sameAs+priceRange+founder enrichment); only remaining item is Article schema when blog pages are built*

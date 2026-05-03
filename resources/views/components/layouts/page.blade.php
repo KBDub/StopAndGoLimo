@@ -74,6 +74,7 @@
         "@id": "https://www.top5pct.com",
         "url": "https://www.top5pct.com",
         "telephone": "815-349-8600",
+        "priceRange": "$",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "121 Springfield Avenue, Suite 103",
@@ -87,6 +88,11 @@
             "latitude": 41.5250,
             "longitude": -88.0817
         },
+        "founder": {
+            "@type": "Person",
+            "name": "Ezra",
+            "jobTitle": "Owner & Founder"
+        },
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",
@@ -97,7 +103,16 @@
             "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
             "opens": "08:30",
             "closes": "18:00"
-        }
+        },
+        "sameAs": [
+            "https://www.facebook.com/top5percent/",
+            "https://www.instagram.com/top5percentllc/",
+            "https://www.twitter.com/top5percentllc/",
+            "https://www.youtube.com/channel/UCAhLYjgb9745wv_yfmxSe6w/",
+            "https://www.pinterest.com/top5percentllc/",
+            "https://www.linkedin.com/in/top5percent/",
+            "https://www.google.com/maps?cid=15797523837573086431"
+        ]
     }
     </script>
     <script type="application/ld+json">
@@ -105,7 +120,15 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Top 5 Percent",
-        "url": "https://www.top5pct.com"
+        "url": "https://www.top5pct.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.top5pct.com/collections?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
     }
     </script>
     @stack('structured-data')

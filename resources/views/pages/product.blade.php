@@ -1,3 +1,42 @@
+@push('structured-data')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ e($productName ?? 'Custom Product') }}",
+    "description": "{{ e($productDescription ?? 'Custom product by Top 5 Percent in Joliet, IL.') }}",
+    "url": "https://www.top5pct.com/products/{{ e($slug ?? '') }}",
+    "image": "https://www.top5pct.com/images/og-tags/top5pct-og-home.jpg",
+    "brand": {
+        "@type": "Brand",
+        "name": "Top 5 Percent, LLC"
+    },
+    "offers": {
+        "@type": "Offer",
+        "url": "https://www.top5pct.com/products/{{ e($slug ?? '') }}",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+            "@type": "Organization",
+            "name": "Top 5 Percent, LLC",
+            "url": "https://www.top5pct.com"
+        }
+    }
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
+        { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://www.top5pct.com/collections" },
+        { "@type": "ListItem", "position": 3, "name": "{{ e($productName ?? 'Product') }}", "item": "https://www.top5pct.com/products/{{ e($slug ?? '') }}" }
+    ]
+}
+</script>
+@endpush
 <x-layouts.page
     :title="$productName ?? 'Product Details'"
     :metaDescription="($productDescription ?? 'Custom product') . ' by Top 5 Percent in Joliet, IL. Veteran-owned custom signage and apparel.'"

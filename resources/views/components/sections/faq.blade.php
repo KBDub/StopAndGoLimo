@@ -17,10 +17,10 @@
         @foreach($faqs as $i => $faq)
         {
             "@type": "Question",
-            "name": {{ json_encode($faq['q']) }},
+            "name": {!! json_encode($faq['q']) !!},
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": {{ json_encode($faq['a']) }}
+                "text": {!! json_encode($faq['a']) !!}
             }
         }{{ !$loop->last ? ',' : '' }}
         @endforeach

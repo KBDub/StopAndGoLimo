@@ -74,7 +74,7 @@
         "@type": "Person",
         "name": "{{ $content['review']['author'] }}"
     },
-    "reviewBody": {{ json_encode($content['review']['body']) }}
+    "reviewBody": {!! json_encode($content['review']['body']) !!}
 }
 </script>
 @endif

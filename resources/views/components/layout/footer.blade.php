@@ -1,12 +1,12 @@
 <footer class="bg-linen text-charcoal py-12 border-t border-linen-dark">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
+            <div id="logo">
                 <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-12 mb-4">
                 <p class="text-sm text-charcoal-light">Premium Custom Signage & Apparel. Veteran-owned and proudly serving Joliet, IL.</p>
             </div>
             
-            <div>
+            <div id="quick-links">
                 <h4 class="font-semibold text-charcoal mb-4">Quick Links</h4>
                 <ul class="space-y-2 text-sm">
                     <li><a href="/" class="text-azure hover:text-azure-dark transition-colors">Home</a></li>
@@ -16,7 +16,7 @@
                 </ul>
             </div>
             
-            <div>
+            <div id="services">
                 <h4 class="font-semibold text-charcoal mb-4">Services</h4>
                 <ul class="space-y-2 text-sm">
                     <li><a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark transition-colors">Custom Apparel</a></li>
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             
-            <div>
+            <div id="contact">
                 <h4 class="font-semibold text-charcoal mb-4">Contact</h4>
                 <ul class="space-y-2 text-sm text-charcoal-light">
                     <li>Joliet, IL</li>
@@ -36,7 +36,7 @@
             </div>
         </div>
         
-        <div class="pt-8 border-t border-linen-dark text-center text-xs text-charcoal-light">
+        <div id="copywrite" class="pt-8 border-t border-linen-dark text-center text-xs text-charcoal-light">
             &copy; {{ date('Y') }} Top 5 Percent. All rights reserved. Veteran Owned. Joliet, IL.
         </div>
     </div>

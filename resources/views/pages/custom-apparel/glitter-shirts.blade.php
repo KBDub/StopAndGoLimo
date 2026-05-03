@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Glitter Shirts Joliet IL | Glitter Heat Transfer T-Shirts | Top 5 Percent"
+    title="Custom Glitter Shirts Joliet IL | Glitter Heat Transfer T-Shirts"
     metaDescription="Custom glitter shirts in Joliet, IL. Eye-catching glitter heat-transfer prints that shine in any light. Perfect for birthdays and celebrations. Veteran-owned."
     currentPage="custom-apparel">
 

@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Business Signs Joliet IL | Storefront Signs, Window Signs, Door Signs | Top 5 Percent"
-    metaDescription="We print and install custom business signs, storefront signs, window signs, door signs, and outdoor signs in Joliet, Shorewood, Plainfield, and Will County. Veteran owned sign shop."
+    title="Business Signs Joliet IL | Storefront Signs, Window Signs, Door Signs"
+    metaDescription="We print and install custom business signs, storefront signs, window signs, door signs, and outdoor signs in Joliet, Shorewood, Plainfield, and Will County."
     currentPage="signs">
 
     <x-sections.category-hero

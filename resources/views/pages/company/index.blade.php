@@ -53,8 +53,8 @@
 @endpush
 
 <x-layouts.page
-    title="About Top 5 Percent | Veteran Owned Signage & Apparel in Joliet IL"
-    metaDescription="Top 5 Percent is a veteran owned custom signage and apparel business in Joliet, IL. Serving Will County since 2017 with custom signs, shirts, stickers, and promotional products."
+    title="About Us | Veteran Owned Signage & Apparel in Joliet IL"
+    metaDescription="Top 5 Percent is a veteran owned custom signage and apparel business in Joliet, IL. Serving Will County since 2017 with custom signs, shirts, stickers, and"
     currentPage="about">
 
     <x-sections.category-hero

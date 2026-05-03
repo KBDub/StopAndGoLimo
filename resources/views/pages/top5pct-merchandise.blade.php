@@ -1,5 +1,5 @@
 <x-layouts.page
-    title="Top 5% Merchandise | Premium Branded Apparel & Accessories | Top 5 Percent"
+    title="Top 5% Merchandise | Premium Branded Apparel & Accessories"
     metaDescription="Shop Top 5 Percent branded merchandise. Premium t-shirts, hoodies, hats, and accessories representing the Top 5% lifestyle. Veteran owned, Joliet IL."
     currentPage="store">
 

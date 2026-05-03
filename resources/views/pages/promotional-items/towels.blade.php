@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Towels Joliet IL | Branded Beach & Sport Towels | Top 5 Percent"
-    metaDescription="We print custom towels for businesses, sports teams, and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation beach towels and sport towels. Veteran owned."
+    title="Custom Towels Joliet IL | Branded Beach & Sport Towels"
+    metaDescription="We print custom towels for businesses, sports teams, and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation beach towels and"
     currentPage="promotional-items">
 
     <x-sections.category-hero

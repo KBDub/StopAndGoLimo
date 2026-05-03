@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Banners Joliet IL | Vinyl Banners, Birthday Banners, Team Banners | Top 5 Percent"
-    metaDescription="We print custom vinyl banners, birthday banners, reunion banners, and team banners in Joliet, Shorewood, Plainfield, and Will County. Full color, any size, same day service available. Veteran owned."
+    title="Custom Banners Joliet IL | Vinyl Banners, Birthday Banners, Team Banners"
+    metaDescription="We print custom vinyl banners, birthday banners, reunion banners, and team banners in Joliet, Shorewood, Plainfield, and Will County. Full color, any size,"
     currentPage="signs">
 
     <x-sections.category-hero

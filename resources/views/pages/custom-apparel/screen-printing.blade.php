@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Screen Printing Joliet IL | Custom Screen Printed Shirts & Apparel | Top 5 Percent"
+    title="Screen Printing Joliet IL | Custom Screen Printed Shirts & Apparel"
     metaDescription="Custom screen printed shirts and apparel in Joliet IL. Bold, long-lasting prints ideal for bulk orders, uniforms, and events. No minimums. Veteran owned."
     currentPage="custom-apparel">
 

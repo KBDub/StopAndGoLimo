@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Holographic Shirts Joliet IL | Prismatic T-Shirts | Top 5 Percent"
+    title="Custom Holographic Shirts Joliet IL | Prismatic T-Shirts"
     metaDescription="Custom holographic shirts in Joliet, IL. Color-shifting prismatic designs that catch every eye. Unique, futuristic, unforgettable. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

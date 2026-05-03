@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Table Cloths Joliet IL | Branded Table Covers for Events | Top 5 Percent"
-    metaDescription="We print custom table cloths and table covers for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded table covers for trade shows and events. Veteran owned."
+    title="Custom Table Cloths Joliet IL | Branded Table Covers for Events"
+    metaDescription="We print custom table cloths and table covers for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded table covers for"
     currentPage="signs">
 
     <x-sections.category-hero

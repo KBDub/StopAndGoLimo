@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Mugs Joliet IL | Branded Coffee Mugs & Drinkware | Top 5 Percent"
-    metaDescription="We print custom mugs and branded drinkware for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mugs. Veteran owned."
+    title="Custom Mugs Joliet IL | Branded Coffee Mugs & Drinkware"
+    metaDescription="We print custom mugs and branded drinkware for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mugs. Veteran"
     currentPage="promotional-items">
 
     <x-sections.category-hero

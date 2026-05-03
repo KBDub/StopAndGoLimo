@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Window Signs Joliet IL | Window Decals & Window Graphics | Top 5 Percent"
-    metaDescription="We print custom window signs and window decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Perforated vinyl, clear vinyl, and frosted options. Veteran owned."
+    title="Custom Window Signs Joliet IL | Window Decals & Window Graphics"
+    metaDescription="We print custom window signs and window decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Perforated vinyl, clear vinyl, and frosted"
     currentPage="signs">
 
     <x-sections.category-hero

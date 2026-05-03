@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom T-Shirts Joliet IL | Rhinestone, Vinyl, Foil & More | Top 5 Percent"
-    metaDescription="Joliet's custom t-shirt experts. Rhinestone, vinyl, foil, glitter, embroidery, glow-in-the-dark and 12 more techniques. No minimums, same-day available. Veteran-owned."
+    title="Custom T-Shirts Joliet IL | Rhinestone, Vinyl, Foil & More"
+    metaDescription="Joliet's custom t-shirt experts. Rhinestone, vinyl, foil, glitter, embroidery, glow-in-the-dark and 12 more techniques. No minimums, same-day available."
     currentPage="custom-apparel">
 
     <x-sections.category-hero

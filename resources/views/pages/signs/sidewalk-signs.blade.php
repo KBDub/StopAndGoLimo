@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Sidewalk Signs Joliet IL | A Frame Signs, Sandwich Boards | Top 5 Percent"
-    metaDescription="We print and sell custom a frame sidewalk signs for businesses and events in Joliet, Shorewood, Romeoville, and Will County. Interchangeable inserts, weather resistant, same day service available."
+    title="Sidewalk Signs Joliet IL | A Frame Signs, Sandwich Boards"
+    metaDescription="We print and sell custom a frame sidewalk signs for businesses and events in Joliet, Shorewood, Romeoville, and Will County. Interchangeable inserts, weather"
     currentPage="signs">
 
     <x-sections.category-hero

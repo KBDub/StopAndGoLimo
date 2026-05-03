@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Automobile Graphics Joliet IL | Car Wraps, Vinyl Lettering, Van Graphics, Truck Decals, Boat Graphics | Top 5 Percent"
-    metaDescription="We design and install custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics in Joliet, Shorewood, Crest Hill, Rockdale, and Will County. Turn any vehicle into a mobile billboard. Veteran owned."
+    title="Automobile Graphics Joliet IL | Car Wraps, Vinyl Lettering, Van Graphics, Truck Decals, Boat Graphics"
+    metaDescription="We design and install custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics in Joliet, Shorewood, Crest Hill, Rockdale, and Will"
     currentPage="vehicle-graphics">
 
     <x-sections.category-hero

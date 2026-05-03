@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Vehicle Magnets Joliet IL | Car Door Magnets, Truck Magnetic Signs, Removable Business Magnets | Top 5 Percent"
-    metaDescription="We print custom vehicle magnets and car door magnetic signs for businesses in Joliet, Shorewood, Crest Hill, and Will County. Full color, 30mil thick, weather resistant, removable. Veteran owned."
+    title="Vehicle Magnets Joliet IL | Car Door Magnets, Truck Magnetic Signs, Removable Business Magnets"
+    metaDescription="We print custom vehicle magnets and car door magnetic signs for businesses in Joliet, Shorewood, Crest Hill, and Will County. Full color, 30mil thick, weather"
     currentPage="vehicle-graphics">
 
     <x-sections.category-hero

@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Glow In The Dark Shirts Joliet IL | Custom Glow T-Shirts | Top 5 Percent"
+    title="Glow In The Dark Shirts Joliet IL | Custom Glow T-Shirts"
     metaDescription="Custom glow-in-the-dark shirts in Joliet, IL. Shirts that light up at night — perfect for events, concerts, and Halloween. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

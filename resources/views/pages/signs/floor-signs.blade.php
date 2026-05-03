@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Floor Signs Joliet IL | Floor Decals & Floor Graphics | Top 5 Percent"
-    metaDescription="We print custom floor signs and floor decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Non-slip floor vinyl for retail, events, and safety. Veteran owned."
+    title="Custom Floor Signs Joliet IL | Floor Decals & Floor Graphics"
+    metaDescription="We print custom floor signs and floor decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Non-slip floor vinyl for retail, events, and"
     currentPage="signs">
 
     <x-sections.category-hero

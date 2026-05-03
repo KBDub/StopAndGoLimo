@@ -1,6 +1,6 @@
 <x-layouts.page
-    title="Resources | Tips, Articles & Design Help | Top 5 Percent Joliet IL"
-    metaDescription="Helpful resources for businesses in Joliet and Will County. Tips, articles, and design guides from Top 5 Percent — your veteran owned custom signage and apparel shop."
+    title="Resources | Tips, Articles & Design Help"
+    metaDescription="Helpful resources for businesses in Joliet and Will County. Tips, articles, and design guides from Top 5 Percent — your veteran owned custom signage and"
     currentPage="about">
 
     <x-sections.category-hero

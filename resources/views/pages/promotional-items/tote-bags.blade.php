@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Tote Bags Joliet IL | Branded Drawstring & Tote Bags | Top 5 Percent"
-    metaDescription="We print custom tote bags and drawstring bags for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded bags. No minimums. Veteran owned."
+    title="Custom Tote Bags Joliet IL | Branded Drawstring & Tote Bags"
+    metaDescription="We print custom tote bags and drawstring bags for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded bags. No"
     currentPage="promotional-items">
 
     <x-sections.category-hero

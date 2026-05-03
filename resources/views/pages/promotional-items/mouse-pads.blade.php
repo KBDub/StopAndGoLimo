@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Mouse Pads Joliet IL | Branded Desk Accessories | Top 5 Percent"
-    metaDescription="We print custom mouse pads for businesses and corporate gifting in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mouse pads. Veteran owned."
+    title="Custom Mouse Pads Joliet IL | Branded Desk Accessories"
+    metaDescription="We print custom mouse pads for businesses and corporate gifting in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mouse pads. Veteran"
     currentPage="promotional-items">
 
     <x-sections.category-hero

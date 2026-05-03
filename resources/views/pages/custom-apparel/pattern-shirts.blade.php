@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Pattern Shirts Joliet IL | All-Over Print T-Shirts | Top 5 Percent"
+    title="Custom Pattern Shirts Joliet IL | All-Over Print T-Shirts"
     metaDescription="Custom pattern and all-over print shirts in Joliet, IL. Sports uniforms, branded team apparel, and custom pattern designs. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

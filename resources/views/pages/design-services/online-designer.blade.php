@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Free Online Designer Joliet IL | Design Custom Shirts & Signs Online | Top 5 Percent"
-    metaDescription="Use our free online design tool to create custom shirts, signs, and more right from your browser. Upload your art or start from scratch. Veteran owned in Joliet, IL."
+    title="Free Online Designer Joliet IL | Design Custom Shirts & Signs Online"
+    metaDescription="Use our free online design tool to create custom shirts, signs, and more right from your browser. Upload your art or start from scratch. Veteran owned in"
     currentPage="design-services">
 
     <x-sections.category-hero

@@ -31,7 +31,7 @@
 </script>
 @endpush
 
-<x-layouts.page title="Spirit Wear" metaDescription="Custom spirit wear for schools, teams, and organizations in Joliet IL. T-shirts, hoodies, rhinestone, glow in the dark, and fan wear. Veteran owned, serving all of Will County." currentPage="custom-apparel">
+<x-layouts.page title="Spirit Wear" metaDescription="Custom spirit wear for schools, teams, and organizations in Joliet IL. T-shirts, hoodies, rhinestone, glow in the dark, and fan wear. Veteran owned, serving" currentPage="custom-apparel">
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Spirit Wear"

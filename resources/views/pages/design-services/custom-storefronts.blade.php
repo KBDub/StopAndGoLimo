@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Storefronts for Schools & Businesses | Top 5 Percent Joliet IL"
-    metaDescription="Launch a fully branded online spirit wear store for your school, team, or corporate event. Custom storefronts with your colors, logo, and products — built and managed by Top 5 Percent in Joliet, IL."
+    title="Custom Storefronts for Schools & Businesses"
+    metaDescription="Launch a fully branded online spirit wear store for your school, team, or corporate event. Custom storefronts with your colors, logo, and products — built and"
     currentPage="design-services">
 
     <x-sections.category-hero

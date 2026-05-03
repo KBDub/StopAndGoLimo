@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Design Idea Catalogs Joliet IL | Custom Print Design Inspiration | Top 5 Percent"
-    metaDescription="Browse thousands of design templates and ideas for custom shirts, signs, and promotional products. Pick a design and make it your own. Veteran owned in Joliet, IL."
+    title="Design Idea Catalogs Joliet IL | Custom Print Design Inspiration"
+    metaDescription="Browse thousands of design templates and ideas for custom shirts, signs, and promotional products. Pick a design and make it your own. Veteran owned in Joliet,"
     currentPage="design-services">
 
     <x-sections.category-hero

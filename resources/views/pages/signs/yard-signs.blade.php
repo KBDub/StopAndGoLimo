@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Yard Signs Joliet IL | Lawn Signs, Real Estate Signs, Political Signs | Top 5 Percent"
-    metaDescription="We print custom yard signs and lawn signs in Joliet, Shorewood, Plainfield, and Will County. Corrugated plastic, double sided, and metal stakes. Veteran owned sign shop with same day service."
+    title="Yard Signs Joliet IL | Lawn Signs, Real Estate Signs, Political Signs"
+    metaDescription="We print custom yard signs and lawn signs in Joliet, Shorewood, Plainfield, and Will County. Corrugated plastic, double sided, and metal stakes. Veteran owned"
     currentPage="signs">
 
     <x-sections.category-hero

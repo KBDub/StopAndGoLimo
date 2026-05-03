@@ -31,7 +31,7 @@
 </script>
 @endpush
 
-<x-layouts.page title="Reunion Shirts" metaDescription="Custom reunion shirts for family gatherings and group events in Joliet IL. Bulk pricing, free design help, veteran owned, and fast turnaround serving all of Will County." currentPage="custom-apparel">
+<x-layouts.page title="Reunion Shirts" metaDescription="Custom reunion shirts for family gatherings and group events in Joliet IL. Bulk pricing, free design help, veteran owned, and fast turnaround serving all of" currentPage="custom-apparel">
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Reunion Shirts"

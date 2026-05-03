@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Poster Printing Joliet IL | Large Format Posters, Backdrops, Poster Boards | Top 5 Percent"
-    metaDescription="We print high quality posters, large format backdrops, and mounted poster boards in Joliet, Shorewood, Romeoville, and Will County. Semi gloss, matte, and gloss paper options. Veteran owned."
+    title="Poster Printing Joliet IL | Large Format Posters, Backdrops, Poster Boards"
+    metaDescription="We print high quality posters, large format backdrops, and mounted poster boards in Joliet, Shorewood, Romeoville, and Will County. Semi gloss, matte, and"
     currentPage="signs">
 
     <x-sections.category-hero

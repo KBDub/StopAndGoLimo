@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Wall Signs Joliet IL | Wall Decals & Wall Graphics | Top 5 Percent"
-    metaDescription="We print and install custom wall signs and wall decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Office murals, lobby graphics, vinyl wall art. Veteran owned."
+    title="Custom Wall Signs Joliet IL | Wall Decals & Wall Graphics"
+    metaDescription="We print and install custom wall signs and wall decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Office murals, lobby graphics, vinyl"
     currentPage="signs">
 
     <x-sections.category-hero

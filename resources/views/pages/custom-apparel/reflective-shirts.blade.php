@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Reflective Shirts Joliet IL | High-Visibility T-Shirts | Top 5 Percent"
+    title="Custom Reflective Shirts Joliet IL | High-Visibility T-Shirts"
     metaDescription="Custom reflective high-visibility shirts in Joliet, IL. Safety apparel and night-event shirts that shine in the dark. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

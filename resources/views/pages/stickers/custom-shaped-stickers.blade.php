@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Shaped Stickers Joliet IL | Die Cut Stickers Any Shape | Top 5 Percent"
+    title="Custom Shaped Stickers Joliet IL | Die Cut Stickers Any Shape"
     metaDescription="We print custom die cut stickers in any shape in Joliet, Shorewood, Plainfield, and Will County. Full color weatherproof vinyl. No minimums. Veteran owned."
     currentPage="stickers">
 

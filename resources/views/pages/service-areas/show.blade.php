@@ -81,8 +81,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Signs & Apparel in {{ $cityState }} | Top 5 Percent"
-    metaDescription="Top 5 Percent is a veteran-owned custom signage and apparel shop proudly serving {{ $cityState }}. Custom t-shirts, business signs, banners, vehicle graphics, and more. Fast turnaround, in-house production."
+    title="Custom Signs & Apparel in {{ $cityState }}"
+    metaDescription="Veteran-owned custom signage and apparel serving {{ $cityState }}. T-shirts, signs, banners, vehicle graphics, and more. Same day service available."
     currentPage="about">
 
     {{-- Hero --}}

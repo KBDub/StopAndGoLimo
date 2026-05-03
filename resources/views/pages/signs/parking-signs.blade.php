@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Parking Signs Joliet IL | Business Parking & Lot Signs | Top 5 Percent"
-    metaDescription="We print custom parking signs for businesses and properties in Joliet, Shorewood, Plainfield, and Will County. Reserved parking, no parking, lot rules, and directional signs. Veteran owned."
+    title="Custom Parking Signs Joliet IL | Business Parking & Lot Signs"
+    metaDescription="We print custom parking signs for businesses and properties in Joliet, Shorewood, Plainfield, and Will County. Reserved parking, no parking, lot rules, and"
     currentPage="signs">
 
     <x-sections.category-hero

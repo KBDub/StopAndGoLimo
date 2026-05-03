@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Picture Shirts Joliet IL | Photo Print T-Shirts | Top 5 Percent"
+    title="Custom Picture Shirts Joliet IL | Photo Print T-Shirts"
     metaDescription="Custom photo print shirts in Joliet, IL. Full-color pictures, portraits, pets, and artwork printed directly on your shirt. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

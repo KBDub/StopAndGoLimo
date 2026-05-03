@@ -31,8 +31,8 @@
 @endpush
 
 <x-layouts.page
-    title="Vehicle Graphics & Wraps Joliet IL | Car Wraps, Truck Lettering, Vehicle Magnets, DOT Decals | Top 5 Percent"
-    metaDescription="We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals in Joliet, Shorewood, Channahon, and all of Will County. Veteran owned."
+    title="Vehicle Graphics & Wraps Joliet IL | Car Wraps, Truck Lettering, Vehicle Magnets, DOT Decals"
+    metaDescription="We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals in Joliet, Shorewood, Channahon, and all"
     currentPage="vehicle-graphics"
     ogImage="/images/og-tags/top5pct-og-vehicle-graphics.jpg"
     ogImageAlt="Vehicle Graphics & Wraps in Joliet, IL — Top 5 Percent">

@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Embroidery Shirts Joliet IL | Embroidered T-Shirts & Polos | Top 5 Percent"
-    metaDescription="Custom embroidered shirts, polos, and hats in Joliet, IL. Precise machine embroidery for corporate logos, team names, and branded apparel. No minimums. Veteran-owned."
+    title="Custom Embroidery Shirts Joliet IL | Embroidered T-Shirts & Polos"
+    metaDescription="Custom embroidered shirts, polos, and hats in Joliet, IL. Precise machine embroidery for corporate logos, team names, and branded apparel. No minimums."
     currentPage="custom-apparel">
 
     <x-sections.category-hero

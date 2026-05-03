@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Vinyl Shirts Joliet IL | Heat Press Vinyl T-Shirts | Top 5 Percent"
+    title="Custom Vinyl Shirts Joliet IL | Heat Press Vinyl T-Shirts"
     metaDescription="Custom vinyl heat-press shirts in Joliet, IL. Bold, durable designs in any color. No minimums, same-day available. Veteran-owned. Call (815) 349-8600."
     currentPage="custom-apparel">
 

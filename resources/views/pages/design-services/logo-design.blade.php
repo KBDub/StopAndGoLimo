@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Logo Design Joliet IL | Professional Logo Design Services | Top 5 Percent"
-    metaDescription="Professional logo design services in Joliet, Shorewood, Plainfield, and Will County. Custom logo creation for businesses, organizations, and events. Veteran owned."
+    title="Logo Design Joliet IL | Professional Logo Design Services"
+    metaDescription="Professional logo design services in Joliet, Shorewood, Plainfield, and Will County. Custom logo creation for businesses, organizations, and events. Veteran"
     currentPage="design-services">
 
     <x-sections.category-hero

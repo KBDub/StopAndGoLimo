@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Safety Signs Joliet IL | Social Distancing Signs, Coronavirus Decals | Top 5 Percent"
-    metaDescription="We print social distancing signs, coronavirus safety signs, floor decals, and open for business signs in Joliet, Shorewood, Plainfield, and Will County. Veteran owned sign shop with fast turnaround."
+    title="Safety Signs Joliet IL | Social Distancing Signs, Coronavirus Decals"
+    metaDescription="We print social distancing signs, coronavirus safety signs, floor decals, and open for business signs in Joliet, Shorewood, Plainfield, and Will County."
     currentPage="signs">
 
     <x-sections.category-hero

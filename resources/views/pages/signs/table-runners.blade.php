@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Table Runners Joliet IL | Custom Table Cloths, Table Skirts | Top 5 Percent"
-    metaDescription="We print custom table runners, table cloths, and table skirts for trade shows, events, and brand promotions in Joliet, Shorewood, Plainfield, and Will County. Full color polyester fabric. Veteran owned."
+    title="Table Runners Joliet IL | Custom Table Cloths, Table Skirts"
+    metaDescription="We print custom table runners, table cloths, and table skirts for trade shows, events, and brand promotions in Joliet, Shorewood, Plainfield, and Will County."
     currentPage="signs">
 
     <x-sections.category-hero

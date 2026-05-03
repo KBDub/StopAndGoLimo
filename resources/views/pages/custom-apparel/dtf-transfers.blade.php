@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom DTF Transfers Joliet IL | Direct-to-Film Shirt Transfers | Top 5 Percent"
-    metaDescription="Direct-to-film transfers for vibrant and durable designs on any fabric. No minimums, same day available. Full color DTF prints in Joliet, Shorewood, and Will County. Veteran owned."
+    title="Custom DTF Transfers Joliet IL | Direct-to-Film Shirt Transfers"
+    metaDescription="Direct-to-film transfers for vibrant and durable designs on any fabric. No minimums, same day available. Full color DTF prints in Joliet, Shorewood, and Will"
     currentPage="custom-apparel">
 
     <x-sections.category-hero

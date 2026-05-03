@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Puff Print Shirts Joliet IL | 3D Raised Puff Custom Apparel | Top 5 Percent"
+    title="Puff Print Shirts Joliet IL | 3D Raised Puff Custom Apparel"
     metaDescription="Custom puff print shirts in Joliet IL. 3D raised puff ink gives your design dimensional texture and a premium feel. No minimums. Veteran owned."
     currentPage="custom-apparel">
 

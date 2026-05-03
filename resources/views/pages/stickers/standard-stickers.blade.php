@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Stickers & Decals Joliet IL | Die Cut Stickers, Labels, Business Decals | Top 5 Percent"
-    metaDescription="We print custom stickers, die cut decals, product labels, and business stickers in Joliet, Shorewood, Plainfield, and Will County. No minimums, full color, weatherproof vinyl. Veteran owned."
+    title="Custom Stickers & Decals Joliet IL | Die Cut Stickers, Labels, Business Decals"
+    metaDescription="We print custom stickers, die cut decals, product labels, and business stickers in Joliet, Shorewood, Plainfield, and Will County. No minimums, full color,"
     currentPage="stickers">
 
     <x-sections.category-hero

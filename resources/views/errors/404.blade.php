@@ -1,5 +1,17 @@
 <x-layouts.page title="Page Not Found | Top 5 Percent, LLC" metaDescription="The page you were looking for does not exist. You will be redirected to the Top 5 Percent homepage." currentPage="404">
 
+    @push('structured-data')
+    <style>
+        @keyframes ring-drain {
+            from { stroke-dashoffset: 0; }
+            to   { stroke-dashoffset: 276.46; }
+        }
+        #countdown-ring {
+            animation: ring-drain 7s linear forwards;
+        }
+    </style>
+    @endpush
+
     <section class="min-h-[70vh] bg-linen flex items-center justify-center px-6 py-16">
         <div class="w-full max-w-lg bg-white shadow-md p-10 text-center">
 
@@ -60,16 +72,6 @@
 
         </div>
     </section>
-
-    <style>
-        @keyframes ring-drain {
-            from { stroke-dashoffset: 0; }
-            to   { stroke-dashoffset: 276.46; }
-        }
-        #countdown-ring {
-            animation: ring-drain 7s linear forwards;
-        }
-    </style>
 
     <script>
         (function () {

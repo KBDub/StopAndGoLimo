@@ -31,7 +31,7 @@
                 <img
                     src="/images/logos/top5-logo.gif"
                     alt="Top 5 Percent — Custom Signage & Apparel Joliet IL"
-                    class="transition-all duration-300 transform-gpu"
+                    class="transition-all duration-300 transform-gpu h-20"
                     x-bind:class="scrolled ? 'h-12' : 'h-20'"
                 >
             </a>

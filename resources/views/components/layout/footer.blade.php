@@ -6,13 +6,13 @@
             {{-- Logo --}}
             <div id="logo" class="col-span-1">
                 <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-10 mb-3">
-                <p class="text-xs text-charcoal-light leading-relaxed">Premium Custom Signage & Apparel. Veteran-owned and proudly serving Joliet, IL.</p>
+                <p class="text-sm text-charcoal-light leading-relaxed">Premium Custom Signage & Apparel. Veteran-owned and proudly serving Joliet, IL.</p>
             </div>
 
             {{-- Quick Links --}}
             <div id="quick-links" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-sm mb-3">Quick Links</h4>
-                <ul class="space-y-1.5 text-xs">
+                <h4 class="font-semibold text-charcoal text-md mb-3">Quick Links</h4>
+                <ul class="space-y-1.5 text-sm">
                     <li><a href="/" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Home</a></li>
                     <li><a href="/about" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">About Us</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Service Areas</a></li>
@@ -29,11 +29,11 @@
 
             {{-- Services — 5-column newspaper spill --}}
             <div id="services" class="col-span-5">
-                <h4 class="font-semibold text-charcoal text-sm mb-3 text-center">Services</h4>
-                <div class="columns-5 gap-x-4 text-xs">
+                <h4 class="font-semibold text-charcoal text-md mb-3 text-center">Services</h4>
+                <div class="columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
-                    <h5 class="font-semibold text-charcoal uppercase tracking-wide mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
                         <a href="/custom-apparel" class="hover:text-sunburst transition-colors">Custom Apparel</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
@@ -54,7 +54,7 @@
                     </ul>
 
                     {{-- Signs & Banners --}}
-                    <h5 class="font-semibold text-charcoal uppercase tracking-wide mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
                         <a href="/signs" class="hover:text-sunburst transition-colors">Signs & Banners</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
@@ -73,7 +73,7 @@
                     </ul>
 
                     {{-- Vehicle Graphics --}}
-                    <h5 class="font-semibold text-charcoal uppercase tracking-wide mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
                         <a href="/vehicle-graphics" class="hover:text-sunburst transition-colors">Vehicle Graphics</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
@@ -83,7 +83,7 @@
                     </ul>
 
                     {{-- Decals & Stickers --}}
-                    <h5 class="font-semibold text-charcoal uppercase tracking-wide mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
                         <a href="/stickers" class="hover:text-sunburst transition-colors">Decals & Stickers</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
@@ -92,7 +92,7 @@
                     </ul>
 
                     {{-- Promotional Items --}}
-                    <h5 class="font-semibold text-charcoal uppercase tracking-wide mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
                         <a href="/promotional-items" class="hover:text-sunburst transition-colors">Promotional Items</a>
                     </h5>
                     <ul class="space-y-1 mb-4">
@@ -105,7 +105,7 @@
                     </ul>
 
                     {{-- Design Services --}}
-                    <h5 class="font-semibold text-charcoal uppercase tracking-wide mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
                         <a href="/design-services" class="hover:text-sunburst transition-colors">Design Services</a>
                     </h5>
                     <ul class="space-y-1">
@@ -121,9 +121,9 @@
 
             {{-- Contact --}}
             <div id="contact" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-sm mb-3">Contact</h4>
-                <div class="text-xs space-y-2">
-                    <p class="font-medium text-charcoal">Headquartered in Joliet, IL</p>
+                <h4 class="font-semibold text-charcoal text-md mb-3">Contact</h4>
+                <div class="text-sm space-y-2">
+                    <p class="text-charcoal">Headquartered in Joliet, IL</p>
                     <p class="text-charcoal-light leading-relaxed">
                         121 Springfield Avenue<br>
                         Suite 103<br>

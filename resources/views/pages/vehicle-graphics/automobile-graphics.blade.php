@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Automobile Graphics in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Custom automobile graphics, car wraps, and vinyl lettering in Joliet, IL. Full and partial wraps for cars, trucks, vans, and fleets. Veteran owned."
 }

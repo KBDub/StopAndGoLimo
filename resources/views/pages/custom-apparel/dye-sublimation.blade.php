@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Dye Sublimation Shirts in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Custom all-over dye sublimation shirts and apparel in Joliet, IL. Full-color, edge-to-edge printing on polyester garments, jerseys, and performance wear. No minimums. Veteran owned."
 }

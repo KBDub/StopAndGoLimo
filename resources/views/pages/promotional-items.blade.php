@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Custom Promotional Items in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Veteran-owned custom promotional products in Joliet, IL. Custom mugs, koozies, tote bags, towels, drink coasters, and mouse pads with full-color sublimation printing. No minimums."
 }

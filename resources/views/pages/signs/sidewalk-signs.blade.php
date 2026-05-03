@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Sidewalk Signs in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Custom sidewalk signs and A-frame signs in Joliet, IL. Portable sidewalk boards for businesses, restaurants, and retail stores. Same day available. Veteran owned."
 }

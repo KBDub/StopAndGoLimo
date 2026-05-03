@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "DOT Decals & Truck Lettering in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "USDOT number stickers, MC numbers, GVWR markings, and DOT compliance decals for commercial trucks in Joliet, Shorewood, Channahon, and Will County. Same day available. Veteran owned."
 }

@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Custom Apparel in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Veteran-owned custom apparel shop in Joliet, IL offering DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, foil, and specialty shirt printing with no minimums and same day service."
 }

@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Custom Flock Shirts in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Custom flock velvet shirts in Joliet, IL. Soft velvet-textured flock designs on t-shirts and apparel for teams, events, and businesses. No minimums, same day available. Veteran owned."
 }

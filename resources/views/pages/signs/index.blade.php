@@ -4,7 +4,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Custom Signs & Banners in Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Veteran-owned sign shop in Joliet, IL printing yard signs, vinyl banners, posters, sidewalk signs, business signs, window graphics, wall signs, floor signs, door signs, and table runners with same day service."
 }

@@ -5,11 +5,7 @@
     "@type": "Person",
     "name": "Ezra",
     "jobTitle": "Owner & Founder",
-    "worksFor": {
-        "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC",
-        "url": "https://www.top5pct.com"
-    },
+    "worksFor": { "@id": "https://www.top5pct.com" },
     "description": "Veteran and founder of Top 5 Percent, LLC — a custom signage and apparel business in Joliet, IL serving Will County since 2017.",
     "address": {
         "@type": "PostalAddress",
@@ -26,7 +22,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "About Top 5 Percent — Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
 }

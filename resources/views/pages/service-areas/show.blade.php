@@ -12,11 +12,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Custom Signs & Apparel in {{ $cityState }}",
-    "provider": {
-        "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC",
-        "url": "https://www.top5pct.com"
-    },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": {
         "@type": "City",
         "name": "{{ $cityName }}",
@@ -66,10 +62,7 @@
 {
     "@context": "https://schema.org",
     "@type": "Review",
-    "itemReviewed": {
-        "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC"
-    },
+    "itemReviewed": { "@id": "https://www.top5pct.com" },
     "author": {
         "@type": "Person",
         "name": "{{ $content['review']['author'] }}"

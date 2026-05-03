@@ -17,11 +17,7 @@
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
         "itemCondition": "https://schema.org/NewCondition",
-        "seller": {
-            "@type": "Organization",
-            "name": "Top 5 Percent, LLC",
-            "url": "https://www.top5pct.com"
-        }
+        "seller": { "@id": "https://www.top5pct.com" }
     }
 }
 </script>

@@ -9,8 +9,8 @@
     "url": "https://www.top5pct.com/portfolio",
     "license": "https://www.top5pct.com",
     "acquireLicensePage": "https://www.top5pct.com/contact",
-    "creator": { "@type": "Organization", "name": "Top 5 Percent, LLC" },
-    "copyrightHolder": { "@type": "Organization", "name": "Top 5 Percent, LLC" }
+    "creator": { "@id": "https://www.top5pct.com" },
+    "copyrightHolder": { "@id": "https://www.top5pct.com" }
 }
 </script>
 <script type="application/ld+json">
@@ -23,8 +23,8 @@
     "url": "https://www.top5pct.com/portfolio",
     "license": "https://www.top5pct.com",
     "acquireLicensePage": "https://www.top5pct.com/contact",
-    "creator": { "@type": "Organization", "name": "Top 5 Percent, LLC" },
-    "copyrightHolder": { "@type": "Organization", "name": "Top 5 Percent, LLC" }
+    "creator": { "@id": "https://www.top5pct.com" },
+    "copyrightHolder": { "@id": "https://www.top5pct.com" }
 }
 </script>
 <script type="application/ld+json">
@@ -37,8 +37,8 @@
     "url": "https://www.top5pct.com/portfolio",
     "license": "https://www.top5pct.com",
     "acquireLicensePage": "https://www.top5pct.com/contact",
-    "creator": { "@type": "Organization", "name": "Top 5 Percent, LLC" },
-    "copyrightHolder": { "@type": "Organization", "name": "Top 5 Percent, LLC" }
+    "creator": { "@id": "https://www.top5pct.com" },
+    "copyrightHolder": { "@id": "https://www.top5pct.com" }
 }
 </script>
 <script type="application/ld+json">
@@ -51,8 +51,8 @@
     "url": "https://www.top5pct.com/portfolio",
     "license": "https://www.top5pct.com",
     "acquireLicensePage": "https://www.top5pct.com/contact",
-    "creator": { "@type": "Organization", "name": "Top 5 Percent, LLC" },
-    "copyrightHolder": { "@type": "Organization", "name": "Top 5 Percent, LLC" }
+    "creator": { "@id": "https://www.top5pct.com" },
+    "copyrightHolder": { "@id": "https://www.top5pct.com" }
 }
 </script>
 @endpush
@@ -62,7 +62,7 @@
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Our Portfolio — Top 5 Percent Joliet, IL",
-    "provider": { "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", "url": "https://www.top5pct.com" },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Browse the portfolio of Top 5 Percent, LLC in Joliet, IL. Custom shirts, signs, vehicle graphics, stickers, and promotional products produced for businesses and organizations in Will County."
 }

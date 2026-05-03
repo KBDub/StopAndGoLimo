@@ -138,22 +138,22 @@ Route::get('/custom-apparel/group-shirts/corporate-wear-shirts', function () {
     return view('pages.custom-apparel.corporate-wear-shirts');
 })->name('custom-apparel.corporate-wear-shirts');
 
-// ─── Custom Apparel 301 Redirects ────────────────────────────────────────────
+// ─── Custom Apparel 302 Redirects (temporary — promote to 301 at go-live) ────
 
-Route::permanentRedirect('/custom-apparel/dtf-transfers',           '/custom-apparel/printing-options/dtf-printing');
-Route::permanentRedirect('/custom-apparel/dye-sublimation',         '/custom-apparel/printing-options/dye-sublimation-printing');
-Route::permanentRedirect('/custom-apparel/rhinestone-shirts',       '/custom-apparel/rhinestone-apparel');
-Route::permanentRedirect('/custom-apparel/glitter-shirts',          '/custom-apparel/specialty-materials/glitter-shirts');
-Route::permanentRedirect('/custom-apparel/puff-shirts',             '/custom-apparel/specialty-materials/puff-shirts');
-Route::permanentRedirect('/custom-apparel/glow-in-the-dark-shirts', '/custom-apparel/specialty-materials/glow-in-the-dark-shirts');
-Route::permanentRedirect('/custom-apparel/flock-shirts',            '/custom-apparel/specialty-materials/flock-shirts');
-Route::permanentRedirect('/custom-apparel/brick-shirts',            '/custom-apparel/specialty-materials/brick-shirts');
-Route::permanentRedirect('/custom-apparel/holographic-shirts',      '/custom-apparel/specialty-materials/holographic-shirts');
-Route::permanentRedirect('/custom-apparel/foil-shirts',             '/custom-apparel/specialty-materials/foil-shirts');
-Route::permanentRedirect('/custom-apparel/reflective-shirts',       '/custom-apparel/specialty-materials/reflective-shirts');
-Route::permanentRedirect('/custom-apparel/reunion-shirts',          '/custom-apparel/group-shirts/reunion-shirts');
-Route::permanentRedirect('/custom-apparel/spirit-wear-shirts',      '/custom-apparel/group-shirts/spirit-wear-shirts');
-Route::permanentRedirect('/custom-apparel/corporate-wear-shirts',   '/custom-apparel/group-shirts/corporate-wear-shirts');
+Route::redirect('/custom-apparel/dtf-transfers',           '/custom-apparel/printing-options/dtf-printing',        302);
+Route::redirect('/custom-apparel/dye-sublimation',         '/custom-apparel/printing-options/dye-sublimation-printing', 302);
+Route::redirect('/custom-apparel/rhinestone-shirts',       '/custom-apparel/rhinestone-apparel',                   302);
+Route::redirect('/custom-apparel/glitter-shirts',          '/custom-apparel/specialty-materials/glitter-shirts',   302);
+Route::redirect('/custom-apparel/puff-shirts',             '/custom-apparel/specialty-materials/puff-shirts',      302);
+Route::redirect('/custom-apparel/glow-in-the-dark-shirts', '/custom-apparel/specialty-materials/glow-in-the-dark-shirts', 302);
+Route::redirect('/custom-apparel/flock-shirts',            '/custom-apparel/specialty-materials/flock-shirts',     302);
+Route::redirect('/custom-apparel/brick-shirts',            '/custom-apparel/specialty-materials/brick-shirts',     302);
+Route::redirect('/custom-apparel/holographic-shirts',      '/custom-apparel/specialty-materials/holographic-shirts', 302);
+Route::redirect('/custom-apparel/foil-shirts',             '/custom-apparel/specialty-materials/foil-shirts',      302);
+Route::redirect('/custom-apparel/reflective-shirts',       '/custom-apparel/specialty-materials/reflective-shirts', 302);
+Route::redirect('/custom-apparel/reunion-shirts',          '/custom-apparel/group-shirts/reunion-shirts',          302);
+Route::redirect('/custom-apparel/spirit-wear-shirts',      '/custom-apparel/group-shirts/spirit-wear-shirts',      302);
+Route::redirect('/custom-apparel/corporate-wear-shirts',   '/custom-apparel/group-shirts/corporate-wear-shirts',   302);
 
 // ─── Design Services ─────────────────────────────────────────────────────────
 
@@ -234,20 +234,20 @@ Route::get('/signs/table-signs/table-runners', function () {
     return view('pages.signs.table-runners');
 })->name('signs.table-runners');
 
-// ─── Signs 301 Redirects ─────────────────────────────────────────────────────
+// ─── Signs 302 Redirects (temporary — promote to 301 at go-live) ─────────────
 
-Route::permanentRedirect('/signs/banners',        '/signs/business-signs/banners');
-Route::permanentRedirect('/signs/window-signs',   '/signs/business-signs/window-signs');
-Route::permanentRedirect('/signs/wall-signs',     '/signs/business-signs/wall-signs');
-Route::permanentRedirect('/signs/floor-signs',    '/signs/business-signs/floor-signs');
-Route::permanentRedirect('/signs/door-signs',     '/signs/business-signs/door-signs');
-Route::permanentRedirect('/signs/posters',        '/signs/business-signs/posters');
-Route::permanentRedirect('/signs/business-signs', '/signs');
-Route::permanentRedirect('/signs/yard-signs',     '/signs/ground-signs/yard-signs');
-Route::permanentRedirect('/signs/sidewalk-signs', '/signs/ground-signs/sidewalk-signs');
-Route::permanentRedirect('/signs/parking-signs',  '/signs/ground-signs/parking-signs');
-Route::permanentRedirect('/signs/table-cloths',   '/signs/table-signs/table-cloths');
-Route::permanentRedirect('/signs/table-runners',  '/signs/table-signs/table-runners');
+Route::redirect('/signs/banners',        '/signs/business-signs/banners',    302);
+Route::redirect('/signs/window-signs',   '/signs/business-signs/window-signs', 302);
+Route::redirect('/signs/wall-signs',     '/signs/business-signs/wall-signs', 302);
+Route::redirect('/signs/floor-signs',    '/signs/business-signs/floor-signs', 302);
+Route::redirect('/signs/door-signs',     '/signs/business-signs/door-signs', 302);
+Route::redirect('/signs/posters',        '/signs/business-signs/posters',    302);
+Route::redirect('/signs/business-signs', '/signs',                           302);
+Route::redirect('/signs/yard-signs',     '/signs/ground-signs/yard-signs',   302);
+Route::redirect('/signs/sidewalk-signs', '/signs/ground-signs/sidewalk-signs', 302);
+Route::redirect('/signs/parking-signs',  '/signs/ground-signs/parking-signs', 302);
+Route::redirect('/signs/table-cloths',   '/signs/table-signs/table-cloths',  302);
+Route::redirect('/signs/table-runners',  '/signs/table-signs/table-runners', 302);
 
 // ─── Stickers ────────────────────────────────────────────────────────────────
 
@@ -263,10 +263,10 @@ Route::get('/stickers/custom-shaped-stickers-decals', function () {
     return view('pages.stickers.custom-shaped-stickers');
 })->name('stickers.custom-shaped-stickers-decals');
 
-// ─── Stickers 301 Redirects ──────────────────────────────────────────────────
+// ─── Stickers 302 Redirects (temporary — promote to 301 at go-live) ─────────
 
-Route::permanentRedirect('/stickers/standard-stickers',      '/stickers/standard-stickers-decals');
-Route::permanentRedirect('/stickers/custom-shaped-stickers', '/stickers/custom-shaped-stickers-decals');
+Route::redirect('/stickers/standard-stickers',      '/stickers/standard-stickers-decals',      302);
+Route::redirect('/stickers/custom-shaped-stickers', '/stickers/custom-shaped-stickers-decals', 302);
 
 // ─── Vehicle Graphics ────────────────────────────────────────────────────────
 
@@ -340,8 +340,8 @@ Route::get('/about-us', function () {
     return view('pages.about');
 })->name('about');
 
-Route::permanentRedirect('/about',   '/about-us');
-Route::permanentRedirect('/company', '/about-us');
+Route::redirect('/about',   '/about-us', 302);
+Route::redirect('/company', '/about-us', 302);
 
 Route::get('/stores', function () {
     return view('pages.stores');
@@ -367,14 +367,14 @@ Route::get('/terms-of-use', function () {
     return view('pages.terms-of-use');
 })->name('terms-of-use');
 
-// ─── Legacy PHP Redirects ─────────────────────────────────────────────────────
+// ─── Legacy PHP Redirects (temporary 302 — promote to 301 at go-live) ────────
 
-Route::permanentRedirect('/php/privacy-policy.php', '/privacy-policy');
-Route::permanentRedirect('/php/terms-of-use.php',   '/terms-of-use');
-Route::permanentRedirect('/php/faqs.php',            '/resources');
-Route::permanentRedirect('/dir',                     '/resources');
+Route::redirect('/php/privacy-policy.php', '/privacy-policy', 302);
+Route::redirect('/php/terms-of-use.php',   '/terms-of-use',   302);
+Route::redirect('/php/faqs.php',            '/resources',      302);
+Route::redirect('/dir',                     '/resources',      302);
 Route::get('/dir/{any}', function () {
-    return redirect('/resources', 301);
+    return redirect('/resources', 302);
 })->where('any', '.*');
 
 // ─── Page Management ─────────────────────────────────────────────────────────

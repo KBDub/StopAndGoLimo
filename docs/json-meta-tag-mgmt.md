@@ -847,27 +847,18 @@ City data: `app/Data/CityContent.php` (41 cities)
 - og:title / og:description: inherits from props (partial — missing og:image, og:url, og:type)
 - No canonical, no robots, no GTM
 
-**FAQ expansion required — all 41 city pages:**
-Every city page currently has 3 FAQ entries in `CityContent.php`. All must be expanded to a
-minimum of 6. The three additional questions per city should be geo-specific and cover:
+**FAQ expansion — COMPLETE (P2 done May 2026):**
+All 41 city pages in `app/Data/CityContent.php` have been expanded from 3 to 6 FAQ entries.
+Total FAQ entries: **246** (41 cities x 6). Each city received three new geo-specific questions:
 
-| Additional Q topic | Intent targeted |
+| Additional Q added | Intent targeted |
 |--------------------|----------------|
 | Driving distance / travel time from Joliet to the city | Local proximity / "near me" |
-| Zip codes or neighborhoods served in that city | Hyper-local landing page signal |
-| A city-specific product or use case (e.g., fleet wraps for Channahon logistics, spirit wear for Naperville schools) | City-specific transactional |
+| Zip codes served in that city | Hyper-local landing page signal |
+| A city-specific product or use case (e.g., fleet wraps for Channahon logistics, NIU gear for DeKalb, Raging Waves apparel for Yorkville) | City-specific transactional |
 
-**Example additional geo FAQ entries (Aurora):**
-```php
-['q' => 'How far is Top 5 Percent from Aurora, IL?',
- 'a' => 'Our studio at 121 Springfield Avenue in Joliet is approximately 20 miles from Aurora — about a 25-minute drive via I-88. We also offer local delivery for large orders.'],
-['q' => 'What Aurora zip codes do you serve?',
- 'a' => 'We serve all Aurora zip codes including 60502, 60505, and 60506 with the same fast turnaround as our Joliet-area clients.'],
-['q' => 'Do you offer custom apparel for Aurora manufacturing companies?',
- 'a' => 'Yes. We specialize in high-durability workwear and embroidered corporate wear for the industrial and manufacturing businesses in the Fox River Valley corridor near Eola Road.'],
-```
-
-These additions must be made directly in `app/Data/CityContent.php` for each of the 41 city slugs.
+All 41 cities confirmed at 6 FAQs via `php -r` count check. PHP syntax validated clean.
+`FAQPage` JSON-LD auto-fires on all city pages through `x-sections.faq` with the full 6-question set.
 
 ---
 
@@ -1109,9 +1100,7 @@ would be high-value for e-commerce SEO but requires integrating with Lunar produ
 Per the SEO Tag Checker rubric (FAQPage = +20 pts, the highest bonus) and the content
 strategy from `docs/DeepSEOLocalizedContentForTop5Pct.pdf`:
 
-1. **Minimum 6 Q&A pairs per page.** The city pages currently have exactly 3 and must be
-   expanded to 6. Service pages should also target 6 to cover a broad range of voice search
-   and intent variants.
+1. **Minimum 6 Q&A pairs per page.** City pages now have exactly 6 (expanded May 2026 — P2 complete). Service pages should also target 6 to cover a broad range of voice search and intent variants.
 
 2. **Question format:** Must be a full grammatical question (not a keyword phrase).
    - Good: "Do you offer same-day banner printing in Joliet?"
@@ -1184,7 +1173,7 @@ the schema. To fix, add to the top of that component:
 | P1 | Add GTM/GA4 to layout | All (70+) | Analytics data | Low |
 | P1 | Add canonical tag to layout | All (70+) | Prevents duplication | Low |
 | P1 | Add robots meta to layout (with noindex override prop) | All (70+) | Protects cart/demo | Low |
-| P2 | Expand all 41 city pages from 3 to 6 FAQs in `CityContent.php` (add geo/zip/distance/use-case Qs) | 41 pages | Voice search + local signal | High |
+| ~~P2~~ | ~~Expand all 41 city pages from 3 to 6 FAQs in `CityContent.php` (add geo/zip/distance/use-case Qs)~~ | ~~41 pages~~ | ~~Voice search + local signal~~ | **DONE May 2026** |
 | P2 | Add `x-sections.faq` to home page | 1 page | +20 pts JSON-LD | Medium |
 | P2 | Add Service + BreadcrumbList + WebPage @push to all silo landing pages | ~6 pages | +25 pts JSON-LD | Medium |
 | P2 | Add `x-sections.faq` to all silo landing pages | ~6 pages | +20 pts JSON-LD | Medium |
@@ -1237,4 +1226,4 @@ component must expose new optional props with safe defaults:
 
 *Document maintained by: Top 5 Percent development team*
 *Source documents: `docs/DreamStudioSolutions.SEO.TagChecker.Scoring.pdf`, `docs/DeepSEOLocalizedContentForTop5Pct.pdf`, `docs/detailed.seo.md`*
-*Last updated: May 2026*
+*Last updated: May 2026 — P2 city FAQ expansion complete (246 FAQs across 41 cities)*

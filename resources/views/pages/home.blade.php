@@ -18,6 +18,15 @@
     "description": "Veteran-owned custom signs, apparel, stickers, vehicle graphics, and promotional products serving Joliet, Shorewood, Plainfield, and Will County, IL."
 }
 </script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" }
+    ]
+}
+</script>
 @endpush
 
 <x-layouts.page

@@ -50,9 +50,14 @@ The PDF introduces a three-level URL hierarchy for Custom Apparel and Signs (e.g
 
 | Route | Action |
 |---|---|
-| `/custom-apparel/custom-shirts` | Remove route and MM entry. Page file can be archived. |
-| `/custom-apparel/pattern-shirts` | Remove route. Not in PDF. |
-| `/custom-apparel/picture-shirts` | Remove route. Not in PDF. |
+| `/custom-apparel/pattern-shirts` | Remove route and blade page file entirely. Not in PDF. No redirect. |
+| `/custom-apparel/picture-shirts` | Remove route and blade page file entirely. Not in PDF. No redirect. |
+
+### Routes to keep but unlink from MM
+
+| Route | Action |
+|---|---|
+| `/custom-apparel/custom-shirts` | Keep route and page file as-is. Remove MM entry only. Not linked anywhere in the nav. |
 
 ---
 

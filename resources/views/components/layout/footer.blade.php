@@ -17,6 +17,8 @@
                     <li><a href="/about-us" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">About Us</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Service Areas</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Reviews</a></li>
+                    <li><a href="/privacy-policy" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Terms of Use</a></li>
                     <li>
                         <a href="#"
                            onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('open-contact-modal'))"

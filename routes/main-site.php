@@ -359,6 +359,24 @@ Route::get('/resources', function () {
     return view('pages.company.resources');
 })->name('resources');
 
+Route::get('/privacy-policy', function () {
+    return view('pages.privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/terms-of-use', function () {
+    return view('pages.terms-of-use');
+})->name('terms-of-use');
+
+// ─── Legacy PHP Redirects ─────────────────────────────────────────────────────
+
+Route::permanentRedirect('/php/privacy-policy.php', '/privacy-policy');
+Route::permanentRedirect('/php/terms-of-use.php',   '/terms-of-use');
+Route::permanentRedirect('/php/faqs.php',            '/resources');
+Route::permanentRedirect('/dir',                     '/resources');
+Route::get('/dir/{any}', function () {
+    return redirect('/resources', 301);
+})->where('any', '.*');
+
 // ─── Page Management ─────────────────────────────────────────────────────────
 
 Route::get('/page-management', function () {

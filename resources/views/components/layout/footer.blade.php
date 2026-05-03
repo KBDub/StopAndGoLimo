@@ -11,7 +11,7 @@
 
             {{-- Quick Links --}}
             <div id="quick-links" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-md mb-3">Quick Links</h4>
+                <h4 class="font-semibold text-charcoal text-base mb-3">Quick Links</h4>
                 <ul class="space-y-1.5 text-sm">
                     <li><a href="/" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Home</a></li>
                     <li><a href="/about" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">About Us</a></li>
@@ -29,7 +29,7 @@
 
             {{-- Services — 5-column newspaper spill --}}
             <div id="services" class="col-span-5">
-                <h4 class="font-semibold text-charcoal text-md mb-3 text-center">Services</h4>
+                <h4 class="font-semibold text-charcoal text-base mb-3 text-center">Services</h4>
                 <div class="columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
@@ -121,7 +121,7 @@
 
             {{-- Contact --}}
             <div id="contact" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-md mb-3">Contact</h4>
+                <h4 class="font-semibold text-charcoal text-base mb-3">Contact</h4>
                 <div class="text-sm space-y-2">
                     <p class="text-charcoal">Headquartered in Joliet, IL</p>
                     <p class="text-charcoal-light leading-relaxed">

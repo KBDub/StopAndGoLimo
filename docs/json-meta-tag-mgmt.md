@@ -533,11 +533,7 @@ currently set, what fields it must include, and which pages should carry it.
     "@context": "https://schema.org",
     "@type": "Service",
     "name": "Custom Signs & Apparel in {City}, IL",
-    "provider": {
-        "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC",
-        "url": "https://www.top5pct.com"
-    },
+    "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": {
         "@type": "City",
         "name": "{City}",
@@ -548,6 +544,8 @@ currently set, what fields it must include, and which pages should carry it.
     "serviceType": "Custom Printing"
 }
 ```
+
+**Important:** `provider` must use the `@id` reference pattern, not an inline `@type: LocalBusiness` object. Inline objects cause Google's Rich Results Test to detect a second, incomplete LocalBusiness entity alongside the authoritative one in the layout.
 
 **Applied to:** Service area city pages only (currently). Should be added to all service
 silo pages and sub-pages (see Section 8).
@@ -593,7 +591,7 @@ silo pages and sub-pages (see Section 8).
 - The last item in the list should always match the current page URL and title
 - `position` must be sequential integers starting at 1
 - `item` must be an absolute URL for every position
-- The home page itself does not need a BreadcrumbList (there is no breadcrumb on the root)
+- The home page uses a single-item BreadcrumbList (`position 1: Home`) — Google expects this for consistency across the site
 
 **Applied to:** Service area city pages only (currently). Should be added to all second-level
 and deeper pages.
@@ -685,10 +683,7 @@ when `CityContent::for($slug)['review']` is non-null.
 {
     "@context": "https://schema.org",
     "@type": "Review",
-    "itemReviewed": {
-        "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC"
-    },
+    "itemReviewed": { "@id": "https://www.top5pct.com" },
     "author": {
         "@type": "Person",
         "name": "Shannon Blizniak"
@@ -696,6 +691,8 @@ when `CityContent::for($slug)['review']` is non-null.
     "reviewBody": "Ezra was great to work with and made our tshirt within hours... Great service & quality."
 }
 ```
+
+**Important:** `itemReviewed` must use the `@id` reference pattern. Same rule as `provider` — no inline `@type: LocalBusiness` objects.
 
 **Cities with review data populated in `CityContent.php`:**
 
@@ -781,14 +778,19 @@ Do not paraphrase, truncate, or editorialize the review text in the schema outpu
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ezra",
-    "jobTitle": "Owner & Operator",
-    "worksFor": {
-        "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC"
-    },
-    "description": "Veteran-owned and operated. U.S. Army veteran and founder of Top 5 Percent, LLC."
+    "jobTitle": "Owner & Founder",
+    "worksFor": { "@id": "https://www.top5pct.com" },
+    "description": "Veteran-owned and operated. U.S. Army veteran and founder of Top 5 Percent, LLC.",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Joliet",
+        "addressRegion": "IL",
+        "addressCountry": "US"
+    }
 }
 ```
+
+**Important:** `worksFor` must use the `@id` reference pattern. No inline `@type: LocalBusiness` or `@type: Organization` objects anywhere — all nested business/org references must point back to `{ "@id": "https://www.top5pct.com" }`.
 
 ---
 
@@ -870,11 +872,11 @@ File: `resources/views/pages/home.blade.php`
 |-------------|--------|--------|--------|
 | LocalBusiness | Layout | `L ✓` | 40 |
 | WebSite | Layout | `L ✓` | 15 |
-| Service | Page @push | `P ✗` | +10 needed |
-| WebPage | Page @push | `P ✗` | +5 needed |
-| FAQPage | x-sections.faq | `C ✗` | +20 needed |
-| **Current score** | | | **55 pts** |
-| **Target score** | | | **90 pts** |
+| BreadcrumbList | Page @push | `P ✓` | +10 |
+| Service | Page @push | `P ✓` | +10 |
+| WebPage | Page @push | `P ✓` | +5 |
+| FAQPage | x-sections.faq | `C ✓` | +20 |
+| **Current score** | | | **100 pts** |
 
 **Recommended FAQ topics for home page:**
 - "Do you offer same-day custom shirts in Joliet?"
@@ -1252,8 +1254,9 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 
 - [x] ~~Create `public/robots.txt`~~ — **DONE May 2026 — disallows cart/checkout/order-confirmation/demo/page-management/admin/lunar/livewire; declares Sitemap location**
 - [x] ~~Create `sitemap.xml`~~ — **DONE May 2026 — dynamic Laravel route at `/sitemap.xml`; covers 108 static URLs (8 core, 21 apparel, 14 signs, 4 vehicle, 3 stickers, 6 design, 7 promo, 42 service-area) + dynamic Lunar products and collections; view at `resources/views/sitemaps/sitemap.blade.php`**
-- [ ] Create `sitemap_images.xml` — **FUTURE: update/finalize all product and portfolio images first, then add `<image:image>` extensions for every page**
-- [ ] Create `sitemap_video.xml` — **FUTURE: finalize video assets first, then build with `<video:video>` extensions for YouTube embeds and hosted video content**
+- [ ] **Create `sitemap_images.xml`** — FUTURE TODO: finalize all product and portfolio images first, then build a dedicated image sitemap with `<image:image>` extensions for every page. Declare in `robots.txt` alongside `sitemap.xml`. See Google's image sitemap documentation.
+- [ ] **Create `sitemap_video.xml`** — FUTURE TODO: finalize video assets first (YouTube embeds, hosted product demo videos), then build with `<video:video>` extensions. Declare in `robots.txt`. Particularly valuable for the vehicle graphics and design services pages.
+- [ ] **Review and audit all `alt` image tags** — FUTURE TODO: audit every `<img>` tag across all blade files to ensure descriptive, keyword-rich alt text. Rules: (1) every image must have an `alt` attribute; (2) alt text must describe the image content, not just the product category; (3) include a geo signal where natural (e.g., "custom banner printed in Joliet IL"); (4) do not stuff keywords — Google penalises alt text that reads as a keyword list; (5) decorative images should use `alt=""`. Priority pages: home hero, silo hero images, portfolio, product pages.
 - [ ] Submit `sitemap.xml` to Google Search Console and Bing Webmaster Tools once the domain is live
 
 #### VALIDATION (do after each sprint)
@@ -1264,6 +1267,43 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 
 ---
 
+## 11. Confirmed Per-Page Schema Matrix (May 2026)
+
+Verified via live server curl + Google Rich Results Test. All counts are per-page rendered output.
+
+| Schema Type | Homepage | Service Area City | Signs/Banners | About | Portfolio |
+|-------------|----------|-------------------|---------------|-------|-----------|
+| `LocalBusiness` | 1 | 1 | 1 | 1 | 1 |
+| `Organization` | 1* | 1* | 1* | 1* | 1* |
+| `WebSite` | 1 | 1 | 1 | 1 | 1 |
+| `BreadcrumbList` | 1 | 1 | 1 | 1 | 1 |
+| `FAQPage` | 1 | 1 | 1 | 1 | 1 |
+| `Service` | 1 | 1 | 1 | 1 | 1 |
+| `WebPage` | 1 | 1 | 1 | 1 | 1 |
+| `Review` | — | 1 (3 cities) | — | — | — |
+| `Person` | — | — | — | 1 | — |
+| `ImageObject` | — | — | — | — | 4 |
+
+*`Organization` is detected because `LocalBusiness` is a subtype of `Organization` — this is correct and expected, not a duplicate.
+
+### @id Reference Rule (enforced May 2026)
+
+Every nested reference to the business entity across all ~60 blade files uses the JSON-LD `@id` pointer pattern instead of an inline typed object:
+
+```json
+{ "@id": "https://www.top5pct.com" }
+```
+
+**Never** write `{ "@type": "LocalBusiness", "name": "Top 5 Percent, LLC", ... }` or `{ "@type": "Organization", ... }` as a nested value inside another schema. Google's parser extracts every typed object it finds — including nested ones — and counts each as a separate entity in the Rich Results Test. Inline objects create incomplete duplicate entries with "non-critical issues" warnings.
+
+This applies to: `provider`, `worksFor`, `itemReviewed`, `creator`, `copyrightHolder`, `seller`, and any future nested business/org reference.
+
+### WebSite Schema and Rich Results Test
+
+The `WebSite` schema (Sitelinks Searchbox) is present on every page via the layout but will **not** appear in the Rich Results Test detected list when testing a staging URL (e.g., `top-5-pct.replit.app`). This is by design — Google's Sitelinks Searchbox detection requires the schema's `url` property to match the tested domain. Testing against `https://www.top5pct.com` will show it correctly.
+
+---
+
 *Document maintained by: Top 5 Percent development team*
 *Source documents: `docs/DreamStudioSolutions.SEO.TagChecker.Scoring.pdf`, `docs/DeepSEOLocalizedContentForTop5Pct.pdf`, `docs/detailed.seo.md`*
-*Last updated: May 2026 — P1–P4 schema complete; robots.txt created; sitemap.xml dynamic route live covering 108 static + dynamic Lunar URLs; sitemap_images.xml and sitemap_video.xml queued as future items*
+*Last updated: May 2026 — P1–P4 schema complete; duplicate LocalBusiness/Organization entities eliminated via @id references; homepage BreadcrumbList added; sitemap_images.xml, sitemap_video.xml, and alt tag audit queued as future todos*

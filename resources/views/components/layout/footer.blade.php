@@ -1,4 +1,4 @@
-<footer class="bg-linen text-charcoal py-8 border-t border-linen-dark">
+<footer class="bg-linen text-charcoal py-2 border-t border-linen-dark">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-8 gap-x-4 mb-6 items-start">
@@ -139,8 +139,8 @@
 
         </div>
 
-        <div id="copywrite" class="pt-5 border-t border-linen-dark text-center text-charcoal-light">
-            <p class="text-xs">&copy;Copyright 2026 Top 5%, LLC (Top 5 Percent, LLC) &nbsp;&nbsp;|&nbsp;&nbsp; Top 5%, LLC (Top 5 Percent, LLC) is a Registered Trademark</p>
+        <div id="copywrite" class="pt-2 border-t border-linen-dark text-center text-charcoal-light">
+            <p class="text-xs pb-2">&copy;Copyright 2026 Top 5%, LLC (Top 5 Percent, LLC) &nbsp;&nbsp;|&nbsp;&nbsp; Top 5%, LLC (Top 5 Percent, LLC) is a Registered Trademark</p>
             <p class="text-xs mt-1">Powered by <span class="font-medium">Dream Studio Solutions</span></p>
         </div>
 

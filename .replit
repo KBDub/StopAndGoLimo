@@ -8,24 +8,12 @@ channel = "stable-22_11"
 
 [deployment]
 run = ["bash", "scripts/startup.sh"]
-deploymentTarget = "cloudrun"
+deploymentTarget = "autoscale"
 build = ["bash", "-c", "composer install --no-scripts --no-dev --optimize-autoloader && rm -f bootstrap/cache/services.php bootstrap/cache/packages.php && php artisan package:discover --ansi && npm ci && npx vite build && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan event:cache"]
 
 [[ports]]
 localPort = 3000
 externalPort = 3000
-
-[[ports]]
-localPort = 5000
-externalPort = 80
-
-[[ports]]
-localPort = 5001
-externalPort = 3001
-
-[[ports]]
-localPort = 5002
-externalPort = 3002
 
 [[ports]]
 localPort = 5003
@@ -34,6 +22,10 @@ externalPort = 3003
 [[ports]]
 localPort = 8000
 externalPort = 8000
+
+[[ports]]
+localPort = 5000
+externalPort = 80
 
 [agent]
 expertMode = true

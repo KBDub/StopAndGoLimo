@@ -139,8 +139,9 @@
 
         </div>
 
-        <div id="copywrite" class="pt-5 border-t border-linen-dark text-center text-xs text-charcoal-light">
-            &copy; {{ date('Y') }} Top 5 Percent. All rights reserved. Veteran Owned. Joliet, IL.
+        <div id="copywrite" class="pt-5 border-t border-linen-dark text-center text-charcoal-light">
+            <p class="text-xs">&copy;Copyright 2026 Top 5%, LLC (Top 5 Percent, LLC) &nbsp;&nbsp;|&nbsp;&nbsp; Top 5%, LLC (Top 5 Percent, LLC) is a Registered Trademark</p>
+            <p class="text-xs mt-1">Powered by <span class="font-medium">Dream Studio Solutions</span></p>
         </div>
 
     </div>

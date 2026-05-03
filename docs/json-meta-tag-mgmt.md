@@ -1185,20 +1185,19 @@ the schema. To fix, add to the top of that component:
 | P4 | Add Product schema to Lunar product detail pages | Dynamic | E-comm SEO | High |
 | P4 | Add WebSite.potentialAction (SearchAction) to WebSite schema | All (via layout) | Sitelinks search box | Low |
 | P4 | Enrich LocalBusiness schema with sameAs, priceRange, founder | All (via layout) | Trust signals | Low |
-| P4 | Add geo meta tags (geo.region, geo.placename, geo.position) | All (via layout) | Local SEO | Low |
+| ~~P4~~ | ~~Add geo meta tags (geo.region, geo.placename, geo.position)~~ | ~~All (via layout)~~ | ~~Local SEO~~ | **DONE — completed early with P1 layout buildout** |
 | P4 | Add Article schema to resources/blog pages | Future pages | +10 pts JSON-LD | N/A now |
 
-### Layout Props to Add
+### Layout Props (IMPLEMENTED)
 
-When adding OG image, canonical, robots, and GTM to the layout, the `x-layouts.page`
-component must expose new optional props with safe defaults:
+All layout props are live in `resources/views/components/layouts/page.blade.php`:
 
 ```blade
 @props([
     'title'          => 'Top 5 Percent - Custom Signage & Apparel',
     'metaDescription' => 'Premium custom signage and apparel in Joliet, IL.',
     'currentPage'    => '',
-    'ogImage'        => null,     // absolute URL — falls back to default OG image
+    'ogImage'        => null,     // absolute URL — falls back to top5pct-og-home.jpg
     'ogImageAlt'     => null,     // alt text for OG image
     'ogType'         => 'website', // website | article | product
     'canonical'      => null,     // full URL — falls back to request()->url()
@@ -1208,22 +1207,55 @@ component must expose new optional props with safe defaults:
 
 ### Deployment Checklist Before Next Audit
 
-- [ ] GTM container created and ID stored in `.env`
-- [ ] GA4 property linked inside GTM
-- [ ] Default OG image created at `/images/top5pct-og-default.jpg` (1200×630px)
-- [ ] `og:image`, `og:url`, `og:type`, `og:site_name` added to layout
-- [ ] Twitter card tags added to layout
-- [ ] Canonical tag added to layout
-- [ ] Robots meta added to layout (with `noIndex` prop override)
-- [ ] FAQ section added to home page
-- [ ] FAQ section added to 6 silo landing pages
-- [ ] FAQPage @push added to `shirt-types-faq` component
-- [ ] Service + BreadcrumbList + WebPage @push added to 6 silo landing pages
-- [ ] Run SEO Tag Checker against 5 pages to confirm score improvements
+#### DONE
+
+- [x] GTM container ID (`GTM-TEMP0001`) stored in `.env` and `config/services.php`
+- [x] GTM head snippet + noscript body snippet injected in layout (conditional on `config('services.gtm.id')`)
+- [x] GA4 Measurement ID (`G-TEMP000001`) stored in `.env` and `config/services.php`
+- [x] `og:image`, `og:url`, `og:type`, `og:site_name` added to layout
+- [x] `og:title`, `og:description`, `og:locale` added to layout
+- [x] `og:image:width` (1200), `og:image:height` (630), `og:image:alt` added to layout
+- [x] Twitter card tags (`twitter:card summary_large_image` + title/description/image) added to layout
+- [x] Canonical tag added to layout (falls back to `request()->url()`)
+- [x] Robots meta added to layout with `noIndex` prop override (`noindex,nofollow` when true)
+- [x] Geo meta tags added to layout (`geo.region US-IL`, `geo.placename Joliet, IL`, `geo.position 41.5250;-88.0817`) — originally P4, completed early
+- [x] `@stack('structured-data')` present in layout for JSON-LD injection
+- [x] `:noIndex="true"` applied to cart, checkout, and order-confirmation pages
+- [x] Default OG image available at `public/images/og-tags/top5pct-og-home.jpg` (1200×630px, used as fallback)
+- [x] Silo-specific OG images created for 6 pages: home, custom-apparel, signs, vehicle-graphics, stickers, design-services
+- [x] All 41 city pages expanded from 3 to 6 FAQs in `CityContent.php` (246 total — completed May 2026)
+
+#### REMAINING — P2 (next sprint)
+
+- [ ] **Replace placeholder GTM ID** — swap `GTM-TEMP0001` in `.env` with the real GTM container ID once the GTM account is created
+- [ ] **Replace placeholder GA4 ID** — swap `G-TEMP000001` in `.env` with the real GA4 Measurement ID and link it inside GTM
+- [ ] Add `x-sections.faq` with 6 tailored questions to home page (`pages/home.blade.php`)
+- [ ] Add `x-sections.faq` with 6 tailored questions to each of the 6 silo landing pages (custom-apparel, signs, vehicle-graphics, stickers, design-services, promotional-items)
+- [ ] Add Service + BreadcrumbList + WebPage `@push('structured-data')` to each of the 6 silo landing pages
+- [ ] Add FAQPage JSON-LD `@push` to `x-sections.shirt-types-faq` component (see section 9 for template)
+
+#### REMAINING — P3
+
+- [ ] Add Service + BreadcrumbList + WebPage `@push('structured-data')` to all ~40 sub-category pages
+- [ ] Add `x-sections.faq` with 6 tailored questions to all ~40 sub-category pages
+- [ ] Add Person schema to About and Company pages
+- [ ] Add ImageObject schema to Portfolio page
+
+#### REMAINING — P4
+
+- [ ] Add Product schema to Lunar product detail pages
+- [ ] Add `WebSite.potentialAction` (SearchAction) to the WebSite schema in the layout
+- [ ] Enrich LocalBusiness schema with `sameAs`, `priceRange`, and `founder` fields
+- [ ] Add Article schema to resources/blog pages (future — no pages exist yet)
+
+#### VALIDATION (do after each sprint)
+
+- [ ] Run SEO Tag Checker against at minimum: home, one city page, one silo landing page, one sub-category page, contact page
 - [ ] Validate all JSON-LD with Google's Rich Results Test at search.google.com/test/rich-results
+- [ ] Confirm GTM is firing in GTM Preview mode after real container ID is swapped in
 
 ---
 
 *Document maintained by: Top 5 Percent development team*
 *Source documents: `docs/DreamStudioSolutions.SEO.TagChecker.Scoring.pdf`, `docs/DeepSEOLocalizedContentForTop5Pct.pdf`, `docs/detailed.seo.md`*
-*Last updated: May 2026 — P2 city FAQ expansion complete (246 FAQs across 41 cities)*
+*Last updated: May 2026 — P1 layout buildout complete; P2 city FAQ expansion complete (246 FAQs across 41 cities); checklist audited and restructured*

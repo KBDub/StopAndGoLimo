@@ -1248,6 +1248,14 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 - [x] ~~Enrich LocalBusiness schema with `sameAs`, `priceRange`, and `founder` fields~~ — **DONE May 2026 — 7 sameAs URLs (Facebook, Instagram, Twitter, YouTube, Pinterest, LinkedIn, Google Maps CID), priceRange "$", founder Ezra**
 - [ ] Add Article schema to resources/blog pages (future — no blog pages exist yet)
 
+#### REMAINING — Sitemaps & Crawlability
+
+- [x] ~~Create `public/robots.txt`~~ — **DONE May 2026 — disallows cart/checkout/order-confirmation/demo/page-management/admin/lunar/livewire; declares Sitemap location**
+- [x] ~~Create `sitemap.xml`~~ — **DONE May 2026 — dynamic Laravel route at `/sitemap.xml`; covers 108 static URLs (8 core, 21 apparel, 14 signs, 4 vehicle, 3 stickers, 6 design, 7 promo, 42 service-area) + dynamic Lunar products and collections; view at `resources/views/sitemaps/sitemap.blade.php`**
+- [ ] Create `sitemap_images.xml` — **FUTURE: update/finalize all product and portfolio images first, then add `<image:image>` extensions for every page**
+- [ ] Create `sitemap_video.xml` — **FUTURE: finalize video assets first, then build with `<video:video>` extensions for YouTube embeds and hosted video content**
+- [ ] Submit `sitemap.xml` to Google Search Console and Bing Webmaster Tools once the domain is live
+
 #### VALIDATION (do after each sprint)
 
 - [ ] Run SEO Tag Checker against at minimum: home, one city page, one silo landing page, one sub-category page, contact page
@@ -1258,4 +1266,4 @@ All layout props are live in `resources/views/components/layouts/page.blade.php`
 
 *Document maintained by: Top 5 Percent development team*
 *Source documents: `docs/DreamStudioSolutions.SEO.TagChecker.Scoring.pdf`, `docs/DeepSEOLocalizedContentForTop5Pct.pdf`, `docs/detailed.seo.md`*
-*Last updated: May 2026 — P1 complete; P2 complete; P3 complete (Person schema on about+company, 4x ImageObject on portfolio); P4 complete (Product schema on product.blade.php, WebSite SearchAction, LocalBusiness sameAs+priceRange+founder enrichment); only remaining item is Article schema when blog pages are built*
+*Last updated: May 2026 — P1–P4 schema complete; robots.txt created; sitemap.xml dynamic route live covering 108 static + dynamic Lunar URLs; sitemap_images.xml and sitemap_video.xml queued as future items*

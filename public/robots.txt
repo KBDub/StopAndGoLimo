@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Transactional and utility pages — no crawl value
+Disallow: /cart
+Disallow: /checkout
+Disallow: /order-confirmation/
+Disallow: /page-management
+Disallow: /demo
+Disallow: /demo/
+Disallow: /admin/
+Disallow: /lunar/
+Disallow: /livewire/
+
+# Sitemaps
+Sitemap: https://www.top5pct.com/sitemap.xml

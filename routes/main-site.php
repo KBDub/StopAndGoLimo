@@ -356,6 +356,10 @@ Route::get('/articles', function () {
     return view('pages.company.articles');
 })->name('articles');
 
+Route::get('/reviews', function () {
+    return view('pages.reviews');
+})->name('reviews');
+
 Route::redirect('/resources', '/articles', 302);
 
 Route::get('/privacy-policy', function () {

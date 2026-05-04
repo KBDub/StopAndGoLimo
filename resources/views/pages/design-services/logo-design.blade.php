@@ -55,7 +55,7 @@
             ['src' => '/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg', 'alt' => 'Professional logo design and brand identity services in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg',             'alt' => 'Custom logo design applied to embroidery and apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom logo design for businesses and organizations in Joliet and Will County Illinois'],
-            ['src' => '/images/banners/top5pct-banner-custom-banners-joliet-shorewood-will-county.jpg',       'alt' => 'Professional logo design for signage and print applications in Joliet Illinois'],
+            ['src' => '/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg',       'alt' => 'Professional logo design for signage and print applications in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -126,7 +126,7 @@
         direction="left"
     />
     <x-ui.card-banner-slide-in
-        image="/images/banners/top5pct-banner-custom-banners-joliet-shorewood-will-county.jpg"
+        image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
         alt="Custom banners and printed products designed by Top 5 Percent in Joliet Illinois"
         title="Your Logo on Everything — Shirts, Signs, Banners, and More"
         href="/contact"

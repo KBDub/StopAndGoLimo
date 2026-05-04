@@ -53,7 +53,7 @@
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg', 'alt' => 'Professional graphic design and layout services for print in Joliet Illinois'],
-            ['src' => '/images/banners/top5pct-banner-custom-banners-joliet-shorewood-will-county.jpg',       'alt' => 'Custom banner design and large format print layout in Joliet Illinois'],
+            ['src' => '/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg',       'alt' => 'Custom banner design and large format print layout in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg',          'alt' => 'Apparel graphic design and print-ready art preparation in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Graphic design services for custom apparel and promotional products in Joliet Illinois'],
         ]"
@@ -119,7 +119,7 @@
         name="Gerardo Munoz Jr"
     />
     <x-ui.card-banner-slide-in
-        image="/images/banners/top5pct-banner-custom-banners-joliet-shorewood-will-county.jpg"
+        image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
         alt="Professional graphic design and print layout services from Top 5 Percent in Joliet Illinois"
         title="Print-Ready Design From Concept to Finished Product"
         href="/contact"

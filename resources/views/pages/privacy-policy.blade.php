@@ -3,7 +3,7 @@
     <section class="pt-16 pb-4 bg-white border-b border-linen-dark">
         <div class="max-w-4xl mx-auto px-6">
             <p class="text-sunburst text-sm font-semibold uppercase tracking-widest mb-2">Top 5 Percent, LLC &mdash; Joliet, IL</p>
-            <h1 class="text-charcoal font-bold text-h1 mb-3">Privacy Policy</h1>
+            <h1 class="text-charcoal font-bold text-h1 mb-3">Privacy Policy | Top 5 Percent</h1>
             <div class="h-1 w-16 bg-sunburst mb-5"></div>
             <p class="text-charcoal-light text-body-sm">Last updated: May 2026</p>
         </div>

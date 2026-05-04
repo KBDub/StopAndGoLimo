@@ -1,4 +1,4 @@
-<x-layouts.store>
+<x-layouts.store :description="'Shop ' . $store->name . ' custom spirit wear. Browse shirts, hoodies, and apparel made to order. Powered by Top 5 Percent, veteran-owned in Joliet, IL.'">
     @foreach($page->sections ?? ['hero', 'countdown', 'catalog', 'calendar', 'roster'] as $section)
         @switch($section)
 

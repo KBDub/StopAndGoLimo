@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom DTF Transfers Joliet IL | Direct-to-Film Shirt Transfers"
+    title="DTF Transfers | Joliet, IL"
     metaDescription="Direct-to-film transfers for vibrant and durable designs on any fabric. No minimums, same day available. Full color DTF prints in Joliet, Shorewood, and Will"
     currentPage="custom-apparel">
 

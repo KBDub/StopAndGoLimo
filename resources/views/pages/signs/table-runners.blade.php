@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Table Runners Joliet IL | Custom Table Cloths, Table Skirts"
+    title="Table Runners | Joliet, IL"
     metaDescription="We print custom table runners, table cloths, and table skirts for trade shows, events, and brand promotions in Joliet, Shorewood, Plainfield, and Will County."
     currentPage="signs">
 

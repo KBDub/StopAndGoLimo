@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Graphic Design Joliet IL | Layout & Print Design Services"
+    title="Graphic Design | Joliet, IL"
     metaDescription="Professional layout and graphic design services in Joliet, Shorewood, Plainfield, and Will County. Print-ready design for signs, apparel, banners, and"
     currentPage="design-services">
 

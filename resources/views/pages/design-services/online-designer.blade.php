@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Free Online Designer Joliet IL | Design Custom Shirts & Signs Online"
+    title="Free Online Designer | Joliet, IL"
     metaDescription="Use our free online design tool to create custom shirts, signs, and more right from your browser. Upload your art or start from scratch. Veteran owned in"
     currentPage="design-services">
 

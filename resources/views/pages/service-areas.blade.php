@@ -20,8 +20,8 @@
 @endphp
 
 <x-layouts.page
-    title="Service Areas | Custom Signage & Apparel | Joliet IL"
-    metaDescription="Top 5 Percent serves Joliet, Plainfield, Romeoville, Bolingbrook, Naperville, Aurora, and communities across Will County and greater Chicagoland. Veteran-owned"
+    title="Service Areas | Joliet, IL"
+    metaDescription="Top 5 Percent serves Joliet, Plainfield, Romeoville, Bolingbrook, Naperville, Aurora, and communities across Will County and Chicagoland. Veteran-owned."
     currentPage="about">
 
     {{-- Hero --}}

@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Flock Shirts Joliet IL | Velvet Flock T-Shirts"
+    title="Flock Shirts | Joliet, IL"
     metaDescription="Custom flock velvet shirts in Joliet, IL. Soft, raised flock printing with a premium tactile feel. Bold and distinctive. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

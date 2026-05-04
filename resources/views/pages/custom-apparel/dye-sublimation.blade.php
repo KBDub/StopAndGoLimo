@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Dye Sublimation Shirts Joliet IL | All Over Print Custom Apparel"
+    title="Dye Sublimation Shirts | Joliet, IL"
     metaDescription="Custom dye sublimation shirts and apparel in Joliet IL. Full color all-over prints, vibrant and permanent. No minimums, same day available. Veteran owned."
     currentPage="custom-apparel">
 

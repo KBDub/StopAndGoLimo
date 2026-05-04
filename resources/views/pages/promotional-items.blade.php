@@ -31,7 +31,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Promotional Items Joliet IL | Mugs, Koozies, Tote Bags, Towels, Mouse Pads"
+    title="Promotional Items | Joliet, IL"
     metaDescription="We print custom promotional products for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Custom mugs, koozies, tote bags, towels,"
     currentPage="promotional-items">
 

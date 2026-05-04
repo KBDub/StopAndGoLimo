@@ -31,7 +31,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Apparel Joliet IL | T-Shirts, Hoodies, Embroidery, DTF, Screen Printing"
+    title="Custom Apparel | Joliet, IL"
     metaDescription="Premium custom apparel in Joliet, IL. Custom t-shirts, DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, and specialty shirts. Veteran"
     currentPage="custom-apparel"
     ogImage="/images/og-tags/top5pct-og-custom-apparel.jpg"

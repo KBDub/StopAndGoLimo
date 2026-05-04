@@ -31,7 +31,7 @@
 @endpush
 
 <x-layouts.page
-    title="Vehicle Graphics & Wraps Joliet IL | Car Wraps, Truck Lettering, Vehicle Magnets, DOT Decals"
+    title="Vehicle Graphics & Wraps | Joliet, IL"
     metaDescription="We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals in Joliet, Shorewood, Channahon, and all"
     currentPage="vehicle-graphics"
     ogImage="/images/og-tags/top5pct-og-vehicle-graphics.jpg"

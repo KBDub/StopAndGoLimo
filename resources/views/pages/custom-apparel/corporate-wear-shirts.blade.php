@@ -31,7 +31,7 @@
 </script>
 @endpush
 
-<x-layouts.page title="Corporate Wear" metaDescription="Custom corporate apparel in Joliet IL including polo shirts, work uniforms, and branded clothing. Veteran owned, embroidered logos, serving Will County and all" currentPage="custom-apparel">
+<x-layouts.page title="Corporate Wear" metaDescription="Custom corporate apparel in Joliet, IL. Polo shirts, work uniforms, and branded clothing with embroidered logos. No minimums. Veteran owned in Will County." currentPage="custom-apparel">
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Corporate Wear"

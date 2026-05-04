@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Foil Shirts Joliet IL | Metallic Foil T-Shirts"
+    title="Foil Shirts | Joliet, IL"
     metaDescription="Custom metallic foil shirts in Joliet, IL. Gold, silver, and colored foil prints with a high-shine finish. No minimums, same-day available. Veteran-owned."
     currentPage="custom-apparel">
 

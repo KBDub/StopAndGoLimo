@@ -31,7 +31,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Stickers Joliet IL | Standard Stickers, Die Cut Custom Shapes, Weatherproof Vinyl"
+    title="Custom Stickers | Joliet, IL"
     metaDescription="We print custom stickers in Joliet, Shorewood, Plainfield, and Will County. Standard stickers, die cut custom shapes, weatherproof vinyl. No minimums. Veteran"
     currentPage="stickers"
     ogImage="/images/og-tags/top5pct-og-stickers.jpg"

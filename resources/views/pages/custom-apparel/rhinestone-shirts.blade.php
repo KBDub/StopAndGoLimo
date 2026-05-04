@@ -32,8 +32,8 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Rhinestone Shirts Joliet IL | Bling T-Shirts"
-    metaDescription="Custom rhinestone bling shirts in Joliet, IL. Crystal rhinestone designs for reunions, events, and celebrations. No minimums, same-day available. Veteran-owned."
+    title="Rhinestone Shirts | Joliet, IL"
+    metaDescription="Custom rhinestone shirts in Joliet, IL. Crystal designs for reunions, events, and celebrations. No minimums, same-day turnaround available. Veteran-owned."
     currentPage="custom-apparel">
 
     <x-sections.category-hero

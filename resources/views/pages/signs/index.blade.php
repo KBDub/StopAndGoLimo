@@ -31,7 +31,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Signs & Banners Joliet IL | Yard Signs, Posters, Business Signs, Window Signs"
+    title="Custom Signs & Banners | Joliet, IL"
     metaDescription="We print custom signs, banners, posters, yard signs, sidewalk signs, business signs, window signs, wall signs, door signs, and floor signs in Joliet,"
     currentPage="signs"
     ogImage="/images/og-tags/top5pct-og-signs.jpg"

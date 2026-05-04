@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Automobile Graphics Joliet IL | Car Wraps, Vinyl Lettering, Van Graphics, Truck Decals, Boat Graphics"
+    title="Automobile Graphics | Joliet, IL"
     metaDescription="We design and install custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics in Joliet, Shorewood, Crest Hill, Rockdale, and Will"
     currentPage="vehicle-graphics">
 

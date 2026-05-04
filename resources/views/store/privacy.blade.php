@@ -1,4 +1,4 @@
-<x-layouts.store title="Privacy Policy">
+<x-layouts.store title="Privacy Policy" description="Read the privacy policy for this custom apparel store. Learn how your personal information is collected, used, and protected by Top 5 Percent.">
     @php
         $store  = app('current_store');
         $email  = $store->contact_email ?: config('storefront.default_contact_email');

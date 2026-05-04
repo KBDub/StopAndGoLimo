@@ -1,4 +1,4 @@
-<x-layouts.store title="Terms &amp; Conditions">
+<x-layouts.store title="Terms &amp; Conditions" description="Review the terms and conditions for ordering custom apparel from this store. All products are made to order. Powered by Top 5 Percent in Joliet, IL.">
     @php
         $store  = app('current_store');
         $email  = $store->contact_email ?: config('storefront.default_contact_email');

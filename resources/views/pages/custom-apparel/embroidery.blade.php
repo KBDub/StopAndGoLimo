@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Embroidery Shirts Joliet IL | Embroidered T-Shirts & Polos"
+    title="Custom Embroidery | Joliet, IL"
     metaDescription="Custom embroidered shirts, polos, and hats in Joliet, IL. Precise machine embroidery for corporate logos, team names, and branded apparel. No minimums."
     currentPage="custom-apparel">
 

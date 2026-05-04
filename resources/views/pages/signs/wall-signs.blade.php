@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Wall Signs Joliet IL | Wall Decals & Wall Graphics"
+    title="Wall Signs | Joliet, IL"
     metaDescription="We print and install custom wall signs and wall decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Office murals, lobby graphics, vinyl"
     currentPage="signs">
 

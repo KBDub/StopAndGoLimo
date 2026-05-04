@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="DOT Decals & USDOT Number Stickers Joliet IL | Truck Lettering, MC Numbers, FMCSA Compliance"
+    title="DOT Decals & USDOT Numbers | Joliet, IL"
     metaDescription="We print DOT decals, USDOT number stickers, MC number decals, and truck lettering for commercial vehicles in Joliet, Shorewood, Channahon, and Will County."
     currentPage="vehicle-graphics">
 

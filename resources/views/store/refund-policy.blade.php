@@ -1,4 +1,4 @@
-<x-layouts.store title="Refund Policy">
+<x-layouts.store title="Refund Policy" description="Review the refund policy for this store. All sales are final on custom made-to-order products. Contact us within 5 days if we made a production error.">
     @php
         $store  = app('current_store');
         $email  = $store->contact_email ?: config('storefront.default_contact_email');

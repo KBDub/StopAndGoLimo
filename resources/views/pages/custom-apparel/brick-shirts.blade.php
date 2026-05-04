@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Brick Shirts Joliet IL | 3D Textured T-Shirts"
+    title="Brick Shirts | Joliet, IL"
     metaDescription="Custom brick textured shirts in Joliet, IL. Dimensional 3D brick-style prints that give your shirt a unique raised look. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 

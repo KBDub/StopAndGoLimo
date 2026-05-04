@@ -1,10 +1,11 @@
+@props(['title' => null, 'description' => null])
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $currentStore->name }} | Powered by Top 5 Percent</title>
-    <meta name="description" content="Official store for {{ $currentStore->name }}.">
+    <title>{{ $title ? $title . ' | ' . $currentStore->name : $currentStore->name . ' | Powered by Top 5 Percent' }}</title>
+    <meta name="description" content="{{ $description ?? 'Official store for ' . $currentStore->name . '.' }}">
 
     {{-- Tri-palette CSS injection — no Tailwind recompile needed --}}
     <style>

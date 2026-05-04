@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Can Koozies Joliet IL | Branded Drink Koozies"
+    title="Can Koozies | Joliet, IL"
     metaDescription="We print custom can koozies for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color foam and neoprene koozies. No minimums."
     currentPage="promotional-items">
 

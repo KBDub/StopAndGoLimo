@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Door Signs Joliet IL | Business Door Graphics & Door Decals"
+    title="Door Signs | Joliet, IL"
     metaDescription="We print custom door signs and door decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Hours, logos, suite numbers, and frosted privacy"
     currentPage="signs">
 

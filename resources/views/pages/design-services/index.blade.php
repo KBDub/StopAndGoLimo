@@ -31,8 +31,8 @@
 @endpush
 
 <x-layouts.page
-    title="Design Services Joliet IL | Logo Design, Graphic Design, Online Designer, Design Catalogs"
-    metaDescription="Professional design services in Joliet IL. Logo design, graphic design, free online designer, and design inspiration catalogs for custom shirts, signs, decals,"
+    title="Design Services | Joliet, IL"
+    metaDescription="Professional design services in Joliet, IL. Logo design, graphic design, free online designer, and design catalogs for custom shirts, signs, and decals."
     currentPage="design-services"
     ogImage="/images/og-tags/top5pct-og-design-services.jpg"
     ogImageAlt="Design Services in Joliet, IL — Logo Design, Graphic Design — Top 5 Percent">

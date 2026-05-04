@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Drink Coasters Joliet IL | Branded Coasters for Businesses"
+    title="Drink Coasters | Joliet, IL"
     metaDescription="We print custom drink coasters for businesses, restaurants, and events in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation coasters."
     currentPage="promotional-items">
 

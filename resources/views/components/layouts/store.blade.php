@@ -7,6 +7,24 @@
     <title>{{ $title ? $title . ' | ' . $currentStore->name : $currentStore->name . ' | Powered by Top 5 Percent' }}</title>
     <meta name="description" content="{{ $description ?? 'Official store for ' . $currentStore->name . '.' }}">
 
+    @php
+        $twitterTitle = $title
+            ? $title . ' | ' . $currentStore->name
+            : $currentStore->name . ' | Powered by Top 5 Percent';
+        $twitterDesc  = $description ?? 'Official store for ' . $currentStore->name . '.';
+        $twitterImage = $currentStore->banner_image
+            ? Storage::url($currentStore->banner_image)
+            : ($currentStore->logo_path ? Storage::url($currentStore->logo_path) : null);
+    @endphp
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:site"        content="@top5pct">
+    <meta name="twitter:title"       content="{{ $twitterTitle }}">
+    <meta name="twitter:description" content="{{ $twitterDesc }}">
+    @if($twitterImage)
+    <meta name="twitter:image"       content="{{ $twitterImage }}">
+    <meta name="twitter:image:alt"   content="{{ $currentStore->name }} store">
+    @endif
+
     {{-- Tri-palette CSS injection — no Tailwind recompile needed --}}
     <style>
         :root {

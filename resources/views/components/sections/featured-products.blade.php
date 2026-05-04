@@ -11,8 +11,8 @@
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <x-ui.card-product
-                title="Custom Shirts"
-                href="/custom-apparel/custom-shirts"
+                title="Custom Apparel"
+                href="/custom-apparel"
                 image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">

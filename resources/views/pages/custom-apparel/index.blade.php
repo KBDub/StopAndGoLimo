@@ -102,12 +102,6 @@
             'href'  => '/custom-apparel/rhinestone-shirts',
         ],
         [
-            'image' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',
-            'alt'   => 'Custom vinyl heat transfer shirts and apparel in Joliet Illinois',
-            'title' => 'Vinyl Shirts',
-            'href'  => '/custom-apparel/vinyl-shirts',
-        ],
-        [
             'image' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',
             'alt'   => 'Custom glitter print shirts and apparel in Joliet Illinois',
             'title' => 'Glitter Shirts',

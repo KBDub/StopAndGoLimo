@@ -67,9 +67,6 @@ Route::get('/custom-apparel', function () {
 })->name('custom-apparel');
 
 // Keep route; not linked in MM or nav
-Route::get('/custom-apparel/custom-shirts', function () {
-    return view('pages.custom-apparel.custom-shirts');
-})->name('custom-apparel.custom-shirts');
 
 Route::get('/custom-apparel/screen-printing', function () {
     return view('pages.custom-apparel.screen-printing');
@@ -355,9 +352,11 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
-Route::get('/resources', function () {
-    return view('pages.company.resources');
-})->name('resources');
+Route::get('/articles', function () {
+    return view('pages.company.articles');
+})->name('articles');
+
+Route::redirect('/resources', '/articles', 302);
 
 Route::get('/privacy-policy', function () {
     return view('pages.privacy-policy');
@@ -371,10 +370,10 @@ Route::get('/terms-of-use', function () {
 
 Route::redirect('/php/privacy-policy.php', '/privacy-policy', 302);
 Route::redirect('/php/terms-of-use.php',   '/terms-of-use',   302);
-Route::redirect('/php/faqs.php',            '/resources',      302);
-Route::redirect('/dir',                     '/resources',      302);
+Route::redirect('/php/faqs.php',            '/articles',       302);
+Route::redirect('/dir',                     '/articles',       302);
 Route::get('/dir/{any}', function () {
-    return redirect('/resources', 302);
+    return redirect('/articles', 302);
 })->where('any', '.*');
 
 // ─── Page Management ─────────────────────────────────────────────────────────

@@ -439,7 +439,7 @@
                                 <div class="grid grid-cols-3 gap-x-4 gap-y-3">
                                     <div><a href="/about-us" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">About Us</a><a href="/about-us" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Our mission & team</a></div>
                                     <div><a href="/portfolio" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Portfolio</a><a href="/portfolio" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">View our past work</a></div>
-                                    <div><a href="/resources" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Resources</a><a href="/resources" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Tips & helpful guides</a></div>
+                                    <div><a href="/articles" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Articles</a><a href="/articles" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Tips & helpful guides</a></div>
                                 </div>
                             </div>
                             <x-layout.mega-menu-ad

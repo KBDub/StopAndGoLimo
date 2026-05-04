@@ -15,6 +15,7 @@
                 <ul class="space-y-1.5 text-sm">
                     <li><a href="/" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Home</a></li>
                     <li><a href="/about-us" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">About Us</a></li>
+                    <li><a href="/articles" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Articles</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Service Areas</a></li>
                     <li><a href="/service-areas" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Reviews</a></li>
                     <li><a href="/privacy-policy" class="text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-px transition-all no-underline">Privacy Policy</a></li>

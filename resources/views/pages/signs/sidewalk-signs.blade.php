@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Sidewalk Signs", "item": "https://www.top5pct.com/signs/sidewalk-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Sidewalk Signs", "item": "https://www.top5pct.com/signs/ground-signs/sidewalk-signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Sidewalk Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/sidewalk-signs",
+    "url": "https://www.top5pct.com/signs/ground-signs/sidewalk-signs",
     "description": "Custom sidewalk signs and A-frame signs in Joliet, IL. Portable sidewalk boards for businesses, restaurants, and retail stores. Same day available. Veteran owned."
 }
 </script>

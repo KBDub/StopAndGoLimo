@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Stickers", "item": "https://www.top5pct.com/stickers" },
-        { "@type": "ListItem", "position": 3, "name": "Custom Shaped Stickers", "item": "https://www.top5pct.com/stickers/custom-shaped-stickers" }
+        { "@type": "ListItem", "position": 3, "name": "Custom Shaped Stickers", "item": "https://www.top5pct.com/stickers/custom-shaped-stickers-decals" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Shaped Stickers in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/stickers/custom-shaped-stickers",
+    "url": "https://www.top5pct.com/stickers/custom-shaped-stickers-decals",
     "description": "Custom die-cut shaped stickers in Joliet, IL. Stickers cut to the exact outline of any design — logos, characters, and unique shapes. No minimums. Veteran owned."
 }
 </script>

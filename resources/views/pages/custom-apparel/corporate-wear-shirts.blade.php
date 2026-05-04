@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Corporate Wear", "item": "https://www.top5pct.com/custom-apparel/corporate-wear-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Corporate Wear", "item": "https://www.top5pct.com/custom-apparel/group-shirts/corporate-wear-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Corporate Wear in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/corporate-wear-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/group-shirts/corporate-wear-shirts",
     "description": "Custom corporate apparel in Joliet, IL. Embroidered polo shirts, branded work uniforms, and corporate clothing for businesses across Will County. No minimums. Veteran owned."
 }
 </script>

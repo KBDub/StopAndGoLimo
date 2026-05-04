@@ -11,35 +11,35 @@
                 <p class="text-charcoal-light mb-4">Bold, durable <span class="text-azure underline underline-offset-2">heat-press vinyl</span> in any color. Sharp lines and <span class="text-azure underline underline-offset-2">long-lasting results</span>, ideal for logos, names, and numbers.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Rhinestone Shirts" href="/custom-apparel/rhinestone-shirts" image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg">
+            <x-ui.card-product title="Rhinestone Shirts" href="/custom-apparel/rhinestone-apparel" image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Dazzling crystal rhinestone designs for <span class="text-azure underline underline-offset-2">maximum bling</span>. Custom patterns, logos, and text that <span class="text-azure underline underline-offset-2">catch every eye</span> in the room.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Glitter Shirts" href="/custom-apparel/glitter-shirts" image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg">
+            <x-ui.card-product title="Glitter Shirts" href="/custom-apparel/specialty-materials/glitter-shirts" image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Eye-catching <span class="text-azure underline underline-offset-2">glitter heat-transfer prints</span> that shine under any light. Perfect for <span class="text-azure underline underline-offset-2">birthdays, reunions, and celebrations</span>.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Foil Shirts" href="/custom-apparel/foil-shirts" image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg">
+            <x-ui.card-product title="Foil Shirts" href="/custom-apparel/specialty-materials/foil-shirts" image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg">
                 <p class="text-charcoal-light mb-4"><span class="text-azure underline underline-offset-2">Metallic foil prints</span> in gold, silver, and more. High-shine finish that makes any design look <span class="text-azure underline underline-offset-2">premium and fashion-forward</span>.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Glow In The Dark" href="/custom-apparel/glow-in-the-dark-shirts" image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg">
+            <x-ui.card-product title="Glow In The Dark" href="/custom-apparel/specialty-materials/glow-in-the-dark-shirts" image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Shirts that <span class="text-azure underline underline-offset-2">light up when the lights go out</span>. Perfect for <span class="text-azure underline underline-offset-2">concerts, events, and nightlife</span> occasions.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Flock Shirts" href="/custom-apparel/flock-shirts" image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg">
+            <x-ui.card-product title="Flock Shirts" href="/custom-apparel/specialty-materials/flock-shirts" image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Velvety, raised <span class="text-azure underline underline-offset-2">flock printing</span> delivers a soft, premium tactile feel. Bold and distinctive, <span class="text-azure underline underline-offset-2">stands out by touch</span> as much as sight.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Reflective Shirts" href="/custom-apparel/reflective-shirts" image="/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg">
+            <x-ui.card-product title="Reflective Shirts" href="/custom-apparel/specialty-materials/reflective-shirts" image="/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg">
                 <p class="text-charcoal-light mb-4">High-visibility <span class="text-azure underline underline-offset-2">reflective prints</span> for safety gear, sports teams, and night events. <span class="text-azure underline underline-offset-2">Be seen and be safe</span> in style.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Holographic Shirts" href="/custom-apparel/holographic-shirts" image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg">
+            <x-ui.card-product title="Holographic Shirts" href="/custom-apparel/specialty-materials/holographic-shirts" image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Color-shifting <span class="text-azure underline underline-offset-2">holographic designs</span> that catch every eye. Prismatic, futuristic, and <span class="text-azure underline underline-offset-2">completely unforgettable</span>.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Brick Shirts" href="/custom-apparel/brick-shirts" image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg">
+            <x-ui.card-product title="Brick Shirts" href="/custom-apparel/specialty-materials/brick-shirts" image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Textured <span class="text-azure underline underline-offset-2">brick-style prints</span> create a dimensional, bold 3D effect. A unique look that <span class="text-azure underline underline-offset-2">sets your shirt apart</span> from every other.</p>
             </x-ui.card-product>
 

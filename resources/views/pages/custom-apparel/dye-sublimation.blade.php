@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Dye Sublimation", "item": "https://www.top5pct.com/custom-apparel/dye-sublimation" }
+        { "@type": "ListItem", "position": 3, "name": "Dye Sublimation", "item": "https://www.top5pct.com/custom-apparel/printing-options/dye-sublimation-printing" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Dye Sublimation Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/dye-sublimation",
+    "url": "https://www.top5pct.com/custom-apparel/printing-options/dye-sublimation-printing",
     "description": "Custom all-over dye sublimation shirts and apparel in Joliet, IL. Full-color, edge-to-edge printing on polyester garments, jerseys, and performance wear. No minimums. Veteran owned."
 }
 </script>

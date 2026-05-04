@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Banners", "item": "https://www.top5pct.com/signs/banners" }
+        { "@type": "ListItem", "position": 3, "name": "Banners", "item": "https://www.top5pct.com/signs/business-signs/banners" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Banners in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/banners",
+    "url": "https://www.top5pct.com/signs/business-signs/banners",
     "description": "Custom vinyl banners, birthday banners, business banners, and event banners in Joliet, IL. Full color, any size, same day service. Veteran owned."
 }
 </script>

@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Window Signs", "item": "https://www.top5pct.com/signs/window-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Window Signs", "item": "https://www.top5pct.com/signs/business-signs/window-signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Window Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/window-signs",
+    "url": "https://www.top5pct.com/signs/business-signs/window-signs",
     "description": "Custom window signs and window graphics in Joliet, IL. Full-color window decals, perforated film, and frosted vinyl for retail storefronts and commercial buildings. Veteran owned."
 }
 </script>

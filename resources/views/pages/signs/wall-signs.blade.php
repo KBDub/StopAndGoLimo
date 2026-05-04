@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Wall Signs", "item": "https://www.top5pct.com/signs/wall-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Wall Signs", "item": "https://www.top5pct.com/signs/business-signs/wall-signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Wall Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/wall-signs",
+    "url": "https://www.top5pct.com/signs/business-signs/wall-signs",
     "description": "Custom wall signs and wall graphics in Joliet, IL. Vinyl wall decals, wall wraps, and mounted wall signs for businesses and commercial spaces. Veteran owned."
 }
 </script>

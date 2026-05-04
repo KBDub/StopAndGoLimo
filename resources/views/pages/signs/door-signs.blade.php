@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Door Signs", "item": "https://www.top5pct.com/signs/door-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Door Signs", "item": "https://www.top5pct.com/signs/business-signs/door-signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Door Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/door-signs",
+    "url": "https://www.top5pct.com/signs/business-signs/door-signs",
     "description": "Custom door signs and door graphics in Joliet, IL. Business door decals, frosted vinyl, and full-color door wraps for commercial properties. Same day available. Veteran owned."
 }
 </script>

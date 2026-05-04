@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Yard Signs", "item": "https://www.top5pct.com/signs/yard-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Yard Signs", "item": "https://www.top5pct.com/signs/ground-signs/yard-signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Yard Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/yard-signs",
+    "url": "https://www.top5pct.com/signs/ground-signs/yard-signs",
     "description": "Custom yard signs and lawn signs in Joliet, IL. Political signs, real estate signs, business yard signs, and event lawn signs. Fast turnaround and same day available. Veteran owned."
 }
 </script>

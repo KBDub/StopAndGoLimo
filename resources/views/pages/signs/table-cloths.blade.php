@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Table Cloths", "item": "https://www.top5pct.com/signs/table-cloths" }
+        { "@type": "ListItem", "position": 3, "name": "Table Cloths", "item": "https://www.top5pct.com/signs/table-signs/table-cloths" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Table Cloths in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/table-cloths",
+    "url": "https://www.top5pct.com/signs/table-signs/table-cloths",
     "description": "Custom printed table cloths and table covers for events and trade shows in Joliet, IL. Full-color branded table cloths in fitted and throw styles. Veteran owned."
 }
 </script>

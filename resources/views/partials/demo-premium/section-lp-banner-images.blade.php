@@ -20,13 +20,13 @@
                 'image' => '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',
                 'alt'   => 'DTF transfers printing in Joliet',
                 'title' => 'DTF Transfers',
-                'href'  => '/custom-apparel/dtf-transfers',
+                'href'  => '/custom-apparel/printing-options/dtf-printing',
             ],
             [
                 'image' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg',
                 'alt'   => 'Family and class reunion shirts in Joliet and Shorewood',
                 'title' => 'Reunion Shirts',
-                'href'  => '/custom-apparel/reunion-shirts',
+                'href'  => '/custom-apparel/group-shirts/reunion-shirts',
             ],
         ]" />
 
@@ -46,7 +46,7 @@
         'image' =&gt; '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',
         'alt'   =&gt; 'DTF transfers printing in Joliet',
         'title' =&gt; 'DTF Transfers',
-        'href'  =&gt; '/custom-apparel/dtf-transfers',
+        'href'  =&gt; '/custom-apparel/printing-options/dtf-printing',
     ],
 ]" /&gt;
 {{-- Aspect ratio: 16:7 (full width per banner) --}}

@@ -28,7 +28,7 @@
                     image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
                     alt="DTF transfers printing in Joliet"
                     title="DTF Transfers"
-                    href="/custom-apparel/dtf-transfers"
+                    href="/custom-apparel/printing-options/dtf-printing"
                     direction="right"
                 />
             </div>

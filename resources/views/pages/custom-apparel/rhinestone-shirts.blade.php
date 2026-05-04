@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Rhinestone Shirts", "item": "https://www.top5pct.com/custom-apparel/rhinestone-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Rhinestone Shirts", "item": "https://www.top5pct.com/custom-apparel/rhinestone-apparel" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Rhinestone Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/rhinestone-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/rhinestone-apparel",
     "description": "Custom rhinestone t-shirts and apparel in Joliet, IL. Sparkle and crystal rhinestone designs for events, teams, and businesses. No minimums, same day available. Veteran owned."
 }
 </script>

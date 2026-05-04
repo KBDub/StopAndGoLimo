@@ -44,7 +44,7 @@
             <x-ui.card-category-visual
                 title="DTF transfers"
                 subtitle="Ready-to-press designs"
-                href="/custom-apparel/dtf-transfers"
+                href="/custom-apparel/printing-options/dtf-printing"
             />
         </div>
 

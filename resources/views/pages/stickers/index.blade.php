@@ -75,13 +75,13 @@
             'image' => '/images/stickers-decals/top5pct-stickers-decals-joliet-beer-brewery.jpg',
             'alt'   => 'Standard custom stickers printed for businesses in Joliet Illinois',
             'title' => 'Standard Stickers',
-            'href'  => '/stickers/standard-stickers',
+            'href'  => '/stickers/standard-stickers-decals',
         ],
         [
             'image' => '/images/stickers-decals/top5pct-stickers-decals-joliet-ocean-viewz.jpg',
             'alt'   => 'Custom shaped die cut stickers printed in Joliet Illinois',
             'title' => 'Custom Shaped Stickers',
-            'href'  => '/stickers/custom-shaped-stickers',
+            'href'  => '/stickers/custom-shaped-stickers-decals',
         ],
     ]" />
 

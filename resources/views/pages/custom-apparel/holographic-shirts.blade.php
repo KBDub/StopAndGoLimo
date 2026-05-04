@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Holographic Shirts", "item": "https://www.top5pct.com/custom-apparel/holographic-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Holographic Shirts", "item": "https://www.top5pct.com/custom-apparel/specialty-materials/holographic-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Holographic Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/holographic-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/specialty-materials/holographic-shirts",
     "description": "Custom holographic shirts in Joliet, IL. Rainbow-shifting holographic vinyl designs on t-shirts and apparel for events, teams, and promotions. No minimums, same day available. Veteran owned."
 }
 </script>

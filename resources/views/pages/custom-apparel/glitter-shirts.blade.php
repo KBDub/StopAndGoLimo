@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Glitter Shirts", "item": "https://www.top5pct.com/custom-apparel/glitter-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Glitter Shirts", "item": "https://www.top5pct.com/custom-apparel/specialty-materials/glitter-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Glitter Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/glitter-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/specialty-materials/glitter-shirts",
     "description": "Custom glitter heat-transfer shirts in Joliet, IL. Sparkling glitter designs for events, teams, and celebrations. No minimums, same day available. Veteran owned."
 }
 </script>

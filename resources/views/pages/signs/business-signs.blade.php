@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Business Signs", "item": "https://www.top5pct.com/signs/business-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Business Signs", "item": "https://www.top5pct.com/signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Business Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/business-signs",
+    "url": "https://www.top5pct.com/signs",
     "description": "Custom business signs in Joliet, IL. Storefront signs, outdoor signs, window signs, door signs, and professional signage for businesses across Will County. Veteran owned."
 }
 </script>

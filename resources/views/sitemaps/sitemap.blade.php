@@ -77,49 +77,49 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/rhinestone-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/rhinestone-apparel</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/glitter-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/glitter-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/foil-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/foil-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/glow-in-the-dark-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/glow-in-the-dark-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/flock-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/flock-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/reflective-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/reflective-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/holographic-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/holographic-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/brick-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/brick-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -143,31 +143,31 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/dtf-transfers</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/dtf-printing</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/reunion-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-shirts/reunion-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/corporate-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-shirts/corporate-wear-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/spirit-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-shirts/spirit-wear-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/dye-sublimation</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/dye-sublimation-printing</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -179,7 +179,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/puff-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/specialty-materials/puff-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -196,73 +196,73 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/business-signs</loc>
+        <loc>https://www.top5pct.com/signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/banners</loc>
+        <loc>https://www.top5pct.com/signs/business-signs/banners</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/posters</loc>
+        <loc>https://www.top5pct.com/signs/business-signs/posters</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/table-runners</loc>
+        <loc>https://www.top5pct.com/signs/table-signs/table-runners</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/sidewalk-signs</loc>
+        <loc>https://www.top5pct.com/signs/ground-signs/sidewalk-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/yard-signs</loc>
+        <loc>https://www.top5pct.com/signs/ground-signs/yard-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/window-signs</loc>
+        <loc>https://www.top5pct.com/signs/business-signs/window-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/wall-signs</loc>
+        <loc>https://www.top5pct.com/signs/business-signs/wall-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/floor-signs</loc>
+        <loc>https://www.top5pct.com/signs/business-signs/floor-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/door-signs</loc>
+        <loc>https://www.top5pct.com/signs/business-signs/door-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/parking-signs</loc>
+        <loc>https://www.top5pct.com/signs/ground-signs/parking-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/table-cloths</loc>
+        <loc>https://www.top5pct.com/signs/table-signs/table-cloths</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -314,13 +314,13 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/stickers/standard-stickers</loc>
+        <loc>https://www.top5pct.com/stickers/standard-stickers-decals</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/stickers/custom-shaped-stickers</loc>
+        <loc>https://www.top5pct.com/stickers/custom-shaped-stickers-decals</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

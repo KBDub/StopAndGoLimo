@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "DTF Transfers", "item": "https://www.top5pct.com/custom-apparel/dtf-transfers" }
+        { "@type": "ListItem", "position": 3, "name": "DTF Transfers", "item": "https://www.top5pct.com/custom-apparel/printing-options/dtf-printing" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "DTF Transfers in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/dtf-transfers",
+    "url": "https://www.top5pct.com/custom-apparel/printing-options/dtf-printing",
     "description": "Custom direct-to-film transfers printed in Joliet, IL. Vibrant full-color DTF prints on any fabric with no minimums and same day service available. Veteran owned."
 }
 </script>

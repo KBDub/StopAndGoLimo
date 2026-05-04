@@ -22,31 +22,31 @@
 
             <x-ui.card-product
                 title="Corporate Wear"
-                href="/custom-apparel/corporate-wear-shirts"
+                href="/custom-apparel/group-shirts/corporate-wear-shirts"
                 image="/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/corporate-wear-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
+                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
                 title="Business Signs"
-                href="/signs/business-signs"
+                href="/signs"
                 image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Want to attract more customers with a new sign?</strong> Our <a href="/signs/business-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom business signs</a> are designed to maximize visibility and build brand recognition. From storefront signs to building wraps, we also offer <a href="/signs/banners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom banners</a> for temporary promotions and grand openings.
+                    <strong class="text-charcoal">Want to attract more customers with a new sign?</strong> Our <a href="/signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom business signs</a> are designed to maximize visibility and build brand recognition. From storefront signs to building wraps, we also offer <a href="/signs/business-signs/banners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom banners</a> for temporary promotions and grand openings.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
                 title="Banners"
-                href="/signs/banners"
+                href="/signs/business-signs/banners"
                 image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Need a banner for your next event or promotion?</strong> Durable <a href="/signs/banners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">indoor and outdoor banners</a> with full-color printing on premium vinyl and fabric. Perfect for grand openings and trade shows. We also print <a href="/signs/table-runners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom table runners</a> for a complete event presence.
+                    <strong class="text-charcoal">Need a banner for your next event or promotion?</strong> Durable <a href="/signs/business-signs/banners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">indoor and outdoor banners</a> with full-color printing on premium vinyl and fabric. Perfect for grand openings and trade shows. We also print <a href="/signs/table-signs/table-runners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom table runners</a> for a complete event presence.
                 </p>
             </x-ui.card-product>
 
@@ -62,31 +62,31 @@
 
             <x-ui.card-product
                 title="Custom Stickers"
-                href="/stickers/standard-stickers"
+                href="/stickers/standard-stickers-decals"
                 image="/images/stickers-decals/top5pct-banner-stickers-decals-joliet.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for custom stickers or labels?</strong> High-quality <a href="/stickers/standard-stickers" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">die-cut stickers and labels</a> for branding, packaging, giveaways, and promotions. We also offer <a href="/signs/window-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">window and wall decals</a> for storefronts and office spaces.
+                    <strong class="text-charcoal">Looking for custom stickers or labels?</strong> High-quality <a href="/stickers/standard-stickers-decals" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">die-cut stickers and labels</a> for branding, packaging, giveaways, and promotions. We also offer <a href="/signs/business-signs/window-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">window and wall decals</a> for storefronts and office spaces.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
                 title="DTF Transfers"
-                href="/custom-apparel/dtf-transfers"
+                href="/custom-apparel/printing-options/dtf-printing"
                 image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/dtf-transfers" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. You can even <a href="/design-services/online-designer" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">design your own transfer online</a> and we will handle the rest.
+                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/printing-options/dtf-printing" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. You can even <a href="/design-services/online-designer" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">design your own transfer online</a> and we will handle the rest.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
                 title="Yard Signs"
-                href="/signs/yard-signs"
+                href="/signs/ground-signs/yard-signs"
                 image="/images/yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Where can I get yard signs near Joliet?</strong> Corrugated <a href="/signs/yard-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">yard signs for real estate, campaigns, and events</a>. Weather-resistant with single or double-sided printing. Need something larger? We also offer <a href="/signs/posters" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom posters and foam boards</a> for indoor displays.
+                    <strong class="text-charcoal">Where can I get yard signs near Joliet?</strong> Corrugated <a href="/signs/ground-signs/yard-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">yard signs for real estate, campaigns, and events</a>. Weather-resistant with single or double-sided printing. Need something larger? We also offer <a href="/signs/business-signs/posters" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom posters and foam boards</a> for indoor displays.
                 </p>
             </x-ui.card-product>
 

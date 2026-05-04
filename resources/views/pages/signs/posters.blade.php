@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Posters", "item": "https://www.top5pct.com/signs/posters" }
+        { "@type": "ListItem", "position": 3, "name": "Posters", "item": "https://www.top5pct.com/signs/business-signs/posters" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Poster Printing in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/posters",
+    "url": "https://www.top5pct.com/signs/business-signs/posters",
     "description": "Large format poster printing in Joliet, IL. Event posters, backdrops, poster boards, and mounted prints for businesses and events across Will County. Same day available. Veteran owned."
 }
 </script>

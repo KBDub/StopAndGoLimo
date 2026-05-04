@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Parking Signs", "item": "https://www.top5pct.com/signs/parking-signs" }
+        { "@type": "ListItem", "position": 3, "name": "Parking Signs", "item": "https://www.top5pct.com/signs/ground-signs/parking-signs" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Parking Signs in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/parking-signs",
+    "url": "https://www.top5pct.com/signs/ground-signs/parking-signs",
     "description": "Custom parking signs and lot signs in Joliet, IL. Business parking signs, reserved parking, no parking, and custom property signage for commercial properties. Veteran owned."
 }
 </script>

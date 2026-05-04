@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Stickers", "item": "https://www.top5pct.com/stickers" },
-        { "@type": "ListItem", "position": 3, "name": "Standard Stickers", "item": "https://www.top5pct.com/stickers/standard-stickers" }
+        { "@type": "ListItem", "position": 3, "name": "Standard Stickers", "item": "https://www.top5pct.com/stickers/standard-stickers-decals" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Standard Custom Stickers in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/stickers/standard-stickers",
+    "url": "https://www.top5pct.com/stickers/standard-stickers-decals",
     "description": "Custom standard stickers in Joliet, IL. Rectangle, square, circle, and oval stickers for businesses, events, and promotions. No minimums, same day available. Veteran owned."
 }
 </script>

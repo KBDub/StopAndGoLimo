@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Puff Shirts", "item": "https://www.top5pct.com/custom-apparel/puff-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Puff Shirts", "item": "https://www.top5pct.com/custom-apparel/specialty-materials/puff-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Puff Print Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/puff-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/specialty-materials/puff-shirts",
     "description": "Custom puff print shirts in Joliet, IL. 3D raised puff heat-transfer designs on t-shirts and apparel. No minimums, same day available. Veteran owned."
 }
 </script>

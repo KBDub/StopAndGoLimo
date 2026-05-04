@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Glow in the Dark Shirts", "item": "https://www.top5pct.com/custom-apparel/glow-in-the-dark-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Glow in the Dark Shirts", "item": "https://www.top5pct.com/custom-apparel/specialty-materials/glow-in-the-dark-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Glow in the Dark Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/glow-in-the-dark-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/specialty-materials/glow-in-the-dark-shirts",
     "description": "Custom glow in the dark shirts in Joliet, IL. Luminescent vinyl designs that glow under blacklight and in low light for events, raves, and team apparel. No minimums. Veteran owned."
 }
 </script>

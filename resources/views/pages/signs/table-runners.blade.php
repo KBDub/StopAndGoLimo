@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Signs", "item": "https://www.top5pct.com/signs" },
-        { "@type": "ListItem", "position": 3, "name": "Table Runners", "item": "https://www.top5pct.com/signs/table-runners" }
+        { "@type": "ListItem", "position": 3, "name": "Table Runners", "item": "https://www.top5pct.com/signs/table-signs/table-runners" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Table Runners in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/signs/table-runners",
+    "url": "https://www.top5pct.com/signs/table-signs/table-runners",
     "description": "Custom printed table runners for events and trade shows in Joliet, IL. Branded dye sublimation table runners for businesses and organizations. Veteran owned."
 }
 </script>

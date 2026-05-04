@@ -1,6 +1,6 @@
 <x-layouts.page
     title="Articles | Tips, Guides & Design Help"
-    metaDescription="Helpful articles for businesses in Joliet and Will County. Tips, guides, and design advice from Top 5 Percent — your veteran owned custom signage and apparel shop."
+    metaDescription="Helpful articles, tips, and design advice from Top 5 Percent — your veteran-owned custom signage and apparel shop in Joliet and Will County."
     currentPage="about">
 
     <x-sections.category-hero

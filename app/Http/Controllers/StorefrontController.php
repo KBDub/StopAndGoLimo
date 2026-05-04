@@ -47,10 +47,9 @@ class StorefrontController extends Controller
             ->where('is_active', true)
             ->firstOrFail();
 
-        return view('store.index', [
-            'store'    => $store,
-            'page'     => $page,
-            'sections' => $this->sectionComponents,
+        return view('store.page', [
+            'store' => $store,
+            'page'  => $page,
         ]);
     }
 

@@ -16,7 +16,7 @@
                 image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Need custom t-shirts in Joliet?</strong> Whether you are ordering <a href="/custom-apparel/custom-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">screen printed and heat pressed custom shirts</a> for a team, a family reunion, or your business, Top 5 Percent delivers premium quality. Ask about our <a href="/custom-apparel" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">full custom apparel lineup</a> for all your branding needs.
+                    <strong class="text-charcoal">Need custom t-shirts in Joliet?</strong> Whether you are ordering screen printed and heat pressed custom shirts for a team, a family reunion, or your business, Top 5 Percent delivers premium quality. Ask about our <a href="/custom-apparel" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">full custom apparel lineup</a> for all your branding needs.
                 </p>
             </x-ui.card-product>
 

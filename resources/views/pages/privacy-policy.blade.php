@@ -1,4 +1,4 @@
-<x-layouts.page title="Privacy Policy" metaDescription="Top 5 Percent privacy policy. Veteran-owned custom signage and apparel in Joliet, IL. Learn how we collect, use, and protect your personal information." currentPage="privacy-policy">
+<x-layouts.page title="Top 5 Percent Privacy Policy" metaDescription="Top 5 Percent privacy policy. Veteran-owned custom signage and apparel in Joliet, IL. Learn how we collect, use, and protect your personal information." currentPage="privacy-policy">
 
     <section class="pt-16 pb-4 bg-white border-b border-linen-dark">
         <div class="max-w-4xl mx-auto px-6">

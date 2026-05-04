@@ -38,8 +38,8 @@
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
-        heading="Custom Stickers"
-        headingAccent="Any Shape, Any Size"
+        heading="Standard Stickers & Decals"
+        headingAccent="Precision Cut, Full Color"
         description="We print custom stickers, die cut decals, product labels, and business decals for companies, sports teams, events, and personal use throughout Joliet, Shorewood, Plainfield, and Will County. No minimums, full color, weatherproof vinyl, and same day service available."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"

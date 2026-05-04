@@ -13,7 +13,7 @@
         <div class="max-w-3xl mx-auto px-6">
 
             <div class="mb-10">
-                <h1 class="text-3xl font-bold mb-2" style="color: var(--brand-primary);">Privacy Policy</h1>
+                <h1 class="text-3xl font-bold mb-2" style="color: var(--brand-primary);">Your Privacy Rights</h1>
                 <p class="text-sm" style="color: var(--brand-primary); opacity: .6;">Last updated: {{ date('F j, Y') }}</p>
             </div>
 

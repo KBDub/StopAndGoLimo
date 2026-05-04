@@ -23,7 +23,7 @@
             </div>
 
             <div class="mb-8">
-                <h1 class="font-heading text-3xl md:text-4xl font-bold text-charcoal">{{ $collectionName }}</h1>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-charcoal">{{ $collectionName }}</h2>
             </div>
 
             @if($childCollections->isNotEmpty())

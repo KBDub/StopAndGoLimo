@@ -288,11 +288,6 @@ html {
         @apply font-semibold text-azure hover:text-azure-dark transition-colors no-underline;
     }
 
-    .link-notification {
-        @apply font-semibold underline decoration-2;
-        color: var(--color-azure);
-    }
-
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -322,6 +317,14 @@ html {
     .scrollbar-sunburst::-webkit-scrollbar-thumb:hover {
         background: var(--color-sunburst-dark);
     }
+}
+
+/* Unlayered — always wins over @layer base / @layer components decoration resets */
+.link-notification {
+    font-weight: 600;
+    color: var(--color-azure);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
 }
 
 @keyframes rock {

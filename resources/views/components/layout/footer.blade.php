@@ -120,7 +120,7 @@
             <div id="contact" class="col-span-1">
                 <h4 class="font-semibold text-charcoal text-base mb-3">Contact</h4>
                 <div class="text-sm space-y-2">
-                    <p class="text-charcoal">Joliet, IL (Headquarters)</p>
+                    <p class="text-charcoal">Joliet, IL</p>
                     <p class="text-charcoal-light leading-relaxed">
                         121 Springfield Avenue<br>
                         Suite 103<br>

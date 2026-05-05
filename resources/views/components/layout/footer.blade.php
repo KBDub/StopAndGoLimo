@@ -11,7 +11,7 @@
 
             {{-- Quick Links --}}
             <div id="quick-links" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-lg mb-3 text-center">Quick Links</h4>
+                <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Quick Links</h4>
                 <ul class="space-y-1.5 text-sm text-center">
                     <li><a href="/" class="link-notification">Home</a></li>
                     <li><a href="/about-us" class="link-notification">About Us</a></li>
@@ -32,8 +32,8 @@
 
             {{-- Services — 5-column newspaper spill --}}
             <div id="services" class="col-span-5">
-                <h4 class="font-semibold text-charcoal text-lg mb-3 text-center">Services</h4>
-                <div class="columns-5 gap-x-2 text-xs">
+                <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Services</h4>
+                <div class="columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
@@ -118,7 +118,7 @@
 
             {{-- Contact --}}
             <div id="contact" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-lg mb-3 text-center">Contact</h4>
+                <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Contact</h4>
                 <div class="text-sm space-y-2 text-center">
                     <p class="text-charcoal">Joliet, IL</p>
                     <p class="text-charcoal-light leading-relaxed">

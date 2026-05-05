@@ -271,6 +271,28 @@ html {
         height: 3px;
     }
 
+    /* ── Link Styles ─────────────────────────────────────── */
+    .link-inline {
+        @apply font-semibold text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors;
+    }
+
+    .link-underbar {
+        @apply font-semibold text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline;
+    }
+
+    .link-nav {
+        @apply font-semibold text-charcoal hover:text-sunburst text-lg transition-colors no-underline;
+    }
+
+    .link-arrow {
+        @apply font-semibold text-azure hover:text-azure-dark transition-colors no-underline;
+    }
+
+    .link-notification {
+        @apply font-semibold underline decoration-2;
+        color: var(--color-azure);
+    }
+
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;

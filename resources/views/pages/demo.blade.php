@@ -473,32 +473,37 @@
                     <div class="space-y-6">
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">Inline Link - Azure Blue, fading underline</p>
-                            <p class="text-base text-charcoal">Visit our <a href="#" class="font-semibold text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom shirts page</a> to browse our full catalog of apparel options.</p>
-                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="font-semibold text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors"</p>
+                            <p class="text-base text-charcoal">Visit our <a href="#" class="link-inline">custom shirts page</a> to browse our full catalog of apparel options.</p>
+                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="link-inline"</p>
+                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors</p>
                         </div>
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">Underbar Link - Bottom border style (used on top5pct.com)</p>
-                            <p class="text-base text-charcoal">Learn more about <a href="#" class="font-semibold text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline">vinyl lettering &amp; car wraps</a> and our <a href="#" class="font-semibold text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline">vehicle graphics</a> services.</p>
-                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="font-semibold text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline"</p>
+                            <p class="text-base text-charcoal">Learn more about <a href="#" class="link-underbar">vinyl lettering &amp; car wraps</a> and our <a href="#" class="link-underbar">vehicle graphics</a> services.</p>
+                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="link-underbar"</p>
+                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline</p>
                         </div>
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">Navigation Link - Charcoal default, Sunburst hover, 18px</p>
                             <div class="flex gap-6">
-                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-lg transition-colors no-underline">Custom Apparel</a>
-                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-lg transition-colors no-underline">Signs</a>
-                                <a href="#" class="text-charcoal hover:text-sunburst font-semibold text-lg transition-colors no-underline">Decals</a>
+                                <a href="#" class="link-nav">Custom Apparel</a>
+                                <a href="#" class="link-nav">Signs</a>
+                                <a href="#" class="link-nav">Decals</a>
                             </div>
-                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="font-semibold text-charcoal hover:text-sunburst text-lg transition-colors no-underline"</p>
+                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="link-nav"</p>
+                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold text-charcoal hover:text-sunburst text-lg transition-colors no-underline</p>
                         </div>
                         <div class="pb-4 border-b border-gray-200">
                             <p class="text-xs text-charcoal-light mb-2">Arrow Link - Azure with arrow indicator</p>
-                            <a href="#" class="text-azure hover:text-azure-dark font-semibold transition-colors no-underline">View All Products →</a>
-                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="font-semibold text-azure hover:text-azure-dark transition-colors no-underline"</p>
+                            <a href="#" class="link-arrow">View All Products →</a>
+                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="link-arrow"</p>
+                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold text-azure hover:text-azure-dark transition-colors no-underline</p>
                         </div>
                         <div>
                             <p class="text-xs text-charcoal-light mb-2">Notification Bar Link - Azure via CSS var, semibold, bold underline (used in <code class="bg-gray-100 px-1 rounded">x-layout.top-notification-bar</code>)</p>
-                            <p class="text-base text-charcoal">Call us at <a href="tel:+18153498600" class="font-semibold underline decoration-2" style="color:var(--color-azure)">(815) 349-8600</a> or <a href="tel:+18153498600" class="font-semibold underline decoration-2" style="color:var(--color-azure)">(815) 349-TOP5</a>.</p>
-                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="font-semibold underline decoration-2" style="color:var(--color-azure)"</p>
+                            <p class="text-base text-charcoal">Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or <a href="tel:+18153498600" class="link-notification">(815) 349-TOP5</a>.</p>
+                            <p class="text-xs text-charcoal-light mt-2 font-mono">class="link-notification"</p>
+                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold underline decoration-2; color: var(--color-azure)</p>
                         </div>
                     </div>
                 </div>

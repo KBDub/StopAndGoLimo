@@ -290,6 +290,7 @@ html {
 
     .link-city {
         @apply font-semibold no-underline pb-px border-b-2 border-transparent transition-colors;
+        color: inherit;
     }
 
     .link-city:hover {

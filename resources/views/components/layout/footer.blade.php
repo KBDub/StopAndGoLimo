@@ -37,7 +37,7 @@
 
                     {{-- Custom Apparel --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/custom-apparel" class="link-nav">Custom Apparel</a>
+                        <a href="/custom-apparel" class="text-charcoal hover:text-sunburst transition-colors no-underline">Custom Apparel</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/custom-apparel/screen-printing"                              class="link-notification">Screen Printing</a></li>
@@ -56,7 +56,7 @@
 
                     {{-- Signs & Banners --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/signs" class="link-nav">Signs & Banners</a>
+                        <a href="/signs" class="text-charcoal hover:text-sunburst transition-colors no-underline">Signs & Banners</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/signs/business-signs/banners"       class="link-notification">Banners</a></li>
@@ -74,7 +74,7 @@
 
                     {{-- Vehicle Graphics --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/vehicle-graphics" class="link-nav">Vehicle Graphics</a>
+                        <a href="/vehicle-graphics" class="text-charcoal hover:text-sunburst transition-colors no-underline">Vehicle Graphics</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/vehicle-graphics/automobile-graphics" class="link-notification">Automobile Graphics</a></li>
@@ -84,7 +84,7 @@
 
                     {{-- Decals & Stickers --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/stickers" class="link-nav">Decals & Stickers</a>
+                        <a href="/stickers" class="text-charcoal hover:text-sunburst transition-colors no-underline">Decals & Stickers</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/stickers/standard-stickers-decals"      class="link-notification">Standard Stickers & Decals</a></li>
@@ -93,7 +93,7 @@
 
                     {{-- Promotional Items --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/promotional-items" class="link-nav">Promotional Items</a>
+                        <a href="/promotional-items" class="text-charcoal hover:text-sunburst transition-colors no-underline">Promotional Items</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/promotional-items/mugs"           class="link-notification">Mugs</a></li>
@@ -106,7 +106,7 @@
 
                     {{-- Design Services --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/design-services" class="link-nav">Design Services</a>
+                        <a href="/design-services" class="text-charcoal hover:text-sunburst transition-colors no-underline">Design Services</a>
                     </h5>
                     <ul class="space-y-1 text-center">
                         <li><a href="/design-services/graphic-design" class="link-notification">Graphic Design</a></li>

@@ -1,5 +1,6 @@
 @php
     use App\Data\PrimaryLocations;
+    use Illuminate\Support\Str;
     $mapLocations   = PrimaryLocations::forMap();
     $zips           = PrimaryLocations::zips();
     $primaryCities  = PrimaryLocations::primaryCityNames();
@@ -123,7 +124,7 @@
                     @php $allCities = array_merge([$hqCity], $primaryCities, $secondaryCities); @endphp
                     <p id="city-list" class="text-white/50 text-sm leading-relaxed">
                         Veteran-owned since 2015, Top 5 Percent proudly serves
-                        @foreach($allCities as $city)<a href="/service-areas" class="link-city text-sm">{{ $city }}</a>, @endforeach
+                        @foreach($allCities as $city)<a href="/service-areas/{{ Str::slug($city . '-IL') }}" class="link-city text-sm">{{ $city }}</a>, @endforeach
                         and the greater Chicagoland area.
                         Friendly, reliable service.
                     </p>

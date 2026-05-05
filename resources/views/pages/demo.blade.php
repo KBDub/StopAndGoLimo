@@ -500,10 +500,10 @@
                             <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold text-azure hover:text-azure-dark transition-colors no-underline</p>
                         </div>
                         <div>
-                            <p class="text-xs text-charcoal-light mb-2">Notification Bar Link - Azure via CSS var, semibold, bold underline (used in <code class="bg-gray-100 px-1 rounded">x-layout.top-notification-bar</code>)</p>
+                            <p class="text-xs text-charcoal-light mb-2">Notification Bar Link - Azure via CSS var, semibold, 2px underline on hover (used in <code class="bg-gray-100 px-1 rounded">x-layout.top-notification-bar</code>)</p>
                             <p class="text-base text-charcoal">Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or <a href="tel:+18153498600" class="link-notification">(815) 349-TOP5</a>.</p>
                             <p class="text-xs text-charcoal-light mt-2 font-mono">class="link-notification"</p>
-                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">@apply font-semibold underline decoration-2; color: var(--color-azure)</p>
+                            <p class="text-xs text-charcoal-light/60 mt-1 font-mono">font-weight:600; color:var(--color-azure); hover → text-decoration-line:underline; text-decoration-thickness:2px</p>
                         </div>
                     </div>
                 </div>

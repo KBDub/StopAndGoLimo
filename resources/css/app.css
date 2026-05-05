@@ -323,6 +323,9 @@ html {
 .link-notification {
     font-weight: 600;
     color: var(--color-azure);
+    text-decoration-line: none;
+}
+.link-notification:hover {
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
 }

@@ -506,12 +506,12 @@
                             <p class="text-xs text-charcoal-light/60 mt-1 font-mono">font-weight:600; color:var(--color-azure); hover → text-decoration-line:underline; text-decoration-thickness:2px</p>
                         </div>
                         <div class="bg-charcoal p-4">
-                            <p class="text-xs text-charcoal-lighter mb-2">City / Service Area Link - White, semibold, sunburst gold 2px border-bottom on hover (used in <code class="bg-charcoal-light/30 px-1 rounded">x-sections.map-section</code>)</p>
-                            <p class="text-base">
-                                Serving <a href="#" class="link-city">Joliet</a>, <a href="#" class="link-city">Aurora</a>, <a href="#" class="link-city">Naperville</a>, and the greater Chicagoland area.
+                            <p class="text-xs text-charcoal-lighter mb-2">City / Service Area Link - Inherits parent color, semibold, sunburst gold 2px border-bottom on hover (used in <code class="bg-charcoal-light/30 px-1 rounded">x-sections.map-section</code>)</p>
+                            <p class="text-base text-white/50">
+                                Veteran-owned since 2015, Top 5 Percent proudly serves <a href="#" class="link-city">Joliet</a>, <a href="#" class="link-city">Aurora</a>, <a href="#" class="link-city">Naperville</a>, and the greater Chicagoland area.
                             </p>
                             <p class="text-xs text-charcoal-lighter mt-2 font-mono">class="link-city"</p>
-                            <p class="text-xs text-charcoal-lighter/60 mt-1 font-mono">font-semibold; text-white; border-b-2 border-transparent; hover → border-sunburst</p>
+                            <p class="text-xs text-charcoal-lighter/60 mt-1 font-mono">font-semibold; inherits color; border-b-2 border-transparent; hover → border-sunburst</p>
                         </div>
                     </div>
                 </div>

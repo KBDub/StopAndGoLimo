@@ -137,6 +137,22 @@
             </div>
         </div>
 
+        {{-- Image Sizes --}}
+        <div class="mb-10">
+            <div class="text-center mb-5">
+                <h4 class="text-h4 font-semibold text-charcoal">Image Sizes</h4>
+                <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
+            </div>
+            <div class="flex justify-center">
+                <img
+                    src="{{ asset('images/top5pct-dtf-price-chart2.jpg') }}"
+                    alt="DTF transfer image size reference chart"
+                    class="w-full max-w-3xl shadow-md"
+                    style="max-width:100%;"
+                >
+            </div>
+        </div>
+
         {{-- Drop zone CTA --}}
         <div class="border-t-4 border-sunburst shadow-md bg-linen-light p-8">
             <div class="text-center mb-6">

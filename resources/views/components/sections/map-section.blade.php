@@ -120,11 +120,10 @@
                 </div>
 
                 <div class="border-t border-white/10 pt-6">
+                    @php $allCities = array_merge([$hqCity], $primaryCities, $secondaryCities); @endphp
                     <p id="city-list" class="text-white/50 text-sm leading-relaxed">
                         Veteran-owned since 2015, Top 5 Percent proudly serves
-                        {{ $hqCity }},
-                        {{ implode(', ', $primaryCities) }},
-                        {{ implode(', ', $secondaryCities) }},
+                        @foreach($allCities as $city)<a href="/service-areas" class="link-city text-sm">{{ $city }}</a>, @endforeach
                         and the greater Chicagoland area.
                         Friendly, reliable service.
                     </p>

@@ -52,7 +52,7 @@
                         @foreach($card['tiers'] as $qty => $price)
                             <button
                                 type="button"
-                                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true } }))"
+                                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } }))"
                                 class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
                             >
                                 <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
@@ -125,7 +125,7 @@
                         @foreach($card['tiers'] as $qty => $price)
                             <button
                                 type="button"
-                                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true } }))"
+                                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } }))"
                                 class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
                             >
                                 <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
@@ -240,7 +240,7 @@
                         @foreach($card['tiers'] as $qty => $price)
                             <button
                                 type="button"
-                                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true } }))"
+                                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } }))"
                                 class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
                             >
                                 <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>

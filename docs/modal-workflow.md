@@ -33,6 +33,22 @@ The Custom Request Workflow is a multi-step guided wizard that collects everythi
 4. User clicks the toggle ON → the contact modal closes immediately and the wizard opens at Step 1, with name/email/phone pre-filled.
 5. The toggle click handler calls `launchWizard()` only when it transitions to `true`.
 
+#### DTF Pricing Button Flow
+
+1. User clicks any row on the DTF pricing section (Neck Tags, Left Chest, Image Sizes).
+2. Button dispatches `open-modal` with `{ name: 'dtf-confirm' }`.
+3. The **DTF Confirm Modal** (`x-ui.dtf-confirm-modal`) opens — gold variant, `sm` size.
+   - Title: "Ready to Order?"
+   - Body: "Would you like to order some DTFs?"
+   - **Yes, let's do it** → closes confirm modal, then dispatches `open-contact-modal` with `{ dtf: true }`.
+   - **No, not right now** → closes confirm modal, flow ends.
+4. On "Yes", continues into the regular DTF Dropzone Flow below (step 3 onward).
+
+**Component:** `resources/views/components/ui/dtf-confirm-modal.blade.php`
+**Included on:** `resources/views/pages/custom-apparel/dtf-transfers.blade.php`
+
+---
+
 #### DTF Dropzone Flow
 
 1. User drops or selects a file on any DTF drop zone component.

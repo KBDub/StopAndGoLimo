@@ -36,10 +36,10 @@
                 <div class="columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
-                    {{-- <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
                         <a href="/custom-apparel" class="link-nav">Custom Apparel</a>
-                    </h5> --}}
-                    <ul class="space-y-1 mb-4">
+                    </h5>
+                    <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/custom-apparel/screen-printing"                              class="link-notification">Screen Printing</a></li>
                         <li><a href="/custom-apparel/embroidery"                                    class="link-notification">Embroidery</a></li>
                         <li><a href="/custom-apparel/printing-options/dtf-printing"                class="link-notification">DTF Printing</a></li>
@@ -55,10 +55,10 @@
                     </ul>
 
                     {{-- Signs & Banners --}}
-                    {{-- <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
                         <a href="/signs" class="link-nav">Signs & Banners</a>
-                    </h5> --}}
-                    <ul class="space-y-1 mb-4">
+                    </h5>
+                    <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/signs/business-signs/banners"       class="link-notification">Banners</a></li>
                         <li><a href="/signs/ground-signs/yard-signs"       class="link-notification">Yard Signs</a></li>
                         <li><a href="/signs/business-signs/window-signs"  class="link-notification">Window Signs</a></li>
@@ -73,29 +73,29 @@
                     </ul>
 
                     {{-- Vehicle Graphics --}}
-                    {{-- <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
                         <a href="/vehicle-graphics" class="link-nav">Vehicle Graphics</a>
-                    </h5> --}}
-                    <ul class="space-y-1 mb-4">
+                    </h5>
+                    <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/vehicle-graphics/automobile-graphics" class="link-notification">Automobile Graphics</a></li>
                         <li><a href="/vehicle-graphics/vehicle-magnets"     class="link-notification">Vehicle Magnets</a></li>
                         <li><a href="/vehicle-graphics/dot-decals"          class="link-notification">DOT Decals</a></li>
                     </ul>
 
                     {{-- Decals & Stickers --}}
-                    {{-- <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
                         <a href="/stickers" class="link-nav">Decals & Stickers</a>
-                    </h5> --}}
-                    <ul class="space-y-1 mb-4">
+                    </h5>
+                    <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/stickers/standard-stickers-decals"      class="link-notification">Standard Stickers & Decals</a></li>
                         <li><a href="/stickers/custom-shaped-stickers-decals" class="link-notification">Custom-Shaped Stickers & Decals</a></li>
                     </ul>
 
                     {{-- Promotional Items --}}
-                    {{-- <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
                         <a href="/promotional-items" class="link-nav">Promotional Items</a>
-                    </h5> --}}
-                    <ul class="space-y-1 mb-4">
+                    </h5>
+                    <ul class="space-y-1 mb-4 text-center">
                         <li><a href="/promotional-items/mugs"           class="link-notification">Mugs</a></li>
                         <li><a href="/promotional-items/can-koozies"    class="link-notification">Can Koozies</a></li>
                         <li><a href="/promotional-items/tote-bags"      class="link-notification">Tote Bags</a></li>
@@ -105,10 +105,10 @@
                     </ul>
 
                     {{-- Design Services --}}
-                    {{-- <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
                         <a href="/design-services" class="link-nav">Design Services</a>
-                    </h5> --}}
-                    <ul class="space-y-1">
+                    </h5>
+                    <ul class="space-y-1 text-center">
                         <li><a href="/design-services/graphic-design" class="link-notification">Graphic Design</a></li>
                         <li><a href="/design-services/logo-design"    class="link-notification">Logo Design</a></li>
                     </ul>

@@ -143,13 +143,112 @@
                 <h4 class="text-h4 font-semibold text-charcoal">Image Sizes</h4>
                 <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
             </div>
-            <div class="flex justify-center">
-                <img
-                    src="{{ asset('images/top5pct-dtf-price-chart2.jpg') }}"
-                    alt="DTF transfer image size reference chart"
-                    class="w-full max-w-3xl shadow-md"
-                    style="max-width:100%;"
-                >
+            @php
+                $imageSizes = [
+                    ['size' => '5″ × 5″', 'tiers' => [
+                        '1 – 14 pcs'    => '$3.99',
+                        '15 – 49 pcs'   => '$2.59',
+                        '50 – 99 pcs'   => '$2.19',
+                        '100 – 249 pcs' => '$1.80',
+                        '250+ pcs'      => '$1.40',
+                    ]],
+                    ['size' => '6″ × 6″', 'tiers' => [
+                        '1 – 14 pcs'    => '$4.99',
+                        '15 – 49 pcs'   => '$3.24',
+                        '50 – 99 pcs'   => '$2.74',
+                        '100 – 249 pcs' => '$2.25',
+                        '250+ pcs'      => '$1.75',
+                    ]],
+                    ['size' => '7″ × 7″', 'tiers' => [
+                        '1 – 14 pcs'    => '$5.99',
+                        '15 – 49 pcs'   => '$3.89',
+                        '50 – 99 pcs'   => '$3.29',
+                        '100 – 249 pcs' => '$2.70',
+                        '250+ pcs'      => '$2.10',
+                    ]],
+                    ['size' => '8″ × 8″', 'tiers' => [
+                        '1 – 14 pcs'    => '$6.99',
+                        '15 – 49 pcs'   => '$4.54',
+                        '50 – 99 pcs'   => '$3.84',
+                        '100 – 249 pcs' => '$3.15',
+                        '250+ pcs'      => '$2.45',
+                    ]],
+                    ['size' => '9″ × 9″', 'tiers' => [
+                        '1 – 14 pcs'    => '$7.99',
+                        '15 – 49 pcs'   => '$5.19',
+                        '50 – 99 pcs'   => '$4.39',
+                        '100 – 249 pcs' => '$3.60',
+                        '250+ pcs'      => '$2.80',
+                    ]],
+                    ['size' => '10″ × 10″', 'tiers' => [
+                        '1 – 14 pcs'    => '$5.99',
+                        '15 – 49 pcs'   => '$3.89',
+                        '50 – 99 pcs'   => '$3.29',
+                        '100 – 249 pcs' => '$2.70',
+                        '250+ pcs'      => '$2.10',
+                    ]],
+                    ['size' => '9″ × 11″', 'tiers' => [
+                        '1 – 14 pcs'    => '$8.49',
+                        '15 – 49 pcs'   => '$5.52',
+                        '50 – 99 pcs'   => '$4.67',
+                        '100 – 249 pcs' => '$3.82',
+                        '250+ pcs'      => '$2.97',
+                    ]],
+                    ['size' => '10″ × 10″ (lg)', 'tiers' => [
+                        '1 – 14 pcs'    => '$8.99',
+                        '15 – 49 pcs'   => '$5.84',
+                        '50 – 99 pcs'   => '$4.94',
+                        '100 – 249 pcs' => '$4.05',
+                        '250+ pcs'      => '$3.15',
+                    ]],
+                    ['size' => '11″ × 5″', 'tiers' => [
+                        '1 – 14 pcs'    => '$6.49',
+                        '15 – 49 pcs'   => '$4.22',
+                        '50 – 99 pcs'   => '$3.57',
+                        '100 – 249 pcs' => '$2.92',
+                        '250+ pcs'      => '$2.27',
+                    ]],
+                    ['size' => '11″ × 11″', 'tiers' => [
+                        '1 – 14 pcs'    => '$9.99',
+                        '15 – 49 pcs'   => '$6.49',
+                        '50 – 99 pcs'   => '$5.49',
+                        '100 – 249 pcs' => '$4.50',
+                        '250+ pcs'      => '$3.50',
+                    ]],
+                    ['size' => '11″ × 14″', 'tiers' => [
+                        '1 – 14 pcs'    => '$11.49',
+                        '15 – 49 pcs'   => '$7.47',
+                        '50 – 99 pcs'   => '$6.32',
+                        '100 – 249 pcs' => '$5.17',
+                        '250+ pcs'      => '$4.02',
+                    ]],
+                    ['size' => '12″ × 17″', 'tiers' => [
+                        '1 – 14 pcs'    => '$14.49',
+                        '15 – 49 pcs'   => '$9.42',
+                        '50 – 99 pcs'   => '$7.97',
+                        '100 – 249 pcs' => '$6.52',
+                        '250+ pcs'      => '$5.07',
+                    ]],
+                ];
+            @endphp
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                @foreach($imageSizes as $card)
+                    <div class="border-t-4 border-sunburst shadow-md bg-white overflow-hidden">
+                        <div class="px-4 py-2.5 bg-sunburst text-center">
+                            <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
+                        </div>
+                        @foreach($card['tiers'] as $qty => $price)
+                            <button
+                                type="button"
+                                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal', { detail: { dtf: true } }))"
+                                class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
+                            >
+                                <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
+                                <span class="text-sm font-bold text-charcoal">{{ $price }} <span class="text-xs font-normal text-charcoal-light">ea</span></span>
+                            </button>
+                        @endforeach
+                    </div>
+                @endforeach
             </div>
         </div>
 

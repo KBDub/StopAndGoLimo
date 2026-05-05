@@ -288,6 +288,14 @@ html {
         @apply font-semibold text-azure hover:text-azure-dark transition-colors no-underline;
     }
 
+    .link-city {
+        @apply font-semibold text-white no-underline pb-px border-b-2 border-transparent transition-colors;
+    }
+
+    .link-city:hover {
+        @apply border-sunburst;
+    }
+
     .hide-scrollbar {
         -ms-overflow-style: none;
         scrollbar-width: none;

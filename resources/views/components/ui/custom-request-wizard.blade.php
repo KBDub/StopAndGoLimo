@@ -46,6 +46,8 @@
 
         /* ── Step 3: Garment Selection ────────────────────── */
         garments: {
+            crewNeck:   false,
+            vNeck:      false,
             poloLong:   false,
             poloShort:  false,
             tankTop:    false,
@@ -74,7 +76,7 @@
         selectedColorsByGarment:{},
         colorFocusIdx: -1,
         colorSuggestions: [
-            'White','Black','Navy Blue','Red','Royal Blue','Forest Green',
+            'White','Black','Blue','Navy Blue','Red','Royal Blue','Forest Green',
             'Charcoal Gray','Light Gray','Sky Blue','Yellow','Orange','Purple',
             'Maroon','Pink','Hot Pink','Kelly Green','Burgundy','Lime Green',
             'Gold','Silver','Tan','Brown','Heather Gray','Sport Gray',
@@ -129,12 +131,15 @@
 
         /* ── Computed ─────────────────────────────────────── */
         get hasShirtType() {
-            return this.garments.poloLong || this.garments.poloShort || this.garments.tankTop ||
+            return this.garments.crewNeck  || this.garments.vNeck    ||
+                   this.garments.poloLong  || this.garments.poloShort || this.garments.tankTop ||
                    this.garments.beanie   || this.garments.scoopNeck || this.garments.baseballCap ||
                    this.garments.sweatshirt || this.garments.hoodie  || this.garments.zipHoodie;
         },
         get selectedGarmentTypes() {
             return [
+                { key:'crewNeck',   label:'Crew Necks'          },
+                { key:'vNeck',      label:'V-Necks'             },
                 { key:'poloLong',   label:'Polo (Long Sleeve)'  },
                 { key:'poloShort',  label:'Polo (Short Sleeve)' },
                 { key:'tankTop',    label:'Tank Tops'           },
@@ -212,11 +217,18 @@
                 return Object.values(this.garments).some(v => v);
             }
             if (s === 'quantity') {
-                return this.selectedGarmentTypes.some(g =>
-                    this.genders.some(gender =>
+                return this.selectedGarmentTypes.some(g => {
+                    if (g.key === 'beanie') {
+                        return (this.quantities['beanie-count'] || 0) > 0;
+                    }
+                    if (g.key === 'baseballCap') {
+                        return (this.quantities['baseballCap-adult'] || 0) > 0
+                            || (this.quantities['baseballCap-youth'] || 0) > 0;
+                    }
+                    return this.genders.some(gender =>
                         this.sizes.some(size => (this.quantities[g.key + '-' + gender.key + '-' + size] || 0) > 0)
-                    )
-                );
+                    );
+                });
             }
             if (s.startsWith('print-method-')) {
                 const key = this.currentGarmentKey;
@@ -316,6 +328,18 @@
             const g = this.selectedGarmentTypes.find(x => x.key === gKey);
             if (!g) return [];
             const results = [];
+            if (gKey === 'beanie') {
+                const qty = this.quantities['beanie-count'] || 0;
+                if (qty > 0) results.push(qty + ' One Size');
+                return results;
+            }
+            if (gKey === 'baseballCap') {
+                const adult = this.quantities['baseballCap-adult'] || 0;
+                const youth = this.quantities['baseballCap-youth'] || 0;
+                if (adult > 0) results.push(adult + ' Adult');
+                if (youth > 0) results.push(youth + ' Youth');
+                return results;
+            }
             this.genders.forEach(gender => {
                 this.sizes.forEach(size => {
                     const qty = this.quantities[gKey + '-' + gender.key + '-' + size] || 0;
@@ -412,17 +436,19 @@
                             <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
                                 Is this a company or personal request? <span class="text-error">*</span>
                             </h3>
-                            <div class="grid grid-cols-2 gap-3">
-                                @foreach([['company','Company'],['personal','Personal']] as [$val,$lbl])
-                                <label class="cursor-pointer group">
-                                    <input type="radio" name="crw-request-type" value="{{ $val }}"
-                                        x-model="requestType" class="sr-only">
-                                    <span
-                                        class="flex items-center justify-center py-3 border-2 text-sm font-semibold transition-colors duration-150 w-full"
-                                        :class="requestType === '{{ $val }}' ? 'border-sunburst bg-sunburst text-charcoal' : 'border-linen-dark bg-white text-charcoal group-hover:border-sunburst/50'"
-                                    >{{ $lbl }}</span>
+                            <div class="flex gap-6 justify-center">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="crw-request-type" value="company"
+                                        @change="requestType = 'company'" :checked="requestType === 'company'"
+                                        class="w-4 h-4 accent-sunburst">
+                                    <span class="text-sm font-medium text-charcoal">Company</span>
                                 </label>
-                                @endforeach
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="crw-request-type" value="personal"
+                                        @change="requestType = 'personal'" :checked="requestType === 'personal'"
+                                        class="w-4 h-4 accent-sunburst">
+                                    <span class="text-sm font-medium text-charcoal">Personal</span>
+                                </label>
                             </div>
                             <div x-show="requestType === 'company'" x-cloak class="mt-3">
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
@@ -528,6 +554,8 @@
                     <p class="text-xs text-charcoal-light mb-4">Select all applicable garment types. <span class="text-error font-semibold">At least one required.</span></p>
                     @php
                         $garmentList = [
+                            ['key' => 'crewNeck',   'label' => 'Crew Necks'],
+                            ['key' => 'vNeck',      'label' => 'V-Necks'],
                             ['key' => 'poloLong',   'label' => 'Polo (Long Sleeve)'],
                             ['key' => 'poloShort',  'label' => 'Polo (Short Sleeve)'],
                             ['key' => 'tankTop',    'label' => 'Tank Tops'],
@@ -716,37 +744,104 @@
                                 <div class="px-3 py-2 bg-linen border-b border-linen-dark">
                                     <h4 class="text-sm font-bold text-charcoal" x-text="g.label"></h4>
                                 </div>
-                                <div class="overflow-x-auto scrollbar-sunburst">
-                                    <table class="w-full border-collapse text-xs">
-                                        <thead>
-                                            <tr class="bg-linen-light">
-                                                <th class="text-left px-2 py-2 font-semibold text-charcoal-light border-r border-linen-dark w-20 whitespace-nowrap">Gender</th>
-                                                <template x-for="size in sizes" :key="size">
-                                                    <th class="px-1 py-2 font-semibold text-charcoal-light text-center min-w-[2.75rem]" x-text="size"></th>
-                                                </template>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <template x-for="gender in genders" :key="gender.key">
-                                                <tr class="border-t border-linen-dark hover:bg-linen-light/50">
-                                                    <td class="px-2 py-1.5 font-semibold text-charcoal border-r border-linen-dark whitespace-nowrap" x-text="gender.label"></td>
+
+                                {{-- Beanies: single one-size quantity input --}}
+                                <template x-if="g.key === 'beanie'">
+                                    <div class="px-4 py-4 flex items-center gap-4">
+                                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
+                                            One Size <span class="text-error">*</span>
+                                        </label>
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            :value="quantities['beanie-count'] || ''"
+                                            @input="
+                                                const n = parseInt($event.target.value);
+                                                const q = Object.assign({}, quantities);
+                                                if (n > 0) q['beanie-count'] = n; else delete q['beanie-count'];
+                                                quantities = q;
+                                            "
+                                            class="w-20 text-center text-sm border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                            placeholder="0"
+                                        >
+                                        <span class="text-xs text-charcoal-light">Enter total quantity needed</span>
+                                    </div>
+                                </template>
+
+                                {{-- Baseball Caps: Adult or Youth only --}}
+                                <template x-if="g.key === 'baseballCap'">
+                                    <div class="px-4 py-4 flex flex-wrap items-center gap-6">
+                                        <div class="flex items-center gap-3">
+                                            <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">Adult</label>
+                                            <input
+                                                type="number"
+                                                min="0"
+                                                :value="quantities['baseballCap-adult'] || ''"
+                                                @input="
+                                                    const n = parseInt($event.target.value);
+                                                    const q = Object.assign({}, quantities);
+                                                    if (n > 0) q['baseballCap-adult'] = n; else delete q['baseballCap-adult'];
+                                                    quantities = q;
+                                                "
+                                                class="w-20 text-center text-sm border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                placeholder="0"
+                                            >
+                                        </div>
+                                        <div class="flex items-center gap-3">
+                                            <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">Youth</label>
+                                            <input
+                                                type="number"
+                                                min="0"
+                                                :value="quantities['baseballCap-youth'] || ''"
+                                                @input="
+                                                    const n = parseInt($event.target.value);
+                                                    const q = Object.assign({}, quantities);
+                                                    if (n > 0) q['baseballCap-youth'] = n; else delete q['baseballCap-youth'];
+                                                    quantities = q;
+                                                "
+                                                class="w-20 text-center text-sm border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                placeholder="0"
+                                            >
+                                        </div>
+                                        <span class="text-xs text-charcoal-light">Enter quantities per size</span>
+                                    </div>
+                                </template>
+
+                                {{-- All other garments: full gender × size matrix --}}
+                                <template x-if="g.key !== 'beanie' && g.key !== 'baseballCap'">
+                                    <div class="overflow-x-auto scrollbar-sunburst">
+                                        <table class="w-full border-collapse text-xs">
+                                            <thead>
+                                                <tr class="bg-linen-light">
+                                                    <th class="text-left px-2 py-2 font-semibold text-charcoal-light border-r border-linen-dark w-20 whitespace-nowrap">Gender</th>
                                                     <template x-for="size in sizes" :key="size">
-                                                        <td class="px-1 py-1 text-center border-l border-linen-dark">
-                                                            <input
-                                                                type="number"
-                                                                min="0"
-                                                                :value="getQty(g.key, gender.key, size)"
-                                                                @input="setQty(g.key, gender.key, size, $event.target.value)"
-                                                                class="w-11 text-center text-xs border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
-                                                                placeholder="0"
-                                                            >
-                                                        </td>
+                                                        <th class="px-1 py-2 font-semibold text-charcoal-light text-center min-w-[2.75rem]" x-text="size"></th>
                                                     </template>
                                                 </tr>
-                                            </template>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                            </thead>
+                                            <tbody>
+                                                <template x-for="gender in genders" :key="gender.key">
+                                                    <tr class="border-t border-linen-dark hover:bg-linen-light/50">
+                                                        <td class="px-2 py-1.5 font-semibold text-charcoal border-r border-linen-dark whitespace-nowrap" x-text="gender.label"></td>
+                                                        <template x-for="size in sizes" :key="size">
+                                                            <td class="px-1 py-1 text-center border-l border-linen-dark">
+                                                                <input
+                                                                    type="number"
+                                                                    min="0"
+                                                                    :value="getQty(g.key, gender.key, size)"
+                                                                    @input="setQty(g.key, gender.key, size, $event.target.value)"
+                                                                    class="w-11 text-center text-xs border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                                    placeholder="0"
+                                                                >
+                                                            </td>
+                                                        </template>
+                                                    </tr>
+                                                </template>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </template>
+
                             </div>
                         </template>
 

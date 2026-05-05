@@ -143,6 +143,42 @@ All button components accept `href` (renders as `<a>`) or render as `<button>` b
 <x-ui.button-text-link href="/about">Learn More</x-ui.button-text-link>
 ```
 
+### UI Link Classes
+
+Five named CSS classes defined in `resources/css/app.css`. All links use `font-weight: 600` (semibold). Classes `.link-inline` through `.link-arrow` are in `@layer components`; `.link-notification` is unlayered so it always wins over layer-based decoration resets. Live reference on the demo page at `/demo`.
+
+| Class | Color | Decoration | Hover |
+|-------|-------|------------|-------|
+| `.link-inline` | Azure (`text-azure`) | Underline, `decoration-azure/30` (faded) | Text darkens to `azure-dark`, underline opacity to full |
+| `.link-underbar` | Azure (`text-azure`) | 2px bottom border, `border-azure/30` (faded) | Border opacity to full; no text-decoration underline |
+| `.link-nav` | Charcoal (`text-charcoal`), 18px | None | Text changes to Sunburst Gold |
+| `.link-arrow` | Azure (`text-azure`) | None | Text darkens to `azure-dark` |
+| `.link-notification` | Azure via `var(--color-azure)` | None | 2px underline (`text-decoration-thickness: 2px`) |
+
+```blade
+{{-- Inline body copy link --}}
+Visit our <a href="/custom-apparel" class="link-inline">custom shirts page</a> to browse all options.
+
+{{-- Underbar style (used throughout top5pct.com body copy) --}}
+Learn more about <a href="/signs" class="link-underbar">business signs</a>.
+
+{{-- Navigation / menu link --}}
+<a href="/custom-apparel" class="link-nav">Custom Apparel</a>
+
+{{-- Arrow / "view all" link --}}
+<a href="/products" class="link-arrow">View All Products →</a>
+
+{{-- Notification bar phone / contact link --}}
+<a href="tel:+18153498600" class="link-notification">(815) 349-8600</a>
+```
+
+**When to use each:**
+- `link-inline` — hyperlinks embedded inside body paragraphs
+- `link-underbar` — same as inline but uses a border-bottom instead of text-decoration; preferred for longer run-on links
+- `link-nav` — navigation menus, mega-menus, footer nav columns
+- `link-arrow` — "View All", "See More", "Shop Now" text links (no button)
+- `link-notification` — phone numbers and short contact links inside the top notification bar or any sunburst/gold background
+
 ### UI Badge Components
 
 All badge components use rounded-full pill shape, `text-xs font-semibold`, and support `$attributes->merge()` for extensibility.
@@ -1455,6 +1491,23 @@ All buttons are implemented as Blade components (see **UI Button Components** ab
 - **Active:** Scale (0.98) + deeper shadow
 - **Disabled:** 50% opacity, no pointer events
 - **Focus:** 2px Azure Blue (#3273DC) outline for accessibility
+
+### Link Styles
+
+All link classes are plain CSS applied directly to `<a>` tags — no Blade component wrapper needed. Source: `resources/css/app.css`. See **UI Link Classes** in the Component Architecture section above for usage examples and when-to-use guidance.
+
+| Class | Default Decoration | Hover Decoration | Color |
+|-------|-------------------|-----------------|-------|
+| `.link-inline` | Underline, 30% opacity | Underline, full opacity | Azure, darkens to Azure Dark |
+| `.link-underbar` | 2px bottom border, 30% opacity | Border, full opacity | Azure, darkens to Azure Dark |
+| `.link-nav` | None | None | Charcoal, changes to Sunburst Gold |
+| `.link-arrow` | None | None | Azure, darkens to Azure Dark |
+| `.link-notification` | None | 2px underline | Azure via `var(--color-azure)` |
+
+**Implementation notes:**
+- `.link-notification` is defined outside `@layer components` in `app.css` to guarantee it wins over any base-layer decoration resets.
+- Never use bare Tailwind `hover:underline` on notification bar links; use `link-notification` instead so thickness and color are consistent.
+- `link-nav` intentionally uses 18px font size to match the nav bar type scale.
 
 ### Badge Styles
 

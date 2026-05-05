@@ -4,9 +4,9 @@
         <div class="grid grid-cols-8 gap-x-4 mb-6 items-start">
 
             {{-- Logo --}}
-            <div id="logo" class="col-span-1">
-                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-10 mb-3">
-                <p class="text-sm text-charcoal-light leading-relaxed">Premium Custom Signage & Apparel. Veteran-owned and proudly serving Joliet, IL.</p>
+            <div id="logo" class="col-span-1 text-center">
+                <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-10 mb-3 mx-auto">
+                <p class="text-sm text-charcoal-light leading-relaxed">Premium Custom Signage & Apparel. Veteran-owned, proudly serving & headquartered in Joliet, IL since 2017.</p>
             </div>
 
             {{-- Quick Links --}}

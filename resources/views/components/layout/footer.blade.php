@@ -11,7 +11,7 @@
 
             {{-- Quick Links --}}
             <div id="quick-links" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-base mb-3">Quick Links</h4>
+                <h4 class="font-semibold text-charcoal text-lg mb-3">Quick Links</h4>
                 <ul class="space-y-1.5 text-sm">
                     <li><a href="/" class="link-notification">Home</a></li>
                     <li><a href="/about-us" class="link-notification">About Us</a></li>
@@ -32,11 +32,11 @@
 
             {{-- Services — 5-column newspaper spill --}}
             <div id="services" class="col-span-5">
-                <h4 class="font-semibold text-charcoal text-base mb-3 text-center">Services</h4>
+                <h4 class="font-semibold text-charcoal text-lg mb-3 text-center">Services</h4>
                 <div class="columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
-                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
                         <a href="/custom-apparel" class="link-nav">Custom Apparel</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
@@ -55,7 +55,7 @@
                     </ul>
 
                     {{-- Signs & Banners --}}
-                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
                         <a href="/signs" class="link-nav">Signs & Banners</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
@@ -73,7 +73,7 @@
                     </ul>
 
                     {{-- Vehicle Graphics --}}
-                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
                         <a href="/vehicle-graphics" class="link-nav">Vehicle Graphics</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
@@ -83,7 +83,7 @@
                     </ul>
 
                     {{-- Decals & Stickers --}}
-                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
                         <a href="/stickers" class="link-nav">Decals & Stickers</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
@@ -92,7 +92,7 @@
                     </ul>
 
                     {{-- Promotional Items --}}
-                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
                         <a href="/promotional-items" class="link-nav">Promotional Items</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
@@ -105,7 +105,7 @@
                     </ul>
 
                     {{-- Design Services --}}
-                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center">
+                    <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
                         <a href="/design-services" class="link-nav">Design Services</a>
                     </h5>
                     <ul class="space-y-1 text-center">
@@ -118,7 +118,7 @@
 
             {{-- Contact --}}
             <div id="contact" class="col-span-1">
-                <h4 class="font-semibold text-charcoal text-base mb-3">Contact</h4>
+                <h4 class="font-semibold text-charcoal text-lg mb-3">Contact</h4>
                 <div class="text-sm space-y-2">
                     <p class="text-charcoal">Joliet, IL</p>
                     <p class="text-charcoal-light leading-relaxed">

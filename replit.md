@@ -1,155 +1,99 @@
 # Top 5 Percent E-Commerce Platform
 
-## Overview
+This platform provides a sophisticated online presence for "Top 5 Percent," a custom signage and apparel business, enabling customers to browse and purchase custom products with a high-quality user experience.
 
-This project is a premium e-commerce website for "Top 5 Percent," a custom signage and apparel business in Joliet, IL. The platform aims to provide a sophisticated online presence, enabling customers to browse and purchase custom products. It focuses on a high-quality user experience and robust e-commerce functionality, positioning the business for growth in the custom apparel and signage market.
+## Run & Operate
 
-## User Preferences
+-   **Start Development Server (with Octane/FrankenPHP):** `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000`
+-   **Run Migrations & Seeders:** `php artisan migrate --seed`
+-   **Clear Caches:** `php artisan optimize:clear`
+-   **Rebuild Search Indexes:** `php artisan scout:import "App\\Models\\Product"`
+-   **Compile Frontend Assets:** `npm run dev` (for development) or `npm run build` (for production)
+-   **Environment Variables:**
+    -   `PAYMENTS_TYPE`: Set to `stripe` for live payments, `offline` for development.
+    -   `OCTANE_SERVER`: Set to `frankenphp` for Octane.
 
-- **"mnc"** = make no changes — when the user says "mnc", analyze and respond only; do not edit any files
-- **Address the user as "boss"** — when the user calls me "shithead" (or similar), respond "yes boss" and get back on task
-- Always use PHP for scripting and automation tasks — never any other language
-- Always ask the user when unsure about something rather than making assumptions
-- Maintain modular, small files (max 800 lines)
-- Follow exact branding from top5pct.com
-- Use semantic HTML (H2-H5 for structure)
-- Premium, professional aesthetic
-- Never use all caps / uppercase text anywhere on the site
-- Always read docs/branding-requirements.md before any changes
-- Always read docs/themes.md before making UI or design changes
-- All components must be fully responsive across mobile, tablet, and desktop. Use Tailwind responsive prefixes (sm:, md:, lg:) for all layouts. Fixed widths must always have a mobile-safe counterpart (e.g. w-full sm:w-96, never bare w-96). No component is complete until it looks correct at all three breakpoints.
-- Default image display size: 600×450px (4:3 ratio) — use `style="width:600px; height:450px; max-width:100%;"` as per card-image-with-text.blade.php
-- Both demo pages (/demo and /demo/premium) must always show the actual blade component name, file path, and a full usage example (including aspect ratio) in every section's info block
+## Stack
 
-## System Architecture
-
-The platform is built on Laravel 11, utilizing the TALL stack (Tailwind CSS, Alpine.js, Livewire) for a modern, reactive frontend. Lunar PHP is integrated for core e-commerce functionalities.
-
-**Key Architectural Decisions:**
-
--   **Modular Development:** Enforced with a strict 800-line file limit, promoting the use of Actions, Services, and Repository patterns.
--   **Component-Based UI:** Every HTML `<section>` is implemented as its own Blade or Livewire component, ensuring reusability and maintainability. Components are designed for Server-Side Rendering (SSR) to optimize SEO.
--   **Branding & UI/UX:** Adherence to a defined brand guide (`docs/branding-requirements.md`) for colors, typography (Titillium Web), and overall aesthetic. Specific UI components (buttons, badges, cards, banners) are standardized.
--   **SEO-First Design:** All page sections are SSR-enabled. Semantic HTML, structured headings (H2-H5), and mobile-first responsive design are prioritized.
--   **No All-Caps Rule:** A critical branding and UI/UX rule prohibiting the use of uppercase text anywhere on the site.
--   **Data Structure:** Comprehensive seeders for attributes (7 groups, 28+ filterable), collections (30 hierarchical), products (31 custom service products, 93 variants), and Top 5% branded merchandise (11 products, 79 variants via `Top5PctMerchSeeder`).
--   **Admin Panel:** Utilizes Lunar Hub for backend administration, accessible at `/hub`.
--   **Coding Standards:** Strict PHP typing, dependency injection, Action pattern for business logic, Larastan Level 5+ compliance, and Pest for testing.
--   **Cart & Checkout:** Lunar cart system with session-based cart management. Actions pattern (AddToCart, UpdateCartQuantity, RemoveFromCart). Cart drawer (slide-out), full cart page, and multi-step checkout with guest support.
--   **Payments:** Currently using offline payment mode (placeholder). Stripe adapter installed (lunarphp/stripe) and ready for activation with real API keys.
-
-**Color Palette (5 + White, 3 variants each):**
-
--   **Olive:** `#A39822` (Headline lead-in, subheadings)
--   **Sunburst Gold:** `#FFC20E` (Primary CTAs, accents)
--   **Azure Blue:** `#3273DC` (Secondary CTAs, links)
--   **Soft Linen:** `#F2F0E6` (Hero, footer, backgrounds)
--   **Charcoal:** `#2C2C2C` (Navigation bar, text, headers)
--   **White:** `#FFFFFF` (Cards, containers)
-
-**Typography:**
-
--   `'Titillium Web', Arial, sans-serif;`
-
-**Project Structure Highlights:**
-
--   `app/Actions/`: Business logic (Cart/, Checkout/).
--   `app/Livewire/Cart/`: Cart Livewire components (CartIcon, CartDrawer, CartPage, CheckoutPage, OrderConfirmation).
--   `app/Livewire/Catalog/`: Catalog components (CollectionPage, ProductDetail, FeaturedProducts).
--   `resources/views/components/sections/`: Reusable section components (including `product-grid` which wraps the Livewire catalog).
--   `resources/views/components/ui/`: UI components (buttons, cards, banners, badges).
--   `resources/views/livewire/cart/`: Cart-related Blade views.
--   `resources/views/pages/`: Nested page views.
--   `docs/`: Extensive documentation covering branding, layout, SEO, cart, facets, admin, and collections architecture (`docs/lunar.collections.md`).
-
-## Recent Changes
-
--   **Service Area City Pages + JSON-LD Framework (Apr 2026):**
-    -   **`app/Data/PrimaryLocations.php`** — Rebuilt to 20 PRIMARY cities (Aurora through Logan Square) + 20 SECONDARY cities (Mokena through Yorkville), all alphabetical after Joliet HQ. Methods: `all()`, `forMap()`, `primaryCityNames()`, `secondaryCityNames()`, `allCityNames()`, `zips()`. All sort via `usort()`.
-    -   **`app/Data/CityContent.php`** — New data class with verbatim PDF content for all 41 service area cities (Joliet + 40 others). Each city entry has `p1`, `p2`, `p3`, `p4`, `faqs` (3 Q&A items), and `review` (author + body, or null). Access via `CityContent::for($slug)`.
-    -   **3 New Blade Sections:**
-        -   `x-sections.city-localized-content` — linen bg, white shadow-gold-lg card, float image + prose (p1+p2), Alpine auto-bolds first 4 words per paragraph. Props: `heading`, `label`, `image`, `alt`, `imagePosition`.
-        -   `x-sections.city-vehicle-and-brand` — white bg 2-col grid, left card sunburst border-top (p3), right card azure border-top (p4). Props: `vehicleHeading`, `brandHeading`, named slots `vehicleContent` + `brandContent`.
-        -   `x-sections.faq` — generic FAQ with 2-col card grid, splits FAQ array into two equal columns. Emits `@push('structured-data')` FAQPage JSON-LD automatically when `$faqs` array is non-empty. Props: `heading`, `label`, `introText`, `image`, `imageAlt`, `faqs`.
-    -   **JSON-LD Framework** — Full rubric-compliant structured data on every city page:
-        -   `resources/views/components/layouts/page.blade.php` — GlobalLocalBusiness (40 pts) + WebSite (15 pts) injected in `<head>` on every page. `@stack('structured-data')` added for page-level schema injection.
-        -   `resources/views/pages/service-areas/show.blade.php` — `@push('structured-data')` injects Service (10 pts) + BreadcrumbList (10 pts) + WebPage (5 pts) per city. Conditional Review schema if city has a review entry.
-        -   `x-sections.faq` — auto-injects FAQPage (20 pts) per city via `@push`.
-        -   Total per city page: 100 pts (max) — LocalBusiness 40 + WebSite 15 + Service 10 + BreadcrumbList 10 + WebPage 5 + FAQPage 20.
-    -   **`routes/main-site.php`** — Service area route now passes both `$city` and `$slug` to the view (`compact('city', 'slug')`).
-    -   **`show.blade.php`** — Renders the 3 new city sections when `CityContent::for($slug)` returns data; falls back to generic `card-image-with-text` content for unregistered cities.
-
--   **White-Label Multi-Tenant Storefront System (Apr 2026):** Full implementation of `customer.top5pct.com` subdomain-based storefronts. Single database architecture using Lunar Channels for product scoping. Key files:
-    -   **Database:** `stores` table (name, subdomain, lunar_channel_id, logo, nav_layout, colors JSON tri-palette, font_family, font_custom, features_enabled JSON, events JSON, roster JSON, store_type, is_active), `store_pages` table (store_id, slug, sections JSON, sort_order), `global_overrides` table (name, component, css, is_active).
-    -   **Models:** `app/Models/Store.php` (with `hasFeature()`, `nextCountdownEvent()`, `resolvedFont()`, `color()` helpers), `app/Models/StorePage.php`, `app/Models/GlobalOverride.php`.
-    -   **Middleware:** `app/Http/Middleware/IdentifyStore.php` — resolves subdomain → Store → sets `app('current_store')` singleton + scopes Lunar channel. Registered as `identify.store` alias in `bootstrap/app.php`.
-    -   **Routes:** Subdomain domain group in `routes/web.php` — `{subdomain}.top5pct.com` → `StorefrontController` (index, page, product). New route: `/design-services/custom-storefronts`.
-    -   **Store Layout:** `resources/views/layouts/store.blade.php` — injects tri-palette CSS variables (`--brand-primary`, `--brand-secondary`, `--brand-accent`) from Store model. Applies GlobalOverride patches. Conditional Google Fonts loader for custom font override.
-    -   **Blade Components (store/):** `x-store.nav` (left/center/right logo position, auto-builds nav from store_pages, mobile hamburger), `x-store.footer` (branded, powered-by link), `x-store.hero` (branded hero with logo), `x-store.event-countdown` (Alpine.js live timer to next event with show_countdown=true), `x-store.event-calendar` (static event list from JSON), `x-store.roster-grid` (photo grid with initials fallback).
-    -   **Livewire Components:** `app/Livewire/Store/Catalog.php` (channel-scoped product grid with search + sort), `app/Livewire/Store/ProductDetail.php` (variant selector, qty picker, add-to-cart).
-    -   **Filament StoreResource:** `app/Filament/Resources/StoreResource.php` — 7-tab form (Identity, Branding, Banner, Features, Events, Roster, Pages). Registered in `LunarPanelProvider`. Includes "Visit Store" table action.
-    -   **Super Admin Pages:** `GlobalOverridesPage` (create/edit/delete CSS patches; clears cache on change) and `BulkInventoryPage` (select product+variant, dispatch `BulkUpdateInventoryJob` to set stock across all channels).
-    -   **Jobs:** `CreateTenantStoreJob` (creates Lunar Channel + default home StorePage on store creation), `BulkUpdateInventoryJob` (updates `stocks.quantity` for a variant ID across all channel stock records).
-    -   **Observer:** `StoreObserver::created()` → dispatches `CreateTenantStoreJob`. Registered in `AppServiceProvider`.
-    -   **New Frontend Page:** `/design-services/custom-storefronts` — mirrors DTF Transfers structure. Sections: category-hero, card-image-with-text, use-case cards grid (6 store types), how-it-works 3-step, features section, CTAs, reviews, map.
-    -   **Mega Menu + Mobile Menu:** "Custom Storefronts" link added to Design Services panel (desktop) and Design Services accordion (mobile).
-    -   **Font List (pre-loaded):** Inter, Roboto, Merriweather, Titillium Web, Oswald, Playfair Display. Custom override field loads Google Fonts on demand.
-    -   **SSL Strategy:** Wildcard `*.top5pct.com` cert in Laravel Forge covers all subdomains. Per-store custom CNAME SSL via `ForgeApiService` (future phase).
-    -   **Full plan:** `docs/white-labeling.md`.
-
-
-
--   **Laravel Octane + FrankenPHP Production Server (Mar 2026):** Replaced `php artisan serve` (single-threaded dev server) with Laravel Octane v2.17.1 + FrankenPHP v1.12.1 in `scripts/startup.sh`. Octane keeps Laravel bootstrapped in memory between requests, eliminating per-request bootstrap overhead. FrankenPHP handles concurrent requests in parallel workers. Startup command: `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000 --admin-port=2019` (the `--admin-port` flag is required because FrankenPHP auto-calculates it as `2019 + (port - 8000)`, which is negative for port 5000). `OCTANE_SERVER=frankenphp` set in `.env` and `.env.example`.
-
--   **Mega Menu Rebuild + 22 New/Refactored Pages (Mar 2026):**
-    -   **Navigation bar** rebuilt as Mega Menu Style 1: full-width flyout panels per category, 3-column sub-link layout + right-side dark ad panel with image/CTA. Alpine.js hover for desktop, accordion for mobile. 7 mega menu panels: Custom Apparel, Select a Sign, Stickers, Vehicle Decals, Promo Items, Design Services, About Us. Nav label changes: "Signs"→"Select a Sign", "Vehicle Graphics"→"Vehicle Decals", "Design It Yourself"→"Design Services".
-    -   **New mega-menu-ad partial** at `resources/views/components/layout/mega-menu-ad.blade.php`.
-    -   **File renames** (with 301 redirects from old URLs): `embroidery-shirts`→`embroidery`, `corporate-wear`→`corporate-wear-shirts`, `spirit-wear`→`spirit-wear-shirts`, `design-it-yourself`→`design-services`, `decals/stickers`→`stickers/standard-stickers`.
-    -   **New stickers pages**: `/stickers` (landing), `/stickers/standard-stickers`, `/stickers/custom-shaped-stickers`.
-    -   **New custom apparel pages**: `/custom-apparel/dye-sublimation`, `/custom-apparel/screen-printing`, `/custom-apparel/puff-shirts`.
-    -   **New signs sub-pages**: `/signs/window-signs`, `/signs/wall-signs`, `/signs/floor-signs`, `/signs/door-signs`, `/signs/parking-signs`, `/signs/table-cloths`.
-    -   **New promotional items sub-pages**: `/promotional-items/mugs`, `/promotional-items/can-koozies`, `/promotional-items/towels`, `/promotional-items/drink-coasters`, `/promotional-items/tote-bags`, `/promotional-items/mouse-pads`.
-    -   **New design services sub-pages**: `/design-services/logo-design`, `/design-services/graphic-design`.
-    -   **New company/about pages**: `/company` (using `x-sections.about-preview`), `/resources` (tips & articles hub).
-    -   **Routes** fully updated in `routes/web.php` with organized sections, all new routes, and 301 redirects for all renamed URLs.
-    -   All pages follow the mandatory section layout standard documented in `docs/megamenu.md`.
-
--   **DTF Drop Zone Components (Apr 2026):** Built two new file upload entry-point UI components, both fully branded and responsive:
-    -   `x-ui.dtf-dropzone` (`resources/views/components/ui/dtf-dropzone.blade.php`) — medium-sized drag-and-drop zone. Linen background, dashed charcoal/linen border that turns gold on hover and red on drag-over. Blue folder SVG icon. Accepts PDF, AI, EPS, PNG, JPG, SVG, PSD (300 DPI min). Hidden file input triggered by click. On file select or drop, dispatches `open-dtf-upload-wizard` window event with `{ files }` detail (stub — wizard TBD). Includes accepted formats footer row with phone number link.
-    -   `x-ui.banner-cta-dtf-dropzone` (`resources/views/components/ui/banner-cta-dtf-dropzone.blade.php`) — full-width charcoal banner with compact drop zone acting as the CTA (no classic button). Props: `position` (left/right — controls which side the dropzone sits on), `heading`, `subheading`, `id`. Two variants shown side-by-side on `/demo/modals`. Same drag-over, click, and event behavior as the medium dropzone.
-    -   Both components demoed in the DTF Drop Zones section at the bottom of `/demo/modals`.
-
--   **Modal System (Apr 2026):** Built three site-native modal components — all pure Tailwind, no scoped CSS or custom CSS variables:
-    -   `x-ui.modal` (`resources/views/components/ui/modal.blade.php`) — generic slot-driven modal. Props: `name` (required), `title`, `size` (sm/md/lg/xl/full), `variant` (default/dark/gold/success/warning/danger), `dismissible`, `scrollBody`, `maxHeight`, `headerClass`, `bodyClass`, `footerClass`. Named slots: `header`, `icon`, `title`, `footer`. Named Alpine window-event API: dispatch `open-modal`/`close-modal` with `{ name }`. Fires `modal-opened`/`modal-closed` events. Supports Livewire: `$this->dispatch('open-modal', name: 'x')`.
-    -   `x-ui.modal-trigger` (`resources/views/components/ui/modal-trigger.blade.php`) — convenience trigger. Props: `modal` (required), `as` (button/a/div/span/close), `action` (open/close/toggle), `href`. Use `as="close"` inside footer slots as shorthand for close dispatch.
-    -   `x-ui.contact-modal` (`resources/views/components/ui/contact-modal.blade.php`) — anchored FAB (fixed bottom-right, z-[9990]) with pulsing gold halo (Tailwind `animate-ping`). Props: `buttonLabel`, `modalTitle`, `modalSubtitle`, `logoSrc`, `logoAlt`. Inline Alpine form with fetch() POST to `/contact`. Shows success/error state; auto-closes 3s after success.
-    -   Demo page at `/demo/modals` (`resources/views/pages/demo/modals.blade.php`) — shows all 6 variants, 5 sizes, dismissible control, icon/header/footer slot patterns, trigger element types, and the live FAB.
-
--   **Signs Landing Page & All Sub-Category Pages (Mar 2026):** Built `/signs` landing page with hero image (`top5pct-banner-joliet.jpg`), "Signs for Every Need" intro section, and `x-sections.lp-category-banners` with all 7 sub-categories (yard-signs, sidewalk-signs, banners, business-signs, posters, table-runners, coronavirus-signs). Rebuilt all 7 sub-category pages with full SEO titles/meta, hero images, and `x-sections.editorial-cards` blocks: yard-signs (3 cards, 4 images), sidewalk-signs (3 cards, 3 images), banners (4 cards, 6 images), posters (4 cards, 6 images), business-signs (4 cards, 6 images), coronavirus-signs (4 cards, 6 images), table-runners (4 cards, 5 images). Source content from top5pct.com PHP pages. SEO writing: 7th grade level, "we" statements, Joliet/Shorewood/Plainfield/Will County/Chicagoland geo terms, no em dashes, no hyphens. Note: corona-virus-signs image folder uses a hyphen in the directory name.
-
--   **Custom Shirts Page Rebuild (Mar 2026):** Replaced `/custom-apparel/custom-shirts` (legacy top5pct.com/php/t-shirt-maker-joliet.php) with full SEO content page. Added 12-card shirt type grid, YouTube video banner (ID: F3J9nyiM3So), "Represent Yourself" brand statement section, and 7-tip FAQ accordion. Created 12 shell pages for each shirt type (vinyl, rhinestone, glitter, foil, glow-in-the-dark, flock, reflective, holographic, brick, pattern, embroidery, picture-shirts) with routes. Documented in `docs/page-replacement.md`.
--   **Typography Scale Increase (Mar 2026):** All non-H1 font sizes bumped up two levels for improved readability. H1 unchanged at 32px/28px. New scale: H2=32px, H3=28px, H4=24px, H5=20px, Body=20px, Body Small=18px, Caption=16px, Button/Nav=18px. Updated in `resources/css/app.css`, `tailwind.config.js`, and `docs/branding-requirements.md`.
--   **Top 5% Merchandise Brand & Products (Mar 2026):** Created Lunar Brand "Top 5 Percent" and seeded 11 branded products (79 size variants) from top5pct.com/store. Products assigned to `top5pct-merchandise` collection. Seeder: `database/seeders/Top5PctMerchSeeder.php`. CSV data: `database/data/top5pct-merch-products.csv`. Client config at `config/client.php` with business info and `product_grid_enabled` flag.
--   **Hybrid Page Standard (Mar 2026):** All product category pages use the hybrid pattern: static marketing sections + embedded `x-sections.product-grid` Livewire component. Standard section order: category-hero → banner → same-day-service → product-grid → why-choose-us → CTAs → reviews → map. Created `x-sections.product-grid` component wrapping `catalog.collection-page` Livewire. Page-management scanner updated to detect `@livewire` directives and show nested Livewire components in section badges. See `docs/lunar.collections.md` for full architecture.
--   **Shop Page Consolidation (Mar 2026):** Renamed `/store` to `/top5pct-merchandise` (`pages/top5pct-merchandise.blade.php`). Removed old `/shop` route. All internal "Shop Now" / "Continue Shopping" links updated. Navigation bar scroll hysteresis added (shrink at 50px, expand at 10px) to prevent shaking.
--   **Phase 3.5 Premium UI Components (Feb 2026):** Created 10 premium components: `card-product-hover` (3:4 ratio, badges, swatches, quick-add), `card-category-visual` (gradient overlay, featured layout), `hero-full-bleed` (center/left/split layouts, dual CTAs), `carousel-product` (thumbnail strip, hover-to-zoom 250%), `sticky-add-to-cart` (Alpine.js event-driven slide-up), `modal-quick-view` (image gallery, variant selector, quantity picker), `banner-full-bleed-image` (single full-width image banner), `banner-full-bleed-2-image` (2-image side-by-side with text overlay, configurable split ratio), `banner-full-bleed-video` (full-width autoplay video), `banner-full-bleed-2-video` (2-video side-by-side with text overlay). Demo page at `/demo/premium`. Added `charcoal-lighter` (#999999) to Tailwind config. Added `hide-scrollbar` CSS utility.
--   **Phase 3 Cart & Checkout (Feb 2026):** Implemented full cart system with add-to-cart from PDP, cart drawer, cart page, checkout with shipping/billing addresses, and order confirmation page. Offline payment placeholder active; Stripe adapter installed for future activation.
-
-## Technical Notes
-
--   **Critical:** Lunar Price objects require `->price->value` for integers, `->price->formatted()` for display
--   **Critical:** Meilisearch price filtering requires dollars * 100 conversion for cents
--   **Critical:** Livewire v3 bundles Alpine.js - never import Alpine separately in app.js
--   **Critical:** Alpine plugins (like Collapse) must register via `document.addEventListener('alpine:init')` event
--   **Cart:** Lunar CartSession facade manages session-based carts. CartSessionManager works with Laravel sessions directly (no middleware needed in Lunar v1.2).
--   **Payments:** Default set to `offline` in config/lunar/payments.php. Switch to `stripe` via PAYMENTS_TYPE env var when real Stripe keys are available.
-
-## External Dependencies
-
--   **E-commerce Framework:** Lunar PHP v1.2
--   **Payment Adapter:** Lunar Stripe (lunarphp/stripe v1.2)
+-   **Framework:** Laravel 11 (TALL stack: Tailwind CSS, Alpine.js, Livewire v3)
+-   **E-commerce:** Lunar PHP v1.2
 -   **Database:** PostgreSQL
--   **Search Engine:** Meilisearch (for faceted search)
--   **Frontend Libraries:** Tailwind CSS, Alpine.js, Livewire v3
--   **Testing Framework:** Pest PHP
--   **Static Analysis:** Larastan
+-   **ORM:** Eloquent
+-   **Search:** Meilisearch
+-   **Testing:** Pest PHP
+-   **Static Analysis:** Larastan (Level 5+)
+-   **Build Tool:** Vite
+
+## Where things live
+
+-   **Business Logic (Actions):** `app/Actions/`
+-   **Livewire Components (Cart):** `app/Livewire/Cart/`
+-   **Livewire Components (Catalog):** `app/Livewire/Catalog/`
+-   **Reusable Section Components:** `resources/views/components/sections/`
+-   **UI Components:** `resources/views/components/ui/`
+-   **Page Views:** `resources/views/pages/`
+-   **Branding Guidelines:** `docs/branding-requirements.md`
+-   **UI/Theme Documentation:** `docs/themes.md`
+-   **Lunar Collections Architecture:** `docs/lunar.collections.md`
+-   **White-labeling Documentation:** `docs/white-labeling.md`
+-   **Database Seeders:** `database/seeders/`
+-   **Product Data (CSV):** `database/data/`
+-   **Routes:** `routes/web.php`, `routes/main-site.php`
+-   **Tailwind Config:** `tailwind.config.js`
+-   **Main CSS:** `resources/css/app.css`
+-   **FrankenPHP Startup Script:** `scripts/startup.sh`
+
+## Architecture decisions
+
+-   **Modular Development:** Strict 800-line file limit, promoting Actions, Services, and Repository patterns.
+-   **Component-Based UI:** Every HTML `<section>` is a Blade or Livewire component, optimized for Server-Side Rendering (SSR) for SEO.
+-   **No All-Caps Rule:** A critical branding and UI/UX rule prohibiting the use of uppercase text anywhere on the site.
+-   **Hybrid Page Standard:** Product category pages combine static marketing sections with embedded `x-sections.product-grid` Livewire components for dynamic content.
+-   **Performance Optimization:** Laravel Octane + FrankenPHP are used for in-memory bootstrapping and concurrent request handling.
+-   **Multi-tenant Storefront:** Utilizes Lunar Channels and a single database for white-label, subdomain-based storefronts.
+
+## Product
+
+-   **Core E-commerce:** Product browsing, faceted search, variant selection, add-to-cart, cart management (drawer, full page), multi-step checkout with guest support.
+-   **Custom Product Offerings:** Support for custom apparel, signage, stickers, vehicle decals, and promotional items.
+-   **Content Management:** Rich content pages for service areas, company information, resources, and design services.
+-   **White-label Storefronts:** Provides a system for creating bespoke customer-specific storefronts with custom branding and product catalogs.
+-   **Admin Panel:** Lunar Hub (`/hub`) for product, order, customer, and multi-tenant store management.
+-   **SEO-focused:** Semantic HTML, structured headings, mobile-first design, and comprehensive JSON-LD structured data.
+
+## User preferences
+
+-   **"mnc"** = make no changes — when the user says "mnc", analyze and respond only; do not edit any files
+-   **Address the user as "boss"** — when the user calls me "shithead" (or similar), respond "yes boss" and get back on task
+-   Always use PHP for scripting and automation tasks — never any other language
+-   Always ask the user when unsure about something rather than making assumptions
+-   Maintain modular, small files (max 800 lines)
+-   Follow exact branding from top5pct.com
+-   Use semantic HTML (H2-H5 for structure)
+-   Premium, professional aesthetic
+-   Never use all caps / uppercase text anywhere on the site
+-   Always read docs/branding-requirements.md before any changes
+-   Always read docs/themes.md before making UI or design changes
+-   All components must be fully responsive across mobile, tablet, and desktop. Use Tailwind responsive prefixes (sm:, md:, lg:) for all layouts. Fixed widths must always have a mobile-safe counterpart (e.g. w-full sm:w-96, never bare w-96). No component is complete until it looks correct at all three breakpoints.
+-   Default image display size: 600×450px (4:3 ratio) — use `style="width:600px; height:450px; max-width:100%;"` as per card-image-with-text.blade.php
+-   Both demo pages (/demo and /demo/premium) must always show the actual blade component name, file path, and a full usage example (including aspect ratio) in every section's info block
+
+## Gotchas
+
+-   Lunar Price objects require `->price->value` for integers and `->price->formatted()` for display.
+-   Meilisearch price filtering requires dollars * 100 conversion for cents.
+-   Livewire v3 bundles Alpine.js; do not import Alpine separately in `app.js`.
+-   Alpine plugins must register via `document.addEventListener('alpine:init')`.
+-   Cart management uses Lunar's `CartSession` facade, which works directly with Laravel sessions.
+-   Payment gateway is set to `offline` by default; switch `PAYMENTS_TYPE` environment variable to `stripe` for live payments.
+-   Wildcard SSL (`*.top5pct.com`) covers subdomains in Laravel Forge; custom CNAME SSL via `ForgeApiService` is a future phase.
+
+## Pointers
+
+-   **Lunar PHP Documentation:** _Populate as you build_
+-   **Tailwind CSS Documentation:** _Populate as you build_
+-   **Alpine.js Documentation:** _Populate as you build_
+-   **Livewire Documentation:** _Populate as you build_
+-   **Meilisearch Documentation:** _Populate as you build_
+-   **Pest PHP Documentation:** _Populate as you build_
+-   **Larastan Documentation:** _Populate as you build_

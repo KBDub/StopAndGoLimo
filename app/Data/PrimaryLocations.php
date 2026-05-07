@@ -2,6 +2,8 @@
 
 namespace App\Data;
 
+use Illuminate\Support\Str;
+
 class PrimaryLocations
 {
     const HQ = [
@@ -88,13 +90,21 @@ class PrimaryLocations
 
     public static function forMap(): array
     {
-        $points = [self::HQ];
+        $hq = array_merge(self::HQ, [
+            'slug' => Str::slug(self::HQ['city'] . '-IL'),
+        ]);
+
+        $points = [$hq];
 
         $cities = array_merge(self::PRIMARY, self::SECONDARY);
         usort($cities, fn ($a, $b) => strcmp($a['city'], $b['city']));
 
         foreach ($cities as $loc) {
-            $points[] = array_merge($loc, ['name' => $loc['city'], 'main' => false]);
+            $points[] = array_merge($loc, [
+                'name' => $loc['city'],
+                'main' => false,
+                'slug' => Str::slug($loc['city'] . '-IL'),
+            ]);
         }
 
         return $points;

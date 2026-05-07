@@ -180,9 +180,9 @@
                         iconAnchor: [10, 10],
                     });
                     marker.setIcon(hqIcon);
-                    marker.bindPopup('<strong style="color:#2C2C2C;">' + loc.name + '</strong>').openPopup();
+                    marker.bindPopup('<a href="/service-areas/' + loc.slug + '" style="color:#2C2C2C;font-weight:bold;">' + loc.name + '</a>').openPopup();
                 } else {
-                    marker.bindPopup('<span style="color:#2C2C2C;">' + loc.city + '</span>');
+                    marker.bindPopup('<a href="/service-areas/' + loc.slug + '" style="color:#2C2C2C;">' + loc.city + '</a>');
                 }
             });
         });

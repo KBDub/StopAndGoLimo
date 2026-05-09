@@ -8,4 +8,13 @@ document.addEventListener('alpine:init', () => {
         inRange: false,
         zip: '',
     });
+
+    window.Alpine.store('dtfCart', {
+        items: [],
+        pendingItem: null,
+        clear() {
+            this.items = [];
+            this.pendingItem = null;
+        }
+    });
 });

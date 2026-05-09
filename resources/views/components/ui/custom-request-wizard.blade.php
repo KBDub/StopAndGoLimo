@@ -2,25 +2,37 @@
  | Component  : x-ui.custom-request-wizard
  | Location   : resources/views/components/ui/custom-request-wizard.blade.php
  |
- | Full-featured custom order request wizard. Triggered from the
- | x-ui.contact-modal "Do You Have a Custom Request or DTF Upload?" toggle.
+ | Full-featured custom order request wizard. Triggered from x-ui.contact-modal
+ | via two radio buttons: "Custom Apparel Request" | "DTF Transfers".
  | Include once per page alongside x-ui.contact-modal.
  |
- | ── STEP ORDER ──────────────────────────────────────────────────────────────
+ | ── DTF PATH (dtfMode === true) ─────────────────────────────────────────────
  |   1. request-type         — Request Details (always)
- |   2. dtf-upload           — DTF File Upload (always; skip prompt if file pre-attached)
- |   3. garment-selection    — Garment Selection (always)
- |   4. quantity             — Quantity & Sizing — all selected garments (always)
- |   ↳ Per selected garment (repeated):
- |       print-method-{key}  — Print Method
- |       color-{key}         — Color Selection
+ |   2. dtf-upload           — DTF File Upload / PNG only (always; auto-passes if pre-attached)
+ |   3. dtf-type-selection   — DTF Type Selection (only when dtfItems.length === 0)
+ |   4. dtf-quantity         — Quantities & Pricing (only when dtfItems.length === 0)
  |   5. completion-date      — Desired Completion Date (always)
  |   6. extra-notes          — Extra Notes (always)
  |   7. shipping-address     — Shipping Address (always)
  |   8. confirm-submit       — Review & Submit (always)
  |
+ | ── APPAREL PATH (dtfMode === false) ────────────────────────────────────────
+ |   1. request-type         — Request Details (always)
+ |   2. garment-selection    — Garment Selection (always)
+ |   3. quantity             — Quantity & Sizing (always)
+ |   4. image-distribution   — One design or individual? (only when >1 garment type)
+ |   5. artwork-upload       — Artwork Upload (only when 1 garment OR imageDistribution=single)
+ |   ↳ Per selected garment (repeated):
+ |       print-method-{key}  — Print Method
+ |       color-{key}         — Color Selection
+ |   6. completion-date      — Desired Completion Date (always)
+ |   7. extra-notes          — Extra Notes (always)
+ |   8. shipping-address     — Shipping Address (always)
+ |   9. confirm-submit       — Review & Submit (always)
+ |
  | ── EVENT API ───────────────────────────────────────────────────────────────
- |   open-modal   { name: 'custom-request-wizard', prefill: { name, email, phone, dtfFileName } }
+ |   open-modal   { name: 'custom-request-wizard', prefill: { name, email, phone,
+ |                  dtfMode, dtfFileName, dtfItems } }
  |   close-modal  { name: 'custom-request-wizard' }  — closes and resets
  |   wizard-done  { name: 'custom-request-wizard' }  — fires on submit
  |
@@ -35,14 +47,49 @@
         step:       1,
         modalName:  'custom-request-wizard',
 
+        /* ── Mode ──────────────────────────────────────────────── */
+        dtfMode:    null,      /* true = DTF path, false = apparel path */
+
         /* ── Step 1: Request Details ──────────────────────── */
         requestType:  '',
         companyName:  '',
         isRush:       null,
 
-        /* ── Step 2: DTF Upload ───────────────────────────── */
+        /* ── DTF path: pre-loaded items from pricing table ─── */
+        dtfItems:    [],
+
+        /* ── DTF path: file upload ────────────────────────── */
         dtfFileName: '',
         hasDtf:      null,
+
+        /* ── DTF path: type selection (when no pre-loaded items) ── */
+        dtfTypes: {
+            neckTag:    false,
+            chestImage: false,
+            imageSize:  false,
+        },
+        dtfQuantities: {
+            neckTag:    { tier: '', qty: '' },
+            chestImage: { tier: '', qty: '' },
+            imageSize:  { tier: '', qty: '' },
+        },
+        dtfTierOptions: [
+            '1 – 14 pcs',
+            '15 – 49 pcs',
+            '50 – 99 pcs',
+            '100 – 249 pcs',
+            '250+ pcs',
+        ],
+        dtfTypeLabels: {
+            neckTag:    'Neck Tags',
+            chestImage: 'Left / Right Chest',
+            imageSize:  'Image Sizes (5\u2033 and above)',
+        },
+
+        /* ── Apparel path: image distribution ────────────── */
+        imageDistribution: null,    /* 'single' | 'individual' */
+        artworkFileName: '',
+        hasArtwork: null,
 
         /* ── Step 3: Garment Selection ────────────────────── */
         garments: {
@@ -151,13 +198,35 @@
                 { key:'zipHoodie',  label:'Zip-Up Hoodies'      }
             ].filter(g => this.garments[g.key]);
         },
+        get selectedDtfTypes() {
+            return [
+                { key:'neckTag',    label:'Neck Tags'                     },
+                { key:'chestImage', label:'Left / Right Chest'            },
+                { key:'imageSize',  label:'Image Sizes (5\u2033 and above)' },
+            ].filter(t => this.dtfTypes[t.key]);
+        },
         get visibleSteps() {
-            const s = ['request-type','dtf-upload','garment-selection','quantity'];
+            if (this.dtfMode === true) {
+                const s = ['request-type', 'dtf-upload'];
+                if (!this.dtfItems || this.dtfItems.length === 0) {
+                    s.push('dtf-type-selection', 'dtf-quantity');
+                }
+                s.push('completion-date', 'extra-notes', 'shipping-address', 'confirm-submit');
+                return s;
+            }
+            /* Apparel path (dtfMode === false or null) */
+            const s = ['request-type', 'garment-selection', 'quantity'];
+            if (this.selectedGarmentTypes.length > 1) {
+                s.push('image-distribution');
+            }
+            if (this.selectedGarmentTypes.length === 1 || this.imageDistribution === 'single') {
+                s.push('artwork-upload');
+            }
             this.selectedGarmentTypes.forEach(g => {
                 s.push('print-method-' + g.key);
                 s.push('color-' + g.key);
             });
-            s.push('completion-date','extra-notes','shipping-address','confirm-submit');
+            s.push('completion-date', 'extra-notes', 'shipping-address', 'confirm-submit');
             return s;
         },
         get currentStepName() { return this.visibleSteps[this.step - 1] ?? ''; },
@@ -177,14 +246,18 @@
         get currentStepTitle() {
             const n = this.currentStepName;
             const map = {
-                'request-type':      'Request Details',
-                'dtf-upload':        'DTF File Upload',
-                'garment-selection': 'Garment Selection',
-                'quantity':          'Quantity & Sizing',
-                'completion-date':   'Desired Completion Date',
-                'extra-notes':       'Extra Notes',
-                'shipping-address':  'Shipping Address',
-                'confirm-submit':    'Review & Submit'
+                'request-type':       'Request Details',
+                'dtf-upload':         'DTF File Upload',
+                'dtf-type-selection': 'DTF Type Selection',
+                'dtf-quantity':       'Quantities & Pricing',
+                'artwork-upload':     'Artwork Upload',
+                'garment-selection':  'Garment Selection',
+                'quantity':           'Quantity & Sizing',
+                'image-distribution': 'Artwork — One Design or Individual?',
+                'completion-date':    'Desired Completion Date',
+                'extra-notes':        'Extra Notes',
+                'shipping-address':   'Shipping Address',
+                'confirm-submit':     'Review & Submit'
             };
             if (map[n]) return map[n];
             const lbl = this.currentGarmentLabel;
@@ -213,6 +286,16 @@
             if (s === 'dtf-upload') {
                 return this.dtfFileName ? true : this.hasDtf !== null;
             }
+            if (s === 'dtf-type-selection') {
+                return Object.values(this.dtfTypes).some(v => v);
+            }
+            if (s === 'dtf-quantity') {
+                if (this.selectedDtfTypes.length === 0) return false;
+                return this.selectedDtfTypes.every(t => {
+                    const q = this.dtfQuantities[t.key];
+                    return q && q.tier !== '' && parseInt(q.qty) > 0;
+                });
+            }
             if (s === 'garment-selection') {
                 return Object.values(this.garments).some(v => v);
             }
@@ -229,6 +312,12 @@
                         this.sizes.some(size => (this.quantities[g.key + '-' + gender.key + '-' + size] || 0) > 0)
                     );
                 });
+            }
+            if (s === 'image-distribution') {
+                return this.imageDistribution !== null;
+            }
+            if (s === 'artwork-upload') {
+                return this.artworkFileName ? true : this.hasArtwork !== null;
             }
             if (s.startsWith('print-method-')) {
                 const key = this.currentGarmentKey;
@@ -270,7 +359,11 @@
         },
         next()   { if (this.stepValid && this.step < this.totalSteps) this.step++; },
         prev()   { if (this.step > 1) this.step--; },
-        finish() { this.showConfirmation = true; this.$dispatch('wizard-done', { name: this.modalName }); },
+        finish() {
+            Alpine.store('dtfCart').clear();
+            this.showConfirmation = true;
+            this.$dispatch('wizard-done', { name: this.modalName });
+        },
 
         backToContactModal() {
             this.close();
@@ -284,6 +377,12 @@
             if (Object.values(this.stateMap).includes(upper)) { this.state = upper; return; }
             const match = Object.keys(this.stateMap).find(n => n.toLowerCase() === v.toLowerCase());
             if (match) this.state = this.stateMap[match];
+        },
+
+        updateDtfQty(key, field, val) {
+            const q = Object.assign({}, this.dtfQuantities[key]);
+            q[field] = val;
+            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: q });
         },
 
         /* ── Per-garment color methods ─────────────────────── */
@@ -355,7 +454,9 @@
             contactName  = p.name  || '';
             contactEmail = p.email || '';
             contactPhone = p.phone || '';
+            dtfMode      = p.dtfMode !== undefined ? p.dtfMode : false;
             dtfFileName  = p.dtfFileName || '';
+            dtfItems     = Array.isArray(p.dtfItems) ? p.dtfItems : [];
             hasDtf       = dtfFileName ? true : null;
             open();
         }
@@ -408,7 +509,9 @@
                     <h2 id="crw-title" class="text-lg font-bold text-charcoal leading-tight" x-text="currentStepTitle"></h2>
                     <p class="text-xs text-charcoal-light mt-0.5">
                         Step <span x-text="step"></span> of <span x-text="totalSteps"></span>
-                        &nbsp;·&nbsp; Custom Request Wizard
+                        &nbsp;·&nbsp;
+                        <span x-show="dtfMode === true" x-cloak>DTF Transfers</span>
+                        <span x-show="dtfMode !== true">Custom Apparel</span>
                     </p>
                 </div>
                 <button
@@ -486,7 +589,7 @@
                     </div>
                 </div>
 
-                {{-- ══ STEP 2: DTF File Upload ════════════════════════════════ --}}
+                {{-- ══ STEP 2 (DTF path): DTF File Upload ════════════════════ --}}
                 <div x-show="currentStepName === 'dtf-upload'" x-cloak>
 
                     {{-- Case A: file already attached — skip prompt --}}
@@ -501,12 +604,12 @@
                                 <p class="text-sm text-charcoal truncate" x-text="dtfFileName"></p>
                             </div>
                         </div>
-                        <p class="text-xs text-charcoal-light">Your file has been noted and will be processed with your order. You can continue to the next step.</p>
+                        <p class="text-xs text-charcoal-light">Your PNG file has been noted and will be processed with your order. You can continue to the next step.</p>
                     </div>
 
                     {{-- Case B: no file yet — prompt user --}}
                     <div x-show="!dtfFileName" class="space-y-5">
-                        <p class="text-xs text-charcoal-light">Would you like to upload a DTF file for this order?</p>
+                        <p class="text-xs text-charcoal-light">Would you like to upload your DTF PNG file now?</p>
 
                         <fieldset>
                             <legend class="block text-sm font-semibold text-charcoal mb-3 text-center">
@@ -526,14 +629,13 @@
                             </div>
                         </fieldset>
 
-                        {{-- File input when Yes selected --}}
                         <div x-show="hasDtf === true" x-cloak class="space-y-2">
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide">
-                                Upload DTF File
+                                Upload DTF PNG File
                             </label>
                             <input
                                 type="file"
-                                accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
+                                accept=".png"
                                 @change="
                                     const f = $event.target.files[0];
                                     if (f) dtfFileName = f.name;
@@ -543,13 +645,112 @@
                             <div x-show="dtfFileName" x-cloak class="text-xs text-charcoal-light">
                                 Selected: <span class="font-semibold text-charcoal" x-text="dtfFileName"></span>
                             </div>
-                            <p class="text-xs text-charcoal-lighter">Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD &mdash; max 50 MB.</p>
+                            <p class="text-xs text-charcoal-lighter">Accepted: PNG only &mdash; 300 DPI minimum recommended &mdash; max 50 MB.</p>
                         </div>
                     </div>
 
                 </div>
 
-                {{-- ══ STEP 3: Garment Selection ══════════════════════════════ --}}
+                {{-- ══ STEP (DTF path): DTF Type Selection ══════════════════ --}}
+                <div x-show="currentStepName === 'dtf-type-selection'" x-cloak>
+                    <p class="text-xs text-charcoal-light mb-4">
+                        Select the DTF transfer type(s) you need.
+                        <span class="text-error font-semibold">At least one required.</span>
+                    </p>
+                    <div class="space-y-3">
+                        @php
+                            $dtfTypeOptions = [
+                                ['key' => 'neckTag',    'label' => 'Neck Tags',                      'hint' => '2″ × 2″ or 3″ × 3″ — fits within size'],
+                                ['key' => 'chestImage', 'label' => 'Left / Right Chest',             'hint' => '3″–5″ wide — standard chest placement'],
+                                ['key' => 'imageSize',  'label' => 'Image Sizes (5″ and above)',     'hint' => 'Full designs from 5″ × 5″ up to 12″ × 17″'],
+                            ];
+                        @endphp
+                        @foreach($dtfTypeOptions as $opt)
+                        <div class="flex items-start justify-between gap-4 px-4 py-4 border border-linen-dark">
+                            <div>
+                                <p class="text-sm font-bold text-charcoal">{{ $opt['label'] }}</p>
+                                <p class="text-xs text-charcoal-light mt-0.5">{{ $opt['hint'] }}</p>
+                            </div>
+                            <button
+                                type="button"
+                                role="switch"
+                                :aria-checked="dtfTypes.{{ $opt['key'] }}.toString()"
+                                @click="dtfTypes.{{ $opt['key'] }} = !dtfTypes.{{ $opt['key'] }}"
+                                :class="dtfTypes.{{ $opt['key'] }} ? 'bg-sunburst' : 'bg-linen-dark'"
+                                class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1 mt-0.5"
+                            >
+                                <span
+                                    :class="dtfTypes.{{ $opt['key'] }} ? 'translate-x-6' : 'translate-x-1'"
+                                    class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
+                                ></span>
+                            </button>
+                        </div>
+                        @endforeach
+                    </div>
+                    <div x-show="selectedDtfTypes.length > 0" x-cloak class="mt-5 pt-4 border-t border-linen-dark">
+                        <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Selected</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <template x-for="t in selectedDtfTypes" :key="t.key">
+                                <span class="px-3 py-1.5 border border-linen-dark bg-white text-charcoal text-xs font-semibold" x-text="t.label"></span>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- ══ STEP (DTF path): DTF Quantity & Tier ══════════════════ --}}
+                <div x-show="currentStepName === 'dtf-quantity'" x-cloak>
+                    <p class="text-xs text-charcoal-light mb-5">
+                        For each transfer type, choose a quantity tier and enter your quantity.
+                        <span class="text-error font-semibold">All fields required.</span>
+                    </p>
+                    <div class="space-y-5">
+                        <template x-for="t in selectedDtfTypes" :key="t.key">
+                            <div class="border border-linen-dark">
+                                <div class="px-4 py-2.5 bg-linen border-b border-linen-dark">
+                                    <p class="text-sm font-bold text-charcoal" x-text="t.label"></p>
+                                </div>
+                                <div class="px-4 py-4 space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                            Quantity Tier <span class="text-error">*</span>
+                                        </label>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                            @foreach(['1 – 14 pcs', '15 – 49 pcs', '50 – 99 pcs', '100 – 249 pcs', '250+ pcs'] as $tier)
+                                            <label
+                                                class="flex items-center gap-2 px-3 py-2.5 border cursor-pointer transition-colors duration-150"
+                                                :class="dtfQuantities[t.key].tier === '{{ $tier }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                                            >
+                                                <input type="radio"
+                                                    :name="'dtf-tier-' + t.key"
+                                                    value="{{ $tier }}"
+                                                    :checked="dtfQuantities[t.key].tier === '{{ $tier }}'"
+                                                    @change="updateDtfQty(t.key, 'tier', '{{ $tier }}')"
+                                                    class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                                <span class="text-sm font-semibold text-charcoal">{{ $tier }}</span>
+                                            </label>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
+                                            Quantity <span class="text-error">*</span>
+                                        </label>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            :value="dtfQuantities[t.key].qty"
+                                            @input="updateDtfQty(t.key, 'qty', $event.target.value)"
+                                            placeholder="0"
+                                            class="w-24 text-center text-sm border border-linen-dark py-2 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                {{-- ══ STEP (Apparel path): Garment Selection ════════════════ --}}
                 <div x-show="currentStepName === 'garment-selection'" x-cloak>
                     <p class="text-xs text-charcoal-light mb-4">Select all applicable garment types. <span class="text-error font-semibold">At least one required.</span></p>
                     @php
@@ -596,6 +797,102 @@
                             </template>
                         </div>
                     </div>
+                </div>
+
+                {{-- ══ STEP (Apparel path): Image Distribution ═══════════════ --}}
+                <div x-show="currentStepName === 'image-distribution'" x-cloak>
+                    <p class="text-xs text-charcoal-light mb-5">
+                        You have selected multiple garment types.
+                        <span class="text-error font-semibold">One answer required.</span>
+                    </p>
+                    <div class="space-y-3">
+                        <label
+                            class="flex items-start gap-3 px-4 py-4 border cursor-pointer transition-colors duration-150"
+                            :class="imageDistribution === 'single' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                        >
+                            <input type="radio" name="crw-image-dist" value="single"
+                                x-model="imageDistribution"
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
+                            <div>
+                                <p class="text-sm font-bold text-charcoal">One design for all garment types</p>
+                                <p class="text-xs text-charcoal-light mt-0.5">You'll upload a single artwork file that applies to all garments</p>
+                            </div>
+                        </label>
+                        <label
+                            class="flex items-start gap-3 px-4 py-4 border cursor-pointer transition-colors duration-150"
+                            :class="imageDistribution === 'individual' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                        >
+                            <input type="radio" name="crw-image-dist" value="individual"
+                                x-model="imageDistribution"
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
+                            <div>
+                                <p class="text-sm font-bold text-charcoal">Individual design per garment type</p>
+                                <p class="text-xs text-charcoal-light mt-0.5">Each garment type gets its own artwork — you'll describe it per garment in the notes</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                {{-- ══ STEP (Apparel path): Artwork Upload ════════════════════ --}}
+                <div x-show="currentStepName === 'artwork-upload'" x-cloak>
+
+                    {{-- Case A: file already attached --}}
+                    <div x-show="artworkFileName" x-cloak class="space-y-4">
+                        <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                                <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                                <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                            </svg>
+                            <div class="min-w-0">
+                                <p class="text-xs font-semibold text-charcoal">Artwork file attached:</p>
+                                <p class="text-sm text-charcoal truncate" x-text="artworkFileName"></p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-charcoal-light">Your artwork file has been noted. You can continue to the next step.</p>
+                    </div>
+
+                    {{-- Case B: no file yet --}}
+                    <div x-show="!artworkFileName" class="space-y-5">
+                        <p class="text-xs text-charcoal-light">Would you like to upload your artwork file now?</p>
+
+                        <fieldset>
+                            <legend class="block text-sm font-semibold text-charcoal mb-3 text-center">
+                                Upload an artwork file? <span class="text-error">*</span>
+                            </legend>
+                            <div class="flex gap-6 justify-center">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="crw-has-artwork" :value="true" x-model="hasArtwork"
+                                           class="w-4 h-4 accent-sunburst cursor-pointer">
+                                    <span class="text-sm font-medium text-charcoal">Yes</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="crw-has-artwork" :value="false" x-model="hasArtwork"
+                                           class="w-4 h-4 accent-sunburst cursor-pointer">
+                                    <span class="text-sm font-medium text-charcoal">No</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div x-show="hasArtwork === true" x-cloak class="space-y-2">
+                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide">
+                                Upload Artwork File
+                            </label>
+                            <input
+                                type="file"
+                                accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
+                                @change="
+                                    const f = $event.target.files[0];
+                                    if (f) artworkFileName = f.name;
+                                "
+                                class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark"
+                            >
+                            <div x-show="artworkFileName" x-cloak class="text-xs text-charcoal-light">
+                                Selected: <span class="font-semibold text-charcoal" x-text="artworkFileName"></span>
+                            </div>
+                            <p class="text-xs text-charcoal-lighter">Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD &mdash; max 50 MB.</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 {{-- ══ PER-GARMENT: Print Method ══════════════════════════════ --}}
@@ -731,7 +1028,7 @@
                     </div>
                 </div>
 
-                {{-- ══ STEP 4: Quantity & Sizing (Global — all selected garments) ══ --}}
+                {{-- ══ STEP (Apparel path): Quantity & Sizing ════════════════ --}}
                 <div x-show="currentStepName === 'quantity'" x-cloak>
                     <div class="space-y-5">
                         <p class="text-xs text-charcoal-light">
@@ -803,34 +1100,33 @@
                                                 placeholder="0"
                                             >
                                         </div>
-                                        <span class="text-xs text-charcoal-light">Enter quantities per size</span>
                                     </div>
                                 </template>
 
-                                {{-- All other garments: full gender × size matrix --}}
+                                {{-- Standard garments: full size matrix --}}
                                 <template x-if="g.key !== 'beanie' && g.key !== 'baseballCap'">
                                     <div class="overflow-x-auto scrollbar-sunburst">
-                                        <table class="w-full border-collapse text-xs">
+                                        <table class="min-w-full text-xs">
                                             <thead>
-                                                <tr class="bg-linen-light">
-                                                    <th class="text-left px-2 py-2 font-semibold text-charcoal-light border-r border-linen-dark w-20 whitespace-nowrap">Gender</th>
-                                                    <template x-for="size in sizes" :key="size">
-                                                        <th class="px-1 py-2 font-semibold text-charcoal-light text-center min-w-[2.75rem]" x-text="size"></th>
-                                                    </template>
+                                                <tr class="border-b border-linen-dark">
+                                                    <th class="px-3 py-2 text-left font-semibold text-charcoal-light bg-linen sticky left-0 z-10 min-w-[5rem]">Gender</th>
+                                                    @foreach(['XS','S','M','L','XL','2XL','3XL','4XL','5XL','6XL'] as $sz)
+                                                    <th class="px-2 py-2 text-center font-semibold text-charcoal-light bg-linen min-w-[3rem]">{{ $sz }}</th>
+                                                    @endforeach
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <template x-for="gender in genders" :key="gender.key">
-                                                    <tr class="border-t border-linen-dark hover:bg-linen-light/50">
-                                                        <td class="px-2 py-1.5 font-semibold text-charcoal border-r border-linen-dark whitespace-nowrap" x-text="gender.label"></td>
-                                                        <template x-for="size in sizes" :key="size">
-                                                            <td class="px-1 py-1 text-center border-l border-linen-dark">
+                                                    <tr class="border-b border-linen-dark last:border-0">
+                                                        <td class="px-3 py-1.5 font-semibold text-charcoal bg-white sticky left-0 z-10 whitespace-nowrap" x-text="gender.label"></td>
+                                                        <template x-for="sz in sizes" :key="sz">
+                                                            <td class="px-1 py-1.5 text-center">
                                                                 <input
                                                                     type="number"
                                                                     min="0"
-                                                                    :value="getQty(g.key, gender.key, size)"
-                                                                    @input="setQty(g.key, gender.key, size, $event.target.value)"
-                                                                    class="w-11 text-center text-xs border border-linen-dark py-1.5 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                                    :value="getQty(g.key, gender.key, sz)"
+                                                                    @input="setQty(g.key, gender.key, sz, $event.target.value)"
+                                                                    class="w-12 text-center text-xs border border-linen-dark py-1 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
                                                                     placeholder="0"
                                                                 >
                                                             </td>
@@ -841,12 +1137,11 @@
                                         </table>
                                     </div>
                                 </template>
-
                             </div>
                         </template>
 
-                        {{-- Combined ORDER SUMMARY across all garments --}}
-                        <div class="pt-4 border-t border-linen-dark">
+                        {{-- Order summary --}}
+                        <div x-show="Object.keys(quantities).length > 0" x-cloak class="pt-4 border-t border-linen-dark">
                             <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-2">Order Summary</p>
                             <div class="flex flex-wrap gap-1.5">
                                 <template x-for="g in selectedGarmentTypes" :key="g.key">
@@ -1033,6 +1328,14 @@
                         <div class="divide-y divide-linen-dark border border-linen-dark">
 
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
+                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Order Type</span>
+                                <div class="col-span-2 text-sm text-charcoal">
+                                    <span x-show="dtfMode === true" x-cloak class="font-semibold">DTF Transfers</span>
+                                    <span x-show="dtfMode !== true">Custom Apparel</span>
+                                </div>
+                            </div>
+
+                            <div class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Request Type</span>
                                 <div class="col-span-2 text-sm text-charcoal">
                                     <span class="capitalize" x-text="requestType || '—'"></span>
@@ -1051,13 +1354,56 @@
                                 </div>
                             </div>
 
+                            {{-- DTF items (DTF path) --}}
+                            <div x-show="dtfMode === true" x-cloak class="px-4 py-3 grid grid-cols-3 gap-3">
+                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">DTF Items</span>
+                                <div class="col-span-2">
+                                    {{-- Pre-loaded items from pricing table --}}
+                                    <div x-show="dtfItems.length > 0" x-cloak class="space-y-1">
+                                        <template x-for="(item, idx) in dtfItems" :key="idx">
+                                            <div class="text-xs text-charcoal">
+                                                <span class="font-semibold" x-text="item.type + ' — ' + item.size"></span>
+                                                <span class="text-charcoal-light" x-text="' · ' + item.tier + ' at ' + item.price + ' ea'"></span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                    {{-- User-selected types from wizard --}}
+                                    <div x-show="dtfItems.length === 0 && selectedDtfTypes.length > 0" x-cloak class="space-y-1">
+                                        <template x-for="t in selectedDtfTypes" :key="t.key">
+                                            <div class="text-xs text-charcoal">
+                                                <span class="font-semibold" x-text="t.label"></span>
+                                                <span class="text-charcoal-light"
+                                                    x-text="dtfQuantities[t.key].tier ? ' · ' + dtfQuantities[t.key].tier + ' · Qty: ' + dtfQuantities[t.key].qty : ''"></span>
+                                            </div>
+                                        </template>
+                                    </div>
+                                    <span x-show="dtfItems.length === 0 && selectedDtfTypes.length === 0" class="text-sm text-charcoal-lighter">None selected</span>
+                                </div>
+                            </div>
+
+                            {{-- File row (DTF or Artwork) --}}
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
-                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">DTF File</span>
+                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">
+                                    <span x-show="dtfMode === true" x-cloak>DTF File</span>
+                                    <span x-show="dtfMode !== true">Artwork</span>
+                                </span>
                                 <div class="col-span-2 text-sm text-charcoal">
-                                    <span x-show="dtfFileName" x-cloak x-text="dtfFileName"></span>
-                                    <span x-show="!dtfFileName && hasDtf === true" x-cloak>Yes — will provide separately</span>
-                                    <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
-                                    <span x-show="!dtfFileName && hasDtf === null" class="text-charcoal-lighter">Not answered</span>
+                                    <template x-if="dtfMode === true">
+                                        <span>
+                                            <span x-show="dtfFileName" x-cloak x-text="dtfFileName"></span>
+                                            <span x-show="!dtfFileName && hasDtf === true" x-cloak>Yes — will provide separately</span>
+                                            <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
+                                            <span x-show="!dtfFileName && hasDtf === null" class="text-charcoal-lighter">Not answered</span>
+                                        </span>
+                                    </template>
+                                    <template x-if="dtfMode !== true">
+                                        <span>
+                                            <span x-show="artworkFileName" x-cloak x-text="artworkFileName"></span>
+                                            <span x-show="!artworkFileName && hasArtwork === true" x-cloak>Yes — will provide separately</span>
+                                            <span x-show="hasArtwork === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
+                                            <span x-show="!artworkFileName && hasArtwork === null" class="text-charcoal-lighter">Not answered</span>
+                                        </span>
+                                    </template>
                                 </div>
                             </div>
 
@@ -1088,60 +1434,56 @@
                                 </div>
                             </div>
 
+                            {{-- Per-garment summary (apparel path only) --}}
+                            <template x-if="dtfMode !== true">
+                                <div x-show="selectedGarmentTypes.length > 0" x-cloak class="divide-y divide-linen-dark">
+                                    <template x-for="g in selectedGarmentTypes" :key="g.key">
+                                        <div>
+                                            <div class="px-4 py-2 bg-linen">
+                                                <span class="text-xs font-bold text-charcoal uppercase tracking-wide" x-text="g.label"></span>
+                                            </div>
+                                            <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
+                                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Print</span>
+                                                <div class="col-span-2 text-sm text-charcoal">
+                                                    <span x-show="printMethods[g.key] === 'traditional'" x-cloak>Traditional</span>
+                                                    <span x-show="printMethods[g.key] === 'specialty'" x-cloak>
+                                                        Specialty — <span x-text="specialtyLabels[specialtyTypeByGarment[g.key]] || ''"></span>
+                                                    </span>
+                                                    <span x-show="!printMethods[g.key]" class="text-charcoal-lighter">Not selected</span>
+                                                </div>
+                                            </div>
+                                            <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
+                                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Colors</span>
+                                                <div class="col-span-2">
+                                                    <div x-show="(selectedColorsByGarment[g.key] || []).length > 0" x-cloak class="flex flex-wrap gap-1">
+                                                        <template x-for="color in (selectedColorsByGarment[g.key] || [])" :key="color">
+                                                            <span class="px-2 py-0.5 bg-charcoal text-white text-xs" x-text="color"></span>
+                                                        </template>
+                                                    </div>
+                                                    <span x-show="!(selectedColorsByGarment[g.key] || []).length" class="text-sm text-charcoal-lighter">None selected</span>
+                                                </div>
+                                            </div>
+                                            <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
+                                                <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Quantities</span>
+                                                <div class="col-span-2">
+                                                    <div x-show="garmentQuantitySummary(g.key).length > 0" x-cloak class="flex flex-wrap gap-1">
+                                                        <template x-for="(item, i) in garmentQuantitySummary(g.key)" :key="i">
+                                                            <span class="px-2 py-0.5 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
+                                                        </template>
+                                                    </div>
+                                                    <span x-show="garmentQuantitySummary(g.key).length === 0" class="text-sm text-charcoal-lighter">None entered</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </template>
+
                             <div x-show="extraNotes" x-cloak class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Notes</span>
                                 <div class="col-span-2 text-sm text-charcoal line-clamp-3" x-text="extraNotes"></div>
                             </div>
 
-                        </div>
-
-                        {{-- Per-garment summary --}}
-                        <div x-show="selectedGarmentTypes.length > 0" x-cloak class="space-y-3">
-                            <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide">Per-Garment Details</p>
-                            <template x-for="g in selectedGarmentTypes" :key="g.key">
-                                <div class="border border-linen-dark divide-y divide-linen-dark">
-                                    <div class="px-4 py-2 bg-linen">
-                                        <span class="text-xs font-bold text-charcoal uppercase tracking-wide" x-text="g.label"></span>
-                                    </div>
-                                    <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
-                                        <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Print</span>
-                                        <div class="col-span-2 text-sm text-charcoal">
-                                            <span x-show="printMethods[g.key] === 'traditional'" x-cloak>
-                                                Traditional
-                                                <span x-show="traditionalTypes[g.key]" x-cloak>
-                                                    &nbsp;&mdash;&nbsp;<span x-text="{ htv:'HTV', digital:'Digital', screenprint:'Screenprint' }[traditionalTypes[g.key]] || ''"></span>
-                                                </span>
-                                            </span>
-                                            <span x-show="printMethods[g.key] === 'specialty'" x-cloak>
-                                                Specialty &mdash; <span x-text="specialtyLabels[specialtyTypeByGarment[g.key]] || ''"></span>
-                                            </span>
-                                            <span x-show="!printMethods[g.key]" class="text-charcoal-lighter">Not selected</span>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
-                                        <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Colors</span>
-                                        <div class="col-span-2">
-                                            <div x-show="(selectedColorsByGarment[g.key] || []).length > 0" x-cloak class="flex flex-wrap gap-1">
-                                                <template x-for="color in (selectedColorsByGarment[g.key] || [])" :key="color">
-                                                    <span class="px-2 py-0.5 bg-charcoal text-white text-xs" x-text="color"></span>
-                                                </template>
-                                            </div>
-                                            <span x-show="!(selectedColorsByGarment[g.key] || []).length" class="text-sm text-charcoal-lighter">None selected</span>
-                                        </div>
-                                    </div>
-                                    <div class="px-4 py-2.5 grid grid-cols-3 gap-3">
-                                        <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Quantities</span>
-                                        <div class="col-span-2">
-                                            <div x-show="garmentQuantitySummary(g.key).length > 0" x-cloak class="flex flex-wrap gap-1">
-                                                <template x-for="(item, i) in garmentQuantitySummary(g.key)" :key="i">
-                                                    <span class="px-2 py-0.5 bg-linen text-charcoal text-xs border border-linen-dark" x-text="item"></span>
-                                                </template>
-                                            </div>
-                                            <span x-show="garmentQuantitySummary(g.key).length === 0" class="text-sm text-charcoal-lighter">None entered</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </template>
                         </div>
 
                         <p class="text-xs text-charcoal-lighter text-center">

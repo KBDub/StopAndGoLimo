@@ -54,7 +54,7 @@
                     Drop your file here or <strong class="font-bold text-sunburst">click to browse</strong>
                 </p>
                 <p class="text-charcoal-lighter text-xs tracking-wide">
-                    PDF &middot; AI &middot; EPS &middot; PNG &middot; JPG &middot; SVG &middot; PSD
+                    PNG only
                 </p>
                 <span class="text-xs text-charcoal-lighter">300 DPI minimum recommended</span>
             </div>
@@ -111,7 +111,7 @@
         id="{{ $id }}-input"
         type="file"
         class="sr-only"
-        accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
+        accept=".png"
         @change="handleFileChange($event)"
     >
 </div>

@@ -1,8 +1,25 @@
-<section class="py-10 bg-white">
+<section
+    x-data="{
+        setPending(type, size, tier, price) {
+            Alpine.store('dtfCart').pendingItem = { type: type, size: size, tier: tier, price: price, fileName: '' };
+            const input = document.getElementById('dtf-pricing-file-picker');
+            input.value = '';
+            input.click();
+        },
+        handleFilePicked(e) {
+            const f = e.target.files[0];
+            if (!f) return;
+            Alpine.store('dtfCart').pendingItem.fileName = f.name;
+            e.target.value = '';
+            this.$nextTick(() => window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } })));
+        }
+    }"
+    class="py-10 bg-white"
+>
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Heading --}}
-        <div class="text-center mb-10">
+        <div class="text-center mb-6">
             <div class="inline-block mb-4">
                 <h2 class="text-h2 font-bold text-charcoal mb-2">DTF Transfer Pricing</h2>
                 <div class="h-1 bg-sunburst"></div>
@@ -13,6 +30,23 @@
                 if individual cuts are needed.
                 Prices shown are per piece at each quantity tier.
                 <span class="block mt-1 text-xs text-sunburst font-semibold">Click any row to start your order.</span>
+            </p>
+        </div>
+
+        {{-- Active cart indicator --}}
+        <div
+            x-show="$store.dtfCart.items.length > 0"
+            x-cloak
+            class="flex items-center justify-center gap-2.5 px-5 py-3 mb-8 bg-sunburst/10 border border-sunburst/40"
+        >
+            <svg class="w-4 h-4 flex-shrink-0 text-sunburst" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            <p class="text-sm font-semibold text-charcoal">
+                <span x-text="$store.dtfCart.items.length"></span>
+                DTF transfer<span x-show="$store.dtfCart.items.length !== 1">s</span>
+                saved to your order
+                <span class="font-normal text-charcoal-light">— keep adding or click any row to proceed to checkout</span>
             </p>
         </div>
 
@@ -52,7 +86,7 @@
                         @foreach($card['tiers'] as $qty => $price)
                             <button
                                 type="button"
-                                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } }))"
+                                @click="setPending('Neck Tags', '{{ $card['size'] }}', '{{ $qty }}', '{{ $price }}')"
                                 class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
                             >
                                 <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
@@ -125,7 +159,7 @@
                         @foreach($card['tiers'] as $qty => $price)
                             <button
                                 type="button"
-                                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } }))"
+                                @click="setPending('Left / Right Chest', '{{ $card['size'] }}', '{{ $qty }}', '{{ $price }}')"
                                 class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
                             >
                                 <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
@@ -240,7 +274,7 @@
                         @foreach($card['tiers'] as $qty => $price)
                             <button
                                 type="button"
-                                onclick="window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } }))"
+                                @click="setPending('Image Sizes', '{{ $card['size'] }}', '{{ $qty }}', '{{ $price }}')"
                                 class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
                             >
                                 <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
@@ -256,10 +290,20 @@
         <div class="border-t-4 border-sunburst shadow-md bg-linen-light p-8">
             <div class="text-center mb-6">
                 <h4 class="text-h4 font-semibold text-charcoal mb-1">Ready to order your DTF transfers?</h4>
-                <p class="text-body-sm text-charcoal-light">Drop your design file below to get started — we'll walk you through the rest.</p>
+                <p class="text-body-sm text-charcoal-light">Drop your PNG design file below to get started — we'll walk you through the rest.</p>
             </div>
             <x-ui.dtf-dropzone class="max-w-2xl mx-auto" />
         </div>
 
     </div>
+
+    {{-- Shared hidden PNG file picker for pricing row clicks --}}
+    <input
+        id="dtf-pricing-file-picker"
+        type="file"
+        accept=".png"
+        class="sr-only"
+        @change="handleFilePicked($event)"
+    >
+
 </section>

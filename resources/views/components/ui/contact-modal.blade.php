@@ -31,7 +31,7 @@
         sent: false,
         error: false,
         loading: false,
-        customRequest: false,
+        orderType: '',
         dtfFileName: '',
         emailError: false,
         firstName: '',
@@ -51,9 +51,14 @@
             return this.contactReady && this.contactMessage.trim().length > 0;
         },
 
-        openModal()  {
+        init() {
+            this.$watch('contactReady', (val) => {
+                if (val && this.orderType !== '') this.launchWizard();
+            });
+        },
+        openModal() {
             this.open = true;
-            this.customRequest = false;
+            this.orderType = '';
             this.dtfFileName = '';
             document.body.style.overflow = 'hidden';
         },
@@ -65,14 +70,20 @@
                     detail: {
                         name: 'custom-request-wizard',
                         prefill: {
-                            name: (this.firstName.trim() + ' ' + this.lastName.trim()).trim(),
-                            email: this.cmEmail,
-                            phone: this.cmPhone,
-                            dtfFileName: this.dtfFileName
+                            name:        (this.firstName.trim() + ' ' + this.lastName.trim()).trim(),
+                            email:       this.cmEmail,
+                            phone:       this.cmPhone,
+                            dtfMode:     this.orderType === 'dtf',
+                            dtfFileName: this.dtfFileName,
+                            dtfItems:    Alpine.store('dtfCart').items.slice()
                         }
                     }
                 }));
             });
+        },
+        selectOrderType(type) {
+            this.orderType = type;
+            if (this.contactReady) this.launchWizard();
         },
 
         async submit(form) {
@@ -103,6 +114,8 @@
         const _d = $event.detail || {};
         if (_d.dtf) {
             dtfFileName = _d.fileName || '';
+            orderType   = 'dtf';
+            if (contactReady) launchWizard();
         }
     "
 >
@@ -295,37 +308,44 @@
                     </div>
                 </div>
 
-                {{-- ── Custom Request / DTF Toggle ─────────────────────────── --}}
-                <div class="border-t border-b border-linen-dark">
-                    <div class="flex items-center justify-between gap-4 py-3">
-                        <div class="min-w-0">
-                            <p class="text-sm font-semibold text-charcoal">
-                                Do You Have a Custom Request or DTF Upload?
-                            </p>
-                            <p class="text-xs text-charcoal-light mt-0.5" x-show="!contactReady">Complete your contact info above to enable</p>
-                            <p class="text-xs text-charcoal-light mt-0.5" x-show="contactReady && !customRequest" x-cloak>Use our guided custom order wizard</p>
-                            <p class="text-xs text-sunburst-dark font-medium mt-0.5" x-show="contactReady && customRequest" x-cloak>Ready — click "Continue to Wizard" below</p>
-                        </div>
-                        <button
-                            type="button"
-                            role="switch"
-                            :aria-checked="customRequest.toString()"
-                            :disabled="!contactReady"
-                            @click="if (contactReady) { customRequest = !customRequest; if (customRequest) launchWizard(); }"
-                            :class="contactReady
-                                ? (customRequest ? 'bg-sunburst' : 'bg-linen-dark')
-                                : 'bg-linen-dark opacity-40 cursor-not-allowed'"
-                            class="relative flex-shrink-0 w-11 h-6 overflow-hidden rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sunburst focus:ring-offset-1"
+                {{-- ── Order Type Selection ─────────────────────────────────── --}}
+                <div class="border-t border-b border-linen-dark py-3 space-y-2.5">
+                    <div class="flex items-center justify-between gap-2 flex-wrap">
+                        <p class="text-sm font-semibold text-charcoal">What can we help you with?</p>
+                        <p class="text-xs text-charcoal-light" x-show="!contactReady">Complete your contact info above to select</p>
+                        <p class="text-xs text-sunburst-dark font-medium" x-show="contactReady && orderType !== ''" x-cloak>Ready — launching wizard…</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label
+                            class="flex items-center gap-2.5 px-4 py-3 border cursor-pointer transition-colors duration-150"
+                            :class="orderType === 'apparel'
+                                ? 'border-sunburst bg-sunburst/5'
+                                : (!contactReady ? 'border-linen-dark bg-linen-light opacity-50' : 'border-linen-dark bg-white hover:border-sunburst/40')"
                         >
-                            <span
-                                :class="customRequest ? 'translate-x-6' : 'translate-x-1'"
-                                class="absolute left-0 top-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-200"
-                            ></span>
-                        </button>
+                            <input type="radio" name="cm-order-type" value="apparel"
+                                :disabled="!contactReady"
+                                :checked="orderType === 'apparel'"
+                                @change="selectOrderType('apparel')"
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst">
+                            <span class="text-sm font-semibold text-charcoal leading-tight">Custom Apparel</span>
+                        </label>
+                        <label
+                            class="flex items-center gap-2.5 px-4 py-3 border cursor-pointer transition-colors duration-150"
+                            :class="orderType === 'dtf'
+                                ? 'border-sunburst bg-sunburst/5'
+                                : (!contactReady ? 'border-linen-dark bg-linen-light opacity-50' : 'border-linen-dark bg-white hover:border-sunburst/40')"
+                        >
+                            <input type="radio" name="cm-order-type" value="dtf"
+                                :disabled="!contactReady"
+                                :checked="orderType === 'dtf'"
+                                @change="selectOrderType('dtf')"
+                                class="w-4 h-4 flex-shrink-0 accent-sunburst">
+                            <span class="text-sm font-semibold text-charcoal leading-tight">DTF Transfers</span>
+                        </label>
                     </div>
                     {{-- DTF file attached indicator --}}
                     <div x-show="dtfFileName" x-cloak
-                         class="flex items-center gap-2 px-3 py-2 mb-2 bg-sunburst/10 border border-sunburst/30 text-xs text-charcoal">
+                         class="flex items-center gap-2 px-3 py-2 bg-sunburst/10 border border-sunburst/30 text-xs text-charcoal">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 text-azure" viewBox="0 0 64 64" aria-hidden="true">
                             <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
                             <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
@@ -348,22 +368,9 @@
                     ></textarea>
                 </div>
 
-                {{-- Continue to Wizard — shown when custom request toggle is ON --}}
+                {{-- Send Message — only when no order type is selected --}}
                 <button
-                    x-show="customRequest"
-                    x-cloak
-                    type="button"
-                    :disabled="!contactReady"
-                    @click="if (contactReady) launchWizard()"
-                    :class="contactReady ? '' : 'opacity-50 cursor-not-allowed'"
-                    class="w-full py-3 px-6 bg-charcoal text-white font-semibold text-sm tracking-wide transition-all duration-150 hover:bg-charcoal-dark hover:-translate-y-0.5 active:translate-y-0"
-                >
-                    Continue to Custom Request Wizard →
-                </button>
-
-                {{-- Send Message — shown when custom request toggle is OFF --}}
-                <button
-                    x-show="!customRequest"
+                    x-show="orderType === ''"
                     type="submit"
                     :disabled="loading || !formReady"
                     class="w-full py-3 px-6 bg-gold-gradient text-charcoal font-semibold text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"

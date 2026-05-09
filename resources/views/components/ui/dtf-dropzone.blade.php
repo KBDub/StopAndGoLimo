@@ -51,7 +51,7 @@
 
         {{-- Format list --}}
         <p class="text-charcoal-lighter text-sm text-center tracking-wide">
-            PDF &middot; AI &middot; EPS &middot; PNG &middot; JPG &middot; SVG &middot; PSD &mdash; 300 DPI minimum recommended
+            PNG &mdash; 300 DPI minimum recommended
         </p>
     </div>
 
@@ -60,7 +60,7 @@
         id="{{ $id }}-input"
         type="file"
         class="sr-only"
-        accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
+        accept=".png"
         @change="handleFileChange($event)"
     >
 
@@ -68,7 +68,7 @@
     <div class="mt-2 flex items-start gap-2 text-sm text-charcoal-light">
         <span class="text-warning mt-px" aria-hidden="true">&#128161;</span>
         <span>
-            Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD. Need help?
+            Accepted: PNG files only — 300 DPI minimum recommended. Need help?
             Call <a href="tel:8153498600" class="text-azure hover:text-azure-dark font-semibold transition-colors">(815) 349-8600</a>.
         </span>
     </div>

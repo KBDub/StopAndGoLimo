@@ -371,7 +371,7 @@
             this.submitting  = true;
             this.submitError = false;
             try {
-                const csrfToken = document.querySelector('meta[name=csrf-token]')?.content ?? '';
+                const csrfToken = (document.getElementsByName('csrf-token')[0] || {content:''}).content;
                 const res = await fetch('/custom-order/submit', {
                     method:  'POST',
                     headers: {

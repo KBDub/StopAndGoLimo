@@ -1683,14 +1683,16 @@
                     >Next →</button>
 
                     <div x-show="step === totalSteps" x-cloak class="flex flex-col items-end gap-1">
-                        <x-ui.button-modal-primary
+                        <button
+                            type="button"
                             @click="finish()"
-                            :disabled="submitting"
+                            x-bind:disabled="submitting"
                             x-bind:class="submitting ? 'opacity-60 cursor-not-allowed' : ''"
+                            class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                         >
                             <span x-show="!submitting">Submit Request</span>
                             <span x-show="submitting" x-cloak>Submitting…</span>
-                        </x-ui.button-modal-primary>
+                        </button>
                         <p x-show="submitError" x-cloak class="text-xs text-error">
                             Something went wrong — please try again.
                         </p>

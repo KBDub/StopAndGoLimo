@@ -166,6 +166,7 @@
         submitError:    false,
         checkoutUrl:    '',
         orderReference: '',
+        _csrf:          '{{ csrf_token() }}',
 
         /* ── US States ────────────────────────────────────── */
         stateMap: {
@@ -371,7 +372,7 @@
             this.submitting  = true;
             this.submitError = false;
             try {
-                const csrfToken = (document.getElementsByName('csrf-token')[0] || {content:''}).content;
+                const csrfToken = this._csrf;
                 const res = await fetch('/custom-order/submit', {
                     method:  'POST',
                     headers: {

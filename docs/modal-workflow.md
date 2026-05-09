@@ -162,18 +162,30 @@ The wizard uses a dynamic `visibleSteps` computed array driven by `dtfMode`. The
 | Step | Name (internal) | Title | Conditional |
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
-| 2 | `artwork-upload` | Artwork Upload | Always (PDF, AI, EPS, PNG, JPG, SVG, PSD — max 50 MB) |
-| 3 | `garment-selection` | Garment Selection | Always |
-| 4 | `quantity` | Quantity & Sizing | Always (shows all selected garments) |
-| — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
+| 2 | `garment-selection` | Garment Selection | Always |
+| 3 | `quantity` | Quantity & Sizing | Always (shows all selected garments) |
+| 4 | `image-distribution` | Artwork — One Design or Individual? | Only when `selectedGarmentTypes.length > 1` |
+| 5 | `artwork-upload` | Artwork Upload | Only when one garment type selected, OR `imageDistribution === 'single'` |
+| — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment (includes per-garment artwork upload when `imageDistribution === 'individual'`) |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
 | Last | `completion-date` | Desired Completion Date | Always |
 | Last | `extra-notes` | Extra Notes | Always |
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 4 global + 2 per-garment-type selected + 4 closing = variable.
-**Example:** Polo (Long Sleeve) + Hoodies → 4 + 4 + 4 = 12 steps.
+**Total steps:** Variable, driven by garment count and image distribution choice.
+**Example (single garment):** Crew Necks only → request-type, garment-selection, quantity, artwork-upload, print-method-crewNeck, color-crewNeck, completion-date, extra-notes, shipping-address, confirm-submit = 10 steps.
+**Example (multi-garment, one image):** Crew Necks + Hoodies → request-type, garment-selection, quantity, image-distribution, artwork-upload, print-method-crewNeck, color-crewNeck, print-method-hoodie, color-hoodie, completion-date, extra-notes, shipping-address, confirm-submit = 13 steps.
+**Example (multi-garment, individual images):** Crew Necks + Hoodies → same as above but no standalone artwork-upload step; artwork upload is embedded inside each print-method step = 12 steps.
+
+**`image-distribution` step detail:**
+- Question: "Do you have one design for all garment types, or a different design for each?"
+- Radio options:
+  - **One design for all garments** (`imageDistribution: 'single'`) — a single `artwork-upload` step follows; that file applies to all garment types.
+  - **Individual design per garment type** (`imageDistribution: 'individual'`) — no standalone `artwork-upload` step; each `print-method-{key}` step includes its own file upload sub-section.
+- Only pushed into `visibleSteps` when `selectedGarmentTypes.length > 1`. When only one garment type is selected, this question is skipped and a single `artwork-upload` step is always shown.
+
+**Alpine state:** `imageDistribution: null` (`'single'` | `'individual'`)
 
 #### DTF path (`dtfMode === true`) — DTF Transfers
 
@@ -181,17 +193,24 @@ The wizard uses a dynamic `visibleSteps` computed array driven by `dtfMode`. The
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
 | 2 | `dtf-upload` | DTF File Upload | Always (PNG only — max 50 MB; auto-passes if file pre-loaded from pricing or dropzone flow) |
-| 3 | `dtf-type-selection` | DTF Type Selection | Always (replaces garment-selection) |
-| 4 | `dtf-quantity` | Quantities & Pricing | Always (replaces quantity matrix; shows DTF pricing tier picker per selected DTF type) |
+| 3 | `dtf-type-selection` | DTF Type Selection | Only when `dtfItems.length === 0` (no pre-selection from pricing table) |
+| 4 | `dtf-quantity` | Quantities & Pricing | Only when `dtfItems.length === 0` (no pre-selection from pricing table) |
 | Last | `completion-date` | Desired Completion Date | Always |
 | Last | `extra-notes` | Extra Notes | Always |
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** Always 8 (no per-item branching steps).
+**Total steps:** 6 when pre-loaded from pricing table (`dtfItems.length > 0`); 8 when entered via FAB/dropzone with no prior selection.
 **Note:** Print Method and Color Selection steps do not appear in the DTF path.
 
-**DTF types available in Step 3:**
+**Entry point determines Steps 3 + 4:**
+
+| Entry point | `dtfItems` on open | Steps 3 + 4 |
+|---|---|---|
+| DTF pricing table → file pick → confirm modal → "Proceed to Checkout" | Pre-populated from clicked row(s) | Skipped — selection already made |
+| FAB / CTA / dropzone → DTF radio selected | Empty array | Shown — user selects DTF type and quantity in wizard |
+
+**DTF types available in Step 3 (when shown):**
 
 | Toggle Label | Internal key |
 |---|---|
@@ -199,7 +218,9 @@ The wizard uses a dynamic `visibleSteps` computed array driven by `dtfMode`. The
 | Left Chest / Right Chest | `chestImage` |
 | Image Sizes (5″ and above) | `imageSize` |
 
-**Step 4 — DTF Quantity:** For each selected DTF type, the user picks a pricing tier (matching the `dtf-pricing-section` table) and enters a quantity. Pre-loaded `dtfItems` from the pricing flow auto-populate this step.
+**Step 4 — DTF Quantity (when shown):** For each selected DTF type, the user picks a pricing tier (matching the `dtf-pricing-section` table) and enters a quantity.
+
+**When pre-loaded (`dtfItems.length > 0`):** The `confirm-submit` review step displays all pre-loaded items from `dtfItems` directly. No re-selection needed.
 
 ---
 

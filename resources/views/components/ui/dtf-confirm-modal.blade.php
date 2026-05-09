@@ -148,37 +148,30 @@
                     </div>
 
                     {{-- Option radios --}}
-                    <fieldset class="space-y-2.5">
-                        <legend class="text-sm font-semibold text-charcoal block mb-2.5">
-                            What would you like to do? <span class="text-error">*</span>
+                    <fieldset>
+                        <legend class="block text-sm font-semibold text-charcoal text-center mb-3">
+                            Would you like to: <span class="text-error">*</span>
                         </legend>
-
-                        <label
-                            class="flex items-start gap-3 px-4 py-3.5 border cursor-pointer transition-colors duration-150"
-                            :class="selectedOption === 'checkout' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
-                        >
-                            <input type="radio" name="dtf-confirm-option" value="checkout"
-                                x-model="selectedOption"
-                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
-                            <div>
-                                <p class="text-sm font-bold text-charcoal leading-tight"
-                                   x-text="'Proceed to Checkout for ' + (pending.type || 'DTF Transfer')"></p>
-                                <p class="text-xs text-charcoal-light mt-0.5">Continue to provide your contact info and place your order</p>
-                            </div>
-                        </label>
-
-                        <label
-                            class="flex items-start gap-3 px-4 py-3.5 border cursor-pointer transition-colors duration-150"
-                            :class="selectedOption === 'addMore' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
-                        >
-                            <input type="radio" name="dtf-confirm-option" value="addMore"
-                                x-model="selectedOption"
-                                class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
-                            <div>
-                                <p class="text-sm font-bold text-charcoal leading-tight">Add more DTFs</p>
-                                <p class="text-xs text-charcoal-light mt-0.5">Go back and select another size or type from the pricing table</p>
-                            </div>
-                        </label>
+                        <div class="grid grid-cols-2 gap-2">
+                            <label
+                                class="flex flex-col items-center gap-2 px-3 py-3.5 border cursor-pointer transition-colors duration-150 text-center"
+                                :class="selectedOption === 'checkout' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                            >
+                                <input type="radio" name="dtf-confirm-option" value="checkout"
+                                    x-model="selectedOption"
+                                    class="w-4 h-4 accent-sunburst">
+                                <span class="text-sm font-bold text-charcoal leading-tight">Proceed to Checkout</span>
+                            </label>
+                            <label
+                                class="flex flex-col items-center gap-2 px-3 py-3.5 border cursor-pointer transition-colors duration-150 text-center"
+                                :class="selectedOption === 'addMore' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                            >
+                                <input type="radio" name="dtf-confirm-option" value="addMore"
+                                    x-model="selectedOption"
+                                    class="w-4 h-4 accent-sunburst">
+                                <span class="text-sm font-bold text-charcoal leading-tight">Add more DTFs</span>
+                            </label>
+                        </div>
                     </fieldset>
 
                 </div>

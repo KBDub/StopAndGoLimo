@@ -161,6 +161,12 @@
         showConfirmation: false,
         showCloseConfirm: false,
 
+        /* ── Submission state ─────────────────────────────── */
+        submitting:     false,
+        submitError:    false,
+        checkoutUrl:    '',
+        orderReference: '',
+
         /* ── US States ────────────────────────────────────── */
         stateMap: {
             'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
@@ -284,6 +290,7 @@
                        this.isRush !== null;
             }
             if (s === 'dtf-upload') {
+                if (this.dtfItems && this.dtfItems.length > 0) return true;
                 return this.dtfFileName ? true : this.hasDtf !== null;
             }
             if (s === 'dtf-type-selection') {
@@ -359,10 +366,69 @@
         },
         next()   { if (this.stepValid && this.step < this.totalSteps) this.step++; },
         prev()   { if (this.step > 1) this.step--; },
-        finish() {
-            Alpine.store('dtfCart').clear();
-            this.showConfirmation = true;
-            this.$dispatch('wizard-done', { name: this.modalName });
+        async finish() {
+            if (this.submitting) return;
+            this.submitting  = true;
+            this.submitError = false;
+            try {
+                const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+                const res = await fetch('/custom-order/submit', {
+                    method:  'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept':       'application/json',
+                        'X-CSRF-TOKEN': csrfMeta ? csrfMeta.content : '',
+                    },
+                    body: JSON.stringify(this.buildPayload()),
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.message || 'Submission failed');
+                Alpine.store('dtfCart').clear();
+                this.checkoutUrl    = data.checkoutUrl || '';
+                this.orderReference = data.reference   || '';
+                this.showConfirmation = true;
+                this.$dispatch('wizard-done', { name: this.modalName });
+            } catch (err) {
+                this.submitError = true;
+                console.error('Wizard submit error:', err);
+            } finally {
+                this.submitting = false;
+            }
+        },
+
+        buildPayload() {
+            return {
+                orderType:      this.dtfMode ? 'dtf' : 'apparel',
+                requestType:    this.requestType,
+                companyName:    this.companyName,
+                isRush:         this.isRush,
+                /* DTF path */
+                dtfItems:       this.dtfItems,
+                dtfFileName:    this.dtfFileName,
+                dtfTypes:       this.dtfMode && !this.dtfItems.length ? this.dtfTypes       : null,
+                dtfQuantities:  this.dtfMode && !this.dtfItems.length ? this.dtfQuantities  : null,
+                /* Apparel path */
+                garments:              !this.dtfMode ? this.garments               : null,
+                quantities:            !this.dtfMode ? this.quantities             : null,
+                printMethods:          !this.dtfMode ? this.printMethods           : null,
+                specialtyTypes:        !this.dtfMode ? this.specialtyTypeByGarment : null,
+                colorsByGarment:       !this.dtfMode ? this.selectedColorsByGarment: null,
+                imageDistribution:     this.imageDistribution,
+                artworkFileName:       this.artworkFileName,
+                /* Shared */
+                completionDate:   this.completionDate,
+                isRushDelivery:   this.isRushDelivery,
+                extraNotes:       this.extraNotes,
+                /* Contact & shipping */
+                contactName:  this.contactName,
+                contactEmail: this.contactEmail,
+                contactPhone: this.contactPhone,
+                address1:     this.address1,
+                address2:     this.address2,
+                city:         this.city,
+                state:        this.state,
+                zip:          this.zip,
+            };
         },
 
         backToContactModal() {
@@ -592,8 +658,26 @@
                 {{-- ══ STEP 2 (DTF path): DTF File Upload ════════════════════ --}}
                 <div x-show="currentStepName === 'dtf-upload'" x-cloak>
 
-                    {{-- Case A: file already attached — skip prompt --}}
-                    <div x-show="dtfFileName" x-cloak class="space-y-4">
+                    {{-- Case A: pre-loaded items from pricing table --}}
+                    <div x-show="dtfItems && dtfItems.length > 0" x-cloak class="space-y-3">
+                        <p class="text-xs text-charcoal-light">The following DTF files were attached during pricing selection:</p>
+                        <template x-for="(item, idx) in dtfItems" :key="idx">
+                            <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                                    <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                                    <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                                </svg>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-semibold text-charcoal" x-text="item.type + ' — ' + item.size"></p>
+                                    <p class="text-sm text-charcoal truncate" x-text="item.fileName || 'No file attached'"></p>
+                                </div>
+                            </div>
+                        </template>
+                        <p class="text-xs text-charcoal-light">All files noted — continue to the next step.</p>
+                    </div>
+
+                    {{-- Case B: single file attached from dropzone, no items --}}
+                    <div x-show="(!dtfItems || dtfItems.length === 0) && dtfFileName" x-cloak class="space-y-4">
                         <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
                                 <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
@@ -607,8 +691,8 @@
                         <p class="text-xs text-charcoal-light">Your PNG file has been noted and will be processed with your order. You can continue to the next step.</p>
                     </div>
 
-                    {{-- Case B: no file yet — prompt user --}}
-                    <div x-show="!dtfFileName" class="space-y-5">
+                    {{-- Case C: no file yet — prompt user --}}
+                    <div x-show="(!dtfItems || dtfItems.length === 0) && !dtfFileName" class="space-y-5">
                         <p class="text-xs text-charcoal-light">Would you like to upload your DTF PNG file now?</p>
 
                         <fieldset>
@@ -835,64 +919,66 @@
 
                 {{-- ══ STEP (Apparel path): Artwork Upload ════════════════════ --}}
                 <div x-show="currentStepName === 'artwork-upload'" x-cloak>
+                    <div class="space-y-4">
+                        <p class="text-xs text-charcoal-light">Upload your design file now, or skip and describe it in the notes step.</p>
 
-                    {{-- Case A: file already attached --}}
-                    <div x-show="artworkFileName" x-cloak class="space-y-4">
-                        <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
-                                <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
-                                <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
-                            </svg>
-                            <div class="min-w-0">
-                                <p class="text-xs font-semibold text-charcoal">Artwork file attached:</p>
-                                <p class="text-sm text-charcoal truncate" x-text="artworkFileName"></p>
+                        {{-- Attached state --}}
+                        <div x-show="artworkFileName" x-cloak class="space-y-3">
+                            <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                                    <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                                    <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                                </svg>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-xs font-semibold text-charcoal">Artwork file attached:</p>
+                                    <p class="text-sm text-charcoal truncate" x-text="artworkFileName"></p>
+                                </div>
+                                <button type="button"
+                                    @click="artworkFileName = ''; hasArtwork = null"
+                                    class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors flex-shrink-0">
+                                    Remove
+                                </button>
                             </div>
                         </div>
-                        <p class="text-xs text-charcoal-light">Your artwork file has been noted. You can continue to the next step.</p>
-                    </div>
 
-                    {{-- Case B: no file yet --}}
-                    <div x-show="!artworkFileName" class="space-y-5">
-                        <p class="text-xs text-charcoal-light">Would you like to upload your artwork file now?</p>
-
-                        <fieldset>
-                            <legend class="block text-sm font-semibold text-charcoal mb-3 text-center">
-                                Upload an artwork file? <span class="text-error">*</span>
-                            </legend>
-                            <div class="flex gap-6 justify-center">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-has-artwork" :value="true" x-model="hasArtwork"
-                                           class="w-4 h-4 accent-sunburst cursor-pointer">
-                                    <span class="text-sm font-medium text-charcoal">Yes</span>
-                                </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-has-artwork" :value="false" x-model="hasArtwork"
-                                           class="w-4 h-4 accent-sunburst cursor-pointer">
-                                    <span class="text-sm font-medium text-charcoal">No</span>
-                                </label>
-                            </div>
-                        </fieldset>
-
-                        <div x-show="hasArtwork === true" x-cloak class="space-y-2">
+                        {{-- File picker --}}
+                        <div x-show="!artworkFileName" class="space-y-2">
                             <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide">
-                                Upload Artwork File
+                                Upload Artwork File <span class="font-normal normal-case text-charcoal-lighter">(optional)</span>
                             </label>
                             <input
                                 type="file"
                                 accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
                                 @change="
                                     const f = $event.target.files[0];
-                                    if (f) artworkFileName = f.name;
+                                    if (f) { artworkFileName = f.name; hasArtwork = true; }
                                 "
                                 class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark"
                             >
-                            <div x-show="artworkFileName" x-cloak class="text-xs text-charcoal-light">
-                                Selected: <span class="font-semibold text-charcoal" x-text="artworkFileName"></span>
-                            </div>
                             <p class="text-xs text-charcoal-lighter">Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD &mdash; max 50 MB.</p>
                         </div>
-                    </div>
 
+                        {{-- Skip option (only when no file selected) --}}
+                        <div x-show="!artworkFileName && hasArtwork !== false" class="text-center">
+                            <button type="button"
+                                @click="hasArtwork = false"
+                                class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors">
+                                No artwork yet — I'll describe my design in the notes
+                            </button>
+                        </div>
+
+                        {{-- Skipped state --}}
+                        <div x-show="hasArtwork === false && !artworkFileName" x-cloak
+                             class="flex items-center gap-3 px-4 py-3 bg-linen border border-linen-dark">
+                            <p class="text-xs text-charcoal-light flex-1">No file provided — you can describe your design in the Extra Notes step.</p>
+                            <button type="button"
+                                @click="hasArtwork = null"
+                                class="text-xs text-sunburst-dark underline flex-shrink-0 hover:text-sunburst transition-colors">
+                                Change
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
 
                 {{-- ══ PER-GARMENT: Print Method ══════════════════════════════ --}}
@@ -1519,13 +1605,29 @@
                 </h3>
                 <p class="text-sm text-charcoal-light max-w-xs leading-relaxed">
                     Your <span x-show="rushActive" x-cloak class="font-semibold text-sunburst-dark">rush </span>request
-                    has been submitted. We will be in touch shortly.
+                    has been submitted. Our team will review and be in touch shortly.
                 </p>
-                <button
-                    type="button"
-                    @click="close()"
-                    class="mt-8 px-6 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
-                >Done</button>
+                <p x-show="orderReference" x-cloak
+                   class="mt-3 text-xs font-semibold text-charcoal-light tracking-wide">
+                    Reference: <span class="text-charcoal font-bold" x-text="orderReference"></span>
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-3 mt-8">
+                    <button
+                        type="button"
+                        @click="close()"
+                        class="px-6 py-2.5 border border-linen-dark text-charcoal text-sm font-semibold hover:bg-linen transition-all"
+                    >Done</button>
+                    <a
+                        x-show="checkoutUrl"
+                        x-cloak
+                        :href="checkoutUrl"
+                        class="px-6 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
+                    >Proceed to Payment &rarr;</a>
+                </div>
+                <p x-show="!checkoutUrl" x-cloak
+                   class="mt-4 text-xs text-charcoal-lighter max-w-xs">
+                    A payment link will be sent to <span x-text="contactEmail" class="font-medium text-charcoal"></span> once your order is reviewed.
+                </p>
             </div>
 
             {{-- ── Close Confirmation Overlay ────────────────────────────── --}}
@@ -1580,11 +1682,19 @@
                         class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                     >Next →</button>
 
-                    <x-ui.button-modal-primary
-                        x-show="step === totalSteps"
-                        x-cloak
-                        @click="finish()"
-                    >Submit Request</x-ui.button-modal-primary>
+                    <div x-show="step === totalSteps" x-cloak class="flex flex-col items-end gap-1">
+                        <x-ui.button-modal-primary
+                            @click="finish()"
+                            :disabled="submitting"
+                            x-bind:class="submitting ? 'opacity-60 cursor-not-allowed' : ''"
+                        >
+                            <span x-show="!submitting">Submit Request</span>
+                            <span x-show="submitting" x-cloak>Submitting…</span>
+                        </x-ui.button-modal-primary>
+                        <p x-show="submitError" x-cloak class="text-xs text-error">
+                            Something went wrong — please try again.
+                        </p>
+                    </div>
 
                 </div>
             </div>

@@ -310,11 +310,7 @@
 
                 {{-- ── Order Type Selection ─────────────────────────────────── --}}
                 <div class="border-t border-b border-linen-dark py-3 space-y-2.5">
-                    <div class="flex items-center justify-between gap-2 flex-wrap">
-                        <p class="text-sm font-semibold text-charcoal">What can we help you with?</p>
-                        <p class="text-xs text-charcoal-light" x-show="!contactReady">Complete your contact info above to select</p>
-                        <p class="text-xs text-sunburst-dark font-medium" x-show="contactReady && orderType !== ''" x-cloak>Ready — launching wizard…</p>
-                    </div>
+                    <p class="text-sm font-semibold text-charcoal text-center">What can we help you with?</p>
                     <div class="grid grid-cols-2 gap-2">
                         <label
                             class="flex items-center gap-2.5 px-4 py-3 border cursor-pointer transition-colors duration-150"
@@ -343,6 +339,8 @@
                             <span class="text-sm font-semibold text-charcoal leading-tight">DTF Transfers</span>
                         </label>
                     </div>
+                    <p class="text-xs text-charcoal-light text-center" x-show="!contactReady">Complete your contact info above to select</p>
+                    <p class="text-xs text-sunburst-dark font-medium text-center" x-show="contactReady && orderType !== ''" x-cloak>Ready — launching wizard…</p>
                     {{-- DTF file attached indicator --}}
                     <div x-show="dtfFileName" x-cloak
                          class="flex items-center gap-2 px-3 py-2 bg-sunburst/10 border border-sunburst/30 text-xs text-charcoal">

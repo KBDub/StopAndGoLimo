@@ -487,3 +487,6 @@ Route::get('/checkout', function () {
 Route::get('/order-confirmation/{orderId}', function (int $orderId) {
     return view('pages.order-confirmation', ['orderId' => $orderId]);
 })->name('order-confirmation');
+
+Route::post('/custom-order/submit', [\App\Http\Controllers\CustomOrderController::class, 'submit'])
+    ->name('custom-order.submit');

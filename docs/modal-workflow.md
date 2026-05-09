@@ -4,17 +4,22 @@
 
 > **Scope:** Documents every modal component that is built and in active use in the application.
 
+> **Status legend used in this file:**
+> - **BUILT** — fully implemented and in production use
+> - **PLANNED** — design agreed, not yet implemented
+
 ---
 
 ## Custom Request Workflow
 
 ### Overview
 
-The Custom Request Workflow is a multi-step guided wizard that collects everything needed to place a custom apparel or product order. It is triggered from inside the `x-ui.contact-modal` FAB via a toggle, and is implemented as a dedicated `x-ui.custom-request-wizard` component that should be included once per page alongside the contact modal.
+The Custom Request Workflow is a multi-step guided wizard that collects everything needed to place a custom apparel or DTF transfer order. It is triggered from inside the `x-ui.contact-modal` FAB via two radio buttons, and is implemented as a dedicated `x-ui.custom-request-wizard` component that should be included once per page alongside the contact modal.
 
 **Entry points:**
-- `x-ui.contact-modal` → "Do You Have a Custom Request or DTF Upload?" toggle row (regular flow)
-- Any DTF drop zone component (`x-ui.dtf-dropzone`, `x-ui.banner-cta-dtf-dropzone`) → dispatches `open-contact-modal` with `{ dtf: true, fileName }` → contact modal → wizard (DTF flow)
+- `x-ui.contact-modal` → two radio buttons: "Custom Apparel Request" | "DTF Transfers" (all flows)
+- Any DTF drop zone component (`x-ui.dtf-dropzone`, `x-ui.banner-cta-dtf-dropzone`) → dispatches `open-contact-modal` with `{ dtf: true, fileName }` → contact modal → wizard (DTF flow, `dtfMode: true`)
+- DTF pricing table → PNG file picker → `x-ui.dtf-confirm-modal` → wizard (DTF flow, `dtfMode: true`)
 
 **Wizard component:** `x-ui.custom-request-wizard`
 **Demo page:** `resources/views/pages/demo/modals.blade.php`
@@ -25,72 +30,94 @@ The Custom Request Workflow is a multi-step guided wizard that collects everythi
 
 ### Trigger Flows
 
-#### Regular Flow
+#### Regular Flow (Custom Apparel) — BUILT (radio button change PLANNED)
 
 1. User opens the contact modal (FAB or any `open-contact-modal` event).
 2. User fills in **First Name, Last Name, Phone, and Email** — these four fields are the `contactReady` gate.
-3. Once `contactReady` is `true`, the "Do You Have a Custom Request or DTF Upload?" toggle becomes active.
-4. User clicks the toggle ON → the contact modal closes immediately and the wizard opens at Step 1, with name/email/phone pre-filled.
-5. The toggle click handler calls `launchWizard()` only when it transitions to `true`.
+3. Once `contactReady` is `true`, the two order-type radio buttons become active.
+4. User selects **Custom Apparel Request** — this sets `dtfMode: false`.
+5. Selecting a radio AND having `contactReady` true immediately calls `launchWizard()`, closes the contact modal, and opens the wizard at Step 1 with name/email/phone pre-filled.
 
-#### DTF Pricing Button Flow
+> **Key rule:** Both gates must be satisfied before `launchWizard()` fires — all four contact fields filled AND one radio selected. There is no automatic launch without both conditions met.
 
-1. User clicks any row on the DTF pricing section (Neck Tags, Left Chest, Image Sizes).
-2. Button dispatches `open-modal` with `{ name: 'dtf-confirm' }`.
-3. The **DTF Confirm Modal** (`x-ui.dtf-confirm-modal`) opens — gold variant, `sm` size.
-   - Title: "Ready to Order?"
-   - Body: "Would you like to order some DTFs?"
-   - **Yes, let's do it** → closes confirm modal, then dispatches `open-contact-modal` with `{ dtf: true }`.
-   - **No, not right now** → closes confirm modal, flow ends.
-4. On "Yes", continues into the regular DTF Dropzone Flow below (step 3 onward).
+#### DTF Dropzone Flow — BUILT (radio button change PLANNED)
 
-**Component:** `resources/views/components/ui/dtf-confirm-modal.blade.php`
-**Included on:** `resources/views/pages/custom-apparel/dtf-transfers.blade.php`
-
----
-
-#### DTF Dropzone Flow
-
-1. User drops or selects a file on any DTF drop zone component.
-2. The drop zone dispatches `open-contact-modal` with `{ dtf: true, fileName: 'filename.ext' }`.
+1. User drops or selects a file on any DTF drop zone component (`x-ui.dtf-dropzone` or `x-ui.banner-cta-dtf-dropzone`).
+2. The drop zone dispatches `open-contact-modal` with `{ dtf: true, fileName: 'filename.png' }`.
 3. The contact modal opens with:
    - `dtfFileName` set to the dropped file name.
-   - A gold info bar below the toggle showing the attached filename.
-   - The toggle starts **OFF** — the user must still explicitly click it to proceed, same as the regular flow.
-4. The toggle is disabled until `contactReady` is `true` (all four contact fields filled).
-5. User fills in contact info, then clicks the toggle ON → the contact modal closes and the wizard opens with name/email/phone/dtfFileName pre-filled and `hasDtf` pre-answered as `true`.
+   - A gold info bar below the radio row showing the attached filename.
+   - The **DTF Transfers** radio is pre-selected — the user does not need to pick again.
+4. The radios are disabled until `contactReady` is `true` (all four contact fields filled).
+5. Once `contactReady` is satisfied, `launchWizard()` fires — contact modal closes, wizard opens with name/email/phone/dtfFileName pre-filled and `dtfMode: true`.
 
-> **Key rule:** The user must always click the toggle to invoke the wizard, in both flows. There is no automatic launch.
+#### DTF Pricing Button Flow — PLANNED (replaces current flow)
 
-#### Submit Button Split
+1. User clicks any pricing row on the DTF pricing section (Neck Tags, Left Chest, Image Sizes). The clicked row's size, tier, and price are stored to `Alpine.store('dtfCart').pendingItem`.
+2. An inline **PNG-only file picker** opens immediately (no modal yet). Accepted: `.png` only.
+3. After a PNG file is selected, the `x-ui.dtf-confirm-modal` opens carrying the pending item and filename.
+4. See **DTF Confirm Modal** section below for modal behavior.
+5. On "Proceed to Checkout", the modal closes and the wizard opens in `dtfMode: true` with the full `dtfCart.items` array and the PNG filename in the prefill payload.
+
+#### Submit Button Split — BUILT (label update PLANNED)
 
 The contact modal submit row shows one of two buttons at all times:
 
 | Condition | Button shown |
 |---|---|
-| `customRequest` is OFF | Gold "Send Message" button (normal contact form submit) |
-| `customRequest` is ON | Charcoal "Continue to Custom Request Wizard →" button (disabled until `contactReady`; clicking it also calls `launchWizard()`) |
+| No radio selected | Gold "Send Message" button (normal contact form submit) |
+| Either radio selected | Charcoal "Continue to Custom Request Wizard →" button (disabled until `contactReady`; clicking it also calls `launchWizard()`) |
 
-The "Continue to Wizard" button serves as a visible fallback CTA for users who enable the toggle but haven't yet triggered auto-launch (e.g. toggled manually before all fields are filled).
-
----
-
-### Contact Modal — Toggle Row
-
-- **Label:** "Do You Have a Custom Request or DTF Upload?"
-- **Sub-labels:**
-  - While `!contactReady`: "Complete your contact info above to enable"
-  - While `contactReady && !customRequest`: "Use our guided custom order wizard"
-- **Toggle behavior:**
-  - Disabled (`:disabled="!contactReady"`) until all four contact fields are filled.
-  - Clicking it toggles `customRequest`; if it becomes `true`, calls `launchWizard()` immediately and closes the contact modal.
-  - Works identically in both the regular flow and the DTF dropzone flow — the user must always explicitly click the toggle.
-- **DTF file indicator:** Gold-tinted box shown below the toggle row when `dtfFileName` is set, displaying the attached filename. This is purely informational — it does not lock or pre-set the toggle.
-- **Alpine state added to contact-modal:** `customRequest: false`, `dtfFileName: ''`, `launchWizard()` method.
+The "Continue to Wizard" button serves as a visible fallback CTA — it reflects whichever radio is selected and is disabled until all four contact fields are filled.
 
 ---
 
-### `launchWizard()` — Prefill Payload
+### Contact Modal — Radio Row — PLANNED (currently a toggle)
+
+**Current state (built):** A single toggle labeled "Do You Have a Custom Request or DTF Upload?" that is off/on.
+
+**Planned state:** The toggle is replaced by two radio buttons:
+
+- **Custom Apparel Request**
+- **DTF Transfers**
+
+**Behavior (identical gate logic to current toggle):**
+- Both radios are disabled (`:disabled="!contactReady"`) until all four contact fields are filled.
+- Selecting a radio sets `orderType` to `'apparel'` or `'dtf'`, which sets `dtfMode` accordingly.
+- If `contactReady` is already `true` when a radio is selected, `launchWizard()` fires immediately.
+- If a radio is selected before `contactReady` is `true`, the selection is held and `launchWizard()` fires as soon as the last required contact field is satisfied.
+- Sub-label while `!contactReady`: "Complete your contact info above to enable"
+- Sub-label while `contactReady && !orderType`: "Use our guided custom order wizard"
+- **DTF file indicator:** Gold-tinted box shown below the radio row when `dtfFileName` is set, displaying the attached filename. Purely informational — does not auto-select either radio.
+
+**Alpine state on contact-modal:** `orderType: ''` (`'apparel'` | `'dtf'`), `dtfFileName: ''`, `launchWizard()` method.
+
+---
+
+### DTF Confirm Modal — `x-ui.dtf-confirm-modal` — PLANNED (replaces current modal)
+
+**File:** `resources/views/components/ui/dtf-confirm-modal.blade.php`
+**Included on:** `resources/views/pages/custom-apparel/dtf-transfers.blade.php`
+
+**Current state (built):** Opens after a pricing button click. Shows "Ready to Order?" with "Yes, let's do it" and "No, not right now" buttons.
+
+**Planned state:** Opens after the user selects a PNG file from the pricing table flow (step 2 of that flow). Shows the selected DTF type and filename, with two radio options and an X close button.
+
+**Modal content:**
+- Title: "Ready to Order?"
+- Gold info row: selected DTF type + size (e.g. "Neck Tags — 2″ × 2″, 15–49 pcs at $1.29 ea")
+- Gold info row: attached PNG filename
+- Two radios (one must be selected to enable Continue):
+  - **Proceed to Checkout for [DTF Type Name]** — appends the pending item to `dtfCart.items` and opens the wizard
+  - **Add more DTFs** — appends the pending item to `dtfCart.items`, closes the modal, returns user to the pricing table to pick another size/tier
+- Primary button: "Continue" (disabled until a radio is selected)
+- X button: triggers an "Are you sure?" overlay (same pattern as `x-ui.custom-request-wizard` close confirm) — confirmed closes the modal and clears `dtfCart`
+
+**DTF cart store:** `Alpine.store('dtfCart', { items: [], pendingItem: null })` persists across multiple confirm modal interactions. Each confirmed "Add more DTFs" appends `{ type, size, tier, price, fileName }` to `items`. When "Proceed to Checkout" is selected, the full `items` array is passed in the wizard prefill payload.
+
+---
+
+### `launchWizard()` — Prefill Payload — PLANNED (updated from current)
 
 When the wizard is opened from the contact modal, a prefill payload is dispatched via the `open-modal` event:
 
@@ -98,18 +125,22 @@ When the wizard is opened from the contact modal, a prefill payload is dispatche
 {
   name: 'custom-request-wizard',
   prefill: {
-    name:        contactName,   // firstName + lastName combined
+    name:        contactName,     // firstName + lastName combined
     email:       cmEmail,
     phone:       cmPhone,
-    dtfFileName: dtfFileName    // empty string '' when not a DTF flow
+    dtfMode:     true | false,    // set from radio selection or DTF entry point
+    dtfFileName: dtfFileName,     // empty string '' when not a DTF flow
+    dtfItems:    []               // dtfCart.items array; empty array when not a DTF pricing flow
   }
 }
 ```
 
 The wizard reads this payload in its `@open-modal.window` handler and populates:
 - `contactName`, `contactEmail`, `contactPhone`
-- `dtfFileName` — pre-fills the DTF step notice
+- `dtfMode` — drives the entire step branching
+- `dtfFileName` — pre-fills the DTF file step notice
 - `hasDtf` — set to `true` automatically when `dtfFileName` is non-empty
+- `dtfItems` — pre-loaded DTF cart items from the pricing flow (empty for all other flows)
 
 ---
 
@@ -120,19 +151,20 @@ The wizard reads this payload in its `@open-modal.window` handler and populates:
 **Opens via:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'custom-request-wizard', prefill: {...} } }))`
 **Fires on submit:** `wizard-done` window event with `{ name: 'custom-request-wizard' }`
 
-The wizard uses a dynamic `visibleSteps` computed array. After the global Quantity & Sizing step, **two per-garment steps** (Print Method, Color Selection) are inserted once for each garment type the user selected — so the total step count scales with selections. The DTF Upload step is always present as step 2. All step numbers and the dot-indicator count adjust automatically.
+The wizard uses a dynamic `visibleSteps` computed array driven by `dtfMode`. The DTF path and the custom apparel path share the same component with clearly separated step sequences — no hybrid steps. Step numbering, dot indicators, and titles all adjust automatically.
 
 ---
 
-### Step Map
+### Step Map — PLANNED (dtfMode branching; current wizard has no dtfMode)
+
+#### Non-DTF path (`dtfMode === false`) — Custom Apparel
 
 | Step | Name (internal) | Title | Conditional |
 |------|-----------------|-------|-------------|
 | 1 | `request-type` | Request Details | Always |
-| 2 | `dtf-upload` | DTF File Upload | Always |
+| 2 | `artwork-upload` | Artwork Upload | Always (PDF, AI, EPS, PNG, JPG, SVG, PSD — max 50 MB) |
 | 3 | `garment-selection` | Garment Selection | Always |
 | 4 | `quantity` | Quantity & Sizing | Always (shows all selected garments) |
-| *For each selected garment (e.g. Polo (Long Sleeve), Hoodies…):* | | | |
 | — | `print-method-{key}` | Print Method — {Garment Label} | Per selected garment |
 | — | `color-{key}` | Color Selection — {Garment Label} | Per selected garment |
 | Last | `completion-date` | Desired Completion Date | Always |
@@ -140,48 +172,79 @@ The wizard uses a dynamic `visibleSteps` computed array. After the global Quanti
 | Last | `shipping-address` | Shipping Address | Always |
 | Last | `confirm-submit` | Review & Submit | Always |
 
-**Total steps:** 4 global + 2 per-garment-type selected + 4 closing global steps = variable.
+**Total steps:** 4 global + 2 per-garment-type selected + 4 closing = variable.
+**Example:** Polo (Long Sleeve) + Hoodies → 4 + 4 + 4 = 12 steps.
 
-**Example:** User selects Polo (Long Sleeve) + Hoodies → 4 + 4 + 4 = 12 steps.
+#### DTF path (`dtfMode === true`) — DTF Transfers
+
+| Step | Name (internal) | Title | Conditional |
+|------|-----------------|-------|-------------|
+| 1 | `request-type` | Request Details | Always |
+| 2 | `dtf-upload` | DTF File Upload | Always (PNG only — max 50 MB; auto-passes if file pre-loaded from pricing or dropzone flow) |
+| 3 | `dtf-type-selection` | DTF Type Selection | Always (replaces garment-selection) |
+| 4 | `dtf-quantity` | Quantities & Pricing | Always (replaces quantity matrix; shows DTF pricing tier picker per selected DTF type) |
+| Last | `completion-date` | Desired Completion Date | Always |
+| Last | `extra-notes` | Extra Notes | Always |
+| Last | `shipping-address` | Shipping Address | Always |
+| Last | `confirm-submit` | Review & Submit | Always |
+
+**Total steps:** Always 8 (no per-item branching steps).
+**Note:** Print Method and Color Selection steps do not appear in the DTF path.
+
+**DTF types available in Step 3:**
+
+| Toggle Label | Internal key |
+|---|---|
+| Neck Tags | `neckTag` |
+| Left Chest / Right Chest | `chestImage` |
+| Image Sizes (5″ and above) | `imageSize` |
+
+**Step 4 — DTF Quantity:** For each selected DTF type, the user picks a pricing tier (matching the `dtf-pricing-section` table) and enters a quantity. Pre-loaded `dtfItems` from the pricing flow auto-populate this step.
 
 ---
 
-### Step Details
+### Step Details — Current Build
+
+> The following step details reflect the **currently built** wizard. Steps marked PLANNED above (dtfMode branching, dtf-type-selection, dtf-quantity) are not yet implemented.
 
 ---
 
-#### Step 1 — Request Details
+#### Step 1 — Request Details — BUILT
 
 **Fields:**
 
 - **Is this a company or personal request?** — two radio buttons: `Company` | `Personal`
   - If `Company` is selected, a **Company Name** text input is enabled/shown below the radios.
 - **Is this a rush request?** — two radio buttons: `Yes` | `No`
-  - If `Yes`, `isRush` is set to `true`. This value persists and affects later steps (Step 7 and Step 10).
+  - If `Yes`, `isRush` is set to `true`. This value persists and affects later steps.
 
 **Alpine state:** `requestType: ''`, `companyName: ''`, `isRush: null`
 
 ---
 
-#### Step 2 — DTF File Upload
+#### Step 2 — Artwork / DTF File Upload — BUILT (file type split PLANNED)
 
 **Always present.** Asks whether the customer is providing a design file.
 
+**Current behavior (built):** Single file input accepting all design formats.
+
+**Planned behavior:** File type accepted depends on `dtfMode`:
+- `dtfMode === false` (Custom Apparel): PDF, AI, EPS, PNG, JPG, SVG, PSD — max 50 MB. Step label: "Artwork Upload".
+- `dtfMode === true` (DTF Transfers): PNG only — max 50 MB. Step label: "DTF File Upload". Display hint: "PNG — 300 DPI minimum recommended".
+
 **Content:**
-- If `dtfFileName` is set (pre-filled from DTF dropzone flow), a gold notice box shows the filename and the step is auto-valid — no prompt shown.
-- Otherwise, a Yes/No radio group: "Would you like to upload a DTF file?"
-  - **Yes** — reveals a file input (PDF, AI, EPS, PNG, JPG, SVG, PSD, max 50 MB). Selecting a file sets `dtfFileName`.
+- If `dtfFileName` is set (pre-filled from dropzone or pricing flow), a gold notice box shows the filename and the step is auto-valid — no prompt shown.
+- Otherwise, a Yes/No radio group asking whether the customer is uploading a file.
+  - **Yes** — reveals the file input with the appropriate accept mask.
   - **No** — no file needed; step becomes valid.
 
 **Step valid when:** `dtfFileName` is set (auto-valid) OR `hasDtf !== null`.
 
 **Alpine state:** `dtfFileName: ''`, `hasDtf: null`
 
-When opened from the DTF dropzone flow, `dtfFileName` is pre-populated and `hasDtf` is pre-set to `true`.
-
 ---
 
-#### Step 3 — Garment Selection
+#### Step 3 — Garment Selection — BUILT (non-DTF path only after branching is implemented)
 
 **Heading:** "Select all applicable garment types"
 
@@ -189,6 +252,8 @@ Each garment type is a toggle switch rendered inside a **3-column grid of border
 
 | Toggle Label | Alpine key |
 |---|---|
+| Crew Necks | `garments.crewNeck` |
+| V-Necks | `garments.vNeck` |
 | Polo (Long Sleeve) | `garments.poloLong` |
 | Polo (Short Sleeve) | `garments.poloShort` |
 | Tank Tops | `garments.tankTop` |
@@ -203,7 +268,7 @@ Below the grid, when at least one garment is selected, a **SELECTED** section ap
 
 ---
 
-#### Step 4 — Quantity & Sizing
+#### Step 4 — Quantity & Sizing — BUILT (non-DTF path only after branching is implemented)
 
 A matrix input grid organized by garment type. Only garment types selected in Step 3 are shown. Each garment type renders its own table.
 
@@ -211,6 +276,10 @@ A matrix input grid organized by garment type. Only garment types selected in St
 - **Rows:** Men's, Women's, Youth, Toddler
 - **Columns:** XS, S, M, L, XL, 2XL, 3XL, 4XL, 5XL, 6XL
 - Each cell contains a small number input (blank = 0).
+
+**Exceptions:**
+- **Beanies:** One-size input only (single count field, no gender/size matrix).
+- **Baseball Caps:** Adult and Youth inputs only (no full matrix).
 
 The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunburst`) to handle narrow viewports.
 
@@ -223,7 +292,7 @@ The table container is horizontally scrollable (`overflow-x-auto scrollbar-sunbu
 
 ---
 
-#### Per-Garment Step — Print Method
+#### Per-Garment Step — Print Method — BUILT (non-DTF path only)
 
 Two main radio options. Both card headers use the **centered card radio** pattern: `flex items-center justify-center gap-3 p-4` on the card header div. See `docs/branding-requirements.md → Form Controls → Radio Group → card-style radio rows`.
 
@@ -253,13 +322,13 @@ Two main radio options. Both card headers use the **centered card radio** patter
 | Embroidery | `embroidery` |
 | Picture Shirts | `picture` |
 
-**Alpine state:** `printMethods: {}` (per-garment key → `'traditional'` or `'specialty'`), `specialtyTypeByGarment: {}` (per-garment key → specialty option value)
+**Alpine state:** `printMethods: {}` (per-garment key → `'traditional'` or `'specialty'`), `specialtyTypeByGarment: {}` (per-garment key → selected specialty type string (single value))
 
 ---
 
-#### Per-Garment Step — Color Selection
+#### Per-Garment Step — Color Selection — BUILT (non-DTF path only)
 
-A smart text input with inline (non-absolute) autocomplete against a list of 30 common colors. Users can add multiple colors.
+A smart text input with inline (non-absolute) autocomplete against a list of common colors. Users can add multiple colors.
 
 **Behavior:**
 - Typing filters the `colorSuggestions` array (case-insensitive, excludes already-selected colors).
@@ -268,14 +337,14 @@ A smart text input with inline (non-absolute) autocomplete against a list of 30 
 - Clicking a suggestion adds it and clears the input.
 - Each selected color becomes a **chip** (charcoal background, white text) with an × remove button.
 
-**Color suggestion list (30 colors):**
-White, Black, Navy Blue, Red, Royal Blue, Forest Green, Charcoal Gray, Light Gray, Sky Blue, Yellow, Orange, Purple, Maroon, Pink, Hot Pink, Kelly Green, Burgundy, Lime Green, Gold, Silver, Tan, Brown, Heather Gray, Sport Gray, Safety Green, Safety Orange, Teal, Coral, Lavender, Olive Green
+**Color suggestion list:**
+White, Black, Blue, Navy Blue, Red, Royal Blue, Forest Green, Charcoal Gray, Light Gray, Sky Blue, Yellow, Orange, Purple, Maroon, Pink, Hot Pink, Kelly Green, Burgundy, Lime Green, Gold, Silver, Tan, Brown, Heather Gray, Sport Gray, Safety Green, Safety Orange, Teal, Coral, Lavender, Olive Green
 
 **Alpine state:** `colorInput: ''`, `selectedColors: []`, `colorSuggestions: [...]`
 
 ---
 
-#### Step 7 — Desired Completion Date
+#### Step — Desired Completion Date — BUILT
 
 **Rush handling:**
 
@@ -289,7 +358,7 @@ The date input's border and ring turn sunburst when `rushActive` is true (`isRus
 
 ---
 
-#### Step 8 — Extra Notes
+#### Step — Extra Notes — BUILT
 
 A single resizable `<textarea>` for any additional order details — artwork requirements, special instructions, references, etc.
 
@@ -297,7 +366,7 @@ A single resizable `<textarea>` for any additional order details — artwork req
 
 ---
 
-#### Step 9 — Shipping Address
+#### Step — Shipping Address — BUILT
 
 - **Company Name** field — shown only when `requestType === 'company'`. Pre-bound to `companyName` (same field as Step 1, so it carries forward any value entered there).
 - **First Name** / **Last Name** — side-by-side on sm+ screens.
@@ -309,7 +378,7 @@ A single resizable `<textarea>` for any additional order details — artwork req
 
 ---
 
-#### Step 10 — Review & Submit
+#### Step — Review & Submit — BUILT
 
 A read-only summary of all collected data, displayed as a two-column key/value grid inside a bordered container with divider rows.
 
@@ -317,18 +386,19 @@ A read-only summary of all collected data, displayed as a two-column key/value g
 
 | Row | Content |
 |---|---|
+| Order Type | DTF Transfers or Custom Apparel (shown when dtfMode is implemented) |
 | Request Type | `Company` or `Personal`; company name appended if applicable |
 | Rush | Sunburst `RUSH` badge if `rushActive`, otherwise "Standard" |
-| Garments | Chips for each selected garment type |
-| Shirt Spec | Sleeve length + fabric weight (only shown if shirt type selected and values set) |
-| Colors | Charcoal chips for each selected color |
-| Quantities | Chips in `{qty} {Gender} {Size} {Garment}s` format |
-| Print Method | Traditional type or Specialty, as applicable |
+| Garments | Chips for each selected garment type (non-DTF path) |
+| DTF Items | Type, size, tier, quantity chips (DTF path — PLANNED) |
+| Colors | Charcoal chips for each selected color (non-DTF path) |
+| Quantities | Chips in `{qty} {Gender} {Size} {Garment}s` format (non-DTF path) |
+| Print Method | Traditional type or Specialty, as applicable (non-DTF path) |
 | Date Needed | Completion date with inline `RUSH` badge if rush active |
 | Contact | Full name, email, phone |
 | Ship To | Company name (if applicable), address lines, city/state/zip |
 | Notes | Extra notes (truncated at 3 lines if long) |
-| DTF File | Filename if pre-filled; "Yes — will provide separately" if hasDtf but no filename; "No file / needs design help" if hasDtf is false |
+| Artwork File | Filename if provided; "Yes — will provide separately" if hasDtf but no filename; "No file / needs design help" if hasDtf is false |
 
 **Rush banner:** A full-width sunburst gold bar at the top of the step when `rushActive` is true.
 
@@ -336,65 +406,79 @@ The **Submit Request** button dispatches the `wizard-done` event and closes the 
 
 ---
 
-### Alpine.js State Summary
+### Alpine.js State Summary — Current + Planned
 
 All state lives in the `x-data` object on the root element of `x-ui.custom-request-wizard`.
 
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `isOpen` | bool | `false` | Backdrop visibility |
-| `step` | int | `1` | Current step (1-based) |
-| `requestType` | string | `''` | `'company'` or `'personal'` |
-| `companyName` | string | `''` | Company name (Step 1, reused in Step 9) |
-| `isRush` | bool\|null | `null` | Rush flag from Step 1 |
-| `dtfFileName` | string | `''` | Pre-filled filename from DTF dropzone flow |
-| `hasDtf` | bool\|null | `null` | Whether customer is providing a design file (Step 1a) |
-| `garments` | object | all `false` | Toggle state for each garment type |
-| `colorInput` | string | `''` | Live text in color search input |
-| `selectedColors` | array | `[]` | Array of color name strings |
-| `quantities` | object | `{}` | Flat map of `{garmentKey}-{genderKey}-{size}` → quantity |
-| `sizes` | array | 10 items | `['XS','S','M','L','XL','2XL','3XL','4XL','5XL','6XL']` |
-| `genders` | array | 4 items | `[{key,label}]` for Men's, Women's, Youth, Toddler |
-| `printMethods` | object | `{}` | Per-garment key → `'traditional'` or `'specialty'` |
-| `specialtyTypeByGarment` | object | `{}` | Per-garment key → selected specialty type string (single value) |
-| `completionDate` | string | `''` | ISO date string from date input |
-| `isRushDelivery` | bool\|null | `null` | Rush flag from Step 7 (if not already set in Step 1) |
-| `extraNotes` | string | `''` | Free-text notes |
-| `contactName` | string | `''` | Pre-filled from contact modal |
-| `contactEmail` | string | `''` | Pre-filled from contact modal |
-| `contactPhone` | string | `''` | Pre-filled from contact modal |
-| `address1` | string | `''` | Shipping address line 1 |
-| `address2` | string | `''` | Shipping address line 2 |
-| `city` | string | `''` | Shipping city |
-| `state` | string | `''` | Shipping state (2-char) |
-| `zip` | string | `''` | Shipping ZIP code |
+| Property | Type | Default | Status | Description |
+|---|---|---|---|---|
+| `isOpen` | bool | `false` | BUILT | Backdrop visibility |
+| `step` | int | `1` | BUILT | Current step (1-based) |
+| `dtfMode` | bool\|null | `null` | PLANNED | `true` = DTF path, `false` = apparel path; drives `visibleSteps` |
+| `requestType` | string | `''` | BUILT | `'company'` or `'personal'` |
+| `companyName` | string | `''` | BUILT | Company name (Step 1, reused in shipping step) |
+| `isRush` | bool\|null | `null` | BUILT | Rush flag from Step 1 |
+| `dtfFileName` | string | `''` | BUILT | Pre-filled filename from dropzone or pricing flow |
+| `hasDtf` | bool\|null | `null` | BUILT | Whether customer is providing a design file |
+| `dtfItems` | array | `[]` | PLANNED | Pre-loaded DTF cart items from pricing flow |
+| `dtfTypes` | object | all `false` | PLANNED | Toggle state for each DTF type (DTF path Step 3) |
+| `garments` | object | all `false` | BUILT | Toggle state for each garment type (non-DTF path) |
+| `colorInputs` | object | `{}` | BUILT | Per-garment live color search input |
+| `selectedColorsByGarment` | object | `{}` | BUILT | Per-garment selected colors array |
+| `quantities` | object | `{}` | BUILT | Flat map of `{garmentKey}-{genderKey}-{size}` → quantity |
+| `sizes` | array | 10 items | BUILT | `['XS','S','M','L','XL','2XL','3XL','4XL','5XL','6XL']` |
+| `genders` | array | 4 items | BUILT | `[{key,label}]` for Men's, Women's, Youth, Toddler |
+| `printMethods` | object | `{}` | BUILT | Per-garment key → `'traditional'` or `'specialty'` |
+| `specialtyTypeByGarment` | object | `{}` | BUILT | Per-garment key → selected specialty type string |
+| `completionDate` | string | `''` | BUILT | ISO date string from date input |
+| `isRushDelivery` | bool\|null | `null` | BUILT | Rush flag from completion date step |
+| `extraNotes` | string | `''` | BUILT | Free-text notes |
+| `contactName` | string | `''` | BUILT | Pre-filled from contact modal |
+| `contactEmail` | string | `''` | BUILT | Pre-filled from contact modal |
+| `contactPhone` | string | `''` | BUILT | Pre-filled from contact modal |
+| `address1` | string | `''` | BUILT | Shipping address line 1 |
+| `address2` | string | `''` | BUILT | Shipping address line 2 |
+| `city` | string | `''` | BUILT | Shipping city |
+| `state` | string | `''` | BUILT | Shipping state (2-char) |
+| `zip` | string | `''` | BUILT | Shipping ZIP code |
 
 **Computed getters:**
 
-| Getter | Returns |
-|---|---|
-| `hasShirtType` | `true` if any garment is toggled on |
-| `visibleSteps` | Array of step name strings; always starts with `request-type`, `dtf-upload`, `garment-selection`, `quantity`; then `print-method-{key}`, `color-{key}` per selected garment; ends with `completion-date`, `extra-notes`, `shipping-address`, `confirm-submit` |
-| `currentStepName` | String key for the current step |
-| `currentStepTitle` | Human-readable title for the current step |
-| `totalSteps` | `visibleSteps.length` (variable based on garment selections) |
-| `selectedGarmentTypes` | Filtered array of `{key, label}` objects for selected garments |
-| `filteredColors` | Color suggestions filtered by `colorInput`, excluding already-selected |
-| `quantitySummary` | Array of readable strings like "13 Men's 3XL Hoodies" |
-| `rushActive` | `true` if `isRush === true` or `isRushDelivery === true` |
-| `stepValid` | Validates the current step before allowing Next |
+| Getter | Status | Returns |
+|---|---|---|
+| `visibleSteps` | PLANNED update | Branches on `dtfMode` — DTF path: 8 fixed steps; apparel path: 4 global + 2 per-garment + 4 closing |
+| `currentStepName` | BUILT | String key for the current step |
+| `currentStepTitle` | BUILT | Human-readable title for the current step |
+| `totalSteps` | BUILT | `visibleSteps.length` |
+| `selectedGarmentTypes` | BUILT | Filtered array of `{key, label}` objects for selected garments (apparel path) |
+| `selectedDtfTypes` | PLANNED | Filtered array of `{key, label}` for selected DTF types (DTF path) |
+| `filteredColorsForGarment` | BUILT | Color suggestions filtered by garment input, excluding already-selected |
+| `quantitySummary` | BUILT | Array of readable strings like "13 Men's 3XL Hoodies" |
+| `rushActive` | BUILT | `true` if `isRush === true` or `isRushDelivery === true` |
+| `stepValid` | BUILT (update PLANNED) | Validates current step; DTF-path steps need their own validation branches |
 
 ---
 
-### Event API
+### File Type Restrictions by Component — PLANNED
 
-| Event | Direction | Payload | Description |
-|---|---|---|---|
-| `open-contact-modal` | dispatch → contact modal | `{}` or `{ dtf: true, fileName: 'name.ext' }` | Opens contact modal; DTF payload pre-enables toggle and stores filename |
-| `open-modal` | contact modal → wizard | `{ name: 'custom-request-wizard', prefill: { name, email, phone, dtfFileName } }` | Opens wizard at step 1 with pre-filled contact info |
-| `close-modal` | dispatch → wizard | `{ name: 'custom-request-wizard' }` | Closes and resets wizard |
-| `modal-closed` | wizard fires → window | `{ name: 'custom-request-wizard' }` | Fired after wizard closes |
-| `wizard-done` | wizard fires → window | `{ name: 'custom-request-wizard' }` | Fired when Submit is clicked |
+| Component | File | Current `accept` | Planned (DTF) | Planned (non-DTF) |
+|---|---|---|---|---|
+| `x-ui.dtf-dropzone` | `dtf-dropzone.blade.php` | all types | `.png` only | n/a (DTF-only component) |
+| `x-ui.banner-cta-dtf-dropzone` | `banner-cta-dtf-dropzone.blade.php` | all types | `.png` only | n/a (DTF-only component) |
+| Wizard Step 2 file input | `custom-request-wizard.blade.php` | all types | `.png` only | PDF, AI, EPS, PNG, JPG, SVG, PSD |
+| Display hint text | all above | "PDF · AI · EPS · PNG…" | "PNG — 300 DPI minimum" | "PDF, AI, EPS, PNG, JPG, SVG, PSD" |
+
+---
+
+### Event API — Current + Planned
+
+| Event | Direction | Payload | Status | Description |
+|---|---|---|---|---|
+| `open-contact-modal` | dispatch → contact modal | `{}` or `{ dtf: true, fileName: 'name.png' }` | BUILT | Opens contact modal; DTF payload pre-selects DTF radio and stores filename |
+| `open-modal` | contact modal → wizard | `{ name: 'custom-request-wizard', prefill: { name, email, phone, dtfMode, dtfFileName, dtfItems } }` | BUILT (dtfMode + dtfItems PLANNED) | Opens wizard at step 1 with pre-filled contact info and mode |
+| `close-modal` | dispatch → wizard | `{ name: 'custom-request-wizard' }` | BUILT | Closes and resets wizard |
+| `modal-closed` | wizard fires → window | `{ name: 'custom-request-wizard' }` | BUILT | Fired after wizard closes |
+| `wizard-done` | wizard fires → window | `{ name: 'custom-request-wizard' }` | BUILT | Fired when Submit is clicked |
 
 ---
 
@@ -415,9 +499,12 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 {{-- Include once per page alongside x-ui.contact-modal --}}
 <x-ui.contact-modal />
 <x-ui.custom-request-wizard />
+
+{{-- On DTF pages, also include: --}}
+<x-ui.dtf-confirm-modal />
 ```
 
-The contact modal toggle dispatches the open event; the wizard component listens for it. Both components must be present on the same page.
+Both `x-ui.contact-modal` and `x-ui.custom-request-wizard` must be present on the same page. `x-ui.dtf-confirm-modal` is only needed on pages with the DTF pricing section.
 
 ---
 
@@ -534,7 +621,7 @@ Demonstrates the simpler `x-ui.modal-wizard` component — distinct from the ful
 | `demo-wizard-cancel` | `Submit` | `Cancel` | "Before You Continue" / "Confirm Your Details" / "Submission Complete" | Cancel link only appears on step 1. Steps 2+ hide it — user can only go Back or Finish. Step 2 has name + email inputs. Step 3 is a confirmation. | ✅ |
 
 **`x-ui.modal-wizard` vs `x-ui.custom-request-wizard`:**
-`x-ui.modal-wizard` is a lightweight 3-step shell — slots, static titles, no internal conditional logic. `x-ui.custom-request-wizard` is the full 10-step order wizard with dynamic `visibleSteps`, full Alpine state, and all production business logic. They are separate components serving different purposes.
+`x-ui.modal-wizard` is a lightweight 3-step shell — slots, static titles, no internal conditional logic. `x-ui.custom-request-wizard` is the full production order wizard with dynamic `visibleSteps`, `dtfMode` branching, full Alpine state, and all business logic. They are separate components serving different purposes.
 
 ---
 

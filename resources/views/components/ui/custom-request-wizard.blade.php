@@ -371,13 +371,13 @@
             this.submitting  = true;
             this.submitError = false;
             try {
-                const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+                const csrfToken = document.querySelector('meta[name=csrf-token]')?.content ?? '';
                 const res = await fetch('/custom-order/submit', {
                     method:  'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept':       'application/json',
-                        'X-CSRF-TOKEN': csrfMeta ? csrfMeta.content : '',
+                        'X-CSRF-TOKEN': csrfToken,
                     },
                     body: JSON.stringify(this.buildPayload()),
                 });

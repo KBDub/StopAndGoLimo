@@ -75,9 +75,9 @@
             imageSize:  false,
         },
         dtfQuantities: {
-            neckTag:    [{ tier: '', qty: '' }],
-            chestImage: [{ tier: '', qty: '' }],
-            imageSize:  [{ tier: '', qty: '' }],
+            neckTag:    { qty: '' },
+            chestImage: { qty: '' },
+            imageSize:  { qty: '' },
         },
         dtfTierOptions: [
             '1 – 14 pcs',
@@ -307,9 +307,8 @@
             if (s === 'dtf-quantity') {
                 if (this.selectedDtfTypes.length === 0) return false;
                 return this.selectedDtfTypes.every(t => {
-                    const rows = this.dtfQuantities[t.key];
-                    if (!rows || !rows.length) return false;
-                    return rows.every(r => r.tier !== '' && parseInt(r.qty) > 0);
+                    const q = this.dtfQuantities[t.key];
+                    return q && parseInt(q.qty) > 0;
                 });
             }
             if (s === 'garment-selection') {
@@ -467,19 +466,9 @@
             if (match) this.state = this.stateMap[match];
         },
 
-        addDtfQtyRow(key) {
-            const rows = (this.dtfQuantities[key] || []).concat([{ tier: '', qty: '' }]);
-            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: rows });
-        },
-        removeDtfQtyRow(key, idx) {
-            const rows = (this.dtfQuantities[key] || []).filter(function(_, i) { return i !== idx; });
-            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: rows.length ? rows : [{ tier: '', qty: '' }] });
-        },
-        updateDtfQtyRow(key, idx, field, val) {
-            const rows = (this.dtfQuantities[key] || []).map(function(r, i) {
-                return i === idx ? Object.assign({}, r, { [field]: val }) : r;
-            });
-            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: rows });
+        updateDtfQty(key, val) {
+            const q = Object.assign({}, this.dtfQuantities[key], { qty: val });
+            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: q });
         },
 
         /* ── Per-garment color methods ─────────────────────── */
@@ -884,94 +873,45 @@
                 {{-- ══ STEP (DTF path): DTF Quantity & Tier ══════════════════ --}}
                 <div x-show="currentStepName === 'dtf-quantity'" x-cloak>
                     <p class="text-xs text-charcoal-light mb-5">
-                        For each transfer type, select a quantity tier and enter your quantity.
-                        Add multiple rows to order across different tiers.
-                        <span class="text-error font-semibold">All rows required.</span>
+                        Enter the quantity for each transfer type.
+                        <span class="text-error font-semibold">All fields required.</span>
                     </p>
-                    <div class="space-y-5">
+                    <div class="space-y-4">
                         <template x-for="t in selectedDtfTypes" :key="t.key">
                             <div class="border border-linen-dark">
-
-                                {{-- Type header --}}
                                 <div class="px-4 py-2.5 bg-linen border-b border-linen-dark">
                                     <p class="text-sm font-bold text-charcoal" x-text="t.label"></p>
                                 </div>
-
-                                {{-- Quantity rows --}}
-                                <div class="divide-y divide-linen-dark">
-                                    <template x-for="(row, idx) in dtfQuantities[t.key]" :key="idx">
-                                        <div class="px-4 py-4 space-y-3">
-
-                                            {{-- Row header + remove button --}}
-                                            <div class="flex items-center justify-between">
-                                                <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide"
-                                                   x-text="dtfQuantities[t.key].length > 1 ? 'Order ' + (idx + 1) : 'Quantity Tier'">
-                                                </p>
-                                                <button type="button"
-                                                    x-show="dtfQuantities[t.key].length > 1"
-                                                    @click="removeDtfQtyRow(t.key, idx)"
-                                                    class="text-xs text-charcoal-light underline hover:text-error transition-colors">
-                                                    Remove
-                                                </button>
-                                            </div>
-
-                                            {{-- Tier radio grid --}}
-                                            <div>
-                                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
-                                                    Quantity Tier <span class="text-error">*</span>
-                                                </label>
-                                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                                    @foreach(['1 – 14 pcs', '15 – 49 pcs', '50 – 99 pcs', '100 – 249 pcs', '250+ pcs'] as $tier)
-                                                    <label
-                                                        class="flex items-center gap-2 px-3 py-2.5 border cursor-pointer transition-colors duration-150"
-                                                        :class="row.tier === '{{ $tier }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
-                                                    >
-                                                        <input type="radio"
-                                                            :name="'dtf-tier-' + t.key + '-' + idx"
-                                                            value="{{ $tier }}"
-                                                            :checked="row.tier === '{{ $tier }}'"
-                                                            @change="updateDtfQtyRow(t.key, idx, 'tier', '{{ $tier }}')"
-                                                            class="w-4 h-4 accent-sunburst flex-shrink-0">
-                                                        <span class="text-sm font-semibold text-charcoal">{{ $tier }}</span>
-                                                    </label>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-
-                                            {{-- Quantity stepper (right-aligned) --}}
-                                            <div class="flex items-center justify-between gap-4 pt-1">
-                                                <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
-                                                    Quantity <span class="text-error">*</span>
-                                                </label>
-                                                <div class="flex items-center border border-linen-dark bg-white">
-                                                    <button
-                                                        type="button"
-                                                        @click="updateDtfQtyRow(t.key, idx, 'qty', Math.max(1, parseInt(row.qty || 0) - 1))"
-                                                        class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-r border-linen-dark"
-                                                        aria-label="Decrease quantity"
-                                                    >&minus;</button>
-                                                    <input
-                                                        type="number"
-                                                        min="1"
-                                                        :value="row.qty"
-                                                        @input="updateDtfQtyRow(t.key, idx, 'qty', $event.target.value)"
-                                                        placeholder="0"
-                                                        class="w-16 text-center text-sm py-2 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
-                                                        style="-moz-appearance:textfield;"
-                                                    >
-                                                    <button
-                                                        type="button"
-                                                        @click="updateDtfQtyRow(t.key, idx, 'qty', parseInt(row.qty || 0) + 1)"
-                                                        class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-l border-linen-dark"
-                                                        aria-label="Increase quantity"
-                                                    >+</button>
-                                                </div>
-                                            </div>
-
+                                <div class="px-4 py-4">
+                                    <div class="flex items-center justify-between gap-4">
+                                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
+                                            Quantity <span class="text-error">*</span>
+                                        </label>
+                                        <div class="flex items-center border border-linen-dark bg-white">
+                                            <button
+                                                type="button"
+                                                @click="updateDtfQty(t.key, Math.max(1, parseInt(dtfQuantities[t.key].qty || 0) - 1))"
+                                                class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-r border-linen-dark"
+                                                aria-label="Decrease quantity"
+                                            >&minus;</button>
+                                            <input
+                                                type="number"
+                                                min="1"
+                                                :value="dtfQuantities[t.key].qty"
+                                                @input="updateDtfQty(t.key, $event.target.value)"
+                                                placeholder="0"
+                                                class="w-16 text-center text-sm py-2 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                style="-moz-appearance:textfield;"
+                                            >
+                                            <button
+                                                type="button"
+                                                @click="updateDtfQty(t.key, parseInt(dtfQuantities[t.key].qty || 0) + 1)"
+                                                class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-l border-linen-dark"
+                                                aria-label="Increase quantity"
+                                            >+</button>
                                         </div>
-                                    </template>
+                                    </div>
                                 </div>
-
                             </div>
                         </template>
                     </div>

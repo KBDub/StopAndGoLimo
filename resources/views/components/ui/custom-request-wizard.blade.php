@@ -8,8 +8,8 @@
  |
  | ── DTF PATH (dtfMode === true) ─────────────────────────────────────────────
  |   1. request-type         — Request Details (always)
- |   2. dtf-upload           — DTF File Upload / PNG only (always; auto-passes if pre-attached)
- |   3. dtf-type-selection   — DTF Type Selection (only when dtfItems.length === 0)
+ |   2. dtf-type-selection   — DTF Type Selection (only when dtfItems.length === 0)
+ |   3. dtf-upload           — DTF Image Upload — one or per-type (auto-passes if pre-attached)
  |   4. dtf-quantity         — Quantities & Pricing (only when dtfItems.length === 0)
  |   5. completion-date      — Desired Completion Date (always)
  |   6. extra-notes          — Extra Notes (always)
@@ -58,9 +58,15 @@
         /* ── DTF path: pre-loaded items from pricing table ─── */
         dtfItems:    [],
 
-        /* ── DTF path: file upload ────────────────────────── */
-        dtfFileName: '',
-        hasDtf:      null,
+        /* ── DTF path: image upload ────────────────────────── */
+        dtfFileName:          '',    /* single file (pre-attached or 'single' distribution) */
+        hasDtf:               null,
+        dtfImageDistribution: null,  /* 'single' | 'individual' */
+        dtfFilesByType: {            /* per-type file names ('individual' distribution) */
+            neckTag:    '',
+            chestImage: '',
+            imageSize:  '',
+        },
 
         /* ── DTF path: type selection (when no pre-loaded items) ── */
         dtfTypes: {
@@ -69,9 +75,9 @@
             imageSize:  false,
         },
         dtfQuantities: {
-            neckTag:    { tier: '', qty: '' },
-            chestImage: { tier: '', qty: '' },
-            imageSize:  { tier: '', qty: '' },
+            neckTag:    [{ tier: '', qty: '' }],
+            chestImage: [{ tier: '', qty: '' }],
+            imageSize:  [{ tier: '', qty: '' }],
         },
         dtfTierOptions: [
             '1 – 14 pcs',
@@ -214,12 +220,11 @@
         },
         get visibleSteps() {
             if (this.dtfMode === true) {
-                const s = ['request-type', 'dtf-upload'];
-                if (!this.dtfItems || this.dtfItems.length === 0) {
-                    s.push('dtf-type-selection', 'dtf-quantity');
+                if (this.dtfItems && this.dtfItems.length > 0) {
+                    return ['request-type', 'dtf-upload', 'completion-date', 'extra-notes', 'shipping-address', 'confirm-submit'];
                 }
-                s.push('completion-date', 'extra-notes', 'shipping-address', 'confirm-submit');
-                return s;
+                return ['request-type', 'dtf-type-selection', 'dtf-upload', 'dtf-quantity',
+                        'completion-date', 'extra-notes', 'shipping-address', 'confirm-submit'];
             }
             /* Apparel path (dtfMode === false or null) */
             const s = ['request-type', 'garment-selection', 'quantity'];
@@ -254,8 +259,8 @@
             const n = this.currentStepName;
             const map = {
                 'request-type':       'Request Details',
-                'dtf-upload':         'DTF File Upload',
                 'dtf-type-selection': 'DTF Type Selection',
+                'dtf-upload':         'DTF Image Upload',
                 'dtf-quantity':       'Quantities & Pricing',
                 'artwork-upload':     'Artwork Upload',
                 'garment-selection':  'Garment Selection',
@@ -290,18 +295,21 @@
                        (this.requestType !== 'company' || this.companyName.trim() !== '') &&
                        this.isRush !== null;
             }
-            if (s === 'dtf-upload') {
-                if (this.dtfItems && this.dtfItems.length > 0) return true;
-                return this.dtfFileName ? true : this.hasDtf !== null;
-            }
             if (s === 'dtf-type-selection') {
                 return Object.values(this.dtfTypes).some(v => v);
+            }
+            if (s === 'dtf-upload') {
+                if (this.dtfItems && this.dtfItems.length > 0) return true;
+                if (this.dtfFileName) return true;
+                if (this.selectedDtfTypes.length > 1 && this.dtfImageDistribution === null) return false;
+                return true;
             }
             if (s === 'dtf-quantity') {
                 if (this.selectedDtfTypes.length === 0) return false;
                 return this.selectedDtfTypes.every(t => {
-                    const q = this.dtfQuantities[t.key];
-                    return q && q.tier !== '' && parseInt(q.qty) > 0;
+                    const rows = this.dtfQuantities[t.key];
+                    if (!rows || !rows.length) return false;
+                    return rows.every(r => r.tier !== '' && parseInt(r.qty) > 0);
                 });
             }
             if (s === 'garment-selection') {
@@ -417,8 +425,10 @@
                 /* DTF path */
                 dtfItems:       this.dtfItems,
                 dtfFileName:    this.dtfFileName,
-                dtfTypes:       this.dtfMode && !this.dtfItems.length ? this.dtfTypes       : null,
-                dtfQuantities:  this.dtfMode && !this.dtfItems.length ? this.dtfQuantities  : null,
+                dtfTypes:             this.dtfMode && !this.dtfItems.length ? this.dtfTypes             : null,
+                dtfQuantities:        this.dtfMode && !this.dtfItems.length ? this.dtfQuantities        : null,
+                dtfImageDistribution: this.dtfMode ? this.dtfImageDistribution : null,
+                dtfFilesByType:       this.dtfMode ? this.dtfFilesByType       : null,
                 /* Apparel path */
                 garments:              !this.dtfMode ? this.garments               : null,
                 quantities:            !this.dtfMode ? this.quantities             : null,
@@ -457,10 +467,19 @@
             if (match) this.state = this.stateMap[match];
         },
 
-        updateDtfQty(key, field, val) {
-            const q = Object.assign({}, this.dtfQuantities[key]);
-            q[field] = val;
-            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: q });
+        addDtfQtyRow(key) {
+            const rows = (this.dtfQuantities[key] || []).concat([{ tier: '', qty: '' }]);
+            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: rows });
+        },
+        removeDtfQtyRow(key, idx) {
+            const rows = (this.dtfQuantities[key] || []).filter(function(_, i) { return i !== idx; });
+            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: rows.length ? rows : [{ tier: '', qty: '' }] });
+        },
+        updateDtfQtyRow(key, idx, field, val) {
+            const rows = (this.dtfQuantities[key] || []).map(function(r, i) {
+                return i === idx ? Object.assign({}, r, { [field]: val }) : r;
+            });
+            this.dtfQuantities = Object.assign({}, this.dtfQuantities, { [key]: rows });
         },
 
         /* ── Per-garment color methods ─────────────────────── */
@@ -535,7 +554,9 @@
             dtfMode      = p.dtfMode !== undefined ? p.dtfMode : false;
             dtfFileName  = p.dtfFileName || '';
             dtfItems     = Array.isArray(p.dtfItems) ? p.dtfItems : [];
-            hasDtf       = dtfFileName ? true : null;
+            hasDtf               = dtfFileName ? true : null;
+            dtfImageDistribution = null;
+            dtfFilesByType       = { neckTag: '', chestImage: '', imageSize: '' };
             open();
         }
     "
@@ -688,7 +709,7 @@
                         <p class="text-xs text-charcoal-light">All files noted — continue to the next step.</p>
                     </div>
 
-                    {{-- Case B: single file attached from dropzone, no items --}}
+                    {{-- Case B: single file pre-attached from dropzone --}}
                     <div x-show="(!dtfItems || dtfItems.length === 0) && dtfFileName" x-cloak class="space-y-4">
                         <div class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
@@ -700,49 +721,131 @@
                                 <p class="text-sm text-charcoal truncate" x-text="dtfFileName"></p>
                             </div>
                         </div>
-                        <p class="text-xs text-charcoal-light">Your PNG file has been noted and will be processed with your order. You can continue to the next step.</p>
+                        <p class="text-xs text-charcoal-light">Your PNG file has been noted and will be processed with your order. Continue to the next step.</p>
                     </div>
 
-                    {{-- Case C: no file yet — prompt user --}}
+                    {{-- Case C: no pre-loaded items and no pre-attached file → image picker --}}
                     <div x-show="(!dtfItems || dtfItems.length === 0) && !dtfFileName" class="space-y-5">
-                        <p class="text-xs text-charcoal-light">Would you like to upload your DTF PNG file now?</p>
 
-                        <fieldset>
-                            <legend class="block text-sm font-semibold text-charcoal mb-3 text-center">
-                                Upload a DTF file? <span class="text-error">*</span>
-                            </legend>
-                            <div class="flex gap-6 justify-center">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-has-dtf" :value="true" x-model="hasDtf"
-                                           class="w-4 h-4 accent-sunburst cursor-pointer">
-                                    <span class="text-sm font-medium text-charcoal">Yes</span>
-                                </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-has-dtf" :value="false" x-model="hasDtf"
-                                           class="w-4 h-4 accent-sunburst cursor-pointer">
-                                    <span class="text-sm font-medium text-charcoal">No</span>
-                                </label>
-                            </div>
-                        </fieldset>
-
-                        <div x-show="hasDtf === true" x-cloak class="space-y-2">
-                            <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide">
-                                Upload DTF PNG File
-                            </label>
-                            <input
-                                type="file"
-                                accept=".png"
-                                @change="
-                                    const f = $event.target.files[0];
-                                    if (f) dtfFileName = f.name;
-                                "
-                                class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark"
+                        {{-- C-1: Distribution question (only when >1 DTF type selected) --}}
+                        <div x-show="selectedDtfTypes.length > 1" class="space-y-3">
+                            <p class="text-xs text-charcoal-light mb-1">
+                                You've selected multiple DTF types.
+                                <span class="text-error font-semibold">One answer required.</span>
+                            </p>
+                            <label
+                                class="flex items-start gap-3 px-4 py-4 border cursor-pointer transition-colors duration-150"
+                                :class="dtfImageDistribution === 'single' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
                             >
-                            <div x-show="dtfFileName" x-cloak class="text-xs text-charcoal-light">
-                                Selected: <span class="font-semibold text-charcoal" x-text="dtfFileName"></span>
-                            </div>
-                            <p class="text-xs text-charcoal-lighter">Accepted: PNG only &mdash; 300 DPI minimum recommended &mdash; max 50 MB.</p>
+                                <input type="radio" name="crw-dtf-dist" value="single"
+                                    x-model="dtfImageDistribution"
+                                    class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
+                                <div>
+                                    <p class="text-sm font-bold text-charcoal">One design file for all types</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Upload a single PNG that applies to every DTF transfer type in your order</p>
+                                </div>
+                            </label>
+                            <label
+                                class="flex items-start gap-3 px-4 py-4 border cursor-pointer transition-colors duration-150"
+                                :class="dtfImageDistribution === 'individual' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                            >
+                                <input type="radio" name="crw-dtf-dist" value="individual"
+                                    x-model="dtfImageDistribution"
+                                    class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
+                                <div>
+                                    <p class="text-sm font-bold text-charcoal">Individual design per type</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Each DTF type gets its own PNG file — upload one per type below</p>
+                                </div>
+                            </label>
                         </div>
+
+                        {{-- C-2: Single file uploader (1 type selected, or user chose 'single' distribution) --}}
+                        <div x-show="selectedDtfTypes.length === 1 || dtfImageDistribution === 'single'" x-cloak class="space-y-3">
+                            <p class="text-xs text-charcoal-light">Upload your DTF PNG file now, or skip and provide it separately.</p>
+
+                            {{-- Attached state --}}
+                            <div x-show="dtfFilesByType['_single']" x-cloak
+                                 class="flex items-center gap-3 px-4 py-3 bg-sunburst/10 border border-sunburst/40">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                                    <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                                    <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                                </svg>
+                                <div class="min-w-0 flex-1">
+                                    <p class="text-xs font-semibold text-charcoal">DTF PNG attached:</p>
+                                    <p class="text-sm text-charcoal truncate" x-text="dtfFilesByType['_single']"></p>
+                                </div>
+                                <button type="button"
+                                    @click="dtfFilesByType = Object.assign({}, dtfFilesByType, { '_single': '' })"
+                                    class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors flex-shrink-0">Remove</button>
+                            </div>
+
+                            {{-- File picker --}}
+                            <div x-show="!dtfFilesByType['_single']" class="space-y-2">
+                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide">
+                                    Upload DTF PNG File <span class="font-normal normal-case text-charcoal-lighter">(optional)</span>
+                                </label>
+                                <input type="file" accept=".png"
+                                    @change="
+                                        const f = $event.target.files[0];
+                                        if (f) dtfFilesByType = Object.assign({}, dtfFilesByType, { '_single': f.name });
+                                    "
+                                    class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark">
+                                <p class="text-xs text-charcoal-lighter">PNG only &mdash; 300 DPI minimum recommended &mdash; max 50 MB.</p>
+                            </div>
+
+                            {{-- Skip link --}}
+                            <div x-show="!dtfFilesByType['_single']" class="text-center">
+                                <button type="button"
+                                    @click="next()"
+                                    class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors">
+                                    No file yet — I'll provide it separately
+                                </button>
+                            </div>
+                        </div>
+
+                        {{-- C-3: Per-type file uploaders (user chose 'individual' distribution) --}}
+                        <div x-show="dtfImageDistribution === 'individual'" x-cloak class="space-y-4">
+                            <p class="text-xs text-charcoal-light">Upload a PNG for each DTF type. All uploads are optional — you can provide files separately.</p>
+                            <template x-for="t in selectedDtfTypes" :key="t.key">
+                                <div class="border border-linen-dark">
+                                    <div class="px-4 py-2.5 bg-linen border-b border-linen-dark">
+                                        <p class="text-sm font-bold text-charcoal" x-text="t.label"></p>
+                                    </div>
+                                    <div class="px-4 py-3 space-y-2">
+                                        {{-- Attached --}}
+                                        <div x-show="dtfFilesByType[t.key]" x-cloak
+                                             class="flex items-center gap-3 px-3 py-2 bg-sunburst/10 border border-sunburst/40">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" viewBox="0 0 64 64" aria-hidden="true">
+                                                <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
+                                                <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                                            </svg>
+                                            <p class="text-xs text-charcoal truncate flex-1" x-text="dtfFilesByType[t.key]"></p>
+                                            <button type="button"
+                                                @click="dtfFilesByType = Object.assign({}, dtfFilesByType, { [t.key]: '' })"
+                                                class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors flex-shrink-0">Remove</button>
+                                        </div>
+                                        {{-- File picker --}}
+                                        <div x-show="!dtfFilesByType[t.key]">
+                                            <input type="file" accept=".png"
+                                                @change="
+                                                    const f = $event.target.files[0];
+                                                    const k = t.key;
+                                                    if (f) dtfFilesByType = Object.assign({}, dtfFilesByType, { [k]: f.name });
+                                                "
+                                                class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark">
+                                        </div>
+                                    </div>
+                                </div>
+                            </template>
+                            <div class="text-center pt-1">
+                                <button type="button"
+                                    @click="next()"
+                                    class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors">
+                                    Continue without uploading files
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>
@@ -796,51 +899,107 @@
                 {{-- ══ STEP (DTF path): DTF Quantity & Tier ══════════════════ --}}
                 <div x-show="currentStepName === 'dtf-quantity'" x-cloak>
                     <p class="text-xs text-charcoal-light mb-5">
-                        For each transfer type, choose a quantity tier and enter your quantity.
-                        <span class="text-error font-semibold">All fields required.</span>
+                        For each transfer type, select a quantity tier and enter your quantity.
+                        Add multiple rows to order across different tiers.
+                        <span class="text-error font-semibold">All rows required.</span>
                     </p>
                     <div class="space-y-5">
                         <template x-for="t in selectedDtfTypes" :key="t.key">
                             <div class="border border-linen-dark">
+
+                                {{-- Type header --}}
                                 <div class="px-4 py-2.5 bg-linen border-b border-linen-dark">
                                     <p class="text-sm font-bold text-charcoal" x-text="t.label"></p>
                                 </div>
-                                <div class="px-4 py-4 space-y-3">
-                                    <div>
-                                        <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
-                                            Quantity Tier <span class="text-error">*</span>
-                                        </label>
-                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                            @foreach(['1 – 14 pcs', '15 – 49 pcs', '50 – 99 pcs', '100 – 249 pcs', '250+ pcs'] as $tier)
-                                            <label
-                                                class="flex items-center gap-2 px-3 py-2.5 border cursor-pointer transition-colors duration-150"
-                                                :class="dtfQuantities[t.key].tier === '{{ $tier }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
-                                            >
-                                                <input type="radio"
-                                                    :name="'dtf-tier-' + t.key"
-                                                    value="{{ $tier }}"
-                                                    :checked="dtfQuantities[t.key].tier === '{{ $tier }}'"
-                                                    @change="updateDtfQty(t.key, 'tier', '{{ $tier }}')"
-                                                    class="w-4 h-4 accent-sunburst flex-shrink-0">
-                                                <span class="text-sm font-semibold text-charcoal">{{ $tier }}</span>
-                                            </label>
-                                            @endforeach
+
+                                {{-- Quantity rows --}}
+                                <div class="divide-y divide-linen-dark">
+                                    <template x-for="(row, idx) in dtfQuantities[t.key]" :key="idx">
+                                        <div class="px-4 py-4 space-y-3">
+
+                                            {{-- Row header + remove button --}}
+                                            <div class="flex items-center justify-between">
+                                                <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide"
+                                                   x-text="dtfQuantities[t.key].length > 1 ? 'Order ' + (idx + 1) : 'Quantity Tier'">
+                                                </p>
+                                                <button type="button"
+                                                    x-show="dtfQuantities[t.key].length > 1"
+                                                    @click="removeDtfQtyRow(t.key, idx)"
+                                                    class="text-xs text-charcoal-light underline hover:text-error transition-colors">
+                                                    Remove
+                                                </button>
+                                            </div>
+
+                                            {{-- Tier radio grid --}}
+                                            <div>
+                                                <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
+                                                    Quantity Tier <span class="text-error">*</span>
+                                                </label>
+                                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                                    @foreach(['1 – 14 pcs', '15 – 49 pcs', '50 – 99 pcs', '100 – 249 pcs', '250+ pcs'] as $tier)
+                                                    <label
+                                                        class="flex items-center gap-2 px-3 py-2.5 border cursor-pointer transition-colors duration-150"
+                                                        :class="row.tier === '{{ $tier }}' ? 'border-sunburst bg-sunburst/5' : 'border-linen-dark bg-white hover:border-sunburst/40'"
+                                                    >
+                                                        <input type="radio"
+                                                            :name="'dtf-tier-' + t.key + '-' + idx"
+                                                            value="{{ $tier }}"
+                                                            :checked="row.tier === '{{ $tier }}'"
+                                                            @change="updateDtfQtyRow(t.key, idx, 'tier', '{{ $tier }}')"
+                                                            class="w-4 h-4 accent-sunburst flex-shrink-0">
+                                                        <span class="text-sm font-semibold text-charcoal">{{ $tier }}</span>
+                                                    </label>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+
+                                            {{-- Quantity stepper (right-aligned) --}}
+                                            <div class="flex items-center justify-between gap-4 pt-1">
+                                                <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
+                                                    Quantity <span class="text-error">*</span>
+                                                </label>
+                                                <div class="flex items-center border border-linen-dark bg-white">
+                                                    <button
+                                                        type="button"
+                                                        @click="updateDtfQtyRow(t.key, idx, 'qty', Math.max(1, parseInt(row.qty || 0) - 1))"
+                                                        class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-r border-linen-dark"
+                                                        aria-label="Decrease quantity"
+                                                    >&minus;</button>
+                                                    <input
+                                                        type="number"
+                                                        min="1"
+                                                        :value="row.qty"
+                                                        @input="updateDtfQtyRow(t.key, idx, 'qty', $event.target.value)"
+                                                        placeholder="0"
+                                                        class="w-16 text-center text-sm py-2 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
+                                                        style="-moz-appearance:textfield;"
+                                                    >
+                                                    <button
+                                                        type="button"
+                                                        @click="updateDtfQtyRow(t.key, idx, 'qty', parseInt(row.qty || 0) + 1)"
+                                                        class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-l border-linen-dark"
+                                                        aria-label="Increase quantity"
+                                                    >+</button>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                    </div>
-                                    <div class="flex items-center gap-4">
-                                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
-                                            Quantity <span class="text-error">*</span>
-                                        </label>
-                                        <input
-                                            type="number"
-                                            min="1"
-                                            :value="dtfQuantities[t.key].qty"
-                                            @input="updateDtfQty(t.key, 'qty', $event.target.value)"
-                                            placeholder="0"
-                                            class="w-24 text-center text-sm border border-linen-dark py-2 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
-                                        >
-                                    </div>
+                                    </template>
                                 </div>
+
+                                {{-- Add another quantity row --}}
+                                <div class="px-4 py-3 border-t border-linen-dark bg-linen-light">
+                                    <button type="button"
+                                        @click="addDtfQtyRow(t.key)"
+                                        class="flex items-center gap-1.5 text-xs font-semibold text-sunburst-dark hover:text-sunburst transition-colors">
+                                        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                                        </svg>
+                                        Add another quantity
+                                    </button>
+                                </div>
+
                             </div>
                         </template>
                     </div>
@@ -1290,6 +1449,7 @@
                                 </label>
                                 <input type="date" x-model="completionDate"
                                     @click="if ($el.showPicker) $el.showPicker()"
+                                    :min="new Date().toISOString().split('T')[0]"
                                     :class="rushActive ? 'border-sunburst ring-1 ring-sunburst/30' : 'border-linen-dark'"
                                     class="w-full px-3 py-2.5 text-sm border focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer">
                             </div>
@@ -1301,6 +1461,7 @@
                             </label>
                             <input type="date" x-model="completionDate"
                                 @click="if ($el.showPicker) $el.showPicker()"
+                                :min="new Date().toISOString().split('T')[0]"
                                 class="w-full px-3 py-2.5 text-sm border border-sunburst ring-1 ring-sunburst/30 focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal transition-colors cursor-pointer">
                         </div>
 

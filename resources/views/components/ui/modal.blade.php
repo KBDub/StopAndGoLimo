@@ -60,6 +60,7 @@
     'footerClass' => '',
     'panelClass'  => '',
     'zIndex'      => 9800,
+    'teleport'    => false,
 ])
 
 @php
@@ -199,7 +200,8 @@
     @close-modal.window="if ($event.detail.name === modalName) close()"
     @keydown.escape.window="if (isOpen) close()"
 >
-    {{-- Backdrop --}}
+    {{-- Backdrop (optionally teleported to <body> to escape ancestor stacking contexts) --}}
+    @if($teleport)<template x-teleport="body">@endif
     <div
         x-show="isOpen"
         x-cloak
@@ -294,4 +296,5 @@
 
         </div>{{-- /panel --}}
     </div>{{-- /backdrop --}}
+    @if($teleport)</template>@endif
 </div>

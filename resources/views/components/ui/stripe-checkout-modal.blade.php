@@ -35,6 +35,7 @@
     variant="default"
     :dismissible="true"
     :zIndex="9999"
+    :teleport="true"
 >
     <x-slot:icon>
         {{-- Shield / lock icon — conveys secure checkout --}}

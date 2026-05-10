@@ -674,3 +674,90 @@ Three drop zone variants demonstrating `x-ui.dtf-dropzone` and `x-ui.banner-cta-
 | `x-ui.dtf-dropzone` | *(none — medium default)* | Standard medium drop zone | ✅ |
 | `x-ui.banner-cta-dtf-dropzone` | `position="left"` | Full-width banner, text on left | ✅ |
 | `x-ui.banner-cta-dtf-dropzone` | `position="right"` | Full-width banner, text on right | ✅ |
+
+---
+
+### Section 11 — Stripe Checkout Modal
+
+One modal demonstrating `x-ui.stripe-checkout-modal`. Triggered automatically by the wizard after a successful form submission. Also shown as a standalone demo via a trigger button.
+
+| Modal name | Title | Size | Variant | Status |
+|---|---|---|---|---|
+| `stripe-checkout-modal` | "Request received — complete your payment" | `md` | `default` | ✅ |
+
+---
+
+## Stripe Checkout Modal — `x-ui.stripe-checkout-modal`
+
+**File:** `resources/views/components/ui/stripe-checkout-modal.blade.php`
+**Opened by:** The wizard's `finish()` method — dispatched automatically after a successful form POST. Can also be opened manually via `open-modal` event.
+**Trigger event:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'stripe-checkout-modal' } }))`
+
+### Purpose
+
+Bridges the gap between the custom order wizard and Stripe's hosted checkout. Shown immediately after the wizard closes on successful submission. Confirms the request was received, clearly states that payment is required to confirm the order, and embeds the Stripe Buy Button which opens the hosted checkout in a new tab.
+
+### Content
+
+| Element | Description |
+|---|---|
+| Icon slot | Shield/lock SVG — reinforces secure checkout |
+| Title | "Request received — complete your payment" |
+| Gold info bar | "Thank you for choosing Top 5 Percent." with a checkmark icon |
+| Body paragraph | Confirms request received; states payment required to begin production |
+| Red warning bar | "Your order is not confirmed or entered into production until payment is complete." — bordered red, error colour text |
+| Instruction paragraph | Explains the Stripe button opens in a new tab; that payment info is handled by Stripe only |
+| Stripe Buy Button | `<stripe-buy-button>` web component — renders as a Stripe-hosted iframe; on click, opens `buy.stripe.com` in a new tab |
+| Footer | Single "Close" button (`x-ui.button-modal-cancel`) |
+
+### Stripe Buy Button embed
+
+The Stripe Buy Button is a web component provided by Stripe. It requires the Stripe CDN script:
+
+```html
+<script async src="https://js.stripe.com/v3/buy-button.js"></script>
+```
+
+The component itself uses `@once @push('scripts')...@endpush @endonce` to inject this script via the layout stack on production pages. For the demo page (standalone, no layout stack), the script is loaded directly in `<head>`.
+
+The button embed:
+
+```html
+<stripe-buy-button
+    buy-button-id="buy_btn_1RZ3WEDdab3WXP8kgWVZaTvN"
+    publishable-key="pk_live_51Oe8TsDdab3WXP8kVk9kcOcHilb4gtSCMfYLeKU51vq4GERTi1HolsMK11Wt4q2EFjy9nFAB6swzv9TCdjlDFKz800w59VsKEI"
+></stripe-buy-button>
+```
+
+> **Note:** The `buy-button-id` and `publishable-key` above are placeholder values used for demo and development. Replace with production-specific values before going live.
+
+### Wizard integration — button label + finish() flow
+
+**Button label change — `x-ui.custom-request-wizard`:**
+The final step's primary button is renamed from **"Submit Request"** to **"Continue to Secure Checkout"** in both the DTF and custom apparel paths. The loading state label changes from "Submitting…" to "Processing…".
+
+**Updated `finish()` flow:**
+
+```
+User clicks "Continue to Secure Checkout"
+  → finish() fires
+  → POST to /custom-order/submit
+  → On success:
+      → dispatch wizard-done event
+      → close() the wizard
+      → $nextTick: dispatch open-modal { name: 'stripe-checkout-modal' }
+  → On error:
+      → submitError = true (error message shown, wizard stays open)
+```
+
+The `showConfirmation` state that previously showed an in-wizard confirmation panel is no longer set to `true` — the Stripe checkout modal fully replaces that pattern.
+
+### Usage
+
+```blade
+{{-- Include once per page alongside x-ui.custom-request-wizard --}}
+<x-ui.custom-request-wizard />
+<x-ui.stripe-checkout-modal />
+```
+
+Both components must be present on the same page. The wizard opens the Stripe checkout modal automatically after a successful submission.

@@ -17,6 +17,7 @@
     @if($jsFile)
         <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body class="font-sans antialiased bg-linen text-charcoal">
 
@@ -39,8 +40,9 @@
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal</code>,
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal-trigger</code>,
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.modal-wizard</code>,
-            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code>, and
-            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.custom-request-wizard</code>
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code>,
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.custom-request-wizard</code>, and
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.stripe-checkout-modal</code>
             — all variants live below.
         </p>
     </div>
@@ -1280,6 +1282,54 @@
 
     </section>
 
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    {{-- SECTION 11: Stripe Checkout Modal --}}
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    <section>
+        <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Stripe Checkout Modal</h2>
+        <p class="text-charcoal-light text-sm mb-1 pl-5">
+            <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.stripe-checkout-modal</code>
+            — opened automatically after the custom request wizard submits successfully. Contains the Stripe Buy Button iframe and payment confirmation messaging.
+        </p>
+        <p class="text-charcoal-light text-xs mb-6 pl-5">
+            Component: <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/stripe-checkout-modal.blade.php</code>
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-8">
+            <x-ui.modal-trigger modal="stripe-checkout-modal"
+                class="px-5 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all">
+                Preview Stripe Checkout Modal
+            </x-ui.modal-trigger>
+        </div>
+
+        {{-- Info block --}}
+        <div class="bg-charcoal px-6 py-5 text-sm space-y-3">
+            <div>
+                <p class="text-sunburst font-semibold text-xs mb-1">Component</p>
+                <p class="font-mono text-white/80 text-xs">x-ui.stripe-checkout-modal</p>
+            </div>
+            <div>
+                <p class="text-sunburst font-semibold text-xs mb-1">File</p>
+                <p class="font-mono text-white/80 text-xs">resources/views/components/ui/stripe-checkout-modal.blade.php</p>
+            </div>
+            <div>
+                <p class="text-sunburst font-semibold text-xs mb-1">Include (once per page, alongside x-ui.custom-request-wizard)</p>
+                <p class="font-mono text-white/80 text-xs">&lt;x-ui.stripe-checkout-modal /&gt;</p>
+            </div>
+            <div>
+                <p class="text-sunburst font-semibold text-xs mb-1">Opened automatically by the wizard — or trigger manually via Alpine</p>
+                <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">window.dispatchEvent(new CustomEvent('open-modal', {
+    detail: { name: 'stripe-checkout-modal' }
+}));</pre>
+            </div>
+            <p class="text-white/40 text-xs pt-1">
+                The Stripe Buy Button renders as a hosted iframe. Clicking it opens
+                <code class="bg-white/10 px-1">buy.stripe.com</code> in a new tab.
+                Payment info is handled entirely by Stripe — nothing is stored on our servers.
+            </p>
+        </div>
+    </section>
+
 </main>
 
 <x-layout.footer />
@@ -1289,6 +1339,9 @@
 
 {{-- Custom Request Wizard --}}
 <x-ui.custom-request-wizard />
+
+{{-- Stripe Checkout Modal --}}
+<x-ui.stripe-checkout-modal />
 
 </body>
 </html>

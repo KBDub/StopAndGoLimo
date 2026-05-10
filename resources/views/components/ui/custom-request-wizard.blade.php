@@ -387,8 +387,11 @@
                 Alpine.store('dtfCart').clear();
                 this.checkoutUrl    = data.checkoutUrl || '';
                 this.orderReference = data.reference   || '';
-                this.showConfirmation = true;
                 this.$dispatch('wizard-done', { name: this.modalName });
+                this.close();
+                this.$nextTick(() => {
+                    window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'stripe-checkout-modal' } }));
+                });
             } catch (err) {
                 this.submitError = true;
                 console.error('Wizard submit error:', err);
@@ -1691,8 +1694,8 @@
                             x-bind:class="submitting ? 'opacity-60 cursor-not-allowed' : ''"
                             class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                         >
-                            <span x-show="!submitting">Submit Request</span>
-                            <span x-show="submitting" x-cloak>Submitting…</span>
+                            <span x-show="!submitting">Continue to Secure Checkout</span>
+                            <span x-show="submitting" x-cloak>Processing…</span>
                         </button>
                         <p x-show="submitError" x-cloak class="text-xs text-error">
                             Something went wrong — please try again.

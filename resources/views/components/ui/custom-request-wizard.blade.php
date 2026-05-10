@@ -392,7 +392,13 @@
                 this.close();
                 setTimeout(() => {
                     this.step = 1;
-                    window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'stripe-checkout-modal' } }));
+                    window.dispatchEvent(new CustomEvent('open-modal', {
+                        detail: {
+                            name:          'stripe-checkout-modal',
+                            checkoutStep:  this.totalSteps + 1,
+                            checkoutTotal: this.totalSteps + 1,
+                        }
+                    }));
                 }, 220);
             } catch (err) {
                 this.submitError = true;
@@ -580,7 +586,7 @@
                     </div>
                     <h2 id="crw-title" class="text-lg font-bold text-charcoal leading-tight" x-text="currentStepTitle"></h2>
                     <p class="text-xs text-charcoal-light mt-0.5">
-                        Step <span x-text="step"></span> of <span x-text="totalSteps"></span>
+                        Step <span x-text="step"></span> of <span x-text="totalSteps + 1"></span>
                         &nbsp;·&nbsp;
                         <span x-show="dtfMode === true" x-cloak>DTF Transfers</span>
                         <span x-show="dtfMode !== true">Custom Apparel</span>

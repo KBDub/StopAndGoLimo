@@ -793,14 +793,6 @@
                                 <p class="text-xs text-charcoal-lighter">PNG only &mdash; 300 DPI minimum recommended &mdash; max 50 MB.</p>
                             </div>
 
-                            {{-- Skip link --}}
-                            <div x-show="!dtfFilesByType['_single']" class="text-center">
-                                <button type="button"
-                                    @click="next()"
-                                    class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors">
-                                    No file yet — I'll provide it separately
-                                </button>
-                            </div>
                         </div>
 
                         {{-- C-3: Per-type file uploaders (user chose 'individual' distribution) --}}
@@ -837,13 +829,6 @@
                                     </div>
                                 </div>
                             </template>
-                            <div class="text-center pt-1">
-                                <button type="button"
-                                    @click="next()"
-                                    class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors">
-                                    Continue without uploading files
-                                </button>
-                            </div>
                         </div>
 
                     </div>
@@ -985,19 +970,6 @@
 
                                         </div>
                                     </template>
-                                </div>
-
-                                {{-- Add another quantity row --}}
-                                <div class="px-4 py-3 border-t border-linen-dark bg-linen-light">
-                                    <button type="button"
-                                        @click="addDtfQtyRow(t.key)"
-                                        class="flex items-center gap-1.5 text-xs font-semibold text-sunburst-dark hover:text-sunburst transition-colors">
-                                        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                            <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-                                        </svg>
-                                        Add another quantity
-                                    </button>
                                 </div>
 
                             </div>

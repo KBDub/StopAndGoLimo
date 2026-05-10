@@ -34,6 +34,7 @@
     size="md"
     variant="default"
     :dismissible="true"
+    :zIndex="9999"
 >
     <x-slot:icon>
         {{-- Shield / lock icon — conveys secure checkout --}}

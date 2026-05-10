@@ -59,6 +59,7 @@
     'bodyClass'   => '',
     'footerClass' => '',
     'panelClass'  => '',
+    'zIndex'      => 9800,
 ])
 
 @php
@@ -202,7 +203,8 @@
     <div
         x-show="isOpen"
         x-cloak
-        class="fixed inset-0 z-[9800] flex items-center justify-center p-4 bg-charcoal-dark/80 backdrop-blur-sm"
+        class="fixed inset-0 flex items-center justify-center p-4 bg-charcoal-dark/80 backdrop-blur-sm"
+        style="z-index: {{ $zIndex }};"
         role="dialog"
         aria-modal="true"
         aria-labelledby="{{ $alpineId }}_title"

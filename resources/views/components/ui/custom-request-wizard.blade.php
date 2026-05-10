@@ -357,10 +357,11 @@
         open()  {
             this.isOpen = true; this.step = 1;
             this.showConfirmation = false; this.showCloseConfirm = false;
+            this.submitting = false; this.submitError = false;
             document.body.style.overflow = 'hidden';
         },
         close() {
-            this.isOpen = false; this.step = 1;
+            this.isOpen = false;
             this.showConfirmation = false; this.showCloseConfirm = false;
             document.body.style.overflow = '';
             this.$dispatch('modal-closed', { name: this.modalName });
@@ -389,9 +390,10 @@
                 this.orderReference = data.reference   || '';
                 this.$dispatch('wizard-done', { name: this.modalName });
                 this.close();
-                this.$nextTick(() => {
+                setTimeout(() => {
+                    this.step = 1;
                     window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'stripe-checkout-modal' } }));
-                });
+                }, 220);
             } catch (err) {
                 this.submitError = true;
                 console.error('Wizard submit error:', err);

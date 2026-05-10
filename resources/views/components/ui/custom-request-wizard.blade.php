@@ -1681,9 +1681,11 @@
 
                 <div class="flex items-center gap-2.5 ml-auto">
 
-                    <x-ui.button-modal-cancel
+                    <button
+                        type="button"
                         @click="step === 1 ? backToContactModal() : prev()"
-                    >← Back</x-ui.button-modal-cancel>
+                        class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
+                    >← Back</button>
 
                     <button
                         type="button"

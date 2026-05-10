@@ -173,11 +173,13 @@
                 <div class="flex items-center gap-2.5 ml-auto">
 
                     {{-- Back --}}
-                    <x-ui.button-modal-cancel
+                    <button
+                        type="button"
                         x-show="step > 1"
                         x-cloak
                         @click="prev()"
-                    >← Back</x-ui.button-modal-cancel>
+                        class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
+                    >← Back</button>
 
                     {{-- Next --}}
                     <x-ui.button-modal-primary

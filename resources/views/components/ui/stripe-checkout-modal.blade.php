@@ -11,57 +11,64 @@
  |   detail so this modal can display "Step X of Y · Secure Payment".
  |
  | ── TAB CLOSE DETECTION ─────────────────────────────────────────────────────
- |   window.open() returns a WindowProxy; setInterval polls .closed every 1 s.
- |   noopener is intentionally omitted so the reference stays non-null.
- |   Cross-origin access from the Stripe tab back to window.opener is blocked
- |   by the browser's same-origin policy, so this is safe.
+ |   _win and _timer are plain JavaScript closure variables — NOT Alpine
+ |   reactive properties. Alpine's Proxy wraps every object assigned to a
+ |   reactive property; WindowProxy assigned to a reactive prop loses its
+ |   ability to reflect .closed accurately. Using closure vars avoids this.
+ |
+ |   window.open() without 'noopener' so the returned WindowProxy is non-null
+ |   and .closed remains readable. Cross-origin access from the Stripe tab
+ |   back to window.opener is blocked by the same-origin policy.
  --}}
 
 <div
-    x-data="{
-        checkoutStep:    1,
-        checkoutTotal:   1,
-        checkoutWin:     null,
-        paymentComplete: false,
-        _pollTimer:      null,
+    x-data="(function () {
+        let _win   = null;
+        let _timer = null;
 
-        openCheckout() {
-            this.paymentComplete = false;
-            this.checkoutWin = window.open('https://buy.stripe.com/bIYcPWgoC5mt6FqeUU', '_blank');
-            if (this.checkoutWin) {
-                this.startPolling();
-            }
-        },
+        return {
+            checkoutStep:    1,
+            checkoutTotal:   1,
+            paymentComplete: false,
 
-        startPolling() {
-            this.stopPolling();
-            this._pollTimer = setInterval(() => {
-                if (this.checkoutWin && this.checkoutWin.closed) {
-                    this.stopPolling();
-                    this.paymentComplete = true;
+            openCheckout() {
+                this.paymentComplete = false;
+                _win = window.open('https://buy.stripe.com/bIYcPWgoC5mt6FqeUU', '_blank');
+                if (_win) {
+                    this._startPolling();
                 }
-            }, 1000);
-        },
+            },
 
-        stopPolling() {
-            if (this._pollTimer) {
-                clearInterval(this._pollTimer);
-                this._pollTimer = null;
-            }
-        },
-    }"
+            _startPolling() {
+                this._stopPolling();
+                const self = this;
+                _timer = setInterval(function () {
+                    if (_win && _win.closed) {
+                        self._stopPolling();
+                        self.paymentComplete = true;
+                    }
+                }, 1000);
+            },
+
+            _stopPolling() {
+                if (_timer) {
+                    clearInterval(_timer);
+                    _timer = null;
+                }
+            },
+        };
+    })()"
     @open-modal.window="
         if ($event.detail.name === 'stripe-checkout-modal') {
-            checkoutStep     = $event.detail.checkoutStep  || 1;
-            checkoutTotal    = $event.detail.checkoutTotal || 1;
-            paymentComplete  = false;
-            checkoutWin      = null;
-            stopPolling();
+            checkoutStep    = $event.detail.checkoutStep  || 1;
+            checkoutTotal   = $event.detail.checkoutTotal || 1;
+            paymentComplete = false;
+            _stopPolling();
         }
     "
     @modal-closed.window="
         if ($event.detail.name === 'stripe-checkout-modal') {
-            stopPolling();
+            _stopPolling();
         }
     "
 >

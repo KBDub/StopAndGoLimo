@@ -69,8 +69,6 @@
     <x-ui.banner-cta-dtf-dropzone position="left" />
 
     <x-ui.dtf-confirm-modal />
-    <x-ui.contact-modal />
-    <x-ui.custom-request-wizard />
     <x-sections.dtf-pricing-section />
 
     <x-sections.card-image-with-text

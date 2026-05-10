@@ -75,9 +75,9 @@
             imageSize:  false,
         },
         dtfQuantities: {
-            neckTag:    { tier: '', qty: '' },
-            chestImage: { tier: '', qty: '' },
-            imageSize:  { tier: '', qty: '' },
+            neckTag:    { tier: '' },
+            chestImage: { tier: '' },
+            imageSize:  { tier: '' },
         },
         dtfTierOptions: [
             '1 – 14 pcs',
@@ -308,7 +308,7 @@
                 if (this.selectedDtfTypes.length === 0) return false;
                 return this.selectedDtfTypes.every(t => {
                     const q = this.dtfQuantities[t.key];
-                    return q && q.tier !== '' && parseInt(q.qty) > 0;
+                    return q && q.tier !== '';
                 });
             }
             if (s === 'garment-selection') {
@@ -904,36 +904,6 @@
                                                 <span class="text-sm font-semibold text-charcoal">{{ $tier }}</span>
                                             </label>
                                             @endforeach
-                                        </div>
-                                    </div>
-
-                                    {{-- Quantity stepper --}}
-                                    <div class="flex items-center justify-between gap-4">
-                                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wide whitespace-nowrap">
-                                            Quantity <span class="text-error">*</span>
-                                        </label>
-                                        <div class="flex items-center border border-linen-dark bg-white">
-                                            <button
-                                                type="button"
-                                                @click="updateDtfQty(t.key, 'qty', Math.max(1, parseInt(dtfQuantities[t.key].qty || 0) - 1))"
-                                                class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-r border-linen-dark"
-                                                aria-label="Decrease quantity"
-                                            >&minus;</button>
-                                            <input
-                                                type="number"
-                                                min="1"
-                                                :value="dtfQuantities[t.key].qty"
-                                                @input="updateDtfQty(t.key, 'qty', $event.target.value)"
-                                                placeholder="0"
-                                                class="w-16 text-center text-sm py-2 focus:outline-none focus:border-sunburst bg-white text-charcoal transition-colors"
-                                                style="-moz-appearance:textfield;"
-                                            >
-                                            <button
-                                                type="button"
-                                                @click="updateDtfQty(t.key, 'qty', parseInt(dtfQuantities[t.key].qty || 0) + 1)"
-                                                class="w-9 h-9 flex items-center justify-center text-charcoal hover:bg-linen transition-colors text-lg font-bold flex-shrink-0 border-l border-linen-dark"
-                                                aria-label="Increase quantity"
-                                            >+</button>
                                         </div>
                                     </div>
 

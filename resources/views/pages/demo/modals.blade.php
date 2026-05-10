@@ -1337,11 +1337,8 @@
 {{-- Live anchored FAB --}}
 <x-ui.contact-modal />
 
-{{-- Custom Request Wizard --}}
+{{-- Custom Request Wizard (bundles x-ui.stripe-checkout-modal automatically) --}}
 <x-ui.custom-request-wizard />
-
-{{-- Stripe Checkout Modal --}}
-<x-ui.stripe-checkout-modal />
 
 </body>
 </html>

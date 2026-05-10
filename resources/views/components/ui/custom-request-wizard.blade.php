@@ -1709,3 +1709,6 @@
     </div>{{-- /backdrop --}}
     </template>
 </div>
+
+{{-- Stripe Checkout Modal — bundled with the wizard so any page including the wizard gets it automatically --}}
+<x-ui.stripe-checkout-modal />

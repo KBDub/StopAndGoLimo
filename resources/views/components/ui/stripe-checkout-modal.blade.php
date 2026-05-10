@@ -88,6 +88,6 @@
     </div>
 
     <x-slot:footer>
-        <x-ui.button-modal-cancel modal="stripe-checkout-modal">Close</x-ui.button-modal-cancel>
+        <x-ui.button-modal-cancel>Close</x-ui.button-modal-cancel>
     </x-slot:footer>
 </x-ui.modal>

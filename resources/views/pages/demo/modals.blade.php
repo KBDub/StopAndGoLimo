@@ -1251,40 +1251,41 @@
             </div>
         </div>
 
-        {{-- Free Quote Banner (cta-free-quote-banner) — two-part section --}}
+        {{-- Three-component page pattern: artwork-dropzone + sunburst + cta-free-quote-banner --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Free Quote Banner</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Dropzone + Free Quote Banner</h3>
+            <p class="text-charcoal-light text-xs mb-1 pl-5">
+                These three components are placed separately on every content page in this order:
+            </p>
             <p class="text-charcoal-light text-xs mb-6 pl-5">
-                <code class="bg-linen-dark px-1 py-0.5">&lt;x-sections.cta-free-quote-banner /&gt;</code>
-                — two-part section: <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code> above, CTA row below.
-                On DTF pages pass <code class="bg-linen-dark px-1 py-0.5">type="dtf"</code> to render
-                <code class="bg-linen-dark px-1 py-0.5">x-ui.dtf-dropzone</code> instead.
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.banner-thin-sunburst</code>
+                &nbsp;→&nbsp;
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code>
+                &nbsp;→&nbsp;
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.banner-thin-sunburst</code>
+                &nbsp;→&nbsp;
+                <code class="bg-linen-dark px-1 py-0.5">x-sections.cta-free-quote-banner</code>
             </p>
 
-            {{-- Part 1: Artwork Dropzone --}}
+            {{-- Artwork Dropzone --}}
             <p class="text-charcoal-light text-xs mb-2 pl-5">
-                Part 1 — <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code>
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code>
+                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
+                — standalone drop zone, dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal &#123; artwork: true, fileName &#125;</code>
             </p>
+            <x-ui.banner-thin-sunburst />
             <div class="max-w-2xl mb-6">
                 <x-ui.artwork-dropzone />
             </div>
 
-            {{-- Part 2: CTA Row --}}
+            {{-- cta-free-quote-banner --}}
             <p class="text-charcoal-light text-xs mb-2 pl-5">
-                Part 2 — CTA row
+                <code class="bg-linen-dark px-1 py-0.5">x-sections.cta-free-quote-banner</code>
+                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/sections/cta-free-quote-banner.blade.php</code>
+                — CTA text + button only, no dropzone inside
             </p>
-            <div class="max-w-2xl py-6 px-8 bg-warm-gradient border border-linen-dark flex flex-col sm:flex-row items-center gap-8">
-                <div class="flex-1 w-full text-center sm:text-left">
-                    <h3 class="text-lg font-bold text-charcoal">Need help with a custom project?</h3>
-                    <p class="text-sm text-charcoal-light">Get a free, no-obligation quote from our team. Veteran-owned, locally trusted.</p>
-                </div>
-                <x-ui.button-blue-white
-                    onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-                    class="px-6 py-3 text-sm whitespace-nowrap flex-shrink-0"
-                >
-                    Get a Free Quote
-                </x-ui.button-blue-white>
-            </div>
+            <x-ui.banner-thin-sunburst />
+            <x-sections.cta-free-quote-banner />
         </div>
 
         {{-- Artwork Banner CTA — Dropzone Left --}}

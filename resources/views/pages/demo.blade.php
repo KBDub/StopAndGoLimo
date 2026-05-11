@@ -795,15 +795,27 @@
             subheading="Have your file ready? Drop it right here and we'll get your quote started. Fast turnaround, no guesswork."
         />
 
-        {{-- CTA: Free Quote --}}
+        {{-- Artwork Dropzone + CTA Banner (three-component pattern) --}}
         <div class="px-6 max-w-7xl mx-auto mt-8 mb-2">
+            <p class="text-xs text-charcoal-light mb-1 font-semibold">Three-component page pattern</p>
             <p class="text-xs text-charcoal-light mb-1">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-sunburst</code>
+                &nbsp;→&nbsp;
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>
+                &nbsp;→&nbsp;
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-thin-sunburst</code>
+                &nbsp;→&nbsp;
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code>
-                &nbsp;—&nbsp;
-                <code class="bg-gray-100 px-1.5 py-0.5 rounded">resources/views/components/sections/cta-free-quote-banner.blade.php</code>
             </p>
-            <p class="text-xs text-charcoal-light mb-2">Default (<code class="bg-gray-100 px-1.5 py-0.5 rounded">type="artwork"</code>) — uses <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>. Pass <code class="bg-gray-100 px-1.5 py-0.5 rounded">type="dtf"</code> on DTF pages to render <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.dtf-dropzone</code> instead.</p>
+            <p class="text-xs text-charcoal-light mb-1">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code> — standalone drop zone, dispatches
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">open-contact-modal &#123; artwork: true, fileName &#125;</code>
+            </p>
+            <p class="text-xs text-charcoal-light mb-2">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code> — CTA text + button only, no dropzone inside
+            </p>
         </div>
+        <x-ui.banner-thin-sunburst />
         <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
         <x-ui.banner-thin-sunburst />
         <x-sections.cta-free-quote-banner />

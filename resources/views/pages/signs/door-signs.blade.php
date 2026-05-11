@@ -65,6 +65,10 @@
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
     />
+    <x-ui.banner-cta-artwork-dropzone />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg"
@@ -137,6 +141,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

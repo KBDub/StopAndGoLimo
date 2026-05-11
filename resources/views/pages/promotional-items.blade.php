@@ -64,6 +64,10 @@
         quote="Really nice service, the result of my customized coffee mugs were really good. I had a nice experience with them, I really recommend this place."
         name="lucia irausquin"
     />
+    <x-ui.banner-cta-artwork-dropzone />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.lp-category-banners
         id="promo-categories"
@@ -151,6 +155,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

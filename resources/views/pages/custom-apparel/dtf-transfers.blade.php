@@ -65,6 +65,10 @@
         quote="Excellent customer service! Really good quality DTF prints! Love that its local... Thank you Ezra!"
         name="Monica Perez"
     />
+    <x-ui.banner-cta-artwork-dropzone position="right" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-ui.banner-cta-dtf-dropzone position="left" />
 
@@ -144,6 +148,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

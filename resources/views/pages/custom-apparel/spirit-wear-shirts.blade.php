@@ -64,6 +64,10 @@
         quote="Top 5 Percent is my number one go to for any custom made items. They have made shirts for several events and did a wonderful job. Duke keeps you updated on the order and works extremely fast and efficient. They have a customer in me for life!"
         name="Euneke Rembert"
     />
+    <x-ui.banner-cta-artwork-dropzone position="right" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg"
@@ -166,6 +170,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

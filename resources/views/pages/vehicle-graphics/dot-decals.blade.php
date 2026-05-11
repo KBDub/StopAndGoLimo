@@ -65,6 +65,10 @@
         quote="Ezra is the most helpful individual I know in this field. I came in looking for vinyl decals for my trucking company and he made me exactly what I needed at a price that was fair and honest. I would highly recommend this place for all of your signage needs."
         name="Jack Smith"
     />
+    <x-ui.banner-cta-artwork-dropzone />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/dot-decals/top5pct-DOT-stickers-joliet-shorewood-rockdale.jpg"
@@ -160,6 +164,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

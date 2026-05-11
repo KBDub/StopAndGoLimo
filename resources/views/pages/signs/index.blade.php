@@ -67,6 +67,10 @@
         quote="I needed a banner ASAP. I stopped into Top 5 Percent's location in Joliet. The owner Ezra was SUPER helpful and very talented with his printing services. I highly recommend any printing type of service to work with Top 5 Percent. Professional and efficient in meeting the needs of their customers."
         name="Jerry E Olson"
     />
+    <x-ui.banner-cta-artwork-dropzone />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.lp-category-banners
         id="sign-categories"
@@ -190,6 +194,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

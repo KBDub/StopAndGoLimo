@@ -50,12 +50,17 @@
     <x-ui.banner-thin-charcoal />
 
     <x-ui.banner-testimonial />
+    <x-ui.banner-cta-artwork-dropzone position="right" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
     <x-ui.banner-thin-charcoal />
 
     <x-sections.our-services />
     <x-sections.cta-design-your-own-banner />
 
     <x-sections.design-it-yourself />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

@@ -160,6 +160,7 @@
 
     <x-sections.why-choose-us />
 
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
@@ -169,6 +170,10 @@
         name="School Booster Club Coordinator"
         location="Joliet, IL"
     />
+    <x-ui.banner-cta-artwork-dropzone position="right" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"

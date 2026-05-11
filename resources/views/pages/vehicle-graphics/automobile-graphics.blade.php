@@ -65,6 +65,10 @@
         quote="Many thanks to Ezra and his crew. I am beyond impressed with the custom decals created for my car. The quality of the decals is superb and they were installed perfectly. I've already received numerous compliments and inquiries about the work."
         name="Sam"
     />
+    <x-ui.banner-cta-artwork-dropzone position="right" />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg"
@@ -162,6 +166,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

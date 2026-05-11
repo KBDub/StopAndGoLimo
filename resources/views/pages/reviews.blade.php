@@ -216,6 +216,7 @@ $totalCount = count($reviews);
     <x-ui.banner-thin-charcoal />
 
     <x-sections.cta-quadruple-button-banner />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

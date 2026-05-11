@@ -61,6 +61,10 @@
         quote="Ezra and Kim are incredible to work with for your personal or business shirts or decals. Highly recommend Top 5 Percent and very reasonable pricing."
         name="Matt Heath"
     />
+    <x-ui.banner-cta-artwork-dropzone />
+    <x-ui.banner-thin-sunburst />
+    <x-ui.banner-thin-azure />
+    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg"
@@ -162,6 +166,7 @@
     />
 
     <x-sections.why-choose-us />
+    <x-ui.banner-thin-sunburst />
     <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />

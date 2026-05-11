@@ -1197,26 +1197,57 @@
 
 
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
-    {{-- SECTION: DTF Drop Zones --}}
+    {{-- SECTION: Artwork Drop Zones --}}
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section class="space-y-10">
         <div>
-            <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">DTF Drop Zones</h2>
+            <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Artwork Drop Zones</h2>
             <p class="text-charcoal-light text-sm mb-1 pl-5">
-                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.dtf-dropzone</code> and
-                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.banner-cta-dtf-dropzone</code>
-                — file upload entry points that will trigger the DTF upload wizard.
+                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.artwork-dropzone</code> and
+                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.banner-cta-artwork-dropzone</code>
+                — general-purpose artwork upload entry points for signs, stickers, vehicle graphics, design services,
+                promotional items, and any non-DTF page. Accepts PNG, JPG, PDF, SVG, AI, EPS.
+                Dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal</code> with
+                <code class="bg-linen-dark px-1 py-0.5">{ artwork: true, fileName }</code>.
             </p>
         </div>
 
-        {{-- Medium Drop Zone --}}
+        {{-- Medium Artwork Drop Zone --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Medium Drop Zone</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Medium Artwork Drop Zone</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
-                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.dtf-dropzone /&gt;</code>
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.artwork-dropzone /&gt;</code>
+                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
             </p>
             <div class="max-w-xl">
-                <x-ui.dtf-dropzone />
+                <x-ui.artwork-dropzone />
+            </div>
+            <div class="bg-charcoal px-6 py-5 text-sm space-y-3 mt-4 max-w-xl">
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Component</p>
+                    <p class="font-mono text-white/80 text-xs">x-ui.artwork-dropzone</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">File</p>
+                    <p class="font-mono text-white/80 text-xs">resources/views/components/ui/artwork-dropzone.blade.php</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Usage</p>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">&lt;x-ui.artwork-dropzone /&gt;
+&lt;x-ui.artwork-dropzone class="max-w-2xl mx-auto" /&gt;</pre>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Accepted formats</p>
+                    <p class="font-mono text-white/80 text-xs">PNG, JPG, PDF, SVG, AI, EPS — high resolution preferred</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Dispatches</p>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">open-contact-modal { artwork: true, fileName: 'file.pdf' }</pre>
+                </div>
+                <p class="text-white/40 text-xs pt-1">
+                    Use on all non-DTF pages. Do not use on DTF transfers or DTF pricing pages — use
+                    <code class="bg-white/10 px-1">x-ui.dtf-dropzone</code> there instead.
+                </p>
             </div>
         </div>
 
@@ -1225,15 +1256,17 @@
             <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Free Quote Banner</h3>
             <p class="text-charcoal-light text-xs mb-6 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-sections.cta-free-quote-banner /&gt;</code>
-                — two-part section: <code class="bg-linen-dark px-1 py-0.5">x-ui.dtf-dropzone</code> above, CTA row below.
+                — two-part section: <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code> above, CTA row below.
+                On DTF pages pass <code class="bg-linen-dark px-1 py-0.5">type="dtf"</code> to render
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.dtf-dropzone</code> instead.
             </p>
 
-            {{-- Part 1: DTF Dropzone --}}
+            {{-- Part 1: Artwork Dropzone --}}
             <p class="text-charcoal-light text-xs mb-2 pl-5">
-                Part 1 — <code class="bg-linen-dark px-1 py-0.5">x-ui.dtf-dropzone</code>
+                Part 1 — <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code>
             </p>
             <div class="max-w-2xl mb-6">
-                <x-ui.dtf-dropzone />
+                <x-ui.artwork-dropzone />
             </div>
 
             {{-- Part 2: CTA Row --}}
@@ -1254,22 +1287,129 @@
             </div>
         </div>
 
+        {{-- Artwork Banner CTA — Dropzone Left --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Banner CTA — Drop Zone Left</h3>
+            <p class="text-charcoal-light text-xs mb-4 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-artwork-dropzone position="left" /&gt;</code>
+                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</code>
+            </p>
+            <x-ui.banner-cta-artwork-dropzone
+                position="left"
+                heading="Upload Your Artwork"
+                subheading="Drop your design file and we'll handle the rest. Our team reviews every order to make sure your artwork looks perfect before production."
+            />
+            <div class="bg-charcoal px-6 py-5 text-sm space-y-3 mt-4">
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Component</p>
+                    <p class="font-mono text-white/80 text-xs">x-ui.banner-cta-artwork-dropzone</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">File</p>
+                    <p class="font-mono text-white/80 text-xs">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Props</p>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">position   — 'left' (default) | 'right'
+heading    — string (default: 'Upload Your Artwork')
+subheading — string (default: descriptive copy)</pre>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Usage (position left)</p>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">&lt;x-ui.banner-cta-artwork-dropzone position="left" /&gt;</pre>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Accepted formats</p>
+                    <p class="font-mono text-white/80 text-xs">PNG, JPG, PDF, SVG, AI, EPS — high resolution preferred</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Dispatches</p>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">open-contact-modal { artwork: true, fileName: 'file.pdf' }</pre>
+                </div>
+            </div>
+        </div>
+
+        {{-- Artwork Banner CTA — Dropzone Right --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Banner CTA — Drop Zone Right</h3>
+            <p class="text-charcoal-light text-xs mb-4 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-artwork-dropzone position="right" /&gt;</code>
+            </p>
+            <x-ui.banner-cta-artwork-dropzone
+                position="right"
+                heading="Ready to Start?"
+                subheading="Have your file ready? Drop it right here and we'll get your quote started. Fast turnaround, no guesswork."
+            />
+        </div>
+
+    </section>
+
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    {{-- SECTION: DTF Drop Zones --}}
+    {{-- ═══════════════════════════════════════════════════════════════════ --}}
+    <section class="space-y-10">
+        <div>
+            <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">DTF Drop Zones</h2>
+            <p class="text-charcoal-light text-sm mb-1 pl-5">
+                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.dtf-dropzone</code> and
+                <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.banner-cta-dtf-dropzone</code>
+                — DTF-specific upload entry points used only on the DTF transfers page and DTF pricing section.
+                Accepts PNG only (300 DPI minimum). Dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal</code>
+                with <code class="bg-linen-dark px-1 py-0.5">{ dtf: true, fileName }</code>.
+            </p>
+        </div>
+
+        {{-- Medium Drop Zone --}}
+        <div>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Medium DTF Drop Zone</h3>
+            <p class="text-charcoal-light text-xs mb-4 pl-5">
+                <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.dtf-dropzone /&gt;</code>
+                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/dtf-dropzone.blade.php</code>
+            </p>
+            <div class="max-w-xl">
+                <x-ui.dtf-dropzone />
+            </div>
+            <div class="bg-charcoal px-6 py-5 text-sm space-y-3 mt-4 max-w-xl">
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Component</p>
+                    <p class="font-mono text-white/80 text-xs">x-ui.dtf-dropzone</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">File</p>
+                    <p class="font-mono text-white/80 text-xs">resources/views/components/ui/dtf-dropzone.blade.php</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Accepted formats</p>
+                    <p class="font-mono text-white/80 text-xs">PNG only — 300 DPI minimum recommended</p>
+                </div>
+                <div>
+                    <p class="text-sunburst font-semibold text-xs mb-1">Dispatches</p>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">open-contact-modal { dtf: true, fileName: 'design.png' }</pre>
+                </div>
+                <p class="text-white/40 text-xs pt-1">
+                    Use only on DTF-specific pages. For all other pages use
+                    <code class="bg-white/10 px-1">x-ui.artwork-dropzone</code> instead.
+                </p>
+            </div>
+        </div>
+
         {{-- Banner CTA — Dropzone Left --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Banner CTA — Drop Zone Left</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">DTF Banner CTA — Drop Zone Left</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-dtf-dropzone position="left" /&gt;</code>
+                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/banner-cta-dtf-dropzone.blade.php</code>
             </p>
             <x-ui.banner-cta-dtf-dropzone
                 position="left"
-                heading="Upload Your Artwork"
-                subheading="Drop your design file and we'll handle the rest. Our team reviews every order before printing to make sure your artwork looks perfect."
+                heading="Upload Your DTF Artwork"
+                subheading="Drop your PNG design file and we'll handle the rest. Our team reviews every DTF order before printing to ensure 300 DPI quality."
             />
         </div>
 
         {{-- Banner CTA — Dropzone Right --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Banner CTA — Drop Zone Right</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">DTF Banner CTA — Drop Zone Right</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-dtf-dropzone position="right" /&gt;</code>
             </p>

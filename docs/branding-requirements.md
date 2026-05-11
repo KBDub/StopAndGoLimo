@@ -108,7 +108,7 @@ Every `<section>` must be its own file in `resources/views/components/sections/`
 | `x-sections.shirt-types-video` | YouTube video embed (charcoal bg) | `resources/views/components/sections/shirt-types-video.blade.php` |
 | `x-sections.represent-yourself` | "Represent Yourself" brand statement + stats | `resources/views/components/sections/represent-yourself.blade.php` |
 | `x-sections.shirt-types-faq` | 7-tip shirt maker FAQ accordion | `resources/views/components/sections/shirt-types-faq.blade.php` |
-| `x-sections.cta-free-quote-banner` | Free quote CTA bar with DTF dropzone | `resources/views/components/sections/cta-free-quote-banner.blade.php` |
+| `x-sections.cta-free-quote-banner` | Free quote CTA bar — artwork dropzone by default; pass `type="dtf"` on DTF pages | `resources/views/components/sections/cta-free-quote-banner.blade.php` |
 | `x-sections.cta-design-your-own-banner` | Design your own CTA bar | `resources/views/components/sections/cta-design-your-own-banner.blade.php` |
 | `x-sections.cta-quadruple-button-banner` | 3-button CTA bar: Free Quote · Start Designing · Get Directions | `resources/views/components/sections/cta-quadruple-button-banner.blade.php` |
 | `x-ui.button-map-directions` | Smooth-scroll button targeting `#map-section` | `resources/views/components/ui/button-map-directions.blade.php` |
@@ -382,6 +382,40 @@ Full-width image and video banners for visual breaks between sections. All accep
     :featured="true"
 />
 ```
+
+### UI Dropzone Components
+
+Two families of file-upload drop zones. **Never swap these — each family targets a specific modal flow.**
+
+| Component | Accepted Formats | Dispatches | Use On |
+|---|---|---|---|
+| `x-ui.artwork-dropzone` | PNG, JPG, PDF, SVG, AI, EPS | `open-contact-modal { artwork: true, fileName }` | All non-DTF pages (signs, stickers, vehicle graphics, design services, promotional items, general quote banners) |
+| `x-ui.banner-cta-artwork-dropzone` | PNG, JPG, PDF, SVG, AI, EPS | `open-contact-modal { artwork: true, fileName }` | Full-width banner variant of the artwork dropzone — same non-DTF contexts |
+| `x-ui.dtf-dropzone` | PNG only — 300 DPI minimum | `open-contact-modal { dtf: true, fileName }` | DTF transfers page and DTF pricing section **only** |
+| `x-ui.banner-cta-dtf-dropzone` | PNG only — 300 DPI minimum | `open-contact-modal { dtf: true, fileName }` | Full-width banner variant — DTF pages **only** |
+
+**Artwork dropzone props (`x-ui.artwork-dropzone`):** `id` (auto-generated)
+
+**Artwork banner props (`x-ui.banner-cta-artwork-dropzone`):** `position` (`left` / `right`), `heading` (default: `Upload Your Artwork`), `subheading` (default: general copy), `id` (auto-generated)
+
+```blade
+{{-- General quote / non-DTF pages --}}
+<x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
+
+{{-- Full-width banner on signs, stickers, promotional pages --}}
+<x-ui.banner-cta-artwork-dropzone position="left" />
+<x-ui.banner-cta-artwork-dropzone
+    position="right"
+    heading="Start Your Custom Project"
+    subheading="Drop your artwork file and we'll take it from there."
+/>
+
+{{-- DTF pages only --}}
+<x-ui.dtf-dropzone class="max-w-2xl mx-auto" />
+<x-ui.banner-cta-dtf-dropzone position="left" />
+```
+
+---
 
 ### UI Product Components
 

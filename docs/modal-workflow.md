@@ -18,6 +18,7 @@ The Custom Request Workflow is a multi-step guided wizard that collects everythi
 
 **Entry points:**
 - `x-ui.contact-modal` → two radio buttons: "Custom Apparel Request" | "DTF Transfers" (all flows)
+- Any artwork drop zone component (`x-ui.artwork-dropzone`, `x-ui.banner-cta-artwork-dropzone`) → dispatches `open-contact-modal` with `{ artwork: true, fileName }` → contact modal opens for general quote request (non-DTF flow)
 - Any DTF drop zone component (`x-ui.dtf-dropzone`, `x-ui.banner-cta-dtf-dropzone`) → dispatches `open-contact-modal` with `{ dtf: true, fileName }` → contact modal → wizard (DTF flow, `dtfMode: true`)
 - DTF pricing table → PNG file picker → `x-ui.dtf-confirm-modal` → wizard (DTF flow, `dtfMode: true`)
 
@@ -39,6 +40,14 @@ The Custom Request Workflow is a multi-step guided wizard that collects everythi
 5. Selecting a radio AND having `contactReady` true immediately calls `launchWizard()`, closes the contact modal, and opens the wizard at Step 1 with name/email/phone pre-filled.
 
 > **Key rule:** Both gates must be satisfied before `launchWizard()` fires — all four contact fields filled AND one radio selected. There is no automatic launch without both conditions met.
+
+#### Artwork Dropzone Flow — BUILT
+
+1. User drops or selects a file on any artwork drop zone component (`x-ui.artwork-dropzone` or `x-ui.banner-cta-artwork-dropzone`).
+2. The drop zone dispatches `open-contact-modal` with `{ artwork: true, fileName: 'filename.pdf' }`.
+3. The contact modal opens as a standard general quote request. No DTF-specific pre-selection or `dtfMode` is set.
+
+> **Artwork dropzone components** are used on all non-DTF pages via `x-sections.cta-free-quote-banner` and any standalone banner placement. Accepted formats: PNG, JPG, PDF, SVG, AI, EPS.
 
 #### DTF Dropzone Flow — BUILT (radio button change PLANNED)
 
@@ -665,13 +674,23 @@ Two modals demonstrating branded inline custom dropdowns (no native `<select>` h
 
 ---
 
-### Section 10 — DTF Drop Zones
+### Section 10 — Artwork Drop Zones + DTF Drop Zones
 
-Three drop zone variants demonstrating `x-ui.dtf-dropzone` and `x-ui.banner-cta-dtf-dropzone`. All variants dispatch `open-contact-modal` with a DTF payload on file drop or file-input selection.
+Two separate drop zone families. The artwork family covers all non-DTF pages; the DTF family is DTF-only.
+
+**Artwork drop zones** — dispatch `open-contact-modal` with `{ artwork: true, fileName }`. Accepted: PNG, JPG, PDF, SVG, AI, EPS.
 
 | Component | Prop | Description | Status |
 |---|---|---|---|
-| `x-ui.dtf-dropzone` | *(none — medium default)* | Standard medium drop zone | ✅ |
+| `x-ui.artwork-dropzone` | *(none — medium default)* | Standard medium artwork drop zone | ✅ |
+| `x-ui.banner-cta-artwork-dropzone` | `position="left"` | Full-width banner, folder icon on left | ✅ |
+| `x-ui.banner-cta-artwork-dropzone` | `position="right"` | Full-width banner, folder icon on right | ✅ |
+
+**DTF drop zones** — dispatch `open-contact-modal` with `{ dtf: true, fileName }`. Accepted: PNG only — 300 DPI minimum. Use on DTF transfers page and DTF pricing section only.
+
+| Component | Prop | Description | Status |
+|---|---|---|---|
+| `x-ui.dtf-dropzone` | *(none — medium default)* | Standard medium DTF drop zone | ✅ |
 | `x-ui.banner-cta-dtf-dropzone` | `position="left"` | Full-width banner, text on left | ✅ |
 | `x-ui.banner-cta-dtf-dropzone` | `position="right"` | Full-width banner, text on right | ✅ |
 

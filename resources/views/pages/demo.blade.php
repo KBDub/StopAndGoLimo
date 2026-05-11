@@ -732,8 +732,78 @@
             :stars="5"
         />
 
+        {{-- Artwork Drop Zone (medium) --}}
+        <div class="px-6 max-w-7xl mx-auto mt-8 mb-2">
+            <p class="text-xs text-charcoal-light mb-1">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>
+                &nbsp;—&nbsp;
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">resources/views/components/ui/artwork-dropzone.blade.php</code>
+            </p>
+        </div>
+        <div class="px-6 max-w-7xl mx-auto mb-2">
+            <div class="max-w-xl">
+                <x-ui.artwork-dropzone />
+            </div>
+            <div class="bg-charcoal px-5 py-4 text-sm space-y-2 mt-3 max-w-xl">
+                <p class="font-mono text-white/80 text-xs">x-ui.artwork-dropzone</p>
+                <p class="font-mono text-white/50 text-xs">resources/views/components/ui/artwork-dropzone.blade.php</p>
+                <p class="text-white/50 text-xs">Accepts: PNG, JPG, PDF, SVG, AI, EPS — dispatches <code class="bg-white/10 px-1">open-contact-modal &#123; artwork: true, fileName &#125;</code></p>
+                <pre class="font-mono text-white/70 text-xs bg-black/20 px-3 py-2 whitespace-pre-wrap">&lt;x-ui.artwork-dropzone /&gt;
+&lt;x-ui.artwork-dropzone class="max-w-2xl mx-auto" /&gt;</pre>
+                <p class="text-white/30 text-xs">Use on all non-DTF pages. Pass <code class="bg-white/10 px-1">x-ui.dtf-dropzone</code> on DTF-specific pages instead.</p>
+            </div>
+        </div>
+
+        {{-- Artwork Banner CTA — Left --}}
+        <div class="px-6 max-w-7xl mx-auto mt-6 mb-2">
+            <p class="text-xs text-charcoal-light mb-1">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-cta-artwork-dropzone</code>
+                &nbsp;—&nbsp;
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</code>
+            </p>
+        </div>
+        <x-ui.banner-cta-artwork-dropzone
+            position="left"
+            heading="Upload Your Artwork"
+            subheading="Drop your design file and we'll handle the rest. Our team reviews every order to make sure your artwork looks perfect before production."
+        />
+        <div class="px-6 max-w-7xl mx-auto mt-3 mb-2">
+            <div class="bg-charcoal px-5 py-4 text-sm space-y-2">
+                <p class="font-mono text-white/80 text-xs">x-ui.banner-cta-artwork-dropzone</p>
+                <p class="font-mono text-white/50 text-xs">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</p>
+                <p class="text-white/50 text-xs">Props: <code class="bg-white/10 px-1">position</code> (left / right) &bull; <code class="bg-white/10 px-1">heading</code> &bull; <code class="bg-white/10 px-1">subheading</code></p>
+                <p class="text-white/50 text-xs">Accepts: PNG, JPG, PDF, SVG, AI, EPS — dispatches <code class="bg-white/10 px-1">open-contact-modal &#123; artwork: true, fileName &#125;</code></p>
+                <pre class="font-mono text-white/70 text-xs bg-black/20 px-3 py-2 whitespace-pre-wrap">&lt;x-ui.banner-cta-artwork-dropzone position="left" /&gt;
+&lt;x-ui.banner-cta-artwork-dropzone
+    position="right"
+    heading="Start Your Custom Project"
+    subheading="Drop your artwork file and we'll take it from there."
+/&gt;</pre>
+                <p class="text-white/30 text-xs">Use on signs, stickers, vehicle graphics, design services, and all non-DTF pages.</p>
+            </div>
+        </div>
+
+        {{-- Artwork Banner CTA — Right --}}
+        <div class="px-6 max-w-7xl mx-auto mt-2 mb-2">
+            <p class="text-xs text-charcoal-light mb-1">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-cta-artwork-dropzone position="right"</code>
+            </p>
+        </div>
+        <x-ui.banner-cta-artwork-dropzone
+            position="right"
+            heading="Ready to Start?"
+            subheading="Have your file ready? Drop it right here and we'll get your quote started. Fast turnaround, no guesswork."
+        />
+
         {{-- CTA: Free Quote --}}
-        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-8 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code></p>
+        <div class="px-6 max-w-7xl mx-auto mt-8 mb-2">
+            <p class="text-xs text-charcoal-light mb-1">
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code>
+                &nbsp;—&nbsp;
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">resources/views/components/sections/cta-free-quote-banner.blade.php</code>
+            </p>
+            <p class="text-xs text-charcoal-light mb-2">Default (<code class="bg-gray-100 px-1.5 py-0.5 rounded">type="artwork"</code>) — uses <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>. Pass <code class="bg-gray-100 px-1.5 py-0.5 rounded">type="dtf"</code> on DTF pages to render <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.dtf-dropzone</code> instead.</p>
+        </div>
         <x-sections.cta-free-quote-banner />
 
         {{-- CTA: Design Your Own --}}

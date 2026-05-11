@@ -144,7 +144,7 @@
     />
 
     <x-sections.why-choose-us />
-    <x-sections.cta-free-quote-banner />
+    <x-sections.cta-free-quote-banner type="dtf" />
     <x-sections.video-banner
         videoId="F3J9nyiM3So"
         heading="Full-Color Prints on Any Fabric"

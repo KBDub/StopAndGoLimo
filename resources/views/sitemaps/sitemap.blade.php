@@ -35,12 +35,7 @@
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
-    <url>
-        <loc>https://www.top5pct.com/stores</loc>
-        <lastmod>2026-05-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.6</priority>
-    </url>
+
     <url>
         <loc>https://www.top5pct.com/resources</loc>
         <lastmod>2026-05-01</lastmod>

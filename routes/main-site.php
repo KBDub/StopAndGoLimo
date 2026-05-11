@@ -344,9 +344,6 @@ Route::get('/about-us', function () {
 Route::redirect('/about',   '/about-us', 302);
 Route::redirect('/company', '/about-us', 302);
 
-Route::get('/stores', function () {
-    return view('pages.stores');
-})->name('stores');
 
 Route::get('/portfolio', function () {
     return view('pages.portfolio');

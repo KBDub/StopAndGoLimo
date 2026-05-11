@@ -33,7 +33,7 @@
         :class="dragging
             ? 'border-error bg-error/5 border-dashed border-2'
             : 'border-linen-dark bg-linen-light border-dashed border-2 hover:border-sunburst hover:bg-sunburst/5'"
-        class="flex flex-col items-center justify-center gap-3 px-8 pt-16 pb-10 cursor-pointer transition-colors duration-200"
+        class="flex flex-col items-center justify-center gap-3 px-8 py-10 mt-6 cursor-pointer transition-colors duration-200"
     >
         {{-- Call to action heading --}}
         <p class="text-lg font-bold text-charcoal text-center leading-snug">

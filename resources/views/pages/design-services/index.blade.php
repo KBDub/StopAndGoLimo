@@ -84,18 +84,6 @@
             'title' => 'Graphic Design',
             'href'  => '/design-services/graphic-design',
         ],
-        [
-            'image' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
-            'alt'   => 'Free online design tool for custom shirts, signs, and more in Joliet Illinois',
-            'title' => 'Online Designer',
-            'href'  => '/design-services/online-designer',
-        ],
-        [
-            'image' => '/images/banners/top5pct-banner-joliet-romeoville-rockdale-plainfield.jpg',
-            'alt'   => 'Design idea catalogs and templates for custom products in Joliet Illinois',
-            'title' => 'Design Catalogs',
-            'href'  => '/design-services/design-catalogs',
-        ],
     ]" />
 
     <x-sections.card-image-with-text

@@ -337,18 +337,6 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/design-services/online-designer</loc>
-        <lastmod>2026-05-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.top5pct.com/design-services/design-catalogs</loc>
-        <lastmod>2026-05-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.top5pct.com/design-services/logo-design</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>

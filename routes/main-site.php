@@ -158,14 +158,6 @@ Route::get('/design-services', function () {
     return view('pages.design-services.index');
 })->name('design-services');
 
-Route::get('/design-services/online-designer', function () {
-    return view('pages.design-services.online-designer');
-})->name('design-services.online-designer');
-
-Route::get('/design-services/design-catalogs', function () {
-    return view('pages.design-services.design-catalogs');
-})->name('design-services.design-catalogs');
-
 Route::get('/design-services/logo-design', function () {
     return view('pages.design-services.logo-design');
 })->name('design-services.logo-design');

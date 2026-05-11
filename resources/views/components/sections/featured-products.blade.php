@@ -76,7 +76,7 @@
                 image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/printing-options/dtf-printing" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. You can even <a href="/design-services/online-designer" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">design your own transfer online</a> and we will handle the rest.
+                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/printing-options/dtf-printing" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. Share your artwork or describe what you want and we will handle the rest.
                 </p>
             </x-ui.card-product>
 

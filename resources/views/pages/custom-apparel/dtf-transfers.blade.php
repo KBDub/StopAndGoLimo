@@ -66,8 +66,6 @@
         name="Monica Perez"
     />
     <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-ui.banner-thin-sunburst />
-    <x-ui.banner-thin-azure />
     <x-sections.cta-quadruple-button-banner />
 
     <x-ui.banner-cta-dtf-dropzone position="left" />

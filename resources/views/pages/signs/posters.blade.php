@@ -66,8 +66,6 @@
         name="Datjaeda"
     />
     <x-ui.banner-cta-artwork-dropzone />
-    <x-ui.banner-thin-sunburst />
-    <x-ui.banner-thin-azure />
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text

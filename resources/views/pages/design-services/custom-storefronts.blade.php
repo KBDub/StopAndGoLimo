@@ -171,8 +171,6 @@
         location="Joliet, IL"
     />
     <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-ui.banner-thin-sunburst />
-    <x-ui.banner-thin-azure />
     <x-sections.cta-quadruple-button-banner />
 
     <x-ui.card-banner-slide-in

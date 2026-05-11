@@ -56,6 +56,8 @@
     <x-sections.cta-design-your-own-banner />
 
     <x-sections.design-it-yourself />
+    <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
+    <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
         videoId="F3J9nyiM3So"

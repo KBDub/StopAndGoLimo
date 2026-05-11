@@ -35,6 +35,11 @@
             : 'border-linen-dark bg-linen-light border-dashed border-2 hover:border-sunburst hover:bg-sunburst/5'"
         class="flex flex-col items-center justify-center gap-3 px-8 py-10 cursor-pointer transition-colors duration-200"
     >
+        {{-- Call to action heading --}}
+        <p class="text-lg font-bold text-charcoal text-center leading-snug">
+            Start your custom quote now
+        </p>
+
         {{-- Folder icon --}}
         <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" viewBox="0 0 64 64" aria-hidden="true">
             <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z"

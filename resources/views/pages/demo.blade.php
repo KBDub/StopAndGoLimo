@@ -804,6 +804,8 @@
             </p>
             <p class="text-xs text-charcoal-light mb-2">Default (<code class="bg-gray-100 px-1.5 py-0.5 rounded">type="artwork"</code>) — uses <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>. Pass <code class="bg-gray-100 px-1.5 py-0.5 rounded">type="dtf"</code> on DTF pages to render <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.dtf-dropzone</code> instead.</p>
         </div>
+        <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
+        <x-ui.banner-thin-sunburst />
         <x-sections.cta-free-quote-banner />
 
         {{-- CTA: Design Your Own --}}

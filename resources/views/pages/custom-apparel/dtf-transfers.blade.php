@@ -68,9 +68,7 @@
     <x-ui.banner-cta-artwork-dropzone position="right" />
     <x-sections.cta-quadruple-button-banner />
 
-    <x-ui.banner-cta-dtf-dropzone position="left" />
-
-    <x-ui.dtf-confirm-modal />
+    <!--x-ui.dtf-confirm-modal /-->
     <x-sections.dtf-pricing-section />
 
     <x-sections.card-image-with-text

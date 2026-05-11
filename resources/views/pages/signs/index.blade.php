@@ -210,7 +210,7 @@
             ['q' => 'What materials do you use for outdoor signs and banners?', 'a' => 'We use 13oz scrim vinyl for outdoor banners, UV-laminated corrugated plastic for yard signs, and weather-resistant substrates for business signs. All outdoor products are finished to handle Illinois heat, cold, and humidity.'],
             ['q' => 'How long do your outdoor vinyl banners last?', 'a' => 'Our outdoor banners are printed with UV-resistant inks on hemmed and grommeted 13oz vinyl and typically last two or more years in outdoor conditions with normal care.'],
             ['q' => 'Do you offer design help for signs and banners?', 'a' => 'Yes. Free design assistance is included with every sign order. You can describe what you want, share a logo or reference image, and our team will build the layout for you at no extra charge.'],
-            ['q' => 'What is the smallest custom yard sign you print?', 'a' => 'We print yard signs starting at 18"x24", the standard single-stake size used for real estate, political campaigns, and business promotions. Custom sizes are also available.'],
+            ['q' => 'What is the smallest custom yard sign you print?', 'a' => 'We print yard signs starting at 18 x 24 inches, the standard single-stake size used for real estate, political campaigns, and business promotions. Custom sizes are also available.'],
             ['q' => 'Do you install window decals and graphics for businesses?', 'a' => 'Yes. We print and can install professional window decals, perforated window films, and full window graphics for storefronts throughout Joliet and Will County.'],
         ]"
     />

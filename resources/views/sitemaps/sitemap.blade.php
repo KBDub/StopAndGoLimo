@@ -196,12 +196,6 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs</loc>
-        <lastmod>2026-05-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://www.top5pct.com/signs/business-signs/banners</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>

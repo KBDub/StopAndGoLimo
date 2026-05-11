@@ -6,3 +6,5 @@ Disallow: /checkout
 
 # Sitemaps
 Sitemap: https://www.top5pct.com/sitemap.xml
+Sitemap: https://www.top5pct.com/sitemap_video.xml
+Sitemap: https://www.top5pct.com/sitemap_images.xml

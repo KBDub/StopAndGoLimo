@@ -38,6 +38,18 @@ Route::get('/sitemap.xml', function () {
         ->header('Content-Type', 'application/xml; charset=utf-8');
 })->name('sitemap');
 
+Route::get('/sitemap_video.xml', function () {
+    return response()
+        ->view('sitemaps.sitemap-video')
+        ->header('Content-Type', 'application/xml; charset=utf-8');
+})->name('sitemap.video');
+
+Route::get('/sitemap_images.xml', function () {
+    return response()
+        ->view('sitemaps.sitemap-images')
+        ->header('Content-Type', 'application/xml; charset=utf-8');
+})->name('sitemap.images');
+
 // ─── Main Site ───────────────────────────────────────────────────────────────
 
 Route::get('/', function () {

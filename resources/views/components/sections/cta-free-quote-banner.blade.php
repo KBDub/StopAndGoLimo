@@ -1,14 +1,6 @@
-@props([
-    'type' => 'artwork', {{-- 'artwork' for general pages | 'dtf' for DTF-specific pages --}}
-])
-
 <section class="py-10 bg-warm-gradient border-t border-b border-sunburst/30">
     <div class="max-w-7xl mx-auto px-6">
-        @if($type === 'dtf')
-            <x-ui.dtf-dropzone class="max-w-2xl mx-auto" />
-        @else
-            <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
-        @endif
+        <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
 
         <div class="flex flex-col sm:flex-row items-center gap-8 max-w-2xl mx-auto mt-8">
             <div class="flex-1 w-full text-center sm:text-left">

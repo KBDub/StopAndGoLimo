@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',                               'alt' => 'Custom vinyl heat press shirts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom heat press apparel and vinyl shirts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-t-shirts-main.jpg',                                           'alt' => 'Custom vinyl cut shirts and apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom heat press vinyl shirts made in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-caps-vinyl.jpg',                               'alt' => 'Custom vinyl heat press shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-hoodies.jpg', 'alt' => 'Custom heat press apparel and vinyl shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-hoodies.jpg',                                           'alt' => 'Custom vinyl cut shirts and apparel in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts.jpg',                                     'alt' => 'Custom heat press vinyl shirts made in Joliet and Will County Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+        image="/images/custom-shirts/top5pct-neon-vinyl-shirts.jpg"
         alt="Custom vinyl heat press shirts and apparel in Joliet Illinois"
         title="Heat Press Vinyl — Crisp, Clean, Durable"
     >
@@ -79,7 +79,7 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+        image="/images/custom-shirts/top5pct-vinyl-caps.jpg"
         alt="Custom vinyl shirts for sports teams and groups in Joliet Illinois"
         title="Names, Numbers, and Team Gear"
         imagePosition="right"
@@ -95,7 +95,7 @@
 
     <x-sections.card-detailed-info
         heading="When Vinyl Is the Right Choice for Your Custom Apparel Project"
-        image1="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+        image1="/images/custom-shirts/top5pct-vinyl-hoodie.jpg"
         alt1="Custom vinyl heat press shirts and specialty apparel printed in Joliet Illinois"
     >
         <x-slot name="intro">

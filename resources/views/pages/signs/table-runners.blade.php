@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg', 'alt' => 'Custom printed table cloths and table runners for events in Joliet Illinois'],
-            ['src' => '/images/table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg',                 'alt' => 'Custom branded table cloth printed for a business in Joliet and Crest Hill Illinois'],
-            ['src' => '/images/table-runners/top5pct-custom-table-runner-joliet-new-lenox.jpg',                 'alt' => 'Custom table runner printed for an event in Joliet and New Lenox Illinois'],
-            ['src' => '/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg',                 'alt' => 'Custom printed table runner in Joliet and Shorewood Illinois'],
+            ['src' => '/images/table-runners/top5pct-custom-table-runner.jpg', 'alt' => 'Custom printed table cloths and table runners for events in Joliet Illinois'],
+            ['src' => '/images/table-runners/top5pct-custom-table-runners.jpg',                 'alt' => 'Custom branded table cloth printed for a business in Joliet and Crest Hill Illinois'],
+            ['src' => '/images/table-runners/top5pct-table-runner.jpg',                 'alt' => 'Custom table runner printed for an event in Joliet and New Lenox Illinois'],
+            ['src' => '/images/table-runners/top5pct-table-runners.jpg',                 'alt' => 'Custom printed table runner in Joliet and Shorewood Illinois'],
         ]"
         visible=2
     />

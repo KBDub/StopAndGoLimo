@@ -402,13 +402,13 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-t-shirts-main.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 8 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-caps-vinyl.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-hoodies.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-vinyl-hoodies.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-custom-vinyl-shirts.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-neon-vinyl-shirts.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-vinyl-caps.jpg` | Done |
+| 8 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-vinyl-hoodie.jpg` | Done |
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
 
@@ -421,10 +421,10 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-screenprint-custom-shirts.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-screenprinted-shirts-in-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-screenprinted-shirts-joliet.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-screenprinting-shirts.jpg` | Done |
 | 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg` | Keep |
 | 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg` | Keep |
 | 8 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg` | Keep |
@@ -440,11 +440,11 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-t-shirts-main.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `dtf-transfers/top5pct-custom-sweatshirts.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `dtf-transfers/top5pct-custom-shirt-with-picture.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `dtf-transfers/top5pct-custom-t-shirts-dtf.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `dtf-transfers/top5pct-dtf-hoodies-joliet.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `dtf-transfers/top5pct-dtf-zip-up-hoodies.jpg` | Done |
 | 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
 | 8 | `card-detailed-info` image1 | 400×300px | `dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg` | Keep |
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg` | Keep |
@@ -459,10 +459,10 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-t-shirts-main.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-embroidered-aprons.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-embroidered-caps.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-embroidery-in-joliet.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-stitched-caps.jpg` | Done |
 | 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Keep |
 | 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
 | 8 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Keep |
@@ -478,7 +478,7 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-rhinestone-hoodies-joliet.jpg` | Done |
 | 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
 | 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
 | 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg` | Keep |
@@ -497,13 +497,13 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg` | Done |
-| 8 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-dog-bandanas.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-face-mask-sublimated.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-sublimated-towels.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-dye-sublimated-longsleeve-shirt-joliet.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-dye-sublimation-shirts.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-sublimation-shirt-printer.jpg` | Done |
+| 8 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-sublimation-shirt.jpg` | Done |
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg` | Keep |
 
@@ -516,8 +516,8 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-glitter-clothing.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-glitter-sweatshirts.jpg` | Done |
 | 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg` | Keep |
 | 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg` | Keep |
 | 6 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
@@ -554,7 +554,7 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-reflective-shirts-gold.jpg` | Done |
 | 3 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
 | 4 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Keep |
 | 5 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg` | Keep |
@@ -573,13 +573,13 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `corporate-wear/toptpct-custom-hoodie-pullover-joliet-shorewood.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `corporate-wear/toptpct-custom-button-up-shirt-joliet-shorewood.jpg` | Done |
-| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `corporate-wear/top5pct-custom-apron-joliet.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `corporate-wear/top5pct-custom-aprons-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `corporate-wear/top5pct-custom-business-shirts.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `corporate-wear/top5pct-custom-pocket-shirt-joliet.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `corporate-wear/top5pct-landscaping-clothing-joliet.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `corporate-wear/top5pct-lawn-care-clothing.jpg` | Done |
+| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `corporate-wear/top5pct-safety-work-gear-joliet.jpg` | Done |
 | 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `corporate-wear/toptpct-custom-hoodie-pullover-joliet-shorewood.jpg` | Keep |
 | 10 | `card-image-with-text` (left) | 600×450px | `corporate-wear/toptpct-custom-cap-hat-joliet-shorewood-rockdale.jpg` | Keep |
 | 11 | `card-detailed-info` image1 | 400×300px | `corporate-wear/toptpct-article-corporate-wear-pic1.jpg` | Keep |
@@ -596,12 +596,12 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `reunion-shirts/toptpct-class-reunion-shirts-joliet-shorewood.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `reunion-shirts/toptpct-family-reunion-shirts-joliet-plainfield.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `reunion-shirts/toptpct-westinghouse-class-reunion-shirt-joliet-shorewood.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `reunion-shirts/toptpct-class-reunion-shirts-joliet-shorewood.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `reunion-shirts/toptpct-westinghouse-class-reunion-shirt-joliet-shorewood.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `reunion-shirts/top5pct-class-reunion-shirt.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `reunion-shirts/top5pct-family-reunion-shirts-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `reunion-shirts/top5pct-family-reunion-tshirts-in-joliet.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `reunion-shirts/top5pct-group-shirts.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `reunion-shirts/top5pct-reunion-group-shirts.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `reunion-shirts/top5pct-reunion-shirts.jpg` | Done |
 | 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `reunion-shirts/toptpct-class-reunion-shirt-templates.gif` | Keep |
 | 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `reunion-shirts/toptpct-class-reunion-shirt-templates2.gif` | Keep |
 | 10 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `reunion-shirts/toptpct-family-reunion-shirts-joliet-crest-hill.jpg` | Keep |
@@ -621,8 +621,8 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `spirit-wear/top5pct-banner-fanwear-spiritwear-uniforms-joliet-shorewood.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `spirit-wear/top5pct-banner-fanwear-spiritwear-uniforms-joliet-shorewood.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `spirit-wear/top5pct-spirit-wear-joliet.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `spirit-wear/top5pct-spirit-wear-shirts.jpg` | Done |
 | 4 | `carousel` slot 3 | 600×450px | `spirit-wear/top5pct-spiritwear-fanwear-joliet-plainfield-shorewood.jpg` | Keep |
 | 5 | `carousel` slot 4 | 600×450px | `spirit-wear/top5pct-bowling-shirts-joliet-shorewood-crest-hill.jpg` | Keep |
 | 6 | `card-image-with-text` (left) | 600×450px | `spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg` | Keep |
@@ -644,13 +644,13 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `banners/top5pct-banner-joliet-romeoville-rockdale-plainfield.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `banners/top5pct-birthday-banner-joliet-shorewood-plainfield.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `banners/top5pct-family-reunion-banners-joliet-crest-hill.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `banners/top5pct-banners-business-joliet-shorewood-crest-hill.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `banners/top5pct-banner-joliet-romeoville-rockdale-plainfield.jpg` | Done |
-| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `banners/top5pct-birthday-banner-joliet-shorewood-plainfield.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `banners/top5pct-banners-and-signs.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `banners/top5pct-banners-near-me.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `banners/top5pct-big-banners.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `banners/top5pct-custom-retractable-banners-joliet.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `banners/top5pct-custom-vinyl-banners.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `banners/top5pct-graduation-banners.jpg` | Done |
+| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `banners/top5pct-retractable-banner.jpg` | Done |
 | 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `banners/top5pct-birthday-banners-joliet-shorewood-crest-hill.jpg` | Keep |
 | 10 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `banners/top5pct-family-reunion-banners-joliet-crest-hill.jpg` | Keep |
 | 11 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `banners/top5pct-team-banners-joliet-shorewood-crest-hill.jpg` | Keep |
@@ -684,10 +684,10 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `sidewalk-signs/top5pct-banner-a-frame-sidewalk-signs-joliet-romeoville.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `sidewalk-signs/top5pct-banner-a-frame-sidewalk-signs-joliet-romeoville.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `sidewalk-signs/top5pct-sidewalk-a-frames-joliet-shorewood.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `sidewalk-signs/top5pct-sidewalk-signs-joliet-shorewood-crest-hill.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `sidewalk-signs/top5pct-a-frame-sign.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `sidewalk-signs/top5pct-custom-a-frame-sidewalk-signs-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `sidewalk-signs/top5pct-sidewalk-sign.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `sidewalk-signs/top5pct-sidewalk-signs-joliet.jpg` | Done |
 | 6 | `card-image-with-text` (left) | 600×450px | `sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg` | Keep |
 | 7 | `card-image-with-text` (right) | 600×450px | `sidewalk-signs/top5pct-sidewalk-a-frames-joliet-shorewood.jpg` | Keep |
 | 8 | `card-image-with-text` (left) | 600×450px | `sidewalk-signs/top5pct-sidewalk-signs-joliet-shorewood-crest-hill.jpg` | Keep |
@@ -704,11 +704,11 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `yard-signs/top5pct-yard-signs-joliet.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `yard-signs/top5pct-yard-signs-joliet-plainfied-new-lenox.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `yard-signs/top5pct-yard-signs-joliet-shorewood-romeoville.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `yard-signs/top5pct-yard-signs-joliet.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `yard-signs/top5pct-custom-yard-signs-joliet.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `yard-signs/top5pct-lawn-signs.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `yard-signs/top5pct-yard-sign-joliet.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `yard-signs/top5pct-yard-signs-joliet.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `yard-signs/top5pct-yard-signs.jpg` | Done |
 | 7 | `card-image-with-text` (right) | 600×450px | `yard-signs/top5pct-yard-signs-joliet-plainfied-new-lenox.jpg` | Keep |
 | 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `yard-signs/top5pct-yard-signs-joliet-shorewood-romeoville.jpg` | Keep |
 | 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `yard-signs/top5pct-table-signs-joliet-shorewood-plainfield.jpg` | Keep |
@@ -720,14 +720,14 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 
 ### `pages/signs/table-cloths.blade.php`
 
-*New images available: 3 (table-cloths/) — 7 eligible slots — 3 Pending (carousel 1–3)*
+*New images available: 3 (table-cloths/) — 7 eligible slots — all 3 wired ✓*
 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `table-runners/top5pct-custom-table-cloth-joliet-will-county.jpg` ⚠ file missing | Done |
+| 2 | `carousel` slot 1 | 600×450px | `table-runners/top5pct-custom-table-cloth.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `table-runners/top5pct-personalized-tablecloth-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `table-runners/top5pct-table-cloths.jpg` | Done |
 | 5 | `carousel` slot 4 | 600×450px | `table-runners/top5pct-article-table-cloths-table-runners.jpg` ⚠ file missing | Keep |
 | 6 | `card-image-with-text` (left) | 600×450px | `table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg` | Keep |
 | 7 | `card-image-with-text` (right) | 600×450px | `table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg` | Keep |
@@ -744,10 +744,10 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `table-runners/top5pct-custom-table-runner-joliet-new-lenox.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `table-runners/top5pct-custom-table-runner.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `table-runners/top5pct-custom-table-runners.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `table-runners/top5pct-table-runner.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `table-runners/top5pct-table-runners.jpg` | Done |
 | 6 | `card-image-with-text` (left) | 600×450px | `table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg` | Keep |
 | 7 | `card-image-with-text` (right) | 600×450px | `table-runners/top5pct-custom-table-runner-joliet-new-lenox.jpg` | Keep |
 | 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg` | Keep |
@@ -766,11 +766,11 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `window-wall-floor-decals/top5pct-business-window-signs.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `window-wall-floor-decals/top5pct-custom-window-signs.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `window-wall-floor-decals/top5pct-window-door-signs.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `window-wall-floor-decals/top5pct-window-signs-joliet-slammers.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `window-wall-floor-decals/top5pct-window-signs-joliet.jpg` | Done |
 | 7 | `card-image-with-text` (right) | 600×450px | `window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg` | Keep |
 | 8 | `card-detailed-info` image1 | 400×300px | `window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg` | Keep |
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg` | Keep |
@@ -785,7 +785,7 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `window-wall-floor-decals/top5pct-door-signage.jpg` | Done |
 | 3 | `carousel` slot 2 | 600×450px | `window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg` | Keep |
 | 4 | `carousel` slot 3 | 600×450px | `window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg` | Keep |
 | 5 | `carousel` slot 4 | 600×450px | `window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg` | Keep |
@@ -804,7 +804,7 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `window-wall-floor-decals/top5pct-wall-signs-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `window-wall-floor-decals/top5pct-wall-signs-joliet.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `window-wall-floor-decals/top5pct-wall-signs.jpg` | Done |
 | 3 | `carousel` slot 2 | 600×450px | `window-wall-floor-decals/top5pct-wall-decals-joliet.jpg` | Keep |
 | 4 | `carousel` slot 3 | 600×450px | `window-wall-floor-decals/top5pct-article-window-wall-signs.jpg` | Keep |
 | 5 | `carousel` slot 4 | 600×450px | `window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg` | Keep |
@@ -823,12 +823,12 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `stickers-decals/top5pct-stickers-decals-joliet-ocean-viewz.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `stickers-decals/top5pct-stickers-decals-joliet-ocean-viewz.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `stickers-decals/top5pct-stickers-decals-joliet-labels.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `stickers-decals/top5pct-custom-stickers.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `stickers-decals/top5pct-custom-glossy-stickers-in-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `stickers-decals/top5pct-custom-label-stickers.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `stickers-decals/top5pct-custom-shaped-stickers.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `stickers-decals/top5pct-diecut-stickers.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `stickers-decals/top5pct-stickers-in-joliet.jpg` | Done |
 | 8 | `card-detailed-info` image1 | 400×300px | `stickers-decals/top5pct-article-buy-stickers-decals-joliet.jpg` | Keep |
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg` | Keep |
@@ -842,15 +842,15 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `automobile-graphics/top5pct-boat-decals-joliet-shorewood-crest-hill.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `automobile-graphics/top5pct-truck-decal-joliet-shorewood-rockdale.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-crest-hill.jpg` | Done |
-| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-shorewood.jpg` | Done |
-| 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `automobile-graphics/top5pct-truck-decal-joliet-shorewood-rockdale.jpg` | Done |
-| 10 | `card-image-with-text` (left) | 600×450px | `automobile-graphics/top5pct-boat-decals-joliet-shorewood-crest-hill.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `automobile-graphics/top5pct-car-wraps.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `automobile-graphics/top5pct-pickup-truck-graphics.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `automobile-graphics/top5pct-trailer-decal-graphics.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `automobile-graphics/top5pct-trailer-decals.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `automobile-graphics/top5pct-van-graphics-decals.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `automobile-graphics/top5pct-vecal-decals.jpg` | Done |
+| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `automobile-graphics/top5pct-vehicle-graphics.jpg` | Done |
+| 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `automobile-graphics/top5pct-vehicle-window-graphics-in-joliet.jpg` | Done |
+| 10 | `card-image-with-text` (left) | 600×450px | `automobile-graphics/top5pct-vehicle-window-graphics-joliet.jpg` | Done |
 | 11 | `card-detailed-info` image1 | 400×300px | `automobile-graphics/top5pct-article-car-wraps-vinyl-lettering.jpg` | Keep |
 | 12 | `card-banner-slide-in` (left→right) | full-width 16:7 | `automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-crest-hill.jpg` | Keep |
 | 13 | `card-banner-slide-in` (right→left) | full-width 16:7 | `vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg` | Keep |
@@ -864,9 +864,9 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `dot-decals/top5pct-banner-DOT-stickers-joliet-shorewood-channahon.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `dot-decals/top5pct-banner-DOT-stickers-joliet-shorewood-channahon.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `dot-decals/top5pct-DOT-stickers-joliet-shorewood-rockdale.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `dot-decals/top5pct-dot-decals-joliet-shorewood-rockdale.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `dot-decals/top5pct-dot-decals-joliet.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `dot-decals/top5pct-dot-semi-truck-decals.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `dot-decals/top5pct-dot-truck-decals-joliet.jpg` | Done |
 | 5 | `carousel` slot 4 | 600×450px | `dot-decals/top5pct-trucking-logo-joliet-shorewood-crest-hill.jpg` | Keep |
 | 6 | `card-image-with-text` (left) | 600×450px | `dot-decals/top5pct-DOT-stickers-joliet-shorewood-rockdale.jpg` | Keep |
 | 7 | `card-image-with-text` (right) | 600×450px | `dot-decals/top5pct-dot-decals-joliet-shorewood-rockdale.jpg` | Keep |
@@ -886,14 +886,14 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 | # | Component | Size | Current Image | Replaced? |
 |---|---|---|---|---|
 | 1 | `category-hero` | full-width × 576px | `vehicle-magnets/top5pct-banner-car-magnets-joliet-shorewood-crest-hill.jpg` | Keep |
-| 2 | `carousel` slot 1 | 600×450px | `vehicle-magnets/top5pct-banner-car-magnets-joliet-shorewood-crest-hill.jpg` | Done |
-| 3 | `carousel` slot 2 | 600×450px | `vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg` | Done |
-| 4 | `carousel` slot 3 | 600×450px | `vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg` | Done |
-| 5 | `carousel` slot 4 | 600×450px | `vehicle-magnets/top5pct-business-magnets-car-magnets-joliet.jpg` | Done |
-| 6 | `card-image-with-text` (left) | 600×450px | `vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg` | Done |
-| 7 | `card-image-with-text` (right) | 600×450px | `vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg` | Done |
-| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `vehicle-magnets/top5pct-business-magnets-car-magnets-joliet.jpg` | Done |
-| 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `vehicle-magnets/top5pct-large-magnets-magnets-near-me-joliet.jpg` | Done |
+| 2 | `carousel` slot 1 | 600×450px | `vehicle-magnets/top5pct-automobile-magnets-joliet.jpg` | Done |
+| 3 | `carousel` slot 2 | 600×450px | `vehicle-magnets/top5pct-car-magnets-joliet.jpg` | Done |
+| 4 | `carousel` slot 3 | 600×450px | `vehicle-magnets/top5pct-car-magnets.jpg` | Done |
+| 5 | `carousel` slot 4 | 600×450px | `vehicle-magnets/top5pct-car-sign-magnets-joliet.jpg` | Done |
+| 6 | `card-image-with-text` (left) | 600×450px | `vehicle-magnets/top5pct-custom-car-magnets-in-joliet.jpg` | Done |
+| 7 | `card-image-with-text` (right) | 600×450px | `vehicle-magnets/top5pct-custom-car-magnets.jpg` | Done |
+| 8 | `card-2image-with-text` image1 | fluid 4:3, ~50% | `vehicle-magnets/top5pct-vehicle-magnets-joliet.jpg` | Done |
+| 9 | `card-2image-with-text` image2 | fluid 4:3, ~50% | `vehicle-magnets/top5pct-vehicle-magnets.jpg` | Done |
 | 10 | `card-detailed-info` image1 | 400×300px | `vehicle-magnets/top5pct-article-car-magnets-truck-magnets.jpg` | Keep |
 | 11 | `card-banner-slide-in` (right→left) | full-width 16:7 | `vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg` | Keep |
 | 12 | `card-banner-slide-in` (left→right) | full-width 16:7 | `automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg` | Keep |
@@ -908,8 +908,8 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 
 | # | Component | Size | Current Image (placeholder) | Replaced? |
 |---|---|---|---|---|
-| 1 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 2 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-pattern-shirts-caps-hoodies-joliet.jpg` | Done |
+| 1 | `carousel` slot 1 | 600×450px | `promo-items/koozies/top5pct-can-koozies.jpg` | Done |
+| 2 | `carousel` slot 2 | 600×450px | `promo-items/koozies/top5pct-custom-koozies.jpg` | Done |
 | 3 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg` | Keep |
 | 4 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg` | Keep |
 | 5 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Keep |
@@ -928,13 +928,13 @@ These are product photos of vinyl banners. Existing `top5pct-banner-*` files in 
 
 | # | Component | Size | Current Image (placeholder) | Replaced? |
 |---|---|---|---|---|
-| 1 | `carousel` slot 1 | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 2 | `carousel` slot 2 | 600×450px | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Done |
-| 3 | `carousel` slot 3 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg` | Done |
-| 4 | `carousel` slot 4 | 600×450px | `custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg` | Done |
-| 5 | `card-image-with-text` (left) | 600×450px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
-| 6 | `card-image-with-text` (right) | 600×450px | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Done |
-| 7 | `card-detailed-info` image1 | 400×300px | `custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg` | Done |
+| 1 | `carousel` slot 1 | 600×450px | `promo-items/mugs/top5pct-custom-coffee-mugs-in-joliet.jpg` | Done |
+| 2 | `carousel` slot 2 | 600×450px | `promo-items/mugs/top5pct-custom-coffee-mugs.jpg` | Done |
+| 3 | `carousel` slot 3 | 600×450px | `promo-items/mugs/top5pct-custom-mugs-near-me.jpg` | Done |
+| 4 | `carousel` slot 4 | 600×450px | `promo-items/mugs/top5pct-custom-mugs.jpg` | Done |
+| 5 | `card-image-with-text` (left) | 600×450px | `promo-items/mugs/top5pct-custom-printed-mugs.jpg` | Done |
+| 6 | `card-image-with-text` (right) | 600×450px | `promo-items/mugs/top5pct-picture-on-mugs.jpg` | Done |
+| 7 | `card-detailed-info` image1 | 400×300px | `promo-items/mugs/top5pct-printed-mugs.jpg` | Done |
 | 8 | `card-banner-slide-in` (right→left) | full-width 16:7 | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Keep |
 | 9 | `card-banner-slide-in` (left→right) | full-width 16:7 | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
 
@@ -970,9 +970,9 @@ The source file `vehicle-decals/automobile-graphics/vecal-decals.jpg` appears to
 
 `public/new-images/custom-apparel/specialty-material/holographic/custom-jackets-with-glitter-in-joliet.psd` has been deleted. It was a Photoshop source file, not a web-ready image. This leaves `holographic-shirts.blade.php` with 0 new images — all slots on that page remain **Keep**. If a JPEG export is ever needed, export from the original source and name it `top5pct-custom-jackets-with-glitter-in-joliet.jpg` → destination `custom-shirts/`.
 
-### Promo-items pages — blade attributes still need updating
+### Promo-items pages — blade attributes updated ✓
 
-`can-koozies.blade.php` and `mugs.blade.php` still reference `custom-shirts/` placeholder images in their `image=` attributes. The new images are now in place at `promo-items/koozies/` and `promo-items/mugs/`, but the blade files must be edited to point to them. See Execution Checklist.
+`can-koozies.blade.php` and `mugs.blade.php` blade `src`/`image=` attributes have been updated to reference the new `promo-items/koozies/` and `promo-items/mugs/` paths.
 
 ### No new banner (page-hero) images
 
@@ -992,8 +992,8 @@ Every slide-in CTA on every page is **Keep** — regardless of whether its curre
 - [x] Run migration for sections 1–16 above — 125 files copied, 1 renamed to `-old.jpg` (`top5pct-yard-signs-joliet-old.jpg`), 0 errors
 - [x] Verify all files present at destination with `top5pct-` prefix
 - [x] Mark each slot **Done** in this document
-- [ ] Fix `table-cloths.blade.php` carousel slot 3 — update `image=` attribute from the missing `top5pct-custom-table-cloth-joliet-will-county.jpg` to the new `top5pct-table-cloths.jpg`
+- [x] Fix `table-cloths.blade.php` carousel slot 3 — updated `image=` attribute from the missing `top5pct-custom-table-cloth-joliet-will-county.jpg` to `top5pct-table-cloths.jpg` ✓
 - [ ] Fix `table-cloths.blade.php` carousel slot 4 — `top5pct-article-table-cloths-table-runners.jpg` still missing; create or source a dedicated article image
-- [ ] Update `can-koozies.blade.php` — change 2 Done slot `image=` attributes to `promo-items/koozies/` paths
-- [ ] Update `mugs.blade.php` — change all 7 Done slot `image=` attributes to `promo-items/mugs/` paths
+- [x] Update `can-koozies.blade.php` — 2 Done carousel slot `src` attributes updated to `promo-items/koozies/` paths ✓
+- [x] Update `mugs.blade.php` — all 7 Done slot `src`/`image=` attributes updated to `promo-items/mugs/` paths ✓
 - [ ] Remove `public/new-images/` directory once all above is verified

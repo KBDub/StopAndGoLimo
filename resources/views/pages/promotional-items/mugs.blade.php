@@ -52,10 +52,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom branded promotional products and drinkware in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg',                         'alt' => 'Custom branded gifts and promotional items in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom promotional products and branded merchandise in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Branded merchandise and custom promotional gifts in Joliet and Will County Illinois'],
+            ['src' => '/images/promo-items/mugs/top5pct-custom-coffee-mugs-in-joliet.jpg', 'alt' => 'Custom branded promotional products and drinkware in Joliet Illinois'],
+            ['src' => '/images/promo-items/mugs/top5pct-custom-coffee-mugs.jpg',                         'alt' => 'Custom branded gifts and promotional items in Joliet Illinois'],
+            ['src' => '/images/promo-items/mugs/top5pct-custom-mugs-near-me.jpg',                                     'alt' => 'Custom promotional products and branded merchandise in Joliet Illinois'],
+            ['src' => '/images/promo-items/mugs/top5pct-custom-mugs.jpg',                                     'alt' => 'Branded merchandise and custom promotional gifts in Joliet and Will County Illinois'],
         ]"
         visible=2
     />
@@ -68,7 +68,7 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+        image="/images/promo-items/mugs/top5pct-custom-printed-mugs.jpg"
         alt="Custom branded mugs for businesses and events in Joliet Illinois"
         title="Coffee Mugs That Work for Your Brand"
     >
@@ -78,7 +78,7 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
+        image="/images/promo-items/mugs/top5pct-picture-on-mugs.jpg"
         alt="Custom mug orders and branded drinkware design process in Joliet Illinois"
         title="Easy Ordering, Fast Turnaround"
         imagePosition="right"
@@ -94,7 +94,7 @@
 
     <x-sections.card-detailed-info
         heading="Why Custom Mugs Are One of the Most Effective Promotional Products for Daily Brand Visibility"
-        image1="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+        image1="/images/promo-items/mugs/top5pct-printed-mugs.jpg"
         alt1="Custom branded mugs and promotional drinkware for businesses in Joliet and Will County Illinois"
     >
         <x-slot name="intro">

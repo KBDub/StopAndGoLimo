@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-ocean-viewz.jpg',      'alt' => 'Custom shaped stickers and branded decals printed in Joliet Illinois'],
-            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg',    'alt' => 'Custom die cut stickers for a sports organization in Joliet Illinois'],
-            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg',  'alt' => 'Custom die cut stickers for a restaurant in Joliet Illinois'],
-            ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg',           'alt' => 'Custom shaped product labels and die cut stickers in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-custom-stickers.jpg',      'alt' => 'Custom shaped stickers and branded decals printed in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-custom-glossy-stickers-in-joliet.jpg',    'alt' => 'Custom die cut stickers for a sports organization in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-custom-label-stickers.jpg',  'alt' => 'Custom die cut stickers for a restaurant in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-custom-shaped-stickers.jpg',           'alt' => 'Custom shaped product labels and die cut stickers in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg"
+        image="/images/stickers-decals/top5pct-diecut-stickers.jpg"
         alt="Custom shaped die cut stickers for a sports organization in Joliet Illinois"
         title="Die Cut to Any Shape"
     >
@@ -79,7 +79,7 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg"
+        image="/images/stickers-decals/top5pct-stickers-in-joliet.jpg"
         alt="Custom brand stickers for local businesses in Joliet and Will County Illinois"
         title="Weatherproof and Built to Last"
         imagePosition="right"

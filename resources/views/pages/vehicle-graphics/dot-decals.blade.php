@@ -53,9 +53,9 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/dot-decals/top5pct-banner-DOT-stickers-joliet-shorewood-channahon.jpg', 'alt' => 'DOT decals and USDOT compliance stickers for trucks in Joliet, Shorewood, and Channahon Illinois'],
-            ['src' => '/images/dot-decals/top5pct-DOT-stickers-joliet-shorewood-rockdale.jpg',         'alt' => 'USDOT number stickers and DOT compliance decals printed in Joliet, Shorewood, and Rockdale Illinois'],
-            ['src' => '/images/dot-decals/top5pct-dot-decals-joliet-shorewood-rockdale.jpg',           'alt' => 'Print and cut DOT decals and vinyl lettering for trucks in Joliet, Shorewood, and Rockdale Illinois'],
+            ['src' => '/images/dot-decals/top5pct-dot-decals-joliet.jpg', 'alt' => 'DOT decals and USDOT compliance stickers for trucks in Joliet, Shorewood, and Channahon Illinois'],
+            ['src' => '/images/dot-decals/top5pct-dot-semi-truck-decals.jpg',         'alt' => 'USDOT number stickers and DOT compliance decals printed in Joliet, Shorewood, and Rockdale Illinois'],
+            ['src' => '/images/dot-decals/top5pct-dot-truck-decals-joliet.jpg',           'alt' => 'Print and cut DOT decals and vinyl lettering for trucks in Joliet, Shorewood, and Rockdale Illinois'],
             ['src' => '/images/dot-decals/top5pct-trucking-logo-joliet-shorewood-crest-hill.jpg',      'alt' => 'Custom trucking company logo and truck branding graphics in Joliet, Shorewood, and Crest Hill Illinois'],
         ]"
         visible=2

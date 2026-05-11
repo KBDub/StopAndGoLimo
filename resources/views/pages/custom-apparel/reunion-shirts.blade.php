@@ -49,10 +49,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg', 'alt' => 'Custom family and class reunion shirts in Joliet and Shorewood Illinois'],
-            ['src' => '/images/reunion-shirts/toptpct-class-reunion-shirts-joliet-shorewood.jpg',                'alt' => 'Class reunion shirts printed in Joliet and Shorewood Illinois'],
-            ['src' => '/images/reunion-shirts/toptpct-family-reunion-shirts-joliet-plainfield.jpg',             'alt' => 'Custom family reunion shirts in Joliet and Plainfield Illinois'],
-            ['src' => '/images/reunion-shirts/toptpct-westinghouse-class-reunion-shirt-joliet-shorewood.jpg',   'alt' => 'Westinghouse class reunion shirts in Joliet and Shorewood Illinois'],
+            ['src' => '/images/reunion-shirts/top5pct-class-reunion-shirt.jpg', 'alt' => 'Custom family and class reunion shirts in Joliet and Shorewood Illinois'],
+            ['src' => '/images/reunion-shirts/top5pct-family-reunion-shirts-joliet.jpg',                'alt' => 'Class reunion shirts printed in Joliet and Shorewood Illinois'],
+            ['src' => '/images/reunion-shirts/top5pct-family-reunion-tshirts-in-joliet.jpg',             'alt' => 'Custom family reunion shirts in Joliet and Plainfield Illinois'],
+            ['src' => '/images/reunion-shirts/top5pct-group-shirts.jpg',   'alt' => 'Westinghouse class reunion shirts in Joliet and Shorewood Illinois'],
         ]"
         visible=2
     />
@@ -65,7 +65,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/reunion-shirts/toptpct-class-reunion-shirts-joliet-shorewood.jpg"
+            image="/images/reunion-shirts/top5pct-reunion-group-shirts.jpg"
             alt="Class reunion shirts printed in Joliet and Shorewood Illinois"
             title="Class Reunion Shirts"
         >
@@ -76,7 +76,7 @@
         </x-sections.card-image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/reunion-shirts/toptpct-westinghouse-class-reunion-shirt-joliet-shorewood.jpg"
+            image="/images/reunion-shirts/top5pct-reunion-shirts.jpg"
             alt="Westinghouse class reunion shirt printed in Joliet and Shorewood Illinois"
             title="School Alumni Shirts"
             imagePosition="right"

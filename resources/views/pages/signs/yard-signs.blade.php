@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg',  'alt' => 'Custom yard signs and lawn signs printed in Joliet, Shorewood, and Crest Hill Illinois'],
-            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet.jpg',                              'alt' => 'Custom yard signs for businesses and events in Joliet Illinois'],
-            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet-plainfied-new-lenox.jpg',          'alt' => 'Real estate and campaign yard signs in Joliet, Plainfield, and New Lenox Illinois'],
-            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet-shorewood-romeoville.jpg',         'alt' => 'Corrugated plastic yard signs printed in Joliet, Shorewood, and Romeoville Illinois'],
+            ['src' => '/images/yard-signs/top5pct-custom-yard-signs-joliet.jpg',  'alt' => 'Custom yard signs and lawn signs printed in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/yard-signs/top5pct-lawn-signs.jpg',                              'alt' => 'Custom yard signs for businesses and events in Joliet Illinois'],
+            ['src' => '/images/yard-signs/top5pct-yard-sign-joliet.jpg',          'alt' => 'Real estate and campaign yard signs in Joliet, Plainfield, and New Lenox Illinois'],
+            ['src' => '/images/yard-signs/top5pct-yard-signs-joliet.jpg',         'alt' => 'Corrugated plastic yard signs printed in Joliet, Shorewood, and Romeoville Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/yard-signs/top5pct-yard-signs-joliet.jpg"
+            image="/images/yard-signs/top5pct-yard-signs.jpg"
             alt="Custom yard signs printed in Joliet Illinois for business and event promotion"
             title="Yard Signs for Your Business"
         >

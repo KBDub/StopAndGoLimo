@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg',     'alt' => 'Custom car wraps and vinyl lettering in Joliet Illinois'],
-            ['src' => '/images/automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg',  'alt' => 'Professional vehicle wraps and vinyl lettering in Joliet and Shorewood Illinois'],
-            ['src' => '/images/automobile-graphics/top5pct-boat-decals-joliet-shorewood-crest-hill.jpg',     'alt' => 'Custom boat decals and marine vinyl graphics in Joliet, Shorewood, and Crest Hill Illinois'],
-            ['src' => '/images/automobile-graphics/top5pct-truck-decal-joliet-shorewood-rockdale.jpg',       'alt' => 'Custom truck decals and door graphics in Joliet, Shorewood, and Rockdale Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-car-wraps.jpg',     'alt' => 'Custom car wraps and vinyl lettering in Joliet Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-pickup-truck-graphics.jpg',  'alt' => 'Professional vehicle wraps and vinyl lettering in Joliet and Shorewood Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-trailer-decal-graphics.jpg',     'alt' => 'Custom boat decals and marine vinyl graphics in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/automobile-graphics/top5pct-trailer-decals.jpg',       'alt' => 'Custom truck decals and door graphics in Joliet, Shorewood, and Rockdale Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg"
+            image="/images/automobile-graphics/top5pct-van-graphics-decals.jpg"
             alt="Custom car wraps and vinyl lettering installed on a vehicle in Joliet and Shorewood Illinois"
             title="Car Wraps and Vinyl Lettering"
         >
@@ -79,7 +79,7 @@
         </x-sections.card-image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-crest-hill.jpg"
+            image="/images/automobile-graphics/top5pct-vecal-decals.jpg"
             alt="Commercial van vinyl lettering and car graphics installed in Joliet and Crest Hill Illinois"
             title="Commercial Van Lettering and Fleet Branding"
             imagePosition="right"
@@ -92,9 +92,9 @@
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
-            image1="/images/automobile-graphics/top5pct-vinyl-lettering-car-graphics-joliet-shorewood.jpg"
+            image1="/images/automobile-graphics/top5pct-vehicle-graphics.jpg"
             alt1="Vinyl lettering and car graphics on a vehicle in Joliet and Shorewood Illinois"
-            image2="/images/automobile-graphics/top5pct-truck-decal-joliet-shorewood-rockdale.jpg"
+            image2="/images/automobile-graphics/top5pct-vehicle-window-graphics-in-joliet.jpg"
             alt2="Custom truck decals and door graphics installed in Joliet, Shorewood, and Rockdale Illinois"
             title="Truck Graphics and Door Logos"
         >
@@ -104,7 +104,7 @@
         </x-sections.card-2image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/automobile-graphics/top5pct-boat-decals-joliet-shorewood-crest-hill.jpg"
+            image="/images/automobile-graphics/top5pct-vehicle-window-graphics-joliet.jpg"
             alt="Custom boat graphics and marine vinyl decals for boats in Joliet, Shorewood, and Crest Hill Illinois"
             title="Boat Graphics and Marine Vinyl"
         >

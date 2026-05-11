@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom screen printed shirts and apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg',                           'alt' => 'Custom screen printed apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg',                   'alt' => 'Custom screen printing for group apparel and uniforms in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom screen printed shirts made in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-screenprint-custom-shirts.jpg', 'alt' => 'Custom screen printed shirts and apparel in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-screenprinted-shirts-in-joliet.jpg',                           'alt' => 'Custom screen printed apparel in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-screenprinted-shirts-joliet.jpg',                   'alt' => 'Custom screen printing for group apparel and uniforms in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-screenprinting-shirts.jpg',                                     'alt' => 'Custom screen printed shirts made in Joliet Illinois'],
         ]"
         visible=2
     />

@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom dye sublimation apparel and all over print shirts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',                         'alt' => 'Custom all over print sublimation shirts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg',                     'alt' => 'Custom sublimation jerseys and performance wear printed in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom apparel and shirts made in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-dog-bandanas.jpg', 'alt' => 'Custom dye sublimation apparel and all over print shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-face-mask-sublimated.jpg',                         'alt' => 'Custom all over print sublimation shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-sublimated-towels.jpg',                     'alt' => 'Custom sublimation jerseys and performance wear printed in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-dye-sublimated-longsleeve-shirt-joliet.jpg',                                     'alt' => 'Custom apparel and shirts made in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
+        image="/images/custom-shirts/top5pct-dye-sublimation-shirts.jpg"
         alt="Dye sublimation all over print custom shirts in Joliet Illinois"
         title="Full-Color, All-Over Printing"
     >
@@ -79,7 +79,7 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
+        image="/images/custom-shirts/top5pct-sublimation-shirt-printer.jpg"
         alt="Custom sublimation jersey and performance wear printed in Joliet Illinois"
         title="Jerseys, Performance Wear, and More"
         imagePosition="right"
@@ -95,7 +95,7 @@
 
     <x-sections.card-detailed-info
         heading="Why Dye Sublimation Is the Best Choice for Full Color Custom Apparel"
-        image1="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+        image1="/images/custom-shirts/top5pct-sublimation-shirt.jpg"
         alt1="Custom dye sublimation all over print shirts and apparel in Joliet Illinois"
     >
         <x-slot name="intro">

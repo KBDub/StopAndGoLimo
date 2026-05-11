@@ -53,9 +53,9 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg', 'alt' => 'Custom branded table cloths and table covers for events in Joliet Illinois'],
-            ['src' => '/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg',                 'alt' => 'Custom table runners and table covers for trade shows in Joliet and Shorewood Illinois'],
-            ['src' => '/images/table-runners/top5pct-custom-table-cloth-joliet-will-county.jpg',               'alt' => 'Full color custom table cloths for events and businesses in Joliet Illinois'],
+            ['src' => '/images/table-runners/top5pct-custom-table-cloth.jpg', 'alt' => 'Custom branded table cloths and table covers for events in Joliet Illinois'],
+            ['src' => '/images/table-runners/top5pct-personalized-tablecloth-joliet.jpg',                 'alt' => 'Custom table runners and table covers for trade shows in Joliet and Shorewood Illinois'],
+            ['src' => '/images/table-runners/top5pct-table-cloths.jpg',               'alt' => 'Full color custom table cloths for events and businesses in Joliet Illinois'],
             ['src' => '/images/table-runners/top5pct-article-table-cloths-table-runners.jpg',                  'alt' => 'Custom branded table covers and table runners in Joliet and Will County Illinois'],
         ]"
         visible=2

@@ -53,7 +53,7 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg',                      'alt' => 'Custom rhinestone shirts and bling apparel in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-rhinestone-hoodies-joliet.jpg',                      'alt' => 'Custom rhinestone shirts and bling apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom celebration shirts and rhinestone apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',                         'alt' => 'Custom bling and sparkle shirts for events in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom rhinestone and specialty shirts made in Joliet Illinois'],

@@ -53,7 +53,7 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg',                   'alt' => 'Custom reflective shirts and high-visibility apparel in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-reflective-shirts-gold.jpg',                   'alt' => 'Custom reflective shirts and high-visibility apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom safety and reflective apparel for businesses in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',                               'alt' => 'Custom reflective and safety shirts for crews in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom high-visibility shirts and safety apparel in Joliet and Will County Illinois'],

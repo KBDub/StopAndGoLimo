@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg',     'alt' => 'Custom window signs and door graphics for businesses in Joliet Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg','alt' => 'Custom window decals and window graphics in Joliet, Shorewood, and Crest Hill Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg',     'alt' => 'Window clings and perforated vinyl for businesses in Joliet and Shorewood Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg',  'alt' => 'Custom window decals installed in Joliet, Shorewood, and Rockdale Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-business-window-signs.jpg',     'alt' => 'Custom window signs and door graphics for businesses in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-custom-window-signs.jpg','alt' => 'Custom window decals and window graphics in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-window-door-signs.jpg',     'alt' => 'Window clings and perforated vinyl for businesses in Joliet and Shorewood Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-window-signs-joliet-slammers.jpg',  'alt' => 'Custom window decals installed in Joliet, Shorewood, and Rockdale Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg"
+        image="/images/window-wall-floor-decals/top5pct-window-signs-joliet.jpg"
         alt="Custom window decals and window graphics for businesses in Joliet, Shorewood, and Crest Hill Illinois"
         title="Turn Your Windows Into Advertising Space"
     >

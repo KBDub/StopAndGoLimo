@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg',                                    'alt' => 'Custom DTF direct-to-film transfers printed in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom DTF transfers applied to shirts and apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-t-shirts-main.jpg',                                           'alt' => 'Full color DTF printed shirts in Joliet and Will County Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom DTF transfer shirts and apparel made in Joliet Illinois'],
+            ['src' => '/images/dtf-transfers/top5pct-custom-sweatshirts.jpg',                                    'alt' => 'Custom DTF direct-to-film transfers printed in Joliet Illinois'],
+            ['src' => '/images/dtf-transfers/top5pct-custom-shirt-with-picture.jpg', 'alt' => 'Custom DTF transfers applied to shirts and apparel in Joliet Illinois'],
+            ['src' => '/images/dtf-transfers/top5pct-custom-t-shirts-dtf.jpg',                                           'alt' => 'Full color DTF printed shirts in Joliet and Will County Illinois'],
+            ['src' => '/images/dtf-transfers/top5pct-dtf-hoodies-joliet.jpg',                                     'alt' => 'Custom DTF transfer shirts and apparel made in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -70,7 +70,7 @@
     <x-sections.dtf-pricing-section />
 
     <x-sections.card-image-with-text
-        image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
+        image="/images/dtf-transfers/top5pct-dtf-zip-up-hoodies.jpg"
         alt="Custom DTF direct-to-film transfers printed in Joliet Illinois"
         title="Full Color Transfers for Any Fabric"
     >

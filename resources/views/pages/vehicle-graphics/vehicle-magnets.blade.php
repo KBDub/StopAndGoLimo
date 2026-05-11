@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/vehicle-magnets/top5pct-banner-car-magnets-joliet-shorewood-crest-hill.jpg', 'alt' => 'Custom vehicle magnets and car door magnetic signs in Joliet, Shorewood, and Crest Hill Illinois'],
-            ['src' => '/images/vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg',               'alt' => 'Custom car magnets and truck magnetic signs printed in Joliet Illinois'],
-            ['src' => '/images/vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg',             'alt' => 'Full color vehicle magnets and removable car door signs in Joliet Illinois'],
-            ['src' => '/images/vehicle-magnets/top5pct-business-magnets-car-magnets-joliet.jpg',            'alt' => 'Custom business car magnets and magnetic vehicle signs printed in Joliet Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-automobile-magnets-joliet.jpg', 'alt' => 'Custom vehicle magnets and car door magnetic signs in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-car-magnets-joliet.jpg',               'alt' => 'Custom car magnets and truck magnetic signs printed in Joliet Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-car-magnets.jpg',             'alt' => 'Full color vehicle magnets and removable car door signs in Joliet Illinois'],
+            ['src' => '/images/vehicle-magnets/top5pct-car-sign-magnets-joliet.jpg',            'alt' => 'Custom business car magnets and magnetic vehicle signs printed in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,7 +69,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/vehicle-magnets/top5pct-car-magnets-truck-magnets-joliet.jpg"
+            image="/images/vehicle-magnets/top5pct-custom-car-magnets-in-joliet.jpg"
             alt="Custom car magnets and truck magnetic signs printed in Joliet Illinois"
             title="Removable Car Magnets for Business and Personal Vehicles"
         >
@@ -79,7 +79,7 @@
         </x-sections.card-image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg"
+            image="/images/vehicle-magnets/top5pct-custom-car-magnets.jpg"
             alt="Custom full color vehicle magnets and car door magnetic signs printed in Joliet Illinois"
             title="Full Color or Vinyl Cut: Choosing the Right Magnet"
             imagePosition="right"
@@ -92,9 +92,9 @@
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
-            image1="/images/vehicle-magnets/top5pct-business-magnets-car-magnets-joliet.jpg"
+            image1="/images/vehicle-magnets/top5pct-vehicle-magnets-joliet.jpg"
             alt1="Custom business car magnets and magnetic vehicle signs printed in Joliet Illinois"
-            image2="/images/vehicle-magnets/top5pct-large-magnets-magnets-near-me-joliet.jpg"
+            image2="/images/vehicle-magnets/top5pct-vehicle-magnets.jpg"
             alt2="Large format vehicle magnets and magnetic signs near Joliet Illinois"
             title="30 Mil Thickness, Die Cut Corners, and Weather Resistance"
         >

@@ -52,8 +52,8 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom branded promotional products and event giveaways in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-pattern-shirts-caps-hoodies-joliet.jpg',                      'alt' => 'Custom promotional items and branded event merchandise in Joliet Illinois'],
+            ['src' => '/images/promo-items/koozies/top5pct-can-koozies.jpg', 'alt' => 'Custom branded promotional products and event giveaways in Joliet Illinois'],
+            ['src' => '/images/promo-items/koozies/top5pct-custom-koozies.jpg',                      'alt' => 'Custom promotional items and branded event merchandise in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom branded giveaways and promotional products in Joliet and Will County Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Branded merchandise and custom koozies in Joliet Illinois'],
         ]"

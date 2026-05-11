@@ -49,10 +49,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg', 'alt' => 'Custom corporate shirts and uniforms in Joliet and Shorewood Illinois'],
-            ['src' => '/images/corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg',   'alt' => 'Custom embroidered polo shirts for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
-            ['src' => '/images/corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg',       'alt' => 'Custom branded corporate t-shirts in Joliet and Shorewood Illinois'],
-            ['src' => '/images/corporate-wear/toptpct-custom-hoodie-pullover-joliet-shorewood.jpg',          'alt' => 'Custom branded hoodies and pullovers for businesses in Joliet and Shorewood Illinois'],
+            ['src' => '/images/corporate-wear/top5pct-custom-apron-joliet.jpg', 'alt' => 'Custom corporate shirts and uniforms in Joliet and Shorewood Illinois'],
+            ['src' => '/images/corporate-wear/top5pct-custom-aprons-joliet.jpg',   'alt' => 'Custom embroidered polo shirts for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/corporate-wear/top5pct-custom-business-shirts.jpg',       'alt' => 'Custom branded corporate t-shirts in Joliet and Shorewood Illinois'],
+            ['src' => '/images/corporate-wear/top5pct-custom-pocket-shirt-joliet.jpg',          'alt' => 'Custom branded hoodies and pullovers for businesses in Joliet and Shorewood Illinois'],
         ]"
         visible=2
     />
@@ -65,7 +65,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg"
+            image="/images/corporate-wear/top5pct-landscaping-clothing-joliet.jpg"
             alt="Custom embroidered polo shirts for businesses in Joliet and Shorewood Illinois"
             title="Custom Polo Shirts"
         >
@@ -76,7 +76,7 @@
         </x-sections.card-image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/corporate-wear/toptpct-custom-button-up-shirt-joliet-shorewood.jpg"
+            image="/images/corporate-wear/top5pct-lawn-care-clothing.jpg"
             alt="Custom button up work shirts and uniforms printed in Joliet and Shorewood Illinois"
             title="Custom Work Uniforms"
             imagePosition="right"
@@ -90,7 +90,7 @@
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
-            image1="/images/corporate-wear/toptpct-custom-corporate-t-shirts-joliet-shorewood.jpg"
+            image1="/images/corporate-wear/top5pct-safety-work-gear-joliet.jpg"
             alt1="Custom corporate t shirts printed for businesses in Joliet and Shorewood Illinois"
             image2="/images/corporate-wear/toptpct-custom-hoodie-pullover-joliet-shorewood.jpg"
             alt2="Custom branded hoodies and pullovers printed for companies in Joliet and Shorewood Illinois"

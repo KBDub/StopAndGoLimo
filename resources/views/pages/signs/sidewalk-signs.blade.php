@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/sidewalk-signs/top5pct-banner-a-frame-sidewalk-signs-joliet-romeoville.jpg', 'alt' => 'Custom a frame sidewalk signs and sandwich boards in Joliet and Romeoville Illinois'],
-            ['src' => '/images/sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg',                   'alt' => 'Custom a frame sidewalk sign printed and built in Joliet Illinois'],
-            ['src' => '/images/sidewalk-signs/top5pct-sidewalk-a-frames-joliet-shorewood.jpg',              'alt' => 'A frame sidewalk signs displayed outside businesses in Joliet and Shorewood Illinois'],
-            ['src' => '/images/sidewalk-signs/top5pct-sidewalk-signs-joliet-shorewood-crest-hill.jpg',      'alt' => 'Durable a frame sidewalk signs in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-a-frame-sign.jpg', 'alt' => 'Custom a frame sidewalk signs and sandwich boards in Joliet and Romeoville Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-custom-a-frame-sidewalk-signs-joliet.jpg',                   'alt' => 'Custom a frame sidewalk sign printed and built in Joliet Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-sidewalk-sign.jpg',              'alt' => 'A frame sidewalk signs displayed outside businesses in Joliet and Shorewood Illinois'],
+            ['src' => '/images/sidewalk-signs/top5pct-sidewalk-signs-joliet.jpg',      'alt' => 'Durable a frame sidewalk signs in Joliet, Shorewood, and Crest Hill Illinois'],
         ]"
         visible=2
     />

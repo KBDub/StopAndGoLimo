@@ -53,7 +53,7 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg', 'alt' => 'Custom door signs and door graphics for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-door-signage.jpg', 'alt' => 'Custom door signs and door graphics for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg',    'alt' => 'Custom door graphics and window signs for businesses in Joliet Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg', 'alt' => 'Custom door vinyl and window decals in Joliet, Shorewood, and Rockdale Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg',    'alt' => 'Custom door clings and window graphics for businesses in Joliet and Shorewood Illinois'],

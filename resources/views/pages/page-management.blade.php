@@ -309,6 +309,99 @@
                 </div>
             </div>
 
+            {{-- ── Dropzone Component Family ───────────────────────────────────── --}}
+            <div class="mt-12 bg-white rounded-lg shadow-sm border border-linen-dark/20 overflow-hidden">
+                <div class="px-6 py-5 border-b border-linen-dark/20">
+                    <h2 class="text-lg font-bold text-charcoal flex items-center gap-2">
+                        <span class="w-3 h-3 bg-sunburst-full"></span>
+                        Dropzone Component Family
+                    </h2>
+                    <p class="text-sm text-charcoal-light mt-1 ml-5">
+                        These components use conditional prop-based rendering and cannot be detected by the dynamic scanner.
+                        The table below documents their actual page-level usage.
+                    </p>
+                </div>
+
+                {{-- Artwork vs DTF split --}}
+                <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-linen-dark/20">
+
+                    {{-- Artwork flow --}}
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-sm font-bold text-charcoal flex items-center gap-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-700 border border-emerald-200">Artwork flow</span>
+                        </h3>
+                        <p class="text-xs text-charcoal-light">
+                            Dispatches <code class="bg-linen px-1 py-0.5 rounded font-mono">open-contact-modal &#123; artwork: true, fileName &#125;</code>
+                            — opens the custom request wizard in artwork mode.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-start gap-3 p-3 bg-emerald-50 border border-emerald-200 rounded">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold text-charcoal font-mono">x-ui.artwork-dropzone</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Standalone dropzone. Used inside <code class="bg-white px-1 rounded font-mono">sections.cta-free-quote-banner</code> (default — all non-DTF pages).</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-emerald-50 border border-emerald-200 rounded">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 shrink-0"></span>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold text-charcoal font-mono">x-ui.banner-cta-artwork-dropzone</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Banner variant. Drop-in replacement for <code class="bg-white px-1 rounded font-mono">banner-cta-dtf-dropzone</code> on artwork / apparel pages.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- DTF flow --}}
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-sm font-bold text-charcoal flex items-center gap-2">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-700 border border-amber-200">DTF flow</span>
+                        </h3>
+                        <p class="text-xs text-charcoal-light">
+                            Dispatches <code class="bg-linen px-1 py-0.5 rounded font-mono">open-modal &#123; name: 'dtf-confirm' &#125;</code>
+                            — opens the DTF confirm modal, then the custom request wizard in DTF mode.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="flex items-start gap-3 p-3 bg-amber-50 border border-amber-200 rounded">
+                                <span class="w-2 h-2 rounded-full bg-amber-400 mt-1.5 shrink-0"></span>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold text-charcoal font-mono">x-ui.dtf-dropzone</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Standalone dropzone. Used inside <code class="bg-white px-1 rounded font-mono">sections.cta-free-quote-banner</code> only when <code class="bg-white px-1 rounded font-mono">type="dtf"</code> — DTF Transfers page only.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3 bg-amber-50 border border-amber-200 rounded">
+                                <span class="w-2 h-2 rounded-full bg-amber-400 mt-1.5 shrink-0"></span>
+                                <div class="min-w-0">
+                                    <p class="text-xs font-bold text-charcoal font-mono">x-ui.banner-cta-dtf-dropzone</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Banner variant. Used directly on DTF Transfers page (<code class="bg-white px-1 rounded font-mono">/custom-apparel/dtf-transfers</code>) at hero left and right positions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Flow legend --}}
+                <div class="px-6 py-4 border-t border-linen-dark/20 bg-linen-light/50">
+                    <h4 class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-3">Full modal flow</h4>
+                    <div class="flex flex-wrap items-center gap-2 text-xs">
+                        <span class="px-2.5 py-1 bg-emerald-100 text-emerald-700 border border-emerald-200 rounded font-mono font-medium">artwork-dropzone</span>
+                        <span class="text-charcoal-light">→</span>
+                        <span class="px-2.5 py-1 bg-white border border-linen-dark rounded font-mono font-medium text-charcoal">contact-modal</span>
+                        <span class="text-charcoal-light">→</span>
+                        <span class="px-2.5 py-1 bg-white border border-linen-dark rounded font-mono font-medium text-charcoal">custom-request-wizard (artwork mode)</span>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2 text-xs mt-2">
+                        <span class="px-2.5 py-1 bg-amber-100 text-amber-700 border border-amber-200 rounded font-mono font-medium">dtf-dropzone</span>
+                        <span class="text-charcoal-light">→</span>
+                        <span class="px-2.5 py-1 bg-white border border-linen-dark rounded font-mono font-medium text-charcoal">dtf-confirm-modal</span>
+                        <span class="text-charcoal-light">→</span>
+                        <span class="px-2.5 py-1 bg-white border border-linen-dark rounded font-mono font-medium text-charcoal">contact-modal</span>
+                        <span class="text-charcoal-light">→</span>
+                        <span class="px-2.5 py-1 bg-white border border-linen-dark rounded font-mono font-medium text-charcoal">custom-request-wizard (DTF mode)</span>
+                    </div>
+                </div>
+            </div>
+
             {{-- ── Color Legend ────────────────────────────────────────────────── --}}
             <div class="mt-12 bg-white rounded-lg shadow-sm border border-linen-dark/20 p-6">
                 <h2 class="text-lg font-bold text-charcoal mb-4">Color Legend</h2>

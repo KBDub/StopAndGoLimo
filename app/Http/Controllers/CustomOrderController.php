@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Actions\Cart\AddToCart;
 use App\Models\CustomOrderRequest;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Lunar\Models\Cart;
+use Lunar\Models\Channel;
+use Lunar\Models\Currency;
 use Lunar\Models\ProductVariant;
 
 class CustomOrderController extends Controller
@@ -50,23 +52,21 @@ class CustomOrderController extends Controller
     // ── DTF cart submission ──────────────────────────────────────────────────
 
     /**
-     * Resolves DTF transfer variants from the wizard payload, adds them to the
-     * Lunar cart via the existing AddToCart action, and records the submission.
+     * Resolves DTF transfer variants, adds them to the Lunar cart, and records
+     * the submission. Uses $request->session() directly to avoid Octane singleton
+     * pollution in Lunar's CartSessionManager.
      *
-     * Two payload shapes are handled:
+     * Two payload shapes:
      *
-     *  A. Pricing-table flow — dtfItems is a populated array:
-     *     Each item has { type, size, tier, price, quantity }.
+     *  A. Pricing-table flow — dtfItems populated:
+     *     Each item carries { type, size, tier, price, quantity }.
      *     SKU resolved from type + size via resolveDtfSku().
      *
-     *  B. Manual wizard flow — dtfItems is empty, dtfTypes/dtfQuantities used:
+     *  B. Manual wizard flow — dtfItems empty, dtfTypes/dtfQuantities present:
      *     dtfTypes:      { neckTag: bool, chestImage: bool, imageSize: bool }
-     *     dtfQuantities: { neckTag: { tier: '15 – 49 pcs' }, ... }
-     *     SKU resolved from type key via defaultSkuForType().
-     *     Quantity derived from tier label via tierMinQuantity().
-     *
-     * Accepts action = 'cart' | 'checkout'.
-     * Redirect to /checkout is handled client-side after this endpoint confirms success.
+     *     dtfQuantities: { neckTag: { tier: '15 – 49 pcs' }, … }
+     *     SKU resolved to the default size per type via defaultSkuForType().
+     *     Quantity from tier label via tierMinQuantity().
      */
     public function dtfCart(Request $request): JsonResponse
     {
@@ -84,6 +84,7 @@ class CustomOrderController extends Controller
             'dtfItems.*.quantity' => 'nullable|integer|min:1',
         ]);
 
+        // ── Save order record ────────────────────────────────────────────────
         $reference = 'T5P-DTF-' . strtoupper(Str::random(8));
 
         CustomOrderRequest::create([
@@ -97,37 +98,30 @@ class CustomOrderController extends Controller
             'submitted_at' => now(),
         ]);
 
-        $addToCart  = app(AddToCart::class);
-        $addedCount = 0;
-
-        $dtfItems = $request->input('dtfItems', []);
+        // ── Resolve items to add ─────────────────────────────────────────────
+        $itemsToAdd = [];   // [ [variantId, qty], … ]
+        $dtfItems   = $request->input('dtfItems', []);
 
         if (count($dtfItems) > 0) {
-            // ── Path A: Pricing-table flow ───────────────────────────────────
+            // Path A: user came from pricing table with specific sizes
             foreach ($dtfItems as $item) {
                 $sku = $this->resolveDtfSku(
                     (string) ($item['type'] ?? ''),
                     (string) ($item['size'] ?? '')
                 );
-
                 if (! $sku) {
                     continue;
                 }
-
                 $variant = ProductVariant::where('sku', $sku)->first();
-
                 if (! $variant) {
-                    logger()->warning("DTF cart (A): variant SKU not found — {$sku}");
+                    logger()->warning("DTF cart (A): SKU not found — {$sku}");
                     continue;
                 }
-
                 $qty = max(1, (int) ($item['quantity'] ?? $this->tierMinQuantity((string) ($item['tier'] ?? ''))));
-
-                $addToCart->execute($variant->id, $qty);
-                $addedCount++;
+                $itemsToAdd[] = [$variant->id, $qty];
             }
         } else {
-            // ── Path B: Manual wizard flow ───────────────────────────────────
+            // Path B: manual wizard flow — type + tier selected, no specific size
             $dtfTypes      = $request->input('dtfTypes', []);
             $dtfQuantities = $request->input('dtfQuantities', []);
 
@@ -135,27 +129,51 @@ class CustomOrderController extends Controller
                 if (empty($dtfTypes[$key])) {
                     continue;
                 }
-
                 $sku = $this->defaultSkuForType($key);
-
                 if (! $sku) {
                     continue;
                 }
-
                 $variant = ProductVariant::where('sku', $sku)->first();
-
                 if (! $variant) {
-                    logger()->warning("DTF cart (B): default variant SKU not found — {$sku}");
+                    logger()->warning("DTF cart (B): default SKU not found — {$sku}");
                     continue;
                 }
-
                 $tier = (string) ($dtfQuantities[$key]['tier'] ?? '');
-                $qty  = $this->tierMinQuantity($tier);
+                $itemsToAdd[] = [$variant->id, $this->tierMinQuantity($tier)];
+            }
+        }
 
-                $addToCart->execute($variant->id, $qty);
+        // ── Get / create Lunar cart via request session directly ─────────────
+        // We intentionally bypass CartSession (Lunar's singleton manager) here
+        // because in Octane/FrankenPHP the singleton's cached $this->cart and
+        // injected SessionManager can be stale from a previous worker request,
+        // causing the wrong session to be written or the session write to be
+        // silently dropped. Using $request->session() is always bound to the
+        // current HTTP request's session regardless of worker state.
+        $cartId = $request->session()->get('lunar_cart');
+        $cart   = $cartId ? Cart::with([])->find($cartId) : null;
+
+        if (! $cart || $cart->hasCompletedOrders()) {
+            $cart = Cart::create([
+                'currency_id' => Currency::getDefault()->id,
+                'channel_id'  => Channel::getDefault()->id,
+            ]);
+        }
+
+        // ── Add items ────────────────────────────────────────────────────────
+        $addedCount = 0;
+
+        foreach ($itemsToAdd as [$variantId, $qty]) {
+            $variant = ProductVariant::find($variantId);
+            if ($variant) {
+                $cart->add($variant, max(1, min($qty, 9999)));
                 $addedCount++;
             }
         }
+
+        // ── Persist cart ID to session ───────────────────────────────────────
+        $request->session()->put('lunar_cart', $cart->id);
+        $request->session()->save();
 
         return response()->json([
             'success'    => true,
@@ -168,9 +186,8 @@ class CustomOrderController extends Controller
 
     /**
      * Derives the canonical DTF variant SKU from a human-readable type + size pair.
-     * Used for Path A (pricing-table flow) where the user selected a specific size.
+     * Used for Path A where the user selected a specific size from the pricing table.
      *
-     * Mapping matches the SKUs written by DtfProductSeeder:
      *   'Neck Tags'          + '2″ × 2″'         → 'DTF-NECK-2X2'
      *   'Left / Right Chest' + '4″ × 3″'         → 'DTF-CHEST-4X3'
      *   'Image Sizes'        + '10″ × 10″ (lg)'  → 'DTF-IMG-10X10LG'
@@ -199,10 +216,9 @@ class CustomOrderController extends Controller
     }
 
     /**
-     * Returns the default (smallest/most common) variant SKU for a given DTF type key.
-     * Used for Path B (manual wizard flow) where no specific size was chosen.
-     *
-     * The team will confirm exact sizes when fulfilling the CustomOrderRequest record.
+     * Returns the default (smallest/most common) variant SKU for a DTF type key.
+     * Used for Path B where no specific size was chosen during the wizard.
+     * The team confirms exact sizes when fulfilling the CustomOrderRequest record.
      */
     private function defaultSkuForType(string $key): string
     {
@@ -215,8 +231,8 @@ class CustomOrderController extends Controller
     }
 
     /**
-     * Returns the minimum quantity for a given tier label string.
-     * Used as cart quantity when no explicit per-item count was provided.
+     * Returns the minimum quantity for a tier label string.
+     * Used as cart quantity when no explicit per-item count is present.
      */
     private function tierMinQuantity(string $tier): int
     {

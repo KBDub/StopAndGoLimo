@@ -2,8 +2,15 @@
  | Component  : x-ui.contact-modal
  | Location   : resources/views/components/ui/contact-modal.blade.php
  |
- | Anchored FAB (bottom-right) that opens a branded contact/quote form modal.
- | Drop anywhere in the layout — renders outside the normal flow via fixed positioning.
+ | Anchored FAB (bottom-right) that opens a "What can we help you with?" picker modal.
+ | Choosing an option dispatches directly to the appropriate flow — no contact info
+ | collected here:
+ |
+ |   Custom Apparel Request  → custom-request-wizard (dtfMode: false)
+ |   DTF Transfers           → custom-request-wizard (dtfMode: true, no contact prefill)
+ |   Send Us a Message       → x-ui.send-message-modal
+ |
+ | x-ui.send-message-modal is bundled at the bottom of this file — no separate include needed.
  |
  | ── PROPS ───────────────────────────────────────────────────────────────────
  |   buttonLabel   FAB label text         (default: "Contact Us Now")
@@ -12,9 +19,9 @@
  |   logoSrc       logo image path        (default: /images/logos/top5-logo.gif)
  |   logoAlt       logo alt text          (default: "Top 5 Percent")
  |
- | ── USAGE ───────────────────────────────────────────────────────────────────
- |   <x-ui.contact-modal />
- |   <x-ui.contact-modal button-label="Get a Quote" modal-title="Request Pricing" />
+ | ── EVENTS ───────────────────────────────────────────────────────────────────
+ |   open-contact-modal  { dtf: true, fileName: 'name.png' }  → bypasses picker, launches DTF wizard directly
+ |   open-contact-modal  {}                                    → opens picker
 --}}
 
 @props([
@@ -28,101 +35,77 @@
 <div
     x-data="{
         open: false,
-        sent: false,
-        error: false,
-        loading: false,
-        orderType: '',
         dtfFileName: '',
-        emailError: false,
-        firstName: '',
-        lastName: '',
-        cmPhone: '',
-        cmEmail: '',
-        contactMessage: '',
 
-        get contactReady() {
-            return this.firstName.trim().length > 0
-                && this.lastName.trim().length > 0
-                && this.cmPhone.replace(/\D/g,'').length >= 10
-                && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.cmEmail)
-                && !this.emailError;
-        },
-        get formReady() {
-            return this.contactReady && this.contactMessage.trim().length > 0;
-        },
-
-        init() {
-            this.$watch('contactReady', (val) => {
-                if (val && this.orderType !== '') this.launchWizard();
-            });
-        },
         openModal() {
             this.open = true;
-            this.orderType = '';
-            this.dtfFileName = '';
             document.body.style.overflow = 'hidden';
         },
-        closeModal() { this.open = false; document.body.style.overflow = ''; },
-        launchWizard() {
+        closeModal() {
+            this.open = false;
+            document.body.style.overflow = '';
+        },
+        choose(type) {
+            const fileName = this.dtfFileName;
+            const items = (typeof Alpine !== 'undefined' && Alpine.store && Alpine.store('dtfCart'))
+                ? Alpine.store('dtfCart').items.slice()
+                : [];
+            this.closeModal();
+            this.$nextTick(() => {
+                if (type === 'message') {
+                    window.dispatchEvent(new CustomEvent('open-send-message-modal'));
+                    return;
+                }
+                window.dispatchEvent(new CustomEvent('open-modal', {
+                    detail: {
+                        name: 'custom-request-wizard',
+                        prefill: {
+                            name:        '',
+                            email:       '',
+                            phone:       '',
+                            dtfMode:     type === 'dtf',
+                            dtfFileName: type === 'dtf' ? fileName : '',
+                            dtfItems:    type === 'dtf' ? items : [],
+                        }
+                    }
+                }));
+            });
+        },
+        launchDtfDirect(fileName) {
+            const items = (typeof Alpine !== 'undefined' && Alpine.store && Alpine.store('dtfCart'))
+                ? Alpine.store('dtfCart').items.slice()
+                : [];
             this.closeModal();
             this.$nextTick(() => {
                 window.dispatchEvent(new CustomEvent('open-modal', {
                     detail: {
                         name: 'custom-request-wizard',
                         prefill: {
-                            name:        (this.firstName.trim() + ' ' + this.lastName.trim()).trim(),
-                            email:       this.cmEmail,
-                            phone:       this.cmPhone,
-                            dtfMode:     this.orderType === 'dtf',
-                            dtfFileName: this.dtfFileName,
-                            dtfItems:    Alpine.store('dtfCart').items.slice()
+                            name: '', email: '', phone: '',
+                            dtfMode: true,
+                            dtfFileName: fileName,
+                            dtfItems: items,
                         }
                     }
                 }));
             });
         },
-        selectOrderType(type) {
-            this.orderType = type;
-            if (this.contactReady) this.launchWizard();
-        },
-
-        async submit(form) {
-            this.loading = true;
-            this.error   = false;
-            try {
-                const res = await fetch('/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': document.querySelector('meta[name=csrf-token]')?.content ?? '',
-                    },
-                    body: JSON.stringify(Object.fromEntries(new FormData(form))),
-                });
-                this.sent = res.ok;
-                if (!res.ok) this.error = true;
-            } catch {
-                this.error = true;
-            } finally {
-                this.loading = false;
-                if (this.sent) setTimeout(() => this.closeModal(), 3000);
-            }
-        },
     }"
     @keydown.escape.window="if (open) closeModal()"
     @open-contact-modal.window="
-        openModal();
         const _d = $event.detail || {};
         if (_d.dtf) {
             dtfFileName = _d.fileName || '';
-            orderType   = 'dtf';
-            if (contactReady) launchWizard();
+            launchDtfDirect(dtfFileName);
+        } else {
+            dtfFileName = '';
+            openModal();
         }
     "
 >
     {{-- ── Floating Action Button ─────────────────────────────────────────── --}}
     <div class="fixed bottom-6 right-6 z-[9990]">
         <div class="relative">
-            {{-- Pulse halo --}}
             <span
                 class="absolute inset-0 rounded-full bg-sunburst opacity-50 animate-ping"
                 aria-hidden="true"
@@ -164,7 +147,7 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full max-w-[34rem] max-h-[92dvh] bg-white shadow-2xl overflow-y-auto overscroll-contain"
+            class="relative w-full max-w-[34rem] bg-white shadow-2xl overflow-hidden"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
@@ -197,7 +180,7 @@
                     type="button"
                     class="flex items-center justify-center w-8 h-8 flex-shrink-0 -mt-0.5 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
                     @click="closeModal()"
-                    aria-label="Close contact form"
+                    aria-label="Close"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
@@ -207,189 +190,79 @@
                 </button>
             </div>
 
-            {{-- Success state --}}
-            <div x-show="sent" class="px-6 py-10 text-center">
-                <div class="flex items-center justify-center w-14 h-14 rounded-full bg-success/10 mx-auto mb-4">
-                    <svg class="w-7 h-7 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="20 6 9 17 4 12"/>
-                    </svg>
+            {{-- Body: picker --}}
+            <div class="px-6 py-7">
+                <p class="text-base font-semibold text-charcoal text-center mb-1">What can we help you with?</p>
+                <p class="text-xs text-charcoal-light text-center mb-5">Choose an option to get started</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+
+                    {{-- Custom Apparel Request --}}
+                    <button
+                        type="button"
+                        @click="choose('apparel')"
+                        class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full"
+                    >
+                        <span
+                            class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 border-charcoal-lighter group-hover:border-sunburst transition-colors duration-150"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="flex flex-col gap-0.5">
+                            <span class="text-sm font-semibold text-charcoal leading-tight">Custom Apparel Request</span>
+                            <span class="text-xs text-charcoal-light">Shirts, hoodies, hats, and more</span>
+                        </span>
+                    </button>
+
+                    {{-- DTF Transfers --}}
+                    <button
+                        type="button"
+                        @click="choose('dtf')"
+                        class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full"
+                    >
+                        <span
+                            class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 border-charcoal-lighter group-hover:border-sunburst transition-colors duration-150"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="flex flex-col gap-0.5">
+                            <span class="text-sm font-semibold text-charcoal leading-tight">DTF Transfers</span>
+                            <span class="text-xs text-charcoal-light">Heat-transfer prints ready to apply</span>
+                        </span>
+                    </button>
+
+                    {{-- Send Us a Message — centered below the two-column row --}}
+                    <div class="sm:col-span-2 flex justify-center">
+                        <button
+                            type="button"
+                            @click="choose('message')"
+                            class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full sm:max-w-[calc(50%-0.375rem)]"
+                        >
+                            <span
+                                class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 border-charcoal-lighter group-hover:border-sunburst transition-colors duration-150"
+                                aria-hidden="true"
+                            ></span>
+                            <span class="flex flex-col gap-0.5">
+                                <span class="text-sm font-semibold text-charcoal leading-tight">Send Us a Message</span>
+                                <span class="text-xs text-charcoal-light">Questions, pricing, or anything else</span>
+                            </span>
+                        </button>
+                    </div>
+
                 </div>
-                <h3 class="text-xl font-bold text-charcoal mb-2">Message Sent!</h3>
-                <p class="text-charcoal-light text-sm">We'll get back to you within one business day. This window will close automatically.</p>
             </div>
 
-            {{-- Form --}}
-            <form
-                x-show="!sent"
-                @submit.prevent="submit($el)"
-                class="px-6 py-5 space-y-4"
-                novalidate
-            >
-                {{-- Error banner --}}
-                <div x-show="error" class="flex items-center gap-2 px-4 py-3 bg-error/10 text-error text-sm font-medium">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                         stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-                    </svg>
-                    Something went wrong. Please try again or call us at (815) 349-8600.
-                </div>
-
-                {{-- ── Row 1: First Name + Last Name ────────────────────── --}}
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label for="contact-first-name" class="block text-sm font-semibold text-charcoal mb-1">First Name <span class="text-error">*</span></label>
-                        <input
-                            id="contact-first-name"
-                            name="first_name"
-                            type="text"
-                            required
-                            autocomplete="given-name"
-                            placeholder="First name"
-                            x-model="firstName"
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                        >
-                    </div>
-                    <div>
-                        <label for="contact-last-name" class="block text-sm font-semibold text-charcoal mb-1">Last Name <span class="text-error">*</span></label>
-                        <input
-                            id="contact-last-name"
-                            name="last_name"
-                            type="text"
-                            required
-                            autocomplete="family-name"
-                            placeholder="Last name"
-                            x-model="lastName"
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                        >
-                    </div>
-                </div>
-
-                {{-- ── Row 2: Phone + Email ──────────────────────────────── --}}
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label for="contact-phone" class="block text-sm font-semibold text-charcoal mb-1">Phone <span class="text-error">*</span></label>
-                        <input
-                            id="contact-phone"
-                            name="phone"
-                            type="tel"
-                            required
-                            autocomplete="tel"
-                            placeholder="(815) 000-0000"
-                            maxlength="14"
-                            :value="cmPhone"
-                            @input="
-                                let d = $el.value.replace(/\D/g,'').substring(0,10);
-                                if (d.length >= 7)      $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3,6) + '-' + d.substring(6);
-                                else if (d.length >= 4) $el.value = '(' + d.substring(0,3) + ') ' + d.substring(3);
-                                else if (d.length >= 1) $el.value = '(' + d;
-                                else                    $el.value = '';
-                                cmPhone = $el.value;
-                            "
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                        >
-                    </div>
-                    <div>
-                        <label for="contact-email" class="block text-sm font-semibold text-charcoal mb-1">Email <span class="text-error">*</span></label>
-                        <input
-                            id="contact-email"
-                            name="email"
-                            type="email"
-                            required
-                            autocomplete="email"
-                            placeholder="you@example.com"
-                            x-model="cmEmail"
-                            @input="emailError = cmEmail.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cmEmail)"
-                            @blur="emailError = cmEmail.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cmEmail)"
-                            :class="emailError ? 'border-error ring-1 ring-error/40 focus:border-error focus:ring-error/40' : 'border-linen-dark focus:border-sunburst focus:ring-1 focus:ring-sunburst/50'"
-                            class="w-full px-3 py-2.5 text-sm border focus:outline-none bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
-                        >
-                        <p x-show="emailError" x-cloak class="mt-1 text-xs text-error font-medium">Please enter a valid email address.</p>
-                    </div>
-                </div>
-
-                {{-- ── Order Type Selection ─────────────────────────────────── --}}
-                <div class="border-t border-b border-linen-dark py-3 space-y-2.5">
-                    <p class="text-sm font-semibold text-charcoal text-center">What can we help you with?</p>
-                    <div class="grid grid-cols-2 gap-2">
-                        <label
-                            class="flex items-center gap-2.5 px-4 py-3 border cursor-pointer transition-colors duration-150"
-                            :class="orderType === 'apparel'
-                                ? 'border-sunburst bg-sunburst/5'
-                                : (!contactReady ? 'border-linen-dark bg-linen-light opacity-50' : 'border-linen-dark bg-white hover:border-sunburst/40')"
-                        >
-                            <input type="radio" name="cm-order-type" value="apparel"
-                                :disabled="!contactReady"
-                                :checked="orderType === 'apparel'"
-                                @change="selectOrderType('apparel')"
-                                class="w-4 h-4 flex-shrink-0 accent-sunburst">
-                            <span class="text-sm font-semibold text-charcoal leading-tight">Custom Apparel</span>
-                        </label>
-                        <label
-                            class="flex items-center gap-2.5 px-4 py-3 border cursor-pointer transition-colors duration-150"
-                            :class="orderType === 'dtf'
-                                ? 'border-sunburst bg-sunburst/5'
-                                : (!contactReady ? 'border-linen-dark bg-linen-light opacity-50' : 'border-linen-dark bg-white hover:border-sunburst/40')"
-                        >
-                            <input type="radio" name="cm-order-type" value="dtf"
-                                :disabled="!contactReady"
-                                :checked="orderType === 'dtf'"
-                                @change="selectOrderType('dtf')"
-                                class="w-4 h-4 flex-shrink-0 accent-sunburst">
-                            <span class="text-sm font-semibold text-charcoal leading-tight">DTF Transfers</span>
-                        </label>
-                    </div>
-                    <p class="text-xs text-charcoal-light text-center" x-show="!contactReady">Complete your contact info above to select</p>
-                    <p class="text-xs text-sunburst-dark font-medium text-center" x-show="contactReady && orderType !== ''" x-cloak>Ready — launching wizard…</p>
-                    {{-- DTF file attached indicator --}}
-                    <div x-show="dtfFileName" x-cloak
-                         class="flex items-center gap-2 px-3 py-2 bg-sunburst/10 border border-sunburst/30 text-xs text-charcoal">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 text-azure" viewBox="0 0 64 64" aria-hidden="true">
-                            <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z" fill="#4A90D9" opacity="0.85"/>
-                            <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
-                        </svg>
-                        <span><span class="font-semibold">DTF file attached:</span> <span x-text="dtfFileName"></span></span>
-                    </div>
-                </div>
-
-                {{-- ── What can we help you with? ───────────────────────── --}}
-                <div>
-                    <label for="contact-message" class="block text-sm font-semibold text-charcoal mb-1">What can we help you with? <span class="text-error">*</span></label>
-                    <textarea
-                        id="contact-message"
-                        name="message"
-                        required
-                        rows="4"
-                        x-model="contactMessage"
-                        placeholder="Tell us about your project — product type, quantity, deadline, etc."
-                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
-                    ></textarea>
-                </div>
-
-                {{-- Send Message — only when no order type is selected --}}
-                <button
-                    x-show="orderType === ''"
-                    type="submit"
-                    :disabled="loading || !formReady"
-                    class="w-full py-3 px-6 bg-gold-gradient text-charcoal font-semibold text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                    <span x-show="!loading">Send Message</span>
-                    <span x-show="loading" class="flex items-center justify-center gap-2">
-                        <svg class="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
-                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
-                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
-                        </svg>
-                        Sending…
-                    </span>
-                </button>
-            </form>
-
             {{-- Footer micro-text --}}
-            <div x-show="!sent" class="px-6 pb-4 pt-1 text-center text-xs text-charcoal-lighter border-t border-linen-dark">
-                <span class="text-sunburst-dark font-semibold">🎖 Veteran-Owned</span>
+            <div class="px-6 pb-5 pt-0 text-center text-xs text-charcoal-lighter border-t border-linen-dark">
+                <span class="font-semibold text-charcoal-light">Veteran-Owned</span>
                 &nbsp;&middot;&nbsp; Proudly Serving Joliet, IL &nbsp;&middot;&nbsp; No spam, ever.
             </div>
 
         </div>{{-- /panel --}}
     </div>{{-- /overlay --}}
 </div>
+
+{{-- x-ui.send-message-modal is bundled here — no separate include needed --}}
+<x-ui.send-message-modal
+    :logo-src="$logoSrc"
+    :logo-alt="$logoAlt"
+    :modal-subtitle="$modalSubtitle"
+/>

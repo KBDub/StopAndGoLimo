@@ -72,9 +72,9 @@ class CustomOrderController extends Controller
     {
         $request->validate([
             'action'              => 'required|in:cart,checkout',
-            'contactName'         => 'required|string|max:255',
-            'contactEmail'        => 'required|email|max:255',
-            'contactPhone'        => 'required|string|max:50',
+            'contactName'         => 'nullable|string|max:255',
+            'contactEmail'        => 'nullable|email|max:255',
+            'contactPhone'        => 'nullable|string|max:50',
             'dtfItems'            => 'nullable|array',
             'dtfItems.*.type'     => 'nullable|string|max:100',
             'dtfItems.*.size'     => 'nullable|string|max:50',

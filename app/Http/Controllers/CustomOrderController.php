@@ -53,6 +53,18 @@ class CustomOrderController extends Controller
      * Resolves DTF transfer variants from the wizard payload, adds them to the
      * Lunar cart via the existing AddToCart action, and records the submission.
      *
+     * Two payload shapes are handled:
+     *
+     *  A. Pricing-table flow — dtfItems is a populated array:
+     *     Each item has { type, size, tier, price, quantity }.
+     *     SKU resolved from type + size via resolveDtfSku().
+     *
+     *  B. Manual wizard flow — dtfItems is empty, dtfTypes/dtfQuantities used:
+     *     dtfTypes:      { neckTag: bool, chestImage: bool, imageSize: bool }
+     *     dtfQuantities: { neckTag: { tier: '15 – 49 pcs' }, ... }
+     *     SKU resolved from type key via defaultSkuForType().
+     *     Quantity derived from tier label via tierMinQuantity().
+     *
      * Accepts action = 'cart' | 'checkout'.
      * Redirect to /checkout is handled client-side after this endpoint confirms success.
      */
@@ -88,27 +100,61 @@ class CustomOrderController extends Controller
         $addToCart  = app(AddToCart::class);
         $addedCount = 0;
 
-        foreach ($request->input('dtfItems', []) as $item) {
-            $sku = $this->resolveDtfSku(
-                (string) ($item['type'] ?? ''),
-                (string) ($item['size'] ?? '')
-            );
+        $dtfItems = $request->input('dtfItems', []);
 
-            if (! $sku) {
-                continue;
+        if (count($dtfItems) > 0) {
+            // ── Path A: Pricing-table flow ───────────────────────────────────
+            foreach ($dtfItems as $item) {
+                $sku = $this->resolveDtfSku(
+                    (string) ($item['type'] ?? ''),
+                    (string) ($item['size'] ?? '')
+                );
+
+                if (! $sku) {
+                    continue;
+                }
+
+                $variant = ProductVariant::where('sku', $sku)->first();
+
+                if (! $variant) {
+                    logger()->warning("DTF cart (A): variant SKU not found — {$sku}");
+                    continue;
+                }
+
+                $qty = max(1, (int) ($item['quantity'] ?? $this->tierMinQuantity((string) ($item['tier'] ?? ''))));
+
+                $addToCart->execute($variant->id, $qty);
+                $addedCount++;
             }
+        } else {
+            // ── Path B: Manual wizard flow ───────────────────────────────────
+            $dtfTypes      = $request->input('dtfTypes', []);
+            $dtfQuantities = $request->input('dtfQuantities', []);
 
-            $variant = ProductVariant::where('sku', $sku)->first();
+            foreach (['neckTag', 'chestImage', 'imageSize'] as $key) {
+                if (empty($dtfTypes[$key])) {
+                    continue;
+                }
 
-            if (! $variant) {
-                logger()->warning("DTF cart: variant SKU not found — {$sku}");
-                continue;
+                $sku = $this->defaultSkuForType($key);
+
+                if (! $sku) {
+                    continue;
+                }
+
+                $variant = ProductVariant::where('sku', $sku)->first();
+
+                if (! $variant) {
+                    logger()->warning("DTF cart (B): default variant SKU not found — {$sku}");
+                    continue;
+                }
+
+                $tier = (string) ($dtfQuantities[$key]['tier'] ?? '');
+                $qty  = $this->tierMinQuantity($tier);
+
+                $addToCart->execute($variant->id, $qty);
+                $addedCount++;
             }
-
-            $qty = max(1, (int) ($item['quantity'] ?? $this->tierMinQuantity((string) ($item['tier'] ?? ''))));
-
-            $addToCart->execute($variant->id, $qty);
-            $addedCount++;
         }
 
         return response()->json([
@@ -122,6 +168,7 @@ class CustomOrderController extends Controller
 
     /**
      * Derives the canonical DTF variant SKU from a human-readable type + size pair.
+     * Used for Path A (pricing-table flow) where the user selected a specific size.
      *
      * Mapping matches the SKUs written by DtfProductSeeder:
      *   'Neck Tags'          + '2″ × 2″'         → 'DTF-NECK-2X2'
@@ -152,8 +199,24 @@ class CustomOrderController extends Controller
     }
 
     /**
+     * Returns the default (smallest/most common) variant SKU for a given DTF type key.
+     * Used for Path B (manual wizard flow) where no specific size was chosen.
+     *
+     * The team will confirm exact sizes when fulfilling the CustomOrderRequest record.
+     */
+    private function defaultSkuForType(string $key): string
+    {
+        return match ($key) {
+            'neckTag'    => 'DTF-NECK-2X2',
+            'chestImage' => 'DTF-CHEST-4X3',
+            'imageSize'  => 'DTF-IMG-5X5',
+            default      => '',
+        };
+    }
+
+    /**
      * Returns the minimum quantity for a given tier label string.
-     * Used as a sensible fallback when no explicit quantity is passed.
+     * Used as cart quantity when no explicit per-item count was provided.
      */
     private function tierMinQuantity(string $tier): int
     {

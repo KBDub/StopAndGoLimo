@@ -14,7 +14,7 @@ class AddToCart
 {
     public function execute(int $variantId, int $quantity = 1): Cart
     {
-        $quantity = max(1, min($quantity, 99));
+        $quantity = max(1, min($quantity, 9999));
 
         $variant = ProductVariant::findOrFail($variantId);
 

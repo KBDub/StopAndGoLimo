@@ -743,53 +743,241 @@ One modal that handles the DTF path's final cart/checkout choice. Bundled automa
 ## Order Action Modal — `x-ui.order-action-modal`
 
 **File:** `resources/views/components/ui/order-action-modal.blade.php`
-**Opened by:** The wizard's `finish()` method — DTF path only. Dispatched automatically after the wizard closes.
-**Trigger event:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'order-action-modal', payload: buildPayload() } }))`
+**Opened by:** The wizard's `finish()` method — DTF path only. Dispatched automatically 220 ms after the wizard closes (to allow the close animation to finish before the modal opens).
+**Trigger event:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'order-action-modal', payload: buildPayload(), wizardStep: N, wizardTotalSteps: M } }))`
 
 ### Purpose
 
-Final step of the DTF order path. Shown after the wizard closes, it presents the customer with two clear choices: save the transfer to their cart and keep shopping, or go directly to checkout. On confirm, it calls `/custom-order/dtf-cart` to add the Lunar product variant(s) to the cart session and records the submission.
+Final step of the DTF order path. Shown after the wizard closes, it presents the customer with two clear choices: save the transfer to their cart and keep shopping, or go directly to checkout. On confirm, it POSTs to `/custom-order/dtf-cart`, which resolves Lunar product variants from the wizard payload, adds them to the cart, saves the session, and records the submission to `custom_order_requests`.
 
-### Content
+---
 
-| Element | Description |
+### UI / Content
+
+| Element | Detail |
 |---|---|
-| Header | "DTF Transfers" eyebrow label + "How would you like to proceed?" heading + ✕ close button |
-| Order summary | Iterates over `payload.dtfItems` — shows each transfer type, size, tier, and price per piece. Falls back to filename display when no structured items are present. |
-| Radio: Add to Cart | "Add to Your Cart" — save and keep shopping |
-| Radio: Proceed to Checkout | "Proceed to Checkout" — complete order now |
-| Error bar | Shown inline if the POST to `/custom-order/dtf-cart` fails |
-| Footer | "Cancel" (secondary) + dynamic CTA: "Add to Cart" or "Proceed to Checkout →" (primary, disabled until radio selected) |
+| Header | Custom `$header` slot — linen background, 2px sunburst border-bottom, matching the wizard step header exactly. Shows "Cart or Checkout" heading, step counter ("Step N+1 of M+2 · DTF Transfers"), and ✕ close. |
+| Order summary | Rendered only when `hasSummary` is true. When `dtfItems.length > 0`, iterates each item and shows type/size on one line and tier/price on the next. When no structured items are present but `dtfFileName` is set, shows a file icon and the filename. |
+| Radio: Add to Cart | `value="cart"` — "Add to Your Cart — save this transfer to your cart and keep shopping." |
+| Radio: Proceed to Checkout | `value="checkout"` — "Proceed to Checkout — go directly to checkout and complete your order now." |
+| Inline error | `x-show="error"` — shown below the radios if the server returns a non-2xx response or the fetch throws. |
+| Footer: ← Back | Raw `<button>` that dispatches `close-modal` for this modal and then fires `reopen-wizard` on `window`. The wizard listens for `@reopen-wizard.window` and calls its own `reopen()` method, which re-opens at the preserved step without resetting state. |
+| Footer: primary CTA | `x-ui.button-modal-primary` — disabled until a radio is selected. Label cycles: "Confirm" (no selection) → "Add to Cart" (cart selected) → "Proceed to Checkout →" (checkout selected) → "Processing…" (submitting). |
 
-### Endpoint
+**CSRF:** The CSRF token is baked into the `x-data` object at render time as `_csrf: '{{ csrf_token() }}'`. It is sent as the `X-CSRF-TOKEN` header on the fetch POST. There is no `<meta name="csrf-token">` tag in any layout — this inline bake is the required pattern for all DTF/modal fetch calls.
 
-**POST `/custom-order/dtf-cart`** — handled by `CustomOrderController::dtfCart()`
+---
 
-| Field | Type | Description |
+### Alpine state (`x-data`)
+
+| Property | Default | Description |
 |---|---|---|
-| `action` | `cart` \| `checkout` | User's choice |
-| `contactName` | string | From wizard state |
-| `contactEmail` | string | From wizard state |
-| `contactPhone` | string | From wizard state |
-| `dtfItems` | array | Each item: `{ type, size, tier, price, quantity?, fileName }` |
+| `_csrf` | Blade-baked `{{ csrf_token() }}` | Sent as `X-CSRF-TOKEN` header on POST |
+| `choice` | `''` | `'cart'` or `'checkout'` — drives button state and POST body |
+| `submitting` | `false` | True while fetch is in-flight; disables the primary CTA |
+| `error` | `''` | Set on non-ok response or fetch exception; cleared on each new confirm attempt |
+| `payload` | `{}` | Full wizard `buildPayload()` object, received from the `open-modal` event |
+| `wizardStep` | `1` | Wizard's current step at the time `finish()` was called — used in the step counter |
+| `wizardTotalSteps` | `1` | Wizard's `totalSteps` at finish — used in the step counter |
 
-The controller resolves each item's Lunar variant via SKU (e.g., `DTF-NECK-2X2`), adds it to the cart using the existing `AddToCart` action, and writes a record to `custom_order_requests` with prefix `T5P-DTF-`.
+**Computed getters:**
 
-### SKU resolution
-
-| DTF type string contains | SKU prefix |
+| Getter | Returns |
 |---|---|
-| `Neck` | `DTF-NECK` |
-| `Chest` | `DTF-CHEST` |
-| anything else | `DTF-IMG` |
+| `dtfItems` | `payload.dtfItems` if it is a non-empty array; otherwise `[]` |
+| `hasSummary` | `true` if `dtfItems.length > 0` or `payload.dtfFileName` is a non-empty string |
 
-Size strings are normalized: inch marks stripped, `×` replaced with `X`, spaces removed. `(lg)` suffix appended for large 10×10. Examples: `2″ × 2″` → `2X2`, `10″ × 10″ (lg)` → `10X10LG`.
+---
+
+### `confirm()` — async fetch flow
+
+```
+User clicks primary CTA
+  → guard: if no choice selected, or already submitting → return
+  → submitting = true, error = ''
+  → fetch POST /custom-order/dtf-cart
+      headers: Content-Type: application/json, Accept: application/json, X-CSRF-TOKEN: _csrf
+      body: JSON.stringify({ ...payload, action: choice })
+  → await response.json()
+  → if !res.ok → throw new Error(data.message || fallback)
+  → dispatch close-modal { name: 'order-action-modal' }
+  → if choice === 'checkout':
+      window.location.href = '/checkout'
+  → else (cart):
+      window.dispatchEvent(new CustomEvent('cart-updated'))
+      window.dispatchEvent(new CustomEvent('open-cart-drawer'))
+  → on catch: this.error = err.message
+  → finally: submitting = false
+```
+
+The `CartDrawer` Livewire component holds a `#[On('open-cart-drawer')]` listener — when the browser event fires, Livewire makes a server roundtrip to `openDrawer()`, which re-renders the component and calls `CartSession::current()` to load the freshly written session cart.
+
+---
+
+### POST endpoint — `CustomOrderController::dtfCart()`
+
+**Route:** `POST /custom-order/dtf-cart` (named `custom-order.dtf-cart`)
+**File:** `app/Http/Controllers/CustomOrderController.php`
+
+#### Request validation
+
+| Field | Rule |
+|---|---|
+| `action` | required, `cart` or `checkout` |
+| `contactName` | required, string, max 255 |
+| `contactEmail` | required, email, max 255 |
+| `contactPhone` | required, string, max 50 |
+| `dtfItems` | nullable, array |
+| `dtfItems.*.type` | nullable, string, max 100 |
+| `dtfItems.*.size` | nullable, string, max 50 |
+| `dtfItems.*.tier` | nullable, string, max 50 |
+| `dtfItems.*.price` | nullable, string, max 20 |
+| `dtfItems.*.fileName` | nullable, string, max 255 |
+| `dtfItems.*.quantity` | nullable, integer, min 1 |
+
+#### Step 1 — Record submission
+
+Before any cart work, a `CustomOrderRequest` record is created with:
+- `reference` — `T5P-DTF-` + 8 random uppercase chars (e.g. `T5P-DTF-IGDBCM1B`)
+- `order_type` — `dtf`
+- `contact_name`, `contact_email`, `contact_phone` — from request
+- `payload` — full raw request body stored as JSON
+- `status` — `pending`
+- `submitted_at` — `now()`
+
+This write happens unconditionally, before variant resolution, so the lead is captured even if the cart add subsequently fails.
+
+#### Step 2 — Variant resolution (two paths)
+
+The controller branches based on whether `dtfItems` is populated.
+
+**Path A — Pricing table flow (`dtfItems` array is non-empty)**
+
+Each item in `dtfItems` carries `{ type, size, tier, price, quantity? }` from the pricing section. The controller calls `resolveDtfSku(type, size)` to derive the Lunar variant SKU:
+
+1. Determine prefix from `type`:
+   - Contains `'Neck'` → `DTF-NECK`
+   - Contains `'Chest'` → `DTF-CHEST`
+   - Otherwise → `DTF-IMG`
+2. Detect large suffix: if `size` contains `'lg'` or `'(lg)'`, append `LG` at the end.
+3. Normalize `size` using four successive `preg_replace` calls — **all with the `/u` (UTF-8) flag** so that multibyte Unicode chars (`″` U+2033, `×` U+00D7) are treated as single codepoints and not split into raw bytes (which would double the `X` separator):
+   - Strip inch marks: `/[″'″"]/u` → `''`
+   - Replace separator: `/\s*[×xX]\s*/u` → `'X'`
+   - Strip parenthetical: `/\([^)]*\)/` → `''`
+   - Strip non-alphanumeric: `/[^a-zA-Z0-9]/` → `''`
+4. `strtoupper()` the result, append `LG` if large.
+
+Full size → SKU normalization table:
+
+| Input size | Normalized | Example full SKU |
+|---|---|---|
+| `2″ × 2″` | `2X2` | `DTF-NECK-2X2` |
+| `4″ × 3″` | `4X3` | `DTF-CHEST-4X3` |
+| `6″ × 6″` | `6X6` | `DTF-IMG-6X6` |
+| `9″ × 11″` | `9X11` | `DTF-IMG-9X11` |
+| `10″ × 10″ (lg)` | `10X10LG` | `DTF-IMG-10X10LG` |
+| `12″ × 17″` | `12X17` | `DTF-IMG-12X17` |
+
+> **Critical gotcha:** Without the `/u` flag, PHP PCRE treats `×` (0xC3 0x97) as two raw bytes. Both match the `[×xX]` class separately and each is replaced by `X`, producing `6XX6` instead of `6X6`. The `/u` flag is mandatory on both regexes that touch these characters.
+
+Quantity per item: `item.quantity` if present; otherwise `tierMinQuantity(item.tier)` using the tier label:
+
+| Tier label starts with | Quantity used |
+|---|---|
+| `250` | 250 |
+| `100` | 100 |
+| `50` | 50 |
+| `15` | 15 |
+| anything else | 1 |
+
+**Path B — Manual wizard flow (`dtfItems` is empty)**
+
+When the user came through the FAB/dropzone path (no pricing table selection), the wizard provides `dtfTypes` (toggle state) and `dtfQuantities` (tier per type). The controller iterates `['neckTag', 'chestImage', 'imageSize']` and for each enabled key calls `defaultSkuForType(key)`:
+
+| Key | Default SKU |
+|---|---|
+| `neckTag` | `DTF-NECK-2X2` |
+| `chestImage` | `DTF-CHEST-4X3` |
+| `imageSize` | `DTF-IMG-5X5` |
+
+The team confirms exact sizes when fulfilling the `CustomOrderRequest` record. Quantity is derived from the tier label via `tierMinQuantity()` (same table as Path A).
+
+#### Step 3 — Early return if nothing resolved
+
+If `$itemsToAdd` is empty after resolution (no variant found for any item), the controller returns **422** before touching the cart:
+
+```json
+{ "success": false, "message": "No matching transfer sizes were found. Please contact us directly to place your order." }
+```
+
+The modal's `catch` block surfaces this as `this.error` in the inline error bar. The modal stays open. No `CustomOrderRequest` record is deleted — the lead is already saved.
+
+#### Step 4 — Cart get-or-create
+
+```php
+$cartId = $request->session()->get('lunar_cart');
+$cart   = $cartId ? Cart::find($cartId) : null;
+
+if (! $cart || $cart->hasCompletedOrders()) {
+    $cart = Cart::create([
+        'currency_id' => Currency::getDefault()->id,
+        'channel_id'  => Channel::getDefault()->id,
+    ]);
+}
+```
+
+> **Why `$request->session()` and not `CartSession`?**
+>
+> Lunar registers `CartSessionInterface` as an `app->singleton()`. In Octane/FrankenPHP, that singleton persists across requests on the same worker. Its injected `SessionManager` can resolve a stale session `Store` cached from a previous request, causing `CartSession::use($cart)` to write the cart ID to the wrong session or for the write to be silently dropped. Using `$request->session()` is always bound to the current HTTP request's session by the `StartSession` middleware, regardless of worker state or singleton caching. **Do not use `CartSession` in plain HTTP controllers on this application.**
+
+Cart is only created here (Step 4), after resolving items confirms there is something to add. Orphan empty carts are not created on variant-not-found failures.
+
+#### Step 5 — Add items and save session
+
+```php
+foreach ($itemsToAdd as [$variantId, $qty]) {
+    $variant = ProductVariant::find($variantId);
+    if ($variant) {
+        $cart->add($variant, max(1, min($qty, 9999)));
+        $addedCount++;
+    }
+}
+
+$request->session()->put('lunar_cart', $cart->id);
+$request->session()->save();   // explicit flush before response — required for Octane
+```
+
+`->save()` is called explicitly to flush the session to disk/DB before the response is returned. Without it, in Octane the session write might not complete before the immediately-following Livewire `open-cart-drawer` AJAX request reads the session, causing the cart drawer to appear empty.
+
+Quantity is clamped to `[1, 9999]`. The seeded DTF variants all have `stock: null` and `purchasable: always`, so no stock guard is triggered.
+
+#### Response
+
+On success:
+```json
+{ "success": true, "reference": "T5P-DTF-IGDBCM1B", "addedCount": 2 }
+```
+
+On variant-not-found (422):
+```json
+{ "success": false, "message": "No matching transfer sizes were found. Please contact us directly to place your order." }
+```
+
+---
 
 ### Lunar product structure
 
-DTF transfer products are seeded by `DtfProductSeeder`. Each (type + size) combination is a distinct Lunar product with one variant and five price-break records:
+DTF transfer products are seeded by `database/seeders/DtfProductSeeder.php`. Each (type + size) combination is a distinct Lunar `Product` with a single `ProductVariant` and five `Price` records (one per quantity tier). The full SKU list:
 
-| Quantity tier | `min_quantity` |
+**Neck Tags (`DTF-NECK-*`):** `DTF-NECK-2X2`, `DTF-NECK-3X3`
+
+**Left / Right Chest (`DTF-CHEST-*`):** `DTF-CHEST-3X2`, `DTF-CHEST-3X3`, `DTF-CHEST-4X2`, `DTF-CHEST-4X3`, `DTF-CHEST-4X4`, `DTF-CHEST-5X3`
+
+**Image Sizes (`DTF-IMG-*`):** `DTF-IMG-5X5`, `DTF-IMG-6X6`, `DTF-IMG-7X7`, `DTF-IMG-8X8`, `DTF-IMG-9X9`, `DTF-IMG-9X11`, `DTF-IMG-10X10`, `DTF-IMG-10X10LG`, `DTF-IMG-11X5`, `DTF-IMG-11X11`, `DTF-IMG-11X14`, `DTF-IMG-12X17`
+
+Each variant has five price-break records using Lunar's `min_quantity` field:
+
+| Tier label | `min_quantity` |
 |---|---|
 | 1 – 14 pcs | 1 |
 | 15 – 49 pcs | 15 |
@@ -797,14 +985,18 @@ DTF transfer products are seeded by `DtfProductSeeder`. Each (type + size) combi
 | 100 – 249 pcs | 100 |
 | 250+ pcs | 250 |
 
-Lunar automatically selects the correct price at checkout using the `min_quantity` field. DTF variants are `purchasable: always`, `shippable: false`, `stock: null`.
+Lunar selects the correct price at checkout automatically by finding the highest `min_quantity` that does not exceed the line quantity. All DTF variants are `purchasable: always`, `shippable: false`, `stock: null`.
 
-### On success
+---
 
-| User choice | Client-side action |
+### On success — client-side behavior
+
+| User choice | What happens |
 |---|---|
-| Add to Cart | Dispatch `cart-updated` + `open-cart-drawer`; modal closes |
-| Proceed to Checkout | Redirect to `/checkout`; modal closes |
+| **Add to Cart** | `close-modal` fired → `cart-updated` fired on `window` → `open-cart-drawer` fired on `window` → CartDrawer Livewire component's `#[On('open-cart-drawer')]` triggers `openDrawer()` server roundtrip → component re-renders reading `lunar_cart` from session → drawer opens showing the newly added items |
+| **Proceed to Checkout** | `close-modal` fired → `window.location.href = '/checkout'` → browser navigates; Lunar checkout reads `lunar_cart` from session |
+
+---
 
 ### Usage
 

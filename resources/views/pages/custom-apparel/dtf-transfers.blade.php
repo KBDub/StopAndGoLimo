@@ -66,7 +66,7 @@
         name="Monica Perez"
     />
 
-    <!--x-ui.dtf-confirm-modal /-->
+    <x-ui.dtf-confirm-modal />
     <x-sections.dtf-pricing-section />
 
     <x-sections.card-image-with-text

@@ -373,6 +373,12 @@
             document.body.style.overflow = '';
             this.$dispatch('modal-closed', { name: this.modalName });
         },
+        reopen() {
+            this.isOpen = true;
+            this.showConfirmation = false; this.showCloseConfirm = false;
+            this.submitting = false; this.submitError = false;
+            document.body.style.overflow = 'hidden';
+        },
         next()   { if (this.stepValid && this.step < this.totalSteps) this.step++; },
         prev()   { if (this.step > 1) this.step--; },
         async finish() {
@@ -382,12 +388,18 @@
             if (this.dtfMode === true) {
                 Alpine.store('dtfCart').clear();
                 this.$dispatch('wizard-done', { name: this.modalName });
-                const payload = this.buildPayload();
+                const payload         = this.buildPayload();
+                const _wizardStep     = this.step;
+                const _wizardTotal    = this.totalSteps;
                 this.close();
                 setTimeout(() => {
-                    this.step = 1;
                     window.dispatchEvent(new CustomEvent('open-modal', {
-                        detail: { name: 'order-action-modal', payload: payload },
+                        detail: {
+                            name:             'order-action-modal',
+                            payload:          payload,
+                            wizardStep:       _wizardStep,
+                            wizardTotalSteps: _wizardTotal,
+                        },
                     }));
                 }, 220);
                 return;
@@ -555,6 +567,7 @@
         }
     "
     @close-modal.window="if ($event.detail.name === modalName) close()"
+    @reopen-wizard.window="reopen()"
     @keydown.escape.window="if (isOpen) { if (showCloseConfirm) showCloseConfirm = false; else if (!showConfirmation) showCloseConfirm = true; }"
 >
     {{-- ── Backdrop — teleported to <body> to escape any ancestor transforms ── --}}

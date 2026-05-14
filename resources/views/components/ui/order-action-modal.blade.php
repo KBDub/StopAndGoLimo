@@ -5,27 +5,37 @@
  |              "Add to Cart" (keep shopping) or "Proceed to Checkout" (go now).
  |
  | Opens via  : window.dispatchEvent(new CustomEvent('open-modal', {
- |                  detail: { name: 'order-action-modal', payload: { ...wizardBuildPayload } }
+ |                  detail: {
+ |                      name:             'order-action-modal',
+ |                      payload:          { ...wizardBuildPayload },
+ |                      wizardStep:       N,       // wizard's step at finish()
+ |                      wizardTotalSteps: M,       // wizard's totalSteps at finish()
+ |                  }
  |              }))
  |
  | Closes via : window.dispatchEvent(new CustomEvent('close-modal', {
  |                  detail: { name: 'order-action-modal' }
  |              }))
  |
+ | Back:       : dispatches 'reopen-wizard' — wizard reopens at its preserved step
+ |
  | On success : dispatches 'cart-updated' + 'open-cart-drawer' (cart choice)
  |              OR redirects to /checkout (checkout choice).
  |
- | Branding   : Built on x-ui.modal (variant="default"). Square corners,
- |              gold-gradient stripe, linen header, white body, linen footer.
- |              Footer uses x-ui.button-modal-cancel + x-ui.button-modal-primary.
+ | Branding   : Header slot overrides x-ui.modal to match the wizard step 6 header
+ |              exactly — gold stripe, linen bg, sunburst border, step counter, X.
+ |              Footer uses raw ← Back button + x-ui.button-modal-primary.
  --}}
 
 <div
     x-data="{
-        choice:     '',
-        submitting: false,
-        error:      '',
-        payload:    {},
+        _csrf:           '{{ csrf_token() }}',
+        choice:          '',
+        submitting:      false,
+        error:           '',
+        payload:         {},
+        wizardStep:      1,
+        wizardTotalSteps: 1,
 
         get dtfItems() {
             return Array.isArray(this.payload.dtfItems) && this.payload.dtfItems.length > 0
@@ -43,14 +53,12 @@
             this.submitting = true;
             this.error      = '';
             try {
-                const csrfMeta = document.querySelector('meta[name=csrf-token]');
-                const csrf     = csrfMeta ? csrfMeta.getAttribute('content') : '';
                 const res = await fetch('/custom-order/dtf-cart', {
                     method:  'POST',
                     headers: {
                         'Content-Type':  'application/json',
                         'Accept':        'application/json',
-                        'X-CSRF-TOKEN':  csrf,
+                        'X-CSRF-TOKEN':  this._csrf,
                     },
                     body: JSON.stringify({ ...this.payload, action: this.choice }),
                 });
@@ -74,7 +82,9 @@
     }"
     @open-modal.window="
         if ($event.detail.name === 'order-action-modal') {
-            payload    = $event.detail.payload || {};
+            payload          = $event.detail.payload          || {};
+            wizardStep       = $event.detail.wizardStep       || 1;
+            wizardTotalSteps = $event.detail.wizardTotalSteps || 1;
             choice     = '';
             submitting = false;
             error      = '';
@@ -83,46 +93,56 @@
 >
     <x-ui.modal
         name="order-action-modal"
-        title="How would you like to proceed?"
         size="md"
         variant="default"
-        :dismissible="true"
+        :dismissible="false"
         :zIndex="9999"
         :teleport="true"
     >
-        {{-- Icon --}}
-        <x-slot:icon>
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                 stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="9" cy="21" r="1"/>
-                <circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-            </svg>
-        </x-slot:icon>
+        {{-- ── Header — matches wizard step header exactly ───────────────── --}}
+        <x-slot:header>
+            <div class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 bg-linen border-sunburst">
+                <div class="flex-1 min-w-0">
+                    <h2 class="text-lg font-bold text-charcoal leading-tight">
+                        Cart or Checkout
+                    </h2>
+                    <p class="text-xs text-charcoal-light mt-0.5">
+                        Step <span x-text="wizardStep + 1"></span>
+                        of <span x-text="wizardTotalSteps + 2"></span>
+                        &nbsp;&middot;&nbsp;DTF Transfers
+                    </p>
+                </div>
+                <button
+                    type="button"
+                    @click="$dispatch('close-modal', { name: 'order-action-modal' })"
+                    class="flex items-center justify-center w-8 h-8 flex-shrink-0 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
+                    aria-label="Close"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                         class="w-[1.125rem] h-[1.125rem]" aria-hidden="true">
+                        <path d="M18 6 6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </x-slot:header>
 
-        {{-- Eyebrow / step label --}}
-        <p class="text-xs text-charcoal-light mb-4">
-            DTF Transfers &nbsp;&middot;&nbsp; Cart or Checkout
-        </p>
-
-        {{-- Order summary --}}
+        {{-- ── Order summary ──────────────────────────────────────────────── --}}
         <div x-show="hasSummary" class="border border-linen-dark divide-y divide-linen-dark mb-5">
 
-            {{-- Structured DTF items from pricing flow --}}
             <template x-if="dtfItems.length > 0">
                 <div>
                     <template x-for="(item, idx) in dtfItems" :key="idx">
                         <div class="px-4 py-3">
                             <p class="text-sm font-semibold text-charcoal"
-                               x-text="item.type + ' — ' + item.size"></p>
+                               x-text="item.type + ' \u2014 ' + item.size"></p>
                             <p class="text-xs text-charcoal-light mt-0.5"
-                               x-text="item.tier + ' · ' + item.price + ' per piece'"></p>
+                               x-text="item.tier + ' \u00b7 ' + item.price + ' per piece'"></p>
                         </div>
                     </template>
                 </div>
             </template>
 
-            {{-- Fallback: filename only, no structured items --}}
             <template x-if="dtfItems.length === 0 && payload.dtfFileName">
                 <div class="px-4 py-3 flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 text-charcoal-light"
@@ -137,7 +157,7 @@
 
         </div>
 
-        {{-- Radio choices --}}
+        {{-- ── Radio choices ──────────────────────────────────────────────── --}}
         <fieldset class="space-y-3">
             <legend class="sr-only">Choose an action</legend>
 
@@ -184,15 +204,20 @@
             </label>
         </fieldset>
 
-        {{-- Inline error --}}
+        {{-- ── Inline error ────────────────────────────────────────────────── --}}
         <p x-show="error" x-cloak x-text="error"
            class="mt-4 text-xs text-error" role="alert"></p>
 
-        {{-- Footer --}}
+        {{-- ── Footer ─────────────────────────────────────────────────────── --}}
         <x-slot:footer>
-            <x-ui.button-modal-cancel modal="order-action-modal">
-                Cancel
-            </x-ui.button-modal-cancel>
+            <button
+                type="button"
+                @click="
+                    $dispatch('close-modal', { name: 'order-action-modal' });
+                    window.dispatchEvent(new CustomEvent('reopen-wizard'));
+                "
+                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
+            >&larr; Back</button>
 
             <x-ui.button-modal-primary
                 @click="confirm()"

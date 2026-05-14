@@ -183,7 +183,7 @@
             document.body.style.overflow = 'hidden';
             this.$nextTick(() => {
                 const el = this.$el.querySelector(
-                    'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])'
+                    'button, [href], input, select, textarea'
                 );
                 el && el.focus({ preventScroll: true });
                 this.$dispatch('modal-opened', { name: this.modalName });

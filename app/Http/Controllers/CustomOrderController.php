@@ -143,6 +143,14 @@ class CustomOrderController extends Controller
             }
         }
 
+        // ── Bail early if nothing resolved ──────────────────────────────────
+        if (empty($itemsToAdd)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'No matching transfer sizes were found. Please contact us directly to place your order.',
+            ], 422);
+        }
+
         // ── Get / create Lunar cart via request session directly ─────────────
         // We intentionally bypass CartSession (Lunar's singleton manager) here
         // because in Octane/FrankenPHP the singleton's cached $this->cart and
@@ -151,7 +159,7 @@ class CustomOrderController extends Controller
         // silently dropped. Using $request->session() is always bound to the
         // current HTTP request's session regardless of worker state.
         $cartId = $request->session()->get('lunar_cart');
-        $cart   = $cartId ? Cart::with([])->find($cartId) : null;
+        $cart   = $cartId ? Cart::find($cartId) : null;
 
         if (! $cart || $cart->hasCompletedOrders()) {
             $cart = Cart::create([
@@ -202,10 +210,13 @@ class CustomOrderController extends Controller
 
         $isLarge = str_contains($size, 'lg') || str_contains($size, '(lg)');
 
-        $normalized = preg_replace('/[″"\'"]/', '', $size) ?? $size;
-        $normalized = preg_replace('/\s*[×xX]\s*/', 'X', $normalized) ?? $normalized;
+        // Use /u (UTF-8) flag so multibyte chars like ″ (U+2033) and × (U+00D7)
+        // are treated as single codepoints, not split into raw bytes.
+        // Without /u, × (0xC3 0x97) matches TWICE in [×xX] → produces "2XX2" not "2X2".
+        $normalized = preg_replace('/[″\'″"]/u', '', $size) ?? $size;
+        $normalized = preg_replace('/\s*[×xX]\s*/u', 'X', $normalized) ?? $normalized;
         $normalized = preg_replace('/\([^)]*\)/', '', $normalized) ?? $normalized;
-        $normalized = preg_replace('/[^a-zA-Z0-9X]/', '', $normalized) ?? $normalized;
+        $normalized = preg_replace('/[^a-zA-Z0-9]/', '', $normalized) ?? $normalized;
         $normalized = strtoupper(trim($normalized));
 
         if ($isLarge) {

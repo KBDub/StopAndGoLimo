@@ -144,7 +144,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="gaTzSSv0qGM"
         heading="Brilliant Shine on Every Design"
         label="Foil Print Custom Shirts"
         subheading="Foil printing delivers a metallic, high-shine finish that makes logos and designs pop. Watch how we apply custom foil graphics to shirts, hoodies, and caps at our Joliet print shop."

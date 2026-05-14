@@ -144,7 +144,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="JG01ZE2_unc"
         heading="Designs That Light Up the Night"
         label="Glow-in-the-Dark Apparel"
         subheading="Glow-in-the-dark printing keeps your brand or design visible long after the lights go down. See how Top 5 Percent creates vivid, glow-reactive custom shirts in Joliet, IL."

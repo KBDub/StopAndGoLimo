@@ -137,7 +137,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="aRq0XJ5By9A"
         heading="Stickers for Every Surface"
         label="Custom Stickers in Joliet, IL"
         subheading="From product labels to promotional stickers and laptop decals — see how Top 5 Percent produces high-quality custom stickers for businesses, brands, and events in Joliet, Illinois."

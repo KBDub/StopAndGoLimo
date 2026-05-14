@@ -173,7 +173,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="JXD-Zl7-Rrs"
         heading="Show Your School Pride"
         label="Custom Spirit Wear"
         subheading="Spirit wear unites students, staff, and fans with custom designs that represent your school or organization. Watch how Top 5 Percent creates quality spirit wear apparel in Joliet, Illinois."

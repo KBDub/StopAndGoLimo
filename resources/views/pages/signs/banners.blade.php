@@ -168,7 +168,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="L3Dw8KGC6D8"
         heading="Banners Built for Impact"
         label="Custom Banners"
         subheading="Custom banners grab attention at events, storefronts, and trade shows. Watch how Top 5 Percent designs and produces durable vinyl and fabric banners for businesses in the Joliet area."

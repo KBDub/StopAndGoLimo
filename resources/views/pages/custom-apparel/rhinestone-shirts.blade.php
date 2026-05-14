@@ -144,7 +144,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="wS7NHsyIEUY"
         heading="Sparkle With Every Stitch"
         label="Rhinestone Custom Shirts"
         subheading="Rhinestone shirts bring glamour and shine to any event, performance, or brand. Watch how Top 5 Percent applies rhinestone designs to custom shirts and apparel in Joliet, IL."

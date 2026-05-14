@@ -63,7 +63,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="j0vslNa91gU"
         heading="See Our Craft in Action"
         label="Custom Apparel & Signs in Joliet, IL"
         subheading="From design to finished product, watch how Top 5 Percent produces custom shirts, signs, vehicle graphics, and promotional products for businesses across Joliet and the Chicagoland area."

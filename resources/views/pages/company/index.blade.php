@@ -118,7 +118,7 @@
     <x-ui.banner-thin-sunburst />
     <x-sections.cta-free-quote-banner />
     <x-sections.video-banner
-        videoId="F3J9nyiM3So"
+        videoId="j0vslNa91gU"
         heading="Built Different. Built Better."
         label="The Top 5 Percent Company"
         subheading="Top 5 Percent is more than a print shop. See the story behind the veteran-owned business that has been serving Joliet and the Chicago area with custom apparel, signs, and promotional products."

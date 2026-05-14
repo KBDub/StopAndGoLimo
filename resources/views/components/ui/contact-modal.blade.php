@@ -193,7 +193,7 @@
             {{-- Body: picker --}}
             <div class="px-6 pt-6 pb-12">
                 <p class="text-base font-semibold text-charcoal text-center mb-1">What can we help you with?</p>
-                <p class="text-xs text-charcoal-light text-center mb-5">Choose an option to get started</p>
+                <p class="text-xs text-charcoal-light text-center mb-5"></p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 

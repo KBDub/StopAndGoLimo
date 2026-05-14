@@ -614,7 +614,7 @@
                     </div>
                     <h2 id="crw-title" class="text-lg font-bold text-charcoal leading-tight" x-text="currentStepTitle"></h2>
                     <p class="text-xs text-charcoal-light mt-0.5">
-                        Step <span x-text="step"></span> of <span x-text="totalSteps + 2"></span>
+                        Step <span x-text="step"></span> of <span x-text="totalSteps + (dtfMode === true ? 2 : 1)"></span>
                         &nbsp;·&nbsp;
                         <span x-show="dtfMode === true" x-cloak>DTF Transfers</span>
                         <span x-show="dtfMode !== true">Custom Apparel</span>
@@ -1580,11 +1580,21 @@
                                 </span>
                                 <div class="col-span-2 text-sm text-charcoal">
                                     <template x-if="dtfMode === true">
-                                        <span>
-                                            <span x-show="dtfFileName" x-cloak x-text="dtfFileName"></span>
-                                            <span x-show="!dtfFileName && hasDtf === true" x-cloak>Yes — will provide separately</span>
+                                        <span x-data="{
+                                            get resolvedFile() {
+                                                if (dtfFileName) return dtfFileName;
+                                                if (dtfFilesByType && dtfFilesByType['_single']) return dtfFilesByType['_single'];
+                                                if (dtfFilesByType) {
+                                                    const found = Object.values(dtfFilesByType).find(v => v);
+                                                    if (found) return found;
+                                                }
+                                                return '';
+                                            }
+                                        }">
+                                            <span x-show="resolvedFile" x-cloak x-text="resolvedFile"></span>
+                                            <span x-show="!resolvedFile && hasDtf === true" x-cloak>Yes — will provide separately</span>
                                             <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
-                                            <span x-show="!dtfFileName && hasDtf === null" class="text-charcoal-lighter">Not answered</span>
+                                            <span x-show="!resolvedFile && hasDtf === null" class="text-charcoal-lighter">Not answered</span>
                                         </span>
                                     </template>
                                     <template x-if="dtfMode !== true">
@@ -1729,10 +1739,6 @@
                         class="px-6 py-2.5 bg-gold-gradient text-charcoal text-sm font-semibold hover:shadow-gold transition-all"
                     >Proceed to Payment &rarr;</a>
                 </div>
-                <p x-show="!checkoutUrl" x-cloak
-                   class="mt-4 text-xs text-charcoal-lighter max-w-xs">
-                    A payment link will be sent to <span x-text="contactEmail" class="font-medium text-charcoal"></span> once your order is reviewed.
-                </p>
             </div>
 
             {{-- ── Close Confirmation Overlay ────────────────────────────── --}}

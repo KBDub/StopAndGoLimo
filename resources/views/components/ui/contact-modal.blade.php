@@ -191,7 +191,7 @@
             </div>
 
             {{-- Body: picker --}}
-            <div class="px-6 py-7">
+            <div class="px-6 pt-6 pb-10">
                 <p class="text-base font-semibold text-charcoal text-center mb-1">What can we help you with?</p>
                 <p class="text-xs text-charcoal-light text-center mb-5">Choose an option to get started</p>
 
@@ -230,11 +230,11 @@
                     </button>
 
                     {{-- Send Us a Message — centered below the two-column row --}}
-                    <div class="sm:col-span-2 flex justify-center">
+                    <div class="sm:col-span-2 flex justify-center mt-1">
                         <button
                             type="button"
                             @click="choose('message')"
-                            class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full sm:max-w-[calc(50%-0.375rem)]"
+                            class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full sm:max-w-[13rem]"
                         >
                             <span
                                 class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 border-charcoal-lighter group-hover:border-sunburst transition-colors duration-150"

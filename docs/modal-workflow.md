@@ -444,14 +444,14 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 |---|---|---|---|---|
 | `isOpen` | bool | `false` | BUILT | Backdrop visibility |
 | `step` | int | `1` | BUILT | Current step (1-based) |
-| `dtfMode` | bool\|null | `null` | PLANNED | `true` = DTF path, `false` = apparel path; drives `visibleSteps` |
+| `dtfMode` | bool\|null | `null` | BUILT | `true` = DTF path, `false` = apparel path; drives `visibleSteps` |
 | `requestType` | string | `''` | BUILT | `'company'` or `'personal'` |
 | `companyName` | string | `''` | BUILT | Company name (Step 1, reused in shipping step) |
 | `isRush` | bool\|null | `null` | BUILT | Rush flag from Step 1 |
 | `dtfFileName` | string | `''` | BUILT | Pre-filled filename from dropzone or pricing flow |
 | `hasDtf` | bool\|null | `null` | BUILT | Whether customer is providing a design file |
-| `dtfItems` | array | `[]` | PLANNED | Pre-loaded DTF cart items from pricing flow |
-| `dtfTypes` | object | all `false` | PLANNED | Toggle state for each DTF type (DTF path Step 3) |
+| `dtfItems` | array | `[]` | BUILT | Pre-loaded DTF cart items from pricing flow; passed to order-action-modal payload |
+| `dtfTypes` | object | all `false` | BUILT | Toggle state for each DTF type (DTF path Step 3) |
 | `garments` | object | all `false` | BUILT | Toggle state for each garment type (non-DTF path) |
 | `colorInputs` | object | `{}` | BUILT | Per-garment live color search input |
 | `selectedColorsByGarment` | object | `{}` | BUILT | Per-garment selected colors array |
@@ -489,26 +489,31 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 
 ---
 
-### File Type Restrictions by Component — PLANNED
+### File Type Restrictions by Component — BUILT
 
-| Component | File | Current `accept` | Planned (DTF) | Planned (non-DTF) |
+| Component | File | `accept` | Max size | Notes |
 |---|---|---|---|---|
-| `x-ui.dtf-dropzone` | `dtf-dropzone.blade.php` | all types | `.png` only | n/a (DTF-only component) |
-| `x-ui.banner-cta-dtf-dropzone` | `banner-cta-dtf-dropzone.blade.php` | all types | `.png` only | n/a (DTF-only component) |
-| Wizard Step 2 file input | `custom-request-wizard.blade.php` | all types | `.png` only | PDF, AI, EPS, PNG, JPG, SVG, PSD |
-| Display hint text | all above | "PDF · AI · EPS · PNG…" | "PNG — 300 DPI minimum" | "PDF, AI, EPS, PNG, JPG, SVG, PSD" |
+| `x-ui.dtf-dropzone` | `dtf-dropzone.blade.php` | `.png` | 5 MB | DTF path only; client-side size check in `@change` |
+| `x-ui.banner-cta-dtf-dropzone` | `banner-cta-dtf-dropzone.blade.php` | `.png` | 5 MB | DTF path only |
+| Wizard DTF upload (single mode) | `custom-request-wizard.blade.php` | `.png` | 5 MB | `@change` rejects and alerts if `f.size > 5 * 1024 * 1024` |
+| Wizard DTF upload (per-type mode) | `custom-request-wizard.blade.php` | `.png` | 5 MB | Same guard per-type file input loop |
+| Wizard apparel artwork upload | `custom-request-wizard.blade.php` | `.pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd` | 5 MB | `@change` rejects and alerts if over limit |
 
 ---
 
-### Event API — Current + Planned
+### Event API
 
 | Event | Direction | Payload | Status | Description |
 |---|---|---|---|---|
 | `open-contact-modal` | dispatch → contact modal | `{}` or `{ dtf: true, fileName: 'name.png' }` | BUILT | Opens contact modal; DTF payload pre-selects DTF radio and stores filename |
-| `open-modal` | contact modal → wizard | `{ name: 'custom-request-wizard', prefill: { name, email, phone, dtfMode, dtfFileName, dtfItems } }` | BUILT (dtfMode + dtfItems PLANNED) | Opens wizard at step 1 with pre-filled contact info and mode |
+| `open-modal` | contact modal → wizard | `{ name: 'custom-request-wizard', prefill: { name, email, phone, dtfMode, dtfFileName, dtfItems } }` | BUILT | Opens wizard at step 1 with pre-filled contact info and mode |
 | `close-modal` | dispatch → wizard | `{ name: 'custom-request-wizard' }` | BUILT | Closes and resets wizard |
 | `modal-closed` | wizard fires → window | `{ name: 'custom-request-wizard' }` | BUILT | Fired after wizard closes |
-| `wizard-done` | wizard fires → window | `{ name: 'custom-request-wizard' }` | BUILT | Fired when Submit is clicked |
+| `wizard-done` | wizard fires → window | `{ name: 'custom-request-wizard' }` | BUILT | Fired when DTF or apparel path completes |
+| `open-modal` | wizard → order-action-modal | `{ name: 'order-action-modal', payload: buildPayload() }` | BUILT | DTF path only — opens cart/checkout chooser after wizard closes |
+| `close-modal` | dispatch → order-action-modal | `{ name: 'order-action-modal' }` | BUILT | Closes the order action modal |
+| `cart-updated` | order-action-modal → window | `{}` | BUILT | Fired after successful cart add (cart choice) |
+| `open-cart-drawer` | order-action-modal → window | `{}` | BUILT | Opens cart drawer after successful cart add |
 
 ---
 
@@ -519,7 +524,7 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 - **Step dot indicators** — current step renders as a wider pill (`w-6 h-2 bg-sunburst`); completed steps are smaller filled dots (`w-2.5 h-2 bg-sunburst/60`); future steps are linen-dark (`w-2.5 h-2 bg-linen-dark`).
 - **Scrollable areas** — all `overflow-y-auto` and `overflow-x-auto` elements must use `scrollbar-sunburst`.
 - **Color autocomplete** — suggestions list must render inline in document flow (never `position:absolute`) per the modal overflow rule. Use `max-h-[8rem] overflow-y-auto scrollbar-sunburst`.
-- **Footer buttons** — use `x-ui.button-modal-primary` and `x-ui.button-modal-cancel`. The final step's primary is labeled "Submit Request".
+- **Footer buttons** — use `x-ui.button-modal-primary` and `x-ui.button-modal-cancel`. The DTF path's final step button is labeled "Choose Cart Option →". The apparel path's final step button is labeled "Submit Request".
 
 ---
 
@@ -529,22 +534,51 @@ All state lives in the `x-data` object on the root element of `x-ui.custom-reque
 {{-- Include once per page alongside x-ui.contact-modal --}}
 <x-ui.contact-modal />
 <x-ui.custom-request-wizard />
+{{-- x-ui.order-action-modal is bundled automatically inside x-ui.custom-request-wizard --}}
 
 {{-- On DTF pages, also include: --}}
 <x-ui.dtf-confirm-modal />
 ```
 
-Both `x-ui.contact-modal` and `x-ui.custom-request-wizard` must be present on the same page. `x-ui.dtf-confirm-modal` is only needed on pages with the DTF pricing section.
+Both `x-ui.contact-modal` and `x-ui.custom-request-wizard` must be present on the same page. The `x-ui.order-action-modal` is included at the bottom of `x-ui.custom-request-wizard` and does not need a separate include. `x-ui.dtf-confirm-modal` is only needed on pages with the DTF pricing section.
 
 ---
 
-### Future Phase — Data Persistence
+### Submit Flow — Path Split
 
-On submission (`wizard-done`), the full Alpine state will be:
-1. **Serialized to a cookie** for session continuity.
-2. **POST'd to a Laravel endpoint** that stores the data in a dedicated `custom_requests` database table.
+The wizard's `finish()` function branches based on `dtfMode`:
 
-The table schema and endpoint are deferred to Phase 2. The wizard component should be designed so that the `finish()` method's implementation can be updated to fire the POST without restructuring the Alpine state.
+#### DTF path (`dtfMode === true`)
+```
+User clicks "Choose Cart Option →"
+  → finish() fires — NO server call here
+  → Alpine.store('dtfCart').clear()
+  → dispatch wizard-done event
+  → close() the wizard
+  → setTimeout 220ms:
+      → dispatch open-modal { name: 'order-action-modal', payload: buildPayload() }
+  → User chooses "Add to Cart" or "Proceed to Checkout" in order-action-modal
+  → order-action-modal POSTs to /custom-order/dtf-cart
+  → On success (cart): dispatch cart-updated + open-cart-drawer
+  → On success (checkout): window.location.href = '/checkout'
+  → On error: show inline error in modal, modal stays open
+```
+
+#### Apparel path (`dtfMode !== true`)
+```
+User clicks "Submit Request"
+  → finish() fires
+  → POST to /custom-order/submit (orderType: 'apparel')
+  → On success:
+      → orderReference = data.reference
+      → dispatch wizard-done event
+      → showConfirmation = true (in-wizard thank-you panel)
+  → On error:
+      → submitError = true (inline error, wizard stays open)
+```
+
+#### Data persistence
+Both paths write a record to `custom_order_requests` before any cart/redirect action. DTF submissions use reference prefix `T5P-DTF-`. Apparel submissions use `T5P-`.
 
 ---
 
@@ -696,87 +730,97 @@ Two separate drop zone families. The artwork family covers all non-DTF pages; th
 
 ---
 
-### Section 11 — Stripe Checkout Modal
+### Section 11 — Order Action Modal
 
-One modal demonstrating `x-ui.stripe-checkout-modal`. Triggered automatically by the wizard after a successful form submission. Also shown as a standalone demo via a trigger button.
+One modal that handles the DTF path's final cart/checkout choice. Bundled automatically inside `x-ui.custom-request-wizard` — no separate include required. Also present on the demo page for reference.
 
-| Modal name | Title | Size | Variant | Status |
-|---|---|---|---|---|
-| `stripe-checkout-modal` | "Request received — complete your payment" | `md` | `default` | ✅ |
+| Modal name | Purpose | Trigger | Status |
+|---|---|---|---|
+| `order-action-modal` | DTF cart/checkout chooser — "Add to Cart" or "Proceed to Checkout" | Dispatched by `finish()` in wizard (DTF path only) | ✅ |
 
 ---
 
-## Stripe Checkout Modal — `x-ui.stripe-checkout-modal`
+## Order Action Modal — `x-ui.order-action-modal`
 
-**File:** `resources/views/components/ui/stripe-checkout-modal.blade.php`
-**Opened by:** The wizard's `finish()` method — dispatched automatically after a successful form POST. Can also be opened manually via `open-modal` event.
-**Trigger event:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'stripe-checkout-modal' } }))`
+**File:** `resources/views/components/ui/order-action-modal.blade.php`
+**Opened by:** The wizard's `finish()` method — DTF path only. Dispatched automatically after the wizard closes.
+**Trigger event:** `window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'order-action-modal', payload: buildPayload() } }))`
 
 ### Purpose
 
-Bridges the gap between the custom order wizard and Stripe's hosted checkout. Shown immediately after the wizard closes on successful submission. Confirms the request was received, clearly states that payment is required to confirm the order, and embeds the Stripe Buy Button which opens the hosted checkout in a new tab.
+Final step of the DTF order path. Shown after the wizard closes, it presents the customer with two clear choices: save the transfer to their cart and keep shopping, or go directly to checkout. On confirm, it calls `/custom-order/dtf-cart` to add the Lunar product variant(s) to the cart session and records the submission.
 
 ### Content
 
 | Element | Description |
 |---|---|
-| Icon slot | Shield/lock SVG — reinforces secure checkout |
-| Title | "Request received — complete your payment" |
-| Gold info bar | "Thank you for choosing Top 5 Percent." with a checkmark icon |
-| Body paragraph | Confirms request received; states payment required to begin production |
-| Red warning bar | "Your order is not confirmed or entered into production until payment is complete." — bordered red, error colour text |
-| Instruction paragraph | Explains the Stripe button opens in a new tab; that payment info is handled by Stripe only |
-| Stripe Buy Button | `<stripe-buy-button>` web component — renders as a Stripe-hosted iframe; on click, opens `buy.stripe.com` in a new tab |
-| Footer | Single "Close" button (`x-ui.button-modal-cancel`) |
+| Header | "DTF Transfers" eyebrow label + "How would you like to proceed?" heading + ✕ close button |
+| Order summary | Iterates over `payload.dtfItems` — shows each transfer type, size, tier, and price per piece. Falls back to filename display when no structured items are present. |
+| Radio: Add to Cart | "Add to Your Cart" — save and keep shopping |
+| Radio: Proceed to Checkout | "Proceed to Checkout" — complete order now |
+| Error bar | Shown inline if the POST to `/custom-order/dtf-cart` fails |
+| Footer | "Cancel" (secondary) + dynamic CTA: "Add to Cart" or "Proceed to Checkout →" (primary, disabled until radio selected) |
 
-### Stripe Buy Button embed
+### Endpoint
 
-The Stripe Buy Button is a web component provided by Stripe. It requires the Stripe CDN script:
+**POST `/custom-order/dtf-cart`** — handled by `CustomOrderController::dtfCart()`
 
-```html
-<script async src="https://js.stripe.com/v3/buy-button.js"></script>
-```
+| Field | Type | Description |
+|---|---|---|
+| `action` | `cart` \| `checkout` | User's choice |
+| `contactName` | string | From wizard state |
+| `contactEmail` | string | From wizard state |
+| `contactPhone` | string | From wizard state |
+| `dtfItems` | array | Each item: `{ type, size, tier, price, quantity?, fileName }` |
 
-The component itself uses `@once @push('scripts')...@endpush @endonce` to inject this script via the layout stack on production pages. For the demo page (standalone, no layout stack), the script is loaded directly in `<head>`.
+The controller resolves each item's Lunar variant via SKU (e.g., `DTF-NECK-2X2`), adds it to the cart using the existing `AddToCart` action, and writes a record to `custom_order_requests` with prefix `T5P-DTF-`.
 
-The button embed:
+### SKU resolution
 
-```html
-<stripe-buy-button
-    buy-button-id="buy_btn_1RZ3WEDdab3WXP8kgWVZaTvN"
-    publishable-key="pk_live_51Oe8TsDdab3WXP8kVk9kcOcHilb4gtSCMfYLeKU51vq4GERTi1HolsMK11Wt4q2EFjy9nFAB6swzv9TCdjlDFKz800w59VsKEI"
-></stripe-buy-button>
-```
+| DTF type string contains | SKU prefix |
+|---|---|
+| `Neck` | `DTF-NECK` |
+| `Chest` | `DTF-CHEST` |
+| anything else | `DTF-IMG` |
 
-> **Note:** The `buy-button-id` and `publishable-key` above are placeholder values used for demo and development. Replace with production-specific values before going live.
+Size strings are normalized: inch marks stripped, `×` replaced with `X`, spaces removed. `(lg)` suffix appended for large 10×10. Examples: `2″ × 2″` → `2X2`, `10″ × 10″ (lg)` → `10X10LG`.
 
-### Wizard integration — button label + finish() flow
+### Lunar product structure
 
-**Button label change — `x-ui.custom-request-wizard`:**
-The final step's primary button is renamed from **"Submit Request"** to **"Continue to Secure Checkout"** in both the DTF and custom apparel paths. The loading state label changes from "Submitting…" to "Processing…".
+DTF transfer products are seeded by `DtfProductSeeder`. Each (type + size) combination is a distinct Lunar product with one variant and five price-break records:
 
-**Updated `finish()` flow:**
+| Quantity tier | `min_quantity` |
+|---|---|
+| 1 – 14 pcs | 1 |
+| 15 – 49 pcs | 15 |
+| 50 – 99 pcs | 50 |
+| 100 – 249 pcs | 100 |
+| 250+ pcs | 250 |
 
-```
-User clicks "Continue to Secure Checkout"
-  → finish() fires
-  → POST to /custom-order/submit
-  → On success:
-      → dispatch wizard-done event
-      → close() the wizard
-      → $nextTick: dispatch open-modal { name: 'stripe-checkout-modal' }
-  → On error:
-      → submitError = true (error message shown, wizard stays open)
-```
+Lunar automatically selects the correct price at checkout using the `min_quantity` field. DTF variants are `purchasable: always`, `shippable: false`, `stock: null`.
 
-The `showConfirmation` state that previously showed an in-wizard confirmation panel is no longer set to `true` — the Stripe checkout modal fully replaces that pattern.
+### On success
+
+| User choice | Client-side action |
+|---|---|
+| Add to Cart | Dispatch `cart-updated` + `open-cart-drawer`; modal closes |
+| Proceed to Checkout | Redirect to `/checkout`; modal closes |
 
 ### Usage
 
 ```blade
-{{-- Include once per page alongside x-ui.custom-request-wizard --}}
+{{-- x-ui.order-action-modal is bundled automatically at the bottom of x-ui.custom-request-wizard --}}
+<x-ui.contact-modal />
 <x-ui.custom-request-wizard />
-<x-ui.stripe-checkout-modal />
 ```
 
-Both components must be present on the same page. The wizard opens the Stripe checkout modal automatically after a successful submission.
+No additional include needed. For standalone demo use, include `<x-ui.order-action-modal />` directly.
+
+---
+
+## Stripe Checkout Modal — `x-ui.stripe-checkout-modal` (demo only)
+
+**File:** `resources/views/components/ui/stripe-checkout-modal.blade.php`
+**Status:** No longer used by the wizard. Retained as a standalone component for demo page reference only.
+
+The wizard previously used this modal to bridge to a Stripe-hosted checkout after submission. That pattern has been replaced by `x-ui.order-action-modal` + the Lunar cart flow. The Stripe modal file is kept intact and demonstrated on `/demo/modals` but is not bundled with `x-ui.custom-request-wizard` anymore.

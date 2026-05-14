@@ -377,36 +377,41 @@
         prev()   { if (this.step > 1) this.step--; },
         async finish() {
             if (this.submitting) return;
+
+            // DTF path — hand off to order-action-modal for cart/checkout choice
+            if (this.dtfMode === true) {
+                Alpine.store('dtfCart').clear();
+                this.$dispatch('wizard-done', { name: this.modalName });
+                const payload = this.buildPayload();
+                this.close();
+                setTimeout(() => {
+                    this.step = 1;
+                    window.dispatchEvent(new CustomEvent('open-modal', {
+                        detail: { name: 'order-action-modal', payload: payload },
+                    }));
+                }, 220);
+                return;
+            }
+
+            // Apparel path — save quote request, show confirmation panel
             this.submitting  = true;
             this.submitError = false;
             try {
-                const csrfToken = this._csrf;
                 const res = await fetch('/custom-order/submit', {
                     method:  'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept':       'application/json',
-                        'X-CSRF-TOKEN': csrfToken,
+                        'X-CSRF-TOKEN': this._csrf,
                     },
                     body: JSON.stringify(this.buildPayload()),
                 });
                 const data = await res.json();
                 if (!res.ok) throw new Error(data.message || 'Submission failed');
-                Alpine.store('dtfCart').clear();
-                this.checkoutUrl    = data.checkoutUrl || '';
-                this.orderReference = data.reference   || '';
+                this.orderReference  = data.reference || '';
+                this.checkoutUrl     = '';
                 this.$dispatch('wizard-done', { name: this.modalName });
-                this.close();
-                setTimeout(() => {
-                    this.step = 1;
-                    window.dispatchEvent(new CustomEvent('open-modal', {
-                        detail: {
-                            name:          'stripe-checkout-modal',
-                            checkoutStep:  this.totalSteps + 1,
-                            checkoutTotal: this.totalSteps + 2,
-                        }
-                    }));
-                }, 220);
+                this.showConfirmation = true;
             } catch (err) {
                 this.submitError = true;
                 console.error('Wizard submit error:', err);
@@ -776,10 +781,12 @@
                                 <input type="file" accept=".png"
                                     @change="
                                         const f = $event.target.files[0];
-                                        if (f) dtfFilesByType = Object.assign({}, dtfFilesByType, { '_single': f.name });
+                                        if (!f) return;
+                                        if (f.size > 5 * 1024 * 1024) { alert('File must be 5 MB or smaller. Please resize and try again.'); $event.target.value = ''; return; }
+                                        dtfFilesByType = Object.assign({}, dtfFilesByType, { '_single': f.name });
                                     "
                                     class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark">
-                                <p class="text-xs text-charcoal-lighter">PNG only &mdash; 300 DPI minimum recommended &mdash; max 50 MB.</p>
+                                <p class="text-xs text-charcoal-lighter">PNG only &mdash; 300 DPI minimum recommended &mdash; max 5 MB.</p>
                             </div>
 
                         </div>
@@ -811,7 +818,9 @@
                                                 @change="
                                                     const f = $event.target.files[0];
                                                     const k = t.key;
-                                                    if (f) dtfFilesByType = Object.assign({}, dtfFilesByType, { [k]: f.name });
+                                                    if (!f) return;
+                                                    if (f.size > 5 * 1024 * 1024) { alert('File must be 5 MB or smaller. Please resize and try again.'); $event.target.value = ''; return; }
+                                                    dtfFilesByType = Object.assign({}, dtfFilesByType, { [k]: f.name });
                                                 "
                                                 class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark">
                                         </div>
@@ -1030,11 +1039,13 @@
                                 accept=".pdf,.ai,.eps,.png,.jpg,.jpeg,.svg,.psd"
                                 @change="
                                     const f = $event.target.files[0];
-                                    if (f) { artworkFileName = f.name; hasArtwork = true; }
+                                    if (!f) return;
+                                    if (f.size > 5 * 1024 * 1024) { alert('File must be 5 MB or smaller. Please resize and try again.'); $event.target.value = ''; return; }
+                                    artworkFileName = f.name; hasArtwork = true;
                                 "
                                 class="block w-full text-sm text-charcoal border border-linen-dark py-2 px-3 cursor-pointer file:mr-4 file:py-1.5 file:px-4 file:border-0 file:text-xs file:font-semibold file:bg-linen file:text-charcoal hover:file:bg-linen-dark"
                             >
-                            <p class="text-xs text-charcoal-lighter">Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD &mdash; max 50 MB.</p>
+                            <p class="text-xs text-charcoal-lighter">Accepted: PDF, AI, EPS, PNG, JPG, SVG, PSD &mdash; max 5 MB.</p>
                         </div>
 
                         {{-- Skip option (only when no file selected) --}}
@@ -1773,8 +1784,11 @@
                             x-bind:class="submitting ? 'opacity-60 cursor-not-allowed' : ''"
                             class="px-5 py-2 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
                         >
-                            <span x-show="!submitting">Continue to Secure Checkout</span>
-                            <span x-show="submitting" x-cloak>Processing…</span>
+                            <span x-show="!submitting">
+                                <span x-show="dtfMode === true" x-cloak>Choose Cart Option &rarr;</span>
+                                <span x-show="dtfMode !== true">Submit Request</span>
+                            </span>
+                            <span x-show="submitting" x-cloak>Processing&hellip;</span>
                         </button>
                         <p x-show="submitError" x-cloak class="text-xs text-error">
                             Something went wrong — please try again.
@@ -1789,5 +1803,5 @@
     </template>
 </div>
 
-{{-- Stripe Checkout Modal — bundled with the wizard so any page including the wizard gets it automatically --}}
-<x-ui.stripe-checkout-modal />
+{{-- Order Action Modal — bundled with the wizard so any DTF page gets the cart/checkout chooser automatically --}}
+<x-ui.order-action-modal />

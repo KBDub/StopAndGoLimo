@@ -491,3 +491,6 @@ Route::get('/order-confirmation/{orderId}', function (int $orderId) {
 
 Route::post('/custom-order/submit', [\App\Http\Controllers\CustomOrderController::class, 'submit'])
     ->name('custom-order.submit');
+
+Route::post('/custom-order/dtf-cart', [\App\Http\Controllers\CustomOrderController::class, 'dtfCart'])
+    ->name('custom-order.dtf-cart');

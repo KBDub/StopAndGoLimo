@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
             AttributeSeeder::class,
             CollectionSeeder::class,
             ProductSeeder::class,
+            DtfProductSeeder::class,
             TaxSeeder::class,
             Top5PctMerchSeeder::class,
             EventTemplateSeeder::class,

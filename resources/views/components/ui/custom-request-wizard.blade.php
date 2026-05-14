@@ -642,23 +642,48 @@
                 <div x-show="currentStepName === 'request-type'">
                     <div class="space-y-6">
 
+                        {{-- Company vs Personal --}}
                         <div>
                             <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
                                 Is this a company or personal request? <span class="text-error">*</span>
                             </h3>
-                            <div class="flex gap-6 justify-center">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-request-type" value="company"
-                                        @change="requestType = 'company'" :checked="requestType === 'company'"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">Company</span>
-                                </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-request-type" value="personal"
-                                        @change="requestType = 'personal'" :checked="requestType === 'personal'"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">Personal</span>
-                                </label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button
+                                    type="button"
+                                    @click="requestType = 'company'"
+                                    :class="requestType === 'company'
+                                        ? 'border-sunburst bg-sunburst/5'
+                                        : 'border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5'"
+                                    class="group flex items-start gap-3.5 px-4 py-4 border transition-colors duration-150 text-left w-full"
+                                >
+                                    <span
+                                        :class="requestType === 'company' ? 'border-sunburst' : 'border-charcoal-lighter group-hover:border-sunburst'"
+                                        class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 transition-colors duration-150"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="flex flex-col gap-0.5">
+                                        <span class="text-sm font-semibold text-charcoal leading-tight">Company</span>
+                                        <span class="text-xs text-charcoal-light">Business or organization</span>
+                                    </span>
+                                </button>
+                                <button
+                                    type="button"
+                                    @click="requestType = 'personal'"
+                                    :class="requestType === 'personal'
+                                        ? 'border-sunburst bg-sunburst/5'
+                                        : 'border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5'"
+                                    class="group flex items-start gap-3.5 px-4 py-4 border transition-colors duration-150 text-left w-full"
+                                >
+                                    <span
+                                        :class="requestType === 'personal' ? 'border-sunburst' : 'border-charcoal-lighter group-hover:border-sunburst'"
+                                        class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 transition-colors duration-150"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="flex flex-col gap-0.5">
+                                        <span class="text-sm font-semibold text-charcoal leading-tight">Personal</span>
+                                        <span class="text-xs text-charcoal-light">Individual order</span>
+                                    </span>
+                                </button>
                             </div>
                             <div x-show="requestType === 'company'" x-cloak class="mt-3">
                                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">
@@ -673,23 +698,48 @@
                             </div>
                         </div>
 
+                        {{-- Rush or Standard --}}
                         <div>
                             <h3 class="text-sm font-semibold text-charcoal mb-3 text-center">
                                 Is this a rush request? <span class="text-error">*</span>
                             </h3>
-                            <div class="flex gap-6 justify-center">
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-is-rush" value="yes"
-                                        @change="isRush = true" :checked="isRush === true"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">Yes</span>
-                                </label>
-                                <label class="flex items-center gap-2 cursor-pointer">
-                                    <input type="radio" name="crw-is-rush" value="no"
-                                        @change="isRush = false" :checked="isRush === false"
-                                        class="w-4 h-4 accent-sunburst">
-                                    <span class="text-sm font-medium text-charcoal">No</span>
-                                </label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button
+                                    type="button"
+                                    @click="isRush = true"
+                                    :class="isRush === true
+                                        ? 'border-sunburst bg-sunburst/5'
+                                        : 'border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5'"
+                                    class="group flex items-start gap-3.5 px-4 py-4 border transition-colors duration-150 text-left w-full"
+                                >
+                                    <span
+                                        :class="isRush === true ? 'border-sunburst' : 'border-charcoal-lighter group-hover:border-sunburst'"
+                                        class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 transition-colors duration-150"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="flex flex-col gap-0.5">
+                                        <span class="text-sm font-semibold text-charcoal leading-tight">Yes — Rush</span>
+                                        <span class="text-xs text-charcoal-light">Expedited production</span>
+                                    </span>
+                                </button>
+                                <button
+                                    type="button"
+                                    @click="isRush = false"
+                                    :class="isRush === false
+                                        ? 'border-sunburst bg-sunburst/5'
+                                        : 'border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5'"
+                                    class="group flex items-start gap-3.5 px-4 py-4 border transition-colors duration-150 text-left w-full"
+                                >
+                                    <span
+                                        :class="isRush === false ? 'border-sunburst' : 'border-charcoal-lighter group-hover:border-sunburst'"
+                                        class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 transition-colors duration-150"
+                                        aria-hidden="true"
+                                    ></span>
+                                    <span class="flex flex-col gap-0.5">
+                                        <span class="text-sm font-semibold text-charcoal leading-tight">No — Standard</span>
+                                        <span class="text-xs text-charcoal-light">Regular production timeline</span>
+                                    </span>
+                                </button>
                             </div>
                         </div>
 

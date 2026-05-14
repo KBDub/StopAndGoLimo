@@ -234,7 +234,7 @@
                         <button
                             type="button"
                             @click="choose('message')"
-                            class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full sm:max-w-[13rem]"
+                            class="group flex items-start gap-3.5 px-4 py-4 border border-linen-dark bg-white hover:border-sunburst/60 hover:bg-sunburst/5 transition-colors duration-150 text-left w-full sm:w-1/2"
                         >
                             <span
                                 class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full border-2 border-charcoal-lighter group-hover:border-sunburst transition-colors duration-150"

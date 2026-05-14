@@ -221,9 +221,9 @@
         get visibleSteps() {
             if (this.dtfMode === true) {
                 if (this.dtfItems && this.dtfItems.length > 0) {
-                    return ['request-type', 'dtf-upload', 'completion-date', 'extra-notes', 'shipping-address', 'confirm-submit'];
+                    return ['dtf-upload', 'completion-date', 'extra-notes', 'shipping-address', 'confirm-submit'];
                 }
-                return ['request-type', 'dtf-type-selection', 'dtf-upload', 'dtf-quantity',
+                return ['dtf-type-selection', 'dtf-upload', 'dtf-quantity',
                         'completion-date', 'extra-notes', 'shipping-address', 'confirm-submit'];
             }
             /* Apparel path (dtfMode === false or null) */
@@ -563,6 +563,7 @@
             hasDtf               = dtfFileName ? true : null;
             dtfImageDistribution = null;
             dtfFilesByType       = { neckTag: '', chestImage: '', imageSize: '' };
+            if (dtfMode === true) { requestType = 'personal'; isRush = false; }
             open();
         }
     "

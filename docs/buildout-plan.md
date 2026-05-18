@@ -161,7 +161,7 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 - [x] Stock availability display
 - [x] Breadcrumb navigation
 - [ ] Product image gallery (placeholder images, rolled into Phase 3)
-- [ ] Related products section (rolled into Phase 3)
+- [x] Related products section (rolled into Phase 3)
 
 #### 2.5 Static Pages
 - [x] About Us page
@@ -350,7 +350,7 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 
 ---
 
-## Phase 4: Admin & Enhancements
+## Phase 4: Premium Admin & Enhancements
 
 **Complexity:** Medium-High  
 **Duration:** Admin customization + polish  
@@ -523,8 +523,8 @@ A customer can:
 1. ✅ Browse products via mega menu
 2. ✅ Filter products by size, material, price
 3. ✅ View product details
-4. ⬜ Add items to cart
-5. ⬜ Complete checkout with payment
+4. ✅ Add items to cart
+5. ✅ Complete checkout with payment
 6. ⬜ Receive order confirmation
 
 ---

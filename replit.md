@@ -78,6 +78,8 @@ This platform provides a sophisticated online presence for "Top 5 Percent," a cu
 -   All components must be fully responsive across mobile, tablet, and desktop. Use Tailwind responsive prefixes (sm:, md:, lg:) for all layouts. Fixed widths must always have a mobile-safe counterpart (e.g. w-full sm:w-96, never bare w-96). No component is complete until it looks correct at all three breakpoints.
 -   Default image display size: 600×450px (4:3 ratio) — use `style="width:600px; height:450px; max-width:100%;"` as per card-image-with-text.blade.php
 -   Both demo pages (/demo and /demo/premium) must always show the actual blade component name, file path, and a full usage example (including aspect ratio) in every section's info block
+-   Never use double -- or a hyphen, use a comma instead.
+-   Always use a 7th grade reading writing level.
 
 ## Gotchas
 

@@ -94,6 +94,7 @@
                                             <div><a href="/custom-apparel/screen-printing" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Screen Printing</a><a href="/custom-apparel/screen-printing" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Classic bulk production</a></div>
                                             <div><a href="/custom-apparel/embroidery" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Embroidery</a><a href="/custom-apparel/embroidery" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Premium stitched branding</a></div>
                                             <div><a href="/custom-apparel/rhinestone-apparel" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Rhinestone</a><a href="/custom-apparel/rhinestone-apparel" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Crystal embellishments</a></div>
+                                            <div><a href="/custom-apparel/printing-options/digital-vinyl" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Digital Vinyl</a><a href="/custom-apparel/printing-options/digital-vinyl" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Full color printed vinyl</a></div>
                                         </div>
                                     </div>
                                     {{-- Row 2: Specialty Materials --}}
@@ -108,6 +109,7 @@
                                             <div><a href="/custom-apparel/specialty-materials/holographic-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Holographic</a><a href="/custom-apparel/specialty-materials/holographic-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Iridescent color shifting</a></div>
                                             <div><a href="/custom-apparel/specialty-materials/foil-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Foil</a><a href="/custom-apparel/specialty-materials/foil-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Shiny metallic finish</a></div>
                                             <div><a href="/custom-apparel/specialty-materials/reflective-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Reflective</a><a href="/custom-apparel/specialty-materials/reflective-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">High-visibility safety</a></div>
+                                            <div><a href="/custom-apparel/specialty-materials/vinyl" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Vinyl</a><a href="/custom-apparel/specialty-materials/vinyl" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Heat press cut vinyl</a></div>
                                         </div>
                                     </div>
                                     {{-- Row 3: Group Shirts --}}
@@ -493,12 +495,14 @@
                     <a href="/custom-apparel/screen-printing" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Screen Printing</a>
                     <a href="/custom-apparel/embroidery" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Embroidery</a>
                     <a href="/custom-apparel/rhinestone-apparel" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Rhinestone Apparel</a>
+                    <a href="/custom-apparel/printing-options/digital-vinyl" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Digital Vinyl</a>
                     <a href="/custom-apparel/specialty-materials/glitter-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Glitter Shirts</a>
                     <a href="/custom-apparel/specialty-materials/puff-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Puff Shirts</a>
                     <a href="/custom-apparel/specialty-materials/foil-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Foil Shirts</a>
                     <a href="/custom-apparel/specialty-materials/glow-in-the-dark-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Glow in the Dark</a>
                     <a href="/custom-apparel/specialty-materials/flock-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Flock Shirts</a>
                     <a href="/custom-apparel/specialty-materials/reflective-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reflective Shirts</a>
+                    <a href="/custom-apparel/specialty-materials/vinyl" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Vinyl Shirts</a>
                     <a href="/custom-apparel/specialty-materials/holographic-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Holographic Shirts</a>
                     <a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Corporate Wear</a>
                     <a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Spirit Wear</a>

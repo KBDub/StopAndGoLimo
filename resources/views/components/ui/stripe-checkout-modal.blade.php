@@ -2,62 +2,17 @@
  | Component  : x-ui.stripe-checkout-modal
  | Location   : resources/views/components/ui/stripe-checkout-modal.blade.php
  |
- | Shown automatically after the custom-request-wizard submits successfully.
- | Opens Stripe's hosted checkout in a new tab via window.open(), then polls
- | the returned window reference every second to detect when the tab closes.
- |
- | ── STEP INDICATOR ──────────────────────────────────────────────────────────
- |   The wizard passes checkoutStep and checkoutTotal in the open-modal event
- |   detail so this modal can display "Step X of Y · Secure Payment".
- |
- | ── TAB CLOSE DETECTION ─────────────────────────────────────────────────────
- |   _win and _timer are plain JavaScript closure variables — NOT Alpine
- |   reactive properties. Alpine's Proxy wraps every object assigned to a
- |   reactive property; WindowProxy assigned to a reactive prop loses its
- |   ability to reflect .closed accurately. Using closure vars avoids this.
- |
- |   window.open() without 'noopener' so the returned WindowProxy is non-null
- |   and .closed remains readable. Cross-origin access from the Stripe tab
- |   back to window.opener is blocked by the same-origin policy.
+ | NOTE: Payment is now handled through the standard Lunar checkout flow.
+ | This modal is retained as a shell but the Stripe Payment Link has been
+ | removed. Do not wire this modal to any active checkout flow.
  --}}
 
 <div
-    x-data="(function () {
-        let _win   = null;
-        let _timer = null;
-
-        return {
-            checkoutStep:    1,
-            checkoutTotal:   1,
-            paymentComplete: false,
-
-            openCheckout() {
-                this.paymentComplete = false;
-                _win = window.open('https://buy.stripe.com/bIYcPWgoC5mt6FqeUU', '_blank');
-                if (_win) {
-                    this._startPolling();
-                }
-            },
-
-            _startPolling() {
-                this._stopPolling();
-                const self = this;
-                _timer = setInterval(function () {
-                    if (_win && _win.closed) {
-                        self._stopPolling();
-                        self.paymentComplete = true;
-                    }
-                }, 1000);
-            },
-
-            _stopPolling() {
-                if (_timer) {
-                    clearInterval(_timer);
-                    _timer = null;
-                }
-            },
-        };
-    })()"
+    x-data="{
+        checkoutStep:    1,
+        checkoutTotal:   1,
+        paymentComplete: false,
+    }"
     @open-modal.window="
         if ($event.detail.name === 'stripe-checkout-modal') {
             checkoutStep    = $event.detail.checkoutStep  || 1;

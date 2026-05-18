@@ -1,9 +1,11 @@
 <div>
-    {{-- $cartUrl / $shopUrl are Livewire public properties set in mount() --}}
+    {{-- $cartUrl / $shopUrl / $returnUrl are Livewire public properties set in mount() --}}
 
     <section class="py-10 bg-gray-50 min-h-screen">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
             @if(!$cart || $cart->lines->isEmpty())
+
                 <div class="bg-white shadow p-12 text-center max-w-lg mx-auto">
                     <h1 class="text-2xl font-bold mb-3" style="color: var(--brand-primary)">Nothing to checkout</h1>
                     <p class="text-gray-500 mb-6">Your cart is empty. Add some items before checking out.</p>
@@ -15,8 +17,18 @@
                         Browse Products
                     </a>
                 </div>
-            @else
-                <h1 class="text-3xl font-bold mb-8" style="color: var(--brand-primary)">Checkout</h1>
+
+            @elseif(!$showPaymentForm)
+
+                {{-- ── Step 1: Contact + Address ───────────────────────────────── --}}
+                <h1 class="text-3xl font-bold mb-2" style="color: var(--brand-primary)">Checkout</h1>
+                <p class="text-sm text-gray-500 mb-8">Step 1 of 2 — Contact &amp; Shipping</p>
+
+                @if(session('stripe_error'))
+                    <div class="bg-red-50 border border-red-200 text-red-700 p-4 mb-6">
+                        {{ session('stripe_error') }}
+                    </div>
+                @endif
 
                 @if($errorMessage)
                     <div class="bg-red-50 border border-red-200 text-red-700 p-4 mb-6">
@@ -37,34 +49,28 @@
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="email">Email address</label>
                                     <input
                                         type="email" id="email" wire:model="email"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary focus:ring-brand-secondary outline-none transition-all"
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all"
                                         placeholder="your@email.com"
                                     >
                                     @error('email') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="firstName">First name</label>
-                                    <input
-                                        type="text" id="firstName" wire:model="firstName"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary focus:ring-brand-secondary outline-none transition-all"
-                                    >
+                                    <input type="text" id="firstName" wire:model="firstName"
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
                                     @error('firstName') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="lastName">Last name</label>
-                                    <input
-                                        type="text" id="lastName" wire:model="lastName"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary focus:ring-brand-secondary outline-none transition-all"
-                                    >
+                                    <input type="text" id="lastName" wire:model="lastName"
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
                                     @error('lastName') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="sm:col-span-2">
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="phone">Phone (optional)</label>
-                                    <input
-                                        type="tel" id="phone" wire:model="phone"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all"
-                                        placeholder="(555) 123-4567"
-                                    >
+                                    <input type="tel" id="phone" wire:model="phone"
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all"
+                                        placeholder="(555) 123-4567">
                                 </div>
                             </div>
                         </div>
@@ -76,30 +82,30 @@
                                 <div class="sm:col-span-2">
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="shippingLine1">Street address</label>
                                     <input type="text" id="shippingLine1" wire:model="shippingLine1"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                     @error('shippingLine1') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="sm:col-span-2">
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="shippingLine2">Apartment, suite, etc. (optional)</label>
                                     <input type="text" id="shippingLine2" wire:model="shippingLine2"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="shippingCity">City</label>
                                     <input type="text" id="shippingCity" wire:model="shippingCity"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                     @error('shippingCity') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="shippingState">State</label>
                                     <input type="text" id="shippingState" wire:model="shippingState" placeholder="IL"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                     @error('shippingState') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="shippingPostcode">Zip code</label>
                                     <input type="text" id="shippingPostcode" wire:model="shippingPostcode"
-                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                        class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                     @error('shippingPostcode') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                 </div>
                             </div>
@@ -120,30 +126,30 @@
                                     <div class="sm:col-span-2">
                                         <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="billingLine1">Street address</label>
                                         <input type="text" id="billingLine1" wire:model="billingLine1"
-                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                         @error('billingLine1') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
                                     <div class="sm:col-span-2">
                                         <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="billingLine2">Apartment, suite, etc. (optional)</label>
                                         <input type="text" id="billingLine2" wire:model="billingLine2"
-                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                     </div>
                                     <div>
                                         <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="billingCity">City</label>
                                         <input type="text" id="billingCity" wire:model="billingCity"
-                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                         @error('billingCity') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
                                     <div>
                                         <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="billingState">State</label>
                                         <input type="text" id="billingState" wire:model="billingState"
-                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                         @error('billingState') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
                                     <div>
                                         <label class="block text-sm font-semibold mb-1" style="color: var(--brand-primary)" for="billingPostcode">Zip code</label>
                                         <input type="text" id="billingPostcode" wire:model="billingPostcode"
-                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all">
+                                            class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all">
                                         @error('billingPostcode') <span class="text-red-600 text-xs mt-1">{{ $message }}</span> @enderror
                                     </div>
                                 </div>
@@ -155,10 +161,11 @@
                             <h2 class="text-xl font-bold mb-4" style="color: var(--brand-primary)">Order Notes (optional)</h2>
                             <textarea
                                 wire:model="notes" rows="3"
-                                class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none focus:border-brand-secondary outline-none transition-all resize-none"
+                                class="w-full px-4 py-2.5 border border-gray-300 focus:outline-none outline-none transition-all resize-none"
                                 placeholder="Special instructions for your order..."
                             ></textarea>
                         </div>
+
                     </div>
 
                     {{-- Order summary sidebar --}}
@@ -227,19 +234,19 @@
                             </div>
 
                             <button
-                                wire:click="placeOrder"
+                                wire:click="saveAddresses"
                                 wire:loading.attr="disabled"
                                 class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 text-lg font-semibold transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
                                 style="background-color: var(--brand-secondary); color: var(--brand-primary)"
                                 {{ $processing ? 'disabled' : '' }}
                             >
-                                <span wire:loading.remove wire:target="placeOrder">Place Order</span>
-                                <span wire:loading wire:target="placeOrder" class="flex items-center gap-2">
+                                <span wire:loading.remove wire:target="saveAddresses">Continue to Payment</span>
+                                <span wire:loading wire:target="saveAddresses" class="flex items-center gap-2">
                                     <svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24">
                                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
                                     </svg>
-                                    Processing...
+                                    Saving...
                                 </span>
                             </button>
 
@@ -248,7 +255,7 @@
                                     <svg class="w-4 h-4 flex-shrink-0" style="color: var(--brand-accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                                     </svg>
-                                    <span>Secure checkout</span>
+                                    <span>Secure checkout powered by Stripe</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-xs text-gray-500">
                                     <svg class="w-4 h-4 flex-shrink-0" style="color: var(--brand-accent)" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,13 +267,103 @@
 
                             <div class="mt-4 text-center">
                                 <a href="{{ $cartUrl }}" class="text-sm hover:opacity-70 transition-opacity" style="color: var(--brand-accent)">
-                                    ← Return to cart
+                                    &larr; Return to cart
                                 </a>
                             </div>
                         </div>
                     </div>
+
                 </div>
+
+            @else
+
+                {{-- ── Step 2: Stripe Payment ──────────────────────────────────── --}}
+                @stripeScripts
+
+                <h1 class="text-3xl font-bold mb-2" style="color: var(--brand-primary)">Secure Payment</h1>
+                <p class="text-sm text-gray-500 mb-8">Step 2 of 2 — Enter your card details below</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                    <div class="lg:col-span-2">
+                        <div class="bg-white shadow p-6">
+                            <h2 class="text-xl font-bold mb-1" style="color: var(--brand-primary)">Payment Details</h2>
+                            <p class="text-sm text-gray-500 mb-6">Your card information is handled entirely by Stripe and is never stored on our servers.</p>
+
+                            @livewire('stripe.payment', ['cart' => $cart, 'returnUrl' => $returnUrl], key('stripe-payment'))
+
+                        </div>
+
+                        <div class="mt-4">
+                            <button
+                                wire:click="$set('showPaymentForm', false)"
+                                class="text-sm hover:opacity-70 transition-opacity"
+                                style="color: var(--brand-accent)"
+                            >
+                                &larr; Back to shipping details
+                            </button>
+                        </div>
+                    </div>
+
+                    {{-- Mini order summary --}}
+                    <div class="lg:col-span-1">
+                        <div class="bg-white shadow p-6 sticky top-32">
+                            <h2 class="text-xl font-bold mb-4" style="color: var(--brand-primary)">Order Summary</h2>
+
+                            <div class="space-y-3 mb-4 max-h-64 overflow-y-auto">
+                                @foreach($cart->lines as $line)
+                                    @php
+                                        $variant      = $line->purchasable;
+                                        $product      = $variant->product;
+                                        $productName  = $product->translateAttribute('name');
+                                        $lineTotal    = $line->subTotal?->value ?? 0;
+                                        $variantLabel = $variant->sku ? last(explode('-', $variant->sku)) : '';
+                                    @endphp
+                                    <div class="flex gap-3 pb-3 border-b border-gray-200">
+                                        <div class="flex-1 min-w-0">
+                                            <h4 class="text-sm font-semibold truncate" style="color: var(--brand-primary)">{{ $productName }}</h4>
+                                            @if($variantLabel)
+                                                <p class="text-xs text-gray-500">{{ $variantLabel }}</p>
+                                            @endif
+                                            <p class="text-xs text-gray-500">Qty: {{ $line->quantity }}</p>
+                                        </div>
+                                        <span class="text-sm font-bold" style="color: var(--brand-primary)">${{ number_format($lineTotal / 100, 2) }}</span>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            @php
+                                $subTotal = $cart->subTotal?->value ?? 0;
+                                $taxTotal = $cart->taxTotal?->value ?? 0;
+                                $total    = $cart->total?->value ?? 0;
+                            @endphp
+
+                            <div class="space-y-2 py-4 border-t border-gray-200">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Subtotal</span>
+                                    <span class="font-medium" style="color: var(--brand-primary)">${{ number_format($subTotal / 100, 2) }}</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Shipping</span>
+                                    <span class="text-gray-500">Free</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-500">Tax</span>
+                                    <span class="font-medium" style="color: var(--brand-primary)">${{ number_format($taxTotal / 100, 2) }}</span>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between border-t border-gray-200 pt-3">
+                                <span class="font-bold text-lg" style="color: var(--brand-primary)">Total</span>
+                                <span class="font-bold text-xl" style="color: var(--brand-primary)">${{ number_format($total / 100, 2) }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             @endif
+
         </div>
     </section>
 </div>

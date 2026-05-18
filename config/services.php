@@ -43,4 +43,10 @@ return [
         'id' => env('GA4_MEASUREMENT_ID'),
     ],
 
+    'stripe' => [
+        'key'        => env('STRIPE_SECRET'),
+        'public_key' => env('STRIPE_KEY'),
+        'secret'     => env('STRIPE_SECRET'),
+    ],
+
 ];

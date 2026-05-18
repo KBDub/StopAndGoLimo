@@ -12,60 +12,63 @@ use Lunar\Models\Country;
 
 class CheckoutPage extends Component
 {
-    public string $email = '';
+    public string $email    = '';
     public string $firstName = '';
-    public string $lastName = '';
-    public string $phone = '';
+    public string $lastName  = '';
+    public string $phone     = '';
 
-    public string $shippingLine1 = '';
-    public string $shippingLine2 = '';
-    public string $shippingCity = '';
-    public string $shippingState = '';
+    public string $shippingLine1    = '';
+    public string $shippingLine2    = '';
+    public string $shippingCity     = '';
+    public string $shippingState    = '';
     public string $shippingPostcode = '';
-    public string $shippingCountry = 'US';
+    public string $shippingCountry  = 'US';
 
     public bool $sameBillingAddress = true;
 
-    public string $billingLine1 = '';
-    public string $billingLine2 = '';
-    public string $billingCity = '';
-    public string $billingState = '';
+    public string $billingLine1    = '';
+    public string $billingLine2    = '';
+    public string $billingCity     = '';
+    public string $billingState    = '';
     public string $billingPostcode = '';
-    public string $billingCountry = 'US';
+    public string $billingCountry  = 'US';
 
-    public string $notes        = '';
-    public bool   $processing   = false;
-    public string $errorMessage = '';
+    public string $notes          = '';
+    public bool   $processing     = false;
+    public string $errorMessage   = '';
+    public bool   $showPaymentForm = false;
 
-    public string $cartUrl             = '/cart';
-    public string $shopUrl             = '/top5pct-merchandise';
-    public string $confirmationBase    = '/order-confirmation/';
+    public string $cartUrl          = '/cart';
+    public string $shopUrl          = '/top5pct-merchandise';
+    public string $confirmationBase = '/order-confirmation/';
+    public string $returnUrl        = '';
 
     public function mount(): void
     {
         $this->cartUrl          = view()->shared('storefrontCartUrl',          '/cart');
         $this->shopUrl          = view()->shared('storefrontHomeUrl',           '/top5pct-merchandise');
         $this->confirmationBase = view()->shared('storefrontConfirmationBase', '/order-confirmation/');
+        $this->returnUrl        = route('stripe.return');
     }
 
     protected function rules(): array
     {
         $rules = [
-            'email' => 'required|email',
-            'firstName' => 'required|string|max:255',
-            'lastName' => 'required|string|max:255',
-            'phone' => 'nullable|string|max:20',
-            'shippingLine1' => 'required|string|max:255',
-            'shippingLine2' => 'nullable|string|max:255',
-            'shippingCity' => 'required|string|max:255',
-            'shippingState' => 'required|string|max:255',
+            'email'            => 'required|email',
+            'firstName'        => 'required|string|max:255',
+            'lastName'         => 'required|string|max:255',
+            'phone'            => 'nullable|string|max:20',
+            'shippingLine1'    => 'required|string|max:255',
+            'shippingLine2'    => 'nullable|string|max:255',
+            'shippingCity'     => 'required|string|max:255',
+            'shippingState'    => 'required|string|max:255',
             'shippingPostcode' => 'required|string|max:20',
         ];
 
         if (! $this->sameBillingAddress) {
-            $rules['billingLine1'] = 'required|string|max:255';
-            $rules['billingCity'] = 'required|string|max:255';
-            $rules['billingState'] = 'required|string|max:255';
+            $rules['billingLine1']    = 'required|string|max:255';
+            $rules['billingCity']     = 'required|string|max:255';
+            $rules['billingState']    = 'required|string|max:255';
             $rules['billingPostcode'] = 'required|string|max:20';
         }
 
@@ -76,18 +79,16 @@ class CheckoutPage extends Component
     {
         try {
             $cart = CartSession::current();
-
             if ($cart && $cart->lines->isNotEmpty()) {
                 return $cart->calculate();
             }
-
             return $cart;
         } catch (\Lunar\Exceptions\MissingCurrencyPriceException $e) {
             return null;
         }
     }
 
-    public function placeOrder(): void
+    public function saveAddresses(): void
     {
         $this->validate();
 
@@ -98,22 +99,21 @@ class CheckoutPage extends Component
             return;
         }
 
-        $this->processing = true;
+        $this->processing   = true;
         $this->errorMessage = '';
 
         try {
-            $country = Country::where('iso3', 'USA')->first()
-                ?? Country::first();
+            $country = Country::where('iso3', 'USA')->first() ?? Country::first();
 
             $shippingAddress = [
-                'first_name' => $this->firstName,
-                'last_name' => $this->lastName,
-                'line_one' => $this->shippingLine1,
-                'line_two' => $this->shippingLine2,
-                'city' => $this->shippingCity,
-                'state' => $this->shippingState,
-                'postcode' => $this->shippingPostcode,
-                'country_id' => $country?->id,
+                'first_name'    => $this->firstName,
+                'last_name'     => $this->lastName,
+                'line_one'      => $this->shippingLine1,
+                'line_two'      => $this->shippingLine2,
+                'city'          => $this->shippingCity,
+                'state'         => $this->shippingState,
+                'postcode'      => $this->shippingPostcode,
+                'country_id'    => $country?->id,
                 'contact_email' => $this->email,
                 'contact_phone' => $this->phone,
             ];
@@ -124,49 +124,37 @@ class CheckoutPage extends Component
                 $cart->setBillingAddress($shippingAddress);
             } else {
                 $cart->setBillingAddress([
-                    'first_name' => $this->firstName,
-                    'last_name' => $this->lastName,
-                    'line_one' => $this->billingLine1,
-                    'line_two' => $this->billingLine2,
-                    'city' => $this->billingCity,
-                    'state' => $this->billingState,
-                    'postcode' => $this->billingPostcode,
-                    'country_id' => $country?->id,
+                    'first_name'    => $this->firstName,
+                    'last_name'     => $this->lastName,
+                    'line_one'      => $this->billingLine1,
+                    'line_two'      => $this->billingLine2,
+                    'city'          => $this->billingCity,
+                    'state'         => $this->billingState,
+                    'postcode'      => $this->billingPostcode,
+                    'country_id'    => $country?->id,
                     'contact_email' => $this->email,
                     'contact_phone' => $this->phone,
                 ]);
             }
 
             $shippingOption = ShippingManifest::getOptions($cart)->first();
-
             if ($shippingOption) {
                 $cart->setShippingOption($shippingOption);
             }
 
-            $cart = $cart->refresh()->calculate();
+            $cart->refresh()->calculate();
 
-            $order = $cart->createOrder();
+            $this->processing     = false;
+            $this->showPaymentForm = true;
 
-            $order->update([
-                'notes' => $this->notes,
-                'meta' => array_merge($order->meta?->toArray() ?? [], [
-                    'payment_method' => 'offline',
-                ]),
-            ]);
-
-            CartSession::forget();
-
-            $this->dispatch('cart-updated');
-
-            $this->redirect($this->confirmationBase . $order->id);
         } catch (\Exception $e) {
-            $this->errorMessage = 'There was an issue placing your order. Please try again.';
-            $this->processing = false;
+            $this->errorMessage = 'There was an issue saving your details. Please try again.';
+            $this->processing   = false;
             report($e);
         }
     }
 
-    public function render()
+    public function render(): \Illuminate\View\View
     {
         return view('livewire.cart.checkout-page', [
             'cart' => $this->cart,

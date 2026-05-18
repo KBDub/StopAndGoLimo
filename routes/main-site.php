@@ -485,6 +485,9 @@ Route::get('/checkout', function () {
     return view('pages.checkout');
 })->name('checkout');
 
+Route::get('/stripe/return', \App\Http\Controllers\StripeReturnController::class)
+    ->name('stripe.return');
+
 Route::get('/order-confirmation/{orderId}', function (int $orderId) {
     return view('pages.order-confirmation', ['orderId' => $orderId]);
 })->name('order-confirmation');

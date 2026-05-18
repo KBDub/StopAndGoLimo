@@ -101,6 +101,10 @@ Route::get('/custom-apparel/printing-options/dye-sublimation-printing', function
     return view('pages.custom-apparel.dye-sublimation');
 })->name('custom-apparel.dye-sublimation-printing');
 
+Route::get('/custom-apparel/printing-options/digital-vinyl', function () {
+    return view('pages.custom-apparel.printing-options.digital-vinyl');
+})->name('custom-apparel.digital-vinyl');
+
 // Specialty Materials
 Route::get('/custom-apparel/specialty-materials/glitter-shirts', function () {
     return view('pages.custom-apparel.glitter-shirts');
@@ -133,6 +137,10 @@ Route::get('/custom-apparel/specialty-materials/foil-shirts', function () {
 Route::get('/custom-apparel/specialty-materials/reflective-shirts', function () {
     return view('pages.custom-apparel.reflective-shirts');
 })->name('custom-apparel.reflective-shirts');
+
+Route::get('/custom-apparel/specialty-materials/vinyl', function () {
+    return view('pages.custom-apparel.specialty-materials.vinyl');
+})->name('custom-apparel.vinyl');
 
 // Group Shirts
 Route::get('/custom-apparel/group-shirts/reunion-shirts', function () {

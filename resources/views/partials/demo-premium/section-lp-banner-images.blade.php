@@ -26,7 +26,7 @@
                 'image' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg',
                 'alt'   => 'Family and class reunion shirts in Joliet and Shorewood',
                 'title' => 'Reunion Shirts',
-                'href'  => '/custom-apparel/group-shirts/reunion-shirts',
+                'href'  => '/custom-apparel/group-wear/reunion-shirts',
             ],
         ]" />
 

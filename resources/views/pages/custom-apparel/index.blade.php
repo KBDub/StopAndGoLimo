@@ -155,19 +155,19 @@
             'image' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg',
             'alt'   => 'Custom family and class reunion shirts in Joliet and Shorewood Illinois',
             'title' => 'Reunion Shirts',
-            'href'  => '/custom-apparel/group-shirts/reunion-shirts',
+            'href'  => '/custom-apparel/group-wear/reunion-shirts',
         ],
         [
             'image' => '/images/spirit-wear/top5pct-banner-fanwear-spiritwear-uniforms-joliet-shorewood.jpg',
             'alt'   => 'Custom spirit wear, fan wear, and school uniforms in Joliet Illinois',
             'title' => 'Spirit Wear',
-            'href'  => '/custom-apparel/group-shirts/spirit-wear-shirts',
+            'href'  => '/custom-apparel/group-wear/spirit-wear-shirts',
         ],
         [
             'image' => '/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg',
             'alt'   => 'Custom corporate shirts, polo shirts, and uniforms in Joliet Illinois',
             'title' => 'Corporate Wear',
-            'href'  => '/custom-apparel/group-shirts/corporate-wear-shirts',
+            'href'  => '/custom-apparel/group-wear/corporate-wear-shirts',
         ],
     ]" />
 

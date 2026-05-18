@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Reunion Shirts", "item": "https://www.top5pct.com/custom-apparel/group-shirts/reunion-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Reunion Shirts", "item": "https://www.top5pct.com/custom-apparel/group-wear/reunion-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Reunion Shirts in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/group-shirts/reunion-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/group-wear/reunion-shirts",
     "description": "Custom family reunion shirts and group shirts in Joliet, IL. Group pricing available. DTF, screen print, and vinyl printing for reunions, class reunions, and family events. No minimums. Veteran owned."
 }
 </script>
@@ -52,7 +52,7 @@
             ['src' => '/images/reunion-shirts/top5pct-class-reunion-shirt.jpg', 'alt' => 'Custom family and class reunion shirts in Joliet and Shorewood Illinois'],
             ['src' => '/images/reunion-shirts/top5pct-family-reunion-shirts-joliet.jpg',                'alt' => 'Class reunion shirts printed in Joliet and Shorewood Illinois'],
             ['src' => '/images/reunion-shirts/top5pct-family-reunion-tshirts-in-joliet.jpg',             'alt' => 'Custom family reunion shirts in Joliet and Plainfield Illinois'],
-            ['src' => '/images/reunion-shirts/top5pct-group-shirts.jpg',   'alt' => 'Westinghouse class reunion shirts in Joliet and Shorewood Illinois'],
+            ['src' => '/images/reunion-shirts/top5pct-group-wear.jpg',   'alt' => 'Westinghouse class reunion shirts in Joliet and Shorewood Illinois'],
         ]"
         visible=2
     />
@@ -65,7 +65,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/reunion-shirts/top5pct-reunion-group-shirts.jpg"
+            image="/images/reunion-shirts/top5pct-reunion-group-wear.jpg"
             alt="Class reunion shirts printed in Joliet and Shorewood Illinois"
             title="Class Reunion Shirts"
         >

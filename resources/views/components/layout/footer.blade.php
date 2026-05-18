@@ -49,9 +49,9 @@
                         <li><a href="/custom-apparel/specialty-materials/foil-shirts"              class="link-notification">Foil Shirts</a></li>
                         <li><a href="/custom-apparel/specialty-materials/holographic-shirts"       class="link-notification">Holographic Shirts</a></li>
                         <li><a href="/custom-apparel/specialty-materials/puff-shirts"              class="link-notification">Puff Shirts</a></li>
-                        <li><a href="/custom-apparel/group-shirts/spirit-wear-shirts"              class="link-notification">Spirit Wear</a></li>
-                        <li><a href="/custom-apparel/group-shirts/corporate-wear-shirts"           class="link-notification">Corporate Wear</a></li>
-                        <li><a href="/custom-apparel/group-shirts/reunion-shirts"                  class="link-notification">Reunion Shirts</a></li>
+                        <li><a href="/custom-apparel/group-wear/spirit-wear-shirts"              class="link-notification">Spirit Wear</a></li>
+                        <li><a href="/custom-apparel/group-wear/corporate-wear-shirts"           class="link-notification">Corporate Wear</a></li>
+                        <li><a href="/custom-apparel/group-wear/reunion-shirts"                  class="link-notification">Reunion Shirts</a></li>
                     </ul>
 
                     {{-- Signs & Banners --}}

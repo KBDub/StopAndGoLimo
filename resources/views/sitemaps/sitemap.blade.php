@@ -144,19 +144,19 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/reunion-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/reunion-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/corporate-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/corporate-wear-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/spirit-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/spirit-wear-shirts</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

@@ -22,11 +22,11 @@
 
             <x-ui.card-product
                 title="Corporate Wear"
-                href="/custom-apparel/group-shirts/corporate-wear-shirts"
+                href="/custom-apparel/group-wear/corporate-wear-shirts"
                 image="/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg"
             >
                 <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
+                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
                 </p>
             </x-ui.card-product>
 

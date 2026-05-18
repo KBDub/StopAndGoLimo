@@ -252,7 +252,7 @@
     </url>
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/spirit-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/spirit-wear-shirts</loc>
         <image:image>
             <image:loc>https://www.top5pct.com/images/spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg</image:loc>
             <image:title>Custom Spirit Wear in Joliet, IL</image:title>
@@ -261,7 +261,7 @@
     </url>
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/corporate-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/corporate-wear-shirts</loc>
         <image:image>
             <image:loc>https://www.top5pct.com/images/corporate-wear/top5pct-landscaping-clothing-joliet.jpg</image:loc>
             <image:title>Corporate Wear &amp; Uniforms in Joliet, IL</image:title>
@@ -270,9 +270,9 @@
     </url>
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/reunion-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/reunion-shirts</loc>
         <image:image>
-            <image:loc>https://www.top5pct.com/images/reunion-shirts/top5pct-reunion-group-shirts.jpg</image:loc>
+            <image:loc>https://www.top5pct.com/images/reunion-shirts/top5pct-reunion-group-wear.jpg</image:loc>
             <image:title>Custom Reunion Shirts in Joliet, IL</image:title>
             <image:caption>Custom family reunion and group shirts made in Joliet, IL.</image:caption>
         </image:image>

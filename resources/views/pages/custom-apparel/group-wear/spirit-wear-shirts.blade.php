@@ -16,7 +16,7 @@
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.top5pct.com" },
         { "@type": "ListItem", "position": 2, "name": "Custom Apparel", "item": "https://www.top5pct.com/custom-apparel" },
-        { "@type": "ListItem", "position": 3, "name": "Spirit Wear", "item": "https://www.top5pct.com/custom-apparel/group-shirts/spirit-wear-shirts" }
+        { "@type": "ListItem", "position": 3, "name": "Spirit Wear", "item": "https://www.top5pct.com/custom-apparel/group-wear/spirit-wear-shirts" }
     ]
 }
 </script>
@@ -25,7 +25,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Custom Spirit Wear in Joliet, IL | Top 5 Percent",
-    "url": "https://www.top5pct.com/custom-apparel/group-shirts/spirit-wear-shirts",
+    "url": "https://www.top5pct.com/custom-apparel/group-wear/spirit-wear-shirts",
     "description": "Custom spirit wear and fan apparel in Joliet, IL. School spirit shirts, team fan apparel, and community spirit wear for schools, sports teams, and organizations. No minimums. Veteran owned."
 }
 </script>

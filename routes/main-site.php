@@ -143,16 +143,16 @@ Route::get('/custom-apparel/specialty-materials/vinyl', function () {
 })->name('custom-apparel.vinyl');
 
 // Group Shirts
-Route::get('/custom-apparel/group-shirts/reunion-shirts', function () {
-    return view('pages.custom-apparel.group-shirts.reunion-shirts');
+Route::get('/custom-apparel/group-wear/reunion-shirts', function () {
+    return view('pages.custom-apparel.group-wear.reunion-shirts');
 })->name('custom-apparel.reunion-shirts');
 
-Route::get('/custom-apparel/group-shirts/spirit-wear-shirts', function () {
-    return view('pages.custom-apparel.group-shirts.spirit-wear-shirts');
+Route::get('/custom-apparel/group-wear/spirit-wear-shirts', function () {
+    return view('pages.custom-apparel.group-wear.spirit-wear-shirts');
 })->name('custom-apparel.spirit-wear-shirts');
 
-Route::get('/custom-apparel/group-shirts/corporate-wear-shirts', function () {
-    return view('pages.custom-apparel.group-shirts.corporate-wear-shirts');
+Route::get('/custom-apparel/group-wear/corporate-wear-shirts', function () {
+    return view('pages.custom-apparel.group-wear.corporate-wear-shirts');
 })->name('custom-apparel.corporate-wear-shirts');
 
 // ─── Custom Apparel 302 Redirects (temporary — promote to 301 at go-live) ────
@@ -168,9 +168,9 @@ Route::redirect('/custom-apparel/brick-shirts',            '/custom-apparel/spec
 Route::redirect('/custom-apparel/holographic-shirts',      '/custom-apparel/specialty-materials/holographic-shirts', 302);
 Route::redirect('/custom-apparel/foil-shirts',             '/custom-apparel/specialty-materials/foil-shirts',      302);
 Route::redirect('/custom-apparel/reflective-shirts',       '/custom-apparel/specialty-materials/reflective-shirts', 302);
-Route::redirect('/custom-apparel/reunion-shirts',          '/custom-apparel/group-shirts/reunion-shirts',          302);
-Route::redirect('/custom-apparel/spirit-wear-shirts',      '/custom-apparel/group-shirts/spirit-wear-shirts',      302);
-Route::redirect('/custom-apparel/corporate-wear-shirts',   '/custom-apparel/group-shirts/corporate-wear-shirts',   302);
+Route::redirect('/custom-apparel/reunion-shirts',          '/custom-apparel/group-wear/reunion-shirts',          302);
+Route::redirect('/custom-apparel/spirit-wear-shirts',      '/custom-apparel/group-wear/spirit-wear-shirts',      302);
+Route::redirect('/custom-apparel/corporate-wear-shirts',   '/custom-apparel/group-wear/corporate-wear-shirts',   302);
 
 // ─── Design Services ─────────────────────────────────────────────────────────
 

@@ -112,7 +112,7 @@
     </url>
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/group-shirts/spirit-wear-shirts</loc>
+        <loc>https://www.top5pct.com/custom-apparel/group-wear/spirit-wear-shirts</loc>
         <video:video>
             <video:thumbnail_loc>https://i.ytimg.com/vi/JXD-Zl7-Rrs/hqdefault.jpg</video:thumbnail_loc>
             <video:title>Custom Spirit Wear &amp; Fan Wear in Joliet, IL</video:title>

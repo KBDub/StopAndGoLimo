@@ -116,9 +116,9 @@
                                     <div>
                                         <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Group Shirts</p>
                                         <div class="grid grid-cols-3 gap-x-4 gap-y-3">
-                                            <div><a href="/custom-apparel/group-shirts/reunion-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Family Reunion</a><a href="/custom-apparel/group-shirts/reunion-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Custom matching apparel</a></div>
-                                            <div><a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Spirit Wear</a><a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">School and sports fans</a></div>
-                                            <div><a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Corporate Wear</a><a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Branded staff uniforms</a></div>
+                                            <div><a href="/custom-apparel/group-wear/reunion-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Family Reunion</a><a href="/custom-apparel/group-wear/reunion-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Custom matching apparel</a></div>
+                                            <div><a href="/custom-apparel/group-wear/spirit-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Spirit Wear</a><a href="/custom-apparel/group-wear/spirit-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">School and sports fans</a></div>
+                                            <div><a href="/custom-apparel/group-wear/corporate-wear-shirts" class="block text-lg font-bold text-charcoal hover:text-sunburst transition-colors text-center">Corporate Wear</a><a href="/custom-apparel/group-wear/corporate-wear-shirts" class="block text-base text-charcoal-light leading-tight hover:text-sunburst transition-colors text-center">Branded staff uniforms</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -504,9 +504,9 @@
                     <a href="/custom-apparel/specialty-materials/reflective-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reflective Shirts</a>
                     <a href="/custom-apparel/specialty-materials/vinyl" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Vinyl Shirts</a>
                     <a href="/custom-apparel/specialty-materials/holographic-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Holographic Shirts</a>
-                    <a href="/custom-apparel/group-shirts/corporate-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Corporate Wear</a>
-                    <a href="/custom-apparel/group-shirts/spirit-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Spirit Wear</a>
-                    <a href="/custom-apparel/group-shirts/reunion-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reunion Shirts</a>
+                    <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Corporate Wear</a>
+                    <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Spirit Wear</a>
+                    <a href="/custom-apparel/group-wear/reunion-shirts" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Reunion Shirts</a>
                 </div>
             </div>
 

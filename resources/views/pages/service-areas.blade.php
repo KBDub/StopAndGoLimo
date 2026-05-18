@@ -63,10 +63,12 @@
             {{ implode(', ', $secondaryNames) }},
             and the greater Chicagoland area. If you are nearby, stop in. If not, we ship.
         </p>
+        <p class="mb-4">
+            We also produce <a href="/promotional-items" class="link-notification">promotional items</a> and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> for businesses across every city we serve — from branded mugs and tote bags for trade shows to vehicle wraps and DOT decals for commercial fleets.
+        </p>
         <p>
-            Call us at <a href="tel:+18153498600" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 349-8600</a>
-            or <a href="/contact" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">request a free quote online</a>.
-            Your brand is our business.
+            <a href="/contact" class="link-notification">Contact us</a> to discuss your project and confirm same-day availability for your area. Call us at <a href="tel:+18153498600" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 349-8600</a>
+            or request a free quote online. Your brand is our business.
         </p>
     </x-sections.card-image-with-text>
 

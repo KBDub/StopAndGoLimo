@@ -126,19 +126,21 @@ $totalCount = count($reviews);
         alt="Happy customers wearing custom apparel from Top 5 Percent in Joliet Illinois"
         imagePosition="right"
     >
-        <p>
+        <p class="mb-4">
             Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service. Every
             review below is a real customer who walked through our door — or shipped their order across the country —
             and trusted us to deliver. We take that trust seriously.
         </p>
-        <p>
+        <p class="mb-4">
             Our customers range from individuals ordering a single custom shirt to businesses outfitting entire
             teams, schools running spirit wear fundraisers, and organizations celebrating milestones with banners
             and promotional products. Whatever the project, the standard is always the same.
         </p>
+        <p class="mb-4">
+            See the work that earned these reviews in our <a href="/portfolio" class="link-notification">portfolio</a>. Learn more <a href="/about" class="link-notification">about us</a> — the veteran-owned team behind every five-star job. Ready to be our next happy customer? <a href="/contact" class="link-notification">Contact us</a> for a free quote.
+        </p>
         <p>
-            All reviews below are from Google. No cherry-picking, no fake names — just real feedback from real
-            people in Joliet and beyond. We are proud of every single one.
+            Our most reviewed products include <a href="/custom-apparel" class="link-notification">custom apparel</a>, <a href="/signs" class="link-notification">business signs</a>, and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> — browse any of those pages to see what we can produce for your business. All reviews below are from Google. No cherry-picking, no fake names — just real feedback from real people in Joliet and beyond.
         </p>
     </x-sections.card-image-with-text>
 

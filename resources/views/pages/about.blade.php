@@ -99,6 +99,15 @@
         </div>
     </section>
 
+    <x-sections.card-image-with-text
+        image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
+        alt="Custom signage and apparel produced by Top 5 Percent in Joliet Illinois"
+        title="See Our Work and Hear From Our Customers"
+    >
+        <p class="mb-4">See our quality in the <a href="/portfolio" class="link-notification">portfolio</a> — real work produced for real local businesses, schools, sports teams, and organizations throughout Joliet and Will County.</p>
+        <p class="mb-4">Don't take our word for it — read our <a href="/reviews" class="link-notification">reviews</a> from customers across Will County. Hundreds of verified five-star ratings from people who walked through our door or shipped their order from across the country.</p>
+        <p>We serve Joliet and all surrounding communities across our <a href="/service-areas" class="link-notification">service areas</a> throughout Will County and Chicagoland. If you are nearby, stop in. If not, we ship.</p>
+    </x-sections.card-image-with-text>
     <x-sections.top5pct-same-day-service serviceType="about" displayServiceType="Custom Signage & Apparel" />
     <x-sections.cta-quadruple-button-banner />
 

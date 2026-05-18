@@ -68,14 +68,14 @@
             <div class="space-y-3">
                 @foreach(array_slice($faqs, 0, (int) ceil(count($faqs) / 2)) as $i => $faq)
                     <x-ui.card-faq question="{{ $faq['q'] }}" :open="$i === 0">
-                        <p class="text-charcoal-light">{{ $faq['a'] }}</p>
+                        <p class="text-charcoal-light">{!! $faq['a'] !!}</p>
                     </x-ui.card-faq>
                 @endforeach
             </div>
             <div class="space-y-3">
                 @foreach(array_slice($faqs, (int) ceil(count($faqs) / 2)) as $faq)
                     <x-ui.card-faq question="{{ $faq['q'] }}">
-                        <p class="text-charcoal-light">{{ $faq['a'] }}</p>
+                        <p class="text-charcoal-light">{!! $faq['a'] !!}</p>
                     </x-ui.card-faq>
                 @endforeach
             </div>

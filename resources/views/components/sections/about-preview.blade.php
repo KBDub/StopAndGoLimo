@@ -22,7 +22,7 @@
                     <div>
                         <h3 class="text-lg font-bold text-olive mb-2">Joliet Is Our Kind Of Town</h3>
                         <p class="text-charcoal-light text-sm leading-relaxed">
-                            We chose the City of Joliet because of its tight-knit support amongst its community and local businesses. It's also known as the City of Excitement! It's no wonder why it's the fourth largest city in the state of Illinois. We have the opportunity to meet wonderful residents and network with local businesses, as well as provide products, services, create brand awareness and build long-term relationships.
+                            We chose the City of Joliet because of its tight-knit support amongst its community and local businesses. It's also known as the City of Excitement! It's no wonder why it's the fourth largest city in the state of Illinois. We have the opportunity to meet wonderful residents and network with local businesses, as well as provide products, services, create brand awareness and build long-term relationships. Proudly serving Joliet and all <a href="/service-areas" class="link-notification">service areas</a> across Will County.
                         </p>
                     </div>
 
@@ -43,6 +43,9 @@
             </div>
 
             <div class="md:col-span-2 relative pb-8">
+                <div class="mb-4">
+                    <a href="/about-us" class="link-notification text-sm text-charcoal-light underline underline-offset-2">Learn more about us and our veteran story →</a>
+                </div>
                 <div class="overflow-hidden shadow-lg">
                     <img
                         src="/images/about-preview.jpg"

@@ -20,15 +20,15 @@
                 <div class="flex flex-col gap-y-1.5">
                     @php
                         $benefits = [
-                            'We carry a <strong>five star rating</strong> on Google',
+                            'We carry a <a href="/reviews" class="link-notification"><strong>five star rating</strong></a> on Google',
                             'We offer <strong>same day service</strong> on most orders',
                             'Our pricing is <strong>always transparent</strong> and upfront',
-                            'We have <strong>no minimums</strong> on custom shirts',
-                            'Our <strong>in-house design team</strong> handles your artwork',
+                            'We have <strong>no minimums</strong> on <a href="/custom-apparel" class="link-notification">custom shirts</a>',
+                            'Our <a href="/design-services" class="link-notification"><strong>in-house design team</strong></a> handles your artwork',
                             'We use <strong>top quality materials</strong> and premium inks',
                             'We produce every order <strong>in-house</strong> from start to finish',
                             'Our team brings <strong>40+ years</strong> of combined experience',
-                            'We welcome <strong>rush orders</strong> with fast turnaround',
+                            'We welcome <a href="/contact" class="link-notification"><strong>rush orders</strong></a> with fast turnaround',
                         ];
                     @endphp
                     @foreach($benefits as $benefit)
@@ -58,18 +58,23 @@
                 <div class="flex flex-col gap-y-1.5 mb-6">
                     @php
                         $services = [
-                            ['label' => 'Custom Shirts', 'detail' => 'DTF, screen print, embroidery, vinyl, no minimums'],
-                            ['label' => 'Turnaround', 'detail' => 'Same day available, typical 1-3 business days'],
-                            ['label' => 'Signs and Banners', 'detail' => 'Business signage, yard signs, banners'],
-                            ['label' => 'Vehicle Graphics', 'detail' => 'Wraps, lettering, magnets, DOT decals'],
-                            ['label' => 'Guarantee', 'detail' => 'Quality workmanship, satisfaction guaranteed'],
+                            ['label' => 'Custom Shirts',    'href' => '/custom-apparel',    'detail' => 'DTF, screen print, embroidery, vinyl, no minimums'],
+                            ['label' => 'Turnaround',       'href' => null,                 'detail' => 'Same day available, typical 1-3 business days'],
+                            ['label' => 'Signs and Banners','href' => '/signs',             'detail' => 'Business signage, yard signs, banners'],
+                            ['label' => 'Vehicle Graphics', 'href' => '/vehicle-graphics',  'detail' => 'Wraps, lettering, magnets, DOT decals'],
+                            ['label' => 'Our Reviews',      'href' => '/reviews',           'detail' => 'Quality workmanship, satisfaction guaranteed'],
                         ];
                     @endphp
                     @foreach($services as $service)
                         @if($loop->even)
                             <div class="flex items-center justify-end gap-2 whitespace-nowrap">
                                 <p class="text-body-sm text-charcoal">
-                                    <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}
+                                    @if($service['href'])
+                                        <a href="{{ $service['href'] }}" class="font-semibold link-notification">{{ $service['label'] }}</a>:
+                                    @else
+                                        <span class="font-semibold">{{ $service['label'] }}</span>:
+                                    @endif
+                                    {{ $service['detail'] }}
                                 </p>
                                 <div class="w-1 h-5 bg-azure shrink-0"></div>
                             </div>
@@ -77,7 +82,12 @@
                             <div class="flex items-center gap-2 whitespace-nowrap">
                                 <div class="w-1 h-5 bg-azure shrink-0"></div>
                                 <p class="text-body-sm text-charcoal">
-                                    <span class="font-semibold">{{ $service['label'] }}:</span> {{ $service['detail'] }}
+                                    @if($service['href'])
+                                        <a href="{{ $service['href'] }}" class="font-semibold link-notification">{{ $service['label'] }}</a>:
+                                    @else
+                                        <span class="font-semibold">{{ $service['label'] }}</span>:
+                                    @endif
+                                    {{ $service['detail'] }}
                                 </p>
                             </div>
                         @endif

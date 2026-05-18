@@ -114,7 +114,7 @@
             <p class="mb-4">Screen printing works on cotton, cotton blends, polyester, and most other common apparel materials. T-shirts, hoodies, sweatshirts, polos, <a href="/promotional-items/tote-bags" class="link-notification">tote bags</a>, and hats are all fair game. The versatility of screen printing across garment types makes it the logical choice when you need a consistent look across a mixed apparel order.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois serving businesses, sports teams, schools, and organizations throughout Will County. We handle everything from artwork preparation through production and delivery in-house so your order comes out exactly right. We also produce <a href="/signs/business-signs" class="link-notification">custom signs</a> and banners for businesses across the Chicagoland area.</p>
+            <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois serving businesses, sports teams, schools, and organizations throughout Will County. We handle everything from artwork preparation through production and delivery in-house so your order comes out exactly right. We also produce <a href="/signs" class="link-notification">custom signs</a> and banners for businesses across the Chicagoland area.</p>
             <p>Call us at (815) 349-8600 to get a quote on your custom screen printing order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>

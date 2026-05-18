@@ -137,7 +137,7 @@ $totalCount = count($reviews);
             and promotional products. Whatever the project, the standard is always the same.
         </p>
         <p class="mb-4">
-            See the work that earned these reviews in our <a href="/portfolio" class="link-notification">portfolio</a>. Learn more <a href="/about" class="link-notification">about us</a> — the veteran-owned team behind every five-star job. Ready to be our next happy customer? <a href="/contact" class="link-notification">Contact us</a> for a free quote.
+            See the work that earned these reviews in our <a href="/portfolio" class="link-notification">portfolio</a>. Learn more <a href="/about-us" class="link-notification">about us</a> — the veteran-owned team behind every five-star job. Ready to be our next happy customer? <a href="/contact" class="link-notification">Contact us</a> for a free quote.
         </p>
         <p>
             Our most reviewed products include <a href="/custom-apparel" class="link-notification">custom apparel</a>, <a href="/signs" class="link-notification">business signs</a>, and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> — browse any of those pages to see what we can produce for your business. All reviews below are from Google. No cherry-picking, no fake names — just real feedback from real people in Joliet and beyond.

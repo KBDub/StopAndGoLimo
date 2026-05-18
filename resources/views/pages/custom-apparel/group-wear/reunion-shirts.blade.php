@@ -65,7 +65,7 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/reunion-shirts/top5pct-reunion-group-wear.jpg"
+            image="/images/reunion-shirts/top5pct-reunion-group-shirts.jpg"
             alt="Class reunion shirts printed in Joliet and Shorewood Illinois"
             title="Class Reunion Shirts"
         >
@@ -150,7 +150,7 @@
                 </x-slot>
                 <x-slot name="lower">
                     <h3 class="text-h3 font-bold text-charcoal mb-2">Showcase Your Creativity with the Design</h3>
-                    <p class="mb-4">Your reunion shirt does not have to be basic. We offer full color digital printing, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, vinyl lettering, and even specialty materials like <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a> and <a href="/custom-apparel/foil-shirts" class="link-notification">foil</a> so your design can be as creative as your family or your class. Tell us your theme and we will build a design that captures it. Tropical vacation theme? A decade themed class reunion? A family crest and heritage design? We have done them all and we are always excited to tackle something new for customers in Joliet, Romeoville, Bolingbrook, and across Will County. Great design is what turns a shirt into a truly memorable keepsake.</p>
+                    <p class="mb-4">Your reunion shirt does not have to be basic. We offer full color digital printing, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, vinyl lettering, and even specialty materials like <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a> and <a href="/custom-apparel/specialty-materials/foil-shirts" class="link-notification">foil</a> so your design can be as creative as your family or your class. Tell us your theme and we will build a design that captures it. Tropical vacation theme? A decade themed class reunion? A family crest and heritage design? We have done them all and we are always excited to tackle something new for customers in Joliet, Romeoville, Bolingbrook, and across Will County. Great design is what turns a shirt into a truly memorable keepsake.</p>
                     <h3 class="text-h3 font-bold text-charcoal mb-2">Tips for Planning Your Reunion Order</h3>
                     <p class="mb-4">Start planning your shirts at least three to four months before your reunion date. This gives you enough time to gather sizes, finalize your design, and place your order without any last minute stress. We recommend collecting a small deposit from each attendee when they commit to coming so you cover your shirt costs upfront. We can help you put together a simple order form so the size collection process is easy for whoever is organizing the event. Reach out to us early and we will walk you through the entire process from first conversation to finished shirts, ready to pick up at our shop in Joliet.</p>
                 </x-slot>

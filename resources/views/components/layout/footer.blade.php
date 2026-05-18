@@ -40,11 +40,11 @@
                         <a href="/custom-apparel" class="text-charcoal hover:text-sunburst transition-colors no-underline">Custom Apparel</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
-                        <li><a href="/custom-apparel/screen-printing"                              class="link-notification">Screen Printing</a></li>
-                        <li><a href="/custom-apparel/embroidery"                                    class="link-notification">Embroidery</a></li>
+                        <li><a href="/custom-apparel/printing-options/screen-printing"              class="link-notification">Screen Printing</a></li>
+                        <li><a href="/custom-apparel/printing-options/embroidery"                   class="link-notification">Embroidery</a></li>
                         <li><a href="/custom-apparel/printing-options/dtf-printing"                class="link-notification">DTF Printing</a></li>
                         <li><a href="/custom-apparel/printing-options/dye-sublimation-printing"    class="link-notification">Dye Sublimation</a></li>
-                        <li><a href="/custom-apparel/rhinestone-apparel"                            class="link-notification">Rhinestone Apparel</a></li>
+                        <li><a href="/custom-apparel/printing-options/rhinestone-apparel"           class="link-notification">Rhinestone Apparel</a></li>
                         <li><a href="/custom-apparel/specialty-materials/glitter-shirts"           class="link-notification">Glitter Shirts</a></li>
                         <li><a href="/custom-apparel/specialty-materials/foil-shirts"              class="link-notification">Foil Shirts</a></li>
                         <li><a href="/custom-apparel/specialty-materials/holographic-shirts"       class="link-notification">Holographic Shirts</a></li>
@@ -69,7 +69,7 @@
                         <li><a href="/signs/table-signs/table-cloths"     class="link-notification">Table Cloths</a></li>
                         <li><a href="/signs/table-signs/table-runners"    class="link-notification">Table Runners</a></li>
                         <li><a href="/signs/ground-signs/sidewalk-signs"  class="link-notification">Sidewalk Signs</a></li>
-                        <li><a href="/signs/ground-signs/parking-signs"   class="link-notification">Parking Signs</a></li>
+                        <li><a href="/signs/ground-signs/sidewalk-signs-a-frame-signs"   class="link-notification">A-Frame Signs</a></li>
                     </ul>
 
                     {{-- Vehicle Graphics --}}

@@ -40,7 +40,7 @@
     {{-- ─── Custom Apparel ───────────────────────────────────────────────── --}}
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/rhinestone-apparel</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/rhinestone-apparel</loc>
         <video:video>
             <video:thumbnail_loc>https://i.ytimg.com/vi/wS7NHsyIEUY/hqdefault.jpg</video:thumbnail_loc>
             <video:title>Custom Rhinestone Shirts, Caps &amp; Hoodies in Joliet, IL</video:title>

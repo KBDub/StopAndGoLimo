@@ -143,7 +143,7 @@
             'image' => '/images/business-signs/top5pct-outdoor-signs-joliet-shorewood-crest-hill.jpg',
             'alt'   => 'Custom parking signs and lot signage for businesses in Joliet, Shorewood, and Crest Hill',
             'title' => 'Parking Signs',
-            'href'  => '/signs/ground-signs/parking-signs',
+            'href'  => '/signs/ground-signs/sidewalk-signs-a-frame-signs',
         ],
     ]" />
 

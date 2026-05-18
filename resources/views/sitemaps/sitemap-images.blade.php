@@ -153,7 +153,7 @@
     </url>
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/rhinestone-apparel</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/rhinestone-apparel</loc>
         <image:image>
             <image:loc>https://www.top5pct.com/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg</image:loc>
             <image:title>Custom Rhinestone Shirts in Joliet, IL</image:title>
@@ -225,7 +225,7 @@
     </url>
 
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/embroidery</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/embroidery</loc>
         <image:image>
             <image:loc>https://www.top5pct.com/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg</image:loc>
             <image:title>Custom Embroidery in Joliet, IL</image:title>

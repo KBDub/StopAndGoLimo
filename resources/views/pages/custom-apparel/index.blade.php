@@ -89,19 +89,19 @@
             'image' => '/images/custom-shirts/top5pct-custom-shirts-with-pictures-joliet-shorewood.jpg',
             'alt'   => 'Custom screen printed shirts for groups and businesses in Joliet Illinois',
             'title' => 'Screen Printing',
-            'href'  => '/custom-apparel/screen-printing',
+            'href'  => '/custom-apparel/printing-options/screen-printing',
         ],
         [
             'image' => '/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg',
             'alt'   => 'Custom embroidery for shirts, caps, and jackets in Joliet Illinois',
             'title' => 'Embroidery',
-            'href'  => '/custom-apparel/embroidery',
+            'href'  => '/custom-apparel/printing-options/embroidery',
         ],
         [
             'image' => '/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg',
             'alt'   => 'Custom rhinestone shirts and bling apparel in Joliet Illinois',
             'title' => 'Rhinestone Shirts',
-            'href'  => '/custom-apparel/rhinestone-apparel',
+            'href'  => '/custom-apparel/printing-options/rhinestone-apparel',
         ],
         [
             'image' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',

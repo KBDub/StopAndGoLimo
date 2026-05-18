@@ -72,7 +72,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/rhinestone-apparel</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/rhinestone-apparel</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -126,7 +126,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/embroidery</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/embroidery</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -168,7 +168,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/custom-apparel/screen-printing</loc>
+        <loc>https://www.top5pct.com/custom-apparel/printing-options/screen-printing</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -245,7 +245,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.top5pct.com/signs/ground-signs/parking-signs</loc>
+        <loc>https://www.top5pct.com/signs/ground-signs/sidewalk-signs-a-frame-signs</loc>
         <lastmod>2026-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

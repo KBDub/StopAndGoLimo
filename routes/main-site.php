@@ -80,16 +80,16 @@ Route::get('/custom-apparel', function () {
 
 // Keep route; not linked in MM or nav
 
-Route::get('/custom-apparel/screen-printing', function () {
-    return view('pages.custom-apparel.screen-printing');
+Route::get('/custom-apparel/printing-options/screen-printing', function () {
+    return view('pages.custom-apparel.printing-options.screen-printing');
 })->name('custom-apparel.screen-printing');
 
-Route::get('/custom-apparel/embroidery', function () {
-    return view('pages.custom-apparel.embroidery');
+Route::get('/custom-apparel/printing-options/embroidery', function () {
+    return view('pages.custom-apparel.printing-options.embroidery');
 })->name('custom-apparel.embroidery');
 
-Route::get('/custom-apparel/rhinestone-apparel', function () {
-    return view('pages.custom-apparel.rhinestone-shirts');
+Route::get('/custom-apparel/printing-options/rhinestone-apparel', function () {
+    return view('pages.custom-apparel.printing-options.rhinestone-apparel');
 })->name('custom-apparel.rhinestone-apparel');
 
 // Printing Options
@@ -144,22 +144,22 @@ Route::get('/custom-apparel/specialty-materials/vinyl', function () {
 
 // Group Shirts
 Route::get('/custom-apparel/group-shirts/reunion-shirts', function () {
-    return view('pages.custom-apparel.reunion-shirts');
+    return view('pages.custom-apparel.group-shirts.reunion-shirts');
 })->name('custom-apparel.reunion-shirts');
 
 Route::get('/custom-apparel/group-shirts/spirit-wear-shirts', function () {
-    return view('pages.custom-apparel.spirit-wear-shirts');
+    return view('pages.custom-apparel.group-shirts.spirit-wear-shirts');
 })->name('custom-apparel.spirit-wear-shirts');
 
 Route::get('/custom-apparel/group-shirts/corporate-wear-shirts', function () {
-    return view('pages.custom-apparel.corporate-wear-shirts');
+    return view('pages.custom-apparel.group-shirts.corporate-wear-shirts');
 })->name('custom-apparel.corporate-wear-shirts');
 
 // ─── Custom Apparel 302 Redirects (temporary — promote to 301 at go-live) ────
 
 Route::redirect('/custom-apparel/dtf-transfers',           '/custom-apparel/printing-options/dtf-printing',        302);
 Route::redirect('/custom-apparel/dye-sublimation',         '/custom-apparel/printing-options/dye-sublimation-printing', 302);
-Route::redirect('/custom-apparel/rhinestone-shirts',       '/custom-apparel/rhinestone-apparel',                   302);
+Route::redirect('/custom-apparel/rhinestone-shirts',       '/custom-apparel/printing-options/rhinestone-apparel',  302);
 Route::redirect('/custom-apparel/glitter-shirts',          '/custom-apparel/specialty-materials/glitter-shirts',   302);
 Route::redirect('/custom-apparel/puff-shirts',             '/custom-apparel/specialty-materials/puff-shirts',      302);
 Route::redirect('/custom-apparel/glow-in-the-dark-shirts', '/custom-apparel/specialty-materials/glow-in-the-dark-shirts', 302);
@@ -230,9 +230,9 @@ Route::get('/signs/ground-signs/sidewalk-signs', function () {
     return view('pages.signs.sidewalk-signs');
 })->name('signs.sidewalk-signs');
 
-Route::get('/signs/ground-signs/parking-signs', function () {
-    return view('pages.signs.parking-signs');
-})->name('signs.parking-signs');
+Route::get('/signs/ground-signs/sidewalk-signs-a-frame-signs', function () {
+    return view('pages.signs.sidewalk-signs-a-frame-signs');
+})->name('signs.sidewalk-signs-a-frame-signs');
 
 // Table Signs
 Route::get('/signs/table-signs/table-cloths', function () {
@@ -254,7 +254,7 @@ Route::redirect('/signs/posters',        '/signs/business-signs/posters',    302
 Route::redirect('/signs/business-signs', '/signs',                           302);
 Route::redirect('/signs/yard-signs',     '/signs/ground-signs/yard-signs',   302);
 Route::redirect('/signs/sidewalk-signs', '/signs/ground-signs/sidewalk-signs', 302);
-Route::redirect('/signs/parking-signs',  '/signs/ground-signs/parking-signs', 302);
+Route::redirect('/signs/parking-signs',  '/signs/ground-signs/sidewalk-signs-a-frame-signs', 302);
 Route::redirect('/signs/table-cloths',   '/signs/table-signs/table-cloths',  302);
 Route::redirect('/signs/table-runners',  '/signs/table-signs/table-runners', 302);
 

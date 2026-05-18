@@ -11,7 +11,7 @@
                 <p class="text-charcoal-light mb-4">Bold, durable <span class="text-azure underline underline-offset-2">heat-press vinyl</span> in any color. Sharp lines and <span class="text-azure underline underline-offset-2">long-lasting results</span>, ideal for logos, names, and numbers.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Rhinestone Shirts" href="/custom-apparel/rhinestone-apparel" image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg">
+            <x-ui.card-product title="Rhinestone Shirts" href="/custom-apparel/printing-options/rhinestone-apparel" image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Dazzling crystal rhinestone designs for <span class="text-azure underline underline-offset-2">maximum bling</span>. Custom patterns, logos, and text that <span class="text-azure underline underline-offset-2">catch every eye</span> in the room.</p>
             </x-ui.card-product>
 
@@ -47,7 +47,7 @@
                 <p class="text-charcoal-light mb-4">Custom pattern printing for <span class="text-azure underline underline-offset-2">all-over designs</span>, sports uniforms, and more. Consistent, vibrant results for <span class="text-azure underline underline-offset-2">branded team apparel</span>.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Embroidery Shirts" href="/custom-apparel/embroidery" image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg">
+            <x-ui.card-product title="Embroidery Shirts" href="/custom-apparel/printing-options/embroidery" image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg">
                 <p class="text-charcoal-light mb-4">Classic <span class="text-azure underline underline-offset-2">embroidered logos and text</span> stitched with precision. The most professional, long-lasting finish for <span class="text-azure underline underline-offset-2">corporate apparel</span>.</p>
             </x-ui.card-product>
 

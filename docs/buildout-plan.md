@@ -383,10 +383,12 @@ Phase 1: Stack Setup → Phase 2: Search/Facets → Phase 3: Checkout/Payment �
 - [ ] OG image management
 
 #### 4.5 Email Templates
-- [ ] Order confirmation template
+- [ ] Order confirmation template (internal — Stripe sends its own payment receipt automatically)
+- [ ] Payment failed notification (triggered via `payment_intent.payment_failed` webhook event)
 - [ ] Shipping notification
 - [ ] Abandoned cart recovery
 - [ ] Welcome email
+- **Note:** Stripe webhook events (`payment_intent.succeeded`, `payment_intent.payment_failed`, `charge.refunded`) are handled by `Lunar\Stripe\Http\Controllers\WebhookController` at `POST /stripe/webhook`. Email triggers should hook into Lunar order events (`OrderCreated`, `OrderStatusUpdated`) rather than Stripe webhooks directly.
 
 #### 4.6 Performance & Polish
 - [ ] Image optimization (WebP)

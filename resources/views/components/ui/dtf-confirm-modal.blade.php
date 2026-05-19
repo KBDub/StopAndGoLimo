@@ -9,7 +9,7 @@
  |
  | On "Proceed to Checkout" : appends pendingItem to dtfCart.items,
  |                            dispatches open-contact-modal { dtf: true, fileName }
- | On "Add more DTFs"       : appends pendingItem to dtfCart.items, closes — user
+ | On "Add more DTFs"       : appends pendingItem to dtfCart.items, closes, user
  |                            returns to pricing table to pick another size.
  | X close (confirmed)      : clears dtfCart and closes.
 --}}
@@ -124,7 +124,7 @@
                         </svg>
                         <div class="min-w-0">
                             <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-0.5">Selected Transfer</p>
-                            <p class="text-sm font-bold text-charcoal" x-text="(pending.type || '') + ' — ' + (pending.size || '')"></p>
+                            <p class="text-sm font-bold text-charcoal" x-text="(pending.type || '') + ', ' + (pending.size || '')"></p>
                             <p class="text-xs text-charcoal-light" x-text="(pending.tier || '') + ' at ' + (pending.price || '') + ' ea'"></p>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                         </svg>
                         <div class="min-w-0">
                             <p class="text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-0.5">PNG File Attached</p>
-                            <p class="text-sm font-semibold text-charcoal truncate" x-text="pending.fileName || '—'"></p>
+                            <p class="text-sm font-semibold text-charcoal truncate" x-text="pending.fileName || ','"></p>
                         </div>
                     </div>
 

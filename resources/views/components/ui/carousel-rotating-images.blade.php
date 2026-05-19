@@ -60,7 +60,7 @@
                 {{-- Image track --}}
                 <div class="flex items-center justify-center gap-3">
 
-                    {{-- Left slot — visible=3 only — 300×225px --}}
+                    {{-- Left slot, visible=3 only, 300×225px --}}
                     <template x-if="vis >= 3">
                         <div
                             class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
@@ -76,7 +76,7 @@
                         </div>
                     </template>
 
-                    {{-- Center slot — 600×450px --}}
+                    {{-- Center slot, 600×450px --}}
                     <div
                         class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out relative"
                         :class="fading ? 'opacity-0' : 'opacity-100'"
@@ -93,7 +93,7 @@
                         >
                     </div>
 
-                    {{-- Right slot — visible >= 2 --}}
+                    {{-- Right slot, visible >= 2 --}}
                     <template x-if="vis >= 2">
                         <div
                             class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"

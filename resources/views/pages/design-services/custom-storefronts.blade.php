@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Custom Storefronts for Schools & Businesses"
-    metaDescription="Launch a fully branded online spirit wear store for your school, team, or corporate event. Custom storefronts with your colors, logo, and products — built and"
+    metaDescription="Launch a fully branded online spirit wear store for your school, team, or corporate event. Custom storefronts with your colors, logo, and products, built and"
     currentPage="design-services">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Custom Storefronts"
         headingAccent="Built for Your Group"
-        description="A fully branded online store with your logo, colors, and products — up and running in days. We build and manage it. Your group just shops."
+        description="A fully branded online store with your logo, colors, and products, up and running in days. We build and manage it. Your group just shops."
         primaryButtonText="Get Your Store Built"
         primaryButtonHref="#how-it-works"
         secondaryButtonText="Call Us Today"
@@ -53,11 +53,11 @@
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
         alt="Custom branded storefront for schools and businesses built by Top 5 Percent in Joliet Illinois"
-        title="Your Own Online Store — Zero Tech Work Required"
+        title="Your Own Online Store, Zero Tech Work Required"
     >
-        <p class="mb-4">We build and host a fully branded online store at your own custom web address. Your school, team, company, or organization gets a professional storefront with your logo, your colors, and your products already loaded and ready to sell. You share the link, your community shops, and we handle the printing and shipping.</p>
-        <p class="mb-4">There is no software to install, no platform fees to manage, and no design experience required. We take your branding and build the store for you. The entire setup process takes a few business days from the time we receive your logo, color choices, and product selection.</p>
-        <p class="mb-4"><a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">Spirit wear</a> stores are one of our most popular storefront categories — schools and teams love the hands-off ordering experience where parents shop online without any staff involvement. <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">Corporate wear</a> storefronts let employees self-serve their uniform orders without admin overhead. Every storefront starts with a logo — if you need one built, our <a href="/design-services/logo-design" class="link-notification">logo design</a> team gets you there first.</p>
+        <p class="mb-4">We build and host a fully branded online store at your own custom web address. Your school, team, company, or organization gets a professional storefront with your logo, your colors, and your <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> and other products already loaded and ready to sell, and unlike managing group orders manually the storefront handles size selection, payment, and order routing automatically so no one person has to collect money or track sizes. You share the link, your community shops, and we handle the <a href="/custom-apparel" class="link-notification">custom apparel</a> printing and shipping.</p>
+        <p class="mb-4">There is no software to install, no platform fees to manage, and no design experience required. We take your branding and build the store for you. The entire setup process takes a few business days from the time we receive your logo, color choices, and product selection, and if you need a logo built before the store can go live our <a href="/design-services/logo-design" class="link-notification">logo design</a> team creates print-ready vector artwork in the same appointment.</p>
+        <p class="mb-4"><a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">Spirit wear</a> stores are one of our most popular storefront categories, schools and teams love the hands-off ordering experience where parents shop online without any staff involvement. <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">Corporate wear</a> storefronts let employees self-serve their uniform orders without admin overhead. Every storefront starts with a logo, if you need one built, our <a href="/design-services/logo-design" class="link-notification">logo design</a> team gets you there first.</p>
         <p>We are a veteran owned shop in Joliet, Illinois, and we have worked with schools, youth sports leagues, corporate teams, and booster clubs throughout Will County and the Chicagoland area. Call us at (815) 349 8600 to discuss your custom storefront today.</p>
     </x-sections.card-image-with-text>
     <x-ui.banner-thin-charcoal />
@@ -95,7 +95,7 @@
                 <div class="bg-white p-6 shadow-sm hover:shadow-gold-lg hover:-translate-y-1 transition-all">
                     <div class="w-12 h-1 bg-sunburst mb-4"></div>
                     <h3 class="font-bold text-charcoal mb-2">Team Stores</h3>
-                    <p class="text-sm text-charcoal-light">Jerseys, warm-ups, practice gear, and fan apparel — all in one store for your athletic team. We handle sizes, variants, and fulfillment so your coaches focus on the game.</p>
+                    <p class="text-sm text-charcoal-light">Jerseys, warm-ups, practice gear, and fan apparel, all in one store for your athletic team. We handle sizes, variants, and fulfillment so your coaches focus on the game.</p>
                 </div>
                 <div class="bg-white p-6 shadow-sm hover:shadow-gold-lg hover:-translate-y-1 transition-all">
                     <div class="w-12 h-1 bg-sunburst mb-4"></div>
@@ -121,7 +121,7 @@
                     <h2 class="text-h2 font-bold text-charcoal mb-2">How It Works</h2>
                     <div class="h-1 bg-sunburst"></div>
                 </div>
-                <p class="text-charcoal-light max-w-4xl mx-auto">We handle the entire setup. You just provide your branding and product preferences — we take it from there.</p>
+                <p class="text-charcoal-light max-w-4xl mx-auto">We handle the entire setup. You just provide your branding and product preferences, we take it from there.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -133,7 +133,7 @@
                 <div class="relative p-6 border border-linen-dark">
                     <span class="absolute top-4 right-4 text-5xl font-bold text-sunburst/20">2</span>
                     <h3 class="font-bold text-charcoal mb-3">We Build Your Store</h3>
-                    <p class="text-sm text-charcoal-light">We set up your branded storefront at your web address, load your products with photos and pricing, and configure your store features — calendar, roster, countdown timer, and more.</p>
+                    <p class="text-sm text-charcoal-light">We set up your branded storefront at your web address, load your products with photos and pricing, and configure your store features, calendar, roster, countdown timer, and more.</p>
                 </div>
                 <div class="relative p-6 border border-linen-dark">
                     <span class="absolute top-4 right-4 text-5xl font-bold text-sunburst/20">3</span>
@@ -150,9 +150,9 @@
         title="Built-In Features for Schools and Events"
         imagePosition="right"
     >
-        <p class="mb-4">School and event stores get access to built-in features that go beyond a standard e-commerce page. We can add an event countdown timer to your store home page so students and parents always know how many days until picture day, game day, or your fundraiser deadline. The calendar feature lets you display multiple upcoming events with dates and locations on the store page.</p>
-        <p class="mb-4">For class picture stores, we can display a roster section with photos, names, and grade levels — a personalized touch that makes the store feel purpose-built for your school rather than a generic shopping site. All of these features are configured by our team and updated whenever your schedule changes.</p>
-        <p class="mb-4">Storefronts are the easiest way to manage <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirt</a> orders — each participant orders their own size and pays online with no one person having to collect money or track sizes. Storefronts can also carry <a href="/promotional-items" class="link-notification">promotional items</a> — mugs, tote bags, and more — alongside your apparel offerings so your store becomes a one-stop shop for your brand.</p>
+        <p class="mb-4">School and event stores get access to built-in features that go beyond a standard e-commerce page. We can add an event countdown timer to your store home page so students and parents always know how many days until picture day, game day, or your fundraiser deadline, and the countdown timer works seamlessly for <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirt</a> orders where participants need to know when the ordering window closes. The calendar feature lets you display multiple upcoming events with dates and locations on the store page, and many schools use the event calendar alongside their <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> store so every game day is a shopping reminder for parents and fans.</p>
+        <p class="mb-4">For class picture stores, we can display a roster section with photos, names, and grade levels, a personalized touch that makes the store feel purpose-built for your school rather than a generic shopping site. All of these features are configured by our team and updated whenever your schedule changes, and for corporate event stores that also need branded <a href="/promotional-items" class="link-notification">promotional items</a> alongside the apparel we can include mugs, tote bags, and other merchandise in the same storefront.</p>
+        <p class="mb-4">Storefronts are the easiest way to manage <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirt</a> orders, each participant orders their own size and pays online with no one person having to collect money or track sizes. Storefronts can also carry <a href="/promotional-items" class="link-notification">promotional items</a>, mugs, tote bags, and more, alongside your apparel offerings so your store becomes a one-stop shop for your brand.</p>
         <p>We serve schools, businesses, and organizations throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will County. Call us at (815) 349 8600 to get your custom storefront started today.</p>
     </x-sections.card-image-with-text>
 
@@ -178,14 +178,14 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
         alt="Custom branded storefronts for schools and businesses built by Top 5 Percent in Joliet Illinois"
-        title="Custom Storefronts — Your Brand, Your Store, Our Platform"
+        title="Custom Storefronts, Your Brand, Your Store, Our Platform"
         href="/contact"
         direction="right"
     />
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"
         alt="Spirit wear and custom apparel for school stores and corporate events in Joliet Illinois"
-        title="Spirit Wear, Corporate Gear, and Event Merch — All in One Place"
+        title="Spirit Wear, Corporate Gear, and Event Merch, All in One Place"
         href="/contact"
         direction="left"
     />
@@ -195,11 +195,11 @@
         label="Storefront Graphics in Joliet, IL"
         :faqs="[
             ['q' => 'What storefront graphic services do you offer?', 'a' => 'We design and produce window graphics, wall signs, door decals, sidewalk signs, and full storefront branding packages for retail businesses, restaurants, and service companies in Joliet and Will County.'],
-            ['q' => 'Can you design and produce a full storefront branding package?', 'a' => 'Yes. We work with new and rebranding businesses to develop cohesive storefront signage including window graphics, interior wall signs, door lettering, and exterior signage — all from one shop.'],
+            ['q' => 'Can you design and produce a full storefront branding package?', 'a' => 'Yes. We work with new and rebranding businesses to develop cohesive storefront signage including window graphics, interior wall signs, door lettering, and exterior signage, all from one shop.'],
             ['q' => 'How long does storefront graphic production take?', 'a' => 'Most storefront graphic packages are completed within three to five business days. Installation scheduling may add time. Contact us to plan your project timeline.'],
             ['q' => 'Do you install storefront graphics?', 'a' => 'Yes. We handle production and installation of window decals, wall graphics, and other applied storefront signage. Ask about installation when you place your order.'],
             ['q' => 'Can you match my existing brand colors for storefront graphics?', 'a' => 'Yes. Provide your brand color codes (Pantone, CMYK, or HEX) and we will match them across all your storefront graphics for consistent brand presentation.'],
-            ['q' => 'Is there a minimum order for storefront graphics?', 'a' => 'No. We have no minimum. One window decal or a complete storefront graphics package — both are welcome.'],
+            ['q' => 'Is there a minimum order for storefront graphics?', 'a' => 'No. We have no minimum. One window decal or a complete storefront graphics package, both are welcome.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

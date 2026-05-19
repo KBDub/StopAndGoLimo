@@ -71,7 +71,7 @@
 
         </div>
 
-        {{-- MIDDLE: Free Shipping — centered because both sides are flex-1 --}}
+        {{-- MIDDLE: Free Shipping, centered because both sides are flex-1 --}}
         <a href="/top5pct-merchandise" class="shrink-0 font-semibold text-charcoal hover:underline whitespace-nowrap">
             Free Shipping on Orders Over $50!
         </a>

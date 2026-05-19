@@ -16,7 +16,7 @@
  |   Footer border : border-linen-dark
  |
  | ── FOOTER NOTE ─────────────────────────────────────────────────────────────
- |   Destructive confirm actions must use a raw <button> with error styling —
+ |   Destructive confirm actions must use a raw <button> with error styling,
  |   never x-ui.button-modal-primary (gold) for a destructive action:
  |   class="px-5 py-2 bg-error text-white text-sm font-semibold hover:opacity-90 transition-opacity"
  |

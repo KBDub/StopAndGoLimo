@@ -35,7 +35,7 @@
     metaDescription="Premium custom apparel in Joliet, IL. Custom t-shirts, DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, and specialty shirts. Veteran"
     currentPage="custom-apparel"
     ogImage="/images/og-tags/top5pct-og-custom-apparel.jpg"
-    ogImageAlt="Custom Apparel — T-Shirts, Hoodies & More in Joliet, IL">
+    ogImageAlt="Custom Apparel, T-Shirts, Hoodies & More in Joliet, IL">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
@@ -176,8 +176,8 @@
         alt="Custom t-shirts and apparel printed at Top 5 Percent in Joliet Illinois"
         title="Your Custom Apparel Shop in Joliet, IL"
     >
-        <p class="mb-4">Top 5 Percent is a veteran owned custom apparel shop serving Joliet, Shorewood, Plainfield, Crest Hill, Romeoville, and all of Will County. We offer one of the widest selections of custom decorating techniques in the Chicagoland area — from <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> and <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a> to <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestone</a>, <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a>, flock, foil, holographic, reflective, puff, glow in the dark, and brick-style printing. Whether you need one shirt or a thousand, we can produce it with the technique that best fits your design and your budget.</p>
-        <p class="mb-4">We have no minimums on any of our custom apparel services. You can order a single shirt, a small run for your team, or a large bulk order for your organization and you will receive the same level of care and quality at every quantity. Our in-house design team has over 20 years of experience and will work with you from concept to finished product at no extra charge. You do not need to arrive with a finished artwork file — just tell us what you want and we will make it happen.</p>
+        <p class="mb-4">Top 5 Percent is a veteran owned custom apparel shop serving Joliet, Shorewood, Plainfield, Crest Hill, Romeoville, and all of Will County. We offer one of the widest selections of custom decorating techniques in the Chicagoland area, from <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> and screen printing to embroidery, rhinestone, glitter, flock, foil, holographic, reflective, puff, glow in the dark, and brick-style printing. For the most professional look in corporate and workwear settings, our <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a> service stitches your logo directly into the fabric on polos, caps, and jackets. Whether you need one shirt or a thousand, we can produce it with the technique that best fits your design and your budget.</p>
+        <p class="mb-4">We have no minimums on any of our custom apparel services. You can order a single shirt, a small run for your team, or a large bulk order for your organization and you will receive the same level of care and quality at every quantity. Our in-house design team has over 20 years of experience and will work with you from concept to finished product. If you need help developing your artwork, our <a href="/design-services" class="link-notification">design services</a> team is ready to assist at no extra charge. You do not need to arrive with a finished file.</p>
         <p><a href="/contact" class="link-notification">Same-day service</a> is available on many of our products, making us the go-to custom apparel shop for businesses, schools, sports teams, churches, and families throughout Will County who need shirts in a hurry. Stop by our shop at <a href="/service-areas" class="link-notification">121 Springfield Avenue in Joliet</a> or call us at (815) 349 8600 to get started today.</p>
     </x-sections.card-image-with-text>
 
@@ -203,7 +203,7 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
         alt="Custom embroidery and specialty apparel printing at Top 5 Percent in Joliet Illinois"
-        title="Embroidery, Screen Print, DTF — We Do It All"
+        title="Embroidery, Screen Print, DTF, We Do It All"
         href="/contact"
         direction="right"
     />
@@ -224,13 +224,13 @@
         videoId="F3J9nyiM3So"
         heading="Quality You Can See & Feel"
         label="Custom Apparel in Joliet, IL"
-        subheading="From screen printing to embroidery, brick shirts to rhinestone designs — watch how Top 5 Percent brings your custom apparel vision to life, right here in Joliet, Illinois."
+        subheading="From screen printing to embroidery, brick shirts to rhinestone designs, watch how Top 5 Percent brings your custom apparel vision to life, right here in Joliet, Illinois."
     />
     <x-sections.faq
         heading="Custom Apparel FAQs"
         label="Custom Shirts & Apparel in Joliet, IL"
         :faqs="[
-            ['q' => 'What custom apparel printing techniques do you offer?', 'a' => 'We offer <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestone</a>, <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a>, flock, foil, holographic, reflective, puff print, glow in the dark, and brick-style printing — one of the widest selections in the Chicagoland area.'],
+            ['q' => 'What custom apparel printing techniques do you offer?', 'a' => 'We offer <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestone</a>, <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a>, flock, foil, holographic, reflective, puff print, glow in the dark, and brick-style printing, one of the widest selections in the Chicagoland area.'],
             ['q' => 'Is there a minimum order for custom shirts?', 'a' => 'No. We have no minimum order on any custom apparel service. You can order a single shirt or a thousand and receive the same professional quality.'],
             ['q' => 'How long does it take to get custom shirts in Joliet?', 'a' => 'Many custom shirt orders are available same day or within 24 hours. Turnaround depends on quantity and technique. Call us at (815) 349-8600 to confirm availability for your order.'],
             ['q' => 'Can you print on hoodies, hats, jackets, and other garments?', 'a' => 'Yes. We print on t-shirts, hoodies, crewnecks, polo shirts, jackets, caps, and many other garments. Bring in your item or choose from our in-stock blanks.'],

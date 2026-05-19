@@ -35,7 +35,7 @@
     metaDescription="We print custom stickers in Joliet, Shorewood, Plainfield, and Will County. Standard stickers, die cut custom shapes, weatherproof vinyl. No minimums. Veteran"
     currentPage="stickers"
     ogImage="/images/og-tags/top5pct-og-stickers.jpg"
-    ogImageAlt="Custom Stickers & Decals in Joliet, IL — Top 5 Percent">
+    ogImageAlt="Custom Stickers & Decals in Joliet, IL, Top 5 Percent">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
@@ -93,7 +93,7 @@
         title="Custom Stickers for Business, Events, and Personal Use"
     >
         <p class="mb-4">Top 5 Percent prints custom stickers and decals for businesses, sports teams, organizations, and individuals throughout Joliet, Shorewood, Plainfield, and Will County. A well-designed custom sticker is one of the most versatile and cost-effective branding tools available. You can stick them on <a href="/promotional-items" class="link-notification">product packaging</a>, hand them out at events, include them in order shipments, apply them to <a href="/signs/business-signs/window-signs" class="link-notification">storefront windows</a>, or give them away to build community around your brand. Breweries, restaurants, retail stores, gyms, and service businesses across Will County use our stickers to put their brand in the hands of their customers every day.</p>
-        <p class="mb-4">We print on premium adhesive vinyl with crisp, full-color output that is weatherproof, fade-resistant, and durable. <a href="/stickers/standard-stickers-decals" class="link-notification">Standard rectangular, square, circle, and oval stickers</a> are available, as well as fully <a href="/stickers/custom-shaped-stickers-decals" class="link-notification">custom die-cut shapes</a> that cut directly around the outline of your design. Die-cut stickers make your brand look polished and professional, and they work on any smooth surface — laptops, water bottles, vehicle windows, packaging, and anywhere else your customers carry them.</p>
+        <p class="mb-4">We print on premium adhesive vinyl with crisp, full-color output that is weatherproof, fade-resistant, and durable. <a href="/stickers/standard-stickers-decals" class="link-notification">Standard rectangular, square, circle, and oval stickers</a> are available, as well as fully <a href="/stickers/custom-shaped-stickers-decals" class="link-notification">custom die-cut shapes</a> that cut directly around the outline of your design. Die-cut stickers make your brand look polished and professional, and they work on any smooth surface, laptops, water bottles, vehicle windows, packaging, and anywhere else your customers carry them.</p>
         <p>No minimums means you can order exactly what you need, whether that is five stickers for a small event or five thousand labels for a product launch. Same-day service is available on many sticker orders. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to place your order today.</p>
     </x-sections.card-image-with-text>
 
@@ -140,7 +140,7 @@
         videoId="aRq0XJ5By9A"
         heading="Stickers for Every Surface"
         label="Custom Stickers in Joliet, IL"
-        subheading="From product labels to promotional stickers and laptop decals — see how Top 5 Percent produces high-quality custom stickers for businesses, brands, and events in Joliet, Illinois."
+        subheading="From product labels to promotional stickers and laptop decals, see how Top 5 Percent produces high-quality custom stickers for businesses, brands, and events in Joliet, Illinois."
     />
     <x-sections.faq
         heading="Custom Stickers FAQs"

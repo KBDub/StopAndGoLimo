@@ -1,7 +1,7 @@
 {{--
  | Component  : x-ui.order-action-modal
  | Location   : resources/views/components/ui/order-action-modal.blade.php
- | Purpose    : DTF path final step — lets the customer choose between
+ | Purpose    : DTF path final step, lets the customer choose between
  |              "Add to Cart" (keep shopping) or "Proceed to Checkout" (go now).
  |
  | Opens via  : window.dispatchEvent(new CustomEvent('open-modal', {
@@ -17,13 +17,13 @@
  |                  detail: { name: 'order-action-modal' }
  |              }))
  |
- | Back:       : dispatches 'reopen-wizard' — wizard reopens at its preserved step
+ | Back:       : dispatches 'reopen-wizard', wizard reopens at its preserved step
  |
  | On success : dispatches 'cart-updated' + 'open-cart-drawer' (cart choice)
  |              OR redirects to /checkout (checkout choice).
  |
  | Branding   : Header slot overrides x-ui.modal to match the wizard step 6 header
- |              exactly — gold stripe, linen bg, sunburst border, step counter, X.
+ |              exactly, gold stripe, linen bg, sunburst border, step counter, X.
  |              Footer uses raw ← Back button + x-ui.button-modal-primary.
  --}}
 
@@ -63,7 +63,7 @@
                     body: JSON.stringify({ ...this.payload, action: this.choice }),
                 });
                 const data = await res.json();
-                if (!res.ok) throw new Error(data.message || 'Could not add to cart — please try again.');
+                if (!res.ok) throw new Error(data.message || 'Could not add to cart, please try again.');
 
                 window.dispatchEvent(new CustomEvent('close-modal', { detail: { name: 'order-action-modal' } }));
 
@@ -74,7 +74,7 @@
                     window.dispatchEvent(new CustomEvent('open-cart-drawer'));
                 }
             } catch (err) {
-                this.error = err.message || 'Something went wrong — please try again.';
+                this.error = err.message || 'Something went wrong, please try again.';
             } finally {
                 this.submitting = false;
             }
@@ -99,7 +99,7 @@
         :zIndex="9999"
         :teleport="true"
     >
-        {{-- ── Header — matches wizard step header exactly ───────────────── --}}
+        {{-- ── Header, matches wizard step header exactly ───────────────── --}}
         <x-slot:header>
             <div class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 bg-linen border-sunburst">
                 <div class="flex-1 min-w-0">

@@ -54,7 +54,7 @@
         videoId="F3J9nyiM3So"
         heading="Quality Made to Order"
         label="Custom Product Details"
-        subheading="Every product we make is produced to your exact specifications. See how Top 5 Percent delivers quality custom apparel, signage, and promotional products — right here in Joliet, Illinois."
+        subheading="Every product we make is produced to your exact specifications. See how Top 5 Percent delivers quality custom apparel, signage, and promotional products, right here in Joliet, Illinois."
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

@@ -62,7 +62,7 @@
             @endif
         </div>
 
-        {{-- FAQ cards — 2-column grid --}}
+        {{-- FAQ cards, 2-column grid --}}
         @if(count($faqs))
         <div class="grid md:grid-cols-2 gap-6 items-start">
             <div class="space-y-3">

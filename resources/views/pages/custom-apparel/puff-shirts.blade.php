@@ -99,7 +99,7 @@
         alt1="Custom puff print shirts and 3D raised apparel in Joliet Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">Puff printing is a specialty screen printing technique that produces a three-dimensional raised texture on the printed design. A puff additive mixed into the plastisol ink expands when heated during the curing process, causing the print to rise above the surface of the garment and create a soft, tactile embossed look. The result is a shirt that immediately communicates a higher level of quality and craftsmanship than a standard flat print — something that customers and wearers notice immediately when they see and touch the garment.</p>
+            <p class="mb-4">Puff printing is a specialty screen printing technique that produces a three-dimensional raised texture on the printed design. A puff additive mixed into the plastisol ink expands when heated during the curing process, causing the print to rise above the surface of the garment and create a soft, tactile embossed look. The result is a shirt that immediately communicates a higher level of quality and craftsmanship than a standard flat print, something that customers and wearers notice immediately when they see and touch the garment.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">The Texture That Communicates Quality</h3>
             <p class="mb-4">In a market saturated with flat-printed custom shirts, puff print is one of the most effective ways to make your apparel feel premium and intentional. The raised texture adds a dimension of quality that photographs well, photographs distinctively, and creates a tactile experience that standard prints cannot match. Streetwear brands, lifestyle labels, gyms, sports teams, and boutique businesses throughout the Chicagoland area use puff printing to elevate their apparel above the average custom shirt.</p>
         </x-slot>
@@ -133,7 +133,7 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
         alt="Custom rhinestone and bling shirts from Top 5 Percent in Joliet Illinois"
-        title="Puff, Rhinestone, or Flock — Mix Techniques for One of a Kind Shirts"
+        title="Puff, Rhinestone, or Flock, Mix Techniques for One of a Kind Shirts"
         href="/contact"
         direction="right"
     />
@@ -154,7 +154,7 @@
         label="Custom Puff Print Shirts in Joliet, IL"
         :faqs="[
             ['q' => 'What is puff print on shirts?', 'a' => 'Puff printing uses a foam-based heat-transfer that expands when pressed, creating a three-dimensional raised design on the shirt surface. The result is a bold, tactile print that is visually and physically distinct.'],
-            ['q' => 'Is there a minimum order for puff shirts?', 'a' => 'No. We have no minimum. One puff print shirt or a full team order — same professional quality.'],
+            ['q' => 'Is there a minimum order for puff shirts?', 'a' => 'No. We have no minimum. One puff print shirt or a full team order, same professional quality.'],
             ['q' => 'How durable is puff print?', 'a' => 'Puff prints are durable when cared for properly. Wash inside out on cold, gentle cycle, and tumble dry on low or air dry.'],
             ['q' => 'What designs work best with puff printing?', 'a' => 'Bold, chunky text and large design elements work best for puff printing. Fine lines and very small text are difficult to achieve with the raised finish.'],
             ['q' => 'Can puff print be combined with other vinyl types?', 'a' => 'Yes. Puff can be combined with standard vinyl, glitter, or foil for multi-texture layered designs.'],

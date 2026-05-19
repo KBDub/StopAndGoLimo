@@ -12,7 +12,7 @@
     $resolvedOgImage    = $ogImage
         ? 'https://www.top5pct.com' . $ogImage
         : 'https://www.top5pct.com/images/og-tags/top5pct-og-home.jpg';
-    $resolvedOgImageAlt = $ogImageAlt ?? 'Top 5 Percent — Custom Signs & Apparel in Joliet, IL';
+    $resolvedOgImageAlt = $ogImageAlt ?? 'Top 5 Percent, Custom Signs & Apparel in Joliet, IL';
     $resolvedCanonical  = $canonical ?? request()->url();
 @endphp
 <!DOCTYPE html>

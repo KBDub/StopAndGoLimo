@@ -3,16 +3,16 @@
  | Location   : resources/views/components/ui/modal.blade.php
  | Stack      : Laravel + Alpine.js (Livewire 3 bundles Alpine)
  |
- | Generic, slot-driven modal. Named-instance event system — unlimited modals
+ | Generic, slot-driven modal. Named-instance event system, unlimited modals
  | can coexist on a page without conflict.
  |
  | ── PROPS ──────────────────────────────────────────────────────────────────
- |   name         required — unique ID used for open/close events
+ |   name         required, unique ID used for open/close events
  |   title        heading text in the header bar
  |   size         sm | md | lg | xl | full
  |   variant      default | dark | gold | success | warning | danger
- |   dismissible  bool (default true) — show ✕ / allow backdrop click to close
- |   scrollBody   bool (default true) — inner body scrolls; header+footer sticky
+ |   dismissible  bool (default true), show ✕ / allow backdrop click to close
+ |   scrollBody   bool (default true), inner body scrolls; header+footer sticky
  |   maxHeight    CSS max-height override, e.g. "90dvh"
  |   headerClass  extra Tailwind classes on the header div
  |   bodyClass    extra Tailwind classes on the body div
@@ -26,10 +26,10 @@
  |   footer       action row below the body (buttons, links, etc.)
  |
  | ── EVENT API ───────────────────────────────────────────────────────────────
- |   open-modal   { name: 'my-modal' }  — opens the named instance
- |   close-modal  { name: 'my-modal' }  — closes the named instance
- |   modal-opened { name: 'my-modal' }  — fired after open animation
- |   modal-closed { name: 'my-modal' }  — fired after close
+ |   open-modal   { name: 'my-modal' } , opens the named instance
+ |   close-modal  { name: 'my-modal' } , closes the named instance
+ |   modal-opened { name: 'my-modal' } , fired after open animation
+ |   modal-closed { name: 'my-modal' } , fired after close
  |
  | ── BASIC USAGE ─────────────────────────────────────────────────────────────
  |   <x-ui.modal-trigger modal="my-modal">Open</x-ui.modal-trigger>

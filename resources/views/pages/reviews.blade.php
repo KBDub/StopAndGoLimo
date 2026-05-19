@@ -4,27 +4,27 @@ $reviews = [
     ['name' => 'Rachel J.',         'quote' => 'Top 5 Percent is a great place to get truck decals. Ezra took the time to explain the process and answered all my questions. He responded promptly to emails and phone calls. I highly recommend this business.'],
     ['name' => 'Ken M.',            'quote' => 'Top 5% did an awesome job for us. They created and produced two door magnets for our car and then installed decals on our business truck. Very nice work, very fair pricing, and they communicate well! I will definitely be back to Top 5% soon!'],
     ['name' => 'Anjell E.',         'quote' => 'Ezra was extremely professional and committed to providing us with a quality product. My classmates and I were looking for a shirt for our class reunion. Ezra worked with us until we found a suitable option within our price range. We ended up with a beautiful design on a quality shirt! I will use this company again!'],
-    ['name' => 'Chamille D.',       'quote' => 'Excellence and Professionalism! We ordered 150+ shirts for our 51st annual family reunion and received bulk pricing. Ezra worked with us to ensure the best combination of color and font styles were perfect. The process from start to finish was excellent — Ezra remained in continued communication throughout. Shout-out to T5P!'],
-    ['name' => 'Dr. Tera J.',       'quote' => 'I walked in the door and received a very warm greeting. My questions were met with honest answers, not false promises. I placed an order for T-shirts with a very tight deadline — they took my idea, produced the concept, and completed my order in a very timely manner. I\'m very very happy with every aspect of Top 5%. I will be bringing future business their way.'],
+    ['name' => 'Chamille D.',       'quote' => 'Excellence and Professionalism! We ordered 150+ shirts for our 51st annual family reunion and received bulk pricing. Ezra worked with us to ensure the best combination of color and font styles were perfect. The process from start to finish was excellent, Ezra remained in continued communication throughout. Shout-out to T5P!'],
+    ['name' => 'Dr. Tera J.',       'quote' => 'I walked in the door and received a very warm greeting. My questions were met with honest answers, not false promises. I placed an order for T-shirts with a very tight deadline, they took my idea, produced the concept, and completed my order in a very timely manner. I\'m very very happy with every aspect of Top 5%. I will be bringing future business their way.'],
     ['name' => 'Delena',            'quote' => 'Top 5 Percent is our new favorite t-shirt printer! Their customer service is unmatched! We are located in Washington state, and Ezra helped us with an expedited order that arrived on time. He communicated with me throughout the design and printing process. The quality of the gold foil shirts we ordered is fantastic! I highly recommend Top 5 Percent for your printing needs.'],
     ['name' => 'Euneke R.',         'quote' => 'Top 5 Percent is my number one go to for any custom made items. They\'ve made shirts for several girls trips and did a wonderful job on my daughter\'s birthday shirts, masks, and backdrops. They keep you updated on the order and work extremely fast and efficiently. They have a customer in me for life!'],
-    ['name' => 'Tim S.',            'quote' => 'Top 5 Percent is just that! My first contact was with Ezra. He took the time to explain how he could produce my business needs and personally brought out the material the stickers would be printed on. Top 5 Percent goes above and beyond by anticipating customer needs in order to exceed expectations. Outstanding service, care, quality, and great prices — all wrapped in one visit. I would definitely recommend.'],
+    ['name' => 'Tim S.',            'quote' => 'Top 5 Percent is just that! My first contact was with Ezra. He took the time to explain how he could produce my business needs and personally brought out the material the stickers would be printed on. Top 5 Percent goes above and beyond by anticipating customer needs in order to exceed expectations. Outstanding service, care, quality, and great prices, all wrapped in one visit. I would definitely recommend.'],
     ['name' => 'Sam',               'quote' => 'I am beyond impressed with the custom decals created for my car! I needed something unique that would grab attention for my business, and the team absolutely delivered. The quality of the decals is superb and they were installed perfectly. I\'ve already received numerous compliments and inquiries about the work. Highly recommend for anyone looking for custom decals that stand out!'],
     ['name' => 'Vicky D.',          'quote' => 'I love working with this company!! They make sure we like what we are ordering before we place the order. The quality of materials and durability of the apparel is outstanding. Always on time, clear communication, and they listen to what we need. Never disappointed with them!'],
-    ['name' => 'Reggie H.',         'quote' => 'This place should be called Top 1%. I\'ve had them make decals for my truck in the past — their service is always great, prices are affordable, and the quality of the finished product is second to none! Definitely call them for all your printing needs.'],
-    ['name' => 'Ascendant Iron',    'quote' => 'Top 5 Percent was the highest rated locally when I started my search. It was a great decision — they were great to work with and did not disappoint! Ezra was very patient throughout the whole process and answered every question I had with great detail. Shirts came out great and I would use Top 5 Percent again for future orders.'],
+    ['name' => 'Reggie H.',         'quote' => 'This place should be called Top 1%. I\'ve had them make decals for my truck in the past, their service is always great, prices are affordable, and the quality of the finished product is second to none! Definitely call them for all your printing needs.'],
+    ['name' => 'Ascendant Iron',    'quote' => 'Top 5 Percent was the highest rated locally when I started my search. It was a great decision, they were great to work with and did not disappoint! Ezra was very patient throughout the whole process and answered every question I had with great detail. Shirts came out great and I would use Top 5 Percent again for future orders.'],
     ['name' => 'Jerry M.',          'quote' => 'I needed a custom hoodie made on very short notice. I brought it in and it was done less than 48 hours later. Ezra was genuinely awesome throughout the entire process. He was a joy to work with and I would highly recommend Top 5% to anyone looking for a custom job. The price was more than reasonable too!'],
     ['name' => 'Shontae',           'quote' => 'I stumbled on this place and so glad I did! The owner is so knowledgeable, friendly, and professional. He explained every item in the store and what his company has to offer. He gave me pricing on everything and everything was very well priced. The quality of everything he had in his store was 10/10! This is a gem!'],
-    ['name' => 'Brittney P.',       'quote' => 'Top 5 Percent came through in a clutch. I had a rush DTF order and I needed the print ASAP and Ezra took care of me!! Everything here was top tier — the service, the print, and the establishment. They definitely have my business!!'],
+    ['name' => 'Brittney P.',       'quote' => 'Top 5 Percent came through in a clutch. I had a rush DTF order and I needed the print ASAP and Ezra took care of me!! Everything here was top tier, the service, the print, and the establishment. They definitely have my business!!'],
     ['name' => 'Eric M.',           'quote' => 'The owner Ezra was extremely knowledgeable and helpful. He gave great marketing ideas for my stickers. The quality of my product was top of the line. I would recommend Top 5 Percent to any business or organization that needs print services. Excellent!'],
     ['name' => 'Shannon B.',        'quote' => 'Highly recommend! Ezra was great to work with and made our t-shirt within hours of putting the order in for same day pickup. Great service and quality!'],
-    ['name' => 'Abdul J.',          'quote' => 'Great experience. Ezra had me come in on the same day and explained all the different ways of printing on specific fabrics. He gave great prices and tips on how I would like my design printed. Had them ready in two business days. Great quality and print — would be sure to recommend this service to family and friends.'],
+    ['name' => 'Abdul J.',          'quote' => 'Great experience. Ezra had me come in on the same day and explained all the different ways of printing on specific fabrics. He gave great prices and tips on how I would like my design printed. Had them ready in two business days. Great quality and print, would be sure to recommend this service to family and friends.'],
     ['name' => 'Anna G.',           'quote' => 'I went to purchase a onesie for my public pregnancy announcement and the outcome was AMAZING! Due to the great outcome I also purchased our gender reveal shirt from them as well and it turned out AMAZING AS WELL! Great work and fast work! I will be coming back!'],
     ['name' => 'Donna M.',          'quote' => 'I am sharing this review on behalf of my husband Terry. You were kind enough to make for him a singular shirt and hat. He is extremely pleased with the product and so happy you could assist him with such a small order. I\'m sure we\'ll be back!'],
     ['name' => 'Jack S.',           'quote' => 'Ezra is the most helpful individual I know in this field. I came in looking for vinyl decals for my trucking company and he made me exactly what I needed at a price that was fair and honest. I would highly recommend this place for all of your signage and printing needs.'],
     ['name' => 'Jerry O.',          'quote' => 'I needed a banner ASAP and stopped into Top 5 Percent\'s location in Joliet. The owner Ezra was SUPER helpful and very talented with his printing services. I HIGHLY recommend Top 5 Percent. Professional and efficient in meeting the needs of their customers.'],
-    ['name' => 'Yolanda F.',        'quote' => 'Top 5% — fast and professional service. The experience by far was the best. The customer service was great. Friendly environment. Everyone loved the family reunion banner. It was perfect! Thanks Ezra and team, great work!'],
-    ['name' => 'John K.',           'quote' => 'Went to see them about doing truck signs — needed them quickly. Walked in at 5:30pm and had my signs on my truck by 12:30pm the next day. Incredible service and very friendly. The owner Ezra was awesome. Definitely recommend.'],
+    ['name' => 'Yolanda F.',        'quote' => 'Top 5%, fast and professional service. The experience by far was the best. The customer service was great. Friendly environment. Everyone loved the family reunion banner. It was perfect! Thanks Ezra and team, great work!'],
+    ['name' => 'John K.',           'quote' => 'Went to see them about doing truck signs, needed them quickly. Walked in at 5:30pm and had my signs on my truck by 12:30pm the next day. Incredible service and very friendly. The owner Ezra was awesome. Definitely recommend.'],
     ['name' => 'Ryan H.',           'quote' => 'I went in the store and had the best experience with Kimani. She was so professional and knowledgeable with everything we talked about. I came in for a design and she explained the process and worked so patiently with me. She made my time in the shop so pleasant and she will get my business again!'],
     ['name' => 'Paco S.',           'quote' => 'I showed Ezra what I wanted on my prosthetic leg and he showed me how it was going to look before he actually made it and it was perfectly what I wanted. Thank you Ezra for your work. Highly recommend!'],
     ['name' => 'Diana R.',          'quote' => 'Kimani did an excellent job with my shirt. She understood the assignment! I am impressed by her attention to detail and kindness. I will definitely come back when I need more stuff!'],
@@ -55,12 +55,12 @@ $reviews = [
     ['name' => 'Elias H.',          'quote' => 'Excellent communication. Excellent product quality. I am very pleased with this business.'],
     ['name' => 'Emmanuel V.',       'quote' => 'Ezra did an amazing job and was very quick to get back to us. Will definitely be going back to get more work done!'],
     ['name' => 'Fairmont Community','quote' => 'Top 5 helped us create a better graphic for our t-shirts and we are very pleased with the final product. Thank you for executing our order in a timely fashion. Looking forward to working with you in the future.'],
-    ['name' => 'Gerardo M.',        'quote' => 'Great quality work, professional and efficient. If you\'re looking for custom apparel — from shirts to hoodies to hats — they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!'],
+    ['name' => 'Gerardo M.',        'quote' => 'Great quality work, professional and efficient. If you\'re looking for custom apparel, from shirts to hoodies to hats, they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!'],
     ['name' => 'Hammes Family Dental', 'quote' => 'Excellent work! On time and very reasonable! Nice to have someone local! Will work with them again for sure.'],
     ['name' => 'J. N.',             'quote' => 'Had a great experience at this establishment. Punctual, extremely satisfied with the service and courtesy.'],
     ['name' => 'Jackie L.',         'quote' => 'They are quick. You\'re in and out. The correspondence by email is a great help for business. The quality is top notch.'],
     ['name' => 'Jaime F.',          'quote' => 'Great people! Returning customer here!'],
-    ['name' => 'Jenna K.',          'quote' => 'This place was great. The personalized shirt I ordered came out great. Ezra is great — excellent customer service!! Would highly recommend.'],
+    ['name' => 'Jenna K.',          'quote' => 'This place was great. The personalized shirt I ordered came out great. Ezra is great, excellent customer service!! Would highly recommend.'],
     ['name' => 'Jermaine',          'quote' => 'I\'ve done business with these guys several times and I\'ve always been very pleased. They do great work.'],
     ['name' => 'Joseph C.',         'quote' => 'Excellent Service and Products. Thank you Ezra!'],
     ['name' => 'Lea B.',            'quote' => 'I had my fingerprints done here and the service was excellent! The staff were awesome, friendly, professional, and made the whole process quick and easy. Everything was well-organized and efficient. Highly recommend this location for anyone needing fingerprinting done!'],
@@ -90,7 +90,7 @@ $reviews = [
     ['name' => 'USA Moving Co.',    'quote' => 'Very good experience! Great service, quick turnaround time, and very happy with the products we received.'],
     ['name' => 'Vero C.',           'quote' => 'Got two t-shirts made on two different occasions and they did not disappoint. Loved them!'],
     ['name' => 'Veronica S.',       'quote' => 'Very prompt, professional, and pleasant!!'],
-    ['name' => 'Google Reviewer',   'quote' => 'I think the owners are very helpful, knowledgeable and have been a Blessing to my entire family business. There should be more business owners like those two. If you are looking for good quality work this is the place. Please try them out — you wouldn\'t be disappointed.'],
+    ['name' => 'Google Reviewer',   'quote' => 'I think the owners are very helpful, knowledgeable and have been a Blessing to my entire family business. There should be more business owners like those two. If you are looking for good quality work this is the place. Please try them out, you wouldn\'t be disappointed.'],
     ['name' => 'Lilc J.',           'quote' => 'Very friendly and do very great work.'],
     ['name' => 'Mr.',               'quote' => 'I had a great experience with the customer service at Top 5 Percent when I went in for fingerprinting. The staff was professional, friendly, and efficient. They made the entire process smooth and stress-free. I highly recommend their services!'],
     ['name' => 'Tim S.',            'quote' => 'Top 5 Percent is just That! Ezra took the time to explain how he could produce my business needs and personally brought out the material the stickers were going to be printed on. Top 5 Percent is a company that offers service that goes above and beyond. Outstanding Service, care, quality, and great prices!'],
@@ -127,20 +127,18 @@ $totalCount = count($reviews);
         imagePosition="right"
     >
         <p class="mb-4">
-            Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service. Every
-            review below is a real customer who walked through our door — or shipped their order across the country —
-            and trusted us to deliver. We take that trust seriously.
+            Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service, and you can see the work behind these reviews in our <a href="/portfolio" class="link-notification">portfolio</a> of real projects produced for real businesses, schools, and sports teams across Will County. Every review below is a real customer who walked through our door, or shipped their order across the country, and trusted us to deliver <a href="/custom-apparel" class="link-notification">custom apparel</a>, signs, and other printed products. We take that trust seriously.
         </p>
         <p class="mb-4">
             Our customers range from individuals ordering a single custom shirt to businesses outfitting entire
-            teams, schools running spirit wear fundraisers, and organizations celebrating milestones with banners
+            teams, schools running <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> fundraisers, and organizations celebrating milestones with banners
             and promotional products. Whatever the project, the standard is always the same.
         </p>
         <p class="mb-4">
-            See the work that earned these reviews in our <a href="/portfolio" class="link-notification">portfolio</a>. Learn more <a href="/about-us" class="link-notification">about us</a> — the veteran-owned team behind every five-star job. Ready to be our next happy customer? <a href="/contact" class="link-notification">Contact us</a> for a free quote.
+            See the work that earned these reviews in our <a href="/portfolio" class="link-notification">portfolio</a>. Learn more <a href="/about-us" class="link-notification">about us</a>, the veteran-owned team behind every five-star job. Ready to be our next happy customer? <a href="/contact" class="link-notification">Contact us</a> for a free quote.
         </p>
         <p>
-            Our most reviewed products include <a href="/custom-apparel" class="link-notification">custom apparel</a>, <a href="/signs" class="link-notification">business signs</a>, and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> — browse any of those pages to see what we can produce for your business. All reviews below are from Google. No cherry-picking, no fake names — just real feedback from real people in Joliet and beyond.
+            Our most reviewed products include <a href="/custom-apparel" class="link-notification">custom apparel</a>, <a href="/signs" class="link-notification">business signs</a>, and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a>, browse any of those pages to see what we can produce for your business. All reviews below are from Google. No cherry-picking, no fake names, just real feedback from real people in Joliet and beyond.
         </p>
     </x-sections.card-image-with-text>
 
@@ -160,7 +158,7 @@ $totalCount = count($reviews);
                     @endfor
                 </div>
                 <p class="text-charcoal-light max-w-2xl mx-auto">
-                    {{ $totalCount }} verified Google reviews — all 5 stars.
+                    {{ $totalCount }} verified Google reviews, all 5 stars.
                 </p>
             </div>
 
@@ -175,7 +173,7 @@ $totalCount = count($reviews);
                 @endforeach
             </div>
 
-            {{-- Remaining reviews — shown after clicking Show More --}}
+            {{-- Remaining reviews, shown after clicking Show More --}}
             <div
                 x-show="showAll"
                 x-transition:enter="transition ease-out duration-500"

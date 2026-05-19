@@ -68,7 +68,7 @@
     <div class="mt-2 flex items-start gap-2 text-sm text-charcoal-light">
         <span class="text-warning mt-px" aria-hidden="true">&#128161;</span>
         <span>
-            Accepted: PNG files only — 300 DPI minimum recommended. Need help?
+            Accepted: PNG files only, 300 DPI minimum recommended. Need help?
             Call <a href="tel:8153498600" class="text-azure hover:text-azure-dark font-semibold transition-colors">(815) 349-8600</a>.
         </span>
     </div>

@@ -25,7 +25,7 @@
     <meta name="twitter:image:alt"   content="{{ $currentStore->name }} store">
     @endif
 
-    {{-- Tri-palette CSS injection — no Tailwind recompile needed --}}
+    {{-- Tri-palette CSS injection, no Tailwind recompile needed --}}
     <style>
         :root {
             --brand-primary:   {{ $currentStore->color('primary', '#2C2C2C') }};

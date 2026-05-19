@@ -3,13 +3,13 @@
  | Location   : resources/views/components/ui/modal-wizard.blade.php
  | Stack      : Laravel + Alpine.js (Livewire 3 bundles Alpine)
  |
- | Multi-step wizard modal. Non-dismissible by default — the user must
+ | Multi-step wizard modal. Non-dismissible by default, the user must
  | complete or explicitly cancel the flow. Steps are driven by named
  | slots (step1, step2, step3). Dot indicators and Back/Next/Finish
  | navigation are rendered automatically.
  |
  | ── PROPS ──────────────────────────────────────────────────────────────────
- |   name         required — unique ID used for open/close events
+ |   name         required, unique ID used for open/close events
  |   size         sm | md | lg | xl | full  (default md)
  |   steps        total step count  (default 3)
  |   step1Title   header title for step 1
@@ -24,9 +24,9 @@
  |   step3        body content for step 3  (optional for 2-step wizards)
  |
  | ── EVENT API ───────────────────────────────────────────────────────────────
- |   open-modal   { name: 'my-wizard' }  — opens at step 1
- |   close-modal  { name: 'my-wizard' }  — closes and resets
- |   wizard-done  { name: 'my-wizard' }  — dispatched when Finish is clicked
+ |   open-modal   { name: 'my-wizard' } , opens at step 1
+ |   close-modal  { name: 'my-wizard' } , closes and resets
+ |   wizard-done  { name: 'my-wizard' } , dispatched when Finish is clicked
  |
  | ── USAGE ───────────────────────────────────────────────────────────────────
  |   <x-ui.modal-trigger modal="my-wizard">Start</x-ui.modal-trigger>
@@ -125,7 +125,7 @@
             {{-- Gold accent stripe --}}
             <div class="h-2 flex-shrink-0 bg-gold-gradient-horizontal" aria-hidden="true"></div>
 
-            {{-- Header — title swaps per step --}}
+            {{-- Header, title swaps per step --}}
             <div class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 bg-linen border-sunburst">
                 <h2 id="{{ $wizId }}_title" class="flex-1 min-w-0 text-lg font-bold text-charcoal leading-tight">
                     <span x-show="step === 1">{{ $step1Title }}</span>

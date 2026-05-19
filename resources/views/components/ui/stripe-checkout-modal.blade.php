@@ -29,7 +29,7 @@
 >
     <x-ui.modal
         name="stripe-checkout-modal"
-        title="Request received — complete your payment"
+        title="Request received, complete your payment"
         size="md"
         variant="default"
         :dismissible="true"
@@ -88,7 +88,7 @@
                 Your payment information is handled entirely by Stripe and is never stored on our servers.
             </p>
 
-            {{-- Checkout button — opens Stripe payment link in new tab --}}
+            {{-- Checkout button, opens Stripe payment link in new tab --}}
             <div class="flex justify-center py-2">
                 <button
                     type="button"

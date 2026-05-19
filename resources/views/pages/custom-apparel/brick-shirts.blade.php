@@ -71,10 +71,10 @@
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg"
         alt="Custom brick print shirts with 3D raised texture in Joliet Illinois"
-        title="Shirts That Stand Out — Literally"
+        title="Shirts That Stand Out, Literally"
     >
-        <p class="mb-4">Brick-style printing is a specialty technique that produces a dimensional, raised texture on your shirt design. Like puff printing, it uses an additive that expands during the heat-curing process to create a three-dimensional surface effect — but brick printing is engineered to produce a specific raised, segmented pattern that resembles the texture and visual weight of actual brickwork or raised tile. The result is a shirt that has a bold, architectural quality that standard flat prints simply cannot achieve.</p>
-        <p class="mb-4">Brick shirts are popular with streetwear brands, lifestyle apparel lines, and anyone who wants their custom shirt to be a genuine conversation piece. The dimensional texture catches both the eye and the hand — the first thing people do when they see a well-executed brick print shirt is reach out to touch it. That tactile reaction is a mark of a printing technique that communicates exceptional craftsmanship and uniqueness that mass-produced apparel cannot replicate.</p>
+        <p class="mb-4">Brick-style printing is a specialty technique that produces a dimensional, raised texture on your shirt design. Like puff printing, it uses an additive that expands during the heat-curing process to create a three-dimensional surface effect, but brick printing is engineered to produce a specific raised, segmented pattern that resembles the texture and visual weight of actual brickwork or raised tile. The result is a shirt that has a bold, architectural quality that standard flat prints simply cannot achieve.</p>
+        <p class="mb-4">Brick shirts are popular with streetwear brands, lifestyle apparel lines, and anyone who wants their custom shirt to be a genuine conversation piece. The dimensional texture catches both the eye and the hand, the first thing people do when they see a well-executed brick print shirt is reach out to touch it. That tactile reaction is a mark of a printing technique that communicates exceptional craftsmanship and uniqueness that mass-produced apparel cannot replicate.</p>
         <p>We produce brick shirts with no minimum order quantity so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at (815) 349 8600 to discuss your brick shirt project today.</p>
     </x-sections.card-image-with-text>
 
@@ -84,7 +84,7 @@
         title="Bold Designs Made for This Technique"
         imagePosition="right"
     >
-        <p class="mb-4">Brick printing works best with bold, graphic designs that benefit from the dimensional effect. Large logos, brand names, block lettering, and clean geometric shapes translate beautifully into the raised texture and create a visual statement that commands attention from across the room. Highly detailed designs with fine lines or intricate gradients are less suited to this technique — where brick printing truly shines is with strong, simple graphics that are elevated into something special by the dimensional effect.</p>
+        <p class="mb-4">Brick printing works best with bold, graphic designs that benefit from the dimensional effect. Large logos, brand names, block lettering, and clean geometric shapes translate beautifully into the raised texture and create a visual statement that commands attention from across the room. Highly detailed designs with fine lines or intricate gradients are less suited to this technique, where brick printing truly shines is with strong, simple graphics that are elevated into something special by the dimensional effect.</p>
         <p class="mb-4">Many streetwear brands and specialty apparel lines use brick printing for signature pieces and limited edition runs where the goal is to create a sense of exclusivity and premium quality. If your brand is built around standing out and refusing to look like everyone else, brick shirts deliver that point of difference in a tangible, wearable way that your audience will recognize and respond to.</p>
         <p>We are a veteran owned custom apparel shop in Joliet, Illinois, serving the greater Chicagoland area. We review every brick shirt order before production to make sure the design is optimized for the dimensional effect. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started.</p>
     </x-sections.card-image-with-text>
@@ -99,13 +99,13 @@
         alt1="Custom brick print shirts with 3D dimensional texture made by Top 5 Percent in Joliet Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">The custom apparel market is saturated with flat-printed shirts that all look fundamentally similar regardless of the quality of the design. When everything has the same surface and the same depth, even a great design can get lost in the noise. Brick printing creates an immediate visual and tactile distinction that separates your shirts from everything else in the market — a distinction your customers feel the moment they pick up your product.</p>
+            <p class="mb-4">The custom apparel market is saturated with flat-printed shirts that all look fundamentally similar regardless of the quality of the design. When everything has the same surface and the same depth, even a great design can get lost in the noise. Brick printing creates an immediate visual and tactile distinction that separates your shirts from everything else in the market, a distinction your customers feel the moment they pick up your product.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">A Physical Quality Signal</h3>
             <p class="mb-4">Consumers associate dimensional, textured prints with premium quality because they correctly understand that specialty techniques require more skill and intention than standard flat printing. A brick print shirt signals to anyone who sees or touches it that the brand behind it cares about the quality and differentiation of its products. This signal of quality is especially valuable for emerging streetwear brands, lifestyle labels, and specialty apparel lines that are trying to establish themselves as premium in a competitive market.</p>
         </x-slot>
         <x-slot name="mid">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Photographs Exceptionally Well</h3>
-            <p class="mb-4">The dimensional texture of brick print creates depth and shadow in photographs that flat prints cannot achieve. For brands that sell apparel online or promote their collections on social media, this photographic distinction is a genuine competitive advantage. A well-lit product photo of a brick print shirt creates visual interest that draws the eye and encourages viewers to look more closely — which translates to longer engagement time and higher purchase intent in e-commerce and social media contexts.</p>
+            <p class="mb-4">The dimensional texture of brick print creates depth and shadow in photographs that flat prints cannot achieve. For brands that sell apparel online or promote their collections on social media, this photographic distinction is a genuine competitive advantage. A well-lit product photo of a brick print shirt creates visual interest that draws the eye and encourages viewers to look more closely, which translates to longer engagement time and higher purchase intent in e-commerce and social media contexts.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Limited Edition Appeal</h3>
             <p class="mb-4">Brick printing is not a technique that every print shop offers, which gives brick print shirts a natural limited edition quality that standard screen-printed shirts cannot claim. When you offer brick shirts alongside standard printed apparel, the brick print pieces stand out as the more exclusive, premium tier of your line. Many brands use brick printing for their most coveted designs, hero pieces, and signature items specifically because the technique itself communicates exclusivity.</p>
         </x-slot>
@@ -126,7 +126,7 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg"
         alt="Custom brick print shirts with 3D dimensional texture by Top 5 Percent in Joliet Illinois"
-        title="Dimensional Brick Print Shirts — No Minimums"
+        title="Dimensional Brick Print Shirts, No Minimums"
         href="/contact"
         direction="left"
     />

@@ -3,11 +3,11 @@
 ])
 
 {{-- ===================================================================
-     Mega Menu Navigation — Style 1
+     Mega Menu Navigation, Style 1
      Each panel lives INSIDE its trigger div so hover is seamless:
        trigger div = relative container
        panel = absolute top-full, left or right offset per item position
-     No close-timer needed — entering the panel never leaves the trigger.
+     No close-timer needed, entering the panel never leaves the trigger.
      ================================================================== --}}
 
 <nav
@@ -30,7 +30,7 @@
             <a href="/" class="flex items-center flex-shrink-0">
                 <img
                     src="/images/logos/top5-logo.gif"
-                    alt="Top 5 Percent — Custom Signage & Apparel Joliet IL"
+                    alt="Top 5 Percent, Custom Signage & Apparel Joliet IL"
                     class="transition-all duration-300 transform-gpu h-20"
                     x-bind:class="scrolled ? 'h-12' : 'h-20'"
                 >
@@ -81,7 +81,7 @@
                             <div class="flex-1 pl-5 pt-2 pb-5 min-w-0">
                                 <a href="/custom-apparel" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Custom Apparel</span>
-                                    <span class="text-base text-charcoal-light">T-shirts, hoodies, caps & more — any print method, same day.</span>
+                                    <span class="text-base text-charcoal-light">T-shirts, hoodies, caps & more, any print method, same day.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <div class="space-y-2">
@@ -161,7 +161,7 @@
                             <div class="flex-1 pl-5 pt-2 pb-5 min-w-0">
                                 <a href="/signs" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Select a Sign</span>
-                                    <span class="text-base text-charcoal-light">Banners, window signs, yard signs & more — same day in Joliet, IL.</span>
+                                    <span class="text-base text-charcoal-light">Banners, window signs, yard signs & more, same day in Joliet, IL.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <div class="space-y-2">
@@ -234,7 +234,7 @@
                             <div class="flex-1 pl-5 pt-2 pb-5 min-w-0">
                                 <a href="/stickers" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Stickers</span>
-                                    <span class="text-base text-charcoal-light">Vinyl stickers & labels — any shape, no minimums, fast turnaround.</span>
+                                    <span class="text-base text-charcoal-light">Vinyl stickers & labels, any shape, no minimums, fast turnaround.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Sticker Types</p>
@@ -355,7 +355,7 @@
                     </div>
                 </div>
 
-                {{-- Top 5% Merchandise — plain link, no dropdown --}}
+                {{-- Top 5% Merchandise, plain link, no dropdown --}}
                 <div class="self-stretch flex items-stretch">
                     <a href="/top5pct-merchandise" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Top 5% Merchandise
@@ -387,7 +387,7 @@
                             <div class="flex-1 pl-5 pt-2 pb-5 min-w-0">
                                 <a href="/design-services" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">Design Services</span>
-                                    <span class="text-base text-charcoal-light">Logos, layouts & print-ready artwork — concept to finished files.</span>
+                                    <span class="text-base text-charcoal-light">Logos, layouts & print-ready artwork, concept to finished files.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Service Options</p>
@@ -434,7 +434,7 @@
                             <div class="flex-1 pl-5 pt-2 pb-5 min-w-0">
                                 <a href="/about-us" class="flex items-center justify-center gap-2 pb-2 mb-2 border-b border-linen-dark group">
                                     <span class="font-bold text-lg text-charcoal group-hover:text-sunburst transition-colors whitespace-nowrap">About Us</span>
-                                    <span class="text-base text-charcoal-light">Veteran-owned in Joliet, IL — quality custom printing since 2017.</span>
+                                    <span class="text-base text-charcoal-light">Veteran-owned in Joliet, IL, quality custom printing since 2017.</span>
                                     <svg class="w-4 h-4 text-sunburst shrink-0 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                                 </a>
                                 <p class="text-sm font-bold uppercase tracking-widest mb-2 text-center" style="color:var(--color-olive)">Our Company</p>
@@ -476,7 +476,7 @@
     ></div>
 
     {{-- ===================================================================
-         MOBILE MENU — Accordion
+         MOBILE MENU, Accordion
          ================================================================== --}}
     <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden border-t border-linen-dark">
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">

@@ -1,6 +1,6 @@
 <x-layouts.page
     title="Resources | Tips, Articles & Design Help"
-    metaDescription="Helpful resources for businesses in Joliet and Will County. Tips, articles, and design guides from Top 5 Percent — your veteran owned custom signage and"
+    metaDescription="Helpful resources for businesses in Joliet and Will County. Tips, articles, and design guides from Top 5 Percent, your veteran owned custom signage and"
     currentPage="about">
 
     <x-sections.category-hero
@@ -31,7 +31,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-h3 font-bold text-charcoal mb-2">7 Tips for Ordering Custom T-Shirts</h3>
-                        <p class="text-charcoal-light text-body-sm">What to know before you order — artwork formats, sizing charts, print methods, and how to get the best result for your budget.</p>
+                        <p class="text-charcoal-light text-body-sm">What to know before you order, artwork formats, sizing charts, print methods, and how to get the best result for your budget.</p>
                     </div>
                 </a>
                 <a href="/blog/buy-stickers-decals-joliet" class="group block bg-linen hover:bg-linen-dark transition-colors">
@@ -40,7 +40,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-h3 font-bold text-charcoal mb-2">Where to Buy Custom Stickers in Joliet</h3>
-                        <p class="text-charcoal-light text-body-sm">A guide to finding high-quality custom stickers locally in Joliet and Will County — and why local print shops beat online ordering for most customers.</p>
+                        <p class="text-charcoal-light text-body-sm">A guide to finding high-quality custom stickers locally in Joliet and Will County, and why local print shops beat online ordering for most customers.</p>
                     </div>
                 </a>
                 <a href="/blog/window-wall-signs" class="group block bg-linen hover:bg-linen-dark transition-colors">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-h3 font-bold text-charcoal mb-2">Outfitting Your Team with Corporate Wear</h3>
-                        <p class="text-charcoal-light text-body-sm">The complete guide to ordering branded corporate apparel for your team — from polo shirts and button-ups to hats and outerwear.</p>
+                        <p class="text-charcoal-light text-body-sm">The complete guide to ordering branded corporate apparel for your team, from polo shirts and button-ups to hats and outerwear.</p>
                     </div>
                 </a>
                 <a href="/blog/spirit-wear-tips" class="group block bg-linen hover:bg-linen-dark transition-colors">
@@ -76,7 +76,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-h3 font-bold text-charcoal mb-2">Spirit Wear for Schools & Sports Teams</h3>
-                        <p class="text-charcoal-light text-body-sm">How to order custom spirit wear that builds team pride — design tips, print method recommendations, and quantity planning advice.</p>
+                        <p class="text-charcoal-light text-body-sm">How to order custom spirit wear that builds team pride, design tips, print method recommendations, and quantity planning advice.</p>
                     </div>
                 </a>
             </div>

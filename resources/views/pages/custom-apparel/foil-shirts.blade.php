@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Foil Shirts"
         headingAccent="The Gold Collection"
-        description="Metallic foil prints in gold, silver, and a spectrum of colors. The high-shine finish elevates any design from ordinary to extraordinary — part of our signature Gold Collection."
+        description="Metallic foil prints in gold, silver, and a spectrum of colors. The high-shine finish elevates any design from ordinary to extraordinary, part of our signature Gold Collection."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -73,8 +73,8 @@
         alt="Custom foil shirts with metallic gold and silver prints in Joliet Illinois"
         title="Mirror-Finish Metallic That Commands Attention"
     >
-        <p class="mb-4">Foil printing uses a heat-activated metallic film that creates a mirror-like, high-gloss surface on your design. The result is a print with an intense metallic sheen — genuine gold foil that looks like polished gold, genuine silver foil that looks like brushed steel, or colored foils in rose gold, copper, red, blue, and other metallic tones that bring a level of luxury and visual impact to custom apparel that standard printing methods simply cannot achieve. If glitter sparkles and holographic shifts, foil shines — a clean, bold, high-polish metallic statement.</p>
-        <p class="mb-4">Foil shirts are popular for premium fashion apparel, luxury brand merchandise, milestone event shirts, and any custom apparel application where an elevated, high-end aesthetic is the goal. Gold foil in particular communicates achievement, prestige, and celebration — it is the natural choice for championship apparel, milestone anniversary shirts, award ceremony attire, and brands that want to position themselves as premium in their market.</p>
+        <p class="mb-4">Foil printing uses a heat-activated metallic film that creates a mirror-like, high-gloss surface on your design. The result is a print with an intense metallic sheen, genuine gold foil that looks like polished gold, genuine silver foil that looks like brushed steel, or colored foils in rose gold, copper, red, blue, and other metallic tones that bring a level of luxury and visual impact to custom apparel that standard printing methods simply cannot achieve. If glitter sparkles and holographic shifts, foil shines, a clean, bold, high-polish metallic statement.</p>
+        <p class="mb-4">Foil shirts are popular for premium fashion apparel, luxury brand merchandise, milestone event shirts, and any custom apparel application where an elevated, high-end aesthetic is the goal. Gold foil in particular communicates achievement, prestige, and celebration, it is the natural choice for championship apparel, milestone anniversary shirts, award ceremony attire, and brands that want to position themselves as premium in their market.</p>
         <p>We produce foil shirts with no minimum order quantities on t-shirts, hoodies, and most standard garment types. We review every foil shirt design before production to ensure the artwork is optimized for the foil application process. Call us at (815) 349 8600 to discuss your foil shirt order today.</p>
     </x-sections.card-image-with-text>
 
@@ -84,9 +84,9 @@
         title="Gold, Silver, and Color Foil Options"
         imagePosition="right"
     >
-        <p class="mb-4">Our foil vinyl selection covers the most popular metallic finishes for custom apparel. Gold foil is our most requested foil option — it works on dark and light garments alike and creates an immediately recognizable premium look that photographs beautifully under any lighting condition. Silver foil provides a clean, modern metallic aesthetic that works particularly well with contemporary brand identities and minimal design styles. Rose gold foil has become increasingly popular for bridal events, women's apparel brands, and lifestyle businesses that align with current aesthetic trends.</p>
+        <p class="mb-4">Our foil vinyl selection covers the most popular metallic finishes for custom apparel. Gold foil is our most requested foil option, it works on dark and light garments alike and creates an immediately recognizable premium look that photographs beautifully under any lighting condition. Silver foil provides a clean, modern metallic aesthetic that works particularly well with contemporary brand identities and minimal design styles. Rose gold foil has become increasingly popular for bridal events, women's apparel brands, and lifestyle businesses that align with current aesthetic trends.</p>
         <p class="mb-4">Beyond standard metallic foils, we also work with colored foils in holographic, red, blue, green, and other specialty finishes that combine the mirror-shine quality of foil with visual complexity beyond standard metallic colors. These specialty foil finishes are especially popular for limited edition designs and statement pieces where the material itself is meant to communicate something distinctive about the design or the brand behind it.</p>
-        <p>For milestone events — fiftieth anniversaries, championship seasons, major organization events — gold foil shirts create an immediate sense of ceremony and significance that standard prints cannot convey. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will County area. Call us at (815) 349 8600 to discuss your foil shirt project today.</p>
+        <p>For milestone events, fiftieth anniversaries, championship seasons, major organization events, gold foil shirts create an immediate sense of ceremony and significance that standard prints cannot convey. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will County area. Call us at (815) 349 8600 to discuss your foil shirt project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -99,9 +99,9 @@
         alt1="Custom metallic foil shirts for brands and events in Joliet and Will County Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">Gold has communicated achievement, luxury, and prestige across human cultures for thousands of years. That symbolic association did not disappear with the advent of custom apparel — if anything, it translated directly into the way consumers perceive gold foil on custom shirts. A gold foil printed shirt communicates championship, milestone, and premium quality in a way that no other print finish can match. When you want your apparel to signal that something significant has been achieved or that your brand operates at a premium level, gold foil is one of the most direct and effective ways to communicate that message through the physical product.</p>
+            <p class="mb-4">Gold has communicated achievement, luxury, and prestige across human cultures for thousands of years. That symbolic association did not disappear with the advent of custom apparel, if anything, it translated directly into the way consumers perceive gold foil on custom shirts. A gold foil printed shirt communicates championship, milestone, and premium quality in a way that no other print finish can match. When you want your apparel to signal that something significant has been achieved or that your brand operates at a premium level, gold foil is one of the most direct and effective ways to communicate that message through the physical product.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Championship and Achievement Apparel</h3>
-            <p class="mb-4">Sports teams, academic organizations, corporate achievement programs, and community organizations throughout Joliet and Will County use gold foil shirts to mark championship seasons, academic achievements, years of service milestones, and significant organizational accomplishments. A gold foil championship shirt feels fundamentally different from a standard printed shirt — it communicates that this accomplishment was significant enough to deserve something that looks as special as it feels to achieve. Players and participants keep these shirts for years because the gold foil quality preserves the memory of the achievement every time they see it.</p>
+            <p class="mb-4">Sports teams, academic organizations, corporate achievement programs, and community organizations throughout Joliet and Will County use gold foil shirts to mark championship seasons, academic achievements, years of service milestones, and significant organizational accomplishments. A gold foil championship shirt feels fundamentally different from a standard printed shirt, it communicates that this accomplishment was significant enough to deserve something that looks as special as it feels to achieve. Players and participants keep these shirts for years because the gold foil quality preserves the memory of the achievement every time they see it.</p>
         </x-slot>
         <x-slot name="mid">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Premium Brand Merchandise</h3>
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce foil shirts and premium metallic apparel for brands, athletes, organizations, and individuals throughout Will County and the Chicagoland area with no minimum order quantities.</p>
-            <p>Call us at (815) 349 8600 to discuss your foil shirt project — gold, silver, rose gold, and specialty foil finishes available.</p>
+            <p>Call us at (815) 349 8600 to discuss your foil shirt project, gold, silver, rose gold, and specialty foil finishes available.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -126,7 +126,7 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
         alt="Custom metallic foil shirts by Top 5 Percent in Joliet Illinois"
-        title="Foil Shirts — Gold, Silver, and Metallic Finishes"
+        title="Foil Shirts, Gold, Silver, and Metallic Finishes"
         href="/contact"
         direction="right"
     />
@@ -154,7 +154,7 @@
         label="Custom Foil Shirts in Joliet, IL"
         :faqs="[
             ['q' => 'What are foil shirts?', 'a' => 'Foil shirts use a metallic foil film heat-pressed onto fabric to create a mirror-finish, highly reflective design. Gold, silver, and color foil options are available.'],
-            ['q' => 'Is there a minimum order for foil shirts?', 'a' => 'No. We have no minimum. One foil shirt for a gift or a hundred for an event — the quality is the same.'],
+            ['q' => 'Is there a minimum order for foil shirts?', 'a' => 'No. We have no minimum. One foil shirt for a gift or a hundred for an event, the quality is the same.'],
             ['q' => 'How do I care for foil-printed shirts?', 'a' => 'Wash foil shirts inside out on cold, gentle cycle, and tumble dry on low or air dry. Avoid ironing directly on the foil area.'],
             ['q' => 'What foil colors do you offer?', 'a' => 'We offer gold, silver, rose gold, holographic, and various color foils. Ask to see available options when you place your order.'],
             ['q' => 'Can foil be combined with other print techniques?', 'a' => 'Yes. Foil pairs well with glitter, rhinestones, and standard vinyl for layered, multi-finish custom shirts.'],

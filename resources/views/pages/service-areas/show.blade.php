@@ -130,15 +130,15 @@
             imagePosition="right"
         >
             <p>
-                Since 2017, Top 5 Percent has been the go-to source for custom signage and apparel
+                Since 2017, Top 5 Percent has been the go-to source for <a href="/custom-apparel" class="link-notification">custom apparel</a> and signage
                 in {{ $cityName }} and throughout Will County and greater Chicagoland. We are a
                 veteran-owned shop based in Joliet, Illinois, and we are proud to serve the
                 {{ $cityName }} community with the same discipline and quality standards that
-                military service instilled in us.
+                military service instilled in us, whether that means producing a single <a href="/signs" class="link-notification">business sign</a> or a full multi-product order for a local organization.
             </p>
             <p>
                 Whether you are a small business looking for a new storefront sign, a school
-                organization ordering custom hoodies, or an individual needing vehicle graphics,
+                organization ordering custom hoodies, or an individual needing <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a>,
                 we handle every job in-house from artwork through production. That means fewer
                 errors, faster turnaround, and a team that stands behind every order.
             </p>
@@ -167,7 +167,7 @@
     @if($content && !empty($content['faqs']))
         {{-- City FAQ with JSON-LD injection --}}
         <x-sections.faq
-            heading="Frequently Asked Questions — {{ $cityName }}, IL"
+            heading="Frequently Asked Questions, {{ $cityName }}, IL"
             label="LOCAL FAQs"
             :faqs="$content['faqs']"
         />

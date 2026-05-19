@@ -46,7 +46,7 @@
                 <span x-text="$store.dtfCart.items.length"></span>
                 DTF transfer<span x-show="$store.dtfCart.items.length !== 1">s</span>
                 saved to your order
-                <span class="font-normal text-charcoal-light">— keep adding or click any row to proceed to checkout</span>
+                <span class="font-normal text-charcoal-light">, keep adding or click any row to proceed to checkout</span>
             </p>
         </div>
 
@@ -290,7 +290,7 @@
         <div class="border-t-4 border-sunburst shadow-md bg-linen-light p-8">
             <div class="text-center mb-6">
                 <h4 class="text-h4 font-semibold text-charcoal mb-1">Ready to order your DTF transfers?</h4>
-                <p class="text-body-sm text-charcoal-light">Drop your PNG design file below to get started — we'll walk you through the rest.</p>
+                <p class="text-body-sm text-charcoal-light">Drop your PNG design file below to get started, we'll walk you through the rest.</p>
             </div>
             <x-ui.dtf-dropzone class="max-w-2xl mx-auto" />
         </div>

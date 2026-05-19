@@ -114,7 +114,7 @@
             </div>
 
         @else
-            {{-- Default: Logo Left — 3-column: [logo] [links centered] [cart] --}}
+            {{-- Default: Logo Left, 3-column: [logo] [links centered] [cart] --}}
             <div class="hidden md:grid items-center py-3 gap-4"
                  style="grid-template-columns: auto 1fr auto;">
 

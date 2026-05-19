@@ -6,7 +6,7 @@
  | Renders as any HTML element via the `as` prop.
  |
  | ── PROPS ───────────────────────────────────────────────────────────────────
- |   modal    required — must match the `name` prop of the target x-ui.modal
+ |   modal    required, must match the `name` prop of the target x-ui.modal
  |   as       button (default) | a | div | span | close
  |            `as="close"` is shorthand for dispatching close-modal
  |   action   open (default) | close | toggle

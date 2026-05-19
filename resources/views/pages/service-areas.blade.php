@@ -39,7 +39,7 @@
 
     <x-ui.banner-medium-sunburst />
 
-    {{-- Company intro — branded card with float image --}}
+    {{-- Company intro, branded card with float image --}}
     <x-sections.card-image-with-text
         title="Proudly Serving Joliet, Will County, and Greater Chicagoland"
         image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
@@ -47,13 +47,13 @@
         imagePosition="right"
     >
         <p>
-            Since 2017, Top 5 Percent has delivered high-quality custom signage and apparel to businesses,
+            Since 2017, Top 5 Percent has delivered high-quality <a href="/custom-apparel" class="link-notification">custom apparel</a> and signage to businesses,
             schools, sports teams, and organizations throughout Will County and greater Chicagoland.
             We are a veteran-owned shop based in Joliet, Illinois, and we take pride in serving our
-            local community with fast turnaround and personal service.
+            local community with fast turnaround and personal service on everything from a single <a href="/signs" class="link-notification">business sign</a> to a full multi-piece print order.
         </p>
         <p>
-            We offer custom t-shirts, hoodies, embroidery, business signs, banners, vehicle graphics,
+            We offer custom t-shirts, hoodies, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, business signs, banners, vehicle graphics,
             promotional products, and white-label storefronts. Whether you need five shirts or five hundred
             signs, we have the equipment and the team to deliver on time, every time.
         </p>
@@ -64,7 +64,7 @@
             and the greater Chicagoland area. If you are nearby, stop in. If not, we ship.
         </p>
         <p class="mb-4">
-            We also produce <a href="/promotional-items" class="link-notification">promotional items</a> and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> for businesses across every city we serve — from branded mugs and tote bags for trade shows to vehicle wraps and DOT decals for commercial fleets.
+            We also produce <a href="/promotional-items" class="link-notification">promotional items</a> and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> for businesses across every city we serve, from branded mugs and tote bags for trade shows to vehicle wraps and DOT decals for commercial fleets.
         </p>
         <p>
             <a href="/contact" class="link-notification">Contact us</a> to discuss your project and confirm same-day availability for your area. Call us at <a href="tel:+18153498600" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 349-8600</a>
@@ -74,7 +74,7 @@
 
     <x-ui.banner-thin-charcoal />
 
-    {{-- Our Service Locations — 3-column responsive card grid --}}
+    {{-- Our Service Locations, 3-column responsive card grid --}}
     <section class="py-14 bg-white">
         <div class="max-w-7xl mx-auto px-6">
 

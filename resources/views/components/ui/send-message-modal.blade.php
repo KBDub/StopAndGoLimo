@@ -4,10 +4,10 @@
  |
  | Standalone contact + message form modal. Opened by the picker inside
  | x-ui.contact-modal when the user chooses "Send Us a Message".
- | Not a FAB-based modal — triggered by the open-send-message-modal window event.
+ | Not a FAB-based modal, triggered by the open-send-message-modal window event.
  |
  | POSTs to POST /contact/message → ContactController::sendMessage()
- | CSRF token is baked at render time as _csrf — no <meta name="csrf-token"> needed.
+ | CSRF token is baked at render time as _csrf, no <meta name="csrf-token"> needed.
  |
  | ── PROPS ───────────────────────────────────────────────────────────────────
  |   logoSrc       logo image path        (default: /images/logos/top5-logo.gif)
@@ -293,7 +293,7 @@
                         required
                         rows="4"
                         x-model="message"
-                        placeholder="Tell us about your project — product type, quantity, deadline, etc."
+                        placeholder="Tell us about your project, product type, quantity, deadline, etc."
                         class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
                     ></textarea>
                 </div>

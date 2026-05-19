@@ -14,7 +14,7 @@
         // ── School ─────────────────────────────────────────────────────────────
         'academic'         => ['bg' => '#1e3a5f', 'digit' => '#fbbf24', 'muted' => '#93c5fd', 'label' => 'Countdown To',       'icon' => '🎓'],
         'social_formal'    => ['bg' => '#4a1d96', 'digit' => '#f9a8d4', 'muted' => '#e9d5ff', 'label' => 'The Night Arrives In', 'icon' => '✨'],
-        'spirit_pride'     => ['bg' => '#92400e', 'digit' => '#fef08a', 'muted' => '#fde68a', 'label' => 'Get Pumped —',        'icon' => '📣'],
+        'spirit_pride'     => ['bg' => '#92400e', 'digit' => '#fef08a', 'muted' => '#fde68a', 'label' => 'Get Pumped,',        'icon' => '📣'],
         'athletic'         => ['bg' => '#7f1d1d', 'digit' => '#fde68a', 'muted' => '#fca5a5', 'label' => 'Game Day In',         'icon' => '🏆'],
         'creative_arts'    => ['bg' => '#78350f', 'digit' => '#fef08a', 'muted' => '#fcd34d', 'label' => 'Curtain Rises In',    'icon' => '🎭'],
         'special_days'     => ['bg' => '#075985', 'digit' => '#e0f2fe', 'muted' => '#bae6fd', 'label' => 'Happening In',        'icon' => '⭐'],

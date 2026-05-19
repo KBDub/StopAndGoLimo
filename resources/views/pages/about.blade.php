@@ -6,7 +6,7 @@
     "name": "Ezra",
     "jobTitle": "Owner & Founder",
     "worksFor": { "@id": "https://www.top5pct.com" },
-    "description": "Veteran and founder of Top 5 Percent, LLC — a custom signage and apparel business in Joliet, IL serving Will County since 2017.",
+    "description": "Veteran and founder of Top 5 Percent, LLC, a custom signage and apparel business in Joliet, IL serving Will County since 2017.",
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Joliet",
@@ -21,7 +21,7 @@
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "About Top 5 Percent — Joliet, IL",
+    "name": "About Top 5 Percent, Joliet, IL",
     "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
     "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
@@ -41,7 +41,7 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "About Top 5 Percent — Joliet, IL | Top 5 Percent",
+    "name": "About Top 5 Percent, Joliet, IL | Top 5 Percent",
     "url": "https://www.top5pct.com/about",
     "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
 }
@@ -77,7 +77,7 @@
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <h3 class="text-h3 font-bold text-charcoal mb-3">Community First</h3>
-                    <p class="text-charcoal-light text-body-sm">Joliet is not just where we work — it is our home. We chose this city because of its strong community spirit and its support for local businesses. We invest in the Joliet community because it has invested in us, and we believe local businesses thrive when they support each other.</p>
+                    <p class="text-charcoal-light text-body-sm">Joliet is not just where we work, it is our home. We chose this city because of its strong community spirit and its support for local businesses. We invest in the Joliet community because it has invested in us, and we believe local businesses thrive when they support each other.</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <h3 class="text-h3 font-bold text-charcoal mb-3">No Compromises on Quality</h3>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <h3 class="text-h3 font-bold text-charcoal mb-3">One-Stop Shop</h3>
-                    <p class="text-charcoal-light text-body-sm">Signs, shirts, stickers, embroidery, promotional products, vehicle decals, table runners, banners — we do it all in one shop. That means consistent quality across every product type, and it means your brand is always being handled by a team that knows your standards and your goals.</p>
+                    <p class="text-charcoal-light text-body-sm">Signs, shirts, stickers, embroidery, promotional products, vehicle decals, table runners, banners, we do it all in one shop. That means consistent quality across every product type, and it means your brand is always being handled by a team that knows your standards and your goals.</p>
                 </div>
                 <div class="bg-white p-8 shadow-sm">
                     <h3 class="text-h3 font-bold text-charcoal mb-3">In-House Design Support</h3>
@@ -104,8 +104,8 @@
         alt="Custom signage and apparel produced by Top 5 Percent in Joliet Illinois"
         title="See Our Work and Hear From Our Customers"
     >
-        <p class="mb-4">See our quality in the <a href="/portfolio" class="link-notification">portfolio</a> — real work produced for real local businesses, schools, sports teams, and organizations throughout Joliet and Will County.</p>
-        <p class="mb-4">Don't take our word for it — read our <a href="/reviews" class="link-notification">reviews</a> from customers across Will County. Hundreds of verified five-star ratings from people who walked through our door or shipped their order from across the country.</p>
+        <p class="mb-4">See our quality in the <a href="/portfolio" class="link-notification">portfolio</a>, real work produced for real local businesses, schools, sports teams, and organizations throughout Joliet and Will County. Every project in that gallery was made here in our Joliet shop, from <a href="/custom-apparel" class="link-notification">custom apparel</a> and embroidery to full-color signs and vehicle graphics.</p>
+        <p class="mb-4">Don't take our word for it, read our <a href="/reviews" class="link-notification">reviews</a> from customers across Will County. Hundreds of verified five-star ratings from people who walked through our door or shipped their order from across the country.</p>
         <p>We serve Joliet and all surrounding communities across our <a href="/service-areas" class="link-notification">service areas</a> throughout Will County and Chicagoland. If you are nearby, stop in. If not, we ship.</p>
     </x-sections.card-image-with-text>
     <x-sections.top5pct-same-day-service serviceType="about" displayServiceType="Custom Signage & Apparel" />
@@ -130,7 +130,7 @@
             ['q' => 'Where is Top 5 Percent located?', 'a' => 'We are located at 121 Springfield Avenue in Joliet, Illinois. We serve all of Will County and the greater Chicagoland area.'],
             ['q' => 'How long has Top 5 Percent been in business?', 'a' => 'Top 5 Percent was founded in 2017 and has been serving businesses, schools, sports teams, and organizations throughout Will County for nearly a decade.'],
             ['q' => 'What products and services do you offer?', 'a' => 'We specialize in custom apparel (shirts, hoodies, hats), custom signs and banners, vehicle graphics and wraps, stickers and decals, and promotional products. Design services are included with every order.'],
-            ['q' => 'Do you offer free design help?', 'a' => 'Yes. Free design assistance is included with every order we produce. You do not need to arrive with finished artwork — our team will build the layout for you.'],
+            ['q' => 'Do you offer free design help?', 'a' => 'Yes. Free design assistance is included with every order we produce. You do not need to arrive with finished artwork, our team will build the layout for you.'],
             ['q' => 'How can I contact Top 5 Percent?', 'a' => 'Call us at (815) 349-8600, stop by 121 Springfield Avenue in Joliet, or use the contact form on our website. We are available seven days a week.'],
         ]"
     />

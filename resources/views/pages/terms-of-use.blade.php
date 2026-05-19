@@ -1,4 +1,4 @@
-<x-layouts.page title="Terms of Use | Top 5 Percent, LLC | Joliet, IL" metaDescription="Read the terms of use for Top 5 Percent, LLC — veteran-owned custom signage and apparel in Joliet, IL. These terms govern your use of our website." currentPage="terms-of-use">
+<x-layouts.page title="Terms of Use | Top 5 Percent, LLC | Joliet, IL" metaDescription="Read the terms of use for Top 5 Percent, LLC, veteran-owned custom signage and apparel in Joliet, IL. These terms govern your use of our website." currentPage="terms-of-use">
 
     <section class="pt-16 pb-4 bg-white border-b border-linen-dark">
         <div class="max-w-4xl mx-auto px-6">

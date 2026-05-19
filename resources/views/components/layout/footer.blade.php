@@ -30,7 +30,7 @@
                 </ul>
             </div>
 
-            {{-- Services — 5-column newspaper spill --}}
+            {{-- Services, 5-column newspaper spill --}}
             <div id="services" class="col-span-5">
                 <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Services</h4>
                 <div class="columns-5 gap-x-2 text-sm">

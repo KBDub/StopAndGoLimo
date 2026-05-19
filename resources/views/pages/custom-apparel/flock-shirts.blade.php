@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Flock Shirts"
         headingAccent="Premium Velvet Feel"
-        description="Flock printing creates a velvety, raised texture that you can see and feel. Bold and distinctive — a premium finish that sets your shirt apart from anything you can find at a typical print shop."
+        description="Flock printing creates a velvety, raised texture that you can see and feel. Bold and distinctive, a premium finish that sets your shirt apart from anything you can find at a typical print shop."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -73,7 +73,7 @@
         alt="Custom flock shirts with soft velvet texture for brands in Joliet Illinois"
         title="The Velvet Feel That Premium Apparel Deserves"
     >
-        <p class="mb-4">Flock printing applies millions of tiny fiber particles to the surface of your design using an adhesive and electrostatic process, creating a print that feels like soft velvet when you run your hand across it. The raised, textured quality of flock printing is immediately distinctive — it communicates premium craftsmanship and a tactile richness that standard flat prints cannot achieve. When someone touches a flock-printed shirt for the first time, the velvet softness is the first thing they notice, and it creates an impression of quality that stays with them.</p>
+        <p class="mb-4">Flock printing applies millions of tiny fiber particles to the surface of your design using an adhesive and electrostatic process, creating a print that feels like soft velvet when you run your hand across it. The raised, textured quality of flock printing is immediately distinctive, it communicates premium craftsmanship and a tactile richness that standard flat prints cannot achieve. When someone touches a flock-printed shirt for the first time, the velvet softness is the first thing they notice, and it creates an impression of quality that stays with them.</p>
         <p class="mb-4">Flock printing is popular with streetwear brands, lifestyle apparel lines, athletic programs, and anyone who wants their custom shirt to feel as premium as it looks. The velvety texture gives your design a three-dimensional depth that catches light differently depending on the angle, creating subtle visual complexity beyond what the design itself provides. For brands that compete on quality and distinctiveness rather than price, flock printing is a powerful way to communicate those values through the physical product itself.</p>
         <p>We produce flock shirts in a range of available flock colors and on a variety of garment types. Most orders have no minimums and are ready within a few business days. Call us at (815) 349 8600 to discuss your flock shirt project today.</p>
     </x-sections.card-image-with-text>
@@ -84,7 +84,7 @@
         title="Bold Designs That Perform on Any Garment"
         imagePosition="right"
     >
-        <p class="mb-4">Like other raised printing techniques, flock performs best with bold, clear design elements — clean logos, strong typographic statements, block lettering, and simple graphic shapes that allow the texture to be the hero of the design rather than competing with fine detail. The velvet texture of flock makes any bold design look more substantial and intentional, giving it a visual weight and presence that draws the eye before the viewer even reads the text or recognizes the logo.</p>
+        <p class="mb-4">Like other raised printing techniques, flock performs best with bold, clear design elements, clean logos, strong typographic statements, block lettering, and simple graphic shapes that allow the texture to be the hero of the design rather than competing with fine detail. The velvet texture of flock makes any bold design look more substantial and intentional, giving it a visual weight and presence that draws the eye before the viewer even reads the text or recognizes the logo.</p>
         <p class="mb-4">Sports teams and athletic programs use flock printing for team names, mascots, and jersey numbers because the soft, thick texture of flock creates a premium feel that distinguishes their apparel from standard printed team gear. Hoodies with flock-printed team names have a quality that feels closer to professional sports apparel than to standard screen-printed shirts, which makes them popular as team merchandise that players and supporters actually want to wear beyond the practice field or gym.</p>
         <p>We work with flock vinyl in black, white, red, navy, royal blue, green, and other standard colors. Specialty flock finishes including metallic flock are also available for designs that call for an additional level of visual distinction. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your flock shirt order today.</p>
     </x-sections.card-image-with-text>
@@ -99,7 +99,7 @@
         alt1="Custom flock shirts with velvet texture for brands and events in Joliet and Will County Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">Brand experience extends beyond what customers see — it includes what they feel, touch, and physically interact with. Apparel that surprises and delights through its physical quality creates a positive brand association that purely visual decoration cannot manufacture. Flock printing adds a tactile dimension to your custom shirt that makes it genuinely pleasurable to touch, carry, and wear, turning your branded apparel into a sensory brand experience that reinforces quality at every interaction.</p>
+            <p class="mb-4">Brand experience extends beyond what customers see, it includes what they feel, touch, and physically interact with. Apparel that surprises and delights through its physical quality creates a positive brand association that purely visual decoration cannot manufacture. Flock printing adds a tactile dimension to your custom shirt that makes it genuinely pleasurable to touch, carry, and wear, turning your branded apparel into a sensory brand experience that reinforces quality at every interaction.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">The Unboxing Moment</h3>
             <p class="mb-4">For brands that ship or gift their custom apparel, flock shirts create a memorable unboxing experience. When a customer or recipient pulls a flock shirt out of packaging and touches the design for the first time, the unexpected softness and texture creates a moment of delight that standard printed shirts simply cannot deliver. This unboxing quality is increasingly important for apparel brands that sell direct-to-consumer and depend on social media sharing of product arrival experiences to build organic brand awareness.</p>
         </x-slot>
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce flock shirts and premium specialty apparel for brands, organizations, sports teams, and individuals throughout Will County and the Chicagoland area with no minimum order quantities.</p>
-            <p>Call us at (815) 349 8600 to discuss your flock shirt project today — the premium velvet finish that sets your apparel apart.</p>
+            <p>Call us at (815) 349 8600 to discuss your flock shirt project today, the premium velvet finish that sets your apparel apart.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -126,7 +126,7 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg"
         alt="Custom flock velvet shirts by Top 5 Percent in Joliet Illinois"
-        title="Custom Flock Shirts — Velvet Feel, Premium Look"
+        title="Custom Flock Shirts, Velvet Feel, Premium Look"
         href="/contact"
         direction="left"
     />

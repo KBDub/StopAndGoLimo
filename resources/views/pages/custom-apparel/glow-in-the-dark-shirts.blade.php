@@ -33,7 +33,7 @@
 
 <x-layouts.page
     title="Glow in the Dark Shirts | Joliet, IL"
-    metaDescription="Custom glow-in-the-dark shirts in Joliet, IL. Shirts that light up at night — perfect for events, concerts, and Halloween. No minimums. Veteran-owned."
+    metaDescription="Custom glow-in-the-dark shirts in Joliet, IL. Shirts that light up at night, perfect for events, concerts, and Halloween. No minimums. Veteran-owned."
     currentPage="custom-apparel">
 
     <x-sections.category-hero
@@ -73,8 +73,8 @@
         alt="Custom glow in the dark shirts for events and nightlife in Joliet Illinois"
         title="Shirts That Transform When the Lights Go Out"
     >
-        <p class="mb-4">Glow-in-the-dark shirts use photoluminescent vinyl that charges in natural or artificial light and then releases that stored energy as a visible green glow when the lights go out. In a darkened room, your design becomes a glowing beacon that is visible across the space and turns your shirt into the most talked-about item at any nighttime event. The glow effect works on any design that can be cut from vinyl — logos, text, shapes, and graphics all translate into glowing designs that look completely distinctive in the dark.</p>
-        <p class="mb-4">Under normal lighting conditions, glow-in-the-dark vinyl has a slightly muted, off-white or light yellow appearance depending on the color of the garment. The real magic happens when the lights dim — after a few seconds of charging under room lights or sunlight, the design transitions to its full glow mode and holds the glow for several minutes before needing to recharge. Re-exposure to any light source charges the vinyl again, making it infinitely reusable throughout an event.</p>
+        <p class="mb-4">Glow-in-the-dark shirts use photoluminescent vinyl that charges in natural or artificial light and then releases that stored energy as a visible green glow when the lights go out. In a darkened room, your design becomes a glowing beacon that is visible across the space and turns your shirt into the most talked-about item at any nighttime event. The glow effect works on any design that can be cut from vinyl, logos, text, shapes, and graphics all translate into glowing designs that look completely distinctive in the dark.</p>
+        <p class="mb-4">Under normal lighting conditions, glow-in-the-dark vinyl has a slightly muted, off-white or light yellow appearance depending on the color of the garment. The real magic happens when the lights dim, after a few seconds of charging under room lights or sunlight, the design transitions to its full glow mode and holds the glow for several minutes before needing to recharge. Re-exposure to any light source charges the vinyl again, making it infinitely reusable throughout an event.</p>
         <p>Glow shirts are popular for Halloween events, nightclub outings, concerts, music festivals, blacklight parties, school dances, and any nighttime event where you want a genuinely unexpected and memorable visual effect. Call us at (815) 349 8600 to discuss your glow shirt project today.</p>
     </x-sections.card-image-with-text>
 
@@ -99,19 +99,19 @@
         alt1="Custom glow in the dark shirts for events and nighttime activities in Joliet and Will County Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">Event experiences are made or broken by the moments that participants remember afterward. A well-chosen glow shirt moment — the instant when the room lights dim and a group of matching glow shirts lights up simultaneously — is one of the most viscerally exciting moments that custom apparel can create. The surprise and delight of that reveal is the kind of thing that guests photograph, share on social media, and talk about when describing the event to people who were not there. That level of organic, enthusiastic sharing is exactly what event organizers and celebration planners want to create.</p>
+            <p class="mb-4">Event experiences are made or broken by the moments that participants remember afterward. A well-chosen glow shirt moment, the instant when the room lights dim and a group of matching glow shirts lights up simultaneously, is one of the most viscerally exciting moments that custom apparel can create. The surprise and delight of that reveal is the kind of thing that guests photograph, share on social media, and talk about when describing the event to people who were not there. That level of organic, enthusiastic sharing is exactly what event organizers and celebration planners want to create.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">The Element of Surprise</h3>
-            <p class="mb-4">Part of what makes glow shirts so effective is that the transformation is unexpected and visible to everyone simultaneously. Unlike most group apparel that looks the same all night, a glow shirt has a hidden second identity that only reveals itself in the dark. This reveal moment — whether it happens at a planned "lights out" moment at a party, naturally as daylight fades at an outdoor festival, or in the darkness of a concert venue — creates a collective experience that bonds the group and generates excitement that carries through the rest of the event.</p>
+            <p class="mb-4">Part of what makes glow shirts so effective is that the transformation is unexpected and visible to everyone simultaneously. Unlike most group apparel that looks the same all night, a glow shirt has a hidden second identity that only reveals itself in the dark. This reveal moment, whether it happens at a planned "lights out" moment at a party, naturally as daylight fades at an outdoor festival, or in the darkness of a concert venue, creates a collective experience that bonds the group and generates excitement that carries through the rest of the event.</p>
         </x-slot>
         <x-slot name="mid">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Social Media Gold</h3>
             <p class="mb-4">Glow shirts photograph spectacularly in low-light conditions, producing vivid, glowing images that stand out dramatically in social media feeds. In an environment where every event post competes for attention, a photo of a group in matching glow shirts in a darkened venue is immediately eye-catching and shareable. For events where social media coverage and word-of-mouth promotion matter, glow shirts are one of the best visual tools available to create naturally shareable moments.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Blacklight Party Ready</h3>
-            <p class="mb-4">Glow-in-the-dark vinyl also reacts strongly to blacklight (ultraviolet light), producing an intense, vivid glow under UV exposure that is even more dramatic than the phosphorescent glow in complete darkness. If your event uses blacklights — a common feature at club events, school dances, Halloween parties, and themed parties — your glow shirt design will appear as a sharp, vivid fluorescent image that makes the wearer's design pop dramatically against the dark background of the room.</p>
+            <p class="mb-4">Glow-in-the-dark vinyl also reacts strongly to blacklight (ultraviolet light), producing an intense, vivid glow under UV exposure that is even more dramatic than the phosphorescent glow in complete darkness. If your event uses blacklights, a common feature at club events, school dances, Halloween parties, and themed parties, your glow shirt design will appear as a sharp, vivid fluorescent image that makes the wearer's design pop dramatically against the dark background of the room.</p>
         </x-slot>
         <x-slot name="lower">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Works on Most Garment Types</h3>
-            <p class="mb-4">Glow vinyl applies via heat press to the same range of garment types as standard vinyl — t-shirts, hoodies, sweatshirts, and most other common apparel items. The glow effect is independent of the garment color, though it shows most dramatically on dark-colored garments where the contrast between the shirt and the glowing design is greatest. For nighttime events, black or very dark garments with glow designs produce the most visually striking results.</p>
+            <p class="mb-4">Glow vinyl applies via heat press to the same range of garment types as standard vinyl, t-shirts, hoodies, sweatshirts, and most other common apparel items. The glow effect is independent of the garment color, though it shows most dramatically on dark-colored garments where the contrast between the shirt and the glowing design is greatest. For nighttime events, black or very dark garments with glow designs produce the most visually striking results.</p>
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce glow-in-the-dark shirts and specialty event apparel for individuals, groups, and organizations throughout Will County and the Chicagoland area with no minimum orders and fast turnaround.</p>
@@ -126,7 +126,7 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg"
         alt="Custom glow in the dark shirts by Top 5 Percent in Joliet Illinois"
-        title="Custom Glow Shirts — Light Up Your Next Event"
+        title="Custom Glow Shirts, Light Up Your Next Event"
         href="/contact"
         direction="right"
     />
@@ -154,7 +154,7 @@
         label="Glow in the Dark Shirts in Joliet, IL"
         :faqs="[
             ['q' => 'What are glow in the dark shirts?', 'a' => 'Glow in the dark shirts use a luminescent vinyl that charges under light and glows in the dark. They are especially popular for blacklight events, raves, Halloween parties, and nighttime sports.'],
-            ['q' => 'Is there a minimum order for glow in the dark shirts?', 'a' => 'No. We have no minimum. One shirt or a hundred — same quality either way.'],
+            ['q' => 'Is there a minimum order for glow in the dark shirts?', 'a' => 'No. We have no minimum. One shirt or a hundred, same quality either way.'],
             ['q' => 'How long does the glow last after charging?', 'a' => 'The glow is rechargeable. Expose the shirt to any light source to recharge and it will glow again. Duration varies by design size and material.'],
             ['q' => 'Do glow in the dark shirts look good in regular lighting too?', 'a' => 'Yes. Our glow vinyl is typically white or light-colored in daylight and activates under blacklight or darkness, so the shirt looks great in both normal and dark lighting conditions.'],
             ['q' => 'Can glow be combined with other vinyl types?', 'a' => 'Yes. Glow vinyl can be layered with standard vinyl colors, glitter, or reflective materials for a multi-effect design.'],

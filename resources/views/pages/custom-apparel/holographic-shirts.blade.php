@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Holographic Shirts"
         headingAccent="Color-Shifting Magic"
-        description="Holographic prints shift through a spectrum of colors as you move. Prismatic, futuristic, and completely unforgettable — the most eye-catching shirt you'll ever own."
+        description="Holographic prints shift through a spectrum of colors as you move. Prismatic, futuristic, and completely unforgettable, the most eye-catching shirt you'll ever own."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -73,7 +73,7 @@
         alt="Custom holographic shirts with prismatic color-shifting prints in Joliet Illinois"
         title="The Shirt That Shifts With Every Step"
     >
-        <p class="mb-4">Holographic vinyl creates a color-shifting prismatic effect that cycles through a spectrum of colors as the viewing angle changes. A holographic shirt in silver creates a rainbow shimmer as you move — what reads as silver from one angle shifts to gold, pink, purple, and blue as the light catches different facets of the surface. The effect is impossible to fully capture in a static photograph because it is inherently dynamic, which makes holographic shirts even more striking in person than they appear in any marketing image.</p>
+        <p class="mb-4">Holographic vinyl creates a color-shifting prismatic effect that cycles through a spectrum of colors as the viewing angle changes. A holographic shirt in silver creates a rainbow shimmer as you move, what reads as silver from one angle shifts to gold, pink, purple, and blue as the light catches different facets of the surface. The effect is impossible to fully capture in a static photograph because it is inherently dynamic, which makes holographic shirts even more striking in person than they appear in any marketing image.</p>
         <p class="mb-4">Holographic vinyl is available in silver, gold, rose gold, and various base tints that all produce slightly different spectral effects depending on the lighting conditions. Under bright indoor lighting, holographic prints create a dramatic iridescent shimmer. Under natural outdoor light, they produce a more subtle but still striking prismatic effect. At nightlife events with stage lighting and LED effects, holographic designs become one of the most visually dynamic elements in the room.</p>
         <p>We produce holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at (815) 349 8600 to discuss your holographic shirt order today.</p>
     </x-sections.card-image-with-text>
@@ -99,7 +99,7 @@
         alt1="Custom holographic shirts with prismatic color-shifting prints in Joliet and Will County Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">In the hierarchy of attention-commanding apparel effects, holographic printing sits near the very top. The color-shifting, prismatic quality of holographic vinyl is impossible to ignore in any setting because it is inherently dynamic — it changes appearance with every movement, every shift in lighting, and every change in viewing angle. You cannot look at a holographic print and see the same thing twice in the span of a single moment, which means your design is continuously creating new visual stimuli and drawing sustained attention from everyone around it.</p>
+            <p class="mb-4">In the hierarchy of attention-commanding apparel effects, holographic printing sits near the very top. The color-shifting, prismatic quality of holographic vinyl is impossible to ignore in any setting because it is inherently dynamic, it changes appearance with every movement, every shift in lighting, and every change in viewing angle. You cannot look at a holographic print and see the same thing twice in the span of a single moment, which means your design is continuously creating new visual stimuli and drawing sustained attention from everyone around it.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Born for Social Media</h3>
             <p class="mb-4">Few apparel designs perform better on social media than holographic prints, because the color shifts and prismatic effects that make holographic vinyl so striking in person are partially captured even in smartphone video. A short Instagram reel or TikTok video of a holographic shirt being worn shows the color shift dynamically, creating engaging, watch-again content that generates organic engagement. For brands that depend on social media to drive awareness and sales, holographic pieces are among the most effective content catalysts in any apparel lineup.</p>
         </x-slot>
@@ -126,14 +126,14 @@
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
         alt="Custom holographic shirts with color-shifting prismatic prints by Top 5 Percent in Joliet Illinois"
-        title="Holographic Shirts — Color-Shifting, Impossible to Ignore"
+        title="Holographic Shirts, Color-Shifting, Impossible to Ignore"
         href="/contact"
         direction="left"
     />
     <x-ui.card-banner-slide-in
         image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
         alt="Custom metallic foil shirts from Top 5 Percent in Joliet Illinois"
-        title="Holographic, Foil, or Glitter — Shine Your Way"
+        title="Holographic, Foil, or Glitter, Shine Your Way"
         href="/contact"
         direction="right"
     />

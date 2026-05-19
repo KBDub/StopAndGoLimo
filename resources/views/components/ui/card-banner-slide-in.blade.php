@@ -11,7 +11,7 @@
     $isModal = $href === '/contact';
 @endphp
 
-{{-- Outer div: observation target only — no transform, stays in layout position --}}
+{{-- Outer div: observation target only, no transform, stays in layout position --}}
 <div
     x-data="{ visible: false }"
     x-init="
@@ -25,7 +25,7 @@
     "
     class="overflow-hidden"
 >
-    {{-- Inner div: animated element — translates off-screen until observer fires --}}
+    {{-- Inner div: animated element, translates off-screen until observer fires --}}
     <div
         :style="{
             transform: visible ? 'translateX(0)' : 'translateX({{ $translateStart }})',

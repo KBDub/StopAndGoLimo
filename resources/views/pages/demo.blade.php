@@ -637,11 +637,11 @@
                     <div class="grid md:grid-cols-2 gap-4 text-sm text-charcoal-light">
                         <ul class="space-y-2">
                             <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Renders as <code>&lt;a&gt;</code> with <code>href</code>, <code>&lt;button&gt;</code> without</li>
-                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> 9 variants — primary, secondary, text link</li>
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> 9 variants, primary, secondary, text link</li>
                             <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Size overrideable via <code>!px-*</code> / <code>!py-*</code> classes</li>
                         </ul>
                         <ul class="space-y-2">
-                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> No <code>rounded-*</code> — square branding</li>
+                            <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> No <code>rounded-*</code>, square branding</li>
                             <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> All support slotted text content</li>
                             <li class="flex items-start gap-2"><span class="text-sunburst mt-0.5">&#x2713;</span> Alpine.js attributes pass through</li>
                         </ul>
@@ -681,19 +681,19 @@
                 <h3 class="text-lg font-semibold text-charcoal mb-4">Medium Banner Bars <span class="text-sm font-normal text-charcoal-light">(solid color dividers)</span></h3>
                 <div class="space-y-5 mb-12">
                     <div>
-                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-sunburst</code> — h-16</p>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-sunburst</code>, h-16</p>
                         <x-ui.banner-medium-sunburst />
                     </div>
                     <div>
-                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-azure</code> — h-8</p>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-azure</code>, h-8</p>
                         <x-ui.banner-medium-azure />
                     </div>
                     <div>
-                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-charcoal</code> — h-8</p>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-charcoal</code>, h-8</p>
                         <x-ui.banner-medium-charcoal />
                     </div>
                     <div>
-                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-linen</code> — h-8</p>
+                        <p class="text-xs text-charcoal-light mb-1"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-medium-linen</code>, h-8</p>
                         <x-ui.banner-medium-linen />
                     </div>
                 </div>
@@ -722,9 +722,9 @@
         </section>
 
         {{-- Banner Testimonial --}}
-        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-testimonial</code> — default props</p>
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-testimonial</code>, default props</p>
         <x-ui.banner-testimonial />
-        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-testimonial</code> — custom quote</p>
+        <p class="text-xs text-charcoal-light px-6 max-w-7xl mx-auto mt-4 mb-2"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-testimonial</code>, custom quote</p>
         <x-ui.banner-testimonial
             quote="Our reunion shirts were absolutely perfect. Everyone loved them and we got so many compliments at the event."
             name="Denise W."
@@ -736,7 +736,7 @@
         <div class="px-6 max-w-7xl mx-auto mt-8 mb-2">
             <p class="text-xs text-charcoal-light mb-1">
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>
-                &nbsp;—&nbsp;
+                &nbsp;,&nbsp;
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">resources/views/components/ui/artwork-dropzone.blade.php</code>
             </p>
         </div>
@@ -747,18 +747,18 @@
             <div class="bg-charcoal px-5 py-4 text-sm space-y-2 mt-3 max-w-xl">
                 <p class="font-mono text-white/80 text-xs">x-ui.artwork-dropzone</p>
                 <p class="font-mono text-white/50 text-xs">resources/views/components/ui/artwork-dropzone.blade.php</p>
-                <p class="text-white/50 text-xs">Accepts: PNG, JPG, PDF, SVG, AI, EPS — dispatches <code class="bg-white/10 px-1">open-contact-modal &#123; artwork: true, fileName &#125;</code></p>
+                <p class="text-white/50 text-xs">Accepts: PNG, JPG, PDF, SVG, AI, EPS, dispatches <code class="bg-white/10 px-1">open-contact-modal &#123; artwork: true, fileName &#125;</code></p>
                 <pre class="font-mono text-white/70 text-xs bg-black/20 px-3 py-2 whitespace-pre-wrap">&lt;x-ui.artwork-dropzone /&gt;
 &lt;x-ui.artwork-dropzone class="max-w-2xl mx-auto" /&gt;</pre>
                 <p class="text-white/30 text-xs">Use on all non-DTF pages. Pass <code class="bg-white/10 px-1">x-ui.dtf-dropzone</code> on DTF-specific pages instead.</p>
             </div>
         </div>
 
-        {{-- Artwork Banner CTA — Left --}}
+        {{-- Artwork Banner CTA, Left --}}
         <div class="px-6 max-w-7xl mx-auto mt-6 mb-2">
             <p class="text-xs text-charcoal-light mb-1">
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-cta-artwork-dropzone</code>
-                &nbsp;—&nbsp;
+                &nbsp;,&nbsp;
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</code>
             </p>
         </div>
@@ -772,7 +772,7 @@
                 <p class="font-mono text-white/80 text-xs">x-ui.banner-cta-artwork-dropzone</p>
                 <p class="font-mono text-white/50 text-xs">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</p>
                 <p class="text-white/50 text-xs">Props: <code class="bg-white/10 px-1">position</code> (left / right) &bull; <code class="bg-white/10 px-1">heading</code> &bull; <code class="bg-white/10 px-1">subheading</code></p>
-                <p class="text-white/50 text-xs">Accepts: PNG, JPG, PDF, SVG, AI, EPS — dispatches <code class="bg-white/10 px-1">open-contact-modal &#123; artwork: true, fileName &#125;</code></p>
+                <p class="text-white/50 text-xs">Accepts: PNG, JPG, PDF, SVG, AI, EPS, dispatches <code class="bg-white/10 px-1">open-contact-modal &#123; artwork: true, fileName &#125;</code></p>
                 <pre class="font-mono text-white/70 text-xs bg-black/20 px-3 py-2 whitespace-pre-wrap">&lt;x-ui.banner-cta-artwork-dropzone position="left" /&gt;
 &lt;x-ui.banner-cta-artwork-dropzone
     position="right"
@@ -783,7 +783,7 @@
             </div>
         </div>
 
-        {{-- Artwork Banner CTA — Right --}}
+        {{-- Artwork Banner CTA, Right --}}
         <div class="px-6 max-w-7xl mx-auto mt-2 mb-2">
             <p class="text-xs text-charcoal-light mb-1">
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.banner-cta-artwork-dropzone position="right"</code>
@@ -808,11 +808,11 @@
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code>
             </p>
             <p class="text-xs text-charcoal-light mb-1">
-                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code> — standalone drop zone, dispatches
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-ui.artwork-dropzone</code>, standalone drop zone, dispatches
                 <code class="bg-gray-100 px-1.5 py-0.5 rounded">open-contact-modal &#123; artwork: true, fileName &#125;</code>
             </p>
             <p class="text-xs text-charcoal-light mb-2">
-                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code> — CTA text + button only, no dropzone inside
+                <code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.cta-free-quote-banner</code>, CTA text + button only, no dropzone inside
             </p>
         </div>
         <x-ui.banner-thin-sunburst />
@@ -962,7 +962,7 @@
 &lt;x-ui.card-info-light title="Shipping Info" description="Standard delivery in 5-7 days." linkText="View policy" linkHref="#" /&gt;
 &lt;x-ui.card-feature step="01" title="Upload Your Design" description="Start by uploading your artwork." /&gt;
 &lt;x-ui.card-showcase title="Design Studio" description="Create designs in minutes." /&gt;
-{{-- No aspect ratio — all cards are height-auto, width determined by grid column --}}</code></pre>
+{{-- No aspect ratio, all cards are height-auto, width determined by grid column --}}</code></pre>
                 </div>
 
                 <h3 class="text-lg font-semibold mb-4 text-charcoal">Info Card Variants</h3>
@@ -1023,7 +1023,7 @@
 
                 <div class="space-y-8 mb-12">
                     <div>
-                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.card-image-with-text</code> — image left (default)</p>
+                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.card-image-with-text</code>, image left (default)</p>
                         <x-sections.card-image-with-text
                             image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
                             alt="Custom vinyl shirts, caps, and hoodies"
@@ -1035,7 +1035,7 @@
                     </div>
 
                     <div>
-                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.card-image-with-text</code> — image right</p>
+                        <p class="text-xs text-charcoal-light mb-3"><code class="bg-gray-100 px-1.5 py-0.5 rounded">x-sections.card-image-with-text</code>, image right</p>
                         <x-sections.card-image-with-text
                             image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
                             alt="Custom rhinestone shirts and caps"
@@ -1059,7 +1059,7 @@
 &gt;
     &lt;p&gt;Your editorial body text goes here.&lt;/p&gt;
 &lt;/x-sections.card-image-with-text&gt;
-{{-- Image display: 600&times;450px (4:3) — project standard size --}}
+{{-- Image display: 600&times;450px (4:3), project standard size --}}
 {{-- imagePosition: "left" (default) | "right" --}}</code></pre>
                 </div>
 
@@ -1091,7 +1091,7 @@
 &gt;
     &lt;p&gt;Your editorial body text goes here.&lt;/p&gt;
 &lt;/x-sections.card-2image-with-text&gt;
-{{-- Each image: 600&times;450px (4:3) — project standard size, side by side --}}
+{{-- Each image: 600&times;450px (4:3), project standard size, side by side --}}
 {{-- Text block centered below both images --}}</code></pre>
                 </div>
 
@@ -1115,7 +1115,7 @@
     question="How long does production take?"
     answer="Standard 5-7 business days. Rush orders 2-3 days with additional fee."
 /&gt;
-{{-- No aspect ratio — height-auto accordion --}}
+{{-- No aspect ratio, height-auto accordion --}}
 {{-- open prop: first item expanded by default, rest collapsed --}}</code></pre>
                 </div>
 
@@ -1139,10 +1139,10 @@
 &gt;
     &lt;x-slot name="intro"&gt;&lt;p&gt;Intro content with floated image1 (right).&lt;/p&gt;&lt;/x-slot&gt;
     &lt;x-slot name="mid"&gt;&lt;p&gt;Mid content with floated image2 (left).&lt;/p&gt;&lt;/x-slot&gt;
-    &lt;x-slot name="lower"&gt;&lt;p&gt;Lower body content — no image.&lt;/p&gt;&lt;/x-slot&gt;
+    &lt;x-slot name="lower"&gt;&lt;p&gt;Lower body content, no image.&lt;/p&gt;&lt;/x-slot&gt;
     &lt;x-slot name="footer"&gt;&lt;p&gt;Closing paragraph with internal links.&lt;/p&gt;&lt;/x-slot&gt;
 &lt;/x-ui.card-detailed-info&gt;
-{{-- Images: floated at 300px wide (max-w-xs), 4:3 ratio — project standard --}}
+{{-- Images: floated at 300px wide (max-w-xs), 4:3 ratio, project standard --}}
 {{-- image1 floats right in intro slot; image2 floats left in mid slot --}}</code></pre>
                 </div>
 
@@ -1254,52 +1254,52 @@
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The Trades Hustler</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">Miguel, 34 — independent plumber/HVAC tech, Joliet/Romeoville area</p>
-                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Running a one- or two-man operation, his truck is his storefront. He needs door lettering, a magnetic sign, maybe a partial wrap — yesterday. Budget-conscious, no time for back-and-forth, values same-day service heavily.</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Miguel, 34, independent plumber/HVAC tech, Joliet/Romeoville area</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Running a one- or two-man operation, his truck is his storefront. He needs door lettering, a magnetic sign, maybe a partial wrap, yesterday. Budget-conscious, no time for back-and-forth, values same-day service heavily.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Speed, simplicity, same-day service, clear pricing</span></p>
                                 <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Vehicle graphics, door lettering, magnetic signs, partial wraps</span></p>
-                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Your truck is your billboard — make it work for you</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Your truck is your billboard, make it work for you</span></p>
                             </div>
                         </div>
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The Family Reunion Organizer</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">Denise, 52 — matriarch-type, community-rooted, South Side Chicago / south suburbs</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Denise, 52, matriarch-type, community-rooted, South Side Chicago / south suburbs</p>
                             <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Coordinating 80+ people for a summer reunion and needs matching custom shirts that actually look good. She wants rhinestone or foil options, she has opinions about colors, and she has probably been burned by a cheaper shop before.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Quality assurance, specialty options, local presence, reliability</span></p>
                                 <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Custom shirts, rhinestone apparel, foil prints, group orders</span></p>
-                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Do not settle for cheap — your family deserves the best bling around</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Do not settle for cheap, your family deserves the best bling around</span></p>
                             </div>
                         </div>
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The School Spirit Coordinator</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">James, 41 — athletic director or booster club chair, Plainfield or New Lenox</p>
-                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Ordering spirit wear in bulk — hoodies, shirts, possibly banners for the gym. He needs to manage multiple SKUs, sizes, and tight event deadlines. The free web store offering is a massive draw.</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">James, 41, athletic director or booster club chair, Plainfield or New Lenox</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Ordering spirit wear in bulk, hoodies, shirts, possibly banners for the gym. He needs to manage multiple SKUs, sizes, and tight event deadlines. The free web store offering is a massive draw.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Bulk ordering, deadline reliability, size management, web store convenience</span></p>
                                 <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Custom hoodies, spirit shirts, gym banners, online store setup</span></p>
-                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Easiest spirit wear season you have ever had — we handle the logistics</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Easiest spirit wear season you have ever had, we handle the logistics</span></p>
                             </div>
                         </div>
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The Boutique Brand Builder</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">Aisha, 27 — launching a small clothing or lifestyle brand, Joliet area</p>
-                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">She has a concept, a logo, and a dream of selling her own apparel. The Top 5% Clothing and Black Doll brand lines signal to her that this is not just a print shop — it is a place that gets brand identity.</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Aisha, 27, launching a small clothing or lifestyle brand, Joliet area</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">She has a concept, a logo, and a dream of selling her own apparel. The Top 5% Clothing and Black Doll brand lines signal to her that this is not just a print shop, it is a place that gets brand identity.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Low minimums, design support, DTF transfers, brand identity understanding</span></p>
                                 <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">DTF transfers, custom apparel, design services, small-batch runs</span></p>
-                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Start your brand here — we built ours the same way</span></p>
+                                <p><span class="font-semibold text-charcoal">Messaging:</span> <span class="text-olive italic">Start your brand here, we built ours the same way</span></p>
                             </div>
                         </div>
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The Small Business Owner Leveling Up</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">Rick, 48 — owns a landscaping or cleaning company, Crest Hill or Lockport</p>
-                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">He has been in business 10 years on word-of-mouth alone and is finally ready to look professional. He needs yard signs, a vehicle wrap, window decals — the full kit. He does not want to coordinate five vendors.</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Rick, 48, owns a landscaping or cleaning company, Crest Hill or Lockport</p>
+                            <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">He has been in business 10 years on word-of-mouth alone and is finally ready to look professional. He needs yard signs, a vehicle wrap, window decals, the full kit. He does not want to coordinate five vendors.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">One-stop shop, full business identity package, professionalism, veteran respect</span></p>
                                 <p><span class="font-semibold text-charcoal">Products:</span> <span class="text-charcoal-light">Yard signs, vehicle wraps, window decals, banners, branded apparel</span></p>
@@ -1309,7 +1309,7 @@
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The Event and Nonprofit Coordinator</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">Sandra, 39 — church event planner or nonprofit program director, Will County</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Sandra, 39, church event planner or nonprofit program director, Will County</p>
                             <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Ordering banners, table runners, and event shirts on a shoestring budget with a hard event date. She needs creative flexibility and a shop that will not nickel-and-dime her for design help.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Budget flexibility, design consultation, deadline certainty, quantity discounts</span></p>

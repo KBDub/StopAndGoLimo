@@ -6,7 +6,7 @@
                 <h2 class="text-h2 font-bold text-charcoal mb-2">See a Live Demo Storefront</h2>
                 <div class="h-1 bg-sunburst"></div>
             </div>
-            <p class="text-charcoal-light max-w-3xl mx-auto">School House Rock is one of our real demo stores — a fully branded spirit wear shop built the same way we would build yours. Browse it, explore the layout, and imagine your logo in place of theirs.</p>
+            <p class="text-charcoal-light max-w-3xl mx-auto">School House Rock is one of our real demo stores, a fully branded spirit wear shop built the same way we would build yours. Browse it, explore the layout, and imagine your logo in place of theirs.</p>
         </div>
 
         <div class="max-w-5xl mx-auto">

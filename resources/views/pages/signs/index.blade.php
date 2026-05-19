@@ -35,7 +35,7 @@
     metaDescription="We print custom signs, banners, posters, yard signs, sidewalk signs, business signs, window signs, wall signs, door signs, and floor signs in Joliet,"
     currentPage="signs"
     ogImage="/images/og-tags/top5pct-og-signs.jpg"
-    ogImageAlt="Custom Signs & Banners in Joliet, IL — Top 5 Percent">
+    ogImageAlt="Custom Signs & Banners in Joliet, IL, Top 5 Percent">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
@@ -152,8 +152,8 @@
         alt="Professional sign printing for businesses in Joliet, Plainfield, and Shorewood Illinois"
         title="Professional Sign Printing for Every Business in Will County"
     >
-        <p class="mb-4">Top 5 Percent is a veteran owned sign shop serving businesses, organizations, and events throughout Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, and all of Will County. We produce a full spectrum of sign products — from yard signs and sidewalk a-frames to full-color vinyl banners, window graphics, wall decals, floor signs, door signs, business signs, posters, table runners, table cloths, and parking signs. Whatever your business needs to get noticed, we can print it.</p>
-        <p class="mb-4">Our wide-format printing technology produces sharp, vibrant colors on outdoor-rated vinyl, fabric, corrugated boards, and specialty substrates. We finish every sign with the right hardware for its application — grommets and hemmed edges on banners, lamination for indoor displays, UV protection for long-term outdoor use. We also offer design help for every sign order so you never have to arrive with a finished file. Just tell us what you want to communicate and our team will build the layout for you.</p>
+        <p class="mb-4">Top 5 Percent is a veteran owned sign shop serving businesses, organizations, and events throughout Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, and all of Will County, and our <a href="/custom-apparel" class="link-notification">custom apparel</a> team makes us the area's one-stop shop for complete branding. We produce a full spectrum of sign products, from <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> and sidewalk a-frames to full-color vinyl banners, window graphics, wall decals, floor signs, door signs, business signs, posters, table runners, table cloths, and parking signs. Whatever your business needs to get noticed, we can print it.</p>
+        <p class="mb-4">Our wide-format printing technology produces sharp, vibrant colors on outdoor-rated vinyl, fabric, corrugated boards, and specialty substrates. We finish every sign with the right hardware for its application, grommets and hemmed edges on <a href="/signs/business-signs/banners" class="link-notification">banners</a>, lamination for indoor displays, UV protection for long-term outdoor use. We also offer design help for every sign order so you never have to arrive with a finished file. Just tell us what you want to communicate and our team will build the layout for you.</p>
         <p>We are located at 121 Springfield Avenue in Joliet and we offer same-day service on many sign products. Need your brand on the move? Explore our <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> for mobile advertising. If your business needs a sign quickly, we are the shop to call. Reach us at (815) 349 8600 seven days a week or stop by during business hours.</p>
     </x-sections.card-image-with-text>
 
@@ -179,7 +179,7 @@
     <x-ui.card-banner-slide-in
         image="/images/window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg"
         alt="Custom window graphics and signs printed and installed by Top 5 Percent in Joliet Illinois"
-        title="Window Signs, Banners, and More — Same Day Available"
+        title="Window Signs, Banners, and More, Same Day Available"
         href="/contact"
         direction="left"
     />
@@ -200,7 +200,7 @@
         videoId="F3J9nyiM3So"
         heading="Signs That Work as Hard as You Do"
         label="Custom Signs in Joliet, IL"
-        subheading="From banners and yard signs to wall graphics and window displays — see how Top 5 Percent produces professional, custom signage for businesses and events in Joliet, Illinois."
+        subheading="From banners and yard signs to wall graphics and window displays, see how Top 5 Percent produces professional, custom signage for businesses and events in Joliet, Illinois."
     />
     <x-sections.faq
         heading="Custom Signs FAQs"

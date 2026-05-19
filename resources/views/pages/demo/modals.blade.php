@@ -21,7 +21,7 @@
 </head>
 <body class="font-sans antialiased bg-linen text-charcoal">
 
-<x-layout.top-notification-bar message="Modal System Demo — Internal Only" />
+<x-layout.top-notification-bar message="Modal System Demo, Internal Only" />
 <x-ui.banner-thin-sunburst />
 <x-ui.banner-thin-charcoal />
 <x-layout.navigation-bar currentPage="demo" />
@@ -43,7 +43,7 @@
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code>,
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.custom-request-wizard</code>, and
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.stripe-checkout-modal</code>
-            — all variants live below.
+           , all variants live below.
         </p>
     </div>
 
@@ -52,7 +52,7 @@
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Variants</h2>
-        <p class="text-charcoal-light text-sm mb-6 pl-5">Six visual themes — each driven by the <code>variant</code> prop.</p>
+        <p class="text-charcoal-light text-sm mb-6 pl-5">Six visual themes, each driven by the <code>variant</code> prop.</p>
 
         <div class="flex flex-wrap gap-3">
             <x-ui.modal-trigger modal="demo-default"
@@ -168,7 +168,7 @@
         <p class="text-charcoal-light text-sm mb-6 pl-5">Five presets via the <code>size</code> prop.</p>
 
         <div class="flex flex-wrap gap-3">
-            @foreach(['sm' => 'SM — 22rem', 'md' => 'MD — 34rem (default)', 'lg' => 'LG — 46rem', 'xl' => 'XL — 58rem', 'full' => 'Full — 95vw'] as $sz => $label)
+            @foreach(['sm' => 'SM, 22rem', 'md' => 'MD, 34rem (default)', 'lg' => 'LG, 46rem', 'xl' => 'XL, 58rem', 'full' => 'Full, 95vw'] as $sz => $label)
                 <x-ui.modal-trigger modal="demo-size-{{ $sz }}"
                     class="px-5 py-2.5 bg-white border border-linen-dark text-charcoal text-sm font-semibold hover:bg-linen transition-colors shadow-sm">
                     {{ $label }}
@@ -177,7 +177,7 @@
         </div>
     </section>
 
-    @foreach(['sm' => 'SM — Small (22rem)', 'md' => 'MD — Medium (34rem)', 'lg' => 'LG — Large (46rem)', 'xl' => 'XL — Extra Large (58rem)', 'full' => 'Full — 95vw Canvas'] as $sz => $label)
+    @foreach(['sm' => 'SM, Small (22rem)', 'md' => 'MD, Medium (34rem)', 'lg' => 'LG, Large (46rem)', 'xl' => 'XL, Extra Large (58rem)', 'full' => 'Full, 95vw Canvas'] as $sz => $label)
         <x-ui.modal name="demo-size-{{ $sz }}" title="{{ $label }}" size="{{ $sz }}">
             <p class="text-charcoal-light text-sm">
                 This modal uses <code>size="{{ $sz }}"</code>.
@@ -228,7 +228,7 @@
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Slot Patterns</h2>
-        <p class="text-charcoal-light text-sm mb-6 pl-5">Icon slot, full header override, rich footer — and the title slot for dynamic HTML headings.</p>
+        <p class="text-charcoal-light text-sm mb-6 pl-5">Icon slot, full header override, rich footer, and the title slot for dynamic HTML headings.</p>
 
         <div class="flex flex-wrap gap-3">
             <x-ui.modal-trigger modal="demo-icon-slot"
@@ -280,7 +280,7 @@
                 </x-ui.modal-trigger>
             </div>
         </x-slot:header>
-        <p>The <code>$header</code> slot replaces the entire header region — title, icon, close button — giving you full layout control.</p>
+        <p>The <code>$header</code> slot replaces the entire header region, title, icon, close button, giving you full layout control.</p>
     </x-ui.modal>
 
     <x-ui.modal name="demo-rich-footer" title="Rich Footer Example" variant="gold">
@@ -299,7 +299,7 @@
         <x-slot:title>
             <span class="text-azure">Dynamic</span> Title with <em>HTML</em>
         </x-slot:title>
-        <p>The <code>$title</code> slot lets you inject arbitrary HTML into the heading — useful for badge labels, colored fragments, or icons inline with the text.</p>
+        <p>The <code>$title</code> slot lets you inject arbitrary HTML into the heading, useful for badge labels, colored fragments, or icons inline with the text.</p>
         <x-slot:footer>
             <x-ui.button-modal-cancel modal="demo-title-slot">Close</x-ui.button-modal-cancel>
         </x-slot:footer>
@@ -333,7 +333,7 @@
     </section>
 
     <x-ui.modal name="demo-trigger-types" title="Trigger Element Types" size="sm">
-        <p>This modal was opened by a <code>button</code>, <code>a</code>, or <code>span</code> — all using the same <code>modal="demo-trigger-types"</code> prop.</p>
+        <p>This modal was opened by a <code>button</code>, <code>a</code>, or <code>span</code>, all using the same <code>modal="demo-trigger-types"</code> prop.</p>
         <x-slot:footer>
             <x-ui.button-modal-cancel modal="demo-trigger-types">Close</x-ui.button-modal-cancel>
         </x-slot:footer>
@@ -345,7 +345,7 @@
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Use-Case Patterns</h2>
         <p class="text-charcoal-light text-sm mb-6 pl-5">
-            Real-world modal patterns — promotional alerts, long forms, scrollable agreements.
+            Real-world modal patterns, promotional alerts, long forms, scrollable agreements.
         </p>
 
         <div class="flex flex-wrap gap-3">
@@ -366,7 +366,7 @@
         </div>
     </section>
 
-    {{-- Promo modal — full header override with badge-style branding --}}
+    {{-- Promo modal, full header override with badge-style branding --}}
     <x-ui.modal name="demo-promo" size="md">
         <x-slot:header>
             <div class="h-2 flex-shrink-0" style="background:linear-gradient(90deg,#FFC20E 0%,#FFD93D 100%);"></div>
@@ -401,7 +401,7 @@
         </div>
 
         <p class="mt-4 text-charcoal-light text-sm">
-            The <code class="text-xs bg-linen-dark px-1 py-0.5">$header</code> slot replaces the entire header block — full control over layout, branding treatments, multi-line content, or custom badge patterns.
+            The <code class="text-xs bg-linen-dark px-1 py-0.5">$header</code> slot replaces the entire header block, full control over layout, branding treatments, multi-line content, or custom badge patterns.
         </p>
 
         <x-slot:footer>
@@ -410,7 +410,7 @@
         </x-slot:footer>
     </x-ui.modal>
 
-    {{-- Long form modal — multi-field quote/sample request --}}
+    {{-- Long form modal, multi-field quote/sample request --}}
     <x-ui.modal name="demo-long-form" title="Request a Sample Pack" size="lg">
         <form class="space-y-4" @submit.prevent>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -448,7 +448,7 @@
             </div>
             <div>
                 <label class="block text-xs font-semibold text-charcoal-light uppercase tracking-wide mb-1.5">Additional Notes</label>
-                <textarea rows="3" placeholder="Tell us about your project — quantity, timeline, or any special requirements."
+                <textarea rows="3" placeholder="Tell us about your project, quantity, timeline, or any special requirements."
                     class="w-full px-3 py-2 border border-linen-dark bg-white text-charcoal text-sm placeholder:text-charcoal-lighter focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst transition-colors resize-none"></textarea>
             </div>
         </form>
@@ -500,7 +500,7 @@
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Workflow Wizard</h2>
         <p class="text-charcoal-light text-sm mb-6 pl-5">
-            <code>x-ui.modal-wizard</code> — multi-step non-dismissible flow with dot indicators and Back/Next/Finish navigation.
+            <code>x-ui.modal-wizard</code>, multi-step non-dismissible flow with dot indicators and Back/Next/Finish navigation.
             No close button, no backdrop dismiss, no Escape key.
         </p>
 
@@ -544,7 +544,7 @@
     >
         <x-slot:step1>
             <p class="text-charcoal-light">
-                No close button, no backdrop dismiss — the user must complete the flow.
+                No close button, no backdrop dismiss, the user must complete the flow.
                 Useful for mandatory onboarding steps, required agreements, or critical setup wizards.
             </p>
             <p class="text-charcoal-light mt-3">
@@ -628,7 +628,7 @@
         <x-slot:step1>
             <p class="text-charcoal-light">
                 This wizard has a <strong class="text-charcoal">Cancel</strong> link on step 1, letting the user opt out before they invest time in the flow.
-                Steps 2 and 3 remove the cancel option — they can only go back or finish.
+                Steps 2 and 3 remove the cancel option, they can only go back or finish.
             </p>
             <p class="text-charcoal-light mt-3 text-sm">
                 Set <code>cancelLabel="Cancel"</code> on the component to enable it.
@@ -670,7 +670,7 @@
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Dropdown Selection</h2>
         <p class="text-charcoal-light text-sm mb-6 pl-5">
-            Branded custom dropdown built with Alpine.js — no native <code>&lt;select&gt;</code> arrow styling hacks required.
+            Branded custom dropdown built with Alpine.js, no native <code>&lt;select&gt;</code> arrow styling hacks required.
             Uses <code>border-sunburst</code> focus, <code>bg-linen</code> hover, and a sunburst left-border accent on the active option.
         </p>
 
@@ -734,7 +734,7 @@
                     </svg>
                 </button>
 
-                {{-- Option list — inline (no absolute), no clipping issues --}}
+                {{-- Option list, inline (no absolute), no clipping issues --}}
                 <div
                     x-show="open"
                     x-cloak
@@ -871,7 +871,7 @@
                     </svg>
                 </button>
 
-                {{-- Option list — inline (no absolute), no clipping issues --}}
+                {{-- Option list, inline (no absolute), no clipping issues --}}
                 <div
                     x-show="colorOpen"
                     x-cloak
@@ -921,7 +921,7 @@
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Form Controls</h2>
-        <p class="text-charcoal-light text-sm mb-6 pl-5">Branded radio groups and toggle switches — Alpine-driven, zero JS frameworks.</p>
+        <p class="text-charcoal-light text-sm mb-6 pl-5">Branded radio groups and toggle switches, Alpine-driven, zero JS frameworks.</p>
 
         <div class="flex flex-wrap gap-3">
             <x-ui.modal-trigger modal="demo-radio"
@@ -1107,11 +1107,11 @@
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Custom Request Wizard</h2>
         <p class="text-charcoal-light text-sm mb-3 pl-5">
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.custom-request-wizard</code>
-            — a guided 10-step custom order wizard.
+           , a guided 10-step custom order wizard.
             Triggered from the <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.contact-modal</code> "Do You Have a Custom Request?" toggle,
             or opened directly via any button dispatching the <code class="text-sm bg-linen-dark px-1 py-0.5">open-modal</code> window event.
             Steps are driven by a dynamic <code class="text-sm bg-linen-dark px-1 py-0.5">visibleSteps</code> array
-            — the Shirt Length &amp; Fabric step only appears when a shirt-type garment is selected.
+           , the Shirt Length &amp; Fabric step only appears when a shirt-type garment is selected.
         </p>
 
         {{-- Usage block --}}
@@ -1135,7 +1135,7 @@
                 $wizSteps = [
                     ['n' => '1',   'label' => 'Request Details',          'note' => 'Company/Personal · Rush flag'],
                     ['n' => '2',   'label' => 'Garment Selection',         'note' => 'Toggle each garment type'],
-                    ['n' => '3*',  'label' => 'Shirt Length & Fabric',     'note' => 'Conditional — shirt types only'],
+                    ['n' => '3*',  'label' => 'Shirt Length & Fabric',     'note' => 'Conditional, shirt types only'],
                     ['n' => '4',   'label' => 'Color Selection',           'note' => 'Smart autocomplete + chips'],
                     ['n' => '5',   'label' => 'Quantity & Sizing',         'note' => 'Gender × Size matrix per garment'],
                     ['n' => '6',   'label' => 'Print Method',              'note' => 'Traditional or Specialty'],
@@ -1159,7 +1159,7 @@
     </section>
 
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
-    {{-- SECTION 8: Contact FAB — live showcase --}}
+    {{-- SECTION 8: Contact FAB, live showcase --}}
     {{-- ═══════════════════════════════════════════════════════════════════ --}}
     <section class="bg-charcoal border-l-4 border-sunburst p-8 shadow-lg">
         <div class="inline-block mb-5">
@@ -1176,7 +1176,7 @@
                 </p>
                 <p class="text-white/60 text-sm">
                     Included globally in <code class="text-xs bg-white/10 px-1 py-0.5">layouts/page.blade.php</code>
-                    — skipped automatically on cart, checkout, and order-confirmation pages.
+                   , skipped automatically on cart, checkout, and order-confirmation pages.
                 </p>
                 <div class="bg-charcoal-dark px-4 py-3 font-mono text-sm text-sunburst mt-2">
                     &lt;x-ui.contact-modal /&gt;
@@ -1184,7 +1184,7 @@
             </div>
 
             <div class="flex flex-col items-center gap-2 text-sunburst lg:self-end">
-                <span class="text-sm font-semibold text-white/70">It's live — click it</span>
+                <span class="text-sm font-semibold text-white/70">It's live, click it</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24"
                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                      aria-hidden="true">
@@ -1205,7 +1205,7 @@
             <p class="text-charcoal-light text-sm mb-1 pl-5">
                 <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.artwork-dropzone</code> and
                 <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.banner-cta-artwork-dropzone</code>
-                — general-purpose artwork upload entry points for signs, stickers, vehicle graphics, design services,
+               , general-purpose artwork upload entry points for signs, stickers, vehicle graphics, design services,
                 promotional items, and any non-DTF page. Accepts PNG, JPG, PDF, SVG, AI, EPS.
                 Dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal</code> with
                 <code class="bg-linen-dark px-1 py-0.5">{ artwork: true, fileName }</code>.
@@ -1217,7 +1217,7 @@
             <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Medium Artwork Drop Zone</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.artwork-dropzone /&gt;</code>
-                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
+                &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
             </p>
             <div class="max-w-xl">
                 <x-ui.artwork-dropzone />
@@ -1238,14 +1238,14 @@
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Accepted formats</p>
-                    <p class="font-mono text-white/80 text-xs">PNG, JPG, PDF, SVG, AI, EPS — high resolution preferred</p>
+                    <p class="font-mono text-white/80 text-xs">PNG, JPG, PDF, SVG, AI, EPS, high resolution preferred</p>
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Dispatches</p>
                     <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">open-contact-modal { artwork: true, fileName: 'file.pdf' }</pre>
                 </div>
                 <p class="text-white/40 text-xs pt-1">
-                    Use on all non-DTF pages. Do not use on DTF transfers or DTF pricing pages — use
+                    Use on all non-DTF pages. Do not use on DTF transfers or DTF pricing pages, use
                     <code class="bg-white/10 px-1">x-ui.dtf-dropzone</code> there instead.
                 </p>
             </div>
@@ -1270,8 +1270,8 @@
             {{-- Artwork Dropzone --}}
             <p class="text-charcoal-light text-xs mb-2 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code>
-                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
-                — standalone drop zone, dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal &#123; artwork: true, fileName &#125;</code>
+                &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
+               , standalone drop zone, dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal &#123; artwork: true, fileName &#125;</code>
             </p>
             <x-ui.banner-thin-sunburst />
             <div class="max-w-2xl mb-6">
@@ -1281,19 +1281,19 @@
             {{-- cta-free-quote-banner --}}
             <p class="text-charcoal-light text-xs mb-2 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">x-sections.cta-free-quote-banner</code>
-                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/sections/cta-free-quote-banner.blade.php</code>
-                — CTA text + button only, no dropzone inside
+                &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/sections/cta-free-quote-banner.blade.php</code>
+               , CTA text + button only, no dropzone inside
             </p>
             <x-ui.banner-thin-sunburst />
             <x-sections.cta-free-quote-banner />
         </div>
 
-        {{-- Artwork Banner CTA — Dropzone Left --}}
+        {{-- Artwork Banner CTA, Dropzone Left --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Banner CTA — Drop Zone Left</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Banner CTA, Drop Zone Left</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-artwork-dropzone position="left" /&gt;</code>
-                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</code>
+                &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/banner-cta-artwork-dropzone.blade.php</code>
             </p>
             <x-ui.banner-cta-artwork-dropzone
                 position="left"
@@ -1311,9 +1311,9 @@
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Props</p>
-                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">position   — 'left' (default) | 'right'
-heading    — string (default: 'Upload Your Artwork')
-subheading — string (default: descriptive copy)</pre>
+                    <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">position  , 'left' (default) | 'right'
+heading   , string (default: 'Upload Your Artwork')
+subheading, string (default: descriptive copy)</pre>
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Usage (position left)</p>
@@ -1321,7 +1321,7 @@ subheading — string (default: descriptive copy)</pre>
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Accepted formats</p>
-                    <p class="font-mono text-white/80 text-xs">PNG, JPG, PDF, SVG, AI, EPS — high resolution preferred</p>
+                    <p class="font-mono text-white/80 text-xs">PNG, JPG, PDF, SVG, AI, EPS, high resolution preferred</p>
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Dispatches</p>
@@ -1330,9 +1330,9 @@ subheading — string (default: descriptive copy)</pre>
             </div>
         </div>
 
-        {{-- Artwork Banner CTA — Dropzone Right --}}
+        {{-- Artwork Banner CTA, Dropzone Right --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Banner CTA — Drop Zone Right</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Artwork Banner CTA, Drop Zone Right</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-artwork-dropzone position="right" /&gt;</code>
             </p>
@@ -1354,7 +1354,7 @@ subheading — string (default: descriptive copy)</pre>
             <p class="text-charcoal-light text-sm mb-1 pl-5">
                 <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.dtf-dropzone</code> and
                 <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.banner-cta-dtf-dropzone</code>
-                — DTF-specific upload entry points used only on the DTF transfers page and DTF pricing section.
+               , DTF-specific upload entry points used only on the DTF transfers page and DTF pricing section.
                 Accepts PNG only (300 DPI minimum). Dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal</code>
                 with <code class="bg-linen-dark px-1 py-0.5">{ dtf: true, fileName }</code>.
             </p>
@@ -1365,7 +1365,7 @@ subheading — string (default: descriptive copy)</pre>
             <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">Medium DTF Drop Zone</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.dtf-dropzone /&gt;</code>
-                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/dtf-dropzone.blade.php</code>
+                &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/dtf-dropzone.blade.php</code>
             </p>
             <div class="max-w-xl">
                 <x-ui.dtf-dropzone />
@@ -1381,7 +1381,7 @@ subheading — string (default: descriptive copy)</pre>
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Accepted formats</p>
-                    <p class="font-mono text-white/80 text-xs">PNG only — 300 DPI minimum recommended</p>
+                    <p class="font-mono text-white/80 text-xs">PNG only, 300 DPI minimum recommended</p>
                 </div>
                 <div>
                     <p class="text-sunburst font-semibold text-xs mb-1">Dispatches</p>
@@ -1394,12 +1394,12 @@ subheading — string (default: descriptive copy)</pre>
             </div>
         </div>
 
-        {{-- Banner CTA — Dropzone Left --}}
+        {{-- Banner CTA, Dropzone Left --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">DTF Banner CTA — Drop Zone Left</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">DTF Banner CTA, Drop Zone Left</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-dtf-dropzone position="left" /&gt;</code>
-                &nbsp;—&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/banner-cta-dtf-dropzone.blade.php</code>
+                &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/banner-cta-dtf-dropzone.blade.php</code>
             </p>
             <x-ui.banner-cta-dtf-dropzone
                 position="left"
@@ -1408,9 +1408,9 @@ subheading — string (default: descriptive copy)</pre>
             />
         </div>
 
-        {{-- Banner CTA — Dropzone Right --}}
+        {{-- Banner CTA, Dropzone Right --}}
         <div>
-            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">DTF Banner CTA — Drop Zone Right</h3>
+            <h3 class="text-lg font-semibold text-charcoal mb-1 pl-5 border-l-2 border-linen-dark">DTF Banner CTA, Drop Zone Right</h3>
             <p class="text-charcoal-light text-xs mb-4 pl-5">
                 <code class="bg-linen-dark px-1 py-0.5">&lt;x-ui.banner-cta-dtf-dropzone position="right" /&gt;</code>
             </p>
@@ -1430,7 +1430,7 @@ subheading — string (default: descriptive copy)</pre>
         <h2 class="text-2xl font-bold text-charcoal mb-2 border-l-4 border-sunburst pl-4">Stripe Checkout Modal</h2>
         <p class="text-charcoal-light text-sm mb-1 pl-5">
             <code class="text-sm bg-linen-dark px-1.5 py-0.5">x-ui.stripe-checkout-modal</code>
-            — opened automatically after the custom request wizard submits successfully. Contains the Stripe Buy Button iframe and payment confirmation messaging.
+           , opened automatically after the custom request wizard submits successfully. Contains the Stripe Buy Button iframe and payment confirmation messaging.
         </p>
         <p class="text-charcoal-light text-xs mb-6 pl-5">
             Component: <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/stripe-checkout-modal.blade.php</code>
@@ -1458,7 +1458,7 @@ subheading — string (default: descriptive copy)</pre>
                 <p class="font-mono text-white/80 text-xs">&lt;x-ui.stripe-checkout-modal /&gt;</p>
             </div>
             <div>
-                <p class="text-sunburst font-semibold text-xs mb-1">Opened automatically by the wizard — or trigger manually via Alpine</p>
+                <p class="text-sunburst font-semibold text-xs mb-1">Opened automatically by the wizard, or trigger manually via Alpine</p>
                 <pre class="font-mono text-white/70 text-xs leading-relaxed whitespace-pre-wrap bg-black/20 px-3 py-2">window.dispatchEvent(new CustomEvent('open-modal', {
     detail: { name: 'stripe-checkout-modal' }
 }));</pre>
@@ -1466,7 +1466,7 @@ subheading — string (default: descriptive copy)</pre>
             <p class="text-white/40 text-xs pt-1">
                 The Stripe Buy Button renders as a hosted iframe. Clicking it opens
                 <code class="bg-white/10 px-1">buy.stripe.com</code> in a new tab.
-                Payment info is handled entirely by Stripe — nothing is stored on our servers.
+                Payment info is handled entirely by Stripe, nothing is stored on our servers.
             </p>
         </div>
     </section>

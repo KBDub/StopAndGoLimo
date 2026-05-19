@@ -34,7 +34,7 @@
     metaDescription="Premium custom signage and apparel in Joliet, IL. Veteran-owned business specializing in custom shirts, signs, decals, and vehicle graphics."
     currentPage="home"
     ogImage="/images/og-tags/top5pct-og-home.jpg"
-    ogImageAlt="Top 5 Percent — Custom Signs & Apparel in Joliet, IL"
+    ogImageAlt="Top 5 Percent, Custom Signs & Apparel in Joliet, IL"
 >
     <x-sections.category-hero />
     <x-ui.banner-thin-charcoal />
@@ -73,7 +73,7 @@
 
     <x-sections.faq
         heading="Frequently Asked Questions"
-        label="Top 5 Percent — Joliet, IL"
+        label="Top 5 Percent, Joliet, IL"
         :faqs="[
             ['q' => 'Do you offer same-day custom shirts in Joliet?', 'a' => 'Yes. <a href="/custom-apparel" class="link-notification">Same-day custom shirt printing</a> is available on many of our apparel products. Call us at (815) 349-8600 before coming in to confirm availability for your specific order.'],
             ['q' => 'Is there a minimum order for custom apparel or signs?', 'a' => 'No. We have no minimum order requirement on any of our products. You can order a single custom shirt, one banner, or one sticker and receive the same quality and care as a large bulk order.'],

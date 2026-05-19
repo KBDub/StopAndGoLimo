@@ -3,14 +3,14 @@
  | Location   : resources/views/components/ui/contact-modal.blade.php
  |
  | Anchored FAB (bottom-right) that opens a "What can we help you with?" picker modal.
- | Choosing an option dispatches directly to the appropriate flow — no contact info
+ | Choosing an option dispatches directly to the appropriate flow, no contact info
  | collected here:
  |
  |   Custom Apparel Request  → custom-request-wizard (dtfMode: false)
  |   DTF Transfers           → custom-request-wizard (dtfMode: true, no contact prefill)
  |   Send Us a Message       → x-ui.send-message-modal
  |
- | x-ui.send-message-modal is bundled at the bottom of this file — no separate include needed.
+ | x-ui.send-message-modal is bundled at the bottom of this file, no separate include needed.
  |
  | ── PROPS ───────────────────────────────────────────────────────────────────
  |   buttonLabel   FAB label text         (default: "Contact Us Now")
@@ -115,7 +115,7 @@
             <button
                 type="button"
                 class="relative flex items-center gap-2 px-5 py-3 bg-gold-gradient text-charcoal text-sm font-semibold tracking-wide shadow-gold-xl transition-transform duration-150 hover:-translate-y-0.5 hover:shadow-gold-xl active:translate-y-0 whitespace-nowrap select-none"
-                aria-label="{{ $buttonLabel }} — open contact form"
+                aria-label="{{ $buttonLabel }}, open contact form"
                 @click="openModal()"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -229,7 +229,7 @@
                         </span>
                     </button>
 
-                    {{-- Send Us a Message — centered below the two-column row --}}
+                    {{-- Send Us a Message, centered below the two-column row --}}
                     <div class="sm:col-span-2 flex justify-center mt-1">
                         <button
                             type="button"
@@ -260,7 +260,7 @@
     </div>{{-- /overlay --}}
 </div>
 
-{{-- x-ui.send-message-modal is bundled here — no separate include needed --}}
+{{-- x-ui.send-message-modal is bundled here, no separate include needed --}}
 <x-ui.send-message-modal
     :logo-src="$logoSrc"
     :logo-alt="$logoAlt"

@@ -7,34 +7,34 @@
  | Include once per page alongside x-ui.contact-modal.
  |
  | ── DTF PATH (dtfMode === true) ─────────────────────────────────────────────
- |   1. request-type         — Request Details (always)
- |   2. dtf-type-selection   — DTF Type Selection (only when dtfItems.length === 0)
- |   3. dtf-upload           — DTF Image Upload — one or per-type (auto-passes if pre-attached)
- |   4. dtf-quantity         — Quantities & Pricing (only when dtfItems.length === 0)
- |   5. completion-date      — Desired Completion Date (always)
- |   6. extra-notes          — Extra Notes (always)
- |   7. shipping-address     — Shipping Address (always)
- |   8. confirm-submit       — Review & Submit (always)
+ |   1. request-type        , Request Details (always)
+ |   2. dtf-type-selection  , DTF Type Selection (only when dtfItems.length === 0)
+ |   3. dtf-upload          , DTF Image Upload, one or per-type (auto-passes if pre-attached)
+ |   4. dtf-quantity        , Quantities & Pricing (only when dtfItems.length === 0)
+ |   5. completion-date     , Desired Completion Date (always)
+ |   6. extra-notes         , Extra Notes (always)
+ |   7. shipping-address    , Shipping Address (always)
+ |   8. confirm-submit      , Review & Submit (always)
  |
  | ── APPAREL PATH (dtfMode === false) ────────────────────────────────────────
- |   1. request-type         — Request Details (always)
- |   2. garment-selection    — Garment Selection (always)
- |   3. quantity             — Quantity & Sizing (always)
- |   4. image-distribution   — One design or individual? (only when >1 garment type)
- |   5. artwork-upload       — Artwork Upload (only when 1 garment OR imageDistribution=single)
+ |   1. request-type        , Request Details (always)
+ |   2. garment-selection   , Garment Selection (always)
+ |   3. quantity            , Quantity & Sizing (always)
+ |   4. image-distribution  , One design or individual? (only when >1 garment type)
+ |   5. artwork-upload      , Artwork Upload (only when 1 garment OR imageDistribution=single)
  |   ↳ Per selected garment (repeated):
- |       print-method-{key}  — Print Method
- |       color-{key}         — Color Selection
- |   6. completion-date      — Desired Completion Date (always)
- |   7. extra-notes          — Extra Notes (always)
- |   8. shipping-address     — Shipping Address (always)
- |   9. confirm-submit       — Review & Submit (always)
+ |       print-method-{key} , Print Method
+ |       color-{key}        , Color Selection
+ |   6. completion-date     , Desired Completion Date (always)
+ |   7. extra-notes         , Extra Notes (always)
+ |   8. shipping-address    , Shipping Address (always)
+ |   9. confirm-submit      , Review & Submit (always)
  |
  | ── EVENT API ───────────────────────────────────────────────────────────────
  |   open-modal   { name: 'custom-request-wizard', prefill: { name, email, phone,
  |                  dtfMode, dtfFileName, dtfItems } }
- |   close-modal  { name: 'custom-request-wizard' }  — closes and resets
- |   wizard-done  { name: 'custom-request-wizard' }  — fires on submit
+ |   close-modal  { name: 'custom-request-wizard' } , closes and resets
+ |   wizard-done  { name: 'custom-request-wizard' } , fires on submit
  |
  | ── USAGE ───────────────────────────────────────────────────────────────────
  |   <x-ui.contact-modal />
@@ -265,7 +265,7 @@
                 'artwork-upload':     'Artwork Upload',
                 'garment-selection':  'Garment Selection',
                 'quantity':           'Quantity & Sizing',
-                'image-distribution': 'Artwork — One Design or Individual?',
+                'image-distribution': 'Artwork, One Design or Individual?',
                 'completion-date':    'Desired Completion Date',
                 'extra-notes':        'Extra Notes',
                 'shipping-address':   'Shipping Address',
@@ -384,7 +384,7 @@
         async finish() {
             if (this.submitting) return;
 
-            // DTF path — hand off to order-action-modal for cart/checkout choice
+            // DTF path, hand off to order-action-modal for cart/checkout choice
             if (this.dtfMode === true) {
                 Alpine.store('dtfCart').clear();
                 this.$dispatch('wizard-done', { name: this.modalName });
@@ -405,7 +405,7 @@
                 return;
             }
 
-            // Apparel path — save quote request, show confirmation panel
+            // Apparel path, save quote request, show confirmation panel
             this.submitting  = true;
             this.submitError = false;
             try {
@@ -571,7 +571,7 @@
     @reopen-wizard.window="reopen()"
     @keydown.escape.window="if (isOpen) { if (showCloseConfirm) showCloseConfirm = false; else if (!showConfirmation) showCloseConfirm = true; }"
 >
-    {{-- ── Backdrop — teleported to <body> to escape any ancestor transforms ── --}}
+    {{-- ── Backdrop, teleported to <body> to escape any ancestor transforms ── --}}
     <template x-teleport="body">
     <div
         x-show="isOpen"
@@ -718,7 +718,7 @@
                                         aria-hidden="true"
                                     ></span>
                                     <span class="flex flex-col gap-0.5">
-                                        <span class="text-sm font-semibold text-charcoal leading-tight">Yes — Rush</span>
+                                        <span class="text-sm font-semibold text-charcoal leading-tight">Yes, Rush</span>
                                         <span class="text-xs text-charcoal-light">Expedited production</span>
                                     </span>
                                 </button>
@@ -736,7 +736,7 @@
                                         aria-hidden="true"
                                     ></span>
                                     <span class="flex flex-col gap-0.5">
-                                        <span class="text-sm font-semibold text-charcoal leading-tight">No — Standard</span>
+                                        <span class="text-sm font-semibold text-charcoal leading-tight">No, Standard</span>
                                         <span class="text-xs text-charcoal-light">Regular production timeline</span>
                                     </span>
                                 </button>
@@ -759,12 +759,12 @@
                                     <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
                                 </svg>
                                 <div class="min-w-0">
-                                    <p class="text-xs font-semibold text-charcoal" x-text="item.type + ' — ' + item.size"></p>
+                                    <p class="text-xs font-semibold text-charcoal" x-text="item.type + ', ' + item.size"></p>
                                     <p class="text-sm text-charcoal truncate" x-text="item.fileName || 'No file attached'"></p>
                                 </div>
                             </div>
                         </template>
-                        <p class="text-xs text-charcoal-light">All files noted — continue to the next step.</p>
+                        <p class="text-xs text-charcoal-light">All files noted, continue to the next step.</p>
                     </div>
 
                     {{-- Case B: single file pre-attached from dropzone --}}
@@ -812,7 +812,7 @@
                                     class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
                                 <div>
                                     <p class="text-sm font-bold text-charcoal">Individual design per type</p>
-                                    <p class="text-xs text-charcoal-light mt-0.5">Each DTF type gets its own PNG file — upload one per type below</p>
+                                    <p class="text-xs text-charcoal-light mt-0.5">Each DTF type gets its own PNG file, upload one per type below</p>
                                 </div>
                             </label>
                         </div>
@@ -857,7 +857,7 @@
 
                         {{-- C-3: Per-type file uploaders (user chose 'individual' distribution) --}}
                         <div x-show="dtfImageDistribution === 'individual'" x-cloak class="space-y-4">
-                            <p class="text-xs text-charcoal-light">Upload a PNG for each DTF type. All uploads are optional — you can provide files separately.</p>
+                            <p class="text-xs text-charcoal-light">Upload a PNG for each DTF type. All uploads are optional, you can provide files separately.</p>
                             <template x-for="t in selectedDtfTypes" :key="t.key">
                                 <div class="border border-linen-dark">
                                     <div class="px-4 py-2.5 bg-linen border-b border-linen-dark">
@@ -906,8 +906,8 @@
                     <div class="space-y-3">
                         @php
                             $dtfTypeOptions = [
-                                ['key' => 'neckTag',    'label' => 'Neck Tags',                      'hint' => '2″ × 2″ or 3″ × 3″ — fits within size'],
-                                ['key' => 'chestImage', 'label' => 'Left / Right Chest',             'hint' => '3″–5″ wide — standard chest placement'],
+                                ['key' => 'neckTag',    'label' => 'Neck Tags',                      'hint' => '2″ × 2″ or 3″ × 3″, fits within size'],
+                                ['key' => 'chestImage', 'label' => 'Left / Right Chest',             'hint' => '3″–5″ wide, standard chest placement'],
                                 ['key' => 'imageSize',  'label' => 'Image Sizes (5″ and above)',     'hint' => 'Full designs from 5″ × 5″ up to 12″ × 17″'],
                             ];
                         @endphp
@@ -1063,7 +1063,7 @@
                                 class="w-4 h-4 flex-shrink-0 accent-sunburst mt-0.5">
                             <div>
                                 <p class="text-sm font-bold text-charcoal">Individual design per garment type</p>
-                                <p class="text-xs text-charcoal-light mt-0.5">Each garment type gets its own artwork — you'll describe it per garment in the notes</p>
+                                <p class="text-xs text-charcoal-light mt-0.5">Each garment type gets its own artwork, you'll describe it per garment in the notes</p>
                             </div>
                         </label>
                     </div>
@@ -1117,14 +1117,14 @@
                             <button type="button"
                                 @click="hasArtwork = false"
                                 class="text-xs text-charcoal-light underline hover:text-charcoal transition-colors">
-                                No artwork yet — I'll describe my design in the notes
+                                No artwork yet, I'll describe my design in the notes
                             </button>
                         </div>
 
                         {{-- Skipped state --}}
                         <div x-show="hasArtwork === false && !artworkFileName" x-cloak
                              class="flex items-center gap-3 px-4 py-3 bg-linen border border-linen-dark">
-                            <p class="text-xs text-charcoal-light flex-1">No file provided — you can describe your design in the Extra Notes step.</p>
+                            <p class="text-xs text-charcoal-light flex-1">No file provided, you can describe your design in the Extra Notes step.</p>
                             <button type="button"
                                 @click="hasArtwork = null"
                                 class="text-xs text-sunburst-dark underline flex-shrink-0 hover:text-sunburst transition-colors">
@@ -1263,7 +1263,7 @@
                         </div>
 
                         <div x-show="!(selectedColorsByGarment[currentGarmentKey] || []).length" class="py-6 text-center text-charcoal-lighter text-sm">
-                            No colors added yet — search and select above.
+                            No colors added yet, search and select above.
                         </div>
                     </div>
                 </div>
@@ -1403,7 +1403,7 @@
                             <svg class="w-5 h-5 text-sunburst flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                             </svg>
-                            <p class="text-sm font-bold text-charcoal">Rush Order — Expediting Active</p>
+                            <p class="text-sm font-bold text-charcoal">Rush Order, Expediting Active</p>
                         </div>
 
                         <div x-show="isRush !== true" x-cloak class="grid grid-cols-2 gap-6 items-center">
@@ -1454,7 +1454,7 @@
                 {{-- ══ Extra Notes ══════════════════════════════════════════════ --}}
                 <div x-show="currentStepName === 'extra-notes'" x-cloak>
                     <div class="space-y-3">
-                        <p class="text-xs text-charcoal-light">Include any additional details — artwork requirements, special instructions, references, etc. (optional)</p>
+                        <p class="text-xs text-charcoal-light">Include any additional details, artwork requirements, special instructions, references, etc. (optional)</p>
                         <textarea x-model="extraNotes" rows="8"
                             placeholder="Add any extra notes, instructions, or details about your custom order…"
                             class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
@@ -1563,7 +1563,7 @@
                             <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                             </svg>
-                            <span class="text-sm">Rush Order — Expediting Active</span>
+                            <span class="text-sm">Rush Order, Expediting Active</span>
                         </div>
 
                         {{-- Global summary --}}
@@ -1580,8 +1580,8 @@
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Request Type</span>
                                 <div class="col-span-2 text-sm text-charcoal">
-                                    <span class="capitalize" x-text="requestType || '—'"></span>
-                                    <span x-show="requestType === 'company' && companyName" x-cloak class="text-charcoal-light"> — <span x-text="companyName"></span></span>
+                                    <span class="capitalize" x-text="requestType || ','"></span>
+                                    <span x-show="requestType === 'company' && companyName" x-cloak class="text-charcoal-light">, <span x-text="companyName"></span></span>
                                 </div>
                             </div>
 
@@ -1604,7 +1604,7 @@
                                     <div x-show="dtfItems.length > 0" x-cloak class="space-y-1">
                                         <template x-for="(item, idx) in dtfItems" :key="idx">
                                             <div class="text-xs text-charcoal">
-                                                <span class="font-semibold" x-text="item.type + ' — ' + item.size"></span>
+                                                <span class="font-semibold" x-text="item.type + ', ' + item.size"></span>
                                                 <span class="text-charcoal-light" x-text="' · ' + item.tier + ' at ' + item.price + ' ea'"></span>
                                             </div>
                                         </template>
@@ -1643,7 +1643,7 @@
                                             }
                                         }">
                                             <span x-show="resolvedFile" x-cloak x-text="resolvedFile"></span>
-                                            <span x-show="!resolvedFile && hasDtf === true" x-cloak>Yes — will provide separately</span>
+                                            <span x-show="!resolvedFile && hasDtf === true" x-cloak>Yes, will provide separately</span>
                                             <span x-show="hasDtf === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
                                             <span x-show="!resolvedFile && hasDtf === null" class="text-charcoal-lighter">Not answered</span>
                                         </span>
@@ -1651,7 +1651,7 @@
                                     <template x-if="dtfMode !== true">
                                         <span>
                                             <span x-show="artworkFileName" x-cloak x-text="artworkFileName"></span>
-                                            <span x-show="!artworkFileName && hasArtwork === true" x-cloak>Yes — will provide separately</span>
+                                            <span x-show="!artworkFileName && hasArtwork === true" x-cloak>Yes, will provide separately</span>
                                             <span x-show="hasArtwork === false" x-cloak class="text-charcoal-light">No file / needs design help</span>
                                             <span x-show="!artworkFileName && hasArtwork === null" class="text-charcoal-lighter">Not answered</span>
                                         </span>
@@ -1662,7 +1662,7 @@
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Date Needed</span>
                                 <div class="col-span-2 text-sm text-charcoal flex items-center gap-2 flex-wrap">
-                                    <span x-text="completionDate || '—'"></span>
+                                    <span x-text="completionDate || ','"></span>
                                     <span x-show="rushActive && completionDate" x-cloak class="px-1.5 py-0.5 bg-sunburst text-charcoal text-[10px] font-bold">RUSH</span>
                                 </div>
                             </div>
@@ -1670,7 +1670,7 @@
                             <div class="px-4 py-3 grid grid-cols-3 gap-3">
                                 <span class="text-xs font-semibold text-charcoal-light uppercase tracking-wide col-span-1 pt-0.5">Contact</span>
                                 <div class="col-span-2 text-sm text-charcoal space-y-0.5">
-                                    <p x-text="contactName || '—'"></p>
+                                    <p x-text="contactName || ','"></p>
                                     <p x-show="contactEmail" x-cloak class="text-charcoal-light" x-text="contactEmail"></p>
                                     <p x-show="contactPhone" x-cloak class="text-charcoal-light" x-text="contactPhone"></p>
                                 </div>
@@ -1699,7 +1699,7 @@
                                                 <div class="col-span-2 text-sm text-charcoal">
                                                     <span x-show="printMethods[g.key] === 'traditional'" x-cloak>Traditional</span>
                                                     <span x-show="printMethods[g.key] === 'specialty'" x-cloak>
-                                                        Specialty — <span x-text="specialtyLabels[specialtyTypeByGarment[g.key]] || ''"></span>
+                                                        Specialty, <span x-text="specialtyLabels[specialtyTypeByGarment[g.key]] || ''"></span>
                                                     </span>
                                                     <span x-show="!printMethods[g.key]" class="text-charcoal-lighter">Not selected</span>
                                                 </div>
@@ -1861,7 +1861,7 @@
                             <span x-show="submitting" x-cloak>Processing&hellip;</span>
                         </button>
                         <p x-show="submitError" x-cloak class="text-xs text-error">
-                            Something went wrong — please try again.
+                            Something went wrong, please try again.
                         </p>
                     </div>
 
@@ -1873,5 +1873,5 @@
     </template>
 </div>
 
-{{-- Order Action Modal — bundled with the wizard so any DTF page gets the cart/checkout chooser automatically --}}
+{{-- Order Action Modal, bundled with the wizard so any DTF page gets the cart/checkout chooser automatically --}}
 <x-ui.order-action-modal />

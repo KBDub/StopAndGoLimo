@@ -58,11 +58,11 @@
                 <div class="flex flex-col gap-y-1.5 mb-6">
                     @php
                         $services = [
-                            ['label' => 'Custom Shirts',    'href' => '/custom-apparel',    'detail' => 'DTF, screen print, embroidery, vinyl, no minimums'],
-                            ['label' => 'Turnaround',       'href' => null,                 'detail' => 'Same day available, typical 1-3 business days'],
-                            ['label' => 'Signs and Banners','href' => '/signs',             'detail' => 'Business signage, yard signs, banners'],
-                            ['label' => 'Vehicle Graphics', 'href' => '/vehicle-graphics',  'detail' => 'Wraps, lettering, magnets, DOT decals'],
-                            ['label' => 'Our Reviews',      'href' => '/reviews',           'detail' => 'Quality workmanship, satisfaction guaranteed'],
+                            ['label' => 'Custom Shirts',    'href' => '/custom-apparel',   'detail' => '<a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen print</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/specialty-materials/vinyl" class="link-notification">vinyl</a>, no minimums'],
+                            ['label' => 'Turnaround',       'href' => null,                'detail' => 'Same day available, typical 1-3 business days'],
+                            ['label' => 'Signs and Banners','href' => '/signs',            'detail' => '<a href="/signs" class="link-notification">Business signage</a>, <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a>, <a href="/signs/business-signs/banners" class="link-notification">banners</a>'],
+                            ['label' => 'Vehicle Graphics', 'href' => '/vehicle-graphics', 'detail' => '<a href="/vehicle-graphics/automobile-graphics" class="link-notification">Wraps</a>, <a href="/vehicle-graphics/automobile-graphics" class="link-notification">lettering</a>, <a href="/vehicle-graphics/vehicle-magnets" class="link-notification">magnets</a>, <a href="/vehicle-graphics/dot-decals" class="link-notification">DOT decals</a>'],
+                            ['label' => 'Our Reviews',      'href' => '/reviews',          'detail' => 'Quality workmanship, satisfaction guaranteed'],
                         ];
                     @endphp
                     @foreach($services as $service)
@@ -74,7 +74,7 @@
                                     @else
                                         <span class="font-semibold">{{ $service['label'] }}</span>:
                                     @endif
-                                    {{ $service['detail'] }}
+                                    {!! $service['detail'] !!}
                                 </p>
                                 <div class="w-1 h-5 bg-azure shrink-0"></div>
                             </div>
@@ -87,7 +87,7 @@
                                     @else
                                         <span class="font-semibold">{{ $service['label'] }}</span>:
                                     @endif
-                                    {{ $service['detail'] }}
+                                    {!! $service['detail'] !!}
                                 </p>
                             </div>
                         @endif

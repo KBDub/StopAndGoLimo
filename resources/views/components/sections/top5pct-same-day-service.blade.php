@@ -58,37 +58,23 @@
                 <div class="flex flex-col gap-y-1.5 mb-6">
                     @php
                         $services = [
-                            ['label' => 'Custom Shirts',    'href' => '/custom-apparel',   'detail' => '<a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen print</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/specialty-materials/vinyl" class="link-notification">vinyl</a>, no minimums'],
-                            ['label' => 'Turnaround',       'href' => null,                'detail' => 'Same day available, typical 1-3 business days'],
-                            ['label' => 'Signs and Banners','href' => '/signs',            'detail' => '<a href="/signs" class="link-notification">Business signage</a>, <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a>, <a href="/signs/business-signs/banners" class="link-notification">banners</a>'],
-                            ['label' => 'Vehicle Graphics', 'href' => '/vehicle-graphics', 'detail' => '<a href="/vehicle-graphics/automobile-graphics" class="link-notification">Wraps</a>, <a href="/vehicle-graphics/automobile-graphics" class="link-notification">lettering</a>, <a href="/vehicle-graphics/vehicle-magnets" class="link-notification">magnets</a>, <a href="/vehicle-graphics/dot-decals" class="link-notification">DOT decals</a>'],
-                            ['label' => 'Our Reviews',      'href' => '/reviews',          'detail' => 'Quality workmanship, satisfaction guaranteed'],
+                            'Custom shirts using <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen print</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, and <a href="/custom-apparel/specialty-materials/vinyl" class="link-notification">vinyl</a>, no minimums',
+                            'Same day turnaround available on most orders',
+                            '<a href="/signs" class="link-notification">Business signage</a>, <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a>, and <a href="/signs/business-signs/banners" class="link-notification">banners</a> made in-house',
+                            '<a href="/vehicle-graphics/automobile-graphics" class="link-notification">Wraps</a>, <a href="/vehicle-graphics/automobile-graphics" class="link-notification">lettering</a>, <a href="/vehicle-graphics/vehicle-magnets" class="link-notification">magnets</a>, and <a href="/vehicle-graphics/dot-decals" class="link-notification">DOT decals</a>',
+                            'Quality workmanship and satisfaction guaranteed on every order',
                         ];
                     @endphp
                     @foreach($services as $service)
                         @if($loop->even)
                             <div class="flex items-center justify-end gap-2 whitespace-nowrap">
-                                <p class="text-body-sm text-charcoal">
-                                    @if($service['href'])
-                                        <a href="{{ $service['href'] }}" class="font-semibold link-notification">{{ $service['label'] }}</a>:
-                                    @else
-                                        <span class="font-semibold">{{ $service['label'] }}</span>:
-                                    @endif
-                                    {!! $service['detail'] !!}
-                                </p>
+                                <span class="text-body-sm text-charcoal">{!! $service !!}</span>
                                 <div class="w-1 h-5 bg-azure shrink-0"></div>
                             </div>
                         @else
                             <div class="flex items-center gap-2 whitespace-nowrap">
                                 <div class="w-1 h-5 bg-azure shrink-0"></div>
-                                <p class="text-body-sm text-charcoal">
-                                    @if($service['href'])
-                                        <a href="{{ $service['href'] }}" class="font-semibold link-notification">{{ $service['label'] }}</a>:
-                                    @else
-                                        <span class="font-semibold">{{ $service['label'] }}</span>:
-                                    @endif
-                                    {!! $service['detail'] !!}
-                                </p>
+                                <span class="text-body-sm text-charcoal">{!! $service !!}</span>
                             </div>
                         @endif
                     @endforeach

@@ -397,6 +397,15 @@ html {
     text-decoration: underline;
     text-underline-offset: 3px;
 }
+.card-detail-content a.link-notification {
+    text-decoration: none;
+    text-underline-offset: initial;
+}
+.card-detail-content a.link-notification:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
 
 /* saved for later:
 .card-text-sway:hover {

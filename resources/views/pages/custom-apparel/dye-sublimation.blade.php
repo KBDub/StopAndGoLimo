@@ -149,17 +149,20 @@
         label="Dye Sublimation Printing"
         subheading="Dye sublimation bonds color directly into the fabric for prints that won't crack, fade, or peel. See how we produce vibrant all-over designs for teams, businesses, and events in Joliet, Illinois."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What is dye sublimation printing?', 'a' => 'Dye sublimation uses heat and pressure to bond ink directly into polyester fibers, producing a permanent, all-over full-color print that will never crack, peel, or fade. The color becomes part of the fabric itself. For cotton or mixed fabrics, see our <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>.'],
+        ['q' => 'What kind of garments work with dye sublimation?', 'a' => 'Dye sublimation works best on 100% polyester or high-polyester-blend fabrics. It is ideal for jerseys, performance wear, activewear, swimwear, and other athletic apparel.'],
+        ['q' => 'Can you do all-over printing with dye sublimation?', 'a' => 'Yes. Dye sublimation covers the entire garment surface edge to edge including seams, making it the best choice for bold, all-over custom designs.'],
+        ['q' => 'Is there a minimum order for dye sublimation shirts?', 'a' => 'No. We have no minimum order. You can order as few as one custom sublimated jersey or as many as a full team set.'],
+        ['q' => 'How durable are dye sublimation prints?', 'a' => 'Because the ink becomes part of the fabric, sublimation prints are extremely durable. They will not crack or peel and the colors remain vibrant through years of regular washing.'],
+        ['q' => 'How long does a dye sublimation order take in Joliet?', 'a' => 'Most sublimation orders are completed within one to three business days. Call (815) 349-8600 to confirm lead time for your quantity and design.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Dye Sublimation FAQs"
         label="Dye Sublimation Shirts in Joliet, IL"
-        :faqs="[
-            ['q' => 'What is dye sublimation printing?', 'a' => 'Dye sublimation uses heat and pressure to bond ink directly into polyester fibers, producing a permanent, all-over full-color print that will never crack, peel, or fade. The color becomes part of the fabric itself. For cotton or mixed fabrics, see our <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>.'],
-            ['q' => 'What kind of garments work with dye sublimation?', 'a' => 'Dye sublimation works best on 100% polyester or high-polyester-blend fabrics. It is ideal for jerseys, performance wear, activewear, swimwear, and other athletic apparel.'],
-            ['q' => 'Can you do all-over printing with dye sublimation?', 'a' => 'Yes. Dye sublimation covers the entire garment surface edge to edge including seams, making it the best choice for bold, all-over custom designs.'],
-            ['q' => 'Is there a minimum order for dye sublimation shirts?', 'a' => 'No. We have no minimum order. You can order as few as one custom sublimated jersey or as many as a full team set.'],
-            ['q' => 'How durable are dye sublimation prints?', 'a' => 'Because the ink becomes part of the fabric, sublimation prints are extremely durable. They will not crack or peel and the colors remain vibrant through years of regular washing.'],
-            ['q' => 'How long does a dye sublimation order take in Joliet?', 'a' => 'Most sublimation orders are completed within one to three business days. Call (815) 349-8600 to confirm lead time for your quantity and design.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

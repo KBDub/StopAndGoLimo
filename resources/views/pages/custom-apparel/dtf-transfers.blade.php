@@ -152,17 +152,20 @@
         label="DTF Transfer Printing"
         subheading="Direct-to-film transfers deliver vibrant, durable prints on virtually any garment. See how Top 5 Percent uses DTF technology to produce detailed, full-color custom transfers in Joliet, IL."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What is DTF (direct-to-film) printing?', 'a' => 'DTF printing produces a full-color film transfer that is heat-pressed onto fabric. It works on virtually any material including cotton, polyester, blends, and nylon, and produces vibrant, flexible prints with excellent durability.'],
+        ['q' => 'Is there a minimum order for DTF transfers?', 'a' => 'No. We have no minimum order for DTF transfers. You can order a single transfer or hundreds at any quantity that fits your project.'],
+        ['q' => 'How long do DTF prints last on shirts?', 'a' => 'With proper care, DTF prints last as long as the garment. Wash inside out on cold and tumble dry on low to maximize print life.'],
+        ['q' => 'What garments can you apply DTF transfers to?', 'a' => 'DTF transfers work on cotton, polyester, poly-cotton blends, nylon, and most other fabrics. They also work on hats, bags, and other textile accessories.'],
+        ['q' => 'How is DTF different from screen printing?', 'a' => 'DTF prints full-color photographic designs directly from a digital file with no screens, no setup fees, and no minimums. <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> uses stenciled layers of ink and is more cost-effective at high volumes for simpler designs.'],
+        ['q' => 'How fast can I get DTF transfers in Joliet?', 'a' => 'Many DTF transfer orders are ready same day. Call us at (815) 349-8600 to confirm turnaround for your specific order.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="DTF Transfer FAQs"
         label="DTF Transfers in Joliet, IL"
-        :faqs="[
-            ['q' => 'What is DTF (direct-to-film) printing?', 'a' => 'DTF printing produces a full-color film transfer that is heat-pressed onto fabric. It works on virtually any material including cotton, polyester, blends, and nylon, and produces vibrant, flexible prints with excellent durability.'],
-            ['q' => 'Is there a minimum order for DTF transfers?', 'a' => 'No. We have no minimum order for DTF transfers. You can order a single transfer or hundreds at any quantity that fits your project.'],
-            ['q' => 'How long do DTF prints last on shirts?', 'a' => 'With proper care, DTF prints last as long as the garment. Wash inside out on cold and tumble dry on low to maximize print life.'],
-            ['q' => 'What garments can you apply DTF transfers to?', 'a' => 'DTF transfers work on cotton, polyester, poly-cotton blends, nylon, and most other fabrics. They also work on hats, bags, and other textile accessories.'],
-            ['q' => 'How is DTF different from screen printing?', 'a' => 'DTF prints full-color photographic designs directly from a digital file with no screens, no setup fees, and no minimums. <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> uses stenciled layers of ink and is more cost-effective at high volumes for simpler designs.'],
-            ['q' => 'How fast can I get DTF transfers in Joliet?', 'a' => 'Many DTF transfer orders are ready same day. Call us at (815) 349-8600 to confirm turnaround for your specific order.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

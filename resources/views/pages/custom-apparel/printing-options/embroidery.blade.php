@@ -149,17 +149,20 @@
         label="Custom Embroidery"
         subheading="Embroidery adds a professional, lasting finish to polos, hats, jackets, and more. Watch our team digitize and stitch custom designs with care at our Joliet embroidery shop."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What is custom embroidery?', 'a' => 'Custom embroidery uses a computerized machine to stitch your design directly into fabric using thread. It creates a raised, textured, professional finish that is more durable than most printed alternatives. For full-color prints, see our <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>.'],
+        ['q' => 'What garments can you embroider?', 'a' => 'We embroider polo shirts, dress shirts, t-shirts, hats, caps, jackets, fleece, tote bags, and most other fabric items. Bring your garment or choose from our in-stock blanks.'],
+        ['q' => 'Do you charge extra to digitize my logo for embroidery?', 'a' => 'A one-time digitizing fee may apply to convert your artwork into an embroidery file. Once digitized, your file is on file for future reorders at no additional digitizing charge.'],
+        ['q' => 'Is there a minimum order for custom embroidery?', 'a' => 'No. We have no minimum order. You can embroider a single polo shirt or outfit an entire company uniform program.'],
+        ['q' => 'How do I care for embroidered shirts?', 'a' => 'Wash embroidered garments inside out on cold using a gentle cycle. Avoid high heat in the dryer to preserve thread integrity and shape.'],
+        ['q' => 'How long does a custom embroidery order take?', 'a' => 'Most embroidery orders are completed within one to three business days after design approval. Rush turnaround may be available, call (815) 349-8600 to discuss your timeline.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Custom Embroidery FAQs"
         label="Embroidery in Joliet, IL"
-        :faqs="[
-            ['q' => 'What is custom embroidery?', 'a' => 'Custom embroidery uses a computerized machine to stitch your design directly into fabric using thread. It creates a raised, textured, professional finish that is more durable than most printed alternatives. For full-color prints, see our <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>.'],
-            ['q' => 'What garments can you embroider?', 'a' => 'We embroider polo shirts, dress shirts, t-shirts, hats, caps, jackets, fleece, tote bags, and most other fabric items. Bring your garment or choose from our in-stock blanks.'],
-            ['q' => 'Do you charge extra to digitize my logo for embroidery?', 'a' => 'A one-time digitizing fee may apply to convert your artwork into an embroidery file. Once digitized, your file is on file for future reorders at no additional digitizing charge.'],
-            ['q' => 'Is there a minimum order for custom embroidery?', 'a' => 'No. We have no minimum order. You can embroider a single polo shirt or outfit an entire company uniform program.'],
-            ['q' => 'How do I care for embroidered shirts?', 'a' => 'Wash embroidered garments inside out on cold using a gentle cycle. Avoid high heat in the dryer to preserve thread integrity and shape.'],
-            ['q' => 'How long does a custom embroidery order take?', 'a' => 'Most embroidery orders are completed within one to three business days after design approval. Rush turnaround may be available, call (815) 349-8600 to discuss your timeline.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

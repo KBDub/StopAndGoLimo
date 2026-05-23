@@ -226,17 +226,20 @@
         label="Custom Apparel in Joliet, IL"
         subheading="From screen printing to embroidery, brick shirts to rhinestone designs, watch how Top 5 Percent brings your custom apparel vision to life, right here in Joliet, Illinois."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What custom apparel printing techniques do you offer?', 'a' => 'We offer <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestone</a>, <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a>, flock, foil, holographic, reflective, puff print, glow in the dark, and brick-style printing, one of the widest selections in the Chicagoland area.'],
+        ['q' => 'Is there a minimum order for custom shirts?', 'a' => 'No. We have no minimum order on any custom apparel service. You can order a single shirt or a thousand and receive the same professional quality.'],
+        ['q' => 'How long does it take to get custom shirts in Joliet?', 'a' => 'Many custom shirt orders are available same day or within 24 hours. Turnaround depends on quantity and technique. Call us at (815) 349-8600 to confirm availability for your order.'],
+        ['q' => 'Can you print on hoodies, hats, jackets, and other garments?', 'a' => 'Yes. We print on t-shirts, hoodies, crewnecks, polo shirts, jackets, caps, and many other garments. Bring in your item or choose from our in-stock blanks.'],
+        ['q' => 'What is the difference between DTF printing and screen printing?', 'a' => '<a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF (direct-to-film) transfers</a> produce full-color photographic prints on any fabric with no setup fees, ideal for small runs. <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> uses stenciled ink layers and is more cost-effective for high-volume single-color designs.'],
+        ['q' => 'Do you offer bulk pricing for large custom apparel orders?', 'a' => 'Yes. We offer quantity discounts on larger orders. <a href="/contact" class="link-notification">Contact us</a> for a custom quote based on your quantity, garment type, and printing technique.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Custom Apparel FAQs"
         label="Custom Shirts & Apparel in Joliet, IL"
-        :faqs="[
-            ['q' => 'What custom apparel printing techniques do you offer?', 'a' => 'We offer <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>, <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestone</a>, <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a>, flock, foil, holographic, reflective, puff print, glow in the dark, and brick-style printing, one of the widest selections in the Chicagoland area.'],
-            ['q' => 'Is there a minimum order for custom shirts?', 'a' => 'No. We have no minimum order on any custom apparel service. You can order a single shirt or a thousand and receive the same professional quality.'],
-            ['q' => 'How long does it take to get custom shirts in Joliet?', 'a' => 'Many custom shirt orders are available same day or within 24 hours. Turnaround depends on quantity and technique. Call us at (815) 349-8600 to confirm availability for your order.'],
-            ['q' => 'Can you print on hoodies, hats, jackets, and other garments?', 'a' => 'Yes. We print on t-shirts, hoodies, crewnecks, polo shirts, jackets, caps, and many other garments. Bring in your item or choose from our in-stock blanks.'],
-            ['q' => 'What is the difference between DTF printing and screen printing?', 'a' => '<a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF (direct-to-film) transfers</a> produce full-color photographic prints on any fabric with no setup fees, ideal for small runs. <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> uses stenciled ink layers and is more cost-effective for high-volume single-color designs.'],
-            ['q' => 'Do you offer bulk pricing for large custom apparel orders?', 'a' => 'Yes. We offer quantity discounts on larger orders. <a href="/contact" class="link-notification">Contact us</a> for a custom quote based on your quantity, garment type, and printing technique.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

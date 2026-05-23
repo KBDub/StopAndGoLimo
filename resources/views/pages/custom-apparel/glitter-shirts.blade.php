@@ -149,17 +149,20 @@
         label="Glitter Print Custom Apparel"
         subheading="Custom glitter shirts bring eye-catching sparkle to any event, team, or brand. See how Top 5 Percent applies durable glitter graphics to apparel right here in Joliet, Illinois."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What are glitter shirts?', 'a' => 'Glitter shirts use a glitter-finish heat-transfer vinyl that creates a sparkling, eye-catching design. They are popular for birthday parties, dance teams, bachelorette events, and promotional apparel.'],
+        ['q' => 'Is there a minimum order for glitter shirts?', 'a' => 'No. We have no minimum. Order one shirt for a special occasion or an entire team set.'],
+        ['q' => 'How do I wash glitter shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the glitter finish over time.'],
+        ['q' => 'What glitter colors are available?', 'a' => 'We carry gold, silver, rose gold, black, red, blue, green, and many other glitter vinyl colors. Ask about current stock when you place your order.'],
+        ['q' => 'Can glitter be combined with other print techniques?', 'a' => 'Yes. Glitter vinyl can be layered with standard vinyl, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestones</a>, or flock for a multi-texture custom design.'],
+        ['q' => 'How fast can I get glitter shirts in Joliet?', 'a' => 'Most glitter shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your order.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Glitter Shirt FAQs"
         label="Custom Glitter Shirts in Joliet, IL"
-        :faqs="[
-            ['q' => 'What are glitter shirts?', 'a' => 'Glitter shirts use a glitter-finish heat-transfer vinyl that creates a sparkling, eye-catching design. They are popular for birthday parties, dance teams, bachelorette events, and promotional apparel.'],
-            ['q' => 'Is there a minimum order for glitter shirts?', 'a' => 'No. We have no minimum. Order one shirt for a special occasion or an entire team set.'],
-            ['q' => 'How do I wash glitter shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the glitter finish over time.'],
-            ['q' => 'What glitter colors are available?', 'a' => 'We carry gold, silver, rose gold, black, red, blue, green, and many other glitter vinyl colors. Ask about current stock when you place your order.'],
-            ['q' => 'Can glitter be combined with other print techniques?', 'a' => 'Yes. Glitter vinyl can be layered with standard vinyl, <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestones</a>, or flock for a multi-texture custom design.'],
-            ['q' => 'How fast can I get glitter shirts in Joliet?', 'a' => 'Most glitter shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your order.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

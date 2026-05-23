@@ -149,17 +149,20 @@
         label="Custom Screen Printing"
         subheading="Screen printing delivers sharp, vibrant colors on bulk orders at a price that makes sense. See how Top 5 Percent produces professional screen-printed apparel for businesses, teams, and events in Joliet, IL."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What is screen printing?', 'a' => 'Screen printing pushes ink through a mesh stencil screen directly onto fabric. Each color in the design requires a separate screen. It produces vibrant, long-lasting prints and is the most cost-effective method for high-volume orders.'],
+        ['q' => 'Is there a minimum order for screen printed shirts?', 'a' => 'No. We have no minimum order. We print single shirts and small runs as readily as large bulk orders.'],
+        ['q' => 'How many colors can be screen printed on one shirt?', 'a' => 'We can print multiple colors in a single design. Each additional color adds a screen and setup step. For full-color photographic designs, <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> may be a better option with no screen setup.'],
+        ['q' => 'How durable are screen-printed shirts?', 'a' => 'Screen printing produces thick, durable ink layers that hold up well through years of regular washing when cared for properly. Wash inside out on cold to extend print life.'],
+        ['q' => 'What is the best use case for screen printing?', 'a' => 'Screen printing is most cost-effective for high-volume orders with simple designs and limited colors. For small runs or full-color images, we recommend <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> or <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>.'],
+        ['q' => 'How long does a screen printing order take in Joliet?', 'a' => 'Most screen printing orders are completed within one to three business days. Rush turnaround may be available, call (815) 349-8600 to confirm.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Screen Printing FAQs"
         label="Screen Printing in Joliet, IL"
-        :faqs="[
-            ['q' => 'What is screen printing?', 'a' => 'Screen printing pushes ink through a mesh stencil screen directly onto fabric. Each color in the design requires a separate screen. It produces vibrant, long-lasting prints and is the most cost-effective method for high-volume orders.'],
-            ['q' => 'Is there a minimum order for screen printed shirts?', 'a' => 'No. We have no minimum order. We print single shirts and small runs as readily as large bulk orders.'],
-            ['q' => 'How many colors can be screen printed on one shirt?', 'a' => 'We can print multiple colors in a single design. Each additional color adds a screen and setup step. For full-color photographic designs, <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> may be a better option with no screen setup.'],
-            ['q' => 'How durable are screen-printed shirts?', 'a' => 'Screen printing produces thick, durable ink layers that hold up well through years of regular washing when cared for properly. Wash inside out on cold to extend print life.'],
-            ['q' => 'What is the best use case for screen printing?', 'a' => 'Screen printing is most cost-effective for high-volume orders with simple designs and limited colors. For small runs or full-color images, we recommend <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> or <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>.'],
-            ['q' => 'How long does a screen printing order take in Joliet?', 'a' => 'Most screen printing orders are completed within one to three business days. Rush turnaround may be available, call (815) 349-8600 to confirm.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

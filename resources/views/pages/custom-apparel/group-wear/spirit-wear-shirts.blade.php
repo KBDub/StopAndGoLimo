@@ -180,17 +180,20 @@
         label="Custom Spirit Wear"
         subheading="Spirit wear unites students, staff, and fans with custom designs that represent your school or organization. Watch how Top 5 Percent creates quality spirit wear apparel in Joliet, Illinois."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What is custom spirit wear?', 'a' => 'Spirit wear is branded apparel worn to show support for a school, sports team, organization, or community. It includes t-shirts, hoodies, hats, and other items printed with team colors, mascots, and slogans.'],
+        ['q' => 'Do you make spirit wear for schools and sports teams in Joliet?', 'a' => 'Yes. We produce spirit wear for schools, youth sports teams, travel teams, booster clubs, and community organizations throughout Joliet and Will County.'],
+        ['q' => 'Is there a minimum order for spirit wear?', 'a' => 'No. We have no minimum. You can order individual spirit wear items for specific players or full team sets.'],
+        ['q' => 'Can we sell spirit wear as a fundraiser?', 'a' => 'Yes. We can work with organizations to produce spirit wear for sale at games, events, or through school stores. Contact us to discuss your fundraising program.'],
+        ['q' => 'What printing techniques work best for spirit wear?', 'a' => '<a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> is popular for large uniform runs in simple colors. <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> are great for full-color mascot designs in smaller quantities. We will recommend the best option based on your design and budget.'],
+        ['q' => 'How do I order spirit wear for my school or team?', 'a' => 'Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet. Bring your team logo or mascot design and we will guide you through the options.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Spirit Wear FAQs"
         label="Custom Spirit Wear in Joliet, IL"
-        :faqs="[
-            ['q' => 'What is custom spirit wear?', 'a' => 'Spirit wear is branded apparel worn to show support for a school, sports team, organization, or community. It includes t-shirts, hoodies, hats, and other items printed with team colors, mascots, and slogans.'],
-            ['q' => 'Do you make spirit wear for schools and sports teams in Joliet?', 'a' => 'Yes. We produce spirit wear for schools, youth sports teams, travel teams, booster clubs, and community organizations throughout Joliet and Will County.'],
-            ['q' => 'Is there a minimum order for spirit wear?', 'a' => 'No. We have no minimum. You can order individual spirit wear items for specific players or full team sets.'],
-            ['q' => 'Can we sell spirit wear as a fundraiser?', 'a' => 'Yes. We can work with organizations to produce spirit wear for sale at games, events, or through school stores. Contact us to discuss your fundraising program.'],
-            ['q' => 'What printing techniques work best for spirit wear?', 'a' => '<a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> is popular for large uniform runs in simple colors. <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> are great for full-color mascot designs in smaller quantities. We will recommend the best option based on your design and budget.'],
-            ['q' => 'How do I order spirit wear for my school or team?', 'a' => 'Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet. Bring your team logo or mascot design and we will guide you through the options.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

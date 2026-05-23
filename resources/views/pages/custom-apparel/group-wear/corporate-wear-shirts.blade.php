@@ -174,17 +174,20 @@
         label="Corporate Custom Apparel"
         subheading="Corporate apparel reinforces your brand image every time your team shows up. See how Top 5 Percent outfits businesses across Joliet and the Chicago area with professional custom shirts and polos."
     />
+    @php
+    $pageFaqs = [
+        ['q' => 'What types of corporate apparel do you offer?', 'a' => 'We offer embroidered polo shirts, branded t-shirts, work uniforms, corporate jackets, safety vests, and custom caps. All can be personalized with your company logo or branding.'],
+        ['q' => 'Is embroidery the best option for corporate logos?', 'a' => '<a href="/custom-apparel/printing-options/embroidery" class="link-notification">Embroidery</a> is the most professional and durable option for corporate wear, especially on polo shirts, dress shirts, and jackets. For more colorful or photographic designs, <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> or <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a> may be better suited.'],
+        ['q' => 'Do you offer group pricing for corporate uniform orders?', 'a' => 'Yes. We offer quantity pricing for corporate uniform programs. Contact us for a custom quote based on your garment type, quantity, and branding requirements.'],
+        ['q' => 'Can you match our brand colors exactly?', 'a' => 'We work to match your brand colors as closely as possible using thread for embroidery and Pantone-referenced inks for print. Provide your brand color codes when you place your order.'],
+        ['q' => 'Is there a minimum order for corporate apparel?', 'a' => 'No. We have no minimum. One embroidered polo or fifty branded uniforms, both are welcome.'],
+        ['q' => 'How fast can we get corporate apparel in Joliet?', 'a' => 'Most corporate wear orders are completed within two to five business days. Rush service may be available, call (815) 349-8600 to discuss your timeline.'],
+    ];
+    @endphp
     <x-sections.faq
         heading="Corporate Wear FAQs"
         label="Custom Corporate Apparel in Joliet, IL"
-        :faqs="[
-            ['q' => 'What types of corporate apparel do you offer?', 'a' => 'We offer embroidered polo shirts, branded t-shirts, work uniforms, corporate jackets, safety vests, and custom caps. All can be personalized with your company logo or branding.'],
-            ['q' => 'Is embroidery the best option for corporate logos?', 'a' => '<a href="/custom-apparel/printing-options/embroidery" class="link-notification">Embroidery</a> is the most professional and durable option for corporate wear, especially on polo shirts, dress shirts, and jackets. For more colorful or photographic designs, <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> or <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a> may be better suited.'],
-            ['q' => 'Do you offer group pricing for corporate uniform orders?', 'a' => 'Yes. We offer quantity pricing for corporate uniform programs. Contact us for a custom quote based on your garment type, quantity, and branding requirements.'],
-            ['q' => 'Can you match our brand colors exactly?', 'a' => 'We work to match your brand colors as closely as possible using thread for embroidery and Pantone-referenced inks for print. Provide your brand color codes when you place your order.'],
-            ['q' => 'Is there a minimum order for corporate apparel?', 'a' => 'No. We have no minimum. One embroidered polo or fifty branded uniforms, both are welcome.'],
-            ['q' => 'How fast can we get corporate apparel in Joliet?', 'a' => 'Most corporate wear orders are completed within two to five business days. Rush service may be available, call (815) 349-8600 to discuss your timeline.'],
-        ]"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

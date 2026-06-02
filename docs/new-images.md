@@ -1291,7 +1291,7 @@ Create `public/images/outdoor-signs/` before copying.
 
 ---
 
-#### R2-19. `custom-shirts/` — Specialty / Glitter (8 files)
+#### R2-19. `custom-shirts/` — Specialty / Glitter (7 files)
 
 | Source | Destination |
 |---|---|
@@ -1303,7 +1303,7 @@ Create `public/images/outdoor-signs/` before copying.
 | `glitter-t-shirts-cresthill.jpg` | `top5pct-glitter-t-shirts-cresthill.jpg` |
 | `glitter-t-shirts.jpg` | `top5pct-glitter-t-shirts.jpg` |
 
-> Note: the R1 `custom-glitter-sweatshirts.jpg` collision rename handles the 8th entry; only 7 new filenames appear in this table.
+> Note: `custom-glitter-sweatshirts.jpg` is a collision with an existing R1 file — the existing file is renamed to `-old.jpg` before the new copy lands. All 7 files go to `custom-shirts/`.
 
 ---
 
@@ -1546,7 +1546,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-stitched-embroidered-shirts.jpg`.
+> R2 excess (copied to `custom-shirts/`, no slot assignment): `top5pct-stitched-embroidered-shirts.jpg`.
 
 ---
 
@@ -1583,7 +1583,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-custom-sublimation-shirts.jpg`, `top5pct-dye-sublimation-custom-shirt-joliet.jpg`, `top5pct-long-lasting-graphic-shirts.jpg`, `top5pct-sublmation-team-shirts.jpg`.
+> R2 excess (copied to `custom-shirts/`, no slot assignment): `top5pct-custom-sublimation-shirts.jpg`, `top5pct-dye-sublimation-custom-shirt-joliet.jpg`, `top5pct-long-lasting-graphic-shirts.jpg`, `top5pct-sublmation-team-shirts.jpg`.
 
 ---
 
@@ -1642,7 +1642,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-gitter-birthday-shirt.jpg`.
+> R2 excess (copied to `custom-shirts/`, no slot assignment): `top5pct-gitter-birthday-shirt.jpg`.
 
 ---
 
@@ -1777,7 +1777,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 13 | `card-banner-slide-in` (right→left) | full-width 16:7 | `banners/top5pct-banners-business-joliet-shorewood-crest-hill.jpg` | Keep |
 | 14 | `card-banner-slide-in` (left→right) | full-width 16:7 | `banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-sports-banners.jpg`.
+> R2 excess (copied to `banners/`, no slot assignment): `top5pct-sports-banners.jpg`.
 
 ---
 
@@ -1832,7 +1832,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `window-wall-floor-decals/top5pct-wall-decals-joliet.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-window-signs-joliet.jpg` — collision rename replaces R1 file transparently.
+> R2 excess (copied to `window-wall-floor-decals/`, no slot assignment): `top5pct-window-signs-joliet.jpg` — collision rename replaces R1 file transparently.
 
 ---
 
@@ -1933,7 +1933,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 9 | `card-banner-slide-in` (right→left) | full-width 16:7 | `stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg` | Keep |
 | 10 | `card-banner-slide-in` (left→right) | full-width 16:7 | `stickers-decals/top5pct-stickers-decals-joliet-stoner-rock-bbq.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-die-cut-stickers-joliet.jpg`, `top5pct-die-cut-stickers-shorewood.jpg`.
+> R2 excess (copied to `stickers-decals/`, no slot assignment): `top5pct-die-cut-stickers-joliet.jpg`, `top5pct-die-cut-stickers-shorewood.jpg`.
 
 ---
 
@@ -1998,7 +1998,7 @@ Create `public/images/outdoor-signs/` before copying.
 | 11 | `card-banner-slide-in` (right→left) | full-width 16:7 | `vehicle-magnets/top5pct-car-magnets-vehicle-magnets-joliet.jpg` | Keep |
 | 12 | `card-banner-slide-in` (left→right) | full-width 16:7 | `automobile-graphics/top5pct-car-wraps-vinyl-lettering-joliet-shorewood.jpg` | Keep |
 
-> R2 excess (copied, no slot assignment): `top5pct-joliet-car-magnets.jpg`, `top5pct-magnet-vehicle-signs-joliet.jpg`, `top5pct-truck-sign-magnets-joliet.jpg`, `top5pct-yard-signs-near-me.jpg`.
+> R2 excess (copied to `vehicle-magnets/`, no slot assignment): `top5pct-joliet-car-magnets.jpg`, `top5pct-magnet-vehicle-signs-joliet.jpg`, `top5pct-truck-sign-magnets-joliet.jpg`, `top5pct-yard-signs-near-me.jpg`.
 
 ---
 

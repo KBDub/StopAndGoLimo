@@ -15,7 +15,7 @@
 /custom-apparel/specialty-materials/flock-shirts
 /custom-apparel/specialty-materials/brick-shirts
 /custom-apparel/specialty-materials/holographic-shirts
-/custom-apparel/specialty-materials/oil-shirts
+/custom-apparel/specialty-materials/foil-shirts
 /custom-apparel/specialty-materials/reflective-shirts
 /custom-apparel/specialty-materials/vinyl
 /custom-apparel/specialty-materials/chameleon

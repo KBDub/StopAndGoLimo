@@ -110,8 +110,8 @@
 
             <x-sections.card-detailed-info
                 heading="Top 5 Reasons Car Magnets Can Help Your Business"
-                image1="/images/vehicle-magnets/top5pct-article-car-magnets-truck-magnets.jpg"
-                alt1="Custom car magnets and vehicle magnets printed for businesses in Joliet and Will County Illinois"
+                image1="/images/vehicle-magnets/top5pct-car-decals-white-oaks-library.jpg"
+                alt1="Custom car decals at White Oaks Library in Joliet Illinois"
             >
                 <x-slot name="intro">
                     <p class="mb-4">Vehicle magnets are one of the most practical and affordable ways for a small business to get its name in front of potential customers in the Chicagoland area. They attach to any metal surface on your vehicle, display your business name and contact information clearly, and come off just as easily when you want your vehicle back to its everyday look. We produce custom vehicle magnets for businesses throughout Joliet, Shorewood, Plainfield, Romeoville, and all of Will County, and for businesses that also want branded staff attire to match their vehicle signs our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> team produces coordinating shirts and polos in the same order. Here are the top five reasons car magnets can help your business grow.</p>

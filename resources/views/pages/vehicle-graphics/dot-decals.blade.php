@@ -56,7 +56,7 @@
             ['src' => '/images/dot-decals/top5pct-dot-decals-joliet.jpg', 'alt' => 'DOT decals and USDOT compliance stickers for trucks in Joliet, Shorewood, and Channahon Illinois'],
             ['src' => '/images/dot-decals/top5pct-dot-semi-truck-decals.jpg',         'alt' => 'USDOT number stickers and DOT compliance decals printed in Joliet, Shorewood, and Rockdale Illinois'],
             ['src' => '/images/dot-decals/top5pct-dot-truck-decals-joliet.jpg',           'alt' => 'Print and cut DOT decals and vinyl lettering for trucks in Joliet, Shorewood, and Rockdale Illinois'],
-            ['src' => '/images/dot-decals/top5pct-trucking-logo-joliet-shorewood-crest-hill.jpg',      'alt' => 'Custom trucking company logo and truck branding graphics in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/dot-decals/top5pct-custom-dot-decals-for-trucks-in-joliet.jpg',          'alt' => 'Custom DOT decals for trucks in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/dot-decals/top5pct-DOT-stickers-joliet-shorewood-rockdale.jpg"
-            alt="USDOT number stickers and DOT compliance decals for commercial trucks in Joliet, Shorewood, and Rockdale Illinois"
+            image="/images/dot-decals/top5pct-custom-dot-truck-signs-illinois.jpg"
+            alt="Custom DOT truck signs in Illinois"
             title="USDOT Number Stickers and Compliance Requirements"
         >
             <p class="mb-4">We print USDOT number stickers and DOT compliance decals for commercial vehicle operators throughout Joliet, Shorewood, Rockdale, and Will County. Both owners of Top 5 Percent drove trucks in the military and one still holds a valid CDL Class A license with over 15 years of tractor trailer driving experience. We are not just a print shop that happens to make DOT stickers, and alongside your compliance markings we can produce a complete branded graphics package using our <a href="/vehicle-graphics/automobile-graphics" class="link-notification">automobile graphics</a> team for wraps, lettering, and logo installations. We are a veteran owned business run by people who have personally operated commercial vehicles and understand the compliance requirements that keep truckers on the road and out of trouble with the FMCSA, and for operators who also need a removable sign option for lighter vehicles our <a href="/vehicle-graphics/vehicle-magnets" class="link-notification">vehicle magnets</a> are a great complement to your permanent truck lettering.</p>
@@ -80,8 +80,8 @@
         </x-sections.card-image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/dot-decals/top5pct-dot-decals-joliet-shorewood-rockdale.jpg"
-            alt="Print and cut DOT decals and vinyl lettering for trucks in Joliet, Shorewood, and Rockdale Illinois"
+            image="/images/dot-decals/top5pct-dot-decals-semi-truck.jpg"
+            alt="Custom DOT decals for semi trucks in Joliet Illinois"
             title="Print and Cut Decals with Clean Professional Edges"
             imagePosition="right"
         >
@@ -93,10 +93,10 @@
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text
-            image1="/images/dot-decals/top5pct-trucking-logo-joliet-shorewood-crest-hill.jpg"
-            alt1="Custom trucking company logo design and truck graphics in Joliet, Shorewood, and Crest Hill Illinois"
-            image2="/images/dot-decals/top5pct-trucking-logo-joliet-shorewood-rockdale.jpg"
-            alt2="Trucking logo design and truck branding graphics in Joliet, Shorewood, and Rockdale Illinois"
+            image1="/images/dot-decals/top5pct-dot-lettering-joliet.jpg"
+            alt1="Custom DOT lettering in Joliet Illinois"
+            image2="/images/dot-decals/top5pct-dot-magnets.jpg"
+            alt2="Custom DOT magnets for trucks in Joliet Illinois"
             title="Trucking Logo Design and Truck Branding"
         >
             <p class="mb-4">We design custom trucking logos and truck branding graphics for owner operators and small trucking companies throughout Joliet and Will County who want their equipment to stand out from the roughly 16 million trucks on the road in the United States. When most of those trucks are plain and unbranded, a well designed trucking logo and a clean set of door graphics make your rig immediately memorable to everyone who sees it on the highway. Kids chase after trucks with great graphics trying to get the driver to honk. Adults do double takes on the interstate. That kind of attention translates directly into brand recognition for your company and your operation.</p>
@@ -106,8 +106,8 @@
         </x-sections.card-2image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/dot-decals/top5pct-truck-lettering-joliet-shorewood-rockdale.jpg"
-            alt="Commercial truck lettering and DOT number markings installed in Joliet, Shorewood, and Rockdale Illinois"
+            image="/images/dot-decals/top5pct-trucking-dot-decals-in-joliet.jpg"
+            alt="Custom trucking DOT decals in Joliet Illinois"
             title="MC Numbers, GVWR Markings, and Full Compliance Packages"
         >
             <p class="mb-4">We print and apply full DOT compliance packages for commercial vehicle operators in Joliet, Shorewood, Rockdale, and across Will County. A complete compliance package for a commercial truck typically includes the USDOT number, the MC number for interstate carriers, the company name and principal place of business, the GVWR or gross vehicle weight rating, and in some cases KYU numbers for carriers operating in Kentucky. We are familiar with all of these requirements and we can help you understand exactly what your specific vehicle and operation requires so you are fully compliant and ready to pass any roadside inspection, and for a complete truck branding package that combines compliance markings with your company logo and door graphics our <a href="/vehicle-graphics/automobile-graphics" class="link-notification">automobile graphics</a> team handles the full layout in one visit. If you also need a professional trucking logo built before we print your door graphics, our <a href="/design-services/logo-design" class="link-notification">logo design</a> team creates scalable vector artwork specifically optimized for truck door applications.</p>

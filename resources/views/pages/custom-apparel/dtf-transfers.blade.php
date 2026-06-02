@@ -80,8 +80,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
-        alt="DTF transfers applied to custom shirts and apparel in Joliet Illinois"
+        image="/images/dtf-transfers/top5pct-custom-baby-clothing-joliet.jpg"
+        alt="Custom baby clothing with DTF printing in Joliet Illinois"
         title="The Right Solution for Small Runs and Samples"
         imagePosition="right"
     >
@@ -96,8 +96,8 @@
 
     <x-sections.card-detailed-info
         heading="Why DTF Transfers Are Changing the Way Custom Shirts Are Made"
-        image1="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
-        alt1="Custom DTF direct-to-film transfers printed and applied to apparel in Joliet Illinois"
+        image1="/images/dtf-transfers/top5pct-custom-bowling-shirts-dtf.jpg"
+        alt1="Custom bowling shirts with DTF printing in Joliet Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Direct-to-film printing has fundamentally changed the economics and accessibility of custom apparel production over the past several years. Before DTF became widely available, producing a single custom shirt or a small run of five to ten shirts required either the setup cost of screen printing or the limitations of direct-to-garment (DTG) printing, which requires pre-treatment of the garment and only works reliably on high-cotton fabrics. DTF eliminated both of these constraints, making high-quality full-color custom apparel available in any quantity on any fabric at an accessible price point. For all-over edge-to-edge coverage on polyester, compare to <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>.</p>

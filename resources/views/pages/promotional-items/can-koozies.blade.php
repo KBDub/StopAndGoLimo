@@ -54,8 +54,8 @@
         :images="[
             ['src' => '/images/promo-items/koozies/top5pct-can-koozies.jpg', 'alt' => 'Custom branded promotional products and event giveaways in Joliet Illinois'],
             ['src' => '/images/promo-items/koozies/top5pct-custom-koozies.jpg',                      'alt' => 'Custom promotional items and branded event merchandise in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom branded giveaways and promotional products in Joliet and Will County Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Branded merchandise and custom koozies in Joliet Illinois'],
+            ['src' => '/images/promo-items/koozies/top5pct-custom-can-koozies.jpg',                  'alt' => 'Custom can koozies in Joliet Illinois'],
+            ['src' => '/images/promo-items/koozies/top5pct-koozies-joliet.jpg',                     'alt' => 'Custom koozies in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -68,8 +68,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
-        alt="Custom branded can koozies for events and businesses in Joliet Illinois"
+        image="/images/promo-items/koozies/top5pct-personalized-koozies-joliet.jpg"
+        alt="Custom personalized koozies in Joliet Illinois"
         title="The Perfect Event Giveaway"
     >
         <p class="mb-4">Custom can koozies are one of the most popular and cost-effective promotional giveaways available for events, parties, fundraisers, and corporate outings. They are practical, fun, and used constantly throughout the Chicagoland area at outdoor events, tailgates, golf outings, weddings, family reunions, and community festivals, and for a complete event package they pair perfectly with <a href="/stickers/custom-shaped-stickers-decals" class="link-notification">custom shaped stickers</a> in swag bags for a branded giveaway that travels beyond the event. Every time someone reaches for a cold drink in one of your branded koozies, your logo gets seen by everyone around them, and for sponsors who want more table presence at events our <a href="/signs/table-signs/table-cloths" class="link-notification">custom table cloths</a> extend that branded look across the whole setup.</p>

@@ -54,9 +54,9 @@
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/custom-shirts/top5pct-reflective-shirts-gold.jpg',                   'alt' => 'Custom reflective shirts and high-visibility apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom safety and reflective apparel for businesses in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',                               'alt' => 'Custom reflective and safety shirts for crews in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom high-visibility shirts and safety apparel in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-reflective-hoodies.jpg',                         'alt' => 'Custom reflective hoodies for safety in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-reflective-shirts.jpg',                                'alt' => 'Custom reflective shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-reflective-shirts-shorewood.jpg',                      'alt' => 'Custom reflective shirts in Shorewood Illinois'],
         ]"
         visible=2
     />
@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg"
-        alt="Custom reflective shirts and high-visibility apparel for safety and events in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-reflective-vinyl-shirts-plainfield.jpg"
+        alt="Custom reflective vinyl shirts in Plainfield Illinois"
         title="Visibility That Could Save a Life"
     >
         <p class="mb-4">Reflective vinyl printing applies a specialized material to your shirt that retroreflects light directly back toward its source. In headlight or flashlight conditions, a reflective print appears intensely bright, dramatically more visible than any standard printed design. For workers, cyclists, runners, and anyone operating in or near vehicle traffic during low-light conditions, reflective apparel is not just a style choice, it is a genuine safety measure that increases the visibility of the wearer to drivers who may otherwise not see them in time.</p>

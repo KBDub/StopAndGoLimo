@@ -55,8 +55,8 @@
         :images="[
             ['src' => '/images/custom-shirts/top5pct-custom-glitter-clothing.jpg',                         'alt' => 'Custom glitter shirts and sparkle apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-glitter-sweatshirts.jpg', 'alt' => 'Custom celebration shirts and glitter apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg',                      'alt' => 'Custom glitter and specialty shirts for events in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom glitter heat transfer shirts made in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-wedding-glitter-shirts.jpg',                    'alt' => 'Custom wedding glitter shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-glitter-blue-jean-jacket.jpg',                         'alt' => 'Custom glitter blue jean jacket in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
-        alt="Custom glitter shirts and sparkle apparel for celebrations in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-glitter-lips-custom-t-shirt.jpg"
+        alt="Custom glitter lips design on a t-shirt in Joliet Illinois"
         title="Shirts That Catch Every Light in the Room"
     >
         <p class="mb-4">Custom glitter shirts use glitter heat transfer vinyl, a specialty material embedded with fine metallic glitter particles that catch and reflect light from every angle, making them one of the most eye-catching options in our <a href="/custom-apparel" class="link-notification">custom apparel</a> lineup. When you wear a glitter shirt, your design sparkles and shimmers in a way that draws instant attention, a quality that pairs beautifully with the raised dimension of our <a href="/custom-apparel/specialty-materials/puff-shirts" class="link-notification">puff print shirts</a> when you want a truly layered specialty design. Glitter vinyl is available in gold, silver, rose gold, red, blue, green, and many other colors so you can match your design to your event's color scheme or your brand palette.</p>
@@ -79,8 +79,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
-        alt="Custom glitter and sparkle shirts for events and celebrations in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-glitter-t-shirts-cresthill.jpg"
+        alt="Custom glitter shirts in Cresthill Illinois"
         title="Perfect for Celebrations of Every Kind"
         imagePosition="right"
     >
@@ -95,8 +95,8 @@
 
     <x-sections.card-detailed-info
         heading="Why Glitter Shirts Are the Signature Look for Celebrations in Joliet and Will County"
-        image1="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
-        alt1="Custom glitter shirts and sparkle apparel for celebrations and events in Joliet Illinois"
+        image1="/images/custom-shirts/top5pct-glitter-t-shirts.jpg"
+        alt1="Custom glitter t-shirts in Joliet Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Some events demand more than a standard custom shirt. When the occasion is a milestone birthday, a bachelorette weekend, a <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">family reunion</a> with fifty years of history behind it, or a celebration that the participants have been planning for months, the apparel should match the energy and significance of the moment. Glitter shirts deliver that energy, they sparkle under every light, photograph beautifully, and give a group the visual identity that makes them feel like they are celebrating together rather than just wearing matching clothes.</p>

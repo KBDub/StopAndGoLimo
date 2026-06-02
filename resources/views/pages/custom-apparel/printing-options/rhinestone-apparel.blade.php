@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-rhinestone-hoodies-joliet.jpg',                      'alt' => 'Custom rhinestone shirts and bling apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom celebration shirts and rhinestone apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',                         'alt' => 'Custom bling and sparkle shirts for events in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom rhinestone and specialty shirts made in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-rhinestone-apparel-keith-elementary.jpg',             'alt' => 'Custom rhinestone apparel at Keith Elementary in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-rhinestone-bling-joliet.jpg',                         'alt' => 'Custom rhinestone bling shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-rhinestone-hoodie-joliet-west.jpg',                   'alt' => 'Custom rhinestone hoodie at Joliet West in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-rhinestone-ladies-shirt.jpg',                         'alt' => 'Custom rhinestone ladies shirt in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
-        alt="Custom rhinestone shirts and bling apparel for events in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-rhinestone-t-shirts-joliet.jpg"
+        alt="Custom rhinestone t-shirts in Joliet Illinois"
         title="Crystal Bling That Turns Every Head"
     >
         <p class="mb-4">Custom rhinestone shirts bring a level of sparkle and glamour to custom apparel that no other printing technique can match. Whether you want your name, a team name, or a decorative pattern set in crystals, rhinestone shirts are the preferred choice for anyone who wants to be noticed and celebrated. For a bold, flat sparkle effect at a lower price point, our <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter shirts</a> are a popular alternative that also works beautifully for group events and celebrations.</p>
@@ -79,8 +79,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg"
-        alt="Custom rhinestone designs and bling shirts for celebrations and events in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-custom-rhinestone-shirts.jpg"
+        alt="Custom rhinestone shirts for celebrations and events in Joliet Illinois"
         title="Custom Designs for Any Occasion"
         imagePosition="right"
     >
@@ -95,8 +95,8 @@
 
     <x-sections.card-detailed-info
         heading="Why Custom Rhinestone Shirts Make Every Special Occasion Unforgettable"
-        image1="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg"
-        alt1="Custom rhinestone bling shirts for celebrations and events in Joliet and Will County Illinois"
+        image1="/images/custom-shirts/top5pct-rhinetsone-t-shirts.jpg"
+        alt1="Custom rhinestone t-shirts for events in Joliet and Will County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Special occasions deserve special apparel, and rhinestone shirts are among the most requested items at our <a href="/custom-apparel" class="link-notification">custom apparel shop</a> in Joliet for exactly that reason. The sparkle and glamour of crystal rhinestones elevate a custom shirt from a piece of branded apparel into a genuine keepsake that the recipient associates with a positive, celebratory experience. Long after the event is over, the rhinestone shirt stays in the closet as a reminder of that occasion and the thought that went into making it special.</p>

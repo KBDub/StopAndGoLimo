@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/table-runners/top5pct-custom-table-cloth-joliet-crest-hill.jpg"
-            alt="Custom printed table cloth for a business in Joliet and Crest Hill Illinois"
+            image="/images/table-runners/top5pct-table-runner-joliet.jpg"
+            alt="Custom table runner in Joliet Illinois"
             title="Custom Printed Table Cloths"
         >
             <p class="mb-4">We print custom table cloths for businesses, event organizers, and individuals throughout Joliet and the greater Chicagoland area. A custom printed table cloth is one of the most powerful promotional tools you can bring to a trade show or community event, and it works best when paired with matching <a href="/signs/business-signs/banners" class="link-notification">banners</a> above the table to capture attention from across the room. We print on 100% polyester table cloth material that is lightweight, wrinkle resistant, and machine washable, and for clients who also need branded staff shirts our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> team produces coordinating apparel in the same order.</p>

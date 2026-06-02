@@ -53,10 +53,10 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/posters/top5pct-banner-poster-maker-joliet-romeoville-shorewood.jpg', 'alt' => 'Custom poster printing and large format posters in Joliet, Romeoville, and Shorewood Illinois'],
-            ['src' => '/images/posters/top5pct-poster-printing-joliet-shorewood-romeoville.jpg',     'alt' => 'Full color poster prints made in Joliet, Shorewood, and Romeoville Illinois'],
-            ['src' => '/images/posters/top5pct-poster-maker-joliet-shorewood-plainfield.jpg',        'alt' => 'Large format poster maker in Joliet, Shorewood, and Plainfield Illinois'],
-            ['src' => '/images/posters/top5pct-poster-board-joliet-shorewood-romeoville.jpg',        'alt' => 'Mounted poster board displays printed in Joliet, Shorewood, and Romeoville Illinois'],
+            ['src' => '/images/posters/top5pct-big-posters-joliet.jpg',                             'alt' => 'Custom large posters in Joliet Illinois'],
+            ['src' => '/images/posters/top5pct-custom-posters.jpg',                                 'alt' => 'Custom posters in Joliet Illinois'],
+            ['src' => '/images/posters/top5pct-poster-board-joliet.jpg',                            'alt' => 'Custom poster board in Joliet Illinois'],
+            ['src' => '/images/posters/top5pct-posters-printed-joliet.jpg',                         'alt' => 'Custom posters printed in Joliet Illinois'],
         ]"
         visible=2
     />

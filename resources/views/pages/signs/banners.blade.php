@@ -94,8 +94,8 @@
         <x-sections.card-2image-with-text
             image1="/images/banners/top5pct-retractable-banner.jpg"
             alt1="Custom birthday banner printed in Joliet, Shorewood, and Plainfield Illinois"
-            image2="/images/banners/top5pct-birthday-banners-joliet-shorewood-crest-hill.jpg"
-            alt2="Birthday celebration banners printed in Joliet, Shorewood, and Crest Hill Illinois"
+            image2="/images/banners/top5pct-banners-for-trade-shows.jpg"
+            alt2="Custom banners for trade shows in Joliet Illinois"
             title="Birthday and Celebration Banners"
         >
             <p class="mb-4">We love helping families celebrate the people they love. Custom birthday banners are one of our most popular sign products and for good reason. A personalized banner with your loved one's name and photo turns any venue into a real celebration. We print birthday banners for backyard parties, church halls, restaurant events, and any other gathering where you want to show someone how special they are. We serve families in Joliet, Plainfield, and across Will County with fast turnaround and affordable pricing.</p>
@@ -104,10 +104,10 @@
         </x-sections.card-2image-with-text>
 
         <x-sections.card-2image-with-text
-            image1="/images/banners/top5pct-family-reunion-banners-joliet-crest-hill.jpg"
-            alt1="Family reunion banners printed in Joliet and Crest Hill Illinois"
-            image2="/images/banners/top5pct-team-banners-joliet-shorewood-crest-hill.jpg"
-            alt2="Custom team banners printed in Joliet, Shorewood, and Crest Hill Illinois"
+            image1="/images/banners/top5pct-mesh-construction-banner.jpg"
+            alt1="Custom mesh construction banner in Joliet Illinois"
+            image2="/images/banners/top5pct-portable-banners.jpg"
+            alt2="Custom portable banners in Joliet Illinois"
             title="Reunion and Team Banners"
         >
             <p class="mb-4">We print reunion and team banners for groups throughout the Chicagoland area. Whether you are organizing a family reunion in a Joliet park, a class reunion at a local venue, or a youth sports season kickoff, a custom banner brings your group together and makes the occasion feel official. We work with reunion organizers, coaches, club directors, and parent organizations to create banners that represent the group and set the tone for the event.</p>
@@ -120,8 +120,8 @@
 
             <x-sections.card-detailed-info
                 heading="Why Vinyl Banners Are Great for Your Business or Special Event"
-                image1="/images/banners/top5pct-article-vinyl-banners-pic1.jpg"
-                alt1="Custom vinyl banners printed for businesses and events in Joliet and Will County Illinois"
+                image1="/images/banners/top5pct-retractable-banners-plainfield.jpg"
+                alt1="Custom retractable banners in Plainfield Illinois"
             >
                 <x-slot name="intro">
                     <p class="mb-4">Vinyl banners are one of the most cost effective and versatile promotional tools available to businesses and event organizers in the Chicagoland area. We have produced thousands of custom vinyl banners for businesses, schools, community organizations, and event planners throughout Joliet, Shorewood, Plainfield, Lockport, and all of Will County, and many of those clients also ordered matching <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> to complete their outdoor signage package. Whether you are promoting a grand opening, announcing a sale, advertising an event, or building brand visibility at a trade show, a well printed banner gets the job done at a price that makes sense for almost any budget.</p>

@@ -53,7 +53,7 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg',                     'alt' => 'Custom holographic shirts with color-shifting prismatic prints in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-holographic-vinyl-hoodie-foil.jpg',                           'alt' => 'Custom holographic vinyl hoodie with foil effect in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom specialty apparel and holographic shirts in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg',                         'alt' => 'Custom holographic and foil specialty shirts in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom holographic prismatic shirts made in Joliet and Will County Illinois'],

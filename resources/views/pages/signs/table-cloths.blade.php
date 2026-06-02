@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg"
-        alt="Custom branded table cloths and table covers for events and trade shows in Joliet Illinois"
+        image="/images/table-runners/top5pct-custom-table-cloth-business.jpg"
+        alt="Custom branded table cloths for businesses in Joliet Illinois"
         title="Look Professional at Every Event"
     >
         <p class="mb-4">A custom branded table cloth is one of the simplest and most effective ways to make your booth or display table look professional at any event, and it pairs naturally with a matching <a href="/signs/business-signs/banners" class="link-notification">retractable banner</a> behind your table to build a complete, branded trade show setup. When you walk into a trade show, farmers market, community fair, or corporate event and your table is covered with a clean, full-color branded cloth that features your logo, colors, and contact information, you immediately project a level of professionalism and credibility that a plain table or a basic white cloth simply cannot achieve. We produce custom table cloths for businesses and organizations throughout Joliet, Shorewood, Plainfield, and Will County, and for clients who also want their staff dressed to match their display our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> team produces coordinating shirts and polos in the same order.</p>
@@ -80,8 +80,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/table-runners/top5pct-custom-table-runner-joliet-shorewood.jpg"
-        alt="Custom branded table runners and table covers for events in Joliet and Shorewood Illinois"
+        image="/images/table-runners/top5pct-printed-table-cloths.jpg"
+        alt="Custom printed table cloths in Joliet Illinois"
         title="Fitted, Throw, and Stretch Styles Available"
         imagePosition="right"
     >

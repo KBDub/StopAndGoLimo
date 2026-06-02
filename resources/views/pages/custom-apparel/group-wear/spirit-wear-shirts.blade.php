@@ -54,8 +54,8 @@
         :images="[
             ['src' => '/images/spirit-wear/top5pct-spirit-wear-joliet.jpg', 'alt' => 'Custom spirit wear and fan wear for schools in Joliet and Shorewood Illinois'],
             ['src' => '/images/spirit-wear/top5pct-spirit-wear-shirts.jpg',            'alt' => 'Joliet West spirit wear hoodie printed in Shorewood Illinois'],
-            ['src' => '/images/spirit-wear/top5pct-spiritwear-fanwear-joliet-plainfield-shorewood.jpg',      'alt' => 'Custom fan wear and spirit wear in Joliet, Plainfield, and Shorewood Illinois'],
-            ['src' => '/images/spirit-wear/top5pct-bowling-shirts-joliet-shorewood-crest-hill.jpg',          'alt' => 'Custom bowling league shirts in Joliet, Shorewood, and Crest Hill Illinois'],
+            ['src' => '/images/spirit-wear/top5pct-spirit-wear-clothing.jpg',                              'alt' => 'Custom spirit wear clothing in Joliet Illinois'],
+            ['src' => '/images/spirit-wear/top5pct-volleyball-team-uniforms-joliet.jpg',                    'alt' => 'Custom volleyball team uniforms in Joliet Illinois'],
         ]"
         visible=2
     />

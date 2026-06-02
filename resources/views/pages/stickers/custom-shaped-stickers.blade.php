@@ -97,8 +97,8 @@
 
     <x-sections.card-detailed-info
         heading="Why Custom Shaped Stickers Work"
-        image1="/images/stickers-decals/top5pct-article-buy-stickers-decals-joliet.jpg"
-        alt1="Custom shaped stickers and die cut decals from Top 5 Percent in Joliet Illinois"
+        image1="/images/stickers-decals/top5pct-custom-shaped-stickers-cresthill.jpg"
+        alt1="Custom shaped stickers in Crest Hill Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Custom shaped stickers are one of the most effective and affordable branding tools available to small businesses, organizations, and individuals. A die cut sticker that follows the shape of your logo or mascot immediately communicates a level of polish and intentionality that a standard rectangle sticker cannot match, and they pair naturally with our <a href="/promotional-items" class="link-notification">promotional items</a> in event bags and brand kits for a complete branded giveaway experience. When someone sees a perfectly cut sticker of your brand sitting on a laptop, a water bottle, or a car bumper, it registers as a deliberate brand moment rather than just a label.</p>

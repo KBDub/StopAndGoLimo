@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
-            image="/images/sidewalk-signs/top5pct-a-frame-sidewalk-sign-joliet.jpg"
-            alt="Custom a frame sidewalk sign printed and built in Joliet Illinois"
+            image="/images/sidewalk-signs/top5pct-a-frame-sidewalk-signs.jpg"
+            alt="Custom a frame sidewalk signs in Joliet Illinois"
             title="A Frame Signs for Your Business"
         >
             <p class="mb-4">We build and print a frame signs that draw foot traffic right to your front door. When you place a sidewalk sign on the curb outside your business, you are advertising to everyone who walks or drives by. Retailers use them to drive impulse visits from people who were not planning to stop but could not resist the offer on the sign, and many of our retail clients pair their sidewalk A-frame with matching <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> to create a consistent brand message from the curb to the entrance. We work with business owners throughout Joliet, Shorewood, Romeoville, and Crest Hill to create sidewalk signs that work hard every single day, and for clients who need yard sign coverage further down the block our <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> extend your street presence beyond the immediate front door.</p>
@@ -80,8 +80,8 @@
         </x-sections.card-image-with-text>
 
         <x-sections.card-image-with-text
-            image="/images/sidewalk-signs/top5pct-sidewalk-a-frames-joliet-shorewood.jpg"
-            alt="A frame sidewalk signs displayed outside businesses in Joliet and Shorewood Illinois"
+            image="/images/sidewalk-signs/top5pct-sidewalk-signage.jpg"
+            alt="Custom sidewalk signage for businesses in Joliet Illinois"
             title="Sidewalk Signs for Events"
             imagePosition="right"
         >

@@ -53,9 +53,9 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom puff print shirts and 3D raised apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg',                         'alt' => 'Custom 3D puff print shirts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-pattern-shirts-caps-hoodies-joliet.jpg',                      'alt' => 'Premium custom puff print shirts for brands in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-puff-shirts.jpg',                              'alt' => 'Custom puff print shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-puff-shirts-joliet.jpg',                               'alt' => 'Custom puff shirts in Joliet Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-puff-shirts.jpg',                                      'alt' => 'Custom puff print apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom apparel and puff print shirts made in Joliet Illinois'],
         ]"
         visible=2

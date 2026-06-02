@@ -54,9 +54,9 @@
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/window-wall-floor-decals/top5pct-door-signage.jpg', 'alt' => 'Custom door signs and door graphics for businesses in Joliet, Shorewood, and Crest Hill Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg',    'alt' => 'Custom door graphics and window signs for businesses in Joliet Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg', 'alt' => 'Custom door vinyl and window decals in Joliet, Shorewood, and Rockdale Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg',    'alt' => 'Custom door clings and window graphics for businesses in Joliet and Shorewood Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-business-door-signs.jpg',                   'alt' => 'Custom business door signs in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-door-sign-installers.jpg',                  'alt' => 'Custom door sign installation in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-door-wraps-joliet.jpg',                     'alt' => 'Custom door wraps in Joliet Illinois'],
         ]"
         visible=2
     />
@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/window-wall-floor-decals/top5pct-window-decal-joliet-shorewood-rockdale.jpg"
-        alt="Custom door signs for businesses in Joliet, Shorewood, and Rockdale Illinois"
+        image="/images/window-wall-floor-decals/top5pct-vinyl-door-lettering.jpg"
+        alt="Custom vinyl door lettering for businesses in Joliet Illinois"
         title="Professional Door Graphics That Make an Impression"
     >
         <p class="mb-4">Your front door is one of the first physical brand touchpoints your customers encounter. A professional door graphic with your business name, logo, hours, phone number, and any other relevant details communicates that you are organized and established, and it works best when it matches the <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> on the rest of your storefront glass. We produce custom door signs for businesses of every type throughout Joliet, Shorewood, Crest Hill, and Will County, and for clients who want complete interior coverage our <a href="/signs/business-signs/wall-signs" class="link-notification">wall signs</a> carry the same design language from the entrance all the way to the back of the space.</p>
@@ -80,8 +80,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg"
-        alt="Custom frosted vinyl and privacy door graphics for businesses in Joliet Illinois"
+        image="/images/window-wall-floor-decals/top5pct-vinyl-door-signs.jpg"
+        alt="Custom vinyl door signs for businesses in Joliet Illinois"
         title="Frosted, Perforated, and Full-Color Options"
         imagePosition="right"
     >

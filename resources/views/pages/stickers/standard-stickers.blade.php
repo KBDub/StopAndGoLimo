@@ -53,7 +53,7 @@
 
     <x-ui.carousel-rotating-images
         :images="[
-            ['src' => '/images/stickers-decals/top5pct-banner-stickers-decals-joliet.jpg',          'alt' => 'Custom stickers and decals printed in Joliet Illinois'],
+            ['src' => '/images/stickers-decals/top5pct-custom-stickers-cresthill.jpg',               'alt' => 'Custom stickers in Crest Hill Illinois'],
             ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-beer-brewery.jpg',    'alt' => 'Custom business stickers and decals printed for a brewery in Joliet Illinois'],
             ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-boxing-sports.jpg',   'alt' => 'Custom sports stickers and decals for a boxing gym in Joliet Illinois'],
             ['src' => '/images/stickers-decals/top5pct-stickers-decals-joliet-labels.jpg',          'alt' => 'Custom product labels and branded stickers printed in Joliet Illinois'],

@@ -54,7 +54,7 @@
     <x-ui.carousel-rotating-images
         :images="[
             ['src' => '/images/window-wall-floor-decals/top5pct-wall-signs.jpg',             'alt' => 'Custom wall signs and wall graphics for businesses in Joliet Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-wall-decals-joliet.jpg',             'alt' => 'Custom wall decals and branded wall graphics installed in Joliet Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-wall-wraps.jpg',                    'alt' => 'Custom wall wraps for businesses in Joliet Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg',      'alt' => 'Office murals and lobby wall graphics in Joliet and Will County Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg', 'alt' => 'Wall decals and door signs for businesses in Joliet Illinois'],
         ]"

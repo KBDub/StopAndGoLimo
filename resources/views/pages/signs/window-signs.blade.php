@@ -79,8 +79,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/window-wall-floor-decals/top5pct-window-cling-decal-joliet-shorewood.jpg"
-        alt="Window clings and temporary window graphics for events in Joliet Illinois"
+        image="/images/window-wall-floor-decals/top5pct-joliet-slammers-window-signs-joliet.jpg"
+        alt="Custom window signs at Joliet Slammers stadium in Joliet Illinois"
         title="Perforated Vinyl and Window Clings"
         imagePosition="right"
     >
@@ -95,8 +95,8 @@
 
     <x-sections.card-detailed-info
         heading="How Window Graphics Give Your Business a Professional, Polished Storefront"
-        image1="/images/window-wall-floor-decals/top5pct-window-decals-joliet-shorewood-crest-hill.jpg"
-        alt1="Custom window graphics and window decals installed in Joliet, Shorewood, and Crest Hill Illinois"
+        image1="/images/window-wall-floor-decals/top5pct-window-signage.jpg"
+        alt1="Custom window signage for businesses in Joliet Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Your storefront windows are one of the most powerful and underutilized marketing surfaces your business has. Every person who walks or drives past your location sees your windows, which means window graphics are a constant, passive advertisement for your business that never stops working, much like the <a href="/signs/business-signs/banners" class="link-notification">outdoor banners</a> we print for storefronts throughout Will County. A well-executed window display communicates your brand identity, your product offerings, your business hours, and your personality to everyone in your immediate area, all without spending anything beyond the initial installation cost.</p>

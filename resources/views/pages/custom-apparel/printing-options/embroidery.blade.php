@@ -69,8 +69,8 @@
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
-        alt="Custom embroidery shirts and embroidered apparel for businesses in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-embroidered-bag.jpg"
+        alt="Custom embroidered bag with machine embroidery in Joliet Illinois"
         title="The Most Professional Look in Custom Apparel"
     >
         <p class="mb-4">Machine embroidery is the gold standard for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate and professional custom apparel</a>. Unlike <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">printed decorations</a> that sit on the surface of a garment, embroidery stitches your logo, name, or design directly into the fabric using precision machine needles and colored thread. The result is a raised, textured design that communicates quality, permanence, and professionalism in a way that printed apparel simply cannot match. When your employees or team members wear embroidered shirts, the embroidered logo signals that your brand takes itself seriously.</p>
@@ -79,8 +79,8 @@
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
-        image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
-        alt="Custom embroidered corporate uniforms and branded polos in Joliet Illinois"
+        image="/images/custom-shirts/top5pct-embroidered-smocks.jpg"
+        alt="Custom embroidered smocks and work apparel in Joliet Illinois"
         title="Corporate Uniforms, Caps, and Accessories"
         imagePosition="right"
     >
@@ -95,8 +95,8 @@
 
     <x-sections.card-detailed-info
         heading="Why Embroidery Is the Right Choice for Professional and Corporate Apparel"
-        image1="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg"
-        alt1="Custom embroidery for corporate apparel and professional uniforms in Joliet and Will County Illinois"
+        image1="/images/custom-shirts/top5pct-embroidery-beanies.jpg"
+        alt1="Custom embroidered beanies and hats in Joliet Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Embroidery has been the mark of quality and professionalism in branded apparel for generations, and for good reason. The raised, textured quality of a machine-embroidered logo communicates craftsmanship in a way that no print process can replicate, setting it apart from <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF printing</a> and vinyl heat transfer methods. For businesses that want their team to project confidence and credibility, embroidered apparel is the investment that makes a visible difference in how clients, customers, and partners perceive your brand.</p>

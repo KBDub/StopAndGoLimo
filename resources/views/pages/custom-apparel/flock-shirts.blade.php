@@ -150,17 +150,20 @@
         label="Flock Print Apparel"
         subheading="Flock printing adds a raised, velvet-like texture to custom apparel that's unmistakable to the touch. See how Top 5 Percent applies flock designs to shirts, hoodies, and caps in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Flock Shirt FAQs"
-        label="Custom Flock Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What is flock printing on shirts?', 'a' => 'Flock printing applies tiny textile fibers to an adhesive design, creating a soft, velvet-like texture on your shirt. It gives a premium, raised tactile finish that stands out visually and to the touch.'],
             ['q' => 'Is there a minimum order for flock shirts?', 'a' => 'No. We have no minimum. You can order one flock shirt or a full set for your team or organization.'],
             ['q' => 'How do I wash flock-printed shirts?', 'a' => 'Wash flock shirts inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the velvet texture.'],
             ['q' => 'What colors of flock are available?', 'a' => 'We carry a range of flock colors. Ask us about current inventory when you place your order and we will show you available swatches.'],
             ['q' => 'Can flock be combined with other print techniques on the same shirt?', 'a' => 'Yes. Flock works well layered with rhinestones, glitter vinyl, or standard vinyl lettering for a multi-texture custom design.'],
             ['q' => 'How fast can I get flock shirts in Joliet?', 'a' => 'Most flock shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your design.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Flock Shirt FAQs"
+        label="Custom Flock Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

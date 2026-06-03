@@ -149,17 +149,20 @@
         label="Custom Wall Signs & Graphics"
         subheading="Wall signs and graphics reinforce your brand in offices, retail spaces, lobbies, and showrooms. See how Top 5 Percent produces professional wall graphics and mounted signage in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Wall Sign FAQs"
-        label="Custom Wall Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of custom wall signs do you produce?', 'a' => 'We produce vinyl wall decals, full-color wall wraps, mounted rigid wall signs, and dimensional lettering for interior commercial spaces throughout Joliet, Will and DuPage County.'],
             ['q' => 'Will wall decals damage painted walls?', 'a' => 'When applied and removed properly, quality vinyl wall decals should not damage painted drywall. We use adhesives appropriate for the surface type and age of paint.'],
             ['q' => 'Can you wrap an entire wall with a custom graphic?', 'a' => 'Yes. We produce large-format wall wraps that cover entire wall sections with photographic or branded imagery. This is popular for office lobbies, retail stores, and event venues.'],
             ['q' => 'What wall surfaces can decals be applied to?', 'a' => 'Vinyl decals work on smooth painted drywall, glass, concrete, brick, and most other interior wall surfaces. Heavily textured walls may require a different adhesive solution.'],
             ['q' => 'Is there a minimum order for wall signs?', 'a' => 'No. We have no minimum. One wall decal or a full wall wrap installation, both are welcome.'],
             ['q' => 'How fast can I get wall signs in Joliet?', 'a' => 'Most wall sign orders are completed within one to two business days. Installation scheduling may add time. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to plan your project.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Wall Sign FAQs"
+        label="Custom Wall Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

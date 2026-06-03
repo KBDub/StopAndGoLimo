@@ -150,17 +150,20 @@
         label="Foil Print Custom Shirts"
         subheading="Foil printing delivers a metallic, high-shine finish that makes logos and designs pop. Watch how we apply custom foil graphics to shirts, hoodies, and caps at our Joliet print shop."
     />
-    <x-sections.faq
-        heading="Foil Shirt FAQs"
-        label="Custom Foil Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are foil shirts?', 'a' => 'Foil shirts use a metallic foil film heat-pressed onto fabric to create a mirror-finish, highly reflective design. Gold, silver, and color foil options are available.'],
             ['q' => 'Is there a minimum order for foil shirts?', 'a' => 'No. We have no minimum. One foil shirt for a gift or a hundred for an event, the quality is the same.'],
             ['q' => 'How do I care for foil-printed shirts?', 'a' => 'Wash foil shirts inside out on cold, gentle cycle, and tumble dry on low or air dry. Avoid ironing directly on the foil area.'],
             ['q' => 'What foil colors do you offer?', 'a' => 'We offer gold, silver, rose gold, holographic, and various color foils. Ask to see available options when you place your order.'],
             ['q' => 'Can foil be combined with other print techniques?', 'a' => 'Yes. Foil pairs well with glitter, rhinestones, and standard vinyl for layered, multi-finish custom shirts.'],
             ['q' => 'How fast can I get foil shirts in Joliet?', 'a' => 'Most foil shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Foil Shirt FAQs"
+        label="Custom Foil Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

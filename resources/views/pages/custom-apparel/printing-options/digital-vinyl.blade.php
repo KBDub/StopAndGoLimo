@@ -174,17 +174,20 @@
         label="Digital Vinyl Printing"
         subheading="Digital vinyl lets us put photographic quality, full color artwork on shirts, hoodies, hats, and more. See how Top 5 Percent creates digital vinyl apparel for businesses and individuals in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Digital Vinyl FAQs"
-        label="Digital Vinyl Printing in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What is digital vinyl printing?', 'a' => 'Digital vinyl printing is a process where your design is printed in full color onto a special vinyl film, which is then cut to shape and heat pressed onto a garment. It allows photographic quality and unlimited colors on shirts, hoodies, hats, and more.'],
             ['q' => 'How is digital vinyl different from regular cut vinyl?', 'a' => 'Standard cut vinyl is a solid color film cut into shapes. Digital vinyl is printed in full color before being applied, which allows gradients, photos, and complex multi-color artwork that standard cut vinyl cannot produce.'],
             ['q' => 'Can digital vinyl be applied to dark colored shirts?', 'a' => 'Yes. Because the design is printed on a film and then applied to the garment, digital vinyl works on dark and light colored fabrics alike. Your colors will show up clearly regardless of the shirt color underneath.'],
             ['q' => 'Is there a minimum order quantity for digital vinyl?', 'a' => 'No. We press digital vinyl orders starting from a single piece. There are no minimum order requirements, making it a great option for custom one-off items, samples, and small batch orders.'],
             ['q' => 'How long does digital vinyl last on a shirt?', 'a' => 'With proper care, digital vinyl holds up well through years of regular washing. We recommend washing inside out in warm water and avoiding high heat in the dryer to keep the design looking its best.'],
             ['q' => 'What file format should I submit for a digital vinyl order?', 'a' => 'We prefer vector files such as AI, EPS, or PDF for the sharpest results. High resolution PNG or JPG files also work well. If you only have a low resolution file, contact us and we can discuss your options.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Digital Vinyl FAQs"
+        label="Digital Vinyl Printing in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

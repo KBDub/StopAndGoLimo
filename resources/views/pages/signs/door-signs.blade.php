@@ -151,17 +151,20 @@
         label="Custom Door Signs"
         subheading="Door signs set the tone for every visitor who walks through your entrance. Watch how Top 5 Percent produces custom door signs for offices, retail spaces, and facilities in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Door Sign FAQs"
-        label="Custom Door Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of door signs do you produce?', 'a' => 'We produce full-color door vinyl, frosted privacy film, perforated see-through film, and printed door decals for commercial doors and glass entrances.'],
             ['q' => 'Do door graphics work on glass doors?', 'a' => 'Yes. We specialize in glass door graphics including hours of operation decals, frosted privacy film, and full-color printed window films for retail storefronts and office buildings.'],
             ['q' => 'How long do door decals last?', 'a' => 'Quality door decals applied to clean, smooth surfaces last two to five years indoors. Outdoor door graphics are laminated for UV and weather resistance.'],
             ['q' => 'Will door decals damage my glass door?', 'a' => 'No. Professionally applied vinyl decals can be removed cleanly from glass without damage. We use commercial-grade vinyl that adheres firmly without leaving residue on removal.'],
             ['q' => 'Is there a minimum order for door signs?', 'a' => 'No. We have no minimum. One door decal or signage for every door in your building, both welcome.'],
             ['q' => 'How fast can I get door signs in Joliet?', 'a' => 'Most door sign orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Door Sign FAQs"
+        label="Custom Door Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

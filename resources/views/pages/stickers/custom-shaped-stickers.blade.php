@@ -152,17 +152,20 @@
         label="Custom Die-Cut Stickers"
         subheading="Custom shaped stickers are cut to the exact outline of your design for a clean, professional look. Watch how Top 5 Percent produces precision die-cut stickers for brands and businesses in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Custom Shaped Sticker FAQs"
-        label="Die-Cut Custom Stickers in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are custom shaped (die-cut) stickers?', 'a' => 'Die-cut stickers are cut to the exact outline of your artwork rather than into a standard rectangle or circle. The result is a premium sticker with no visible border that makes your brand look polished and professional.'],
             ['q' => 'Can you cut any shape?', 'a' => 'Yes. We can cut stickers to the precise outline of any design including logos, characters, irregular shapes, and complex illustrations. Provide your artwork and we will handle the cutting path.'],
             ['q' => 'Are die-cut stickers more expensive than standard stickers?', 'a' => 'Die-cut stickers require an additional cutting step but the price difference is minimal. Contact us for a quote based on your design and quantity.'],
             ['q' => 'Are die-cut stickers weatherproof?', 'a' => 'Yes. Our die-cut stickers are printed on waterproof vinyl with UV-resistant inks and are durable for outdoor surfaces, vehicle windows, water bottles, and other exposed applications.'],
             ['q' => 'Is there a minimum order for die-cut stickers?', 'a' => 'No. We have no minimum. Order one die-cut sticker or thousands for a product line or marketing campaign.'],
             ['q' => 'How fast can I get custom shaped stickers in Joliet?', 'a' => 'Most die-cut sticker orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm turnaround.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Custom Shaped Sticker FAQs"
+        label="Die-Cut Custom Stickers in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

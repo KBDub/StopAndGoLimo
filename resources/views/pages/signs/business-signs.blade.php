@@ -150,17 +150,20 @@
         label="Custom Business Signs"
         subheading="The right business sign makes your location easy to find and your brand impossible to forget. See how Top 5 Percent produces custom indoor and outdoor business signs in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Business Sign FAQs"
-        label="Custom Business Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of business signs do you make in Joliet?', 'a' => 'We produce storefront signs, outdoor business signs, window graphics, door signs, wall signs, sidewalk signs, and interior directional signs for businesses throughout Joliet, Will and DuPage County.'],
             ['q' => 'What materials do you use for business signs?', 'a' => 'We use UV-rated vinyl on aluminum composite, corrugated plastic, foamboard, and rigid substrates depending on the application. Indoor vs. outdoor requirements and mounting method determine the right material.'],
             ['q' => 'Do you help design business signs?', 'a' => 'Yes. Free design assistance is included with every sign order. We will build your sign layout from your logo, brand colors, and direction, no design skills required.'],
             ['q' => 'How long do outdoor business signs last?', 'a' => 'Outdoor business signs printed on UV-rated materials and properly installed typically last three to five years. We use inks and laminates rated for extended outdoor exposure.'],
             ['q' => 'Can you make a sign for my storefront window?', 'a' => 'Yes. We print perforated window film, solid vinyl window graphics, and full-color window decals for retail storefronts and office buildings throughout Joliet.'],
             ['q' => 'How fast can I get business signs in Joliet?', 'a' => 'Many business sign orders are completed within one to two business days. Same-day service is available on select products. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your project.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Business Sign FAQs"
+        label="Custom Business Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

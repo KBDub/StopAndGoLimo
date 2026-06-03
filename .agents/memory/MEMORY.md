@@ -1,1 +1,2 @@
 - [Laravel 12 upgrade & Blade JSON-LD fix](laravel12-blade-jsonld.md) — L12 Blade compiler treats "@context"/"@type"/"@id" in JSON-LD as directives; static blocks need @verbatim, dynamic blocks need @@ escaping.
+- [Blade inline array attributes with double quotes](blade-array-attr-quotes.md) — passing :prop="[...html...]" breaks when array values contain HTML with double quotes; use @php block instead.

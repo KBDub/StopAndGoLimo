@@ -115,17 +115,20 @@
         label="Custom T-Shirts & Apparel"
         subheading="Explore the craftsmanship behind every custom shirt we produce. Top 5 Percent offers the widest range of shirt decoration techniques in the Joliet area — from heat transfers to embroidery and beyond."
     />
-    <x-sections.faq
-        heading="Custom T-Shirt FAQs"
-        label="Custom T-Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What custom t-shirt printing options do you offer in Joliet?', 'a' => 'We offer rhinestone, heat-transfer vinyl, DTF transfers, screen printing, embroidery, dye sublimation, glitter, foil, flock, holographic, reflective, puff print, glow in the dark, and brick-style printing — all on one location at 121 Springfield Avenue in Joliet.'],
             ['q' => 'Is there a minimum order for custom t-shirts?', 'a' => 'No. We have no minimum on any custom shirt order. You can order a single shirt for a gift or bulk quantities for a company uniform program and receive the same professional quality either way.'],
             ['q' => 'How fast can I get custom t-shirts in Joliet?', 'a' => 'Many custom shirt styles are available same day or within 24 hours. Call us at (815) 349-8600 before coming in to confirm availability based on your design and quantity.'],
             ['q' => 'Can I bring my own shirt to be printed?', 'a' => 'Yes. We can print on garments you provide as long as they are clean, appropriate for the printing technique chosen, and made of a compatible fabric. Call us ahead of time to confirm suitability.'],
             ['q' => 'What is the best printing technique for my custom shirt?', 'a' => 'It depends on your design and garment type. DTF is best for full-color photographic prints with no minimums. Screen printing is best for high-volume single-color jobs. Embroidery is best for a professional, textured look. We will recommend the right technique when you come in.'],
             ['q' => 'Can I see a proof before my shirt order goes to production?', 'a' => 'Yes. We provide a design proof for approval before every custom shirt order goes to print. Nothing goes to press until you sign off on the design.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Custom T-Shirt FAQs"
+        label="Custom T-Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

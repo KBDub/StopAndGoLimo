@@ -179,17 +179,20 @@
         label="Standard Custom Stickers"
         subheading="Standard rectangle and square stickers deliver maximum branding at a budget-friendly price. See how Top 5 Percent produces crisp, full-color custom stickers for businesses in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Standard Sticker FAQs"
-        label="Custom Standard Stickers in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What shapes are available for standard stickers?', 'a' => 'Standard stickers are available in rectangle, square, circle, and oval shapes, the most common options for business labels, promotional stickers, and event giveaways.'],
             ['q' => 'Are your standard stickers weatherproof?', 'a' => 'Yes. We print on premium adhesive vinyl with UV-resistant, waterproof inks. Our stickers hold up outdoors, on vehicles, and on water bottles.'],
             ['q' => 'What is the minimum order for standard stickers?', 'a' => 'There is no minimum order. You can order as few as one sticker or as many as several thousand for a product launch or marketing campaign.'],
             ['q' => 'What sizes do standard stickers come in?', 'a' => 'We print standard stickers in any size from 1x1 inches up to large-format decal sizes. Tell us your target size and we will confirm production feasibility.'],
             ['q' => 'How fast can I get standard stickers in Joliet?', 'a' => 'Most standard sticker orders are completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm turnaround for your quantity and design.'],
             ['q' => 'Can you print stickers from my logo file?', 'a' => 'Yes. Provide your logo in a high-resolution format (AI, EPS, PDF, or 300 DPI PNG/JPG) and we will set it up for sticker production. We can also recreate or clean up artwork if needed.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Standard Sticker FAQs"
+        label="Custom Standard Stickers in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

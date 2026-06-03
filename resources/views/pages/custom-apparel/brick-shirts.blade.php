@@ -150,17 +150,20 @@
         label="Brick-Style Custom Shirts"
         subheading="Brick-style printing creates a textured, three-dimensional effect that truly stands out. Watch how our team produces this unique look on custom shirts, hoodies, and caps at our Joliet print shop."
     />
-    <x-sections.faq
-        heading="Brick Shirt FAQs"
-        label="Custom Brick Print Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What is brick-style printing on shirts?', 'a' => 'Brick printing uses a textured vinyl with a dimensional, raised surface pattern that resembles brick, leather, or other 3D materials. It creates a unique look that stands out from standard flat prints.'],
             ['q' => 'Is there a minimum order for brick shirts?', 'a' => 'No. We have no minimum on brick shirt orders.'],
             ['q' => 'What designs work best with brick vinyl?', 'a' => 'Large bold text and simple block shapes show off the brick texture best. The dimensional pattern becomes the visual star of the design.'],
             ['q' => 'How do I care for brick-printed shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the textured vinyl surface.'],
             ['q' => 'Can brick vinyl be combined with other print techniques?', 'a' => 'Yes. Brick vinyl pairs well with standard vinyl lettering, glitter, or rhinestones for a layered multi-texture shirt.'],
             ['q' => 'How fast can I get brick shirts in Joliet?', 'a' => 'Most brick shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your order.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Brick Shirt FAQs"
+        label="Custom Brick Print Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

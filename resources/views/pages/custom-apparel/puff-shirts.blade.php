@@ -150,17 +150,20 @@
         label="Puff Print Custom Apparel"
         subheading="Puff printing adds a raised, three-dimensional look to logos and lettering. See how Top 5 Percent creates durable, eye-catching puff designs on custom shirts and apparel in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Puff Print Shirt FAQs"
-        label="Custom Puff Print Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What is puff print on shirts?', 'a' => 'Puff printing uses a foam-based heat-transfer that expands when pressed, creating a three-dimensional raised design on the shirt surface. The result is a bold, tactile print that is visually and physically distinct.'],
             ['q' => 'Is there a minimum order for puff shirts?', 'a' => 'No. We have no minimum. One puff print shirt or a full team order, same professional quality.'],
             ['q' => 'How durable is puff print?', 'a' => 'Puff prints are durable when cared for properly. Wash inside out on cold, gentle cycle, and tumble dry on low or air dry.'],
             ['q' => 'What designs work best with puff printing?', 'a' => 'Bold, chunky text and large design elements work best for puff printing. Fine lines and very small text are difficult to achieve with the raised finish.'],
             ['q' => 'Can puff print be combined with other vinyl types?', 'a' => 'Yes. Puff can be combined with standard vinyl, glitter, or foil for multi-texture layered designs.'],
             ['q' => 'How fast can I get puff print shirts in Joliet?', 'a' => 'Most puff shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Puff Print Shirt FAQs"
+        label="Custom Puff Print Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

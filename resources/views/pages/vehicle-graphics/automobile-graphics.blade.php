@@ -176,17 +176,20 @@
         label="Car & Truck Graphics"
         subheading="Custom car and truck graphics transform your vehicle into a moving billboard for your business. See how Top 5 Percent designs and applies durable automobile graphics in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Automobile Graphics FAQs"
-        label="Car Wraps & Vinyl Lettering in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What automobile graphic options are available?', 'a' => 'We offer full vehicle wraps, partial wraps, vinyl lettering, color change wraps, and custom graphic packages for cars, trucks, SUVs, and vans.'],
             ['q' => 'How long does a full car wrap take?', 'a' => 'A full vehicle wrap installation typically takes one to three days depending on the vehicle size and design complexity. Partial wraps and lettering installs are often completed same day or next day.'],
             ['q' => 'How long does vehicle wrap vinyl last?', 'a' => 'Premium cast vinyl used for vehicle wraps typically lasts five or more years with proper care. Avoid high-pressure car washes and wax periodically to extend the life of your wrap.'],
             ['q' => 'Can a wrap be removed without damaging my car\'s paint?', 'a' => 'Yes. Professional-grade wrap vinyl can be removed cleanly from factory paint without damage when installed and removed correctly. We use 3M and Avery Dennison materials rated for clean removal.'],
             ['q' => 'What is a partial wrap versus a full wrap?', 'a' => 'A full wrap covers the entire exterior of the vehicle. A partial wrap covers a section of the vehicle, typically the rear, sides, or hood, and is often combined with vinyl lettering for a more budget-friendly branded look.'],
             ['q' => 'Do you wrap commercial vans and fleet vehicles?', 'a' => 'Yes. We produce and install graphics for commercial vans, box trucks, fleet vehicles, and trailers throughout Joliet and the Chicagoland area. Contact us for fleet pricing.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Automobile Graphics FAQs"
+        label="Car Wraps & Vinyl Lettering in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

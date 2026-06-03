@@ -164,17 +164,20 @@
         label="Custom Promo Items in Joliet, IL"
         subheading="Custom promotional products put your brand in the hands of customers every single day. Watch how Top 5 Percent produces quality branded promotional items for businesses and events in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Promotional Items FAQs"
-        label="Custom Promo Products in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What custom promotional products do you offer?', 'a' => 'We offer custom mugs, can koozies, tote bags, towels, drink coasters, and mouse pads, all printed with your full-color logo or custom design using dye sublimation for a durable, vibrant finish.'],
             ['q' => 'Is there a minimum order for custom mugs and koozies?', 'a' => 'No. We have no minimum order on any promotional product. You can order a single custom mug for a gift or thousands of koozies for a trade show giveaway.'],
             ['q' => 'How are your promotional products printed?', 'a' => 'We use dye sublimation printing, which bonds full-color ink directly into the material surface. This produces a vivid, permanent print that will not peel, crack, or fade with normal use.'],
             ['q' => 'How long do custom promotional products take?', 'a' => 'Most promotional product orders are completed within one to three business days. Rush same-day service may be available on select items, call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to check availability.'],
             ['q' => 'Do you handle corporate gifting and bulk promotional orders?', 'a' => 'Yes. We work with businesses, nonprofits, schools, and event organizers throughout Will and DuPage County on bulk promotional product orders with consistent quality at every quantity. Contact us for a volume quote.'],
             ['q' => 'Are your sublimated mugs and koozies dishwasher safe?', 'a' => 'Our mugs are top-rack dishwasher safe with standard care. Koozies and soft goods should be hand-washed or spot-cleaned to preserve print quality over time.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Promotional Items FAQs"
+        label="Custom Promo Products in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

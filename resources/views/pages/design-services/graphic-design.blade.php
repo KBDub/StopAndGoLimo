@@ -149,17 +149,20 @@
         label="Custom Graphic Design"
         subheading="Professional graphic design takes your idea and turns it into production-ready artwork. See how the Top 5 Percent design team works with businesses in Joliet and the Chicago area to build brand-right visuals."
     />
-    <x-sections.faq
-        heading="Graphic Design FAQs"
-        label="Graphic Design in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What graphic design services do you offer?', 'a' => 'We offer full graphic design for print including sign and banner layouts, flyer design, business card design, social media graphics, apparel artwork, and any other print application you need.'],
             ['q' => 'Do you charge for design with my print order?', 'a' => 'Free design help is included with every print order we produce. For standalone design projects not tied to a print order, design fees apply. Contact us for a quote.'],
             ['q' => 'What file formats do you deliver for graphic design projects?', 'a' => 'We deliver print-ready files in PDF, AI, EPS, and other formats depending on the project. All files are set up with proper bleed, resolution, and color profiles for print.'],
             ['q' => 'Can you match my brand colors in graphic design?', 'a' => 'Yes. Provide your Pantone, CMYK, or HEX color codes and we will match them throughout your design to ensure brand consistency across all your materials.'],
             ['q' => 'How long does graphic design take?', 'a' => 'Most design projects are completed within one to three business days. Complex multi-piece campaigns may take longer. Rush delivery is available, ask when you inquire.'],
             ['q' => 'Can you create social media graphics and digital ads?', 'a' => 'Yes. We design graphics optimized for social media platforms, email campaigns, and digital advertising in addition to print-ready materials.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Graphic Design FAQs"
+        label="Graphic Design in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

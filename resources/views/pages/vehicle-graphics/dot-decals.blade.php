@@ -174,17 +174,20 @@
         label="DOT Decals & Compliance Markings"
         subheading="DOT-compliant decals keep your commercial vehicles road-legal without sacrificing professional appearance. See how Top 5 Percent produces accurate, durable DOT decals for fleet businesses in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="DOT Decal FAQs"
-        label="DOT Decals & Truck Lettering in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What information is required on a USDOT number sticker?', 'a' => 'Your USDOT number sticker must display your USDOT number in letters at least 2 inches tall on both sides of the cab. Many carriers also include the company name and home state. We will ensure your decal meets FMCSA formatting requirements.'],
             ['q' => 'Do I need a DOT number on my commercial truck in Illinois?', 'a' => 'Vehicles operating in interstate commerce with a GVWR over 10,001 lbs are required to display a USDOT number. Illinois intrastate carriers may also be subject to state requirements. Consult FMCSA or your carrier compliance advisor to confirm your specific obligations.'],
             ['q' => 'Do you print MC numbers and GVWR markings?', 'a' => 'Yes. We print USDOT numbers, MC authority numbers, GVWR markings, and any other required compliance lettering on vehicles and trailers for commercial carriers throughout the Chicagoland area.'],
             ['q' => 'What material are DOT compliance decals made of?', 'a' => 'We print DOT decals on high-performance outdoor-rated vinyl with UV-resistant ink. They are designed to withstand road exposure, weather, and truck washing for years of compliant display.'],
             ['q' => 'Can you do same-day DOT decals in Joliet?', 'a' => 'Yes. Many DOT number decal orders are completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> with your USDOT number and required markings and we will confirm turnaround.'],
             ['q' => 'Do you letter an entire fleet of trucks?', 'a' => 'Yes. We produce DOT compliance packages and full truck lettering for fleets of any size. Contact us for fleet pricing and turnaround on multi-vehicle orders.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="DOT Decal FAQs"
+        label="DOT Decals & Truck Lettering in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

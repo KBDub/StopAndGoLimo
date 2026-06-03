@@ -148,17 +148,20 @@
         label="Custom Can Koozies"
         subheading="Custom can koozies are a fan favorite at events, parties, and corporate functions. See how Top 5 Percent produces branded can koozies for businesses and events in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Custom Koozie FAQs"
-        label="Custom Can Koozies in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are custom can koozies?', 'a' => 'Custom can koozies are insulated neoprene or foam sleeves that fit standard 12oz cans. They are printed with your full-color logo or custom design using dye sublimation for a vivid, permanent finish.'],
             ['q' => 'What events are custom koozies popular for?', 'a' => 'Custom koozies are popular for weddings, bachelor and bachelorette parties, fundraisers, trade shows, birthday parties, company picnics, and sporting events.'],
             ['q' => 'Is there a minimum order for custom koozies?', 'a' => 'No. We have no minimum. Order one for a personal gift or thousands for a large event or promotional campaign.'],
             ['q' => 'How are custom koozies printed?', 'a' => 'We use dye sublimation, which bonds full-color ink into the koozie material for a permanent, vivid print that will not crack or peel with regular use and washing.'],
             ['q' => 'Are custom koozies washable?', 'a' => 'Yes. Our koozies can be hand-washed or spot-cleaned to maintain print quality. Machine washing on delicate is also possible but hand washing is preferred.'],
             ['q' => 'How fast can I get custom koozies in Joliet?', 'a' => 'Most koozie orders are completed within one to two business days. Rush options may be available, call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your timeline.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Custom Koozie FAQs"
+        label="Custom Can Koozies in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

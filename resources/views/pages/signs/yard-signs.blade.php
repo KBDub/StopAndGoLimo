@@ -161,17 +161,20 @@
         label="Custom Yard Signs"
         subheading="Yard signs are a cost-effective way to promote events, candidates, real estate, and businesses. See how Top 5 Percent produces full-color, weather-resistant yard signs in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Yard Sign FAQs"
-        label="Custom Yard Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are yard signs made of?', 'a' => 'Our yard signs are printed on 4mm corrugated plastic (coroplast), a lightweight, weatherproof material that holds up outdoors. Single-sided and double-sided options are available.'],
             ['q' => 'What is the standard yard sign size?', 'a' => 'The most common size is 18"x24", which is the standard used for real estate, political campaigns, and small business promotions. Custom sizes are available.'],
             ['q' => 'Do you include H-stakes with yard signs?', 'a' => 'Yes. Wire H-stakes for ground installation are available. Ask when you place your order.'],
             ['q' => 'How long do yard signs last outside?', 'a' => 'Corrugated plastic yard signs are weatherproof and UV-resistant. They typically last one to two years in outdoor conditions depending on exposure.'],
             ['q' => 'Is there a minimum order for yard signs?', 'a' => 'No. We have no minimum. You can order one yard sign or a hundred for a campaign or event.'],
             ['q' => 'How fast can I get custom yard signs in Joliet?', 'a' => 'Many yard sign orders are completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm turnaround for your quantity and design.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Yard Sign FAQs"
+        label="Custom Yard Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

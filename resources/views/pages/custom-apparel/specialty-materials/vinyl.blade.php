@@ -174,17 +174,20 @@
         label="Vinyl Shirts & Apparel"
         subheading="Vinyl heat press gives your design clean, sharp edges on shirts, hoodies, hats, and more. See how Top 5 Percent creates custom vinyl apparel for individuals and businesses in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Vinyl Shirts FAQs"
-        label="Custom Vinyl Apparel in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What is heat press vinyl?', 'a' => 'Heat press vinyl is a type of colored film that is cut into a design shape and permanently bonded to fabric using heat and pressure. It produces a smooth, durable finish with clean edges and bold color.'],
             ['q' => 'How long does vinyl on a shirt last?', 'a' => 'With proper care, quality heat transfer vinyl lasts for years. Turn shirts inside out before washing, use warm water, and avoid high dryer heat to extend the life of the design.'],
             ['q' => 'Is there a minimum order for vinyl shirts?', 'a' => 'No. We press vinyl shirts starting from a single piece. There are no minimum order requirements, which makes vinyl a great choice for one-off orders, small groups, and quick turnaround jobs.'],
             ['q' => 'Can you do multi-color vinyl designs?', 'a' => 'Yes. We cut each color separately and layer them during pressing to create multi-color designs. Complex layered artwork comes out clean and precise with our cutting and pressing process.'],
             ['q' => 'What types of garments can you press vinyl onto?', 'a' => 'We press vinyl onto t-shirts, hoodies, sweatshirts, hats, bags, jackets, and most other fabric items. Vinyl works well on cotton, polyester, and blended fabrics.'],
             ['q' => 'How fast can I get my vinyl shirts?', 'a' => 'Many vinyl orders are ready same day or next day depending on quantity and design complexity. Contact us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your timeline and we will do our best to meet your deadline.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Vinyl Shirts FAQs"
+        label="Custom Vinyl Apparel in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

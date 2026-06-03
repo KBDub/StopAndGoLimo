@@ -149,17 +149,20 @@
         label="Custom Parking Signs"
         subheading="Custom parking signs keep your lot organized and visitors informed. Watch how Top 5 Percent designs and produces compliant, branded parking signage for businesses and properties in Joliet, Illinois."
     />
-    <x-sections.faq
-        heading="Parking Sign FAQs"
-        label="Custom Parking Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of parking signs do you make?', 'a' => 'We print reserved parking signs, no parking signs, handicap parking signs, loading zone signs, customer parking only signs, and fully custom property signs for businesses across Joliet, Will and DuPage County.'],
             ['q' => 'What material are parking signs made of?', 'a' => 'Our parking signs are printed on rigid aluminum composite or UV-rated PVC board with weather-resistant laminate for long-term outdoor durability.'],
             ['q' => 'How long do outdoor parking signs last?', 'a' => 'Parking signs printed on aluminum composite with UV-rated materials typically last five or more years outdoors in Illinois weather conditions.'],
             ['q' => 'Do you include mounting hardware?', 'a' => 'Post-mounting hardware and sign brackets are available upon request. Ask us about hardware options when you place your order.'],
             ['q' => 'Is there a minimum order for parking signs?', 'a' => 'No. We have no minimum. One sign or a set for your entire parking lot, both are welcome.'],
             ['q' => 'How fast can I get parking signs in Joliet?', 'a' => 'Most parking sign orders are completed within one to two business days. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm turnaround.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Parking Sign FAQs"
+        label="Custom Parking Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

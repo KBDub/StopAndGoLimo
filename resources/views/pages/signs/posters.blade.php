@@ -173,17 +173,20 @@
         label="Custom Posters & Prints"
         subheading="Custom posters amplify your message in lobbies, classrooms, retail spaces, and events. See how Top 5 Percent produces high-resolution, large format poster prints in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Poster Printing FAQs"
-        label="Poster Printing in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What poster sizes do you print?', 'a' => 'We print posters in standard sizes including 11x17, 18x24, 24x36, and custom dimensions up to wide-format sizes. Event backdrops and step-and-repeat banners are also available.'],
             ['q' => 'What paper or material options are available for posters?', 'a' => 'We print on glossy photo paper, matte poster paper, and can mount prints on foam board or rigid substrates for display. Ask about paper weight and finish options when you order.'],
             ['q' => 'Can you print full-color photographic posters?', 'a' => 'Yes. Our wide-format printers produce full-color photographic-quality output with sharp detail and vibrant colors at any poster size.'],
             ['q' => 'Do you offer same-day poster printing in Joliet?', 'a' => 'Yes. Same-day poster printing is available on many sizes. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> before coming in to confirm availability for your dimensions and design.'],
             ['q' => 'Is there a minimum order for poster printing?', 'a' => 'No. We have no minimum. One poster for an event or fifty for a promotional campaign are both equally welcome.'],
             ['q' => 'Can you print step-and-repeat backdrops for events?', 'a' => 'Yes. We print custom step-and-repeat photo backdrops in any size for corporate events, grand openings, galas, and community events throughout Will and DuPage County.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Poster Printing FAQs"
+        label="Poster Printing in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

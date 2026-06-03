@@ -150,17 +150,20 @@
         label="Reflective Safety Apparel"
         subheading="Reflective shirts increase visibility in low-light environments while keeping your team looking sharp. See how Top 5 Percent produces custom reflective apparel for safety and style in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Reflective Shirt FAQs"
-        label="Custom Reflective Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are reflective shirts?', 'a' => 'Reflective shirts use a retroreflective vinyl that lights up when hit by headlights or a flashlight in low-light conditions. They are used for safety, construction, running, cycling, and nighttime events.'],
             ['q' => 'Is there a minimum order for reflective shirts?', 'a' => 'No. We have no minimum. You can order a single reflective safety shirt or a full crew set.'],
             ['q' => 'Are reflective shirts ANSI compliant for job sites?', 'a' => 'Our reflective vinyl shirts are popular for job site visibility. For full ANSI Class 2 or Class 3 compliance, the reflective tape must be applied to a specific pattern. Ask us about your specific safety requirements.'],
             ['q' => 'How do I care for reflective shirts?', 'a' => 'Wash inside out on cold, gentle cycle. Avoid fabric softener and high heat in the dryer, which can degrade reflective materials.'],
             ['q' => 'Can reflective vinyl be combined with other print types?', 'a' => 'Yes. Reflective vinyl can be layered with standard vinyl, company logos, or text on the same shirt.'],
             ['q' => 'How fast can I get reflective shirts in Joliet?', 'a' => 'Most reflective shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Reflective Shirt FAQs"
+        label="Custom Reflective Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

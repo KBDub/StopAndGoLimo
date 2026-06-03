@@ -191,17 +191,20 @@
         direction="left"
     />
 
-    <x-sections.faq
-        heading="Custom Storefront FAQs"
-        label="Storefront Graphics in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What storefront graphic services do you offer?', 'a' => 'We design and produce window graphics, wall signs, door decals, sidewalk signs, and full storefront branding packages for retail businesses, restaurants, and service companies in Joliet, Will and DuPage County.'],
             ['q' => 'Can you design and produce a full storefront branding package?', 'a' => 'Yes. We work with new and rebranding businesses to develop cohesive storefront signage including window graphics, interior wall signs, door lettering, and exterior signage, all from one shop.'],
             ['q' => 'How long does storefront graphic production take?', 'a' => 'Most storefront graphic packages are completed within three to five business days. Installation scheduling may add time. Contact us to plan your project timeline.'],
             ['q' => 'Do you install storefront graphics?', 'a' => 'Yes. We handle production and installation of window decals, wall graphics, and other applied storefront signage. Ask about installation when you place your order.'],
             ['q' => 'Can you match my existing brand colors for storefront graphics?', 'a' => 'Yes. Provide your brand color codes (Pantone, CMYK, or HEX) and we will match them across all your storefront graphics for consistent brand presentation.'],
             ['q' => 'Is there a minimum order for storefront graphics?', 'a' => 'No. We have no minimum. One window decal or a complete storefront graphics package, both are welcome.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Custom Storefront FAQs"
+        label="Storefront Graphics in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

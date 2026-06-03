@@ -148,17 +148,20 @@
         label="Custom Drink Coasters"
         subheading="Custom coasters put your logo in front of customers at every drink. Watch how Top 5 Percent produces branded promotional coasters for restaurants, offices, and events in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Custom Coaster FAQs"
-        label="Custom Drink Coasters in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of custom drink coasters do you offer?', 'a' => 'We print full-color sublimated round and square coasters for restaurants, bars, corporate gifting, weddings, and branded promotions.'],
             ['q' => 'How are your coasters printed?', 'a' => 'We use dye sublimation to permanently bond full-color designs into the coaster surface. The print will not fade, scratch, or peel with regular use.'],
             ['q' => 'Are your custom coasters absorbent?', 'a' => 'Our coasters are produced on materials appropriate for drink use. Ask us about available coaster substrates and their moisture management properties.'],
             ['q' => 'Is there a minimum order for custom coasters?', 'a' => 'No. We have no minimum. One set of four or hundreds for a restaurant rollout, both welcome.'],
             ['q' => 'How fast can I get custom coasters in Joliet?', 'a' => 'Most coaster orders are completed within one to two business days. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your quantity.'],
             ['q' => 'Can custom coasters be used as wedding favors?', 'a' => 'Yes. Custom coasters make excellent personalized wedding favors and party giveaways. We can print names, dates, and custom designs for any event.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Custom Coaster FAQs"
+        label="Custom Drink Coasters in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

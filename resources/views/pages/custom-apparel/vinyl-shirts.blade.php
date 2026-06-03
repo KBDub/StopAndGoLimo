@@ -150,17 +150,20 @@
         label="Vinyl Heat Transfer Shirts"
         subheading="Vinyl heat transfers deliver clean edges and rich, solid colors on custom shirts and jackets. See how Top 5 Percent cuts and presses custom vinyl designs on apparel in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Vinyl Shirt FAQs"
-        label="Custom Vinyl Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What is heat-transfer vinyl printing on shirts?', 'a' => 'Heat-transfer vinyl (HTV) is a colored film cut into your design and pressed onto fabric with heat. It produces clean, crisp designs with a smooth finish and is excellent for text-based and single-color designs.'],
             ['q' => 'Is there a minimum order for vinyl shirts?', 'a' => 'No. We have no minimum on vinyl shirt orders. You can order one shirt or a full batch for your team or event.'],
             ['q' => 'How durable is vinyl on shirts?', 'a' => 'Heat-transfer vinyl is very durable when cared for properly. Wash inside out on cold and avoid high heat in the dryer to extend the life of your design.'],
             ['q' => 'What colors of vinyl do you carry?', 'a' => 'We stock a wide range of vinyl colors including standard colors, neon, metallic, glitter, holographic, and specialty finishes. Ask us about available colors when you place your order.'],
             ['q' => 'Can you do multi-color vinyl designs?', 'a' => 'Yes. We layer multiple vinyl colors to produce multi-color designs. Each color is cut, weeded, and pressed individually.'],
             ['q' => 'How fast can I get vinyl shirts in Joliet?', 'a' => 'Vinyl shirt orders are among our fastest. Many can be completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Vinyl Shirt FAQs"
+        label="Custom Vinyl Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

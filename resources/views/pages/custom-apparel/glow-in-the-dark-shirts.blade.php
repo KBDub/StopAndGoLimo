@@ -150,17 +150,20 @@
         label="Glow-in-the-Dark Apparel"
         subheading="Glow-in-the-dark printing keeps your brand or design visible long after the lights go down. See how Top 5 Percent creates vivid, glow-reactive custom shirts in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Glow in the Dark Shirt FAQs"
-        label="Glow in the Dark Shirts in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are glow in the dark shirts?', 'a' => 'Glow in the dark shirts use a luminescent vinyl that charges under light and glows in the dark. They are especially popular for blacklight events, raves, Halloween parties, and nighttime sports.'],
             ['q' => 'Is there a minimum order for glow in the dark shirts?', 'a' => 'No. We have no minimum. One shirt or a hundred, same quality either way.'],
             ['q' => 'How long does the glow last after charging?', 'a' => 'The glow is rechargeable. Expose the shirt to any light source to recharge and it will glow again. Duration varies by design size and material.'],
             ['q' => 'Do glow in the dark shirts look good in regular lighting too?', 'a' => 'Yes. Our glow vinyl is typically white or light-colored in daylight and activates under blacklight or darkness, so the shirt looks great in both normal and dark lighting conditions.'],
             ['q' => 'Can glow be combined with other vinyl types?', 'a' => 'Yes. Glow vinyl can be layered with standard vinyl colors, glitter, or reflective materials for a multi-effect design.'],
             ['q' => 'How fast can I get glow in the dark shirts in Joliet?', 'a' => 'Most glow shirt orders are completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability for your design and quantity.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Glow in the Dark Shirt FAQs"
+        label="Glow in the Dark Shirts in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

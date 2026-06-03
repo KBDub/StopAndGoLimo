@@ -166,17 +166,20 @@
         label="Custom Vehicle Magnets"
         subheading="Vehicle magnets let you brand your personal vehicle during business hours and remove it after. Watch how Top 5 Percent produces durable, full-color vehicle magnets for businesses in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Vehicle Magnet FAQs"
-        label="Custom Vehicle Magnets in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are custom vehicle magnets?', 'a' => 'Vehicle magnets are flexible, removable magnetic signs that attach to the metal surface of your vehicle. They display your business name, logo, and contact information and can be removed whenever you choose, making them ideal for personal vehicles used for business.'],
             ['q' => 'What size vehicle magnets do you produce?', 'a' => 'Common sizes include 12x18, 12x24, 18x24, and 24x24 inches. Custom sizes are available for larger doors, hoods, or tailgates.'],
             ['q' => 'Are your vehicle magnets waterproof?', 'a' => 'Yes. We print on waterproof magnetic material with UV-resistant inks and laminate over the surface for durability through rain, car washes, and road exposure.'],
             ['q' => 'Will vehicle magnets scratch my vehicle\'s paint?', 'a' => 'Magnets can trap dirt underneath if not removed and cleaned regularly. We recommend removing magnets weekly, cleaning both the magnet back and the vehicle surface, and reapplying. Proper care prevents surface damage.'],
             ['q' => 'How long do custom vehicle magnets last?', 'a' => 'With regular care, quality vehicle magnets last two to four years. Storing magnets flat indoors when not in use extends their life significantly.'],
             ['q' => 'Is there a minimum order for vehicle magnets?', 'a' => 'No. We have no minimum. Order a pair of door magnets or a full set for your entire fleet.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Vehicle Magnet FAQs"
+        label="Custom Vehicle Magnets in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

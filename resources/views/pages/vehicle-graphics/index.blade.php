@@ -148,17 +148,20 @@
         label="Vehicle Graphics in Joliet, IL"
         subheading="Custom vehicle graphics and wraps put your brand in front of thousands of people every day. Watch how Top 5 Percent designs and applies professional vehicle graphics for businesses in the Joliet area."
     />
-    <x-sections.faq
-        heading="Vehicle Graphics FAQs"
-        label="Vehicle Graphics & Wraps in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'How long does cast vinyl vehicle wrap last?', 'a' => 'Premium cast vinyl used for vehicle graphics typically lasts five or more years with normal care. Avoid high-pressure car washes and wax periodically to extend the life of your graphics.'],
             ['q' => 'Do you print and install DOT compliance decals for commercial trucks?', 'a' => 'Yes. We specialize in USDOT number stickers, MC numbers, GVWR markings, and full DOT compliance packages for commercial carriers operating in Illinois and interstate commerce.'],
             ['q' => 'What is the difference between a full wrap and a partial wrap?', 'a' => 'A full wrap covers the entire vehicle surface with custom printed vinyl. A partial wrap covers a portion of the vehicle, often combined with vinyl lettering, and is more budget-friendly while still delivering high visibility.'],
             ['q' => 'Can I get removable vehicle magnets instead of permanent vinyl graphics?', 'a' => 'Yes. We print custom vehicle magnets that attach and remove easily, making them ideal for business owners who use their personal vehicle for work and want to maintain a professional appearance without permanent installation.'],
             ['q' => 'How long does vehicle graphic installation take?', 'a' => 'Most vehicle magnet and decal orders are completed same day or within 24 hours. Full wraps and complex installs typically take one to three days depending on scope.'],
             ['q' => 'Do you design and install boat and watercraft graphics?', 'a' => 'Yes. We produce custom boat decals, registration numbers, and marine graphics on materials rated for prolonged water and UV exposure. Stop by our Joliet shop to discuss your watercraft project.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Vehicle Graphics FAQs"
+        label="Vehicle Graphics & Wraps in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

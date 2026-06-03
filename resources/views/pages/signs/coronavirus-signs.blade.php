@@ -122,17 +122,20 @@
         label="Safety & Health Signage"
         subheading="Custom safety signage communicates important information quickly and clearly. See how Top 5 Percent produces professional health and safety signs for businesses in Joliet and the surrounding area."
     />
-    <x-sections.faq
-        heading="Safety Sign FAQs"
-        label="Safety & Social Distancing Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of safety signs do you print?', 'a' => 'We print social distancing floor decals, directional arrows, occupancy limit signs, handwashing reminder signs, mask required signs, and other safety protocol signage for businesses and public spaces.'],
             ['q' => 'What materials are used for floor safety decals?', 'a' => 'Our floor decals are printed on anti-slip laminated vinyl rated for foot traffic on hard floors. They adhere firmly and are repositionable without leaving residue.'],
             ['q' => 'Can you print custom safety messaging for my business?', 'a' => 'Yes. We can print any custom safety or operational message on signs, decals, banners, or posters. Bring your message or policy and we will lay it out professionally.'],
             ['q' => 'Are your safety signs ADA compliant?', 'a' => 'We can produce ADA-compliant signage with tactile text and Braille upon request. Ask us about ADA sign requirements when you place your order.'],
             ['q' => 'Is there a minimum order for safety signs?', 'a' => 'No. We have no minimum. One sign or a package of signage for your entire facility, both are welcome.'],
             ['q' => 'How fast can I get safety signs in Joliet?', 'a' => 'Many safety sign orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your specific order.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Safety Sign FAQs"
+        label="Safety & Social Distancing Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

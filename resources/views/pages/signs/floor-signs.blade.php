@@ -149,17 +149,20 @@
         label="Custom Floor Graphics"
         subheading="Floor graphics direct customers, reinforce branding, and add wayfinding to any space. See how Top 5 Percent produces durable, slip-resistant custom floor signs for businesses in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Floor Sign FAQs"
-        label="Custom Floor Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are custom floor signs?', 'a' => 'Floor signs are large-format graphics printed on anti-slip vinyl and applied directly to hard floors. They are used for directional arrows, promotional messages, social distancing markers, and brand displays in retail stores, trade shows, and event venues.'],
             ['q' => 'Are your floor decals slip-resistant?', 'a' => 'Yes. Our floor graphics are printed on anti-slip laminated vinyl that meets safety standards for indoor foot traffic.'],
             ['q' => 'How long do floor decals last?', 'a' => 'Floor decals in moderate traffic areas typically last six to eighteen months. High-traffic areas will show wear faster. Ask about protective overlaminate options to extend durability.'],
             ['q' => 'Can floor graphics be removed without damaging the floor?', 'a' => 'Yes. Our floor vinyl is designed for clean removal from sealed concrete, tile, hardwood, and other smooth floor surfaces.'],
             ['q' => 'Is there a minimum order for floor signs?', 'a' => 'No. We have no minimum. One floor decal for a directional arrow or a full set for a trade show booth are equally welcome.'],
             ['q' => 'How fast can I get custom floor signs in Joliet?', 'a' => 'Many floor sign orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm turnaround.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Floor Sign FAQs"
+        label="Custom Floor Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

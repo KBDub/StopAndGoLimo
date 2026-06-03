@@ -149,17 +149,20 @@
         label="Custom Window Signs & Decals"
         subheading="Custom window graphics promote your brand, products, and hours to everyone who passes by. Watch how Top 5 Percent designs and installs window signs for businesses across Joliet and the Chicago area."
     />
-    <x-sections.faq
-        heading="Window Sign FAQs"
-        label="Custom Window Signs in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What types of window signs do you make?', 'a' => 'We print full-color window decals, perforated see-through window film, frosted privacy film, and custom window graphics for retail storefronts, office buildings, and commercial doors throughout Joliet.'],
             ['q' => 'What is perforated window film?', 'a' => 'Perforated window film has small holes that allow you to see out from inside while displaying a bold graphic on the exterior. It is commonly used on vehicle windows and large storefront windows for promotions.'],
             ['q' => 'Do window decals block the view from inside the store?', 'a' => 'Standard solid window vinyl blocks the view where applied. Perforated film allows about 50% visibility from inside while still displaying a full graphic from the outside.'],
             ['q' => 'How long do window graphics last?', 'a' => 'Interior window graphics last three to five years or more. Exterior-facing window decals are laminated for UV resistance and typically last two to four years.'],
             ['q' => 'Will window vinyl damage my storefront glass?', 'a' => 'No. Professionally installed vinyl can be removed cleanly from glass without damage or residue, as long as proper removal techniques are used.'],
             ['q' => 'How fast can I get window signs in Joliet?', 'a' => 'Many window sign orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your project.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Window Sign FAQs"
+        label="Custom Window Signs in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

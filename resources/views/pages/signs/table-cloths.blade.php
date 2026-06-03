@@ -151,17 +151,20 @@
         label="Custom Table Covers"
         subheading="Custom table covers transform any display into a branded experience at trade shows, events, and storefronts. Watch how Top 5 Percent produces fitted and draped table covers in Joliet, IL."
     />
-    <x-sections.faq
-        heading="Custom Table Cloth FAQs"
-        label="Custom Table Cloths in Joliet, IL"
-        :faqs="[
+    @php
+    $pageFaqs = [
             ['q' => 'What are custom branded table cloths?', 'a' => 'Custom branded table cloths are full-color printed fabric covers for event tables. They display your logo, brand colors, and messaging on a professional surface at trade shows, expos, corporate events, and retail displays.'],
             ['q' => 'What styles of table cloths do you print?', 'a' => 'We print fitted table cloths that wrap snugly around standard 6ft and 8ft tables, as well as throw-style cloths that drape over all four sides.'],
             ['q' => 'What material are your custom table cloths made of?', 'a' => 'Our table cloths are printed using dye sublimation on wrinkle-resistant polyester fabric for a sharp, professional look that holds up through repeated use and washing.'],
             ['q' => 'Are custom table cloths washable?', 'a' => 'Yes. Dye sublimation table cloths are machine washable on cold. The print will not fade or crack with regular laundering.'],
             ['q' => 'How fast can I get a custom table cloth in Joliet?', 'a' => 'Most table cloth orders are completed within two to three business days. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss rush options if needed.'],
             ['q' => 'Is there a minimum order for custom table cloths?', 'a' => 'No. We have no minimum. One branded table cloth or a set for your full event team are both welcome.'],
-        ]"
+        ];
+    @endphp
+    <x-sections.faq
+        heading="Custom Table Cloth FAQs"
+        label="Custom Table Cloths in Joliet, IL"
+        :faqs="$pageFaqs"
     />
     <x-sections.cta-ready-to-get-started />
     <x-sections.review-banner />

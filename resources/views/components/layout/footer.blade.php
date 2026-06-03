@@ -1,16 +1,16 @@
 <footer class="bg-linen text-charcoal py-2 border-t border-linen-dark">
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid grid-cols-1 md:grid-cols-8 gap-x-4 gap-y-8 mb-6 items-start">
+        <div class="grid grid-cols-8 gap-x-4 mb-6 items-start">
 
             {{-- Logo --}}
-            <div id="logo" class="md:col-span-1 text-center">
+            <div id="logo" class="col-span-1 text-center">
                 <img src="/images/logos/top5-logo.gif" alt="Top 5 Percent" class="h-10 mb-3 mx-auto">
                 <p class="text-sm text-charcoal-light leading-relaxed">Premium Custom Signage & Apparel. Veteran-owned, proudly serving & headquartered in Joliet, IL since 2017.</p>
             </div>
 
             {{-- Quick Links --}}
-            <div id="quick-links" class="md:col-span-1">
+            <div id="quick-links" class="col-span-1">
                 <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Quick Links</h4>
                 <ul class="space-y-1.5 text-sm text-center">
                     <li><a href="/" class="link-notification">Home</a></li>
@@ -31,9 +31,9 @@
             </div>
 
             {{-- Services, 5-column newspaper spill --}}
-            <div id="services" class="md:col-span-5">
+            <div id="services" class="col-span-5">
                 <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Services</h4>
-                <div class="columns-2 sm:columns-3 md:columns-5 gap-x-2 text-sm">
+                <div class="columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">
@@ -117,7 +117,7 @@
             </div>
 
             {{-- Contact --}}
-            <div id="contact" class="md:col-span-1">
+            <div id="contact" class="col-span-1">
                 <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Contact</h4>
                 <div class="text-sm space-y-2 text-center">
                     <p class="text-charcoal">Joliet, IL</p>

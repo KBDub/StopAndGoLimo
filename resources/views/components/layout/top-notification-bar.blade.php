@@ -11,13 +11,13 @@
 
             {{-- Phone numbers at far left --}}
             <div class="flex items-center gap-1.5 shrink-0">
-                <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
-                <span class="font-normal text-charcoal opacity-60">or</span>
+                <a href="tel:+18153498600" class="hidden sm:inline font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
+                <span class="hidden sm:inline font-normal text-charcoal opacity-60">or</span>
                 <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-TOP5</a>
             </div>
 
             {{-- Social media icons centered between phones and Free Shipping --}}
-            <div class="flex items-center gap-1.5 mx-auto shrink-0">
+            <div class="hidden sm:flex items-center gap-1.5 mx-auto shrink-0">
 
                 {{-- Google Maps --}}
                 <a href="https://www.google.com/maps?cid=15797523837573086431" target="_blank" rel="noopener" aria-label="Google Maps" class="text-charcoal opacity-60 hover:opacity-100 hover:scale-125 hover:[color:var(--color-olive)] transition-all duration-200">
@@ -72,7 +72,7 @@
         </div>
 
         {{-- MIDDLE: Free Shipping, centered because both sides are flex-1 --}}
-        <a href="/top5pct-merchandise" class="shrink-0 font-semibold text-charcoal hover:underline whitespace-nowrap">
+        <a href="/top5pct-merchandise" class="hidden sm:block shrink-0 font-semibold text-charcoal hover:underline whitespace-nowrap">
             Free Shipping on Orders Over $50!
         </a>
 
@@ -83,7 +83,7 @@
             <div class="flex items-center gap-6 mx-auto shrink-0">
 
                 {{-- Reviews --}}
-                <a href="/reviews" class="flex items-center gap-1 font-semibold text-charcoal hover:underline">
+                <a href="/reviews" class="hidden sm:flex items-center gap-1 font-semibold text-charcoal hover:underline">
                     <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>

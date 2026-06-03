@@ -38,7 +38,7 @@
                 </h1>
                 <div class="h-1 bg-sunburst"></div>
             </div>
-            <p class="text-2xl text-linen mb-8 max-w-3xl">
+            <p class="text-lg md:text-2xl text-linen mb-8 max-w-3xl">
                 {{ $description }}
             </p>
             <div class="flex flex-col sm:flex-row gap-4">

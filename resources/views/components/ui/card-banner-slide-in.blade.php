@@ -47,7 +47,7 @@
                 >
                 <div class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/85 transition-colors duration-300 flex items-center justify-center">
                     <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center px-6">
-                        <h3 class="text-7xl font-bold text-sunburst underline underline-offset-8 decoration-2">{{ $title }}</h3>
+                        <h3 class="text-3xl md:text-5xl lg:text-7xl font-bold text-sunburst underline underline-offset-8 decoration-2">{{ $title }}</h3>
                     </div>
                 </div>
             </div>

@@ -87,6 +87,28 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ---
 
+## Sticky Navbar Broken by `overflow-x-hidden` on `<html>` — Fixed
+
+**Date:** 2026-06-03
+**File:** `resources/views/components/layouts/page.blade.php`
+
+**Problem:** After adding `overflow-x-hidden` to both `<html>` and `<body>` to fix horizontal overflow, the sticky notification bar and navigation bar stopped sticking on scroll — both desktop and mobile.
+
+**Root cause:** Setting any `overflow` value other than `visible` on `<html>` turns it into a scroll container. `position: sticky` elements look up the DOM for their nearest scrolling ancestor to stick against. With `<html>` now a non-scrollable `overflow: hidden` container, sticky descendants found it as their scroll container but could not stick (nothing scrolls inside a hidden-overflow element). The result: nav and notification bar scrolled out of view like normal block elements.
+
+**Fix:** Removed `overflow-x-hidden` from `<html>`. Left `overflow-x-hidden` on `<body>`.
+
+**Why body is safe:** When `<html>` has the default `overflow: visible`, the browser propagates `<body>`'s overflow value to the viewport. The body element itself then behaves as `overflow: visible` for layout purposes. Sticky elements inside body still find the viewport as their scroll container, so sticking works normally.
+
+**Why the horizontal overflow stays fixed:** The real containment is now at the component level:
+- `carousel-rotating-images` — `overflow-hidden` on the `relative` wrapper clips the 1036px track
+- `card-banner-slide-in` — `relative` on the outer wrapper gives `overflow-hidden` proper positioning context to clip `translateX(100%)` before the animation fires
+- `<body>` `overflow-x-hidden` remains as a catch-all backstop for any future overflow sources
+
+**Rule to remember:** Never put `overflow: hidden` (or any non-visible overflow) on `<html>`. Always use `<body>` or a scoped wrapper instead. Fix overflow at the component level first, use body as a backstop only.
+
+---
+
 ## Low Priority — Pending
 
 - Custom request wizard multi-step form — needs live mobile test.

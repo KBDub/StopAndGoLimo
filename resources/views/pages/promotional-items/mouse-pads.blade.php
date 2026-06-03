@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom printed mouse pads in Joliet, IL. Full-color sublimated mouse pads for offices, corporate gifts, and branded promotions. No minimums. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

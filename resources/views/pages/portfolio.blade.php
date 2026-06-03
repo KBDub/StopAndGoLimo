@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -55,8 +56,10 @@
     "copyrightHolder": { "@id": "https://www.top5pct.com" }
 }
 </script>
+@endverbatim
 @endpush
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -86,6 +89,7 @@
     "description": "Browse the portfolio of Top 5 Percent, LLC in Joliet, IL. Custom shirts, signs, vehicle graphics, stickers, and promotional products produced for businesses and organizations in Will and DuPage County and the greater Chicagoland area."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page title="Our Portfolio" metaDescription="See Top 5 Percent's portfolio of custom shirts, signs, vehicle wraps, and promotional products in Joliet, IL." currentPage="portfolio">

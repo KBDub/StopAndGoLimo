@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom printed mugs in Joliet, IL. Full-color sublimated coffee mugs for businesses, events, and corporate gifts. No minimums. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

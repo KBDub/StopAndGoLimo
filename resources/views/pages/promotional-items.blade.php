@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -28,6 +29,7 @@
     "description": "Veteran-owned custom promotional products in Joliet, IL. Custom mugs, koozies, tote bags, towels, drink coasters, and mouse pads with full-color sublimation printing. No minimums."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will and DuPage County. No minimums. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -28,6 +29,7 @@
     "description": "Professional graphic design services in Joliet, IL. Logo design, layout design for print, free online design tool, and design catalogs for custom shirts, signs, and promotional products."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

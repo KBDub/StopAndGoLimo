@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom glitter heat-transfer shirts in Joliet, IL. Sparkling glitter designs for events, teams, and celebrations. No minimums, same day available. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

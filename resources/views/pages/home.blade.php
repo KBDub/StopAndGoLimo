@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -27,6 +28,7 @@
     ]
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -28,6 +29,7 @@
     "description": "Veteran-owned sign shop in Joliet, IL printing yard signs, vinyl banners, posters, sidewalk signs, business signs, window graphics, wall signs, floor signs, door signs, and table runners with same day service."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

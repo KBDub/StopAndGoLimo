@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom all-over dye sublimation shirts and apparel in Joliet, IL. Full-color, edge-to-edge printing on polyester garments, jerseys, and performance wear. No minimums. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

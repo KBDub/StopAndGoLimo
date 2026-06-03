@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom window signs and window graphics in Joliet, IL. Full-color window decals, perforated film, and frosted vinyl for retail storefronts and commercial buildings. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

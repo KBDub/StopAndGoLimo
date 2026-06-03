@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -37,6 +38,7 @@
     ]
 }
 </script>
+@endverbatim
 @endpush
 <section class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-6">

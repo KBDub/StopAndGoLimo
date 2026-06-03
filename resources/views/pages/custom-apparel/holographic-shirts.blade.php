@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom holographic shirts in Joliet, IL. Rainbow-shifting holographic vinyl designs on t-shirts and apparel for events, teams, and promotions. No minimums, same day available. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom wall signs and wall graphics in Joliet, IL. Vinyl wall decals, wall wraps, and mounted wall signs for businesses and commercial spaces. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -28,6 +29,7 @@
     "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will and DuPage County and the greater Chicagoland area."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

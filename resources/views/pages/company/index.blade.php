@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -15,8 +16,10 @@
     }
 }
 </script>
+@endverbatim
 @endpush
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -46,6 +49,7 @@
     "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel shop in Joliet, Illinois, proudly serving Will and DuPage County since 2017 with custom shirts, signs, decals, and vehicle graphics."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

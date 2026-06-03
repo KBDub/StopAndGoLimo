@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom puff print shirts in Joliet, IL. 3D raised puff heat-transfer designs on t-shirts and apparel. No minimums, same day available. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

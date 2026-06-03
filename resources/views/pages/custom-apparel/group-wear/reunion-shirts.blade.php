@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom family reunion shirts and group shirts in Joliet, IL. Group pricing available. DTF, screen print, and vinyl printing for reunions, class reunions, and family events. No minimums. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page title="Reunion Shirts" metaDescription="Custom reunion shirts for family gatherings and group events in Joliet IL. Bulk pricing, free design help, veteran owned, and fast turnaround serving all of" currentPage="custom-apparel">

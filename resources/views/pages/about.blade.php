@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -15,8 +16,10 @@
     }
 }
 </script>
+@endverbatim
 @endpush
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -46,6 +49,7 @@
     "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will and DuPage County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page title="About Us" metaDescription="Learn about Top 5 Percent - Veteran-owned custom signage and apparel business in Joliet, IL" currentPage="about">

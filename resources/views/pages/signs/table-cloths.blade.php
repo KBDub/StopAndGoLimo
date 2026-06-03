@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom printed table cloths and table covers for events and trade shows in Joliet, IL. Full-color branded table cloths in fitted and throw styles. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom digital vinyl shirts, hoodies, and apparel in Joliet, IL. Full color printed vinyl heat pressed onto garments for photographic detail and vibrant designs. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

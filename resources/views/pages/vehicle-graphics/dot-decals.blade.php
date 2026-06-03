@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "USDOT number stickers, MC numbers, GVWR markings, and DOT compliance decals for commercial trucks in Joliet, Shorewood, Channahon, and Will and DuPage County. Same day available. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -49,7 +49,7 @@
     <meta property="og:site_name" content="Top 5 Percent">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@top5pct">
+    <meta name="twitter:site" content="@@top5pct">
     <meta name="twitter:title" content="{{ $title }}">
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $resolvedOgImage }}">
@@ -65,6 +65,7 @@
     @if($jsFile)
     <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
+    @verbatim
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -131,6 +132,7 @@
         }
     }
     </script>
+    @endverbatim
     @stack('structured-data')
 </head>
 <style>

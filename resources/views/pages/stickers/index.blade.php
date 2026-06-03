@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -28,6 +29,7 @@
     "description": "Veteran-owned sticker printing in Joliet, IL. Standard stickers, die-cut custom shapes, weatherproof vinyl, product labels, and business decals with no minimums and same day service."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

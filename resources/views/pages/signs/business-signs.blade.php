@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom business signs in Joliet, IL. Storefront signs, outdoor signs, window signs, door signs, and professional signage for businesses across Will and DuPage County. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

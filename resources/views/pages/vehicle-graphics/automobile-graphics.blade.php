@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom automobile graphics, car wraps, and vinyl lettering in Joliet, IL. Full and partial wraps for cars, trucks, vans, and fleets. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

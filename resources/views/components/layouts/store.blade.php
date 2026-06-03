@@ -17,7 +17,7 @@
             : ($currentStore->logo_path ? Storage::url($currentStore->logo_path) : null);
     @endphp
     <meta name="twitter:card"        content="summary_large_image">
-    <meta name="twitter:site"        content="@top5pct">
+    <meta name="twitter:site"        content="@@top5pct">
     <meta name="twitter:title"       content="{{ $twitterTitle }}">
     <meta name="twitter:description" content="{{ $twitterDesc }}">
     @if($twitterImage)

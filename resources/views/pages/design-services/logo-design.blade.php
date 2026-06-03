@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Professional logo design services in Joliet, IL. Custom logo creation for businesses and organizations in Will and DuPage County. Print-ready vector files delivered. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

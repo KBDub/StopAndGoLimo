@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom safety signs, social distancing signs, and coronavirus decals in Joliet, IL. Floor decals, window signs, and safety protocol signage for businesses. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

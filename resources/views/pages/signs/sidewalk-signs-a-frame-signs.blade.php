@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom parking signs and lot signs in Joliet, IL. Business parking signs, reserved parking, no parking, and custom property signage for commercial properties. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

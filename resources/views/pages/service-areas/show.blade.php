@@ -9,12 +9,12 @@
 @push('structured-data')
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "Service",
+    "@@context": "https://schema.org",
+    "@@type": "Service",
     "name": "Custom Signs & Apparel in {{ $cityState }}",
-    "provider": { "@id": "https://www.top5pct.com" },
+    "provider": { "@@id": "https://www.top5pct.com" },
     "areaServed": {
-        "@type": "City",
+        "@@type": "City",
         "name": "{{ $cityName }}",
         "addressRegion": "IL",
         "addressCountry": "US"
@@ -24,23 +24,23 @@
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
     "itemListElement": [
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 1,
             "name": "Home",
             "item": "https://www.top5pct.com"
         },
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 2,
             "name": "Service Areas",
             "item": "https://www.top5pct.com/service-areas"
         },
         {
-            "@type": "ListItem",
+            "@@type": "ListItem",
             "position": 3,
             "name": "{{ $cityState }}",
             "item": "https://www.top5pct.com/service-areas/{{ $slug }}"
@@ -50,8 +50,8 @@
 </script>
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@@context": "https://schema.org",
+    "@@type": "WebPage",
     "name": "Custom Signs & Apparel in {{ $cityState }} | Top 5 Percent",
     "url": "https://www.top5pct.com/service-areas/{{ $slug }}",
     "description": "Top 5 Percent is a veteran-owned custom signage and apparel shop proudly serving {{ $cityState }}."
@@ -60,11 +60,11 @@
 @if($content && !empty($content['review']))
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "Review",
-    "itemReviewed": { "@id": "https://www.top5pct.com" },
+    "@@context": "https://schema.org",
+    "@@type": "Review",
+    "itemReviewed": { "@@id": "https://www.top5pct.com" },
     "author": {
-        "@type": "Person",
+        "@@type": "Person",
         "name": "{{ $content['review']['author'] }}"
     },
     "reviewBody": {!! json_encode($content['review']['body']) !!}

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom direct-to-film transfers printed in Joliet, IL. Vibrant full-color DTF prints on any fabric with no minimums and same day service available. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

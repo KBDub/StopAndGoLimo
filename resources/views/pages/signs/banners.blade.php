@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom vinyl banners, birthday banners, business banners, and event banners in Joliet, IL. Full color, any size, same day service. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

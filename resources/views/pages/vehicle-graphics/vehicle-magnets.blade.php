@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom vehicle magnets in Joliet, IL. Removable car and truck magnets for businesses and contractors. Full-color printing on heavy-duty magnetic material. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

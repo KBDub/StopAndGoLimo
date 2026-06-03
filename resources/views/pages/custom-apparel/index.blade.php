@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -28,6 +29,7 @@
     "description": "Veteran-owned custom apparel shop in Joliet, IL offering DTF transfers, screen printing, embroidery, rhinestone, glitter, flock, foil, and specialty shirt printing with no minimums and same day service."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page

@@ -1,4 +1,5 @@
 @push('structured-data')
+@verbatim
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -29,6 +30,7 @@
     "description": "Custom spirit wear and fan apparel in Joliet, IL. School spirit shirts, team fan apparel, and community spirit wear for schools, sports teams, and organizations. No minimums. Veteran owned."
 }
 </script>
+@endverbatim
 @endpush
 
 <x-layouts.page title="Spirit Wear" metaDescription="Custom spirit wear for schools, teams, and organizations in Joliet IL. T-shirts, hoodies, rhinestone, glow in the dark, and fan wear. Veteran owned, serving" currentPage="custom-apparel">

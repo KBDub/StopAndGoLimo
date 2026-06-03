@@ -11,15 +11,15 @@
 @if(count($faqs))
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    "@@context": "https://schema.org",
+    "@@type": "FAQPage",
     "mainEntity": [
         @foreach($faqs as $i => $faq)
         {
-            "@type": "Question",
+            "@@type": "Question",
             "name": {!! json_encode($faq['q']) !!},
             "acceptedAnswer": {
-                "@type": "Answer",
+                "@@type": "Answer",
                 "text": {!! json_encode($faq['a']) !!}
             }
         }{{ !$loop->last ? ',' : '' }}

@@ -42,7 +42,7 @@
                     @endif
 
                     @if($allImages->count() > 1)
-                        <div class="grid grid-cols-4 gap-2">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                             @foreach($allImages->take(4) as $image)
                                 <div class="overflow-hidden bg-linen cursor-pointer hover:ring-2 hover:ring-sunburst transition-all">
                                     <img src="{{ $image->getUrl('small') }}" alt="" class="w-full h-20 object-cover">

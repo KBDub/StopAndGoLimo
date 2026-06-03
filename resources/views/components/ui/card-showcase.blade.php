@@ -14,7 +14,7 @@
             <img
                 src="{{ $image }}"
                 alt="{{ $imageAlt }}"
-                class="w-48 mx-auto mb-6"
+                class="w-full sm:w-48 mx-auto mb-6"
             />
         @endif
         @if($title)

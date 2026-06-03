@@ -48,10 +48,15 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ---
 
-## Medium Priority — Pending
+## Medium Priority — Fixed
 
-- **Product detail thumbnail grid** — `grid-cols-4` has no responsive prefix; 4 tiny thumbnails on a 375px screen. Needs `grid-cols-4 sm:grid-cols-4` or a responsive reduction.
-- **`card-showcase.blade.php`** — `w-48` bare fixed width; needs `w-full sm:w-48` fallback.
+**Product detail thumbnail grid** — `grid-cols-4` → `grid-cols-2 sm:grid-cols-4`. On phones, thumbnails now show 2-up instead of 4 tiny tiles side by side.
+**File:** `resources/views/livewire/catalog/product-detail.blade.php`
+**Date:** 2026-06-03
+
+**`card-showcase.blade.php` image width** — `w-48` → `w-full sm:w-48`. Image fills its container on mobile, then caps at 192px on small screens and up.
+**File:** `resources/views/components/ui/card-showcase.blade.php`
+**Date:** 2026-06-03
 
 ---
 

@@ -11,7 +11,7 @@
             x-data="{ ready: false }"
             x-init="$nextTick(() => ready = true)"
             :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="p-4 sm:p-8 md:p-10 bg-white shadow-gold-lg transition-all duration-500"
+            class="p-10 bg-white shadow-gold-lg transition-all duration-500"
         >
             {{-- Title centered full-width at top --}}
             <div class="text-center mb-8">
@@ -21,22 +21,24 @@
                 </div>
             </div>
 
-            {{-- Image stacks full-width on mobile, floats left/right on md+ --}}
+            {{-- Float-based image + wrapping text --}}
             <div class="[display:flow-root]">
                 @if($imagePosition === 'right')
-                    <div class="w-full mb-6 md:float-right md:w-[600px] md:ml-12 md:mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                    <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-left: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block w-full h-auto md:h-[450px] object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @else
-                    <div class="w-full mb-6 md:float-left md:w-[600px] md:mr-12 md:mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                    <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-right: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block w-full h-auto md:h-[450px] object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @endif

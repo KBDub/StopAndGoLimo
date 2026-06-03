@@ -60,25 +60,6 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ---
 
-## High Priority — Fixed
-
-### Float Layout Collapse — Card Image With Text and Card Detailed Info
-
-**Date:** 2026-06-03
-**Files:**
-- `resources/views/components/sections/card-image-with-text.blade.php`
-- `resources/views/components/ui/card-detailed-info.blade.php`
-
-**Problem:** Both components use CSS `float-left` / `float-right` to wrap text around images. CSS floats never stack — they stay floated at any screen width. On a 412px phone this caused three compounding failures:
-
-1. Heavy card padding (`p-10` / `p-8`) ate most of the available width, leaving ~284-348px of content space.
-2. Inline `margin-right: 3rem` / `margin-left: 3rem` on the float containers was never cleared on mobile, pushing the float footprint wider than the container and clipping the image on the left edge.
-3. `card-detailed-info` images had `style="width:400px; height:300px"` with no `max-width:100%`, causing a hard 400px overflow on a 348px content area.
-
-**Fix:** Floats now only activate at `md:` (768px+). On mobile, the image becomes a full-width block that stacks above the text. Inline margin/dimension styles replaced with responsive Tailwind classes (`w-full h-auto` on mobile, `md:w-[Xpx] md:h-[Xpx]` on desktop). Card padding reduced to `p-4 sm:p-8 md:p-10` so mobile screens have more breathing room.
-
----
-
 ## Low Priority — Pending
 
 - Custom request wizard multi-step form — needs live mobile test.

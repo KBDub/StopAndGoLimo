@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Reflective vinyl printing applies a specialized material to your shirt that retroreflects light directly back toward its source. In headlight or flashlight conditions, a reflective print appears intensely bright, dramatically more visible than any standard printed design. For workers, cyclists, runners, and anyone operating in or near vehicle traffic during low-light conditions, reflective apparel is not just a style choice, it is a genuine safety measure that increases the visibility of the wearer to drivers who may otherwise not see them in time.</p>
         <p class="mb-4">We apply reflective vinyl to t-shirts, hoodies, jackets, and safety vests for construction companies, utility crews, landscaping businesses, event staff, and organizations throughout Joliet, Will and DuPage County that need their team to be highly visible in low-light or nighttime working conditions. Custom reflective apparel with your company name and logo branded on high-visibility safety gear allows your team to maintain professional brand standards while meeting workplace safety requirements.</p>
-        <p>Reflective vinyl at <a href="/" class="link-notification">Top 5 Percent</a> is available in silver, the most common retroreflective finish, as well as colored reflective films that appear as a specific color in normal light while still retroreflecting in direct light. Call us at (815) 349 8600 to discuss your reflective shirt or safety apparel order today.</p>
+        <p>Reflective vinyl at <a href="/" class="link-notification">Top 5 Percent</a> is available in silver, the most common retroreflective finish, as well as colored reflective films that appear as a specific color in normal light while still retroreflecting in direct light. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your reflective shirt or safety apparel order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Reflective printing is not only for safety workwear, it has become a recognized element of athletic and streetwear style as well. Running clubs, cycling groups, and fitness teams throughout Joliet, Will and DuPage County use reflective prints on their training shirts and jackets as a practical safety measure that also communicates an active, performance-oriented brand identity. The reflective elements catch headlights during morning and evening training sessions while looking sharp and intentional in daylight, a genuinely functional design choice that serves two purposes simultaneously.</p>
         <p class="mb-4">Night events, outdoor concerts, music festivals, and charity walks throughout the Chicagoland area use reflective shirts both as safety gear and as distinctive event merchandise that stands out from standard printed event shirts. A reflective element incorporated into an event shirt design creates a functional and visual distinction that makes the shirt more memorable and more valuable to participants who will use it for outdoor activities after the event itself.</p>
-        <p>We produce reflective shirts with no minimum order quantities. Whether you need a single shirt for personal use or a full production run for a commercial safety apparel program, we can accommodate your order. We are a veteran owned shop at 121 Springfield Avenue in Joliet, Illinois. Call us at (815) 349 8600 to discuss your reflective shirt order today.</p>
+        <p>We produce reflective shirts with no minimum order quantities. Whether you need a single shirt for personal use or a full production run for a commercial safety apparel program, we can accommodate your order. We are a veteran owned shop at 121 Springfield Avenue in Joliet, Illinois. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your reflective shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce reflective shirts and safety-grade branded apparel for businesses, organizations, and individuals throughout Will and DuPage County and the Chicagoland area with no minimum order quantities.</p>
-            <p>Call us at (815) 349 8600 to discuss your reflective shirt or safety apparel order today, branded, reflective, and built for real outdoor conditions.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your reflective shirt or safety apparel order today, branded, reflective, and built for real outdoor conditions.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'Are reflective shirts ANSI compliant for job sites?', 'a' => 'Our reflective vinyl shirts are popular for job site visibility. For full ANSI Class 2 or Class 3 compliance, the reflective tape must be applied to a specific pattern. Ask us about your specific safety requirements.'],
             ['q' => 'How do I care for reflective shirts?', 'a' => 'Wash inside out on cold, gentle cycle. Avoid fabric softener and high heat in the dryer, which can degrade reflective materials.'],
             ['q' => 'Can reflective vinyl be combined with other print types?', 'a' => 'Yes. Reflective vinyl can be layered with standard vinyl, company logos, or text on the same shirt.'],
-            ['q' => 'How fast can I get reflective shirts in Joliet?', 'a' => 'Most reflective shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm.'],
+            ['q' => 'How fast can I get reflective shirts in Joliet?', 'a' => 'Most reflective shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

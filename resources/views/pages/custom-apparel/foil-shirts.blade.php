@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Foil printing uses a heat-activated metallic film that creates a mirror-like, high-gloss surface on your design. The result is a print with an intense metallic sheen, genuine gold foil that looks like polished gold, genuine silver foil that looks like brushed steel, or colored foils in rose gold, copper, red, blue, and other metallic tones that bring a level of luxury and visual impact to custom apparel that standard printing methods simply cannot achieve. If glitter sparkles and holographic shifts, foil shines, a clean, bold, high-polish metallic statement.</p>
         <p class="mb-4">Foil shirts are popular for premium fashion apparel, luxury brand merchandise, milestone event shirts, and any custom apparel application where an elevated, high-end aesthetic is the goal. Gold foil in particular communicates achievement, prestige, and celebration, it is the natural choice for championship apparel, milestone anniversary shirts, award ceremony attire, and brands that want to position themselves as premium in their market.</p>
-        <p><a href="/" class="link-notification">Top 5 Percent</a> produces foil shirts with no minimum order quantities on t-shirts, hoodies, and most standard garment types. Every foil design is reviewed before production to ensure the artwork is optimized for the foil application process. Call us at (815) 349 8600 to discuss your foil shirt order today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> produces foil shirts with no minimum order quantities on t-shirts, hoodies, and most standard garment types. Every foil design is reviewed before production to ensure the artwork is optimized for the foil application process. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your foil shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Our foil vinyl selection covers the most popular metallic finishes for custom apparel. Gold foil is our most requested foil option, it works on dark and light garments alike and creates an immediately recognizable premium look that photographs beautifully under any lighting condition. Silver foil provides a clean, modern metallic aesthetic that works particularly well with contemporary brand identities and minimal design styles. Rose gold foil has become increasingly popular for bridal events, women's apparel brands, and lifestyle businesses that align with current aesthetic trends.</p>
         <p class="mb-4">Beyond standard metallic foils, we also work with colored foils in holographic, red, blue, green, and other specialty finishes that combine the mirror-shine quality of foil with visual complexity beyond standard metallic colors. These specialty foil finishes are especially popular for limited edition designs and statement pieces where the material itself is meant to communicate something distinctive about the design or the brand behind it.</p>
-        <p>For milestone events, fiftieth anniversaries, championship seasons, major organization events, gold foil shirts create an immediate sense of ceremony and significance that standard prints cannot convey. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will and DuPage County area. Call us at (815) 349 8600 to discuss your foil shirt project today.</p>
+        <p>For milestone events, fiftieth anniversaries, championship seasons, major organization events, gold foil shirts create an immediate sense of ceremony and significance that standard prints cannot convey. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will and DuPage County area. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your foil shirt project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce foil shirts and premium metallic apparel for brands, athletes, organizations, and individuals throughout Will and DuPage County and the Chicagoland area with no minimum order quantities.</p>
-            <p>Call us at (815) 349 8600 to discuss your foil shirt project, gold, silver, rose gold, and specialty foil finishes available.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your foil shirt project, gold, silver, rose gold, and specialty foil finishes available.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'How do I care for foil-printed shirts?', 'a' => 'Wash foil shirts inside out on cold, gentle cycle, and tumble dry on low or air dry. Avoid ironing directly on the foil area.'],
             ['q' => 'What foil colors do you offer?', 'a' => 'We offer gold, silver, rose gold, holographic, and various color foils. Ask to see available options when you place your order.'],
             ['q' => 'Can foil be combined with other print techniques?', 'a' => 'Yes. Foil pairs well with glitter, rhinestones, and standard vinyl for layered, multi-finish custom shirts.'],
-            ['q' => 'How fast can I get foil shirts in Joliet?', 'a' => 'Most foil shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm availability.'],
+            ['q' => 'How fast can I get foil shirts in Joliet?', 'a' => 'Most foil shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

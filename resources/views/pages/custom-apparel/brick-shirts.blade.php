@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Brick-style printing is a specialty technique that produces a dimensional, raised texture on your shirt design. Like puff printing, it uses an additive that expands during the heat-curing process to create a three-dimensional surface effect, but brick printing is engineered to produce a specific raised, segmented pattern that resembles the texture and visual weight of actual brickwork or raised tile. The result is a shirt that has a bold, architectural quality that standard flat prints simply cannot achieve.</p>
         <p class="mb-4">Brick shirts are popular with streetwear brands, lifestyle apparel lines, and anyone who wants their custom shirt to be a genuine conversation piece. The dimensional texture catches both the eye and the hand, the first thing people do when they see a well-executed brick print shirt is reach out to touch it. That tactile reaction is a mark of a printing technique that communicates exceptional craftsmanship and uniqueness that mass-produced apparel cannot replicate.</p>
-        <p><a href="/" class="link-notification">Top 5 Percent</a> produces brick shirts with no minimum order quantity, so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at (815) 349 8600 to discuss your brick shirt project today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> produces brick shirts with no minimum order quantity, so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your brick shirt project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Brick printing works best with bold, graphic designs that benefit from the dimensional effect. Large logos, brand names, block lettering, and clean geometric shapes translate beautifully into the raised texture and create a visual statement that commands attention from across the room. Highly detailed designs with fine lines or intricate gradients are less suited to this technique, where brick printing truly shines is with strong, simple graphics that are elevated into something special by the dimensional effect.</p>
         <p class="mb-4">Many streetwear brands and specialty apparel lines use brick printing for signature pieces and limited edition runs where the goal is to create a sense of exclusivity and premium quality. If your brand is built around standing out and refusing to look like everyone else, brick shirts deliver that point of difference in a tangible, wearable way that your audience will recognize and respond to.</p>
-        <p>We are a veteran owned custom apparel shop in Joliet, Illinois, serving the greater Chicagoland area. We review every brick shirt order before production to make sure the design is optimized for the dimensional effect. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started.</p>
+        <p>We are a veteran owned custom apparel shop in Joliet, Illinois, serving the greater Chicagoland area. We review every brick shirt order before production to make sure the design is optimized for the dimensional effect. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to get started.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce specialty print shirts for brands, individuals, and organizations throughout Will and DuPage County and the greater Chicagoland area with no minimum order quantities and expert quality control on every order.</p>
-            <p>Call us at (815) 349 8600 to discuss your brick shirt project today.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your brick shirt project today.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'What designs work best with brick vinyl?', 'a' => 'Large bold text and simple block shapes show off the brick texture best. The dimensional pattern becomes the visual star of the design.'],
             ['q' => 'How do I care for brick-printed shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the textured vinyl surface.'],
             ['q' => 'Can brick vinyl be combined with other print techniques?', 'a' => 'Yes. Brick vinyl pairs well with standard vinyl lettering, glitter, or rhinestones for a layered multi-texture shirt.'],
-            ['q' => 'How fast can I get brick shirts in Joliet?', 'a' => 'Most brick shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm for your order.'],
+            ['q' => 'How fast can I get brick shirts in Joliet?', 'a' => 'Most brick shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your order.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

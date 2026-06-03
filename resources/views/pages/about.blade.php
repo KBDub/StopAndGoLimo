@@ -131,7 +131,7 @@
             ['q' => 'How long has Top 5 Percent been in business?', 'a' => 'Top 5 Percent was founded in 2017 and has been serving businesses, schools, sports teams, and organizations throughout Will and DuPage County for nearly a decade.'],
             ['q' => 'What products and services do you offer?', 'a' => 'We specialize in custom apparel (shirts, hoodies, hats), custom signs and banners, vehicle graphics and wraps, stickers and decals, and promotional products. Design services are included with every order.'],
             ['q' => 'Do you offer free design help?', 'a' => 'Yes. Free design assistance is included with every order we produce. You do not need to arrive with finished artwork, our team will build the layout for you.'],
-            ['q' => 'How can I contact Top 5 Percent?', 'a' => 'Call us at (815) 349-8600, stop by 121 Springfield Avenue in Joliet, or use the contact form on our website. We are available seven days a week.'],
+            ['q' => 'How can I contact Top 5 Percent?', 'a' => 'Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a>, stop by 121 Springfield Avenue in Joliet, or use the contact form on our website. We are available seven days a week.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

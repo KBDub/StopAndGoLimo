@@ -33,7 +33,7 @@
 
 <x-layouts.page
     title="Custom Vinyl Shirts Joliet IL | Heat Press Vinyl T-Shirts"
-    metaDescription="Custom vinyl heat-press shirts in Joliet, IL. Bold, durable designs in any color. No minimums, same-day available. Veteran-owned. Call (815) 349-8600."
+    metaDescription="Custom vinyl heat-press shirts in Joliet, IL. Bold, durable designs in any color. No minimums, same-day available. Veteran-owned. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a>."
     currentPage="custom-apparel">
 
     <x-sections.category-hero
@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Heat press vinyl printing cuts your design from colored vinyl film and presses it onto your shirt with heat and pressure, creating a smooth, solid-color print with perfectly clean edges. Vinyl is one of the most time-tested custom shirt printing methods available, it produces bold, crisp designs that hold up through years of regular washing without fading, cracking, or peeling when applied correctly. For logos, text, numbers, and designs that rely on solid colors and clean lines, vinyl delivers consistently excellent results at a low cost per piece.</p>
         <p class="mb-4">Vinyl shirts are especially popular for sports numbers and names, team jerseys, group event shirts, and any application where a specific color match or a clean, professional look is important. The vinyl is available in a wide range of colors including standard, metallic, glitter, holographic, and reflective finishes, giving you significant visual variety within the vinyl printing method. We can cut complex designs and apply them with precision to any garment type.</p>
-        <p><a href="/" class="link-notification">Top 5 Percent</a> has no minimums on vinyl shirts, and same-day production is available for most orders. We serve businesses, sports teams, schools, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your vinyl shirt order today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> has no minimums on vinyl shirts, and same-day production is available for most orders. We serve businesses, sports teams, schools, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your vinyl shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Sports teams throughout Joliet, Will and DuPage County rely on vinyl printing for their jersey numbers, player names, and team branding because vinyl consistently delivers the bold, legible results that sports apparel requires. Numbers and names in vinyl are highly visible on the field or court, maintain their appearance through frequent washing and athletic use, and can be applied quickly enough to accommodate even last-minute roster changes. We can produce individual jerseys with personalized names and numbers without minimum quantities.</p>
         <p class="mb-4">Group event shirts are another high-volume use case for vinyl printing. Family reunion names and dates, employee event shirts with individual names, and organization shirts with personalized details are all efficiently produced using vinyl because each shirt can be customized individually without significant additional cost or production time. If you need twenty-five shirts where every shirt has a different name applied, vinyl is the right method for that project.</p>
-        <p>We work with standard vinyl, as well as specialty vinyl types including metallic, glitter, reflective, holographic, flock, glow-in-the-dark, and foil finishes, all of which can be cut and heat-pressed to your garments for unique visual effects beyond the standard solid color print. Call us at (815) 349 8600 to discuss which vinyl type is right for your project.</p>
+        <p>We work with standard vinyl, as well as specialty vinyl types including metallic, glitter, reflective, holographic, flock, glow-in-the-dark, and foil finishes, all of which can be cut and heat-pressed to your garments for unique visual effects beyond the standard solid color print. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss which vinyl type is right for your project.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce vinyl shirts and specialty apparel for individuals, groups, businesses, and organizations throughout Will and DuPage County and the Chicagoland area, no minimums, same-day available, expert quality on every piece.</p>
-            <p>Call us at (815) 349 8600 to discuss your vinyl shirt order today.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your vinyl shirt order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'How durable is vinyl on shirts?', 'a' => 'Heat-transfer vinyl is very durable when cared for properly. Wash inside out on cold and avoid high heat in the dryer to extend the life of your design.'],
             ['q' => 'What colors of vinyl do you carry?', 'a' => 'We stock a wide range of vinyl colors including standard colors, neon, metallic, glitter, holographic, and specialty finishes. Ask us about available colors when you place your order.'],
             ['q' => 'Can you do multi-color vinyl designs?', 'a' => 'Yes. We layer multiple vinyl colors to produce multi-color designs. Each color is cut, weeded, and pressed individually.'],
-            ['q' => 'How fast can I get vinyl shirts in Joliet?', 'a' => 'Vinyl shirt orders are among our fastest. Many can be completed same day. Call (815) 349-8600 to confirm availability.'],
+            ['q' => 'How fast can I get vinyl shirts in Joliet?', 'a' => 'Vinyl shirt orders are among our fastest. Many can be completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

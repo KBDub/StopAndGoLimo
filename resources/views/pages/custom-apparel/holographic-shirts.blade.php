@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Holographic vinyl creates a color-shifting prismatic effect that cycles through a spectrum of colors as the viewing angle changes. A holographic shirt in silver creates a rainbow shimmer as you move, what reads as silver from one angle shifts to gold, pink, purple, and blue as the light catches different facets of the surface. The effect is impossible to fully capture in a static photograph because it is inherently dynamic, which makes holographic shirts even more striking in person than they appear in any marketing image.</p>
         <p class="mb-4">Holographic vinyl is available in silver, gold, rose gold, and various base tints that all produce slightly different spectral effects depending on the lighting conditions. Under bright indoor lighting, holographic prints create a dramatic iridescent shimmer. Under natural outdoor light, they produce a more subtle but still striking prismatic effect. At nightlife events with stage lighting and LED effects, holographic designs become one of the most visually dynamic elements in the room.</p>
-        <p><a href="/" class="link-notification">Top 5 Percent</a> produces holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at (815) 349 8600 to discuss your holographic shirt order today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> produces holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your holographic shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Holographic apparel has strong associations with futuristic aesthetics, technology brands, gaming culture, and streetwear brands that push creative boundaries. If your brand identity is built around innovation, creativity, or being ahead of the curve, holographic shirts communicate those values through the physical design of the product in a way that a standard printed shirt simply cannot achieve. The prismatic quality of holographic vinyl signals that your brand is not content with conventional choices.</p>
         <p class="mb-4">Music artists, DJs, and performers throughout the Chicagoland area use holographic merchandise as premium tier items in their merchandise setups because holographic pieces have an inherent premium quality that fans perceive as more valuable than standard printed shirts. Event-specific holographic tees, tour hoodies with holographic accents, and limited-run holographic designs all command higher perceived value and sell at higher price points than equivalent non-holographic items.</p>
-        <p>We are a veteran owned custom apparel shop in Joliet, Illinois, serving the greater Chicagoland area. We review every holographic shirt order before production to make sure the design is optimized for the prismatic effect. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your holographic shirt project today.</p>
+        <p>We are a veteran owned custom apparel shop in Joliet, Illinois, serving the greater Chicagoland area. We review every holographic shirt order before production to make sure the design is optimized for the prismatic effect. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to discuss your holographic shirt project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce holographic shirts and specialty prismatic apparel for brands, individuals, and organizations throughout Will and DuPage County and the Chicagoland area with no minimum orders.</p>
-            <p>Call us at (815) 349 8600 to discuss your holographic shirt project today.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your holographic shirt project today.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'How do I care for holographic shirts?', 'a' => 'Wash inside out on cold, gentle cycle, and tumble dry on low or air dry to preserve the holographic finish.'],
             ['q' => 'What designs work best with holographic vinyl?', 'a' => 'Bold, simple shapes and large text show off the color-shifting effect best. Thin lines and small text can still be done but the effect is more visible on larger design elements.'],
             ['q' => 'Can holographic vinyl be combined with other finishes?', 'a' => 'Yes. Holographic works well layered with standard vinyl, glitter, or foil for a multi-texture, multi-finish shirt.'],
-            ['q' => 'How fast can I get holographic shirts in Joliet?', 'a' => 'Most holographic shirt orders are completed same day. Call (815) 349-8600 to confirm for your order.'],
+            ['q' => 'How fast can I get holographic shirts in Joliet?', 'a' => 'Most holographic shirt orders are completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm for your order.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

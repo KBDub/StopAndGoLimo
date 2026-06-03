@@ -132,7 +132,7 @@
             ['q' => 'What communities does Top 5 Percent serve?', 'a' => 'We serve all of Will and DuPage County including Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, Lockport, New Lenox, and Channahon. We also ship and serve customers across the greater Chicagoland region.'],
             ['q' => 'Do you offer military or veteran discounts?', 'a' => 'Yes. We offer a 10% discount to active military, veterans, and first responders. Mention your status when you place your order.'],
             ['q' => 'What industries do you work with?', 'a' => 'We work with small businesses, restaurants, churches, schools, nonprofits, sports teams, construction companies, trucking companies, event planners, and individuals throughout Will and DuPage County and the Chicago area.'],
-            ['q' => 'Is there parking at your Joliet location?', 'a' => 'Yes. Our shop at 121 Springfield Avenue in Joliet has on-site parking available. Call us at (815) 349-8600 with any questions before your visit.'],
+            ['q' => 'Is there parking at your Joliet location?', 'a' => 'Yes. Our shop at 121 Springfield Avenue in Joliet has on-site parking available. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> with any questions before your visit.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

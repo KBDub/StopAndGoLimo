@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Glow-in-the-dark shirts use photoluminescent vinyl that charges in natural or artificial light and then releases that stored energy as a visible green glow when the lights go out. In a darkened room, your design becomes a glowing beacon that is visible across the space and turns your shirt into the most talked-about item at any nighttime event. The glow effect works on any design that can be cut from vinyl, logos, text, shapes, and graphics all translate into glowing designs that look completely distinctive in the dark.</p>
         <p class="mb-4">Under normal lighting conditions, glow-in-the-dark vinyl has a slightly muted, off-white or light yellow appearance depending on the color of the garment. The real magic happens when the lights dim, after a few seconds of charging under room lights or sunlight, the design transitions to its full glow mode and holds the glow for several minutes before needing to recharge. Re-exposure to any light source charges the vinyl again, making it infinitely reusable throughout an event.</p>
-        <p>Glow shirts from <a href="/" class="link-notification">Top 5 Percent</a> are popular for Halloween events, nightclub outings, concerts, music festivals, blacklight parties, school dances, and any nighttime event where you want a genuinely unexpected and memorable visual effect. Call us at (815) 349 8600 to discuss your glow shirt project today.</p>
+        <p>Glow shirts from <a href="/" class="link-notification">Top 5 Percent</a> are popular for Halloween events, nightclub outings, concerts, music festivals, blacklight parties, school dances, and any nighttime event where you want a genuinely unexpected and memorable visual effect. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your glow shirt project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">The versatility of glow-in-the-dark shirts extends well beyond Halloween and nightclub events. Running groups and cycling clubs throughout Will and DuPage County use glow shirts as a safety and visibility measure during early morning or evening outdoor activities where being seen by drivers is genuinely important. Glow vinyl provides a compelling mix of style and practical night visibility that standard reflective gear cannot match. If your group runs or rides in low-light conditions, glow shirts give you visibility with personality.</p>
         <p class="mb-4">Music festivals throughout the Chicagoland area, school spirit events, church youth group activities, and team-building outings all benefit from glow shirts as a memorable group activity element. When a group changes into matching glow shirts for the evening portion of an event, the energy in the room changes immediately. It creates a shared experience moment that participants remember and talk about long after the event itself.</p>
-        <p>We produce glow shirts with no minimum order quantities. You can order a single piece or a full group set depending on your needs. We are a veteran owned shop in Joliet serving the greater Will and DuPage County area. Call us at (815) 349 8600 to discuss your glow shirt order today.</p>
+        <p>We produce glow shirts with no minimum order quantities. You can order a single piece or a full group set depending on your needs. We are a veteran owned shop in Joliet serving the greater Will and DuPage County area. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your glow shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce glow-in-the-dark shirts and specialty event apparel for individuals, groups, and organizations throughout Will and DuPage County and the Chicagoland area with no minimum orders and fast turnaround.</p>
-            <p>Call us at (815) 349 8600 to discuss your glow shirt order today.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your glow shirt order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'How long does the glow last after charging?', 'a' => 'The glow is rechargeable. Expose the shirt to any light source to recharge and it will glow again. Duration varies by design size and material.'],
             ['q' => 'Do glow in the dark shirts look good in regular lighting too?', 'a' => 'Yes. Our glow vinyl is typically white or light-colored in daylight and activates under blacklight or darkness, so the shirt looks great in both normal and dark lighting conditions.'],
             ['q' => 'Can glow be combined with other vinyl types?', 'a' => 'Yes. Glow vinyl can be layered with standard vinyl colors, glitter, or reflective materials for a multi-effect design.'],
-            ['q' => 'How fast can I get glow in the dark shirts in Joliet?', 'a' => 'Most glow shirt orders are completed same day. Call (815) 349-8600 to confirm availability for your design and quantity.'],
+            ['q' => 'How fast can I get glow in the dark shirts in Joliet?', 'a' => 'Most glow shirt orders are completed same day. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability for your design and quantity.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

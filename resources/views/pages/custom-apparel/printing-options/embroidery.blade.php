@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Machine embroidery is the gold standard for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate and professional custom apparel</a>. Unlike <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">printed decorations</a> that sit on the surface of a garment, embroidery stitches your logo, name, or design directly into the fabric using precision machine needles and colored thread. The result is a raised, textured design that communicates quality, permanence, and professionalism in a way that printed apparel simply cannot match. When your employees or team members wear embroidered shirts, the embroidered logo signals that your brand takes itself seriously.</p>
         <p class="mb-4">We produce custom embroidery on polos, button-down shirts, dress shirts, fleece jackets, caps, hats, hoodies, aprons, and virtually any other garment that can be hooped and fed through our embroidery machines. Corporate clients and service businesses throughout Joliet, Will and DuPage County rely on us for professional <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">embroidered uniforms</a> and branded apparel that holds up through regular commercial washing and daily use.</p>
-        <p>Embroidery at <a href="/" class="link-notification">Top 5 Percent</a> is especially durable because the thread is structurally part of the garment rather than an applied layer on top of it. Your embroidered logo will outlast the shirt itself. Call us at (815) 349-8600 to discuss your embroidery project today.</p>
+        <p>Embroidery at <a href="/" class="link-notification">Top 5 Percent</a> is especially durable because the thread is structurally part of the garment rather than an applied layer on top of it. Your embroidered logo will outlast the shirt itself. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your embroidery project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Embroidery is the preferred decoration method for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate uniforms</a> and employee workwear because it creates a finished, polished look appropriate for client-facing environments. Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team will help you build an artwork file optimized for embroidery stitch counts and thread color matching before your order goes into production. Construction firms, medical practices, real estate teams, and service companies throughout Will and DuPage County use embroidered apparel as a core component of their professional image.</p>
         <p class="mb-4">Caps and hats are among the most popular embroidery substrates because a well-structured cap with a crisply embroidered logo is a universally appreciated branded item. <a href="/promotional-items" class="link-notification">Embroidered caps</a> work equally well as employee gear, client gifts, merchandise, and event giveaways. We embroider on structured hats, dad hats, beanies, visors, and trucker hats, and we can accommodate most commercially available hat styles that you provide or that we source for you.</p>
-        <p>We also embroider on bags, towels, blankets, and other accessories beyond standard apparel. If you have a specific embroidery project in mind and you are not sure if it is possible, call us and describe what you need, we will let you know what is achievable. Call us at (815) 349-8600 or visit 121 Springfield Avenue in Joliet to discuss your embroidery order today.</p>
+        <p>We also embroider on bags, towels, blankets, and other accessories beyond standard apparel. If you have a specific embroidery project in mind and you are not sure if it is possible, call us and describe what you need, we will let you know what is achievable. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to discuss your embroidery order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. For bold graphic designs on apparel, see our <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a> options as a complement to embroidery on the same team kit. We also produce professional <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a> for full-color designs on cotton and mixed-fabric garments that cannot be embroidered.</p>
-            <p>Call us at (815) 349-8600 to discuss your embroidery order. We also embroider <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirts</a> and group apparel with no minimums, logo digitization included, and expert quality control on every garment.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your embroidery order. We also embroider <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirts</a> and group apparel with no minimums, logo digitization included, and expert quality control on every garment.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -156,7 +156,7 @@
         ['q' => 'Do you charge extra to digitize my logo for embroidery?', 'a' => 'A one-time digitizing fee may apply to convert your artwork into an embroidery file. Once digitized, your file is on file for future reorders at no additional digitizing charge.'],
         ['q' => 'Is there a minimum order for custom embroidery?', 'a' => 'No. We have no minimum order. You can embroider a single polo shirt or outfit an entire company uniform program.'],
         ['q' => 'How do I care for embroidered shirts?', 'a' => 'Wash embroidered garments inside out on cold using a gentle cycle. Avoid high heat in the dryer to preserve thread integrity and shape.'],
-        ['q' => 'How long does a custom embroidery order take?', 'a' => 'Most embroidery orders are completed within one to three business days after design approval. Rush turnaround may be available, call (815) 349-8600 to discuss your timeline.'],
+        ['q' => 'How long does a custom embroidery order take?', 'a' => 'Most embroidery orders are completed within one to three business days after design approval. Rush turnaround may be available, call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your timeline.'],
     ];
     @endphp
     <x-sections.faq

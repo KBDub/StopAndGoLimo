@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Puff printing uses a special expanding ink additive that reacts to heat during the curing process, causing the printed area to rise up from the fabric surface and create a raised, three-dimensional texture. The effect is immediately noticeable when you look at the shirt and even more pronounced when you touch it. Puff printing adds a level of depth and quality to custom apparel that flat-printed methods simply cannot achieve. It is especially popular for logos, lettering, and graphic elements where you want a bold, premium feel.</p>
         <p class="mb-4">Puff print works best on bold, simple designs with clean edges. Fine lines and small details do not expand as predictably, so we recommend puff printing for block text, large logos, simple icons, and designs where the dimensional quality of the technique can really show. The raised texture is consistent across the print area and holds up well through normal wash and wear cycles without flattening or losing its shape over time.</p>
-        <p><a href="/" class="link-notification">Top 5 Percent</a> produces puff print shirts for brands, sports teams, organizations, and individuals throughout Joliet, Shorewood, and Will and DuPage County who want their custom apparel to stand out from standard flat prints. Call us at (815) 349 8600 to discuss your puff print project today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> produces puff print shirts for brands, sports teams, organizations, and individuals throughout Joliet, Shorewood, and Will and DuPage County who want their custom apparel to stand out from standard flat prints. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your puff print project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">Puff printing is a popular choice for streetwear brands, lifestyle apparel, and organizations that want their logo or design to carry an elevated, premium quality. The raised texture communicates craftsmanship in a way that a flat print does not, and it photographs exceptionally well for social media and product listings. Many brands in the Chicagoland area use puff printing on signature pieces and limited edition runs to create a sense of exclusivity and quality that their customers genuinely appreciate and comment on.</p>
         <p class="mb-4">We can combine puff printing with other decorating techniques such as flat screen printing or vinyl heat transfer to create multi-texture designs where certain elements are raised and others are flat. This combination approach gives your design additional visual complexity and makes it even more distinctive. Ask us about multi-technique designs when you come in to discuss your project.</p>
-        <p>We are a veteran owned custom apparel shop located at 121 Springfield Avenue in Joliet, Illinois. We take pride in every shirt we produce and we want your puff print shirts to represent your brand at their best. Call us at (815) 349 8600 to get started.</p>
+        <p>We are a veteran owned custom apparel shop located at 121 Springfield Avenue in Joliet, Illinois. We take pride in every shirt we produce and we want your puff print shirts to represent your brand at their best. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to get started.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -115,7 +115,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We take pride in every shirt we produce and we want your puff print shirts to represent your brand at its best. No minimums, fast turnaround, and expert guidance from concept to finished garment.</p>
-            <p>Call us at (815) 349 8600 to get started on your puff print shirt order today.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to get started on your puff print shirt order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -158,7 +158,7 @@
             ['q' => 'How durable is puff print?', 'a' => 'Puff prints are durable when cared for properly. Wash inside out on cold, gentle cycle, and tumble dry on low or air dry.'],
             ['q' => 'What designs work best with puff printing?', 'a' => 'Bold, chunky text and large design elements work best for puff printing. Fine lines and very small text are difficult to achieve with the raised finish.'],
             ['q' => 'Can puff print be combined with other vinyl types?', 'a' => 'Yes. Puff can be combined with standard vinyl, glitter, or foil for multi-texture layered designs.'],
-            ['q' => 'How fast can I get puff print shirts in Joliet?', 'a' => 'Most puff shirt orders are completed same day or within 24 hours. Call (815) 349-8600 to confirm availability.'],
+            ['q' => 'How fast can I get puff print shirts in Joliet?', 'a' => 'Most puff shirt orders are completed same day or within 24 hours. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm availability.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

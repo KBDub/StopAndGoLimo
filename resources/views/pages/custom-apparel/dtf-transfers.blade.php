@@ -76,7 +76,7 @@
     >
         <p class="mb-4">Direct-to-film (DTF) printing is one of the most versatile and accessible custom printing methods available today. A DTF transfer is a full-color printed film that is heat-pressed onto a garment, bonding permanently with the fabric fibers to create a vivid, durable print that works on cotton, polyester, blends, and virtually any fabric type. Unlike <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>, which requires separate screens for each color, DTF printing handles full-color designs on any fabric with a single production step. It is also more versatile than <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a>, which only works on polyester fabrics and cannot print on cotton or blended materials.</p>
         <p class="mb-4">DTF transfers are especially popular for low-quantity orders where the cost and setup time of screen printing is not justified. We can produce a single custom DTF transfer for the same quality as a production run of one hundred, which makes DTF the ideal solution for one-off custom shirts, samples, prototypes, and any situation where you need a small number of high-quality custom prints quickly. <a href="/contact" class="link-notification">Same-day production</a> is available for most DTF transfer orders placed before noon.</p>
-        <p><a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned print shop in Joliet, Illinois, serving the greater Will and DuPage County area with premium DTF transfers and custom apparel printing. Call us at (815) 349 8600 to discuss your DTF project today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned print shop in Joliet, Illinois, serving the greater Will and DuPage County area with premium DTF transfers and custom apparel printing. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your DTF project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -87,7 +87,7 @@
     >
         <p class="mb-4">DTF transfers shine in situations where you need quality results without the minimums or setup time that other methods require. Whether you need five shirts for a team event or ten shirts for a small business promotion, our <a href="/custom-apparel" class="link-notification">custom apparel shop</a> in Joliet delivers consistent results at any quantity. The full-color printing process handles photographic images, complex gradients, and detailed artwork equally well, making it a top choice for anyone ordering <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> or promotional group shirts.</p>
         <p class="mb-4">You can also purchase DTF transfers separately and apply them yourself using a heat press if you have one. We produce transfers in any size and quantity for businesses and individuals who do their own heat pressing. This is popular with small apparel businesses, school clubs, and organizations that maintain their own garment decorating equipment and need a reliable source of high-quality pre-printed transfers to apply in-house. This includes groups ordering <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirts</a> and similar group apparel in smaller quantities.</p>
-        <p>We serve businesses, organizations, and individuals throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will and DuPage County with fast, high-quality DTF transfer printing. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your DTF transfer order today.</p>
+        <p>We serve businesses, organizations, and individuals throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will and DuPage County with fast, high-quality DTF transfer printing. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to discuss your DTF transfer order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -116,7 +116,7 @@
         </x-slot>
         <x-slot name="footer">
             <p class="mb-4">We are a veteran owned print shop at 121 Springfield Avenue in Joliet, Illinois, part of our full <a href="/custom-apparel" class="link-notification">custom apparel</a> shop serving businesses, organizations, and individuals throughout Will and DuPage County and the Chicagoland area. We produce DTF transfers with no minimum orders and fast turnaround, and we pair every order with our <a href="/design-services/logo-design" class="link-notification">logo design</a> team if you need artwork built before production.</p>
-            <p>Call us at (815) 349 8600 to discuss your DTF project today, same-day production available, all fabric types accepted, no minimums. We can also combine DTF shirts with matching <a href="/signs/business-signs/banners" class="link-notification">custom banners</a> for a complete event package.</p>
+            <p>Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your DTF project today, same-day production available, all fabric types accepted, no minimums. We can also combine DTF shirts with matching <a href="/signs/business-signs/banners" class="link-notification">custom banners</a> for a complete event package.</p>
         </x-slot>
     </x-sections.card-detailed-info>
 
@@ -159,7 +159,7 @@
         ['q' => 'How long do DTF prints last on shirts?', 'a' => 'With proper care, DTF prints last as long as the garment. Wash inside out on cold and tumble dry on low to maximize print life.'],
         ['q' => 'What garments can you apply DTF transfers to?', 'a' => 'DTF transfers work on cotton, polyester, poly-cotton blends, nylon, and most other fabrics. They also work on hats, bags, and other textile accessories.'],
         ['q' => 'How is DTF different from screen printing?', 'a' => 'DTF prints full-color photographic designs directly from a digital file with no screens, no setup fees, and no minimums. <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">Screen printing</a> uses stenciled layers of ink and is more cost-effective at high volumes for simpler designs.'],
-        ['q' => 'How fast can I get DTF transfers in Joliet?', 'a' => 'Many DTF transfer orders are ready same day. Call us at (815) 349-8600 to confirm turnaround for your specific order.'],
+        ['q' => 'How fast can I get DTF transfers in Joliet?', 'a' => 'Many DTF transfer orders are ready same day. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to confirm turnaround for your specific order.'],
     ];
     @endphp
     <x-sections.faq

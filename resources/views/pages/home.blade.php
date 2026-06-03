@@ -40,6 +40,7 @@
 >
     <x-sections.category-hero
         description="Top 5 Percent is a veteran-owned custom printing shop in Joliet, IL. We make custom shirts, signs, stickers, vehicle graphics, and promotional products for businesses, teams, and individuals throughout Will and DuPage County and the greater Chicagoland area."
+        :compactButtons="true"
     />
     <x-ui.banner-thin-charcoal />
     <x-ui.banner-medium-sunburst />

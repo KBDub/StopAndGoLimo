@@ -1,7 +1,50 @@
 <footer class="bg-linen text-charcoal py-2 border-t border-linen-dark">
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid grid-cols-8 gap-x-4 mb-6 items-start">
+        {{-- Mobile footer (below md) --}}
+        <div class="block md:hidden mb-6">
+
+            {{-- Row 1: Quick Links --}}
+            <div class="mb-5">
+                <h4 class="font-semibold text-charcoal text-base mb-2 border-b border-linen-dark pb-1">Quick Links</h4>
+                <div class="flex flex-wrap gap-x-6 gap-y-1.5 text-sm">
+                    <a href="/" class="link-notification">Home</a>
+                    <a href="/about-us" class="link-notification">About Us</a>
+                    <a href="/articles" class="link-notification">Articles</a>
+                    <a href="/service-areas" class="link-notification">Service Areas</a>
+                    <a href="/reviews" class="link-notification">Reviews</a>
+                    <a href="/privacy-policy" class="link-notification">Privacy Policy</a>
+                    <a href="/terms-of-use" class="link-notification">Terms of Use</a>
+                    <a href="#" onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('open-contact-modal'))" class="link-notification">Contact Us</a>
+                </div>
+            </div>
+
+            {{-- Row 2: Services (top-level only) --}}
+            <div class="mb-5">
+                <h4 class="font-semibold text-charcoal text-base mb-2 border-b border-linen-dark pb-1">Services</h4>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
+                    <a href="/custom-apparel" class="link-notification font-medium">Custom Apparel</a>
+                    <a href="/signs" class="link-notification font-medium">Signs &amp; Banners</a>
+                    <a href="/vehicle-graphics" class="link-notification font-medium">Vehicle Graphics</a>
+                    <a href="/stickers" class="link-notification font-medium">Decals &amp; Stickers</a>
+                    <a href="/promotional-items" class="link-notification font-medium">Promotional Items</a>
+                    <a href="/design-services" class="link-notification font-medium">Design Services</a>
+                </div>
+            </div>
+
+            {{-- Row 3: Contact --}}
+            <div>
+                <h4 class="font-semibold text-charcoal text-base mb-2 border-b border-linen-dark pb-1">Contact</h4>
+                <div class="text-sm space-y-1">
+                    <p class="text-charcoal-light">121 Springfield Avenue, Suite 103, Joliet, IL 60435</p>
+                    <p><a href="tel:+18153498600" class="link-notification font-semibold">(815) 349-8600</a></p>
+                </div>
+            </div>
+
+        </div>
+
+        {{-- Desktop footer (md and above) --}}
+        <div class="hidden md:grid grid-cols-8 gap-x-4 mb-6 items-start">
 
             {{-- Logo --}}
             <div id="logo" class="col-span-1 text-center">

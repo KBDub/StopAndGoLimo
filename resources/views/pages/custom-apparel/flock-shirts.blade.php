@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Flock Shirts"
         headingAccent="Premium Velvet Feel"
-        description="Flock printing creates a velvety, raised texture that you can see and feel. Bold and distinctive, a premium finish that sets your shirt apart from anything you can find at a typical print shop."
+        description="Top 5 Percent uses flock printing to create a velvety, raised texture that you can see and feel. Bold and distinctive, a premium finish that sets your shirt apart from anything you'd find at a typical print shop."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/custom-shirts/top5pct-custom-flock-t-shirt-printing.jpg',                    'alt' => 'Custom flock t-shirt printing in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-flock-hoodie-printing.jpg',                            'alt' => 'Custom flock hoodie printing in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-flock-shirt-vinyl.jpg',                               'alt' => 'Custom flock shirt vinyl in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom flock velvet shirts made in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom flock velvet shirts made in Joliet, Will and DuPage County Illinois'],
         ]"
         visible=2
     />
@@ -96,7 +96,7 @@
     <x-sections.card-detailed-info
         heading="Why Flock Printing Creates a Premium Brand Experience You Can Feel"
         image1="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg"
-        alt1="Custom flock shirts with velvet texture for brands and events in Joliet and Will County Illinois"
+        alt1="Custom flock shirts with velvet texture for brands and events in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Brand experience extends beyond what customers see, it includes what they feel, touch, and physically interact with. Apparel that surprises and delights through its physical quality creates a positive brand association that purely visual decoration cannot manufacture. Flock printing adds a tactile dimension to your custom shirt that makes it genuinely pleasurable to touch, carry, and wear, turning your branded apparel into a sensory brand experience that reinforces quality at every interaction.</p>
@@ -114,7 +114,7 @@
             <p class="mb-4">Flock printing can be combined with flat vinyl prints, metallic vinyl accents, and other specialty printing techniques to create multi-element designs where different parts of the design have different textures and finishes. A flock-printed main logo element with metallic or standard vinyl accent text, for example, creates a layered visual complexity that makes a design feel more considered and premium than a single-technique application. We can discuss combination technique options when you consult with us about your project.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce flock shirts and premium specialty apparel for brands, organizations, sports teams, and individuals throughout Will County and the Chicagoland area with no minimum order quantities.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce flock shirts and premium specialty apparel for brands, organizations, sports teams, and individuals throughout Will and DuPage County and the Chicagoland area with no minimum order quantities.</p>
             <p>Call us at (815) 349 8600 to discuss your flock shirt project today, the premium velvet finish that sets your apparel apart.</p>
         </x-slot>
     </x-sections.card-detailed-info>

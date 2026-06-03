@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Screen Printing"
         headingAccent="Bold & Long-Lasting"
-        description="Screen printing delivers thick, opaque ink layers that produce bold, vibrant colors on any fabric. The most durable decorating method for bulk orders, uniforms, and group apparel that needs to last."
+        description="Top 5 Percent uses screen printing to lay down thick, opaque ink that produces bold, vibrant colors on any fabric. The most durable method for bulk orders, uniforms, and group apparel that needs to last."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -74,7 +74,7 @@
         title="The Classic Standard for Custom Apparel"
     >
         <p class="mb-4">Screen printing is the most time-tested method for decorating custom apparel, and the backbone of our <a href="/custom-apparel" class="link-notification">custom apparel</a> shop in Joliet. The process pushes thick, opaque ink directly through a mesh screen onto the fabric, building up a solid color layer that sits on the surface with a tactile presence you can feel with your fingertip. The result is a bold, high-contrast print that holds up through years of washing without fading, cracking, or peeling. For bulk <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> orders with simple designs and quantities of twelve or more, screen printing is typically the most cost-effective production method available.</p>
-        <p class="mb-4">Screen printing works on virtually any fabric type, including cotton, polyester, blends, and performance fabrics. It is the standard method for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">company uniforms</a>, team apparel, band merchandise, and organization gear across Joliet and throughout Will County. When you need matching shirts for a large group and you want them to look consistent, clean, and durable, screen printing is the right call.</p>
+        <p class="mb-4">Screen printing works on virtually any fabric type, including cotton, polyester, blends, and performance fabrics. It is the standard method for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">company uniforms</a>, team apparel, band merchandise, and organization gear across Joliet and throughout Will and DuPage County. When you need matching shirts for a large group and you want them to look consistent, clean, and durable, screen printing is the right call.</p>
         <p>We produce screen printed apparel for businesses, schools, churches, and community organizations throughout the Chicagoland area, including popular <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> orders for local schools and sports leagues. For full-color photographic designs or small runs without setup fees, see our <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">DTF transfers</a>. Call us at (815) 349-8600 or visit 121 Springfield Avenue in Joliet to talk about your screen printing project today.</p>
     </x-sections.card-image-with-text>
 
@@ -114,7 +114,7 @@
             <p class="mb-4">Screen printing works on cotton, cotton blends, polyester, and most other common apparel materials. T-shirts, hoodies, sweatshirts, polos, <a href="/promotional-items/tote-bags" class="link-notification">tote bags</a>, and hats are all fair game. The versatility of screen printing across garment types makes it the logical choice when you need a consistent look across a mixed order of <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirts</a>, team wear, and accessories.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois serving businesses, sports teams, schools, and organizations throughout Will County. Our <a href="/contact" class="link-notification">same-day service</a> is available for rush orders so your deadline is never at risk. We also produce <a href="/signs" class="link-notification">custom signs</a> and banners to complement your branded apparel and complete your marketing presence.</p>
+            <p class="mb-4">We are a veteran owned print shop in Joliet, Illinois serving businesses, sports teams, schools, and organizations throughout Will and DuPage County. Our <a href="/contact" class="link-notification">same-day service</a> is available for rush orders so your deadline is never at risk. We also produce <a href="/signs" class="link-notification">custom signs</a> and banners to complement your branded apparel and complete your marketing presence.</p>
             <p>Call us at (815) 349-8600 or <a href="/contact" class="link-notification">send us your design</a> to get a quote on your custom screen printing order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>

@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Glow In The Dark Shirts"
         headingAccent="Light Up the Night"
-        description="When the lights go out, your shirt lights up. Custom glow-in-the-dark prints perfect for concerts, nightlife events, Halloween, and any occasion that deserves a little glow."
+        description="When the lights go out, your shirt lights up. Top 5 Percent prints custom glow-in-the-dark designs perfect for concerts, nightlife events, Halloween, and any occasion that deserves a little glow."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/custom-shirts/top5pct-glow-in-the-dark-caps.jpg',                          'alt' => 'Custom glow in the dark caps in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-glowing-halloween-bat-shirt.jpg',                     'alt' => 'Custom glowing Halloween bat shirt in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-halloween-pumpkin-glow-shirt.jpg',                    'alt' => 'Custom Halloween pumpkin glow shirt in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom glow in the dark shirts made in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom glow in the dark shirts made in Joliet, Will and DuPage County Illinois'],
         ]"
         visible=2
     />
@@ -84,9 +84,9 @@
         title="Every Event Under the Stars"
         imagePosition="right"
     >
-        <p class="mb-4">The versatility of glow-in-the-dark shirts extends well beyond Halloween and nightclub events. Running groups and cycling clubs throughout Will County use glow shirts as a safety and visibility measure during early morning or evening outdoor activities where being seen by drivers is genuinely important. Glow vinyl provides a compelling mix of style and practical night visibility that standard reflective gear cannot match. If your group runs or rides in low-light conditions, glow shirts give you visibility with personality.</p>
+        <p class="mb-4">The versatility of glow-in-the-dark shirts extends well beyond Halloween and nightclub events. Running groups and cycling clubs throughout Will and DuPage County use glow shirts as a safety and visibility measure during early morning or evening outdoor activities where being seen by drivers is genuinely important. Glow vinyl provides a compelling mix of style and practical night visibility that standard reflective gear cannot match. If your group runs or rides in low-light conditions, glow shirts give you visibility with personality.</p>
         <p class="mb-4">Music festivals throughout the Chicagoland area, school spirit events, church youth group activities, and team-building outings all benefit from glow shirts as a memorable group activity element. When a group changes into matching glow shirts for the evening portion of an event, the energy in the room changes immediately. It creates a shared experience moment that participants remember and talk about long after the event itself.</p>
-        <p>We produce glow shirts with no minimum order quantities. You can order a single piece or a full group set depending on your needs. We are a veteran owned shop in Joliet serving the greater Will County area. Call us at (815) 349 8600 to discuss your glow shirt order today.</p>
+        <p>We produce glow shirts with no minimum order quantities. You can order a single piece or a full group set depending on your needs. We are a veteran owned shop in Joliet serving the greater Will and DuPage County area. Call us at (815) 349 8600 to discuss your glow shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -96,7 +96,7 @@
     <x-sections.card-detailed-info
         heading="Why Glow-in-the-Dark Shirts Create Unforgettable Event Moments"
         image1="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg"
-        alt1="Custom glow in the dark shirts for events and nighttime activities in Joliet and Will County Illinois"
+        alt1="Custom glow in the dark shirts for events and nighttime activities in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Event experiences are made or broken by the moments that participants remember afterward. A well-chosen glow shirt moment, the instant when the room lights dim and a group of matching glow shirts lights up simultaneously, is one of the most viscerally exciting moments that custom apparel can create. The surprise and delight of that reveal is the kind of thing that guests photograph, share on social media, and talk about when describing the event to people who were not there. That level of organic, enthusiastic sharing is exactly what event organizers and celebration planners want to create.</p>
@@ -114,7 +114,7 @@
             <p class="mb-4">Glow vinyl applies via heat press to the same range of garment types as standard vinyl, t-shirts, hoodies, sweatshirts, and most other common apparel items. The glow effect is independent of the garment color, though it shows most dramatically on dark-colored garments where the contrast between the shirt and the glowing design is greatest. For nighttime events, black or very dark garments with glow designs produce the most visually striking results.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce glow-in-the-dark shirts and specialty event apparel for individuals, groups, and organizations throughout Will County and the Chicagoland area with no minimum orders and fast turnaround.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce glow-in-the-dark shirts and specialty event apparel for individuals, groups, and organizations throughout Will and DuPage County and the Chicagoland area with no minimum orders and fast turnaround.</p>
             <p>Call us at (815) 349 8600 to discuss your glow shirt order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>

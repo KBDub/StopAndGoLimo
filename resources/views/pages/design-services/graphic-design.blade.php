@@ -6,7 +6,7 @@
     "name": "Graphic Design in Joliet, IL",
     "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "Professional graphic design and print layout services in Joliet, IL. Flyers, business cards, signage layouts, and marketing materials for businesses in Will County. Veteran owned."
+    "description": "Professional graphic design and print layout services in Joliet, IL. Flyers, business cards, signage layouts, and marketing materials for businesses in Will and DuPage County. Veteran owned."
 }
 </script>
 <script type="application/ld+json">
@@ -26,21 +26,21 @@
     "@type": "WebPage",
     "name": "Graphic Design in Joliet, IL | Top 5 Percent",
     "url": "https://www.top5pct.com/design-services/graphic-design",
-    "description": "Professional graphic design and print layout services in Joliet, IL. Flyers, business cards, signage layouts, and marketing materials for businesses in Will County. Veteran owned."
+    "description": "Professional graphic design and print layout services in Joliet, IL. Flyers, business cards, signage layouts, and marketing materials for businesses in Will and DuPage County. Veteran owned."
 }
 </script>
 @endpush
 
 <x-layouts.page
     title="Graphic Design | Joliet, IL"
-    metaDescription="Professional layout and graphic design services in Joliet, Shorewood, Plainfield, and Will County. Print-ready design for signs, apparel, banners, and"
+    metaDescription="Professional layout and graphic design services in Joliet, Shorewood, Plainfield, and Will and DuPage County. Print-ready design for signs, apparel, banners, and"
     currentPage="design-services">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Layout &"
         headingAccent="Graphic Design"
-        description="Print-ready layout and graphic design for signs, banners, apparel, promotional products, and more. Our designers prepare your artwork so it looks exactly right when it comes off the press."
+        description="Top 5 Percent offers print-ready layout and graphic design for signs, banners, apparel, promotional products, and more. Our designers prepare your artwork so it looks exactly right when it comes off the press."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -85,7 +85,7 @@
         imagePosition="right"
     >
         <p class="mb-4">Our graphic design services cover every product we produce. We can design custom shirt graphics, banner and sign layouts, <a href="/stickers/custom-shaped-stickers-decals" class="link-notification">sticker and decal artwork</a>, promotional product designs, trade show display graphics, event programs, and anything else you need to look great in print, and for clients who need vehicle graphics designed alongside their sign and apparel artwork our <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> shop is part of the same production team. We use industry-standard design software and deliver files in every format required for production, whether that means vector files for vinyl cutting, high-resolution rasters for large-format printing, or embroidery-ready DST files for machine stitching.</p>
-        <p class="mb-4">We specialize in working with businesses that need design support for ongoing marketing and branding needs. If you run a business in Joliet or Will County and you regularly need new shirts, signs, or promotional materials, we can serve as your design resource and production partner. Many of our long-term clients send us their new product or event ideas and trust us to design and produce everything from a single consistent source, and for businesses that want their team to be able to self-serve their orders our <a href="/design-services/custom-storefronts" class="link-notification">custom storefronts</a> give employees or members a branded online store to shop from at any time.</p>
+        <p class="mb-4">We specialize in working with businesses that need design support for ongoing marketing and branding needs. If you run a business in Joliet or Will and DuPage County and you regularly need new shirts, signs, or promotional materials, we can serve as your design resource and production partner. Many of our long-term clients send us their new product or event ideas and trust us to design and produce everything from a single consistent source, and for businesses that want their team to be able to self-serve their orders our <a href="/design-services/custom-storefronts" class="link-notification">custom storefronts</a> give employees or members a branded online store to shop from at any time.</p>
         <p class="mb-4">From there, we roll your new logo directly into any print product you need, <a href="/promotional-items" class="link-notification">promotional items</a>, <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a>, and more, all from one team. And a finished design package positions you perfectly to open a <a href="/design-services/custom-storefronts" class="link-notification">custom storefront</a> where your school, team, or organization can place orders at any time without involving your staff.</p>
         <p>We are a veteran owned print and design shop located at 121 Springfield Avenue in Joliet, Illinois. We take pride in the quality and accuracy of everything we design and produce. Call us at (815) 349 8600 to discuss your graphic design needs today.</p>
     </x-sections.card-image-with-text>
@@ -113,7 +113,7 @@
             <p class="mb-4">Many of our clients return to us repeatedly for new design work because having a single trusted design and production partner simplifies their entire marketing material workflow. We maintain your brand files, understand your design standards, and can produce new variations quickly without starting from scratch every time, and for businesses that want to take that one step further our <a href="/design-services/custom-storefronts" class="link-notification">custom storefronts</a> give your team or community a fully branded online shop to order from at any time without involving your staff. For businesses that regularly need new event <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a>, updated banner designs, or seasonal promotional materials, this ongoing relationship saves significant time and ensures consistent quality across everything your brand produces.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned design and print shop at 121 Springfield Avenue in Joliet, Illinois. We serve businesses, organizations, and individuals throughout Will County and the Chicagoland area with professional graphic design services that produce results in print, not just on screen, and our team's expertise spans every product we make, from <a href="/custom-apparel" class="link-notification">custom apparel</a> and signs to promotional products and vehicle graphics. For clients who need a brand identity before layout work begins our <a href="/design-services/logo-design" class="link-notification">logo design</a> service creates the foundational mark that goes on everything we produce.</p>
+            <p class="mb-4">We are a veteran owned design and print shop at 121 Springfield Avenue in Joliet, Illinois. We serve businesses, organizations, and individuals throughout Will and DuPage County and the Chicagoland area with professional graphic design services that produce results in print, not just on screen, and our team's expertise spans every product we make, from <a href="/custom-apparel" class="link-notification">custom apparel</a> and signs to promotional products and vehicle graphics. For clients who need a brand identity before layout work begins our <a href="/design-services/logo-design" class="link-notification">logo design</a> service creates the foundational mark that goes on everything we produce.</p>
             <p>Call us at (815) 349 8600 to discuss your graphic design project today, layout, concept development, artwork correction, and print-ready file delivery all available, and ask about pairing your design with a <a href="/signs/business-signs/banners" class="link-notification">custom banner</a> or sign to see how your new artwork looks in large format.</p>
         </x-slot>
     </x-sections.card-detailed-info>

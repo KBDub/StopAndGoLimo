@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Custom Table Cloths | Joliet, IL"
-    metaDescription="We print custom table cloths and table covers for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Full color branded table covers for"
+    metaDescription="We print custom table cloths and table covers for businesses and events in Joliet, Shorewood, Plainfield, and Will and DuPage County. Full color branded table covers for"
     currentPage="signs">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Custom Table Cloths"
         headingAccent="& Table Covers"
-        description="Full-color branded table cloths and table covers that make your booth or display table look professional at trade shows, events, farmers markets, and corporate functions throughout Joliet and Will County."
+        description="Top 5 Percent prints full-color branded table cloths and table covers that make your booth or display table look professional at trade shows, events, farmers markets, and corporate functions throughout Joliet, Will and DuPage County and the greater Chicagoland area."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/table-runners/top5pct-custom-table-cloth.jpg', 'alt' => 'Custom branded table cloths and table covers for events in Joliet Illinois'],
             ['src' => '/images/table-runners/top5pct-personalized-tablecloth-joliet.jpg',                 'alt' => 'Custom table runners and table covers for trade shows in Joliet and Shorewood Illinois'],
             ['src' => '/images/table-runners/top5pct-table-cloths.jpg',               'alt' => 'Full color custom table cloths for events and businesses in Joliet Illinois'],
-            ['src' => '/images/table-runners/top5pct-article-table-cloths-table-runners.jpg',                  'alt' => 'Custom branded table covers and table runners in Joliet and Will County Illinois'],
+            ['src' => '/images/table-runners/top5pct-article-table-cloths-table-runners.jpg',                  'alt' => 'Custom branded table covers and table runners in Joliet, Will and DuPage County Illinois'],
         ]"
         visible=2
     />
@@ -73,7 +73,7 @@
         alt="Custom branded table cloths for businesses in Joliet Illinois"
         title="Look Professional at Every Event"
     >
-        <p class="mb-4">A custom branded table cloth is one of the simplest and most effective ways to make your booth or display table look professional at any event, and it pairs naturally with a matching <a href="/signs/business-signs/banners" class="link-notification">retractable banner</a> behind your table to build a complete, branded trade show setup. When you walk into a trade show, farmers market, community fair, or corporate event and your table is covered with a clean, full-color branded cloth that features your logo, colors, and contact information, you immediately project a level of professionalism and credibility that a plain table or a basic white cloth simply cannot achieve. We produce custom table cloths for businesses and organizations throughout Joliet, Shorewood, Plainfield, and Will County, and for clients who also want their staff dressed to match their display our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> team produces coordinating shirts and polos in the same order.</p>
+        <p class="mb-4">A custom branded table cloth is one of the simplest and most effective ways to make your booth or display table look professional at any event, and it pairs naturally with a matching <a href="/signs/business-signs/banners" class="link-notification">retractable banner</a> behind your table to build a complete, branded trade show setup. When you walk into a trade show, farmers market, community fair, or corporate event and your table is covered with a clean, full-color branded cloth that features your logo, colors, and contact information, you immediately project a level of professionalism and credibility that a plain table or a basic white cloth simply cannot achieve. We produce custom table cloths for businesses and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County, and for clients who also want their staff dressed to match their display our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> team produces coordinating shirts and polos in the same order.</p>
         <p class="mb-4">We offer full-color dye sublimation printing on polyester table covers that fit standard six-foot and eight-foot folding tables, using the same process we apply to our <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">sublimation apparel</a> for colors that bond directly into the fabric fibers and stay vibrant wash after wash. The dye sublimation process bonds the ink directly into the fabric fibers so the colors are vibrant, sharp, and completely resistant to fading, peeling, or washing out. Our table cloths are machine washable and hold their print quality through many wash cycles, making them a durable investment that you can use at every event throughout the year.</p>
         <p class="mb-4"><a href="/signs/table-signs/table-runners" class="link-notification">Table runners</a> are a narrower alternative that lets your table cloth show while still carrying your brand. Complete your trade show booth with matching <a href="/signs/business-signs/banners" class="link-notification">banners</a> hung above your table for maximum height and visibility. Fill your branded table with <a href="/promotional-items" class="link-notification">promotional items</a>, mugs, coasters, and tote bags, to complete the brand experience from tabletop to takeaway.</p>
         <p>We produce table cloths in fitted, throw, and stretch styles depending on your preference and the look you want to achieve. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your custom table cloth order today.</p>
@@ -116,7 +116,7 @@
             <p class="mb-4">If you have an event coming up soon, contact us as early as possible to allow enough production time for your table cloth, and remember that we can produce coordinating <a href="/signs/business-signs/banners" class="link-notification">banners</a> in the same order so your entire display is ready at once. Most custom table cloth orders are completed within three to five business days. If your timeline is tight, ask about our rush production options, we do everything we can to meet urgent deadlines when an important event is approaching, and for a completely coordinated brand look we can also produce <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> for your event team in the same timeframe.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned print shop at 121 Springfield Avenue in Joliet, Illinois. We serve businesses and organizations throughout Will County and the greater Chicagoland area with premium custom event display products including table cloths, <a href="/signs/business-signs/banners" class="link-notification">banner stands</a>, and complete exhibit packages, and for clients who want a complete branded event presence we also produce matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for staff so every person at the table communicates the same brand identity.</p>
+            <p class="mb-4">We are a veteran owned print shop at 121 Springfield Avenue in Joliet, Illinois. We serve businesses and organizations throughout Will and DuPage County and the greater Chicagoland area with premium custom event display products including table cloths, <a href="/signs/business-signs/banners" class="link-notification">banner stands</a>, and complete exhibit packages, and for clients who want a complete branded event presence we also produce matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for staff so every person at the table communicates the same brand identity.</p>
             <p>Call us at (815) 349 8600 to discuss your custom table cloth or event display needs today, and ask about adding <a href="/promotional-items" class="link-notification">promotional items</a> to your order for a complete giveaway package that keeps your brand in customers' hands after the event.</p>
         </x-slot>
     </x-sections.card-detailed-info>

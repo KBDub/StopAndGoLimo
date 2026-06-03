@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Custom Shaped Stickers | Joliet, IL"
-    metaDescription="We print custom die cut stickers in any shape in Joliet, Shorewood, Plainfield, and Will County. Full color weatherproof vinyl. No minimums. Veteran owned."
+    metaDescription="We print custom die cut stickers in any shape in Joliet, Shorewood, Plainfield, and Will and DuPage County. Full color weatherproof vinyl. No minimums. Veteran owned."
     currentPage="stickers">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Custom Shaped"
         headingAccent="Stickers"
-        description="Die cut to any shape you can imagine. Perfect for logos, mascots, unique brand shapes, and anything in between. Full color, weatherproof vinyl with no minimums."
+        description="Top 5 Percent die-cuts custom stickers to any shape you can imagine. Perfect for logos, mascots, unique brand shapes, and everything in between. Full color, weatherproof vinyl with no minimums."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -73,7 +73,7 @@
         alt="Custom shaped die cut stickers for a sports organization in Joliet Illinois"
         title="Die Cut to Any Shape"
     >
-        <p class="mb-4">Custom shaped stickers let your brand break free from the rectangle. We can die cut stickers to follow the exact outline of your logo, mascot, product, or any custom shape you design. The result is a sticker that looks like a premium branded object rather than a label, and that difference gets noticed, especially when paired with matching <a href="/promotional-items" class="link-notification">promotional items</a> in an event bag or product kit for a complete branded experience. Sports teams, breweries, bands, food trucks, and local businesses throughout Joliet and Will County use custom shaped stickers to create a memorable brand impression that stands out from standard square or circle stickers, and many clients extend that brand to their staff with matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for a unified look from the team shirt to the sticker.</p>
+        <p class="mb-4">Custom shaped stickers let your brand break free from the rectangle. We can die cut stickers to follow the exact outline of your logo, mascot, product, or any custom shape you design. The result is a sticker that looks like a premium branded object rather than a label, and that difference gets noticed, especially when paired with matching <a href="/promotional-items" class="link-notification">promotional items</a> in an event bag or product kit for a complete branded experience. Sports teams, breweries, bands, food trucks, and local businesses throughout Joliet, Will and DuPage County use custom shaped stickers to create a memorable brand impression that stands out from standard square or circle stickers, and many clients extend that brand to their staff with matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for a unified look from the team shirt to the sticker.</p>
         <p class="mb-4">We print on premium adhesive vinyl using full color digital printing so your design comes through crisp and vibrant at any size. Our die cutting is precise to within fractions of a millimeter, which means complex shapes and fine details are handled cleanly every time, and for clients who also need window-scale applications of their die-cut artwork our <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> team handles large-format vinyl cut to the same precision. Whether you need a simple rounded badge shape or a highly detailed contour cut of your mascot, we have the equipment and the experience to produce it right.</p>
         <p class="mb-4">Need a simple rectangle or circle? Our <a href="/stickers/standard-stickers-decals" class="link-notification">standard stickers</a> are the most economical option for clean, basic shapes. For large die-cut graphics on vehicles, our <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> team handles full-scale custom shapes. Our <a href="/design-services/graphic-design" class="link-notification">graphic design</a> team can also help build a precise cut-path outline from any logo or artwork.</p>
         <p>We offer no minimums on custom shaped stickers so you can order exactly what you need, whether that is five stickers for a personal project or five thousand for a major product launch. Call us at (815) 349 8600 or visit us at 121 Springfield Avenue in Joliet to get started on your custom shaped sticker order.</p>
@@ -81,7 +81,7 @@
 
     <x-sections.card-image-with-text
         image="/images/stickers-decals/top5pct-stickers-in-joliet.jpg"
-        alt="Custom brand stickers for local businesses in Joliet and Will County Illinois"
+        alt="Custom brand stickers for local businesses in Joliet, Will and DuPage County Illinois"
         title="Weatherproof and Built to Last"
         imagePosition="right"
     >
@@ -103,7 +103,7 @@
         <x-slot name="intro">
             <p class="mb-4">Custom shaped stickers are one of the most effective and affordable branding tools available to small businesses, organizations, and individuals. A die cut sticker that follows the shape of your logo or mascot immediately communicates a level of polish and intentionality that a standard rectangle sticker cannot match, and they pair naturally with our <a href="/promotional-items" class="link-notification">promotional items</a> in event bags and brand kits for a complete branded giveaway experience. When someone sees a perfectly cut sticker of your brand sitting on a laptop, a water bottle, or a car bumper, it registers as a deliberate brand moment rather than just a label.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Brand Recognition on the Move</h3>
-            <p class="mb-4">Every custom shaped sticker that leaves our shop becomes a moving advertisement for your brand. When customers, fans, and supporters put your sticker on their belongings, your logo travels with them throughout Joliet, across Will County, and beyond. This kind of organic brand exposure is especially valuable for local businesses that depend on word of mouth and community recognition to grow. A sticker is a physical endorsement that travels everywhere its owner goes, and a well-designed custom shaped sticker gets noticed and remembered.</p>
+            <p class="mb-4">Every custom shaped sticker that leaves our shop becomes a moving advertisement for your brand. When customers, fans, and supporters put your sticker on their belongings, your logo travels with them throughout Joliet, across Will and DuPage County, and beyond. This kind of organic brand exposure is especially valuable for local businesses that depend on word of mouth and community recognition to grow. A sticker is a physical endorsement that travels everywhere its owner goes, and a well-designed custom shaped sticker gets noticed and remembered.</p>
         </x-slot>
         <x-slot name="mid">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Perfect for Product Packaging and Events</h3>
@@ -116,7 +116,7 @@
             <p class="mb-4">We have no minimum order quantity on custom shaped stickers. Whether you need a single proof sticker to test before a larger run or a small batch for a one-time event, we will produce exactly what you need without requiring you to over-order, and for larger-scale applications of your die-cut artwork our <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> team scales your design to full-panel wraps and fleet decals. We work with businesses of all sizes and we understand that not every project justifies a large quantity order. Our flexible ordering makes us the right choice for both small personal projects and large commercial runs, and we can pair your sticker order with matching <a href="/promotional-items" class="link-notification">promotional items</a> for a complete branded event kit.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned print shop located at 121 Springfield Avenue in Joliet, Illinois. We serve customers throughout Will County and the greater Chicagoland area with premium custom stickers and print products, and our full <a href="/stickers" class="link-notification">stickers shop</a> includes standard stickers, die-cut shapes, and product labels for every branding need. We take pride in the quality of everything we produce and we want your stickers to represent your brand at its absolute best, and for clients who want their brand on fabric as well our <a href="/custom-apparel" class="link-notification">custom apparel</a> shop produces shirts, hoodies, and hats right next door.</p>
+            <p class="mb-4">We are a veteran owned print shop located at 121 Springfield Avenue in Joliet, Illinois. We serve customers throughout Will and DuPage County and the greater Chicagoland area with premium custom stickers and print products, and our full <a href="/stickers" class="link-notification">stickers shop</a> includes standard stickers, die-cut shapes, and product labels for every branding need. We take pride in the quality of everything we produce and we want your stickers to represent your brand at its absolute best, and for clients who want their brand on fabric as well our <a href="/custom-apparel" class="link-notification">custom apparel</a> shop produces shirts, hoodies, and hats right next door.</p>
             <p>Call us at (815) 349 8600 or stop by our shop in Joliet to discuss your custom shaped sticker project. We are ready to help, and ask about pairing your sticker order with <a href="/promotional-items" class="link-notification">promotional items</a> for a complete branded giveaway kit.</p>
         </x-slot>
     </x-sections.card-detailed-info>

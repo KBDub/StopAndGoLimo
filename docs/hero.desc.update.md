@@ -20,7 +20,7 @@ All `x-sections.category-hero` description values must include the company name,
 **Current:** *(no description prop set, component renders with its default)*
 **Update:**
 ```
-description="Top 5 Percent is a veteran-owned custom printing shop in Joliet, IL. We make custom shirts, signs, stickers, vehicle graphics, and promotional products for businesses, teams, and individuals throughout Will County and Chicagoland."
+description="Top 5 Percent is a veteran-owned custom printing shop in Joliet, IL. We make custom shirts, signs, stickers, vehicle graphics, and promotional products for businesses, teams, and individuals throughout Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -47,10 +47,10 @@ description="Get in touch with Top 5 Percent for a free quote on custom shirts, 
 
 ### Reviews
 **File:** `resources/views/pages/reviews.blade.php`
-**Current:** `"Don't take our word for it. Here's what real customers across Joliet, Will County, and Chicagoland have to say about our work, our service, and our team."`
+**Current:** `"Don't take our word for it. Here's what real customers across Joliet, Will and DuPage County, and the greater Chicagoland area have to say about our work, our service, and our team."`
 **Update:**
 ```
-description="Don't just take our word for it. Here's what real customers across Joliet, Will County, and Chicagoland have to say about Top 5 Percent, our work, and our team."
+description="Don't just take our word for it. Here's what real customers across Joliet, Will and DuPage County, and the greater Chicagoland area have to say about Top 5 Percent, our work, and our team."
 ```
 
 ---
@@ -67,10 +67,10 @@ description="Browse the Top 5 Percent project gallery featuring custom shirts, s
 
 ### Service Areas
 **File:** `resources/views/pages/service-areas.blade.php`
-**Current:** `"Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will County and the greater Chicagoland area."`
+**Current:** `"Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will and DuPage County and the greater Chicagoland area."`
 **Update:** *(already includes the name well, minor polish only)*
 ```
-description="Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will County and the greater Chicagoland area."
+description="Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -111,10 +111,10 @@ description="Shop the exclusive Top 5 Percent merchandise collection. Premium t-
 
 ### Company Overview
 **File:** `resources/views/pages/company/index.blade.php`
-**Current:** `"We are a veteran-owned custom signage and apparel shop in Joliet, Illinois. Founded in 2017, we have spent nearly a decade building long-term relationships with the businesses, teams, and organizations of Will County."`
+**Current:** `"We are a veteran-owned custom signage and apparel shop in Joliet, Illinois. Founded in 2017, we have spent nearly a decade building long-term relationships with the businesses, teams, and organizations of Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent is a veteran-owned custom signage and apparel shop in Joliet, Illinois. Founded in 2017, we have spent nearly a decade building long-term relationships with businesses, teams, and organizations across Will County."
+description="Top 5 Percent is a veteran-owned custom signage and apparel shop in Joliet, Illinois. Founded in 2017, we have spent nearly a decade building long-term relationships with businesses, teams, and organizations across Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -185,20 +185,20 @@ description="Top 5 Percent prints direct-to-film transfers with vivid, full-colo
 
 ### Digital Vinyl
 **File:** `resources/views/pages/custom-apparel/printing-options/digital-vinyl.blade.php`
-**Current:** `"We produce custom digital vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, and Will County. Digital vinyl is printed in full color on a special vinyl film and then heat pressed onto your garment. The result is photographic quality detail, smooth color gradients, and vivid artwork that standard cut vinyl cannot achieve."`
+**Current:** `"We produce custom digital vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, and Will and DuPage County. Digital vinyl is printed in full color on a special vinyl film and then heat pressed onto your garment. The result is photographic quality detail, smooth color gradients, and vivid artwork that standard cut vinyl cannot achieve."`
 **Update:**
 ```
-description="Top 5 Percent produces custom digital vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, and Will County. Digital vinyl is printed in full color on a special vinyl film and then heat pressed onto your garment. The result is photographic quality detail, smooth color gradients, and vivid artwork that standard cut vinyl cannot match."
+description="Top 5 Percent produces custom digital vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, and Will and DuPage County. Digital vinyl is printed in full color on a special vinyl film and then heat pressed onto your garment. The result is photographic quality detail, smooth color gradients, and vivid artwork that standard cut vinyl cannot match."
 ```
 
 ---
 
 ### Specialty Vinyl
 **File:** `resources/views/pages/custom-apparel/specialty-materials/vinyl.blade.php`
-**Current:** `"We press custom vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will County. Heat press vinyl gives you sharp, clean edges, bold color, and a design that holds up wash after wash. Whether you need one shirt or a hundred, we can turn your design into finished apparel fast."`
+**Current:** `"We press custom vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Heat press vinyl gives you sharp, clean edges, bold color, and a design that holds up wash after wash. Whether you need one shirt or a hundred, we can turn your design into finished apparel fast."`
 **Update:**
 ```
-description="Top 5 Percent presses custom vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will County. Heat press vinyl gives you sharp, clean edges, bold color, and a design that holds up wash after wash. One shirt or a hundred, we can turn your design into finished apparel fast."
+description="Top 5 Percent presses custom vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Heat press vinyl gives you sharp, clean edges, bold color, and a design that holds up wash after wash. One shirt or a hundred, we can turn your design into finished apparel fast."
 ```
 
 ---
@@ -353,40 +353,40 @@ description="Top 5 Percent makes custom spirit wear for schools, teams, and orga
 
 ### Signs (category index)
 **File:** `resources/views/pages/signs/index.blade.php`
-**Current:** `"We print professional custom signs, banners, posters, and displays for businesses and events throughout Joliet, Shorewood, Plainfield, and all of Will County. Indoor and outdoor options with premium materials and fast turnaround. Veteran owned and same day service available."`
+**Current:** `"We print professional custom signs, banners, posters, and displays for businesses and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Indoor and outdoor options with premium materials and fast turnaround. Veteran owned and same day service available."`
 **Update:**
 ```
-description="Top 5 Percent prints professional custom signs, banners, posters, and displays for businesses and events throughout Joliet, Shorewood, Plainfield, and all of Will County. Indoor and outdoor options with premium materials and fast turnaround. Veteran owned, same day service available."
+description="Top 5 Percent prints professional custom signs, banners, posters, and displays for businesses and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Indoor and outdoor options with premium materials and fast turnaround. Veteran owned, same day service available."
 ```
 
 ---
 
 ### Banners
 **File:** `resources/views/pages/signs/banners.blade.php`
-**Current:** `"We print custom vinyl banners, fabric banners, and specialty banners for businesses, celebrations, and events throughout Joliet, Shorewood, Plainfield, and all of Will County. Full color printing in any size with same day service available."`
+**Current:** `"We print custom vinyl banners, fabric banners, and specialty banners for businesses, celebrations, and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Full color printing in any size with same day service available."`
 **Update:**
 ```
-description="Top 5 Percent prints custom vinyl banners, fabric banners, and specialty banners for businesses, celebrations, and events throughout Joliet, Shorewood, Plainfield, and all of Will County. Full color printing in any size, same day service available."
+description="Top 5 Percent prints custom vinyl banners, fabric banners, and specialty banners for businesses, celebrations, and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Full color printing in any size, same day service available."
 ```
 
 ---
 
 ### Business Signs
 **File:** `resources/views/pages/signs/business-signs.blade.php`
-**Current:** `"We print and install custom business signs for storefronts, offices, windows, and doors throughout Joliet, Shorewood, Channahon, and all of Will County. Premium materials built to withstand Illinois weather. Veteran owned with in house design and installation."`
+**Current:** `"We print and install custom business signs for storefronts, offices, windows, and doors throughout Joliet, Shorewood, Channahon, and all of Will and DuPage County. Premium materials built to withstand Illinois weather. Veteran owned with in house design and installation."`
 **Update:**
 ```
-description="Top 5 Percent prints and installs custom business signs for storefronts, offices, windows, and doors throughout Joliet, Shorewood, Channahon, and all of Will County. Premium materials built to withstand Illinois weather. Veteran owned with in-house design and installation."
+description="Top 5 Percent prints and installs custom business signs for storefronts, offices, windows, and doors throughout Joliet, Shorewood, Channahon, and all of Will and DuPage County. Premium materials built to withstand Illinois weather. Veteran owned with in-house design and installation."
 ```
 
 ---
 
 ### Sidewalk Signs (a-frame)
 **File:** `resources/views/pages/signs/sidewalk-signs.blade.php`
-**Current:** `"We build and print a frame sidewalk signs that draw customers right to your front door. Interchangeable inserts, weather resistant frames, and full color printed graphics for businesses and events throughout Joliet, Shorewood, and all of Will County."`
+**Current:** `"We build and print a frame sidewalk signs that draw customers right to your front door. Interchangeable inserts, weather resistant frames, and full color printed graphics for businesses and events throughout Joliet, Shorewood, and all of Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent builds and prints a-frame sidewalk signs that draw customers right to your front door. Interchangeable inserts, weather-resistant frames, and full color printed graphics for businesses and events throughout Joliet, Shorewood, and all of Will County."
+description="Top 5 Percent builds and prints a-frame sidewalk signs that draw customers right to your front door. Interchangeable inserts, weather-resistant frames, and full color printed graphics for businesses and events throughout Joliet, Shorewood, and all of Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -403,60 +403,60 @@ description="Top 5 Percent makes custom parking signs for businesses, properties
 
 ### Yard Signs
 **File:** `resources/views/pages/signs/yard-signs.blade.php`
-**Current:** `"We print custom yard signs for real estate, political campaigns, business promotions, events, and personal use throughout Joliet, Shorewood, Plainfield, and all of Will County. Durable corrugated plastic, metal stakes, and same day service available."`
+**Current:** `"We print custom yard signs for real estate, political campaigns, business promotions, events, and personal use throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Durable corrugated plastic, metal stakes, and same day service available."`
 **Update:**
 ```
-description="Top 5 Percent prints custom yard signs for real estate, political campaigns, business promotions, events, and personal use throughout Joliet, Shorewood, Plainfield, and all of Will County. Durable corrugated plastic, metal stakes, and same day service available."
+description="Top 5 Percent prints custom yard signs for real estate, political campaigns, business promotions, events, and personal use throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Durable corrugated plastic, metal stakes, and same day service available."
 ```
 
 ---
 
 ### Table Cloths
 **File:** `resources/views/pages/signs/table-cloths.blade.php`
-**Current:** `"Full-color branded table cloths and table covers that make your booth or display table look professional at trade shows, events, farmers markets, and corporate functions throughout Joliet and Will County."`
+**Current:** `"Full-color branded table cloths and table covers that make your booth or display table look professional at trade shows, events, farmers markets, and corporate functions throughout Joliet, Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent prints full-color branded table cloths and table covers that make your booth or display table look professional at trade shows, events, farmers markets, and corporate functions throughout Joliet and Will County."
+description="Top 5 Percent prints full-color branded table cloths and table covers that make your booth or display table look professional at trade shows, events, farmers markets, and corporate functions throughout Joliet, Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
 
 ### Table Runners
 **File:** `resources/views/pages/signs/table-runners.blade.php`
-**Current:** `"We print custom table runners, table cloths, and table skirts for trade shows, corporate events, weddings, and brand promotions throughout Joliet, Shorewood, Plainfield, and all of Will County. Full color printing on premium polyester fabric."`
+**Current:** `"We print custom table runners, table cloths, and table skirts for trade shows, corporate events, weddings, and brand promotions throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Full color printing on premium polyester fabric."`
 **Update:**
 ```
-description="Top 5 Percent prints custom table runners, table cloths, and table skirts for trade shows, corporate events, weddings, and brand promotions throughout Joliet, Shorewood, Plainfield, and all of Will County. Full color printing on premium polyester fabric."
+description="Top 5 Percent prints custom table runners, table cloths, and table skirts for trade shows, corporate events, weddings, and brand promotions throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Full color printing on premium polyester fabric."
 ```
 
 ---
 
 ### Window Signs
 **File:** `resources/views/pages/signs/window-signs.blade.php`
-**Current:** `"Custom window signs and graphics that transform plain glass into powerful advertising space. Perforated vinyl, clear vinyl, frosted privacy film, and full-color window decals for businesses throughout Will County."`
+**Current:** `"Custom window signs and graphics that transform plain glass into powerful advertising space. Perforated vinyl, clear vinyl, frosted privacy film, and full-color window decals for businesses throughout Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent makes custom window signs and graphics that transform plain glass into powerful advertising space. Perforated vinyl, clear vinyl, frosted privacy film, and full-color window decals for businesses throughout Will County."
+description="Top 5 Percent makes custom window signs and graphics that transform plain glass into powerful advertising space. Perforated vinyl, clear vinyl, frosted privacy film, and full-color window decals for businesses throughout Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
 
 ### Door Signs
 **File:** `resources/views/pages/signs/door-signs.blade.php`
-**Current:** `"Custom door signs that tell customers everything they need to know before they step inside. Hours, logo, suite numbers, welcome graphics, and frosted privacy vinyl for businesses throughout Will County."`
+**Current:** `"Custom door signs that tell customers everything they need to know before they step inside. Hours, logo, suite numbers, welcome graphics, and frosted privacy vinyl for businesses throughout Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent makes custom door signs that tell customers everything they need to know before they step inside. Hours, logos, suite numbers, welcome graphics, and frosted privacy vinyl for businesses throughout Will County."
+description="Top 5 Percent makes custom door signs that tell customers everything they need to know before they step inside. Hours, logos, suite numbers, welcome graphics, and frosted privacy vinyl for businesses throughout Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
 
 ### Wall Signs
 **File:** `resources/views/pages/signs/wall-signs.blade.php`
-**Current:** `"Custom wall signs, decals, and murals that transform your interior spaces into branded environments. Office lobbies, retail floors, break rooms, and feature walls throughout Joliet and Will County."`
+**Current:** `"Custom wall signs, decals, and murals that transform your interior spaces into branded environments. Office lobbies, retail floors, break rooms, and feature walls throughout Joliet, Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent creates custom wall signs, decals, and murals that transform your interior spaces into branded environments. Office lobbies, retail floors, break rooms, and feature walls throughout Joliet and Will County."
+description="Top 5 Percent creates custom wall signs, decals, and murals that transform your interior spaces into branded environments. Office lobbies, retail floors, break rooms, and feature walls throughout Joliet, Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -473,20 +473,20 @@ description="Top 5 Percent makes custom floor signs and decals that guide custom
 
 ### Posters
 **File:** `resources/views/pages/signs/posters.blade.php`
-**Current:** `"We produce high quality poster prints for businesses, events, and personal use throughout Joliet, Shorewood, Romeoville, and all of Will County. Wide format output, premium paper stocks, and fast turnaround. Free design help included with every order."`
+**Current:** `"We produce high quality poster prints for businesses, events, and personal use throughout Joliet, Shorewood, Romeoville, and all of Will and DuPage County. Wide format output, premium paper stocks, and fast turnaround. Free design help included with every order."`
 **Update:**
 ```
-description="Top 5 Percent produces high quality poster prints for businesses, events, and personal use throughout Joliet, Shorewood, Romeoville, and all of Will County. Wide format output, premium paper stocks, and fast turnaround. Free design help included with every order."
+description="Top 5 Percent produces high quality poster prints for businesses, events, and personal use throughout Joliet, Shorewood, Romeoville, and all of Will and DuPage County. Wide format output, premium paper stocks, and fast turnaround. Free design help included with every order."
 ```
 
 ---
 
 ### Coronavirus Signs
 **File:** `resources/views/pages/signs/coronavirus-signs.blade.php`
-**Current:** `"We print social distancing signs, floor decals, safety protocol signage, and open for business displays for businesses, schools, and organizations throughout Joliet, Shorewood, Plainfield, and all of Will County. Fast turnaround and professional quality."`
+**Current:** `"We print social distancing signs, floor decals, safety protocol signage, and open for business displays for businesses, schools, and organizations throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Fast turnaround and professional quality."`
 **Update:**
 ```
-description="Top 5 Percent prints social distancing signs, floor decals, safety protocol signage, and open-for-business displays for businesses, schools, and organizations throughout Joliet, Shorewood, Plainfield, and all of Will County. Fast turnaround and professional quality."
+description="Top 5 Percent prints social distancing signs, floor decals, safety protocol signage, and open-for-business displays for businesses, schools, and organizations throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Fast turnaround and professional quality."
 ```
 
 ---
@@ -497,20 +497,20 @@ description="Top 5 Percent prints social distancing signs, floor decals, safety 
 
 ### Stickers (category index)
 **File:** `resources/views/pages/stickers/index.blade.php`
-**Current:** `"We print premium custom stickers for businesses, events, sports teams, and personal use throughout Joliet, Shorewood, Plainfield, and Will County. Standard sizes and fully custom die-cut shapes available. No minimums, full color, weatherproof vinyl, and same day service available."`
+**Current:** `"We print premium custom stickers for businesses, events, sports teams, and personal use throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Standard sizes and fully custom die-cut shapes available. No minimums, full color, weatherproof vinyl, and same day service available."`
 **Update:**
 ```
-description="Top 5 Percent prints premium custom stickers for businesses, events, sports teams, and personal use throughout Joliet, Shorewood, Plainfield, and Will County. Standard sizes and fully custom die-cut shapes available. No minimums, full color, weatherproof vinyl, and same day service available."
+description="Top 5 Percent prints premium custom stickers for businesses, events, sports teams, and personal use throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Standard sizes and fully custom die-cut shapes available. No minimums, full color, weatherproof vinyl, and same day service available."
 ```
 
 ---
 
 ### Standard Stickers
 **File:** `resources/views/pages/stickers/standard-stickers.blade.php`
-**Current:** `"We print custom stickers, die cut decals, product labels, and business decals for companies, sports teams, events, and personal use throughout Joliet, Shorewood, Plainfield, and Will County. No minimums, full color, weatherproof vinyl, and same day service available."`
+**Current:** `"We print custom stickers, die cut decals, product labels, and business decals for companies, sports teams, events, and personal use throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. No minimums, full color, weatherproof vinyl, and same day service available."`
 **Update:**
 ```
-description="Top 5 Percent prints custom stickers, die-cut decals, product labels, and business decals for companies, sports teams, events, and personal use throughout Joliet, Shorewood, Plainfield, and Will County. No minimums, full color, weatherproof vinyl, and same day service available."
+description="Top 5 Percent prints custom stickers, die-cut decals, product labels, and business decals for companies, sports teams, events, and personal use throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. No minimums, full color, weatherproof vinyl, and same day service available."
 ```
 
 ---
@@ -531,40 +531,40 @@ description="Top 5 Percent die-cuts custom stickers to any shape you can imagine
 
 ### Vehicle Graphics (category index)
 **File:** `resources/views/pages/vehicle-graphics/index.blade.php`
-**Current:** `"We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will County. Turn your vehicle into a mobile billboard today."`
+**Current:** `"We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will and DuPage County. Turn your vehicle into a mobile billboard today."`
 **Update:**
 ```
-description="Top 5 Percent designs and installs custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will County. Turn your vehicle into a mobile billboard."
+description="Top 5 Percent designs and installs custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will and DuPage County. Turn your vehicle into a mobile billboard."
 ```
 
 ---
 
 ### Automobile Graphics
 **File:** `resources/views/pages/vehicle-graphics/automobile-graphics.blade.php`
-**Current:** `"We design and install custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics for businesses and individuals throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will County. Full color, professional grade, long lasting vinyl that turns any vehicle into a mobile billboard."`
+**Current:** `"We design and install custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics for businesses and individuals throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Full color, professional grade, long lasting vinyl that turns any vehicle into a mobile billboard."`
 **Update:**
 ```
-description="Top 5 Percent designs and installs custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics for businesses and individuals throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will County. Full color, professional grade, long lasting vinyl that turns any vehicle into a mobile billboard."
+description="Top 5 Percent designs and installs custom car wraps, vinyl lettering, van graphics, truck decals, and boat graphics for businesses and individuals throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Full color, professional grade, long lasting vinyl that turns any vehicle into a mobile billboard."
 ```
 
 ---
 
 ### DOT Decals
 **File:** `resources/views/pages/vehicle-graphics/dot-decals.blade.php`
-**Current:** `"We print DOT decals, USDOT number stickers, MC number decals, truck lettering, and commercial vehicle compliance graphics for truckers and fleet operators in Joliet, Shorewood, Channahon, and all of Will County. Veteran owned with real trucking experience. Same day service available."`
+**Current:** `"We print DOT decals, USDOT number stickers, MC number decals, truck lettering, and commercial vehicle compliance graphics for truckers and fleet operators in Joliet, Shorewood, Channahon, and all of Will and DuPage County. Veteran owned with real trucking experience. Same day service available."`
 **Update:**
 ```
-description="Top 5 Percent prints DOT decals, USDOT number stickers, MC number decals, truck lettering, and commercial vehicle compliance graphics for truckers and fleet operators in Joliet, Shorewood, Channahon, and all of Will County. Veteran owned with real trucking experience. Same day service available."
+description="Top 5 Percent prints DOT decals, USDOT number stickers, MC number decals, truck lettering, and commercial vehicle compliance graphics for truckers and fleet operators in Joliet, Shorewood, Channahon, and all of Will and DuPage County. Veteran owned with real trucking experience. Same day service available."
 ```
 
 ---
 
 ### Vehicle Magnets
 **File:** `resources/views/pages/vehicle-graphics/vehicle-magnets.blade.php`
-**Current:** `"We print custom vehicle magnets and removable car door signs for businesses throughout Joliet, Shorewood, Crest Hill, and all of Will County. Full color, 30 mil thick, weather resistant, and easy to apply or remove in seconds. The smart choice for business owners who use their personal vehicle for work."`
+**Current:** `"We print custom vehicle magnets and removable car door signs for businesses throughout Joliet, Shorewood, Crest Hill, and all of Will and DuPage County. Full color, 30 mil thick, weather resistant, and easy to apply or remove in seconds. The smart choice for business owners who use their personal vehicle for work."`
 **Update:**
 ```
-description="Top 5 Percent prints custom vehicle magnets and removable car door signs for businesses throughout Joliet, Shorewood, Crest Hill, and all of Will County. Full color, 30 mil thick, weather resistant, and easy to apply or remove in seconds. The smart choice for business owners who use their personal vehicle for work."
+description="Top 5 Percent prints custom vehicle magnets and removable car door signs for businesses throughout Joliet, Shorewood, Crest Hill, and all of Will and DuPage County. Full color, 30 mil thick, weather resistant, and easy to apply or remove in seconds. The smart choice for business owners who use their personal vehicle for work."
 ```
 
 ---
@@ -575,10 +575,10 @@ description="Top 5 Percent prints custom vehicle magnets and removable car door 
 
 ### Promotional Items (category index)
 **File:** `resources/views/pages/promotional-items.blade.php`
-**Current:** `"Custom branded promotional products for businesses, events, and organizations throughout Joliet, Shorewood, Plainfield, and Will County. Mugs, koozies, tote bags, towels, coasters, mouse pads, and more. Your logo on products people actually use."`
+**Current:** `"Custom branded promotional products for businesses, events, and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Mugs, koozies, tote bags, towels, coasters, mouse pads, and more. Your logo on products people actually use."`
 **Update:**
 ```
-description="Top 5 Percent creates custom branded promotional products for businesses, events, and organizations throughout Joliet, Shorewood, Plainfield, and Will County. Mugs, koozies, tote bags, towels, coasters, mouse pads, and more. Your logo on products people actually use."
+description="Top 5 Percent creates custom branded promotional products for businesses, events, and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Mugs, koozies, tote bags, towels, coasters, mouse pads, and more. Your logo on products people actually use."
 ```
 
 ---
@@ -595,10 +595,10 @@ description="Top 5 Percent makes custom branded can koozies for events, parties,
 
 ### Mugs
 **File:** `resources/views/pages/promotional-items/mugs.blade.php`
-**Current:** `"Full-color custom mugs with your logo, message, or design. Perfect for corporate gifts, employee recognition, event giveaways, and branded merchandise throughout Joliet and Will County."`
+**Current:** `"Full-color custom mugs with your logo, message, or design. Perfect for corporate gifts, employee recognition, event giveaways, and branded merchandise throughout Joliet, Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent makes full-color custom mugs with your logo, message, or design. Perfect for corporate gifts, employee recognition, event giveaways, and branded merchandise throughout Joliet and Will County."
+description="Top 5 Percent makes full-color custom mugs with your logo, message, or design. Perfect for corporate gifts, employee recognition, event giveaways, and branded merchandise throughout Joliet, Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -625,10 +625,10 @@ description="Top 5 Percent makes branded tote bags and drawstring bags for event
 
 ### Mouse Pads
 **File:** `resources/views/pages/promotional-items/mouse-pads.blade.php`
-**Current:** `"Full-color custom mouse pads with your logo, design, or messaging. A practical desk accessory that keeps your brand visible every single workday for businesses and corporate gifting in Will County."`
+**Current:** `"Full-color custom mouse pads with your logo, design, or messaging. A practical desk accessory that keeps your brand visible every single workday for businesses and corporate gifting in Will and DuPage County and the greater Chicagoland area."`
 **Update:**
 ```
-description="Top 5 Percent prints full-color custom mouse pads with your logo, design, or messaging. A practical desk accessory that keeps your brand visible every single workday, perfect for businesses and corporate gifting in Will County."
+description="Top 5 Percent prints full-color custom mouse pads with your logo, design, or messaging. A practical desk accessory that keeps your brand visible every single workday, perfect for businesses and corporate gifting in Will and DuPage County and the greater Chicagoland area."
 ```
 
 ---
@@ -659,10 +659,10 @@ description="Top 5 Percent offers professional design support from concept to pr
 
 ### Logo Design
 **File:** `resources/views/pages/design-services/logo-design.blade.php`
-**Current:** `"A professionally designed logo is the foundation of your brand identity. We create custom logos for businesses, organizations, sports teams, and events throughout Joliet and Will County, from concept to final files."`
+**Current:** `"A professionally designed logo is the foundation of your brand identity. We create custom logos for businesses, organizations, sports teams, and events throughout Joliet, Will and DuPage County, from concept to final files."`
 **Update:**
 ```
-description="A professionally designed logo is the foundation of your brand identity. Top 5 Percent creates custom logos for businesses, organizations, sports teams, and events throughout Joliet and Will County, from concept to final files."
+description="A professionally designed logo is the foundation of your brand identity. Top 5 Percent creates custom logos for businesses, organizations, sports teams, and events throughout Joliet, Will and DuPage County, from concept to final files."
 ```
 
 ---

@@ -110,7 +110,7 @@ $totalCount = count($reviews);
         preHeading="Veteran Owned • Joliet, IL"
         heading="Customer Reviews"
         headingAccent="What People Are Saying"
-        description="Don't take our word for it. Here's what real customers across Joliet, Will County, and Chicagoland have to say about our work, our service, and our team."
+        description="Don't just take our word for it. Here's what real customers across Joliet, Will and DuPage County, and the greater Chicagoland area have to say about Top 5 Percent, our work, and our team."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call (815) 349-8600"
@@ -127,7 +127,7 @@ $totalCount = count($reviews);
         imagePosition="right"
     >
         <p class="mb-4">
-            Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service, and you can see the work behind these reviews in our <a href="/portfolio" class="link-notification">portfolio</a> of real projects produced for real businesses, schools, and sports teams across Will County. Every review below is a real customer who walked through our door, or shipped their order across the country, and trusted us to deliver <a href="/custom-apparel" class="link-notification">custom apparel</a>, signs, and other printed products. We take that trust seriously.
+            Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service, and you can see the work behind these reviews in our <a href="/portfolio" class="link-notification">portfolio</a> of real projects produced for real businesses, schools, and sports teams across Will and DuPage County. Every review below is a real customer who walked through our door, or shipped their order across the country, and trusted us to deliver <a href="/custom-apparel" class="link-notification">custom apparel</a>, signs, and other printed products. We take that trust seriously.
         </p>
         <p class="mb-4">
             Our customers range from individuals ordering a single custom shirt to businesses outfitting entire

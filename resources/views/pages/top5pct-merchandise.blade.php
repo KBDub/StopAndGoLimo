@@ -7,7 +7,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Top 5% Merchandise"
         headingAccent="Rep the Brand"
-        description="Shop our exclusive line of Top 5 Percent branded merchandise. Premium quality t-shirts, hoodies, hats, and accessories that represent the Top 5% standard of excellence."
+        description="Shop the exclusive Top 5 Percent merchandise collection. Premium t-shirts, hoodies, hats, and accessories that represent the standard of excellence our brand is built on."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"

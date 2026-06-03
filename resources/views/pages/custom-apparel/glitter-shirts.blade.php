@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Glitter Shirts"
         headingAccent="Shine Your Way"
-        description="Eye-catching glitter heat-transfer prints that shimmer under any light. Perfect for birthdays, bachelorette parties, family reunions, and anyone ready to stand out."
+        description="Top 5 Percent prints eye-catching glitter heat-transfer designs that shimmer under any light. Perfect for birthdays, bachelorette parties, family reunions, and anyone ready to stand out."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -85,8 +85,8 @@
         imagePosition="right"
     >
         <p class="mb-4">No occasion celebrates itself quite as well as one where the attendees are wearing matching glitter shirts. For bachelorette parties, we produce glitter shirts with "Bride," "Bridesmaid," and custom names in bold glitter lettering that makes the whole group look coordinated and celebratory from our <a href="/custom-apparel" class="link-notification">custom apparel shop</a> in Joliet. We also pair glitter shirts with coordinated <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirt</a> packages where the glitter design is the hero piece alongside standard printed shirts for the rest of the group.</p>
-        <p class="mb-4">Glitter shirts are also a popular choice for school spirit events, homecoming, prom send-offs, and any school gathering where students want apparel that feels special rather than just standard printed gear. <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">Cheerleading squads, dance teams, and performance groups</a> throughout Joliet and Will County use glitter vinyl for squad shirts, performance gear, and spirit merchandise that matches the energy and sparkle of their performances.</p>
-        <p>We have no minimum order quantities on glitter shirts. Same-day production is available for many glitter orders placed before noon. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will County area. Call us at (815) 349 8600 or stop by to discuss your glitter shirt order today.</p>
+        <p class="mb-4">Glitter shirts are also a popular choice for school spirit events, homecoming, prom send-offs, and any school gathering where students want apparel that feels special rather than just standard printed gear. <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">Cheerleading squads, dance teams, and performance groups</a> throughout Joliet, Will and DuPage County use glitter vinyl for squad shirts, performance gear, and spirit merchandise that matches the energy and sparkle of their performances.</p>
+        <p>We have no minimum order quantities on glitter shirts. Same-day production is available for many glitter orders placed before noon. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will and DuPage County area. Call us at (815) 349 8600 or stop by to discuss your glitter shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -94,7 +94,7 @@
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />
 
     <x-sections.card-detailed-info
-        heading="Why Glitter Shirts Are the Signature Look for Celebrations in Joliet and Will County"
+        heading="Why Glitter Shirts Are the Signature Look for Celebrations in Joliet, Will and DuPage County"
         image1="/images/custom-shirts/top5pct-glitter-t-shirts.jpg"
         alt1="Custom glitter t-shirts in Joliet Illinois"
     >
@@ -114,7 +114,7 @@
             <p class="mb-4">Properly heat-applied glitter vinyl bonds durably with the garment and withstands regular washing when care instructions are followed, making it a great investment for a keepsake piece. A glitter shirt that is cared for correctly can be worn to many future events, and many customers pair their glitter pieces with our <a href="/custom-apparel/printing-options/rhinestone-apparel" class="link-notification">rhinestone shirts</a> for maximum sparkle on special occasions. Many customers return to us for replacement glitter shirts years later, and our <a href="/contact" class="link-notification">same-day service</a> makes reordering fast when you need a replacement in a hurry.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned <a href="/custom-apparel" class="link-notification">custom apparel shop</a> at 121 Springfield Avenue in Joliet, Illinois. We produce glitter shirts and specialty celebration apparel for individuals and groups throughout Will County, and we can combine your glitter shirts with <a href="/signs" class="link-notification">custom signs</a> and banners for a complete event setup.</p>
+            <p class="mb-4">We are a veteran owned <a href="/custom-apparel" class="link-notification">custom apparel shop</a> at 121 Springfield Avenue in Joliet, Illinois. We produce glitter shirts and specialty celebration apparel for individuals and groups throughout Will and DuPage County, and we can combine your glitter shirts with <a href="/signs" class="link-notification">custom signs</a> and banners for a complete event setup.</p>
             <p>Call us at (815) 349 8600 to discuss your glitter shirt order today. We can also combine glitter with <a href="/custom-apparel/specialty-materials/holographic-shirts" class="link-notification">holographic shirts</a> in the same group order for a multi-texture sparkle lineup.</p>
         </x-slot>
     </x-sections.card-detailed-info>

@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Vinyl Shirts"
         headingAccent="Bold & Durable"
-        description="Heat-press vinyl printing delivers sharp, vibrant designs in any color. Perfect for logos, names, numbers, and custom text. No minimums, order one or a thousand."
+        description="Top 5 Percent uses heat-press vinyl printing to deliver sharp, vibrant designs in any color. Perfect for logos, names, numbers, and custom text. No minimums, order one or a thousand."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/custom-shirts/top5pct-custom-caps-vinyl.jpg',                               'alt' => 'Custom vinyl heat press shirts in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-hoodies.jpg', 'alt' => 'Custom heat press apparel and vinyl shirts in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-vinyl-hoodies.jpg',                                           'alt' => 'Custom vinyl cut shirts and apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts.jpg',                                     'alt' => 'Custom heat press vinyl shirts made in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts.jpg',                                     'alt' => 'Custom heat press vinyl shirts made in Joliet, Will and DuPage County Illinois'],
         ]"
         visible=2
     />
@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Heat press vinyl printing cuts your design from colored vinyl film and presses it onto your shirt with heat and pressure, creating a smooth, solid-color print with perfectly clean edges. Vinyl is one of the most time-tested custom shirt printing methods available, it produces bold, crisp designs that hold up through years of regular washing without fading, cracking, or peeling when applied correctly. For logos, text, numbers, and designs that rely on solid colors and clean lines, vinyl delivers consistently excellent results at a low cost per piece.</p>
         <p class="mb-4">Vinyl shirts are especially popular for sports numbers and names, team jerseys, group event shirts, and any application where a specific color match or a clean, professional look is important. The vinyl is available in a wide range of colors including standard, metallic, glitter, holographic, and reflective finishes, giving you significant visual variety within the vinyl printing method. We can cut complex designs and apply them with precision to any garment type.</p>
-        <p>We have no minimums on vinyl shirts, and same-day production is available for most orders. We serve businesses, sports teams, schools, and individuals throughout Joliet, Shorewood, Plainfield, and Will County. Call us at (815) 349 8600 to discuss your vinyl shirt order today.</p>
+        <p>We have no minimums on vinyl shirts, and same-day production is available for most orders. We serve businesses, sports teams, schools, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your vinyl shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -84,7 +84,7 @@
         title="Names, Numbers, and Team Gear"
         imagePosition="right"
     >
-        <p class="mb-4">Sports teams throughout Joliet and Will County rely on vinyl printing for their jersey numbers, player names, and team branding because vinyl consistently delivers the bold, legible results that sports apparel requires. Numbers and names in vinyl are highly visible on the field or court, maintain their appearance through frequent washing and athletic use, and can be applied quickly enough to accommodate even last-minute roster changes. We can produce individual jerseys with personalized names and numbers without minimum quantities.</p>
+        <p class="mb-4">Sports teams throughout Joliet, Will and DuPage County rely on vinyl printing for their jersey numbers, player names, and team branding because vinyl consistently delivers the bold, legible results that sports apparel requires. Numbers and names in vinyl are highly visible on the field or court, maintain their appearance through frequent washing and athletic use, and can be applied quickly enough to accommodate even last-minute roster changes. We can produce individual jerseys with personalized names and numbers without minimum quantities.</p>
         <p class="mb-4">Group event shirts are another high-volume use case for vinyl printing. Family reunion names and dates, employee event shirts with individual names, and organization shirts with personalized details are all efficiently produced using vinyl because each shirt can be customized individually without significant additional cost or production time. If you need twenty-five shirts where every shirt has a different name applied, vinyl is the right method for that project.</p>
         <p>We work with standard vinyl, as well as specialty vinyl types including metallic, glitter, reflective, holographic, flock, glow-in-the-dark, and foil finishes, all of which can be cut and heat-pressed to your garments for unique visual effects beyond the standard solid color print. Call us at (815) 349 8600 to discuss which vinyl type is right for your project.</p>
     </x-sections.card-image-with-text>
@@ -114,7 +114,7 @@
             <p class="mb-4">Vinyl adheres to cotton, polyester, blends, and most other fabric types as long as the surface is smooth enough to accept the heat press. T-shirts, hoodies, sweatshirts, polo shirts, jackets, tote bags, and many other items all work well for vinyl application. The heat press process is fast and the garment does not need pre-treatment, which allows us to process vinyl orders quickly even at no-notice same-day timelines for many standard requests.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce vinyl shirts and specialty apparel for individuals, groups, businesses, and organizations throughout Will County and the Chicagoland area, no minimums, same-day available, expert quality on every piece.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce vinyl shirts and specialty apparel for individuals, groups, businesses, and organizations throughout Will and DuPage County and the Chicagoland area, no minimums, same-day available, expert quality on every piece.</p>
             <p>Call us at (815) 349 8600 to discuss your vinyl shirt order today.</p>
         </x-slot>
     </x-sections.card-detailed-info>

@@ -6,7 +6,7 @@
     "name": "Custom Embroidery in Joliet, IL",
     "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will County. No minimums. Veteran owned."
+    "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will and DuPage County. No minimums. Veteran owned."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
     "@type": "WebPage",
     "name": "Custom Embroidery in Joliet, IL | Top 5 Percent",
     "url": "https://www.top5pct.com/custom-apparel/printing-options/embroidery",
-    "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will County. No minimums. Veteran owned."
+    "description": "Professional custom embroidery on shirts, polo shirts, hats, jackets, and corporate wear in Joliet, IL. Logo digitizing and embroidery for businesses across Will and DuPage County. No minimums. Veteran owned."
 }
 </script>
 @endpush
@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Embroidery Shirts"
         headingAccent="Classic & Professional"
-        description="Machine embroidery stitches your logo, name, or design directly into the fabric with precision and permanence. The most professional finish available, ideal for corporate wear, polos, and uniforms."
+        description="Top 5 Percent uses machine embroidery to stitch your logo, name, or design directly into the fabric with precision and permanence. The most professional finish available, ideal for corporate wear, polos, and uniforms."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/custom-shirts/top5pct-embroidered-aprons.jpg',                         'alt' => 'Custom embroidery shirts and embroidered apparel in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-embroidered-caps.jpg', 'alt' => 'Custom embroidered corporate shirts and polos in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-embroidery-in-joliet.jpg',                                           'alt' => 'Custom embroidered uniforms and branded apparel in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-stitched-caps.jpg',                                     'alt' => 'Custom embroidery for businesses and organizations in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-stitched-caps.jpg',                                     'alt' => 'Custom embroidery for businesses and organizations in Joliet, Will and DuPage County Illinois'],
         ]"
         visible=2
     />
@@ -74,7 +74,7 @@
         title="The Most Professional Look in Custom Apparel"
     >
         <p class="mb-4">Machine embroidery is the gold standard for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate and professional custom apparel</a>. Unlike <a href="/custom-apparel/printing-options/dtf-printing" class="link-notification">printed decorations</a> that sit on the surface of a garment, embroidery stitches your logo, name, or design directly into the fabric using precision machine needles and colored thread. The result is a raised, textured design that communicates quality, permanence, and professionalism in a way that printed apparel simply cannot match. When your employees or team members wear embroidered shirts, the embroidered logo signals that your brand takes itself seriously.</p>
-        <p class="mb-4">We produce custom embroidery on polos, button-down shirts, dress shirts, fleece jackets, caps, hats, hoodies, aprons, and virtually any other garment that can be hooped and fed through our embroidery machines. Corporate clients and service businesses throughout Joliet and Will County rely on us for professional <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">embroidered uniforms</a> and branded apparel that holds up through regular commercial washing and daily use.</p>
+        <p class="mb-4">We produce custom embroidery on polos, button-down shirts, dress shirts, fleece jackets, caps, hats, hoodies, aprons, and virtually any other garment that can be hooped and fed through our embroidery machines. Corporate clients and service businesses throughout Joliet, Will and DuPage County rely on us for professional <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">embroidered uniforms</a> and branded apparel that holds up through regular commercial washing and daily use.</p>
         <p>Embroidery is especially durable because the thread is structurally part of the garment rather than an applied layer on top of it. Your embroidered logo will outlast the shirt itself, maintaining its appearance through hundreds of wash cycles without fading, peeling, or cracking. Call us at (815) 349-8600 to discuss your embroidery project today.</p>
     </x-sections.card-image-with-text>
 
@@ -84,7 +84,7 @@
         title="Corporate Uniforms, Caps, and Accessories"
         imagePosition="right"
     >
-        <p class="mb-4">Embroidery is the preferred decoration method for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate uniforms</a> and employee workwear because it creates a finished, polished look appropriate for client-facing environments. Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team will help you build an artwork file optimized for embroidery stitch counts and thread color matching before your order goes into production. Construction firms, medical practices, real estate teams, and service companies throughout Will County use embroidered apparel as a core component of their professional image.</p>
+        <p class="mb-4">Embroidery is the preferred decoration method for <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate uniforms</a> and employee workwear because it creates a finished, polished look appropriate for client-facing environments. Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team will help you build an artwork file optimized for embroidery stitch counts and thread color matching before your order goes into production. Construction firms, medical practices, real estate teams, and service companies throughout Will and DuPage County use embroidered apparel as a core component of their professional image.</p>
         <p class="mb-4">Caps and hats are among the most popular embroidery substrates because a well-structured cap with a crisply embroidered logo is a universally appreciated branded item. <a href="/promotional-items" class="link-notification">Embroidered caps</a> work equally well as employee gear, client gifts, merchandise, and event giveaways. We embroider on structured hats, dad hats, beanies, visors, and trucker hats, and we can accommodate most commercially available hat styles that you provide or that we source for you.</p>
         <p>We also embroider on bags, towels, blankets, and other accessories beyond standard apparel. If you have a specific embroidery project in mind and you are not sure if it is possible, call us and describe what you need, we will let you know what is achievable. Call us at (815) 349-8600 or visit 121 Springfield Avenue in Joliet to discuss your embroidery order today.</p>
     </x-sections.card-image-with-text>
@@ -107,7 +107,7 @@
             <h3 class="text-h3 font-bold text-charcoal mb-2">Perceived Value and Brand Prestige</h3>
             <p class="mb-4">Consumers and business clients reliably perceive embroidered apparel as more premium than printed apparel. When a service technician arrives wearing an embroidered polo, it creates an immediate impression of a more established organization compared to a basic <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen-printed</a> t-shirt. This perception influences trust and the overall brand experience in ways that directly affect how clients and customers rate your business. For high-volume orders where cost per unit is a priority, see our combined packages that pair embroidered corporate wear with <a href="/signs/business-signs/banners" class="link-notification">branded banners</a> and displays for a complete brand presence.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Versatility Across Garment Types</h3>
-            <p class="mb-4">Embroidery works across a far wider range of garment types than most other decoration methods. We embroider on thin dress shirts and thick fleece jackets, on structured caps and soft beanies, on lightweight polo shirts and heavyweight work jackets. This versatility means you can maintain a consistent embroidered logo across every garment in your workwear program, including the full range of <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate apparel</a> we stock and source for businesses throughout Will County.</p>
+            <p class="mb-4">Embroidery works across a far wider range of garment types than most other decoration methods. We embroider on thin dress shirts and thick fleece jackets, on structured caps and soft beanies, on lightweight polo shirts and heavyweight work jackets. This versatility means you can maintain a consistent embroidered logo across every garment in your workwear program, including the full range of <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate apparel</a> we stock and source for businesses throughout Will and DuPage County.</p>
         </x-slot>
         <x-slot name="lower">
             <h3 class="text-h3 font-bold text-charcoal mb-2">DST File Setup and Logo Digitization</h3>

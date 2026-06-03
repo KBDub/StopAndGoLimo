@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Reflective Shirts"
         headingAccent="Be Seen in Style"
-        description="High-visibility reflective prints for safety gear, sports teams, construction crews, and night events. Stay visible and stay stylish, safety and branding in one sharp design."
+        description="Top 5 Percent prints high-visibility reflective designs for safety gear, sports teams, construction crews, and night events. Stay visible and stay stylish, safety and branding in one sharp design."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -74,7 +74,7 @@
         title="Visibility That Could Save a Life"
     >
         <p class="mb-4">Reflective vinyl printing applies a specialized material to your shirt that retroreflects light directly back toward its source. In headlight or flashlight conditions, a reflective print appears intensely bright, dramatically more visible than any standard printed design. For workers, cyclists, runners, and anyone operating in or near vehicle traffic during low-light conditions, reflective apparel is not just a style choice, it is a genuine safety measure that increases the visibility of the wearer to drivers who may otherwise not see them in time.</p>
-        <p class="mb-4">We apply reflective vinyl to t-shirts, hoodies, jackets, and safety vests for construction companies, utility crews, landscaping businesses, event staff, and organizations throughout Joliet and Will County that need their team to be highly visible in low-light or nighttime working conditions. Custom reflective apparel with your company name and logo branded on high-visibility safety gear allows your team to maintain professional brand standards while meeting workplace safety requirements.</p>
+        <p class="mb-4">We apply reflective vinyl to t-shirts, hoodies, jackets, and safety vests for construction companies, utility crews, landscaping businesses, event staff, and organizations throughout Joliet, Will and DuPage County that need their team to be highly visible in low-light or nighttime working conditions. Custom reflective apparel with your company name and logo branded on high-visibility safety gear allows your team to maintain professional brand standards while meeting workplace safety requirements.</p>
         <p>Reflective vinyl is also available in silver (the most common retroreflective finish) as well as colored reflective films that appear as a specific color in normal light while still retroreflecting in direct light. Call us at (815) 349 8600 to discuss your reflective shirt or safety apparel order today.</p>
     </x-sections.card-image-with-text>
 
@@ -84,7 +84,7 @@
         title="Style Meets Safety for Athletes and Events"
         imagePosition="right"
     >
-        <p class="mb-4">Reflective printing is not only for safety workwear, it has become a recognized element of athletic and streetwear style as well. Running clubs, cycling groups, and fitness teams throughout Joliet and Will County use reflective prints on their training shirts and jackets as a practical safety measure that also communicates an active, performance-oriented brand identity. The reflective elements catch headlights during morning and evening training sessions while looking sharp and intentional in daylight, a genuinely functional design choice that serves two purposes simultaneously.</p>
+        <p class="mb-4">Reflective printing is not only for safety workwear, it has become a recognized element of athletic and streetwear style as well. Running clubs, cycling groups, and fitness teams throughout Joliet, Will and DuPage County use reflective prints on their training shirts and jackets as a practical safety measure that also communicates an active, performance-oriented brand identity. The reflective elements catch headlights during morning and evening training sessions while looking sharp and intentional in daylight, a genuinely functional design choice that serves two purposes simultaneously.</p>
         <p class="mb-4">Night events, outdoor concerts, music festivals, and charity walks throughout the Chicagoland area use reflective shirts both as safety gear and as distinctive event merchandise that stands out from standard printed event shirts. A reflective element incorporated into an event shirt design creates a functional and visual distinction that makes the shirt more memorable and more valuable to participants who will use it for outdoor activities after the event itself.</p>
         <p>We produce reflective shirts with no minimum order quantities. Whether you need a single shirt for personal use or a full production run for a commercial safety apparel program, we can accommodate your order. We are a veteran owned shop at 121 Springfield Avenue in Joliet, Illinois. Call us at (815) 349 8600 to discuss your reflective shirt order today.</p>
     </x-sections.card-image-with-text>
@@ -96,7 +96,7 @@
     <x-sections.card-detailed-info
         heading="Why Reflective Branded Apparel Is the Smart Investment for Businesses With Outdoor Workers"
         image1="/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg"
-        alt1="Custom reflective shirts and high-visibility safety apparel for businesses in Joliet and Will County Illinois"
+        alt1="Custom reflective shirts and high-visibility safety apparel for businesses in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Businesses that operate in outdoor environments, construction, landscaping, utility services, road crews, event management, and similar industries, face a genuine workplace safety requirement to keep their workers visible in and around vehicle traffic and low-light conditions. The standard solution is high-visibility safety vests worn over street clothes, but custom reflective branded apparel offers a superior alternative that combines safety compliance with professional brand presentation. When your crew arrives at a job site in matching reflective branded shirts rather than anonymous safety vests, the impression on clients and the public is immediately more professional.</p>
@@ -105,16 +105,16 @@
         </x-slot>
         <x-slot name="mid">
             <h3 class="text-h3 font-bold text="charcoal mb-2">A Moving Advertisement for Your Business</h3>
-            <p class="mb-4">Reflective branded apparel does double duty as a safety measure and a marketing vehicle. When your crew is visible on job sites throughout Joliet and Will County in matching reflective shirts with your company name, logo, and contact information, you are generating brand impressions with every homeowner, property manager, and business owner who sees your team at work. The inherent high-visibility nature of reflective apparel means your branded shirts are noticed more readily than standard printed work shirts, the reflective quality draws the eye even in normal daylight conditions.</p>
+            <p class="mb-4">Reflective branded apparel does double duty as a safety measure and a marketing vehicle. When your crew is visible on job sites throughout Joliet, Will and DuPage County in matching reflective shirts with your company name, logo, and contact information, you are generating brand impressions with every homeowner, property manager, and business owner who sees your team at work. The inherent high-visibility nature of reflective apparel means your branded shirts are noticed more readily than standard printed work shirts, the reflective quality draws the eye even in normal daylight conditions.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">Year-Round Use in Illinois Climate</h3>
-            <p class="mb-4">Illinois winters mean shorter daylight hours and more working time in low-light conditions than warmer climates, which makes reflective apparel even more valuable for outdoor businesses in our region. From early November through late March, crews in Joliet and Will County regularly start and finish their workdays in low-light conditions. Reflective branded apparel ensures your team is visible and professional-looking throughout the year, regardless of seasonal lighting changes.</p>
+            <p class="mb-4">Illinois winters mean shorter daylight hours and more working time in low-light conditions than warmer climates, which makes reflective apparel even more valuable for outdoor businesses in our region. From early November through late March, crews in Joliet, Will and DuPage County regularly start and finish their workdays in low-light conditions. Reflective branded apparel ensures your team is visible and professional-looking throughout the year, regardless of seasonal lighting changes.</p>
         </x-slot>
         <x-slot name="lower">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Available in Standard and Colored Reflective Films</h3>
             <p class="mb-4">We offer reflective vinyl in silver (the highest retroreflectivity), as well as colored reflective films in yellow-green, orange, and other high-visibility tones that provide brand color matching options while maintaining retroreflective performance. If your brand color is a warm orange or a high-visibility yellow-green, we can work with reflective films in those tones so your branded safety apparel both meets visibility requirements and aligns with your brand color standards.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce reflective shirts and safety-grade branded apparel for businesses, organizations, and individuals throughout Will County and the Chicagoland area with no minimum order quantities.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce reflective shirts and safety-grade branded apparel for businesses, organizations, and individuals throughout Will and DuPage County and the Chicagoland area with no minimum order quantities.</p>
             <p>Call us at (815) 349 8600 to discuss your reflective shirt or safety apparel order today, branded, reflective, and built for real outdoor conditions.</p>
         </x-slot>
     </x-sections.card-detailed-info>

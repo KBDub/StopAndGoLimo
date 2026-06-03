@@ -32,14 +32,14 @@
 
 <x-layouts.page
     title="Promotional Items | Joliet, IL"
-    metaDescription="We print custom promotional products for businesses and events in Joliet, Shorewood, Plainfield, and Will County. Custom mugs, koozies, tote bags, towels,"
+    metaDescription="We print custom promotional products for businesses and events in Joliet, Shorewood, Plainfield, and Will and DuPage County. Custom mugs, koozies, tote bags, towels,"
     currentPage="promotional-items">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Promotional"
         headingAccent="Items & Swag"
-        description="Custom branded promotional products for businesses, events, and organizations throughout Joliet, Shorewood, Plainfield, and Will County. Mugs, koozies, tote bags, towels, coasters, mouse pads, and more. Your logo on products people actually use."
+        description="Top 5 Percent creates custom branded promotional products for businesses, events, and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Mugs, koozies, tote bags, towels, coasters, mouse pads, and more. Your logo on products people actually use."
         primaryButtonText="Browse Promo Items"
         primaryButtonHref="#promo-categories"
         secondaryButtonText="Call Us Today"
@@ -113,8 +113,8 @@
         alt="Custom branded promotional products for businesses and events in Joliet Illinois"
         title="Branded Products That Put Your Logo in Your Customers' Hands"
     >
-        <p class="mb-4">Promotional products are one of the oldest and most effective forms of business marketing because they create a physical, lasting connection between your brand and the people who receive them. Unlike digital ads that disappear the moment you stop paying for them, a branded mug or koozie stays on someone's desk or in their kitchen for years. Every time they use it, they see your name. Every time a guest notices it, your brand gets an impression. Top 5 Percent helps businesses throughout Joliet, Shorewood, Plainfield, and Will County create branded promotional products that deliver long-term value for a fraction of the cost of other advertising channels.</p>
-        <p class="mb-4">We offer a curated selection of high-quality promotional products that people actually use, mugs for the office, koozies for the game, towels for the gym, coasters for the restaurant table, tote bags for the grocery run, and mouse pads for the desk. Every item is printed with your full-color logo or custom design using dye sublimation, which bonds the ink into the material so it stays sharp and vibrant through years of daily use. We work with businesses, nonprofits, sports organizations, schools, and event coordinators throughout Will County who need branded products that make a great impression.</p>
+        <p class="mb-4">Promotional products are one of the oldest and most effective forms of business marketing because they create a physical, lasting connection between your brand and the people who receive them. Unlike digital ads that disappear the moment you stop paying for them, a branded mug or koozie stays on someone's desk or in their kitchen for years. Every time they use it, they see your name. Every time a guest notices it, your brand gets an impression. Top 5 Percent helps businesses throughout Joliet, Shorewood, Plainfield, and Will and DuPage County create branded promotional products that deliver long-term value for a fraction of the cost of other advertising channels.</p>
+        <p class="mb-4">We offer a curated selection of high-quality promotional products that people actually use, mugs for the office, koozies for the game, towels for the gym, coasters for the restaurant table, tote bags for the grocery run, and mouse pads for the desk. Every item is printed with your full-color logo or custom design using dye sublimation, which bonds the ink into the material so it stays sharp and vibrant through years of daily use. We work with businesses, nonprofits, sports organizations, schools, and event coordinators throughout Will and DuPage County who need branded products that make a great impression.</p>
         <p class="mb-4">Combine promotional products with <a href="/custom-apparel" class="link-notification">custom apparel</a> for a complete branded event package, shirts and hoodies alongside mugs, koozies, and tote bags, all printed with your logo and ready for the same event or campaign.</p>
         <p>No minimums on any promotional product, order exactly what you need. Call us at (815) 349 8600 or stop by 121 Springfield Avenue in Joliet to discuss your promotional product order today.</p>
     </x-sections.card-image-with-text>
@@ -172,7 +172,7 @@
             ['q' => 'Is there a minimum order for custom mugs and koozies?', 'a' => 'No. We have no minimum order on any promotional product. You can order a single custom mug for a gift or thousands of koozies for a trade show giveaway.'],
             ['q' => 'How are your promotional products printed?', 'a' => 'We use dye sublimation printing, which bonds full-color ink directly into the material surface. This produces a vivid, permanent print that will not peel, crack, or fade with normal use.'],
             ['q' => 'How long do custom promotional products take?', 'a' => 'Most promotional product orders are completed within one to three business days. Rush same-day service may be available on select items, call (815) 349-8600 to check availability.'],
-            ['q' => 'Do you handle corporate gifting and bulk promotional orders?', 'a' => 'Yes. We work with businesses, nonprofits, schools, and event organizers throughout Will County on bulk promotional product orders with consistent quality at every quantity. Contact us for a volume quote.'],
+            ['q' => 'Do you handle corporate gifting and bulk promotional orders?', 'a' => 'Yes. We work with businesses, nonprofits, schools, and event organizers throughout Will and DuPage County on bulk promotional product orders with consistent quality at every quantity. Contact us for a volume quote.'],
             ['q' => 'Are your sublimated mugs and koozies dishwasher safe?', 'a' => 'Our mugs are top-rack dishwasher safe with standard care. Koozies and soft goods should be hand-washed or spot-cleaned to preserve print quality over time.'],
         ]"
     />

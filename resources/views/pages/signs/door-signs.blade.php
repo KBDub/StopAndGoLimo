@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Door Signs | Joliet, IL"
-    metaDescription="We print custom door signs and door decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Hours, logos, suite numbers, and frosted privacy"
+    metaDescription="We print custom door signs and door decals for businesses in Joliet, Shorewood, Plainfield, and Will and DuPage County. Hours, logos, suite numbers, and frosted privacy"
     currentPage="signs">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Door Signs"
         headingAccent="& Door Graphics"
-        description="Custom door signs that tell customers everything they need to know before they step inside. Hours, logo, suite numbers, welcome graphics, and frosted privacy vinyl for businesses throughout Will County."
+        description="Top 5 Percent makes custom door signs that tell customers everything they need to know before they step inside. Hours, logo, suite numbers, welcome graphics, and frosted privacy vinyl for businesses throughout Will and DuPage County and the greater Chicagoland area."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -73,7 +73,7 @@
         alt="Custom vinyl door lettering for businesses in Joliet Illinois"
         title="Professional Door Graphics That Make an Impression"
     >
-        <p class="mb-4">Your front door is one of the first physical brand touchpoints your customers encounter. A professional door graphic with your business name, logo, hours, phone number, and any other relevant details communicates that you are organized and established, and it works best when it matches the <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> on the rest of your storefront glass. We produce custom door signs for businesses of every type throughout Joliet, Shorewood, Crest Hill, and Will County, and for clients who want complete interior coverage our <a href="/signs/business-signs/wall-signs" class="link-notification">wall signs</a> carry the same design language from the entrance all the way to the back of the space.</p>
+        <p class="mb-4">Your front door is one of the first physical brand touchpoints your customers encounter. A professional door graphic with your business name, logo, hours, phone number, and any other relevant details communicates that you are organized and established, and it works best when it matches the <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> on the rest of your storefront glass. We produce custom door signs for businesses of every type throughout Joliet, Shorewood, Crest Hill, and Will and DuPage County, and for clients who want complete interior coverage our <a href="/signs/business-signs/wall-signs" class="link-notification">wall signs</a> carry the same design language from the entrance all the way to the back of the space.</p>
         <p class="mb-4">We work with clear vinyl, white opaque vinyl, perforated window vinyl, and frosted privacy film depending on your application and the look you want to achieve. Clear vinyl blends into the glass and lets your text or logo appear to float on the door surface. White vinyl creates a solid background that makes colors pop and is especially effective for logos, and our <a href="/design-services/logo-design" class="link-notification">logo design</a> team can build the artwork before we print if you do not have a finished file ready.</p>
         <p class="mb-4">Door graphics are most impactful when they match the design language of your <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> and <a href="/signs/business-signs/wall-signs" class="link-notification">wall signs</a>, a consistent look from the sidewalk to the interior tells customers you mean business. Need a professional logo before we print your door graphics? Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team has you covered.</p>
         <p>Our team handles measurement, production, and professional installation for all door sign projects. We prepare every glass surface before application and use professional-grade techniques to ensure clean, straight placement every time. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your door sign project.</p>
@@ -98,7 +98,7 @@
     <x-sections.card-detailed-info
         heading="What Your Door Signage Communicates Before You Say a Word"
         image1="/images/window-wall-floor-decals/top5pct-door-signs-joliet-shorewood-crest-hill.jpg"
-        alt1="Custom door signs and door graphics installed for businesses in Joliet and Will County Illinois"
+        alt1="Custom door signs and door graphics installed for businesses in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Customers form opinions about your business in the first few seconds of encountering it. Your door is part of that first impression, and what your door sign communicates directly affects whether someone chooses to enter, so pairing your door graphic with matching <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> creates a consistent brand statement across all your entrance glass. A professionally designed and applied door graphic is one of the simplest investments you can make in your business's curb appeal and customer experience.</p>
@@ -116,7 +116,7 @@
             <p class="mb-4">Hours change, businesses move, and brands evolve. Vinyl door graphics can be removed cleanly from glass surfaces without leaving residue, which means updating your door sign when your information changes is straightforward and affordable, just like swapping out our <a href="/signs/business-signs/window-signs" class="link-notification">window sign</a> seasonal promotions or refreshing your <a href="/signs/ground-signs/yard-signs" class="link-notification">yard sign</a> campaign. We can produce replacement graphics quickly and install them efficiently so your door always reflects your current brand and current information.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned sign shop at 121 Springfield Avenue in Joliet, Illinois. We design, print, and install custom door signs for businesses throughout Will County and the greater Chicagoland area, and our full <a href="/signs" class="link-notification">signs shop</a> means your door signs, window graphics, banners, and yard signs can all be ordered in one place. Every installation is handled by our experienced team, and we can pair your new door signage with a branded <a href="/signs/business-signs/wall-signs" class="link-notification">wall graphic</a> to complete your interior brand environment on the same visit.</p>
+            <p class="mb-4">We are a veteran owned sign shop at 121 Springfield Avenue in Joliet, Illinois. We design, print, and install custom door signs for businesses throughout Will and DuPage County and the greater Chicagoland area, and our full <a href="/signs" class="link-notification">signs shop</a> means your door signs, window graphics, banners, and yard signs can all be ordered in one place. Every installation is handled by our experienced team, and we can pair your new door signage with a branded <a href="/signs/business-signs/wall-signs" class="link-notification">wall graphic</a> to complete your interior brand environment on the same visit.</p>
             <p>Call us at (815) 349 8600 to discuss your door sign project today. We can also combine your door graphics with matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for staff uniforms that coordinate with your new entrance look.</p>
         </x-slot>
     </x-sections.card-detailed-info>

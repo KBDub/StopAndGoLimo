@@ -6,7 +6,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         :heading="$collectionName ?? 'Shop Our Products'"
         headingAccent=""
-        :description="$collectionDescription ?? 'Premium quality custom products designed and produced right here in Joliet.'"
+        :description="$collectionDescription ?? 'Top 5 Percent designs and produces premium custom products right here in Joliet, IL. Veteran-owned with free design help and fast turnaround.'"
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"

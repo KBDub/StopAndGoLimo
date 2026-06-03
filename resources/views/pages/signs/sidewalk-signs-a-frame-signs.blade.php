@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Parking Signs | Joliet, IL"
-    metaDescription="We print custom parking signs for businesses and properties in Joliet, Shorewood, Plainfield, and Will County. Reserved parking, no parking, lot rules, and"
+    metaDescription="We print custom parking signs for businesses and properties in Joliet, Shorewood, Plainfield, and Will and DuPage County. Reserved parking, no parking, lot rules, and"
     currentPage="signs">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Parking Signs"
         headingAccent="& Lot Signage"
-        description="Custom parking signs for businesses, properties, churches, and organizations. Reserved parking, customer-only zones, lot rules, and directional signage built to withstand Illinois weather."
+        description="Top 5 Percent makes custom parking signs for businesses, properties, churches, and organizations. Reserved parking, customer-only zones, lot rules, and directional signage built to withstand Illinois weather."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg', 'alt' => 'Custom parking signs and lot signage for businesses in Joliet, Plainfield, and Shorewood Illinois'],
             ['src' => '/images/business-signs/top5pct-business-signs-joliet-shorewood-crest-hill.jpg',        'alt' => 'Custom business signs and parking signs in Joliet, Shorewood, and Crest Hill Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg',     'alt' => 'Custom signs and lot signage printed in Joliet Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg',               'alt' => 'Custom business and parking signs for Will County businesses'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg',               'alt' => 'Custom business and parking signs for Will and DuPage County businesses'],
         ]"
         visible=2
     />
@@ -73,7 +73,7 @@
         alt="Custom parking and lot signs for businesses in Joliet, Shorewood, and Crest Hill Illinois"
         title="Keep Your Parking Lot Organized"
     >
-        <p class="mb-4">Custom parking signs help your customers find their way and protect your property from unauthorized use, and they coordinate naturally with your other exterior business signage like our <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> and entrance graphics to create a polished, professional arrival experience. Whether you need reserved parking signs for staff and management, customer-only parking notices, accessible parking designations, tow-away zones, or general lot rules, we produce clear, professional parking signage that holds up through Illinois weather year round. We serve businesses, churches, medical offices, apartment complexes, and commercial properties throughout Joliet, Shorewood, Plainfield, and all of Will County, and for clients who also need branded exterior signage above the entrance our <a href="/signs/business-signs" class="link-notification">business signs</a> shop completes the professional look from the lot to the door.</p>
+        <p class="mb-4">Custom parking signs help your customers find their way and protect your property from unauthorized use, and they coordinate naturally with your other exterior business signage like our <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> and entrance graphics to create a polished, professional arrival experience. Whether you need reserved parking signs for staff and management, customer-only parking notices, accessible parking designations, tow-away zones, or general lot rules, we produce clear, professional parking signage that holds up through Illinois weather year round. We serve businesses, churches, medical offices, apartment complexes, and commercial properties throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County, and for clients who also need branded exterior signage above the entrance our <a href="/signs/business-signs" class="link-notification">business signs</a> shop completes the professional look from the lot to the door.</p>
         <p class="mb-4">We print parking signs on aluminum, which is the most durable material for outdoor signage applications. Aluminum signs are weather-resistant, rust-proof, and rated for years of outdoor exposure without fading or warping. We print with UV-resistant inks that maintain bright colors through summer heat and winter cold without cracking or peeling, using the same materials we apply to our <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> that handle Illinois seasons year after year. For a more budget-friendly option, we also offer corrugated plastic signs that work well for temporary or semi-permanent parking applications.</p>
         <p>We can produce standard parking sign designs as well as fully custom signs with your business name, logo, specific rules, or any information that fits your property needs. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your parking sign project today.</p>
     </x-sections.card-image-with-text>
@@ -96,7 +96,7 @@
     <x-sections.card-detailed-info
         heading="Why Custom Parking Signs Are Worth the Investment for Your Property"
         image1="/images/business-signs/top5pct-business-signs-joliet-shorewood-crest-hill.jpg"
-        alt1="Custom parking signs and outdoor lot signage printed in Joliet and Will County Illinois"
+        alt1="Custom parking signs and outdoor lot signage printed in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">A well-signed parking lot is not just about telling people where to park, it is a direct reflection of how professionally your property is managed and how much you care about the experience of everyone who arrives at your location. Visitors and customers make quick judgments about a business based on every element of their arrival experience, and the quality of your parking signage is part of that assessment, much like the quality of your <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> and entrance graphics that greet every visitor before they even open the door. Clear, professional parking signs reduce frustration, prevent conflicts, and create a smoother customer experience from the moment someone pulls into your lot.</p>
@@ -114,7 +114,7 @@
             <p class="mb-4">Your parking signs do not have to look generic. Adding your business name or logo to your parking signs reinforces your brand identity at every entrance and throughout your lot, creating a more cohesive branded environment that extends from your exterior <a href="/signs/business-signs" class="link-notification">business signs</a> all the way to the ground level of your property. Branded parking signs also communicate to visitors that this lot belongs to a specific business, which reduces confusion in shared parking areas, and businesses that want the most complete branded exterior also invest in coordinating <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> and entrance graphics that tie the parking lot signage to the building itself.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned sign shop at 121 Springfield Avenue in Joliet, Illinois, and our full <a href="/signs" class="link-notification">signs shop</a> means parking signs, window signs, banners, and business signs can all be ordered together for a completely branded exterior package. We serve businesses, property managers, churches, medical facilities, and organizations throughout Will County with professional custom parking and lot signage, and for clients who want to extend their brand presence inside the property as well our <a href="/signs/business-signs/wall-signs" class="link-notification">wall signs</a> and lobby graphics create an interior environment that matches the exterior.</p>
+            <p class="mb-4">We are a veteran owned sign shop at 121 Springfield Avenue in Joliet, Illinois, and our full <a href="/signs" class="link-notification">signs shop</a> means parking signs, window signs, banners, and business signs can all be ordered together for a completely branded exterior package. We serve businesses, property managers, churches, medical facilities, and organizations throughout Will and DuPage County with professional custom parking and lot signage, and for clients who want to extend their brand presence inside the property as well our <a href="/signs/business-signs/wall-signs" class="link-notification">wall signs</a> and lobby graphics create an interior environment that matches the exterior.</p>
             <p>Call us at (815) 349 8600 to discuss your parking sign project today, single signs or complete lot signage packages, and ask about pairing your parking signs with our <a href="/signs/business-signs" class="link-notification">business signs</a> for a unified exterior signage package.</p>
         </x-slot>
     </x-sections.card-detailed-info>
@@ -153,7 +153,7 @@
         heading="Parking Sign FAQs"
         label="Custom Parking Signs in Joliet, IL"
         :faqs="[
-            ['q' => 'What types of parking signs do you make?', 'a' => 'We print reserved parking signs, no parking signs, handicap parking signs, loading zone signs, customer parking only signs, and fully custom property signs for businesses across Joliet and Will County.'],
+            ['q' => 'What types of parking signs do you make?', 'a' => 'We print reserved parking signs, no parking signs, handicap parking signs, loading zone signs, customer parking only signs, and fully custom property signs for businesses across Joliet, Will and DuPage County.'],
             ['q' => 'What material are parking signs made of?', 'a' => 'Our parking signs are printed on rigid aluminum composite or UV-rated PVC board with weather-resistant laminate for long-term outdoor durability.'],
             ['q' => 'How long do outdoor parking signs last?', 'a' => 'Parking signs printed on aluminum composite with UV-rated materials typically last five or more years outdoors in Illinois weather conditions.'],
             ['q' => 'Do you include mounting hardware?', 'a' => 'Post-mounting hardware and sign brackets are available upon request. Ask us about hardware options when you place your order.'],

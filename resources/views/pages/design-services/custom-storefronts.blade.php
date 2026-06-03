@@ -6,7 +6,7 @@
     "name": "Custom Storefronts in Joliet, IL",
     "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "Custom storefront graphics and signage design in Joliet, IL. Window graphics, wall signs, and storefront branding for businesses across Will County. Veteran owned."
+    "description": "Custom storefront graphics and signage design in Joliet, IL. Window graphics, wall signs, and storefront branding for businesses across Will and DuPage County. Veteran owned."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
     "@type": "WebPage",
     "name": "Custom Storefronts in Joliet, IL | Top 5 Percent",
     "url": "https://www.top5pct.com/design-services/custom-storefronts",
-    "description": "Custom storefront graphics and signage design in Joliet, IL. Window graphics, wall signs, and storefront branding for businesses across Will County. Veteran owned."
+    "description": "Custom storefront graphics and signage design in Joliet, IL. Window graphics, wall signs, and storefront branding for businesses across Will and DuPage County. Veteran owned."
 }
 </script>
 @endpush
@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Custom Storefronts"
         headingAccent="Built for Your Group"
-        description="A fully branded online store with your logo, colors, and products, up and running in days. We build and manage it. Your group just shops."
+        description="Top 5 Percent builds fully branded online stores with your logo, colors, and products, up and running in days. We build and manage everything. Your group just shops."
         primaryButtonText="Get Your Store Built"
         primaryButtonHref="#how-it-works"
         secondaryButtonText="Call Us Today"
@@ -58,7 +58,7 @@
         <p class="mb-4">We build and host a fully branded online store at your own custom web address. Your school, team, company, or organization gets a professional storefront with your logo, your colors, and your <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> and other products already loaded and ready to sell, and unlike managing group orders manually the storefront handles size selection, payment, and order routing automatically so no one person has to collect money or track sizes. You share the link, your community shops, and we handle the <a href="/custom-apparel" class="link-notification">custom apparel</a> printing and shipping.</p>
         <p class="mb-4">There is no software to install, no platform fees to manage, and no design experience required. We take your branding and build the store for you. The entire setup process takes a few business days from the time we receive your logo, color choices, and product selection, and if you need a logo built before the store can go live our <a href="/design-services/logo-design" class="link-notification">logo design</a> team creates print-ready vector artwork in the same appointment.</p>
         <p class="mb-4"><a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">Spirit wear</a> stores are one of our most popular storefront categories, schools and teams love the hands-off ordering experience where parents shop online without any staff involvement. <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">Corporate wear</a> storefronts let employees self-serve their uniform orders without admin overhead. Every storefront starts with a logo, if you need one built, our <a href="/design-services/logo-design" class="link-notification">logo design</a> team gets you there first.</p>
-        <p>We are a veteran owned shop in Joliet, Illinois, and we have worked with schools, youth sports leagues, corporate teams, and booster clubs throughout Will County and the Chicagoland area. Call us at (815) 349 8600 to discuss your custom storefront today.</p>
+        <p>We are a veteran owned shop in Joliet, Illinois, and we have worked with schools, youth sports leagues, corporate teams, and booster clubs throughout Will and DuPage County and the Chicagoland area. Call us at (815) 349 8600 to discuss your custom storefront today.</p>
     </x-sections.card-image-with-text>
     <x-ui.banner-thin-charcoal />
     
@@ -153,7 +153,7 @@
         <p class="mb-4">School and event stores get access to built-in features that go beyond a standard e-commerce page. We can add an event countdown timer to your store home page so students and parents always know how many days until picture day, game day, or your fundraiser deadline, and the countdown timer works seamlessly for <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirt</a> orders where participants need to know when the ordering window closes. The calendar feature lets you display multiple upcoming events with dates and locations on the store page, and many schools use the event calendar alongside their <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> store so every game day is a shopping reminder for parents and fans.</p>
         <p class="mb-4">For class picture stores, we can display a roster section with photos, names, and grade levels, a personalized touch that makes the store feel purpose-built for your school rather than a generic shopping site. All of these features are configured by our team and updated whenever your schedule changes, and for corporate event stores that also need branded <a href="/promotional-items" class="link-notification">promotional items</a> alongside the apparel we can include mugs, tote bags, and other merchandise in the same storefront.</p>
         <p class="mb-4">Storefronts are the easiest way to manage <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirt</a> orders, each participant orders their own size and pays online with no one person having to collect money or track sizes. Storefronts can also carry <a href="/promotional-items" class="link-notification">promotional items</a>, mugs, tote bags, and more, alongside your apparel offerings so your store becomes a one-stop shop for your brand.</p>
-        <p>We serve schools, businesses, and organizations throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will County. Call us at (815) 349 8600 to get your custom storefront started today.</p>
+        <p>We serve schools, businesses, and organizations throughout Joliet, Shorewood, Plainfield, Crest Hill, and all of Will and DuPage County. Call us at (815) 349 8600 to get your custom storefront started today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.storefront-demo-preview />
@@ -194,7 +194,7 @@
         heading="Custom Storefront FAQs"
         label="Storefront Graphics in Joliet, IL"
         :faqs="[
-            ['q' => 'What storefront graphic services do you offer?', 'a' => 'We design and produce window graphics, wall signs, door decals, sidewalk signs, and full storefront branding packages for retail businesses, restaurants, and service companies in Joliet and Will County.'],
+            ['q' => 'What storefront graphic services do you offer?', 'a' => 'We design and produce window graphics, wall signs, door decals, sidewalk signs, and full storefront branding packages for retail businesses, restaurants, and service companies in Joliet, Will and DuPage County.'],
             ['q' => 'Can you design and produce a full storefront branding package?', 'a' => 'Yes. We work with new and rebranding businesses to develop cohesive storefront signage including window graphics, interior wall signs, door lettering, and exterior signage, all from one shop.'],
             ['q' => 'How long does storefront graphic production take?', 'a' => 'Most storefront graphic packages are completed within three to five business days. Installation scheduling may add time. Contact us to plan your project timeline.'],
             ['q' => 'Do you install storefront graphics?', 'a' => 'Yes. We handle production and installation of window decals, wall graphics, and other applied storefront signage. Ask about installation when you place your order.'],

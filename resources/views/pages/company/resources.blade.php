@@ -1,13 +1,13 @@
 <x-layouts.page
     title="Resources | Tips, Articles & Design Help"
-    metaDescription="Helpful resources for businesses in Joliet and Will County. Tips, articles, and design guides from Top 5 Percent, your veteran owned custom signage and"
+    metaDescription="Helpful resources for businesses in Joliet, Will and DuPage County. Tips, articles, and design guides from Top 5 Percent, your veteran owned custom signage and"
     currentPage="about">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Resources"
         headingAccent="& Helpful Tips"
-        description="Practical advice, design tips, and helpful articles to help your business get more out of custom signage, apparel, stickers, and promotional products. From the team at Top 5 Percent in Joliet, IL."
+        description="Top 5 Percent shares practical guides, design tips, and resources to help your business get more out of custom signage, apparel, stickers, and promotional products. Written by our team in Joliet, IL."
         primaryButtonText="Contact Us"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -40,7 +40,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-h3 font-bold text-charcoal mb-2">Where to Buy Custom Stickers in Joliet</h3>
-                        <p class="text-charcoal-light text-body-sm">A guide to finding high-quality custom stickers locally in Joliet and Will County, and why local print shops beat online ordering for most customers.</p>
+                        <p class="text-charcoal-light text-body-sm">A guide to finding high-quality custom stickers locally in Joliet, Will and DuPage County, and why local print shops beat online ordering for most customers.</p>
                     </div>
                 </a>
                 <a href="/blog/window-wall-signs" class="group block bg-linen hover:bg-linen-dark transition-colors">

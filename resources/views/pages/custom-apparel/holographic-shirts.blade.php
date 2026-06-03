@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Holographic Shirts"
         headingAccent="Color-Shifting Magic"
-        description="Holographic prints shift through a spectrum of colors as you move. Prismatic, futuristic, and completely unforgettable, the most eye-catching shirt you'll ever own."
+        description="Top 5 Percent prints holographic designs that shift through a spectrum of colors as you move. Prismatic, futuristic, and completely unforgettable, one of the most eye-catching shirts you will ever own."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -56,7 +56,7 @@
             ['src' => '/images/custom-shirts/top5pct-holographic-vinyl-hoodie-foil.jpg',                           'alt' => 'Custom holographic vinyl hoodie with foil effect in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom specialty apparel and holographic shirts in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg',                         'alt' => 'Custom holographic and foil specialty shirts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom holographic prismatic shirts made in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom holographic prismatic shirts made in Joliet, Will and DuPage County Illinois'],
         ]"
         visible=2
     />
@@ -96,7 +96,7 @@
     <x-sections.card-detailed-info
         heading="Why Holographic Prints Make Your Custom Apparel Impossible to Ignore"
         image1="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
-        alt1="Custom holographic shirts with prismatic color-shifting prints in Joliet and Will County Illinois"
+        alt1="Custom holographic shirts with prismatic color-shifting prints in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">In the hierarchy of attention-commanding apparel effects, holographic printing sits near the very top. The color-shifting, prismatic quality of holographic vinyl is impossible to ignore in any setting because it is inherently dynamic, it changes appearance with every movement, every shift in lighting, and every change in viewing angle. You cannot look at a holographic print and see the same thing twice in the span of a single moment, which means your design is continuously creating new visual stimuli and drawing sustained attention from everyone around it.</p>
@@ -114,7 +114,7 @@
             <p class="mb-4">We produce holographic shirts with no minimum order quantities, which means you can test this technique with a single piece or a small prototype run before committing to a larger quantity. Most holographic orders are completed within two to three business days, and we communicate with you throughout the production process to make sure the final result meets your expectations before delivery.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce holographic shirts and specialty prismatic apparel for brands, individuals, and organizations throughout Will County and the Chicagoland area with no minimum orders.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce holographic shirts and specialty prismatic apparel for brands, individuals, and organizations throughout Will and DuPage County and the Chicagoland area with no minimum orders.</p>
             <p>Call us at (815) 349 8600 to discuss your holographic shirt project today.</p>
         </x-slot>
     </x-sections.card-detailed-info>

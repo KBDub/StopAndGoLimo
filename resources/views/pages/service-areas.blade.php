@@ -21,7 +21,7 @@
 
 <x-layouts.page
     title="Service Areas | Joliet, IL"
-    metaDescription="Top 5 Percent serves Joliet, Plainfield, Romeoville, Bolingbrook, Naperville, Aurora, and communities across Will County and Chicagoland. Veteran-owned."
+    metaDescription="Top 5 Percent serves Joliet, Plainfield, Romeoville, Bolingbrook, Naperville, Aurora, and communities across Will and DuPage County and the greater Chicagoland area. Veteran-owned."
     currentPage="about">
 
     {{-- Hero --}}
@@ -29,7 +29,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Service Areas"
         headingAccent="Joliet & Chicagoland"
-        description="Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will County and the greater Chicagoland area."
+        description="Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will and DuPage County and the greater Chicagoland area."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call (815) 349-8600"
@@ -41,14 +41,14 @@
 
     {{-- Company intro, branded card with float image --}}
     <x-sections.card-image-with-text
-        title="Proudly Serving Joliet, Will County, and Greater Chicagoland"
+        title="Proudly Serving Joliet, Will and DuPage County, and Greater Chicagoland"
         image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
         alt="Custom business signs and apparel produced by Top 5 Percent in Joliet Illinois"
         imagePosition="right"
     >
         <p>
             Since 2017, Top 5 Percent has delivered high-quality <a href="/custom-apparel" class="link-notification">custom apparel</a> and signage to businesses,
-            schools, sports teams, and organizations throughout Will County and greater Chicagoland.
+            schools, sports teams, and organizations throughout Will and DuPage County and greater Chicagoland.
             We are a veteran-owned shop based in Joliet, Illinois, and we take pride in serving our
             local community with fast turnaround and personal service on everything from a single <a href="/signs" class="link-notification">business sign</a> to a full multi-piece print order.
         </p>
@@ -82,7 +82,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-charcoal">Our Service Locations</h2>
                 <div class="h-1 w-16 bg-sunburst mx-auto mt-3 mb-4"></div>
                 <p class="text-charcoal-light max-w-2xl mx-auto">
-                    We proudly serve communities across Will County and greater Chicagoland.
+                    We proudly serve communities across Will and DuPage County and greater Chicagoland.
                     Click any city to learn more about our services in your area.
                 </p>
             </div>

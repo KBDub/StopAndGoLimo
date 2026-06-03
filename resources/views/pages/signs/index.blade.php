@@ -41,7 +41,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Custom Signs"
         headingAccent="& Banners"
-        description="We print professional custom signs, banners, posters, and displays for businesses and events throughout Joliet, Shorewood, Plainfield, and all of Will County. Indoor and outdoor options with premium materials and fast turnaround. Veteran owned and same day service available."
+        description="Top 5 Percent prints professional custom signs, banners, posters, and displays for businesses and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Indoor and outdoor options with premium materials and fast turnaround. Veteran owned and same day service available."
         primaryButtonText="Browse All Signs"
         primaryButtonHref="#sign-categories"
         secondaryButtonText="Call Us Today"
@@ -150,9 +150,9 @@
     <x-sections.card-image-with-text
         image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
         alt="Professional sign printing for businesses in Joliet, Plainfield, and Shorewood Illinois"
-        title="Professional Sign Printing for Every Business in Will County"
+        title="Professional Sign Printing for Every Business in Will and DuPage County"
     >
-        <p class="mb-4">Top 5 Percent is a veteran owned sign shop serving businesses, organizations, and events throughout Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, and all of Will County, and our <a href="/custom-apparel" class="link-notification">custom apparel</a> team makes us the area's one-stop shop for complete branding. We produce a full spectrum of sign products, from <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> and sidewalk a-frames to full-color vinyl banners, window graphics, wall decals, floor signs, door signs, business signs, posters, table runners, table cloths, and parking signs. Whatever your business needs to get noticed, we can print it.</p>
+        <p class="mb-4">Top 5 Percent is a veteran owned sign shop serving businesses, organizations, and events throughout Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, and all of Will and DuPage County, and our <a href="/custom-apparel" class="link-notification">custom apparel</a> team makes us the area's one-stop shop for complete branding. We produce a full spectrum of sign products, from <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> and sidewalk a-frames to full-color vinyl banners, window graphics, wall decals, floor signs, door signs, business signs, posters, table runners, table cloths, and parking signs. Whatever your business needs to get noticed, we can print it.</p>
         <p class="mb-4">Our wide-format printing technology produces sharp, vibrant colors on outdoor-rated vinyl, fabric, corrugated boards, and specialty substrates. We finish every sign with the right hardware for its application, grommets and hemmed edges on <a href="/signs/business-signs/banners" class="link-notification">banners</a>, lamination for indoor displays, UV protection for long-term outdoor use. We also offer design help for every sign order so you never have to arrive with a finished file. Just tell us what you want to communicate and our team will build the layout for you.</p>
         <p>We are located at 121 Springfield Avenue in Joliet and we offer same-day service on many sign products. Need your brand on the move? Explore our <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> for mobile advertising. If your business needs a sign quickly, we are the shop to call. Reach us at (815) 349 8600 seven days a week or stop by during business hours.</p>
     </x-sections.card-image-with-text>
@@ -211,7 +211,7 @@
             ['q' => 'How long do your outdoor vinyl banners last?', 'a' => 'Our outdoor banners are printed with UV-resistant inks on hemmed and grommeted 13oz vinyl and typically last two or more years in outdoor conditions with normal care.'],
             ['q' => 'Do you offer design help for signs and banners?', 'a' => 'Yes. Free design assistance is included with every sign order. You can describe what you want, share a logo or reference image, and our team will build the layout for you at no extra charge.'],
             ['q' => 'What is the smallest custom yard sign you print?', 'a' => 'We print yard signs starting at 18 x 24 inches, the standard single-stake size used for real estate, political campaigns, and business promotions. Custom sizes are also available.'],
-            ['q' => 'Do you install window decals and graphics for businesses?', 'a' => 'Yes. We print and can install professional window decals, perforated window films, and full window graphics for storefronts throughout Joliet and Will County.'],
+            ['q' => 'Do you install window decals and graphics for businesses?', 'a' => 'Yes. We print and can install professional window decals, perforated window films, and full window graphics for storefronts throughout Joliet, Will and DuPage County.'],
         ]"
     />
     <x-sections.cta-ready-to-get-started />

@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Custom Mouse Pads | Joliet, IL"
-    metaDescription="We print custom mouse pads for businesses and corporate gifting in Joliet, Shorewood, Plainfield, and Will County. Full color sublimation mouse pads. Veteran"
+    metaDescription="We print custom mouse pads for businesses and corporate gifting in Joliet, Shorewood, Plainfield, and Will and DuPage County. Full color sublimation mouse pads. Veteran"
     currentPage="promotional-items">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Custom Mouse Pads"
         headingAccent="Branded Desk Essentials"
-        description="Full-color custom mouse pads with your logo, design, or messaging. A practical desk accessory that keeps your brand visible every single workday for businesses and corporate gifting in Will County."
+        description="Top 5 Percent prints full-color custom mouse pads with your logo, design, or messaging. A practical desk accessory that keeps your brand visible every single workday, perfect for businesses and corporate gifting in Will and DuPage County and the greater Chicagoland area."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -54,7 +54,7 @@
         :images="[
             ['src' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg', 'alt' => 'Custom branded desk accessories and promotional products in Joliet Illinois'],
             ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',                               'alt' => 'Custom branded promotional products and corporate gifts in Joliet Illinois'],
-            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom mouse pads and branded desk accessories in Joliet and Will County Illinois'],
+            ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic2.jpg',                                     'alt' => 'Custom mouse pads and branded desk accessories in Joliet, Will and DuPage County Illinois'],
             ['src' => '/images/custom-shirts/top5pct-t-shirt-maker-article-pic1.jpg',                                     'alt' => 'Custom corporate gifts and branded promotional items in Joliet Illinois'],
         ]"
         visible=2
@@ -74,7 +74,7 @@
     >
         <p class="mb-4">A custom branded mouse pad sits on a desk every single workday, which means your logo gets seen for hours at a time by the person using it and by anyone else who visits their workspace. For businesses that want consistent brand visibility with clients, employees, and partners, a high-quality custom mouse pad is one of the most cost-effective long-term advertising investments available, and many businesses bundle mouse pads with <a href="/promotional-items/mugs" class="link-notification">branded mugs</a> in employee welcome kits so every desk starts with a matching set. Unlike most promotional items that get used briefly and then discarded, a quality mouse pad stays in service for years, and for a complete office gift set that goes beyond the desk our <a href="/promotional-items/tote-bags" class="link-notification">custom tote bags</a> carry the same logo into every errand and event.</p>
         <p class="mb-4">We produce custom mouse pads using dye sublimation printing on high-quality fabric surfaces with a rubber non-slip backing. The dye sublimation process allows full-color, photographic-quality printing across the entire pad surface without any color limitations or print boundaries. Your design can cover the whole pad edge to edge, making it a true canvas for your brand imagery, messaging, or artwork, and for a logo that needs to be sharpened or built from scratch before printing our <a href="/design-services/logo-design" class="link-notification">logo design</a> team creates scalable vector artwork ready for any surface application.</p>
-        <p>Custom mouse pads are popular for corporate gifting, employee welcome kits, client appreciation packages, and trade show giveaways. We serve businesses, real estate firms, medical practices, law offices, and organizations throughout Joliet, Shorewood, Plainfield, and Will County. Call us at (815) 349 8600 to discuss your custom mouse pad order today.</p>
+        <p>Custom mouse pads are popular for corporate gifting, employee welcome kits, client appreciation packages, and trade show giveaways. We serve businesses, real estate firms, medical practices, law offices, and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your custom mouse pad order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -95,7 +95,7 @@
     <x-sections.card-detailed-info
         heading="Why Custom Mouse Pads Are One of the Best Long-Term Branding Investments Available"
         image1="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
-        alt1="Custom branded mouse pads and desk accessories for businesses in Joliet and Will County Illinois"
+        alt1="Custom branded mouse pads and desk accessories for businesses in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">In the hierarchy of promotional products by lifespan and daily use frequency, branded mouse pads sit near the very top. A mouse pad that lands on an active workstation gets used every single workday, typically for six to eight hours per day, for as long as it remains functional. A quality mouse pad can remain in active use for three to five years or more. When you multiply daily use frequency by the number of workdays in a year by the number of years of service, the lifetime branded impressions generated by a single custom mouse pad rival or exceed those of most other promotional products at any price point, and for a complete desk branding kit our <a href="/promotional-items/mugs" class="link-notification">custom mugs</a> pair with mouse pads so the logo follows the employee from the first sip of morning coffee to the last click of the workday.</p>
@@ -113,7 +113,7 @@
             <p class="mb-4">Service providers, real estate agents, financial planners, accountants, attorneys, insurance agents, and consultants, benefit especially from branded mouse pad gifts because they stay on the desks of clients who may refer business or return for services in the future. A branded mouse pad from a real estate agent or financial advisor that sits on a client's desk is a subtle, persistent reminder of that relationship every time the client uses their computer, and for service businesses that want to extend that brand presence to their office entrance our <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> carry the same logo from the client's desk to your storefront. When that client is ready to buy another home or make another financial decision, the brand familiarity cultivated by that daily exposure influences their choice, and for a complete client gifting package our <a href="/promotional-items/mugs" class="link-notification">branded mugs</a> pair with mouse pads for a two-item desk set that makes an exceptional first impression.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned print shop at 121 Springfield Avenue in Joliet, Illinois. We produce custom branded mouse pads and desk accessories for businesses throughout Will County and the greater Chicagoland area with full-color printing and no minimum order quantities, and our full <a href="/promotional-items" class="link-notification">promotional items shop</a> includes mugs, tote bags, can koozies, towels, and drink coasters so your entire corporate gift set comes from one team. For clients who want branded apparel alongside their desk gifts our <a href="/custom-apparel" class="link-notification">custom apparel</a> shop produces shirts and branded workwear in the same order.</p>
+            <p class="mb-4">We are a veteran owned print shop at 121 Springfield Avenue in Joliet, Illinois. We produce custom branded mouse pads and desk accessories for businesses throughout Will and DuPage County and the greater Chicagoland area with full-color printing and no minimum order quantities, and our full <a href="/promotional-items" class="link-notification">promotional items shop</a> includes mugs, tote bags, can koozies, towels, and drink coasters so your entire corporate gift set comes from one team. For clients who want branded apparel alongside their desk gifts our <a href="/custom-apparel" class="link-notification">custom apparel</a> shop produces shirts and branded workwear in the same order.</p>
             <p>Call us at (815) 349 8600 to discuss your custom mouse pad order today, any design, any quantity, fast turnaround, and ask about bundling with our <a href="/promotional-items/mugs" class="link-notification">branded mugs</a> for a complete branded desk kit.</p>
         </x-slot>
     </x-sections.card-detailed-info>

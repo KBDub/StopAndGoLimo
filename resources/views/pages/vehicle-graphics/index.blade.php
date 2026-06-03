@@ -6,7 +6,7 @@
     "name": "Vehicle Graphics & Wraps in Joliet, IL",
     "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will County."
+    "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will and DuPage County and the greater Chicagoland area."
 }
 </script>
 <script type="application/ld+json">
@@ -25,7 +25,7 @@
     "@type": "WebPage",
     "name": "Vehicle Graphics & Wraps in Joliet, IL | Top 5 Percent",
     "url": "https://www.top5pct.com/vehicle-graphics",
-    "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will County."
+    "description": "Veteran-owned vehicle graphics shop in Joliet, IL designing and installing car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals in Will and DuPage County and the greater Chicagoland area."
 }
 </script>
 @endpush
@@ -41,7 +41,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Vehicle Graphics"
         headingAccent="& Wraps"
-        description="We design and install custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will County. Turn your vehicle into a mobile billboard today."
+        description="Top 5 Percent designs and installs custom vehicle graphics, car wraps, vinyl lettering, vehicle magnets, and DOT compliance decals for businesses and individuals throughout Joliet, Shorewood, Channahon, Rockdale, and all of Will and DuPage County. Turn your vehicle into a mobile billboard today."
         primaryButtonText="Browse Vehicle Graphics"
         primaryButtonHref="#vehicle-categories"
         secondaryButtonText="Call Us Today"
@@ -97,7 +97,7 @@
         alt="Professional vehicle wraps and vinyl lettering installed in Joliet and Shorewood Illinois"
         title="Turn Your Vehicle Into a Moving Billboard"
     >
-        <p class="mb-4">Every mile your vehicle travels is a marketing opportunity. Top 5 Percent designs and installs professional vehicle graphics for businesses and individuals throughout Joliet, Shorewood, Plainfield, Channahon, and all of Will County. Whether you need a full vehicle wrap, a partial wrap with vinyl lettering, removable <a href="/vehicle-graphics/vehicle-magnets" class="link-notification">magnetic signs</a>, or USDOT compliance decals for your commercial truck, we have the equipment and the expertise to produce graphics that look sharp and hold up for years, and for commercial vehicle operators who also need <a href="/vehicle-graphics/dot-decals" class="link-notification">DOT compliance decals</a> we produce USDOT numbers, MC numbers, and GVWR markings alongside any branding package.</p>
+        <p class="mb-4">Every mile your vehicle travels is a marketing opportunity. Top 5 Percent designs and installs professional vehicle graphics for businesses and individuals throughout Joliet, Shorewood, Plainfield, Channahon, and all of Will and DuPage County. Whether you need a full vehicle wrap, a partial wrap with vinyl lettering, removable <a href="/vehicle-graphics/vehicle-magnets" class="link-notification">magnetic signs</a>, or USDOT compliance decals for your commercial truck, we have the equipment and the expertise to produce graphics that look sharp and hold up for years, and for commercial vehicle operators who also need <a href="/vehicle-graphics/dot-decals" class="link-notification">DOT compliance decals</a> we produce USDOT numbers, MC numbers, and GVWR markings alongside any branding package.</p>
         <p class="mb-4">Vehicle graphics are one of the most cost-effective forms of local advertising available to small and medium-sized businesses. Unlike billboards, radio, or digital advertising that charge recurring monthly fees, a vehicle graphic package is a one-time investment that delivers impressions every day for the life of the vehicle. Quality graphics made from premium cast vinyl last five or more years with normal care. When you calculate the total exposure your vehicle generates driving through Joliet, Shorewood, and the surrounding communities daily, the cost per impression is extraordinarily low, and for clients who also want a complete brand presence beyond their vehicle our <a href="/design-services/logo-design" class="link-notification">logo design</a> team builds marks that scale cleanly from a door panel to a banner or sign.</p>
         <p class="mb-4">Extend your brand to your job sites and storefronts with <a href="/signs/ground-signs/yard-signs" class="link-notification">yard signs</a> and <a href="/signs/business-signs/banners" class="link-notification">banners</a>, they work together with vehicle graphics for a complete, consistent brand presence across every location you serve.</p>
         <p>We are a veteran owned shop at 121 Springfield Avenue in Joliet. We work with contractors, tradespeople, fleet operators, and individual vehicle owners throughout the Chicagoland area. Call us at (815) 349 8600 to talk about your vehicle graphics project today.</p>

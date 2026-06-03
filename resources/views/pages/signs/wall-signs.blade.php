@@ -33,14 +33,14 @@
 
 <x-layouts.page
     title="Wall Signs | Joliet, IL"
-    metaDescription="We print and install custom wall signs and wall decals for businesses in Joliet, Shorewood, Plainfield, and Will County. Office murals, lobby graphics, vinyl"
+    metaDescription="We print and install custom wall signs and wall decals for businesses in Joliet, Shorewood, Plainfield, and Will and DuPage County. Office murals, lobby graphics, vinyl"
     currentPage="signs">
 
     <x-sections.category-hero
         preHeading="Veteran Owned • Joliet, IL"
         heading="Wall Signs"
         headingAccent="& Wall Graphics"
-        description="Custom wall signs, decals, and murals that transform your interior spaces into branded environments. Office lobbies, retail floors, break rooms, and feature walls throughout Joliet and Will County."
+        description="Top 5 Percent creates custom wall signs, decals, and murals that transform your interior spaces into branded environments. Office lobbies, retail floors, break rooms, and feature walls throughout Joliet, Will and DuPage County and the greater Chicagoland area."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -55,7 +55,7 @@
         :images="[
             ['src' => '/images/window-wall-floor-decals/top5pct-wall-signs.jpg',             'alt' => 'Custom wall signs and wall graphics for businesses in Joliet Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-wall-wraps.jpg',                    'alt' => 'Custom wall wraps for businesses in Joliet Illinois'],
-            ['src' => '/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg',      'alt' => 'Office murals and lobby wall graphics in Joliet and Will County Illinois'],
+            ['src' => '/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg',      'alt' => 'Office murals and lobby wall graphics in Joliet, Will and DuPage County Illinois'],
             ['src' => '/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg', 'alt' => 'Wall decals and door signs for businesses in Joliet Illinois'],
         ]"
         visible=2
@@ -74,13 +74,13 @@
         title="Brand Your Interior Spaces"
     >
         <p class="mb-4">Wall signs and graphics are one of the most effective ways to create a professional, branded environment inside your business, and they coordinate naturally with our <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> and exterior signage for a consistent brand statement from the curb to the back of your space. Whether you want your company logo on the lobby wall, an inspirational quote in the break room, a product mural in your showroom, or directional graphics throughout your facility, we can produce and install wall graphics that make an immediate impact, and for clients who need branded staff uniforms to match their new interior look our <a href="/custom-apparel" class="link-notification">custom apparel</a> shop produces shirts and hoodies right next door.</p>
-        <p class="mb-4">We print on premium cast vinyl that conforms to textured wall surfaces without leaving air pockets or lifting at the edges. Our wall vinyl is repositionable for a short period after application, which allows our installation team to achieve perfectly straight placement even on large applications, and we use the same professional adhesion standards we apply to our <a href="/signs/business-signs/floor-signs" class="link-notification">floor sign</a> and door graphic installations throughout Will County.</p>
+        <p class="mb-4">We print on premium cast vinyl that conforms to textured wall surfaces without leaving air pockets or lifting at the edges. Our wall vinyl is repositionable for a short period after application, which allows our installation team to achieve perfectly straight placement even on large applications, and we use the same professional adhesion standards we apply to our <a href="/signs/business-signs/floor-signs" class="link-notification">floor sign</a> and door graphic installations throughout Will and DuPage County.</p>
         <p>Interior wall graphics work in harmony with <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> to create a fully branded storefront environment. Complete the interior brand experience with <a href="/signs/business-signs/floor-signs" class="link-notification">floor signs</a> that guide and inform customers at every step. Wall signs from Top 5 Percent are produced in-house and installed by our experienced team. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your wall sign project.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
         image="/images/window-wall-floor-decals/top5pct-article-window-wall-signs.jpg"
-        alt="Office murals and lobby wall graphics installed in Joliet and Will County Illinois"
+        alt="Office murals and lobby wall graphics installed in Joliet, Will and DuPage County Illinois"
         title="Office Murals and Lobby Graphics"
         imagePosition="right"
     >
@@ -99,7 +99,7 @@
         alt1="Custom wall signs and wall graphics for businesses in Joliet Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">The walls of your business are a blank canvas that most business owners never fully use. Wall graphics turn empty wall space into powerful brand communication that works on every person who walks through your door, much like the <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> we produce for storefronts throughout Will County that work on everyone who walks or drives past. A professionally designed and installed wall graphic in your lobby, showroom, or workspace immediately elevates the perceived quality of your business and creates an environment that feels intentional, polished, and professional.</p>
+            <p class="mb-4">The walls of your business are a blank canvas that most business owners never fully use. Wall graphics turn empty wall space into powerful brand communication that works on every person who walks through your door, much like the <a href="/signs/business-signs/window-signs" class="link-notification">window signs</a> we produce for storefronts throughout Will and DuPage County that work on everyone who walks or drives past. A professionally designed and installed wall graphic in your lobby, showroom, or workspace immediately elevates the perceived quality of your business and creates an environment that feels intentional, polished, and professional.</p>
             <h3 class="text-h3 font-bold text-charcoal mb-2">More Than Just Decoration</h3>
             <p class="mb-4">Wall graphics serve multiple functions simultaneously. A lobby feature wall with your logo and brand statement communicates your identity. A values statement or mission graphic in a conference room reinforces company culture for employees and impresses visiting clients. A product showcase mural in a showroom space helps customers understand what you offer. Each of these applications makes your wall space work harder for your business while improving the experience of everyone who spends time in your facility.</p>
         </x-slot>
@@ -111,10 +111,10 @@
         </x-slot>
         <x-slot name="lower">
             <h3 class="text-h3 font-bold text-charcoal mb-2">Professional Installation Included</h3>
-            <p class="mb-4">We handle the full installation of all wall graphic projects. Our installation team prepares the wall surface, aligns the graphic precisely, and ensures a smooth, bubble-free application that looks perfect from every angle, using the same professional care we bring to our <a href="/signs/business-signs/window-signs" class="link-notification">window sign</a> and door graphic installations throughout Will County. Large-scale wall installations require experience and the right tools, we have both, and after we finish the wall we can also install coordinating <a href="/signs/business-signs/floor-signs" class="link-notification">floor signs</a> on the same visit for a complete interior brand environment.</p>
+            <p class="mb-4">We handle the full installation of all wall graphic projects. Our installation team prepares the wall surface, aligns the graphic precisely, and ensures a smooth, bubble-free application that looks perfect from every angle, using the same professional care we bring to our <a href="/signs/business-signs/window-signs" class="link-notification">window sign</a> and door graphic installations throughout Will and DuPage County. Large-scale wall installations require experience and the right tools, we have both, and after we finish the wall we can also install coordinating <a href="/signs/business-signs/floor-signs" class="link-notification">floor signs</a> on the same visit for a complete interior brand environment.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We serve businesses in Joliet, Shorewood, Crest Hill, Romeoville, Plainfield, Lockport, and all of Will County with premium wall graphic design, printing, and installation. We are a veteran owned business, and our full <a href="/signs" class="link-notification">signs shop</a> means wall signs, window signs, banners, and yard signs can all be ordered together for a complete branding package. Many of our clients complete their brand environment by pairing wall graphics with matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for staff uniforms that carry the same brand identity from the wall to the team.</p>
+            <p class="mb-4">We serve businesses in Joliet, Shorewood, Crest Hill, Romeoville, Plainfield, Lockport, and all of Will and DuPage County with premium wall graphic design, printing, and installation. We are a veteran owned business, and our full <a href="/signs" class="link-notification">signs shop</a> means wall signs, window signs, banners, and yard signs can all be ordered together for a complete branding package. Many of our clients complete their brand environment by pairing wall graphics with matching <a href="/custom-apparel" class="link-notification">custom apparel</a> for staff uniforms that carry the same brand identity from the wall to the team.</p>
             <p>Call us at (815) 349 8600 to schedule a consultation for your wall graphic project today, and ask about adding coordinating <a href="/signs/business-signs/door-signs" class="link-notification">door signs</a> or floor graphics to complete your interior brand installation.</p>
         </x-slot>
     </x-sections.card-detailed-info>
@@ -153,7 +153,7 @@
         heading="Wall Sign FAQs"
         label="Custom Wall Signs in Joliet, IL"
         :faqs="[
-            ['q' => 'What types of custom wall signs do you produce?', 'a' => 'We produce vinyl wall decals, full-color wall wraps, mounted rigid wall signs, and dimensional lettering for interior commercial spaces throughout Joliet and Will County.'],
+            ['q' => 'What types of custom wall signs do you produce?', 'a' => 'We produce vinyl wall decals, full-color wall wraps, mounted rigid wall signs, and dimensional lettering for interior commercial spaces throughout Joliet, Will and DuPage County.'],
             ['q' => 'Will wall decals damage painted walls?', 'a' => 'When applied and removed properly, quality vinyl wall decals should not damage painted drywall. We use adhesives appropriate for the surface type and age of paint.'],
             ['q' => 'Can you wrap an entire wall with a custom graphic?', 'a' => 'Yes. We produce large-format wall wraps that cover entire wall sections with photographic or branded imagery. This is popular for office lobbies, retail stores, and event venues.'],
             ['q' => 'What wall surfaces can decals be applied to?', 'a' => 'Vinyl decals work on smooth painted drywall, glass, concrete, brick, and most other interior wall surfaces. Heavily textured walls may require a different adhesive solution.'],

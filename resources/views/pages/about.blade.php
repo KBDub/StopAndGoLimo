@@ -6,7 +6,7 @@
     "name": "Ezra",
     "jobTitle": "Owner & Founder",
     "worksFor": { "@id": "https://www.top5pct.com" },
-    "description": "Veteran and founder of Top 5 Percent, LLC, a custom signage and apparel business in Joliet, IL serving Will County since 2017.",
+    "description": "Veteran and founder of Top 5 Percent, LLC, a custom signage and apparel business in Joliet, IL serving Will and DuPage County since 2017.",
     "address": {
         "@type": "PostalAddress",
         "addressLocality": "Joliet",
@@ -24,7 +24,7 @@
     "name": "About Top 5 Percent, Joliet, IL",
     "provider": { "@id": "https://www.top5pct.com" },
     "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
+    "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will and DuPage County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
 }
 </script>
 <script type="application/ld+json">
@@ -43,7 +43,7 @@
     "@type": "WebPage",
     "name": "About Top 5 Percent, Joliet, IL | Top 5 Percent",
     "url": "https://www.top5pct.com/about",
-    "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
+    "description": "Top 5 Percent, LLC is a veteran-owned custom signage and apparel business in Joliet, IL, serving Will and DuPage County since 2017 with custom shirts, signs, stickers, vehicle graphics, and promotional products."
 }
 </script>
 @endpush
@@ -53,7 +53,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="About"
         headingAccent="Top 5 Percent"
-        description="Veteran-owned and proudly serving Joliet, IL since 2017. We specialize in custom signage, apparel, and promotional products with same day service."
+        description="Top 5 Percent is a veteran-owned custom printing shop in Joliet, IL, proudly serving the community since 2017. We specialize in custom signage, apparel, and promotional products with same day service available."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -66,7 +66,7 @@
     <section class="py-16 bg-linen">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-charcoal font-bold text-h2 mb-3">Proudly Serving Will County Since 2017</h2>
+                <h2 class="text-charcoal font-bold text-h2 mb-3">Proudly Serving Will and DuPage County Since 2017</h2>
                 <div class="h-1 w-24 bg-sunburst mx-auto mb-6"></div>
                 <p class="text-charcoal-light text-body max-w-3xl mx-auto">We have had the privilege of working with hundreds of businesses, schools, churches, sports teams, and community organizations throughout Joliet and the surrounding communities. Here is a look at the values that guide everything we do.</p>
             </div>
@@ -104,9 +104,9 @@
         alt="Custom signage and apparel produced by Top 5 Percent in Joliet Illinois"
         title="See Our Work and Hear From Our Customers"
     >
-        <p class="mb-4">See our quality in the <a href="/portfolio" class="link-notification">portfolio</a>, real work produced for real local businesses, schools, sports teams, and organizations throughout Joliet and Will County. Every project in that gallery was made here in our Joliet shop, from <a href="/custom-apparel" class="link-notification">custom apparel</a> and embroidery to full-color signs and vehicle graphics.</p>
-        <p class="mb-4">Don't take our word for it, read our <a href="/reviews" class="link-notification">reviews</a> from customers across Will County. Hundreds of verified five-star ratings from people who walked through our door or shipped their order from across the country.</p>
-        <p>We serve Joliet and all surrounding communities across our <a href="/service-areas" class="link-notification">service areas</a> throughout Will County and Chicagoland. If you are nearby, stop in. If not, we ship.</p>
+        <p class="mb-4">See our quality in the <a href="/portfolio" class="link-notification">portfolio</a>, real work produced for real local businesses, schools, sports teams, and organizations throughout Joliet, Will and DuPage County. Every project in that gallery was made here in our Joliet shop, from <a href="/custom-apparel" class="link-notification">custom apparel</a> and embroidery to full-color signs and vehicle graphics.</p>
+        <p class="mb-4">Don't take our word for it, read our <a href="/reviews" class="link-notification">reviews</a> from customers across Will and DuPage County. Hundreds of verified five-star ratings from people who walked through our door or shipped their order from across the country.</p>
+        <p>We serve Joliet and all surrounding communities across our <a href="/service-areas" class="link-notification">service areas</a> throughout Will and DuPage County and the greater Chicagoland area. If you are nearby, stop in. If not, we ship.</p>
     </x-sections.card-image-with-text>
     <x-sections.top5pct-same-day-service serviceType="about" displayServiceType="Custom Signage & Apparel" />
     <x-sections.cta-quadruple-button-banner />
@@ -127,8 +127,8 @@
         label="About Top 5 Percent"
         :faqs="[
             ['q' => 'Is Top 5 Percent veteran owned?', 'a' => 'Yes. Top 5 Percent, LLC is veteran-owned and operated. We offer a 10% discount to active military, veterans, and first responders as a thank-you for their service.'],
-            ['q' => 'Where is Top 5 Percent located?', 'a' => 'We are located at 121 Springfield Avenue in Joliet, Illinois. We serve all of Will County and the greater Chicagoland area.'],
-            ['q' => 'How long has Top 5 Percent been in business?', 'a' => 'Top 5 Percent was founded in 2017 and has been serving businesses, schools, sports teams, and organizations throughout Will County for nearly a decade.'],
+            ['q' => 'Where is Top 5 Percent located?', 'a' => 'We are located at 121 Springfield Avenue in Joliet, Illinois. We serve all of Will and DuPage County and the greater Chicagoland area.'],
+            ['q' => 'How long has Top 5 Percent been in business?', 'a' => 'Top 5 Percent was founded in 2017 and has been serving businesses, schools, sports teams, and organizations throughout Will and DuPage County for nearly a decade.'],
             ['q' => 'What products and services do you offer?', 'a' => 'We specialize in custom apparel (shirts, hoodies, hats), custom signs and banners, vehicle graphics and wraps, stickers and decals, and promotional products. Design services are included with every order.'],
             ['q' => 'Do you offer free design help?', 'a' => 'Yes. Free design assistance is included with every order we produce. You do not need to arrive with finished artwork, our team will build the layout for you.'],
             ['q' => 'How can I contact Top 5 Percent?', 'a' => 'Call us at (815) 349-8600, stop by 121 Springfield Avenue in Joliet, or use the contact form on our website. We are available seven days a week.'],

@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Brick Shirts"
         headingAccent="Dimensional & Bold"
-        description="Brick-style printing creates a textured, three-dimensional effect that makes your design literally stand out from the fabric. A unique look that no one else on the block will be wearing."
+        description="Top 5 Percent uses brick-style printing to create a textured, three-dimensional effect that makes your design literally stand out from the fabric. A unique look that no one else on the block will be wearing."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -114,7 +114,7 @@
             <p class="mb-4">We offer brick printing with no minimum order quantity, which means you can test this technique with a small initial run before committing to a large production quantity. This flexibility is especially valuable for emerging brands and designers who want to explore specialty printing techniques without over-investing in inventory before they understand how their market responds to the product.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce specialty print shirts for brands, individuals, and organizations throughout Will County and the greater Chicagoland area with no minimum order quantities and expert quality control on every order.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop at 121 Springfield Avenue in Joliet, Illinois. We produce specialty print shirts for brands, individuals, and organizations throughout Will and DuPage County and the greater Chicagoland area with no minimum order quantities and expert quality control on every order.</p>
             <p>Call us at (815) 349 8600 to discuss your brick shirt project today.</p>
         </x-slot>
     </x-sections.card-detailed-info>

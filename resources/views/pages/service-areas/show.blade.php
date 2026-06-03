@@ -131,7 +131,7 @@
         >
             <p>
                 Since 2017, Top 5 Percent has been the go-to source for <a href="/custom-apparel" class="link-notification">custom apparel</a> and signage
-                in {{ $cityName }} and throughout Will County and greater Chicagoland. We are a
+                in {{ $cityName }} and throughout Will and DuPage County and greater Chicagoland. We are a
                 veteran-owned shop based in Joliet, Illinois, and we are proud to serve the
                 {{ $cityName }} community with the same discipline and quality standards that
                 military service instilled in us, whether that means producing a single <a href="/signs" class="link-notification">business sign</a> or a full multi-product order for a local organization.

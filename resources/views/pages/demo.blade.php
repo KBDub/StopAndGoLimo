@@ -1309,7 +1309,7 @@
 
                         <div class="bg-white shadow-gold p-6 border-l-4 border-sunburst">
                             <h4 class="text-olive font-bold text-h4 mb-1">The Event and Nonprofit Coordinator</h4>
-                            <p class="text-charcoal font-semibold text-body-sm mb-3">Sandra, 39, church event planner or nonprofit program director, Will County</p>
+                            <p class="text-charcoal font-semibold text-body-sm mb-3">Sandra, 39, church event planner or nonprofit program director, Will and DuPage County</p>
                             <p class="text-charcoal-light text-body-sm leading-relaxed mb-4">Ordering banners, table runners, and event shirts on a shoestring budget with a hard event date. She needs creative flexibility and a shop that will not nickel-and-dime her for design help.</p>
                             <div class="space-y-1 text-body-sm">
                                 <p><span class="font-semibold text-charcoal">Key needs:</span> <span class="text-charcoal-light">Budget flexibility, design consultation, deadline certainty, quantity discounts</span></p>

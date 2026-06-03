@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Vinyl"
         headingAccent="Shirts & Apparel"
-        description="We press custom vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will County. Heat press vinyl gives you sharp, clean edges, bold color, and a design that holds up wash after wash. Whether you need one shirt or a hundred, we can turn your design into finished apparel fast."
+        description="Top 5 Percent presses custom vinyl shirts, hoodies, hats, and more for individuals, groups, and businesses throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Heat press vinyl gives you sharp, clean edges, bold color, and a design that holds up wash after wash. Whether you need one shirt or a hundred, we can turn your design into finished apparel fast."
         primaryButtonText="Shop Now"
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
@@ -55,7 +55,7 @@
         :images="[
             ['src' => '/images/vinyl/vinyl-shirts.jpg',         'alt' => 'Custom vinyl shirts made with heat press in Joliet Illinois'],
             ['src' => '/images/vinyl/vinyl-hoodie.jpg',         'alt' => 'Custom vinyl hoodies pressed in Joliet and Shorewood Illinois'],
-            ['src' => '/images/vinyl/vinyl-caps.jpg',           'alt' => 'Custom vinyl hats and caps in Joliet and Will County Illinois'],
+            ['src' => '/images/vinyl/vinyl-caps.jpg',           'alt' => 'Custom vinyl hats and caps in Joliet, Will and DuPage County Illinois'],
             ['src' => '/images/vinyl/vinyl-zip-up-hoodies.jpg', 'alt' => 'Vinyl zip-up hoodies custom pressed in Joliet Illinois'],
         ]"
         visible=2
@@ -75,7 +75,7 @@
     >
         <p class="mb-4">We press custom vinyl shirts using high quality heat transfer vinyl that delivers bold color, crisp edges, and a finish that stays looking great through dozens of washes. Vinyl is one of the most popular apparel decoration methods, and it pairs especially well with our <a href="/custom-apparel/printing-options/dtf-transfers" class="link-notification">DTF transfers</a> when your design includes photographic detail or full-color gradients. Whether you are ordering one shirt for yourself or a matching set for your whole team, vinyl gives you a clean result at a great price, and groups ordering <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> often choose vinyl for its bold, readable designs from a distance.</p>
         <p class="mb-4">We cut every design on our in-house vinyl cutters and press each garment individually to make sure the placement is accurate and the adhesion is solid. You can bring your own design or work with us to create something from scratch, and our <a href="/design-services/logo-design" class="link-notification">logo design</a> team is ready to build the artwork for you before production begins. We can handle text, logos, simple graphics, and multi-color layered designs. If your design has multiple colors, we cut each color from a separate sheet and layer them during pressing to create a finished look that holds together as one clean piece.</p>
-        <p>We serve customers throughout Joliet, Shorewood, Crest Hill, Rockdale, and Will County. Whether you need a single shirt for a birthday, a batch of team shirts for a sports league, or branded apparel for your business, we can get it done. Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet to talk about your vinyl shirt order.</p>
+        <p>We serve customers throughout Joliet, Shorewood, Crest Hill, Rockdale, and Will and DuPage County. Whether you need a single shirt for a birthday, a batch of team shirts for a sports league, or branded apparel for your business, we can get it done. Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet to talk about your vinyl shirt order.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text
@@ -84,7 +84,7 @@
         title="Vinyl Hoodies and Sweatshirts"
         imagePosition="right"
     >
-        <p class="mb-4">Vinyl hoodies and sweatshirts are a go-to choice for anyone who wants custom apparel that looks great and holds up over time. We press vinyl designs onto pullover hoodies, zip-up hoodies, crewneck sweatshirts, and fleece jackets for groups throughout Joliet and Will County, and our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> customers often choose matching hoodies and shirts with the same vinyl logo for a uniform look. A hoodie with a vinyl name, logo, or custom graphic makes a strong impression and works well as a gift or a piece of branded merchandise, and it pairs well with a coordinating <a href="/signs/business-signs/banners" class="link-notification">vinyl banner</a> for your next event or storefront display.</p>
+        <p class="mb-4">Vinyl hoodies and sweatshirts are a go-to choice for anyone who wants custom apparel that looks great and holds up over time. We press vinyl designs onto pullover hoodies, zip-up hoodies, crewneck sweatshirts, and fleece jackets for groups throughout Joliet, Will and DuPage County, and our <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="link-notification">corporate wear</a> customers often choose matching hoodies and shirts with the same vinyl logo for a uniform look. A hoodie with a vinyl name, logo, or custom graphic makes a strong impression and works well as a gift or a piece of branded merchandise, and it pairs well with a coordinating <a href="/signs/business-signs/banners" class="link-notification">vinyl banner</a> for your next event or storefront display.</p>
         <p class="mb-4">Hoodies present a slightly different challenge than t-shirts because the fabric is thicker and has a different surface texture. We press each hoodie at the right temperature and pressure for the specific material so the vinyl bonds fully and lays flat without cracking or lifting at the edges. We use premium heat transfer vinyl from brands that are known for performance on heavy fleece and blended fabrics, so for pure polyester athletic wear you may also want to compare our <a href="/custom-apparel/printing-options/dye-sublimation-printing" class="link-notification">dye sublimation</a> option for all-over coverage. You get a finish that stays smooth and sharp even after repeated washing and drying.</p>
         <p>We offer vinyl hoodies in a wide range of colors and sizes from youth small through adult 4XL. If you need the same design on a mix of hoodies and t-shirts, we can handle both in a single order so everything coordinates. Reach out at (815) 349-8600 or drop by our shop to place your order.</p>
     </x-sections.card-image-with-text>
@@ -93,7 +93,7 @@
 
     <x-sections.card-2image-with-text
         image1="/images/vinyl/custom-caps-vinyl.jpg"
-        alt1="Custom vinyl hats and caps in Joliet and Will County Illinois"
+        alt1="Custom vinyl hats and caps in Joliet, Will and DuPage County Illinois"
         image2="/images/vinyl/neon-vinyl-shirts.jpg"
         alt2="Neon vinyl shirts with bold heat press designs in Joliet Illinois"
         title="Vinyl Hats, Caps, and Specialty Colors"
@@ -108,9 +108,9 @@
         alt="Custom vinyl zip-up hoodies and branded apparel in Joliet Illinois"
         title="Business and Group Vinyl Apparel"
     >
-        <p class="mb-4">Businesses throughout Joliet, Shorewood, and Will County use vinyl apparel for employee uniforms, customer giveaways, event merchandise, and branded team wear. Vinyl is a cost effective way to put your logo or business name on apparel without the setup fees and minimum order requirements that come with <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>. For small runs of ten shirts or fewer, vinyl is often the most practical and affordable option, and for photo-quality artwork on the same order our <a href="/custom-apparel/printing-options/dtf-transfers" class="link-notification">DTF transfers</a> give you full-color results at the same low minimum.</p>
+        <p class="mb-4">Businesses throughout Joliet, Shorewood, and Will and DuPage County use vinyl apparel for employee uniforms, customer giveaways, event merchandise, and branded team wear. Vinyl is a cost effective way to put your logo or business name on apparel without the setup fees and minimum order requirements that come with <a href="/custom-apparel/printing-options/screen-printing" class="link-notification">screen printing</a>. For small runs of ten shirts or fewer, vinyl is often the most practical and affordable option, and for photo-quality artwork on the same order our <a href="/custom-apparel/printing-options/dtf-transfers" class="link-notification">DTF transfers</a> give you full-color results at the same low minimum.</p>
         <p class="mb-4">Groups and organizations in the Chicagoland area also rely on vinyl for <a href="/custom-apparel/group-wear/reunion-shirts" class="link-notification">reunion shirts</a>, church event apparel, school group shirts, sports team warmups, and fundraiser items. Vinyl makes it easy to produce personalized items where each shirt has a different name or number while still keeping the main design consistent across the whole group. We can handle the personalization for each piece so you do not have to manage it yourself.</p>
-        <p>We work with local businesses, nonprofit organizations, sports leagues, schools, and families throughout Will County and the Chicagoland area. No order is too small. Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet and let us help you create the vinyl apparel you need.</p>
+        <p>We work with local businesses, nonprofit organizations, sports leagues, schools, and families throughout Will and DuPage County and the Chicagoland area. No order is too small. Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet and let us help you create the vinyl apparel you need.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.product-grid collectionSlug="vinyl-shirts" parentSlug="custom-apparel" />
@@ -118,10 +118,10 @@
     <x-sections.card-detailed-info
         heading="5 Reasons Vinyl Shirts Are a Smart Choice"
         image1="/images/vinyl/custom-vinyl-shirts.jpg"
-        alt1="Custom vinyl shirts and apparel made in Joliet and Will County Illinois"
+        alt1="Custom vinyl shirts and apparel made in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
-            <p class="mb-4">Vinyl shirts have been a popular choice for custom apparel for a long time, and for good reason. Heat press vinyl gives you a clean, durable, professional result on almost any type of garment. We have been pressing vinyl shirts, hoodies, hats, and other apparel for customers throughout Joliet, Shorewood, Crest Hill, and Will County since 2017, and our full <a href="/custom-apparel" class="link-notification">custom apparel</a> shop means you can pair vinyl shirts with embroidery, DTF, screen printing, and more all in one order. Here are five reasons why vinyl is worth choosing for your next custom apparel order.</p>
+            <p class="mb-4">Vinyl shirts have been a popular choice for custom apparel for a long time, and for good reason. Heat press vinyl gives you a clean, durable, professional result on almost any type of garment. We have been pressing vinyl shirts, hoodies, hats, and other apparel for customers throughout Joliet, Shorewood, Crest Hill, and Will and DuPage County since 2017, and our full <a href="/custom-apparel" class="link-notification">custom apparel</a> shop means you can pair vinyl shirts with embroidery, DTF, screen printing, and more all in one order. Here are five reasons why vinyl is worth choosing for your next custom apparel order.</p>
         </x-slot>
         <x-slot name="mid">
             <h3 class="text-h3 font-bold text-charcoal mb-2">No Minimums and Fast Turnaround</h3>
@@ -138,7 +138,7 @@
             <p class="mb-4">Quality heat transfer vinyl bonds permanently to the fabric when pressed at the correct temperature and pressure. With proper care, including turning garments inside out before washing and avoiding high heat in the dryer, vinyl designs hold up for years. We use premium vinyl that is rated for extended wash cycles so your shirts stay looking sharp long after they leave our shop, and if you need a decoration method that is stitched directly into the fabric for an even more permanent finish, see our <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a> service.</p>
         </x-slot>
         <x-slot name="footer">
-            <p class="mb-4">We are a veteran owned custom apparel shop in Joliet, Illinois and we take pride in producing vinyl shirts, hoodies, hats, and other custom apparel that our customers are proud to wear. We serve individuals, families, businesses, and organizations throughout Joliet, Shorewood, Crest Hill, Rockdale, Plainfield, and all of Will County, and our full <a href="/custom-apparel" class="link-notification">custom apparel</a> catalog means you can combine vinyl with embroidery, DTF, and screen printing in a single order. When you are ready to coordinate your apparel with a matching <a href="/signs/business-signs/banners" class="link-notification">banner</a> or signage package for an event, we handle both right here in the same shop.</p>
+            <p class="mb-4">We are a veteran owned custom apparel shop in Joliet, Illinois and we take pride in producing vinyl shirts, hoodies, hats, and other custom apparel that our customers are proud to wear. We serve individuals, families, businesses, and organizations throughout Joliet, Shorewood, Crest Hill, Rockdale, Plainfield, and all of Will and DuPage County, and our full <a href="/custom-apparel" class="link-notification">custom apparel</a> catalog means you can combine vinyl with embroidery, DTF, and screen printing in a single order. When you are ready to coordinate your apparel with a matching <a href="/signs/business-signs/banners" class="link-notification">banner</a> or signage package for an event, we handle both right here in the same shop.</p>
             <p>Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet to talk about your vinyl apparel order. We also offer no-minimum <a href="/custom-apparel/printing-options/dtf-transfers" class="link-notification">DTF transfers</a> if you need full-color photographic prints on the same garment order.</p>
         </x-slot>
     </x-sections.card-detailed-info>

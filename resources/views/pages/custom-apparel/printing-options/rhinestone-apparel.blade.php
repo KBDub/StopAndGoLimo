@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Rhinestone Shirts"
         headingAccent="Best Bling Around"
-        description="Dazzling crystal rhinestone designs that catch every eye in the room. Custom patterns, logos, and text, handcrafted for reunions, celebrations, and anyone who loves to shine."
+        description="Top 5 Percent handcrafts dazzling crystal rhinestone designs that catch every eye in the room. Custom patterns, logos, and text for reunions, celebrations, and anyone who loves to shine."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -86,7 +86,7 @@
     >
         <p class="mb-4">We can produce rhinestone designs for virtually any occasion or application. Family reunion groups use rhinestone shirts to create a sense of occasion that makes the event feel special and memorable. Bachelorette parties, birthday celebrations, and church groups all use them to mark milestone moments in a way that standard printed shirts simply cannot convey. For <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> orders, rhinestone lettering and team logos bring a level of glamour that sets cheerleading squads and dance teams apart from the crowd.</p>
         <p class="mb-4">Rhinestone designs work best with clean, bold lettering and simple graphic shapes where the rhinestone pattern can follow the design lines clearly without losing detail. Names, dates, and short phrases are among the most popular rhinestone design formats. For even more dimensional impact, try combining rhinestone with our <a href="/custom-apparel/specialty-materials/holographic-shirts" class="link-notification">holographic</a> vinyl base for a truly eye-catching layered effect. We can help you adapt your design concept into a rhinestone-appropriate format if needed.</p>
-        <p>We have no minimum order quantities on rhinestone shirts, which means you can order a single statement piece or matching shirts for an entire group. Rhinestone is extremely popular in <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> for cheerleading squads and dance teams. We are a veteran owned shop serving Joliet, Shorewood, Plainfield, and all of Will County. Need artwork or a design? Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team can help. Call us at (815) 349-8600 to discuss your rhinestone shirt order today.</p>
+        <p>We have no minimum order quantities on rhinestone shirts, which means you can order a single statement piece or matching shirts for an entire group. Rhinestone is extremely popular in <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> for cheerleading squads and dance teams. We are a veteran owned shop serving Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Need artwork or a design? Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team can help. Call us at (815) 349-8600 to discuss your rhinestone shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.cta-quadruple-button-banner />
@@ -96,7 +96,7 @@
     <x-sections.card-detailed-info
         heading="Why Custom Rhinestone Shirts Make Every Special Occasion Unforgettable"
         image1="/images/custom-shirts/top5pct-rhinetsone-t-shirts.jpg"
-        alt1="Custom rhinestone t-shirts for events in Joliet and Will County Illinois"
+        alt1="Custom rhinestone t-shirts for events in Joliet, Will and DuPage County Illinois"
     >
         <x-slot name="intro">
             <p class="mb-4">Special occasions deserve special apparel, and rhinestone shirts are among the most requested items at our <a href="/custom-apparel" class="link-notification">custom apparel shop</a> in Joliet for exactly that reason. The sparkle and glamour of crystal rhinestones elevate a custom shirt from a piece of branded apparel into a genuine keepsake that the recipient associates with a positive, celebratory experience. Long after the event is over, the rhinestone shirt stays in the closet as a reminder of that occasion and the thought that went into making it special.</p>

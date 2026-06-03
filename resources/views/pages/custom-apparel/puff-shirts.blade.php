@@ -40,7 +40,7 @@
         preHeading="Veteran Owned • Joliet, IL"
         heading="Puff Print"
         headingAccent="Shirts"
-        description="Puff ink expands during heat curing to create a raised, three-dimensional texture on your design. It adds a premium, tactile quality that sets your shirts apart from flat-printed apparel."
+        description="Top 5 Percent uses puff ink that expands during heat curing to create a raised, three-dimensional texture on your design. A premium, tactile finish that sets your shirts apart from anything flat-printed."
         primaryButtonText="Get a Free Quote"
         primaryButtonHref="/contact"
         secondaryButtonText="Call Us Today"
@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Puff printing uses a special expanding ink additive that reacts to heat during the curing process, causing the printed area to rise up from the fabric surface and create a raised, three-dimensional texture. The effect is immediately noticeable when you look at the shirt and even more pronounced when you touch it. Puff printing adds a level of depth and quality to custom apparel that flat-printed methods simply cannot achieve. It is especially popular for logos, lettering, and graphic elements where you want a bold, premium feel.</p>
         <p class="mb-4">Puff print works best on bold, simple designs with clean edges. Fine lines and small details do not expand as predictably, so we recommend puff printing for block text, large logos, simple icons, and designs where the dimensional quality of the technique can really show. The raised texture is consistent across the print area and holds up well through normal wash and wear cycles without flattening or losing its shape over time.</p>
-        <p>We produce puff print shirts for brands, sports teams, organizations, and individuals throughout Joliet, Shorewood, and Will County who want their custom apparel to stand out from standard flat prints. Call us at (815) 349 8600 to discuss your puff print project today.</p>
+        <p>We produce puff print shirts for brands, sports teams, organizations, and individuals throughout Joliet, Shorewood, and Will and DuPage County who want their custom apparel to stand out from standard flat prints. Call us at (815) 349 8600 to discuss your puff print project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text

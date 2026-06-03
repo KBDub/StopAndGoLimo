@@ -8,7 +8,32 @@
 
 <div
     x-data
-    x-init="$el.querySelectorAll('p').forEach(p => { p.style.paddingLeft = '1.5rem'; const w = p.innerHTML.trim().split(/\s+/); if(w.length > 4){ p.innerHTML = '<strong>' + w.slice(0,4).join(' ') + '</strong> ' + w.slice(4).join(' '); } })"
+    x-init="$el.querySelectorAll('p').forEach(p => {
+        p.style.paddingLeft = '1.5rem';
+        if (p.textContent.trim().split(/\s+/).length <= 4) return;
+        const nodes = [];
+        const tw = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
+        let n;
+        while (n = tw.nextNode()) nodes.push(n);
+        let c = 0;
+        for (const t of nodes) {
+            if (c >= 4) break;
+            const f = document.createDocumentFragment();
+            t.data.split(/(\s+)/).forEach(s => {
+                if (/^\s*$/.test(s)) {
+                    f.appendChild(document.createTextNode(s));
+                } else if (c < 4) {
+                    const b = document.createElement('strong');
+                    b.textContent = s;
+                    f.appendChild(b);
+                    c++;
+                } else {
+                    f.appendChild(document.createTextNode(s));
+                }
+            });
+            t.parentNode.replaceChild(f, t);
+        }
+    })"
     class="bg-white shadow-gold-lg p-8 lg:p-12"
 >
 

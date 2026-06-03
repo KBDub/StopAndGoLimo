@@ -55,7 +55,7 @@
     <template x-if="images.length > 0">
         <div>
 
-            <div class="relative">
+            <div class="relative overflow-hidden">
 
                 {{-- Image track --}}
                 <div class="flex items-center justify-center gap-3">

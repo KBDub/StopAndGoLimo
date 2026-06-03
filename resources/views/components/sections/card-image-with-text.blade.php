@@ -11,7 +11,7 @@
             x-data="{ ready: false }"
             x-init="$nextTick(() => ready = true)"
             :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="p-6 md:p-10 bg-white shadow-gold-lg transition-all duration-500"
+            class="p-10 bg-white shadow-gold-lg transition-all duration-500"
         >
             {{-- Title centered full-width at top --}}
             <div class="text-center mb-8">
@@ -21,24 +21,24 @@
                 </div>
             </div>
 
-            {{-- Mobile: stacked (image centered above text). Desktop (md+): float layout --}}
+            {{-- Float-based image + wrapping text --}}
             <div class="[display:flow-root]">
                 @if($imagePosition === 'right')
-                    <div class="block mx-auto md:mx-0 md:float-right md:ml-12 mb-6 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                    <div class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-left: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out h-64 md:h-[450px]"
-                            style="width:600px; max-width:100%;"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @else
-                    <div class="block mx-auto md:mx-0 md:float-left md:mr-12 mb-6 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                    <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="margin-right: 3rem;">
                         <img
                             src="{{ $image }}"
                             alt="{{ $alt }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out h-64 md:h-[450px]"
-                            style="width:600px; max-width:100%;"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width: 600px; height: 450px; max-width: 100%;"
                         >
                     </div>
                 @endif
@@ -46,7 +46,7 @@
                 <div
                     x-data
                     x-init="$el.querySelectorAll('p').forEach(p => {
-                        if (window.innerWidth >= 768) { p.style.paddingLeft = '1.5rem'; }
+                        p.style.paddingLeft = '1.5rem';
                         if (p.textContent.trim().split(/\s+/).length <= 4) return;
                         const nodes = [];
                         const tw = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
@@ -71,7 +71,7 @@
                             t.parentNode.replaceChild(f, t);
                         }
                     })"
-                    class="text-charcoal-light leading-relaxed text-center md:text-left"
+                    class="text-charcoal-light leading-relaxed"
                 >
                     {{ $slot }}
                 </div>

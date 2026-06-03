@@ -1,0 +1,43 @@
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires laravel/framework ^11.31, found laravel/framework[v11.31.0, ..., v11.54.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+  Problem 2
+    - Root composer.json requires laravel/octane ^2.17 -> satisfiable by laravel/octane[v2.17.0, ..., v2.17.4].
+    - laravel/octane[v2.17.0, ..., v2.17.4] require laravel/framework ^10.10.1|^11.0|^12.0|^13.0 -> found laravel/framework[v10.10.1, ..., 10.50.2, v11.0.0, ..., v11.54.0, v12.0.0, ..., v12.61.0, v13.0.0, ..., v13.13.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+  Problem 3
+    - Root composer.json requires lunarphp/stripe ~1.2.1 -> satisfiable by lunarphp/stripe[1.2.1].
+    - lunarphp/core 1.2.1 requires laravel/framework ^11.0|^12.0 -> found laravel/framework[v11.0.0, ..., v11.54.0, v12.0.0, ..., v12.61.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+    - lunarphp/stripe 1.2.1 requires lunarphp/core 1.2.1 -> satisfiable by lunarphp/core[1.2.1].
+
+Use the option --with-all-dependencies (-W) to allow upgrades, downgrades and removals for packages currently locked to specific versions.
+
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires laravel/framework ^11.31, found laravel/framework[v11.31.0, ..., v11.54.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+  Problem 2
+    - Root composer.json requires laravel/octane ^2.17 -> satisfiable by laravel/octane[v2.17.0, ..., v2.17.4].
+    - laravel/octane[v2.17.0, ..., v2.17.4] require laravel/framework ^10.10.1|^11.0|^12.0|^13.0 -> found laravel/framework[v10.10.1, ..., 10.50.2, v11.0.0, ..., v11.54.0, v12.0.0, ..., v12.61.0, v13.0.0, ..., v13.13.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+  Problem 3
+    - Root composer.json requires lunarphp/stripe ~1.2.1 -> satisfiable by lunarphp/stripe[1.2.1].
+    - lunarphp/core 1.2.1 requires laravel/framework ^11.0|^12.0 -> found laravel/framework[v11.0.0, ..., v11.54.0, v12.0.0, ..., v12.61.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+    - lunarphp/stripe 1.2.1 requires lunarphp/core 1.2.1 -> satisfiable by lunarphp/core[1.2.1].
+
+Use the option --with-all-dependencies (-W) to allow upgrades, downgrades and removals for packages currently locked to specific versions.
+
+Your requirements could not be resolved to an installable set of packages.
+
+  Problem 1
+    - Root composer.json requires laravel/framework ^11.31, found laravel/framework[v11.31.0, ..., v11.54.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+  Problem 2
+    - Root composer.json requires laravel/octane ^2.17 -> satisfiable by laravel/octane[v2.17.0, ..., v2.17.4].
+    - laravel/octane[v2.17.0, ..., v2.17.4] require laravel/framework ^10.10.1|^11.0|^12.0|^13.0 -> found laravel/framework[v10.10.1, ..., 10.50.2, v11.0.0, ..., v11.54.0, v12.0.0, ..., v12.61.0, v13.0.0, ..., v13.13.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+  Problem 3
+    - Root composer.json requires lunarphp/stripe ~1.2.1 -> satisfiable by lunarphp/stripe[1.2.1].
+    - lunarphp/core 1.2.1 requires laravel/framework ^11.0|^12.0 -> found laravel/framework[v11.0.0, ..., v11.54.0, v12.0.0, ..., v12.61.0] but these were not loaded, because they are affected by security advisories. To ignore the advisories, add ("PKSA-mdq4-51ck-6kdq", "PKSA-zwc5-qtrz-zm1n") to the audit "ignore" config. To turn the feature off entirely, you can set "block-insecure" to false in your "audit" config.
+    - lunarphp/stripe 1.2.1 requires lunarphp/core 1.2.1 -> satisfiable by lunarphp/core[1.2.1].
+
+Use the option --with-all-dependencies (-W) to allow upgrades, downgrades and removals for packages currently locked to specific versions.
+
+exit status 2

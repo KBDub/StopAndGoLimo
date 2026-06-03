@@ -34,7 +34,7 @@
             t.parentNode.replaceChild(f, t);
         }
     })"
-    class="bg-white shadow-gold-lg p-8 lg:p-12"
+    class="bg-white shadow-gold-lg p-4 sm:p-8 lg:p-12"
 >
 
     <div class="text-center mb-6">
@@ -45,14 +45,13 @@
     </div>
 
     @if($image2)
-        {{-- Two-image layout: image1 floated left with intro, image2 floated right with lower --}}
+        {{-- Two-image layout: image1 stacks on mobile, floats left on md+ --}}
         <div class="[display:flow-root] mb-4">
-            <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
+            <div class="w-full mb-6 md:float-left md:w-[400px] md:mr-12 md:mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
-                    class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                    style="width: 400px; height: 300px;"
+                    class="block w-full h-auto md:h-[300px] object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                 >
             </div>
             <div class="card-detail-content">
@@ -64,13 +63,13 @@
             {{ $mid }}
         </div>
 
+        {{-- image2 stacks on mobile, floats right on md+ --}}
         <div class="[display:flow-root] mb-4">
-            <div class="float-right ml-6 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
+            <div class="w-full mb-6 md:float-right md:w-[400px] md:ml-6 md:mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
                 <img
                     src="{{ $image2 }}"
                     alt="{{ $alt2 }}"
-                    class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                    style="width: 400px; height: 300px;"
+                    class="block w-full h-auto md:h-[300px] object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                 >
             </div>
             <div class="card-detail-content">
@@ -82,18 +81,17 @@
             {{ $footer }}
         </div>
     @else
-        {{-- Single-image layout: intro full width, image floated left with mid wrapping, lower full width below --}}
+        {{-- Single-image layout: intro full width, image stacks on mobile / floats left on md+ --}}
         <div class="mb-4 card-detail-content">
             {{ $intro }}
         </div>
 
         <div class="[display:flow-root] mb-4">
-            <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
+            <div class="w-full mb-6 md:float-left md:w-[400px] md:mr-12 md:mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
-                    class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                    style="width: 400px; height: 300px;"
+                    class="block w-full h-auto md:h-[300px] object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
                 >
             </div>
             <div class="card-detail-content">

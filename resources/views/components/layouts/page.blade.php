@@ -142,7 +142,7 @@
         --brand-accent:    #3273DC;
     }
 </style>
-<body class="font-sans antialiased bg-linen text-charcoal">
+<body class="font-sans antialiased bg-linen text-charcoal overflow-x-hidden">
 
     @if(config('services.gtm.id'))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ config('services.gtm.id') }}"

@@ -23,7 +23,7 @@
         }, { threshold: 0.1 });
         observer.observe($el);
     "
-    class="overflow-hidden"
+    class="relative overflow-hidden"
 >
     {{-- Inner div: animated element, translates off-screen until observer fires --}}
     <div

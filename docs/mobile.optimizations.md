@@ -60,6 +60,33 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ---
 
+## Horizontal Overflow / Mobile "Play" — Fixed
+
+**Date:** 2026-06-03
+**Files:**
+- `resources/views/components/layouts/page.blade.php`
+- `resources/views/components/ui/card-banner-slide-in.blade.php`
+
+**Problem:** On iPhone 12 Pro (390px) and Pixel 7 (412px), the page scrolled horizontally by ~130px and ~155px respectively. Users could "play" the page left and right.
+
+**Root cause — two compounding issues:**
+
+1. **No `overflow-x` guard on `<body>`.** The body tag had no `overflow-x: hidden`, so any element that extended even 1px past the right viewport edge created a page-wide horizontal scrollbar. This is the systemic missing safeguard.
+
+2. **`card-banner-slide-in` animation leak.** The component starts its inner element at `translateX(100%)` (for `direction="right"`) or `translateX(-100%)` (for `direction="left"`) before the IntersectionObserver fires. The outer wrapper had `overflow-hidden` but no `position` context. Without `position: relative`, browsers don't reliably use `overflow: hidden` to clip transformed children, so the off-screen initial position leaked into the page scroll width. The `/vehicle-graphics` page uses `direction="right"` which starts the element ~one viewport-width off the right edge.
+
+**Why the overflow amount differed by device:** The `direction="right"` element starts at `translateX(100%)` of its own width. A wider phone → wider element → more pixels of right-side overflow. This explains 130px on a 390px phone vs. 155px on a 412px phone.
+
+**Fixes applied:**
+
+1. `<body>` tag — added `overflow-x-hidden` (Tailwind). This is the universal safeguard. Safe to apply here because `sticky-header-part` is a dead hook class with no CSS rules and no JS usage — no actual sticky positioning exists on the header that would be broken by overflow clipping.
+
+2. `card-banner-slide-in.blade.php` outer wrapper — added `relative` alongside `overflow-hidden`. This gives the wrapper a proper positioning context so `overflow: hidden` reliably clips its transformed child in all browsers, including during the initial off-screen state before the animation fires.
+
+**Note on `sticky-header-part`:** This class appears on the notification bar element but has no CSS definition in `app.css` and no JavaScript selector. It is a dead class and does not affect behavior.
+
+---
+
 ## Low Priority — Pending
 
 - Custom request wizard multi-step form — needs live mobile test.

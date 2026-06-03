@@ -695,3 +695,447 @@ description="Top 5 Percent builds fully branded online stores with your logo, co
 | Pages already using the company name correctly | 5 |
 | Pages needing update | 59 |
 | Pages with no description set (home) | 1 |
+
+---
+
+---
+
+# card-image-with-text Branding Update
+
+All `x-sections.card-image-with-text` slot content must include `<a href="/" class="link-notification">Top 5 Percent</a>` as a branded homepage link in **one card block per page**. The homepage (`home.blade.php`) has no card blocks and is excluded. The demo page is excluded.
+
+**Rules:**
+- One branded `<a href="/" class="link-notification">Top 5 Percent</a>` link per page, placed in the first card block's closing paragraph unless otherwise noted.
+- **Group A** — "Top 5 Percent" already appears as plain text in the slot. Wrap the first occurrence in the link tag. No other content changes.
+- **Group B** — No brand name in the slot. Replace the closing "We are..." or "We serve..." opener, or the relevant phrase, with a natural branded reference.
+- No all-caps, 7th grade reading level, commas not em dashes.
+- Link must use `class="link-notification"` and `href="/"`.
+
+---
+
+## Group A: Wrap existing plain-text mention in a link
+
+These pages already say "Top 5 Percent" in their card slot. The only change is wrapping the first occurrence.
+
+---
+
+### `resources/views/pages/stickers/index.blade.php`
+**Card:** First
+**Current:** `Top 5 Percent prints custom stickers and decals for businesses, sports teams, organizations, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> prints custom stickers and decals for businesses, sports teams, organizations, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County.`
+
+---
+
+### `resources/views/pages/vehicle-graphics/index.blade.php`
+**Card:** First
+**Current:** `Top 5 Percent designs and installs professional vehicle graphics for businesses and individuals throughout Joliet, Shorewood, Plainfield, Channahon, and all of Will and DuPage County.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> designs and installs professional vehicle graphics for businesses and individuals throughout Joliet, Shorewood, Plainfield, Channahon, and all of Will and DuPage County.`
+
+---
+
+### `resources/views/pages/vehicle-graphics/dot-decals.blade.php`
+**Card:** First
+**Current:** `Both owners of Top 5 Percent drove trucks in the military and one still holds a valid CDL Class A license with over 15 years of tractor trailer driving experience.`
+**Target:** `Both owners of <a href="/" class="link-notification">Top 5 Percent</a> drove trucks in the military and one still holds a valid CDL Class A license with over 15 years of tractor trailer driving experience.`
+
+---
+
+### `resources/views/pages/vehicle-graphics/vehicle-magnets.blade.php`
+**Card:** First
+**Current:** `We offer two types of magnetic vehicle signs at Top 5 Percent and each one has its own advantages depending on your budget, your design, and how you plan to use the sign.`
+**Target:** `We offer two types of magnetic vehicle signs at <a href="/" class="link-notification">Top 5 Percent</a> and each one has its own advantages depending on your budget, your design, and how you plan to use the sign.`
+
+---
+
+### `resources/views/pages/signs/index.blade.php`
+**Card:** First
+**Current:** `Top 5 Percent is a veteran owned sign shop serving businesses, organizations, and events throughout Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, and all of Will and DuPage County, and our custom apparel team makes us the area's one-stop shop for complete branding.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran owned sign shop serving businesses, organizations, and events throughout Joliet, Shorewood, Plainfield, Romeoville, Crest Hill, and all of Will and DuPage County, and our custom apparel team makes us the area's one-stop shop for complete branding.`
+
+---
+
+### `resources/views/pages/signs/coronavirus-signs.blade.php`
+**Card:** First
+**Current:** `A safety signage package from Top 5 Percent includes everything from entrance signs and checkout lane markers to floor decals and wall mounted health guidelines.`
+**Target:** `A safety signage package from <a href="/" class="link-notification">Top 5 Percent</a> includes everything from entrance signs and checkout lane markers to floor decals and wall mounted health guidelines.`
+
+---
+
+### `resources/views/pages/signs/sidewalk-signs.blade.php`
+**Card:** First
+**Current:** `Top 5 Percent has helped dozens of local businesses in Joliet, Crest Hill, Shorewood, and Romeoville find the right sidewalk sign to match their storefront and their budget.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> has helped dozens of local businesses in Joliet, Crest Hill, Shorewood, and Romeoville find the right sidewalk sign to match their storefront and their budget.`
+
+---
+
+### `resources/views/pages/signs/table-runners.blade.php`
+**Card:** First
+**Current:** `Contact Top 5 Percent today and let us help you make your brand impossible to ignore at your next event.`
+**Target:** `Contact <a href="/" class="link-notification">Top 5 Percent</a> today and let us help you make your brand impossible to ignore at your next event.`
+
+---
+
+### `resources/views/pages/signs/wall-signs.blade.php`
+**Card:** First
+**Current:** `Wall signs from Top 5 Percent are produced in-house and installed by our experienced team.`
+**Target:** `Wall signs from <a href="/" class="link-notification">Top 5 Percent</a> are produced in-house and installed by our experienced team.`
+
+---
+
+### `resources/views/pages/promotional-items.blade.php`
+**Card:** First
+**Current:** `Top 5 Percent helps businesses throughout Joliet, Shorewood, Plainfield, and Will and DuPage County create branded promotional products that deliver long-term value for a fraction of the cost of other advertising channels.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> helps businesses throughout Joliet, Shorewood, Plainfield, and Will and DuPage County create branded promotional products that deliver long-term value for a fraction of the cost of other advertising channels.`
+
+---
+
+### `resources/views/pages/design-services/index.blade.php`
+**Card:** First
+**Current:** `At Top 5 Percent, we believe every business and organization in Joliet and throughout Will and DuPage County deserves access to professional design help`
+**Target:** `At <a href="/" class="link-notification">Top 5 Percent</a>, we believe every business and organization in Joliet and throughout Will and DuPage County deserves access to professional design help`
+
+---
+
+### `resources/views/pages/custom-apparel/index.blade.php`
+**Card:** First
+**Current:** `Top 5 Percent is a veteran owned custom apparel shop serving Joliet, Shorewood, Plainfield, Crest Hill, Romeoville, and all of Will and DuPage County.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran owned custom apparel shop serving Joliet, Shorewood, Plainfield, Crest Hill, Romeoville, and all of Will and DuPage County.`
+
+---
+
+### `resources/views/pages/custom-apparel/group-wear/reunion-shirts.blade.php`
+**Card:** First
+**Current:** `When you order your reunion shirts with Top 5 Percent, you get the best service and quality from a local veteran owned printer right here in Joliet, Illinois.`
+**Target:** `When you order your reunion shirts with <a href="/" class="link-notification">Top 5 Percent</a>, you get the best service and quality from a local veteran owned printer right here in Joliet, Illinois.`
+
+---
+
+### `resources/views/pages/custom-apparel/group-wear/spirit-wear-shirts.blade.php`
+**Card:** First
+**Current:** `...custom spirit wear from Top 5 Percent right here in Joliet, Illinois.`
+**Target:** `...custom spirit wear from <a href="/" class="link-notification">Top 5 Percent</a> right here in Joliet, Illinois.`
+
+---
+
+### `resources/views/pages/promotional-items/mugs.blade.php`
+**Card:** Second (the ordering/process card)
+**Current:** `Ordering custom branded mugs from Top 5 Percent is straightforward regardless of your starting point.`
+**Target:** `Ordering custom branded mugs from <a href="/" class="link-notification">Top 5 Percent</a> is straightforward regardless of your starting point.`
+
+---
+
+### `resources/views/pages/reviews.blade.php`
+**Card:** First
+**Current:** `Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service`
+**Target:** `Since 2017, <a href="/" class="link-notification">Top 5 Percent</a> has built a reputation for quality, speed, and personal service`
+
+---
+
+### `resources/views/pages/service-areas.blade.php`
+**Card:** First
+**Current:** `Since 2017, Top 5 Percent has delivered high-quality custom apparel and signage to businesses, schools, sports teams, and organizations throughout Will and DuPage County and greater Chicagoland.`
+**Target:** `Since 2017, <a href="/" class="link-notification">Top 5 Percent</a> has delivered high-quality custom apparel and signage to businesses, schools, sports teams, and organizations throughout Will and DuPage County and greater Chicagoland.`
+
+---
+
+### `resources/views/pages/service-areas/show.blade.php`
+**Card:** First (dynamic, uses `$cityState` variable)
+**Current:** `Since 2017, Top 5 Percent has been the go-to source for custom apparel and signage`
+**Target:** `Since 2017, <a href="/" class="link-notification">Top 5 Percent</a> has been the go-to source for custom apparel and signage`
+
+---
+
+### `resources/views/pages/top5pct-merchandise.blade.php`
+**Card:** First
+**Current:** `The concept behind Top 5 Percent has always been simple`
+**Target:** `The concept behind <a href="/" class="link-notification">Top 5 Percent</a> has always been simple`
+
+---
+
+## Group B: Add branded link (no current mention in slot)
+
+These pages have no "Top 5 Percent" in their card slot paragraphs. The change modifies one closing sentence in the first card block to introduce the branded link naturally.
+
+---
+
+### `resources/views/pages/about.blade.php`
+**Card:** First
+**Current:** `We serve Joliet and all surrounding communities across our service areas throughout Will and DuPage County and the greater Chicagoland area. If you are nearby, stop in. If not, we ship.`
+**Target:** `At <a href="/" class="link-notification">Top 5 Percent</a>, we serve Joliet and all surrounding communities across our service areas throughout Will and DuPage County and the greater Chicagoland area. Stop in or ship.`
+
+---
+
+### `resources/views/pages/contact.blade.php`
+**Card:** First
+**Current:** `Check our service areas to confirm we cover your location. We serve all of Joliet, Will and DuPage County, and the greater Chicagoland area. If you are nearby, come in. If not, we ship.`
+**Target:** `Check our <a href="/service-areas" class="link-notification">service areas</a> to confirm <a href="/" class="link-notification">Top 5 Percent</a> covers your location. We serve all of Joliet, Will and DuPage County, and the greater Chicagoland area. If you are nearby, come in. If not, we ship.`
+
+---
+
+### `resources/views/pages/stickers/standard-stickers.blade.php`
+**Card:** First
+**Current:** `We offer a variety of adhesion levels from light grip for easy removal to permanent adhesion for long term outdoor use. All of our stickers can be made weatherproof so they hold up in rain, heat, and cold without fading or peeling. We have no minimums so you can order exactly the quantity you need. Call us at (815) 349 8600 or visit us at 121 Springfield Avenue in Joliet to get started on your custom sticker order today.`
+**Target:** `At <a href="/" class="link-notification">Top 5 Percent</a>, we offer adhesion levels from light grip for easy removal to permanent adhesion for long-term outdoor use. All stickers are weatherproof and hold up in rain, heat, and cold without fading or peeling. No minimums, so you can order exactly the quantity you need. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started.`
+
+---
+
+### `resources/views/pages/stickers/custom-shaped-stickers.blade.php`
+**Card:** First
+**Current:** `We offer no minimums on custom shaped stickers so you can order exactly what you need, whether that is five stickers for a personal project or five thousand for a major product launch. Call us at (815) 349 8600 or visit us at 121 Springfield Avenue in Joliet to get started on your custom shaped sticker order.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> has no minimums on custom shaped stickers, so you can order exactly what you need, whether that is five stickers for a personal project or five thousand for a major product launch. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started.`
+
+---
+
+### `resources/views/pages/vehicle-graphics/automobile-graphics.blade.php`
+**Card:** First
+**Current:** `We serve car owners, business owners, and fleet managers in Joliet, Shorewood, Crest Hill, Rockdale, and throughout the greater Chicagoland area. Call us at (815) 349 8600 to talk about your vehicle wrap today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> serves car owners, business owners, and fleet managers in Joliet, Shorewood, Crest Hill, Rockdale, and throughout the greater Chicagoland area. Call us at (815) 349 8600 to talk about your vehicle wrap today.`
+
+---
+
+### `resources/views/pages/signs/banners.blade.php`
+**Card:** First
+**Current:** `Give us a call at (815) 349 8600 to place your order or stop by our shop at 121 Springfield Avenue in Joliet.`
+**Target:** `Give <a href="/" class="link-notification">Top 5 Percent</a> a call at (815) 349 8600 to place your order or stop by our shop at 121 Springfield Avenue in Joliet.`
+
+---
+
+### `resources/views/pages/signs/business-signs.blade.php`
+**Card:** First
+**Current:** `We are a veteran owned business located at 121 Springfield Avenue in Joliet, Illinois. We are proud to serve the businesses that make Will and DuPage County and the Chicagoland area a great place to live and work. Call us at (815) 349 8600 to talk about your storefront signage needs today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned business located at 121 Springfield Avenue in Joliet, Illinois. We are proud to serve the businesses that make Will and DuPage County and the Chicagoland area a great place to live and work. Call us at (815) 349 8600 to talk about your storefront signage needs today.`
+
+---
+
+### `resources/views/pages/signs/door-signs.blade.php`
+**Card:** First
+**Current:** `Our team handles measurement, production, and professional installation for all door sign projects. We prepare every glass surface before application and use professional-grade techniques to ensure clean, straight placement every time. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your door sign project.`
+**Target:** `The team at <a href="/" class="link-notification">Top 5 Percent</a> handles measurement, production, and professional installation for all door sign projects. We prepare every glass surface before application and use professional-grade techniques to ensure clean, straight placement every time. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your door sign project.`
+
+---
+
+### `resources/views/pages/signs/floor-signs.blade.php`
+**Card:** First
+**Current:** `All of our floor graphics are printed with slip-resistant surface treatments that meet safety standards for commercial spaces.`
+**Target:** `All floor graphics from <a href="/" class="link-notification">Top 5 Percent</a> are printed with slip-resistant surface treatments that meet safety standards for commercial spaces.`
+
+---
+
+### `resources/views/pages/signs/sidewalk-signs-a-frame-signs.blade.php`
+**Card:** First
+**Current:** `We can produce standard parking sign designs as well as fully custom signs with your business name, logo, specific rules, or any information that fits your property needs. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your parking sign project today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces standard parking sign designs as well as fully custom signs with your business name, logo, specific rules, or any information that fits your property needs. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your parking sign project today.`
+
+---
+
+### `resources/views/pages/signs/table-cloths.blade.php`
+**Card:** First
+**Current:** `We produce table cloths in fitted, throw, and stretch styles depending on your preference and the look you want to achieve. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your custom table cloth order today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces table cloths in fitted, throw, and stretch styles depending on your preference and the look you want to achieve. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your custom table cloth order today.`
+
+---
+
+### `resources/views/pages/signs/window-signs.blade.php`
+**Card:** First
+**Current:** `Window signs from our shop are professionally installed so every edge is clean, every bubble is removed, and the finished product looks polished from day one.`
+**Target:** `Window signs from <a href="/" class="link-notification">Top 5 Percent</a> are professionally installed so every edge is clean, every bubble is removed, and the finished product looks polished from day one.`
+
+---
+
+### `resources/views/pages/signs/posters.blade.php`
+**Card:** First
+**Current:** `We are a veteran owned business based in Joliet, Illinois and we serve customers throughout Shorewood, Romeoville, Plainfield, Crest Hill, and the entire Chicagoland area. Call us at (815) 349 8600 and let us get started on your next poster project. We look forward to helping you create something that gets noticed.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned business based in Joliet, Illinois, serving customers throughout Shorewood, Romeoville, Plainfield, Crest Hill, and the entire Chicagoland area. Call us at (815) 349 8600 to get started on your next poster project.`
+
+---
+
+### `resources/views/pages/signs/yard-signs.blade.php`
+**Card:** First
+**Current:** `We are a veteran owned business located at 121 Springfield Avenue in Joliet, Illinois.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned business located at 121 Springfield Avenue in Joliet, Illinois.`
+
+---
+
+### `resources/views/pages/promotional-items/can-koozies.blade.php`
+**Card:** First
+**Current:** `We have no minimums on custom can koozies so you can order exactly the quantity you need for your event or campaign. Custom koozies are ready in just a few days and we can accommodate rush orders when your timeline is tight. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> has no minimums on custom can koozies, so you can order exactly the quantity you need for your event or campaign. Koozies are ready in just a few days and we can accommodate rush orders when your timeline is tight. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to get started today.`
+
+---
+
+### `resources/views/pages/promotional-items/drink-coasters.blade.php`
+**Card:** First
+**Current:** `Custom coasters are also a popular item for corporate gift sets, event giveaways, wedding favors, and holiday gift packages. We have no minimums and can produce small personal orders as well as large commercial quantities. Call us at (815) 349 8600 to discuss your custom coaster order today.`
+**Target:** `Custom coasters from <a href="/" class="link-notification">Top 5 Percent</a> are popular for corporate gift sets, event giveaways, wedding favors, and holiday gift packages. No minimums, from small personal orders to large commercial quantities. Call us at (815) 349 8600 to discuss your custom coaster order today.`
+
+---
+
+### `resources/views/pages/promotional-items/mouse-pads.blade.php`
+**Card:** First
+**Current:** `Custom mouse pads are popular for corporate gifting, employee welcome kits, client appreciation packages, and trade show giveaways. We serve businesses, real estate firms, medical practices, law offices, and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your custom mouse pad order today.`
+**Target:** `Custom mouse pads are popular for corporate gifting, employee welcome kits, client appreciation packages, and trade show giveaways. <a href="/" class="link-notification">Top 5 Percent</a> serves businesses, real estate firms, medical practices, law offices, and organizations throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your custom mouse pad order today.`
+
+---
+
+### `resources/views/pages/promotional-items/tote-bags.blade.php`
+**Card:** First
+**Current:** `Custom bags are popular for event swag bags, trade show giveaways, school spirit merchandise, retail packaging, and corporate gift sets. We have no minimums and offer fast turnaround on all orders. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your custom bag project today.`
+**Target:** `Custom bags from <a href="/" class="link-notification">Top 5 Percent</a> are popular for event swag bags, trade show giveaways, school spirit merchandise, retail packaging, and corporate gift sets. No minimums and fast turnaround on all orders. Call us at (815) 349 8600 or visit 121 Springfield Avenue in Joliet to discuss your custom bag project today.`
+
+---
+
+### `resources/views/pages/promotional-items/towels.blade.php`
+**Card:** First
+**Current:** `Dye sublimation printing on our towels is colorfast and machine washable, maintaining its vibrancy through regular use and laundering. We offer a range of towel sizes from rally towel dimensions up to full beach towel sizes. Call us at (815) 349 8600 to discuss your custom towel order today.`
+**Target:** `Dye sublimation printing at <a href="/" class="link-notification">Top 5 Percent</a> is colorfast and machine washable, maintaining its vibrancy through regular use and laundering. We offer a range of sizes from rally towel dimensions up to full beach towel. Call us at (815) 349 8600 to discuss your custom towel order today.`
+
+---
+
+### `resources/views/pages/design-services/custom-storefronts.blade.php`
+**Card:** First
+**Current:** `We are a veteran owned shop in Joliet, Illinois, and we have worked with schools, youth sports leagues, corporate teams, and booster clubs throughout Will and DuPage County and the Chicagoland area. Call us at (815) 349 8600 to discuss your custom storefront today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned shop in Joliet, Illinois, and we have worked with schools, youth sports leagues, corporate teams, and booster clubs throughout Will and DuPage County and the Chicagoland area. Call us at (815) 349 8600 to discuss your custom storefront today.`
+
+---
+
+### `resources/views/pages/design-services/graphic-design.blade.php`
+**Card:** First
+**Current:** `Because we both design and produce your print products in-house, there is no translation layer between your designer and your printer. What you see on screen is what you get off the press. Call us at (815) 349 8600 to discuss your design project today.`
+**Target:** `Because <a href="/" class="link-notification">Top 5 Percent</a> both designs and produces your print products in-house, there is no translation layer between your designer and your printer. What you see on screen is what you get off the press. Call us at (815) 349 8600 to discuss your design project today.`
+
+---
+
+### `resources/views/pages/design-services/logo-design.blade.php`
+**Card:** First
+**Current:** `We deliver your final logo in all formats you will need, vector files for print production, PNG files for digital use, and specific format packages for any production process we will use for your signage or apparel. Call us at (815) 349 8600 to discuss your logo design project today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> delivers your final logo in all formats you will need, vector files for print production, PNG files for digital use, and specific format packages for any production process we use for your signage or apparel. Call us at (815) 349 8600 to discuss your logo design project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/vinyl-shirts.blade.php`
+**Card:** First
+**Current:** `We have no minimums on vinyl shirts, and same-day production is available for most orders. We serve businesses, sports teams, schools, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your vinyl shirt order today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> has no minimums on vinyl shirts, and same-day production is available for most orders. We serve businesses, sports teams, schools, and individuals throughout Joliet, Shorewood, Plainfield, and Will and DuPage County. Call us at (815) 349 8600 to discuss your vinyl shirt order today.`
+
+---
+
+### `resources/views/pages/custom-apparel/dtf-transfers.blade.php`
+**Card:** First
+**Current:** `We are a veteran owned print shop in Joliet, Illinois, serving the greater Will and DuPage County area with premium DTF transfers and custom apparel printing. Call us at (815) 349 8600 to discuss your DTF project today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned print shop in Joliet, Illinois, serving the greater Will and DuPage County area with premium DTF transfers and custom apparel printing. Call us at (815) 349 8600 to discuss your DTF project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/dye-sublimation.blade.php`
+**Card:** First
+**Current:** `We work with polyester and polyester-blend fabrics that accept dye sublimation inks most effectively. The process requires a light or white base fabric for the colors to appear true, so it is best suited for white or light-colored garments. For cotton fabrics or mixed-fabric orders, DTF transfers are a great alternative that handles any fabric type. Call us at (815) 349 8600 to discuss your project and let us show you samples of our dye sublimation work.`
+**Target:** `At <a href="/" class="link-notification">Top 5 Percent</a>, we work with polyester and polyester-blend fabrics that accept dye sublimation inks most effectively. The process requires a light or white base fabric for the colors to appear true, so it is best suited for white or light-colored garments. For cotton fabrics or mixed-fabric orders, DTF transfers are a great alternative that handles any fabric type. Call us at (815) 349 8600 to discuss your project.`
+
+---
+
+### `resources/views/pages/custom-apparel/brick-shirts.blade.php`
+**Card:** First
+**Current:** `We produce brick shirts with no minimum order quantity so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at (815) 349 8600 to discuss your brick shirt project today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces brick shirts with no minimum order quantity, so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at (815) 349 8600 to discuss your brick shirt project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/flock-shirts.blade.php`
+**Card:** First
+**Current:** `We produce flock shirts in a range of available flock colors and on a variety of garment types. Most orders have no minimums and are ready within a few business days. Call us at (815) 349 8600 to discuss your flock shirt project today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces flock shirts in a range of available flock colors and on a variety of garment types. Most orders have no minimums and are ready within a few business days. Call us at (815) 349 8600 to discuss your flock shirt project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/foil-shirts.blade.php`
+**Card:** First
+**Current:** `We produce foil shirts with no minimum order quantities on t-shirts, hoodies, and most standard garment types. We review every foil shirt design before production to ensure the artwork is optimized for the foil application process. Call us at (815) 349 8600 to discuss your foil shirt order today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces foil shirts with no minimum order quantities on t-shirts, hoodies, and most standard garment types. Every foil design is reviewed before production to ensure the artwork is optimized for the foil application process. Call us at (815) 349 8600 to discuss your foil shirt order today.`
+
+---
+
+### `resources/views/pages/custom-apparel/glitter-shirts.blade.php`
+**Card:** First
+**Current:** `We review every glitter shirt design before production to confirm it will translate correctly to the vinyl format. Glitter vinyl works best with bold, clean shapes and text, the same design guidelines that apply to standard vinyl.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> reviews every glitter shirt design before production to confirm it will translate correctly to the vinyl format. Glitter vinyl works best with bold, clean shapes and text, the same design guidelines that apply to standard vinyl.`
+
+---
+
+### `resources/views/pages/custom-apparel/glow-in-the-dark-shirts.blade.php`
+**Card:** First
+**Current:** `Glow shirts are popular for Halloween events, nightclub outings, concerts, music festivals, blacklight parties, school dances, and any nighttime event where you want a genuinely unexpected and memorable visual effect. Call us at (815) 349 8600 to discuss your glow shirt project today.`
+**Target:** `Glow shirts from <a href="/" class="link-notification">Top 5 Percent</a> are popular for Halloween events, nightclub outings, concerts, music festivals, blacklight parties, school dances, and any nighttime event where you want a genuinely unexpected and memorable visual effect. Call us at (815) 349 8600 to discuss your glow shirt project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/holographic-shirts.blade.php`
+**Card:** First
+**Current:** `We produce holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at (815) 349 8600 to discuss your holographic shirt order today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at (815) 349 8600 to discuss your holographic shirt order today.`
+
+---
+
+### `resources/views/pages/custom-apparel/puff-shirts.blade.php`
+**Card:** First
+**Current:** `We produce puff print shirts for brands, sports teams, organizations, and individuals throughout Joliet, Shorewood, and Will and DuPage County who want their custom apparel to stand out from standard flat prints. Call us at (815) 349 8600 to discuss your puff print project today.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces puff print shirts for brands, sports teams, organizations, and individuals throughout Joliet, Shorewood, and Will and DuPage County who want their custom apparel to stand out from standard flat prints. Call us at (815) 349 8600 to discuss your puff print project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/reflective-shirts.blade.php`
+**Card:** First
+**Current:** `Reflective vinyl is also available in silver (the most common retroreflective finish) as well as colored reflective films that appear as a specific color in normal light while still retroreflecting in direct light. Call us at (815) 349 8600 to discuss your reflective shirt or safety apparel order today.`
+**Target:** `Reflective vinyl at <a href="/" class="link-notification">Top 5 Percent</a> is available in silver, the most common retroreflective finish, as well as colored reflective films that appear as a specific color in normal light while still retroreflecting in direct light. Call us at (815) 349 8600 to discuss your reflective shirt or safety apparel order today.`
+
+---
+
+### `resources/views/pages/custom-apparel/specialty-materials/vinyl.blade.php`
+**Card:** First
+**Current:** `We serve customers throughout Joliet, Shorewood, Crest Hill, Rockdale, and Will and DuPage County. Whether you need a single shirt for a birthday, a batch of team shirts for a sports league, or branded apparel for your business, we can get it done. Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet to talk about your vinyl shirt order.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> serves customers throughout Joliet, Shorewood, Crest Hill, Rockdale, and Will and DuPage County. Whether you need a single shirt for a birthday, a batch of team shirts for a sports league, or branded apparel for your business, we can get it done. Call us at (815) 349-8600 or stop by 121 Springfield Avenue in Joliet to talk about your vinyl shirt order.`
+
+---
+
+### `resources/views/pages/custom-apparel/printing-options/digital-vinyl.blade.php`
+**Card:** First
+**Current:** `We produce digital vinyl shirts for customers throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Call us at (815) 349-8600 to talk about your design, or stop by 121 Springfield Avenue in Joliet and bring your artwork to discuss your options in person.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces digital vinyl shirts for customers throughout Joliet, Shorewood, Crest Hill, Rockdale, and all of Will and DuPage County. Call us at (815) 349-8600 to talk about your design, or stop by 121 Springfield Avenue in Joliet.`
+
+---
+
+### `resources/views/pages/custom-apparel/printing-options/screen-printing.blade.php`
+**Card:** First
+**Current:** `We produce screen printed apparel for businesses, schools, churches, and community organizations throughout the Chicagoland area`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> produces screen printed apparel for businesses, schools, churches, and community organizations throughout the Chicagoland area`
+
+---
+
+### `resources/views/pages/custom-apparel/printing-options/embroidery.blade.php`
+**Card:** First
+**Current:** `Embroidery is especially durable because the thread is structurally part of the garment rather than an applied layer on top of it. Your embroidered logo will outlast the shirt itself, maintaining its appearance through hundreds of wash cycles without fading, peeling, or cracking. Call us at (815) 349-8600 to discuss your embroidery project today.`
+**Target:** `Embroidery at <a href="/" class="link-notification">Top 5 Percent</a> is especially durable because the thread is structurally part of the garment rather than an applied layer on top of it. Your embroidered logo will outlast the shirt itself. Call us at (815) 349-8600 to discuss your embroidery project today.`
+
+---
+
+### `resources/views/pages/custom-apparel/printing-options/rhinestone-apparel.blade.php`
+**Card:** First
+**Current:** `Rhinestone shirts are especially popular for family reunions, bachelorette parties, birthday celebrations, church groups, cheerleading squads, and anyone who wants a genuinely special custom shirt that stands out from standard printed apparel.`
+**Target:** `Rhinestone shirts from <a href="/" class="link-notification">Top 5 Percent</a> are especially popular for family reunions, bachelorette parties, birthday celebrations, church groups, cheerleading squads, and anyone who wants a genuinely special custom shirt that stands out from standard printed apparel.`
+
+---
+
+### `resources/views/pages/custom-apparel/group-wear/corporate-wear-shirts.blade.php`
+**Card:** First
+**Current:** `We are a veteran owned business in Joliet, Illinois and we are proud to serve the Will and DuPage County business community every single day.`
+**Target:** `<a href="/" class="link-notification">Top 5 Percent</a> is a veteran-owned business in Joliet, Illinois and we are proud to serve the Will and DuPage County business community every single day.`
+
+---
+
+## card-image-with-text Summary
+
+| Status | Count |
+|---|---|
+| Group A: plain-text "Top 5 Percent" exists, needs link tag | 19 |
+| Group B: no brand name in slot, add/convert one sentence | 39 |
+| Total pages needing update | 58 |
+| Excluded (homepage, demo) | 2 |

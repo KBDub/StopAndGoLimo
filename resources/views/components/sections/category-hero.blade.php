@@ -17,7 +17,7 @@
     $btnClass         = $compactButtons ? '!px-5 !py-2.5 !text-sm' : '';
 @endphp
 
-<section class="relative min-h-[28rem] md:min-h-[32rem] lg:min-h-[36rem] flex items-center py-10 overflow-hidden isolate">
+<section class="relative min-h-[32rem] md:min-h-[36rem] lg:min-h-[40rem] flex items-center py-10 overflow-hidden isolate">
     <div class="absolute inset-0">
         <img
             src="{{ $image }}"

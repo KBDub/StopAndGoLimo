@@ -16,7 +16,7 @@
     $resolvedCanonical  = $canonical ?? request()->url();
 @endphp
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="overflow-x-hidden">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @if(config('services.gtm.id'))
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

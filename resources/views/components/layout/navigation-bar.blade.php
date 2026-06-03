@@ -24,15 +24,15 @@
 >
     {{-- ── Top Bar ─────────────────────────────────────────────────────── --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="flex items-center gap-4 transition-all duration-300 h-20" x-bind:class="scrolled ? 'h-14' : 'h-20'">
+        <div class="flex items-center gap-4 transition-all duration-300 h-14 lg:h-20" x-bind:class="scrolled ? 'h-12 lg:h-14' : 'h-14 lg:h-20'">
 
             {{-- Logo --}}
             <a href="/" class="flex items-center flex-shrink-0">
                 <img
                     src="/images/logos/top5-logo.gif"
                     alt="Top 5 Percent, Custom Signage & Apparel Joliet IL"
-                    class="transition-all duration-300 transform-gpu h-16"
-                    x-bind:class="scrolled ? 'h-10' : 'h-16'"
+                    class="transition-all duration-300 transform-gpu h-10 lg:h-16"
+                    x-bind:class="scrolled ? 'h-8 lg:h-10' : 'h-10 lg:h-16'"
                 >
             </a>
 

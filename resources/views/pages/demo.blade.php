@@ -783,6 +783,70 @@
             </div>
         </div>
 
+        {{-- Category Hero --}}
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold mb-2 border-l-4 border-sunburst pl-5">Category Hero</h2>
+                <p class="text-sm text-charcoal-light font-mono mb-6 pl-5">x-sections.category-hero &mdash; resources/views/components/sections/category-hero.blade.php</p>
+
+                {{-- Standard variant --}}
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold mb-1 text-charcoal">Standard &mdash; buttons stack on mobile, side-by-side on sm+</h3>
+                    <p class="text-xs text-charcoal-light mb-3">Default <code class="bg-gray-100 px-1.5 py-0.5 rounded">compactButtons</code> is false. Button row: <code class="bg-gray-100 px-1.5 py-0.5 rounded">flex flex-col sm:flex-row gap-4</code>. Buttons: <code class="bg-gray-100 px-1.5 py-0.5 rounded">px-8 py-4</code>.</p>
+                    <pre class="bg-gray-900 text-green-400 text-xs rounded p-4 overflow-x-auto mb-4"><code>&lt;x-sections.category-hero
+    heading="Custom Banners"
+    headingAccent="Big Impact"
+    description="Full color printing in any size with same day service available."
+    primaryButtonText="Shop Now"
+    primaryButtonHref="/signs/business-signs/banners"
+    secondaryButtonText="Get a Free Quote"
+    secondaryButtonHref="/contact"
+    image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
+/&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+        <x-sections.category-hero
+            heading="Custom Banners"
+            headingAccent="Big Impact"
+            description="Top 5 Percent prints custom vinyl banners, fabric banners, and specialty banners for businesses, celebrations, and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Full color printing in any size with same day service available."
+            primaryButtonText="Shop Now"
+            primaryButtonHref="/signs/business-signs/banners"
+            secondaryButtonText="Get a Free Quote"
+            secondaryButtonHref="/contact"
+            image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
+        />
+
+        {{-- Category Hero: Compact Buttons Variant --}}
+        <section class="py-10 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h3 class="text-lg font-semibold mb-1 text-charcoal">Compact buttons variant &mdash; both buttons on the same row on all screen sizes</h3>
+                <p class="text-xs text-charcoal-light mb-3">Pass <code class="bg-gray-100 px-1.5 py-0.5 rounded">:compactButtons="true"</code>. Button row becomes <code class="bg-gray-100 px-1.5 py-0.5 rounded">flex flex-row gap-3</code>. Buttons shrink to <code class="bg-gray-100 px-1.5 py-0.5 rounded">px-5 py-2.5 text-sm</code>. Use when the hero description is long and vertical space is tight on mobile.</p>
+                <pre class="bg-gray-900 text-green-400 text-xs rounded p-4 overflow-x-auto mb-4"><code>&lt;x-sections.category-hero
+    heading="Custom Banners"
+    headingAccent="Big Impact"
+    description="Full color printing in any size with same day service available."
+    primaryButtonText="Shop Now"
+    primaryButtonHref="/signs/business-signs/banners"
+    secondaryButtonText="Get a Free Quote"
+    secondaryButtonHref="/contact"
+    image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
+    :compactButtons="true"
+/&gt;</code></pre>
+            </div>
+        </section>
+        <x-sections.category-hero
+            heading="Custom Banners"
+            headingAccent="Big Impact"
+            description="Top 5 Percent prints custom vinyl banners, fabric banners, and specialty banners for businesses, celebrations, and events throughout Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Full color printing in any size with same day service available."
+            primaryButtonText="Shop Now"
+            primaryButtonHref="/signs/business-signs/banners"
+            secondaryButtonText="Get a Free Quote"
+            secondaryButtonHref="/contact"
+            image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
+            :compactButtons="true"
+        />
+
         {{-- Artwork Banner CTA, Right --}}
         <div class="px-6 max-w-7xl mx-auto mt-2 mb-2">
             <p class="text-xs text-charcoal-light mb-1">

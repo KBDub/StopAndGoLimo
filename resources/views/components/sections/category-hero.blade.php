@@ -8,11 +8,13 @@
     'secondaryButtonText' => 'Get a Free Quote',
     'secondaryButtonHref' => '/contact',
     'image' => '/images/top5pct-banner-joliet.jpg',
+    'compactButtons' => false,
 ])
 
 @php
-    $primaryIsModal  = $primaryButtonHref  === '/contact';
+    $primaryIsModal   = $primaryButtonHref  === '/contact';
     $secondaryIsModal = $secondaryButtonHref === '/contact';
+    $btnClass         = $compactButtons ? '!px-5 !py-2.5 !text-sm' : '';
 @endphp
 
 <section class="relative h-[28rem] md:h-[32rem] lg:h-[36rem] flex items-center py-10 overflow-hidden isolate">
@@ -41,24 +43,28 @@
             <p class="text-lg md:text-2xl text-linen mb-8 max-w-3xl">
                 {{ $description }}
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="{{ $compactButtons ? 'flex flex-row gap-3' : 'flex flex-col sm:flex-row gap-4' }}">
                 @if($primaryIsModal)
-                    <x-ui.button-gold-gradient onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
-                        {{ $primaryButtonText }}
-                    </x-ui.button-gold-gradient>
+                    <x-ui.button-gold-gradient
+                        onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+                        class="{{ $btnClass }}"
+                    >{{ $primaryButtonText }}</x-ui.button-gold-gradient>
                 @else
-                    <x-ui.button-gold-gradient href="{{ $primaryButtonHref }}">
-                        {{ $primaryButtonText }}
-                    </x-ui.button-gold-gradient>
+                    <x-ui.button-gold-gradient
+                        href="{{ $primaryButtonHref }}"
+                        class="{{ $btnClass }}"
+                    >{{ $primaryButtonText }}</x-ui.button-gold-gradient>
                 @endif
                 @if($secondaryIsModal)
-                    <x-ui.button-outline-gold onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
-                        {{ $secondaryButtonText }}
-                    </x-ui.button-outline-gold>
+                    <x-ui.button-outline-gold
+                        onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+                        class="{{ $btnClass }}"
+                    >{{ $secondaryButtonText }}</x-ui.button-outline-gold>
                 @else
-                    <x-ui.button-outline-gold href="{{ $secondaryButtonHref }}">
-                        {{ $secondaryButtonText }}
-                    </x-ui.button-outline-gold>
+                    <x-ui.button-outline-gold
+                        href="{{ $secondaryButtonHref }}"
+                        class="{{ $btnClass }}"
+                    >{{ $secondaryButtonText }}</x-ui.button-outline-gold>
                 @endif
             </div>
         </div>

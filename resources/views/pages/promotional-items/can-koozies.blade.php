@@ -47,6 +47,7 @@
         primaryButtonHref="#all-products"
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

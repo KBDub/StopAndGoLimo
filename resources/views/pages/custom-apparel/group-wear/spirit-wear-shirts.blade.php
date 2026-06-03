@@ -44,6 +44,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/spirit-wear/top5pct-banner-fanwear-spiritwear-uniforms-joliet-shorewood.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

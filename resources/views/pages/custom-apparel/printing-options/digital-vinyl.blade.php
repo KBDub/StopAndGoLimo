@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/digital-vinyl/custom-vinyl-shirts.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

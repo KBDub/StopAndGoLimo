@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

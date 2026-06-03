@@ -49,6 +49,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

@@ -13,6 +13,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

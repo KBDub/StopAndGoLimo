@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

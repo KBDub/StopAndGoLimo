@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
     <x-sections.top5pct-same-day-service serviceType="custom-shirts" displayServiceType="Custom Shirts" />

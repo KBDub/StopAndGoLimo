@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/vehicle-magnets/top5pct-banner-car-magnets-joliet-shorewood-crest-hill.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

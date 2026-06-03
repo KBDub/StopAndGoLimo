@@ -8,6 +8,7 @@
         primaryButtonHref="tel:+18153498600"
         secondaryButtonText="Get Directions"
         secondaryButtonHref="https://maps.google.com"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

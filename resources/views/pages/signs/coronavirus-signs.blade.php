@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/corona-virus-signs/top5pct-banner-coronavirus-signs-stickers-joliet-shorewood.png"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/window-wall-floor-decals/top5pct-banner-wall-decal-door-signs-joliet.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

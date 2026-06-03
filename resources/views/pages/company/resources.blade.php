@@ -13,6 +13,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/top5pct-t-shirt-maker-7-tips.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

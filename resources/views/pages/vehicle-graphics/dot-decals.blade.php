@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/dot-decals/top5pct-banner-DOT-stickers-joliet-shorewood-channahon.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

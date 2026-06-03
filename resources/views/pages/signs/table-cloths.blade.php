@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/table-runners/top5pct-banner-custom-table-cloth-custom-table-runner-joliet.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

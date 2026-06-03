@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/stickers-decals/top5pct-banner-stickers-decals-joliet.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

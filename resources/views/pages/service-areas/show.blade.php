@@ -89,6 +89,7 @@
         secondaryButtonText="Call (815) 349-8600"
         secondaryButtonHref="tel:+18153498600"
         image="/images/top5pct-banner-joliet.jpg"
+    :compactButtons="true"
     />
 
     <x-ui.banner-medium-sunburst />

@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

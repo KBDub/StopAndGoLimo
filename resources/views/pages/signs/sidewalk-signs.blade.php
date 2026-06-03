@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/sidewalk-signs/top5pct-banner-a-frame-sidewalk-signs-joliet-romeoville.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

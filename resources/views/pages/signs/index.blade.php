@@ -49,6 +49,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/posters/top5pct-banner-poster-maker-joliet-romeoville-shorewood.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

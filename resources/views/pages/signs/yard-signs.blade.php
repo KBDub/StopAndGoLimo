@@ -48,6 +48,7 @@
         secondaryButtonText="Call Us Today"
         secondaryButtonHref="tel:+18153498600"
         image="/images/yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg"
+    :compactButtons="true"
     />
     <x-ui.banner-medium-sunburst />
 

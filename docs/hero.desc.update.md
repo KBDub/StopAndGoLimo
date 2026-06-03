@@ -1139,3 +1139,180 @@ These pages have no "Top 5 Percent" in their card slot paragraphs. The change mo
 | Group B: no brand name in slot, add/convert one sentence | 39 |
 | Total pages needing update | 58 |
 | Excluded (homepage, demo) | 2 |
+
+---
+
+## Task 3: Phone Number Tel Link Conversion
+
+### Overview
+
+All plain-text phone numbers in page content sections must become clickable telephone links. This lets mobile users tap to call directly and signals to search engines that the number is a contact point.
+
+Audited: `resources/views/pages/**/*.blade.php` only. Layout components and reusable section components are already linked (see excluded list below).
+
+---
+
+### Link Format to Use
+
+For content paragraphs (`<p>` tags, card slots, secondary card blocks):
+
+```html
+<a href="tel:+18153498600" class="link-notification">(815) 349-8600</a>
+```
+
+For FAQ answer strings (PHP array `'a' =>` values, which render HTML via `{!! !!}`):
+
+```php
+'a' => '... call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> ...'
+```
+
+**Format standardization:** Two display formats exist in the page files. Both become the hyphen format in the linked version:
+
+| Current (plain text) | Target (linked) |
+|---|---|
+| `(815) 349 8600` (space) | `<a href="tel:+18153498600" class="link-notification">(815) 349-8600</a>` |
+| `(815) 349-8600` (hyphen) | `<a href="tel:+18153498600" class="link-notification">(815) 349-8600</a>` |
+
+---
+
+### Already Linked, Excluded from This Task
+
+These components already have working `tel:` links and need no changes:
+
+| File | Notes |
+|---|---|
+| `components/layout/top-notification-bar.blade.php` | Two tel links in top bar |
+| `components/layout/footer.blade.php` | Tel link in contact block |
+| `components/sections/represent-yourself.blade.php` | Gold outline button |
+| `components/sections/cta-ready-to-get-started.blade.php` | Gold outline button |
+| `components/sections/map-section.blade.php` | Tel link in map info |
+| `components/sections/top5pct-same-day-service.blade.php` | Inline tel link |
+| `components/ui/dtf-dropzone.blade.php` | Tel link in call-to-action line |
+| `components/ui/banner-cta-dtf-dropzone.blade.php` | Two tel links |
+| `components/ui/banner-cta-artwork-dropzone.blade.php` | Two tel links |
+| `components/ui/artwork-dropzone.blade.php` | Tel link in call-to-action line |
+| All `secondaryButtonHref="tel:+18153498600"` props in page heroes | Already linked via hero component |
+
+---
+
+### Pages to Update
+
+Each row shows the page file, the count of plain-text phone numbers to convert, and which section types contain them. "Content" = card-image-with-text slots and other `<p>` content blocks. "FAQ" = PHP array `'a' =>` answer strings.
+
+#### Custom Apparel, Specialty Materials
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `custom-apparel/specialty-materials/vinyl.blade.php` | 5 | 1 | 6 |
+| `custom-apparel/vinyl-shirts.blade.php` | 4 | 1 | 5 |
+| `custom-apparel/dtf-transfers.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/dye-sublimation.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/brick-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/flock-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/foil-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/glitter-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/glow-in-the-dark-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/holographic-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/puff-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/reflective-shirts.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/index.blade.php` | 1 | 1 | 2 |
+
+#### Custom Apparel, Group Wear
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `custom-apparel/group-wear/reunion-shirts.blade.php` | 4 | 1 | 5 |
+| `custom-apparel/group-wear/spirit-wear-shirts.blade.php` | 4 | 1 | 5 |
+| `custom-apparel/group-wear/corporate-wear-shirts.blade.php` | 3 | 1 | 4 |
+
+#### Custom Apparel, Printing Options
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `custom-apparel/printing-options/digital-vinyl.blade.php` | 4 | 1 | 5 |
+| `custom-apparel/printing-options/embroidery.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/printing-options/rhinestone-apparel.blade.php` | 3 | 1 | 4 |
+| `custom-apparel/printing-options/screen-printing.blade.php` | 3 | 1 | 4 |
+
+#### Signs
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `signs/banners.blade.php` | 4 | 1 | 5 |
+| `signs/business-signs.blade.php` | 4 | 1 | 5 |
+| `signs/table-runners.blade.php` | 4 | 1 | 5 |
+| `signs/coronavirus-signs.blade.php` | 3 | 1 | 4 |
+| `signs/door-signs.blade.php` | 3 | 1 | 4 |
+| `signs/floor-signs.blade.php` | 3 | 1 | 4 |
+| `signs/posters.blade.php` | 3 | 1 | 4 |
+| `signs/sidewalk-signs.blade.php` | 3 | 1 | 4 |
+| `signs/sidewalk-signs-a-frame-signs.blade.php` | 3 | 1 | 4 |
+| `signs/table-cloths.blade.php` | 3 | 1 | 4 |
+| `signs/wall-signs.blade.php` | 3 | 1 | 4 |
+| `signs/window-signs.blade.php` | 3 | 1 | 4 |
+| `signs/yard-signs.blade.php` | 3 | 1 | 4 |
+| `signs/index.blade.php` | 1 | 1 | 2 |
+
+#### Stickers
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `stickers/standard-stickers.blade.php` | 5 | 1 | 6 |
+| `stickers/custom-shaped-stickers.blade.php` | 3 | 1 | 4 |
+| `stickers/index.blade.php` | 1 | 1 | 2 |
+
+#### Vehicle Graphics
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `vehicle-graphics/dot-decals.blade.php` | 5 | 1 | 6 |
+| `vehicle-graphics/automobile-graphics.blade.php` | 4 | 1 | 5 |
+| `vehicle-graphics/vehicle-magnets.blade.php` | 3 | 1 | 4 |
+| `vehicle-graphics/index.blade.php` | 1 | 0 | 1 |
+
+#### Promotional Items
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `promotional-items/can-koozies.blade.php` | 3 | 1 | 4 |
+| `promotional-items/drink-coasters.blade.php` | 3 | 1 | 4 |
+| `promotional-items/mouse-pads.blade.php` | 3 | 1 | 4 |
+| `promotional-items/mugs.blade.php` | 3 | 1 | 4 |
+| `promotional-items/tote-bags.blade.php` | 3 | 1 | 4 |
+| `promotional-items/towels.blade.php` | 3 | 1 | 4 |
+| `promotional-items.blade.php` | 1 | 1 | 2 |
+
+#### Design Services
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `design-services/logo-design.blade.php` | 3 | 0 | 3 |
+| `design-services/graphic-design.blade.php` | 3 | 0 | 3 |
+| `design-services/custom-storefronts.blade.php` | 2 | 0 | 2 |
+| `design-services/index.blade.php` | 1 | 0 | 1 |
+
+#### Other Pages
+
+| File | Content | FAQ | Total |
+|---|---|---|---|
+| `top5pct-merchandise.blade.php` | 1 | 0 | 1 |
+| `home.blade.php` | 0 | 1 | 1 |
+| `about.blade.php` | 0 | 1 | 1 |
+| `company/index.blade.php` | 0 | 1 | 1 |
+
+#### Excluded (archived)
+
+| File | Notes |
+|---|---|
+| `_archived/custom-apparel-custom-shirts.blade.php` | Archived page, skip |
+
+---
+
+### Phone Tel Link Summary
+
+| Category | Files | Occurrences |
+|---|---|---|
+| Content sections (card slots, `<p>` blocks) | 50 | ~155 |
+| FAQ answer strings (PHP array) | 46 | ~46 |
+| Total page files to update | 53 | ~201 |
+| Already linked (components) | 10 | excluded |

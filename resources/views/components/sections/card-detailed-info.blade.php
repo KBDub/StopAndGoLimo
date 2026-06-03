@@ -53,7 +53,7 @@
                         <img
                             src="{{ $image1 }}"
                             alt="{{ $alt1 }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out w-full h-56 md:h-[300px]"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out h-56 md:h-[300px]"
                             style="width:400px; max-width:100%;"
                         >
                     </div>
@@ -71,7 +71,7 @@
                         <img
                             src="{{ $image2 }}"
                             alt="{{ $alt2 }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out w-full h-56 md:h-[300px]"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out h-56 md:h-[300px]"
                             style="width:400px; max-width:100%;"
                         >
                     </div>
@@ -94,7 +94,7 @@
                         <img
                             src="{{ $image1 }}"
                             alt="{{ $alt1 }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out w-full h-56 md:h-[300px]"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out h-56 md:h-[300px]"
                             style="width:400px; max-width:100%;"
                         >
                     </div>

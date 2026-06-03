@@ -1,7 +1,7 @@
 <footer class="bg-linen text-charcoal py-2 border-t border-linen-dark">
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid grid-cols-8 gap-x-4 mb-6 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-8 gap-x-4 gap-y-8 mb-6 items-start">
 
             {{-- Logo --}}
             <div id="logo" class="col-span-1 text-center">
@@ -33,7 +33,7 @@
             {{-- Services, 5-column newspaper spill --}}
             <div id="services" class="col-span-5">
                 <h4 class="font-semibold text-charcoal text-xl mb-3 text-center">Services</h4>
-                <div class="columns-5 gap-x-2 text-sm">
+                <div class="columns-2 sm:columns-3 lg:columns-5 gap-x-2 text-sm">
 
                     {{-- Custom Apparel --}}
                     <h5 class="font-semibold text-charcoal uppercase mb-1.5 break-after-avoid text-center text-sm">

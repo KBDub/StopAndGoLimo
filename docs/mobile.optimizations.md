@@ -62,6 +62,19 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ## High Priority — Fixed
 
+### Footer Grid Collapse on Mobile
+
+**Date:** 2026-06-03
+**File:** `resources/views/components/layout/footer.blade.php`
+
+**Problem:** Footer outer grid was `grid-cols-8` with no responsive prefix. On a 412px phone with `px-6` padding, the inner content width (~364px) was split into 8 columns of ~45px each. The Services section (`col-span-5`, ~227px) used `columns-5` (CSS newspaper layout) inside it — 5 columns of ~45px each. Every link, heading, and address was crammed into less space than a word.
+
+**Fix:**
+- Outer grid: `grid-cols-8` → `grid-cols-1 lg:grid-cols-8` with `gap-y-8` added. Below 1024px, all four sections (Logo, Quick Links, Services, Contact) stack full-width. At 1024px+ the original 8-column desktop layout is fully restored.
+- Services inner columns: `columns-5` → `columns-2 sm:columns-3 lg:columns-5`. On mobile, service links flow in 2 readable newspaper columns. At `sm:` (640px) they expand to 3. At `lg:` (1024px) they return to the original 5.
+
+---
+
 ### Float Layout Collapse — Card Image With Text and Card Detailed Info
 
 **Date:** 2026-06-03

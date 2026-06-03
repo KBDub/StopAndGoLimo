@@ -21,7 +21,7 @@
     >
         <p class="mb-4">See why hundreds of customers trust us, browse our <a href="/reviews" class="link-notification">reviews</a> from businesses, schools, and organizations across Will and DuPage County who have experienced our quality and same-day service firsthand. Many of those customers came to us for <a href="/custom-apparel" class="link-notification">custom apparel</a> or business signs and came back for everything else we make.</p>
         <p class="mb-4">Browse our <a href="/portfolio" class="link-notification">portfolio</a> to see the quality behind every job, real work produced for real local clients, from vehicle wraps and custom shirts to banners and promotional products.</p>
-        <p>Check our <a href="/service-areas" class="link-notification">service areas</a> to confirm we cover your location. We serve all of Joliet, Will and DuPage County, and the greater Chicagoland area. If you are nearby, come in. If not, we ship.</p>
+        <p>Check our <a href="/service-areas" class="link-notification">service areas</a> to confirm <a href="/" class="link-notification">Top 5 Percent</a> covers your location. We serve all of Joliet, Will and DuPage County, and the greater Chicagoland area. If you are nearby, come in. If not, we ship.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.why-choose-us />

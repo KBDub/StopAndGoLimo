@@ -127,7 +127,7 @@ $totalCount = count($reviews);
         imagePosition="right"
     >
         <p class="mb-4">
-            Since 2017, Top 5 Percent has built a reputation for quality, speed, and personal service, and you can see the work behind these reviews in our <a href="/portfolio" class="link-notification">portfolio</a> of real projects produced for real businesses, schools, and sports teams across Will and DuPage County. Every review below is a real customer who walked through our door, or shipped their order across the country, and trusted us to deliver <a href="/custom-apparel" class="link-notification">custom apparel</a>, signs, and other printed products. We take that trust seriously.
+            Since 2017, <a href="/" class="link-notification">Top 5 Percent</a> has built a reputation for quality, speed, and personal service, and you can see the work behind these reviews in our <a href="/portfolio" class="link-notification">portfolio</a> of real projects produced for real businesses, schools, and sports teams across Will and DuPage County. Every review below is a real customer who walked through our door, or shipped their order across the country, and trusted us to deliver <a href="/custom-apparel" class="link-notification">custom apparel</a>, signs, and other printed products. We take that trust seriously.
         </p>
         <p class="mb-4">
             Our customers range from individuals ordering a single custom shirt to businesses outfitting entire

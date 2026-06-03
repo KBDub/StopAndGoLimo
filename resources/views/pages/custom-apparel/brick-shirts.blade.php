@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Brick-style printing is a specialty technique that produces a dimensional, raised texture on your shirt design. Like puff printing, it uses an additive that expands during the heat-curing process to create a three-dimensional surface effect, but brick printing is engineered to produce a specific raised, segmented pattern that resembles the texture and visual weight of actual brickwork or raised tile. The result is a shirt that has a bold, architectural quality that standard flat prints simply cannot achieve.</p>
         <p class="mb-4">Brick shirts are popular with streetwear brands, lifestyle apparel lines, and anyone who wants their custom shirt to be a genuine conversation piece. The dimensional texture catches both the eye and the hand, the first thing people do when they see a well-executed brick print shirt is reach out to touch it. That tactile reaction is a mark of a printing technique that communicates exceptional craftsmanship and uniqueness that mass-produced apparel cannot replicate.</p>
-        <p>We produce brick shirts with no minimum order quantity so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at (815) 349 8600 to discuss your brick shirt project today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> produces brick shirts with no minimum order quantity, so you can test the technique with a small run or go straight to a full production quantity. The technique works on t-shirts, hoodies, and sweatshirts. Call us at (815) 349 8600 to discuss your brick shirt project today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text

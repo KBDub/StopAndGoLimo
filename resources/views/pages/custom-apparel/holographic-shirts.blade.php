@@ -75,7 +75,7 @@
     >
         <p class="mb-4">Holographic vinyl creates a color-shifting prismatic effect that cycles through a spectrum of colors as the viewing angle changes. A holographic shirt in silver creates a rainbow shimmer as you move, what reads as silver from one angle shifts to gold, pink, purple, and blue as the light catches different facets of the surface. The effect is impossible to fully capture in a static photograph because it is inherently dynamic, which makes holographic shirts even more striking in person than they appear in any marketing image.</p>
         <p class="mb-4">Holographic vinyl is available in silver, gold, rose gold, and various base tints that all produce slightly different spectral effects depending on the lighting conditions. Under bright indoor lighting, holographic prints create a dramatic iridescent shimmer. Under natural outdoor light, they produce a more subtle but still striking prismatic effect. At nightlife events with stage lighting and LED effects, holographic designs become one of the most visually dynamic elements in the room.</p>
-        <p>We produce holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at (815) 349 8600 to discuss your holographic shirt order today.</p>
+        <p><a href="/" class="link-notification">Top 5 Percent</a> produces holographic shirts in any quantity from a single piece to a full group order, with no minimums. The technique works on t-shirts, hoodies, and most standard apparel types. Call us at (815) 349 8600 to discuss your holographic shirt order today.</p>
     </x-sections.card-image-with-text>
 
     <x-sections.card-image-with-text

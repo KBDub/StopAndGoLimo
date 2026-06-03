@@ -65,8 +65,6 @@
         quote="I had a onesie embroidered for our baby announcement and it came out perfect! Was ready in 2 days and very reasonably priced! Will definitely be going back!"
         name="Toni Rincon"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-embroidered-bag.jpg"
@@ -89,6 +87,7 @@
         <p>We also embroider on bags, towels, blankets, and other accessories beyond standard apparel. If you have a specific embroidery project in mind and you are not sure if it is possible, call us and describe what you need, we will let you know what is achievable. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to discuss your embroidery order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

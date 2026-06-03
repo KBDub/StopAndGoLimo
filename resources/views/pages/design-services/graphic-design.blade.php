@@ -64,8 +64,6 @@
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround."
         name="Brittany Harvey"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
@@ -90,6 +88,7 @@
         <p>We are a veteran owned print and design shop located at 121 Springfield Avenue in Joliet, Illinois. We take pride in the quality and accuracy of everything we design and produce. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your graphic design needs today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-detailed-info

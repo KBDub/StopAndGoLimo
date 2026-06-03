@@ -52,7 +52,6 @@
     <x-ui.banner-thin-charcoal />
 
     <x-ui.banner-testimonial />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
     <x-sections.cta-quadruple-button-banner />
     <x-ui.banner-thin-charcoal />
 

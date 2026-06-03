@@ -65,8 +65,6 @@
         quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
         name="Gerardo Munoz Jr"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-neon-vinyl-shirts.jpg"
@@ -89,6 +87,7 @@
         <p>We work with standard vinyl, as well as specialty vinyl types including metallic, glitter, reflective, holographic, flock, glow-in-the-dark, and foil finishes, all of which can be cut and heat-pressed to your garments for unique visual effects beyond the standard solid color print. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss which vinyl type is right for your project.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

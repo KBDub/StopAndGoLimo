@@ -66,8 +66,6 @@
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.lp-category-banners
         id="design-categories"
@@ -97,6 +95,7 @@
         <p>Every design we produce is built to production specifications from the start, correct bleed, proper resolution, accurate color profiles. When your file goes to press, it comes out exactly as designed. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or stop by 121 Springfield Avenue in Joliet to talk about your design project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-ui.carousel-rotating-images

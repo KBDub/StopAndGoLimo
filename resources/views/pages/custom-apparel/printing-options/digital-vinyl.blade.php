@@ -65,8 +65,6 @@
         quote="We needed full color logos on shirts for our business and Top 5 Percent delivered. The colors matched our branding perfectly and the shirts looked incredibly professional."
         name="Dominique R."
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/digital-vinyl/custom-vinyl-shirts.jpg"
@@ -89,6 +87,7 @@
         <p>We serve customers across Joliet, Shorewood, Plainfield, Romeoville, and the broader Chicagoland area. Whether you need one hoodie or a full set for your team, we are ready to help. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to get started on your digital vinyl hoodie order.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-2image-with-text

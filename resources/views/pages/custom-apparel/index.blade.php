@@ -67,8 +67,6 @@
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.lp-category-banners
         id="apparel-categories"
@@ -181,6 +179,7 @@
         <p><a href="/contact" class="link-notification">Same-day service</a> is available on many of our products, making us the go-to custom apparel shop for businesses, schools, sports teams, churches, and families throughout Will and DuPage County who need shirts in a hurry. Stop by our shop at <a href="/service-areas" class="link-notification">121 Springfield Avenue in Joliet</a> or call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to get started today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-ui.carousel-rotating-images

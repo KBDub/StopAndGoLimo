@@ -65,8 +65,6 @@
         quote="The owner Ezra was extremely knowledgeable and helpful. He gave great marketing ideas for my stickers. The quality of my product was top of the line. I would recommend Top 5 Percent to any business or organization that needs print services."
         name="Eric Murff"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/stickers-decals/top5pct-stickers-decals-joliet-beer-brewery.jpg"
@@ -90,6 +88,7 @@
             <p>We work with athletes, coaches, gym owners, and event organizers from all over Will and DuPage County. If you have a logo, we can put it on a sticker. If you need help with the design, our in house team is ready to assist. We offer free design time with every order so you never have to come in with a finished file. Give us a call at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> and let us help you represent your team or your event in style.</p>
         </x-sections.card-image-with-text>
 
+        <x-ui.banner-cta-artwork-dropzone />
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text

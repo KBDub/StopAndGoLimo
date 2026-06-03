@@ -65,8 +65,6 @@
         quote="I love working with this company! They make sure we like what we are ordering before we place the order, the quality of materials and durability of the apparel we've made with them is outstanding. Always on time, clear communication and they listen to what we need. Never disappointed!"
         name="Vicky Donis"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>We produce glow shirts with no minimum order quantities. You can order a single piece or a full group set depending on your needs. We are a veteran owned shop in Joliet serving the greater Will and DuPage County area. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your glow shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

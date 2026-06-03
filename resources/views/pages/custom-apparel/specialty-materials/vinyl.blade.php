@@ -65,8 +65,6 @@
         quote="Top 5 Percent did an amazing job on our vinyl shirts for our family reunion. The colors were sharp and every shirt came out perfect. We will definitely be ordering again."
         name="Carla M."
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/vinyl/custom-vinyl-shirts.jpg"
@@ -89,6 +87,7 @@
         <p>We offer vinyl hoodies in a wide range of colors and sizes from youth small through adult 4XL. If you need the same design on a mix of hoodies and t-shirts, we can handle both in a single order so everything coordinates. Reach out at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or drop by our shop to place your order.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-2image-with-text

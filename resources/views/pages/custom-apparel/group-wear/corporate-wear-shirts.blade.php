@@ -61,8 +61,6 @@
         quote="Ezra and Kim are incredible to work with for your personal or business shirts or decals. Highly recommend Top 5 Percent and very reasonable pricing."
         name="Matt Heath"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/corporate-wear/top5pct-landscaping-clothing-joliet.jpg"
@@ -87,6 +85,7 @@
             <p>We know that uniforms wear out over time. When your team starts looking worn, it can quietly hurt your brand image. We make it easy to reorder and refresh your corporate clothing on your schedule. Our team keeps records of your previous orders so the reorder process is fast and smooth. We are your local one stop shop for all custom work uniforms in the Chicagoland area.</p>
         </x-sections.card-image-with-text>
 
+        <x-ui.banner-cta-artwork-dropzone />
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text

@@ -32,8 +32,6 @@
         quote="Amazing service and quality! Will definitely be doing more business in the future."
         name="Jonathan Young"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"

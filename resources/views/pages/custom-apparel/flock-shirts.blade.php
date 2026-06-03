@@ -65,8 +65,6 @@
         quote="Great quality work, professional and efficient. If you're looking for custom apparel, from shirts to hoodies to hats they do it all. Ezra and his team are awesome! 5 stars, reach out to them today!"
         name="Gerardo Munoz Jr"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>We work with flock vinyl in black, white, red, navy, royal blue, green, and other standard colors. Specialty flock finishes including metallic flock are also available for designs that call for an additional level of visual distinction. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to discuss your flock shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

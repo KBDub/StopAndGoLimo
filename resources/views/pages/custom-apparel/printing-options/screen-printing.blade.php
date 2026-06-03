@@ -65,8 +65,6 @@
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>Our team reviews every screen printing order before production begins to make sure your artwork is set up correctly for the print process. We want every shirt we send out to meet our quality standard and yours. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to get a quote on your custom screen printing order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

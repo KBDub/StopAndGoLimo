@@ -64,8 +64,6 @@
         quote="Amazing service and quality! They understood exactly what I wanted and delivered it perfectly."
         name="Jonathan Young"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
@@ -90,6 +88,7 @@
         <p>We are a veteran owned business serving Joliet, Shorewood, Crest Hill, Romeoville, Plainfield, New Lenox, and all of Will and DuPage County. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to get started on your logo design today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-detailed-info

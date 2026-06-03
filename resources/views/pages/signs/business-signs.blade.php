@@ -55,8 +55,6 @@
         quote="Professional business man. I am so pleased with the banners and signs he made for my church and I will definitely continue to support his business."
         name="Anita Estella"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/business-signs/top5pct-business-signs-joliet-shorewood-crest-hill.jpg"

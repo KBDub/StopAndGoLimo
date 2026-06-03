@@ -65,8 +65,6 @@
         quote="Great service, good customer service, excellent work. Very satisfied."
         name="Arleen Van Hook"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-reflective-vinyl-shirts-plainfield.jpg"
@@ -89,6 +87,7 @@
         <p>We produce reflective shirts with no minimum order quantities. Whether you need a single shirt for personal use or a full production run for a commercial safety apparel program, we can accommodate your order. We are a veteran owned shop at 121 Springfield Avenue in Joliet, Illinois. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your reflective shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

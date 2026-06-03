@@ -65,8 +65,6 @@
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>We are a veteran owned custom apparel shop located at 121 Springfield Avenue in Joliet, Illinois. We take pride in every shirt we produce and we want your puff print shirts to represent your brand at their best. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to get started.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

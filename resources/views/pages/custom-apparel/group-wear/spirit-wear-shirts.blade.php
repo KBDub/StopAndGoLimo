@@ -64,8 +64,6 @@
         quote="Top 5 Percent is my number one go to for any custom made items. They have made shirts for several events and did a wonderful job. Duke keeps you updated on the order and works extremely fast and efficient. They have a customer in me for life!"
         name="Euneke Rembert"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/spirit-wear/top5pct-joliet-west-spirit-wear-hoodie-shorewood.jpg"
@@ -91,6 +89,7 @@
             <p>Fast turnaround and genuine customer service are what set us apart from the competition. We are a local veteran owned screen printer and we take pride in every single product we make. When you pick up your fan wear order and see it for the first time, we want you to smile. That moment is exactly why we do what we do. Call us today and let us help your fans show up strong.</p>
         </x-sections.card-image-with-text>
 
+        <x-ui.banner-cta-artwork-dropzone />
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text

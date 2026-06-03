@@ -65,8 +65,6 @@
         quote="They did an outstanding job on my custom shirts. I shared my concept and it was brought to life with precision and creativity. Excellent quality, great communication, and fast turnaround. I highly recommend!"
         name="Brittany Harvey"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-dye-sublimation-shirts.jpg"
@@ -89,6 +87,7 @@
         <p>We serve teams, schools, businesses, and individuals throughout Joliet, Shorewood, Plainfield, Crest Hill, and the broader Will and DuPage County area. Want to add texture on top of sublimation? We can layer <a href="/custom-apparel/specialty-materials/glitter-shirts" class="link-notification">glitter</a> or <a href="/custom-apparel/specialty-materials/flock-shirts" class="link-notification">flock</a> vinyl over sublimated fabric. Dye sublimation is also used on our <a href="/promotional-items" class="link-notification">promotional items</a>, mugs, coasters, mouse pads, and more. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or stop by 121 Springfield Avenue in Joliet to discuss your dye sublimation project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

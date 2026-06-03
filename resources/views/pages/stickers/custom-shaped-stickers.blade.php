@@ -65,8 +65,6 @@
         quote="The owner Ezra was extremely knowledgeable and helpful. He gave great marketing ideas for my stickers. The quality of my product was top of the line. I would recommend Top 5 Percent to any business or organization that needs print services."
         name="Eric Murff"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/stickers-decals/top5pct-diecut-stickers.jpg"
@@ -91,6 +89,7 @@
         <p>Businesses in Shorewood, Crest Hill, Lockport, and Romeoville trust us for custom shaped stickers that accurately represent their brands. We are a veteran owned shop and we stand behind every sticker we produce. Call <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to talk about your project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="stickers" parentSlug="stickers" />

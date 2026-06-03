@@ -65,8 +65,6 @@
         quote="Great service, good customer service, excellent work. Very satisfied."
         name="Arleen Van Hook"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>For milestone events, fiftieth anniversaries, championship seasons, major organization events, gold foil shirts create an immediate sense of ceremony and significance that standard prints cannot convey. We are a veteran owned shop at 121 Springfield Avenue in Joliet, serving the full Will and DuPage County area. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your foil shirt project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

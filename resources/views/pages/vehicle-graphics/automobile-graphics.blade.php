@@ -65,8 +65,6 @@
         quote="Many thanks to Ezra and his crew. I am beyond impressed with the custom decals created for my car. The quality of the decals is superb and they were installed perfectly. I've already received numerous compliments and inquiries about the work."
         name="Sam"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/automobile-graphics/top5pct-van-graphics-decals.jpg"

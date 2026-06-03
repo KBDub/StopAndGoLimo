@@ -65,8 +65,6 @@
         quote="Amazing service and quality!"
         name="Jonathan Young"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>We are a veteran owned custom apparel shop in Joliet, Illinois, serving the greater Chicagoland area. We review every holographic shirt order before production to make sure the design is optimized for the prismatic effect. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> or visit 121 Springfield Avenue in Joliet to discuss your holographic shirt project today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

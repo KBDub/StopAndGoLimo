@@ -65,8 +65,6 @@
         quote="Ezra is the most helpful individual I know in this field. I came in looking for vinyl decals for my trucking company and he made me exactly what I needed at a price that was fair and honest. I would highly recommend this place for all of your signage needs."
         name="Jack Smith"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/dot-decals/top5pct-custom-dot-truck-signs-illinois.jpg"

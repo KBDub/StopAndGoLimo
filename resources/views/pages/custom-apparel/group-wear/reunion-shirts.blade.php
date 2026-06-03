@@ -61,8 +61,6 @@
         quote="Excellence and Professionalism! Top 5 Percent, LLC job well done! We celebrated our family reunion and ordered over 150 t-shirts for toddlers to adults. Ezra remained in communication throughout and delivered everything on time. We were so very appreciative."
         name="Chamille Doss"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/reunion-shirts/top5pct-reunion-group-shirts.jpg"
@@ -87,6 +85,7 @@
             <p>We print on a wide range of shirt styles and sizes so everyone from your class can find something that fits. From classic tees to hoodies and long sleeves, we have options for every season and every preference. Call us today at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> and let us help your class reunite in shirts that everyone will be proud to wear.</p>
         </x-sections.card-image-with-text>
 
+        <x-ui.banner-cta-artwork-dropzone />
         <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-2image-with-text

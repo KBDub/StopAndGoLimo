@@ -65,8 +65,6 @@
         quote="Needed a banner for an annual event and Ezra's team delivered again! Fantastic work, great price, great quality!"
         name="Datjaeda"
     />
-    <x-ui.banner-cta-artwork-dropzone />
-    <x-sections.cta-quadruple-button-banner />
 
         <x-sections.card-image-with-text
             image="/images/posters/top5pct-poster-printing-joliet-shorewood-romeoville.jpg"

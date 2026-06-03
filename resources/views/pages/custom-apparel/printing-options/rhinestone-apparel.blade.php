@@ -65,8 +65,6 @@
         quote="Great service, good customer service, excellent work. Very satisfied."
         name="Arleen Van Hook"
     />
-    <x-ui.banner-cta-artwork-dropzone position="right" />
-    <x-sections.cta-quadruple-button-banner />
 
     <x-sections.card-image-with-text
         image="/images/custom-shirts/top5pct-rhinestone-t-shirts-joliet.jpg"
@@ -89,6 +87,7 @@
         <p>We have no minimum order quantities on rhinestone shirts, which means you can order a single statement piece or matching shirts for an entire group. Rhinestone is extremely popular in <a href="/custom-apparel/group-wear/spirit-wear-shirts" class="link-notification">spirit wear</a> for cheerleading squads and dance teams. We are a veteran owned shop serving Joliet, Shorewood, Plainfield, and all of Will and DuPage County. Need artwork or a design? Our <a href="/design-services/logo-design" class="link-notification">logo design</a> team can help. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> to discuss your rhinestone shirt order today.</p>
     </x-sections.card-image-with-text>
 
+    <x-ui.banner-cta-artwork-dropzone />
     <x-sections.cta-quadruple-button-banner />
 
     <x-sections.product-grid collectionSlug="custom-shirts" parentSlug="custom-apparel" />

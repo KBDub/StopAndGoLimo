@@ -27,7 +27,7 @@
     @endif
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Top 5 Percent</title>
+    <title>{{ $title }} | Top 5 Percent, LLC</title>
     <meta name="description" content="{{ $metaDescription }}">
     <meta name="robots" content="{{ $noIndex ? 'noindex,nofollow' : 'index,follow' }}">
     <link rel="canonical" href="{{ $resolvedCanonical }}">

@@ -22,7 +22,7 @@
             </div>
 
             {{-- Responsive flex layout: stacked on mobile, side-by-side on md+ --}}
-            <div class="flex flex-col {{ $imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row' }} gap-6 md:gap-0">
+            <div class="flex flex-col {{ $imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row' }} md:items-start gap-6 md:gap-0">
 
                 {{-- Image --}}
                 <div class="w-full md:w-[600px] md:shrink-0 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out {{ $imagePosition === 'right' ? 'md:ml-12' : 'md:mr-12' }}">

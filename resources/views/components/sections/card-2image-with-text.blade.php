@@ -12,7 +12,7 @@
             x-data="{ ready: false }"
             x-init="$nextTick(() => ready = true)"
             :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="p-10 bg-white shadow-gold-lg transition-all duration-500"
+            class="p-4 sm:p-6 md:p-10 bg-white shadow-gold-lg transition-all duration-500"
         >
             {{-- Title centered full-width at top --}}
             <div class="text-center mb-6">

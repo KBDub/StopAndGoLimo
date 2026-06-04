@@ -78,7 +78,7 @@
 
                 {{-- Home (no dropdown) --}}
                 <div class="relative self-stretch flex items-stretch">
-                    <a href="/" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
+                    <a href="/" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'home' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">Home</a>
                 </div>
 
                 {{-- ══ Custom Apparel ═══════════════════════════════════════ --}}
@@ -87,7 +87,7 @@
                     @mouseenter="openMenu = 'apparel'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/custom-apparel" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/custom-apparel" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'custom-apparel' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Custom Apparel
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'apparel' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -167,7 +167,7 @@
                     @mouseenter="openMenu = 'signs'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/signs" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/signs" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'signs' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Select a Sign
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'signs' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -240,7 +240,7 @@
                     @mouseenter="openMenu = 'stickers'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/stickers" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/stickers" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'stickers' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Stickers
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'stickers' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -287,7 +287,7 @@
                     @mouseenter="openMenu = 'vehicle'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/vehicle-graphics" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/vehicle-graphics" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'vehicle-graphics' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Vehicle Decals
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'vehicle' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -335,7 +335,7 @@
                     @mouseenter="openMenu = 'promo'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/promotional-items" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/promotional-items" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'promotional-items' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Promo Items
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'promo' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -382,7 +382,7 @@
 
                 {{-- Top 5% Merchandise, plain link, no dropdown --}}
                 <div class="self-stretch flex items-stretch">
-                    <a href="/top5pct-merchandise" class="px-2 h-full text-lg font-semibold whitespace-nowrap inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/top5pct-merchandise" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'merchandise' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Top 5% Merchandise
                     </a>
                 </div>
@@ -393,7 +393,7 @@
                     @mouseenter="openMenu = 'design'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/design-services" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/design-services" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'design-services' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         Design Services
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'design' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -440,7 +440,7 @@
                     @mouseenter="openMenu = 'about'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/about-us" class="px-2 h-full text-sm font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
+                    <a href="/about-us" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'about' ? 'text-azure' : 'text-charcoal hover:text-sunburst' }} transition-colors">
                         About Us
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>

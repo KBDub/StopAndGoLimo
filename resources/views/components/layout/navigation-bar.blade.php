@@ -503,7 +503,19 @@
     {{-- ===================================================================
          MOBILE MENU, Accordion
          ================================================================== --}}
-    <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden border-t border-linen-dark overflow-y-auto max-h-[calc(100vh-7rem)]">
+    <div
+        x-cloak
+        x-show="mobileMenuOpen"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 -translate-y-2"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-2"
+        class="lg:hidden fixed inset-x-0 bottom-0 z-[60] bg-linen overflow-y-auto border-t-2 border-sunburst"
+        x-init="$watch('mobileMenuOpen', v => { if (v) $el.style.top = $el.closest('nav').getBoundingClientRect().bottom + 'px' })"
+        @scroll.window="if (mobileMenuOpen) $el.style.top = $el.closest('nav').getBoundingClientRect().bottom + 'px'"
+    >
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
 
             <a href="/" class="block px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">Home</a>

@@ -15,6 +15,7 @@
     x-data="{
         images: @js($images),
         vis: {{ (int) $visible }},
+        mobile: window.innerWidth < 768,
         current: 0,
         fading: false,
         timer: null,
@@ -60,27 +61,29 @@
                 {{-- Image track --}}
                 <div class="flex items-center justify-center gap-3">
 
-                    {{-- Left slot, visible=3 only, 300×225px --}}
-                    <template x-if="vis >= 3">
-                        <div
-                            class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
-                            style="width:300px; aspect-ratio:4/3; max-width:100%;"
-                            :class="fading ? 'opacity-0' : 'opacity-60'"
-                        >
-                            <img
-                                :src="lImg.src"
-                                :alt="lImg.alt"
-                                class="w-full h-full object-cover"
-                                loading="lazy"
+                    {{-- Left slot, visible=3 only, hidden on mobile --}}
+                    <div class="hidden md:block">
+                        <template x-if="vis >= 3">
+                            <div
+                                class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
+                                style="width:300px; aspect-ratio:4/3; max-width:100%;"
+                                :class="fading ? 'opacity-0' : 'opacity-60'"
                             >
-                        </div>
-                    </template>
+                                <img
+                                    :src="lImg.src"
+                                    :alt="lImg.alt"
+                                    class="w-full h-full object-cover"
+                                    loading="lazy"
+                                >
+                            </div>
+                        </template>
+                    </div>
 
                     {{-- Center slot, 600×450px --}}
                     <div
                         class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out relative"
                         :class="fading ? 'opacity-0' : 'opacity-100'"
-                        :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:600px; aspect-ratio:4/3; max-width:100%;'"
+                        :style="(vis === 2 && !mobile) ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:600px; aspect-ratio:4/3; max-width:100%;'"
                     >
                         <template x-if="vis >= 3">
                             <div class="absolute inset-0 ring-2 ring-sunburst shadow-gold-xl pointer-events-none z-10"></div>
@@ -93,21 +96,23 @@
                         >
                     </div>
 
-                    {{-- Right slot, visible >= 2 --}}
-                    <template x-if="vis >= 2">
-                        <div
-                            class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
-                            :class="fading ? 'opacity-0' : vis >= 3 ? 'opacity-60' : 'opacity-100'"
-                            :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:300px; aspect-ratio:4/3; max-width:100%;'"
-                        >
-                            <img
-                                :src="rImg.src"
-                                :alt="rImg.alt"
-                                class="w-full h-full object-cover"
-                                loading="lazy"
+                    {{-- Right slot, visible >= 2, hidden on mobile --}}
+                    <div class="hidden md:block">
+                        <template x-if="vis >= 2">
+                            <div
+                                class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
+                                :class="fading ? 'opacity-0' : vis >= 3 ? 'opacity-60' : 'opacity-100'"
+                                :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:300px; aspect-ratio:4/3; max-width:100%;'"
                             >
-                        </div>
-                    </template>
+                                <img
+                                    :src="rImg.src"
+                                    :alt="rImg.alt"
+                                    class="w-full h-full object-cover"
+                                    loading="lazy"
+                                >
+                            </div>
+                        </template>
+                    </div>
 
                 </div>
 

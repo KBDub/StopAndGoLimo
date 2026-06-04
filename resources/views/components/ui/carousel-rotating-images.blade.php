@@ -5,10 +5,10 @@
 ])
 
 {{--
-    Image display standard: 600×450px (4:3) for center slot.
-    Side slots (visible=3): 300×225px (4:3, half of center).
-    visible=2: two 600×450 slots side by side.
-    visible=1: single 600×450 slot, centered.
+    Image display standard: aspect-ratio 4/3 for all slots.
+    Center slot: width:600px, aspect-ratio:4/3, max-width:100% (or 50%-gap for vis=2).
+    Side slots (vis=3): width:300px, aspect-ratio:4/3, max-width:100%.
+    On mobile (< 768px): always collapses to vis=1 regardless of prop.
 --}}
 
 <div
@@ -47,9 +47,16 @@
         },
         stopTimer() {
             if (this.timer) { clearInterval(this.timer); this.timer = null; }
+        },
+        applyResponsive() {
+            if (window.innerWidth < 768) {
+                this.vis = 1;
+            } else {
+                this.vis = {{ (int) $visible }};
+            }
         }
     }"
-    x-init="startTimer()"
+    x-init="applyResponsive(); startTimer(); window.addEventListener('resize', () => applyResponsive())"
     {{ $attributes->merge(['class' => 'w-full']) }}
 >
     <template x-if="images.length > 0">
@@ -60,11 +67,11 @@
                 {{-- Image track --}}
                 <div class="flex items-center justify-center gap-3">
 
-                    {{-- Left slot, visible=3 only, 300×225px --}}
+                    {{-- Left slot, visible=3 only --}}
                     <template x-if="vis >= 3">
                         <div
                             class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
-                            style="width:300px; height:225px; max-width:100%;"
+                            style="width:300px; aspect-ratio:4/3; max-width:100%;"
                             :class="fading ? 'opacity-0' : 'opacity-60'"
                         >
                             <img
@@ -76,11 +83,11 @@
                         </div>
                     </template>
 
-                    {{-- Center slot, 600×450px --}}
+                    {{-- Center slot --}}
                     <div
                         class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out relative"
                         :class="fading ? 'opacity-0' : 'opacity-100'"
-                        :style="vis === 2 ? 'width:600px; height:450px; max-width:calc(50% - 6px);' : 'width:600px; height:450px; max-width:100%;'"
+                        :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:600px; aspect-ratio:4/3; max-width:100%;'"
                     >
                         <template x-if="vis >= 3">
                             <div class="absolute inset-0 ring-2 ring-sunburst shadow-gold-xl pointer-events-none z-10"></div>
@@ -98,7 +105,7 @@
                         <div
                             class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
                             :class="fading ? 'opacity-0' : vis >= 3 ? 'opacity-60' : 'opacity-100'"
-                            :style="vis === 2 ? 'width:600px; height:450px; max-width:calc(50% - 6px);' : 'width:300px; height:225px; max-width:100%;'"
+                            :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:300px; aspect-ratio:4/3; max-width:100%;'"
                         >
                             <img
                                 :src="rImg.src"

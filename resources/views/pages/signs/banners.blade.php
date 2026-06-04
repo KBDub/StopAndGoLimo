@@ -119,7 +119,7 @@
 
     <x-sections.product-grid collectionSlug="banners" parentSlug="signs" />
 
-            <x-sections.card-detailed-info
+            <
                 heading="Why Vinyl Banners Are Great for Your Business or Special Event"
                 image1="/images/banners/top5pct-retractable-banners-plainfield.jpg"
                 alt1="Custom retractable banners in Plainfield Illinois"

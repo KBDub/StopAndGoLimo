@@ -503,18 +503,7 @@
     {{-- ===================================================================
          MOBILE MENU, Accordion
          ================================================================== --}}
-    <div
-        x-cloak
-        x-show="mobileMenuOpen"
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 -translate-y-2"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-2"
-        class="lg:hidden fixed inset-x-0 bottom-0 z-[60] bg-linen overflow-y-scroll overscroll-y-contain border-t-2 border-sunburst"
-        :style="scrolled ? 'top:60px' : 'top:76px'"
-    >
+    <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden border-t border-linen-dark">
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
 
             <a href="/" class="block px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">Home</a>
@@ -617,18 +606,6 @@
                     <a href="/design-services" class="block px-3 py-1.5 text-sm font-bold text-sunburst">View All Design Services</a>
                     <a href="/design-services/logo-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Logo Design</a>
                     <a href="/design-services/graphic-design" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Layout / Graphic Design</a>
-                </div>
-            </div>
-
-            <div>
-                <button @click="openMobile = openMobile === 'about' ? null : 'about'" class="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">
-                    <span>About Us</span>
-                    <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'about' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                </button>
-                <div x-show="openMobile === 'about'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-sunburst ml-3">
-                    <a href="/about-us" class="block px-3 py-1.5 text-sm font-bold text-sunburst">About Us</a>
-                    <a href="/portfolio" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Portfolio</a>
-                    <a href="/articles" class="block px-3 py-1.5 text-sm text-charcoal hover:text-sunburst">Articles</a>
                 </div>
             </div>
 

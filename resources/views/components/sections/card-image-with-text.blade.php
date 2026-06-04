@@ -21,20 +21,28 @@
                 </div>
             </div>
 
-            {{-- Responsive flex layout: stacked on mobile, side-by-side on md+ --}}
-            <div class="flex flex-col {{ $imagePosition === 'right' ? 'md:flex-row-reverse' : 'md:flex-row' }} md:items-start gap-6 md:gap-0">
+            {{-- Float-based layout: stacks on mobile, wraps text on desktop --}}
+            <div class="[display:flow-root]">
+                @if($imagePosition === 'right')
+                    <div class="md:float-right md:ml-12 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
+                        <img
+                            src="{{ $image }}"
+                            alt="{{ $alt }}"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width:600px; height:450px; max-width:100%;"
+                        >
+                    </div>
+                @else
+                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
+                        <img
+                            src="{{ $image }}"
+                            alt="{{ $alt }}"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width:600px; height:450px; max-width:100%;"
+                        >
+                    </div>
+                @endif
 
-                {{-- Image --}}
-                <div class="w-full md:w-[600px] md:shrink-0 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out {{ $imagePosition === 'right' ? 'md:ml-12' : 'md:mr-12' }}">
-                    <img
-                        src="{{ $image }}"
-                        alt="{{ $alt }}"
-                        class="block object-cover w-full h-auto md:h-[450px] hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                        style="aspect-ratio: 4/3;"
-                    >
-                </div>
-
-                {{-- Text --}}
                 <div
                     x-data
                     x-init="$el.querySelectorAll('p').forEach(p => {
@@ -67,7 +75,6 @@
                 >
                     {{ $slot }}
                 </div>
-
             </div>
         </div>
     </div>

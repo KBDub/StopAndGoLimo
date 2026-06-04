@@ -291,6 +291,123 @@ All desktop nav links previously used `whitespace-nowrap text-base`, forcing eac
 
 ---
 
+## Navigation Design Spec (current, authoritative)
+
+This section is the single source of truth for navigation typography, spacing, and responsive behavior. Update it whenever nav specs change.
+
+---
+
+### Breakpoint reference
+
+| Viewport | Hamburger | Desktop menu | SM icons location |
+|---|---|---|---|
+| ≤ 768px (`md` and below) | visible | hidden | centered in nav bar row (between logo and hamburger) |
+| 769–1023px (above `md`, below `lg`) | hidden | visible | hidden everywhere |
+| ≥ 1024px (`lg` and above) | hidden | visible | top notification bar |
+
+---
+
+### Top notification bar (`top-notification-bar.blade.php`)
+
+| Property | Value |
+|---|---|
+| Background | `bg-sunburst` |
+| Text color | `text-charcoal` |
+| Font weight | `font-semibold` |
+| Font size | `text-xs` (12px) |
+| Vertical padding | `py-0.5` (resting), `py-0` (scrolled) |
+| Container | `max-w-7xl mx-auto px-4 flex items-center gap-4` |
+| Phone link color | CSS var `--color-azure` |
+| SM icons (notification bar) | `hidden lg:flex items-center gap-1.5 mx-auto shrink-0` |
+| SM icon size | `w-3.5 h-3.5` (14px) |
+| SM icon hover scale | `hover:scale-125 hover:[color:var(--color-olive)]` |
+| Free Shipping link | `hidden sm:block shrink-0 font-semibold text-charcoal whitespace-nowrap` |
+| Reviews / Service Areas | `hidden sm:flex items-center gap-1 font-semibold text-charcoal` |
+
+---
+
+### Navigation bar (`navigation-bar.blade.php`)
+
+**Bar container and height**
+
+| Property | Value |
+|---|---|
+| Background | `bg-linen` |
+| Shadow | `shadow-sm` |
+| z-index | `relative z-50` |
+| Outer wrapper | `max-w-7xl mx-auto px-4 sm:px-6` |
+| Bar height (resting) | `h-14` mobile, `lg:h-20` desktop |
+| Bar height (scrolled) | `h-12` mobile, `lg:h-14` desktop |
+| Row layout | `flex items-center gap-4 transition-all duration-300` |
+
+**Logo**
+
+| Property | Value |
+|---|---|
+| Container | `flex items-center flex-shrink-0` |
+| Logo height (resting) | `h-10` mobile, `lg:h-16` desktop |
+| Logo height (scrolled) | `h-8` mobile, `lg:h-10` desktop |
+| Transition | `transition-all duration-300 transform-gpu` |
+
+**Desktop nav wrapper**
+
+| Property | Value |
+|---|---|
+| Classes | `hidden md:flex flex-1 self-stretch items-stretch justify-between relative z-50` |
+| Shows at | ≥ 769px (`md` breakpoint) |
+
+**Desktop nav link spec (all items, canonical)**
+
+| Property | Value |
+|---|---|
+| Font size | `text-lg` = **18px** (Titillium Web) |
+| Font weight | `font-semibold` |
+| Line height | `leading-tight` |
+| Text alignment | `text-center` |
+| Display | `inline-flex items-center` |
+| Horizontal padding | `px-2` (8px each side) |
+| Height | `h-full` (full bar height) |
+| Dropdown chevron gap | `gap-0.5` |
+| Inactive color | `text-charcoal hover:text-sunburst` |
+| Active color | `text-azure` |
+| Transition | `transition-colors` |
+| Whitespace | none (removed, allows multi-word labels to wrap to 2 lines) |
+
+**Multi-word stacking behavior**
+
+Labels like "Custom Apparel", "Select a Sign", "Vehicle Decals", "Promo Items", "Top 5% Merchandise", "Design Services", and "About Us" are allowed to wrap to 2 lines. This is intentional and saves roughly 330px of horizontal space at intermediate widths (769–1023px). Do not re-add `whitespace-nowrap` to these links.
+
+**Mobile SM icons (nav bar row)**
+
+| Property | Value |
+|---|---|
+| Container | `flex-1 flex md:hidden justify-center items-center gap-2` |
+| Visible at | ≤ 768px only |
+| Icon size | `w-4 h-4` (16px) |
+| Icon hover | `hover:scale-125 hover:[color:var(--color-olive)]` |
+
+**Hamburger button**
+
+| Property | Value |
+|---|---|
+| Visible at | ≤ 768px (`md:hidden`) |
+| Padding | `p-2` |
+| Colors | `text-charcoal hover:text-sunburst` |
+| Icon size | `w-7 h-7` (28px) |
+
+**Mobile menu drawer**
+
+| Property | Value |
+|---|---|
+| Visibility | `md:hidden` (≤ 768px) |
+| Border | `border-t border-linen-dark` |
+| Max height | `max-h-[calc(100vh-6.5rem)]` (prevents overflow past viewport) |
+| Scroll | `overflow-y-auto` |
+| Inner container | `max-w-7xl mx-auto px-4 py-4 space-y-1` |
+| Mobile link style | `block px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors` |
+
+---
+
 ## Low Priority — Pending
 
 - Custom request wizard multi-step form — needs live mobile test.

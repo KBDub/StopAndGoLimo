@@ -21,6 +21,7 @@
     }"
     x-on:scroll.window="if (window.scrollY > 50) { scrolled = true } else { scrolled = false; openMenu = null }"
     x-on:keydown.escape.window="openMenu = null; mobileMenuOpen = false"
+    x-effect="document.body.classList.toggle('overflow-hidden', mobileMenuOpen)"
 >
     {{-- ── Top Bar ─────────────────────────────────────────────────────── --}}
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
@@ -512,9 +513,8 @@
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-2"
-        class="lg:hidden fixed inset-x-0 bottom-0 z-[60] bg-linen overflow-y-auto border-t-2 border-sunburst"
-        x-init="$watch('mobileMenuOpen', v => { if (v) $el.style.top = $el.closest('nav').getBoundingClientRect().bottom + 'px' })"
-        @scroll.window="if (mobileMenuOpen) $el.style.top = $el.closest('nav').getBoundingClientRect().bottom + 'px'"
+        class="lg:hidden fixed inset-x-0 bottom-0 z-[60] bg-linen overflow-y-auto overscroll-y-contain border-t-2 border-sunburst"
+        :style="scrolled ? 'top:60px' : 'top:76px'"
     >
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
 

@@ -323,11 +323,16 @@ This section is the single source of truth for navigation typography, spacing, a
 | SM icon hover scale | `hover:scale-125 hover:[color:var(--color-olive)]` |
 | Free Shipping link | `hidden md:block shrink-0 font-semibold text-charcoal whitespace-nowrap` |
 | Reviews / Service Areas | `hidden md:flex items-center gap-1 font-semibold text-charcoal` |
-| Get a Free Quote link | `md:hidden link-notification whitespace-nowrap` |
+| Get a Free Quote link | `md:hidden link-notification whitespace-nowrap shrink-0` — center slot |
 
 **Responsive swap at 768px (mobile notification bar):**
 
-At ≤ 768px the right-hand section hides "Free Shipping", "Reviews", and "Service Areas" and replaces them with a "Get a Free Quote" link styled with `.link-notification` (azure, weight 600, underline on hover). Clicking it dispatches `window.dispatchEvent(new CustomEvent('open-contact-modal'))` — the same global event used by the "Schedule Same Day Service" button on every page. The `x-ui.contact-modal` component already listens for `open-contact-modal` via `@open-contact-modal.window` on its root Alpine `x-data` div. No changes to `contact-modal.blade.php` are required.
+At ≤ 768px:
+- "Free Shipping on Orders Over $50!" hides (`hidden md:block`)
+- "Reviews" and "Service Areas" hide (`hidden md:flex`)
+- "Get a Free Quote" appears in the **center slot** (same position as Free Shipping), naturally centered because both sides of the bar are `flex-1`
+
+Styled with `.link-notification` (azure, weight 600, underline on hover). Clicking it dispatches `window.dispatchEvent(new CustomEvent('open-contact-modal'))` — the same global event used by the "Schedule Same Day Service" button. The `x-ui.contact-modal` component already listens for `open-contact-modal` via `@open-contact-modal.window` on its root Alpine `x-data` div. No changes to `contact-modal.blade.php` are required.
 
 **`.link-notification` CSS spec (from `app.css`):**
 

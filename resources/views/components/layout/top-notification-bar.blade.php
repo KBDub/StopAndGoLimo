@@ -69,9 +69,14 @@
 
         </div>
 
-        {{-- MIDDLE: Free Shipping, centered because both sides are flex-1 --}}
+        {{-- MIDDLE: Free Shipping (desktop) · Get a Free Quote (mobile), centered because both sides are flex-1 --}}
         <a href="/top5pct-merchandise" class="hidden md:block shrink-0 font-semibold text-charcoal hover:underline whitespace-nowrap">
             Free Shipping on Orders Over $50!
+        </a>
+        <a href="#"
+           onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+           class="md:hidden link-notification whitespace-nowrap shrink-0">
+            Get a Free Quote
         </a>
 
         {{-- RIGHT: Reviews · Service Areas (centered between Free Shipping and cart) · Cart (far right) --}}
@@ -86,13 +91,6 @@
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                     Reviews
-                </a>
-
-                {{-- Get a Free Quote (mobile only, ≤768px) --}}
-                <a href="#"
-                   onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-                   class="md:hidden link-notification whitespace-nowrap">
-                    Get a Free Quote
                 </a>
 
                 {{-- Service Areas --}}

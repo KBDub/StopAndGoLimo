@@ -50,47 +50,59 @@
             </div>
 
             @if($image2)
-                {{-- Two-image layout: side-by-side centered at top, all text slots stacked below --}}
-                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-6">
-                    <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                {{-- Two-image layout --}}
+                {{-- image1 float-left + $intro wrapping beside and below --}}
+                <div class="[display:flow-root] mb-4">
+                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
                         <img
                             src="{{ $image1 }}"
                             alt="{{ $alt1 }}"
-                            class="block object-cover w-full hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="aspect-ratio: 4/3;"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width:400px; aspect-ratio:4/3; max-width:100%;"
                         >
                     </div>
-                    <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                    <div class="card-detail-content">{{ $intro }}</div>
+                </div>
+
+                {{-- $mid full-width after float clears --}}
+                <div class="clear-both mb-4 card-detail-content">{{ $mid }}</div>
+
+                {{-- image2 float-right + $lower wrapping beside and below --}}
+                <div class="[display:flow-root] mb-4">
+                    <div class="md:float-right md:ml-6 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
                         <img
                             src="{{ $image2 }}"
                             alt="{{ $alt2 }}"
-                            class="block object-cover w-full hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="aspect-ratio: 4/3;"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width:400px; aspect-ratio:4/3; max-width:100%;"
                         >
                     </div>
+                    <div class="card-detail-content">{{ $lower }}</div>
                 </div>
 
-                <div class="card-detail-content mb-4">{{ $intro }}</div>
-                <div class="card-detail-content mb-4">{{ $mid }}</div>
-                <div class="card-detail-content mb-4">{{ $lower }}</div>
-                <div class="border-t-2 border-linen pt-5 card-detail-content">{{ $footer }}</div>
+                <div class="clear-both border-t-2 border-linen pt-5 card-detail-content">{{ $footer }}</div>
 
             @else
-                {{-- Single-image layout: centered at top, all text slots stacked below --}}
-                <div class="flex justify-center mb-6">
-                    <div class="w-full sm:max-w-[400px] overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                {{-- Single-image layout --}}
+                {{-- $intro full-width at top --}}
+                <div class="mb-4 card-detail-content">{{ $intro }}</div>
+
+                {{-- image1 float-left + $mid wrapping beside and below --}}
+                <div class="[display:flow-root] mb-4">
+                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
                         <img
                             src="{{ $image1 }}"
                             alt="{{ $alt1 }}"
-                            class="block object-cover w-full hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="aspect-ratio: 4/3;"
+                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
+                            style="width:400px; aspect-ratio:4/3; max-width:100%;"
                         >
                     </div>
+                    <div class="card-detail-content">{{ $mid }}</div>
                 </div>
 
-                <div class="card-detail-content mb-4">{{ $intro }}</div>
-                <div class="card-detail-content mb-4">{{ $mid }}</div>
-                <div class="card-detail-content mb-4">{{ $lower }}</div>
+                {{-- $lower full-width after float clears --}}
+                <div class="clear-both mb-4 card-detail-content">{{ $lower }}</div>
+
                 <div class="border-t-2 border-linen pt-5 card-detail-content">{{ $footer }}</div>
 
             @endif

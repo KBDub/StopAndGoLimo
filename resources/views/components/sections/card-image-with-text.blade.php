@@ -29,7 +29,7 @@
                             src="{{ $image }}"
                             alt="{{ $alt }}"
                             class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="width:600px; height:450px; max-width:100%;"
+                            style="width:600px; aspect-ratio:4/3; max-width:100%;"
                         >
                     </div>
                 @else
@@ -38,7 +38,7 @@
                             src="{{ $image }}"
                             alt="{{ $alt }}"
                             class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="width:600px; height:450px; max-width:100%;"
+                            style="width:600px; aspect-ratio:4/3; max-width:100%;"
                         >
                     </div>
                 @endif

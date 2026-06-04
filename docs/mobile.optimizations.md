@@ -109,8 +109,130 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ---
 
+## Card Image Aspect Ratios — Standardized to 4:3
+
+**Date:** 2026-06-04
+**Files:**
+- `resources/views/components/sections/card-image-with-text.blade.php`
+- `resources/views/components/sections/card-detailed-info.blade.php`
+
+**Problem:** `card-image-with-text` used `style="width:600px; height:450px; max-width:100%;"`. On mobile, `max-width:100%` shrank the width (e.g., 332px) but the fixed `height:450px` stayed, producing a tall portrait proportion instead of 4:3. Other card components already used `aspect-ratio:4/3` and rendered at 332x249 — a visible mismatch.
+
+**Fix:** Replaced `height:450px` with `aspect-ratio:4/3` on both image variants (left and right). Final style: `style="width:600px; aspect-ratio:4/3; max-width:100%;"`. On desktop, 600px width with 4:3 still equals 450px height. On mobile, height scales proportionally with width.
+
+**Rule:** Never use a fixed `height` alongside `max-width:100%` on images. Use `aspect-ratio` instead so both dimensions scale together.
+
+---
+
+## card-detailed-info — Float Layout Restored
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/sections/card-detailed-info.blade.php`
+
+**Decision:** Restored the original float-based image layout with responsive breakpoints matching `card-image-with-text`.
+
+**Single-image layout:**
+- `$intro` slot: full-width at top
+- image1 `md:float-left md:mr-12`: stacks on mobile, floats on desktop with text wrapping beside and below
+- `$lower`: full-width after `clear-both`
+- `$footer`: border-top, full-width
+
+**Two-image layout:**
+- image1 `md:float-left md:mr-12` + `$intro` wrapping beside
+- `$mid`: full-width after `clear-both`
+- image2 `md:float-right md:ml-6` + `$lower` wrapping beside
+- `$footer`: border-top, full-width
+
+**Images:** `style="width:400px; aspect-ratio:4/3; max-width:100%;"` — 400px (not 600px) because this component uses a smaller image proportion alongside denser text. `[display:flow-root]` containers wrap each float group to clear properly.
+
+---
+
+## Video Banner — Responsive Aspect Ratio
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/sections/video-banner.blade.php`
+
+**Problem:** The YouTube `<iframe>` had `style="height: 450px;"` with `class="w-full"`. On mobile, `w-full` shrank the width but the height stayed at 450px, giving a near-portrait proportion.
+
+**Fix:** Replaced `height:450px` with `style="aspect-ratio:4/3;"` on the iframe. Added `md:h-[450px]` Tailwind class to override the aspect-ratio on desktop back to 450px fixed height. Container stays `max-w-7xl`.
+
+**Result:**
+- Mobile: 4:3 proportional height, matches card images
+- Desktop (md+): `md:h-[450px]` overrides aspect-ratio, restores original full-width 450px look
+
+---
+
+## Carousel Rotating Images — Mobile Collapse and 4:3 Ratio
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/ui/carousel-rotating-images.blade.php`
+
+**Problems:**
+1. The `visible` prop (e.g., `visible=2`) rendered that many image slots on all screen sizes with no responsive breakpoint — two images side-by-side on a 412px phone.
+2. All slots used fixed `height:450px` or `height:225px` — same aspect-ratio problem as card images.
+
+**Fixes:**
+1. Added `applyResponsive()` Alpine method: sets `vis = 1` when `window.innerWidth < 768`, restores the prop value on desktop. Called on `x-init` and on `window resize`.
+2. Replaced all fixed heights with `aspect-ratio:4/3` across all three slots (left, center, right). Center/right slots in `vis=2` mode use `max-width:calc(50% - 6px)` to split space; height is now driven by aspect-ratio.
+
+**Result:** Mobile always shows one image at 4:3. Desktop and tablet show the configured number of images, each proportional.
+
+---
+
+## Top Notification Bar — Phone Number and Service Areas
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/layout/top-notification-bar.blade.php`
+
+**Changes:**
+1. Removed the `(815) 349-TOP5` secondary number and the "or" separator. Now shows only `(815) 349-8600` at all screen sizes — no `hidden sm:inline` toggling.
+2. "Service Areas" link changed from `class="flex ..."` to `class="hidden sm:flex ..."` — hidden on mobile (< 640px), visible on iPad and desktop.
+
+**Why:** On the narrowest phones, showing two phone numbers plus a separator wastes space and can cause layout crowding. A single canonical number is cleaner. Service Areas is a secondary link that mobile users can access through the hamburger menu.
+
+---
+
+## Navigation Bar — Mobile Social Media Icons
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/layout/navigation-bar.blade.php`
+
+**Change:** Added a `flex-1 flex lg:hidden justify-center items-center gap-2` row of 7 social media icons (Google Maps, Facebook, Instagram, Pinterest, YouTube, X, LinkedIn) between the logo and the hamburger button.
+
+**Why:** On mobile, the nav bar had a large empty gap between the logo and the hamburger. The social icons fill this space, provide direct mobile access to social profiles, and mirror the icons already visible in the desktop top notification bar.
+
+**Icons:** `w-4 h-4` (slightly larger than `w-3.5 h-3.5` in the notification bar) for better touch targets. `flex-1` on the wrapper div centers the icons naturally between the logo and hamburger.
+
+---
+
+## Mobile Menu — Scrollable Container
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/layout/navigation-bar.blade.php`
+
+**Problem:** The mobile accordion menu had no `max-height` or `overflow-y-auto`. Opening a sub-menu with many items (e.g., Custom Apparel with 18 links) extended the menu below the viewport with no way to scroll within the menu panel itself.
+
+**Fix:** Added `max-h-[calc(100vh-6.5rem)] overflow-y-auto` to the outer `x-show="mobileMenuOpen"` wrapper. The `6.5rem` accounts for the combined height of the top notification bar and the mobile nav bar.
+
+**Result:** The menu panel is capped at viewport height minus nav bars and scrolls independently. Works for all states: collapsed top-level list and fully expanded accordions. Requires a CSS build (`npm run build`) for the JIT `calc` class.
+
+---
+
+## Mobile Menu — Item Order and About Us
+
+**Date:** 2026-06-04
+**File:** `resources/views/components/layout/navigation-bar.blade.php`
+
+**Changes:**
+1. "Top 5% Merchandise" moved from after "Design Services" to before it — matches the desktop nav bar order.
+2. "About Us" accordion added after "Design Services" with three sub-links: About Us, Portfolio, Articles. Uses the same accordion pattern (`openMobile === 'about'`) as all other mobile sub-menus.
+
+**Final mobile menu order:**
+Home, Custom Apparel, Select a Sign, Stickers, Vehicle Decals, Promo Items, Top 5% Merchandise, Design Services, About Us.
+
+---
+
 ## Low Priority — Pending
 
 - Custom request wizard multi-step form — needs live mobile test.
 - Checkout multi-step flow — needs live mobile test.
-- Mobile nav sub-panel accordion — needs visual audit on narrow screens.

@@ -15,7 +15,7 @@
             </div>
 
             {{-- Social media icons centered between phones and Free Shipping --}}
-            <div class="hidden sm:flex items-center gap-1.5 mx-auto shrink-0">
+            <div class="hidden lg:flex items-center gap-1.5 mx-auto shrink-0">
 
                 {{-- Google Maps --}}
                 <a href="https://www.google.com/maps?cid=15797523837573086431" target="_blank" rel="noopener" aria-label="Google Maps" class="text-charcoal opacity-60 hover:opacity-100 hover:scale-125 hover:[color:var(--color-olive)] transition-all duration-200">

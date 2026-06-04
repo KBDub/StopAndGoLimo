@@ -257,6 +257,40 @@ Home, Custom Apparel, Select a Sign, Stickers, Vehicle Decals, Promo Items, Top 
 
 ---
 
+## Navigation Bar — Breakpoint Restructure and Menu Overflow Fix
+
+**Date:** 2026-06-04
+**Files:**
+- `resources/views/components/layout/navigation-bar.blade.php`
+- `resources/views/components/layout/top-notification-bar.blade.php`
+
+**Problem:** The desktop mega-menu activated at `lg` (1024px). At exactly 1024px, the full set of nav items overflowed past the right edge of the viewport because the menu items used `whitespace-nowrap` and `text-base`, making them too wide to fit.
+
+**Desired breakpoint behavior:**
+1. ≤ 768px (`md` and below): hamburger menu + SM icons displayed in the nav bar row between logo and hamburger
+2. 769–1023px (above `md`, below `lg`): desktop mega-menu, no SM icons in the nav bar row
+3. ≥ 1024px (`lg` and above): desktop mega-menu + SM icons visible in the top notification bar
+4. Logo always visible at all breakpoints
+
+**Changes made:**
+
+| Element | File | Old class | New class |
+|---|---|---|---|
+| Mobile SM icons (nav bar) | navigation-bar | `flex-1 flex lg:hidden` | `flex-1 flex md:hidden` |
+| Hamburger button | navigation-bar | `lg:hidden` | `md:hidden` |
+| Desktop nav wrapper | navigation-bar | `hidden lg:flex` | `hidden md:flex` |
+| Mobile menu drawer | navigation-bar | `lg:hidden` | `md:hidden` |
+| Notification bar SM icons | top-notification-bar | `hidden sm:flex` | `hidden lg:flex` |
+
+**Multi-word menu item stacking:**
+All desktop nav links previously used `whitespace-nowrap text-base`, forcing each label onto one line. Changed to `whitespace-normal text-sm text-center leading-tight` with `max-w-[72px]` on each anchor. Multi-word items ("Custom Apparel", "Select a Sign", etc.) wrap to two lines, cutting their individual widths roughly in half. Single-word items ("Home", "Stickers") are unaffected.
+
+**Space saved:** 7 multi-word items × ~115px (before) vs ~68px (after) = ~330px recovered. Enough to fit the full menu comfortably from 769px upward.
+
+**No CSS rebuild required** — all breakpoint classes (`md:hidden`, `hidden md:flex`, `hidden lg:flex`) were already in the bundle.
+
+---
+
 ## Low Priority — Pending
 
 - Custom request wizard multi-step form — needs live mobile test.

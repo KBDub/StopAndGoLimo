@@ -503,7 +503,7 @@
     {{-- ===================================================================
          MOBILE MENU, Accordion
          ================================================================== --}}
-    <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden border-t border-linen-dark">
+    <div x-cloak x-show="mobileMenuOpen" x-transition class="lg:hidden border-t border-linen-dark max-h-[calc(100vh-6.5rem)] overflow-y-auto">
         <div class="max-w-7xl mx-auto px-4 py-4 space-y-1">
 
             <a href="/" class="block px-3 py-2.5 text-sm font-semibold text-charcoal hover:text-sunburst hover:bg-linen rounded transition-colors">Home</a>

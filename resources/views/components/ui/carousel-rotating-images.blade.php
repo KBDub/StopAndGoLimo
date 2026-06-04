@@ -64,7 +64,7 @@
                     <template x-if="vis >= 3">
                         <div
                             class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
-                            style="width:300px; height:225px; max-width:100%;"
+                            style="width:300px; aspect-ratio:4/3; max-width:100%;"
                             :class="fading ? 'opacity-0' : 'opacity-60'"
                         >
                             <img
@@ -80,7 +80,7 @@
                     <div
                         class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out relative"
                         :class="fading ? 'opacity-0' : 'opacity-100'"
-                        :style="vis === 2 ? 'width:600px; height:450px; max-width:calc(50% - 6px);' : 'width:600px; height:450px; max-width:100%;'"
+                        :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:600px; aspect-ratio:4/3; max-width:100%;'"
                     >
                         <template x-if="vis >= 3">
                             <div class="absolute inset-0 ring-2 ring-sunburst shadow-gold-xl pointer-events-none z-10"></div>
@@ -98,7 +98,7 @@
                         <div
                             class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
                             :class="fading ? 'opacity-0' : vis >= 3 ? 'opacity-60' : 'opacity-100'"
-                            :style="vis === 2 ? 'width:600px; height:450px; max-width:calc(50% - 6px);' : 'width:300px; height:225px; max-width:100%;'"
+                            :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:300px; aspect-ratio:4/3; max-width:100%;'"
                         >
                             <img
                                 :src="rImg.src"

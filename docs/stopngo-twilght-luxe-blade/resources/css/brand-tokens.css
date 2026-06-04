@@ -1,0 +1,48 @@
+/* =====================================================================
+   Stop & Go Airport Shuttle — "Twilight Luxe" Brand Tokens
+   Source of truth for the design system. Import once, globally.
+   @import 'brand-tokens.css';  (before Tailwind utilities)
+   ===================================================================== */
+:root {
+  /* ── Champagne Gold (primary brand accent) ── */
+  --sg-champagne-light: #E9C79E;
+  --sg-champagne:       #DCB57E;
+  --sg-champagne-dark:  #C49A5E;
+
+  /* ── Midnight Navy (foundation / surfaces / text-on-light) ── */
+  --sg-navy-light: #252235;
+  --sg-navy:       #15162C;
+  --sg-navy-dark:  #0F1223;
+
+  /* ── Signal Gold (high-attention accent only) ── */
+  --sg-signal-light: #FFD65E;
+  --sg-signal:       #FEC42D;
+  --sg-signal-dark:  #E0A800;
+
+  /* ── Cloud Grey (light surfaces) ── */
+  --sg-cloud-light: #F4F5F7;
+  --sg-cloud:       #E8E9EC;
+  --sg-cloud-dark:  #D4D6DB;
+
+  /* ── Slate (secondary text / muted UI) ── */
+  --sg-slate-light: #8B939C;
+  --sg-slate:       #69727D;
+  --sg-slate-dark:  #4A5159;
+
+  --sg-white: #FFFFFF;
+
+  /* ── Semantic ── */
+  --sg-success: #2E9E6B;
+  --sg-warning: #E0A800;
+  --sg-error:   #C0392B;
+
+  /* ── Type ── */
+  --sg-font-head: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  --sg-font-body: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Gradients ── */
+  --sg-grad-hero:     linear-gradient(135deg, #15162C 0%, #252235 100%);
+  --sg-grad-twilight: linear-gradient(135deg, #0F1223 0%, #15162C 60%, #252235 100%);
+  --sg-grad-shine:    linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%);
+  --sg-grad-navygold: linear-gradient(135deg, #15162C 0%, #252235 55%, #DCB57E 140%);
+}

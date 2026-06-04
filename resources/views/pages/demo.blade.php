@@ -1447,6 +1447,261 @@
             </div>
         </section>
 
+        {{-- ═══════════════════════════════════════════════════════════════
+             Navigation Bar & Notification Bar Specs
+             ═══════════════════════════════════════════════════════════════ --}}
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-2xl font-bold mb-2 border-l-4 border-sunburst pl-5">Navigation Bar & Notification Bar</h2>
+                <p class="text-charcoal-light mb-8 pl-5">Breakpoints, typography, heights, and modal entry points. Source of truth: <code class="bg-gray-100 px-1 rounded text-sm">docs/mobile.optimizations.md</code></p>
+
+                {{-- Breakpoint reference --}}
+                <div class="bg-white shadow-lg mb-8">
+                    <div class="bg-linen-light border-b border-linen-dark px-8 py-4">
+                        <h3 class="text-lg font-semibold text-charcoal">Responsive Breakpoints</h3>
+                        <p class="text-sm text-charcoal-light mt-1">Tailwind breakpoints used by both the notification bar and nav bar</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b-2 border-sunburst">
+                                        <th class="text-left pb-3 pr-6 font-semibold text-charcoal">Viewport</th>
+                                        <th class="text-left pb-3 pr-6 font-semibold text-charcoal">Hamburger</th>
+                                        <th class="text-left pb-3 pr-6 font-semibold text-charcoal">Desktop menu</th>
+                                        <th class="text-left pb-3 font-semibold text-charcoal">SM icons location</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100">
+                                    <tr>
+                                        <td class="py-3 pr-6 font-mono text-azure">≤ 768px</td>
+                                        <td class="py-3 pr-6 text-charcoal">Visible</td>
+                                        <td class="py-3 pr-6 text-charcoal">Hidden</td>
+                                        <td class="py-3 text-charcoal">Centered in nav bar row</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6 font-mono text-azure">769–1023px</td>
+                                        <td class="py-3 pr-6 text-charcoal">Hidden</td>
+                                        <td class="py-3 pr-6 text-charcoal">Visible</td>
+                                        <td class="py-3 text-charcoal">Hidden everywhere</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6 font-mono text-azure">≥ 1024px</td>
+                                        <td class="py-3 pr-6 text-charcoal">Hidden</td>
+                                        <td class="py-3 pr-6 text-charcoal">Visible</td>
+                                        <td class="py-3 text-charcoal">Top notification bar</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-6 bg-linen p-4 rounded font-mono text-xs text-charcoal-light space-y-1">
+                            <div><span class="text-sunburst font-bold">Hamburger:</span> md:hidden (hidden at ≥ 769px)</div>
+                            <div><span class="text-sunburst font-bold">Desktop nav wrapper:</span> hidden md:flex (shows at ≥ 769px)</div>
+                            <div><span class="text-sunburst font-bold">Nav bar SM icons:</span> flex-1 flex md:hidden (hidden at ≥ 769px)</div>
+                            <div><span class="text-sunburst font-bold">Notification bar SM icons:</span> hidden lg:flex (shows at ≥ 1024px only)</div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Nav bar heights --}}
+                <div class="bg-white shadow-lg mb-8">
+                    <div class="bg-linen-light border-b border-linen-dark px-8 py-4">
+                        <h3 class="text-lg font-semibold text-charcoal">Navigation Bar Heights</h3>
+                        <p class="text-sm text-charcoal-light mt-1">Heights shrink when the user scrolls past 50px (Alpine <code class="bg-gray-100 px-1 rounded">scrolled</code> state)</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-sm font-semibold text-charcoal mb-3">Resting (top of page)</h4>
+                                <div class="space-y-2 font-mono text-xs text-charcoal-light">
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Mobile bar</span><span class="text-azure">h-14 (56px)</span>
+                                    </div>
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Desktop bar</span><span class="text-azure">lg:h-20 (80px)</span>
+                                    </div>
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Mobile logo</span><span class="text-azure">h-10 (40px)</span>
+                                    </div>
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Desktop logo</span><span class="text-azure">lg:h-16 (64px)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-charcoal mb-3">Scrolled (past 50px)</h4>
+                                <div class="space-y-2 font-mono text-xs text-charcoal-light">
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Mobile bar</span><span class="text-azure">h-12 (48px)</span>
+                                    </div>
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Desktop bar</span><span class="text-azure">lg:h-14 (56px)</span>
+                                    </div>
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Mobile logo</span><span class="text-azure">h-8 (32px)</span>
+                                    </div>
+                                    <div class="flex justify-between bg-linen px-3 py-2 rounded">
+                                        <span>Desktop logo</span><span class="text-azure">lg:h-10 (40px)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Desktop nav link spec --}}
+                <div class="bg-white shadow-lg mb-8">
+                    <div class="bg-linen-light border-b border-linen-dark px-8 py-4">
+                        <h3 class="text-lg font-semibold text-charcoal">Desktop Nav Link — Canonical Spec</h3>
+                        <p class="text-sm text-charcoal-light mt-1">All top-level menu items use this exact set of classes. Do not add whitespace-nowrap.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <p class="text-xs text-charcoal-light mb-3">Live example — 18px, Titillium Web, SemiBold, leading-tight, centered, wraps to 2 lines</p>
+                            <div class="bg-linen flex items-center gap-1 px-6 py-4 h-20">
+                                <a href="#" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center text-charcoal hover:text-sunburst transition-colors">Home</a>
+                                <a href="#" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 text-charcoal hover:text-sunburst transition-colors">Custom Apparel <svg class="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></a>
+                                <a href="#" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center gap-0.5 text-charcoal hover:text-sunburst transition-colors">Top 5% Merchandise</a>
+                                <a href="#" class="px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center text-azure transition-colors">Active Page</a>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 font-mono text-xs">
+                            <div class="space-y-2">
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Font size</span><span class="text-azure">text-lg (18px)</span></div>
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Font weight</span><span class="text-azure">font-semibold (600)</span></div>
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Line height</span><span class="text-azure">leading-tight</span></div>
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Text align</span><span class="text-azure">text-center</span></div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Display</span><span class="text-azure">inline-flex items-center</span></div>
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Padding</span><span class="text-azure">px-2, h-full</span></div>
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Inactive color</span><span class="text-azure">text-charcoal hover:text-sunburst</span></div>
+                                <div class="flex justify-between bg-linen px-3 py-2 rounded"><span class="text-charcoal-light">Active color</span><span class="text-azure">text-azure</span></div>
+                            </div>
+                        </div>
+                        <div class="mt-4 bg-charcoal text-white p-4 rounded font-mono text-xs">
+                            <span class="text-sunburst">class=</span><span class="text-white">"px-2 h-full text-lg font-semibold leading-tight text-center inline-flex items-center [gap-0.5] text-charcoal hover:text-sunburst transition-colors"</span>
+                        </div>
+                        <p class="mt-3 text-xs text-charcoal-light">Add <code class="bg-gray-100 px-1 rounded">gap-0.5</code> only on items with a dropdown chevron SVG. Multi-word labels wrap to 2 lines by design — do not add <code class="bg-gray-100 px-1 rounded">whitespace-nowrap</code>.</p>
+                    </div>
+                </div>
+
+                {{-- Notification bar responsive swap --}}
+                <div class="bg-white shadow-lg mb-8">
+                    <div class="bg-linen-light border-b border-linen-dark px-8 py-4">
+                        <h3 class="text-lg font-semibold text-charcoal">Top Notification Bar — Responsive Swap</h3>
+                        <p class="text-sm text-charcoal-light mt-1">The center and right-hand items switch content at the md breakpoint (768px)</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="text-sm font-semibold text-charcoal mb-3">Desktop (≥ 769px)</h4>
+                                <div class="bg-sunburst px-4 py-2 flex items-center justify-between text-xs font-semibold text-charcoal rounded">
+                                    <span>(815) 349-8600</span>
+                                    <span>Free Shipping on Orders Over $50!</span>
+                                    <span class="flex items-center gap-3">★ Reviews &nbsp; ⬤ Service Areas</span>
+                                </div>
+                                <div class="mt-3 space-y-1 font-mono text-xs text-charcoal-light">
+                                    <div>Free Shipping: <span class="text-azure">hidden md:block</span></div>
+                                    <div>Reviews: <span class="text-azure">hidden md:flex</span></div>
+                                    <div>Service Areas: <span class="text-azure">hidden md:flex</span></div>
+                                    <div>SM icons: <span class="text-azure">hidden lg:flex</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-charcoal mb-3">Mobile (≤ 768px)</h4>
+                                <div class="bg-sunburst px-4 py-2 flex items-center justify-between text-xs font-semibold text-charcoal rounded">
+                                    <span>(815) 349-8600</span>
+                                    <a href="#" class="link-notification text-xs">Get a Free Quote</a>
+                                    <span>🛒</span>
+                                </div>
+                                <div class="mt-3 space-y-1 font-mono text-xs text-charcoal-light">
+                                    <div>Get a Free Quote: <span class="text-azure">md:hidden link-notification</span></div>
+                                    <div>Position: center slot (flanked by two flex-1 sides)</div>
+                                    <div>Trigger: <span class="text-azure">open-contact-modal</span> CustomEvent</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- FAB / Modal entry points --}}
+                <div class="bg-white shadow-lg">
+                    <div class="bg-linen-light border-b border-linen-dark px-8 py-4">
+                        <h3 class="text-lg font-semibold text-charcoal">FAB & Modal Entry Points — <code class="bg-gray-100 px-1 rounded text-base">open-contact-modal</code></h3>
+                        <p class="text-sm text-charcoal-light mt-1">All "Get a Free Quote" triggers across the site use the same global CustomEvent. The <code class="bg-gray-100 px-1 rounded">x-ui.contact-modal</code> component listens via <code class="bg-gray-100 px-1 rounded">@open-contact-modal.window</code>.</p>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h4 class="text-sm font-semibold text-charcoal mb-3">How to trigger the modal from any element</h4>
+                            <div class="bg-charcoal text-white p-4 rounded font-mono text-xs space-y-2">
+                                <div><span class="text-sunburst">{{-- Option A: onclick (plain HTML, buttons, links) --}}</span></div>
+                                <div>onclick="<span class="text-azure">window.dispatchEvent(new CustomEvent('open-contact-modal'))</span>"</div>
+                                <div class="pt-2"><span class="text-sunburst">{{-- Option B: Alpine directive --}}</span></div>
+                                <div>@<span class="text-white">click</span>="<span class="text-azure">window.dispatchEvent(new CustomEvent('open-contact-modal'))</span>"</div>
+                                <div class="pt-2"><span class="text-sunburst">{{-- Option C: Blade modal-trigger component --}}</span></div>
+                                <div>&lt;<span class="text-azure">x-ui.modal-trigger</span> modal="<span class="text-azure">contact-modal</span>"&gt;Get a Free Quote&lt;/x-ui.modal-trigger&gt;</div>
+                            </div>
+                        </div>
+
+                        <h4 class="text-sm font-semibold text-charcoal mb-3">Known entry points on the site</h4>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b-2 border-sunburst">
+                                        <th class="text-left pb-3 pr-6 font-semibold text-charcoal">Location</th>
+                                        <th class="text-left pb-3 pr-6 font-semibold text-charcoal">Element</th>
+                                        <th class="text-left pb-3 font-semibold text-charcoal">Visible at</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-100 text-charcoal-light">
+                                    <tr>
+                                        <td class="py-3 pr-6">Every page (bottom-right)</td>
+                                        <td class="py-3 pr-6 font-mono text-xs">FAB — "Contact Us Now"</td>
+                                        <td class="py-3 font-mono text-xs text-azure">always</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6">Top notification bar</td>
+                                        <td class="py-3 pr-6 font-mono text-xs">"Get a Free Quote" link</td>
+                                        <td class="py-3 font-mono text-xs text-azure">md:hidden (≤ 768px)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6">Home page hero</td>
+                                        <td class="py-3 pr-6 font-mono text-xs">"Get a Free Quote" button</td>
+                                        <td class="py-3 font-mono text-xs text-azure">always</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6">Same Day Service section</td>
+                                        <td class="py-3 pr-6 font-mono text-xs">"Schedule Same Day Service" button</td>
+                                        <td class="py-3 font-mono text-xs text-azure">always</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6">Category hero sections</td>
+                                        <td class="py-3 pr-6 font-mono text-xs">"Get a Free Quote" CTA</td>
+                                        <td class="py-3 font-mono text-xs text-azure">always</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 pr-6">Video banner sections</td>
+                                        <td class="py-3 pr-6 font-mono text-xs">"Get a Free Quote" overlay button</td>
+                                        <td class="py-3 font-mono text-xs text-azure">always</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="mt-6 bg-linen p-4 rounded">
+                            <h4 class="text-sm font-semibold text-charcoal mb-2">Event detail contract</h4>
+                            <div class="font-mono text-xs text-charcoal-light space-y-1">
+                                <div><span class="text-azure">{ }</span> — opens the picker modal (Custom Apparel, DTF Transfers, Send a Message)</div>
+                                <div><span class="text-azure">{ dtf: true, fileName: 'name.png' }</span> — bypasses picker, launches DTF wizard directly</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="py-16 bg-warm-gradient border-t-2 border-b-2 border-sunburst">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="p-8">

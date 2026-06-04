@@ -15,7 +15,7 @@
             class="p-4 sm:p-6 md:p-10 bg-white shadow-gold-lg transition-all duration-500"
         >
             {{-- Title centered full-width at top --}}
-            <div class="text-center mb-6">
+            <div class="text-center mb-6 md:mb-8">
                 <div class="inline-block">
                     <h3 class="text-olive font-bold text-h3 mb-2">{{ $title }}</h3>
                     <div class="h-1 bg-sunburst"></div>
@@ -54,7 +54,7 @@
             <div
                 x-data
                 x-init="$el.querySelectorAll('p').forEach(p => {
-                    p.style.paddingLeft = '1.5rem';
+                    if (window.innerWidth >= 768) p.style.paddingLeft = '1.5rem';
                     if (p.textContent.trim().split(/\s+/).length <= 4) return;
                     const nodes = [];
                     const tw = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);

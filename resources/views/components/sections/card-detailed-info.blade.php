@@ -9,8 +9,10 @@
 <section class="py-10 bg-linen">
     <div class="max-w-7xl mx-auto px-6">
         <div
-            x-data
-            x-init="$el.querySelectorAll('p').forEach(p => {
+            x-data="{ ready: false }"
+            x-init="
+                $nextTick(() => ready = true);
+                $el.querySelectorAll('p').forEach(p => {
                 if (window.innerWidth >= 768) p.style.paddingLeft = '1.5rem';
                 if (p.textContent.trim().split(/\s+/).length <= 4) return;
                 const nodes = [];
@@ -36,10 +38,11 @@
                     t.parentNode.replaceChild(f, t);
                 }
             })"
-            class="bg-white shadow-gold-lg p-4 sm:p-6 md:p-8 lg:p-12"
+            :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
+            class="bg-white shadow-gold-lg p-4 sm:p-6 md:p-10 lg:p-12 transition-all duration-500"
         >
 
-            <div class="text-center mb-6">
+            <div class="text-center mb-6 md:mb-8">
                 <div class="inline-block">
                     <h2 class="text-olive font-bold text-h2 mb-2">{{ $heading }}</h2>
                     <div class="h-1 bg-sunburst"></div>

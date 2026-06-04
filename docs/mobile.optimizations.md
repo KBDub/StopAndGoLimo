@@ -321,8 +321,31 @@ This section is the single source of truth for navigation typography, spacing, a
 | SM icons (notification bar) | `hidden lg:flex items-center gap-1.5 mx-auto shrink-0` |
 | SM icon size | `w-3.5 h-3.5` (14px) |
 | SM icon hover scale | `hover:scale-125 hover:[color:var(--color-olive)]` |
-| Free Shipping link | `hidden sm:block shrink-0 font-semibold text-charcoal whitespace-nowrap` |
-| Reviews / Service Areas | `hidden sm:flex items-center gap-1 font-semibold text-charcoal` |
+| Free Shipping link | `hidden md:block shrink-0 font-semibold text-charcoal whitespace-nowrap` |
+| Reviews / Service Areas | `hidden md:flex items-center gap-1 font-semibold text-charcoal` |
+| Get a Free Quote link | `md:hidden link-notification whitespace-nowrap` |
+
+**Responsive swap at 768px (mobile notification bar):**
+
+At ≤ 768px the right-hand section hides "Free Shipping", "Reviews", and "Service Areas" and replaces them with a "Get a Free Quote" link styled with `.link-notification` (azure, weight 600, underline on hover). Clicking it dispatches `window.dispatchEvent(new CustomEvent('open-contact-modal'))` — the same global event used by the "Schedule Same Day Service" button on every page. The `x-ui.contact-modal` component already listens for `open-contact-modal` via `@open-contact-modal.window` on its root Alpine `x-data` div. No changes to `contact-modal.blade.php` are required.
+
+**`.link-notification` CSS spec (from `app.css`):**
+
+```css
+.link-notification {
+    font-weight: 600;
+    color: var(--color-azure);
+    text-decoration-line: none;
+}
+.link-notification:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+```
+
+**`open-contact-modal` event contract:**
+
+Dispatched as a native `window` CustomEvent with an empty detail object `{}`. The contact-modal picker opens, showing "Custom Apparel Request", "DTF Transfers", and "Send Us a Message" options. Passing `{ dtf: true, fileName: '...' }` in the detail bypasses the picker and launches the DTF wizard directly (not used from the notification bar).
 
 ---
 

@@ -17,9 +17,9 @@
             </div>
             <p class="text-charcoal-light max-w-4xl mx-auto">{{ $subheading }}</p>
         </div>
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-7xl mx-auto">
             <iframe
-                class="w-full shadow-2xl"
+                class="w-full shadow-2xl md:h-[450px]"
                 style="aspect-ratio: 4/3;"
                 src="https://www.youtube.com/embed/{{ $videoId }}"
                 title="{{ $heading }}"

@@ -9,11 +9,9 @@
         {{-- LEFT: Phones (far left) · SM icons (near center) --}}
         <div class="flex-1 flex items-center gap-3 whitespace-nowrap">
 
-            {{-- Phone numbers at far left --}}
+            {{-- Phone number at far left --}}
             <div class="flex items-center gap-1.5 shrink-0">
-                <a href="tel:+18153498600" class="hidden sm:inline font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
-                <span class="hidden sm:inline font-normal text-charcoal opacity-60">or</span>
-                <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-TOP5</a>
+                <a href="tel:+18153498600" class="font-semibold hover:underline" style="color:var(--color-azure)">(815) 349-8600</a>
             </div>
 
             {{-- Social media icons centered between phones and Free Shipping --}}

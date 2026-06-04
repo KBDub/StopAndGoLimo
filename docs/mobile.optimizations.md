@@ -4,6 +4,31 @@ This file tracks all mobile-specific UI decisions and changes made to the Top 5 
 
 ---
 
+## Media Breakpoints
+
+No custom breakpoints are defined in `tailwind.config.js`. The project uses Tailwind's defaults, all mobile-first (min-width):
+
+| Prefix | Min Width | Targets |
+|--------|-----------|---------|
+| *(none)* | 0px | Mobile phones (375px, 412px) |
+| `sm:` | 640px | Large phones, small tablets |
+| `md:` | 768px | iPad portrait, tablet |
+| `lg:` | 1024px | iPad landscape, small desktop |
+| `xl:` | 1280px | Desktop |
+| `2xl:` | 1536px | Large/wide desktop |
+
+**How breakpoints are used in this project:**
+
+- **Mobile nav cutoff** — `lg` (1024px): hamburger menu shows below `lg`, desktop mega-menu shows at `lg` and above
+- **Top notification bar** — `sm` (640px): social icons, Reviews, Service Areas, and Free Shipping all use `hidden sm:flex` or `hidden sm:inline`; hidden on phone, visible on sm+
+- **Card float layouts** — `md` (768px): `md:float-left`, `md:float-right`, `md:mr-12` — image stacks full-width on mobile, floats beside text on tablet/desktop
+- **Card padding** — `p-4 sm:p-6 md:p-10 lg:p-12` — steps up across all four breakpoints
+- **Video banner height** — `aspect-ratio:4/3` on mobile, `md:h-[450px]` override on desktop restores original fixed height
+- **Carousel collapse** — `window.innerWidth < 768` (matches `md:`) — collapses to 1 image on mobile, uses prop value (`visible=2` or `3`) on tablet/desktop
+- **`paddingLeft` JS guard in card components** — `if (window.innerWidth >= 768)` — bold word indent only on md+ where floats are active
+
+---
+
 ## Top Notification Bar — Mobile Simplification
 
 **Date:** 2026-06-03

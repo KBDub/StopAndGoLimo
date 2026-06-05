@@ -39,42 +39,14 @@
     ogImageAlt="Top 5 Percent, Custom Signs & Apparel in Joliet, IL"
 >
     <x-sections.category-hero
-        description="Top 5 Percent is a veteran-owned custom printing shop in Joliet, IL. We make custom shirts, signs, stickers, vehicle graphics, and promotional products for businesses, teams, and individuals throughout Will and DuPage County and the greater Chicagoland area."
+        description=""
         :compactButtons="true"
     />
-    <x-ui.banner-thin-charcoal />
-    <x-ui.banner-medium-sunburst />
 
-    <x-sections.about-preview />
-    <x-ui.banner-medium-charcoal />
-
-    <x-sections.featured-products />
-
-    {{-- @livewire('catalog.featured-products') --}}
-
-    <x-ui.banner-thin-charcoal />
-
-    <x-ui.banner-testimonial />
-    <x-sections.cta-quadruple-button-banner />
-    <x-ui.banner-thin-charcoal />
-
-    <x-sections.our-services />
-    <x-sections.cta-design-your-own-banner />
-
-    <x-sections.design-it-yourself />
-    <x-ui.banner-thin-sunburst />
-    <x-ui.artwork-dropzone class="max-w-2xl mx-auto" />
-    <x-ui.banner-thin-sunburst />
-    <x-sections.cta-free-quote-banner />
-    <x-sections.video-banner
-        videoId="j0vslNa91gU"
-        heading="See Our Craft in Action"
-        label="Custom Apparel & Signs in Joliet, IL"
-        subheading="From design to finished product, watch how Top 5 Percent produces custom shirts, signs, vehicle graphics, and promotional products for businesses across Joliet and the Chicagoland area."
-    />
-
+    {{-- this is an older approach that does not have props/args, clearly needs to be retuned,  --}}
     <x-sections.home-page-services-accordion />
 
+    {{-- prefered faq type --}}
     @php
     $homeFaqs = [
         ['q' => 'Do you offer same-day custom shirts in Joliet?', 'a' => 'Yes. <a href="/custom-apparel" class="link-notification">Same-day custom shirt printing</a> is available on many of our apparel products. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> before coming in to confirm availability for your specific order.'],
@@ -87,10 +59,11 @@
     @endphp
     <x-sections.faq
         heading="Frequently Asked Questions"
-        label="Top 5 Percent, Joliet, IL"
+        label=""
         :faqs="$homeFaqs"
     />
-    <x-sections.cta-ready-to-get-started />
-    <x-sections.review-banner />
-    <x-sections.map-section />
+
+    {{-- temporarily disabled --}}
+    {{-- <x-sections.map-section /> --}}
+    
 </x-layouts.page>

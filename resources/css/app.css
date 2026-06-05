@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -142,6 +143,30 @@ html {
     --z-modal: 500;
     --z-popover: 600;
     --z-tooltip: 700;
+
+    /* ── Twilight Luxe — Stop & Go Limo Brand Tokens ─────── */
+    --navy-light: #252235;
+    --navy: #15162C;
+    --navy-dark: #0F1223;
+    --champagne-light: #E9C79E;
+    --champagne: #DCB57E;
+    --champagne-dark: #C49A5E;
+    --signal-light: #FFD65E;
+    --signal: #FEC42D;
+    --signal-dark: #E0A800;
+    --cloud-light: #F4F5F7;
+    --cloud: #E8E9EC;
+    --cloud-dark: #D4D6DB;
+    --slate-light: #8B939C;
+    --slate: #69727D;
+    --slate-dark: #4A5159;
+    --font-head: 'Poppins', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --stopngo-success: #2E9E6B;
+    --stopngo-warning: #E0A800;
+    --stopngo-error: #C0392B;
+    --shadow-champagne: 0 4px 20px rgba(220, 181, 126, 0.20);
+    --shadow-champagne-lg: 0 8px 30px rgba(220, 181, 126, 0.32);
 
     --btn-padding-x: 32px;
     --btn-padding-y: 16px;

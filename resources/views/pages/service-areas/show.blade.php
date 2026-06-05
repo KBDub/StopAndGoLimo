@@ -80,16 +80,14 @@
 
     {{-- Hero --}}
     <x-sections.category-hero
-        preHeading="Serving {{ $cityState }} Since 2009"
         heading="Airport Transfers"
-        headingAccent="from {{ $cityName }}, {{ $stateName }}"
-        description="Stop and Go Limo provides professional airport transportation to O'Hare (ORD) and Midway (MDW) from {{ $cityState }}. On-time, every time."
-        primaryButtonText="Book a Ride"
-        primaryButtonHref="/contact"
-        secondaryButtonText="Call (815) 585-6922"
-        secondaryButtonHref="tel:+18155856922"
-        image="/images/limo/stopandgo-fleet-new-lenox.jpg"
-    :compactButtons="true"
+        :headingBold="'from ' . $cityName . ', ' . $stateName"
+        :subtitle="'Serving ' . $cityState . ' since 2009'"
+        description="Stop and Go Limo provides professional airport transportation to O'Hare (ORD) and Midway (MDW) from {{ $cityState }}. On time, every time."
+        buttonText="Book a Ride"
+        buttonHref="/contact"
+        image="/images/heroes/hero-services.jpg"
+        imagePosition="center 30%"
     />
 
     <x-ui.banner-medium-champagne />

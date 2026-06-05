@@ -38,10 +38,13 @@
     ogImage=""
     ogImageAlt="Luxury Limo Service in Joliet, IL serving Chicagoland"
 >
-    {{-- TODO need to create a single button variant --}}
     <x-sections.category-hero
-        description=""
-        :compactButtons="true"
+        heading="Premium Airport"
+        headingBold="Shuttle Service"
+        subtitle="Serving O'Hare, Midway, and Chicagoland since 2009"
+        buttonText="Book a Ride"
+        buttonHref="/contact"
+        image="/images/heroes/hero-home.jpg"
     />
 
 

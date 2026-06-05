@@ -1,72 +1,68 @@
 @props([
-    'preHeading'          => 'New Lenox &nbsp;&middot;&nbsp; Naperville &nbsp;&middot;&nbsp; Chicago',
-    'heading'             => 'Premium Airport Shuttle',
-    'headingAccent'       => '& Limousine Service',
-    'description'         => 'Professional airport transfers, corporate travel, and special event transportation. Serving O\'Hare, Midway, and all of Illinois since 2009.',
-    'primaryButtonText'   => 'Book a Ride',
-    'primaryButtonHref'   => '/booking',
-    'secondaryButtonText' => 'Get a Free Quote',
-    'secondaryButtonHref' => '/contact',
-    'image'               => '/images/stopngo-banner.jpg',
-    'compactButtons'      => false,
+    'heading'       => 'Premium Airport',
+    'headingBold'   => 'Shuttle Service',
+    'subtitle'      => "Serving O'Hare, Midway, and Chicagoland since 2009",
+    'description'   => '',
+    'buttonText'    => 'Book a Ride',
+    'buttonHref'    => '/contact',
+    'image'         => '/images/heroes/hero-home.jpg',
+    'imagePosition' => 'center center',
 ])
 
 @php
-    $primaryIsModal   = $primaryButtonHref  === '/contact' || $primaryButtonHref  === '/booking';
-    $secondaryIsModal = $secondaryButtonHref === '/contact' || $secondaryButtonHref === '/booking';
-    $btnClass         = $compactButtons ? '!px-5 !py-2.5 !text-sm' : '';
+    $isModal = $buttonHref === '/contact' || $buttonHref === '/booking';
 @endphp
 
-<section class="relative min-h-[32rem] md:min-h-[36rem] lg:min-h-[40rem] flex items-center py-10 overflow-hidden isolate">
+<section class="relative flex items-center justify-center min-h-[28rem] sm:min-h-[36rem] lg:min-h-[560px] py-16 overflow-hidden isolate">
+
+    {{-- Background image + overlay --}}
     <div class="absolute inset-0">
         <img
             src="{{ $image }}"
-            alt="Stop & Go Limo airport shuttle service"
+            alt="Stop &amp; Go Limo airport shuttle service"
             class="w-full h-full object-cover"
-            style="object-position: center 60%;"
+            style="object-position: {{ $imagePosition }};"
+            loading="eager"
         >
-        <div class="absolute inset-0 bg-navy-dark/70"></div>
+        <div class="absolute inset-0" style="background: var(--navy-dark); opacity: 0.42;"></div>
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <div class="max-w-2xl">
-            <h5 class="text-champagne font-head font-semibold tracking-wide mb-4">
-                {!! $preHeading !!}
-            </h5>
-            <div class="inline-block mb-6">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 font-head">
-                    {{ $heading }}
-                    <span class="block text-champagne">{{ $headingAccent }}</span>
-                </h1>
-                <div class="h-1 bg-champagne"></div>
-            </div>
-            <p class="text-lg md:text-2xl text-cloud mb-8 max-w-3xl">
+    {{-- Content --}}
+    <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+
+        {{-- H1 --}}
+        <h1 class="font-head text-white leading-tight mb-4" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15;">
+            <span class="block font-normal">{{ $heading }}</span>
+            @if($headingBold)
+                <span class="block font-bold">{{ $headingBold }}</span>
+            @endif
+        </h1>
+
+        {{-- Subtitle --}}
+        @if($subtitle)
+            <p class="font-head text-white mb-5" style="font-size: clamp(0.95rem, 2.2vw, 1.2rem); font-weight: 400; opacity: 0.9; letter-spacing: 0.01em;">
+                {{ $subtitle }}
+            </p>
+        @endif
+
+        {{-- Optional body paragraph --}}
+        @if($description)
+            <p class="font-body text-white mx-auto mb-7" style="font-size: 1.0625rem; line-height: 1.7; max-width: 680px; opacity: 0.85;">
                 {{ $description }}
             </p>
-            <div class="{{ $compactButtons ? 'flex flex-row gap-3' : 'flex flex-col sm:flex-row gap-4' }}">
-                @if($primaryIsModal)
-                    <x-ui.button-champagne-solid
-                        onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-                        class="{{ $btnClass }}"
-                    >{{ $primaryButtonText }}</x-ui.button-champagne-solid>
-                @else
-                    <x-ui.button-champagne-solid
-                        href="{{ $primaryButtonHref }}"
-                        class="{{ $btnClass }}"
-                    >{{ $primaryButtonText }}</x-ui.button-champagne-solid>
-                @endif
-                @if($secondaryIsModal)
-                    <x-ui.button-outline-champagne
-                        onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-                        class="{{ $btnClass }}"
-                    >{{ $secondaryButtonText }}</x-ui.button-outline-champagne>
-                @else
-                    <x-ui.button-outline-champagne
-                        href="{{ $secondaryButtonHref }}"
-                        class="{{ $btnClass }}"
-                    >{{ $secondaryButtonText }}</x-ui.button-outline-champagne>
-                @endif
-            </div>
-        </div>
+        @endif
+
+        {{-- Single CTA --}}
+        @if($isModal)
+            <x-ui.button-outline-light
+                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+            >{{ $buttonText }}</x-ui.button-outline-light>
+        @else
+            <x-ui.button-outline-light href="{{ $buttonHref }}">
+                {{ $buttonText }}
+            </x-ui.button-outline-light>
+        @endif
+
     </div>
+
 </section>

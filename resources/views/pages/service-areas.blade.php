@@ -26,16 +26,13 @@
 
     {{-- Hero --}}
     <x-sections.category-hero
-        preHeading="Serving Chicagoland Since 2009"
         heading="Service Areas"
-        headingAccent="New Lenox & Chicagoland"
-        description="Stop and Go Limo has provided professional airport transfers and luxury ground transportation to O'Hare (ORD) and Midway (MDW) for clients across Will and DuPage County and the greater Chicagoland area since 2009."
-        primaryButtonText="Book a Ride"
-        primaryButtonHref="/contact"
-        secondaryButtonText="Call (815) 585-6922"
-        secondaryButtonHref="tel:+18155856922"
-        image="/images/limo/stopandgo-fleet-new-lenox.jpg"
-    :compactButtons="true"
+        headingBold="New Lenox & Chicagoland"
+        subtitle="Airport transfers across Will and DuPage County since 2009"
+        description="Stop and Go Limo provides professional airport transfers to O'Hare (ORD) and Midway (MDW) for clients across Will and DuPage County and the greater Chicagoland area."
+        buttonText="Book a Ride"
+        buttonHref="/contact"
+        image="/images/heroes/hero-services.jpg"
     />
 
     <x-ui.banner-medium-champagne />

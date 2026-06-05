@@ -1,42 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brand Style Guide - Twilight Luxe | Stop &amp; Go Limo</title>
-    <meta name="description" content="Brand style guide and design system for Stop &amp; Go Airport Shuttle Service Inc.">
-    <meta name="theme-color" content="#15162C">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    @php
-        $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
-        $cssFile = $manifest['resources/css/app.css']['file'] ?? null;
-        $jsFile  = $manifest['resources/js/app.js']['file'] ?? null;
-    @endphp
-    @if($cssFile)
-        <link rel="stylesheet" href="/build/{{ $cssFile }}">
-    @endif
-    @if($jsFile)
-        <script type="module" src="/build/{{ $jsFile }}"></script>
-    @endif
-</head>
-<body class="font-body antialiased bg-navy text-cloud">
-
-    {{-- Notification bar preview --}}
-    <div class="bg-navy-dark border-b border-champagne/20 px-6 py-2 flex items-center justify-between flex-wrap gap-2 text-xs font-head font-semibold">
-        <span class="text-muted">Open 24/7 &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet &amp; Chicago, IL</span>
-        <span>
-            <span class="text-champagne">(815) 585-6922</span>
-            &nbsp;|&nbsp;
-            <span class="text-signal">Book Online &rarr;</span>
-        </span>
-    </div>
-    <x-ui.banner-thin-champagne />
-    <x-ui.banner-thin-navy />
-
-    <main>
+<x-layouts.page
+    title="Brand Style Guide — Twilight Luxe"
+    metaDescription="Twilight Luxe brand style guide for Stop &amp; Go Airport Shuttle Service Inc. Color palette, typography, buttons, banners, and mega menu."
+    currentPage="demo"
+    :noIndex="true"
+>
 
         {{-- ── Hero ──────────────────────────────────────────── --}}
         <section class="py-20 text-center relative overflow-hidden">
@@ -586,13 +553,5 @@
             </div>
         </section>
 
-    </main>
 
-    <footer class="py-10 border-t border-white/8 text-center">
-        <p class="font-head font-bold text-lg text-white">Stop &amp; Go <span class="text-champagne">Limo</span></p>
-        <p class="text-muted text-sm mt-2">Stop &amp; Go Airport Shuttle Service Inc. &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet, Chicago &amp; all of Illinois</p>
-        <p class="text-muted-dark text-xs mt-3 tracking-widest">Twilight Luxe Brand System</p>
-    </footer>
-
-</body>
-</html>
+</x-layouts.page>

@@ -72,9 +72,7 @@ The following must be done together — change the token namespace first, then s
 | `shadow-gold-lg` | Delete |
 | `shadow-gold-xl` | Delete |
 
-**Update font family:**
-
-- `sans` font family: change from `['Titillium Web', 'Arial', ...]` to `['Montserrat', 'Arial', ...]`
+**Fonts — no change for now.** The existing font registrations (Titillium Web, Poppins, Montserrat) stay in place until final font decisions are confirmed. Do not remove any `fontFamily` entries from `tailwind.config.js` or `@import` lines from `app.css`.
 
 ---
 
@@ -273,59 +271,12 @@ These files use `bg-sunburst`, `text-azure`, `bg-linen`, `text-charcoal`, `bg-ch
 
 ---
 
-## 5. Section Components to Delete (Top 5 Pct-Specific — No Reuse Value)
-
-These sections exist purely for the print shop business. They have no analog in an airport shuttle service.
-
-| File | Why delete |
-|---|---|
-| `resources/views/components/sections/top5pct-same-day-service.blade.php` | Brand-named T5P section |
-| `resources/views/components/sections/shirt-types-grid.blade.php` | Apparel product grid |
-| `resources/views/components/sections/shirt-types-faq.blade.php` | Apparel FAQ |
-| `resources/views/components/sections/shirt-types-video.blade.php` | Apparel video |
-| `resources/views/components/sections/dtf-pricing-section.blade.php` | DTF transfer pricing |
-| `resources/views/components/sections/cta-design-your-own-banner.blade.php` | Custom design CTA |
-| `resources/views/components/sections/design-it-yourself.blade.php` | T5P custom design feature |
-| `resources/views/components/sections/represent-yourself.blade.php` | T5P brand slogan section |
-| `resources/views/components/sections/top-level-category-section.blade.php` | Print shop category layout |
-| `resources/views/components/sections/storefront-demo-preview.blade.php` | White-label storefront demo |
-
----
-
-## 6. UI Components to Delete (E-commerce — No Reuse Value)
-
-The inherited site had a full e-commerce stack. Stop & Go does not sell products online. These components are tied to product listings, cart, and checkout.
-
-| File | Why delete |
-|---|---|
-| `resources/views/components/ui/carousel-product.blade.php` | Product carousel |
-| `resources/views/components/ui/card-product.blade.php` | Product listing card |
-| `resources/views/components/ui/card-product-hover.blade.php` | Product hover card |
-| `resources/views/components/ui/card-showcase.blade.php` | Product showcase card |
-| `resources/views/components/ui/card-lp-banner-images.blade.php` | Product landing page |
-| `resources/views/components/ui/card-category-visual.blade.php` | Category card (print shop) |
-| `resources/views/components/ui/card-banner-slide-in.blade.php` | Product promo banner |
-| `resources/views/components/ui/sticky-add-to-cart.blade.php` | E-commerce |
-| `resources/views/components/ui/stripe-checkout-modal.blade.php` | E-commerce checkout |
-| `resources/views/components/ui/order-action-modal.blade.php` | Order management |
-| `resources/views/components/ui/custom-request-wizard.blade.php` | T5P custom order wizard |
-| `resources/views/components/ui/artwork-dropzone.blade.php` | Artwork upload for print orders |
-| `resources/views/components/ui/dtf-dropzone.blade.php` | DTF file upload |
-| `resources/views/components/ui/dtf-confirm-modal.blade.php` | DTF confirmation modal |
-| `resources/views/components/ui/banner-cta-artwork-dropzone.blade.php` | Artwork upload CTA |
-| `resources/views/components/ui/banner-cta-dtf-dropzone.blade.php` | DTF upload CTA |
-| `resources/views/components/ui/banner-full-bleed-2-video.blade.php` | Dual-video banner (T5P) |
-
----
-
-## 7. Recommended Cleanup Order
+## 5. Recommended Cleanup Order
 
 1. `tailwind.config.js` — remove old tokens (Step 1 above)
 2. `resources/css/app.css` — clean up vars and layer styles (Step 2 above)
 3. Run the app and check for broken styles
-4. Delete Section 5 files (T5P-specific sections)
-5. Delete Section 6 files (e-commerce UI)
-6. Delete old color UI components (Section 4, delete list)
-7. Update remaining section and UI components to use new tokens (Section 4, update list)
-8. Rewrite page content (Section 3)
-9. Update sitemaps last (Section 3, sitemaps)
+4. Delete old color UI components (Section 4, delete list)
+5. Update remaining section and UI components to use new tokens (Section 4, update list)
+6. Rewrite page content (Section 3)
+7. Update sitemaps last (Section 3, sitemaps)

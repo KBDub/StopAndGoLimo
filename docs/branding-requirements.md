@@ -14,7 +14,12 @@
 | Short name (nav, logo) | Stop & Go Limo |
 | Tagline | Premium Limousine & Airport Shuttle Service |
 | Service area | New Lenox, Naperville, Joliet, Chicago and all of Illinois |
-| Phone | (815) 585-6922 |
+| Primary address | 400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451 |
+| Secondary address | 3420 Lacrosse Ln Ste 116, Naperville, IL |
+| Tertiary address | 5700 Caton Farm Rd, Plainfield, IL 60586 |
+| Primary phone | (815) 585-6922 |
+| Secondary phone | (708) 315-4445 |
+| Email | vincent@newlenoxlimoservice.com |
 | In business since | 2009 |
 | Market position | Premium, luxury ground transportation |
 | Primary airports served | O'Hare (ORD), Midway (MDW) |

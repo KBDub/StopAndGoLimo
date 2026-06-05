@@ -193,6 +193,7 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 
 ## 7. Layout and Spacing
 
+- **Grid only — no Flexbox.** All multi-column and directional layouts must use CSS Grid (`grid`, `grid-cols-*`, `lg:grid-cols-*`). Do not use `flex`, `flex-col`, `flex-row`, or any Flexbox utility for page/section layout. Flexbox is only permitted inside atomic UI components (e.g. a button's internal icon alignment) where a single-line inline arrangement is unavoidable.
 - **Container max-width:** 1280px — `max-w-7xl mx-auto`
 - **Section padding:** `py-16` (64px) default, `py-20` for hero sections
 - **Section padding, mobile:** `py-12` — always use responsive prefixes

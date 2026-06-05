@@ -11,26 +11,22 @@
 ])
 
 @php
-    $bgStyle  = $background === 'cloud'
-        ? 'background: var(--cloud-light);'
-        : 'background: var(--navy);';
+    $bgStyle   = $background === 'cloud' ? 'background: var(--cloud-light);' : 'background: var(--navy);';
+    $textColor = $background === 'cloud' ? 'color: var(--navy);'             : 'color: #ffffff;';
+    $bodyColor = $background === 'cloud' ? 'color: var(--slate);'            : 'color: var(--cloud);';
 
-    $textColor   = $background === 'cloud' ? 'color: var(--navy);'        : 'color: #ffffff;';
-    $bodyColor   = $background === 'cloud' ? 'color: var(--slate);'        : 'color: var(--cloud);';
-    $ruleVariant = $background === 'cloud' ? 'navy'                         : 'champagne';
-
-    $isLeft  = $imagePosition === 'left';
-    $imgCols = $isLeft ? 'order-1 lg:order-1' : 'order-1 lg:order-2';
-    $txtCols = $isLeft ? 'order-2 lg:order-2' : 'order-2 lg:order-1';
+    // On mobile image is always on top. On desktop, imagePosition drives column order.
+    $imgOrder = $imagePosition === 'right' ? 'order-first lg:order-last' : 'order-first lg:order-first';
+    $txtOrder = $imagePosition === 'right' ? 'order-last lg:order-first' : 'order-last lg:order-last';
 @endphp
 
 <section style="{{ $bgStyle }}" class="py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {{-- Image column --}}
-            <div class="{{ $imgCols }} w-full">
+            <div class="{{ $imgOrder }} w-full">
                 <div class="overflow-hidden w-full aspect-[4/3]" style="background: var(--navy-dark);">
                     <img
                         src="{{ $image }}"
@@ -42,7 +38,7 @@
             </div>
 
             {{-- Text column --}}
-            <div class="{{ $txtCols }} w-full">
+            <div class="{{ $txtOrder }} w-full">
 
                 {{-- H2 --}}
                 <h2 class="font-head mb-5 leading-tight" style="font-size: clamp(1.75rem, 4vw, 2.375rem); line-height: 1.2; {{ $textColor }}">

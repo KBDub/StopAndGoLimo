@@ -4,15 +4,6 @@
 --}}
 <header class="sg-nav sticky top-0 z-50">
 
-    <div class="nav-notif">
-        <span>Open 24/7 &nbsp;&middot;&nbsp; New Lenox &amp; Naperville, IL</span>
-        <span style="display:flex;align-items:center;gap:12px;">
-            <a href="tel:+18155856922" class="n-phone">(815) 585-6922</a>
-            <span style="opacity:.4;">|</span>
-            <a href="https://book.mylimobiz.com/v4/stopngo" class="n-book">Book Online &rarr;</a>
-        </span>
-    </div>
-
     <nav class="nav-bar" aria-label="Primary">
 
         <a href="/" class="nav-logo">Stop &amp; Go <span>Airport Shuttle</span></a>

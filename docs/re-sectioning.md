@@ -62,11 +62,51 @@ what has changed, and the order of work.
 
 **Hero images (downloaded from prod):**
 
-| Page | File | Source URL |
-|---|---|---|
-| Home | `public/images/heroes/hero-home.jpg` | `.../karl-kohler-ZMQ7DSpv39g-unsplash-scaled-1.jpg` — dark Audi on mountain road |
-| About Us | `public/images/heroes/hero-about.jpg` | `.../Chauffeurs.jpg` — chauffeur at vehicle |
-| Our Services | `public/images/heroes/hero-services.jpg` | `.../Walking-To-Vehicle.jpg` — walking to vehicle |
+| Page | File | Source filename | Status |
+|---|---|---|---|
+| Home | `public/images/heroes/hero-home.jpg` | `karl-kohler-ZMQ7DSpv39g-unsplash-scaled-1.jpg` | ✅ Confirmed correct |
+| Our Services | `public/images/heroes/hero-services.jpg` | `richard-r-x5qgprHf8fI-unsplash-scaled.jpg` | ✅ Confirmed correct |
+| Special Event Limousine | `public/images/heroes/hero-special-event.jpg` | `Limousine-Suit-Party.jpg` | ✅ Confirmed correct |
+| About Us | `public/images/heroes/hero-about.jpg` | `Chauffeurs.jpg` | ⚠ Not yet confirmed |
+
+---
+
+## Hero Image Discovery Process
+
+Elementor hero backgrounds are **never `<img>` tags**. They are `background-image: url(...)` rules compiled into a **post-level CSS file** separate from the global stylesheet. Grepping the page HTML for image URLs only surfaces body content images and the global `car.jpg` default — not the actual hero.
+
+### Correct process (use this every time)
+
+```
+1. Fetch the target page HTML
+2. Extract all <link rel="stylesheet"> tags that point to Elementor CSS:
+      curl -s "{URL}" | grep -oP 'href="[^"]+elementor[^"]+\.css[^"]*"' | grep -oP 'https://[^"]+'
+3. Fetch each of those CSS files (usually 2-4 files: global, post-level, kit)
+4. Search each file for background-image entries:
+      curl -s "{CSS_URL}" | grep -oP 'background-image:url\([^\)]+\)'
+5. Discard:
+      - car.jpg (the global hero placeholder — appears on every page)
+      - Gradient entries (linear-gradient, radial-gradient)
+      - Data URIs
+6. The remaining URL is the page-specific hero image
+7. Cross-check the filename against the page topic as a sanity check
+8. Download to public/images/heroes/{page-slug}.jpg
+```
+
+### Why img-tag scanning fails
+
+- Elementor compiles hero backgrounds into `/wp-content/uploads/elementor/css/post-{ID}.css`
+- This file is linked, not embedded — so the URL never appears in the HTML body
+- The global stylesheet (also linked) always contains `car.jpg` as a default, which
+  masks the fact that a post-level override exists
+- The post-level CSS file is the only reliable source for the actual hero image
+
+### Fallback when CSS files are unreadable
+
+If the CSS files are minified or the background is set via JS: pull all full-size
+image URLs from the page (no thumbnail suffixes like `-300x169`, `-768x432`),
+exclude favicons, letter-images (`A.jpg`, `I.png`, etc.) and generic names (`car.jpg`),
+then ask the client to confirm before downloading.
 
 ---
 

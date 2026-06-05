@@ -18,6 +18,8 @@
   --cloud-light:#F4F5F7; --cloud:#E8E9EC; --cloud-dark:#D4D6DB;
   /* Slate */
   --slate-light:#8B939C; --slate:#69727D; --slate-dark:#4A5159;
+  /* Azure — secondary accent, links, highlights & focus states */
+  --azure-light:#94ACDB; --azure:#5A7EC8; --azure-dark:#385A9F;
   --white:#FFFFFF;
   /* Semantic */
   --success:#2E9E6B; --warning:#E0A800; --error:#C0392B;
@@ -144,6 +146,11 @@ section{padding:72px 0;}
 .t-cap{font-size:14px;font-weight:400;color:var(--slate-light);}
 .link-inline{color:var(--champagne);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(220,181,126,.3);transition:border-color .2s;}
 .link-inline:hover{border-color:var(--champagne);}
+/* Azure accent utilities */
+.text-azure{color:var(--azure-light);}
+.mark-azure{color:var(--azure-light);background:rgba(90,126,200,.16);padding:1px 7px;border-radius:5px;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+.link-azure{color:var(--azure-light);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(90,126,200,.35);transition:border-color .2s,color .2s;}
+.link-azure:hover{color:#fff;border-color:var(--azure);}
 
 .font-cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:36px;}
 .font-card{border:1px solid rgba(255,255,255,.07);background:var(--navy-light);padding:28px;}
@@ -196,6 +203,10 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
 .btn-white-navy:hover{background:var(--cloud);transform:translateY(-2px);}
 .btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.35);}
 .btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.btn-azure{background:var(--azure);color:#fff;}
+.btn-azure:hover{background:var(--azure-dark);transform:translateY(-2px);box-shadow:0 10px 26px rgba(90,126,200,.32);}
+.btn-outline-azure{background:transparent;color:var(--azure-light);border-color:var(--azure);}
+.btn-outline-azure:hover{background:var(--azure);color:#fff;}
 .btn-text-link{background:transparent;color:var(--champagne);padding:14px 4px;border:0;}
 .btn-text-link:hover{color:var(--champagne-light);gap:12px;}
 /* On-light variants */
@@ -296,7 +307,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-num">01 — Palette</span>
-      <h2>Color Palette (4 + White)</h2>
+      <h2>Color Palette (5 + White)</h2>
       <p>Each core color carries up to three variants — Light, Default, and Dark — for hover states, depth, and surface layering.</p>
     </div>
 
@@ -412,6 +423,34 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
       </div>
     </div>
 
+    <!-- Azure -->
+    <div class="color-group">
+      <div class="cg-label"><h3>Azure</h3><span class="usage">Secondary accent — secondary CTAs, links, informational highlights, and focus states; the cool counterweight to the gold</span></div>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="chip" style="background:#94ACDB"><span class="vlabel" style="color:#15162c">Azure Light</span></div>
+          <div class="meta"><div class="name">Azure Light</div>
+            <div class="val"><span>HEX</span><span>#94ACDB</span></div>
+            <div class="val"><span>RGB</span><span>148, 172, 219</span></div>
+            <div class="val"><span>HSL</span><span>220°, 50%, 72%</span></div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#5A7EC8"><span class="vlabel" style="color:#fff">Azure</span></div>
+          <div class="meta"><div class="name">Azure</div>
+            <div class="val"><span>HEX</span><span>#5A7EC8</span></div>
+            <div class="val"><span>RGB</span><span>90, 126, 200</span></div>
+            <div class="val"><span>HSL</span><span>220°, 50%, 57%</span></div></div>
+        </div>
+        <div class="swatch">
+          <div class="chip" style="background:#385A9F"><span class="vlabel" style="color:#fff">Azure Dark</span></div>
+          <div class="meta"><div class="name">Azure Dark</div>
+            <div class="val"><span>HEX</span><span>#385A9F</span></div>
+            <div class="val"><span>RGB</span><span>56, 90, 159</span></div>
+            <div class="val"><span>HSL</span><span>220°, 48%, 42%</span></div></div>
+        </div>
+      </div>
+    </div>
+
     <!-- White -->
     <div class="color-group">
       <div class="cg-label"><h3>White</h3><span class="usage">Cards, containers, text on navy, maximum-contrast surfaces</span></div>
@@ -474,6 +513,8 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
         <div class="hier-txt"><h4>Cloud Grey <code>#E8E9EC</code></h4><p>Light surface color — alternating sections and breathing room in light mode.</p></div></div>
       <div class="hier-row"><div class="hier-num">5</div><div class="hier-dot" style="background:#69727D"></div>
         <div class="hier-txt"><h4>Slate <code>#69727D</code></h4><p>Secondary text color — captions, metadata, and muted supporting copy.</p></div></div>
+      <div class="hier-row"><div class="hier-num">6</div><div class="hier-dot" style="background:#5A7EC8"></div>
+        <div class="hier-txt"><h4>Azure <code>#5A7EC8</code></h4><p>Secondary accent — secondary actions, links, focus states, and informational highlights that cool-balance the warm gold.</p></div></div>
     </div>
   </div>
 </section>
@@ -574,6 +615,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
       <div><div class="spec">Body · Montserrat · 17px · Regular</div><div class="t-body">Our professional, courteous chauffeurs ensure a seamless and pleasant journey — from elegant weddings and proms to O'Hare and Midway airport transfers, every ride is handled with care and precision.</div></div>
       <div><div class="spec">Caption · Montserrat · 14px · Regular</div><div class="t-cap">Image caption or fine-print text styling.</div></div>
       <div><div class="spec">Inline Link · Champagne · fading underline</div><div class="t-body">Reserve your <a href="#" class="link-inline">airport shuttle to O'Hare</a> or browse our <a href="#" class="link-inline">luxury fleet</a> online.</div></div>
+      <div><div class="spec">Azure Accent · #5A7EC8 · secondary links, emphasis &amp; highlights</div><div class="t-body">Need a ride <span class="mark-azure">right now</span>? Our <span class="text-azure">24/7 dispatch</span> has you covered — <a href="#" class="link-azure">check live availability &rarr;</a></div></div>
     </div>
   </div>
 </section>
@@ -628,6 +670,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
         <div class="btn-cell"><a href="#" class="btn btn-champagne-gradient">Book a Ride</a><span class="tag">btn-champagne-gradient</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-champagne-solid">Reserve 24/7</a><span class="tag">btn-champagne-solid</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-navy-gold">Our Fleet</a><span class="tag">btn-navy-gold</span></div>
+        <div class="btn-cell"><a href="#" class="btn btn-azure">Get a Quote</a><span class="tag">btn-azure</span></div>
       </div>
     </div>
 
@@ -637,6 +680,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
         <div class="btn-cell"><a href="#" class="btn btn-outline-champagne">View Services</a><span class="tag">btn-outline-champagne</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-white-navy">Call Now</a><span class="tag">btn-white-navy</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-outline-light">Service Areas</a><span class="tag">btn-outline-light</span></div>
+        <div class="btn-cell"><a href="#" class="btn btn-outline-azure">Track My Ride</a><span class="tag">btn-outline-azure</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-text-link">View Rates &rarr;</a><span class="tag">btn-text-link</span></div>
       </div>
     </div>

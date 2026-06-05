@@ -1,35 +1,28 @@
 {{--
-  x-nav.navbar — complete Stop & Go primary navigation ("Twilight Luxe")
-  --------------------------------------------------------------------
-  The full production menu tree, assembled from x-nav.* components.
-  Drop into your layout header. Requires Alpine.js + the brand Tailwind
-  theme extension.
+  x-nav.navbar — Stop & Go primary navigation (Twilight Luxe, pure CSS hover)
+  Scoped to .sg-nav — all hover/dropdown behaviour driven by app.css, no JS.
 --}}
-<header class="bg-navy sticky top-0 z-50">
-    {{-- Top notification bar --}}
-    <div class="flex flex-wrap justify-between items-center gap-3 px-6 py-2.5
-                bg-navy-dark border-b border-champagne/20 text-[12.5px] text-slate-light">
+<header class="sg-nav sticky top-0 z-50">
+
+    <div class="nav-notif">
         <span>Open 24/7 &nbsp;&middot;&nbsp; New Lenox &amp; Naperville, IL</span>
-        <span class="flex items-center gap-3">
-            <a href="tel:+18155856922" class="font-head font-semibold text-champagne no-underline">(815) 585-6922</a>
-            <span class="opacity-40">|</span>
-            <a href="https://book.mylimobiz.com/v4/stopngo"
-               class="font-head font-semibold uppercase tracking-wide text-signal no-underline">Book Online &rarr;</a>
+        <span style="display:flex;align-items:center;gap:12px;">
+            <a href="tel:+18155856922" class="n-phone">(815) 585-6922</a>
+            <span style="opacity:.4;">|</span>
+            <a href="https://book.mylimobiz.com/v4/stopngo" class="n-book">Book Online &rarr;</a>
         </span>
     </div>
 
-    {{-- Main bar --}}
-    <nav class="flex flex-wrap items-center gap-1.5 px-[18px]" aria-label="Primary">
-        <a href="/" class="font-head font-bold text-base text-white px-[18px] py-5 pl-1.5 mr-auto no-underline">
-            Stop &amp; Go <span class="text-champagne">Airport Shuttle</span>
-        </a>
+    <nav class="nav-bar" aria-label="Primary">
+
+        <a href="/" class="nav-logo">Stop &amp; Go <span>Airport Shuttle</span></a>
 
         <x-nav.link href="/" :active="request()->is('/')">Welcome</x-nav.link>
 
         <x-nav.dropdown label="About">
-            <x-nav.item href="/about-us" title="About Us" sub="Our story & chauffeurs" />
-            <x-nav.item href="/rates"    title="Rates"    sub="Transparent flat pricing" />
-            <x-nav.item href="/gallery"  title="Gallery"  sub="Our luxury fleet" />
+            <x-nav.item href="/about-us" title="About Us"  sub="Our story & chauffeurs" />
+            <x-nav.item href="/rates"    title="Rates"     sub="Transparent flat pricing" />
+            <x-nav.item href="/gallery"  title="Gallery"   sub="Our luxury fleet" />
         </x-nav.dropdown>
 
         <x-nav.link href="/bookings-reservations" :active="request()->is('bookings-reservations')">Booking</x-nav.link>
@@ -88,5 +81,6 @@
         </x-nav.dropdown>
 
         <x-nav.link href="/get-a-quote" :active="request()->is('get-a-quote')">Contact</x-nav.link>
+
     </nav>
 </header>

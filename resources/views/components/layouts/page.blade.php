@@ -134,6 +134,7 @@
     </script>
     @endverbatim
     @stack('structured-data')
+    @livewireStyles
 </head>
 <style>
     :root {
@@ -157,5 +158,6 @@
 
     {{--<x-layout.footer />--}}
 
+    @livewireScripts
 </body>
 </html>

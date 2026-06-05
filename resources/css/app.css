@@ -151,9 +151,7 @@ html {
     --champagne-light: #E9C79E;
     --champagne: #DCB57E;
     --champagne-dark: #C49A5E;
-    --signal-light: #FFD65E;
-    --signal: #FEC42D;
-    --signal-dark: #E0A800;
+
     --cloud-light: #F4F5F7;
     --cloud: #E8E9EC;
     --cloud-dark: #D4D6DB;
@@ -502,7 +500,7 @@ html {
     background: var(--navy-dark); border-bottom: 1px solid rgba(220,181,126,.2);
 }
 .sg-nav .n-phone { color: var(--champagne); font-weight: 600; font-family: var(--font-head); }
-.sg-nav .n-book  { color: var(--signal); font-weight: 600; font-family: var(--font-head); letter-spacing: .05em; text-transform: uppercase; }
+.sg-nav .n-book  { color: var(--champagne); font-weight: 600; font-family: var(--font-head); letter-spacing: .05em; text-transform: uppercase; }
 .sg-nav .nav-bar { display: flex; align-items: center; gap: 6px; padding: 0 18px; background: var(--navy); position: relative; }
 .sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: #fff; padding: 20px 18px 20px 6px; margin-right: auto; }
 .sg-nav .nav-logo span { color: var(--champagne); }

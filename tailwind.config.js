@@ -53,11 +53,7 @@ export default {
                     DEFAULT: '#DCB57E',
                     dark: '#C49A5E',
                 },
-                'signal': {
-                    light: '#FFD65E',
-                    DEFAULT: '#FEC42D',
-                    dark: '#E0A800',
-                },
+
                 'cloud': {
                     light: '#F4F5F7',
                     DEFAULT: '#E8E9EC',
@@ -113,7 +109,6 @@ export default {
                 'champagne': '0 4px 20px rgba(220, 181, 126, 0.20)',
                 'champagne-lg': '0 8px 30px rgba(220, 181, 126, 0.32)',
                 'champagne-xl': '0 0 25px rgba(220, 181, 126, 0.45), 0 8px 45px rgba(220, 181, 126, 0.35)',
-                'signal': '0 10px 26px rgba(254, 196, 45, 0.30)',
             },
         },
     },

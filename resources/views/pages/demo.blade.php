@@ -462,56 +462,87 @@
                 <div class="mb-10">
                     <span class="font-head font-bold text-xs tracking-widest text-champagne">07 &mdash; Buttons</span>
                     <h2 class="font-head font-bold text-3xl text-white mt-2">Button Variations</h2>
-                    <p class="text-muted-light mt-3">Squared edges throughout, no rounded corners. Each button renders as <code class="font-mono text-champagne text-sm">&lt;a&gt;</code> with href or <code class="font-mono text-champagne text-sm">&lt;button&gt;</code> otherwise.</p>
+                    <p class="text-muted-light mt-3">Rounded by default (10px) for an approachable, modern feel, with a full radius scale from square to pill. Each button renders as <code class="font-mono text-champagne text-sm">&lt;a&gt;</code> with href or <code class="font-mono text-champagne text-sm">&lt;button&gt;</code> otherwise.</p>
                 </div>
 
+                {{-- Primary --}}
                 <div class="bg-navy-light border border-white/8 p-7 mb-5">
                     <h3 class="font-head font-semibold text-white mb-5">Primary Buttons</h3>
                     <div class="flex flex-wrap gap-4 items-start">
                         <div class="text-center"><x-ui.button-champagne-gradient href="#">Book a Ride</x-ui.button-champagne-gradient><p class="text-muted text-xs mt-2 font-mono">button-champagne-gradient</p></div>
-                        <div class="text-center"><x-ui.button-champagne-solid href="#">Get a Quote</x-ui.button-champagne-solid><p class="text-muted text-xs mt-2 font-mono">button-champagne-solid</p></div>
-                        <div class="text-center"><x-ui.button-champagne href="#">Reserve 24/7</x-ui.button-champagne><p class="text-muted text-xs mt-2 font-mono">button-champagne</p></div>
+                        <div class="text-center"><x-ui.button-champagne-solid href="#">Reserve 24/7</x-ui.button-champagne-solid><p class="text-muted text-xs mt-2 font-mono">button-champagne-solid</p></div>
                         <div class="text-center"><x-ui.button-navy-gold href="#">Our Fleet</x-ui.button-navy-gold><p class="text-muted text-xs mt-2 font-mono">button-navy-gold</p></div>
                     </div>
                 </div>
 
+                {{-- Secondary --}}
                 <div class="bg-navy-light border border-white/8 p-7 mb-5">
                     <h3 class="font-head font-semibold text-white mb-5">Secondary Buttons</h3>
                     <div class="flex flex-wrap gap-4 items-start">
                         <div class="text-center"><x-ui.button-outline-champagne href="#">View Services</x-ui.button-outline-champagne><p class="text-muted text-xs mt-2 font-mono">button-outline-champagne</p></div>
                         <div class="text-center"><x-ui.button-white-navy href="#">Call Now</x-ui.button-white-navy><p class="text-muted text-xs mt-2 font-mono">button-white-navy</p></div>
                         <div class="text-center"><x-ui.button-outline-light href="#">Service Areas</x-ui.button-outline-light><p class="text-muted text-xs mt-2 font-mono">button-outline-light</p></div>
-                        <div class="text-center"><x-ui.button-text-champagne href="#">View Rates</x-ui.button-text-champagne><p class="text-muted text-xs mt-2 font-mono">button-text-champagne</p></div>
+                        <div class="text-center"><x-ui.button-text-link href="#">View Rates &rarr;</x-ui.button-text-link><p class="text-muted text-xs mt-2 font-mono">button-text-link</p></div>
                     </div>
                 </div>
 
+                {{-- Button Radius --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-5">Button Radius</h3>
+                    <div class="flex flex-wrap gap-4 items-start">
+                        <div class="text-center">
+                            <x-ui.button-champagne-gradient href="#" radius="square">Square</x-ui.button-champagne-gradient>
+                            <p class="text-muted text-xs mt-2 font-mono">radius="square" &middot; 0px</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.button-champagne-gradient href="#" radius="soft">Soft</x-ui.button-champagne-gradient>
+                            <p class="text-muted text-xs mt-2 font-mono">radius="soft" &middot; 6px</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.button-champagne-gradient href="#" radius="rounded">Rounded</x-ui.button-champagne-gradient>
+                            <p class="text-muted text-xs mt-2 font-mono">radius="rounded" &middot; 10px &middot; default</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.button-champagne-gradient href="#" radius="pill">Pill</x-ui.button-champagne-gradient>
+                            <p class="text-muted text-xs mt-2 font-mono">radius="pill" &middot; 9999px</p>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Sizes --}}
                 <div class="bg-navy-light border border-white/8 p-7 mb-5">
                     <h3 class="font-head font-semibold text-white mb-5">Button Sizes</h3>
                     <div class="flex flex-wrap gap-4 items-center">
-                        <x-ui.button-champagne-gradient href="#" class="!px-4 !py-2 !text-xs">Small</x-ui.button-champagne-gradient>
-                        <x-ui.button-champagne-gradient href="#">Default</x-ui.button-champagne-gradient>
-                        <x-ui.button-champagne-gradient href="#" class="!px-12 !py-5 !text-lg">Large</x-ui.button-champagne-gradient>
+                        <div class="text-center"><x-ui.button-champagne-gradient href="#" size="sm">Small</x-ui.button-champagne-gradient><p class="text-muted text-xs mt-2 font-mono">size="sm"</p></div>
+                        <div class="text-center"><x-ui.button-champagne-gradient href="#">Default</x-ui.button-champagne-gradient><p class="text-muted text-xs mt-2 font-mono">default</p></div>
+                        <div class="text-center"><x-ui.button-champagne-gradient href="#" size="lg">Large</x-ui.button-champagne-gradient><p class="text-muted text-xs mt-2 font-mono">size="lg"</p></div>
                     </div>
                 </div>
 
+                {{-- On Light Surface --}}
                 <div class="bg-cloud p-7 mb-5 border border-cloud-dark">
                     <h3 class="font-head font-semibold text-navy mb-5">On Light Surface (Cloud Grey)</h3>
                     <div class="flex flex-wrap gap-4 items-center">
-                        <x-ui.button-champagne-solid href="#">Book a Ride</x-ui.button-champagne-solid>
-                        <x-ui.button-navy-gold href="#" class="!bg-navy !border-navy/30 !text-navy">Get a Quote</x-ui.button-navy-gold>
-                        <x-ui.button-text-champagne href="#">View Rates</x-ui.button-text-champagne>
+                        <x-ui.button-light-navy href="#">Book a Ride</x-ui.button-light-navy>
+                        <x-ui.button-light-outline-navy href="#">Get a Quote</x-ui.button-light-outline-navy>
+                        <x-ui.button-champagne-solid href="#">Reserve 24/7</x-ui.button-champagne-solid>
+                        <x-ui.button-text-link href="#" class="!text-champagne-dark">View Rates &rarr;</x-ui.button-text-link>
                     </div>
-                    <p class="text-muted-dark text-xs mt-4">On Cloud Grey or White sections, champagne-solid stays as the primary accent. Avoid outline-light on light surfaces.</p>
+                    <p class="text-muted-dark text-xs mt-4">On Cloud Grey or White sections, navy-backed buttons replace gold-on-navy primaries. Champagne stays as the accent.</p>
                 </div>
 
+                {{-- Usage example --}}
                 <div class="bg-navy-dark px-6 py-5 border border-white/8">
                     <p class="font-mono text-champagne text-xs mb-1">x-ui.button-* &mdash; resources/views/components/ui/button-*.blade.php</p>
                     <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-3 overflow-x-auto whitespace-pre-wrap">&lt;x-ui.button-champagne-gradient href="/bookings"&gt;Book a Ride&lt;/x-ui.button-champagne-gradient&gt;
-&lt;x-ui.button-champagne href="/contact"&gt;Reserve 24/7&lt;/x-ui.button-champagne&gt;
+&lt;x-ui.button-champagne-solid href="/contact"&gt;Reserve 24/7&lt;/x-ui.button-champagne-solid&gt;
 &lt;x-ui.button-outline-champagne&gt;View Services&lt;/x-ui.button-outline-champagne&gt;
-&lt;x-ui.button-text-champagne href="/rates"&gt;View Rates&lt;/x-ui.button-text-champagne&gt;
-{{-- Size override via !-prefixed classes --}}
-&lt;x-ui.button-champagne-gradient class="!px-4 !py-2 !text-xs"&gt;Small&lt;/x-ui.button-champagne-gradient&gt;
+&lt;x-ui.button-text-link href="/rates"&gt;View Rates &amp;rarr;&lt;/x-ui.button-text-link&gt;
+{{-- Size prop: sm | base (default) | lg --}}
+&lt;x-ui.button-champagne-gradient size="sm"&gt;Small&lt;/x-ui.button-champagne-gradient&gt;
+&lt;x-ui.button-champagne-gradient size="lg"&gt;Large&lt;/x-ui.button-champagne-gradient&gt;
+{{-- Radius prop: square | soft | rounded (default) | pill --}}
+&lt;x-ui.button-champagne-gradient radius="pill"&gt;Pill&lt;/x-ui.button-champagne-gradient&gt;
 {{-- No aspect ratio: buttons are height-auto, width determined by text content --}}</pre>
                 </div>
             </div>

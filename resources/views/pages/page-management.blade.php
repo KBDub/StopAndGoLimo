@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Management - Top 5 Percent</title>
+    <title>Page Management - Stop and Go Limo</title>
     @php
         $manifest = json_decode(file_get_contents(public_path('build/manifest.json')), true);
         $cssFile = $manifest['resources/css/app.css']['file'] ?? null;
@@ -16,7 +16,7 @@
     <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
 </head>
-<body class="font-sans antialiased bg-linen text-charcoal">
+<body class="font-sans antialiased bg-cloud text-navy">
 
     <header class="sticky top-0 z-50">
         <x-layout.top-notification-bar message="Page Management Dashboard" />
@@ -30,8 +30,8 @@
     <main class="py-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="mb-8">
-                <h1 class="text-3xl font-bold text-charcoal mb-2">Page Management</h1>
-                <p class="text-charcoal-light">
+                <h1 class="text-3xl font-bold text-navy mb-2 font-head">Page Management</h1>
+                <p class="text-slate">
                     Overview of all pages, grouped by top-level menu item. Expand each card to see components in page order.
                 </p>
             </div>
@@ -101,68 +101,68 @@
             @endphp
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-                <div class="bg-white rounded-lg p-5 shadow-sm border border-linen-dark/20">
-                    <p class="text-sm text-charcoal-light mb-1">Total Groups</p>
-                    <p class="text-2xl font-bold text-charcoal">{{ count($groups) }}</p>
+                <div class="bg-white rounded-lg p-5 shadow-sm border border-cloud">
+                    <p class="text-sm text-slate mb-1">Total Groups</p>
+                    <p class="text-2xl font-bold text-navy">{{ count($groups) }}</p>
                 </div>
-                <div class="bg-white rounded-lg p-5 shadow-sm border border-linen-dark/20">
-                    <p class="text-sm text-charcoal-light mb-1">Total Pages</p>
-                    <p class="text-2xl font-bold text-sunburst">{{ $totalPages }}</p>
+                <div class="bg-white rounded-lg p-5 shadow-sm border border-cloud">
+                    <p class="text-sm text-slate mb-1">Total Pages</p>
+                    <p class="text-2xl font-bold text-champagne">{{ $totalPages }}</p>
                 </div>
-                <div class="bg-white rounded-lg p-5 shadow-sm border border-linen-dark/20">
-                    <p class="text-sm text-charcoal-light mb-1">Component Usages</p>
+                <div class="bg-white rounded-lg p-5 shadow-sm border border-cloud">
+                    <p class="text-sm text-slate mb-1">Component Usages</p>
                     <p class="text-2xl font-bold text-azure">{{ $totalComponents }}</p>
                 </div>
-                <div class="bg-white rounded-lg p-5 shadow-sm border border-linen-dark/20">
-                    <p class="text-sm text-charcoal-light mb-1">Unique Components</p>
-                    <p class="text-2xl font-bold text-charcoal">{{ count($allUniqueComponents) }}</p>
+                <div class="bg-white rounded-lg p-5 shadow-sm border border-cloud">
+                    <p class="text-sm text-slate mb-1">Unique Components</p>
+                    <p class="text-2xl font-bold text-navy">{{ count($allUniqueComponents) }}</p>
                 </div>
             </div>
 
             @foreach($groups as $groupName => $group)
                 <div class="mb-8">
-                    <h2 class="text-xl font-bold text-charcoal mb-4 flex items-center gap-2">
-                        <span class="w-3 h-3 bg-sunburst-full"></span>
+                    <h2 class="text-xl font-bold text-navy mb-4 flex items-center gap-2 font-head">
+                        <span class="w-3 h-3 bg-champagne"></span>
                         {{ $groupName }}
-                        <span class="text-sm font-normal text-charcoal-light">({{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }})</span>
+                        <span class="text-sm font-normal text-slate">({{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }})</span>
                     </h2>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         @foreach($group['pages'] as $page)
                             <div
                                 x-data="{ expanded: false }"
-                                class="bg-white rounded-lg shadow-sm border border-linen-dark/20 overflow-hidden"
+                                class="bg-white rounded-lg shadow-sm border border-cloud overflow-hidden"
                             >
                                 <button
                                     @click="expanded = !expanded"
-                                    class="w-full text-left p-5 hover:bg-linen-light/50 transition-colors"
+                                    class="w-full text-left p-5 hover:bg-cloud/50 transition-colors"
                                 >
                                     <div class="flex items-start justify-between gap-2">
                                         <div class="min-w-0 flex-1">
                                             <div class="flex items-center gap-2 mb-1">
                                                 <svg
-                                                    class="w-4 h-4 text-charcoal-light transition-transform shrink-0"
+                                                    class="w-4 h-4 text-slate transition-transform shrink-0"
                                                     :class="{ 'rotate-90': expanded }"
                                                     fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                                 >
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                                 </svg>
-                                                <h3 class="font-bold text-charcoal truncate">{{ $page['name'] }}</h3>
+                                                <h3 class="font-bold text-navy truncate">{{ $page['name'] }}</h3>
                                             </div>
-                                            <p class="text-xs text-charcoal-light ml-6 break-all">{{ $page['url'] }}</p>
+                                            <p class="text-xs text-slate ml-6 break-all">{{ $page['url'] }}</p>
                                         </div>
                                     </div>
 
                                     <div class="flex flex-wrap gap-2 mt-3 ml-6">
                                         @if($page['is_landing'])
-                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sunburst text-charcoal">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-champagne text-navy">
                                                 Landing Page
                                             </span>
                                         @endif
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
                                             Active
                                         </span>
-                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-sunburst/20 text-charcoal">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-champagne/20 text-navy">
                                             {{ $page['shared_count'] }} shared
                                         </span>
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-azure/10 text-azure-dark">
@@ -171,9 +171,9 @@
                                     </div>
                                 </button>
 
-                                <div x-show="expanded" x-cloak x-transition class="border-t border-linen-dark/20 p-5">
+                                <div x-show="expanded" x-cloak x-transition class="border-t border-cloud p-5">
                                     @if(count($page['all_components']) > 0)
-                                        <h4 class="text-xs font-semibold text-charcoal-light mb-3">Components (in page order)</h4>
+                                        <h4 class="text-xs font-semibold text-slate mb-3">Components (in page order)</h4>
                                         <div class="space-y-1.5">
                                             @foreach($page['all_components'] as $index => $component)
                                                 @php
@@ -219,7 +219,7 @@
                                             @endforeach
                                         </div>
                                     @else
-                                        <p class="text-sm text-charcoal-light italic">No components found. Page may not be created yet.</p>
+                                        <p class="text-sm text-slate italic">No components found. Page may not be created yet.</p>
                                     @endif
                                 </div>
                             </div>
@@ -228,14 +228,14 @@
                 </div>
             @endforeach
 
-            {{-- ── Component Registry ─────────────────────────────────────────── --}}
+            {{-- Component Registry --}}
             <div class="mt-12">
-                <h2 class="text-xl font-bold text-charcoal mb-1 flex items-center gap-2">
-                    <span class="w-3 h-3 bg-sunburst-full"></span>
+                <h2 class="text-xl font-bold text-navy mb-1 flex items-center gap-2 font-head">
+                    <span class="w-3 h-3 bg-champagne"></span>
                     Component Registry
                 </h2>
-                <p class="text-sm text-charcoal-light mb-6 ml-5">
-                    {{ count($componentUsageMap) }} unique components · {{ $totalComponents }} total usages across {{ $totalPages }} pages · sorted by usage count
+                <p class="text-sm text-slate mb-6 ml-5">
+                    {{ count($componentUsageMap) }} unique components &middot; {{ $totalComponents }} total usages across {{ $totalPages }} pages &middot; sorted by usage count
                 </p>
 
                 <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
@@ -265,15 +265,15 @@
                         @endphp
                         <div
                             x-data="{ expanded: false }"
-                            class="bg-white rounded-lg shadow-sm border border-linen-dark/20 overflow-hidden"
+                            class="bg-white rounded-lg shadow-sm border border-cloud overflow-hidden"
                         >
                             <button
                                 @click="expanded = !expanded"
-                                class="w-full text-left p-4 hover:bg-linen-light/50 transition-colors"
+                                class="w-full text-left p-4 hover:bg-cloud/50 transition-colors"
                             >
                                 <div class="flex items-center gap-3">
                                     <svg
-                                        class="w-4 h-4 text-charcoal-light transition-transform shrink-0"
+                                        class="w-4 h-4 text-slate transition-transform shrink-0"
                                         :class="{ 'rotate-90': expanded }"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     >
@@ -282,10 +282,10 @@
                                     <span class="w-2.5 h-2.5 rounded-full shrink-0 {{ $color['dot'] }}"></span>
                                     <div class="flex-1 min-w-0">
                                         <div class="flex items-baseline gap-2">
-                                            <span class="font-bold text-charcoal truncate">{{ $label }}</span>
-                                            <span class="text-xs text-charcoal-light shrink-0">{{ $typeLabel }}</span>
+                                            <span class="font-bold text-navy truncate">{{ $label }}</span>
+                                            <span class="text-xs text-slate shrink-0">{{ $typeLabel }}</span>
                                         </div>
-                                        <p class="text-xs text-charcoal-light truncate mt-0.5 font-mono">{{ $isLivewire ? 'livewire:'.$displayComp : $comp }}</p>
+                                        <p class="text-xs text-slate truncate mt-0.5 font-mono">{{ $isLivewire ? 'livewire:'.$displayComp : $comp }}</p>
                                     </div>
                                     <span class="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full text-sm font-bold {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
                                         {{ $usageCount }}
@@ -293,13 +293,13 @@
                                 </div>
                             </button>
 
-                            <div x-show="expanded" x-cloak x-transition class="border-t border-linen-dark/20 p-4">
-                                <h4 class="text-xs font-semibold text-charcoal-light mb-2">Used on {{ $usageCount }} {{ Str::plural('page', $usageCount) }}</h4>
+                            <div x-show="expanded" x-cloak x-transition class="border-t border-cloud p-4">
+                                <h4 class="text-xs font-semibold text-slate mb-2">Used on {{ $usageCount }} {{ Str::plural('page', $usageCount) }}</h4>
                                 <div class="space-y-1">
                                     @foreach($pages as $p)
                                         <div class="flex items-center justify-between gap-2 text-sm">
-                                            <span class="text-charcoal font-medium truncate">{{ $p['name'] }}</span>
-                                            <span class="text-charcoal-light font-mono text-xs shrink-0">{{ $p['url'] }}</span>
+                                            <span class="text-navy font-medium truncate">{{ $p['name'] }}</span>
+                                            <span class="text-slate font-mono text-xs shrink-0">{{ $p['url'] }}</span>
                                         </div>
                                     @endforeach
                                 </div>
@@ -309,9 +309,9 @@
                 </div>
             </div>
 
-            {{-- ── Color Legend ────────────────────────────────────────────────── --}}
-            <div class="mt-12 bg-white rounded-lg shadow-sm border border-linen-dark/20 p-6">
-                <h2 class="text-lg font-bold text-charcoal mb-4">Color Legend</h2>
+            {{-- Color Legend --}}
+            <div class="mt-12 bg-white rounded-lg shadow-sm border border-cloud p-6">
+                <h2 class="text-lg font-bold text-navy mb-4 font-head">Color Legend</h2>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
                     @foreach($componentColorMap as $comp => $color)
                         @php

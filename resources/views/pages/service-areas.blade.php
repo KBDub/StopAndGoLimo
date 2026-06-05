@@ -11,80 +11,80 @@
     $secondaryNames  = array_column($secondaryCities, 'city');
 
     $cardImages = [
-        '/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg',
-        '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
-        '/images/business-signs/top5pct-business-signs-joliet-plainfield-romeoville.jpg',
-        '/images/business-signs/top5pct-business-signs-joliet-shorewood-channahon.jpg',
-        '/images/business-signs/top5pct-business-signs-joliet-shorewood-crest-hill.jpg',
+        '/images/limo/stopandgo-sedan-ord-airport.jpg',
+        '/images/limo/stopandgo-suv-midway-pickup.jpg',
+        '/images/limo/stopandgo-fleet-new-lenox.jpg',
+        '/images/limo/stopandgo-vehicle-joliet.jpg',
+        '/images/limo/stopandgo-chicago-ohare-transfer.jpg',
     ];
 @endphp
 
 <x-layouts.page
-    title="Service Areas | Joliet, IL"
-    metaDescription="Top 5 Percent serves Joliet, Plainfield, Romeoville, Bolingbrook, Naperville, Aurora, and communities across Will and DuPage County and the greater Chicagoland area. Veteran-owned."
+    title="Service Areas | Airport Transfers, New Lenox, IL"
+    metaDescription="Stop and Go Limo serves New Lenox, Joliet, Plainfield, Romeoville, Bolingbrook, Naperville, and communities across Will and DuPage County. Airport transfers to O'Hare and Midway. Serving since 2009."
     currentPage="about">
 
     {{-- Hero --}}
     <x-sections.category-hero
-        preHeading="Veteran Owned • Joliet, IL"
+        preHeading="Serving Chicagoland Since 2009"
         heading="Service Areas"
-        headingAccent="Joliet & Chicagoland"
-        description="Veteran-owned since 2017, Top 5 Percent delivers premium custom signage and apparel to businesses, schools, teams, and organizations throughout Will and DuPage County and the greater Chicagoland area."
-        primaryButtonText="Get a Free Quote"
+        headingAccent="New Lenox & Chicagoland"
+        description="Stop and Go Limo has provided professional airport transfers and luxury ground transportation to O'Hare (ORD) and Midway (MDW) for clients across Will and DuPage County and the greater Chicagoland area since 2009."
+        primaryButtonText="Book a Ride"
         primaryButtonHref="/contact"
-        secondaryButtonText="Call (815) 349-8600"
-        secondaryButtonHref="tel:+18153498600"
-        image="/images/top5pct-banner-joliet.jpg"
+        secondaryButtonText="Call (815) 585-6922"
+        secondaryButtonHref="tel:+18155856922"
+        image="/images/limo/stopandgo-fleet-new-lenox.jpg"
     :compactButtons="true"
     />
 
     <x-ui.banner-medium-champagne />
 
-    {{-- Company intro, branded card with float image --}}
+    {{-- Company intro --}}
     <x-sections.card-image-with-text
-        title="Proudly Serving Joliet, Will and DuPage County, and Greater Chicagoland"
-        image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
-        alt="Custom business signs and apparel produced by Top 5 Percent in Joliet Illinois"
+        title="Proudly Serving New Lenox, Will and DuPage County, and Greater Chicagoland"
+        image="/images/limo/stopandgo-fleet-new-lenox.jpg"
+        alt="Stop and Go Limo fleet serving New Lenox and Chicagoland airport transfers"
         imagePosition="right"
     >
         <p>
-            Since 2017, <a href="/" class="link-notification">Top 5 Percent</a> has delivered high-quality <a href="/custom-apparel" class="link-notification">custom apparel</a> and signage to businesses,
-            schools, sports teams, and organizations throughout Will and DuPage County and greater Chicagoland.
-            We are a veteran-owned shop based in Joliet, Illinois, and we take pride in serving our
-            local community with fast turnaround and personal service on everything from a single <a href="/signs" class="link-notification">business sign</a> to a full multi-piece print order.
+            Since 2009, <a href="/" class="link-notification">Stop and Go Limo</a> has delivered safe, on-time <a href="/airport-transfers" class="link-notification">airport transportation</a> to businesses,
+            travelers, and families throughout Will and DuPage County and greater Chicagoland.
+            We are based in New Lenox, Illinois, at 400 E Lincoln Hwy Suite 101A, and we take pride in serving our
+            local community with professional, punctual service, whether that is a single airport pickup or a
+            recurring corporate account.
         </p>
         <p>
-            We offer custom t-shirts, hoodies, <a href="/custom-apparel/printing-options/embroidery" class="link-notification">embroidery</a>, business signs, banners, vehicle graphics,
-            promotional products, and white-label storefronts. Whether you need five shirts or five hundred
-            signs, we have the equipment and the team to deliver on time, every time.
+            We offer sedan, SUV, and stretch limousine transfers to O'Hare (ORD) and Midway (MDW), as well as
+            corporate shuttles, event transportation, and point-to-point transfers throughout Chicagoland.
+            Whether you need a ride for one person or a group, we have the right vehicle and the right team to
+            get you there on time.
         </p>
         <p>
             We value our community ties in {{ $hq['city'] }},
             {{ implode(', ', $primaryNames) }},
             {{ implode(', ', $secondaryNames) }},
-            and the greater Chicagoland area. If you are nearby, stop in. If not, we ship.
-        </p>
-        <p class="mb-4">
-            We also produce <a href="/promotional-items" class="link-notification">promotional items</a> and <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a> for businesses across every city we serve, from branded mugs and tote bags for trade shows to vehicle wraps and DOT decals for commercial fleets.
+            and the greater Chicagoland area. If you are local, we are your ride.
         </p>
         <p>
-            <a href="/contact" class="link-notification">Contact us</a> to discuss your project and confirm same-day availability for your area. Call us at <a href="tel:+18153498600" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 349-8600</a>
-            or request a free quote online. Your brand is our business.
+            <a href="/contact" class="link-notification">Contact us</a> to confirm availability for your area.
+            Call <a href="tel:+18155856922" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 585-6922</a>
+            or book online. Your trip is our priority.
         </p>
     </x-sections.card-image-with-text>
 
     <x-ui.banner-thin-navy />
 
-    {{-- Our Service Locations, 3-column responsive card grid --}}
+    {{-- Service Locations grid --}}
     <section class="py-14 bg-white">
         <div class="max-w-7xl mx-auto px-6">
 
             <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal">Our Service Locations</h2>
-                <div class="h-1 w-16 bg-sunburst mx-auto mt-3 mb-4"></div>
-                <p class="text-charcoal-light max-w-2xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy font-head">Our Service Locations</h2>
+                <div class="h-1 w-16 bg-champagne mx-auto mt-3 mb-4"></div>
+                <p class="text-slate max-w-2xl mx-auto">
                     We proudly serve communities across Will and DuPage County and greater Chicagoland.
-                    Click any city to learn more about our services in your area.
+                    Click any city to learn more about airport transfers in your area.
                 </p>
             </div>
 
@@ -97,7 +97,7 @@
                 @endphp
 
                 <x-ui.card-product
-                    title="Proudly serving {{ $city['city'] }}, {{ $city['state'] }}"
+                    title="Airport transfers from {{ $city['city'] }}, {{ $city['state'] }}"
                     href="{{ $url }}"
                     image="{{ $img }}"
                     titleSize="text-sm"
@@ -105,16 +105,16 @@
                     <div class="flex flex-col gap-2 mt-2">
                         <a
                             href="{{ $url }}"
-                            class="block w-full text-center px-4 py-2.5 text-sm bg-charcoal text-sunburst font-semibold hover:bg-charcoal-dark hover:shadow-lg transition-all hover:-translate-y-0.5"
+                            class="block w-full text-center px-4 py-2.5 text-sm bg-navy text-champagne font-semibold hover:bg-navy-dark hover:shadow-lg transition-all hover:-translate-y-0.5 font-head"
                         >
-                            Custom Signage in {{ $city['city'] }}
+                            Transfers from {{ $city['city'] }}
                         </a>
                         <button
                             type="button"
                             @click="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-                            class="block w-full text-center px-4 py-2.5 text-sm bg-sunburst text-charcoal font-semibold hover:bg-sunburst-dark hover:shadow-gold-lg transition-all hover:-translate-y-0.5"
+                            class="block w-full text-center px-4 py-2.5 text-sm bg-champagne text-navy font-semibold hover:shadow-champagne-lg transition-all hover:-translate-y-0.5 font-head"
                         >
-                            Get a Free Quote
+                            Book a Ride
                         </button>
                     </div>
                 </x-ui.card-product>

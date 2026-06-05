@@ -11,15 +11,15 @@
 {
     "@@context": "https://schema.org",
     "@@type": "Service",
-    "name": "Custom Signs & Apparel in {{ $cityState }}",
-    "provider": { "@@id": "https://www.top5pct.com" },
+    "name": "Airport Transfers in {{ $cityState }}",
+    "provider": { "@@id": "https://www.stopandgolimo.com" },
     "areaServed": {
         "@@type": "City",
         "name": "{{ $cityName }}",
         "addressRegion": "IL",
         "addressCountry": "US"
     },
-    "description": "Veteran-owned custom signs, apparel, banners, vehicle graphics, and more serving {{ $cityState }}."
+    "description": "Professional airport transfers to O'Hare and Midway serving {{ $cityState }}. Sedans, SUVs, and limousines available. Serving since 2009."
 }
 </script>
 <script type="application/ld+json">
@@ -31,19 +31,19 @@
             "@@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.top5pct.com"
+            "item": "https://www.stopandgolimo.com"
         },
         {
             "@@type": "ListItem",
             "position": 2,
             "name": "Service Areas",
-            "item": "https://www.top5pct.com/service-areas"
+            "item": "https://www.stopandgolimo.com/service-areas"
         },
         {
             "@@type": "ListItem",
             "position": 3,
             "name": "{{ $cityState }}",
-            "item": "https://www.top5pct.com/service-areas/{{ $slug }}"
+            "item": "https://www.stopandgolimo.com/service-areas/{{ $slug }}"
         }
     ]
 }
@@ -52,9 +52,9 @@
 {
     "@@context": "https://schema.org",
     "@@type": "WebPage",
-    "name": "Custom Signs & Apparel in {{ $cityState }} | Top 5 Percent",
-    "url": "https://www.top5pct.com/service-areas/{{ $slug }}",
-    "description": "Top 5 Percent is a veteran-owned custom signage and apparel shop proudly serving {{ $cityState }}."
+    "name": "Airport Transfers in {{ $cityState }} | Stop and Go Limo",
+    "url": "https://www.stopandgolimo.com/service-areas/{{ $slug }}",
+    "description": "Stop and Go Limo provides professional airport transfers and luxury ground transportation serving {{ $cityState }}."
 }
 </script>
 @if($content && !empty($content['review']))
@@ -62,7 +62,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "Review",
-    "itemReviewed": { "@@id": "https://www.top5pct.com" },
+    "itemReviewed": { "@@id": "https://www.stopandgolimo.com" },
     "author": {
         "@@type": "Person",
         "name": "{{ $content['review']['author'] }}"
@@ -74,21 +74,21 @@
 @endpush
 
 <x-layouts.page
-    title="Custom Signs & Apparel in {{ $cityState }}"
-    metaDescription="Veteran-owned custom signage and apparel serving {{ $cityState }}. T-shirts, signs, banners, vehicle graphics, and more. Same day service available."
+    title="Airport Transfers in {{ $cityState }} | Stop and Go Limo"
+    metaDescription="Professional airport transfers to O'Hare and Midway from {{ $cityState }}. Sedans, SUVs, and limousines. On-time guarantee. Serving since 2009. Call (815) 585-6922."
     currentPage="about">
 
     {{-- Hero --}}
     <x-sections.category-hero
-        preHeading="Veteran Owned • Serving {{ $cityState }}"
-        heading="Custom Signs & Apparel"
-        headingAccent="in {{ $cityName }}, {{ $stateName }}"
-        description="Top 5 Percent is a veteran-owned custom signage and apparel shop serving {{ $cityState }} and the surrounding communities. Same day service available on most orders."
-        primaryButtonText="Get a Free Quote"
+        preHeading="Serving {{ $cityState }} Since 2009"
+        heading="Airport Transfers"
+        headingAccent="from {{ $cityName }}, {{ $stateName }}"
+        description="Stop and Go Limo provides professional airport transportation to O'Hare (ORD) and Midway (MDW) from {{ $cityState }}. On-time, every time."
+        primaryButtonText="Book a Ride"
         primaryButtonHref="/contact"
-        secondaryButtonText="Call (815) 349-8600"
-        secondaryButtonHref="tel:+18153498600"
-        image="/images/top5pct-banner-joliet.jpg"
+        secondaryButtonText="Call (815) 585-6922"
+        secondaryButtonHref="tel:+18155856922"
+        image="/images/limo/stopandgo-fleet-new-lenox.jpg"
     :compactButtons="true"
     />
 
@@ -96,22 +96,22 @@
 
     @if($content)
 
-        {{-- Paragraphs 1 + 2: community + commercial identity --}}
+        {{-- Paragraphs 1 + 2 --}}
         <x-sections.city-localized-content
-            heading="Serving {{ $cityState }} Since 2017"
-            label="LOCAL EXPERTISE"
-            image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
-            alt="Custom business signs and apparel for {{ $cityState }} by Top 5 Percent"
+            heading="Serving {{ $cityState }} Since 2009"
+            label="Local Service"
+            image="/images/limo/stopandgo-suv-midway-pickup.jpg"
+            alt="Stop and Go Limo airport transfer from {{ $cityState }}"
             imagePosition="left"
         >
             <p>{{ $content['p1'] }}</p>
             <p>{{ $content['p2'] }}</p>
         </x-sections.city-localized-content>
 
-        {{-- Paragraphs 3 + 4: vehicle visibility + veteran brand --}}
+        {{-- Paragraphs 3 + 4 --}}
         <x-sections.city-vehicle-and-brand
-            vehicleHeading="Visibility That Works for {{ $cityName }} Businesses"
-            brandHeading="Veteran-Owned, {{ $cityName }}-Focused"
+            vehicleHeading="Airport Rides from {{ $cityName }}"
+            brandHeading="Professional Service, {{ $cityName }}-Focused"
         >
             <x-slot name="vehicleContent">
                 <p>{{ $content['p3'] }}</p>
@@ -123,53 +123,54 @@
 
     @else
 
-        {{-- Fallback generic intro if city content not yet populated --}}
+        {{-- Fallback generic intro --}}
         <x-sections.card-image-with-text
-            title="Top 5 Percent, proudly serving {{ $cityState }} since 2017"
-            image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
-            alt="Custom business signs and apparel for {{ $cityState }} by Top 5 Percent"
+            title="Stop and Go Limo, proudly serving {{ $cityState }} since 2009"
+            image="/images/limo/stopandgo-fleet-new-lenox.jpg"
+            alt="Stop and Go Limo serving {{ $cityState }} with airport transfers"
             imagePosition="right"
         >
             <p>
-                Since 2017, <a href="/" class="link-notification">Top 5 Percent</a> has been the go-to source for <a href="/custom-apparel" class="link-notification">custom apparel</a> and signage
-                in {{ $cityName }} and throughout Will and DuPage County and greater Chicagoland. We are a
-                veteran-owned shop based in Joliet, Illinois, and we are proud to serve the
-                {{ $cityName }} community with the same discipline and quality standards that
-                military service instilled in us, whether that means producing a single <a href="/signs" class="link-notification">business sign</a> or a full multi-product order for a local organization.
+                Since 2009, <a href="/" class="link-notification">Stop and Go Limo</a> has been the trusted choice for
+                <a href="/airport-transfers" class="link-notification">airport transfers</a>
+                in {{ $cityName }} and throughout Will and DuPage County and greater Chicagoland. We are based in
+                New Lenox, Illinois, and we are proud to serve the {{ $cityName }} community with the same
+                professionalism and reliability our clients have come to expect, whether that means a single airport
+                pickup or a recurring corporate account.
             </p>
             <p>
-                Whether you are a small business looking for a new storefront sign, a school
-                organization ordering custom hoodies, or an individual needing <a href="/vehicle-graphics" class="link-notification">vehicle graphics</a>,
-                we handle every job in-house from artwork through production. That means fewer
-                errors, faster turnaround, and a team that stands behind every order.
+                Whether you are a business traveler heading to O'Hare, a family flying out of Midway, or a group
+                needing coordinated event transportation, we handle every booking with care and precision.
+                Our fleet includes sedans, SUVs, and stretch limousines, all driven by licensed, background-checked
+                chauffeurs.
             </p>
             <p>
-                {{ $cityName }} customers have access to our full range of services: custom t-shirts,
-                embroidery, business signs, banners, yard signs, vehicle graphics, window decals,
-                promotional items, and more. Same day service is available on most products.
+                {{ $cityName }} clients have access to our full range of services: O'Hare (ORD) and Midway (MDW)
+                airport transfers, corporate shuttles, event rides, and point-to-point transfers across Chicagoland.
+                Same-day service is available on most routes.
             </p>
             <p>
-                Stop in at our Joliet shop, or call us at
-                <a href="tel:+18153498600" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 349-8600</a>
-                to talk through your project. We also offer
-                <a href="/contact" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">free quotes online</a>.
-                Your brand is our business.
+                Call us at
+                <a href="tel:+18155856922" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">(815) 585-6922</a>
+                to talk through your trip. You can also
+                <a href="/contact" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">book a ride online</a>.
+                Your trip is our priority.
             </p>
         </x-sections.card-image-with-text>
 
     @endif
 
-    {{-- All services overview --}}
+    {{-- Services overview --}}
     <x-sections.top5pct-same-day-service
-        serviceType="custom-signage-apparel"
-        displayServiceType="Custom Signage & Apparel in {{ $cityName }}"
+        serviceType="airport-transfers"
+        displayServiceType="Airport Transfers from {{ $cityName }}"
     />
 
     @if($content && !empty($content['faqs']))
-        {{-- City FAQ with JSON-LD injection --}}
+        {{-- City FAQ --}}
         <x-sections.faq
             heading="Frequently Asked Questions, {{ $cityName }}, IL"
-            label="LOCAL FAQs"
+            label="Local FAQs"
             :faqs="$content['faqs']"
         />
     @endif

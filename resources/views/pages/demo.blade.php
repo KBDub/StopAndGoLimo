@@ -23,7 +23,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10">
                     <span class="font-head font-bold text-xs tracking-widest text-champagne">01 &mdash; Palette</span>
-                    <h2 class="font-head font-bold text-3xl text-white mt-2">Color Palette (5 + White)</h2>
+                    <h2 class="font-head font-bold text-3xl text-white mt-2">Color Palette (4 + White)</h2>
                     <p class="text-muted-light mt-3 max-w-2xl">Each core color has up to three variants: Light, Default, and Dark, for hover states, depth, and surface layering.</p>
                 </div>
 
@@ -96,43 +96,6 @@
                                 <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#0F1223</span></div>
                                 <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">15, 18, 35</span></div>
                                 <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">231°, 40%, 10%</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {{-- Signal Gold --}}
-                <div class="mb-10">
-                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
-                        <h3 class="font-head font-semibold text-2xl text-white">Signal Gold</h3>
-                        <span class="text-sm text-muted">High-attention only, 24/7 badges, quote highlights, alert ribbons</span>
-                    </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
-                            <div class="h-28 relative" style="background:#FFD65E"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Signal Light</span></div>
-                            <div class="px-4 pt-3.5 pb-4">
-                                <div class="font-head font-semibold text-white text-sm mb-2">Signal Light</div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#FFD65E</span></div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">255, 214, 94</span></div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">45°, 100%, 68%</span></div>
-                            </div>
-                        </div>
-                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
-                            <div class="h-28 relative" style="background:#FEC42D"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Signal Gold</span></div>
-                            <div class="px-4 pt-3.5 pb-4">
-                                <div class="font-head font-semibold text-white text-sm mb-2">Signal Gold</div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#FEC42D</span></div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">254, 196, 45</span></div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">43°, 99%, 59%</span></div>
-                            </div>
-                        </div>
-                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
-                            <div class="h-28 relative" style="background:#E0A800"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Signal Dark</span></div>
-                            <div class="px-4 pt-3.5 pb-4">
-                                <div class="font-head font-semibold text-white text-sm mb-2">Signal Dark</div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#E0A800</span></div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">224, 168, 0</span></div>
-                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">45°, 100%, 44%</span></div>
                             </div>
                         </div>
                     </div>
@@ -287,7 +250,6 @@
                         [3, '#FFFFFF', 'White', 'Container color, cards, primary text on navy, and high-contrast surfaces.'],
                         [4, '#E8E9EC', 'Cloud Grey', 'Light surface color, alternating sections and breathing room in light mode.'],
                         [5, '#69727D', 'Slate', 'Secondary text color, captions, metadata, and muted supporting copy.'],
-                        [6, '#FEC42D', 'Signal Gold', 'Accent color, used sparingly for 24/7 badges and high-attention highlights only.'],
                     ] as [$num, $hex, $name, $desc])
                     <div class="flex items-center gap-5 border border-white/8 bg-navy-light px-5 py-4">
                         <span class="font-head font-extrabold text-2xl text-white/20 w-8 flex-shrink-0">{{ $num }}</span>

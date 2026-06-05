@@ -1,58 +1,49 @@
-<section id="shirt-types" class="py-10 bg-linen">
+{{--
+ | Repurposed from "Shirt Types Grid" → Stop & Go Limo fleet/vehicle grid.
+--}}
+
+<section id="fleet" class="py-10 bg-cloud">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
-            <p class="text-olive font-semibold mb-2">Every technique, one shop</p>
-            <h2 class="text-charcoal mb-4">Choose Your Printing Style</h2>
-            <p class="text-charcoal-light max-w-4xl mx-auto">Whether you want maximum sparkle, professional embroidery, or a photo printed directly on fabric, we have the technique for you. Click any style below to learn more.</p>
+            <p class="text-champagne font-head font-semibold mb-2">Every occasion, one fleet</p>
+            <div class="inline-block">
+                <h2 class="text-navy mb-4 font-head">Choose Your Vehicle</h2>
+                <div class="h-1 bg-champagne"></div>
+            </div>
+            <p class="text-slate max-w-4xl mx-auto mt-4">Whether you need a private sedan for one or a coach bus for 50, we have the right vehicle. All vehicles are clean, climate-controlled, and maintained to the highest standard.</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <x-ui.card-product title="Vinyl Shirts" href="/custom-apparel/vinyl-shirts" image="/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg">
-                <p class="text-charcoal-light mb-4">Bold, durable <span class="text-azure underline underline-offset-2">heat-press vinyl</span> in any color. Sharp lines and <span class="text-azure underline underline-offset-2">long-lasting results</span>, ideal for logos, names, and numbers.</p>
+            <x-ui.card-product title="Executive Sedan" href="/town-car-services" image="/images/fleet/stopngo-executive-sedan.jpg">
+                <p class="text-slate mb-4">Premium <a href="/town-car-services" class="text-azure hover:text-azure-dark transition-colors underline underline-offset-2">town car service</a> for individuals and couples. Ideal for airport transfers and business travel.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Rhinestone Shirts" href="/custom-apparel/printing-options/rhinestone-apparel" image="/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Dazzling crystal rhinestone designs for <span class="text-azure underline underline-offset-2">maximum bling</span>. Custom patterns, logos, and text that <span class="text-azure underline underline-offset-2">catch every eye</span> in the room.</p>
+            <x-ui.card-product title="SUV / Navigator" href="/limousine-services" image="/images/fleet/stopngo-suv.jpg">
+                <p class="text-slate mb-4">Spacious luxury SUVs for families and small groups. Extra legroom and luggage capacity for airport runs.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Glitter Shirts" href="/custom-apparel/specialty-materials/glitter-shirts" image="/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Eye-catching <span class="text-azure underline underline-offset-2">glitter heat-transfer prints</span> that shine under any light. Perfect for <span class="text-azure underline underline-offset-2">birthdays, reunions, and celebrations</span>.</p>
+            <x-ui.card-product title="Stretch Limousine" href="/limousine-services" image="/images/fleet/stopngo-stretch-limo.jpg">
+                <p class="text-slate mb-4">Classic <a href="/limousine-services" class="text-azure hover:text-azure-dark transition-colors underline underline-offset-2">stretch limousines</a> for weddings, proms, and special occasions. Arrive in style.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Foil Shirts" href="/custom-apparel/specialty-materials/foil-shirts" image="/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg">
-                <p class="text-charcoal-light mb-4"><span class="text-azure underline underline-offset-2">Metallic foil prints</span> in gold, silver, and more. High-shine finish that makes any design look <span class="text-azure underline underline-offset-2">premium and fashion-forward</span>.</p>
+            <x-ui.card-product title="Sprinter Van" href="/corporate-car-service" image="/images/fleet/stopngo-sprinter.jpg">
+                <p class="text-slate mb-4">12-passenger <a href="/corporate-car-service" class="text-azure hover:text-azure-dark transition-colors underline underline-offset-2">Sprinter vans</a> for corporate groups and families. Comfortable seating and luggage space.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Glow In The Dark" href="/custom-apparel/specialty-materials/glow-in-the-dark-shirts" image="/images/custom-shirts/top5pct-custom-glow-shirts-caps-hoodies-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Shirts that <span class="text-azure underline underline-offset-2">light up when the lights go out</span>. Perfect for <span class="text-azure underline underline-offset-2">concerts, events, and nightlife</span> occasions.</p>
+            <x-ui.card-product title="Party Bus" href="/party-bus" image="/images/fleet/stopngo-party-bus.jpg">
+                <p class="text-slate mb-4">Party buses seating 14 to 40 passengers. Built-in sound systems, LED lighting, and a fun atmosphere for <a href="/prom-party-bus" class="text-azure hover:text-azure-dark transition-colors underline underline-offset-2">proms</a> and celebrations.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Flock Shirts" href="/custom-apparel/specialty-materials/flock-shirts" image="/images/custom-shirts/top5pct-custom-flock-shirt-hoodie-cap-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Velvety, raised <span class="text-azure underline underline-offset-2">flock printing</span> delivers a soft, premium tactile feel. Bold and distinctive, <span class="text-azure underline underline-offset-2">stands out by touch</span> as much as sight.</p>
+            <x-ui.card-product title="Mini Bus" href="/bus-rental" image="/images/fleet/stopngo-mini-bus.jpg">
+                <p class="text-slate mb-4">Mini buses for mid-size groups of 20 to 35 passengers. Great for corporate outings, airport group shuttles, and reunions.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Reflective Shirts" href="/custom-apparel/specialty-materials/reflective-shirts" image="/images/custom-shirts/top5pct-custom-reflective-shirts-hoodies-caps-joliet.jpg">
-                <p class="text-charcoal-light mb-4">High-visibility <span class="text-azure underline underline-offset-2">reflective prints</span> for safety gear, sports teams, and night events. <span class="text-azure underline underline-offset-2">Be seen and be safe</span> in style.</p>
+            <x-ui.card-product title="Coach Bus" href="/coach-buses" image="/images/fleet/stopngo-coach-bus.jpg">
+                <p class="text-slate mb-4">Full-size <a href="/coach-buses" class="text-azure hover:text-azure-dark transition-colors underline underline-offset-2">coach buses</a> for large groups of 40 to 55 passengers. Ideal for corporate events and long-distance charters.</p>
             </x-ui.card-product>
 
-            <x-ui.card-product title="Holographic Shirts" href="/custom-apparel/specialty-materials/holographic-shirts" image="/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Color-shifting <span class="text-azure underline underline-offset-2">holographic designs</span> that catch every eye. Prismatic, futuristic, and <span class="text-azure underline underline-offset-2">completely unforgettable</span>.</p>
-            </x-ui.card-product>
-
-            <x-ui.card-product title="Brick Shirts" href="/custom-apparel/specialty-materials/brick-shirts" image="/images/custom-shirts/top5pct-custom-brick-shirts-hoodies-cap-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Textured <span class="text-azure underline underline-offset-2">brick-style prints</span> create a dimensional, bold 3D effect. A unique look that <span class="text-azure underline underline-offset-2">sets your shirt apart</span> from every other.</p>
-            </x-ui.card-product>
-
-            <x-ui.card-product title="Pattern Shirts" href="/custom-apparel/pattern-shirts" image="/images/custom-shirts/top5pct-custom-pattern-shirts-caps-hoodies-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Custom pattern printing for <span class="text-azure underline underline-offset-2">all-over designs</span>, sports uniforms, and more. Consistent, vibrant results for <span class="text-azure underline underline-offset-2">branded team apparel</span>.</p>
-            </x-ui.card-product>
-
-            <x-ui.card-product title="Embroidery Shirts" href="/custom-apparel/printing-options/embroidery" image="/images/custom-shirts/top5pct-custom-embroidery-shops-near-me-joliet.jpg">
-                <p class="text-charcoal-light mb-4">Classic <span class="text-azure underline underline-offset-2">embroidered logos and text</span> stitched with precision. The most professional, long-lasting finish for <span class="text-azure underline underline-offset-2">corporate apparel</span>.</p>
-            </x-ui.card-product>
-
-            <x-ui.card-product title="Picture Shirts" href="/custom-apparel/picture-shirts" image="/images/custom-shirts/top5pct-custom-shirts-with-pictures-joliet-shorewood.jpg">
-                <p class="text-charcoal-light mb-4">Full-color <span class="text-azure underline underline-offset-2">photo prints</span> directly on your shirt. Your <span class="text-azure underline underline-offset-2">memories, pets, portraits</span>, or artwork, worn proudly every day.</p>
+            <x-ui.card-product title="Custom Charter" href="/contact" image="/images/fleet/stopngo-custom-charter.jpg">
+                <p class="text-slate mb-4">Have a unique request? We can arrange custom charter packages for any group size or occasion. <a href="/contact" class="text-azure hover:text-azure-dark transition-colors underline underline-offset-2">Contact us to discuss</a>.</p>
             </x-ui.card-product>
         </div>
     </div>

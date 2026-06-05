@@ -19,13 +19,13 @@
                 class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             >
         @else
-            <div class="absolute inset-0 w-full h-full bg-charcoal-light"></div>
+            <div class="absolute inset-0 w-full h-full bg-slate"></div>
         @endif
 
-        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/80 via-charcoal-dark/20 to-transparent group-hover:from-charcoal-dark/70 transition-all duration-300"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/80 via-navy-dark/20 to-transparent group-hover:from-navy-dark/70 transition-all duration-300"></div>
 
         <div class="absolute bottom-0 left-0 right-0 p-5">
-            <h3 class="text-lg font-bold text-white mb-0.5 group-hover:text-sunburst transition-colors">{{ $title }}</h3>
+            <h3 class="text-lg font-bold text-white mb-0.5 group-hover:text-champagne transition-colors font-head">{{ $title }}</h3>
             @if($subtitle)
                 <p class="text-sm text-white/75">{{ $subtitle }}</p>
             @endif

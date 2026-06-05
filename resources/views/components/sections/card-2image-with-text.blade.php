@@ -6,32 +6,32 @@
     'title'  => '',
 ])
 
-<section class="py-10 bg-linen">
+<section class="py-10 bg-cloud">
     <div class="max-w-7xl mx-auto px-6">
         <div
             x-data="{ ready: false }"
             x-init="$nextTick(() => ready = true)"
             :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="p-4 sm:p-6 md:p-10 bg-white shadow-gold-lg transition-all duration-500"
+            class="p-4 sm:p-6 md:p-10 bg-white shadow-champagne-lg transition-all duration-500"
         >
             {{-- Title centered full-width at top --}}
             <div class="text-center mb-6 md:mb-8">
                 <div class="inline-block">
-                    <h3 class="text-olive font-bold text-h3 mb-2">{{ $title }}</h3>
-                    <div class="h-1 bg-sunburst"></div>
+                    <h3 class="text-champagne font-bold text-h3 mb-2 font-head">{{ $title }}</h3>
+                    <div class="h-1 bg-champagne"></div>
                 </div>
             </div>
 
             {{-- Optional intro text above images --}}
             @isset($intro)
-                <div class="text-charcoal-light leading-relaxed mb-6">
+                <div class="text-slate leading-relaxed mb-6">
                     {{ $intro }}
                 </div>
             @endisset
 
             {{-- Two images side by side --}}
             <div class="flex flex-col sm:flex-row gap-8 mb-6">
-                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                <div class="flex-1 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out">
                     <img
                         src="{{ $image1 }}"
                         alt="{{ $alt1 }}"
@@ -40,7 +40,7 @@
                     >
                 </div>
 
-                <div class="flex-1 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out">
+                <div class="flex-1 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out">
                     <img
                         src="{{ $image2 }}"
                         alt="{{ $alt2 }}"
@@ -79,7 +79,7 @@
                         t.parentNode.replaceChild(f, t);
                     }
                 })"
-                class="text-charcoal-light leading-relaxed"
+                class="text-slate leading-relaxed"
             >
                 {{ $slot }}
             </div>

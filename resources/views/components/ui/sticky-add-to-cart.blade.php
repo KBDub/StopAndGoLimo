@@ -15,18 +15,18 @@
     x-transition:leave="transition ease-in duration-200"
     x-transition:leave-start="translate-y-0"
     x-transition:leave-end="translate-y-full"
-    class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-linen-dark shadow-lg"
+    class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-cloud shadow-lg"
     style="display: none;"
 >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between gap-4 py-3">
             <div class="flex items-center gap-4 min-w-0 flex-1">
                 <div class="min-w-0">
-                    <h4 class="text-sm font-semibold text-charcoal truncate">{{ $productName }}</h4>
+                    <h4 class="text-sm font-semibold text-navy truncate font-head">{{ $productName }}</h4>
                     <div class="flex items-center gap-2">
-                        <span class="text-base font-bold text-charcoal">{{ $price }}</span>
+                        <span class="text-base font-bold text-navy">{{ $price }}</span>
                         @if($variantLabel)
-                            <span class="text-xs text-charcoal-light">{{ $variantLabel }}</span>
+                            <span class="text-xs text-slate">{{ $variantLabel }}</span>
                         @endif
                     </div>
                 </div>
@@ -38,8 +38,8 @@
                 <button
                     type="button"
                     class="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-semibold transition-all
-                           bg-gradient-to-r from-sunburst-light via-sunburst to-sunburst-dark text-charcoal
-                           hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+                           bg-champagne text-navy
+                           hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-head"
                 >
                     Add to cart
                 </button>

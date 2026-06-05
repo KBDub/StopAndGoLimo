@@ -1,18 +1,18 @@
 @props([
-    'title'          => 'Top 5 Percent - Custom Signage & Apparel',
-    'metaDescription' => 'Premium custom signage and apparel in Joliet, IL. Veteran-owned business.',
-    'currentPage'    => '',
-    'ogImage'        => null,
-    'ogImageAlt'     => null,
-    'ogType'         => 'website',
-    'canonical'      => null,
-    'noIndex'        => false,
+    'title'           => 'Stop & Go Airport Shuttle Service, Inc.',
+    'metaDescription' => 'Premium airport shuttle and limousine service in New Lenox, Naperville, Joliet, and all of Illinois. Serving O\'Hare and Midway airports. Available 24/7.',
+    'currentPage'     => '',
+    'ogImage'         => null,
+    'ogImageAlt'      => null,
+    'ogType'          => 'website',
+    'canonical'       => null,
+    'noIndex'         => false,
 ])
 @php
     $resolvedOgImage    = $ogImage
-        ? 'https://www.top5pct.com' . $ogImage
-        : 'https://www.top5pct.com/images/og-tags/top5pct-og-home.jpg';
-    $resolvedOgImageAlt = $ogImageAlt ?? 'Top 5 Percent, LLC, Custom Signs & Apparel in Joliet, IL';
+        ? 'https://www.stopandgoairportshuttle.com' . $ogImage
+        : 'https://www.stopandgoairportshuttle.com/images/og-tags/stopngo-og-home.jpg';
+    $resolvedOgImageAlt = $ogImageAlt ?? 'Stop & Go Airport Shuttle Service, Inc. — Premium limousine and airport transportation in Illinois.';
     $resolvedCanonical  = $canonical ?? request()->url();
 @endphp
 <!DOCTYPE html>
@@ -27,16 +27,16 @@
     @endif
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Top 5 Percent, LLC</title>
+    <title>{{ $title }} | Stop & Go Airport Shuttle Service, Inc.</title>
     <meta name="description" content="{{ $metaDescription }}">
     <meta name="robots" content="{{ $noIndex ? 'noindex,nofollow' : 'index,follow' }}">
     <link rel="canonical" href="{{ $resolvedCanonical }}">
-    <meta name="author" content="Top 5 Percent, LLC">
+    <meta name="author" content="Stop & Go Airport Shuttle Service Inc.">
     <meta name="geo.region" content="US-IL">
-    <meta name="geo.placename" content="Joliet, IL">
-    <meta name="geo.position" content="41.5250;-88.0817">
-    <meta name="ICBM" content="41.5250, -88.0817">
-    <meta name="theme-color" content="#FFC20E">
+    <meta name="geo.placename" content="New Lenox, IL">
+    <meta name="geo.position" content="41.4977;-87.9573">
+    <meta name="ICBM" content="41.4977, -87.9573">
+    <meta name="theme-color" content="#DCB57E">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:description" content="{{ $metaDescription }}">
@@ -46,10 +46,9 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ $resolvedOgImageAlt }}">
-    <meta property="og:site_name" content="Top 5 Percent">
+    <meta property="og:site_name" content="Stop & Go Limo">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@@top5pct">
     <meta name="twitter:title" content="{{ $title }}">
     <meta name="twitter:description" content="{{ $metaDescription }}">
     <meta name="twitter:image" content="{{ $resolvedOgImage }}">
@@ -70,49 +69,37 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Top 5 Percent, LLC",
-        "image": "https://www.top5pct.com/images/top5pct-logo.png",
-        "@id": "https://www.top5pct.com",
-        "url": "https://www.top5pct.com",
-        "telephone": "815-349-8600",
-        "priceRange": "$",
+        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "image": "https://www.stopandgoairportshuttle.com/images/stopngo-logo.png",
+        "@id": "https://www.stopandgoairportshuttle.com",
+        "url": "https://www.stopandgoairportshuttle.com",
+        "telephone": "815-585-6922",
+        "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "121 Springfield Avenue, Suite 103",
-            "addressLocality": "Joliet",
+            "streetAddress": "400 E Lincoln Hwy Suite 101A",
+            "addressLocality": "New Lenox",
             "addressRegion": "IL",
-            "postalCode": "60435",
+            "postalCode": "60451",
             "addressCountry": "US"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 41.5250,
-            "longitude": -88.0817
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Ezra",
-            "jobTitle": "Owner & Founder"
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "100"
+            "latitude": 41.4977,
+            "longitude": -87.9573
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-            "opens": "08:30",
-            "closes": "18:00"
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
         },
-        "sameAs": [
-            "https://www.facebook.com/top5percent/",
-            "https://www.instagram.com/top5percentllc/",
-            "https://www.twitter.com/top5percentllc/",
-            "https://www.youtube.com/channel/UCAhLYjgb9745wv_yfmxSe6w/",
-            "https://www.pinterest.com/top5percentllc/",
-            "https://www.linkedin.com/in/top5percent/",
-            "https://www.google.com/maps?cid=15797523837573086431"
+        "areaServed": [
+            "New Lenox, IL",
+            "Naperville, IL",
+            "Joliet, IL",
+            "Chicago, IL",
+            "Illinois"
         ]
     }
     </script>
@@ -120,13 +107,13 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Top 5 Percent",
-        "url": "https://www.top5pct.com",
+        "name": "Stop & Go Limo",
+        "url": "https://www.stopandgoairportshuttle.com",
         "potentialAction": {
             "@type": "SearchAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.top5pct.com/collections?q={search_term_string}"
+                "urlTemplate": "https://www.stopandgoairportshuttle.com/service-areas?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
         }
@@ -136,14 +123,7 @@
     @stack('structured-data')
     @livewireStyles
 </head>
-<style>
-    :root {
-        --brand-primary:   #2C2C2C;
-        --brand-secondary: #FFC20E;
-        --brand-accent:    #3273DC;
-    }
-</style>
-<body class="font-sans antialiased bg-linen text-charcoal overflow-x-hidden">
+<body class="font-body antialiased bg-white text-navy overflow-x-hidden">
 
     @if(config('services.gtm.id'))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ config('services.gtm.id') }}"

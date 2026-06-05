@@ -19,7 +19,7 @@
             loading="lazy"
         >
     @else
-        <div class="w-full bg-charcoal-light flex items-center justify-center" style="height: {{ $height === 'auto' ? '200px' : $height }};">
+        <div class="w-full bg-slate flex items-center justify-center" style="height: {{ $height === 'auto' ? '200px' : $height }};">
             <span class="text-white/60 text-sm">Banner image coming soon</span>
         </div>
     @endif

@@ -28,7 +28,7 @@
                     <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full" x-ref="mobileCarousel">
                         <template x-for="(img, idx) in images" x-bind:key="'mobile-' + idx">
                             <div class="w-[90vw] shrink-0 snap-center px-1">
-                                <div class="aspect-[3/4] overflow-hidden bg-linen">
+                                <div class="aspect-[3/4] overflow-hidden bg-cloud">
                                     <img
                                         x-bind:src="img"
                                         x-bind:alt="'{{ $alt }} ' + (idx + 1)"
@@ -45,7 +45,7 @@
                             <button
                                 x-on:click="goTo(idx)"
                                 class="w-2.5 h-2.5 rounded-full transition-all"
-                                x-bind:class="current === idx ? 'bg-charcoal w-6' : 'bg-charcoal-lighter hover:bg-charcoal-light'"
+                                x-bind:class="current === idx ? 'bg-navy w-6' : 'bg-slate hover:bg-slate'"
                             ></button>
                         </template>
                     </div>
@@ -58,7 +58,7 @@
                         <button
                             x-on:click="goTo(idx)"
                             class="w-20 h-24 overflow-hidden border-2 transition-all shrink-0"
-                            x-bind:class="current === idx ? 'border-sunburst shadow-gold' : 'border-transparent hover:border-charcoal-lighter'"
+                            x-bind:class="current === idx ? 'border-champagne shadow-champagne' : 'border-transparent hover:border-slate'"
                         >
                             <img x-bind:src="img" class="w-full h-full object-cover object-top" alt="">
                         </button>
@@ -67,7 +67,7 @@
 
                 <div class="flex-1 relative">
                     <div
-                        class="aspect-[3/4] overflow-hidden bg-linen cursor-crosshair relative"
+                        class="aspect-[3/4] overflow-hidden bg-cloud cursor-crosshair relative"
                         x-on:mouseenter="zooming = true"
                         x-on:mouseleave="zooming = false"
                         x-on:mousemove="handleZoom($event)"
@@ -90,13 +90,13 @@
                         <div>
                             <button
                                 x-on:click="prev()"
-                                class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-charcoal hover:text-charcoal-dark transition-all"
+                                class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-navy hover:text-navy-dark transition-all"
                             >
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
                             </button>
                             <button
                                 x-on:click="next()"
-                                class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-charcoal hover:text-charcoal-dark transition-all"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow flex items-center justify-center text-navy hover:text-navy-dark transition-all"
                             >
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                             </button>
@@ -108,11 +108,11 @@
     </template>
 
     <template x-if="images.length === 0">
-        <div class="aspect-[3/4] overflow-hidden bg-linen flex flex-col items-center justify-center text-charcoal-lighter">
+        <div class="aspect-[3/4] overflow-hidden bg-cloud flex flex-col items-center justify-center text-slate">
             <svg class="w-16 h-16 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
-            <span class="text-sm">Product image coming soon</span>
+            <span class="text-sm">Image coming soon</span>
         </div>
     </template>
 </div>

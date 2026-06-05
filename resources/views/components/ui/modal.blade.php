@@ -10,8 +10,8 @@
  |   name         required, unique ID used for open/close events
  |   title        heading text in the header bar
  |   size         sm | md | lg | xl | full
- |   variant      default | dark | gold | success | warning | danger
- |   dismissible  bool (default true), show ✕ / allow backdrop click to close
+ |   variant      default | dark | champagne | success | warning | danger
+ |   dismissible  bool (default true), show x / allow backdrop click to close
  |   scrollBody   bool (default true), inner body scrolls; header+footer sticky
  |   maxHeight    CSS max-height override, e.g. "90dvh"
  |   headerClass  extra Tailwind classes on the header div
@@ -78,88 +78,88 @@
     // No inline styles. No raw hex values. Approved brand tokens only.
     $vc = match($variant) {
         'dark' => [
-            'stripe'     => 'bg-gold-gradient-horizontal',
-            'headerBg'   => 'bg-charcoal-dark',
-            'headerBdr'  => 'border-sunburst',
-            'panelBg'    => 'bg-charcoal',
-            'bodyText'   => 'text-linen',
+            'stripe'     => 'bg-grad-champagne-rule',
+            'headerBg'   => 'bg-navy-dark',
+            'headerBdr'  => 'border-champagne',
+            'panelBg'    => 'bg-navy',
+            'bodyText'   => 'text-cloud',
             'titleText'  => 'text-white',
-            'iconBg'     => 'bg-sunburst/15',
-            'iconText'   => 'text-sunburst',
-            'closeText'  => 'text-charcoal-lighter',
-            'closeHover' => 'hover:bg-charcoal',
-            'footerBg'   => 'bg-charcoal-dark',
+            'iconBg'     => 'bg-champagne/15',
+            'iconText'   => 'text-champagne',
+            'closeText'  => 'text-slate-light',
+            'closeHover' => 'hover:bg-navy-light',
+            'footerBg'   => 'bg-navy-dark',
             'footerBdr'  => 'border-white/10',
         ],
-        'gold' => [
-            'stripe'     => 'bg-gold-gradient-horizontal',
-            'headerBg'   => 'bg-gold-gradient',
-            'headerBdr'  => 'border-sunburst-dark',
-            'panelBg'    => 'bg-linen-light',
-            'bodyText'   => 'text-charcoal',
-            'titleText'  => 'text-charcoal',
-            'iconBg'     => 'bg-sunburst/20',
-            'iconText'   => 'text-charcoal',
-            'closeText'  => 'text-charcoal-light',
-            'closeHover' => 'hover:bg-linen-dark',
-            'footerBg'   => 'bg-linen',
-            'footerBdr'  => 'border-linen-dark',
+        'champagne' => [
+            'stripe'     => 'bg-grad-champagne-shine',
+            'headerBg'   => 'bg-grad-champagne-shine',
+            'headerBdr'  => 'border-champagne-dark',
+            'panelBg'    => 'bg-cloud-light',
+            'bodyText'   => 'text-navy',
+            'titleText'  => 'text-navy',
+            'iconBg'     => 'bg-champagne/20',
+            'iconText'   => 'text-navy',
+            'closeText'  => 'text-slate',
+            'closeHover' => 'hover:bg-cloud-dark',
+            'footerBg'   => 'bg-cloud',
+            'footerBdr'  => 'border-cloud-dark',
         ],
         'success' => [
-            'stripe'     => 'bg-success',
-            'headerBg'   => 'bg-linen',
-            'headerBdr'  => 'border-success',
+            'stripe'     => 'bg-stopngo-success',
+            'headerBg'   => 'bg-cloud',
+            'headerBdr'  => 'border-stopngo-success',
             'panelBg'    => 'bg-white',
-            'bodyText'   => 'text-charcoal',
-            'titleText'  => 'text-charcoal',
-            'iconBg'     => 'bg-success/15',
-            'iconText'   => 'text-success',
-            'closeText'  => 'text-charcoal-light',
-            'closeHover' => 'hover:bg-linen-dark',
-            'footerBg'   => 'bg-linen-light',
-            'footerBdr'  => 'border-linen-dark',
+            'bodyText'   => 'text-navy',
+            'titleText'  => 'text-navy',
+            'iconBg'     => 'bg-stopngo-success/15',
+            'iconText'   => 'text-stopngo-success',
+            'closeText'  => 'text-slate',
+            'closeHover' => 'hover:bg-cloud-dark',
+            'footerBg'   => 'bg-cloud-light',
+            'footerBdr'  => 'border-cloud-dark',
         ],
         'warning' => [
-            'stripe'     => 'bg-warning',
-            'headerBg'   => 'bg-linen',
-            'headerBdr'  => 'border-warning',
+            'stripe'     => 'bg-stopngo-warning',
+            'headerBg'   => 'bg-cloud',
+            'headerBdr'  => 'border-stopngo-warning',
             'panelBg'    => 'bg-white',
-            'bodyText'   => 'text-charcoal',
-            'titleText'  => 'text-charcoal',
-            'iconBg'     => 'bg-warning/15',
-            'iconText'   => 'text-warning',
-            'closeText'  => 'text-charcoal-light',
-            'closeHover' => 'hover:bg-linen-dark',
-            'footerBg'   => 'bg-linen-light',
-            'footerBdr'  => 'border-linen-dark',
+            'bodyText'   => 'text-navy',
+            'titleText'  => 'text-navy',
+            'iconBg'     => 'bg-stopngo-warning/15',
+            'iconText'   => 'text-stopngo-warning',
+            'closeText'  => 'text-slate',
+            'closeHover' => 'hover:bg-cloud-dark',
+            'footerBg'   => 'bg-cloud-light',
+            'footerBdr'  => 'border-cloud-dark',
         ],
         'danger' => [
-            'stripe'     => 'bg-error',
-            'headerBg'   => 'bg-linen',
-            'headerBdr'  => 'border-error',
+            'stripe'     => 'bg-stopngo-error',
+            'headerBg'   => 'bg-cloud',
+            'headerBdr'  => 'border-stopngo-error',
             'panelBg'    => 'bg-white',
-            'bodyText'   => 'text-charcoal',
-            'titleText'  => 'text-charcoal',
-            'iconBg'     => 'bg-error/15',
-            'iconText'   => 'text-error',
-            'closeText'  => 'text-charcoal-light',
-            'closeHover' => 'hover:bg-linen-dark',
-            'footerBg'   => 'bg-linen-light',
-            'footerBdr'  => 'border-linen-dark',
+            'bodyText'   => 'text-navy',
+            'titleText'  => 'text-navy',
+            'iconBg'     => 'bg-stopngo-error/15',
+            'iconText'   => 'text-stopngo-error',
+            'closeText'  => 'text-slate',
+            'closeHover' => 'hover:bg-cloud-dark',
+            'footerBg'   => 'bg-cloud-light',
+            'footerBdr'  => 'border-cloud-dark',
         ],
         default => [
-            'stripe'     => 'bg-gold-gradient-horizontal',
-            'headerBg'   => 'bg-linen',
-            'headerBdr'  => 'border-sunburst',
+            'stripe'     => 'bg-grad-champagne-rule',
+            'headerBg'   => 'bg-cloud',
+            'headerBdr'  => 'border-champagne',
             'panelBg'    => 'bg-white',
-            'bodyText'   => 'text-charcoal',
-            'titleText'  => 'text-charcoal',
-            'iconBg'     => 'bg-sunburst/15',
-            'iconText'   => 'text-sunburst',
-            'closeText'  => 'text-charcoal-light',
-            'closeHover' => 'hover:bg-linen-dark',
-            'footerBg'   => 'bg-linen-light',
-            'footerBdr'  => 'border-linen-dark',
+            'bodyText'   => 'text-navy',
+            'titleText'  => 'text-navy',
+            'iconBg'     => 'bg-champagne/15',
+            'iconText'   => 'text-champagne',
+            'closeText'  => 'text-slate',
+            'closeHover' => 'hover:bg-cloud-dark',
+            'footerBg'   => 'bg-cloud-light',
+            'footerBdr'  => 'border-cloud-dark',
         ],
     };
 
@@ -170,7 +170,7 @@
     $hasFooter = isset($footer) && $footer instanceof \Illuminate\View\ComponentSlot && !$footer->isEmpty();
 
     // ── Safe Alpine ID ────────────────────────────────────────────────────
-    $alpineId = 't5modal_' . preg_replace('/[^a-z0-9_]/i', '_', $name ?? uniqid());
+    $alpineId = 'sgmodal_' . preg_replace('/[^a-z0-9_]/i', '_', $name ?? uniqid());
 @endphp
 
 <div
@@ -205,7 +205,7 @@
     <div
         x-show="isOpen"
         x-cloak
-        class="fixed inset-0 flex items-center justify-center p-4 bg-charcoal-dark/80 backdrop-blur-sm"
+        class="fixed inset-0 flex items-center justify-center p-4 bg-navy-dark/80 backdrop-blur-sm"
         style="z-index: {{ $zIndex }};"
         role="dialog"
         aria-modal="true"
@@ -256,7 +256,7 @@
 
                     <h2
                         id="{{ $alpineId }}_title"
-                        class="flex-1 min-w-0 text-lg font-bold leading-tight truncate {{ $vc['titleText'] }}"
+                        class="flex-1 min-w-0 text-lg font-bold leading-tight truncate font-head {{ $vc['titleText'] }}"
                     >
                         {{ $title }}
                     </h2>
@@ -280,7 +280,7 @@
 
             {{-- Body --}}
             <div
-                class="flex-1 px-5 py-4 text-[0.9375rem] leading-relaxed overflow-x-hidden {{ $scrollBody ? 'overflow-y-auto overscroll-contain scrollbar-sunburst' : '' }} {{ $vc['bodyText'] }} {{ $bodyClass }}"
+                class="flex-1 px-5 py-4 text-[0.9375rem] leading-relaxed overflow-x-hidden {{ $scrollBody ? 'overflow-y-auto overscroll-contain scrollbar-champagne' : '' }} {{ $vc['bodyText'] }} {{ $bodyClass }}"
             >
                 {{ $slot }}
             </div>

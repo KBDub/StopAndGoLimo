@@ -70,7 +70,7 @@
                     {{-- Left slot, visible=3 only --}}
                     <template x-if="vis >= 3">
                         <div
-                            class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
+                            class="flex-none overflow-hidden bg-cloud transition-all duration-300 ease-out"
                             style="width:300px; aspect-ratio:4/3; max-width:100%;"
                             :class="fading ? 'opacity-0' : 'opacity-60'"
                         >
@@ -85,12 +85,12 @@
 
                     {{-- Center slot --}}
                     <div
-                        class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out relative"
+                        class="flex-none overflow-hidden bg-cloud transition-all duration-300 ease-out relative"
                         :class="fading ? 'opacity-0' : 'opacity-100'"
                         :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:600px; aspect-ratio:4/3; max-width:100%;'"
                     >
                         <template x-if="vis >= 3">
-                            <div class="absolute inset-0 ring-2 ring-sunburst shadow-gold-xl pointer-events-none z-10"></div>
+                            <div class="absolute inset-0 ring-2 ring-champagne shadow-champagne-xl pointer-events-none z-10"></div>
                         </template>
                         <img
                             :src="cImg.src"
@@ -103,7 +103,7 @@
                     {{-- Right slot, visible >= 2 --}}
                     <template x-if="vis >= 2">
                         <div
-                            class="flex-none overflow-hidden bg-linen transition-all duration-300 ease-out"
+                            class="flex-none overflow-hidden bg-cloud transition-all duration-300 ease-out"
                             :class="fading ? 'opacity-0' : vis >= 3 ? 'opacity-60' : 'opacity-100'"
                             :style="vis === 2 ? 'width:600px; aspect-ratio:4/3; max-width:calc(50% - 6px);' : 'width:300px; aspect-ratio:4/3; max-width:100%;'"
                         >
@@ -123,7 +123,7 @@
                     <div>
                         <button
                             x-on:click="prev()"
-                            class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-charcoal/80 hover:bg-sunburst text-white flex items-center justify-center transition-colors duration-200"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-navy/80 hover:bg-champagne text-white flex items-center justify-center transition-colors duration-200"
                             aria-label="Previous image"
                         >
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +132,7 @@
                         </button>
                         <button
                             x-on:click="next()"
-                            class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-charcoal/80 hover:bg-sunburst text-white flex items-center justify-center transition-colors duration-200"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-navy/80 hover:bg-champagne text-white flex items-center justify-center transition-colors duration-200"
                             aria-label="Next image"
                         >
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,7 +150,7 @@
                     <button
                         x-on:click="jumpTo(idx)"
                         class="h-1.5 transition-all duration-300"
-                        :class="idx === current ? 'w-6 bg-sunburst' : 'w-1.5 bg-charcoal-lighter hover:bg-charcoal-light'"
+                        :class="idx === current ? 'w-6 bg-champagne' : 'w-1.5 bg-slate hover:bg-slate'"
                         :aria-label="'Go to image ' + (idx + 1)"
                     ></button>
                 </template>

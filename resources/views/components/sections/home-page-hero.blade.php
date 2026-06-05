@@ -2,36 +2,42 @@
     <div class="max-w-7xl mx-auto px-6 w-full">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h5 class="text-olive font-semibold tracking-wide mb-4">
-                    Veteran Owned &bull; Joliet, IL
+                <h5 class="text-champagne font-head font-semibold tracking-wide mb-4">
+                    New Lenox &bull; Naperville &bull; Chicago, Illinois
                 </h5>
                 <div class="inline-block mb-6">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal leading-tight mb-2">
-                        Custom Signage
-                        <span class="block text-sunburst">&amp; Apparel</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-2 font-head">
+                        Premium Airport
+                        <span class="block text-champagne">Shuttle Service</span>
                     </h1>
-                    <div class="h-1 bg-sunburst"></div>
+                    <div class="h-1 bg-champagne"></div>
                 </div>
-                <p class="text-2xl text-charcoal-light mb-8 max-w-3xl">
-                    Premium quality custom t-shirts, business signs, vehicle graphics, and promotional
-                    products. Designed and produced right here in Joliet.
+                <p class="text-2xl text-slate mb-8 max-w-3xl">
+                    Professional airport transfers, corporate travel, and special event limousine service. Serving O'Hare, Midway, and all of Illinois since 2009.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <x-ui.button-gold-gradient href="/top5pct-merchandise">
-                        Shop Now
-                    </x-ui.button-gold-gradient>
-                    <x-ui.button-outline-charcoal href="/contact">
-                        Get a Free Quote
-                    </x-ui.button-outline-charcoal>
+                    <x-ui.button-champagne-solid onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+                        Book a Ride
+                    </x-ui.button-champagne-solid>
+                    <x-ui.button-outline-champagne href="/service-areas">
+                        Service Areas
+                    </x-ui.button-outline-champagne>
                 </div>
             </div>
             <div class="relative">
-                <x-ui.card-showcase
-                    image="/images/logos/top5-logo.gif"
-                    imageAlt="Top 5 Percent Signs and Apparel"
-                    description="What Do You Represent?"
-                    minHeight="min-h-[400px]"
-                />
+                <div class="overflow-hidden shadow-champagne-lg">
+                    <img
+                        src="/images/stopngo-hero-vehicle.jpg"
+                        alt="Stop & Go Limo luxury vehicle ready for airport pickup"
+                        class="w-full object-cover"
+                        style="aspect-ratio: 4/3;"
+                        loading="eager"
+                    >
+                </div>
+                <div class="absolute -bottom-4 -left-4 bg-navy shadow-lg px-6 py-4 hidden lg:block">
+                    <p class="text-champagne font-head font-bold text-2xl">2009</p>
+                    <p class="text-cloud text-xs">Serving Illinois</p>
+                </div>
             </div>
         </div>
     </div>

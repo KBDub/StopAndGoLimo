@@ -1,19 +1,19 @@
 @props([
-    'preHeading' => 'Veteran Owned • Joliet, IL',
-    'heading' => 'Custom Signage',
-    'headingAccent' => '& Apparel',
-    'description' => 'Premium quality custom t-shirts, business signs, vehicle graphics, and promotional products. Designed and produced right here in Joliet.',
-    'primaryButtonText' => 'Shop Now',
-    'primaryButtonHref' => '/top5pct-merchandise',
+    'preHeading'          => 'New Lenox &nbsp;&middot;&nbsp; Naperville &nbsp;&middot;&nbsp; Chicago',
+    'heading'             => 'Premium Airport Shuttle',
+    'headingAccent'       => '& Limousine Service',
+    'description'         => 'Professional airport transfers, corporate travel, and special event transportation. Serving O\'Hare, Midway, and all of Illinois since 2009.',
+    'primaryButtonText'   => 'Book a Ride',
+    'primaryButtonHref'   => '/booking',
     'secondaryButtonText' => 'Get a Free Quote',
     'secondaryButtonHref' => '/contact',
-    'image' => '/images/top5pct-banner-joliet.jpg',
-    'compactButtons' => false,
+    'image'               => '/images/stopngo-banner.jpg',
+    'compactButtons'      => false,
 ])
 
 @php
-    $primaryIsModal   = $primaryButtonHref  === '/contact';
-    $secondaryIsModal = $secondaryButtonHref === '/contact';
+    $primaryIsModal   = $primaryButtonHref  === '/contact' || $primaryButtonHref  === '/booking';
+    $secondaryIsModal = $secondaryButtonHref === '/contact' || $secondaryButtonHref === '/booking';
     $btnClass         = $compactButtons ? '!px-5 !py-2.5 !text-sm' : '';
 @endphp
 
@@ -21,50 +21,50 @@
     <div class="absolute inset-0">
         <img
             src="{{ $image }}"
-            alt="Top 5 Percent - Joliet, IL"
+            alt="Stop & Go Limo airport shuttle service"
             class="w-full h-full object-cover"
             style="object-position: center 60%;"
         >
-        <div class="absolute inset-0 bg-charcoal-dark/70"></div>
+        <div class="absolute inset-0 bg-navy-dark/70"></div>
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
         <div class="max-w-2xl">
-            <h5 class="text-sunburst font-semibold tracking-wide mb-4">
-                {{ $preHeading }}
+            <h5 class="text-champagne font-head font-semibold tracking-wide mb-4">
+                {!! $preHeading !!}
             </h5>
             <div class="inline-block mb-6">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-2 font-head">
                     {{ $heading }}
-                    <span class="block text-sunburst">{{ $headingAccent }}</span>
+                    <span class="block text-champagne">{{ $headingAccent }}</span>
                 </h1>
-                <div class="h-1 bg-sunburst"></div>
+                <div class="h-1 bg-champagne"></div>
             </div>
-            <p class="text-lg md:text-2xl text-linen mb-8 max-w-3xl">
+            <p class="text-lg md:text-2xl text-cloud mb-8 max-w-3xl">
                 {{ $description }}
             </p>
             <div class="{{ $compactButtons ? 'flex flex-row gap-3' : 'flex flex-col sm:flex-row gap-4' }}">
                 @if($primaryIsModal)
-                    <x-ui.button-gold-gradient
+                    <x-ui.button-champagne-solid
                         onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
                         class="{{ $btnClass }}"
-                    >{{ $primaryButtonText }}</x-ui.button-gold-gradient>
+                    >{{ $primaryButtonText }}</x-ui.button-champagne-solid>
                 @else
-                    <x-ui.button-gold-gradient
+                    <x-ui.button-champagne-solid
                         href="{{ $primaryButtonHref }}"
                         class="{{ $btnClass }}"
-                    >{{ $primaryButtonText }}</x-ui.button-gold-gradient>
+                    >{{ $primaryButtonText }}</x-ui.button-champagne-solid>
                 @endif
                 @if($secondaryIsModal)
-                    <x-ui.button-outline-gold
+                    <x-ui.button-outline-champagne
                         onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
                         class="{{ $btnClass }}"
-                    >{{ $secondaryButtonText }}</x-ui.button-outline-gold>
+                    >{{ $secondaryButtonText }}</x-ui.button-outline-champagne>
                 @else
-                    <x-ui.button-outline-gold
+                    <x-ui.button-outline-champagne
                         href="{{ $secondaryButtonHref }}"
                         class="{{ $btnClass }}"
-                    >{{ $secondaryButtonText }}</x-ui.button-outline-gold>
+                    >{{ $secondaryButtonText }}</x-ui.button-outline-champagne>
                 @endif
             </div>
         </div>

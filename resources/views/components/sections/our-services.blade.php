@@ -1,51 +1,51 @@
-<section class="py-10 bg-linen">
+<section class="py-10 bg-cloud">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-12">
-            <h5 class="text-azure font-semibold tracking-wide mb-3">
+            <h5 class="text-champagne font-head font-semibold tracking-wide mb-3">
                 What We Do
             </h5>
             <div class="inline-block">
-                <h2 class="text-h2 font-bold text-charcoal mb-2">Our Services</h2>
-                <div class="h-1 bg-sunburst"></div>
+                <h2 class="text-h2 font-bold text-navy mb-2 font-head">Our Services</h2>
+                <div class="h-1 bg-champagne"></div>
             </div>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             <x-ui.card-service
-                title="Custom Apparel"
-                description="T-shirts, hoodies, hats, and more with vinyl, rhinestone, glitter, and embroidery options for any occasion."
+                title="Airport Transfers"
+                description="On-time pickup and drop-off at O'Hare and Midway. We track your flight and adjust automatically for delays."
             />
 
             <x-ui.card-service
-                title="Business Signs"
-                description="Banners, yard signs, posters, table runners, and professional signage that makes your business stand out."
+                title="Corporate Travel"
+                description="Executive car service and group shuttles for corporate clients. Monthly billing and priority booking available."
             />
 
             <x-ui.card-service
-                title="Vehicle Graphics"
-                description="Automobile graphics, vehicle magnets, DOT number decals, and full vehicle wraps for maximum visibility."
+                title="Wedding Limousines"
+                description="Elegant transportation for your wedding day. We offer multi-vehicle packages for the entire wedding party."
             />
 
             <x-ui.card-service
-                title="Decals & Stickers"
-                description="Custom wall decals, window graphics, floor decals, and vinyl stickers for personal or commercial use."
+                title="Group Transportation"
+                description="Mini buses, Sprinter vans, and coach buses for groups of any size. Proms, reunions, sporting events, and more."
             />
 
             <x-ui.card-service
-                title="Promotional Items"
-                description="Mugs, pens, tumblers, koozies, and branded merchandise to promote your business at any event."
+                title="Long Distance Rides"
+                description="Point-to-point travel across Illinois and beyond. Comfortable, professional, and transparent flat-rate pricing."
             />
 
             <x-ui.card-service
-                title="Design Services"
-                description="Our in-house design team brings your vision to life with professional layouts and artwork preparation."
+                title="Hourly Charter"
+                description="Book by the hour for city tours, multiple stops, or a night out. Your driver stays with you the entire time."
             />
         </div>
 
         <div class="text-center">
-            <x-ui.button-text-link href="/top5pct-merchandise">
-                View All Products
-            </x-ui.button-text-link>
+            <a href="/services" class="text-azure hover:text-azure-dark font-semibold text-sm transition-colors">
+                View All Services &rarr;
+            </a>
         </div>
     </div>
 </section>

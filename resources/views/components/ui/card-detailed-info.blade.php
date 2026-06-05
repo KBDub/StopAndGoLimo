@@ -34,20 +34,19 @@
             t.parentNode.replaceChild(f, t);
         }
     })"
-    class="bg-white shadow-gold-lg p-8 lg:p-12"
+    class="bg-white shadow-champagne-lg p-8 lg:p-12"
 >
 
     <div class="text-center mb-6">
         <div class="inline-block">
-            <h2 class="text-olive font-bold text-h2 mb-2">{{ $heading }}</h2>
-            <div class="h-1 bg-sunburst"></div>
+            <h2 class="text-champagne font-bold text-h2 mb-2 font-head">{{ $heading }}</h2>
+            <div class="h-1 bg-champagne"></div>
         </div>
     </div>
 
     @if($image2)
-        {{-- Two-image layout: image1 floated left with intro, image2 floated right with lower --}}
         <div class="[display:flow-root] mb-4">
-            <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
+            <div class="float-left mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
@@ -65,7 +64,7 @@
         </div>
 
         <div class="[display:flow-root] mb-4">
-            <div class="float-right ml-6 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
+            <div class="float-right ml-6 mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0">
                 <img
                     src="{{ $image2 }}"
                     alt="{{ $alt2 }}"
@@ -78,17 +77,16 @@
             </div>
         </div>
 
-        <div class="clear-both border-t-2 border-linen pt-5 card-detail-content">
+        <div class="clear-both border-t-2 border-cloud pt-5 card-detail-content">
             {{ $footer }}
         </div>
     @else
-        {{-- Single-image layout: intro full width, image floated left with mid wrapping, lower full width below --}}
         <div class="mb-4 card-detail-content">
             {{ $intro }}
         </div>
 
         <div class="[display:flow-root] mb-4">
-            <div class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
+            <div class="float-left mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out flex-shrink-0" style="margin-right: 3rem;">
                 <img
                     src="{{ $image1 }}"
                     alt="{{ $alt1 }}"
@@ -105,7 +103,7 @@
             {{ $lower }}
         </div>
 
-        <div class="border-t-2 border-linen pt-5 card-detail-content">
+        <div class="border-t-2 border-cloud pt-5 card-detail-content">
             {{ $footer }}
         </div>
     @endif

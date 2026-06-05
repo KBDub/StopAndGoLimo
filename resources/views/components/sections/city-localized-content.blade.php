@@ -1,27 +1,27 @@
 @props([
     'heading'       => '',
-    'label'         => 'LOCAL EXPERTISE',
-    'image'         => '/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg',
-    'alt'           => 'Custom signs and apparel by Top 5 Percent',
+    'label'         => 'Local Expertise',
+    'image'         => '/images/stopngo-service-area.jpg',
+    'alt'           => 'Stop & Go Limo serving Illinois communities',
     'imagePosition' => 'left',
 ])
 
-<section class="py-10 bg-linen">
+<section class="py-10 bg-cloud">
     <div class="max-w-7xl mx-auto px-6">
         <div
             x-data="{ ready: false }"
             x-init="$nextTick(() => ready = true)"
             :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="p-10 bg-white shadow-gold-lg transition-all duration-500"
+            class="p-10 bg-white shadow-champagne-lg transition-all duration-500"
         >
-            {{-- Centered heading with olive label + sunburst bar --}}
+            {{-- Centered heading with champagne label + bar --}}
             <div class="text-center mb-8">
                 @if($label)
-                    <p class="text-olive font-semibold tracking-widest text-sm uppercase mb-2">{{ $label }}</p>
+                    <p class="text-champagne font-head font-semibold tracking-widest text-sm mb-2">{{ $label }}</p>
                 @endif
                 <div class="inline-block">
-                    <h2 class="text-charcoal text-h2 mb-2">{{ $heading }}</h2>
-                    <div class="h-1 bg-sunburst w-full"></div>
+                    <h2 class="text-navy text-h2 mb-2 font-head">{{ $heading }}</h2>
+                    <div class="h-1 bg-champagne w-full"></div>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
             <div class="[display:flow-root]">
                 @if($imagePosition === 'right')
                     <div
-                        class="float-right mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out"
+                        class="float-right mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out"
                         style="margin-left: 3rem;"
                     >
                         <img
@@ -41,7 +41,7 @@
                     </div>
                 @else
                     <div
-                        class="float-left mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out"
+                        class="float-left mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out"
                         style="margin-right: 3rem;"
                     >
                         <img
@@ -54,7 +54,7 @@
                 @endif
 
                 <div
-                    class="text-charcoal-light leading-relaxed space-y-4 [&>p]:mb-0"
+                    class="text-slate leading-relaxed space-y-4 [&>p]:mb-0"
                     x-data
                     x-init="
                         $el.querySelectorAll('p').forEach(p => {

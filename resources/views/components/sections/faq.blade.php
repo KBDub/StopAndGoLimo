@@ -37,11 +37,11 @@
         <div class="mb-12">
             <div class="text-center mb-8">
                 @if($label)
-                    <p class="text-olive font-semibold tracking-widest text-sm uppercase mb-2">{{ $label }}</p>
+                    <p class="text-champagne font-head font-semibold tracking-widest text-sm mb-2">{{ $label }}</p>
                 @endif
                 <div class="inline-block">
-                    <h2 class="text-charcoal mb-2">{{ $heading }}</h2>
-                    <div class="h-1 bg-sunburst"></div>
+                    <h2 class="text-navy mb-2 font-head">{{ $heading }}</h2>
+                    <div class="h-1 bg-champagne"></div>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
                 >
                 @endif
                 @if($introText)
-                <p class="text-charcoal-light leading-relaxed">{{ $introText }}</p>
+                <p class="text-slate leading-relaxed">{{ $introText }}</p>
                 @endif
             </div>
             @endif
@@ -68,14 +68,14 @@
             <div class="space-y-3">
                 @foreach(array_slice($faqs, 0, (int) ceil(count($faqs) / 2)) as $i => $faq)
                     <x-ui.card-faq question="{{ $faq['q'] }}" :open="$i === 0">
-                        <p class="text-charcoal-light">{!! $faq['a'] !!}</p>
+                        <p class="text-slate">{!! $faq['a'] !!}</p>
                     </x-ui.card-faq>
                 @endforeach
             </div>
             <div class="space-y-3">
                 @foreach(array_slice($faqs, (int) ceil(count($faqs) / 2)) as $faq)
                     <x-ui.card-faq question="{{ $faq['q'] }}">
-                        <p class="text-charcoal-light">{!! $faq['a'] !!}</p>
+                        <p class="text-slate">{!! $faq['a'] !!}</p>
                     </x-ui.card-faq>
                 @endforeach
             </div>

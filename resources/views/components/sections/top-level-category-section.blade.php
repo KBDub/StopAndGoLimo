@@ -9,14 +9,14 @@
     <div class="max-w-7xl mx-auto px-6">
         @if($heading)
             <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-charcoal mb-3">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-3 font-head">
                     {{ $heading }}
                     @if($headingAccent)
-                        <span class="text-sunburst">{{ $headingAccent }}</span>
+                        <span class="text-champagne">{{ $headingAccent }}</span>
                     @endif
                 </h2>
                 @if($description)
-                    <p class="text-charcoal-light max-w-4xl mx-auto">{{ $description }}</p>
+                    <p class="text-slate max-w-4xl mx-auto">{{ $description }}</p>
                 @endif
             </div>
         @endif

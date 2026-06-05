@@ -1,102 +1,72 @@
-<section class="py-10 bg-linen">
+<section class="py-10 bg-cloud">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-olive">
-            Products & Services for Your Every Need
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-champagne font-head">
+            Services for Every Occasion
         </h2>
 
-        <p class="text-charcoal-light leading-relaxed text-center max-w-4xl mx-auto mb-10">
-            From custom apparel to business signage, vehicle graphics, and promotional items, Top 5 Percent is your one stop shop serving Will, Cook, and DuPage counties and the surrounding Chicagoland communities for high-quality, locally produced products.
+        <p class="text-slate leading-relaxed text-center max-w-4xl mx-auto mb-10">
+            From airport runs to weddings and corporate travel, Stop &amp; Go Limo serves Will, Cook, and DuPage counties with professional, on-time transportation. Serving New Lenox, Naperville, Joliet, and the greater Chicagoland area since 2009.
         </p>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <x-ui.card-product
-                title="Custom Apparel"
-                href="/custom-apparel"
-                image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
+                title="Airport Shuttle"
+                href="/airport-shuttle"
+                image="/images/services/stopngo-airport-shuttle.jpg"
             >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Need custom t-shirts in Joliet?</strong> Whether you are ordering screen printed and heat pressed custom shirts for a team, a family reunion, or your business, Top 5 Percent delivers premium quality. Ask about our <a href="/custom-apparel" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">full custom apparel lineup</a> for all your branding needs.
+                <p class="text-sm text-slate mb-3">
+                    <strong class="text-navy">Reliable airport transfers to O'Hare and Midway.</strong> We track your flight and adjust pickup automatically. Flat rates with no surge pricing. <a href="/airport-shuttle" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Learn about our airport service</a>.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
-                title="Corporate Wear"
-                href="/custom-apparel/group-wear/corporate-wear-shirts"
-                image="/images/corporate-wear/toptpct-banner-corporate-shirts-uniforms-joliet-shorewood.jpg"
+                title="Corporate Travel"
+                href="/corporate-car-service"
+                image="/images/services/stopngo-corporate-travel.jpg"
             >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for professional branded apparel?</strong> Outfit your entire team with <a href="/custom-apparel/group-wear/corporate-wear-shirts" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom polos, jackets, and dress shirts</a> featuring your company logo. Embroidered or printed to match your brand standards. Need it fast? We also offer <a href="/custom-apparel" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">same day shirt service</a> for urgent orders.
+                <p class="text-sm text-slate mb-3">
+                    <strong class="text-navy">Executive car service for business travelers.</strong> Monthly billing, priority dispatch, and <a href="/corporate-car-service" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">corporate account management</a>. Available for recurring schedules and last-minute bookings.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
-                title="Business Signs"
-                href="/signs"
-                image="/images/business-signs/top5pct-banner-business-signs-joliet-plainfield-shorewood.jpg"
+                title="Wedding Limousine"
+                href="/wedding-limousine"
+                image="/images/services/stopngo-wedding-limo.jpg"
             >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Want to attract more customers with a new sign?</strong> Our <a href="/signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom business signs</a> are designed to maximize visibility and build brand recognition. From storefront signs to building wraps, we also offer <a href="/signs/business-signs/banners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom banners</a> for temporary promotions and grand openings.
+                <p class="text-sm text-slate mb-3">
+                    <strong class="text-navy">Elegant wedding transportation for your big day.</strong> Stretch limos, Sprinter vans, and full wedding party packages. See our <a href="/wedding-limousine" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">wedding limousine packages</a> for details.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
-                title="Banners"
-                href="/signs/business-signs/banners"
-                image="/images/banners/top5pct-banner-business-banners-joliet-shorewood-crest-hill.jpg"
+                title="Party Bus"
+                href="/party-bus"
+                image="/images/services/stopngo-party-bus.jpg"
             >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Need a banner for your next event or promotion?</strong> Durable <a href="/signs/business-signs/banners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">indoor and outdoor banners</a> with full-color printing on premium vinyl and fabric. Perfect for grand openings and trade shows. We also print <a href="/signs/table-signs/table-runners" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom table runners</a> for a complete event presence.
+                <p class="text-sm text-slate mb-3">
+                    <strong class="text-navy">Group transportation for celebrations and events.</strong> Our party buses seat 14 to 40 passengers with premium sound and lighting. Great for <a href="/prom-party-bus" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">prom night</a> and bachelorette parties.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
-                title="Vehicle Graphics"
-                href="/vehicle-graphics/automobile-graphics"
-                image="/images/automobile-graphics/top5pct-banner-vinyl-lettering-car-wraps-joliet.jpg"
+                title="Coach Buses"
+                href="/coach-buses"
+                image="/images/services/stopngo-coach-bus.jpg"
             >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Ready to turn your vehicle into a mobile billboard?</strong> <a href="/vehicle-graphics/automobile-graphics" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Custom vehicle wraps and vinyl lettering</a> that advertise your business everywhere you drive. For a flexible, no-commitment option, check out our <a href="/vehicle-graphics/vehicle-magnets" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">removable vehicle magnets</a>.
+                <p class="text-sm text-slate mb-3">
+                    <strong class="text-navy">Large-group charter service for any occasion.</strong> <a href="/coach-buses" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Full-size coach buses</a> for corporate outings, sporting events, school trips, and reunions. Comfortable, climate-controlled, and on time.
                 </p>
             </x-ui.card-product>
 
             <x-ui.card-product
-                title="Custom Stickers"
-                href="/stickers/standard-stickers-decals"
-                image="/images/stickers-decals/top5pct-banner-stickers-decals-joliet.jpg"
+                title="Special Events"
+                href="/special-event-limousine"
+                image="/images/services/stopngo-special-events.jpg"
             >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Looking for custom stickers or labels?</strong> High-quality <a href="/stickers/standard-stickers-decals" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">die-cut stickers and labels</a> for branding, packaging, giveaways, and promotions. We also offer <a href="/signs/business-signs/window-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">window and wall decals</a> for storefronts and office spaces.
-                </p>
-            </x-ui.card-product>
-
-            <x-ui.card-product
-                title="DTF Transfers"
-                href="/custom-apparel/printing-options/dtf-printing"
-                image="/images/dtf-transfers/toptpct-banner-dtf-transfers-joliet.jpg"
-            >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">What are DTF transfers and why choose them?</strong> <a href="/custom-apparel/printing-options/dtf-printing" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Direct-to-film transfers</a> produce vibrant, photo-quality designs on virtually any fabric. Ideal for small batches with no minimums. Share your artwork or describe what you want and we will handle the rest.
-                </p>
-            </x-ui.card-product>
-
-            <x-ui.card-product
-                title="Yard Signs"
-                href="/signs/ground-signs/yard-signs"
-                image="/images/yard-signs/top5pct-banner-yard-signs-joliet-shorewood-crest-hill.jpg"
-            >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Where can I get yard signs near Joliet?</strong> Corrugated <a href="/signs/ground-signs/yard-signs" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">yard signs for real estate, campaigns, and events</a>. Weather-resistant with single or double-sided printing. Need something larger? We also offer <a href="/signs/business-signs/posters" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">custom posters and foam boards</a> for indoor displays.
-                </p>
-            </x-ui.card-product>
-
-            <x-ui.card-product
-                title="Promotional Items"
-                href="/promotional-items"
-                image="/images/place-holder.1x1.jpg"
-            >
-                <p class="text-sm text-charcoal-light mb-3">
-                    <strong class="text-charcoal">Want branded merchandise for your next event?</strong> Custom pens, mugs, tote bags, koozies, and hundreds of other <a href="/promotional-items" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">promotional products with your logo</a>. Make a lasting impression at trade shows and events. Ready to get started? <a href="/contact" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Request a free quote</a> and we will help you find the right items.
+                <p class="text-sm text-slate mb-3">
+                    <strong class="text-navy">Luxury transportation for any special occasion.</strong> Concerts, sporting events, gala dinners, and more. <a href="/special-event-limousine" class="text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors">Book your special event ride</a> and arrive in style.
                 </p>
             </x-ui.card-product>
 

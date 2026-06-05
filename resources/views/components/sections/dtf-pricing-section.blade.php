@@ -1,309 +1,53 @@
-<section
-    x-data="{
-        setPending(type, size, tier, price) {
-            Alpine.store('dtfCart').pendingItem = { type: type, size: size, tier: tier, price: price, fileName: '' };
-            const input = document.getElementById('dtf-pricing-file-picker');
-            input.value = '';
-            input.click();
-        },
-        handleFilePicked(e) {
-            const f = e.target.files[0];
-            if (!f) return;
-            Alpine.store('dtfCart').pendingItem.fileName = f.name;
-            e.target.value = '';
-            this.$nextTick(() => window.dispatchEvent(new CustomEvent('open-modal', { detail: { name: 'dtf-confirm' } })));
-        }
-    }"
-    class="py-10 bg-white"
->
+{{--
+ | Repurposed from DTF Transfer Pricing → Stop & Go Limo Rates section.
+ | This is a simplified rates reference. Full booking goes through the contact modal.
+--}}
+
+<section class="py-10 bg-white">
     <div class="max-w-7xl mx-auto px-6">
 
-        {{-- Heading --}}
-        <div class="text-center mb-6">
+        <div class="text-center mb-10">
             <div class="inline-block mb-4">
-                <h2 class="text-h2 font-bold text-charcoal mb-2">DTF Transfer Pricing</h2>
-                <div class="h-1 bg-sunburst"></div>
+                <h2 class="text-h2 font-bold text-navy mb-2 font-head">Transparent Flat-Rate Pricing</h2>
+                <div class="h-1 bg-champagne"></div>
             </div>
-            <p class="text-body-sm text-charcoal-light max-w-2xl mx-auto">
-                Transfers come in a roll.
-                <span class="font-semibold text-charcoal">Add $0.30 per image</span>
-                if individual cuts are needed.
-                Prices shown are per piece at each quantity tier.
-                <span class="block mt-1 text-xs text-sunburst font-semibold">Click any row to start your order.</span>
+            <p class="text-body-sm text-slate max-w-2xl mx-auto">
+                We believe you should know what you are paying before you book. All rates below are flat, with no surge pricing, no hidden fees, and no surprises.
+                <span class="block mt-1 text-xs text-champagne font-semibold">Contact us for a custom quote on longer routes or group charters.</span>
             </p>
         </div>
 
-        {{-- Active cart indicator --}}
-        <div
-            x-show="$store.dtfCart.items.length > 0"
-            x-cloak
-            class="flex items-center justify-center gap-2.5 px-5 py-3 mb-8 bg-sunburst/10 border border-sunburst/40"
-        >
-            <svg class="w-4 h-4 flex-shrink-0 text-sunburst" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-            <p class="text-sm font-semibold text-charcoal">
-                <span x-text="$store.dtfCart.items.length"></span>
-                DTF transfer<span x-show="$store.dtfCart.items.length !== 1">s</span>
-                saved to your order
-                <span class="font-normal text-charcoal-light">, keep adding or click any row to proceed to checkout</span>
-            </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+
+            <div class="border-t-4 border-champagne bg-cloud shadow-md p-6">
+                <h3 class="text-navy font-bold text-lg mb-1 font-head">Airport Transfer</h3>
+                <p class="text-slate text-sm mb-3">New Lenox area to O'Hare or Midway. Flight tracking included.</p>
+                <p class="text-champagne font-head font-bold text-3xl">From $65</p>
+                <p class="text-slate/60 text-xs mt-1">Per vehicle, one way. Rate varies by pickup address.</p>
+            </div>
+
+            <div class="border-t-4 border-champagne bg-cloud shadow-md p-6">
+                <h3 class="text-navy font-bold text-lg mb-1 font-head">Hourly Charter</h3>
+                <p class="text-slate text-sm mb-3">Sedan, SUV, or Sprinter van. Perfect for events, city tours, or multiple stops.</p>
+                <p class="text-champagne font-head font-bold text-3xl">From $95/hr</p>
+                <p class="text-slate/60 text-xs mt-1">Two-hour minimum. Vehicle type and availability may vary.</p>
+            </div>
+
+            <div class="border-t-4 border-champagne bg-cloud shadow-md p-6">
+                <h3 class="text-navy font-bold text-lg mb-1 font-head">Party Bus / Group</h3>
+                <p class="text-slate text-sm mb-3">Party buses and coach buses for proms, weddings, and corporate events.</p>
+                <p class="text-champagne font-head font-bold text-3xl">Custom Quote</p>
+                <p class="text-slate/60 text-xs mt-1">Contact us with your date, group size, and destination.</p>
+            </div>
+
         </div>
 
-        {{-- Neck Tags --}}
-        <div class="mb-10">
-            <div class="text-center mb-5">
-                <h4 class="text-h4 font-semibold text-charcoal">
-                    Neck Tags
-                    <span class="font-normal text-charcoal-light">(fit within size)</span>
-                </h4>
-                <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                @php
-                    $neckTags = [
-                        ['size' => '2″ × 2″', 'tiers' => [
-                            '1 – 14 pcs'    => '$1.99',
-                            '15 – 49 pcs'   => '$1.29',
-                            '50 – 99 pcs'   => '$1.09',
-                            '100 – 249 pcs' => '$0.90',
-                            '250+ pcs'      => '$0.70',
-                        ]],
-                        ['size' => '3″ × 3″', 'tiers' => [
-                            '1 – 14 pcs'    => '$2.49',
-                            '15 – 49 pcs'   => '$1.62',
-                            '50 – 99 pcs'   => '$1.37',
-                            '100 – 249 pcs' => '$1.12',
-                            '250+ pcs'      => '$0.87',
-                        ]],
-                    ];
-                @endphp
-                @foreach($neckTags as $card)
-                    <div class="border-t-4 border-sunburst shadow-md bg-white overflow-hidden">
-                        <div class="px-4 py-2.5 bg-sunburst text-center">
-                            <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
-                        </div>
-                        @foreach($card['tiers'] as $qty => $price)
-                            <button
-                                type="button"
-                                @click="setPending('Neck Tags', '{{ $card['size'] }}', '{{ $qty }}', '{{ $price }}')"
-                                class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
-                            >
-                                <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
-                                <span class="text-sm font-bold text-charcoal">{{ $price }} <span class="text-xs font-normal text-charcoal-light">ea</span></span>
-                            </button>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        {{-- Left Chest / Right Chest --}}
-        <div class="mb-10">
-            <div class="text-center mb-5">
-                <h4 class="text-h4 font-semibold text-charcoal">Left Chest or Right Chest Image</h4>
-                <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
-            </div>
-            @php
-                $chestSizes = [
-                    ['size' => '3″ × 2″', 'tiers' => [
-                        '1 – 14 pcs'    => '$1.49',
-                        '15 – 49 pcs'   => '$1.22',
-                        '50 – 99 pcs'   => '$1.02',
-                        '100 – 249 pcs' => '$0.84',
-                        '250+ pcs'      => '$0.64',
-                    ]],
-                    ['size' => '3″ × 3″', 'tiers' => [
-                        '1 – 14 pcs'    => '$2.49',
-                        '15 – 49 pcs'   => '$1.62',
-                        '50 – 99 pcs'   => '$1.37',
-                        '100 – 249 pcs' => '$1.12',
-                        '250+ pcs'      => '$0.87',
-                    ]],
-                    ['size' => '4″ × 2″', 'tiers' => [
-                        '1 – 14 pcs'    => '$1.99',
-                        '15 – 49 pcs'   => '$1.29',
-                        '50 – 99 pcs'   => '$1.09',
-                        '100 – 249 pcs' => '$0.90',
-                        '250+ pcs'      => '$0.70',
-                    ]],
-                    ['size' => '4″ × 3″', 'tiers' => [
-                        '1 – 14 pcs'    => '$2.49',
-                        '15 – 49 pcs'   => '$1.85',
-                        '50 – 99 pcs'   => '$1.49',
-                        '100 – 249 pcs' => '$1.24',
-                        '250+ pcs'      => '$0.99',
-                    ]],
-                    ['size' => '4″ × 4″', 'tiers' => [
-                        '1 – 14 pcs'    => '$2.99',
-                        '15 – 49 pcs'   => '$1.94',
-                        '50 – 99 pcs'   => '$1.64',
-                        '100 – 249 pcs' => '$1.35',
-                        '250+ pcs'      => '$1.05',
-                    ]],
-                    ['size' => '5″ × 3″', 'tiers' => [
-                        '1 – 14 pcs'    => '$3.49',
-                        '15 – 49 pcs'   => '$2.99',
-                        '50 – 99 pcs'   => '$2.49',
-                        '100 – 249 pcs' => '$1.99',
-                        '250+ pcs'      => '$1.49',
-                    ]],
-                ];
-            @endphp
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                @foreach($chestSizes as $card)
-                    <div class="border-t-4 border-sunburst shadow-md bg-white overflow-hidden">
-                        <div class="px-4 py-2.5 bg-sunburst text-center">
-                            <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
-                        </div>
-                        @foreach($card['tiers'] as $qty => $price)
-                            <button
-                                type="button"
-                                @click="setPending('Left / Right Chest', '{{ $card['size'] }}', '{{ $qty }}', '{{ $price }}')"
-                                class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
-                            >
-                                <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
-                                <span class="text-sm font-bold text-charcoal">{{ $price }} <span class="text-xs font-normal text-charcoal-light">ea</span></span>
-                            </button>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        {{-- Image Sizes --}}
-        <div class="mb-10">
-            <div class="text-center mb-5">
-                <h4 class="text-h4 font-semibold text-charcoal">Image Sizes</h4>
-                <div class="h-0.5 bg-sunburst max-w-xs mx-auto mt-1"></div>
-            </div>
-            @php
-                $imageSizes = [
-                    ['size' => '5″ × 5″', 'tiers' => [
-                        '1 – 14 pcs'    => '$3.99',
-                        '15 – 49 pcs'   => '$2.59',
-                        '50 – 99 pcs'   => '$2.19',
-                        '100 – 249 pcs' => '$1.80',
-                        '250+ pcs'      => '$1.40',
-                    ]],
-                    ['size' => '6″ × 6″', 'tiers' => [
-                        '1 – 14 pcs'    => '$4.99',
-                        '15 – 49 pcs'   => '$3.24',
-                        '50 – 99 pcs'   => '$2.74',
-                        '100 – 249 pcs' => '$2.25',
-                        '250+ pcs'      => '$1.75',
-                    ]],
-                    ['size' => '7″ × 7″', 'tiers' => [
-                        '1 – 14 pcs'    => '$5.99',
-                        '15 – 49 pcs'   => '$3.89',
-                        '50 – 99 pcs'   => '$3.29',
-                        '100 – 249 pcs' => '$2.70',
-                        '250+ pcs'      => '$2.10',
-                    ]],
-                    ['size' => '8″ × 8″', 'tiers' => [
-                        '1 – 14 pcs'    => '$6.99',
-                        '15 – 49 pcs'   => '$4.54',
-                        '50 – 99 pcs'   => '$3.84',
-                        '100 – 249 pcs' => '$3.15',
-                        '250+ pcs'      => '$2.45',
-                    ]],
-                    ['size' => '9″ × 9″', 'tiers' => [
-                        '1 – 14 pcs'    => '$7.99',
-                        '15 – 49 pcs'   => '$5.19',
-                        '50 – 99 pcs'   => '$4.39',
-                        '100 – 249 pcs' => '$3.60',
-                        '250+ pcs'      => '$2.80',
-                    ]],
-                    ['size' => '10″ × 10″', 'tiers' => [
-                        '1 – 14 pcs'    => '$5.99',
-                        '15 – 49 pcs'   => '$3.89',
-                        '50 – 99 pcs'   => '$3.29',
-                        '100 – 249 pcs' => '$2.70',
-                        '250+ pcs'      => '$2.10',
-                    ]],
-                    ['size' => '9″ × 11″', 'tiers' => [
-                        '1 – 14 pcs'    => '$8.49',
-                        '15 – 49 pcs'   => '$5.52',
-                        '50 – 99 pcs'   => '$4.67',
-                        '100 – 249 pcs' => '$3.82',
-                        '250+ pcs'      => '$2.97',
-                    ]],
-                    ['size' => '10″ × 10″ (lg)', 'tiers' => [
-                        '1 – 14 pcs'    => '$8.99',
-                        '15 – 49 pcs'   => '$5.84',
-                        '50 – 99 pcs'   => '$4.94',
-                        '100 – 249 pcs' => '$4.05',
-                        '250+ pcs'      => '$3.15',
-                    ]],
-                    ['size' => '11″ × 5″', 'tiers' => [
-                        '1 – 14 pcs'    => '$6.49',
-                        '15 – 49 pcs'   => '$4.22',
-                        '50 – 99 pcs'   => '$3.57',
-                        '100 – 249 pcs' => '$2.92',
-                        '250+ pcs'      => '$2.27',
-                    ]],
-                    ['size' => '11″ × 11″', 'tiers' => [
-                        '1 – 14 pcs'    => '$9.99',
-                        '15 – 49 pcs'   => '$6.49',
-                        '50 – 99 pcs'   => '$5.49',
-                        '100 – 249 pcs' => '$4.50',
-                        '250+ pcs'      => '$3.50',
-                    ]],
-                    ['size' => '11″ × 14″', 'tiers' => [
-                        '1 – 14 pcs'    => '$11.49',
-                        '15 – 49 pcs'   => '$7.47',
-                        '50 – 99 pcs'   => '$6.32',
-                        '100 – 249 pcs' => '$5.17',
-                        '250+ pcs'      => '$4.02',
-                    ]],
-                    ['size' => '12″ × 17″', 'tiers' => [
-                        '1 – 14 pcs'    => '$14.49',
-                        '15 – 49 pcs'   => '$9.42',
-                        '50 – 99 pcs'   => '$7.97',
-                        '100 – 249 pcs' => '$6.52',
-                        '250+ pcs'      => '$5.07',
-                    ]],
-                ];
-            @endphp
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                @foreach($imageSizes as $card)
-                    <div class="border-t-4 border-sunburst shadow-md bg-white overflow-hidden">
-                        <div class="px-4 py-2.5 bg-sunburst text-center">
-                            <span class="text-sm font-bold text-charcoal">{{ $card['size'] }}</span>
-                        </div>
-                        @foreach($card['tiers'] as $qty => $price)
-                            <button
-                                type="button"
-                                @click="setPending('Image Sizes', '{{ $card['size'] }}', '{{ $qty }}', '{{ $price }}')"
-                                class="w-full flex items-center justify-center gap-4 px-4 py-2 {{ $loop->even ? 'bg-linen-light' : 'bg-white' }} border-t border-linen-dark hover:bg-sunburst/10 hover:border-sunburst/40 transition-colors duration-150 cursor-pointer group"
-                            >
-                                <span class="text-xs text-charcoal-light group-hover:text-charcoal transition-colors">{{ $qty }}</span>
-                                <span class="text-sm font-bold text-charcoal">{{ $price }} <span class="text-xs font-normal text-charcoal-light">ea</span></span>
-                            </button>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-        </div>
-
-        {{-- Drop zone CTA --}}
-        <div class="border-t-4 border-sunburst shadow-md bg-linen-light p-8">
-            <div class="text-center mb-6">
-                <h4 class="text-h4 font-semibold text-charcoal mb-1">Ready to order your DTF transfers?</h4>
-                <p class="text-body-sm text-charcoal-light">Drop your PNG design file below to get started, we'll walk you through the rest.</p>
-            </div>
-            <x-ui.dtf-dropzone class="max-w-2xl mx-auto" />
+        <div class="text-center">
+            <x-ui.button-champagne-solid onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
+                Get a Free Quote
+            </x-ui.button-champagne-solid>
+            <p class="text-slate/60 text-xs mt-4">All rates are subject to change. Contact us to confirm current pricing.</p>
         </div>
 
     </div>
-
-    {{-- Shared hidden PNG file picker for pricing row clicks --}}
-    <input
-        id="dtf-pricing-file-picker"
-        type="file"
-        accept=".png"
-        class="sr-only"
-        @change="handleFilePicked($event)"
-    >
-
 </section>

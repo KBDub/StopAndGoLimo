@@ -4,5 +4,5 @@
 <button
     type="button"
     @click="{{ $modal ? "\$dispatch('close-modal', { name: '{$modal}' })" : 'close()' }}"
-    {{ $attributes->class(['px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors']) }}
+    {{ $attributes->class(['px-4 py-2 text-sm font-semibold text-slate border border-cloud-dark hover:bg-cloud transition-colors']) }}
 >{{ $slot }}</button>

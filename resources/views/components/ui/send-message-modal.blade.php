@@ -2,16 +2,16 @@
  | Component  : x-ui.send-message-modal
  | Location   : resources/views/components/ui/send-message-modal.blade.php
  |
- | Standalone contact + message form modal. Opened by the picker inside
- | x-ui.contact-modal when the user chooses "Send Us a Message".
+ | Standalone contact form modal for Stop & Go Limo. Opened by the picker inside
+ | x-ui.contact-modal when the user chooses "Send a Message" or "Get a Quote".
  | Not a FAB-based modal, triggered by the open-send-message-modal window event.
  |
  | POSTs to POST /contact/message → ContactController::sendMessage()
  | CSRF token is baked at render time as _csrf, no <meta name="csrf-token"> needed.
  |
  | ── PROPS ───────────────────────────────────────────────────────────────────
- |   logoSrc       logo image path        (default: /images/logos/top5-logo.gif)
- |   logoAlt       logo alt text          (default: "Top 5 Percent")
+ |   logoSrc       logo image path        (default: /images/logos/stopngo-logo.png)
+ |   logoAlt       logo alt text          (default: "Stop & Go Limo")
  |   modalSubtitle sub-heading HTML       (default: brand tagline)
  |
  | ── EVENTS ───────────────────────────────────────────────────────────────────
@@ -23,9 +23,9 @@
 --}}
 
 @props([
-    'logoSrc'       => '/images/logos/top5-logo.gif',
-    'logoAlt'       => 'Top 5 Percent',
-    'modalSubtitle' => 'Veteran-Owned &nbsp;&middot;&nbsp; Joliet, IL &nbsp;&middot;&nbsp; Fast Turnaround',
+    'logoSrc'       => '/images/logos/stopngo-logo.png',
+    'logoAlt'       => 'Stop & Go Limo',
+    'modalSubtitle' => 'New Lenox &nbsp;&middot;&nbsp; Naperville &nbsp;&middot;&nbsp; Chicago &nbsp;&middot;&nbsp; Available 24/7',
 ])
 
 <div
@@ -104,7 +104,7 @@
                 this.sent = true;
                 setTimeout(() => this.closeModal(), 3000);
             } catch (err) {
-                this.error = err.message || 'Something went wrong. Please try again or call us at (815) 349-8600.';
+                this.error = err.message || 'Something went wrong. Please try again or call us at (815) 585-6922.';
             } finally {
                 this.loading = false;
             }
@@ -117,7 +117,7 @@
     <div
         x-show="open"
         x-cloak
-        class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-charcoal-dark/80 backdrop-blur-sm"
+        class="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-navy-dark/80 backdrop-blur-sm"
         role="dialog"
         aria-modal="true"
         aria-labelledby="send-message-modal-title"
@@ -131,7 +131,7 @@
     >
         {{-- Panel --}}
         <div
-            class="relative w-full max-w-[34rem] max-h-[92dvh] bg-white shadow-2xl overflow-y-auto overscroll-contain scrollbar-sunburst"
+            class="relative w-full max-w-[34rem] max-h-[92dvh] bg-white shadow-2xl overflow-y-auto overscroll-contain scrollbar-champagne"
             x-transition:enter="transition ease-out duration-220"
             x-transition:enter-start="opacity-0 scale-95 translate-y-4"
             x-transition:enter-end="opacity-100 scale-100 translate-y-0"
@@ -140,11 +140,11 @@
             x-transition:leave-end="opacity-0 scale-95 translate-y-2"
             @click.stop
         >
-            {{-- Gold accent stripe --}}
-            <div class="h-2 bg-gold-gradient-horizontal flex-shrink-0" aria-hidden="true"></div>
+            {{-- Champagne accent stripe --}}
+            <div class="h-2 bg-grad-champagne-rule flex-shrink-0" aria-hidden="true"></div>
 
             {{-- Header --}}
-            <div class="flex items-start justify-between gap-4 px-6 py-5 bg-linen border-b-2 border-sunburst">
+            <div class="flex items-start justify-between gap-4 px-6 py-5 bg-cloud border-b-2 border-champagne">
                 <div class="flex items-center gap-3.5">
                     <img
                         src="{{ $logoSrc }}"
@@ -153,16 +153,16 @@
                         loading="lazy"
                     >
                     <div>
-                        <h2 id="send-message-modal-title" class="text-xl font-bold leading-tight text-charcoal">
+                        <h2 id="send-message-modal-title" class="text-xl font-bold leading-tight text-navy font-head">
                             Send Us a Message
                         </h2>
-                        <p class="text-[0.8125rem] text-charcoal-light mt-0.5">{!! $modalSubtitle !!}</p>
+                        <p class="text-[0.8125rem] text-slate mt-0.5">{!! $modalSubtitle !!}</p>
                     </div>
                 </div>
 
                 <button
                     type="button"
-                    class="flex items-center justify-center w-8 h-8 flex-shrink-0 -mt-0.5 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
+                    class="flex items-center justify-center w-8 h-8 flex-shrink-0 -mt-0.5 text-slate hover:bg-cloud-dark hover:text-navy transition-colors duration-150"
                     @click="closeModal()"
                     aria-label="Close"
                 >
@@ -176,14 +176,14 @@
 
             {{-- ── Success state ──────────────────────────────────────────────── --}}
             <div x-show="sent" x-cloak class="px-6 py-10 text-center">
-                <div class="flex items-center justify-center w-14 h-14 bg-success/10 mx-auto mb-4">
-                    <svg class="w-7 h-7 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                <div class="flex items-center justify-center w-14 h-14 bg-stopngo-success/10 mx-auto mb-4">
+                    <svg class="w-7 h-7 text-stopngo-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <polyline points="20 6 9 17 4 12"/>
                     </svg>
                 </div>
-                <h3 class="text-xl font-bold text-charcoal mb-2">Message Sent!</h3>
-                <p class="text-charcoal-light text-sm">We'll get back to you within one business day. This window will close automatically.</p>
+                <h3 class="text-xl font-bold text-navy mb-2 font-head">Message Sent!</h3>
+                <p class="text-slate text-sm">We will get back to you within one business day. This window will close automatically.</p>
             </div>
 
             {{-- ── Form ──────────────────────────────────────────────────────── --}}
@@ -193,7 +193,7 @@
                 <div
                     x-show="error"
                     x-cloak
-                    class="flex items-center gap-2 px-4 py-3 bg-error/10 text-error text-sm font-medium"
+                    class="flex items-center gap-2 px-4 py-3 bg-stopngo-error/10 text-stopngo-error text-sm font-medium"
                 >
                     <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -205,8 +205,8 @@
                 {{-- Row 1: First Name + Last Name --}}
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label for="smm-first-name" class="block text-sm font-semibold text-charcoal mb-1">
-                            First Name <span class="text-error">*</span>
+                        <label for="smm-first-name" class="block text-sm font-semibold text-navy mb-1">
+                            First Name <span class="text-stopngo-error">*</span>
                         </label>
                         <input
                             id="smm-first-name"
@@ -215,12 +215,12 @@
                             autocomplete="given-name"
                             placeholder="First name"
                             x-model="firstName"
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                            class="w-full px-3 py-2.5 text-sm border border-cloud-dark focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne/50 bg-white text-navy placeholder:text-slate transition-colors"
                         >
                     </div>
                     <div>
-                        <label for="smm-last-name" class="block text-sm font-semibold text-charcoal mb-1">
-                            Last Name <span class="text-error">*</span>
+                        <label for="smm-last-name" class="block text-sm font-semibold text-navy mb-1">
+                            Last Name <span class="text-stopngo-error">*</span>
                         </label>
                         <input
                             id="smm-last-name"
@@ -229,7 +229,7 @@
                             autocomplete="family-name"
                             placeholder="Last name"
                             x-model="lastName"
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                            class="w-full px-3 py-2.5 text-sm border border-cloud-dark focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne/50 bg-white text-navy placeholder:text-slate transition-colors"
                         >
                     </div>
                 </div>
@@ -237,8 +237,8 @@
                 {{-- Row 2: Phone + Email --}}
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label for="smm-phone" class="block text-sm font-semibold text-charcoal mb-1">
-                            Phone <span class="text-error">*</span>
+                        <label for="smm-phone" class="block text-sm font-semibold text-navy mb-1">
+                            Phone <span class="text-stopngo-error">*</span>
                         </label>
                         <input
                             id="smm-phone"
@@ -256,12 +256,12 @@
                                 else                    $el.value = '';
                                 cmPhone = $el.value;
                             "
-                            class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                            class="w-full px-3 py-2.5 text-sm border border-cloud-dark focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne/50 bg-white text-navy placeholder:text-slate transition-colors"
                         >
                     </div>
                     <div>
-                        <label for="smm-email" class="block text-sm font-semibold text-charcoal mb-1">
-                            Email <span class="text-error">*</span>
+                        <label for="smm-email" class="block text-sm font-semibold text-navy mb-1">
+                            Email <span class="text-stopngo-error">*</span>
                         </label>
                         <input
                             id="smm-email"
@@ -273,11 +273,11 @@
                             @input="emailError = cmEmail.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cmEmail)"
                             @blur="emailError  = cmEmail.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cmEmail)"
                             :class="emailError
-                                ? 'border-error ring-1 ring-error/40 focus:border-error focus:ring-error/40'
-                                : 'border-linen-dark focus:border-sunburst focus:ring-1 focus:ring-sunburst/50'"
-                            class="w-full px-3 py-2.5 text-sm border focus:outline-none bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors"
+                                ? 'border-stopngo-error ring-1 ring-stopngo-error/40 focus:border-stopngo-error focus:ring-stopngo-error/40'
+                                : 'border-cloud-dark focus:border-champagne focus:ring-1 focus:ring-champagne/50'"
+                            class="w-full px-3 py-2.5 text-sm border focus:outline-none bg-white text-navy placeholder:text-slate transition-colors"
                         >
-                        <p x-show="emailError" x-cloak class="mt-1 text-xs text-error font-medium">
+                        <p x-show="emailError" x-cloak class="mt-1 text-xs text-stopngo-error font-medium">
                             Please enter a valid email address.
                         </p>
                     </div>
@@ -285,16 +285,16 @@
 
                 {{-- Message --}}
                 <div>
-                    <label for="smm-message" class="block text-sm font-semibold text-charcoal mb-1">
-                        Message <span class="text-error">*</span>
+                    <label for="smm-message" class="block text-sm font-semibold text-navy mb-1">
+                        Your Message <span class="text-stopngo-error">*</span>
                     </label>
                     <textarea
                         id="smm-message"
                         required
                         rows="4"
                         x-model="message"
-                        placeholder="Tell us about your project, product type, quantity, deadline, etc."
-                        class="w-full px-3 py-2.5 text-sm border border-linen-dark focus:outline-none focus:border-sunburst focus:ring-1 focus:ring-sunburst/50 bg-white text-charcoal placeholder:text-charcoal-lighter transition-colors resize-y"
+                        placeholder="Tell us how we can help. Pickup location, destination, date, number of passengers, etc."
+                        class="w-full px-3 py-2.5 text-sm border border-cloud-dark focus:outline-none focus:border-champagne focus:ring-1 focus:ring-champagne/50 bg-white text-navy placeholder:text-slate transition-colors resize-y"
                     ></textarea>
                 </div>
 
@@ -303,7 +303,7 @@
                     <button
                         type="button"
                         @click="goBack()"
-                        class="flex items-center gap-1.5 text-sm text-charcoal-light hover:text-charcoal transition-colors duration-150"
+                        class="flex items-center gap-1.5 text-sm text-slate hover:text-navy transition-colors duration-150"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
@@ -317,7 +317,7 @@
                         type="button"
                         @click="submit()"
                         :disabled="loading || !formReady"
-                        class="flex-1 max-w-xs py-3 px-6 bg-gold-gradient text-charcoal font-semibold text-sm tracking-wide transition-all duration-150 hover:shadow-gold-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none"
+                        class="flex-1 max-w-xs py-3 px-6 bg-champagne text-navy font-semibold text-sm tracking-wide transition-all duration-150 hover:bg-champagne-dark hover:shadow-champagne-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none font-head"
                     >
                         <span x-show="!loading">Send Message</span>
                         <span x-show="loading" x-cloak class="flex items-center justify-center gap-2">
@@ -325,7 +325,7 @@
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
                             </svg>
-                            Sending…
+                            Sending&hellip;
                         </span>
                     </button>
                 </div>
@@ -333,9 +333,9 @@
             </div>{{-- /form --}}
 
             {{-- Footer micro-text --}}
-            <div x-show="!sent" class="px-6 pb-4 pt-1 text-center text-xs text-charcoal-lighter border-t border-linen-dark">
-                <span class="font-semibold text-charcoal-light">Veteran-Owned</span>
-                &nbsp;&middot;&nbsp; Proudly Serving Joliet, IL &nbsp;&middot;&nbsp; No spam, ever.
+            <div x-show="!sent" class="px-6 pb-4 pt-1 text-center text-xs text-slate border-t border-cloud-dark">
+                <span class="font-semibold text-navy">Stop &amp; Go Limo</span>
+                &nbsp;&middot;&nbsp; Serving Illinois since 2009 &nbsp;&middot;&nbsp; No spam, ever.
             </div>
 
         </div>{{-- /panel --}}

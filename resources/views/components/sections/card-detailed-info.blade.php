@@ -6,7 +6,7 @@
     'alt2'    => '',
 ])
 
-<section class="py-10 bg-linen">
+<section class="py-10 bg-cloud">
     <div class="max-w-7xl mx-auto px-6">
         <div
             x-data="{ ready: false }"
@@ -39,21 +39,20 @@
                 }
             })"
             :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="bg-white shadow-gold-lg p-4 sm:p-6 md:p-10 lg:p-12 transition-all duration-500"
+            class="bg-white shadow-champagne-lg p-4 sm:p-6 md:p-10 lg:p-12 transition-all duration-500"
         >
 
             <div class="text-center mb-6 md:mb-8">
                 <div class="inline-block">
-                    <h2 class="text-olive font-bold text-h2 mb-2">{{ $heading }}</h2>
-                    <div class="h-1 bg-sunburst"></div>
+                    <h2 class="text-champagne font-bold text-h2 mb-2 font-head">{{ $heading }}</h2>
+                    <div class="h-1 bg-champagne"></div>
                 </div>
             </div>
 
             @if($image2)
                 {{-- Two-image layout --}}
-                {{-- image1 float-left + $intro wrapping beside and below --}}
                 <div class="[display:flow-root] mb-4">
-                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
+                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
                         <img
                             src="{{ $image1 }}"
                             alt="{{ $alt1 }}"
@@ -64,12 +63,10 @@
                     <div class="card-detail-content">{{ $intro }}</div>
                 </div>
 
-                {{-- $mid full-width after float clears --}}
                 <div class="clear-both mb-4 card-detail-content">{{ $mid }}</div>
 
-                {{-- image2 float-right + $lower wrapping beside and below --}}
                 <div class="[display:flow-root] mb-4">
-                    <div class="md:float-right md:ml-6 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
+                    <div class="md:float-right md:ml-6 mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
                         <img
                             src="{{ $image2 }}"
                             alt="{{ $alt2 }}"
@@ -80,16 +77,14 @@
                     <div class="card-detail-content">{{ $lower }}</div>
                 </div>
 
-                <div class="clear-both border-t-2 border-linen pt-5 card-detail-content">{{ $footer }}</div>
+                <div class="clear-both border-t-2 border-cloud pt-5 card-detail-content">{{ $footer }}</div>
 
             @else
                 {{-- Single-image layout --}}
-                {{-- $intro full-width at top --}}
                 <div class="mb-4 card-detail-content">{{ $intro }}</div>
 
-                {{-- image1 float-left + $mid wrapping beside and below --}}
                 <div class="[display:flow-root] mb-4">
-                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-gold hover:shadow-gold-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
+                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
                         <img
                             src="{{ $image1 }}"
                             alt="{{ $alt1 }}"
@@ -100,10 +95,9 @@
                     <div class="card-detail-content">{{ $mid }}</div>
                 </div>
 
-                {{-- $lower full-width after float clears --}}
                 <div class="clear-both mb-4 card-detail-content">{{ $lower }}</div>
 
-                <div class="border-t-2 border-linen pt-5 card-detail-content">{{ $footer }}</div>
+                <div class="border-t-2 border-cloud pt-5 card-detail-content">{{ $footer }}</div>
 
             @endif
 

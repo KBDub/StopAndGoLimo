@@ -2,10 +2,9 @@
  | Component  : x-ui.stripe-checkout-modal
  | Location   : resources/views/components/ui/stripe-checkout-modal.blade.php
  |
- | NOTE: Payment is now handled through the standard Lunar checkout flow.
- | This modal is retained as a shell but the Stripe Payment Link has been
- | removed. Do not wire this modal to any active checkout flow.
- --}}
+ | NOTE: Payment is handled through the standard Lunar checkout flow.
+ | This modal is retained as a shell. Do not wire to any active checkout flow.
+--}}
 
 <div
     x-data="{
@@ -43,33 +42,29 @@
             </svg>
         </x-slot:icon>
 
-        {{-- ── Pre-payment state ────────────────────────────────────────────── --}}
         <div x-show="!paymentComplete">
 
-            {{-- Step indicator --}}
-            <p class="text-xs text-charcoal-light mb-4">
+            <p class="text-xs text-slate mb-4">
                 Step <span x-text="checkoutStep"></span> of <span x-text="checkoutTotal"></span>
-                &nbsp;·&nbsp;Secure Payment
+                &nbsp;&middot;&nbsp;Secure Payment
             </p>
 
-            {{-- Thank-you bar --}}
-            <div class="flex items-start gap-3 px-4 py-3 mb-5 bg-sunburst/10 border border-sunburst/60">
-                <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-sunburst-dark" fill="none" stroke="currentColor"
+            <div class="flex items-start gap-3 px-4 py-3 mb-5 bg-champagne/10 border border-champagne/60">
+                <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-champagne" fill="none" stroke="currentColor"
                      stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"
                      viewBox="0 0 24 24" aria-hidden="true">
                     <polyline points="20 6 9 17 4 12"/>
                 </svg>
-                <p class="text-sm font-semibold text-charcoal">
-                    Thank you for choosing Top 5 Percent.
+                <p class="text-sm font-semibold text-navy">
+                    Thank you for choosing Stop &amp; Go Limo.
                 </p>
             </div>
 
-            <p class="text-sm text-charcoal mb-5">
-                Your custom order request has been received and recorded. To begin production on your order,
+            <p class="text-sm text-navy mb-5">
+                Your booking request has been received. To confirm your reservation,
                 payment must be completed through our secure checkout below.
             </p>
 
-            {{-- Payment-required warning --}}
             <div class="flex items-start gap-3 px-4 py-3 mb-5 bg-error/5 border border-error/25">
                 <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-error" fill="none" stroke="currentColor"
                      stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"
@@ -79,21 +74,20 @@
                     <line x1="12" y1="17" x2="12.01" y2="17"/>
                 </svg>
                 <p class="text-sm font-semibold text-error">
-                    Your order is not confirmed or entered into production until payment is complete.
+                    Your reservation is not confirmed until payment is complete.
                 </p>
             </div>
 
-            <p class="text-sm text-charcoal-light mb-6">
-                Click the button below to open Stripe's encrypted, secure checkout in a new tab.
+            <p class="text-sm text-slate mb-6">
+                Click the button below to open secure checkout in a new tab.
                 Your payment information is handled entirely by Stripe and is never stored on our servers.
             </p>
 
-            {{-- Checkout button, opens Stripe payment link in new tab --}}
             <div class="flex justify-center py-2">
                 <button
                     type="button"
                     @click="openCheckout()"
-                    class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
+                    class="inline-flex items-center gap-2.5 px-6 py-3 text-sm font-semibold text-navy bg-champagne hover:shadow-champagne transition-all font-head"
                 >
                     <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -104,42 +98,40 @@
                 </button>
             </div>
 
-        </div>{{-- /pre-payment --}}
+        </div>
 
-        {{-- ── Post-payment state (tab closed) ─────────────────────────────── --}}
         <div x-show="paymentComplete" x-cloak>
 
-            <p class="text-xs text-charcoal-light mb-4">
+            <p class="text-xs text-slate mb-4">
                 Step <span x-text="checkoutTotal"></span> of <span x-text="checkoutTotal"></span>
-                &nbsp;·&nbsp;Payment
+                &nbsp;&middot;&nbsp;Payment
             </p>
 
-            {{-- Confirmation bar --}}
-            <div class="flex items-start gap-3 px-4 py-3 mb-5 bg-sunburst/10 border border-sunburst/60">
-                <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-sunburst-dark" fill="none" stroke="currentColor"
+            <div class="flex items-start gap-3 px-4 py-3 mb-5 bg-champagne/10 border border-champagne/60">
+                <svg class="w-4 h-4 flex-shrink-0 mt-0.5 text-champagne" fill="none" stroke="currentColor"
                      stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"
                      viewBox="0 0 24 24" aria-hidden="true">
                     <polyline points="20 6 9 17 4 12"/>
                 </svg>
-                <p class="text-sm font-semibold text-charcoal">
+                <p class="text-sm font-semibold text-navy">
                     Checkout window closed.
                 </p>
             </div>
 
-            <p class="text-sm text-charcoal mb-5">
+            <p class="text-sm text-navy mb-5">
                 If you completed payment, you will receive a confirmation email from Stripe shortly.
-                Our team will begin processing your order once payment is verified.
+                Our team will confirm your reservation once payment is verified.
             </p>
 
-            <p class="text-sm text-charcoal-light mb-6">
-                Didn't finish? Click below to reopen the secure checkout.
+            <p class="text-sm text-slate mb-6">
+                Did not finish? Click below to reopen the secure checkout.
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-3 py-2">
                 <button
                     type="button"
                     @click="openCheckout()"
-                    class="inline-flex items-center gap-2.5 px-5 py-2.5 text-sm font-semibold text-charcoal bg-gold-gradient hover:shadow-gold transition-all"
+                    class="inline-flex items-center gap-2.5 px-5 py-2.5 text-sm font-semibold text-navy bg-champagne hover:shadow-champagne transition-all font-head"
                 >
                     <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                          stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -151,13 +143,13 @@
                 <button
                     type="button"
                     @click="$dispatch('close-modal', { name: 'stripe-checkout-modal' })"
-                    class="px-5 py-2.5 text-sm font-semibold text-charcoal-light hover:text-charcoal transition-colors duration-150"
+                    class="px-5 py-2.5 text-sm font-semibold text-slate hover:text-navy transition-colors duration-150"
                 >
                     Done
                 </button>
             </div>
 
-        </div>{{-- /post-payment --}}
+        </div>
 
     </x-ui.modal>
 </div>

@@ -17,10 +17,10 @@
 
         <div class="mb-12">
             <div class="text-center mb-8">
-                <p class="text-olive font-semibold mb-2">{{ $label }}</p>
+                <p class="text-champagne font-head font-semibold mb-2">{{ $label }}</p>
                 <div class="inline-block">
-                    <h2 class="text-charcoal font-bold text-h2 mb-2">{{ $heading }}</h2>
-                    <div class="h-1 bg-sunburst"></div>
+                    <h2 class="text-navy font-bold text-h2 mb-2 font-head">{{ $heading }}</h2>
+                    <div class="h-1 bg-champagne"></div>
                 </div>
             </div>
 
@@ -31,10 +31,10 @@
                         alt="{{ $imageAlt }}"
                         class="w-[280px] h-[373px] object-cover shadow-lg flex-shrink-0"
                     >
-                    <div class="text-charcoal-light leading-relaxed">{{ $slot }}</div>
+                    <div class="text-slate leading-relaxed">{{ $slot }}</div>
                 </div>
             @else
-                <div class="max-w-4xl mx-auto text-charcoal-light leading-relaxed text-center">{{ $slot }}</div>
+                <div class="max-w-4xl mx-auto text-slate leading-relaxed text-center">{{ $slot }}</div>
             @endif
         </div>
 
@@ -43,14 +43,14 @@
                 <div class="space-y-3">
                     @foreach($left as $i => $item)
                         <x-ui.card-faq question="{{ $item['question'] }}" :open="$i === 0">
-                            <p class="text-charcoal-light">{{ $item['answer'] }}</p>
+                            <p class="text-slate">{{ $item['answer'] }}</p>
                         </x-ui.card-faq>
                     @endforeach
                 </div>
                 <div class="space-y-3">
                     @foreach($right as $item)
                         <x-ui.card-faq question="{{ $item['question'] }}">
-                            <p class="text-charcoal-light">{{ $item['answer'] }}</p>
+                            <p class="text-slate">{{ $item['answer'] }}</p>
                         </x-ui.card-faq>
                     @endforeach
                 </div>

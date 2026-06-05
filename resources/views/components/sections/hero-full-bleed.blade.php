@@ -9,7 +9,7 @@
     'secondaryHref' => '#',
     'layout' => 'center',
     'minHeight' => 'min-h-[40vh] md:min-h-[60vh]',
-    'overlay' => 'bg-gradient-to-t from-charcoal-dark/80 via-charcoal-dark/40 to-charcoal-dark/10',
+    'overlay' => 'bg-gradient-to-t from-navy-dark/80 via-navy-dark/40 to-navy-dark/10',
 ])
 
 <section {{ $attributes->merge(['class' => 'relative w-full overflow-hidden isolate ' . $minHeight]) }}>
@@ -20,7 +20,7 @@
             class="absolute inset-0 w-full h-full object-cover object-center"
         >
     @else
-        <div class="absolute inset-0 w-full h-full bg-charcoal"></div>
+        <div class="absolute inset-0 w-full h-full bg-navy"></div>
     @endif
 
     <div class="absolute inset-0 {{ $overlay }}"></div>
@@ -49,10 +49,10 @@
                 </div>
             @else
                 <div class="{{ $layout === 'center' ? 'max-w-3xl mx-auto' : 'max-w-xl' }}">
-                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight mb-4">
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight mb-4 font-head">
                         {{ $title }}
                         @if($titleAccent)
-                            <span class="text-sunburst">{{ $titleAccent }}</span>
+                            <span class="text-champagne">{{ $titleAccent }}</span>
                         @endif
                     </h2>
 
@@ -63,10 +63,10 @@
                     @if($primaryCta || $secondaryCta)
                         <div class="flex flex-wrap gap-4 {{ $layout === 'center' ? 'justify-center' : '' }}">
                             @if($primaryCta)
-                                <x-ui.button-gold-gradient href="{{ $primaryHref }}">{{ $primaryCta }}</x-ui.button-gold-gradient>
+                                <x-ui.button-champagne-solid href="{{ $primaryHref }}">{{ $primaryCta }}</x-ui.button-champagne-solid>
                             @endif
                             @if($secondaryCta)
-                                <a href="{{ $secondaryHref }}" class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-charcoal transition-all">
+                                <a href="{{ $secondaryHref }}" class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-navy transition-all font-head">
                                     {{ $secondaryCta }}
                                 </a>
                             @endif

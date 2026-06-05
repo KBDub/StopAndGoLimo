@@ -1,15 +1,15 @@
 {{--
  | Component  : x-ui.order-action-modal
  | Location   : resources/views/components/ui/order-action-modal.blade.php
- | Purpose    : DTF path final step, lets the customer choose between
+ | Purpose    : Final booking step — lets the customer choose between
  |              "Add to Cart" (keep shopping) or "Proceed to Checkout" (go now).
  |
  | Opens via  : window.dispatchEvent(new CustomEvent('open-modal', {
  |                  detail: {
  |                      name:             'order-action-modal',
  |                      payload:          { ...wizardBuildPayload },
- |                      wizardStep:       N,       // wizard's step at finish()
- |                      wizardTotalSteps: M,       // wizard's totalSteps at finish()
+ |                      wizardStep:       N,
+ |                      wizardTotalSteps: M,
  |                  }
  |              }))
  |
@@ -18,14 +18,9 @@
  |              }))
  |
  | Back:       : dispatches 'reopen-wizard', wizard reopens at its preserved step
- |
  | On success : dispatches 'cart-updated' + 'open-cart-drawer' (cart choice)
  |              OR redirects to /checkout (checkout choice).
- |
- | Branding   : Header slot overrides x-ui.modal to match the wizard step 6 header
- |              exactly, gold stripe, linen bg, sunburst border, step counter, X.
- |              Footer uses raw ← Back button + x-ui.button-modal-primary.
- --}}
+--}}
 
 <div
     x-data="{
@@ -99,23 +94,21 @@
         :zIndex="9999"
         :teleport="true"
     >
-        {{-- ── Header, matches wizard step header exactly ───────────────── --}}
         <x-slot:header>
-            <div class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 bg-linen border-sunburst">
+            <div class="flex items-center gap-3 px-5 py-4 flex-shrink-0 border-b-2 bg-cloud border-champagne">
                 <div class="flex-1 min-w-0">
-                    <h2 class="text-lg font-bold text-charcoal leading-tight">
+                    <h2 class="text-lg font-bold text-navy leading-tight font-head">
                         Cart or Checkout
                     </h2>
-                    <p class="text-xs text-charcoal-light mt-0.5">
+                    <p class="text-xs text-slate mt-0.5">
                         Step <span x-text="wizardStep + 1"></span>
                         of <span x-text="wizardTotalSteps + 2"></span>
-                        &nbsp;&middot;&nbsp;DTF Transfers
                     </p>
                 </div>
                 <button
                     type="button"
                     @click="$dispatch('close-modal', { name: 'order-action-modal' })"
-                    class="flex items-center justify-center w-8 h-8 flex-shrink-0 text-charcoal-light hover:bg-linen-dark hover:text-charcoal transition-colors duration-150"
+                    class="flex items-center justify-center w-8 h-8 flex-shrink-0 text-slate hover:bg-cloud hover:text-navy transition-colors duration-150"
                     aria-label="Close"
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -127,16 +120,15 @@
             </div>
         </x-slot:header>
 
-        {{-- ── Order summary ──────────────────────────────────────────────── --}}
-        <div x-show="hasSummary" class="border border-linen-dark divide-y divide-linen-dark mb-5">
+        <div x-show="hasSummary" class="border border-cloud divide-y divide-cloud mb-5">
 
             <template x-if="dtfItems.length > 0">
                 <div>
                     <template x-for="(item, idx) in dtfItems" :key="idx">
                         <div class="px-4 py-3">
-                            <p class="text-sm font-semibold text-charcoal"
+                            <p class="text-sm font-semibold text-navy"
                                x-text="item.type + ' \u2014 ' + item.size"></p>
-                            <p class="text-xs text-charcoal-light mt-0.5"
+                            <p class="text-xs text-slate mt-0.5"
                                x-text="item.tier + ' \u00b7 ' + item.price + ' per piece'"></p>
                         </div>
                     </template>
@@ -145,39 +137,38 @@
 
             <template x-if="dtfItems.length === 0 && payload.dtfFileName">
                 <div class="px-4 py-3 flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 text-charcoal-light"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0 text-slate"
                          viewBox="0 0 64 64" aria-hidden="true">
                         <path d="M6 14a4 4 0 0 1 4-4h14l6 6h24a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V14z"
-                              fill="#4A90D9" opacity="0.85"/>
-                        <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="#5BA8F0"/>
+                              fill="var(--azure)" opacity="0.85"/>
+                        <path d="M6 24h52v20a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V24z" fill="var(--azure)" opacity="0.65"/>
                     </svg>
-                    <p class="text-sm text-charcoal truncate" x-text="payload.dtfFileName"></p>
+                    <p class="text-sm text-navy truncate" x-text="payload.dtfFileName"></p>
                 </div>
             </template>
 
         </div>
 
-        {{-- ── Radio choices ──────────────────────────────────────────────── --}}
         <fieldset class="space-y-3">
             <legend class="sr-only">Choose an action</legend>
 
             <label
                 class="flex items-start gap-3 p-4 border cursor-pointer transition-colors"
                 :class="choice === 'cart'
-                    ? 'border-sunburst bg-sunburst/5'
-                    : 'border-linen-dark hover:border-charcoal-light'"
+                    ? 'border-champagne bg-champagne/5'
+                    : 'border-cloud hover:border-slate'"
             >
                 <input
                     type="radio"
                     name="oam_action"
                     value="cart"
                     x-model="choice"
-                    class="mt-0.5 flex-shrink-0 accent-sunburst"
+                    class="mt-0.5 flex-shrink-0 accent-champagne"
                 >
                 <div>
-                    <p class="text-sm font-semibold text-charcoal">Add to Your Cart</p>
-                    <p class="text-xs text-charcoal-light mt-0.5">
-                        Save this transfer to your cart and keep shopping.
+                    <p class="text-sm font-semibold text-navy font-head">Add to Your Cart</p>
+                    <p class="text-xs text-slate mt-0.5">
+                        Save this to your cart and keep shopping.
                     </p>
                 </div>
             </label>
@@ -185,30 +176,28 @@
             <label
                 class="flex items-start gap-3 p-4 border cursor-pointer transition-colors"
                 :class="choice === 'checkout'
-                    ? 'border-sunburst bg-sunburst/5'
-                    : 'border-linen-dark hover:border-charcoal-light'"
+                    ? 'border-champagne bg-champagne/5'
+                    : 'border-cloud hover:border-slate'"
             >
                 <input
                     type="radio"
                     name="oam_action"
                     value="checkout"
                     x-model="choice"
-                    class="mt-0.5 flex-shrink-0 accent-sunburst"
+                    class="mt-0.5 flex-shrink-0 accent-champagne"
                 >
                 <div>
-                    <p class="text-sm font-semibold text-charcoal">Proceed to Checkout</p>
-                    <p class="text-xs text-charcoal-light mt-0.5">
+                    <p class="text-sm font-semibold text-navy font-head">Proceed to Checkout</p>
+                    <p class="text-xs text-slate mt-0.5">
                         Go directly to checkout and complete your order now.
                     </p>
                 </div>
             </label>
         </fieldset>
 
-        {{-- ── Inline error ────────────────────────────────────────────────── --}}
         <p x-show="error" x-cloak x-text="error"
            class="mt-4 text-xs text-error" role="alert"></p>
 
-        {{-- ── Footer ─────────────────────────────────────────────────────── --}}
         <x-slot:footer>
             <button
                 type="button"
@@ -216,7 +205,7 @@
                     $dispatch('close-modal', { name: 'order-action-modal' });
                     window.dispatchEvent(new CustomEvent('reopen-wizard'));
                 "
-                class="px-4 py-2 text-sm font-semibold text-charcoal-light border border-linen-dark hover:bg-linen transition-colors"
+                class="px-4 py-2 text-sm font-semibold text-slate border border-cloud hover:bg-cloud transition-colors"
             >&larr; Back</button>
 
             <x-ui.button-modal-primary

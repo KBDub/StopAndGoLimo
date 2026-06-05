@@ -39,20 +39,20 @@
                     loading="lazy"
                 >
             @else
-                <div class="absolute inset-0 w-full h-full bg-charcoal"></div>
+                <div class="absolute inset-0 w-full h-full bg-navy"></div>
             @endif
 
             @if($title || $subtitle || $ctaText)
-                <div class="absolute inset-0 bg-gradient-to-t from-charcoal-dark/60 via-transparent to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/60 via-transparent to-transparent"></div>
                 <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-10">
                     @if($title)
-                        <h3 class="text-lg md:text-xl font-bold text-white mb-1">{{ $title }}</h3>
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-1 font-head">{{ $title }}</h3>
                     @endif
                     @if($subtitle)
                         <p class="text-sm text-white/80 mb-3 max-w-md">{{ $subtitle }}</p>
                     @endif
                     @if($ctaText)
-                        <a href="{{ $ctaHref }}" class="inline-block text-sm font-semibold text-white underline underline-offset-4 hover:text-sunburst transition-colors">{{ $ctaText }}</a>
+                        <a href="{{ $ctaHref }}" class="inline-block text-sm font-semibold text-white underline underline-offset-4 hover:text-champagne transition-colors">{{ $ctaText }}</a>
                     @endif
                 </div>
             @endif
@@ -67,7 +67,7 @@
                     loading="lazy"
                 >
             @else
-                <div class="absolute inset-0 w-full h-full bg-charcoal-light"></div>
+                <div class="absolute inset-0 w-full h-full bg-slate"></div>
             @endif
         </div>
     </div>

@@ -56,6 +56,10 @@ Route::get('/', function () {
     return view('pages.home');
 });
 
+Route::get('/our-services', function () {
+    return view('pages.our-services');
+})->name('our-services');
+
 Route::get('/demo', function () {
     return view('pages.demo');
 });

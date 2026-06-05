@@ -100,9 +100,9 @@ Once sections are finalized, each public page gets a blueprint that locks in:
 
 | Page | Route | Status |
 |---|---|---|
-| Home | `/` | Pending |
+| Home | `/` | ✅ Hero done |
 | About Us | `/about-us` (TBD) | Pending |
-| Our Services | `/services` (TBD) | Pending |
+| Our Services | `/our-services` | ✅ Hero done |
 | Airport Shuttle | `/airport-shuttle` (TBD) | Pending |
 | Fleet / Vehicles | `/fleet` (TBD) | Pending |
 | Contact / Booking | `/contact` | Pending |

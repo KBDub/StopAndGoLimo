@@ -68,6 +68,7 @@ what has changed, and the order of work.
 | Our Services | `public/images/heroes/hero-services.jpg` | `richard-r-x5qgprHf8fI-unsplash-scaled.jpg` | ✅ Confirmed correct |
 | Special Event Limousine | `public/images/heroes/hero-special-event.jpg` | `Limousine-Suit-Party.jpg` | ✅ Confirmed correct |
 | About Us | `public/images/heroes/hero-about.jpg` | `Chauffeurs.jpg` | ⚠ Not yet confirmed |
+| Service Areas | `public/images/heroes/hero-service-areas.jpg` | Unknown — not findable via CSS scrape | ⚠ Placeholder (hero-services.jpg copy) |
 
 ---
 
@@ -147,7 +148,7 @@ Once sections are finalized, each public page gets a blueprint that locks in:
 | Airport Shuttle | `/airport-shuttle` (TBD) | Pending |
 | Fleet / Vehicles | `/fleet` (TBD) | Pending |
 | Contact / Booking | `/contact` | Pending |
-| Service Areas (index) | `/service-areas` | Pending |
+| Service Areas (index) | `/service-areas` | ✅ Done (hero image placeholder) |
 | Service Area (city) | `/service-areas/{slug}` | Pending |
 
 ---

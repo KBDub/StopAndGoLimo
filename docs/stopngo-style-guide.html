@@ -177,7 +177,13 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
   font-family:var(--font-head);font-weight:600;font-size:15px;letter-spacing:.02em;
   padding:14px 30px;border:2px solid transparent;cursor:pointer;text-decoration:none;
   display:inline-flex;align-items:center;gap:8px;transition:all .22s ease;line-height:1;
+  border-radius:10px; /* default: rounded */
 }
+/* Radius scale */
+.btn-square{border-radius:0;}
+.btn-soft{border-radius:6px;}
+.btn-rounded{border-radius:10px;}
+.btn-pill{border-radius:9999px;}
 /* Primary */
 .btn-champagne-gradient{background:linear-gradient(135deg,#DCB57E 0%,#E9C79E 100%);color:#15162C;}
 .btn-champagne-gradient:hover{background:linear-gradient(135deg,#C49A5E 0%,#DCB57E 100%);transform:translateY(-2px);box-shadow:0 10px 26px rgba(220,181,126,.32);}
@@ -649,7 +655,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
     <div class="sec-head">
       <span class="sec-num">08 — Buttons</span>
       <h2>Button Variations</h2>
-      <p>Squared edges throughout — no rounded corners — for a refined, premium read. Each button renders as an <code style="font-family:ui-monospace,monospace;font-size:13px;color:var(--champagne)">&lt;a&gt;</code> with an href or a <code style="font-family:ui-monospace,monospace;font-size:13px;color:var(--champagne)">&lt;button&gt;</code> otherwise.</p>
+      <p>Rounded by default (10px) for an approachable, modern feel, with a full radius scale from square to pill. Each button renders as an <code style="font-family:ui-monospace,monospace;font-size:13px;color:var(--champagne)">&lt;a&gt;</code> with an href or a <code style="font-family:ui-monospace,monospace;font-size:13px;color:var(--champagne)">&lt;button&gt;</code> otherwise.</p>
     </div>
 
     <div class="btn-block">
@@ -669,6 +675,16 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
         <div class="btn-cell"><a href="#" class="btn btn-white-navy">Call Now</a><span class="tag">btn-white-navy</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-outline-light">Service Areas</a><span class="tag">btn-outline-light</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-text-link">View Rates &rarr;</a><span class="tag">btn-text-link</span></div>
+      </div>
+    </div>
+
+    <div class="btn-block">
+      <h4>Button Radius</h4>
+      <div class="btn-row">
+        <div class="btn-cell"><a href="#" class="btn btn-champagne-gradient btn-square">Square</a><span class="tag">btn-square · 0px</span></div>
+        <div class="btn-cell"><a href="#" class="btn btn-champagne-gradient btn-soft">Soft</a><span class="tag">btn-soft · 6px</span></div>
+        <div class="btn-cell"><a href="#" class="btn btn-champagne-gradient btn-rounded">Rounded</a><span class="tag">btn-rounded · 10px · default</span></div>
+        <div class="btn-cell"><a href="#" class="btn btn-champagne-gradient btn-pill">Pill</a><span class="tag">btn-pill · 9999px</span></div>
       </div>
     </div>
 

@@ -83,6 +83,7 @@ export default {
                 'grad-midnight-hero': 'linear-gradient(135deg, #15152C 0%, #252235 100%)',
                 'grad-deep-twilight': 'linear-gradient(135deg, #0F1223 0%, #15152C 60%, #252235 100%)',
                 'grad-champagne-shine': 'linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%)',
+                'grad-shine':           'linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%)',
                 'grad-navy-to-gold': 'linear-gradient(135deg, #15152C 0%, #252235 55%, #DCB57E 140%)',
                 'grad-champagne-rule': 'linear-gradient(90deg, transparent, #C49A5E 20%, #DCB57E 50%, #C49A5E 80%, transparent)',
             },

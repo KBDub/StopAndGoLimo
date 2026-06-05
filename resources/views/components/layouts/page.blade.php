@@ -149,10 +149,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     @endif
 
-    <header class="sticky top-0 z-50">
-        {{-- <x-layout.top-notification-bar /> --}}
-        <x-layout.navigation-bar currentPage="{{ $currentPage ?? '' }}" />
-    </header>
+    <x-nav.navbar />
 
     <main>
         {{ $slot }}

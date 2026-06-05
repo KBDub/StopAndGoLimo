@@ -43,10 +43,7 @@
         :compactButtons="true"
     />
 
-    {{-- this is an older approach that does not have props/args, clearly needs to be retuned,  --}}
-    <x-sections.home-page-services-accordion />
 
-    {{-- prefered faq type --}}
     @php
     $homeFaqs = [
         ['q' => 'Do you offer same-day custom shirts in Joliet?', 'a' => 'Yes. <a href="/custom-apparel" class="link-notification">Same-day custom shirt printing</a> is available on many of our apparel products. Call us at <a href="tel:+18153498600" class="link-notification">(815) 349-8600</a> before coming in to confirm availability for your specific order.'],
@@ -62,8 +59,5 @@
         label=""
         :faqs="$homeFaqs"
     />
-
-    {{-- temporarily disabled --}}
-    {{-- <x-sections.map-section /> --}}
     
 </x-layouts.page>

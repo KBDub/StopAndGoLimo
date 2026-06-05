@@ -60,6 +60,10 @@ Route::get('/our-services', function () {
     return view('pages.our-services');
 })->name('our-services');
 
+Route::get('/special-event-limousine', function () {
+    return view('pages.special-event-limousine');
+})->name('special-event-limousine');
+
 Route::get('/demo', function () {
     return view('pages.demo');
 });

@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace App\Livewire\Catalog;
 
-use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Cache;
 use Livewire\Component;
 use Lunar\Models\Collection;
 use Lunar\Models\Product;
-use Meilisearch\Client;
 
 class CollectionPage extends Component
 {
@@ -108,103 +106,41 @@ class CollectionPage extends Component
             }
         }
 
-        $filterParts = [];
-        $filterParts[] = 'status = "published"';
+        $query = Product::query()
+            ->with(['thumbnail', 'variants.prices', 'urls'])
+            ->where('status', 'published');
 
         if (! empty($collectionSlugs)) {
-            $collFilters = collect($collectionSlugs)
-                ->map(fn ($s) => "collections = \"{$s}\"")
-                ->join(' OR ');
-            $filterParts[] = "({$collFilters})";
+            $query->whereHas('collections', function ($q) use ($collectionSlugs) {
+                $q->whereHas('urls', fn ($u) => $u->whereIn('slug', $collectionSlugs));
+            });
         }
 
         if ($this->filters['in_stock']) {
-            $filterParts[] = 'in_stock = true';
+            $query->whereHas('variants', fn ($q) => $q->where('stock', '>', 0));
         }
 
         if ($this->filters['min_price'] > 0) {
             $minCents = (int) ($this->filters['min_price'] * 100);
-            $filterParts[] = "min_price >= {$minCents}";
+            $query->whereHas('variants.prices', fn ($q) => $q->where('price', '>=', $minCents));
         }
+
         if ($this->filters['max_price'] > 0 && $this->filters['max_price'] < 3000) {
             $maxCents = (int) ($this->filters['max_price'] * 100);
-            $filterParts[] = "max_price <= {$maxCents}";
+            $query->whereHas('variants.prices', fn ($q) => $q->where('price', '<=', $maxCents));
         }
 
-        $arrayFilters = ['garment_type', 'print_method', 'material_type', 'sign_type', 'placement', 'decal_type', 'vehicle_product'];
-        foreach ($arrayFilters as $field) {
-            if (! empty($this->filters[$field])) {
-                $orParts = collect($this->filters[$field])
-                    ->map(fn ($v) => "{$field} = \"{$v}\"")
-                    ->join(' OR ');
-                $filterParts[] = "({$orParts})";
-            }
+        if ($this->searchQuery !== '') {
+            $term = $this->searchQuery;
+            $query->whereHas('translations', fn ($q) => $q->where('name', 'LIKE', "%{$term}%"));
         }
 
-        $facetFields = $this->getRelevantFacetFields();
-
-        $sortAttr = match ($this->sortBy) {
-            'price_asc' => ['min_price:asc'],
-            'price_desc' => ['min_price:desc'],
-            default => ['created_at:desc'],
+        match ($this->sortBy) {
+            'price_asc', 'price_desc' => $query->orderBy('id', $this->sortBy === 'price_asc' ? 'asc' : 'desc'),
+            default => $query->latest(),
         };
 
-        $offset = ($this->page - 1) * $this->perPage;
-
-        $searchCacheKey = 'collection-search-' . md5(json_encode([
-            'collectionSlug' => $this->collectionSlug,
-            'searchQuery' => $this->searchQuery,
-            'sortBy' => $this->sortBy,
-            'page' => $this->page,
-            'perPage' => $this->perPage,
-            'filters' => $this->filters,
-            'filterParts' => $filterParts,
-            'facetFields' => $facetFields,
-            'sortAttr' => $sortAttr,
-            'offset' => $offset,
-        ]));
-
-        $searchData = Cache::store('file')->remember($searchCacheKey, 60 * 60 * 8, function () use ($filterParts, $facetFields, $sortAttr, $offset) {
-            $client = new Client(config('scout.meilisearch.host'), config('scout.meilisearch.key'));
-            $searchResult = $client->index('products')->search($this->searchQuery ?: '', [
-                'filter' => implode(' AND ', $filterParts),
-                'facets' => $facetFields,
-                'sort' => $sortAttr,
-                'limit' => $this->perPage,
-                'offset' => $offset,
-            ]);
-
-            $rawResult = $searchResult->getRaw();
-            $hits = $rawResult['hits'] ?? [];
-            $totalHits = $rawResult['nbHits'] ?? $rawResult['estimatedTotalHits'] ?? count($hits);
-            $facets = $rawResult['facetDistribution'] ?? [];
-            $productIds = collect($hits)->pluck('id')->toArray();
-
-            $productsMap = Product::with(['thumbnail', 'variants.prices', 'urls'])
-                ->whereIn('id', $productIds)
-                ->get()
-                ->keyBy('id');
-
-            $orderedProducts = collect($productIds)
-                ->map(fn ($id) => $productsMap[$id] ?? null)
-                ->filter()
-                ->values();
-
-            return [
-                'productIds' => $productIds,
-                'orderedProducts' => $orderedProducts,
-                'totalHits' => $totalHits,
-                'facets' => $facets,
-            ];
-        });
-
-        $products = new LengthAwarePaginator(
-            $searchData['orderedProducts'],
-            $searchData['totalHits'],
-            $this->perPage,
-            $this->page,
-            ['path' => request()->url()]
-        );
+        $products = $query->paginate($this->perPage, ['*'], 'page', $this->page);
 
         $childCollections = $collection?->children?->map(function ($child) {
             return [
@@ -227,12 +163,12 @@ class CollectionPage extends Component
         });
 
         return view('livewire.catalog.collection-page', [
-            'products' => $products,
-            'facets' => $searchData['facets'],
-            'collectionName' => $collectionName,
+            'products'         => $products,
+            'facets'           => [],
+            'collectionName'   => $collectionName,
             'childCollections' => $childCollections,
             'parentCollection' => $parentCollection,
-            'totalProducts' => $searchData['totalHits'],
+            'totalProducts'    => $products->total(),
         ]);
     }
 

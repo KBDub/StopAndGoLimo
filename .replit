@@ -43,9 +43,6 @@ DB_HOST = "helium"
 DB_PORT = "5432"
 DB_DATABASE = "heliumdb"
 DB_USERNAME = "postgres"
-SCOUT_DRIVER = "meilisearch"
-MEILISEARCH_HOST = "http://localhost:8000"
-MEILISEARCH_KEY = "OK51DYdyix57qXmQLGkDaq2L4ieZzFB3"
 DB_PASSWORD = "password"
 STRIPE_KEY = "pk_live_placeholder"
 STRIPE_SECRET = "sk_live_placeholder"
@@ -53,6 +50,7 @@ PAYMENTS_TYPE = "stripe"
 STAFF_ADMIN_HASH = "$2y$12$TJGTDRPVswe8zdRzH1QYpu3OFlxUc1U4yMtO2D8oKzslEeHJQoGgC"
 ASSET_URL = "https://top-5-pct.replit.app"
 STRIPE_WEBHOOK_SECRET = "whsec_placeholder"
+SCOUT_DRIVER = "database"
 
 [userenv.development]
 SESSION_DRIVER = "file"
@@ -74,10 +72,6 @@ author = "agent"
 task = "workflow.run"
 args = "Laravel Server"
 
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Meilisearch"
-
 [[workflows.workflow]]
 name = "Laravel Server"
 author = "agent"
@@ -89,17 +83,6 @@ outputType = "webview"
 task = "shell.exec"
 args = "bash scripts/startup-dev.sh"
 waitForPort = 5000
-
-[[workflows.workflow]]
-name = "Meilisearch"
-author = "agent"
-
-[workflows.workflow.metadata]
-outputType = "console"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "meilisearch --http-addr 0.0.0.0:8000 --master-key OK51DYdyix57qXmQLGkDaq2L4ieZzFB3 --db-path ./storage/meilisearch --env production --log-level INFO"
 
 [postMerge]
 path = "scripts/post-merge.sh"

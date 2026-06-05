@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 #
 # Development startup script for the Laravel Server workflow.
-# Meilisearch is started by its own separate workflow.
-# This script: waits for Meilisearch (C), starts Laravel, then warms up OPcache (F).
+# Starts Laravel and warms up OPcache after the server is ready.
 #
 
 # Sync APP_URL so media/storage URLs are correct.
@@ -36,20 +35,6 @@ if [ -n "${STAFF_ADMIN_HASH}" ]; then
     echo "[startup] Applying staff password reset..."
     php artisan staff:reset-passwords
 fi
-
-# C: Wait for Meilisearch health endpoint before serving any requests
-echo "[startup] Waiting for Meilisearch to be ready..."
-MAX_WAIT=90
-ELAPSED=0
-until curl --silent --output /dev/null --max-time 2 http://localhost:8000/health; do
-    sleep 1
-    ELAPSED=$((ELAPSED + 1))
-    if [ "$ELAPSED" -ge "$MAX_WAIT" ]; then
-        echo "[startup] Warning: Meilisearch did not become ready within ${MAX_WAIT}s. Proceeding anyway."
-        break
-    fi
-done
-echo "[startup] Meilisearch ready after ${ELAPSED}s."
 
 # Start Laravel server in background
 echo "[startup] Starting Laravel..."

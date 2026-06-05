@@ -1,32 +1,8 @@
 #!/usr/bin/env bash
 #
 # Production startup script.
-# Handles: Meilisearch (--env production), health gate, Laravel, and OPcache warm-up.
+# Handles: FrankenPHP download, Laravel Octane startup, and OPcache warm-up.
 #
-
-# D: Start Meilisearch in background with production mode
-echo "[startup] Starting Meilisearch (production mode)..."
-meilisearch \
-    --http-addr 0.0.0.0:8000 \
-    --master-key "$MEILISEARCH_KEY" \
-    --db-path ./storage/meilisearch \
-    --env production \
-    --log-level INFO &
-MEILISEARCH_PID=$!
-
-# C: Wait for Meilisearch health endpoint to confirm it is ready
-echo "[startup] Waiting for Meilisearch to be ready..."
-MAX_WAIT=90
-ELAPSED=0
-until curl --silent --output /dev/null --max-time 2 http://localhost:8000/health; do
-    sleep 1
-    ELAPSED=$((ELAPSED + 1))
-    if [ "$ELAPSED" -ge "$MAX_WAIT" ]; then
-        echo "[startup] Warning: Meilisearch did not become ready within ${MAX_WAIT}s. Proceeding anyway."
-        break
-    fi
-done
-echo "[startup] Meilisearch ready after ${ELAPSED}s."
 
 # Download FrankenPHP binary if not present (gitignored, must be fetched at runtime)
 if [ ! -f "./frankenphp" ]; then
@@ -63,4 +39,4 @@ wait
 echo "[startup] Warm-up complete. Site is ready."
 
 # Keep the script alive for as long as either service is running.
-wait "$LARAVEL_PID" "$MEILISEARCH_PID"
+wait "$LARAVEL_PID"

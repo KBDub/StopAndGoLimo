@@ -49,7 +49,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 3. **Never use double hyphens (--).** Use a comma or em dash instead.
 4. **7th-grade reading level** for all body copy. Short sentences. Plain words.
 5. **No icons.** Do not use Heroicons, Font Awesome, or SVG icon libraries anywhere on the public site.
-6. **No color outside the palette.** If a color is not in the Twilight Luxe 4+White palette or the three semantic colors, it is not allowed.
+6. **No color outside the palette.** If a color is not in the Twilight Luxe 5+White palette or the three semantic colors, it is not allowed.
 7. **Poppins for headings, Montserrat for body.** Never mix in a third typeface.
 
 ---
@@ -98,7 +98,7 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 
 ## 5. Color System
 
-### 5.1 — The 4+White Palette
+### 5.1 — The 5+White Palette
 
 | Name | Tailwind token | Default hex | Default HSL | Light hex | Dark hex |
 |---|---|---|---|---|---|
@@ -106,9 +106,12 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 | Champagne Gold | `champagne` | `#DCB57E` | hsl(35, 57%, 68%) | `#E9C79E` | `#C49A5E` |
 | Cloud Grey | `cloud` | `#E8E9EC` | hsl(225, 10%, 92%) | `#F4F5F7` | `#D4D6DB` |
 | Slate | `slate` | `#69727D` | hsl(213, 9%, 45%) | `#8B939C` | `#4A5159` |
+| Azure | `azure` | `#5A7EC8` | hsl(219, 48%, 57%) | `#94ACDB` | `#385A9F` |
 | White | — | `#FFFFFF` | hsl(0, 0%, 100%) | — | — |
 
 > **Note on Tailwind vs CSS var naming:** Slate uses `slate` in both Tailwind (`text-slate`, `bg-slate`) and CSS (`var(--slate)` / `var(--slate-light)` / `var(--slate-dark)`). The legacy Tailwind alias `muted` is being retired during the CSS cleanup phase. See `docs/rebranding.md`.
+>
+> **Azure usage rule:** Azure is a button-only accent. It must not appear on section backgrounds, cards, or decorative surfaces. Use it exclusively for `x-ui.button-azure` and `x-ui.button-outline-azure`, plus inline links and focus rings.
 
 ### 5.2 — Semantic Colors (reservations and booking forms only)
 
@@ -125,6 +128,7 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 3. **White** — cards, containers, text on navy
 4. **Cloud Grey** — light-mode section alternation and breathing room
 5. **Slate** — secondary text, captions, metadata
+6. **Azure** — secondary CTAs, links, focus states, informational highlights. Buttons only; never on section backgrounds.
 
 ### 5.4 — Brand Gradients
 
@@ -153,6 +157,8 @@ All buttons use Poppins (`font-head`) and tracking-wide. Corner radius is contro
 | `x-ui.button-outline-champagne` | Secondary on dark surface | Champagne | Transparent + champagne border |
 | `x-ui.button-white-navy` | Secondary on dark, high contrast | Navy | White |
 | `x-ui.button-outline-light` | Ghost on dark / over image | White | Transparent + white/35 border |
+| `x-ui.button-azure` | Secondary CTA (Get a Quote) | White | Azure solid |
+| `x-ui.button-outline-azure` | Ghost secondary on dark surface | Azure Light | Transparent + azure border |
 | `x-ui.button-text-link` | Inline arrow-link | Champagne | None |
 
 ### 6.2 — Banners

@@ -23,7 +23,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10">
                     <span class="font-head font-bold text-xs tracking-widest text-champagne">01 &mdash; Palette</span>
-                    <h2 class="font-head font-bold text-3xl text-white mt-2">Color Palette (4 + White)</h2>
+                    <h2 class="font-head font-bold text-3xl text-white mt-2">Color Palette (5 + White)</h2>
                     <p class="text-muted-light mt-3 max-w-2xl">Each core color has up to three variants: Light, Default, and Dark, for hover states, depth, and surface layering.</p>
                 </div>
 
@@ -175,6 +175,43 @@
                     </div>
                 </div>
 
+                {{-- Azure --}}
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">Azure</h3>
+                        <span class="text-sm text-muted">Secondary accent, secondary CTAs, links, informational highlights, and focus states</span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#94ACDB"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#15152c">Azure Light</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Azure Light</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#94ACDB</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">148, 172, 219</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">214°, 49%, 72%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#5A7EC8"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#fff">Azure</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Azure</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#5A7EC8</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">90, 126, 200</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">219°, 48%, 57%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#385A9F"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#fff">Azure Dark</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Azure Dark</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#385A9F</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">56, 90, 159</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">222°, 47%, 42%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {{-- White --}}
                 <div class="mb-10">
                     <div class="flex flex-wrap items-baseline gap-3 mb-4">
@@ -250,6 +287,7 @@
                         [3, '#FFFFFF', 'White', 'Container color, cards, primary text on navy, and high-contrast surfaces.'],
                         [4, '#E8E9EC', 'Cloud Grey', 'Light surface color, alternating sections and breathing room in light mode.'],
                         [5, '#69727D', 'Slate', 'Secondary text color, captions, metadata, and muted supporting copy.'],
+                        [6, '#5A7EC8', 'Azure', 'Secondary accent, secondary CTAs, links, informational highlights, and focus states.'],
                     ] as [$num, $hex, $name, $desc])
                     <div class="flex items-center gap-5 border border-white/8 bg-navy-light px-5 py-4">
                         <span class="font-head font-extrabold text-2xl text-white/20 w-8 flex-shrink-0">{{ $num }}</span>
@@ -445,6 +483,16 @@
                         <div class="text-center"><x-ui.button-white-navy href="#">Call Now</x-ui.button-white-navy><p class="text-muted text-xs mt-2 font-mono">button-white-navy</p></div>
                         <div class="text-center"><x-ui.button-outline-light href="#">Service Areas</x-ui.button-outline-light><p class="text-muted text-xs mt-2 font-mono">button-outline-light</p></div>
                         <div class="text-center"><x-ui.button-text-link href="#">View Rates &rarr;</x-ui.button-text-link><p class="text-muted text-xs mt-2 font-mono">button-text-link</p></div>
+                    </div>
+                </div>
+
+                {{-- Azure Buttons --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-5">Azure Buttons (Secondary Accent)</h3>
+                    <p class="text-muted text-sm mb-5">Azure buttons are used for secondary actions only, never as a primary CTA. They cool-balance the warm champagne primary.</p>
+                    <div class="flex flex-wrap gap-4 items-start">
+                        <div class="text-center"><x-ui.button-azure href="#">Get a Quote</x-ui.button-azure><p class="text-muted text-xs mt-2 font-mono">button-azure</p></div>
+                        <div class="text-center"><x-ui.button-outline-azure href="#">Track My Ride</x-ui.button-outline-azure><p class="text-muted text-xs mt-2 font-mono">button-outline-azure</p></div>
                     </div>
                 </div>
 

@@ -19,9 +19,9 @@ export default {
                     dark: '#E6A500',
                 },
                 'azure': {
-                    light: '#5A9AE8',
-                    DEFAULT: '#3273DC',
-                    dark: '#2558A8',
+                    light: '#94ACDB',
+                    DEFAULT: '#5A7EC8',
+                    dark: '#385A9F',
                 },
                 'linen': {
                     light: '#FAF9F5',
@@ -109,6 +109,8 @@ export default {
                 'champagne': '0 4px 20px rgba(220, 181, 126, 0.20)',
                 'champagne-lg': '0 8px 30px rgba(220, 181, 126, 0.32)',
                 'champagne-xl': '0 0 25px rgba(220, 181, 126, 0.45), 0 8px 45px rgba(220, 181, 126, 0.35)',
+                'azure': '0 4px 20px rgba(90, 126, 200, 0.20)',
+                'azure-lg': '0 8px 30px rgba(90, 126, 200, 0.32)',
             },
         },
     },

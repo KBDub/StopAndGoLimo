@@ -158,6 +158,11 @@ html {
     --slate-light: #8B939C;
     --slate: #69727D;
     --slate-dark: #4A5159;
+    --azure-light: #94ACDB;
+    --azure: #5A7EC8;
+    --azure-dark: #385A9F;
+    --shadow-azure: 0 4px 20px rgba(90, 126, 200, 0.20);
+    --shadow-azure-lg: 0 8px 30px rgba(90, 126, 200, 0.32);
     --font-head: 'Poppins', sans-serif;
     --font-body: 'Montserrat', sans-serif;
     --stopngo-success: #2E9E6B;

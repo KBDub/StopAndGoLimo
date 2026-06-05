@@ -26,7 +26,7 @@
 
     {{-- Notification bar preview --}}
     <div class="bg-navy-dark border-b border-champagne/20 px-6 py-2 flex items-center justify-between flex-wrap gap-2 text-xs font-head font-semibold">
-        <span class="text-muted">Open 24/7 &nbsp;&middot;&nbsp; New Lenox &amp; Naperville, IL</span>
+        <span class="text-muted">Open 24/7 &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet &amp; Chicago, IL</span>
         <span>
             <span class="text-champagne">(815) 585-6922</span>
             &nbsp;|&nbsp;
@@ -45,7 +45,7 @@
                 <span class="inline-block font-head font-semibold text-xs tracking-widest text-champagne border border-champagne/40 px-5 py-2 mb-8 bg-champagne/5">Brand Style Guide</span>
                 <h1 class="font-head font-extrabold text-5xl md:text-7xl mb-6 leading-tight bg-grad-champagne-shine bg-clip-text" style="-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Twilight Luxe</h1>
                 <p class="text-muted-light text-lg max-w-xl mx-auto mb-4">A refined navy-and-champagne palette engineered for premium ground transportation, confident, quiet, and first class.</p>
-                <p class="text-sm tracking-widest text-muted font-head"><strong class="text-champagne font-semibold">Stop &amp; Go Airport Shuttle Service Inc.</strong> &nbsp;&middot;&nbsp; New Lenox &amp; Naperville, IL</p>
+                <p class="text-sm tracking-widest text-muted font-head"><strong class="text-champagne font-semibold">Stop &amp; Go Airport Shuttle Service Inc.</strong> &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet, Chicago and all of Illinois</p>
             </div>
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
@@ -375,7 +375,7 @@
                     <div class="flex flex-wrap gap-4 items-start">
                         <div class="text-center"><x-ui.button-champagne-gradient href="#">Book a Ride</x-ui.button-champagne-gradient><p class="text-muted text-xs mt-2 font-mono">button-champagne-gradient</p></div>
                         <div class="text-center"><x-ui.button-champagne-solid href="#">Get a Quote</x-ui.button-champagne-solid><p class="text-muted text-xs mt-2 font-mono">button-champagne-solid</p></div>
-                        <div class="text-center"><x-ui.button-signal href="#">Reserve 24/7</x-ui.button-signal><p class="text-muted text-xs mt-2 font-mono">button-signal</p></div>
+                        <div class="text-center"><x-ui.button-champagne href="#">Reserve 24/7</x-ui.button-champagne><p class="text-muted text-xs mt-2 font-mono">button-champagne</p></div>
                         <div class="text-center"><x-ui.button-navy-gold href="#">Our Fleet</x-ui.button-navy-gold><p class="text-muted text-xs mt-2 font-mono">button-navy-gold</p></div>
                     </div>
                 </div>
@@ -412,7 +412,7 @@
                 <div class="bg-navy-dark px-6 py-5 border border-white/8">
                     <p class="font-mono text-champagne text-xs mb-1">x-ui.button-* &mdash; resources/views/components/ui/button-*.blade.php</p>
                     <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-3 overflow-x-auto whitespace-pre-wrap">&lt;x-ui.button-champagne-gradient href="/bookings"&gt;Book a Ride&lt;/x-ui.button-champagne-gradient&gt;
-&lt;x-ui.button-signal href="/contact"&gt;Reserve 24/7&lt;/x-ui.button-signal&gt;
+&lt;x-ui.button-champagne href="/contact"&gt;Reserve 24/7&lt;/x-ui.button-champagne&gt;
 &lt;x-ui.button-outline-champagne&gt;View Services&lt;/x-ui.button-outline-champagne&gt;
 &lt;x-ui.button-text-champagne href="/rates"&gt;View Rates&lt;/x-ui.button-text-champagne&gt;
 {{-- Size override via !-prefixed classes --}}
@@ -423,53 +423,151 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 08 Navigation Pattern ──────────────────────────── --}}
+        {{-- ── 08 Navigation & Mega Menu ───────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10">
                     <span class="font-head font-bold text-xs tracking-widest text-champagne">08 &mdash; Navigation</span>
-                    <h2 class="font-head font-bold text-3xl text-white mt-2">Navigation Pattern</h2>
-                    <p class="text-muted-light mt-3">Navy bar, Poppins links, champagne hover with a 3px underline. Notification bar above with champagne accents.</p>
+                    <h2 class="font-head font-bold text-3xl text-white mt-2">Navigation &amp; Mega Menu</h2>
+                    <p class="text-muted-light mt-3">Navy bar, Poppins links, champagne hover with a 3px underline. Three dropdown shapes: standard, two-column mega with nested Party Bus flyout, and a 22-city four-column areas grid. Hover to explore.</p>
                 </div>
 
-                <div class="border border-white/10 overflow-hidden mb-6">
-                    <div class="bg-navy-dark flex items-center justify-between px-5 py-2 text-xs font-head font-semibold border-b border-champagne/20 flex-wrap gap-2">
-                        <span class="text-muted">Open 24/7 &nbsp;&middot;&nbsp; New Lenox &amp; Naperville, IL</span>
-                        <span><span class="text-champagne">(815) 585-6922</span> &nbsp;|&nbsp; <span class="text-signal">Book Online &rarr;</span></span>
+                <div class="sg-nav mb-2">
+                    <div class="nav-notif">
+                        <span>Open 24/7 &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet &amp; Chicago, IL</span>
+                        <span><span class="n-phone">(815) 585-6922</span> &nbsp;|&nbsp; <span class="n-book">Book Online &rarr;</span></span>
                     </div>
                     <x-ui.banner-thin-champagne />
                     <x-ui.banner-thin-navy />
-                    <div class="bg-navy flex items-center gap-1 px-4">
-                        <span class="font-head font-bold text-base text-white py-5 px-3 mr-auto">Stop &amp; Go <span class="text-champagne">Limo</span></span>
-                        @foreach(['Welcome','About','Booking','Services','Special Events','Service Areas','Contact'] as $item)
-                            <span class="font-head font-semibold text-xs tracking-wide text-cloud py-5 px-3 border-b-[3px] {{ $loop->first ? 'text-champagne border-champagne' : 'border-transparent hover:text-champagne hover:border-champagne' }} cursor-pointer transition-colors hidden md:block">{{ $item }}</span>
-                        @endforeach
+                    <div class="nav-bar">
+                        <div class="nav-logo">Stop &amp; Go <span>Limo</span></div>
+                        <div class="nav-item"><a href="#" class="nav-link active">Welcome</a></div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">About <span class="caret">&#9660;</span></a>
+                            <div class="dropdown">
+                                <a href="#"><span class="d-title">About Us</span><span class="d-sub">Our story &amp; chauffeurs</span></a>
+                                <a href="#"><span class="d-title">Rates</span><span class="d-sub">Transparent flat pricing</span></a>
+                                <a href="#"><span class="d-title">Gallery</span><span class="d-sub">Our luxury fleet</span></a>
+                            </div>
+                        </div>
+                        <div class="nav-item"><a href="#" class="nav-link">Booking</a></div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">Services <span class="caret">&#9660;</span></a>
+                            <div class="dropdown dropdown-mega">
+                                <a href="#"><span class="d-title">Airport Shuttle</span><span class="d-sub">O'Hare &amp; Midway transfers</span></a>
+                                <a href="#"><span class="d-title">Wedding Limousine</span><span class="d-sub">Elegant event transport</span></a>
+                                <div class="has-flyout">
+                                    <a href="#"><span class="d-title">Party Bus</span><span class="d-sub">Groups &amp; celebrations</span><span class="fcaret">&#9654;</span></a>
+                                    <div class="flyout">
+                                        <a href="#"><span class="d-title">Party Bus &mdash; Aurora</span></a>
+                                        <a href="#"><span class="d-title">Party Bus &mdash; Naperville</span></a>
+                                    </div>
+                                </div>
+                                <a href="#"><span class="d-title">Prom Party Bus</span><span class="d-sub">Safe prom-night transport</span></a>
+                                <a href="#"><span class="d-title">New Bus Rental</span><span class="d-sub">Latest-model coaches</span></a>
+                                <a href="#"><span class="d-title">Coach Buses</span><span class="d-sub">Large-group charters</span></a>
+                                <a href="#"><span class="d-title">Limousine Services</span><span class="d-sub">Classic luxury limos</span></a>
+                                <a href="#"><span class="d-title">Corporate Car Service</span><span class="d-sub">Executive ground service</span></a>
+                                <a href="#"><span class="d-title">Town Car Services</span><span class="d-sub">Premium sedans</span></a>
+                                <a href="#"><span class="d-title">Chauffeurs</span><span class="d-sub">Professional drivers</span></a>
+                                <a href="#"><span class="d-title">Special Event Limousine</span><span class="d-sub">Any occasion</span></a>
+                                <a href="#"><span class="d-title">Transportation Services</span><span class="d-sub">Point-to-point rides</span></a>
+                                <a href="#"><span class="d-title">Grad Day Transportation</span><span class="d-sub">Graduation transport</span></a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">Special Events <span class="caret">&#9660;</span></a>
+                            <div class="dropdown">
+                                <a href="#"><span class="d-title">Six Flags Party Bus</span></a>
+                                <a href="#"><span class="d-title">Golfing Party Bus</span></a>
+                                <a href="#"><span class="d-title">Concert Party Bus Rental</span></a>
+                                <a href="#"><span class="d-title">Chicago Bears Party &amp; Limo Bus</span></a>
+                                <a href="#"><span class="d-title">Chicago Bulls Party Bus</span></a>
+                                <a href="#"><span class="d-title">Chicago Blackhawks Party Bus</span></a>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">Service Areas <span class="caret">&#9660;</span></a>
+                            <div class="dropdown dropdown-areas">
+                                <div class="areas-head">22 Chicagoland Southwest Suburbs &mdash; 24/7</div>
+                                <a href="#"><span class="d-title">New Lenox</span></a>
+                                <a href="#"><span class="d-title">Naperville</span></a>
+                                <a href="#"><span class="d-title">Aurora</span></a>
+                                <a href="#"><span class="d-title">North Aurora</span></a>
+                                <a href="#"><span class="d-title">Plainfield</span></a>
+                                <a href="#"><span class="d-title">Joliet</span></a>
+                                <a href="#"><span class="d-title">Morris</span></a>
+                                <a href="#"><span class="d-title">Minooka</span></a>
+                                <a href="#"><span class="d-title">Channahon</span></a>
+                                <a href="#"><span class="d-title">Elwood</span></a>
+                                <a href="#"><span class="d-title">Romeoville</span></a>
+                                <a href="#"><span class="d-title">Lockport</span></a>
+                                <a href="#"><span class="d-title">Frankfort</span></a>
+                                <a href="#"><span class="d-title">Mokena</span></a>
+                                <a href="#"><span class="d-title">Orland Park</span></a>
+                                <a href="#"><span class="d-title">Manhattan</span></a>
+                                <a href="#"><span class="d-title">Homer Glen</span></a>
+                                <a href="#"><span class="d-title">Lemont</span></a>
+                                <a href="#"><span class="d-title">Monee</span></a>
+                                <a href="#"><span class="d-title">Bolingbrook</span></a>
+                                <a href="#"><span class="d-title">Oswego</span></a>
+                                <a href="#"><span class="d-title">Montgomery</span></a>
+                            </div>
+                        </div>
+                        <div class="nav-item"><a href="#" class="nav-link">Contact</a></div>
                     </div>
                     <x-ui.banner-thin-navy />
                     <x-ui.banner-thin-champagne />
                 </div>
 
-                <div class="grid grid-cols-3 gap-4 mb-6">
-                    <div class="bg-navy-light border border-white/8 p-5 text-center">
-                        <span class="font-head font-semibold text-sm text-cloud border-b-[3px] border-transparent pb-2 block">Services</span>
+                <div class="sg-nav-states">
+                    <div class="sg-nav-state">
+                        <span class="font-head font-semibold text-sm text-cloud border-b-[3px] border-transparent pb-2 inline-block" style="text-transform:uppercase;letter-spacing:.04em">Services</span>
                         <p class="text-muted text-xs mt-3">Default</p>
                         <code class="font-mono text-xs text-champagne">#E8E9EC &bull; transparent rule</code>
                     </div>
-                    <div class="bg-navy-light border border-white/8 p-5 text-center">
-                        <span class="font-head font-semibold text-sm text-champagne border-b-[3px] border-champagne pb-2 block">Services</span>
+                    <div class="sg-nav-state">
+                        <span class="font-head font-semibold text-sm text-champagne border-b-[3px] border-champagne pb-2 inline-block" style="text-transform:uppercase;letter-spacing:.04em">Services</span>
                         <p class="text-muted text-xs mt-3">Hover</p>
                         <code class="font-mono text-xs text-champagne">#DCB57E &bull; champagne rule</code>
                     </div>
-                    <div class="bg-navy-light border border-white/8 p-5 text-center">
-                        <span class="font-head font-semibold text-sm text-champagne border-b-[3px] border-champagne pb-2 block">Welcome</span>
+                    <div class="sg-nav-state">
+                        <span class="font-head font-semibold text-sm text-champagne border-b-[3px] border-champagne pb-2 inline-block" style="text-transform:uppercase;letter-spacing:.04em">Welcome</span>
                         <p class="text-muted text-xs mt-3">Active / Current</p>
                         <code class="font-mono text-xs text-champagne">#DCB57E &bull; champagne rule</code>
                     </div>
                 </div>
 
-                <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                <p class="sg-nav-hint">Dropdown panels: <code class="font-mono" style="color:var(--champagne)">#252235</code> surface, 3px champagne top border, left-edge champagne accent on item hover. Services uses a two-column mega with a nested Party Bus flyout. Service Areas uses a four-column grid for all 22 cities.</p>
+
+                <div class="bg-navy-dark px-6 py-5 border border-white/8 mt-6">
                     <p class="font-mono text-champagne text-xs mb-1">x-nav.navbar &mdash; resources/views/components/nav/navbar.blade.php (coming soon)</p>
-                    <p class="text-muted text-xs">Dropdown panels: #252235 surface, 3px champagne top border, left-edge champagne accent on item hover. Services uses a two-column mega with a nested Party Bus flyout. Service Areas uses a four-column grid for all 22 cities.</p>
+                    <p class="font-mono text-muted text-xs mb-3">CSS: .sg-nav scope &mdash; resources/css/app.css</p>
+                    <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">&lt;div class="sg-nav"&gt;
+  &lt;div class="nav-notif"&gt;...&lt;/div&gt;
+  &lt;div class="nav-bar"&gt;
+    &lt;div class="nav-item"&gt;
+      &lt;a href="#" class="nav-link active"&gt;Welcome&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="nav-item"&gt;
+      &lt;a href="#" class="nav-link"&gt;Services &lt;span class="caret"&gt;&amp;#9660;&lt;/span&gt;&lt;/a&gt;
+      &lt;div class="dropdown dropdown-mega"&gt;
+        &lt;div class="has-flyout"&gt;
+          &lt;a href="#"&gt;&lt;span class="d-title"&gt;Party Bus&lt;/span&gt;&lt;span class="fcaret"&gt;&amp;#9654;&lt;/span&gt;&lt;/a&gt;
+          &lt;div class="flyout"&gt;...&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="nav-item"&gt;
+      &lt;a href="#" class="nav-link"&gt;Service Areas &lt;span class="caret"&gt;&amp;#9660;&lt;/span&gt;&lt;/a&gt;
+      &lt;div class="dropdown dropdown-areas"&gt;
+        &lt;div class="areas-head"&gt;22 Chicagoland Southwest Suburbs&lt;/div&gt;
+        &lt;a href="#"&gt;&lt;span class="d-title"&gt;New Lenox&lt;/span&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+{{-- No aspect ratio: nav is full-width, height auto --}}</pre>
                 </div>
             </div>
         </section>
@@ -492,7 +590,7 @@
 
     <footer class="py-10 border-t border-white/8 text-center">
         <p class="font-head font-bold text-lg text-white">Stop &amp; Go <span class="text-champagne">Limo</span></p>
-        <p class="text-muted text-sm mt-2">Stop &amp; Go Airport Shuttle Service Inc. &nbsp;&middot;&nbsp; New Lenox &amp; Naperville, IL</p>
+        <p class="text-muted text-sm mt-2">Stop &amp; Go Airport Shuttle Service Inc. &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet, Chicago &amp; all of Illinois</p>
         <p class="text-muted-dark text-xs mt-3 tracking-widest">Twilight Luxe Brand System</p>
     </footer>
 

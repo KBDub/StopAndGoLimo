@@ -485,3 +485,85 @@ html {
     0%   { transform: rotate(0deg);   opacity: 1; }
     100% { transform: rotate(720deg); opacity: 1; }
 }
+
+/* ── Stop & Go Limo — Mega Navigation (.sg-nav scope) ───────────────────── */
+/* All inner class names (.dropdown, .nav-link, .flyout, etc.) are intentionally */
+/* generic but are fully namespaced via the .sg-nav parent — no prefix needed.   */
+.sg-nav { overflow: visible; background: var(--navy); border: 1px solid rgba(255,255,255,.08); }
+.sg-nav .nav-notif {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; flex-wrap: wrap; padding: 8px 20px;
+    font-size: 13px; font-family: var(--font-body); color: var(--slate-light);
+    background: var(--navy-dark); border-bottom: 1px solid rgba(220,181,126,.2);
+}
+.sg-nav .n-phone { color: var(--champagne); font-weight: 600; font-family: var(--font-head); }
+.sg-nav .n-book  { color: var(--signal); font-weight: 600; font-family: var(--font-head); letter-spacing: .05em; text-transform: uppercase; }
+.sg-nav .nav-bar { display: flex; align-items: center; gap: 6px; padding: 0 18px; background: var(--navy); position: relative; }
+.sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: #fff; padding: 20px 18px 20px 6px; margin-right: auto; }
+.sg-nav .nav-logo span { color: var(--champagne); }
+.sg-nav .nav-item { position: relative; }
+.sg-nav .nav-link {
+    font-family: var(--font-head); font-weight: 600; font-size: 13.5px;
+    letter-spacing: .04em; text-transform: uppercase;
+    color: var(--cloud); padding: 22px 16px; display: inline-flex;
+    align-items: center; gap: 6px; text-decoration: none;
+    transition: color .2s; border-bottom: 3px solid transparent;
+}
+.sg-nav .nav-link:hover,
+.sg-nav .nav-item:hover .nav-link { color: var(--champagne); border-bottom-color: var(--champagne); }
+.sg-nav .nav-link.active { color: var(--champagne); border-bottom-color: var(--champagne); }
+.sg-nav .nav-link .caret { font-size: 9px; transition: transform .2s; color: var(--slate-light); }
+.sg-nav .nav-item:hover .nav-link .caret { transform: rotate(180deg); color: var(--champagne); }
+.sg-nav .dropdown {
+    position: absolute; top: 100%; left: 0; min-width: 260px;
+    background: var(--navy-light);
+    border: 1px solid rgba(220,181,126,.2); border-top: 3px solid var(--champagne);
+    box-shadow: 0 22px 50px rgba(0,0,0,.55);
+    opacity: 0; visibility: hidden; transform: translateY(8px);
+    transition: opacity .22s ease, transform .22s ease, visibility .22s;
+    z-index: 50; padding: 8px 0;
+}
+.sg-nav .nav-item:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.sg-nav .dropdown a {
+    display: flex; flex-direction: column; gap: 2px; padding: 11px 22px;
+    text-decoration: none; border-left: 3px solid transparent; transition: all .18s;
+}
+.sg-nav .dropdown a .d-title { font-family: var(--font-head); font-weight: 600; font-size: 14px; color: var(--cloud); }
+.sg-nav .dropdown a .d-sub { font-size: 12px; color: var(--slate); }
+.sg-nav .dropdown a:hover { background: var(--navy-dark); border-left-color: var(--champagne); }
+.sg-nav .dropdown a:hover .d-title { color: var(--champagne); }
+.sg-nav .dropdown-mega { min-width: 520px; display: grid; grid-template-columns: 1fr 1fr; }
+.sg-nav .dropdown-areas { min-width: 560px; display: grid; grid-template-columns: repeat(4,1fr); padding: 14px 8px; }
+.sg-nav .dropdown-areas a { padding: 8px 16px; border-left: 0; border-bottom: 2px solid transparent; }
+.sg-nav .dropdown-areas a:hover { border-left: 0; border-bottom-color: var(--champagne); background: var(--navy-dark); }
+.sg-nav .dropdown-areas .d-title { font-size: 13px; }
+.sg-nav .areas-head {
+    grid-column: 1 / -1; padding: 6px 16px 12px;
+    font-family: var(--font-head); font-weight: 600; font-size: 11px;
+    letter-spacing: .16em; text-transform: uppercase;
+    color: var(--champagne); border-bottom: 1px solid rgba(220,181,126,.18); margin-bottom: 6px;
+}
+.sg-nav .has-flyout { position: relative; }
+.sg-nav .has-flyout > a { flex-direction: row; align-items: center; gap: 8px; }
+.sg-nav .has-flyout > a .fcaret { margin-left: auto; font-size: 9px; color: var(--slate-light); transition: color .2s; }
+.sg-nav .has-flyout:hover > a .fcaret { color: var(--champagne); }
+.sg-nav .flyout {
+    position: absolute; top: -9px; left: 100%; min-width: 230px;
+    background: var(--navy-light);
+    border: 1px solid rgba(220,181,126,.2); border-left: 3px solid var(--champagne);
+    box-shadow: 0 22px 50px rgba(0,0,0,.55);
+    opacity: 0; visibility: hidden; transform: translateX(8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s;
+    z-index: 60; padding: 8px 0;
+}
+.sg-nav .has-flyout:hover > .flyout { opacity: 1; visibility: visible; transform: translateX(0); }
+
+.sg-nav-states { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 26px; }
+.sg-nav-state { border: 1px solid rgba(255,255,255,.07); background: var(--navy-light); padding: 20px; text-align: center; }
+.sg-nav-hint { font-size: 13px; color: var(--slate); margin-top: 14px; font-style: italic; }
+
+@media (max-width: 780px) {
+    .sg-nav .dropdown-mega { grid-template-columns: 1fr; min-width: 240px; }
+    .sg-nav .nav-bar { flex-wrap: wrap; }
+    .sg-nav-states { grid-template-columns: 1fr; }
+}

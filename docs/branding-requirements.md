@@ -13,7 +13,7 @@
 | Legal name | Stop & Go Airport Shuttle Service Inc. |
 | Short name (nav, logo) | Stop & Go Limo |
 | Tagline | Premium Limousine & Airport Shuttle Service |
-| Location | New Lenox & Naperville, IL |
+| Service area | New Lenox, Naperville, Joliet, Chicago and all of Illinois |
 | Phone | (815) 585-6922 |
 | In business since | 2009 |
 | Market position | Premium, luxury ground transportation |
@@ -39,7 +39,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 
 ## 3. Absolute Rules (Never Break)
 
-1. **No all-caps / uppercase text anywhere on the site.** No CSS `text-transform: uppercase`. No `tracking-widest` on uppercase labels. Labels in small-caps style use sentence case or title case.
+1. **No all-caps / uppercase text anywhere on the site** — except the approved navigation exception in Section 8.2. No `text-transform: uppercase` outside that scope.
 2. **Square corners only.** No `rounded`, `rounded-lg`, `rounded-full` on any card, button, input, or container. Use `rounded-none` or simply omit.
 3. **Never use double hyphens (--).** Use a comma or em dash instead.
 4. **7th-grade reading level** for all body copy. Short sentences. Plain words.
@@ -58,7 +58,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 | Headings, buttons, nav, labels | Poppins | `font-head` | 300, 400, 500, 600, 700, 800 |
 | Body, captions, paragraphs, UI | Montserrat | `font-body` | 300, 400, 500, 600, 700 |
 
-Both are loaded via Google Fonts. The import is in `resources/css/app.css` line 1-2.
+Both are loaded via Google Fonts. The import is in `resources/css/app.css` lines 1-2.
 
 ### Type Scale
 
@@ -104,6 +104,8 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` line 
 | Slate | `muted` | `#69727D` | `#8B939C` | `#4A5159` |
 | White | — | `#FFFFFF` | — | — |
 
+> **Note on Tailwind vs CSS var naming:** The Slate color is `muted` in Tailwind (`text-muted`, `bg-muted`) but `var(--slate)` / `var(--slate-light)` / `var(--slate-dark)` in CSS. Both refer to the same hex values.
+
 ### 5.2 — Semantic Colors (reservations and booking forms only)
 
 | Name | Tailwind token | Hex |
@@ -119,17 +121,17 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` line 
 3. **White** — cards, containers, text on navy
 4. **Cloud Grey** — light-mode section alternation and breathing room
 5. **Slate** — secondary text, captions, metadata
-6. **Signal Gold** — high-attention only: 24/7 badges, limited-availability chips, alert ribbons
+6. **Signal Gold** — high-attention only: 24/7 badges, limited-availability chips, alert ribbons. Never on buttons.
 
 ### 5.4 — Brand Gradients
 
 | Token | Direction | Use |
 |---|---|---|
-| `bg-grad-midnight-hero` | 135deg Navy → Navy-light | Primary hero and section BGs |
-| `bg-grad-deep-twilight` | 135deg Navy-dark → Navy → Navy-light | Overlays at ~70% on photography |
-| `bg-grad-champagne-shine` | 135deg Champagne → Champagne-light | CTA buttons, highlight chips |
-| `bg-grad-navy-to-gold` | 135deg Navy → Navy-light → Champagne | Feature moments, used sparingly |
-| `bg-grad-champagne-rule` | 90deg transparent → Champagne-dark → Champagne → Champagne-dark → transparent | Decorative horizontal dividers |
+| `bg-grad-midnight-hero` | 135deg Navy to Navy-light | Primary hero and section BGs |
+| `bg-grad-deep-twilight` | 135deg Navy-dark to Navy to Navy-light | Overlays at 20-30% opacity on photography |
+| `bg-grad-champagne-shine` | 135deg Champagne to Champagne-light | CTA buttons, highlight chips |
+| `bg-grad-navy-to-gold` | 135deg Navy to Navy-light to Champagne | Feature moments, used sparingly |
+| `bg-grad-champagne-rule` | 90deg transparent fading champagne | Decorative horizontal dividers |
 
 ---
 
@@ -138,12 +140,13 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` line 
 ### 6.1 — Buttons
 
 All buttons use Poppins (`font-head`), tracking-wide, no rounded corners, square edges.
+**Signal Gold is never used on buttons.** Use champagne variants for all CTAs.
 
 | Component | Use case | Text color | Background |
 |---|---|---|---|
 | `x-ui.button-champagne-gradient` | Primary CTA (Book a Ride) | Navy | Champagne gradient |
 | `x-ui.button-champagne-solid` | Primary CTA on light surface | Navy | Champagne solid |
-| `x-ui.button-signal` | Urgent / 24/7 attention | Navy | Signal Gold |
+| `x-ui.button-champagne` | Rich primary CTA, deeper champagne | Navy | Champagne-dark, hover champagne |
 | `x-ui.button-navy-gold` | Outlined dark container | Champagne | Navy-dark + champagne border |
 | `x-ui.button-outline-champagne` | Secondary on dark surface | Champagne | Transparent + champagne border |
 | `x-ui.button-white-navy` | Secondary on dark, high contrast | Navy | White |
@@ -197,11 +200,79 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 
 ## 8. Navigation
 
+### 8.1 — Structure
+
 - **Top notification bar:** `bg-navy-dark` — champagne phone number, signal gold CTA, muted location text
-- **Nav bar:** `bg-navy` — Poppins semibold, cloud-grey links, champagne on hover, 3px champagne underline for active/hover
+- **Nav bar:** `bg-navy` — Poppins, cloud-grey links, champagne on hover, 3px champagne underline for active/hover
 - **Active state:** `text-champagne border-b-[3px] border-champagne`
-- **Dropdowns:** `bg-navy-light` surface, 3px champagne top border, champagne left-edge accent on item hover
 - **Mobile hamburger:** Champagne icon on navy background
+
+### 8.2 — Mega Menu CSS System
+
+The mega menu is a **pure CSS / hover-state system** — no JavaScript. All styles live in `resources/css/app.css` scoped under the `.sg-nav` parent class.
+
+**Scoping decision:** Instead of prefixing every class (`snglimo-dropdown`, `snglimo-flyout`, etc.), all inner classes are scoped via the `.sg-nav` parent in CSS. This avoids verbose class names in HTML while preventing conflicts with other components. **Do not use `.dropdown`, `.nav-link`, or `.flyout` bare — always inside `.sg-nav`.**
+
+#### CSS Class Reference
+
+| CSS class | Scope | What it does |
+|---|---|---|
+| `.sg-nav` | Root wrapper | `overflow:visible`, navy bg, 1px white/8 border |
+| `.nav-notif` | Inside `.sg-nav` | Notification bar: flex space-between, navy-dark bg |
+| `.n-phone` | Inside `.nav-notif` | Champagne phone number, Poppins semibold |
+| `.n-book` | Inside `.nav-notif` | Signal gold "Book Online," uppercase (approved exception) |
+| `.nav-bar` | Inside `.sg-nav` | Main nav row, flex, navy bg, `position:relative` |
+| `.nav-logo` | Inside `.nav-bar` | Poppins bold, white text, champagne `<span>` for "Limo" |
+| `.nav-item` | Inside `.nav-bar` | `position:relative` — each nav link wrapper |
+| `.nav-link` | Inside `.nav-item` | Poppins 600, 13.5px, **uppercase (approved exception)**, cloud color, 3px transparent border-bottom, 22px vertical padding |
+| `.nav-link:hover` / `.nav-item:hover .nav-link` | — | Champagne color + champagne 3px bottom rule |
+| `.nav-link.active` | — | Same as hover |
+| `.nav-link .caret` | — | Small ▾ 9px, slate-light, rotates 180 on hover |
+| `.dropdown` | Inside `.nav-item` | Absolute panel: navy-light bg, 1px champagne/20 border, 3px champagne top, shadow, opacity/visibility/translateY transition |
+| `.dropdown a` | — | flex-column, 11px 22px padding, 3px transparent border-left |
+| `.dropdown a .d-title` | — | Poppins 600, 14px, cloud |
+| `.dropdown a .d-sub` | — | 12px, slate |
+| `.dropdown a:hover` | — | Navy-dark bg, champagne left border, champagne d-title |
+| `.dropdown-mega` | Modifier on `.dropdown` | 520px min-width, 2-column grid — used for Services |
+| `.dropdown-areas` | Modifier on `.dropdown` | 560px min-width, 4-column grid — used for Service Areas |
+| `.areas-head` | Inside `.dropdown-areas` | Full-width label, Poppins 600, uppercase (approved exception), champagne |
+| `.has-flyout` | Inside `.dropdown-mega` | Wrapper for a menu item with a nested right-side panel |
+| `.has-flyout > a` | — | flex-row (not column), for Party Bus + fcaret arrow |
+| `.flyout` | Inside `.has-flyout` | Absolute panel: `top:-9px; left:100%`, 3px champagne left border |
+| `.sg-nav-states` | Standalone (not inside `.sg-nav`) | 3-column grid showing Default / Hover / Active link states |
+| `.sg-nav-state` | Inside `.sg-nav-states` | Individual state card, navy-light bg |
+| `.sg-nav-hint` | Standalone | Small italic caption, slate text |
+
+#### Dropdown Shapes
+
+1. **Standard dropdown** — single column, min 260px. Used for: About, Special Events, Contact.
+2. **Mega two-column** — `.dropdown.dropdown-mega`, 520px, 2-col grid. Used for Services (13 items + Party Bus flyout).
+3. **Four-column areas grid** — `.dropdown.dropdown-areas`, 560px, 4-col. Used for Service Areas (22 cities).
+
+#### Nested Party Bus Flyout
+
+The Party Bus item inside the Services mega uses `.has-flyout`. Its `<a>` tag switches to `flex-direction:row` to accommodate the right-pointing `▶` caret. The `.flyout` panel opens to the right (`left:100%`) with a champagne left border.
+
+#### Uppercase Exceptions (approved, navigation only)
+
+Three places inside `.sg-nav` intentionally use `text-transform:uppercase`:
+1. `.nav-link` — all top-level nav labels
+2. `.n-book` — "Book Online" in the notification bar
+3. `.areas-head` — city grid header label
+
+These are the only approved uses of uppercase on the entire site.
+
+### 8.3 — Nav Item Inventory
+
+| Item | Dropdown type | Items |
+|---|---|---|
+| Welcome | None (active state) | — |
+| About | Standard | About Us, Rates, Gallery |
+| Booking | None | — |
+| Services | Mega 2-col | Airport Shuttle, Wedding Limousine, Party Bus (+ flyout: Aurora, Naperville), Prom Party Bus, New Bus Rental, Coach Buses, Limousine Services, Corporate Car Service, Town Car Services, Chauffeurs, Special Event Limousine, Transportation Services, Grad Day Transportation |
+| Special Events | Standard | Six Flags Party Bus, Golfing Party Bus, Concert Party Bus, Chicago Bears, Chicago Bulls, Chicago Blackhawks |
+| Service Areas | 4-col areas grid | 22 cities (New Lenox, Naperville, Aurora, North Aurora, Plainfield, Joliet, Morris, Minooka, Channahon, Elwood, Romeoville, Lockport, Frankfort, Mokena, Orland Park, Manhattan, Homer Glen, Lemont, Monee, Bolingbrook, Oswego, Montgomery) |
+| Contact | None | — |
 
 ---
 
@@ -223,7 +294,7 @@ Every component must pass all three breakpoints:
 
 - **Reading level:** 7th grade. Short sentences. Active voice.
 - **Tone:** Professional, warm, confident. Never boastful or discount-y.
-- **Avoid:** "best," "cheapest," "luxury limo service in Illinois" (SEO bait phrases)
+- **Avoid:** "best," "cheapest," "luxury limo service in Illinois" (SEO bait phrases), "taxi," "cab," "rideshare," "Uber-like"
 - **Prefer:** Specific, concrete copy. "On time to O'Hare or Midway, every time." over "reliable transportation."
 - **Punctuation:** Commas over hyphens or double-dashes. No double hyphens.
 - **Numbers:** Spell out one through nine, use numerals for 10+.
@@ -234,7 +305,7 @@ Every component must pass all three breakpoints:
 ## 11. Imagery and Video
 
 - Photography is dark-toned, moody, and aspirational: night skylines, vehicle interiors, airport drop-offs
-- Overlay images with `bg-grad-deep-twilight` at 70% opacity to maintain brand consistency
+- Overlay images with `bg-grad-deep-twilight` at **20-30% opacity** — not higher, to keep photography visible
 - No stock photos with visible faces or generic clip art
 - Vehicle photos: always clean, uncluttered backgrounds
 - Image containers: sharp corners, no rounded edges
@@ -250,6 +321,7 @@ Every component must pass all three breakpoints:
 - JSON-LD in Blade must use `@verbatim` for static blocks or `@@` escaping for dynamic values (Blade treats `@context`/`@type`/`@id` as directives)
 - Meta: `title`, `description`, `og:title`, `og:description`, `og:image` on every page
 - City-specific service area pages: target "[service] in [city], IL" intent
+- Service area copy must reference New Lenox, Naperville, Joliet, Chicago and all of Illinois
 
 ---
 
@@ -261,6 +333,7 @@ Every component must pass all three breakpoints:
 | Blade component drop-ins | `docs/stopngo-twilght-luxe-blade/` |
 | Tailwind tokens | `tailwind.config.js` (theme.extend) |
 | CSS custom properties | `resources/css/app.css` (:root block) |
+| Mega menu CSS | `resources/css/app.css` (bottom, `.sg-nav` scope) |
 | Client config | `config/client.php` |
 | Image/video policy | `docs/image-video-control.md` |
 | Demo style guide page | `/demo` (route: `web.php`) |

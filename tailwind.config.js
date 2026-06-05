@@ -45,7 +45,7 @@ export default {
                 /* ── Twilight Luxe — Stop & Go Limo brand tokens ── */
                 'navy': {
                     light: '#252235',
-                    DEFAULT: '#15162C',
+                    DEFAULT: '#15152C',
                     dark: '#0F1223',
                 },
                 'champagne': {
@@ -80,10 +80,10 @@ export default {
                 'gold-gradient-horizontal': 'linear-gradient(90deg, #FFC20E 0%, #FFD93D 100%)',
                 'warm-gradient': 'linear-gradient(135deg, #FFF9E6 0%, #F2F0E6 100%)',
                 /* Twilight Luxe brand gradients */
-                'grad-midnight-hero': 'linear-gradient(135deg, #15162C 0%, #252235 100%)',
-                'grad-deep-twilight': 'linear-gradient(135deg, #0F1223 0%, #15162C 60%, #252235 100%)',
+                'grad-midnight-hero': 'linear-gradient(135deg, #15152C 0%, #252235 100%)',
+                'grad-deep-twilight': 'linear-gradient(135deg, #0F1223 0%, #15152C 60%, #252235 100%)',
                 'grad-champagne-shine': 'linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%)',
-                'grad-navy-to-gold': 'linear-gradient(135deg, #15162C 0%, #252235 55%, #DCB57E 140%)',
+                'grad-navy-to-gold': 'linear-gradient(135deg, #15152C 0%, #252235 55%, #DCB57E 140%)',
                 'grad-champagne-rule': 'linear-gradient(90deg, transparent, #C49A5E 20%, #DCB57E 50%, #C49A5E 80%, transparent)',
             },
             fontFamily: {

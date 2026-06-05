@@ -32,7 +32,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 - **Precise** — clean typography, no visual clutter, sharp corners throughout.
 - **Trustworthy** — professional drivers, 24/7 availability, transparent pricing.
 
-**Midnight Navy (#15162C):** Deep, authoritative, and refined. Signals trust and premium quality.
+**Midnight Navy (#15152C, hsl(240, 35%, 13%)):** Deep, authoritative, and refined. Signals trust and premium quality.
 **Champagne Gold (#DCB57E):** Warm, understated luxury. Not flashy — the kind of gold that belongs in first class.
 
 ---
@@ -95,14 +95,14 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` lines
 
 ### 5.1 — The 5+1 Palette
 
-| Name | Tailwind token | Default hex | Light hex | Dark hex |
-|---|---|---|---|---|
-| Midnight Navy | `navy` | `#15162C` | `#252235` | `#0F1223` |
-| Champagne Gold | `champagne` | `#DCB57E` | `#E9C79E` | `#C49A5E` |
-| Signal Gold | `signal` | `#FEC42D` | `#FFD65E` | `#E0A800` |
-| Cloud Grey | `cloud` | `#E8E9EC` | `#F4F5F7` | `#D4D6DB` |
-| Slate | `muted` | `#69727D` | `#8B939C` | `#4A5159` |
-| White | — | `#FFFFFF` | — | — |
+| Name | Tailwind token | Default hex | Default HSL | Light hex | Dark hex |
+|---|---|---|---|---|---|
+| Midnight Navy | `navy` | `#15152C` | hsl(240, 35%, 13%) | `#252235` | `#0F1223` |
+| Champagne Gold | `champagne` | `#DCB57E` | hsl(35, 57%, 68%) | `#E9C79E` | `#C49A5E` |
+| Signal Gold | `signal` | `#FEC42D` | hsl(43, 99%, 59%) | `#FFD65E` | `#E0A800` |
+| Cloud Grey | `cloud` | `#E8E9EC` | hsl(225, 10%, 92%) | `#F4F5F7` | `#D4D6DB` |
+| Slate | `muted` | `#69727D` | hsl(213, 9%, 45%) | `#8B939C` | `#4A5159` |
+| White | — | `#FFFFFF` | hsl(0, 0%, 100%) | — | — |
 
 > **Note on Tailwind vs CSS var naming:** The Slate color is `muted` in Tailwind (`text-muted`, `bg-muted`) but `var(--slate)` / `var(--slate-light)` / `var(--slate-dark)` in CSS. Both refer to the same hex values.
 
@@ -173,10 +173,10 @@ Separator lines between nav zones and section boundaries.
 **Standard nav wrap pattern:**
 ```
 x-ui.banner-thin-champagne
-Notification Bar (bg-navy-dark)
+Notification Bar (bg-navy — Midnight Navy primary)
 x-ui.banner-thin-champagne
 x-ui.banner-thin-navy
-Main Navigation (bg-navy)
+Main Navigation (bg-navy — Midnight Navy primary)
 x-ui.banner-thin-navy
 x-ui.banner-thin-champagne
 ```
@@ -193,7 +193,8 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 - **Section padding:** `py-16` (64px) default, `py-20` for hero sections
 - **Section padding, mobile:** `py-12` — always use responsive prefixes
 - **Container padding:** `px-6` default, `px-4` on mobile
-- **Section alternation:** Navy surfaces alternate with Cloud-light surfaces in light-mode sections
+- **Standard section backgrounds:** Midnight Navy (`bg-navy`, `bg-navy-light`, `bg-navy-dark`) or Cloud Grey (`bg-cloud-light`). No other background colors on page sections.
+- **Section alternation:** Midnight Navy sections alternate with Cloud Grey sections where light-mode breathing room is needed.
 - **Max file length:** 800 lines per Blade file. Split into sub-components if longer.
 
 ---
@@ -202,8 +203,8 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 
 ### 8.1 — Structure
 
-- **Top notification bar:** `bg-navy-dark` — champagne phone number, signal gold CTA, muted location text
-- **Nav bar:** `bg-navy` — Poppins, cloud-grey links, champagne on hover, 3px champagne underline for active/hover
+- **Top notification bar:** `bg-navy` (Midnight Navy, primary brand bg) — champagne phone number, signal gold CTA, muted location text
+- **Nav bar:** `bg-navy` (Midnight Navy, primary brand bg) — Poppins, cloud-grey links, champagne on hover, 3px champagne underline for active/hover
 - **Active state:** `text-champagne border-b-[3px] border-champagne`
 - **Mobile hamburger:** Champagne icon on navy background
 

@@ -1,5 +1,5 @@
 <x-layouts.page
-    title="Brand Style Guide — Twilight Luxe"
+    title="Brand Style Guide — Stop &amp; Go Airport Shuttle Service, Inc."
     metaDescription="Twilight Luxe brand style guide for Stop &amp; Go Airport Shuttle Service Inc. Color palette, typography, buttons, banners, and mega menu."
     currentPage="demo"
     :noIndex="true"
@@ -10,7 +10,7 @@
             <div class="absolute inset-0 bg-grad-midnight-hero"></div>
             <div class="relative z-10 max-w-7xl mx-auto px-6">
                 <span class="inline-block font-head font-semibold text-xs tracking-widest text-champagne border border-champagne/40 px-5 py-2 mb-8 bg-champagne/5">Brand Style Guide</span>
-                <h1 class="font-head font-extrabold text-5xl md:text-7xl mb-6 leading-tight bg-grad-champagne-shine bg-clip-text" style="-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Twilight Luxe</h1>
+                <h1 class="font-head font-extrabold text-4xl md:text-6xl mb-6 leading-tight bg-grad-champagne-shine bg-clip-text" style="-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Stop &amp; Go Airport Shuttle Service, Inc.</h1>
                 <p class="text-muted-light text-lg max-w-xl mx-auto mb-4">A refined navy-and-champagne palette engineered for premium ground transportation, confident, quiet, and first class.</p>
                 <p class="text-sm tracking-widest text-muted font-head"><strong class="text-champagne font-semibold">Stop &amp; Go Airport Shuttle Service Inc.</strong> &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet, Chicago and all of Illinois</p>
             </div>
@@ -27,79 +27,206 @@
                 </div>
 
                 {{-- Champagne Gold --}}
-                <div class="mb-8 border border-white/8 overflow-hidden bg-navy-light">
-                    <div class="px-6 py-4 border-b border-white/8">
-                        <h3 class="font-head font-semibold text-xl text-white">Champagne Gold</h3>
-                        <p class="text-muted text-sm">Primary CTAs, brand accents, dividers, button and link hover states</p>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">Champagne Gold</h3>
+                        <span class="text-sm text-muted">Primary CTAs, brand accents, dividers, button and link hover states</span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3">
-                        <div class="p-6" style="background:#E9C79E"><span class="text-[#4a3818] font-bold block mb-2 font-head text-sm">Champagne Light</span><p class="font-mono text-xs text-[#4a3818]/70">HEX #E9C79E &bull; RGB 233, 199, 158</p></div>
-                        <div class="p-6" style="background:#DCB57E"><span class="text-[#4a3818] font-bold block mb-2 font-head text-sm">Champagne Gold</span><p class="font-mono text-xs text-[#4a3818]/70">HEX #DCB57E &bull; RGB 220, 181, 126</p></div>
-                        <div class="p-6" style="background:#C49A5E"><span class="text-white font-bold block mb-2 font-head text-sm">Champagne Dark</span><p class="font-mono text-xs text-white/70">HEX #C49A5E &bull; RGB 196, 154, 94</p></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#E9C79E"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#5a4421">Champagne Light</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Champagne Light</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#E9C79E</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">233, 199, 158</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">33°, 63%, 77%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#DCB57E"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Champagne Gold</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Champagne Gold</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#DCB57E</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">220, 181, 126</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">35°, 57%, 68%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#C49A5E"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#fff">Champagne Dark</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Champagne Dark</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#C49A5E</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">196, 154, 94</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">35°, 46%, 57%</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {{-- Midnight Navy --}}
-                <div class="mb-8 border border-white/8 overflow-hidden bg-navy-light">
-                    <div class="px-6 py-4 border-b border-white/8">
-                        <h3 class="font-head font-semibold text-xl text-white">Midnight Navy</h3>
-                        <p class="text-muted text-sm">Dominant backgrounds, headers, footer, hero overlays</p>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">Midnight Navy</h3>
+                        <span class="text-sm text-muted">Dominant backgrounds, headers, footer, hero overlays, primary text on light</span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3">
-                        <div class="p-6" style="background:#252235"><span class="text-cloud font-bold block mb-2 font-head text-sm">Navy Light</span><p class="font-mono text-xs text-cloud/60">HEX #252235 &bull; RGB 37, 34, 53</p></div>
-                        <div class="p-6" style="background:#15162C"><span class="text-cloud font-bold block mb-2 font-head text-sm">Midnight Navy</span><p class="font-mono text-xs text-cloud/60">HEX #15162C &bull; RGB 21, 22, 44</p></div>
-                        <div class="p-6" style="background:#0F1223"><span class="text-cloud font-bold block mb-2 font-head text-sm">Navy Dark</span><p class="font-mono text-xs text-cloud/60">HEX #0F1223 &bull; RGB 15, 18, 35</p></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#252235"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#cfd0d8">Navy Light</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Navy Light</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#252235</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">37, 34, 53</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">249°, 22%, 17%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#15152C"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#cfd0d8">Midnight Navy</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Midnight Navy</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#15152C</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">21, 21, 44</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">240°, 35%, 13%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#0F1223"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#cfd0d8">Navy Dark</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Navy Dark</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#0F1223</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">15, 18, 35</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">231°, 40%, 10%</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {{-- Signal Gold --}}
-                <div class="mb-8 border border-white/8 overflow-hidden bg-navy-light">
-                    <div class="px-6 py-4 border-b border-white/8">
-                        <h3 class="font-head font-semibold text-xl text-white">Signal Gold</h3>
-                        <p class="text-muted text-sm">High-attention only, 24/7 badges, quote highlights, alert ribbons</p>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">Signal Gold</h3>
+                        <span class="text-sm text-muted">High-attention only, 24/7 badges, quote highlights, alert ribbons</span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3">
-                        <div class="p-6" style="background:#FFD65E"><span class="text-[#4a3818] font-bold block mb-2 font-head text-sm">Signal Light</span><p class="font-mono text-xs text-[#4a3818]/70">HEX #FFD65E &bull; RGB 255, 214, 94</p></div>
-                        <div class="p-6" style="background:#FEC42D"><span class="text-[#4a3818] font-bold block mb-2 font-head text-sm">Signal Gold</span><p class="font-mono text-xs text-[#4a3818]/70">HEX #FEC42D &bull; RGB 254, 196, 45</p></div>
-                        <div class="p-6" style="background:#E0A800"><span class="text-[#4a3818] font-bold block mb-2 font-head text-sm">Signal Dark</span><p class="font-mono text-xs text-[#4a3818]/70">HEX #E0A800 &bull; RGB 224, 168, 0</p></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#FFD65E"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Signal Light</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Signal Light</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#FFD65E</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">255, 214, 94</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">45°, 100%, 68%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#FEC42D"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Signal Gold</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Signal Gold</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#FEC42D</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">254, 196, 45</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">43°, 99%, 59%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#E0A800"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a3818">Signal Dark</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Signal Dark</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#E0A800</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">224, 168, 0</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">45°, 100%, 44%</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {{-- Cloud Grey --}}
-                <div class="mb-8 border border-white/8 overflow-hidden bg-navy-light">
-                    <div class="px-6 py-4 border-b border-white/8">
-                        <h3 class="font-head font-semibold text-xl text-white">Cloud Grey</h3>
-                        <p class="text-muted text-sm">Light-mode backgrounds, breathing room, alternating section surfaces</p>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">Cloud Grey</h3>
+                        <span class="text-sm text-muted">Light-mode backgrounds, breathing room, alternating section surfaces</span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3">
-                        <div class="p-6 border border-white/5" style="background:#F4F5F7"><span class="text-[#4a5159] font-bold block mb-2 font-head text-sm">Cloud Light</span><p class="font-mono text-xs text-[#4a5159]/70">HEX #F4F5F7 &bull; RGB 244, 245, 247</p></div>
-                        <div class="p-6 border border-white/5" style="background:#E8E9EC"><span class="text-[#4a5159] font-bold block mb-2 font-head text-sm">Cloud Grey</span><p class="font-mono text-xs text-[#4a5159]/70">HEX #E8E9EC &bull; RGB 232, 233, 236</p></div>
-                        <div class="p-6 border border-white/5" style="background:#D4D6DB"><span class="text-[#4a5159] font-bold block mb-2 font-head text-sm">Cloud Dark</span><p class="font-mono text-xs text-[#4a5159]/70">HEX #D4D6DB &bull; RGB 212, 214, 219</p></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#F4F5F7"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a5159">Cloud Light</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Cloud Light</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#F4F5F7</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">244, 245, 247</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">220°, 16%, 96%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#E8E9EC"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a5159">Cloud Grey</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Cloud Grey</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#E8E9EC</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">232, 233, 236</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">225°, 10%, 92%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#D4D6DB"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#4a5159">Cloud Dark</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Cloud Dark</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#D4D6DB</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">212, 214, 219</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">223°, 9%, 85%</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {{-- Slate --}}
-                <div class="mb-8 border border-white/8 overflow-hidden bg-navy-light">
-                    <div class="px-6 py-4 border-b border-white/8">
-                        <h3 class="font-head font-semibold text-xl text-white">Slate</h3>
-                        <p class="text-muted text-sm">Secondary text, captions, muted UI, default button grey</p>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">Slate</h3>
+                        <span class="text-sm text-muted">Secondary text, captions, muted UI, default button grey</span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-3">
-                        <div class="p-6" style="background:#8B939C"><span class="text-[#15162c] font-bold block mb-2 font-head text-sm">Slate Light</span><p class="font-mono text-xs text-[#15162c]/70">HEX #8B939C &bull; RGB 139, 147, 156</p></div>
-                        <div class="p-6" style="background:#69727D"><span class="text-white font-bold block mb-2 font-head text-sm">Slate</span><p class="font-mono text-xs text-white/70">HEX #69727D &bull; RGB 105, 114, 125</p></div>
-                        <div class="p-6" style="background:#4A5159"><span class="text-white font-bold block mb-2 font-head text-sm">Slate Dark</span><p class="font-mono text-xs text-white/70">HEX #4A5159 &bull; RGB 74, 81, 89</p></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#8B939C"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#15152C">Slate Light</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Slate Light</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#8B939C</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">139, 147, 156</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">212°, 8%, 58%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#69727D"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#fff">Slate</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Slate</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#69727D</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">105, 114, 125</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">213°, 9%, 45%</span></div>
+                            </div>
+                        </div>
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative" style="background:#4A5159"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#fff">Slate Dark</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">Slate Dark</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#4A5159</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">74, 81, 89</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">212°, 9%, 32%</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 {{-- White --}}
-                <div class="mb-8 border border-white/8 overflow-hidden bg-navy-light">
-                    <div class="px-6 py-4 border-b border-white/8">
-                        <h3 class="font-head font-semibold text-xl text-white">White</h3>
-                        <p class="text-muted text-sm">Cards, containers, text on navy, maximum-contrast surfaces</p>
+                <div class="mb-10">
+                    <div class="flex flex-wrap items-baseline gap-3 mb-4">
+                        <h3 class="font-head font-semibold text-2xl text-white">White</h3>
+                        <span class="text-sm text-muted">Cards, containers, text on navy, maximum-contrast surfaces</span>
                     </div>
-                    <div class="p-6 bg-white">
-                        <span class="text-muted font-bold block mb-2 font-head text-sm">White</span>
-                        <p class="font-mono text-xs text-muted">HEX #FFFFFF &bull; RGB 255, 255, 255 &bull; HSL 0, 0%, 100%</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="border border-white/8 bg-navy-light overflow-hidden transition-transform duration-200 hover:-translate-y-1">
+                            <div class="h-28 relative border-b border-cloud" style="background:#FFFFFF"><span class="absolute left-3.5 bottom-3 font-head font-semibold text-xs" style="color:#69727d">White</span></div>
+                            <div class="px-4 pt-3.5 pb-4">
+                                <div class="font-head font-semibold text-white text-sm mb-2">White</div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HEX</span><span class="font-mono text-cloud">#FFFFFF</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">RGB</span><span class="font-mono text-cloud">255, 255, 255</span></div>
+                                <div class="flex justify-between text-xs py-1 border-t border-white/5"><span class="text-muted font-medium tracking-widest">HSL</span><span class="font-mono text-cloud">0°, 0%, 100%</span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,7 +281,7 @@
                 </div>
                 <div class="space-y-3">
                     @foreach([
-                        [1, '#15162C', 'Midnight Navy', 'Foundation color, dominant backgrounds, headers, and the footer. Sets the luxury tone.'],
+                        [1, '#15152C', 'Midnight Navy', 'Foundation color, dominant backgrounds, headers, and the footer. Sets the luxury tone.'],
                         [2, '#DCB57E', 'Champagne Gold', 'Primary brand color, CTAs, accents, dividers, and every interactive hover state.'],
                         [3, '#FFFFFF', 'White', 'Container color, cards, primary text on navy, and high-contrast surfaces.'],
                         [4, '#E8E9EC', 'Cloud Grey', 'Light surface color, alternating sections and breathing room in light mode.'],
@@ -185,10 +312,10 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-5">
                     @foreach([
-                        ['Midnight Hero', 'bg-grad-midnight-hero', 'Primary hero and section backgrounds, the signature navy depth.', 'linear-gradient(135deg, #15162C 0%, #252235 100%)'],
-                        ['Deep Twilight', 'bg-grad-deep-twilight', 'Image overlays and footer, at ~70% opacity over photography.', 'linear-gradient(135deg, #0F1223 0%, #15162C 60%, #252235 100%)'],
+                        ['Midnight Hero', 'bg-grad-midnight-hero', 'Primary hero and section backgrounds, the signature navy depth.', 'linear-gradient(135deg, #15152C 0%, #252235 100%)'],
+                        ['Deep Twilight', 'bg-grad-deep-twilight', 'Image overlays and footer, at ~70% opacity over photography.', 'linear-gradient(135deg, #0F1223 0%, #15152C 60%, #252235 100%)'],
                         ['Champagne Shine', 'bg-grad-champagne-shine', 'Primary CTAs, buttons, and highlight chips, warm and inviting.', 'linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%)'],
-                        ['Navy to Gold', 'bg-grad-navy-to-gold', 'Feature moments only, modern and eye-catching, used sparingly.', 'linear-gradient(135deg, #15162C 0%, #252235 55%, #DCB57E 140%)'],
+                        ['Navy to Gold', 'bg-grad-navy-to-gold', 'Feature moments only, modern and eye-catching, used sparingly.', 'linear-gradient(135deg, #15152C 0%, #252235 55%, #DCB57E 140%)'],
                     ] as [$label, $class, $desc, $code])
                     <div class="border border-white/8 overflow-hidden bg-navy-light">
                         <div class="h-28 {{ $class }}"></div>
@@ -235,7 +362,7 @@
                     <h3 class="font-head font-semibold text-white mb-4">Navigation Wrap Pattern</h3>
                     <div class="border border-white/10 overflow-hidden">
                         <x-ui.banner-thin-champagne />
-                        <div class="bg-navy-dark text-muted text-center py-2 text-xs font-head font-semibold">Notification Bar &nbsp;&middot;&nbsp; Open 24/7 &nbsp;&middot;&nbsp; (815) 585-6922</div>
+                        <div class="bg-navy text-muted text-center py-2 text-xs font-head font-semibold">Notification Bar &nbsp;&middot;&nbsp; Open 24/7 &nbsp;&middot;&nbsp; (815) 585-6922</div>
                         <x-ui.banner-thin-champagne />
                         <x-ui.banner-thin-navy />
                         <div class="bg-navy text-white text-center py-4 text-sm font-head font-semibold">Stop &amp; Go Limo &nbsp;&middot;&nbsp; Navigation Bar</div>

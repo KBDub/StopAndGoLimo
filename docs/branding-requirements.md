@@ -29,7 +29,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 
 - **Confident** — not boastful. Let quality speak.
 - **Warm** — champagne over cold silver. The gold is approachable.
-- **Precise** — clean typography, no visual clutter, sharp corners throughout.
+- **Precise** — clean typography, no visual clutter.
 - **Trustworthy** — professional drivers, 24/7 availability, transparent pricing.
 
 **Midnight Navy (#15152C, hsl(240, 35%, 13%)):** Deep, authoritative, and refined. Signals trust and premium quality.
@@ -40,11 +40,11 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 ## 3. Absolute Rules (Never Break)
 
 1. **No all-caps / uppercase text anywhere on the site** — except the approved navigation exception in Section 8.2. No `text-transform: uppercase` outside that scope.
-2. **Square corners only.** No `rounded`, `rounded-lg`, `rounded-full` on any card, button, input, or container. Use `rounded-none` or simply omit.
+2. **Sharp corners on all containers, cards, and inputs.** No `rounded` classes on sections, cards, or form inputs. Buttons use the `radius` prop on `x-ui.button` — the default is `soft` (10px). Pass `radius="square"` for a fully square button.
 3. **Never use double hyphens (--).** Use a comma or em dash instead.
 4. **7th-grade reading level** for all body copy. Short sentences. Plain words.
 5. **No icons.** Do not use Heroicons, Font Awesome, or SVG icon libraries anywhere on the public site.
-6. **No color outside the palette.** If a color is not in the Twilight Luxe 5+1 palette or the three semantic colors, it is not allowed.
+6. **No color outside the palette.** If a color is not in the Twilight Luxe 4+White palette or the three semantic colors, it is not allowed.
 7. **Poppins for headings, Montserrat for body.** Never mix in a third typeface.
 
 ---
@@ -58,7 +58,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 | Headings, buttons, nav, labels | Poppins | `font-head` | 300, 400, 500, 600, 700, 800 |
 | Body, captions, paragraphs, UI | Montserrat | `font-body` | 300, 400, 500, 600, 700 |
 
-Both are loaded via Google Fonts. The import is in `resources/css/app.css` lines 1-2.
+Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 
 ### Type Scale
 
@@ -87,24 +87,23 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` lines
 |---|---|
 | `.link-champagne` | Inline champagne link in body copy (underline on hover) |
 | `.link-nav-stopngo` | Nav link: cloud text, champagne on hover |
-| `x-ui.button-text-champagne` | Arrow-link CTA, e.g. "View Rates &rarr;" |
+| `x-ui.button-text-link` | Arrow-link CTA, e.g. "View Rates &rarr;" |
 
 ---
 
 ## 5. Color System
 
-### 5.1 — The 5+1 Palette
+### 5.1 — The 4+White Palette
 
 | Name | Tailwind token | Default hex | Default HSL | Light hex | Dark hex |
 |---|---|---|---|---|---|
 | Midnight Navy | `navy` | `#15152C` | hsl(240, 35%, 13%) | `#252235` | `#0F1223` |
 | Champagne Gold | `champagne` | `#DCB57E` | hsl(35, 57%, 68%) | `#E9C79E` | `#C49A5E` |
-| Signal Gold | `signal` | `#FEC42D` | hsl(43, 99%, 59%) | `#FFD65E` | `#E0A800` |
 | Cloud Grey | `cloud` | `#E8E9EC` | hsl(225, 10%, 92%) | `#F4F5F7` | `#D4D6DB` |
-| Slate | `muted` | `#69727D` | hsl(213, 9%, 45%) | `#8B939C` | `#4A5159` |
+| Slate | `slate` | `#69727D` | hsl(213, 9%, 45%) | `#8B939C` | `#4A5159` |
 | White | — | `#FFFFFF` | hsl(0, 0%, 100%) | — | — |
 
-> **Note on Tailwind vs CSS var naming:** The Slate color is `muted` in Tailwind (`text-muted`, `bg-muted`) but `var(--slate)` / `var(--slate-light)` / `var(--slate-dark)` in CSS. Both refer to the same hex values.
+> **Note on Tailwind vs CSS var naming:** Slate uses `slate` in both Tailwind (`text-slate`, `bg-slate`) and CSS (`var(--slate)` / `var(--slate-light)` / `var(--slate-dark)`). The legacy Tailwind alias `muted` is being retired during the CSS cleanup phase. See `docs/rebranding.md`.
 
 ### 5.2 — Semantic Colors (reservations and booking forms only)
 
@@ -121,7 +120,6 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` lines
 3. **White** — cards, containers, text on navy
 4. **Cloud Grey** — light-mode section alternation and breathing room
 5. **Slate** — secondary text, captions, metadata
-6. **Signal Gold** — high-attention only: 24/7 badges, limited-availability chips, alert ribbons. Never on buttons.
 
 ### 5.4 — Brand Gradients
 
@@ -139,8 +137,7 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css` lines
 
 ### 6.1 — Buttons
 
-All buttons use Poppins (`font-head`), tracking-wide, no rounded corners, square edges.
-**Signal Gold is never used on buttons.** Use champagne variants for all CTAs.
+All buttons use Poppins (`font-head`) and tracking-wide. Corner radius is controlled by the `radius` prop on `x-ui.button` — default is `soft` (10px). Options: `square` (0px), `soft` (10px), `rounded` (20px), `pill` (9999px). Size is controlled by the `size` prop — options: `sm`, `md` (default), `lg`, `xl`.
 
 | Component | Use case | Text color | Background |
 |---|---|---|---|
@@ -151,9 +148,7 @@ All buttons use Poppins (`font-head`), tracking-wide, no rounded corners, square
 | `x-ui.button-outline-champagne` | Secondary on dark surface | Champagne | Transparent + champagne border |
 | `x-ui.button-white-navy` | Secondary on dark, high contrast | Navy | White |
 | `x-ui.button-outline-light` | Ghost on dark / over image | White | Transparent + white/35 border |
-| `x-ui.button-text-champagne` | Inline arrow-link | Champagne | None |
-
-**Size override:** Use Tailwind `!-` prefix: `class="!px-4 !py-2 !text-xs"` for small, `class="!px-12 !py-5 !text-lg"` for large.
+| `x-ui.button-text-link` | Inline arrow-link | Champagne | None |
 
 ### 6.2 — Banners
 
@@ -163,11 +158,9 @@ Separator lines between nav zones and section boundaries.
 |---|---|---|
 | `x-ui.banner-thin-champagne` | 3px | Champagne |
 | `x-ui.banner-thin-navy` | 3px | Navy + white/10 border |
-| `x-ui.banner-thin-signal` | 3px | Signal Gold |
 | `x-ui.banner-thin-cloud` | 3px | Cloud Grey |
 | `x-ui.banner-medium-champagne` | 8px | Champagne |
 | `x-ui.banner-medium-navy` | 8px | Navy + white/10 border |
-| `x-ui.banner-medium-signal` | 8px | Signal Gold |
 | `x-ui.banner-medium-cloud` | 8px | Cloud Grey |
 
 **Standard nav wrap pattern:**
@@ -203,7 +196,7 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 
 ### 8.1 — Structure
 
-- **Top notification bar:** `bg-navy` (Midnight Navy, primary brand bg) — champagne phone number, signal gold CTA, muted location text
+- **Top notification bar:** `bg-navy` (Midnight Navy, primary brand bg) — champagne phone number, champagne CTA, muted location text
 - **Nav bar:** `bg-navy` (Midnight Navy, primary brand bg) — Poppins, cloud-grey links, champagne on hover, 3px champagne underline for active/hover
 - **Active state:** `text-champagne border-b-[3px] border-champagne`
 - **Mobile hamburger:** Champagne icon on navy background
@@ -221,7 +214,7 @@ The mega menu is a **pure CSS / hover-state system** — no JavaScript. All styl
 | `.sg-nav` | Root wrapper | `overflow:visible`, navy bg, 1px white/8 border |
 | `.nav-notif` | Inside `.sg-nav` | Notification bar: flex space-between, navy-dark bg |
 | `.n-phone` | Inside `.nav-notif` | Champagne phone number, Poppins semibold |
-| `.n-book` | Inside `.nav-notif` | Signal gold "Book Online," uppercase (approved exception) |
+| `.n-book` | Inside `.nav-notif` | Champagne "Book Online," uppercase (approved exception) |
 | `.nav-bar` | Inside `.sg-nav` | Main nav row, flex, navy bg, `position:relative` |
 | `.nav-logo` | Inside `.nav-bar` | Poppins bold, white text, champagne `<span>` for "Limo" |
 | `.nav-item` | Inside `.nav-bar` | `position:relative` — each nav link wrapper |
@@ -340,3 +333,4 @@ Every component must pass all three breakpoints:
 | Demo style guide page | `/demo` (route: `web.php`) |
 | Button components | `resources/views/components/ui/button-*.blade.php` |
 | Banner components | `resources/views/components/ui/banner-*.blade.php` |
+| Rebrand audit and cleanup plan | `docs/rebranding.md` |

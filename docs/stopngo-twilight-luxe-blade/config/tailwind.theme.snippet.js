@@ -1,7 +1,7 @@
 /** =====================================================================
  *  Stop & Go — Tailwind theme extension ("Twilight Luxe")
  *  Merge this `extend` block into your tailwind.config.js so utilities
- *  like  text-champagne  bg-navy  border-signal  font-head  resolve.
+ *  like  text-champagne  bg-navy  border-champagne  font-head  resolve.
  *  ===================================================================== */
 module.exports = {
   theme: {
@@ -16,11 +16,6 @@ module.exports = {
           light:   '#252235',
           DEFAULT: '#15162C',
           dark:    '#0F1223',
-        },
-        signal: {
-          light:   '#FFD65E',
-          DEFAULT: '#FEC42D',
-          dark:    '#E0A800',
         },
         cloud: {
           light:   '#F4F5F7',

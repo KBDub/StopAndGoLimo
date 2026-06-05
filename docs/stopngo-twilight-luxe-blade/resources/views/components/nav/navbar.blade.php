@@ -15,7 +15,7 @@
             <a href="tel:+18155856922" class="font-head font-semibold text-champagne no-underline">(815) 585-6922</a>
             <span class="opacity-40">|</span>
             <a href="https://book.mylimobiz.com/v4/stopngo"
-               class="font-head font-semibold uppercase tracking-wide text-signal no-underline">Book Online &rarr;</a>
+               class="font-head font-semibold uppercase tracking-wide text-champagne no-underline">Book Online &rarr;</a>
         </span>
     </div>
 

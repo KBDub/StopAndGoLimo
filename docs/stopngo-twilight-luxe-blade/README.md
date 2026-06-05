@@ -41,20 +41,19 @@ Smart base component (`x-ui.button`) plus one-line aliases for every variant
 ```blade
 {{-- base component --}}
 <x-ui.button href="/bookings-reservations">Book a Ride</x-ui.button>
-<x-ui.button variant="signal" size="lg">Reserve 24/7</x-ui.button>
+<x-ui.button variant="champagne-solid" size="lg">Reserve 24/7</x-ui.button>
 <x-ui.button variant="outline-champagne" type="submit">Get a Quote</x-ui.button>
 
 {{-- alias shorthands --}}
 <x-ui.button-champagne-gradient href="/get-a-quote">Get a Quote</x-ui.button-champagne-gradient>
-<x-ui.button-signal>Reserve 24/7</x-ui.button-signal>
+<x-ui.button-champagne-solid>Reserve 24/7</x-ui.button-champagne-solid>
 <x-ui.button-text-link href="/rates">View Rates &rarr;</x-ui.button-text-link>
 ```
 
 | Variant | Use |
 |---|---|
 | `champagne-gradient` | Primary CTA |
-| `champagne-solid` | Solid primary |
-| `signal` | High-attention booking action |
+| `champagne-solid` | Solid primary / booking action |
 | `navy-gold` | Gold-on-dark outline |
 | `outline-champagne` | Secondary on dark |
 | `white-navy` | Secondary on dark (high contrast) |
@@ -68,7 +67,7 @@ Radius: `square` · `soft` (6px) · `rounded` (10px, **default**) · `pill`.
 Override anything with `!`-prefixed Tailwind classes, e.g. `class="!rounded-lg !px-4"`.
 
 ```blade
-<x-ui.button variant="signal" radius="pill">Reserve 24/7</x-ui.button>
+<x-ui.button variant="champagne-solid" radius="pill">Reserve 24/7</x-ui.button>
 <x-ui.button-champagne-gradient radius="square">Square CTA</x-ui.button-champagne-gradient>
 ```
 

@@ -14,8 +14,6 @@
   --champagne-light:#E9C79E; --champagne:#DCB57E; --champagne-dark:#C49A5E;
   /* Midnight Navy */
   --navy-light:#252235; --navy:#15162C; --navy-dark:#0F1223;
-  /* Signal Gold */
-  --signal-light:#FFD65E; --signal:#FEC42D; --signal-dark:#E0A800;
   /* Cloud Grey */
   --cloud-light:#F4F5F7; --cloud:#E8E9EC; --cloud-dark:#D4D6DB;
   /* Slate */
@@ -42,7 +40,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-head);line-height:1.2;color:var(--white
 .bg-orbs{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;}
 .bg-orbs::before,.bg-orbs::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.18;}
 .bg-orbs::before{width:600px;height:600px;background:var(--champagne);top:-200px;right:-150px;}
-.bg-orbs::after{width:520px;height:520px;background:var(--signal);bottom:-180px;left:-160px;opacity:.10;}
+.bg-orbs::after{width:520px;height:520px;background:var(--champagne);bottom:-180px;left:-160px;opacity:.10;}
 .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 28px;}
 
 /* ── Hero ── */
@@ -55,7 +53,7 @@ header.hero{padding:110px 0 70px;text-align:center;position:relative;}
 }
 header.hero h1{
   font-size:clamp(42px,7vw,76px);font-weight:800;letter-spacing:-.02em;
-  background:linear-gradient(120deg,var(--champagne-light),var(--champagne) 45%,var(--signal) 110%);
+  background:linear-gradient(120deg,var(--champagne-light),var(--champagne) 45%,var(--champagne-dark) 110%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
 header.hero p.lede{max-width:560px;margin:22px auto 0;font-size:19px;color:var(--slate-light);font-weight:400;}
@@ -189,8 +187,6 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
 .btn-champagne-gradient:hover{background:linear-gradient(135deg,#C49A5E 0%,#DCB57E 100%);transform:translateY(-2px);box-shadow:0 10px 26px rgba(220,181,126,.32);}
 .btn-champagne-solid{background:var(--champagne);color:#15162C;}
 .btn-champagne-solid:hover{background:var(--champagne-dark);transform:translateY(-2px);}
-.btn-signal{background:var(--signal);color:#15162C;}
-.btn-signal:hover{background:var(--signal-dark);transform:translateY(-2px);box-shadow:0 10px 26px rgba(254,196,45,.3);}
 .btn-navy-gold{background:var(--navy-dark);color:var(--champagne);border-color:rgba(220,181,126,.35);}
 .btn-navy-gold:hover{border-color:var(--champagne);color:var(--champagne-light);}
 /* Secondary */
@@ -218,7 +214,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
   padding:9px 24px;background:var(--navy-dark);font-size:12.5px;color:var(--slate-light);
   border-bottom:1px solid rgba(220,181,126,.18);}
 .nav-notif .n-phone{color:var(--champagne);font-weight:600;font-family:var(--font-head);}
-.nav-notif .n-book{color:var(--signal);font-weight:600;font-family:var(--font-head);letter-spacing:.05em;text-transform:uppercase;}
+.nav-notif .n-book{color:var(--champagne);font-weight:600;font-family:var(--font-head);letter-spacing:.05em;text-transform:uppercase;}
 .nav-bar{display:flex;align-items:center;gap:6px;padding:0 18px;background:var(--navy);position:relative;}
 .nav-logo{font-family:var(--font-head);font-weight:700;font-size:16px;color:#fff;padding:20px 18px 20px 6px;margin-right:auto;}
 .nav-logo span{color:var(--champagne);}
@@ -300,7 +296,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-num">01 — Palette</span>
-      <h2>Color Palette (5 + White)</h2>
+      <h2>Color Palette (4 + White)</h2>
       <p>Each core color carries up to three variants — Light, Default, and Dark — for hover states, depth, and surface layering.</p>
     </div>
 
@@ -356,34 +352,6 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
             <div class="val"><span>HEX</span><span>#0F1223</span></div>
             <div class="val"><span>RGB</span><span>15, 18, 35</span></div>
             <div class="val"><span>HSL</span><span>231°, 40%, 10%</span></div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Signal Gold -->
-    <div class="color-group">
-      <div class="cg-label"><h3>Signal Gold</h3><span class="usage">High-attention accents only — "24/7" badges, quote highlights, alert ribbons</span></div>
-      <div class="swatch-row">
-        <div class="swatch">
-          <div class="chip" style="background:#FFD65E"><span class="vlabel" style="color:#4a3818">Signal Light</span></div>
-          <div class="meta"><div class="name">Signal Light</div>
-            <div class="val"><span>HEX</span><span>#FFD65E</span></div>
-            <div class="val"><span>RGB</span><span>255, 214, 94</span></div>
-            <div class="val"><span>HSL</span><span>45°, 100%, 68%</span></div></div>
-        </div>
-        <div class="swatch">
-          <div class="chip" style="background:#FEC42D"><span class="vlabel" style="color:#4a3818">Signal Gold</span></div>
-          <div class="meta"><div class="name">Signal Gold</div>
-            <div class="val"><span>HEX</span><span>#FEC42D</span></div>
-            <div class="val"><span>RGB</span><span>254, 196, 45</span></div>
-            <div class="val"><span>HSL</span><span>43°, 99%, 59%</span></div></div>
-        </div>
-        <div class="swatch">
-          <div class="chip" style="background:#E0A800"><span class="vlabel" style="color:#4a3818">Signal Dark</span></div>
-          <div class="meta"><div class="name">Signal Dark</div>
-            <div class="val"><span>HEX</span><span>#E0A800</span></div>
-            <div class="val"><span>RGB</span><span>224, 168, 0</span></div>
-            <div class="val"><span>HSL</span><span>45°, 100%, 44%</span></div></div>
         </div>
       </div>
     </div>
@@ -467,7 +435,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
     <div class="sec-head">
       <span class="sec-num">02 — Semantic</span>
       <h2>Semantic Colors (3)</h2>
-      <p>Reserved for system feedback on booking forms and reservation flows. Kept distinct from the brand golds to avoid mixed signals.</p>
+      <p>Reserved for system feedback on booking forms and reservation flows. Kept distinct from Champagne Gold so brand and status never get confused.</p>
     </div>
     <div class="sem-grid">
       <div class="sem-card"><div class="sem-bar" style="background:#2E9E6B"></div>
@@ -506,8 +474,6 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
         <div class="hier-txt"><h4>Cloud Grey <code>#E8E9EC</code></h4><p>Light surface color — alternating sections and breathing room in light mode.</p></div></div>
       <div class="hier-row"><div class="hier-num">5</div><div class="hier-dot" style="background:#69727D"></div>
         <div class="hier-txt"><h4>Slate <code>#69727D</code></h4><p>Secondary text color — captions, metadata, and muted supporting copy.</p></div></div>
-      <div class="hier-row"><div class="hier-num">6</div><div class="hier-dot" style="background:#FEC42D"></div>
-        <div class="hier-txt"><h4>Signal Gold <code>#FEC42D</code></h4><p>Accent color — used sparingly for "24/7" badges and high-attention highlights only.</p></div></div>
     </div>
   </div>
 </section>
@@ -561,7 +527,6 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
       <div class="banner-demo">
         <div class="bn"><div class="swatchbar thin" style="background:#DCB57E"></div><span class="tag">banner-thin-champagne</span></div>
         <div class="bn"><div class="swatchbar thin" style="background:#15162C;border:1px solid rgba(255,255,255,.1)"></div><span class="tag">banner-thin-navy</span></div>
-        <div class="bn"><div class="swatchbar thin" style="background:#FEC42D"></div><span class="tag">banner-thin-signal</span></div>
         <div class="bn"><div class="swatchbar thin" style="background:#E8E9EC"></div><span class="tag">banner-thin-cloud</span></div>
       </div>
     </div>
@@ -584,7 +549,6 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
       <div class="banner-demo">
         <div class="bn"><div class="swatchbar medium" style="background:#DCB57E"></div><span class="tag">banner-medium-champagne</span></div>
         <div class="bn"><div class="swatchbar medium" style="background:#15162C;border:1px solid rgba(255,255,255,.1)"></div><span class="tag">banner-medium-navy</span></div>
-        <div class="bn"><div class="swatchbar medium" style="background:#FEC42D"></div><span class="tag">banner-medium-signal</span></div>
         <div class="bn"><div class="swatchbar medium" style="background:#E8E9EC"></div><span class="tag">banner-medium-cloud</span></div>
       </div>
     </div>
@@ -662,8 +626,7 @@ footer .powered{margin-top:18px;font-size:12px;color:var(--slate-dark);letter-sp
       <h4>Primary Buttons</h4>
       <div class="btn-row">
         <div class="btn-cell"><a href="#" class="btn btn-champagne-gradient">Book a Ride</a><span class="tag">btn-champagne-gradient</span></div>
-        <div class="btn-cell"><a href="#" class="btn btn-champagne-solid">Get a Quote</a><span class="tag">btn-champagne-solid</span></div>
-        <div class="btn-cell"><a href="#" class="btn btn-signal">Reserve 24/7</a><span class="tag">btn-signal</span></div>
+        <div class="btn-cell"><a href="#" class="btn btn-champagne-solid">Reserve 24/7</a><span class="tag">btn-champagne-solid</span></div>
         <div class="btn-cell"><a href="#" class="btn btn-navy-gold">Our Fleet</a><span class="tag">btn-navy-gold</span></div>
       </div>
     </div>

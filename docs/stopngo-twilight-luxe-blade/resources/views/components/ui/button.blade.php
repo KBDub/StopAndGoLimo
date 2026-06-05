@@ -14,7 +14,7 @@
 
   Usage:
     <x-ui.button href="/bookings-reservations">Book a Ride</x-ui.button>
-    <x-ui.button variant="signal" size="lg" radius="pill">Reserve 24/7</x-ui.button>
+    <x-ui.button variant="champagne-solid" size="lg" radius="pill">Reserve 24/7</x-ui.button>
     <x-ui.button variant="outline-champagne" radius="square" type="submit">Get a Quote</x-ui.button>
 
   Size/shape override via attributes still works: class="!rounded-lg !px-4"
@@ -36,7 +36,6 @@
         // ── Primary ──
         'champagne-gradient' => 'bg-grad-shine text-navy hover:bg-[linear-gradient(135deg,#C49A5E_0%,#DCB57E_100%)] hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(220,181,126,0.32)]',
         'champagne-solid'    => 'bg-champagne text-navy hover:bg-champagne-dark hover:-translate-y-0.5',
-        'signal'             => 'bg-signal text-navy hover:bg-signal-dark hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(254,196,45,0.30)]',
         'navy-gold'          => 'bg-navy-dark text-champagne border-champagne/35 hover:border-champagne hover:text-champagne-light',
 
         // ── Secondary ──

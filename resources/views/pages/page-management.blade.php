@@ -20,11 +20,11 @@
 
     <header class="sticky top-0 z-50">
         <x-layout.top-notification-bar message="Page Management Dashboard" />
-        <x-ui.banner-thin-sunburst />
-        <x-ui.banner-thin-charcoal />
+        <x-ui.banner-thin-champagne />
+        <x-ui.banner-thin-navy />
         <x-layout.navigation-bar currentPage="page-management" />
-        <x-ui.banner-thin-sunburst />
-        <x-ui.banner-thin-charcoal />
+        <x-ui.banner-thin-champagne />
+        <x-ui.banner-thin-navy />
     </header>
 
     <main class="py-10">

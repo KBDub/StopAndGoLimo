@@ -43,6 +43,18 @@
 - `button-azure.blade.php` and `button-outline-azure.blade.php` exist in the codebase as alias stubs but are not exposed on the `/demo` page and must not be used in production templates.
 - `docs/branding-requirements.md` and `replit.md` — Azure button restriction documented as a hard rule.
 
+### 1.8 — T5P Legacy Components Retired (Step 4 Complete)
+- All T5P-named banner component files deleted: `banner-thin-{linen,azure,charcoal,sunburst,signal}` and `banner-medium-{linen,azure,charcoal,sunburst,signal}`.
+- New Twilight Luxe banner variants created: `banner-thin-slate` and `banner-medium-slate` (filling the slot previously held by signal).
+- All banner references in pages updated: sunburst → champagne, charcoal → navy, signal → slate across `demo/modals.blade.php`, `demo-premium.blade.php`, `page-management.blade.php`, `service-areas.blade.php`, `service-areas/show.blade.php`, and `demo.blade.php`.
+- All T5P-named button component files converted to proxy stubs: `button-gold-gradient` and `button-gold-charcoal` and `button-gold-white` → champagne-solid; `button-outline-gold` and `button-outline-charcoal` → outline-champagne; `button-charcoal-gold` → navy-gold; `button-white-charcoal` → white-navy; `button-blue-white` → champagne-solid (azure not used for buttons).
+- `button-azure.blade.php` and `button-outline-azure.blade.php` deleted (no callers, stubs only).
+- Section components that still call T5P button names (`home-page-hero`, `cta-*`, `hero-full-bleed`, etc.) now render correctly via proxies and will be fully rewritten in Step 5.
+
+### 1.7 — Tailwind and CSS Cleanup (Steps 1 and 2 Complete)
+- `tailwind.config.js` — all T5P legacy color tokens removed (`sunburst`, `linen`, `charcoal`, `olive`, `blush-pink`, `success`, `warning`, `error`). Legacy gradient tokens removed (`gold-gradient*`, `warm-gradient`). Legacy shadow tokens removed (`shadow-gold*`). `slate` added as primary token; `muted` kept as alias during blade sweep. `azure` kept with Stop & Go values.
+- `resources/css/app.css` — entire legacy `:root` block removed (all `--color-sunburst-*`, `--color-azure-*` T5P vars, `--color-linen-*`, `--color-charcoal-*`, `--color-olive`, semantic aliases). `--font-primary` removed; `html` now uses `var(--font-body)`. Semantic vars (`--nav-background`, `--footer-background`, `--footer-text-color`, `--input-border-color`, `--input-focus-border-color`) rewired to Twilight Luxe tokens. Border-radius vars updated to `10px`. All raw hex values in `.card-detail-content`, `.lp-banner-wrap`, `.link-notification` migrated to CSS vars. `.btn-primary` and `.btn-secondary` rewired to champagne/navy. `.link-nav` and `.link-city:hover` rewired to champagne. `.scrollbar-sunburst` renamed to `.scrollbar-champagne`. Two new link classes added: `.link-nav-stopngo` and `.link-champagne`.
+
 ### 1.6 — Branded CSS Colors Requirement
 - **All colors must use named Twilight Luxe CSS custom properties** (`var(--navy)`, `var(--champagne)`, `var(--azure)`, etc.).
 - Raw hex values, `rgb()`, `hsl()`, or any unlabeled color literal are not permitted in component files or stylesheets.
@@ -51,7 +63,7 @@
 
 ---
 
-## 2. CSS and Tailwind Cleanup (Pending)
+## 2. CSS and Tailwind Cleanup (Steps 1 and 2 Complete)
 
 The following must be done together — change the token namespace first, then sweep the blade files.
 
@@ -198,26 +210,30 @@ These files use old T5P Tailwind tokens (`bg-sunburst`, `text-azure` pointing to
 
 ### UI Components — Delete Entirely (T5P Color-Named, No Reuse Value)
 
-| File | Reason |
+> All files in this table have been actioned. Files marked **Deleted** are gone. Files marked **Proxied** are proxy stubs that forward to a Stop & Go equivalent — remove them once their calling sections are rewritten in Step 5.
+
+| File | Status |
 |---|---|
-| `resources/views/components/ui/banner-thin-linen.blade.php` | Linen = T5P color |
-| `resources/views/components/ui/banner-thin-azure.blade.php` | T5P azure color (#3273DC era name) |
-| `resources/views/components/ui/banner-thin-charcoal.blade.php` | Charcoal = T5P color |
-| `resources/views/components/ui/banner-thin-sunburst.blade.php` | Sunburst = T5P color |
-| `resources/views/components/ui/banner-medium-linen.blade.php` | Linen = T5P color |
-| `resources/views/components/ui/banner-medium-azure.blade.php` | T5P azure color (#3273DC era name) |
-| `resources/views/components/ui/banner-medium-charcoal.blade.php` | Charcoal = T5P color |
-| `resources/views/components/ui/banner-medium-sunburst.blade.php` | Sunburst = T5P color |
-| `resources/views/components/ui/button-blue-white.blade.php` | T5P azure color |
-| `resources/views/components/ui/button-white-charcoal.blade.php` | Charcoal = T5P color |
-| `resources/views/components/ui/button-charcoal-gold.blade.php` | Charcoal = T5P color |
-| `resources/views/components/ui/button-outline-charcoal.blade.php` | Charcoal = T5P color |
-| `resources/views/components/ui/button-gold-charcoal.blade.php` | Charcoal = T5P color |
-| `resources/views/components/ui/button-gold-gradient.blade.php` | Sunburst gold, T5P |
-| `resources/views/components/ui/button-gold-white.blade.php` | Sunburst gold, T5P |
-| `resources/views/components/ui/button-outline-gold.blade.php` | Sunburst gold, T5P |
-| `resources/views/components/ui/button-azure.blade.php` | Stub only, not in use, no production purpose |
-| `resources/views/components/ui/button-outline-azure.blade.php` | Stub only, not in use, no production purpose |
+| `resources/views/components/ui/banner-thin-linen.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-thin-azure.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-thin-charcoal.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-thin-sunburst.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-thin-signal.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-medium-linen.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-medium-azure.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-medium-charcoal.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-medium-sunburst.blade.php` | **Deleted** |
+| `resources/views/components/ui/banner-medium-signal.blade.php` | **Deleted** |
+| `resources/views/components/ui/button-azure.blade.php` | **Deleted** |
+| `resources/views/components/ui/button-outline-azure.blade.php` | **Deleted** |
+| `resources/views/components/ui/button-gold-gradient.blade.php` | **Proxied** → champagne-solid |
+| `resources/views/components/ui/button-gold-charcoal.blade.php` | **Proxied** → champagne-solid |
+| `resources/views/components/ui/button-gold-white.blade.php` | **Proxied** → champagne-solid |
+| `resources/views/components/ui/button-outline-gold.blade.php` | **Proxied** → outline-champagne |
+| `resources/views/components/ui/button-outline-charcoal.blade.php` | **Proxied** → outline-champagne |
+| `resources/views/components/ui/button-charcoal-gold.blade.php` | **Proxied** → navy-gold |
+| `resources/views/components/ui/button-white-charcoal.blade.php` | **Proxied** → white-navy |
+| `resources/views/components/ui/button-blue-white.blade.php` | **Proxied** → champagne-solid |
 
 ### UI Components — Update (Reusable Structure, Needs Color Rewire)
 

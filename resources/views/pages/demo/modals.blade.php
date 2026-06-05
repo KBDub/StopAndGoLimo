@@ -22,11 +22,11 @@
 <body class="font-sans antialiased bg-linen text-charcoal">
 
 <x-layout.top-notification-bar message="Modal System Demo, Internal Only" />
-<x-ui.banner-thin-sunburst />
-<x-ui.banner-thin-charcoal />
+<x-ui.banner-thin-champagne />
+<x-ui.banner-thin-navy />
 <x-layout.navigation-bar currentPage="demo" />
-<x-ui.banner-thin-sunburst />
-<x-ui.banner-thin-charcoal />
+<x-ui.banner-thin-champagne />
+<x-ui.banner-thin-navy />
 
 <main class="max-w-5xl mx-auto px-6 py-16 space-y-20">
 
@@ -1258,11 +1258,11 @@
                 These three components are placed separately on every content page in this order:
             </p>
             <p class="text-charcoal-light text-xs mb-6 pl-5">
-                <code class="bg-linen-dark px-1 py-0.5">x-ui.banner-thin-sunburst</code>
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.banner-thin-champagne</code>
                 &nbsp;→&nbsp;
                 <code class="bg-linen-dark px-1 py-0.5">x-ui.artwork-dropzone</code>
                 &nbsp;→&nbsp;
-                <code class="bg-linen-dark px-1 py-0.5">x-ui.banner-thin-sunburst</code>
+                <code class="bg-linen-dark px-1 py-0.5">x-ui.banner-thin-champagne</code>
                 &nbsp;→&nbsp;
                 <code class="bg-linen-dark px-1 py-0.5">x-sections.cta-free-quote-banner</code>
             </p>
@@ -1273,7 +1273,7 @@
                 &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/ui/artwork-dropzone.blade.php</code>
                , standalone drop zone, dispatches <code class="bg-linen-dark px-1 py-0.5">open-contact-modal &#123; artwork: true, fileName &#125;</code>
             </p>
-            <x-ui.banner-thin-sunburst />
+            <x-ui.banner-thin-champagne />
             <div class="max-w-2xl mb-6">
                 <x-ui.artwork-dropzone />
             </div>
@@ -1284,7 +1284,7 @@
                 &nbsp;,&nbsp; <code class="bg-linen-dark px-1 py-0.5">resources/views/components/sections/cta-free-quote-banner.blade.php</code>
                , CTA text + button only, no dropzone inside
             </p>
-            <x-ui.banner-thin-sunburst />
+            <x-ui.banner-thin-champagne />
             <x-sections.cta-free-quote-banner />
         </div>
 

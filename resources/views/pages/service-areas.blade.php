@@ -38,7 +38,7 @@
     :compactButtons="true"
     />
 
-    <x-ui.banner-medium-sunburst />
+    <x-ui.banner-medium-champagne />
 
     {{-- Company intro, branded card with float image --}}
     <x-sections.card-image-with-text
@@ -73,7 +73,7 @@
         </p>
     </x-sections.card-image-with-text>
 
-    <x-ui.banner-thin-charcoal />
+    <x-ui.banner-thin-navy />
 
     {{-- Our Service Locations, 3-column responsive card grid --}}
     <section class="py-14 bg-white">
@@ -125,7 +125,7 @@
         </div>
     </section>
 
-    <x-ui.banner-thin-charcoal />
+    <x-ui.banner-thin-navy />
 
     {{-- CTA above the map --}}
     <x-sections.cta-quadruple-button-banner />

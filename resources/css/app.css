@@ -14,47 +14,39 @@ html {
 }
 
 :root {
-    /* Sunburst Gold - Primary Brand Color */
-    --color-sunburst-light: #FFD93D;
-    --color-sunburst: #FFC20E;
-    --color-sunburst-dark: #E6A500;
-    
-    /* Azure Blue - Secondary Brand Color */
-    --color-azure-light: #5A9AE8;
-    --color-azure: #3273DC;
-    --color-azure-dark: #2558A8;
-    
-    /* Soft Linen - Background Color */
-    --color-linen-light: #FAF9F5;
-    --color-linen: #F2F0E6;
-    --color-linen-dark: #E8E5D8;
-    
-    /* Charcoal - Text Color */
-    --color-charcoal-light: #555555;
-    --color-charcoal: #2C2C2C;
-    --color-charcoal-dark: #1A1A1A;
-    
-    /* Olive - Social Media Hover Tags */
-    --color-olive: #A39822;
-    
-    /* White - Container Color */
-    --color-white: #FFFFFF;
-    
-    /* Semantic Colors */
-    --color-success: #4CAF50;
-    --color-warning: #F9A825;
-    --color-error: #C62828;
-    
-    /* Semantic Aliases */
-    --color-primary: var(--color-sunburst);
-    --color-secondary: var(--color-azure);
-    --color-background: var(--color-linen);
-    --color-text: var(--color-charcoal);
-    --color-link: var(--color-azure);
-    --color-link-hover: var(--color-azure-dark);
+    /* ── Twilight Luxe — Stop & Go Limo Brand Tokens ─────── */
+    --navy-light: #252235;
+    --navy: #15152C;
+    --navy-dark: #0F1223;
+    --champagne-light: #E9C79E;
+    --champagne: #DCB57E;
+    --champagne-dark: #C49A5E;
+    --cloud-light: #F4F5F7;
+    --cloud: #E8E9EC;
+    --cloud-dark: #D4D6DB;
+    --slate-light: #8B939C;
+    --slate: #69727D;
+    --slate-dark: #4A5159;
+    --azure-light: #94ACDB;
+    --azure: #5A7EC8;
+    --azure-dark: #385A9F;
+    --shadow-azure: 0 4px 20px rgba(90, 126, 200, 0.20);
+    --shadow-azure-lg: 0 8px 30px rgba(90, 126, 200, 0.32);
+    --shadow-champagne: 0 4px 20px rgba(220, 181, 126, 0.20);
+    --shadow-champagne-lg: 0 8px 30px rgba(220, 181, 126, 0.32);
+    --stopngo-success: #2E9E6B;
+    --stopngo-warning: #E0A800;
+    --stopngo-error: #C0392B;
 
-    --font-primary: 'Titillium Web', Arial, sans-serif;
-    --font-fallback: Arial, sans-serif;
+    --grad-midnight-hero: linear-gradient(135deg, #15152C 0%, #252235 100%);
+    --grad-deep-twilight: linear-gradient(135deg, #0F1223 0%, #15152C 60%, #252235 100%);
+    --grad-champagne-shine: linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%);
+    --grad-navy-to-gold: linear-gradient(135deg, #15152C 0%, #252235 55%, #DCB57E 140%);
+    --grad-champagne-rule: linear-gradient(90deg, transparent, #C49A5E 20%, #DCB57E 50%, #C49A5E 80%, transparent);
+
+    --font-head: 'Poppins', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-semibold: 600;
@@ -115,9 +107,9 @@ html {
 
     --border-width: 1px;
     --border-width-thick: 2px;
-    --border-radius: 0px;
-    --border-radius-md: 0px;
-    --border-radius-lg: 0px;
+    --border-radius: 10px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 10px;
     --border-radius-full: 9999px;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -144,38 +136,6 @@ html {
     --z-popover: 600;
     --z-tooltip: 700;
 
-    /* ── Twilight Luxe — Stop & Go Limo Brand Tokens ─────── */
-    --navy-light: #252235;
-    --navy: #15152C;
-    --navy-dark: #0F1223;
-    --champagne-light: #E9C79E;
-    --champagne: #DCB57E;
-    --champagne-dark: #C49A5E;
-
-    --cloud-light: #F4F5F7;
-    --cloud: #E8E9EC;
-    --cloud-dark: #D4D6DB;
-    --slate-light: #8B939C;
-    --slate: #69727D;
-    --slate-dark: #4A5159;
-    --azure-light: #94ACDB;
-    --azure: #5A7EC8;
-    --azure-dark: #385A9F;
-    --shadow-azure: 0 4px 20px rgba(90, 126, 200, 0.20);
-    --shadow-azure-lg: 0 8px 30px rgba(90, 126, 200, 0.32);
-    --font-head: 'Poppins', sans-serif;
-    --font-body: 'Montserrat', sans-serif;
-    --stopngo-success: #2E9E6B;
-    --stopngo-warning: #E0A800;
-    --stopngo-error: #C0392B;
-    --shadow-champagne: 0 4px 20px rgba(220, 181, 126, 0.20);
-    --shadow-champagne-lg: 0 8px 30px rgba(220, 181, 126, 0.32);
-    --grad-midnight-hero: linear-gradient(135deg, #15152C 0%, #252235 100%);
-    --grad-deep-twilight: linear-gradient(135deg, #0F1223 0%, #15152C 60%, #252235 100%);
-    --grad-champagne-shine: linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%);
-    --grad-navy-to-gold: linear-gradient(135deg, #15152C 0%, #252235 55%, #DCB57E 140%);
-    --grad-champagne-rule: linear-gradient(90deg, transparent, #C49A5E 20%, #DCB57E 50%, #C49A5E 80%, transparent);
-
     --btn-padding-x: 32px;
     --btn-padding-y: 16px;
     --btn-font-size: var(--font-size-button);
@@ -184,8 +144,8 @@ html {
 
     --input-height: 48px;
     --input-padding-x: 16px;
-    --input-border-color: var(--color-gray-border);
-    --input-focus-border-color: var(--color-primary);
+    --input-border-color: var(--cloud-dark);
+    --input-focus-border-color: var(--champagne);
     --input-border-radius: var(--border-radius);
 
     --card-padding: var(--spacing-6);
@@ -194,53 +154,53 @@ html {
 
     --nav-height: 80px;
     --nav-height-mobile: 64px;
-    --nav-background: var(--color-charcoal);
-    --nav-text-color: #FFFFFF;
+    --nav-background: var(--navy);
+    --nav-text-color: var(--cloud);
 
-    --footer-background: var(--color-linen);
-    --footer-text-color: var(--color-charcoal);
+    --footer-background: var(--cloud);
+    --footer-text-color: var(--navy);
 }
 
 @layer base {
     html {
-        font-family: var(--font-primary);
+        font-family: var(--font-body);
     }
-    
+
     body {
         @apply bg-white text-black antialiased;
         font-size: var(--font-size-body);
         line-height: var(--line-height-body);
     }
-    
+
     h1 {
         @apply text-h1 font-bold;
         line-height: var(--line-height-heading);
     }
-    
+
     h2 {
         @apply text-h2 font-bold;
         line-height: var(--line-height-heading);
     }
-    
+
     h3 {
         @apply text-h3 font-semibold;
         line-height: var(--line-height-subheading);
     }
-    
+
     h4 {
         @apply text-h4 font-semibold;
         line-height: var(--line-height-subheading);
     }
-    
+
     h5 {
         @apply text-h5 font-semibold;
         line-height: var(--line-height-subheading);
     }
-    
+
     a {
         @apply text-azure transition-colors duration-200;
     }
-    
+
     a:hover {
         @apply text-azure/80;
     }
@@ -252,19 +212,19 @@ html {
         padding: var(--btn-padding-y) var(--btn-padding-x);
         letter-spacing: var(--letter-spacing-button);
     }
-    
+
     .btn-primary {
-        @apply bg-sunburst text-charcoal hover:scale-[1.02] hover:shadow-lg;
+        @apply bg-champagne text-navy hover:bg-champagne-dark hover:scale-[1.02] hover:shadow-lg;
     }
-    
+
     .btn-secondary {
-        @apply bg-transparent text-charcoal border border-charcoal hover:bg-linen;
+        @apply bg-transparent text-champagne border border-champagne hover:bg-champagne hover:text-navy;
     }
-    
+
     .btn-accent {
         @apply bg-azure text-white hover:bg-azure-dark;
     }
-    
+
     .container-custom {
         max-width: var(--container-max-width);
         margin-left: auto;
@@ -314,7 +274,15 @@ html {
     }
 
     .link-nav {
-        @apply font-semibold text-charcoal hover:text-sunburst text-lg transition-colors no-underline;
+        @apply font-semibold text-cloud hover:text-champagne text-lg transition-colors no-underline;
+    }
+
+    .link-nav-stopngo {
+        @apply font-head font-semibold text-cloud hover:text-champagne transition-colors no-underline;
+    }
+
+    .link-champagne {
+        @apply font-semibold text-champagne hover:text-champagne-light underline decoration-champagne/30 hover:decoration-champagne transition-colors;
     }
 
     .link-arrow {
@@ -327,7 +295,7 @@ html {
     }
 
     .link-city:hover {
-        @apply border-sunburst;
+        @apply border-champagne;
     }
 
     .hide-scrollbar {
@@ -339,32 +307,32 @@ html {
         display: none;
     }
 
-    .scrollbar-sunburst {
+    .scrollbar-champagne {
         scrollbar-width: thin;
-        scrollbar-color: var(--color-sunburst) var(--color-linen);
+        scrollbar-color: var(--champagne) var(--navy-light);
     }
 
-    .scrollbar-sunburst::-webkit-scrollbar {
+    .scrollbar-champagne::-webkit-scrollbar {
         width: 6px;
     }
 
-    .scrollbar-sunburst::-webkit-scrollbar-track {
-        background: var(--color-linen);
+    .scrollbar-champagne::-webkit-scrollbar-track {
+        background: var(--navy-light);
     }
 
-    .scrollbar-sunburst::-webkit-scrollbar-thumb {
-        background: var(--color-sunburst);
+    .scrollbar-champagne::-webkit-scrollbar-thumb {
+        background: var(--champagne);
     }
 
-    .scrollbar-sunburst::-webkit-scrollbar-thumb:hover {
-        background: var(--color-sunburst-dark);
+    .scrollbar-champagne::-webkit-scrollbar-thumb:hover {
+        background: var(--champagne-dark);
     }
 }
 
 /* Unlayered — always wins over @layer base / @layer components decoration resets */
 .link-notification {
     font-weight: 600;
-    color: var(--color-azure);
+    color: var(--azure);
     text-decoration-line: none;
 }
 .link-notification:hover {
@@ -387,7 +355,7 @@ html {
 
 /* card-detailed-info content zones: auto-styles headings, paragraphs, lists, and links */
 .card-detail-content {
-    color: var(--color-charcoal-light, #555);
+    color: var(--slate);
     line-height: 1.75;
 }
 .card-detail-content p {
@@ -399,21 +367,21 @@ html {
 .card-detail-content h3 {
     font-size: var(--font-size-h3, 1.75rem);
     font-weight: 700;
-    color: #A39822;
+    color: var(--champagne);
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 .card-detail-content h4 {
     font-size: var(--font-size-h4, 1.5rem);
     font-weight: 700;
-    color: #A39822;
+    color: var(--champagne);
     margin-top: 1.25rem;
     margin-bottom: 0.4rem;
 }
 .card-detail-content h5 {
     font-size: var(--font-size-h5, 1.25rem);
     font-weight: 600;
-    color: #2C2C2C;
+    color: var(--navy);
     margin-top: 1rem;
     margin-bottom: 0.3rem;
 }
@@ -426,7 +394,7 @@ html {
     margin-bottom: 0.25rem;
 }
 .card-detail-content a {
-    color: #3273DC;
+    color: var(--azure);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -476,11 +444,11 @@ html {
     left: -50%;
     background: conic-gradient(
         from 225deg,
-        transparent  0deg,
-        #FFC20E     20deg,
-        #FFC20E     50deg,
-        transparent  70deg,
-        transparent 360deg
+        transparent        0deg,
+        var(--champagne)  20deg,
+        var(--champagne)  50deg,
+        transparent       70deg,
+        transparent      360deg
     );
     opacity: 0;
 }
@@ -507,7 +475,7 @@ html {
 .sg-nav .n-phone { color: var(--champagne); font-weight: 600; font-family: var(--font-head); }
 .sg-nav .n-book  { color: var(--champagne); font-weight: 600; font-family: var(--font-head); letter-spacing: .05em; text-transform: uppercase; }
 .sg-nav .nav-bar { display: flex; align-items: center; gap: 6px; padding: 0 18px; background: var(--navy); position: relative; }
-.sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: #fff; padding: 20px 18px 20px 6px; margin-right: auto; }
+.sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--cloud); padding: 20px 18px 20px 6px; margin-right: auto; }
 .sg-nav .nav-logo span { color: var(--champagne); }
 .sg-nav .nav-item { position: relative; }
 .sg-nav .nav-link {

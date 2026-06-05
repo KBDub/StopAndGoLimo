@@ -1,20 +1,5 @@
-@props([
-    'href' => null,
-    'type' => 'button',
-])
-
-@if($href)
-    <a 
-        href="{{ $href }}" 
-        {{ $attributes->merge(['class' => 'inline-block px-8 py-4 bg-white text-charcoal font-semibold border border-charcoal hover:bg-linen hover:text-azure hover:border-azure transition-all hover:-translate-y-0.5']) }}
-    >
-        {{ $slot }}
-    </a>
-@else
-    <button 
-        type="{{ $type }}" 
-        {{ $attributes->merge(['class' => 'inline-block px-8 py-4 bg-white text-charcoal font-semibold border border-charcoal hover:bg-linen hover:text-azure hover:border-azure transition-all hover:-translate-y-0.5']) }}
-    >
-        {{ $slot }}
-    </button>
-@endif
+{{-- x-ui.button-white-charcoal — T5P legacy; proxies to white-navy --}}
+@props(['href' => null, 'size' => 'base', 'radius' => 'rounded', 'type' => 'button'])
+<x-ui.button variant="white-navy" :href="$href" :size="$size" :radius="$radius" :type="$type" {{ $attributes }}>
+    {{ $slot }}
+</x-ui.button>

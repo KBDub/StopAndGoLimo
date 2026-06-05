@@ -354,7 +354,7 @@
                     <div class="space-y-4">
                         <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-thin-champagne</p><x-ui.banner-thin-champagne /></div>
                         <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-thin-navy</p><x-ui.banner-thin-navy /></div>
-                        <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-thin-signal</p><x-ui.banner-thin-signal /></div>
+                        <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-thin-slate</p><x-ui.banner-thin-slate /></div>
                         <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-thin-cloud</p><x-ui.banner-thin-cloud /></div>
                     </div>
                 </div>
@@ -379,7 +379,7 @@
                     <div class="space-y-4">
                         <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-medium-champagne</p><x-ui.banner-medium-champagne /></div>
                         <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-medium-navy</p><x-ui.banner-medium-navy /></div>
-                        <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-medium-signal</p><x-ui.banner-medium-signal /></div>
+                        <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-medium-slate</p><x-ui.banner-medium-slate /></div>
                         <div><p class="text-muted text-xs mb-1 font-mono">x-ui.banner-medium-cloud</p><x-ui.banner-medium-cloud /></div>
                     </div>
                 </div>

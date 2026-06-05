@@ -92,7 +92,7 @@
     :compactButtons="true"
     />
 
-    <x-ui.banner-medium-sunburst />
+    <x-ui.banner-medium-champagne />
 
     @if($content)
 

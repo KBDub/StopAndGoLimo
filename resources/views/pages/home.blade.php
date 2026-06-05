@@ -59,6 +59,8 @@
     />
 
 
+    <x-sections.free-instant-quote />
+
     {{-- sample FAQ --}}
     @php
     $homeFaqs = [

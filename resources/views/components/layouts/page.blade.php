@@ -150,25 +150,15 @@
     @endif
 
     <header class="sticky top-0 z-50">
-        <x-layout.top-notification-bar />
-        <x-ui.banner-thin-sunburst />
-        <x-ui.banner-thin-charcoal />
+        {{-- <x-layout.top-notification-bar /> --}}
         <x-layout.navigation-bar currentPage="{{ $currentPage ?? '' }}" />
-        <x-ui.banner-thin-sunburst />
-        <x-ui.banner-thin-charcoal />
     </header>
 
     <main>
         {{ $slot }}
     </main>
 
-    @livewire('cart.cart-drawer')
+    {{--<x-layout.footer />--}}
 
-    <x-layout.footer />
-
-    @if(!in_array($currentPage ?? '', ['cart', 'checkout', 'order-confirmation']))
-        <x-ui.contact-modal />
-        <x-ui.custom-request-wizard />
-    @endif
 </body>
 </html>

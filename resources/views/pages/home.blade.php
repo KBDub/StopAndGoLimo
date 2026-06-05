@@ -39,9 +39,9 @@
     ogImageAlt="Luxury Limo Service in Joliet, IL serving Chicagoland"
 >
     <x-sections.category-hero
-        heading="Premium Airport"
-        headingBold="Shuttle Service"
-        subtitle="Serving O'Hare, Midway, and Chicagoland since 2009"
+        heading="Elevate Your Travel Experience"
+        headingBold="With Luxury and Comfort"
+        subtitle="Discover the joy of seamless journeys"
         buttonText="Book a Ride"
         buttonHref="/contact"
         image="/images/heroes/hero-home.jpg"

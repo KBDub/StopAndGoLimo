@@ -50,22 +50,23 @@ what has changed, and the order of work.
 
 | Prop | Type | Default |
 |---|---|---|
-| `heading` | string | "Premium Airport" |
-| `headingBold` | string | "Shuttle Service" |
-| `subtitle` | string | "Serving O'Hare, Midway, and Chicagoland Since 2009" |
+| `heading` | string | "Elevate Your Travel Experience" |
+| `headingBold` | string | "With Luxury and Comfort" |
+| `subtitle` | string | "Discover the joy of seamless journeys" |
 | `description` | string | `''` |
 | `buttonText` | string | "Book a Ride" |
-| `buttonHref` | string | `'/booking'` |
+| `buttonHref` | string | `'/contact'` |
+| `buttonRadius` | string | `'soft'` |
 | `image` | string | `/images/heroes/hero-home.jpg` |
 | `imagePosition` | string | `'center center'` |
 
 **Hero images (downloaded from prod):**
 
-| Page | File | Source |
+| Page | File | Source URL |
 |---|---|---|
-| Home | `public/images/heroes/hero-home.jpg` | newlenoxlimoservice.com — dark moody sedan, mountain road |
-| About Us | `public/images/heroes/hero-about.jpg` | newlenoxlimoservice.com — chauffeur at vehicle |
-| Our Services | `public/images/heroes/hero-services.jpg` | newlenoxlimoservice.com — walking to vehicle |
+| Home | `public/images/heroes/hero-home.jpg` | `.../karl-kohler-ZMQ7DSpv39g-unsplash-scaled-1.jpg` — dark Audi on mountain road |
+| About Us | `public/images/heroes/hero-about.jpg` | `.../Chauffeurs.jpg` — chauffeur at vehicle |
+| Our Services | `public/images/heroes/hero-services.jpg` | `.../Walking-To-Vehicle.jpg` — walking to vehicle |
 
 ---
 

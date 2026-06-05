@@ -1,10 +1,11 @@
 @props([
-    'heading'       => 'Premium Airport',
-    'headingBold'   => 'Shuttle Service',
-    'subtitle'      => "Serving O'Hare, Midway, and Chicagoland since 2009",
+    'heading'       => 'Elevate Your Travel Experience',
+    'headingBold'   => 'With Luxury and Comfort',
+    'subtitle'      => 'Discover the joy of seamless journeys',
     'description'   => '',
     'buttonText'    => 'Book a Ride',
     'buttonHref'    => '/contact',
+    'buttonRadius'  => 'soft',
     'image'         => '/images/heroes/hero-home.jpg',
     'imagePosition' => 'center center',
 ])
@@ -55,10 +56,11 @@
         {{-- Single CTA --}}
         @if($isModal)
             <x-ui.button-outline-light
+                radius="{{ $buttonRadius }}"
                 onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
             >{{ $buttonText }}</x-ui.button-outline-light>
         @else
-            <x-ui.button-outline-light href="{{ $buttonHref }}">
+            <x-ui.button-outline-light href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
                 {{ $buttonText }}
             </x-ui.button-outline-light>
         @endif

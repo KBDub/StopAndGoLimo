@@ -7,18 +7,6 @@
   swap for named routes (route('...')) once defined.
 --}}
 <header class="bg-navy">
-    {{-- Top notification bar --}}
-    <div class="flex flex-wrap justify-between items-center gap-3 px-6 py-2.5
-                bg-navy-dark border-b border-champagne/20 text-[12.5px] text-slate-light">
-        <span>Open 24/7 &nbsp;·&nbsp; New Lenox &amp; Naperville, IL</span>
-        <span class="flex items-center gap-3">
-            <a href="tel:+18155856922" class="font-head font-semibold text-champagne no-underline">(815) 585-6922</a>
-            <span class="opacity-40">|</span>
-            <a href="https://book.mylimobiz.com/v4/stopngo"
-               class="font-head font-semibold uppercase tracking-wide text-signal no-underline">Book Online &rarr;</a>
-        </span>
-    </div>
-
     {{-- Main bar --}}
     <nav class="flex flex-wrap items-center gap-1.5 px-[18px]" aria-label="Primary">
         <a href="/" class="font-head font-bold text-base text-white px-[18px] py-5 pl-1.5 mr-auto no-underline">

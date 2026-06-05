@@ -111,7 +111,9 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 
 > **Note on Tailwind vs CSS var naming:** Slate uses `slate` in both Tailwind (`text-slate`, `bg-slate`) and CSS (`var(--slate)` / `var(--slate-light)` / `var(--slate-dark)`). The legacy Tailwind alias `muted` is being retired during the CSS cleanup phase. See `docs/rebranding.md`.
 >
-> **Azure usage rule:** Azure is a button-only accent. It must not appear on section backgrounds, cards, or decorative surfaces. Use it exclusively for `x-ui.button-azure` and `x-ui.button-outline-azure`, plus inline links and focus rings.
+> **Azure usage rule:** Azure must not appear on section backgrounds, cards, or decorative surfaces, and is never used for buttons. It is reserved for inline links, focus rings, and informational text highlights only.
+>
+> **Branded CSS colors requirement:** Every color used anywhere on the site must reference a named CSS custom property from the Twilight Luxe token set (e.g. `var(--navy)`, `var(--champagne)`, `var(--azure)`). Raw hex values, `rgb()`, `hsl()`, or any other unlabeled color literals are not permitted in component files or stylesheets.
 
 ### 5.2 — Semantic Colors (reservations and booking forms only)
 
@@ -157,8 +159,6 @@ All buttons use Poppins (`font-head`) and tracking-wide. Corner radius is contro
 | `x-ui.button-outline-champagne` | Secondary on dark surface | Champagne | Transparent + champagne border |
 | `x-ui.button-white-navy` | Secondary on dark, high contrast | Navy | White |
 | `x-ui.button-outline-light` | Ghost on dark / over image | White | Transparent + white/35 border |
-| `x-ui.button-azure` | Secondary CTA (Get a Quote) | White | Azure solid |
-| `x-ui.button-outline-azure` | Ghost secondary on dark surface | Azure Light | Transparent + azure border |
 | `x-ui.button-text-link` | Inline arrow-link | Champagne | None |
 
 ### 6.2 — Banners

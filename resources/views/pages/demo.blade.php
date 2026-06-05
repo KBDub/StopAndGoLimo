@@ -486,16 +486,6 @@
                     </div>
                 </div>
 
-                {{-- Azure Buttons --}}
-                <div class="bg-navy-light border border-white/8 p-7 mb-5">
-                    <h3 class="font-head font-semibold text-white mb-5">Azure Buttons (Secondary Accent)</h3>
-                    <p class="text-muted text-sm mb-5">Azure buttons are used for secondary actions only, never as a primary CTA. They cool-balance the warm champagne primary.</p>
-                    <div class="flex flex-wrap gap-4 items-start">
-                        <div class="text-center"><x-ui.button-azure href="#">Get a Quote</x-ui.button-azure><p class="text-muted text-xs mt-2 font-mono">button-azure</p></div>
-                        <div class="text-center"><x-ui.button-outline-azure href="#">Track My Ride</x-ui.button-outline-azure><p class="text-muted text-xs mt-2 font-mono">button-outline-azure</p></div>
-                    </div>
-                </div>
-
                 {{-- Button Radius --}}
                 <div class="bg-navy-light border border-white/8 p-7 mb-5">
                     <h3 class="font-head font-semibold text-white mb-5">Button Radius</h3>

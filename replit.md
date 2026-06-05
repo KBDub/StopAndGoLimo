@@ -79,6 +79,8 @@ This platform provides a sophisticated online presence for "Stop And Go Limo,", 
 -   Both demo pages (/demo and /demo/premium) must always show the actual blade component name, file path, and a full usage example (including aspect ratio) in every section's info block
 -   Never use double -- or a hyphen, use a comma instead.
 -   Always use a 7th grade reading writing level.
+-   All colors must use named Twilight Luxe CSS custom properties (e.g. `var(--navy)`, `var(--champagne)`, `var(--azure)`). Raw hex values, `rgb()`, `hsl()`, or any unlabeled color literals are not permitted in component files or stylesheets.
+-   Azure is never used for buttons. It is reserved for inline links, focus rings, and informational text highlights only.
 
 ## Gotchas
 

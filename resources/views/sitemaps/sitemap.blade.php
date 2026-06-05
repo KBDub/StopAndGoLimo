@@ -3,14 +3,14 @@
 
     {{-- ═══════════════════════════════════════════════════════════════════════
          STOP AND GO LIMO — Main Sitemap
-         Domain: www.stopandgolimo.com
+         Domain: www.newlenoxlimoservice.com
          Update lastmod dates when content changes on a given page.
     ══════════════════════════════════════════════════════════════════════════ --}}
 
     {{-- ─── Core Pages ───────────────────────────────────────────────────── --}}
 
     <url>
-        <loc>https://www.stopandgolimo.com/</loc>
+        <loc>https://www.newlenoxlimoservice.com/</loc>
         <lastmod>2026-06-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -19,7 +19,7 @@
     {{-- ─── Service Areas — Index ────────────────────────────────────────── --}}
 
     <url>
-        <loc>https://www.stopandgolimo.com/service-areas</loc>
+        <loc>https://www.newlenoxlimoservice.com/service-areas</loc>
         <lastmod>2026-06-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -34,7 +34,7 @@
         $isHq     = $cityName === 'New Lenox';
     @endphp
     <url>
-        <loc>https://www.stopandgolimo.com/service-areas/{{ $citySlug }}</loc>
+        <loc>https://www.newlenoxlimoservice.com/service-areas/{{ $citySlug }}</loc>
         <lastmod>2026-06-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>{{ $isHq ? '0.9' : '0.6' }}</priority>
@@ -45,7 +45,7 @@
 
     @foreach($products as $product)
     <url>
-        <loc>https://www.stopandgolimo.com/products/{{ $product->slug }}</loc>
+        <loc>https://www.newlenoxlimoservice.com/products/{{ $product->slug }}</loc>
         <lastmod>{{ $product->updated_at->format('Y-m-d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -56,7 +56,7 @@
 
     @foreach($collections as $collection)
     <url>
-        <loc>https://www.stopandgolimo.com/collections/{{ $collection->slug }}</loc>
+        <loc>https://www.newlenoxlimoservice.com/collections/{{ $collection->slug }}</loc>
         <lastmod>{{ $collection->updated_at->format('Y-m-d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>

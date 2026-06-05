@@ -6,7 +6,7 @@
 
     {{-- ═══════════════════════════════════════════════════════════════════════
          STOP AND GO LIMO — Video Sitemap
-         Domain: www.stopandgolimo.com
+         Domain: www.newlenoxlimoservice.com
          No Stop & Go videos have been assigned yet.
          Add entries here once YouTube video IDs are confirmed.
          Source of truth: docs/image-video-control.md
@@ -16,7 +16,7 @@
     Example entry — uncomment and fill in once a video is ready:
 
     <url>
-        <loc>https://www.stopandgolimo.com/</loc>
+        <loc>https://www.newlenoxlimoservice.com/</loc>
         <video:video>
             <video:thumbnail_loc>https://i.ytimg.com/vi/YOUTUBE_ID/hqdefault.jpg</video:thumbnail_loc>
             <video:title>Airport Transfers in New Lenox, IL — Stop and Go Limo</video:title>

@@ -11,32 +11,28 @@
             animation: ring-drain 7s linear forwards;
         }
     </style>
-    @endverbatim
-@endpush
+@endverbatim
+    @endpush
 
-    <section class="min-h-[70vh] bg-cloud flex items-center justify-center px-6 py-16">
-        <div class="w-full max-w-lg bg-white shadow-md p-10 text-center">
+    {{-- ─── 404 Section — Navy dark, premium Twilight Luxe ──────────────── --}}
+    <section class="min-h-[75vh] bg-navy flex items-center justify-center px-6 py-20">
+        <div class="w-full max-w-lg text-center">
 
-            {{-- Accent bar --}}
-            <div class="h-1 w-12 bg-champagne mx-auto mb-6"></div>
-
-            {{-- Heading --}}
-            <h1 class="text-navy font-bold text-h2 mb-2 font-head">Page Not Found</h1>
-            <p class="text-slate text-body-sm mb-8 leading-relaxed">
-                The page you are looking for does not exist or may have been moved.<br>
-                You will be redirected to the homepage automatically.
+            {{-- Section label --}}
+            <p class="font-head text-xs font-semibold tracking-widest text-champagne mb-5">
+                404 Error
             </p>
 
             {{-- Countdown Ring --}}
-            <div class="flex flex-col items-center mb-8">
-                <div class="relative w-28 h-28">
+            <div class="flex justify-center mb-8">
+                <div class="relative w-32 h-32">
                     <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100" aria-hidden="true">
                         {{-- Track --}}
                         <circle
                             cx="50" cy="50" r="44"
                             fill="none"
-                            stroke="var(--cloud-dark)"
-                            stroke-width="6"
+                            stroke="var(--navy-light)"
+                            stroke-width="5"
                         />
                         {{-- Animated ring --}}
                         <circle
@@ -44,26 +40,40 @@
                             cx="50" cy="50" r="44"
                             fill="none"
                             stroke="var(--champagne)"
-                            stroke-width="6"
+                            stroke-width="5"
                             stroke-linecap="round"
                             style="stroke-dasharray: 276.46; stroke-dashoffset: 0;"
                         />
                     </svg>
                     {{-- Countdown number --}}
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <span id="countdown-number" class="text-navy font-bold text-4xl leading-none font-head">7</span>
+                        <span id="countdown-number" class="text-white font-bold text-5xl leading-none font-head">7</span>
                     </div>
                 </div>
-
-                <p class="mt-4 text-slate text-body-sm">
-                    Redirecting to home in <span id="countdown-message" class="font-bold text-champagne-dark">7</span> seconds&hellip;
-                </p>
             </div>
 
-            {{-- CTA --}}
-            <a id="go-home" href="/" class="inline-block bg-champagne hover:bg-champagne-dark text-navy font-bold text-sm tracking-widest px-8 py-3 transition-colors cursor-pointer font-head">
+            {{-- Champagne divider --}}
+            <div class="h-px w-16 mx-auto mb-7" style="background: var(--champagne);"></div>
+
+            {{-- Heading --}}
+            <h1 class="font-head font-bold text-white mb-4" style="font-size: 2.375rem; line-height: 1.2;">
+                Page Not Found
+            </h1>
+
+            {{-- Body copy --}}
+            <p class="font-body text-slate mb-2" style="font-size: 1.0625rem; line-height: 1.7;">
+                The page you are looking for does not exist or may have been moved.
+            </p>
+            <p class="font-body mb-8" style="font-size: 1.0625rem; line-height: 1.7;">
+                Redirecting to home in
+                <span id="countdown-message" class="font-bold text-champagne">7</span>
+                seconds&hellip;
+            </p>
+
+            {{-- CTA button --}}
+            <x-ui.button-champagne-solid id="go-home" href="/">
                 Take me home
-            </a>
+            </x-ui.button-champagne-solid>
 
         </div>
     </section>
@@ -85,11 +95,13 @@
                 }
             }, 1000);
 
-            homeEl.addEventListener('click', function (e) {
-                e.preventDefault();
-                clearInterval(interval);
-                window.location.href = '/';
-            });
+            if (homeEl) {
+                homeEl.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    clearInterval(interval);
+                    window.location.href = '/';
+                });
+            }
         })();
     </script>
 

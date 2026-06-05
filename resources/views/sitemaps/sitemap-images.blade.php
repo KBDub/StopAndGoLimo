@@ -6,7 +6,7 @@
 
     {{-- ═══════════════════════════════════════════════════════════════════════
          STOP AND GO LIMO — Image Sitemap
-         Domain: www.stopandgolimo.com
+         Domain: www.newlenoxlimoservice.com
          Add entries here as real Stop & Go images are added to the project.
          Source of truth: docs/image-video-control.md
     ══════════════════════════════════════════════════════════════════════════ --}}
@@ -14,9 +14,9 @@
     {{-- ─── Home ─────────────────────────────────────────────────────────── --}}
 
     <url>
-        <loc>https://www.stopandgolimo.com/</loc>
+        <loc>https://www.newlenoxlimoservice.com/</loc>
         <image:image>
-            <image:loc>https://www.stopandgolimo.com/images/og-tags/stopandgo-og-home.jpg</image:loc>
+            <image:loc>https://www.newlenoxlimoservice.com/images/og-tags/stopandgo-og-home.jpg</image:loc>
             <image:title>Airport Transfers in New Lenox, IL — Stop and Go Limo</image:title>
             <image:caption>Professional airport transfers to O'Hare and Midway from New Lenox and Chicagoland. Serving since 2009.</image:caption>
         </image:image>
@@ -25,9 +25,9 @@
     {{-- ─── Service Areas ────────────────────────────────────────────────── --}}
 
     <url>
-        <loc>https://www.stopandgolimo.com/service-areas</loc>
+        <loc>https://www.newlenoxlimoservice.com/service-areas</loc>
         <image:image>
-            <image:loc>https://www.stopandgolimo.com/images/limo/stopandgo-fleet-new-lenox.jpg</image:loc>
+            <image:loc>https://www.newlenoxlimoservice.com/images/limo/stopandgo-fleet-new-lenox.jpg</image:loc>
             <image:title>Stop and Go Limo — Service Areas in Chicagoland</image:title>
             <image:caption>Stop and Go Limo serves New Lenox, Joliet, Plainfield, Romeoville, Naperville, and communities across Will and DuPage County.</image:caption>
         </image:image>

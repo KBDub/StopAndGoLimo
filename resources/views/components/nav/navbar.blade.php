@@ -6,7 +6,11 @@
 
     <nav class="nav-bar" aria-label="Primary">
 
-        <a href="/" class="nav-logo">Stop &amp; Go <span>Airport Shuttle</span></a>
+        <a href="/" class="nav-logo">
+            <img src="/images/logos/stop-and-go-inverted-logo-large.svg"
+                 alt="Stop &amp; Go Airport Shuttle Service, Inc."
+                 class="h-10 lg:h-16 w-auto transition-all duration-300">
+        </a>
 
         <x-nav.link href="/" :active="request()->is('/')">Welcome</x-nav.link>
 

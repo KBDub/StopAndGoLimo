@@ -4,6 +4,7 @@
     currentPage="demo"
     :noIndex="true"
 >
+<div class="bg-grad-navy-to-gold min-h-screen">
 
         {{-- ── Hero ──────────────────────────────────────────── --}}
         <section class="py-20 text-center relative overflow-hidden">
@@ -680,5 +681,5 @@
             </div>
         </section>
 
-
+</div>
 </x-layouts.page>

@@ -167,6 +167,11 @@ html {
     --stopngo-error: #C0392B;
     --shadow-champagne: 0 4px 20px rgba(220, 181, 126, 0.20);
     --shadow-champagne-lg: 0 8px 30px rgba(220, 181, 126, 0.32);
+    --grad-midnight-hero: linear-gradient(135deg, #15152C 0%, #252235 100%);
+    --grad-deep-twilight: linear-gradient(135deg, #0F1223 0%, #15152C 60%, #252235 100%);
+    --grad-champagne-shine: linear-gradient(135deg, #DCB57E 0%, #E9C79E 100%);
+    --grad-navy-to-gold: linear-gradient(135deg, #15152C 0%, #252235 55%, #DCB57E 140%);
+    --grad-champagne-rule: linear-gradient(90deg, transparent, #C49A5E 20%, #DCB57E 50%, #C49A5E 80%, transparent);
 
     --btn-padding-x: 32px;
     --btn-padding-y: 16px;

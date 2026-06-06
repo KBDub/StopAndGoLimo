@@ -63,5 +63,6 @@
 
     <x-sections.service-locations />
 
+    <x-sections.areas-we-serve />
 
 </x-layouts.page>

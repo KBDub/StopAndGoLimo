@@ -47,14 +47,14 @@
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
 
-                <p style="font-family: var(--font-body); font-size: 20px; font-weight: 400; line-height: 22px; color: var(--navy); margin-top: 2rem;">
+                <p style="font-family: var(--font-body); font-size: 20px; font-weight: 400; line-height: 22px; color: var(--navy); margin-top: 6rem;">
                     {{ $body }}
                 </p>
             </div>
 
             {{-- Right: airport photo --}}
-            <div>
-                <div style="aspect-ratio: 4/3; overflow: hidden;">
+            <div class="flex justify-center md:justify-end">
+                <div style="width: min(550px, 100%); aspect-ratio: 3/4; overflow: hidden;">
                     <img
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"

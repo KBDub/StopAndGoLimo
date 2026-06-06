@@ -30,12 +30,12 @@
 <section style="background: var(--cloud-light);" class="py-14">
     <div class="max-w-7xl mx-auto px-6">
 
-        {{-- Heading + left-aligned champagne rule --}}
-        <div style="margin-bottom: 2rem;">
+        {{-- Heading + left-aligned rule: fit-content wrapper so rule is 116% of heading width --}}
+        <div style="width: fit-content; margin-bottom: 2rem;">
             <h2 class="font-head" style="font-size: clamp(1.6rem, 3.5vw, 2.25rem); font-weight: 400; color: var(--navy); line-height: 1.2;">
                 Frequently Asked <strong style="font-weight: 700;">Questions</strong>
             </h2>
-            <div style="height: 3px; background: var(--champagne); width: 18rem; margin-top: 0.85rem;"></div>
+            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
         </div>
 
         {{-- Accordion items --}}

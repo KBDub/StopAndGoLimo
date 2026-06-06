@@ -124,7 +124,7 @@
     </div>
 
     {{-- ── Map: absolutely positioned over right ~45%, spanning both rows ── --}}
-    <div class="hidden md:block" style="position:absolute;top:1.5rem;right:1.5rem;bottom:1.5rem;width:32%;z-index:10;">
+    <div class="hidden md:block" style="position:absolute;top:1.5rem;right:3rem;width:40%;aspect-ratio:1/1;z-index:10;">
         <iframe
             src="{{ $mapSrc }}"
             width="100%"

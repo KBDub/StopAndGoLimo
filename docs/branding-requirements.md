@@ -346,3 +346,45 @@ Every component must pass all three breakpoints:
 | Button components | `resources/views/components/ui/button-*.blade.php` |
 | Banner components | `resources/views/components/ui/banner-*.blade.php` |
 | Rebrand audit and cleanup plan | `docs/rebranding.md` |
+
+---
+
+## 14. Champagne Rule (Underbar) Standards
+
+Every section heading gets a single `3px` champagne rule beneath it. The rule must be **proportional to the heading text width** — never full-width, never a fixed pixel value.
+
+### Core technique
+
+Wrap the `<h2>` and the rule `<div>` together in a container with `width: fit-content`. This collapses the wrapper to the heading's natural rendered width. The rule is then set to `width: 116%` so it extends 16% past the heading text.
+
+### Centered headings (most sections)
+
+```html
+<div style="width: fit-content; margin: 0 auto 2rem; text-align: center;">
+    <h2>Heading <strong>Bold Part</strong></h2>
+    <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
+</div>
+```
+
+- `margin: 0 auto` centers the wrapper.
+- `margin-left: -8%` on the rule shifts it left by half the overflow (16% / 2 = 8%), keeping it visually centered under the text.
+
+### Left-aligned headings
+
+```html
+<div style="width: fit-content; margin-bottom: 2rem;">
+    <h2>Heading <strong>Bold Part</strong></h2>
+    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+</div>
+```
+
+- No `margin: 0 auto` — the wrapper stays left-anchored.
+- No `margin-left` on the rule — it extends 16% past the right edge of the text only.
+
+### Rules
+
+- Always `3px` height, `var(--champagne)` color.
+- Always `width: 116%` on the rule — never a fixed `rem` or `px` width.
+- Always `margin-top: 0.85rem` between the heading and the rule.
+- The `fit-content` wrapper must contain **only** the heading and the rule — no other siblings.
+- Never use `border-bottom` on the heading itself; always a separate `<div>` element.

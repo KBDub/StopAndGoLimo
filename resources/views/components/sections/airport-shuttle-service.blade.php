@@ -2,15 +2,33 @@
     'heading'     => 'Airport Shuttle',
     'headingTail' => 'Service',
     'body'        => 'At Stop & Go Airport Shuttle Service Inc., we know that air travel does not start and stop at the airport. A peaceful travel experience can make or break your trip, which is why it\'s so important to get started the right way with a smooth, reliable, direct ride to the airport. We take care of everything you need so you can genuinely enjoy stress-free travel to and from any of Chicago\'s airports, including:',
-    'image'       => '/images/sections/airport-shuttle.png',
+    'image'       => 'https://newlenoxlimoservice.com/wp-content/uploads/2025/07/david-syphers-HL3gRIKJxT4-unsplash-1024x683.jpg',
     'imageAlt'    => 'Chicago O\'Hare International Airport terminal and control tower',
     'airports'    => [
-        'Chicago O\'Hare International Airport',
-        'Chicago Midway International Airport',
-        'Chicago Executive Airport, PWK',
-        'Gary/Chicago International Airport',
-        'Chicago Rockford International Airport (RFD)',
-        'Lewis University Airport',
+        [
+            'label' => 'Chicago O\'Hare International Airport',
+            'href'  => 'https://www.flychicago.com/ohare/home/pages/default.aspx',
+        ],
+        [
+            'label' => 'Chicago Midway International Airport',
+            'href'  => 'https://www.flychicago.com/midway/home/pages/default.aspx',
+        ],
+        [
+            'label' => 'Chicago Executive Airport, PWK',
+            'href'  => 'https://flypwk.com/',
+        ],
+        [
+            'label' => 'Gary/Chicago International Airport',
+            'href'  => 'https://www.garychicagoairport.com/',
+        ],
+        [
+            'label' => 'Chicago Rockford International Airport (RFD)',
+            'href'  => 'https://flyrfd.com/',
+        ],
+        [
+            'label' => 'Lewis University Airport',
+            'href'  => 'https://www.lewisu.edu/administration/facilities/airport.htm',
+        ],
     ],
 ])
 
@@ -29,7 +47,7 @@
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
 
-                <p style="font-size: clamp(0.9rem, 1.4vw, 1rem); color: var(--navy); line-height: 1.8;">
+                <p style="font-family: var(--font-body); font-size: 20px; font-weight: 400; line-height: 22px; color: var(--navy);">
                     {{ $body }}
                 </p>
             </div>
@@ -50,20 +68,10 @@
         {{-- Airport cards grid --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             @foreach ($airports as $airport)
-            <div style="background: var(--navy); padding: 2rem 1.5rem 1.75rem; text-align: center;">
-
-                {{-- Champagne map-pin SVG --}}
-                <div style="margin-bottom: 1.25rem; display: flex; justify-content: center;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 2.25rem; height: 2.25rem; fill: var(--champagne);" aria-hidden="true">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
-                    </svg>
-                </div>
-
-                <p class="font-head" style="font-size: clamp(0.95rem, 1.5vw, 1.1rem); color: var(--cloud-light); font-weight: 400; line-height: 1.4; margin: 0;">
-                    {{ $airport }}
-                </p>
-
-            </div>
+                <x-ui.rect-box
+                    label="{{ $airport['label'] }}"
+                    href="{{ $airport['href'] }}"
+                />
             @endforeach
         </div>
 

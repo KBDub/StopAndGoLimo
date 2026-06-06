@@ -59,7 +59,7 @@
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Centered heading + champagne underbar --}}
-        <div style="width: fit-content; margin: 0 auto 3.5rem; text-align: center;">
+        <div style="width: fit-content; margin: 0 auto 6rem; text-align: center;">
             <h2 class="font-head" style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; color: var(--champagne); line-height: 1.2;">
                 {{ $heading }} <strong style="font-weight: 800;">{{ $headingBold }}</strong>
             </h2>

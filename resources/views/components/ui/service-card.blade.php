@@ -1,12 +1,28 @@
 @props([
-    'label' => '',
-    'href'  => '#',
-    'image' => '',
+    'label'    => '',
+    'href'     => '#',
+    'image'    => '',
     'imageAlt' => '',
 ])
 
+<style>
+    .sg-service-card {
+        transition: box-shadow 0.3s ease;
+    }
+    .sg-service-card:hover {
+        box-shadow: inset 0 0 0 2px var(--champagne-light);
+    }
+    .sg-service-card:hover .sg-service-card__overlay {
+        background: rgba(10, 14, 35, 0.38);
+    }
+    .sg-service-card__overlay {
+        transition: background 0.3s ease;
+    }
+</style>
+
 <a
     href="{{ $href }}"
+    class="sg-service-card"
     style="
         display: block;
         position: relative;
@@ -27,7 +43,7 @@
     @endif
 
     {{-- Dark overlay --}}
-    <div style="position: absolute; inset: 6px; background: rgba(10, 14, 35, 0.55);"></div>
+    <div class="sg-service-card__overlay" style="position: absolute; inset: 6px; background: rgba(10, 14, 35, 0.55);"></div>
 
     {{-- Label + underbar, anchored to bottom-center --}}
     <div style="

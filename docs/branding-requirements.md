@@ -48,7 +48,7 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 2. **Sharp corners on all containers, cards, and inputs.** No `rounded` classes on sections, cards, or form inputs. Buttons use the `radius` prop on `x-ui.button` — the default is `soft` (10px). Pass `radius="square"` for a fully square button.
 3. **Never use double hyphens (--).** Use a comma or em dash instead.
 4. **7th-grade reading level** for all body copy. Short sentences. Plain words.
-5. **No icons.** Do not use Heroicons, Font Awesome, or SVG icon libraries anywhere on the public site.
+5. **No icons** — with one approved exception. Do not use Heroicons or any other SVG icon library. **Font Awesome 6 is the sole approved icon library** and may only be used for functional location and contact indicators (map pin, phone). Do not use Font Awesome for decorative or illustrative purposes.
 6. **No color outside the palette.** If a color is not in the Twilight Luxe 5+White palette or the three semantic colors, it is not allowed.
 7. **Poppins for headings, Montserrat for body.** Never mix in a third typeface.
 

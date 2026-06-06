@@ -40,15 +40,9 @@
                 @foreach($locations as $loc)
                     <div class="text-center">
 
-                        {{-- CSS-only map pin (no icon library) --}}
-                        <div class="mx-auto mb-5" style="width: 2.25rem; height: 2.25rem; position: relative;">
-                            <div style="
-                                width: 2.25rem;
-                                height: 2.25rem;
-                                background: var(--champagne);
-                                border-radius: 50% 50% 50% 0;
-                                transform: rotate(-45deg);
-                            "></div>
+                        {{-- Font Awesome map pin (approved exception) --}}
+                        <div class="mx-auto mb-4" style="font-size: 2.5rem; color: var(--champagne); line-height: 1;">
+                            <i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i>
                         </div>
 
                         {{-- City name --}}

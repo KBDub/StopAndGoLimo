@@ -61,21 +61,5 @@
 
     <x-sections.free-instant-quote />
 
-    {{-- sample FAQ --}}
-    @php
-    $homeFaqs = [
-        ['q' => '', 'a' => 'Yes. <a href="/" class="link-notification">S</a> Call us at <a href="tel:+18153498600" class="link-notification">(815) 585-6922</a>'],
-        ['q' => '', 'a' => ''],
-        ['q' => '', 'a' => ''],
-        ['q' => '', 'a' => ''],
-        ['q' => '', 'a' => ''],
-        ['q' => '', 'a' => ''],
-    ];
-    @endphp
-    <x-sections.faq
-        heading="Frequently Asked Questions"
-        label=""
-        :faqs="$homeFaqs"
-    />
-    
+
 </x-layouts.page>

@@ -67,6 +67,8 @@
 
     <x-sections.why-choose-us />
 
+    <x-sections.airport-shuttle-service />
+
     <x-sections.faq />
 
     <x-sections.share-your-experience />

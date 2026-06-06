@@ -37,7 +37,7 @@
     <meta name="geo.position" content="41.4977;-87.9573">
     <meta name="ICBM" content="41.4977, -87.9573">
     <meta name="theme-color" content="#DCB57E">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicons/stop-and-go-airport-shuttle-service-favicon.png" type="image/x-icon">
     <meta property="og:title" content="{{ $title }}">
     <meta property="og:description" content="{{ $metaDescription }}">
     <meta property="og:type" content="{{ $ogType }}">

@@ -40,9 +40,12 @@
                 @foreach($locations as $location)
                     <div style="text-align: center;">
 
-                        {{-- Map pin icon (approved FA6 location use) --}}
-                        <div style="margin-bottom: 1rem;">
-                            <i class="fa-solid fa-location-dot" style="font-size: 3rem; color: var(--champagne);"></i>
+                        {{-- Inline SVG map pin — 4rem, matches service-locations --}}
+                        <div class="mx-auto mb-4" style="width: 4rem; height: auto;">
+                            <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                 style="fill: var(--champagne); width: 4rem; height: auto; margin: 0 auto;">
+                                <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                            </svg>
                         </div>
 
                         {{-- City name --}}
@@ -58,13 +61,12 @@
                         </p>
 
                         {{-- Review button --}}
-                        <a href="{{ $location['reviewHref'] }}"
-                           class="font-head"
-                           style="display: inline-block; background: var(--champagne); color: var(--navy); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; padding: 0.75rem 2rem; text-decoration: none; transition: background 0.2s ease;"
-                           onmouseover="this.style.background='var(--champagne-dark)'"
-                           onmouseout="this.style.background='var(--champagne)'">
+                        <x-ui.button
+                            variant="champagne-solid"
+                            radius="soft"
+                            href="{{ $location['reviewHref'] }}">
                             Leave a Review
-                        </a>
+                        </x-ui.button>
 
                     </div>
                 @endforeach

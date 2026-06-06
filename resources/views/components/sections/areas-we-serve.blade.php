@@ -61,12 +61,11 @@
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 1rem;"></div>
         </div>
 
-        {{-- Three columns — narrower centered container to match prod spacing --}}
-        <div class="max-w-3xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-0">
-                @foreach($columns as $column)
-                    <div>
-                        @foreach($column as $area)
+        {{-- Three columns — full container width, padding insets each column like prod --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
+            @foreach($columns as $column)
+                <div class="pl-8 lg:pl-12">
+                    @foreach($column as $area)
                             <a href="{{ $area['href'] }}" class="sg-area-link font-body">
                                 <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
                                      style="width: 0.85rem; height: auto;">
@@ -77,7 +76,6 @@
                         @endforeach
                     </div>
                 @endforeach
-            </div>
         </div>
 
     </div>

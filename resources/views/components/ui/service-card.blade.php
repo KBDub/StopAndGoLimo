@@ -29,14 +29,15 @@
     {{-- Dark overlay --}}
     <div style="position: absolute; inset: 6px; background: rgba(10, 14, 35, 0.55);"></div>
 
-    {{-- Label + underbar, vertically and horizontally centered --}}
+    {{-- Label + underbar, anchored to bottom-center --}}
     <div style="
         position: absolute;
-        inset: 6px;
+        bottom: 1.5rem;
+        left: 0;
+        right: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     ">
         {{-- fit-content wrapper so underbar is 116% of text width --}}
         <div style="width: fit-content; text-align: center;">

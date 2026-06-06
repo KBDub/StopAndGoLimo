@@ -47,7 +47,7 @@
     {{-- ── Row 2: full-width navy contact strip ── --}}
     <div style="background: var(--navy);" class="py-10">
         <div style="max-width: 60%; padding-left: 2.5rem;">
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" style="max-width: 42rem;">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" style="max-width: 52rem;">
 
                 {{-- Address --}}
                 <div>

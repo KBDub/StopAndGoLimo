@@ -67,6 +67,8 @@
 
     <x-sections.why-choose-us />
 
+    <x-sections.faq />
+
     <x-sections.share-your-experience />
 
 </x-layouts.page>

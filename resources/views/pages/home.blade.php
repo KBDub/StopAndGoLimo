@@ -65,4 +65,6 @@
 
     <x-sections.areas-we-serve />
 
+    <x-sections.why-choose-us />
+
 </x-layouts.page>

@@ -54,7 +54,7 @@
 
             {{-- Right: airport photo --}}
             <div class="flex justify-center md:justify-end">
-                <div style="width: min(550px, 100%); aspect-ratio: 3/4; overflow: hidden;">
+                <div style="width: min(550px, 100%); aspect-ratio: 4/3; overflow: hidden;">
                     <img
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"

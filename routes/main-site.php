@@ -139,10 +139,6 @@ Route::get('/demo/premium', function () {
     return view('pages.demo-premium');
 })->name('demo.premium');
 
-Route::get('/demo/modals', function () {
-    return view('pages.demo.modals');
-})->name('demo.modals');
-
 
 // ─── Service Area ────────────────────────────────────────────────────────────
 

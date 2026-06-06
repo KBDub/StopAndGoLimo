@@ -22,10 +22,12 @@
         ['name' => 'Bolingbrook',  'href' => '/bolingbrook-airport-shuttle-ohare-midway'],
         ['name' => 'Oswego',       'href' => '/oswego-il-limo-service'],
         ['name' => 'Montgomery',   'href' => '/24-7-montgomery-il-limo-service'],
-        ['name' => 'Plainfield',   'href' => '/plainfield-limousine-shuttle-service'],
-        ['name' => 'New Lenox',    'href' => '/new-lenox-airport-shuttle-limo-service'],
     ],
 ])
+
+@php
+    $columns = array_chunk($areas, (int) ceil(count($areas) / 3));
+@endphp
 
 <section style="background: var(--cloud-light);" class="py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-6">
@@ -42,25 +44,31 @@
             <x-ui.banner-thin-champagne />
         </div>
 
-        {{-- City grid — 1 col mobile, 2 col tablet, 3 col desktop --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-1">
-            @foreach($areas as $area)
-                <a
-                    href="{{ $area['href'] }}"
-                    x-data="{ hovered: false }"
-                    x-on:mouseenter="hovered = true"
-                    x-on:mouseleave="hovered = false"
-                    :style="hovered ? 'color:var(--champagne);text-decoration:none;transition:color 0.2s ease;display:grid;grid-template-columns:1.5rem 1fr;gap:0.6rem;align-items:center;' : 'color:var(--navy);text-decoration:none;transition:color 0.2s ease;display:grid;grid-template-columns:1.5rem 1fr;gap:0.6rem;align-items:center;'"
-                    style="color:var(--navy); text-decoration:none; transition:color 0.2s ease; display:grid; grid-template-columns:1.5rem 1fr; gap:0.6rem; align-items:center;"
-                    class="py-2 font-body"
-                >
-                    {{-- Inline SVG pin — fill inherits currentColor from parent <a> --}}
-                    <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
-                         style="fill: currentColor; width: 0.9rem; height: auto; flex-shrink: 0;">
-                        <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                    </svg>
-                    <span style="font-size: 1rem;">{{ $area['name'] }}</span>
-                </a>
+        {{-- Three columns, each flowing top-to-bottom --}}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-0">
+            @foreach($columns as $column)
+                <div>
+                    @foreach($column as $area)
+                        <a
+                            href="{{ $area['href'] }}"
+                            x-data="{ hovered: false }"
+                            x-on:mouseenter="hovered = true"
+                            x-on:mouseleave="hovered = false"
+                            :style="hovered
+                                ? 'color: var(--champagne);'
+                                : 'color: var(--navy);'"
+                            style="color: var(--navy); text-decoration: none; transition: color 0.2s ease; display: grid; grid-template-columns: 1.25rem 1fr; gap: 0.6rem; align-items: center; padding: 0.4rem 0;"
+                            class="font-body"
+                        >
+                            {{-- Inline SVG pin — fill:currentColor inherits parent <a> color --}}
+                            <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                 style="fill: currentColor; width: 0.8rem; height: auto;">
+                                <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                            </svg>
+                            <span style="font-size: 1rem;">{{ $area['name'] }}</span>
+                        </a>
+                    @endforeach
+                </div>
             @endforeach
         </div>
 

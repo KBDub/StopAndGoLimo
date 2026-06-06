@@ -61,5 +61,7 @@
 
     <x-sections.free-instant-quote />
 
+    <x-sections.service-locations />
+
 
 </x-layouts.page>

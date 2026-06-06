@@ -15,7 +15,7 @@
             </p>
 
             {{-- Right: legal links --}}
-            <div style="display: flex; align-items: center; gap: 0.5rem; justify-content: flex-start;" class="sm:justify-end">
+            <div style="display: flex; align-items: center; gap: 0.5rem; justify-content: flex-end;">
                 <a href="{{ $privacyHref }}" style="font-family: var(--font-body); font-size: 0.8rem; color: var(--champagne); text-decoration: none; white-space: nowrap;">Privacy Policy</a>
                 <span style="color: var(--cloud-light); font-size: 0.8rem;">|</span>
                 <a href="{{ $termsHref }}" style="font-family: var(--font-body); font-size: 0.8rem; color: var(--champagne); text-decoration: none; white-space: nowrap;">Terms & Conditions</a>

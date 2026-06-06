@@ -47,7 +47,7 @@
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
 
-                <p style="font-family: var(--font-body); font-size: 20px; font-weight: 400; line-height: 22px; color: var(--navy);">
+                <p style="font-family: var(--font-body); font-size: 20px; font-weight: 400; line-height: 22px; color: var(--navy); margin-top: 2rem;">
                     {{ $body }}
                 </p>
             </div>
@@ -69,8 +69,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             @foreach ($airports as $airport)
                 <x-ui.rect-box
-                    label="{{ $airport['label'] }}"
-                    href="{{ $airport['href'] }}"
+                    :label="$airport['label']"
+                    :href="$airport['href']"
                 />
             @endforeach
         </div>

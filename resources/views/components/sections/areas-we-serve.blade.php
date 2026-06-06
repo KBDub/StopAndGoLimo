@@ -61,21 +61,23 @@
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 1rem;"></div>
         </div>
 
-        {{-- Three columns, each flowing top-to-bottom --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-0">
-            @foreach($columns as $column)
-                <div>
-                    @foreach($column as $area)
-                        <a href="{{ $area['href'] }}" class="sg-area-link font-body">
-                            <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
-                                 style="width: 0.8rem; height: auto;">
-                                <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                            </svg>
-                            <span style="font-size: 1rem;">{{ $area['name'] }}</span>
-                        </a>
-                    @endforeach
-                </div>
-            @endforeach
+        {{-- Three columns — narrower centered container to match prod spacing --}}
+        <div class="max-w-3xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-0">
+                @foreach($columns as $column)
+                    <div>
+                        @foreach($column as $area)
+                            <a href="{{ $area['href'] }}" class="sg-area-link font-body">
+                                <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                     style="width: 0.85rem; height: auto;">
+                                    <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                                </svg>
+                                <span style="font-size: 1.125rem;">{{ $area['name'] }}</span>
+                            </a>
+                        @endforeach
+                    </div>
+                @endforeach
+            </div>
         </div>
 
     </div>

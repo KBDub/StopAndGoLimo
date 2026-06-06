@@ -5,52 +5,52 @@
         [
             'label' => 'Party Bus',
             'href'  => '/party-bus-aurora',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/party-bus-new-lenox.jpg',
+            'image' => '/images/services/party-bus.jpg',
         ],
         [
             'label' => 'Bus Rental',
             'href'  => '/new-bus-rental',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/bus-rental.jpg',
+            'image' => '/images/services/bus-rental.jpg',
         ],
         [
             'label' => 'Airport Shuttle',
             'href'  => '/airport-shuttle-ohare-midway',
-            'image' => '/images/content/airport-transfer.png',
+            'image' => '/images/services/airport-shuttle.jpg',
         ],
         [
             'label' => 'Coach Buses',
             'href'  => '/coach-buses',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/coach-bus.jpg',
+            'image' => '/images/services/coach-buses.jpg',
         ],
         [
             'label' => 'Chauffeur',
             'href'  => '/chauffeurs',
-            'image' => '/images/sections/chauffeurs.jpg',
+            'image' => '/images/services/chauffeur.jpg',
         ],
         [
             'label' => 'Corporate Car',
             'href'  => '/corporate-car-services',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/corporate-car.jpg',
+            'image' => '/images/services/corporate-car.jpg',
         ],
         [
             'label' => 'Town Car Rental',
             'href'  => '/town-car-services',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/town-car.jpg',
+            'image' => '/images/services/town-car.jpg',
         ],
         [
             'label' => 'Wedding Limo',
             'href'  => '/wedding-limousine-services',
-            'image' => '/images/content/elegant-wedding-rides.png',
+            'image' => '/images/services/wedding-limo.jpg',
         ],
         [
             'label' => 'Special Events',
             'href'  => '/limousine-services',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/special-events.jpg',
+            'image' => '/images/services/special-events.jpg',
         ],
         [
             'label' => 'Transportation',
             'href'  => '/transportation-services',
-            'image' => 'https://newlenoxlimoservice.com/wp-content/uploads/2024/10/transportation.jpg',
+            'image' => '/images/services/transportation.jpg',
         ],
     ],
 ])

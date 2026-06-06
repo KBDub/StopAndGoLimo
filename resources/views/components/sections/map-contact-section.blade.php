@@ -6,14 +6,14 @@
     'facebook'     => 'https://www.facebook.com/',
     'twitter'      => 'https://twitter.com/',
     'mapSrc'       => 'https://maps.google.com/maps?q=Stop+%26+Go+Airport+Shuttle+Service&ll=41.67,-87.91&output=embed&z=9',
-    'address'      => '400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451, United States',
-    'businessName' => 'Stop & Go Airport Shuttle Service Inc',
+    'address'      => '400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451',
+    'businessName' => 'Stop & Go Airport Shuttle Service, Inc.',
     'hours'        => 'Open 24/7 for your convenience. Reliable service, anytime you need it.',
     'phone'        => '(815) 585-6922',
     'phoneRaw'     => '+18155856922',
     'phoneAlt'     => '(708) 315-4445',
     'phoneAltRaw'  => '+17083154445',
-    'email'        => 'info@stopandgolimo.com',
+    'email'        => 'vincent@newlenoxlimoservice.com',
 ])
 
 {{-- Outer wrapper: position relative + overflow hidden so map clips at bottom --}}
@@ -99,7 +99,7 @@
     </div>
 
     {{-- ── Map: absolutely positioned over right ~45%, spanning both rows ── --}}
-    <div class="hidden md:block" style="position:absolute;top:1.5rem;right:3rem;width:40%;aspect-ratio:1/1;z-index:10;border:2px solid var(--champagne);border-right:5px solid var(--champagne);">
+    <div class="hidden md:block" style="position:absolute;top:1.5rem;right:3rem;width:40%;aspect-ratio:1/1;z-index:10;border:0;border-left:4px solid var(--champagne);">
         <iframe
             src="{{ $mapSrc }}"
             width="100%"

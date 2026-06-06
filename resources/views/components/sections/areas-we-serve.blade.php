@@ -36,10 +36,10 @@
     text-decoration: none;
     transition: color 0.2s ease;
     display: grid;
-    grid-template-columns: 1.5rem 1fr;
+    grid-template-columns: 1.2rem 1fr;
     gap: 0.6rem;
     align-items: center;
-    padding: 0.1rem 0;
+    padding: 0.3rem 0;
 }
 .sg-area-link:hover {
     color: var(--champagne);
@@ -62,14 +62,14 @@
         </div>
 
         {{-- Inner container matches prod's ~1140px grid width --}}
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto" style="margin-top: 2rem;">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
             @foreach($columns as $column)
                 <div style="width: fit-content; margin: 0 auto;">
                     @foreach($column as $area)
                             <a href="{{ $area['href'] }}" class="sg-area-link">
                                 <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
-                                     style="width: 1.5rem; height: auto;">
+                                     style="width: 1.2rem; height: auto;">
                                     <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
                                 </svg>
                                 <span style="font-size: 25px; font-family: Poppins, sans-serif; letter-spacing: -0.01em; line-height: 1.3;">{{ $area['name'] }}</span>

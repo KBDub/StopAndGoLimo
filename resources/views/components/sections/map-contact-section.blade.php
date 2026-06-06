@@ -20,7 +20,7 @@
 <div style="position: relative; overflow: hidden;">
 
     {{-- ── Row 1: full-width car image with social content ── --}}
-    <div style="position: relative; min-height: 370px; overflow: hidden;">
+    <div style="position: relative; overflow: hidden;">
         <img
             src="{{ $image }}"
             alt="{{ $imageAlt }}"

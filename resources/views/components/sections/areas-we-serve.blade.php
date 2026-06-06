@@ -62,7 +62,7 @@
         </div>
 
         {{-- Inner container matches prod's ~1140px grid width --}}
-        <div class="max-w-6xl mx-auto" style="margin-top: 2rem;">
+        <div class="max-w-6xl mx-auto" style="margin-top: 6rem;">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
             @foreach($columns as $column)
                 <div style="width: fit-content; margin: 0 auto;">

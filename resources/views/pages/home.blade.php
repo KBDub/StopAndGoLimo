@@ -75,4 +75,8 @@
 
     <x-sections.share-your-experience />
 
+    <x-sections.map-contact-section />
+
+    <x-sections.base-footer />
+
 </x-layouts.page>

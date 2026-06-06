@@ -5,15 +5,15 @@
     'headingBold'  => 'Social Media',
     'facebook'     => 'https://www.facebook.com/',
     'twitter'      => 'https://twitter.com/',
-    'mapSrc'       => 'https://maps.google.com/maps?q=Stop+%26+Go+Airport+Shuttle+Service+Inc,+New+Lenox,+IL+60451&output=embed&z=9',
-    'address'      => '400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451',
-    'businessName' => 'Stop & Go Airport Shuttle Service, Inc.',
+    'mapSrc'       => 'https://maps.google.com/maps?q=Stop+%26+Go+Airport+Shuttle+Service&ll=41.67,-87.91&output=embed&z=9',
+    'address'      => '400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451, United States',
+    'businessName' => 'Stop & Go Airport Shuttle Service Inc',
     'hours'        => 'Open 24/7 for your convenience. Reliable service, anytime you need it.',
     'phone'        => '(815) 585-6922',
     'phoneRaw'     => '+18155856922',
     'phoneAlt'     => '(708) 315-4445',
     'phoneAltRaw'  => '+17083154445',
-    'email'        => 'vincent@newlenoxlimoservice.com',
+    'email'        => 'info@stopandgolimo.com',
 ])
 
 {{-- Outer wrapper: position relative + overflow hidden so map clips at bottom --}}

@@ -64,7 +64,7 @@
         {{-- Three columns — full container width, padding insets each column like prod --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
             @foreach($columns as $column)
-                <div class="pl-8 lg:pl-12">
+                <div style="width: fit-content; margin: 0 auto;">
                     @foreach($column as $area)
                             <a href="{{ $area['href'] }}" class="sg-area-link font-body">
                                 <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"

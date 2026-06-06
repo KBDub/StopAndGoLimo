@@ -25,10 +25,10 @@
 
     {{-- Top: heading + subtitle --}}
     <div class="max-w-7xl mx-auto px-6 pt-14 pb-10">
-        <h2 class="font-head" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 400; color: var(--white); line-height: 1.2; margin-bottom: 1rem;">
+        <h2 class="font-head" style="font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; margin-bottom: 1rem;">
             Why <strong style="color: var(--champagne); font-weight: 700;">Choose Us?</strong>
         </h2>
-        <p class="font-body text-center" style="font-size: clamp(1rem, 2vw, 1.25rem); color: var(--white);">
+        <p class="font-body text-center" style="font-size: clamp(1rem, 2vw, 1.25rem); color: var(--cloud-light);">
             Explore our <strong>first class</strong> limousine &amp; car rental services
         </p>
     </div>
@@ -65,11 +65,11 @@
                     {{-- Title --}}
                     <h3 class="font-head" style="font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 400; margin-bottom: 0.85rem; line-height: 1.3;">
                         <strong style="color: var(--champagne); font-weight: 700;">{{ $feature['titleBold'] }}</strong>
-                        <span style="color: var(--white);"> {{ $feature['title'] }}</span>
+                        <span style="color: var(--cloud-light);"> {{ $feature['title'] }}</span>
                     </h3>
 
                     {{-- Body --}}
-                    <p class="font-body" style="color: var(--white); font-size: 1rem; line-height: 1.7;">
+                    <p class="font-body" style="color: var(--cloud-light); font-size: 1rem; line-height: 1.7;">
                         {!! $feature['body'] !!}
                     </p>
 

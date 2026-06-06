@@ -1,6 +1,6 @@
 @props([
     'year'        => date('Y'),
-    'businessName' => 'Stop & Go Shuttle Service Inc.',
+    'businessName' => 'Stop & Go Airport Shuttle Service, Inc.',
     'privacyHref' => '/privacy-policy',
     'termsHref'   => '/terms-conditions',
 ])

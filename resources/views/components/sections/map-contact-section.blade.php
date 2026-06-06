@@ -5,7 +5,7 @@
     'headingBold'  => 'Social Media',
     'facebook'     => 'https://www.facebook.com/',
     'twitter'      => 'https://twitter.com/',
-    'mapSrc'       => 'https://maps.google.com/maps?q=Stop+%26+Go+Airport+Shuttle+Service+Inc,+New+Lenox,+IL+60451&output=embed&z=9',
+    'mapSrc'       => 'https://maps.google.com/maps?q=Stop+%26+Go+Airport+Shuttle+Service+Inc,+New+Lenox,+IL+60451&output=embed&z=11',
     'address'      => '400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451, United States',
     'businessName' => 'Stop & Go Airport Shuttle Service Inc',
     'hours'        => 'Open 24/7 for your convenience. Reliable service, anytime you need it.',
@@ -16,8 +16,8 @@
     'email'        => 'info@stopandgolimo.com',
 ])
 
-{{-- Outer wrapper: position relative so the map can span both rows --}}
-<div style="position: relative;">
+{{-- Outer wrapper: position relative + overflow hidden so map clips at bottom --}}
+<div style="position: relative; overflow: hidden;">
 
     {{-- ── Row 1: full-width car image with social content ── --}}
     <div style="position: relative; min-height: 320px; overflow: hidden;">
@@ -28,8 +28,8 @@
         >
         <div style="position: absolute; inset: 0; background: rgba(10, 14, 35, 0.62);"></div>
 
-        {{-- Content restricted to left ~55% so map has room on the right --}}
-        <div style="position: relative; z-index: 1; padding: 3rem 2.5rem; max-width: 55%; display: flex; flex-direction: column; justify-content: flex-end; gap: 1.75rem; min-height: 320px;">
+        {{-- Content restricted to left ~60% so map has room on the right --}}
+        <div style="position: relative; z-index: 1; padding: 3rem 2.5rem; max-width: 60%; display: flex; flex-direction: column; justify-content: flex-end; gap: 1.75rem; min-height: 320px;">
 
             <h2 class="font-head" style="font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: var(--cloud-light); line-height: 1.25; margin: 0;">
                 {{ $heading }}<br>
@@ -71,7 +71,7 @@
 
     {{-- ── Row 2: full-width navy contact strip ── --}}
     <div style="background: var(--navy);" class="py-10">
-        <div style="max-width: 55%; padding-left: 2.5rem;">
+        <div style="max-width: 60%; padding-left: 2.5rem;">
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" style="max-width: 42rem;">
 
                 {{-- Address --}}
@@ -124,7 +124,7 @@
     </div>
 
     {{-- ── Map: absolutely positioned over right ~45%, spanning both rows ── --}}
-    <div class="hidden md:block" style="position:absolute;top:0;right:0;bottom:0;width:45%;z-index:10;">
+    <div class="hidden md:block" style="position:absolute;top:0;right:0;bottom:0;width:40%;z-index:10;">
         <iframe
             src="{{ $mapSrc }}"
             width="100%"

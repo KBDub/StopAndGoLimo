@@ -99,7 +99,7 @@
     </div>
 
     {{-- ── Map: absolutely positioned over right ~45%, spanning both rows ── --}}
-    <div class="hidden md:block" style="position:absolute;top:1.5rem;bottom:1.5rem;right:3rem;width:calc(40% - 20px);z-index:10;border:0;border-left:4px solid var(--champagne);">
+    <div class="hidden md:block" style="position:absolute;top:1.5rem;bottom:1.5rem;right:3rem;width:30%;z-index:10;border:0;border-left:4px solid var(--champagne);">
         <iframe
             src="{{ $mapSrc }}"
             width="100%"

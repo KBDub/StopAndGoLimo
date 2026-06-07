@@ -47,8 +47,8 @@
                     {{-- Question bar --}}
                     <button
                         @click="open = !open"
-                        style="width: 100%; text-align: left; background: var(--navy); color: var(--cloud-light); padding: 1rem 1.25rem; cursor: pointer; border: none; font-size: 1.25rem; line-height: 1.5; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;"
-                        class="font-body">
+                        style="width: 100%; text-align: left; background: var(--navy); color: var(--cloud-light); padding: 1rem 1.25rem; cursor: pointer; border: none; font-size: 1rem; line-height: 1.5; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;"
+                        class="font-head">
                         <span>{{ $faq['question'] }}</span>
                         <span style="font-size: 1.25rem; line-height: 1; color: var(--champagne); transition: transform 0.2s ease;"
                               :style="open ? 'transform: rotate(45deg)' : 'transform: rotate(0deg)'">+</span>
@@ -63,7 +63,7 @@
                          x-transition:leave-start="opacity-100"
                          x-transition:leave-end="opacity-0"
                          style="background: var(--cloud); padding: 1.25rem 1.25rem; border-left: 3px solid var(--champagne);">
-                        <p class="font-body" style="color: var(--navy); font-size: 1.25rem; line-height: 1.5; margin: 0;">
+                        <p class="font-head" style="color: var(--navy); font-size: 1.25rem; line-height: 1.5; margin: 0;">
                             {{ $faq['answer'] }}
                         </p>
                     </div>

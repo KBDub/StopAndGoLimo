@@ -1,79 +1,10 @@
-@props([
-    'title' => '',
-    'titleAccent' => null,
-    'subtitle' => null,
-    'image' => null,
-    'primaryCta' => null,
-    'primaryHref' => '#',
-    'secondaryCta' => null,
-    'secondaryHref' => '#',
-    'layout' => 'center',
-    'minHeight' => 'min-h-[40vh] md:min-h-[60vh]',
-    'overlay' => 'bg-gradient-to-t from-navy-dark/80 via-navy-dark/40 to-navy-dark/10',
-])
-
-<section {{ $attributes->merge(['class' => 'relative w-full overflow-hidden isolate ' . $minHeight]) }}>
-    @if($image)
-        <img
-            src="{{ $image }}"
-            alt="{{ $title }}"
-            class="absolute inset-0 w-full h-full object-cover object-center"
-        >
-    @else
-        <div class="absolute inset-0 w-full h-full bg-navy"></div>
-    @endif
-
-    <div class="absolute inset-0 {{ $overlay }}"></div>
-
-    <div class="relative z-10 flex items-center {{ $minHeight }} w-full">
-        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
-            @if($layout === 'center') text-center
-            @elseif($layout === 'left') text-left
-            @elseif($layout === 'right') text-right
-            @endif
-        ">
-            @if($layout === 'split')
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <div class="text-left">
-                        @include('components.sections.partials.hero-content', [
-                            'title' => $title,
-                            'titleAccent' => $titleAccent,
-                            'subtitle' => $subtitle,
-                            'primaryCta' => $primaryCta,
-                            'primaryHref' => $primaryHref,
-                            'secondaryCta' => $secondaryCta,
-                            'secondaryHref' => $secondaryHref,
-                        ])
-                    </div>
-                    <div></div>
-                </div>
-            @else
-                <div class="{{ $layout === 'center' ? 'max-w-3xl mx-auto' : 'max-w-xl' }}">
-                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight mb-4 font-head">
-                        {{ $title }}
-                        @if($titleAccent)
-                            <span class="text-champagne">{{ $titleAccent }}</span>
-                        @endif
-                    </h2>
-
-                    @if($subtitle)
-                        <p class="text-base md:text-lg text-white/85 mb-8 max-w-2xl {{ $layout === 'center' ? 'mx-auto' : '' }}">{{ $subtitle }}</p>
-                    @endif
-
-                    @if($primaryCta || $secondaryCta)
-                        <div class="flex flex-wrap gap-4 {{ $layout === 'center' ? 'justify-center' : '' }}">
-                            @if($primaryCta)
-                                <x-ui.button-champagne-solid href="{{ $primaryHref }}">{{ $primaryCta }}</x-ui.button-champagne-solid>
-                            @endif
-                            @if($secondaryCta)
-                                <a href="{{ $secondaryHref }}" class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold border-2 border-white text-white hover:bg-white hover:text-navy transition-all font-head">
-                                    {{ $secondaryCta }}
-                                </a>
-                            @endif
-                        </div>
-                    @endif
-                </div>
-            @endif
-        </div>
+@props(['heading' => '', 'subheading' => '', 'image' => '', 'imageAlt' => '', 'buttonText' => '', 'buttonHref' => '/booking'])
+<section style="position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden;">
+    @if($image)<img src="{{ $image }}" alt="{{ $imageAlt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">@endif
+    <div style="position:absolute;inset:0;background:rgba(10,14,35,0.6);"></div>
+    <div style="position:relative;z-index:1;max-width:72rem;margin:0 auto;padding:3rem 1.5rem;text-align:center;">
+        <h1 class="font-head" style="color:var(--cloud-light);font-size:clamp(2rem,5vw,3.5rem);font-weight:700;margin:0 0 1rem;">{{ $heading }}</h1>
+        @if($subheading)<p style="font-family:var(--font-body);color:var(--cloud);font-size:1.125rem;margin:0 0 2rem;">{{ $subheading }}</p>@endif
+        @if($buttonText)<a href="{{ $buttonHref }}" style="display:inline-block;background:var(--champagne);color:var(--navy-dark);font-family:var(--font-head);font-weight:700;padding:0.875rem 2.5rem;text-decoration:none;">{{ $buttonText }}</a>@endif
     </div>
 </section>

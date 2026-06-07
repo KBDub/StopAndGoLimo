@@ -1,27 +1,6 @@
-<section class="py-10 bg-navy relative overflow-hidden isolate">
-    <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 left-1/4 w-64 h-64 bg-champagne blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-48 h-48 bg-azure blur-3xl"></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-        <h5 class="text-champagne font-head font-semibold tracking-wide mb-3">
-            Your ride is waiting
-        </h5>
-        <div class="inline-block mb-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-2 font-head">Ready to Book Your Ride?</h2>
-            <div class="h-1 bg-champagne"></div>
-        </div>
-        <p class="text-white/70 mb-8 text-lg max-w-4xl mx-auto">
-            Book your airport transfer or limousine service today.
-            Available 24/7, serving Illinois since 2009.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <x-ui.button-champagne-solid onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))">
-                Book a Ride
-            </x-ui.button-champagne-solid>
-            <x-ui.button-outline-champagne href="tel:+18155856922">
-                Call (815) 585-6922
-            </x-ui.button-outline-champagne>
-        </div>
-    </div>
+@props(['heading' => 'Ready to Get Started?', 'subheading' => '', 'buttonText' => 'Book Now', 'buttonHref' => '/booking'])
+<section style="background:var(--navy-dark);padding:4rem 1.5rem;text-align:center;">
+    <h2 class="font-head" style="color:var(--cloud-light);font-size:clamp(1.5rem,3vw,2.25rem);margin:0 0 0.75rem;">{{ $heading }}</h2>
+    @if($subheading)<p style="font-family:var(--font-body);color:var(--cloud);margin:0 0 1.75rem;">{{ $subheading }}</p>@endif
+    <a href="{{ $buttonHref }}" style="display:inline-block;background:var(--champagne);color:var(--navy-dark);font-family:var(--font-head);font-size:0.95rem;font-weight:700;padding:0.75rem 2.25rem;text-decoration:none;">{{ $buttonText }}</a>
 </section>

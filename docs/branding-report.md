@@ -942,3 +942,165 @@ When "vs Spec" and "vs Prod" disagree, the spec wins. Prod breaks our no-caps ru
 | **Prod footer copyright says 2025, omits "Airport"** | Our 2026 date and full legal name ("Airport Shuttle") are both correct. Prod has not been updated. |
 | **Prod contact labels use Montserrat uppercase** | Our build uses Poppins with no uppercase — correct per spec. |
 | **`areas-we-serve` background context differs** | On prod, city links appear white-on-navy because they're nested inside the why-choose-us dark section. Our standalone `var(--cloud-light)` bg requires navy link colors instead. |
+
+---
+
+## Section Component Standardization — Full Audit (2026-06-07)
+
+> All 13 active blade files in `resources/views/components/sections/` were audited against `docs/branding-requirements.md`. The `old/` subdirectory is legacy print-shop content from the previous brand and is out of scope.
+
+### Violations checklist applied to every file
+
+| # | Rule | What to look for |
+|---|---|---|
+| V1 | Section padding | `py-12 lg:py-[6.25rem]` for content sections. Heroes use `min-height: 100svh`, no `py`. |
+| V2 | H1 spec | `clamp(2rem, 6vw, 3.5rem)`, 400+700 split, `letter-spacing: -1px`, `line-height: 1.2` |
+| V3 | H2 spec | `clamp(1.75rem, 5vw, 3rem)`, 400+700 split, `letter-spacing: 0.5px`, `line-height: 1.2` |
+| V4 | H5 spec | Poppins 20px / 600 — city sub-headings in location and experience sections |
+| V5 | Body spec | 20px / 1.25rem, `line-height: 1.5`, Montserrat via `var(--font-body)` |
+| V6 | Card body override | 17px / 1.0625rem in compact card containers |
+| V7 | Card H3 override | Montserrat 25px via `var(--font-body)` |
+| V8 | Raw hex | Replace `#ffffff` with `var(--white)`. No other raw hex allowed. |
+| V9 | Raw font-family | Replace `'Poppins', sans-serif` / `'Montserrat', sans-serif` with `var(--font-head)` / `var(--font-body)` |
+| V10 | px line-height | Replace all `line-height: Npx` with unitless equivalents |
+| V11 | Image overlay | `var(--navy-dark)` at exactly 20% opacity |
+| V12 | Image shadow | `box-shadow: var(--shadow-card)` on card images on dark backgrounds |
+| V13 | No text-transform: uppercase | Anywhere outside §8.2 nav exceptions |
+| V14 | No decorative vertical lines | Never in any component |
+| V15 | Champagne rule | Standard variant (116% width, fit-content wrapper) or SM label-rule (30% width, no wrapper) per §14 |
+
+---
+
+### File-by-file audit results
+
+#### 1. `category-hero.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 Hero | `min-h-[28rem] sm:min-h-[36rem] lg:min-h-[560px] py-16` | `style="min-height: 100svh;"` — no py |
+| V11 Overlay | `var(--navy-dark)` at opacity 0.42 | opacity 0.2 |
+| V2 H1 size | `clamp(2rem, 5vw, 3.5rem)` | `clamp(2rem, 6vw, 3.5rem)` |
+| V2 H1 ls | none | `letter-spacing: -1px` |
+| V2 H1 lh | `1.15` | `1.2` |
+| V5 Subtitle | `clamp(0.95rem, 2.2vw, 1.2rem)`, `letter-spacing: 0.01em` | Lead spec: `clamp(1rem, 2.5vw, 1.3125rem)`, `letter-spacing: -0.5px`, `line-height: 1.5` |
+| V5 Body | `1.0625rem / 1.7` | `1.25rem / 1.5` |
+
+#### 2. `travel-in-style.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-12 lg:py-16` | `py-12 lg:py-[6.25rem]` |
+| V8 | `color: #ffffff` in PHP var | `color: var(--white)` |
+| V3 H2 size | `clamp(1.75rem, 4vw, 2.375rem)` | `clamp(1.75rem, 5vw, 3rem)` |
+| V3 H2 ls | none | `letter-spacing: 0.5px` |
+| V3 H2 lh | `1.2` | `1.2` (already correct) |
+| V5 Body | `1.0625rem / 1.7` | `1.25rem / 1.5` |
+| V12 Image | no shadow | `box-shadow: var(--shadow-card)` |
+| Inner panel | no background on text column | `background: var(--navy); padding: 2.5rem` on navy variant |
+
+#### 3. `free-instant-quote.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-12 lg:py-16` | `py-12 lg:py-[6.25rem]` |
+| V8 | 9 instances of `background: #ffffff` | All → `background: var(--white)` |
+| V3 Right H3 weight | `font-weight: 400` | `font-weight: 600` |
+| V5 Body | `1.0rem / 1.7` | `1.25rem / 1.5` |
+
+#### 4. `service-locations.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-12 lg:py-16` | `py-12 lg:py-[6.25rem]` |
+| V3 H2 | `color: #ffffff` raw hex, `clamp(1.5rem, 3.5vw, 2.375rem)` | `color: var(--cloud-light)`, `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px` |
+| V4 City | `h3` 1.25rem/600 | `h5` tag, 1.25rem/600 (spec-correct) |
+| V5 Body | `0.9375rem / 1.6` | `1.25rem / 1.5` |
+
+#### 5. `areas-we-serve.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-12 lg:py-16` | `py-12 lg:py-[6.25rem]` |
+| V3 H2 | `clamp(1.5rem, 3.5vw, 2.375rem)` | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px` |
+| V9 Link font | `font-family: Poppins, sans-serif` literal | `font-family: var(--font-body)` (Montserrat) |
+| V5 Link size | `25px` | `1.25rem` (20px) |
+| Link ls | `-0.01em` | removed |
+
+#### 6. `why-choose-us.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | Outer `padding: 2rem 2rem` | `padding: 6.25rem 2rem` (100px top/bottom, 2rem side band) |
+| V3 H2 | `65px` fixed | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px`, `line-height: 1.2` |
+| V7 Card H3 | Poppins, `clamp(1.1rem, 2vw, 1.4rem)` | `font-body` (Montserrat), `1.5625rem` (25px) |
+| V6 Card body | `1rem / 1.7` | `1.0625rem / 1.7` (17px card override) |
+
+#### 7. `airport-shuttle-service.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-16` | `py-12 lg:py-[6.25rem]` |
+| V3 H2 | `clamp(1.6rem, 3.5vw, 2.4rem)` | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px` |
+| V10 Body lh | `line-height: 22px` raw px | `line-height: 1.5` |
+| V5 Body size | `20px` | `1.25rem` (unitless rem, same visual) |
+
+#### 8. `map-contact-section.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V3 Social H2 | `clamp(1.5rem, 2.5vw, 2rem)`, no ls | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px` |
+| V15 Dividers | `height: 2px`, `width: 3rem` fixed | SM label-rule: `height: 3px`, `width: 30%`, `margin-top: 0.5rem` |
+
+#### 9. `our-services.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-16` | `py-12 lg:py-[6.25rem]` |
+| V3 H2 | `clamp(2rem, 4vw, 3rem)`, full-champagne color | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px`, base color `var(--cloud-light)`, bold `var(--champagne)` |
+| V3 H2 weight | bold `font-weight: 800` | `font-weight: 700` |
+
+#### 10. `faq.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-14` | `py-12 lg:py-[6.25rem]` |
+| V3 H2 | `clamp(1.6rem, 3.5vw, 2.25rem)` | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px` |
+| V5 Question | `font-size: 1rem` | `1.25rem` |
+| V5 Answer | `font-size: 1rem / line-height: 1.75` | `1.25rem / 1.5` |
+
+#### 11. `share-your-experience.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V1 | `py-14` | `py-12 lg:py-[6.25rem]` |
+| V3 H2 | `clamp(1.6rem, 3.5vw, 2.5rem)` | `clamp(1.75rem, 5vw, 3rem)`, `letter-spacing: 0.5px` |
+| V5 Body | `font-size: 1rem / line-height: 1.75` | `1.25rem / 1.5` |
+| V4 City | `h3`, `1.375rem` | `h5` tag, `1.25rem` (H5 spec) |
+| V5 Address | `1rem / 1.85` | `1.25rem / 1.5` |
+
+#### 12. `cta-free-quote-banner.blade.php` — Updated
+
+| Violation | Before | After |
+|---|---|---|
+| V3 H2 size | `clamp(1.5rem, 3vw, 2.25rem)` | `clamp(1.75rem, 5vw, 3rem)` |
+| V3 H2 ls | none | `letter-spacing: 0.5px` |
+| V3 H2 lh | none | `line-height: 1.2` |
+| V5 Subheading | `font-size: 1rem`, no lh | `1.25rem / 1.5` |
+| Button | Inline hand-rolled `<a>` tag | `x-ui.button-champagne-solid` component |
+
+> **Note — CTA banner padding:** This is a compact action strip, not a standard content section. Padding is intentionally smaller (`3rem 1.5rem`) than the 100px content section standard. This is a documented exception.
+
+#### 13. `base-footer.blade.php` — No changes needed
+
+All properties already spec-compliant: `var(--font-body)` throughout, no raw hex, no raw font-family literals, no px line-height, correct champagne link colors, correct 2026 year and legal business name.
+
+---
+
+### Remaining known violations (deferred)
+
+| Item | File | Reason deferred |
+|---|---|---|
+| Image container uses `flex` layout | `airport-shuttle-service.blade.php` | Structural refactor, deferred per plan |
+| Photo row padding | `map-contact-section.blade.php` | Flagged for client review |
+| Inline CTA button hand-rolled | `cta-free-quote-banner.blade.php` | Fixed in this pass |
+| Map overlay `rgba(10,14,35,0.62)` raw color | `map-contact-section.blade.php` | Functional overlay; token equivalent pending |

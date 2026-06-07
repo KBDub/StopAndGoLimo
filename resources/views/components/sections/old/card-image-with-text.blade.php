@@ -1,81 +1,10 @@
-@props([
-    'image' => '',
-    'alt'   => '',
-    'title' => '',
-    'imagePosition' => 'left',
-])
-
-<section class="py-10 bg-cloud">
-    <div class="max-w-7xl mx-auto px-6">
-        <div
-            x-data="{ ready: false }"
-            x-init="$nextTick(() => ready = true)"
-            :class="ready ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'"
-            class="p-4 sm:p-6 md:p-10 bg-white shadow-champagne-lg transition-all duration-500"
-        >
-            {{-- Title centered full-width at top --}}
-            <div class="text-center mb-6 md:mb-8">
-                <div class="inline-block">
-                    <h3 class="text-champagne font-bold text-h3 mb-2 font-head">{{ $title }}</h3>
-                    <div class="h-1 bg-champagne"></div>
-                </div>
-            </div>
-
-            {{-- Float-based layout: stacks on mobile, wraps text on desktop --}}
-            <div class="[display:flow-root]">
-                @if($imagePosition === 'right')
-                    <div class="md:float-right md:ml-12 mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
-                        <img
-                            src="{{ $image }}"
-                            alt="{{ $alt }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="width:600px; aspect-ratio:4/3; max-width:100%;"
-                        >
-                    </div>
-                @else
-                    <div class="md:float-left md:mr-12 mb-4 overflow-hidden shadow-champagne hover:shadow-champagne-xl hover:scale-105 transition-all duration-500 ease-out" style="max-width:100%;">
-                        <img
-                            src="{{ $image }}"
-                            alt="{{ $alt }}"
-                            class="block object-cover hover:scale-[1.08] hover:brightness-105 transition-all duration-500 ease-out"
-                            style="width:600px; aspect-ratio:4/3; max-width:100%;"
-                        >
-                    </div>
-                @endif
-
-                <div
-                    x-data
-                    x-init="$el.querySelectorAll('p').forEach(p => {
-                        if (window.innerWidth >= 768) p.style.paddingLeft = '1.5rem';
-                        if (p.textContent.trim().split(/\s+/).length <= 4) return;
-                        const nodes = [];
-                        const tw = document.createTreeWalker(p, NodeFilter.SHOW_TEXT);
-                        let n;
-                        while (n = tw.nextNode()) nodes.push(n);
-                        let c = 0;
-                        for (const t of nodes) {
-                            if (c >= 4) break;
-                            const f = document.createDocumentFragment();
-                            t.data.split(/(\s+)/).forEach(s => {
-                                if (/^\s*$/.test(s)) {
-                                    f.appendChild(document.createTextNode(s));
-                                } else if (c < 4) {
-                                    const b = document.createElement('strong');
-                                    b.textContent = s;
-                                    f.appendChild(b);
-                                    c++;
-                                } else {
-                                    f.appendChild(document.createTextNode(s));
-                                }
-                            });
-                            t.parentNode.replaceChild(f, t);
-                        }
-                    })"
-                    class="text-slate leading-relaxed"
-                >
-                    {{ $slot }}
-                </div>
-            </div>
+@props(['heading' => '', 'body' => '', 'image' => '', 'imageAlt' => ''])
+<section style="background:var(--navy);padding:3rem 1.5rem;">
+    <div style="max-width:72rem;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;">
+        @if($image)<img src="{{ $image }}" alt="{{ $imageAlt }}" style="width:100%;display:block;">@endif
+        <div>
+            <h2 class="font-head" style="color:var(--cloud-light);font-size:clamp(1.5rem,3vw,2rem);margin:0 0 1rem;">{{ $heading }}</h2>
+            <p style="font-family:var(--font-body);color:var(--cloud);line-height:1.7;margin:0;">{{ $body }}</p>
         </div>
     </div>
 </section>

@@ -206,9 +206,4 @@
     </div>{{-- /overlay --}}
 </div>
 
-{{-- x-ui.send-message-modal is bundled here --}}
-<x-ui.send-message-modal
-    :logo-src="$logoSrc"
-    :logo-alt="$logoAlt"
-    :modal-subtitle="$modalSubtitle"
-/>
+{{-- x-ui.send-message-modal — removed: component lives in ui/old/ and cannot be resolved by x-ui.* prefix. Legacy file, not used in active site. --}}

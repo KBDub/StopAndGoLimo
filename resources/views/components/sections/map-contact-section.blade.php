@@ -31,7 +31,8 @@
         {{-- Content restricted to left ~60% so map has room on the right --}}
         <div style="position: relative; z-index: 1; padding: 3rem 2.5rem; max-width: 60%; display: flex; flex-direction: column; justify-content: flex-end; gap: 1.75rem; min-height: 320px;">
 
-            <h2 class="font-head" style="font-size: clamp(1.5rem, 2.5vw, 2rem); font-weight: 400; color: var(--cloud-light); line-height: 1.25; margin: 0;">
+            {{-- H2 — Social heading at H2 spec --}}
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; letter-spacing: 0.5px; color: var(--cloud-light); line-height: 1.2; margin: 0;">
                 {{ $heading }}<br>
                 <strong style="font-weight: 700;">{{ $headingBold }}</strong>
             </h2>
@@ -57,7 +58,8 @@
                         </svg>
                         <span style="font-family:var(--font-head);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;color:var(--cloud-light);">Address</span>
                     </div>
-                    <div style="height:2px;background:var(--champagne);width:3rem;margin-bottom:1rem;"></div>
+                    {{-- SM label-rule: 3px, 30% width, champagne --}}
+                    <div style="height:3px;background:var(--champagne);width:30%;margin-top:0.5rem;margin-bottom:1rem;"></div>
                     <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cloud-light);line-height:1.7;margin:0;">
                         <strong style="display:block;margin-bottom:0.25rem;">{{ $businessName }}</strong>
                         {{ $address }}
@@ -72,7 +74,8 @@
                         </svg>
                         <span style="font-family:var(--font-head);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;color:var(--cloud-light);">Hours</span>
                     </div>
-                    <div style="height:2px;background:var(--champagne);width:3rem;margin-bottom:1rem;"></div>
+                    {{-- SM label-rule --}}
+                    <div style="height:3px;background:var(--champagne);width:30%;margin-top:0.5rem;margin-bottom:1rem;"></div>
                     <p style="font-family:var(--font-body);font-size:0.9rem;color:var(--cloud-light);line-height:1.7;margin:0;">{{ $hours }}</p>
                 </div>
 
@@ -82,9 +85,10 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width:1.1rem;fill:var(--cloud-light);" aria-hidden="true">
                             <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/>
                         </svg>
-                        <span style="font-family:var(--font-head);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;color:var(--cloud-light);">Phone & Email</span>
+                        <span style="font-family:var(--font-head);font-size:0.85rem;font-weight:600;letter-spacing:0.08em;color:var(--cloud-light);">Phone &amp; Email</span>
                     </div>
-                    <div style="height:2px;background:var(--champagne);width:3rem;margin-bottom:1rem;"></div>
+                    {{-- SM label-rule --}}
+                    <div style="height:3px;background:var(--champagne);width:30%;margin-top:0.5rem;margin-bottom:1rem;"></div>
                     <div style="font-family:var(--font-body);font-size:0.9rem;line-height:2;margin:0;">
                         <a href="tel:{{ $phoneRaw }}" style="display:block;color:var(--champagne);text-decoration:none;">{{ $phone }}</a>
                         @if($phoneAlt)

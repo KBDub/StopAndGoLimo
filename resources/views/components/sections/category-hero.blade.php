@@ -14,7 +14,7 @@
     $isModal = $buttonHref === '/contact' || $buttonHref === '/booking';
 @endphp
 
-<section class="relative flex items-center justify-center min-h-[28rem] sm:min-h-[36rem] lg:min-h-[560px] py-16 overflow-hidden isolate">
+<section class="relative flex items-center justify-center overflow-hidden isolate" style="min-height: 100svh;">
 
     {{-- Background image + overlay --}}
     <div class="absolute inset-0">
@@ -25,30 +25,30 @@
             style="object-position: {{ $imagePosition }};"
             loading="eager"
         >
-        <div class="absolute inset-0" style="background: var(--navy-dark); opacity: 0.42;"></div>
+        <div class="absolute inset-0" style="background: var(--navy-dark); opacity: 0.2;"></div>
     </div>
 
     {{-- Content --}}
     <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
 
         {{-- H1 --}}
-        <h1 class="font-head text-white leading-tight mb-4" style="font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.15;">
+        <h1 class="font-head text-white mb-4" style="font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.2; letter-spacing: -1px;">
             <span class="block font-normal">{{ $heading }}</span>
             @if($headingBold)
                 <span class="block font-bold">{{ $headingBold }}</span>
             @endif
         </h1>
 
-        {{-- Subtitle --}}
+        {{-- Subtitle (Lead) --}}
         @if($subtitle)
-            <p class="font-head text-white mb-5" style="font-size: clamp(0.95rem, 2.2vw, 1.2rem); font-weight: 400; opacity: 0.9; letter-spacing: 0.01em;">
+            <p class="font-head text-white mb-5" style="font-size: clamp(1rem, 2.5vw, 1.3125rem); font-weight: 400; line-height: 1.5; letter-spacing: -0.5px; opacity: 0.9;">
                 {{ $subtitle }}
             </p>
         @endif
 
         {{-- Optional body paragraph --}}
         @if($description)
-            <p class="font-body text-white mx-auto mb-7" style="font-size: 1.0625rem; line-height: 1.7; max-width: 680px; opacity: 0.85;">
+            <p class="font-body text-white mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; max-width: 680px; opacity: 0.85;">
                 {{ $description }}
             </p>
         @endif

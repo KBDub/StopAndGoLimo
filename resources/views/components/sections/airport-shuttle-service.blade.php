@@ -32,7 +32,7 @@
     ],
 ])
 
-<section style="background: var(--cloud-light);" class="py-16">
+<section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Top: heading/body left, photo right --}}
@@ -41,18 +41,18 @@
             {{-- Left: heading + rule + body --}}
             <div>
                 <div style="width: fit-content; margin-bottom: 2rem;">
-                    <h2 class="font-head" style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 400; color: var(--navy); line-height: 1.2;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700;">{{ $heading }}</strong> {{ $headingTail }}
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
 
-                <p style="font-family: var(--font-body); font-size: 20px; font-weight: 400; line-height: 22px; color: var(--navy); margin-top: 6rem;">
+                <p style="font-family: var(--font-body); font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: var(--navy); margin-top: 6rem;">
                     {{ $body }}
                 </p>
             </div>
 
-            {{-- Right: airport photo --}}
+            {{-- Right: airport photo (image container layout flagged for later) --}}
             <div class="flex justify-center md:justify-end">
                 <div style="width: min(550px, 100%); aspect-ratio: 4/3; overflow: hidden;">
                     <img

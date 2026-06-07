@@ -21,18 +21,18 @@
     ],
 ])
 
-{{-- Outer wrapper: Midnight Navy (#15152C) — visible as side/top/bottom bands --}}
-<section style="background: var(--navy); padding: 2rem 2rem;">
+{{-- Outer wrapper: Midnight Navy visible as decorative side and top/bottom bands --}}
+<section style="background: var(--navy); padding: 6.25rem 2rem;">
 
-    {{-- Inner inlay: Navy Light (#252235) — the content box --}}
+    {{-- Inner inlay: Navy Light — the content box --}}
     <div style="background: var(--navy-light); padding: 35px 35px;">
 
         {{-- Heading + subtitle --}}
         <div class="max-w-7xl mx-auto px-6 pt-6 pb-8">
-            <h2 class="font-head" style="font-size: 65px; font-weight: 400; color: var(--cloud-light); line-height: 1.1; margin-bottom: 1rem;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; letter-spacing: 0.5px; color: var(--cloud-light); line-height: 1.2; margin-bottom: 1rem;">
                 Why <strong style="color: var(--champagne); font-weight: 700;">Choose Us?</strong>
             </h2>
-            <p class="font-body" style="font-size: 30px; color: var(--cloud-light); text-align: right;">
+            <p class="font-body" style="font-size: 30px; line-height: 1.5; color: var(--cloud-light); text-align: right;">
                 Explore our <strong>first class</strong> limousine &amp; car rental services
             </p>
         </div>
@@ -49,7 +49,6 @@
                         {{-- Icon --}}
                         <div style="margin-bottom: 1.25rem; color: var(--champagne);">
                             @if($feature['icon'] === 'thumbs-up')
-                                {{-- FA6 solid thumbs-up — matches prod exactly --}}
                                 <i class="fa-solid fa-thumbs-up" style="font-size: 4rem; color: var(--champagne);"></i>
                             @elseif($feature['icon'] === 'car')
                                 <svg aria-hidden="true" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
@@ -64,14 +63,14 @@
                             @endif
                         </div>
 
-                        {{-- Title --}}
-                        <h3 class="font-head" style="font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 400; margin-bottom: 0.85rem; line-height: 1.3;">
+                        {{-- Card H3: Montserrat 25px per card typography spec --}}
+                        <h3 class="font-body" style="font-size: 1.5625rem; font-weight: 400; margin-bottom: 0.85rem; line-height: 1.3;">
                             <strong style="color: var(--champagne); font-weight: 700;">{{ $feature['titleBold'] }}</strong>
                             <span style="color: var(--cloud-light);"> {{ $feature['title'] }}</span>
                         </h3>
 
-                        {{-- Body --}}
-                        <p class="font-body" style="color: var(--cloud-light); font-size: 1rem; line-height: 1.7;">
+                        {{-- Card body: 17px per card typography override --}}
+                        <p class="font-body" style="color: var(--cloud-light); font-size: 1.0625rem; line-height: 1.7;">
                             {!! $feature['body'] !!}
                         </p>
 

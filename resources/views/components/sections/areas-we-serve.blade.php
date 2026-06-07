@@ -29,7 +29,7 @@
     $columns = array_chunk($areas, (int) ceil(count($areas) / 3));
 @endphp
 
-{{-- Scoped hover styles — no Alpine needed --}}
+{{-- Scoped hover styles --}}
 <style>
 .sg-area-link {
     color: var(--navy);
@@ -49,36 +49,35 @@
 }
 </style>
 
-<section style="background: var(--cloud-light);" class="py-12 lg:py-16">
+<section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
-        {{-- Heading + rule in a fit-content wrapper so rule is 116% of heading width --}}
+        {{-- Heading + champagne rule --}}
         <div style="width: fit-content; margin: 0 auto 2.5rem; text-align: center;">
-            <h2 class="font-head" style="font-size: clamp(1.5rem, 3.5vw, 2.375rem); font-weight: 400; color: var(--navy); line-height: 1.25;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
                 {{ $heading }} <strong style="font-weight: 700;">{{ $headingBold }}</strong>
             </h2>
-            {{-- Champagne rule at 116% heading width, centered via negative margin --}}
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 1rem;"></div>
         </div>
 
-        {{-- Inner container matches prod's ~1140px grid width --}}
+        {{-- Area link grid --}}
         <div class="max-w-6xl mx-auto" style="margin-top: 6rem;">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-0">
             @foreach($columns as $column)
                 <div style="width: fit-content; margin: 0 auto;">
                     @foreach($column as $area)
-                            <a href="{{ $area['href'] }}" class="sg-area-link">
-                                <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
-                                     style="width: 1.2rem; height: auto;">
-                                    <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                                </svg>
-                                <span style="font-size: 25px; font-family: Poppins, sans-serif; letter-spacing: -0.01em; line-height: 1.3;">{{ $area['name'] }}</span>
-                            </a>
-                        @endforeach
-                    </div>
-                @endforeach
+                        <a href="{{ $area['href'] }}" class="sg-area-link">
+                            <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
+                                 style="width: 1.2rem; height: auto;">
+                                <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                            </svg>
+                            <span style="font-size: 1.25rem; font-family: var(--font-body); line-height: 1.5;">{{ $area['name'] }}</span>
+                        </a>
+                    @endforeach
+                </div>
+            @endforeach
         </div>
-        </div>{{-- /max-w-6xl --}}
+        </div>
 
     </div>
 </section>

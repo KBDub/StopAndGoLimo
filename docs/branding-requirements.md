@@ -44,13 +44,15 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 
 ## 3. Absolute Rules (Never Break)
 
-1. **No all-caps / uppercase text anywhere on the site** — except the approved navigation exception in Section 8.2. No `text-transform: uppercase` outside that scope.
+1. **No `text-transform: uppercase` anywhere on the site** — except the approved navigation exceptions in §8.2. Mixed case and title case are allowed everywhere. Never use all-uppercase text.
 2. **Sharp corners on all containers, cards, and inputs.** No `rounded` classes on sections, cards, or form inputs. Buttons use the `radius` prop on `x-ui.button` — the default is `soft` (10px). Pass `radius="square"` for a fully square button.
 3. **Never use double hyphens (--).** Use a comma or em dash instead.
 4. **7th-grade reading level** for all body copy. Short sentences. Plain words.
 5. **No icons** — with one approved exception. Do not use Heroicons or any other SVG icon library. **Font Awesome 6 is the sole approved icon library** and may only be used for functional location and contact indicators (map pin, phone). Do not use Font Awesome for decorative or illustrative purposes.
 6. **No color outside the palette.** If a color is not in the Twilight Luxe 5+White palette or the three semantic colors, it is not allowed.
 7. **Poppins for headings, Montserrat for body.** Never mix in a third typeface.
+8. **No decorative vertical accent lines.** Decorative vertical accent lines are not part of the Stop & Go design system and must never be used.
+9. **Unitless line-height only.** All `line-height` values must be unitless numbers (e.g. `1.5`) — never `em`, `rem`, or `px`. Unitless line-height avoids CSS inheritance issues.
 
 ---
 
@@ -67,23 +69,39 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 
 ### Type Scale
 
-| Level | Size | Weight | Font | Use |
+| Level | Size | Weight | Font | Letter-spacing | Line-height | Use |
+|---|---|---|---|---|---|---|
+| H1 | `clamp(2rem, 6vw, 3.5rem)` (max 56px) | 400 base + 700 bold `<strong>` | Poppins via `var(--font-head)` | -1px | 1.2 | Page hero titles |
+| H2 | `clamp(1.75rem, 5vw, 3rem)` (max 48px) | 400 base + 700 bold `<strong>` | Poppins via `var(--font-head)` | 0.5px | 1.2 | Section headings |
+| H3 | 30px / 1.875rem | SemiBold 600 | Poppins via `var(--font-head)` | none | 1.3 | Subsection headings |
+| H4 | 24px / 1.5rem | SemiBold 600 | Poppins via `var(--font-head)` | none | 1.3 | Card titles, champagne accent color |
+| H5 | 20px / 1.25rem | SemiBold 600 | Poppins via `var(--font-head)` | none | 1.3 | Minor headings |
+| Lead | `clamp(1rem, 2.5vw, 1.3125rem)` (max 21px) | Regular 400 | Poppins via `var(--font-head)` | -0.5px | 1.5 | Hero subtitle, intro paragraph |
+| Body | 20px / 1.25rem | Regular 400 | Montserrat via `var(--font-body)` | none | 1.5 | General content |
+| Caption | 14px / 0.875rem | Regular 400 | Montserrat via `var(--font-body)` | none | — | Image captions, meta |
+| Label / badge | 12px / 0.75rem | SemiBold 600 | Poppins via `var(--font-head)` | none | — | Section labels, tracking-widest tags |
+
+> **Font reference rule:** Always use the CSS token (`var(--font-head)`, `var(--font-body)`) — never a literal font-family string like `'Poppins', sans-serif`. Tokens are white-label-safe and one-line to change.
+>
+> **Weight split pattern:** H1 and H2 use a two-weight split. The base sentence text is Regular 400; the key word or phrase gets a `<strong>` tag which renders at Bold 700. This creates visual emphasis without changing the heading font size.
+
+### Card Typography Override
+
+Cards are compact containers. Card-specific text uses a smaller body size to avoid crowding.
+
+| Role | Size | Weight | Font | Color |
 |---|---|---|---|---|
-| H1 | 48px / 3rem | ExtraBold 800 | Poppins | Page hero titles |
-| H2 | 38px / 2.375rem | Bold 700 | Poppins | Section headings |
-| H3 | 30px / 1.875rem | SemiBold 600 | Poppins | Subsection headings |
-| H4 | 24px / 1.5rem | SemiBold 600 | Poppins | Card titles, champagne accent color |
-| H5 | 20px / 1.25rem | SemiBold 600 | Poppins | Minor headings |
-| Lead | 21px / 1.3125rem | Regular 400 | Montserrat | Hero subtitle, intro paragraph |
-| Body | 17px / 1.0625rem | Regular 400 | Montserrat | General content |
-| Caption | 14px / 0.875rem | Regular 400 | Montserrat | Image captions, meta |
-| Label / badge | 12px / 0.75rem | SemiBold 600 | Poppins | Section labels, tracking-widest tags |
+| Card H3 title | 25px / 1.5625rem | Regular 400 | Montserrat via `var(--font-body)` | `var(--champagne)` or `var(--cloud-light)` on dark; `var(--navy)` on light |
+| Card body text | 17px / 1.0625rem | Regular 400 | Montserrat via `var(--font-body)` | `var(--cloud-light)` on dark; `var(--slate)` on light |
 
 ### Line Heights
 
-- Headings: 1.2
-- Subheadings: 1.3
-- Body: 1.6 — 1.7
+All values are unitless — see Absolute Rule §3.9.
+
+- H1, H2: 1.2
+- H3, H4, H5: 1.3
+- Lead: 1.5
+- Body: 1.5
 - Buttons: 1.0
 
 ### Link Styles
@@ -107,7 +125,7 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 | Cloud Grey | `cloud` | `#E8E9EC` | hsl(225, 10%, 92%) | `#F4F5F7` | `#D4D6DB` |
 | Slate | `slate` | `#69727D` | hsl(213, 9%, 45%) | `#8B939C` | `#4A5159` |
 | Azure | `azure` | `#5A7EC8` | hsl(219, 48%, 57%) | `#94ACDB` | `#385A9F` |
-| White | — | `#FFFFFF` | hsl(0, 0%, 100%) | — | — |
+| White | `white` / `--white` | `#FFFFFF` | hsl(0, 0%, 100%) | — | — |
 
 > **Note on Tailwind vs CSS var naming:** Slate uses `slate` in both Tailwind (`text-slate`, `bg-slate`) and CSS (`var(--slate)` / `var(--slate-light)` / `var(--slate-dark)`). The legacy Tailwind alias `muted` is being retired during the CSS cleanup phase. See `docs/rebranding.md`.
 >
@@ -137,7 +155,7 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 | Token | Direction | Use |
 |---|---|---|
 | `bg-grad-midnight-hero` | 135deg Navy to Navy-light | Primary hero and section BGs |
-| `bg-grad-deep-twilight` | 135deg Navy-dark to Navy to Navy-light | Overlays at 20-30% opacity on photography |
+| `bg-grad-deep-twilight` | 135deg Navy-dark to Navy to Navy-light | Retained for decorative uses. **No longer used for photo overlays** — see §11 for the overlay standard. |
 | `bg-grad-champagne-shine` | 135deg Champagne to Champagne-light | CTA buttons, highlight chips |
 | `bg-grad-navy-to-gold` | 135deg Navy to Navy-light to Champagne | Feature moments, used sparingly |
 | `bg-grad-champagne-rule` | 90deg transparent fading champagne | Decorative horizontal dividers |
@@ -189,14 +207,17 @@ x-ui.banner-thin-champagne
 
 Cards use sharp corners, navy-light backgrounds on dark sections, white backgrounds on light sections. Border: `border border-white/8` on dark, `border border-cloud-dark` on light.
 
+- **White card background:** use `background: var(--white)` — never `#ffffff` raw hex.
+- **Card image shadow:** use `box-shadow: var(--shadow-card)` on card images that sit on a dark background. Both tokens are defined in `resources/css/app.css` `:root`.
+
 ---
 
 ## 7. Layout and Spacing
 
 - **Grid only — no Flexbox.** All multi-column and directional layouts must use CSS Grid (`grid`, `grid-cols-*`, `lg:grid-cols-*`). Do not use `flex`, `flex-col`, `flex-row`, or any Flexbox utility for page/section layout. Flexbox is only permitted inside atomic UI components (e.g. a button's internal icon alignment) where a single-line inline arrangement is unavoidable.
-- **Container max-width:** 1280px — `max-w-7xl mx-auto`
-- **Section padding:** `py-16` (64px) default, `py-20` for hero sections
-- **Section padding, mobile:** `py-12` — always use responsive prefixes
+- **Container max-width:** Always `max-w-7xl mx-auto`. Never write the literal `1280px` in component files — use the Tailwind token only.
+- **Section padding (non-hero):** 100px top and bottom. Use `style="padding: 100px 0"` or Tailwind arbitrary value `py-[6.25rem]`. Responsive pattern: `py-12 lg:py-[6.25rem]`.
+- **Hero min-height:** `min-height: 100svh` — full viewport height. No explicit padding on hero sections; content centers internally.
 - **Container padding:** `px-6` default, `px-4` on mobile
 - **Standard section backgrounds:** Midnight Navy (`bg-navy`, `bg-navy-light`, `bg-navy-dark`) or Cloud Grey (`bg-cloud-light`). No other background colors on page sections.
 - **Section alternation:** Midnight Navy sections alternate with Cloud Grey sections where light-mode breathing room is needed.
@@ -311,7 +332,7 @@ Every component must pass all three breakpoints:
 ## 11. Imagery and Video
 
 - Photography is dark-toned, moody, and aspirational: night skylines, vehicle interiors, airport drop-offs
-- Overlay images with `bg-grad-deep-twilight` at **20-30% opacity** — not higher, to keep photography visible
+- Overlay images with `var(--navy-dark)` at exactly **20% opacity** — `style="background: var(--navy-dark); opacity: 0.2;"` on an absolute-inset div over the photo. Do not use the gradient token for overlays.
 - No stock photos with visible faces or generic clip art
 - Vehicle photos: always clean, uncluttered backgrounds
 - Image containers: sharp corners, no rounded edges
@@ -351,14 +372,17 @@ Every component must pass all three breakpoints:
 
 ## 14. Champagne Rule (Underbar) Standards
 
-Every section heading gets a single `3px` champagne rule beneath it. The rule must be **proportional to the heading text width** — never full-width, never a fixed pixel value.
+Not all sections require a champagne underbar. CTA-style sections, compact contact label rows, and hero headings do not use one.
 
-### Core technique
+**Sections that use the standard underbar:** Travel in Style, Free Instant Quote, Areas We Serve, Why Choose Us, Airport Shuttle Service, Our Services, FAQ, Share Your Experience, Map/Social (social heading only).
 
-Wrap the `<h2>` and the rule `<div>` together in a container with `width: fit-content`. This collapses the wrapper to the heading's natural rendered width. The rule is then set to `width: 116%` so it extends 16% past the heading text.
+**Sections that do not use it:** Category Hero, Service Locations, base-footer.
 
-### Centered headings (most sections)
+### Standard variant (most sections)
 
+The rule must be proportional to the heading text width — never full-width, never a fixed pixel value. Wrap the `<h2>` and the rule `<div>` in a container with `width: fit-content`.
+
+**Centered heading:**
 ```html
 <div style="width: fit-content; margin: 0 auto 2rem; text-align: center;">
     <h2>Heading <strong>Bold Part</strong></h2>
@@ -367,10 +391,9 @@ Wrap the `<h2>` and the rule `<div>` together in a container with `width: fit-co
 ```
 
 - `margin: 0 auto` centers the wrapper.
-- `margin-left: -8%` on the rule shifts it left by half the overflow (16% / 2 = 8%), keeping it visually centered under the text.
+- `margin-left: -8%` on the rule shifts it left by half the overflow (16% / 2 = 8%), keeping it visually centered.
 
-### Left-aligned headings
-
+**Left-aligned heading:**
 ```html
 <div style="width: fit-content; margin-bottom: 2rem;">
     <h2>Heading <strong>Bold Part</strong></h2>
@@ -378,13 +401,17 @@ Wrap the `<h2>` and the rule `<div>` together in a container with `width: fit-co
 </div>
 ```
 
-- No `margin: 0 auto` — the wrapper stays left-anchored.
-- No `margin-left` on the rule — it extends 16% past the right edge of the text only.
+### SM label-rule variant (contact column labels)
 
-### Rules
+Used under short column labels in the Map/Social contact strip. No `fit-content` wrapper needed. Width is 30% of the column container.
+
+```html
+<div style="height: 3px; background: var(--champagne); width: 30%; margin-top: 0.5rem; margin-bottom: 1rem;"></div>
+```
+
+### Rules (all variants)
 
 - Always `3px` height, `var(--champagne)` color.
-- Always `width: 116%` on the rule — never a fixed `rem` or `px` width.
-- Always `margin-top: 0.85rem` between the heading and the rule.
-- The `fit-content` wrapper must contain **only** the heading and the rule — no other siblings.
+- Standard variant: `width: 116%`, `margin-top: 0.85rem`, inside a `fit-content` wrapper containing only the heading and the rule.
+- SM label-rule variant: `width: 30%`, `margin-top: 0.5rem`, no wrapper.
 - Never use `border-bottom` on the heading itself; always a separate `<div>` element.

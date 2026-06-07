@@ -18,18 +18,18 @@
     ],
 ])
 
-<section style="background: var(--navy);" class="py-12 lg:py-16">
+<section style="background: var(--navy);" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-            {{-- Left: Heading + body (centered to match prod) --}}
+            {{-- Left: Heading + body --}}
             <div class="text-center">
-                <h2 class="font-head mb-5" style="font-size: clamp(1.5rem, 3.5vw, 2.375rem); font-weight: 400; color: #ffffff; line-height: 1.25;">
+                <h2 class="font-head mb-5" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                     {{ $heading }} <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
                 </h2>
                 @if($body)
-                    <p class="font-body" style="font-size: 1.0rem; line-height: 1.7; color: var(--cloud);">
+                    <p class="font-body" style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
                         {{ $body }}
                     </p>
                 @endif
@@ -40,25 +40,25 @@
                 @foreach($locations as $loc)
                     <div class="text-center">
 
-                        {{-- Inline SVG map pin — fa-map-marker-alt path, no CDN dependency --}}
+                        {{-- Inline SVG map pin --}}
                         <div class="mx-auto mb-4" style="width: 4rem; height: auto;">
                             <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="fill: var(--champagne); width: 4rem; height: auto; margin: 0 auto;">
                                 <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
                             </svg>
                         </div>
 
-                        {{-- City name --}}
-                        <h3 class="font-head mb-3" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne);">
+                        {{-- City name — H5 spec: Poppins 20px / SemiBold 600 --}}
+                        <h5 class="font-head mb-3" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne);">
                             {{ $loc['city'] }}
-                        </h3>
+                        </h5>
 
                         {{-- Address --}}
-                        <p class="font-body mb-2" style="font-size: 0.9375rem; line-height: 1.6; color: var(--cloud);">
+                        <p class="font-body mb-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
                             {{ $loc['address'] }}
                         </p>
 
                         {{-- Phone --}}
-                        <p class="font-body" style="font-size: 0.9375rem; color: var(--cloud);">
+                        <p class="font-body" style="font-size: 1.25rem; color: var(--cloud);">
                             Phone: <a href="tel:{{ $loc['tel'] }}" style="color: var(--cloud); text-decoration: none;" class="hover:underline">{{ $loc['phone'] }}</a>
                         </p>
 

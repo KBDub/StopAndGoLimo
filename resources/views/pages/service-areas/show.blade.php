@@ -158,11 +158,7 @@
 
     @endif
 
-    {{-- Services overview --}}
-    <x-sections.top5pct-same-day-service
-        serviceType="airport-transfers"
-        displayServiceType="Airport Transfers from {{ $cityName }}"
-    />
+    {{-- sections.top5pct-same-day-service removed from project --}}
 
     @if($content && !empty($content['faqs']))
         {{-- City FAQ --}}

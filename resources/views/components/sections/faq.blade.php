@@ -27,12 +27,12 @@
     ],
 ])
 
-<section style="background: var(--cloud-light);" class="py-14">
+<section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
-        {{-- Heading + left-aligned rule: fit-content wrapper so rule is 116% of heading width --}}
+        {{-- Heading + left-aligned rule --}}
         <div style="width: fit-content; margin-bottom: 2rem;">
-            <h2 class="font-head" style="font-size: clamp(1.6rem, 3.5vw, 2.25rem); font-weight: 400; color: var(--navy); line-height: 1.2;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
                 Frequently Asked <strong style="font-weight: 700;">Questions</strong>
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
@@ -47,7 +47,7 @@
                     {{-- Question bar --}}
                     <button
                         @click="open = !open"
-                        style="width: 100%; text-align: left; background: var(--navy); color: var(--cloud-light); padding: 1rem 1.25rem; cursor: pointer; border: none; font-size: 1rem; line-height: 1.5; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;"
+                        style="width: 100%; text-align: left; background: var(--navy); color: var(--cloud-light); padding: 1rem 1.25rem; cursor: pointer; border: none; font-size: 1.25rem; line-height: 1.5; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem;"
                         class="font-body">
                         <span>{{ $faq['question'] }}</span>
                         <span style="font-size: 1.25rem; line-height: 1; color: var(--champagne); transition: transform 0.2s ease;"
@@ -63,7 +63,7 @@
                          x-transition:leave-start="opacity-100"
                          x-transition:leave-end="opacity-0"
                          style="background: var(--cloud); padding: 1.25rem 1.25rem; border-left: 3px solid var(--champagne);">
-                        <p class="font-body" style="color: var(--navy); font-size: 1rem; line-height: 1.75; margin: 0;">
+                        <p class="font-body" style="color: var(--navy); font-size: 1.25rem; line-height: 1.5; margin: 0;">
                             {{ $faq['answer'] }}
                         </p>
                     </div>

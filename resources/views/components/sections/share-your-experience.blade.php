@@ -17,19 +17,19 @@
     ],
 ])
 
-<section style="background: var(--cloud-light);" class="py-14">
+<section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
-        {{-- Heading + champagne rule in fit-content wrapper --}}
+        {{-- Heading + champagne rule --}}
         <div style="width: fit-content; margin: 0 auto 1.5rem; text-align: center;">
-            <h2 class="font-head" style="font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 400; color: var(--navy); line-height: 1.2;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
                 Share <strong style="font-weight: 700;">Your Experience</strong> With Us
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
         </div>
 
         {{-- Body copy --}}
-        <p class="font-body" style="text-align: center; color: var(--navy); font-size: 1rem; line-height: 1.75; max-width: 56rem; margin: 0 auto 2.5rem;">
+        <p class="font-body" style="text-align: center; color: var(--navy); font-size: 1.25rem; line-height: 1.5; max-width: 56rem; margin: 0 auto 2.5rem;">
             We'd love to hear about your journey! Leave a review and let us know how we can make your future trips even better.
             Your feedback helps us improve and ensures we keep delivering exceptional service.
         </p>
@@ -40,7 +40,7 @@
                 @foreach($locations as $location)
                     <div style="text-align: center;">
 
-                        {{-- Inline SVG map pin — 4rem, matches service-locations --}}
+                        {{-- Inline SVG map pin --}}
                         <div class="mx-auto mb-4" style="width: 4rem; height: auto;">
                             <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"
                                  style="fill: var(--champagne); width: 4rem; height: auto; margin: 0 auto;">
@@ -48,13 +48,13 @@
                             </svg>
                         </div>
 
-                        {{-- City name --}}
-                        <h3 class="font-head" style="font-size: 1.375rem; font-weight: 600; color: var(--champagne); margin-bottom: 1rem;">
+                        {{-- City name — H5 spec: Poppins 20px / SemiBold 600 --}}
+                        <h5 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); margin-bottom: 1rem;">
                             {{ $location['city'] }}
-                        </h3>
+                        </h5>
 
                         {{-- Address --}}
-                        <p class="font-body" style="color: var(--cloud-light); font-size: 1rem; line-height: 1.85; margin-bottom: 1.5rem;">
+                        <p class="font-body" style="color: var(--cloud-light); font-size: 1.25rem; line-height: 1.5; margin-bottom: 1.5rem;">
                             {{ $location['address'] }}<br>
                             {{ $location['addressLine2'] }}<br>
                             Phone: {{ $location['phone'] }}

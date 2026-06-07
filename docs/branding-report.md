@@ -517,6 +517,184 @@
 
 ---
 
+## Re-Review Update Plan — 2026-06-07
+
+> **Source:** Attached branding re-review PDF reviewed against `docs/branding-requirements.md` and the production comparison above.
+> **Status key:** ✅ Confirmed change | ⏳ Pending answer to open question | 🚩 Flagged for later | ❌ Rejected / keep ours
+
+This plan must be approved (questions answered) before `docs/branding-requirements.md` or any section component is modified.
+
+---
+
+### Spec Changes — `docs/branding-requirements.md`
+
+#### §3 Absolute Rules
+
+| # | Current rule | Proposed change | Status |
+|---|---|---|---|
+| 3.1 | "No all-caps / uppercase text anywhere" | Clarify: the rule is **no all-uppercase** (no `text-transform:uppercase`). Mixed case and title case are fine. Update wording to remove ambiguity. | ✅ |
+| 3.NEW | (no rule) | Add: **"Decorative vertical accent lines (as seen on the prod hero) are not part of the Stop & Go design system and must not be used."** | ✅ |
+
+#### §4 Typography — Type Scale
+
+| Element | Current spec | Proposed new spec | Status |
+|---|---|---|---|
+| H1 font | Poppins (font-head) | ⏳ Explicit `Poppins` literal vs `var(--font-head)` token — see Q2 |
+| H1 size | 48px / 3rem | ⏳ Clamp vs fixed px — see Q3 |
+| H1 weight | ExtraBold 800 | **Regular 400 (base text) + Bold 700 (emphasis span)** — split-weight is new spec | ✅ |
+| H1 letter-spacing | none | ⏳ Add negative letter-spacing — see Q4 |
+| H1 line-height | 1.2 | ⏳ Confirm unit convention — see Q5 |
+| H2 size | 38px / 2.375rem | ⏳ "Use H1 values" — see Q6 |
+| H2 weight | Bold 700 | **Regular 400 (base) + Bold 700 (emphasis span)** — same split-weight pattern as H1 | ✅ |
+| H2 letter-spacing | none | Add letter-spacing to spec. Traveling-in-style uses `1.5px`. Confirm a standard value — see Q7 | ⏳ |
+| H2 line-height | 1.2 | ⏳ Confirm unit convention — see Q5 |
+| H3 size | 30px / 1.875rem | No change for standard H3. Card-specific H3: **Montserrat 25px** — see §Card Typography note below | ✅ (card variant) |
+| Lead (subtitle) font | Montserrat | **Poppins** — hero subtitle uses Poppins, not Montserrat | ✅ |
+| Lead size | 21px / 1.3125rem | ⏳ Clamp vs fixed — see Q3 |
+| Lead letter-spacing | none | ⏳ Same question as H1 — see Q4 |
+| Body size | 17px / 1.0625rem | **20px / 1.25rem** — updated to match prod | ✅ |
+| Body line-height | 1.6–1.7 | **1.5** (prod value) — ⏳ confirm unitless vs em — see Q5 | ⏳ |
+
+**Card-specific typography (new note to add to §4):**
+- Card H3 title: **Montserrat 25px**, Regular 400, white/champagne on dark cards
+- Card body: ⏳ see Q13
+
+#### §4 — Line Height Unit Convention (new rule to add)
+
+Proposed addition: *"All `line-height` values must be **unitless numbers** (e.g. `1.5`, `1.7`) — never `em`, `rem`, or `px`. Unitless line-height avoids CSS inheritance issues and is the CSS specification's recommended approach."*
+
+Status: ✅ — this settles the rem-vs-em question from the re-review
+
+#### §5.4 Brand Gradients
+
+| Token | Current | Proposed change | Status |
+|---|---|---|---|
+| `bg-grad-deep-twilight` | 135deg Navy-dark to Navy to Navy-light; used for overlays at 20–30% | Clarify: **overlay usage is `var(--navy-dark)` at 20% opacity** — not the gradient token. The gradient token is retained for other uses but is no longer the overlay standard. | ✅ |
+| NEW: `--inner-text-panel` | none | Add CSS custom property or document the inner text panel gradient used in Travel in Style: `linear-gradient(90deg, var(--navy-deep) 93%, transparent)`. Requires new `--navy-deep` token (currently `#1a1c32`). — ⏳ see Q8 | ⏳ |
+
+#### §6 Component System — Cards
+
+| Item | Current | Proposed change | Status |
+|---|---|---|---|
+| Card BG (white cards on light sections) | `background: #ffffff` (raw hex) | Use a branded token — ⏳ see Q9 | ⏳ |
+| Card image | No shadow spec | **Add:** card images get `box-shadow: 0 0 10px 0 rgba(0,0,0,0.5)` — ⏳ must use CSS token (shadow var) — see Q9 | ⏳ |
+
+#### §7 Layout and Spacing
+
+| Item | Current spec | Proposed new spec | Status |
+|---|---|---|---|
+| Section padding (non-hero) | `py-16` (64px) | **`padding: 100px 0`** — matching prod. Add note that Tailwind `py-16` = 64px; new standard is 100px, which requires either a custom Tailwind value or inline padding. | ✅ |
+| Section padding (hero) | `py-20` | ⏳ see Q1 (min-height vs padding) | ⏳ |
+| Section padding (mobile) | `py-12` | Keep — confirm if mobile also scales up. | ⏳ Q1 context |
+| Container max-width | 1280px — `max-w-7xl mx-auto` | Keep `max-w-7xl mx-auto` — **never write the literal `1280px` in components.** Always use the Tailwind token. | ✅ |
+
+#### §11 Imagery
+
+| Item | Current | Proposed change | Status |
+|---|---|---|---|
+| Overlay | `bg-grad-deep-twilight` at 20–30% | **`var(--navy-dark)` at exactly 20% opacity** | ✅ |
+
+#### §14 Champagne Rule (Underbar) Standards
+
+| Item | Current | Proposed change | Status |
+|---|---|---|---|
+| "Every section heading gets a champagne rule" | Always required | **Not all sections require a champagne underbar.** CTA-type sections (e.g. Service Locations), compact contact label rows, and sections where the heading is followed immediately by a card grid may omit it. Sections that explicitly require it: Travel in Style, Free Instant Quote, Areas We Serve, Why Choose Us, Airport Shuttle, Our Services, FAQ, Share Your Experience, Map/Social. | ✅ |
+| New SM variant | none | **Add SM (label-rule) variant:** Used under contact column labels in Map/Social section. 3px height, `var(--champagne)`, **width: 30%** (not 116%), no `fit-content` wrapper needed. `margin-top: 0.5rem`. | ✅ |
+
+---
+
+### Section Component Changes — after spec is updated
+
+| Section | File | Change | Status |
+|---|---|---|---|
+| category-hero | `category-hero.blade.php` | Overlay → `var(--navy-dark)` at 20%. H1 weight → 400+700 split. Subtitle font → Poppins. Case note clarified. Remove decorative vertical line (never existed in ours). | ✅ pending Q1, Q3, Q4, Q5 |
+| travel-in-style | `travel-in-style.blade.php` | Section padding → 100px. Inner text panel gradient → add. H2 size → H1 value. H2 weight → 400+700 split. H2 letter-spacing → add. Body size → 20px. Image box-shadow → add. | ✅ pending Q5, Q6, Q7, Q8 |
+| free-instant-quote | `free-instant-quote.blade.php` | Section padding → 100px. Card BG → branded token. Right column H3 weight → 600. | ✅ pending Q9 |
+| service-locations | `service-locations.blade.php` | H2 color → `var(--cloud-light)`. City sub-headings → H5 spec (Poppins 20px/600). Remove champagne underbar (CTA section). | ✅ |
+| areas-we-serve | `areas-we-serve.blade.php` | Link color → no violation, keep section-specific. Font, size, letter-spacing → pending Q10, Q11, Q12 | ⏳ Q10, Q11, Q12 |
+| why-choose-us | `why-choose-us.blade.php` | Section padding → 100px. H2 size → H1 value. H2 color → keep split (cloud + champagne). Subtitle size → 30px. H3 card → Montserrat 25px. Card body → pending Q13. | ✅ pending Q6, Q13 |
+| airport-shuttle-service | `airport-shuttle-service.blade.php` | Body font-size → 20px (new spec). Body line-height → 1.5. Image container layout → 🚩 flag for later. | ✅ pending Q5 |
+| map-contact-section | `map-contact-section.blade.php` | Photo row padding → 🚩 flag for later. Social heading size → spec H2 value. Contact strip padding → keep ours. Champagne divider → SM label-rule variant (30% width, 3px). | ✅ |
+
+---
+
+### Open Questions (answers needed before writing spec)
+
+**Q1 — Hero min-height:** The re-review asks "what is recommended?" for hero min-height. Prod uses `min-height: 700px` with no explicit padding. Our current approach is `min-h-[560px]` + `py-16`. Options:
+- (a) Keep `min-h-[560px]` + updated padding spec
+- (b) Increase to `min-h-[700px]` matching prod
+- (c) Use `min-height: 100svh` (viewport height, common for full-bleed heroes)
+- (d) Other value
+
+**Q2 — Font token vs explicit family:** Should components write `font-family: var(--font-head)` (CSS token) or `font-family: 'Poppins', sans-serif` (literal)? My recommendation: always use the token (`var(--font-head)`, `var(--font-body)`) — it keeps components white-label-safe and makes future font swaps a one-line change. Please confirm.
+
+**Q3 — Clamp vs fixed px for heading sizes:** The re-review asks which is preferred. Here is the difference:
+- **Fixed px** (`font-size: 48px`): Simple, predictable, but doesn't scale between breakpoints unless you add multiple `@media` overrides.
+- **Clamp** (`clamp(2rem, 5vw, 3rem)`): Fluid scaling between a min and max as the viewport narrows. Works alongside Tailwind breakpoints (breakpoints handle layout; clamp handles typography scaling within each layout).
+My recommendation: **clamp**, with the min matching the mobile spec size and the max matching the desktop spec size. Please confirm or choose fixed px.
+
+**Q4 — H1 / Lead letter-spacing:** Negative letter-spacing on large display text is a standard luxury brand technique — it visually tightens letter pairs at large sizes and makes headings feel more refined. Values like `-1px` to `-2.5px` on 48–63px headings are common. Should we add a negative letter-spacing standard to the H1 and Lead specs? If yes, what value? Suggestion: `-1px` for H1, `-0.5px` for H2, none below H2.
+
+**Q5 — Line-height units:** The re-review notes "rem, never em." For `line-height` specifically:
+- `rem` (e.g. `1.5rem`): relative to the root `<html>` font-size. This is **not recommended** for line-height — it breaks if the element's font-size changes.
+- `em` (e.g. `1.5em`): relative to the element's own font-size. Equivalent to unitless but with the inheritance hazard.
+- **Unitless** (e.g. `1.5`): the CSS spec's recommended form for `line-height`. Inheriting elements use their own font-size as the base, not the parent's computed value.
+My recommendation: **unitless only** for all `line-height`. The rule in the spec should say: "All `line-height` values must be unitless numbers." Please confirm.
+
+**Q6 — H2 "use H1 values":** The re-review says section H2 sizes should "use H1 values." Currently H1 spec = 48px. Two possible interpretations:
+- (a) H2 size becomes 48px (the current H1 size). H1 stays at 48px or gets promoted.
+- (b) H2 gets the same *approach* as H1 — clamp or whatever size is chosen for H1 after Q3 is answered.
+Please clarify. Also: does this mean H1 gets a new, larger size (e.g. 56–63px matching prod), or does H1 stay at 48px and H2 gets promoted to 48px?
+
+**Q7 — H2 letter-spacing:** The re-review says "use theirs" for H2 letter-spacing. Prod uses `1.5px` for Travel in Style. Should this be a universal H2 standard, or is it section-specific? (Hero prod uses `-2.5px` on H1, but `1.5px` on the Travel H2.) Suggestion: use `0.5px` to `1px` as a light positive tracking on H2 (positive spacing = slightly more open, slightly formal). Please confirm or specify value.
+
+**Q8 — Inner text panel gradient token:** Prod Travel in Style uses `linear-gradient(90deg, #1a1c32 93%, transparent)`. The color `#1a1c32` is close to `var(--navy-dark)` (`#0F1223`) but not exact — it's navy-deep, between navy and navy-dark. Options:
+- (a) Add a new CSS token `--navy-deep: #1a1c32`
+- (b) Approximate with `var(--navy-dark)` (close enough)
+- (c) Use `var(--navy)` fading to transparent
+Please confirm which approach.
+
+**Q9 — White card background token:** Card backgrounds (e.g. Free Instant Quote form card) currently use `background: #ffffff` (raw hex violation). To fix, options are:
+- (a) Define `--white: #ffffff` as a new CSS custom property in `app.css`
+- (b) Use CSS keyword `background: white` (no token needed, valid CSS)
+- (c) Use `var(--cloud-light)` (`#F4F5F7`) — slightly off-white, gives a warm tint
+
+Similarly, image box-shadow currently uses `rgba(0,0,0,0.5)`. Options:
+- (a) Define `--shadow-card: 0 0 10px 0 rgba(0,0,0,0.5)` as a CSS custom property
+- (b) Use Tailwind's `shadow` utility
+
+**Q10 — Areas We Serve: link font:** City links currently use `font-family: Poppins, sans-serif` (literal, violation). Prod uses Montserrat. Our type system says Poppins for headings/labels, Montserrat for body/captions. City names in a grid could reasonably use either:
+- (a) Poppins — treating city names as labels
+- (b) Montserrat — treating city names as navigational body text (matching prod)
+Please confirm font family, and whether to fix the literal to the token.
+
+**Q11 — Areas We Serve: link size:** Current `font-size: 25px` is off the type scale. Options:
+- (a) H4 — 24px / 1.5rem (closest match, Poppins 600)
+- (b) H5 — 20px / 1.25rem (Poppins 600)
+- (c) Body — 20px (new spec after re-review) or 17px (old spec)
+
+**Q12 — Areas We Serve: letter-spacing:** Current `-0.01em` non-standard value. Options:
+- (a) Remove entirely (no letter-spacing)
+- (b) Keep as section-specific style, document in spec as approved
+- (c) Replace with a standard value
+
+**Q13 — Why Choose Us: card body size:** Current is `1rem` (16px). Options after re-review:
+- (a) Update to `20px` (new body spec from re-review)
+- (b) Keep a smaller size for tight card context — `17px` (old body spec) or `16px`
+- (c) Make it explicit that card body text uses a different size than section body text
+
+---
+
+### Items Flagged for Later (no action in this update)
+
+| Item | Section | Note |
+|---|---|---|
+| Hero min-height exact value | category-hero | Pending Q1 answer |
+| Image container layout (flex) | airport-shuttle-service | Structural change, defer |
+| Photo row padding (75px vs 64px) | map-contact-section | "hmm...?? flag for later" per re-review |
+
+---
+
 ## Production Site Comparison — newlenoxlimoservice.com
 
 > **Source:** Live HTML + `post-25492.css` (108 KB Elementor dynamic stylesheet), fetched 2026-06-07.

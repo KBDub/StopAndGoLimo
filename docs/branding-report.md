@@ -514,3 +514,288 @@
 4. **Raw hex/rgba:** `#ffffff` and `rgba()` values appear in four sections. All colors must use CSS custom properties.
 5. **H2 line-height:** Several sections use 1.25; spec is 1.2.
 6. **Large magic margins (`6rem`):** Appears in three sections as arbitrary spacing. Should be standardized to the spacing scale.
+
+---
+
+## Production Site Comparison — newlenoxlimoservice.com
+
+> **Source:** Live HTML + `post-25492.css` (108 KB Elementor dynamic stylesheet), fetched 2026-06-07.
+> **CSS extraction method:** `post-25492.css` for the main home page sections; `post-25492.css` (nav); `post-25501.css` (map/social/contact/footer secondary template). All raw hex values below are as found in Elementor — our build must use CSS custom property equivalents.
+> **Reading the status columns:**
+> - **vs Spec** — matches `docs/branding-requirements.md`
+> - **vs Prod** — our built version matches the live newlenoxlimoservice.com
+
+### How to interpret conflicts
+
+When "vs Spec" and "vs Prod" disagree, the spec wins. Prod breaks our no-caps rule, uses raw hex, and uses non-spec font sizes in many places. Those prod values are noted for awareness, not for copying.
+
+---
+
+### Prod Section ID Map
+
+| Section | Prod element type | Prod ID(s) |
+|---|---|---|
+| Hero | `elementor-top-section` | `#15e81dd0` |
+| Travel in Style | `elementor-top-section` + `elementor-inner-section` | `#315b4c33`, `#249c1e81` |
+| Free Instant Quote | `elementor-top-section` | `#47e5b0e7` |
+| Service Locations | Elementor container (no `<section>`) | `#fa16df6` |
+| Areas We Serve | Elementor container | `#8a00215` |
+| Why Choose Us | `elementor-top-section` + 2 inner sections | `#3d2495c`, `#6d3c9919`, `#79fde32d` |
+| Airport Shuttle Service | Elementor container (3-col grid child) | `#11793a8` |
+| Our Services | Elementor container | `#674b6f5` |
+| FAQ | Elementor container | `#9dfb5d4` |
+| Share Your Experience | Elementor container | `#66308a3` |
+| Map / Social row | `elementor-top-section` + inner | `#7d2bddae`, `#1ca0a42d` |
+| Contact strip | `elementor-top-section` | `#4a2b6c64` |
+| Footer | `elementor-top-section` | `#417ee9cd` |
+
+---
+
+### Section 1 — Hero (`category-hero`)
+
+**Prod ID:** `#15e81dd0` — `elementor-top-section`
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| BG image | `karl-kohler...jpg`, `bottom center` | `hero-home.jpg`, `center center` | ✓ | ❌ Different photo, different position |
+| BG fallback color | `#4E5387` (muted blue-purple) | `var(--navy-dark)` via overlay | — | ❌ |
+| Overlay technique | `linear-gradient(180deg, #15162CB3 45%, #0f1223 81%)` | `var(--navy-dark)` flat color | ❌ both fail spec | ❌ Different technique |
+| Overlay opacity | **0.7 (70%)** | **0.42 (42%)** | ❌ spec = 20–30% | ❌ Both too dark; prod darker |
+| Min-height | `700px` (no explicit padding) | `min-h-[560px]` + `py-16` | ❌ spec = `py-20` | ❌ Prod uses height, not padding |
+| H1 line 1 font | Poppins | Poppins `font-head` | ✓ | ✓ |
+| H1 line 1 size | **63px** | `clamp(2rem → 3.5rem)` max 56px | ❌ spec 48px | ❌ Prod 63px, ours 56px |
+| H1 line 1 weight | **500** | 400 light + 700 bold | ❌ spec 800 | ❌ Neither matches the other |
+| H1 line 1 case | **`text-transform: uppercase`** | Mixed case | ❌ spec = no caps | ❌ Prod uppercase; we correctly omit |
+| H1 line 1 letter-spacing | **-2.5px** | none | — | ❌ Missing |
+| H1 line 1 line-height | **1em** | 1.15 | ❌ spec 1.2 | ❌ |
+| H1 line 2 (subtitle) font | Poppins | Poppins | ❌ spec = Montserrat | ⚠ Same wrong font |
+| H1 line 2 size | **40px w200** uppercase | `clamp(0.95–1.2rem)` w400 | ❌ spec = Lead 21px | ❌ Prod 40px, ours 19px — far apart |
+| H1 line 2 case | **uppercase** | Mixed case | ❌ spec = no caps | ❌ Prod uppercase; we correctly omit |
+| H1 line 2 letter-spacing | **-1.5px** | none | — | ❌ Missing |
+| Decorative vertical line | Champagne `#E9C79E` spacer, centered | None | — | ❌ Missing element |
+| CTA button | `#747474` grey bg, Poppins 24px; hover champagne | `x-ui.button-outline-light` | ✓ spec allows outline-light on dark bg | ❌ Prod uses solid grey |
+
+---
+
+### Section 2 — Travel in Style (`travel-in-style`)
+
+**Prod ID:** `#315b4c33` (outer) + `#249c1e81` (inner) — `elementor-top-section`
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | `#15162c` | `var(--navy)` | ✓ | ✓ Same color, different notation |
+| Section padding | **100px top and bottom** | `py-12 lg:py-16` (48–64px) | ❌ spec 64px | ❌ Prod 100px, ours up to 64px |
+| Container max-width | 1138px | `max-w-7xl` (1280px) | ✓ | ⚠ Ours slightly wider |
+| Inner text panel BG | `linear-gradient(90deg, #1a1c32 93%, transparent)` | None | — | ❌ Prod has dark gradient text panel |
+| Inner padding | 35px all sides | None | — | ❌ Prod wraps text in padded inner box |
+| H2 font | Poppins | Poppins `font-head` | ✓ | ✓ |
+| H2 size | **65px** w500 | `clamp(1.75–2.375rem)` max 38px | ❌ spec 38px | ❌ Prod 65px, ours 38px |
+| H2 weight | **500** | 400 + 700 bold | ❌ spec 700 | ❌ Neither matches the other |
+| H2 letter-spacing | **1.5px** | none | — | ❌ Missing |
+| H2 color | **`#dcb57e`** (full heading champagne) | white + champagne on bold part | ✓ champagne used | ⚠ Prod all-champagne; we split |
+| Body font | Montserrat | Montserrat `font-body` | ✓ | ✓ |
+| Body size | **20px** | 1.0625rem (17px) | ❌ spec 17px | ❌ Prod 20px, ours 17px |
+| Body line-height | **1.5em** | 1.7 | ✓ range | ❌ Prod tighter (1.5 vs 1.7) |
+| Body color | white | `var(--cloud)` | ✓ | ⚠ Same visual, different token |
+| Image box-shadow | `rgba(0,0,0,0.5)` 10px | None | — | ❌ Missing image drop shadow |
+| CTA button | `#747474` grey bg, Poppins 20px, hover champagne | `x-ui.button-outline-champagne` | ✓ spec allows outline-champagne | ❌ Prod uses solid grey |
+
+---
+
+### Section 3 — Free Instant Quote (`free-instant-quote`)
+
+**Prod ID:** `#47e5b0e7` — `elementor-top-section`
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | `#E8E9EC` (cloud grey) | `var(--cloud-light)` | ✓ | ✓ Same color |
+| Section padding | **120px top, 60px bottom** (desktop) | `py-12 lg:py-16` (48–64px) | ❌ spec 64px | ❌ Prod top-heavy, much more space |
+| Container max-width | 1320px | `max-w-7xl` (1280px) | ✓ | ⚠ Prod slightly wider |
+| Form card H2 | Poppins 35px w500 black | `clamp(1.5–2rem)` Poppins w700 navy | ❌ spec 38px | ❌ Prod 35px w500 black; ours 32px w700 navy |
+| Right column H3 | Poppins 35px w500 `#DCB57E` champagne | `clamp(1.25–1.875rem)` Poppins w400 navy | ❌ spec H3=600 | ❌ Prod 35px champagne; ours 30px navy |
+| Right column body | Not isolated in extracted CSS | Montserrat 1.0rem lh:1.7 `var(--slate)` | ✓ approx | ❓ Cannot confirm prod body size from CSS |
+| Form card BG | White (Elementor default) | `background: #ffffff` raw hex | ❌ raw hex in ours | ⚠ Same white; ours uses raw hex |
+| CTA button | `#747474` grey bg, hover champagne | `x-ui.button-champagne-solid` | ✓ champagne ✓ | ❌ Prod grey; ours champagne |
+
+---
+
+### Section 4 — Service Locations (`service-locations`)
+
+**Prod ID:** `#fa16df6` — Elementor container (no `<section>` tag, flex display)
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| BG | Not set — inherits navy from parent | `var(--navy)` | ✓ | ✓ Both appear navy |
+| Layout | `display:flex; flex-direction:column` (Elementor container) | `grid grid-cols-1 lg:grid-cols-2` | ✓ | ⚠ Different layout approach |
+| H2 size | Poppins **65px** w500 champagne (matches pattern from prod headings) | `clamp(1.5–2.375rem)` max 38px | ❌ spec 38px | ❌ Prod 65px, ours 38px |
+| H2 color | `#DCB57E` champagne (full heading) | `#ffffff` raw hex + champagne bold part | ❌ raw hex | ❌ Prod all-champagne; ours split with raw hex |
+| City sub-headings | Poppins 30px w200 lh:63px ls:0.5px white | Poppins 1.25rem (20px) w600 `var(--champagne)` | ❌ spec H5=20px/600 | ❌ Prod 30px w200 white; totally different |
+| Body | Montserrat (size not confirmed in CSS) | Montserrat 1.0rem lh:1.7 `var(--cloud)` | ✓ | ❓ Cannot confirm prod body size |
+| Champagne underbar | Not visible in extracted CSS | Missing (§14 violation) | ❌ | ❓ |
+
+---
+
+### Section 5 — Areas We Serve (`areas-we-serve`)
+
+**Prod ID:** `#8a00215` — Elementor container (grid, 1-col mobile)
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | `#E8E9EC` cloud grey | `var(--cloud-light)` | ✓ | ✓ Same color |
+| Layout | Grid (1-col mobile, multi-col desktop) | `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3` | ✓ | ✓ Same pattern |
+| Area link font | **Montserrat** (from heading title rules in prod CSS) | `font-family: Poppins, sans-serif` literal | ❌ raw literal in ours | ❌ Prod uses Montserrat; ours uses Poppins |
+| Area link size | Montserrat 20px, 19px, 27px, 22px (varied per item) | `font-size: 25px` fixed | ❌ off-scale | ❌ Prod varies; ours fixed 25px |
+| Area link letter-spacing | **-2px** (from prod rule) | `-0.01em` | — | ⚠ Both use negative tracking; values differ |
+| Area link color | White `#FFFFFF` + champagne hover | `var(--navy)` + `var(--champagne)` hover | ❌ navy on cloud bg | ❌ Prod links are white (prod is on a dark bg); ours are navy (on cloud bg) |
+
+> **Note:** On prod, areas-we-serve appears inside the why-choose-us navy section — not as a standalone cloud section. Our version gives it its own cloud-grey background, which changes the entire color context for link colors.
+
+---
+
+### Section 6 — Why Choose Us (`why-choose-us`)
+
+**Prod ID:** `#3d2495c` (outer, 100px padding) + `#6d3c9919` / `#79fde32d` (inner, 35px padding) — `elementor-top-section`
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | transparent + navy gradient | `var(--navy)` outer + `var(--navy-light)` inlay | ✓ both navy | ✓ Same visual |
+| Section padding | **100px top and bottom** | `padding: 2rem` (32px) | ❌ spec 64px | ❌ Prod 100px, ours 32px |
+| Inner section padding | **35px all sides** (25px mobile) | `padding: 35px 35px` | ✓ | ✓ Matches prod |
+| H2 font | Poppins | Poppins `font-head` | ✓ | ✓ |
+| H2 size | **65px** w500 `#DCB57E` | **65px** w400/700 `var(--champagne)` | ❌ spec 38px | ✓ Same 65px size |
+| H2 weight | **500** | 400 + 700 bold | ❌ spec 700 | ⚠ Prod 500; ours split 400/700 |
+| H2 color | `#DCB57E` champagne (full heading) | `var(--cloud-light)` + `var(--champagne)` bold | ✓ champagne used | ⚠ Prod all-champagne; we split |
+| Subtitle font | **Montserrat** | Montserrat `font-body` | ✓ | ✓ |
+| Subtitle size | **30px** w400 white | **30px** fixed | ❌ spec Lead=21px | ✓ Same 30px |
+| H3 card font | Montserrat 25px (from prod heading rules) | Poppins `clamp(1.1–1.4rem)` max 22px | ❌ spec H3=1.875rem | ❌ Prod Montserrat 25px; ours Poppins 22px |
+| Card body | Montserrat 30px w400 white | Montserrat 1rem lh:1.7 `var(--cloud-light)` | ❌ spec 17px | ❌ Prod body text 30px |
+| Icons | FA6 + inline SVG (Elementor) | FA6 thumbs-up + inline SVGs | ✓ | ✓ Same icons |
+
+> **Key finding:** The `why-choose-us` H2 at 65px and subtitle at 30px **match prod exactly**. These are intentional prod design choices that also violate our spec. They are spec violations that happen to match prod; the spec fix (38px / 21px) would make us differ from prod.
+
+---
+
+### Section 7 — Airport Shuttle Service (`airport-shuttle-service`)
+
+**Prod ID:** `#11793a8` — Elementor container (3-col grid desktop, 1-col mobile)
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | Not set on container — inherits cloud from parent | `var(--cloud-light)` | ✓ | ✓ |
+| Cards grid | 3-col desktop, 1-col mobile | `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3` | ✓ | ✓ |
+| H2 size | Poppins 40px w500 lh:1em (from prod heading rules — likely section H2) | `clamp(1.6–2.4rem)` max 38px | ❌ spec 38px | ❌ Prod 40px; ours 38px — close |
+| Body font-size | Not isolated in CSS | `font-size: 20px` fixed | ❌ spec 17px | ❓ Cannot confirm prod body size |
+| Body line-height | Not isolated in CSS | `line-height: 22px` raw px | ❌ spec 1.7 | ❓ Cannot confirm |
+| Image aspect ratio | Not in CSS (Elementor widget) | `aspect-ratio: 4/3` | ✓ | ❓ |
+| Image container layout | Not in CSS | `flex justify-center` | ❌ §7 grid-only | ❓ |
+
+---
+
+### Section 8 — Our Services (`our-services`)
+
+**Prod ID:** `#674b6f5` — Elementor container (grid)
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | transparent + dark gradient (navy visual) | `var(--navy-dark)` | ✓ | ✓ Same visual result |
+| H2 size | Poppins 50px (from prod heading rule sequence) | `clamp(2–3rem)` max 48px | ❌ spec 38px | ⚠ Prod 50px, ours max 48px — close |
+| H2 case | Partial uppercase ("Our SERVICES" on prod) | Mixed case ("Our **Services**") | ❌ prod uses caps | ❌ We correctly avoid caps |
+| Service card labels | **Uppercase** ("PARTY BUS", "AIRPORT SHUTTLE") on prod | Mixed case labels | ❌ prod caps | ❌ We correctly avoid caps |
+| Cards grid | 5-col desktop (from visual) | `grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5` | ✓ | ✓ |
+
+---
+
+### Section 9 — FAQ (`faq`)
+
+**Prod ID:** `#9dfb5d4` — Elementor container
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | `#E8E9EC` cloud grey | `var(--cloud-light)` | ✓ | ✓ Same color |
+| H2 size | Poppins 45px lh:1em (from prod heading rules) | `clamp(1.6–2.25rem)` max 36px | ❌ spec 38px | ❌ Prod 45px; ours 36px |
+| FAQ answers | Elementor nested accordion widget | Alpine `x-data` accordion | ✓ functional | ⚠ Different technical impl; same UX pattern |
+| Answer copy | Slightly different wording on prod | Rewritten at 7th grade level | ✓ | ❌ Copy does not exactly match prod |
+| Champagne left border | Cannot confirm from CSS | `border-left: 3px solid var(--champagne)` | ✓ | ❓ |
+
+---
+
+### Section 10 — Share Your Experience (`share-your-experience`)
+
+**Prod ID:** `#66308a3` — Elementor container
+**Prod CSS file:** `post-25492.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Section BG | `#E8E9EC` cloud grey | `var(--cloud-light)` | ✓ | ✓ |
+| H2 size | Poppins 45px lh:1em (from prod heading rules) | `clamp(1.6–2.5rem)` max 40px | ❌ spec 38px | ❌ Prod 45px; ours 40px — close |
+| Inner card BG | Not in CSS (appears dark navy visually) | `var(--navy)` | ✓ | ✓ |
+| Location grid | 2-col | `grid grid-cols-1 sm:grid-cols-2` | ✓ | ✓ |
+| Review button hrefs | Live Google review URLs | `href="#"` placeholder | — | ❌ Placeholder hrefs not wired to real URLs |
+
+---
+
+### Section 11 — Map / Social (`map-contact-section`)
+
+**Prod ID:** `#7d2bddae` (photo row) + `#4a2b6c64` (contact strip) — `elementor-top-section`
+**Prod CSS file:** `post-25501.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Photo row BG | `#15162C` + `car.jpg` `center center` | `var(--navy-dark)` + own car image | ✓ navy | ⚠ Different photo |
+| Photo row overlay | `linear-gradient(90deg, #15162CC7, #15162CD1)` at **0.8 opacity (80%)** | `rgba(10,14,35,0.62)` (62%) | ❌ both exceed spec | ❌ Prod 80%; ours 62% |
+| Photo row padding | **75px top and bottom** | Custom inline CSS | ❌ spec 64px | ❌ Prod 75px |
+| Social heading font | Poppins | Poppins `font-head` | ✓ | ✓ |
+| Social heading size | **35px** w500 capitalize white | `clamp(1.5–2rem)` max 32px | ❌ spec H2 38px | ❌ Prod 35px; ours 32px |
+| Social heading case | **`text-transform: capitalize`** | Mixed case (no transform) | ✓ no all-caps | ⚠ Prod uses capitalize; we use no transform |
+| Social icon border | `#e9c79e` 1px solid; icon `rgba(233,199,158,0.61)` | `x-ui.*-chip` component | ✓ champagne | ⚠ Different impl; same champagne color |
+| Contact strip BG | `#15162C` | `var(--navy)` | ✓ | ✓ Same color |
+| Contact strip padding | **30px top and bottom** | `py-6` (24px) | ❌ spec 64px | ❌ Prod 30px; ours 24px |
+| Contact labels font | **Montserrat** 15px **uppercase** white | Poppins `var(--font-head)` 0.85rem no-uppercase | ❌ spec = no caps | ❌ Prod Montserrat uppercase; ours Poppins no-caps |
+| Champagne divider | 3px `#dcb57e`, **width 30%** (short underline) | 2px, small fixed width | ❌ ours 2px | ❌ Prod 30%-width short line; ours smaller 2px line |
+| Body text | Montserrat 13px `#F3F3F3` | Montserrat 0.9rem `var(--cloud-light)` | ✓ | ⚠ Prod 13px; ours 14.4px |
+| Map left border | `border-left: 10px solid #D1B38E` | `border-left: 4px solid var(--champagne)` | ✓ champagne | ❌ Prod 10px; ours 4px |
+| Map overlap | `margin-top: -300px` (overlaps photo row) | No overlap | — | ❌ Prod creates dramatic vertical overlap |
+| Map height | `height: 445px` | `aspect-ratio: 1/1` | — | ❌ Different sizing approach |
+
+---
+
+### Section 12 — Footer (`base-footer`)
+
+**Prod ID:** `#417ee9cd` — `elementor-top-section`
+**Prod CSS file:** `post-25501.css`
+
+| Property | Prod value | Our value | vs Spec | vs Prod |
+|---|---|---|---|---|
+| Background | `linear-gradient(180deg, #15162C 0%, #1A1C32 100%)` | `var(--navy-dark)` flat color | ✓ navy | ⚠ Prod gradient; ours flat |
+| Top border | `1px solid rgba(232,232,232,0.47)` semi-white | `1px solid var(--navy-light)` | ✓ | ⚠ Prod semi-white; ours navy-light |
+| Padding | **10px top and bottom** | `py-4` (16px) | — | ⚠ Prod slimmer (10px vs 16px) |
+| Copyright font | Montserrat 12px lh:1.5em white | Montserrat 0.8rem `var(--cloud-light)` | ✓ | ✓ Near match |
+| Copyright year | **"2025"** | **"2026"** | — | ❌ Prod not updated; ours is correct |
+| Business name in copyright | "Stop & Go **Shuttle** Service Inc." | "Stop & Go **Airport Shuttle** Service, Inc." | ✓ ours uses legal name | ⚠ Prod omits "Airport" — ours is correct |
+| Footer links font | Montserrat 12px `#dcb57e` champagne | Montserrat 0.8rem `var(--champagne)` | ✓ | ✓ |
+| Links alignment | Right-aligned | `justify-content: flex-end` | ✓ | ✓ |
+
+---
+
+### Production Comparison — Key Findings
+
+| Finding | Impact |
+|---|---|
+| **Prod H2 sizes are 65px, not 38px** | Every major section heading on prod is 65px. Only our `why-choose-us` and `travel-in-style` match prod on size; the rest match spec instead. |
+| **Prod section padding is 100px** | Most prod sections use 100px top/bottom. Our sections use 48–64px. This is the largest single cause of visible height difference. |
+| **Prod uses uppercase on hero, service cards, contact labels** | Prod breaks the no-caps rule in many places. Our build correctly avoids this per spec. |
+| **Area links use Montserrat on prod, Poppins on ours** | In `areas-we-serve`, prod uses Montserrat for city names; ours uses Poppins (and a raw font-family literal, which is also a spec violation). |
+| **Prod map border is 10px with -300px overlap** | The map on prod dramatically overlaps the photo row via a -300px margin-top. We don't replicate this effect. |
+| **Prod CTA buttons are solid grey (`#747474`)** | Both hero and travel-in-style use a grey solid button on prod. Our buttons use outline or champagne-solid variants per spec. |
+| **Prod footer copyright says 2025, omits "Airport"** | Our 2026 date and full legal name ("Airport Shuttle") are both correct. Prod has not been updated. |
+| **Prod contact labels use Montserrat uppercase** | Our build uses Poppins with no uppercase — correct per spec. |
+| **`areas-we-serve` background context differs** | On prod, city links appear white-on-navy because they're nested inside the why-choose-us dark section. Our standalone `var(--cloud-light)` bg requires navy link colors instead. |

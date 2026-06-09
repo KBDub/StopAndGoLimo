@@ -60,6 +60,15 @@
         body="Custom limousine services are designed specifically for special events, providing a touch of luxury and sophistication."
     />
 
+    <x-sections.party-limo-image
+        heading="Party Limousine Services for"
+        headingBold="Special Events"
+        body="Celebrate in style with our spacious, fully equipped party limousines. We keep the energy high from pickup to drop off. Whether it's a birthday bash, prom night, bachelor or bachelorette party, or a night out with friends, our limos bring the perfect mix of comfort, fun, and head-turning appeal to every special occasion."
+        image="/images/sections/limousine-comfort.jpg"
+        imageAlt="Group enjoying a party limousine, Stop and Go Airport Shuttle in New Lenox, Illinois"
+        imageAspect="4/3"
+    />
+
     <x-sections.free-instant-quote
         heading="Book Your"
         headingBold="Special Event Limo"

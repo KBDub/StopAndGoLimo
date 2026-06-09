@@ -30,7 +30,7 @@
     </div>
 
     {{-- Content --}}
-    <div class="relative z-10 w-full max-w-4xl mx-auto px-6 text-center">
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
 
         {{-- H1 --}}
         <h1 class="font-head text-white mb-4" style="font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.2; letter-spacing: -1px;">
@@ -52,7 +52,7 @@
 
         {{-- Optional body paragraph --}}
         @if($description)
-            <p class="font-body text-white mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; max-width: 680px; opacity: 0.85;">
+            <p class="font-body text-white max-w-5xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; opacity: 0.85;">
                 {{ $description }}
             </p>
         @endif

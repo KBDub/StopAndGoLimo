@@ -49,4 +49,13 @@
         headingBold="Trusted Local Partner"
         background="dark"
     />
+
+    <x-sections.free-instant-quote
+        :showInfoBox="true"
+        image="/images/sections/vincent-in-limo.jpg"
+        imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service Inc., in the driver seat"
+        imageAspect="4/3"
+        heading=""
+        body=""
+    />
 </x-layouts.page>

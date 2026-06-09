@@ -1,13 +1,22 @@
 @props([
-    'heading'        => 'Begin your',
-    'headingBold'    => 'unforgettable experience',
-    'headingTail'    => 'now!',
-    'body'           => 'Our professional drivers are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. With their expertise and commitment to service, you can relax knowing that your transportation needs are handled with care and precision, making every ride a truly exceptional experience.',
-    'image'          => '/images/sections/chauffeurs.jpg',
-    'imageAlt'       => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
-    'imageAspect'    => '4/3',
-    'formAction'     => '/get-a-quote',
-    'submitLabel'    => 'Send Message',
+    'heading'          => 'Begin your',
+    'headingBold'      => 'unforgettable experience',
+    'headingTail'      => 'now!',
+    'body'             => 'Our professional drivers are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. With their expertise and commitment to service, you can relax knowing that your transportation needs are handled with care and precision, making every ride a truly exceptional experience.',
+    'image'            => '/images/sections/chauffeurs.jpg',
+    'imageAlt'         => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
+    'imageAspect'      => '4/3',
+    'formAction'       => '/get-a-quote',
+    'submitLabel'      => 'Send Message',
+    'showInfoBox'      => false,
+    'infoHeading'      => 'So What Are You',
+    'infoHeadingBold'  => 'Waiting For?',
+    'infoLines'        => [
+        'Your journey should be as exceptional as your destination. Our booking and reservations process is designed for speed, simplicity, and total peace of mind, giving you instant access to luxury transport when you need it most.',
+        'Every client review reflects the same standard: reliability, professionalism, and a seamless experience from start to finish. When you book a limo with us, you are not just securing a ride, you are choosing a service trusted by clients who expect results, not excuses.',
+        'Whether it is a corporate transfer, special event, or private hire, our system ensures your booking and reservations are confirmed quickly, managed efficiently, and executed flawlessly.',
+        'Do not leave your plans to chance. Book a limo today and experience a service built on trust, precision, and proven client satisfaction.',
+    ],
 ])
 
 <section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
@@ -176,7 +185,7 @@
                 </form>
             </div>
 
-            {{-- ── Right: Image + Copy ──────────────────────────────────── --}}
+            {{-- ── Right: Image + Copy / Info Box ───────────────────────── --}}
             <div class="w-full">
 
                 {{-- Photo --}}
@@ -189,21 +198,52 @@
                     >
                 </div>
 
-                @if($heading)
-                    {{-- Heading — Poppins, weight 600 per spec --}}
-                    <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
-                        {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
+                @if($showInfoBox)
+
+                    {{-- Heading --}}
+                    <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 400; color: var(--navy); line-height: 1.3; text-align: center;">
+                        {{ $infoHeading }} <strong style="font-weight: 700;">{{ $infoHeadingBold }}</strong>
                     </h3>
 
                     {{-- Champagne rule --}}
                     <x-ui.banner-thin-champagne />
-                @endif
 
-                {{-- Body --}}
-                @if($body)
-                    <p class="font-body mt-4" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
-                        {{ $body }}
+                    {{-- Star rating --}}
+                    <p class="font-head mt-4 mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy); text-align: center; letter-spacing: 0.5px;">
+                        Rated 5 stars by our clients
                     </p>
+                    <p style="text-align: center; font-size: 1.375rem; color: var(--champagne); line-height: 1; margin-bottom: 1.5rem;" aria-label="5 out of 5 stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </p>
+
+                    {{-- Info box --}}
+                    <div style="border: 1px solid var(--champagne); padding: 1.5rem;">
+                        @foreach($infoLines as $line)
+                            <p class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--slate); line-height: 1.6; {{ !$loop->last ? 'margin-bottom: 1rem;' : 'margin: 0;' }}">
+                                {{ $line }}
+                            </p>
+                        @endforeach
+                    </div>
+
+                @else
+
+                    @if($heading)
+                        {{-- Heading — Poppins, weight 600 per spec --}}
+                        <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
+                            {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
+                        </h3>
+
+                        {{-- Champagne rule --}}
+                        <x-ui.banner-thin-champagne />
+                    @endif
+
+                    {{-- Body --}}
+                    @if($body)
+                        <p class="font-body mt-4" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
+                            {{ $body }}
+                        </p>
+                    @endif
+
                 @endif
 
             </div>

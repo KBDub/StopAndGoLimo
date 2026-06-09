@@ -5,6 +5,7 @@
     'body'           => 'Our professional drivers are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. With their expertise and commitment to service, you can relax knowing that your transportation needs are handled with care and precision, making every ride a truly exceptional experience.',
     'image'          => '/images/sections/chauffeurs.jpg',
     'imageAlt'       => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
+    'imageAspect'    => '4/3',
     'formAction'     => '/get-a-quote',
     'submitLabel'    => 'Send Message',
 ])
@@ -80,12 +81,17 @@
                             class="w-full font-body"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
-                            <option value="limousine">Limousine Service</option>
-                            <option value="party-bus">Party Bus</option>
-                            <option value="coach-bus">Coach Bus</option>
-                            <option value="town-car">Town Car</option>
-                            <option value="corporate">Corporate Car Service</option>
-                            <option value="airport-shuttle">Airport Shuttle</option>
+                            <option value="Limousine Service">Limousine Service</option>
+                            <option value="Airport Transportation">Airport Transportation</option>
+                            <option value="Party Bus">Party Bus</option>
+                            <option value="Chartered Bus">Chartered Bus</option>
+                            <option value="Corporate Transportation">Corporate Transportation</option>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Special Event">Special Event</option>
+                            <option value="Sporting Event">Sporting Event</option>
+                            <option value="Concert">Concert</option>
+                            <option value="Wine Tour">Wine Tour</option>
+                            <option value="Chauffeur">Chauffeur</option>
                         </select>
                     </div>
 
@@ -100,9 +106,16 @@
                             class="w-full font-body"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
-                            @foreach(range(1, 20) as $n)
-                                <option value="{{ $n }}">{{ $n }}</option>
-                            @endforeach
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7-8">7-8</option>
+                            <option value="9-10">9-10</option>
+                            <option value="11-13">11-13</option>
+                            <option value="13+">13+</option>
                         </select>
                     </div>
 
@@ -167,7 +180,7 @@
             <div class="w-full">
 
                 {{-- Photo --}}
-                <div class="w-full overflow-hidden mb-6" style="aspect-ratio: 4/3;">
+                <div class="w-full overflow-hidden mb-6" style="aspect-ratio: {{ $imageAspect }};">
                     <img
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"

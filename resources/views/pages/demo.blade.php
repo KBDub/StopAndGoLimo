@@ -912,6 +912,119 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 11 — service-thin-rect-card ─────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">11 — x-ui.</strong>service-thin-rect-card
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        A full-width dark navy rectangular link card for listing services. Height is locked to match the FAQ question bar. Icon is a 20x20 inline SVG using <code class="font-mono text-champagne text-sm">fill="currentColor"</code> so the champagne color is applied via CSS. See docs/branding-requirements.md §18.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                    {{-- Live stack preview --}}
+                    <div>
+                        <p class="font-mono text-champagne text-xs mb-3">Live preview — stacked at ~280px (sidebar width)</p>
+                        <div style="width: 280px;">
+                            <div style="margin-bottom: 3px;">
+                                <x-ui.service-thin-rect-card
+                                    label="Airport Shuttle Service"
+                                    href="#"
+                                    :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z\'/></svg>'"
+                                />
+                            </div>
+                            <div style="margin-bottom: 3px;">
+                                <x-ui.service-thin-rect-card
+                                    label="Chauffeur"
+                                    href="#"
+                                    :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\'/></svg>'"
+                                />
+                            </div>
+                            <div style="margin-bottom: 3px;">
+                                <x-ui.service-thin-rect-card
+                                    label="Coach Buses"
+                                    href="#"
+                                    :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z\'/></svg>'"
+                                />
+                            </div>
+                            <div style="margin-bottom: 3px;">
+                                <x-ui.service-thin-rect-card
+                                    label="Corporate Car Services"
+                                    href="#"
+                                    :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M20 6h-2.18c.07-.44.18-.88.18-1.36C18 2.98 16.02 1 13.36 1c-1.5 0-2.63.78-3.36 1.62C9.27 1.78 8.14 1 6.64 1 4.02 1 2 2.98 2 5.64c0 .48.08.92.18 1.36H0v14h24V6h-4zm-5.78 0H9.78C9.3 5.17 9 4.45 9 3.64 9 2.73 9.73 2 10.64 2s1.64.73 1.64 1.64c0 .17-.03.34-.07.5H12c0-.91.73-1.64 1.64-1.64s1.64.73 1.64 1.64c0 .81-.3 1.53-.78 2.36H14.22z\'/></svg>'"
+                                />
+                            </div>
+                            <div style="margin-bottom: 3px;">
+                                <x-ui.service-thin-rect-card
+                                    label="Party Bus"
+                                    href="#"
+                                    :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z\'/></svg>'"
+                                />
+                            </div>
+                            <x-ui.service-thin-rect-card
+                                label="Limousine Services"
+                                href="#"
+                                :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z\'/></svg>'"
+                            />
+                        </div>
+                        <p class="font-mono text-muted text-xs mt-3">Hover any card to see champagne left accent.</p>
+                    </div>
+
+                    {{-- Spec + code block --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props &mdash; docs/branding-requirements.md §18</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead><tr class="border-b border-white/10"><th class="text-left pb-2 text-champagne">Prop</th><th class="text-left pb-2 text-champagne">Type</th><th class="text-left pb-2 text-champagne">Default</th></tr></thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">icon</td><td>string (raw SVG)</td><td>''</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">label</td><td>string</td><td>'Service'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">href</td><td>string</td><td>'#'</td></tr>
+                                    <tr><td class="py-1.5">target</td><td>string</td><td>'_self'</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage example</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/service-thin-rect-card.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Single card --}}
+&lt;x-ui.service-thin-rect-card
+    label="Airport Shuttle Service"
+    href="/services/airport-shuttle"
+    :icon="'&lt;svg xmlns=\'...\' width=\'20\' height=\'20\'
+        viewBox=\'0 0 24 24\' fill=\'currentColor\'&gt;
+        &lt;path d=\'...\'/&gt;
+    &lt;/svg&gt;'"
+/&gt;
+
+{{-- Stacked list (3px gap matches FAQ) --}}
+&lt;div&gt;
+    &lt;div style="margin-bottom: 3px;"&gt;
+        &lt;x-ui.service-thin-rect-card ... /&gt;
+    &lt;/div&gt;
+    &lt;div style="margin-bottom: 3px;"&gt;
+        &lt;x-ui.service-thin-rect-card ... /&gt;
+    &lt;/div&gt;
+    &lt;x-ui.service-thin-rect-card ... /&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

@@ -550,3 +550,65 @@ Use named CSS custom properties on Layer 1 only. Raw hex values are never permit
 The outer `<section>` must be full-width at all times so that background colors fill edge-to-edge on any screen size. Merging Layer 1 and Layer 2 (putting `max-w-7xl` on the `<section>`) clips the background to 80rem wide, leaving visible gaps at the sides on large monitors. The two-div inner structure is not optional.
 
 **Reference component:** `resources/views/components/sections/info-strip.blade.php`
+
+---
+
+## 18. Service Thin Rect Card (`x-ui.service-thin-rect-card`)
+
+A full-width, dark navy rectangular link card used to list individual services. Sourced from the "Our Key Offers" sidebar on the prod site. Height is intentionally matched to the FAQ question bar so the two components can sit at the same visual weight.
+
+### 18.1 — Props
+
+| Prop | Type | Default | Purpose |
+|---|---|---|---|
+| `icon` | string (raw HTML) | `''` | Inline SVG string rendered unescaped. Must be 20×20, `fill="currentColor"`. |
+| `label` | string | `'Service'` | Visible service name. Rendered with underline. |
+| `href` | string | `'#'` | Link destination. |
+| `target` | string | `'_self'` | Use `'_blank'` for external links. |
+
+### 18.2 — Height standard
+
+The card uses `padding: 1rem 1.25rem` — the same value as the FAQ question bar (`x-sections.faq`). This keeps both components visually consistent when used in the same layout column.
+
+### 18.3 — Icon format
+
+Icons must be inline SVG strings with `fill="currentColor"` so the CSS `color: var(--champagne)` on the icon wrapper drives the fill color. Do not use `stroke`-only icons or `<img>` tags. Target size is 20×20 (`width="20" height="20"`). Pass the full `<svg>...</svg>` string as the `:icon` prop.
+
+```blade
+{{-- Correct: inline SVG, fill="currentColor", 20x20 --}}
+<x-ui.service-thin-rect-card
+    :icon='<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 16v-2l-8-5V3.5..."/></svg>'
+    label="Airport Shuttle Service"
+    href="/services/airport-shuttle"
+/>
+```
+
+### 18.4 — Hover behavior
+
+On hover: background shifts to `var(--navy-light)` and a 3px inset champagne left border appears (`box-shadow: inset 3px 0 0 var(--champagne)`). Using `box-shadow` instead of `border-left` prevents layout shift.
+
+### 18.5 — Stacking cards
+
+Stack multiple cards with `margin-bottom: 3px` between items — matching the FAQ item gap. Wrap the stack in a container div; do not add margin to the component itself.
+
+```blade
+<div>
+    <div style="margin-bottom: 3px;">
+        <x-ui.service-thin-rect-card icon="..." label="Airport Shuttle Service" href="/services/airport-shuttle" />
+    </div>
+    <div style="margin-bottom: 3px;">
+        <x-ui.service-thin-rect-card icon="..." label="Chauffeur" href="/services/chauffeur" />
+    </div>
+    <x-ui.service-thin-rect-card icon="..." label="Coach Buses" href="/services/coach-buses" />
+</div>
+```
+
+### 18.6 — Never do
+
+- Never pass a stroke-only SVG — the icon will be invisible against the navy background.
+- Never add `border-left` directly to the card — use the built-in hover box-shadow instead.
+- Never change the padding values — they are locked to the FAQ height standard.
+- Never use azure for the icon color — icon fill is always `var(--champagne)` via `currentColor`.
+
+**Reference component:** `resources/views/components/ui/service-thin-rect-card.blade.php`
+**Used in section:** `x-sections.our-key-offers` (in progress)

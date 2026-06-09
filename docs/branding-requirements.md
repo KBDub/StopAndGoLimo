@@ -415,3 +415,32 @@ Used under short column labels in the Map/Social contact strip. No `fit-content`
 - Standard variant: `width: 116%`, `margin-top: 0.85rem`, inside a `fit-content` wrapper containing only the heading and the rule.
 - SM label-rule variant: `width: 30%`, `margin-top: 0.5rem`, no wrapper.
 - Never use `border-bottom` on the heading itself; always a separate `<div>` element.
+
+---
+
+## 15. Light-Background Section Standards
+
+Light sections use `background: var(--cloud-light)`. The color rules are different from navy sections.
+
+| Element | Navy section | Light section |
+|---|---|---|
+| Section background | `var(--navy)` | `var(--cloud-light)` |
+| H2 base color | `var(--white)` | `var(--navy)` |
+| H2 bold accent | `var(--champagne)` | `var(--champagne)` |
+| Body text color | `var(--cloud)` | `var(--slate)` |
+| Stat / H3 color | `var(--champagne)` | `var(--navy)` |
+| CTA button | `x-ui.button-outline-champagne` | `x-ui.button-champagne-solid` |
+| Image panel background | `var(--navy-dark)` | none (transparent) |
+
+**Reference component:** `x-sections.travel-in-style` (supports both `background="navy"` and `background="cloud"` via prop).
+
+---
+
+## 16. Approved Design Exceptions
+
+The following one-off exceptions are documented and approved. They must not be generalized to other components.
+
+| Component | Exception | Rule overridden | Justification |
+|---|---|---|---|
+| `x-sections.our-story` | Entry title italic style (`font-style: italic`) | §4 type scale has no italic variant | Sourced from prod site design; storytelling context; `our-story` only |
+| `x-sections.our-story` | `border-left: 8px solid var(--white)` on body `<p>` | §3.8 no decorative vertical accent lines | Functional blockquote-style content-grouping marker, not a decorative line; sourced from prod design |

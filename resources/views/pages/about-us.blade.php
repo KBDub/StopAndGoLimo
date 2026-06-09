@@ -43,4 +43,6 @@
     />
 
     <x-sections.our-story />
+
+    <x-sections.who-are-we />
 </x-layouts.page>

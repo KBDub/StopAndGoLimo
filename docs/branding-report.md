@@ -1216,7 +1216,9 @@ Use `subtitleIn` whenever the hero subtitle has a location-specific suffix. This
 
 ### Violations — all resolved ✓
 
-All four violations (rows 12, 13, 18, 19) have been fixed. Current state matches `travel-in-style` baseline for all shared properties.
+All violations have been fixed. Current state matches `travel-in-style` baseline for all shared properties.
+
+**Post-audit correction:** Entry title `font-weight` was subsequently changed from `600` to `400` (per boss direction — visual preference, not a branding violation).
 
 ---
 
@@ -1225,4 +1227,54 @@ All four violations (rows 12, 13, 18, 19) have been fixed. Current state matches
 | Exception | Rule | Justification |
 |---|---|---|
 | Entry title italic style | §4 type scale has no italic variant | One-off storytelling context; sourced from prod site design; `our-story` only |
-| `border-left: 3px solid var(--champagne)` on entries | §3.8 no decorative vertical accent lines | Functional blockquote-style content-grouping marker, not a standalone decorative line; sourced from prod design |
+| `border-left: 8px solid var(--white)` on body `<p>` only | §3.8 no decorative vertical accent lines | Functional blockquote-style content-grouping marker; title sits above/outside the border; sourced from prod design |
+
+---
+
+## Section Audit — `x-sections.who-are-we`
+
+> **Audited:** 2026-06-09
+> **File:** `resources/views/components/sections/who-are-we.blade.php`
+> **Canonical reference:** `x-sections.travel-in-style` (background="cloud" variant)
+> **Page:** `resources/views/pages/about-us.blade.php`
+
+---
+
+### Audit Results — vs `travel-in-style` (cloud variant) baseline
+
+| # | Property | `who-are-we` (built) | Reference / Spec | Status |
+|---|---|---|---|---|
+| 1 | Section background | `var(--cloud-light)` | `var(--cloud-light)` | ✓ |
+| 2 | Section padding | `py-12 lg:py-[6.25rem]` | `py-12 lg:py-[6.25rem]` | ✓ |
+| 3 | Outer container | `max-w-7xl mx-auto px-6` | `max-w-7xl mx-auto px-6` | ✓ |
+| 4 | Layout engine | `grid grid-cols-1 lg:grid-cols-2` | Grid only | ✓ |
+| 5 | No raw hex/rgb | All `var()` tokens | CSS tokens only | ✓ |
+| 6 | No uppercase | Title/sentence case throughout | No uppercase | ✓ |
+| 7 | H2 font | `font-head` (Poppins) | Poppins via `var(--font-head)` | ✓ |
+| 8 | H2 size | `clamp(1.75rem, 5vw, 3rem)` | `clamp(1.75rem, 5vw, 3rem)` | ✓ |
+| 9 | H2 line-height | `1.2` | `1.2` | ✓ |
+| 10 | H2 letter-spacing | `0.5px` | `0.5px` | ✓ |
+| 11 | H2 base color | `var(--navy)` | `var(--navy)` on cloud bg | ✓ |
+| 12 | H2 bold accent | `color: var(--champagne)` | `color: var(--champagne)` | ✓ |
+| 13 | Champagne underbar | Left-aligned, `3px`, `var(--champagne)`, `116%`, `margin-top: 0.85rem` | Left variant spec | ✓ |
+| 14 | Stat font | `font-head` (Poppins) | Poppins for labels | ✓ |
+| 15 | Stat size | `1.875rem` (30px) — H3 spec | H3: 30px/1.875rem | ✓ |
+| 16 | Stat weight | `600` | H3: SemiBold 600 | ✓ |
+| 17 | Stat line-height | `1.3` | H3/H4/H5: `1.3` | ✓ |
+| 18 | Stat color | `var(--navy)` | `var(--navy)` on cloud bg | ✓ |
+| 19 | Body font | `font-body` (Montserrat) | Montserrat via `var(--font-body)` | ✓ |
+| 20 | Body size | `1.25rem` | `1.25rem` | ✓ |
+| 21 | Body line-height | `1.5` | `1.5` | ✓ |
+| 22 | Body color | `var(--slate)` | `var(--slate)` on cloud bg | ✓ |
+| 23 | Body bottom margin | `mb-7` on all but last `<p>` | `mb-7` | ✓ |
+| 24 | Image aspect ratio | `aspect-[4/3]` | `4:3` for section images | ✓ |
+| 25 | No rounded corners | No `rounded` classes | Sharp corners only | ✓ |
+| 26 | `{!! !!}` unescaped | Not used — HTML entities escaped inline | Safe | ✓ |
+
+### Violations — none ✓
+
+All properties conform to spec. No violations.
+
+### Image Note
+
+Default image is `/images/sections/chauffeurs.jpg` (placeholder). The intended image is a ribbon-cutting ceremony photo of Vincent Rover at the New Lenox Chamber event. Replace via the `image` prop on the component or swap the default path once the photo is available.

@@ -884,28 +884,28 @@
                 <div class="bg-navy-dark px-6 py-5 border border-white/8">
                     <p class="font-mono text-champagne text-xs mb-1">Mandatory section template &mdash; docs/branding-requirements.md §17</p>
                     <p class="font-mono text-muted text-xs mb-3">Copy this shell for every new section component. Adjust background color, padding scale, and inner max-width per design. Never merge Layer 1 and Layer 2.</p>
-                    <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">@verbatim<section style="background: var(--navy);" class="py-10 lg:py-16">
+                    <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">&lt;section style="background: var(--navy);" class="py-10 lg:py-16"&gt;
 
     {{-- Layer 2: outer content rail --}}
-    <div class="max-w-7xl mx-auto px-6">
+    &lt;div class="max-w-7xl mx-auto px-6"&gt;
 
         {{-- Heading + champagne underbar (see §14) --}}
-        <div style="width: fit-content; margin-bottom: 2rem;">
-            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                <strong style="font-weight: 700; color: var(--champagne);">Bold Part</strong> Regular Part
-            </h2>
-            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
-        </div>
+        &lt;div style="width: fit-content; margin-bottom: 2rem;"&gt;
+            &lt;h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;"&gt;
+                &lt;strong style="font-weight: 700; color: var(--champagne);"&gt;Bold Part&lt;/strong&gt; Regular Part
+            &lt;/h2&gt;
+            &lt;div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
         {{-- Layer 3: inner content div --}}
-        <div class="w-full max-w-7xl mx-auto">
-            <p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+        &lt;div class="w-full max-w-7xl mx-auto"&gt;
+            &lt;p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;"&gt;
                 Body text here.
-            </p>
-        </div>
+            &lt;/p&gt;
+        &lt;/div&gt;
 
-    </div>
-</section>@endverbatim</pre>
+    &lt;/div&gt;
+&lt;/section&gt;</pre>
                 </div>
 
             </div>

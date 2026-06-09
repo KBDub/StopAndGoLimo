@@ -824,6 +824,94 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 10 — Section Template ────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">10 — Section</strong> Template
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        Every section component uses a mandatory three-layer HTML structure. The layers keep full-width backgrounds, content width, and body text width as independent concerns. See docs/branding-requirements.md §17 for the full rules.
+                    </p>
+                </div>
+
+                {{-- Three-layer diagram --}}
+                <div class="grid md:grid-cols-3 gap-4 mb-10">
+                    <div class="border border-white/10 bg-black/20 p-6">
+                        <p class="font-mono text-champagne text-xs font-bold mb-2">Layer 1 &mdash; &lt;section&gt;</p>
+                        <p class="text-muted-light text-sm leading-relaxed">Full-width. Carries the background color and vertical padding. Never constrained by max-width. Clipping this layer cuts off the background at the sides on wide screens.</p>
+                        <p class="font-mono text-cloud/50 text-xs mt-3">background: var(--navy);<br>py-10 lg:py-16</p>
+                    </div>
+                    <div class="border border-white/10 bg-black/20 p-6">
+                        <p class="font-mono text-champagne text-xs font-bold mb-2">Layer 2 &mdash; outer content rail</p>
+                        <p class="text-muted-light text-sm leading-relaxed">Constrains all content to the 7xl grid. Holds horizontal padding. Never carries a background color, border, or shadow.</p>
+                        <p class="font-mono text-cloud/50 text-xs mt-3">max-w-7xl mx-auto px-6</p>
+                    </div>
+                    <div class="border border-white/10 bg-black/20 p-6">
+                        <p class="font-mono text-champagne text-xs font-bold mb-2">Layer 3 &mdash; inner content div</p>
+                        <p class="text-muted-light text-sm leading-relaxed">Centers the body text block and controls its readable width. Always paired with w-full for mobile safety. Width can be narrowed (e.g. max-w-5xl) for tighter reading columns.</p>
+                        <p class="font-mono text-cloud/50 text-xs mt-3">w-full max-w-7xl mx-auto</p>
+                    </div>
+                </div>
+
+                {{-- Live preview --}}
+                <div class="mb-6">
+                    <p class="font-mono text-champagne text-xs mb-3">Live preview</p>
+                    <div style="background: var(--navy); padding: 3rem 1.5rem;">
+                        <div style="max-width: 80rem; margin: 0 auto;">
+                            <div style="width: fit-content; margin-bottom: 2rem;">
+                                <p class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                                    <strong style="font-weight: 700; color: var(--champagne);">Section</strong> Heading
+                                </p>
+                                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                            </div>
+                            <div style="width: 100%; max-width: 80rem; margin: 0 auto;">
+                                <p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                                    This is the body paragraph inside Layer 3. It sits inside the centered inner content div with left-aligned text. The heading and underbar above are anchored to Layer 2 at full 7xl width, giving each element its own independent width control.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Code block --}}
+                <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                    <p class="font-mono text-champagne text-xs mb-1">Mandatory section template &mdash; docs/branding-requirements.md §17</p>
+                    <p class="font-mono text-muted text-xs mb-3">Copy this shell for every new section component. Adjust background color, padding scale, and inner max-width per design. Never merge Layer 1 and Layer 2.</p>
+                    <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">@verbatim<section style="background: var(--navy);" class="py-10 lg:py-16">
+
+    {{-- Layer 2: outer content rail --}}
+    <div class="max-w-7xl mx-auto px-6">
+
+        {{-- Heading + champagne underbar (see §14) --}}
+        <div style="width: fit-content; margin-bottom: 2rem;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                <strong style="font-weight: 700; color: var(--champagne);">Bold Part</strong> Regular Part
+            </h2>
+            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+        </div>
+
+        {{-- Layer 3: inner content div --}}
+        <div class="w-full max-w-7xl mx-auto">
+            <p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                Body text here.
+            </p>
+        </div>
+
+    </div>
+</section>@endverbatim</pre>
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

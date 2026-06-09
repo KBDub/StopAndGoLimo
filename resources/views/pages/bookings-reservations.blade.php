@@ -50,6 +50,8 @@
         background="dark"
     />
 
+    <x-sections.four-box-info />
+
     <x-sections.free-instant-quote
         :showInfoBox="true"
         image="/images/sections/vincent-in-limo.jpg"

@@ -67,7 +67,11 @@
 
     <x-sections.faq />
 
-    <x-sections.share-your-experience />
+    <x-sections.share-your-experience
+        :showSingleButton="true"
+        singleButtonText="Leave a review"
+        singleButtonHref="#"
+    />
 
     <x-sections.map-contact-section />
 

@@ -52,4 +52,6 @@
         imagePosition="center 40%"
     />
 
+    <x-sections.info-strip />
+
 </x-layouts.page>

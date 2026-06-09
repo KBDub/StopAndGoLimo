@@ -44,14 +44,6 @@
 
     <x-sections.three-steps />
 
-    <x-sections.areas-we-serve
-        heading="Your"
-        headingBold="Trusted Local Partner"
-        background="dark"
-    />
-
-    <x-sections.four-box-info />
-
     <x-sections.free-instant-quote
         :showInfoBox="true"
         image="/images/sections/vincent-in-limo.jpg"
@@ -61,4 +53,26 @@
         heading=""
         body=""
     />
+
+    <x-sections.areas-we-serve
+        heading="Your"
+        headingBold="Trusted Local Partner"
+        background="dark"
+    />
+
+    <x-sections.four-box-info />
+
+    <x-sections.faq />
+
+    <x-sections.share-your-experience 
+        :showSingleButton="true"
+        singleButtonText="Leave a review"
+        singleButtonHref="#"
+    />
+
+    <x-sections.map-contact-section />
+
+    <x-ui.banner-thin-cloud />
+
+    <x-sections.base-footer />    
 </x-layouts.page>

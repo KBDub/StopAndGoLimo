@@ -1,14 +1,15 @@
 @props([
-    'heading'       => 'Elevate Your Travel Experience',
-    'headingBold'   => 'With Luxury and Comfort',
-    'subtitle'      => 'Discover the joy of seamless journeys',
-    'subtitleIn'    => '',
-    'description'   => '',
-    'buttonText'    => 'Book a Ride',
-    'buttonHref'    => '/contact',
-    'buttonRadius'  => 'soft',
-    'image'         => '/images/heroes/hero-home.jpg',
-    'imagePosition' => 'center center',
+    'heading'         => 'Elevate Your Travel Experience',
+    'headingBold'     => 'With Luxury and Comfort',
+    'headingTwoLines' => true,
+    'subtitle'        => 'Discover the joy of seamless journeys',
+    'subtitleIn'      => '',
+    'description'     => '',
+    'buttonText'      => 'Book a Ride',
+    'buttonHref'      => '/contact',
+    'buttonRadius'    => 'soft',
+    'image'           => '/images/heroes/hero-home.jpg',
+    'imagePosition'   => 'center center',
 ])
 
 @php
@@ -34,25 +35,32 @@
 
         {{-- H1 --}}
         <h1 class="font-head text-white mb-4" style="font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.2; letter-spacing: -1px;">
-            <span class="block font-normal">{{ $heading }}</span>
-            @if($headingBold)
-                <span class="block font-bold">{{ $headingBold }}</span>
+            @if($headingTwoLines)
+                <span class="block font-normal">{{ $heading }}</span>
+                @if($headingBold)
+                    <span class="block font-bold">{{ $headingBold }}</span>
+                @endif
+            @else
+                <span class="font-normal">{{ $heading }}</span>
+                @if($headingBold)
+                    <strong class="font-bold"> {{ $headingBold }}</strong>
+                @endif
             @endif
         </h1>
 
         {{-- Subtitle (Lead) --}}
         @if($subtitle)
-            <p class="font-head text-white mb-5" style="font-size: clamp(1rem, 2.5vw, 1.3125rem); font-weight: 400; line-height: 1.5; letter-spacing: -0.5px; opacity: 0.9; text-align: center;">
+            <p class="font-head text-white mb-5" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; opacity: 0.9; text-align: right;">
                 <span class="block">{{ $subtitle }}</span>
                 @if($subtitleIn)
-                    <span class="block">{{ $subtitleIn }}</span>
+                    <span class="block" style="font-weight: 700;">{{ $subtitleIn }}</span>
                 @endif
             </p>
         @endif
 
         {{-- Optional body paragraph --}}
         @if($description)
-            <p class="font-body text-white max-w-5xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; opacity: 0.85;">
+            <p class="font-body text-white max-w-5xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; letter-spacing: -0.4px; text-align: center; text-shadow: var(--text-shadow-subtle); opacity: 0.85;">
                 {{ $description }}
             </p>
         @endif

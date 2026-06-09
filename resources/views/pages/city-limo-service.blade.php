@@ -116,6 +116,15 @@ $hero = $heroConfig[$city] ?? [
             imageAlt="Aerial view of O'Hare airport, served by Stop and Go New Lenox Airport Shuttle"
             imageAspect="3/2"
         />
+
+        <x-sections.city-info-grid :boxes="[
+            ['heading' => 'North New Lenox',              'items' => ['Spencer Crossing', 'Fox Hill', 'North subdivisions', 'Route 30 corridor', 'LaGrange Road North areas']],
+            ['heading' => 'South New Lenox',              'items' => ['Hickory Creek', 'South New Lenox neighborhoods', 'East side New Lenox', 'Route 52 areas', 'Near Frankfort border']],
+            ['heading' => 'West New Lenox',               'items' => ['West New Lenox neighborhoods', 'Lincoln-Woodridge corridor', 'Near Joliet border', 'Residential subdivisions', 'Local shopping areas']],
+            ['heading' => 'Downtown & Central New Lenox', 'items' => ['Downtown New Lenox', 'Historic downtown area', 'Lincoln Highway corridor', 'Central business district', 'Near Village Hall']],
+            ['heading' => 'Nearby Communities',           'items' => ['Frankfort border areas', 'Mokena border areas', 'Joliet adjacent neighborhoods', 'Homer Glen areas', 'Tinley Park nearby zones']],
+            ['heading' => 'New Lenox High Schools',       'items' => ['Lincoln-Way East High School area', 'Lincoln-Way Central High School area', 'Lincoln-Way West High School area', 'New Lenox Elementary areas', 'Local middle schools']],
+        ]" />
     @endif
 
 </x-layouts.page>

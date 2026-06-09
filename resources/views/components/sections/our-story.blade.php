@@ -29,8 +29,8 @@ $entries = [
 
         {{-- Section heading with left-aligned champagne underbar --}}
         <div style="width: fit-content; margin-bottom: 3rem;">
-            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; color: var(--white);">
-                <span class="font-normal">{{ $heading }} </span><strong class="font-bold">{{ $headingBold }}</strong>
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.2; letter-spacing: 0.5px; color: var(--white);">
+                <span style="font-weight: 400;">{{ $heading }} </span><span style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</span>
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
         </div>
@@ -39,15 +39,15 @@ $entries = [
         <div class="grid grid-cols-1" style="gap: 3rem; max-width: 56rem;">
 
             @foreach($entries as $entry)
-                <div style="border-left: 3px solid var(--champagne); padding-left: 1.75rem;">
+                <div>
 
-                    {{-- Entry title --}}
-                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--champagne); line-height: 1.3; margin-bottom: 0.85rem;">
+                    {{-- Entry title — sits above the border, not inside it --}}
+                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--champagne); line-height: 1.3; margin-bottom: 0.75rem;">
                         {{ $entry['title'] }}
                     </h3>
 
-                    {{-- Entry body --}}
-                    <p class="font-body" style="font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: var(--cloud-light);">
+                    {{-- Entry body — border starts here --}}
+                    <p class="font-body mb-7" style="font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: var(--cloud); border-left: 8px solid var(--white); padding-left: 2rem;">
                         {!! $entry['body'] !!}
                     </p>
 

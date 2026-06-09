@@ -1200,51 +1200,23 @@ Use `subtitleIn` whenever the hero subtitle has a location-specific suffix. This
 | 9 | H2 line-height | `1.2` | `1.2` | ✓ |
 | 10 | H2 letter-spacing | `0.5px` | `0.5px` | ✓ |
 | 11 | H2 base span weight | `font-normal` class | `font-weight: 400` inline | ✓ (same result) |
-| 12 | H2 bold span color | no explicit color (inherits `var(--white)`) | `color: var(--champagne)` | ❌ |
-| 13 | H2 bold span markup | `<strong class="font-bold">` | `<span style="font-weight: 700; color: var(--champagne);">` | ❌ |
+| 12 | H2 bold span color | `color: var(--champagne)` | `color: var(--champagne)` | ✓ |
+| 13 | H2 bold span markup | `<span style="font-weight: 700; color: var(--champagne);">` | `<span style="font-weight: 700; color: var(--champagne);">` | ✓ |
 | 14 | Champagne underbar | Left-aligned, `3px`, `var(--champagne)`, `116%`, `margin-top: 0.85rem` | Same (left variant) | ✓ |
 | 15 | Body font | `font-body` (Montserrat) | `font-body` (Montserrat) | ✓ |
 | 16 | Body size | `1.25rem` | `1.25rem` | ✓ |
 | 17 | Body line-height | `1.5` | `1.5` | ✓ |
-| 18 | Body color | `var(--cloud-light)` | `var(--cloud)` | ❌ |
-| 19 | Body bottom margin | none | `mb-7` | ❌ |
+| 18 | Body color | `var(--cloud)` | `var(--cloud)` | ✓ |
+| 19 | Body bottom margin | `mb-7` | `mb-7` | ✓ |
 | 20 | Entry titles — italic | `font-style: italic` | N/A (no entry titles in `travel-in-style`) | ⚠️ approved exception — see below |
-| 21 | Entry border-left | `3px solid var(--champagne)` | N/A | ⚠️ approved exception — see below |
+| 21 | Entry border-left | `8px solid var(--white)` on `<p>` only (title sits above, outside border) | N/A | ⚠️ approved exception — see below |
 | 22 | `{!! !!}` unescaped output | hardcoded `<strong>` body copy | N/A | ✓ safe — static content |
 
 ---
 
-### Violations (❌) — pending fix
+### Violations — all resolved ✓
 
-#### 12–13. H2 bold word must be `var(--champagne)`, not white
-
-`travel-in-style` renders headingBold as champagne: `<span style="font-weight: 700; color: var(--champagne);">`. `our-story` uses `<strong class="font-bold">` with no color, so it inherits `var(--white)` from the parent `<h2>`.
-
-**Required fix — line 33:**
-```blade
-{{-- before --}}
-<span class="font-normal">{{ $heading }} </span><strong class="font-bold">{{ $headingBold }}</strong>
-
-{{-- after — matches travel-in-style exactly --}}
-<span style="font-weight: 400;">{{ $heading }} </span><span style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</span>
-```
-
-#### 18. Body text color must be `var(--cloud)`, not `var(--cloud-light)`
-
-`travel-in-style` uses `var(--cloud)` for body text on navy. `our-story` uses `var(--cloud-light)`, which is a lighter variant not used by the baseline.
-
-**Required fix — line 53:**
-```blade
-{{-- before --}}
-<p class="font-body" style="font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: var(--cloud-light);">
-
-{{-- after --}}
-<p class="font-body mb-7" style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
-```
-
-#### 19. Body paragraph missing `mb-7` bottom margin
-
-`travel-in-style` applies `mb-7` to its body `<p>`. This spacing is part of the baseline rhythm and is absent from `our-story` entry body paragraphs. Fix included above in row 18.
+All four violations (rows 12, 13, 18, 19) have been fixed. Current state matches `travel-in-style` baseline for all shared properties.
 
 ---
 

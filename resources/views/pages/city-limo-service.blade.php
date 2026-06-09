@@ -106,6 +106,16 @@ $hero = $heroConfig[$city] ?? [
             imageAspect="16/9"
             imageObjectPosition="center"
         />
+
+        <x-sections.image-slide-in
+            heading="24/7 New Lenox Airport Shuttle to O'Hare & Midway"
+            body="Our New Lenox airport shuttle provides round-the-clock service to O'Hare and Midway with on-time pickups from anywhere in New Lenox. Serving downtown, Spencer Crossing, Fox Hill, Hickory Creek, and other neighborhoods, we ensure stress-free travel with flight monitoring, luggage assistance, and expert I-80 and I-55 navigation for efficient New Lenox to O'Hare and New Lenox to Midway trips."
+            buttonText="Book Airport Shuttle"
+            buttonHref="/bookings-reservations"
+            image="/images/sections/new-lenox-airport.png"
+            imageAlt="Aerial view of O'Hare airport, served by Stop and Go New Lenox Airport Shuttle"
+            imageAspect="3/2"
+        />
     @endif
 
 </x-layouts.page>

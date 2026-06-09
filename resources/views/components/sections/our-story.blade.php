@@ -36,13 +36,13 @@ $entries = [
         </div>
 
         {{-- Story entries --}}
-        <div class="grid grid-cols-1" style="gap: 3rem; max-width: 56rem;">
+        <div class="max-w-5xl grid grid-cols-1" style="gap: 3rem;">
 
             @foreach($entries as $entry)
                 <div>
 
                     {{-- Entry title — sits above the border, not inside it --}}
-                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--champagne); line-height: 1.3; margin-bottom: 0.75rem;">
+                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--white); line-height: 1.3; margin-bottom: 0.75rem;">
                         {{ $entry['title'] }}
                     </h3>
 

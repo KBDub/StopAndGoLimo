@@ -42,12 +42,12 @@ $entries = [
                 <div style="border-left: 3px solid var(--champagne); padding-left: 1.75rem;">
 
                     {{-- Entry title --}}
-                    <h3 class="font-head" style="font-size: 1.375rem; font-weight: 400; font-style: italic; color: var(--champagne); line-height: 1.3; margin-bottom: 0.85rem;">
+                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--champagne); line-height: 1.3; margin-bottom: 0.85rem;">
                         {{ $entry['title'] }}
                     </h3>
 
                     {{-- Entry body --}}
-                    <p class="font-body" style="font-size: 1.0625rem; font-weight: 400; line-height: 1.7; color: var(--cloud-light);">
+                    <p class="font-body" style="font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: var(--cloud-light);">
                         {!! $entry['body'] !!}
                     </p>
 

@@ -55,6 +55,7 @@
         image="/images/sections/vincent-in-limo.jpg"
         imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service Inc., in the driver seat"
         imageAspect="4/3"
+        imageObjectPosition="top"
         heading=""
         body=""
     />

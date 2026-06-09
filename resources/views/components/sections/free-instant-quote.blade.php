@@ -6,16 +6,16 @@
     'image'            => '/images/sections/chauffeurs.jpg',
     'imageAlt'         => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
     'imageAspect'      => '4/3',
-    'formAction'       => '/get-a-quote',
-    'submitLabel'      => 'Send Message',
-    'showInfoBox'      => false,
+    'formAction'          => '/get-a-quote',
+    'submitLabel'         => 'Send Message',
+    'imageObjectPosition' => 'center',
+    'showInfoBox'         => false,
     'infoHeading'      => 'So What Are You',
     'infoHeadingBold'  => 'Waiting For?',
     'infoLines'        => [
         'Your journey should be as exceptional as your destination. Our booking and reservations process is designed for speed, simplicity, and total peace of mind, giving you instant access to luxury transport when you need it most.',
         'Every client review reflects the same standard: reliability, professionalism, and a seamless experience from start to finish. When you book a limo with us, you are not just securing a ride, you are choosing a service trusted by clients who expect results, not excuses.',
         'Whether it is a corporate transfer, special event, or private hire, our system ensures your booking and reservations are confirmed quickly, managed efficiently, and executed flawlessly.',
-        'Do not leave your plans to chance. Book a limo today and experience a service built on trust, precision, and proven client satisfaction.',
     ],
 ])
 
@@ -194,6 +194,7 @@
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"
                         class="w-full h-full object-cover"
+                        style="object-position: {{ $imageObjectPosition }};"
                         loading="lazy"
                     >
                 </div>

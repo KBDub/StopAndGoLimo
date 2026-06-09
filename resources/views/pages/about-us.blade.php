@@ -46,6 +46,17 @@
 
     <x-sections.who-are-we />
 
+    <x-sections.travel-in-style
+        heading="Read"
+        headingBold="our Blog"
+        body="Stay updated with expert tips, insider deals, and travel inspiration you won't want to miss plus get behind-the-scenes insights, local highlights, and everything you need to make your next ride smooth, safe, and unforgettable."
+        buttonText=""
+        buttonHref=""
+        image="/images/sections/blog-limo.jpg"
+        imageAlt="Guests celebrating inside a Stop & Go Airport Shuttle limousine"
+        imagePosition="left"
+    />
+
     <x-sections.free-instant-quote
         image="/images/sections/vincent-in-limo.jpg"
         imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service Inc., inside a luxury limousine"

@@ -1025,6 +1025,166 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 12 — rect-box ────────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">12 — x-ui.</strong>rect-box
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        A rectangular navy block used for location links and info panels. Two modes: <code class="font-mono text-champagne text-sm">as="a"</code> renders a clickable link tile with a map pin icon and label, <code class="font-mono text-champagne text-sm">as="div"</code> renders a static navy-light content panel. Both accept a slot for custom inner content.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start mb-10">
+                    {{-- Live previews --}}
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">as="a" — link tile (default: map pin + label)</p>
+                            <div class="grid grid-cols-2 gap-1" style="max-width: 380px;">
+                                <x-ui.rect-box label="New Lenox, IL" href="#" />
+                                <x-ui.rect-box label="Naperville, IL" href="#" />
+                            </div>
+                        </div>
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">as="div" — static info panel (with slot)</p>
+                            <div style="max-width: 380px;">
+                                <x-ui.rect-box as="div">
+                                    <span class="font-head" style="font-size: 1rem; font-weight: 700; color: var(--champagne); display: block; margin-bottom: 0.5rem;">Available 24/7</span>
+                                    <span class="font-body" style="font-size: 1rem; color: var(--cloud-light); line-height: 1.5; display: block;">Call or book online any time. We monitor flight arrivals in real time.</span>
+                                </x-ui.rect-box>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Spec + code --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead><tr class="border-b border-white/10"><th class="text-left pb-2 text-champagne">Prop</th><th class="text-left pb-2 text-champagne">Type</th><th class="text-left pb-2 text-champagne">Default</th></tr></thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">label</td><td>string</td><td>''</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">href</td><td>string</td><td>'#'</td></tr>
+                                    <tr><td class="py-1.5">as</td><td>'a' or 'div'</td><td>'a'</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/rect-box.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Link tile (default map pin icon) --}}
+&lt;x-ui.rect-box label="New Lenox, IL" href="/service-areas/new-lenox" /&gt;
+
+{{-- Link tile with custom slot content --}}
+&lt;x-ui.rect-box href="/contact"&gt;
+    &lt;!-- custom icon + text here --&gt;
+&lt;/x-ui.rect-box&gt;
+
+{{-- Static info panel --}}
+&lt;x-ui.rect-box as="div"&gt;
+    &lt;span ...&gt;Available 24/7&lt;/span&gt;
+    &lt;span ...&gt;Body copy here.&lt;/span&gt;
+&lt;/x-ui.rect-box&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
+        {{-- ── 13 — service-card ────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">13 — x-ui.</strong>service-card
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        A square photo card with a 1:1 aspect ratio. Used in service category grids. The label and champagne underbar are anchored to the bottom-center of the image. Hover reveals a champagne inset ring and lightens the overlay.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    {{-- Live preview --}}
+                    <div>
+                        <p class="font-mono text-champagne text-xs mb-3">Live preview — 4-card grid at 280px each</p>
+                        <div class="grid grid-cols-2 gap-1" style="max-width: 400px;">
+                            <x-ui.service-card
+                                label="Airport Shuttle"
+                                href="#"
+                                image="/images/services/airport-shuttle.jpg"
+                            />
+                            <x-ui.service-card
+                                label="Chauffeur"
+                                href="#"
+                                image="/images/services/chauffeur.jpg"
+                            />
+                            <x-ui.service-card
+                                label="Coach Buses"
+                                href="#"
+                                image="/images/services/coach-buses.jpg"
+                            />
+                            <x-ui.service-card
+                                label="Party Bus"
+                                href="#"
+                                image="/images/services/party-bus.jpg"
+                            />
+                        </div>
+                        <p class="font-mono text-muted text-xs mt-3">Hover any card to see champagne ring + overlay lift.</p>
+                    </div>
+
+                    {{-- Spec + code --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead><tr class="border-b border-white/10"><th class="text-left pb-2 text-champagne">Prop</th><th class="text-left pb-2 text-champagne">Type</th><th class="text-left pb-2 text-champagne">Default</th></tr></thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">label</td><td>string</td><td>''</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">href</td><td>string</td><td>'#'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">image</td><td>string (URL)</td><td>''</td></tr>
+                                    <tr><td class="py-1.5">imageAlt</td><td>string</td><td>falls back to label</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/service-card.blade.php — aspect-ratio: 1/1</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Single card --}}
+&lt;x-ui.service-card
+    label="Airport Shuttle"
+    href="/services/airport-shuttle"
+    image="/images/services/airport-shuttle.jpg"
+    imageAlt="Airport shuttle vehicle"
+/&gt;
+
+{{-- 3-column grid --}}
+&lt;div class="grid grid-cols-3 gap-1"&gt;
+    &lt;x-ui.service-card label="..." href="..." image="..." /&gt;
+    &lt;x-ui.service-card label="..." href="..." image="..." /&gt;
+    &lt;x-ui.service-card label="..." href="..." image="..." /&gt;
+&lt;/div&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

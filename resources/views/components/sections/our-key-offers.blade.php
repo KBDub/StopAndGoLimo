@@ -28,6 +28,20 @@ $svgRoad = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="
 $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 13 32.8 13 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>';
 @endphp
 
+<style>
+    .sg-key-offers-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+    @@media (min-width: 1024px) {
+        .sg-key-offers-body {
+            grid-template-columns: 65fr 35fr;
+        }
+    }
+</style>
+
 {{-- ═══════════════════════════════════════════════════════════
      x-sections.our-key-offers
      Layer 1: section (full-width cloud-light bg)
@@ -70,7 +84,7 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
         </div>
 
         {{-- Body: 65/35 two-column grid ────────────────────────── --}}
-        <div class="grid grid-cols-1 lg:grid-cols-[65fr_35fr] gap-8 items-start">
+        <div class="sg-key-offers-body">
 
             {{-- Left column: text, images, text, cta ──────────── --}}
             <div>

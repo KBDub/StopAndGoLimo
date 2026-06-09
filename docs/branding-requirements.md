@@ -476,3 +476,77 @@ The following one-off exceptions are documented and approved. They must not be g
 |---|---|---|---|
 | `x-sections.our-story` | Entry title italic style (`font-style: italic`) | §4 type scale has no italic variant | Sourced from prod site design; storytelling context; `our-story` only |
 | `x-sections.our-story` | `border-left: 8px solid var(--white)` on body `<p>` | §3.8 no decorative vertical accent lines | Functional blockquote-style content-grouping marker, not a decorative line; sourced from prod design |
+
+---
+
+## 17. Mandatory Section HTML Template
+
+Every Blade section component must follow this exact three-layer structure. No exceptions unless documented in §16.
+
+### 17.1 — The three layers
+
+```
+Layer 1: <section>          — full-width, carries background color and vertical padding
+Layer 2: outer content rail — max-w-7xl mx-auto px-6, constrains content, never clips bg
+Layer 3: inner content div  — w-full max-w-[size] mx-auto, centers the body text block
+```
+
+### 17.2 — Canonical HTML template
+
+```html
+<section style="background: var(--navy);" class="py-10 lg:py-16">
+
+    {{-- Layer 2: outer content rail. Do NOT put background or border here. --}}
+    <div class="max-w-7xl mx-auto px-6">
+
+        {{-- Heading + champagne underbar (see §14 for full rules) --}}
+        <div style="width: fit-content; margin-bottom: 2rem;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                <strong style="font-weight: 700; color: var(--champagne);">Bold Part</strong> Regular Part
+            </h2>
+            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+        </div>
+
+        {{-- Layer 3: inner content div. Centers the body block. Text is left-aligned inside. --}}
+        <div class="w-full max-w-7xl mx-auto">
+            <p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                Body text here.
+            </p>
+        </div>
+
+    </div>
+</section>
+```
+
+### 17.3 — Layer rules
+
+| Layer | Element | Required classes / styles | Never do |
+|---|---|---|---|
+| 1 — Section | `<section>` | Background color as inline `style`; vertical padding `py-10 lg:py-16` | Do not put `max-w-*` or `px-*` here — it clips the background |
+| 2 — Outer rail | `<div>` | `max-w-7xl mx-auto px-6` | Do not put background color, border, or shadow here |
+| 3 — Inner content | `<div>` | `w-full max-w-7xl mx-auto` (or narrower, e.g. `max-w-5xl`, per design) | Do not omit `w-full` (mobile safety rule); do not use bare `max-w-*` without `w-full` |
+
+### 17.4 — Vertical padding scale
+
+| Context | Class |
+|---|---|
+| Standard section | `py-10 lg:py-16` |
+| Compact / callout section | `py-6 lg:py-10` |
+| Hero or feature section | `py-16 lg:py-24` |
+
+### 17.5 — Background color options
+
+Use named CSS custom properties on Layer 1 only. Raw hex values are never permitted.
+
+| Background | Inline style value |
+|---|---|
+| Navy (default) | `style="background: var(--navy);"` |
+| Navy dark | `style="background: var(--navy-dark);"` |
+| Light / cloud | `style="background: var(--cloud-light);"` |
+| Transparent / none | No `style` attribute needed |
+
+### 17.6 — Why the layers must stay separate
+
+The outer `<section>` must be full-width at all times so that background colors fill edge-to-edge on any screen size. Merging Layer 1 and Layer 2 (putting `max-w-7xl` on the `<section>`) clips the background to 80rem wide, leaving visible gaps at the sides on large monitors. The two-div inner structure is not optional.
+
+**Reference component:** `resources/views/components/sections/info-strip.blade.php`

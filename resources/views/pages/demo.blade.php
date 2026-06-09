@@ -1185,6 +1185,90 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 14 — key-offer-item ─────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">14 — x-ui.</strong>key-offer-item
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        A feature highlight item used in the "Our Key Offers" strip. Each item shows a 28px champagne inline SVG icon and a small bold label. Items are placed side by side in a flex row on a light background strip. The optional <code class="font-mono text-champagne text-sm">divider</code> prop shows a faint champagne vertical rule between items. Set <code class="font-mono text-champagne text-sm">:divider="false"</code> on the last item.
+                    </p>
+                </div>
+
+                {{-- Live preview: all 4 instances --}}
+                <div class="mb-10">
+                    <p class="font-mono text-champagne text-xs mb-3">Live preview — all 4 instances in strip container</p>
+                    <div style="background: var(--cloud-light); display: flex; flex-wrap: wrap; align-items: stretch;">
+                        <x-ui.key-offer-item
+                            label="1-15 Passengers"
+                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z\'/></svg>'"
+                        />
+                        <x-ui.key-offer-item
+                            label="Any Occasion"
+                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\'/></svg>'"
+                        />
+                        <x-ui.key-offer-item
+                            label="Music System"
+                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z\'/></svg>'"
+                        />
+                        <x-ui.key-offer-item
+                            label="Various Brands"
+                            :divider="false"
+                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z\'/></svg>'"
+                        />
+                    </div>
+                    <p class="font-mono text-muted text-xs mt-2">Strip container: <code class="text-champagne">background: var(--cloud-light); display: flex; flex-wrap: wrap;</code></p>
+                </div>
+
+                {{-- Spec + code --}}
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                        <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                        <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                            <thead><tr class="border-b border-white/10"><th class="text-left pb-2 text-champagne">Prop</th><th class="text-left pb-2 text-champagne">Type</th><th class="text-left pb-2 text-champagne">Default</th></tr></thead>
+                            <tbody>
+                                <tr class="border-b border-white/5"><td class="py-1.5">icon</td><td>string (raw SVG)</td><td>''</td></tr>
+                                <tr class="border-b border-white/5"><td class="py-1.5">label</td><td>string</td><td>'Feature'</td></tr>
+                                <tr><td class="py-1.5">divider</td><td>boolean</td><td>true</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                        <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                        <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/key-offer-item.blade.php</p>
+                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Strip container --}}
+&lt;div style="background: var(--cloud-light);
+    display: flex; flex-wrap: wrap;"&gt;
+
+    &lt;x-ui.key-offer-item
+        label="1-15 Passengers"
+        :icon="'&lt;svg ...&gt;&lt;/svg&gt;'"
+    /&gt;
+    &lt;x-ui.key-offer-item
+        label="Any Occasion"
+        :icon="'&lt;svg ...&gt;&lt;/svg&gt;'"
+    /&gt;
+    {{-- Last item: no divider --}}
+    &lt;x-ui.key-offer-item
+        label="Various Brands"
+        :divider="false"
+        :icon="'&lt;svg ...&gt;&lt;/svg&gt;'"
+    /&gt;
+&lt;/div&gt;</pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

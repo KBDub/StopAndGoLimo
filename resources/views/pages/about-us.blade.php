@@ -53,16 +53,4 @@
         heading=""
         body=""
     />
-
-    <x-sections.travel-in-style
-        heading="Read"
-        headingBold="our Blog"
-        body="Stay updated with expert tips, insider deals, and travel inspiration you won't want to miss. Get behind-the-scenes insights, local highlights, and everything you need to make your next ride smooth, safe, and unforgettable."
-        buttonText="Click Here"
-        buttonHref="/blog"
-        image="/images/sections/blog-promo.jpg"
-        imageAlt="Luxury limousine interior, Stop and Go Airport Shuttle Service"
-        imagePosition="left"
-        background="cloud"
-    />
 </x-layouts.page>

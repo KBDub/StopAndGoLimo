@@ -6,9 +6,6 @@
     'image'          => '/images/sections/chauffeurs.jpg',
     'imageAlt'       => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
     'imageAspect'    => '4/3',
-    'showForm'       => true,
-    'buttonText'     => '',
-    'buttonHref'     => '',
     'formAction'     => '/get-a-quote',
     'submitLabel'    => 'Send Message',
 ])
@@ -16,12 +13,9 @@
 <section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
-        @if($showForm)
-
-        {{-- ── Form mode: form LEFT, image + copy RIGHT ─────────────── --}}
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
-            {{-- Left: Quote Form Card --}}
+            {{-- ── Left: Quote Form Card ────────────────────────────────── --}}
             <div style="background: var(--white); box-shadow: 0 2px 16px rgba(0,0,0,0.08);" class="w-full px-8 py-10">
 
                 {{-- Card heading --}}
@@ -182,9 +176,10 @@
                 </form>
             </div>
 
-            {{-- Right: Image + Copy --}}
+            {{-- ── Right: Image + Copy ──────────────────────────────────── --}}
             <div class="w-full">
 
+                {{-- Photo --}}
                 <div class="w-full overflow-hidden mb-6" style="aspect-ratio: {{ $imageAspect }};">
                     <img
                         src="{{ $image }}"
@@ -195,12 +190,16 @@
                 </div>
 
                 @if($heading)
+                    {{-- Heading — Poppins, weight 600 per spec --}}
                     <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
                         {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
                     </h3>
+
+                    {{-- Champagne rule --}}
                     <x-ui.banner-thin-champagne />
                 @endif
 
+                {{-- Body --}}
                 @if($body)
                     <p class="font-body mt-4" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
                         {{ $body }}
@@ -210,53 +209,5 @@
             </div>
 
         </div>
-
-        @else
-
-        {{-- ── Promo mode: image LEFT, copy RIGHT — no form ──────────── --}}
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-            {{-- Left: Image --}}
-            <div class="w-full order-first">
-                <div class="w-full overflow-hidden" style="aspect-ratio: {{ $imageAspect }};">
-                    <img
-                        src="{{ $image }}"
-                        alt="{{ $imageAlt }}"
-                        class="w-full h-full object-cover"
-                        loading="lazy"
-                    >
-                </div>
-            </div>
-
-            {{-- Right: Copy --}}
-            <div class="w-full order-last">
-
-                @if($heading)
-                    <div style="width: fit-content; margin-bottom: 1.75rem;">
-                        <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.2; letter-spacing: 0.5px; color: var(--navy);">
-                            <span style="font-weight: 400;">{{ $heading }} </span><span style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</span>{{ $headingTail ? ' ' . $headingTail : '' }}
-                        </h2>
-                        <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
-                    </div>
-                @endif
-
-                @if($body)
-                    <p class="font-body mb-7" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
-                        {{ $body }}
-                    </p>
-                @endif
-
-                @if($buttonText)
-                    <x-ui.button-champagne-solid href="{{ $buttonHref ?: '#' }}">
-                        {{ $buttonText }}
-                    </x-ui.button-champagne-solid>
-                @endif
-
-            </div>
-
-        </div>
-
-        @endif
-
     </div>
 </section>

@@ -53,4 +53,11 @@
         imagePosition="center 50%"
     />
 
+    <x-sections.info-strip
+        headingPrefix="Enjoy a"
+        headingBold="Ride Full of Luxury"
+        heading=""
+        body="Custom limousine services are designed specifically for special events, providing a touch of luxury and sophistication."
+    />
+
 </x-layouts.page>

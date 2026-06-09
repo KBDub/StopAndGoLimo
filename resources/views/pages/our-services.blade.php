@@ -54,4 +54,6 @@
 
     <x-sections.info-strip />
 
+    <x-sections.our-key-offers />
+
 </x-layouts.page>

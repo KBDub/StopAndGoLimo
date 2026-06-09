@@ -1,6 +1,7 @@
 @props([
     'heading'       => 'Travel in',
     'headingBold'   => 'Style',
+    'subtitle'      => '',
     'body'          => '',
     'buttonText'    => 'About Us',
     'buttonHref'    => '/about-us',
@@ -45,6 +46,13 @@
                 <h2 class="font-head mb-5" style="font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.2; letter-spacing: 0.5px; {{ $textColor }}">
                     <span style="font-weight: 400;">{{ $heading }} </span><span style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</span>
                 </h2>
+
+                {{-- Optional subtitle --}}
+                @if($subtitle)
+                    <p class="font-head mb-4" style="font-size: 1.25rem; font-weight: 600; line-height: 1.4; {{ $textColor }}">
+                        {{ $subtitle }}
+                    </p>
+                @endif
 
                 {{-- Body --}}
                 @if($body)

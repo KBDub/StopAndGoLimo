@@ -75,4 +75,20 @@ $hero = $heroConfig[$city] ?? [
         :image="$hero['image']"
         :imagePosition="$hero['imagePosition']"
     />
+
+    @if($city === 'New Lenox')
+        <x-sections.travel-in-style
+            heading="Every Occasion"
+            headingBold="Covered"
+            subtitle="Driven by certified drivers you can trust"
+            body="Stop & Go provides reliable transportation throughout New Lenox. We offer a professional 24/7 New Lenox airport shuttle to O'Hare and Midway."
+            buttonText="About Us"
+            buttonHref="/about-us"
+            image="/images/sections/new-lenox-limo.png"
+            imageAlt="White luxury limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
+            imagePosition="left"
+            background="navy"
+        />
+    @endif
+
 </x-layouts.page>

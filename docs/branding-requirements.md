@@ -372,17 +372,34 @@ Every component must pass all three breakpoints:
 
 ## 14. Champagne Rule (Underbar) Standards
 
+### 14.1 — Two different champagne line elements (do not confuse them)
+
+There are two distinct champagne line elements in the system. They are not interchangeable.
+
+| Element | What it is | Width | Use |
+|---|---|---|---|
+| `x-ui.banner-thin-champagne` | A full-width Blade component | 100% of the viewport | Full-width section separator — between sections, above/below nav zones |
+| Heading underbar `<div>` | An inline `<div>` inside a `width: fit-content` wrapper | `116%` of the heading text | Decorative accent below an H2 inside a section |
+
+**Never use `x-ui.banner-thin-champagne` as a heading underbar.** It is full-width and belongs between sections, not inside them. Never use the heading underbar `<div>` as a section separator.
+
+---
+
+### 14.2 — When to use the heading underbar
+
 Not all sections require a champagne underbar. CTA-style sections, compact contact label rows, and hero headings do not use one.
 
-**Sections that use the standard underbar:** Travel in Style, Free Instant Quote, Areas We Serve, Why Choose Us, Airport Shuttle Service, Our Services, FAQ, Share Your Experience, Map/Social (social heading only).
+**Sections that use the standard underbar:** Travel in Style, Info Strip, Free Instant Quote, Areas We Serve, Why Choose Us, Airport Shuttle Service, Our Services, FAQ, Share Your Experience, Map/Social (social heading only).
 
 **Sections that do not use it:** Category Hero, Service Locations, base-footer.
 
-### Standard variant (most sections)
+---
 
-The rule must be proportional to the heading text width — never full-width, never a fixed pixel value. Wrap the `<h2>` and the rule `<div>` in a container with `width: fit-content`.
+### 14.3 — Standard variant (most sections)
 
-**Centered heading:**
+The rule must be proportional to the heading text width — never full-width, never a fixed `px` or `rem` value. Wrap both the `<h2>` and the rule `<div>` together inside a `width: fit-content` container. This is mandatory — without the wrapper, `width: 116%` resolves to 116% of the section width, not the heading width.
+
+**Centered heading** — canonical reference: `x-sections.areas-we-serve`, `x-sections.share-your-experience`:
 ```html
 <div style="width: fit-content; margin: 0 auto 2rem; text-align: center;">
     <h2>Heading <strong>Bold Part</strong></h2>
@@ -390,10 +407,10 @@ The rule must be proportional to the heading text width — never full-width, ne
 </div>
 ```
 
-- `margin: 0 auto` centers the wrapper.
-- `margin-left: -8%` on the rule shifts it left by half the overflow (16% / 2 = 8%), keeping it visually centered.
+- `margin: 0 auto` centers the wrapper on the page.
+- `margin-left: -8%` on the rule shifts it left by half the overflow (16% / 2 = 8%), keeping the bar visually centered under the heading.
 
-**Left-aligned heading:**
+**Left-aligned heading** — canonical reference: `x-sections.info-strip`, `x-sections.travel-in-style`:
 ```html
 <div style="width: fit-content; margin-bottom: 2rem;">
     <h2>Heading <strong>Bold Part</strong></h2>
@@ -401,20 +418,35 @@ The rule must be proportional to the heading text width — never full-width, ne
 </div>
 ```
 
-### SM label-rule variant (contact column labels)
+- No `margin: 0 auto` — the wrapper naturally left-aligns.
+- No `margin-left` offset — the 8% overhang sits entirely to the right of the heading start, creating a subtle outward extension.
 
-Used under short column labels in the Map/Social contact strip. No `fit-content` wrapper needed. Width is 30% of the column container.
+---
+
+### 14.4 — SM label-rule variant (contact column labels)
+
+Used under short column labels in the Map/Social contact strip. No `fit-content` wrapper needed because the label text is short and the rule is intentionally narrow relative to the column.
 
 ```html
 <div style="height: 3px; background: var(--champagne); width: 30%; margin-top: 0.5rem; margin-bottom: 1rem;"></div>
 ```
 
-### Rules (all variants)
+---
 
-- Always `3px` height, `var(--champagne)` color.
-- Standard variant: `width: 116%`, `margin-top: 0.85rem`, inside a `fit-content` wrapper containing only the heading and the rule.
-- SM label-rule variant: `width: 30%`, `margin-top: 0.5rem`, no wrapper.
-- Never use `border-bottom` on the heading itself; always a separate `<div>` element.
+### 14.5 — Rules and never-do list (all variants)
+
+**Always:**
+- `height: 3px` — never 1px, 2px, or 4px.
+- `background: var(--champagne)` — never a raw hex value.
+- Standard variant: `width: 116%`, inside a `width: fit-content` wrapper that contains only the heading and the rule.
+- SM label variant: `width: 30%`, `margin-top: 0.5rem`, no wrapper required.
+
+**Never:**
+- Never use `border-bottom` on the `<h2>` itself. The rule is always a separate `<div>` element below the heading.
+- Never set the rule width to a fixed `rem` or `px` value (e.g., `width: 14rem`, `width: 200px`). Fixed values ignore the heading's actual rendered width and break at different viewport sizes.
+- Never use `width: 100%` on the underbar — that is full-width, which is the banner component's job.
+- Never place the rule `<div>` outside the `fit-content` wrapper in the standard variant — it must be a sibling of the `<h2>`, both children of the wrapper.
+- Never use `x-ui.banner-thin-champagne` inside a section as a heading underbar.
 
 ---
 

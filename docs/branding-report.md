@@ -1176,104 +1176,81 @@ Use `subtitleIn` whenever the hero subtitle has a location-specific suffix. This
 
 ## Section Audit — `x-sections.our-story`
 
-> **Audited:** 2026-06-09
+> **Audited:** 2026-06-09 (revised)
 > **File:** `resources/views/components/sections/our-story.blade.php`
-> **Reference:** `docs/branding-requirements.md`
+> **Canonical reference:** `x-sections.travel-in-style` (the approved branding baseline for navy sections)
 > **Page:** `resources/views/pages/about-us.blade.php`
 
+`x-sections.travel-in-style` is the established branding baseline for navy background sections. All shared properties must match it exactly. The comparison below is line-for-line against that component.
+
 ---
 
-### Audit Results
+### Audit Results — vs `travel-in-style` baseline
 
-| # | Property | Built | Spec | Status |
+| # | Property | `our-story` (built) | `travel-in-style` (reference) | Status |
 |---|---|---|---|---|
-| 1 | Section background | `var(--navy)` | `var(--navy)` | ✓ |
+| 1 | Section background | `var(--navy)` inline style | `var(--navy)` via `$bgStyle` | ✓ |
 | 2 | Section padding | `py-12 lg:py-[6.25rem]` | `py-12 lg:py-[6.25rem]` | ✓ |
 | 3 | Outer container | `max-w-7xl mx-auto px-6` | `max-w-7xl mx-auto px-6` | ✓ |
-| 4 | Layout engine | `grid grid-cols-1` | Grid only, no Flexbox | ✓ |
-| 5 | No raw hex/rgb | All `var()` tokens | CSS tokens only | ✓ |
-| 6 | No uppercase | Heading + titles use title/sentence case | No uppercase | ✓ |
-| 7 | No double hyphens | Em dash (—) used in entry titles | Comma or em dash | ✓ |
-| 8 | No icons | None present | Font Awesome only for functional use | ✓ |
-| 9 | Unitless line-heights | `1.2`, `1.3`, `1.7` | Unitless only | ✓ |
-| 10 | H2 font | `font-head` (Poppins) | Poppins via `var(--font-head)` | ✓ |
-| 11 | H2 size | `clamp(1.75rem, 5vw, 3rem)` | `clamp(1.75rem, 5vw, 3rem)` | ✓ |
-| 12 | H2 weight split | Regular 400 + Bold 700 `<strong>` | 400 base + 700 bold | ✓ |
-| 13 | H2 letter-spacing | `0.5px` | `0.5px` | ✓ |
-| 14 | H2 line-height | `1.2` | `1.2` | ✓ |
-| 15 | Champagne underbar variant | Left-aligned: `fit-content` wrapper, `height: 3px`, `background: var(--champagne)`, `width: 116%`, `margin-top: 0.85rem` | Left variant spec | ✓ |
-| 16 | Entry title font | `font-head` (Poppins) | Poppins for labels | ✓ |
-| 17 | Entry title color | `var(--champagne)` | `var(--champagne)` on dark | ✓ |
-| 18 | Entry title size | `1.375rem` (22px) | H3: 30px / H4: 24px | ❌ |
-| 19 | Entry title weight | 400 Regular | H3: 600 SemiBold / H4: 600 SemiBold | ❌ |
-| 20 | Entry title italic | `font-style: italic` | Not in type scale | ⚠️ |
-| 21 | Entry body font | `font-body` (Montserrat) | Montserrat via `var(--font-body)` | ✓ |
-| 22 | Entry body size | `1.0625rem` (17px) | Body: 20px/1.25rem (section spec) | ❌ |
-| 23 | Entry body line-height | `1.7` | `1.5` (body spec) | ⚠️ |
-| 24 | Entry body color | `var(--cloud-light)` | `var(--cloud-light)` on dark | ✓ |
-| 25 | Entry border-left | `3px solid var(--champagne)` | §3.8: no decorative vertical accent lines | ⚠️ |
-| 26 | `{!! !!}` unescaped output | Used for hardcoded `<strong>` body copy | Safe — content is static, not user input | ✓ |
+| 4 | Layout engine | `grid grid-cols-1` | `grid grid-cols-1 lg:grid-cols-2` | ✓ (single-col intentional for story layout) |
+| 5 | No raw hex/rgb | All `var()` tokens | All `var()` tokens | ✓ |
+| 6 | No uppercase | Title/sentence case throughout | Title/sentence case throughout | ✓ |
+| 7 | H2 font | `font-head` (Poppins) | `font-head` (Poppins) | ✓ |
+| 8 | H2 size | `clamp(1.75rem, 5vw, 3rem)` | `clamp(1.75rem, 5vw, 3rem)` | ✓ |
+| 9 | H2 line-height | `1.2` | `1.2` | ✓ |
+| 10 | H2 letter-spacing | `0.5px` | `0.5px` | ✓ |
+| 11 | H2 base span weight | `font-normal` class | `font-weight: 400` inline | ✓ (same result) |
+| 12 | H2 bold span color | no explicit color (inherits `var(--white)`) | `color: var(--champagne)` | ❌ |
+| 13 | H2 bold span markup | `<strong class="font-bold">` | `<span style="font-weight: 700; color: var(--champagne);">` | ❌ |
+| 14 | Champagne underbar | Left-aligned, `3px`, `var(--champagne)`, `116%`, `margin-top: 0.85rem` | Same (left variant) | ✓ |
+| 15 | Body font | `font-body` (Montserrat) | `font-body` (Montserrat) | ✓ |
+| 16 | Body size | `1.25rem` | `1.25rem` | ✓ |
+| 17 | Body line-height | `1.5` | `1.5` | ✓ |
+| 18 | Body color | `var(--cloud-light)` | `var(--cloud)` | ❌ |
+| 19 | Body bottom margin | none | `mb-7` | ❌ |
+| 20 | Entry titles — italic | `font-style: italic` | N/A (no entry titles in `travel-in-style`) | ⚠️ approved exception — see below |
+| 21 | Entry border-left | `3px solid var(--champagne)` | N/A | ⚠️ approved exception — see below |
+| 22 | `{!! !!}` unescaped output | hardcoded `<strong>` body copy | N/A | ✓ safe — static content |
 
 ---
 
-### Violations (❌)
+### Violations (❌) — pending fix
 
-#### 18–19. Entry title size and weight do not match any type scale level
+#### 12–13. H2 bold word must be `var(--champagne)`, not white
 
-**Built:** `font-size: 1.375rem` (22px), `font-weight: 400`
-**Spec:** H3 is 30px/600, H4 is 24px/600 (champagne accent on dark — the closest match)
+`travel-in-style` renders headingBold as champagne: `<span style="font-weight: 700; color: var(--champagne);">`. `our-story` uses `<strong class="font-bold">` with no color, so it inherits `var(--white)` from the parent `<h2>`.
 
-The entry titles are `<h3>` elements styled outside the defined type scale. The closest semantic and visual fit is H4 (24px, SemiBold 600, champagne color on dark). These are timeline entry labels, not subsection headings, which supports the smaller H4 treatment.
-
-**Recommended fix:**
+**Required fix — line 33:**
 ```blade
-<h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--champagne); line-height: 1.3; margin-bottom: 0.85rem;">
+{{-- before --}}
+<span class="font-normal">{{ $heading }} </span><strong class="font-bold">{{ $headingBold }}</strong>
+
+{{-- after — matches travel-in-style exactly --}}
+<span style="font-weight: 400;">{{ $heading }} </span><span style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</span>
 ```
-Change `font-size` to `1.5rem` (24px) and `font-weight` to `600` to align with H4 spec. Italic is a documented exception — see ⚠️ row 20 below.
 
-#### 22. Entry body size uses card override instead of section body spec
+#### 18. Body text color must be `var(--cloud)`, not `var(--cloud-light)`
 
-**Built:** `1.0625rem` (17px) — this is the card body override size
-**Spec:** Section body text is `1.25rem` (20px), Regular 400
+`travel-in-style` uses `var(--cloud)` for body text on navy. `our-story` uses `var(--cloud-light)`, which is a lighter variant not used by the baseline.
 
-These are section-level paragraphs, not card body copy. The 17px card override should not be used here.
-
-**Recommended fix:**
+**Required fix — line 53:**
 ```blade
+{{-- before --}}
 <p class="font-body" style="font-size: 1.25rem; font-weight: 400; line-height: 1.5; color: var(--cloud-light);">
+
+{{-- after --}}
+<p class="font-body mb-7" style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
 ```
 
----
+#### 19. Body paragraph missing `mb-7` bottom margin
 
-### Warnings (⚠️)
-
-#### 20. Italic font style — not in approved type scale
-
-The type scale (`docs/branding-requirements.md` §4) does not include an italic variant. Italic is used on entry titles to visually differentiate them as timeline labels. This is a deliberate design choice sourced from the prod site (`newlenoxlimoservice.com/about-us`) and is appropriate for this one-off storytelling context. **Recommended action:** document as an approved exception for `our-story` entry titles only.
-
-#### 23. Entry body line-height `1.7` vs body spec `1.5`
-
-Slightly more generous than the 1.5 spec. Visually comfortable for the longer paragraph blocks in this section. Low-priority deviation — no functional impact.
-
-#### 25. Entry `border-left` vs §3.8 "no decorative vertical accent lines"
-
-**Built:** `border-left: 3px solid var(--champagne); padding-left: 1.75rem` on each story entry
-**Rule §3.8:** "Decorative vertical accent lines are not part of the Stop & Go design system and must never be used."
-
-This border-left functions as a blockquote-style content structure marker, not a standalone decorative accent line. It is sourced directly from the prod site design and is semantically meaningful (grouping title + body for each entry). **Recommended action:** document as an approved structural exception for `our-story` timeline entries — it is not a standalone decorative line but a content-grouping indicator.
+`travel-in-style` applies `mb-7` to its body `<p>`. This spacing is part of the baseline rhythm and is absent from `our-story` entry body paragraphs. Fix included above in row 18.
 
 ---
 
-### Recommended Fixes Summary
-
-| # | File | Change |
-|---|---|---|
-| 1 | `our-story.blade.php` line 45 | Entry title: `font-size: 1.5rem`, `font-weight: 600` |
-| 2 | `our-story.blade.php` line 50 | Entry body: `font-size: 1.25rem`, `line-height: 1.5` |
-
-### Approved Exceptions (document here, no code change needed)
+### Approved Exceptions
 
 | Exception | Rule | Justification |
 |---|---|---|
-| Italic entry titles | §4 type scale has no italic | Sourced from prod design; one-off storytelling context; `our-story` only |
-| `border-left` on entries | §3.8 no decorative vertical accent lines | Functional blockquote-style content-grouping marker; not a standalone decorative line |
+| Entry title italic style | §4 type scale has no italic variant | One-off storytelling context; sourced from prod site design; `our-story` only |
+| `border-left: 3px solid var(--champagne)` on entries | §3.8 no decorative vertical accent lines | Functional blockquote-style content-grouping marker, not a standalone decorative line; sourced from prod design |

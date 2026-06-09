@@ -42,7 +42,7 @@ $entries = [
                 <div>
 
                     {{-- Entry title — sits above the border, not inside it --}}
-                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 600; font-style: italic; color: var(--white); line-height: 1.3; margin-bottom: 0.75rem;">
+                    <h3 class="font-head" style="font-size: 1.5rem; font-weight: 400; font-style: italic; color: var(--white); line-height: 1.3; margin-bottom: 0.75rem;">
                         {{ $entry['title'] }}
                     </h3>
 

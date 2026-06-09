@@ -60,4 +60,17 @@
         body="Custom limousine services are designed specifically for special events, providing a touch of luxury and sophistication."
     />
 
+    <x-sections.free-instant-quote
+        heading="Book Your"
+        headingBold="Special Event Limo"
+        headingTail="Today"
+        body="Planning a special event? Tell us your group size, destination, and date. Our team will match you with the perfect vehicle and get back to you fast."
+        image="/images/sections/classy-limo.jpg"
+        imageAlt="Elegant white limousine ready for a special event, Stop and Go Airport Shuttle in New Lenox, Illinois"
+        imageAspect="4/3"
+        imageObjectPosition="center"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+    />
+
 </x-layouts.page>

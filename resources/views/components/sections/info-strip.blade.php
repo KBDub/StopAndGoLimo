@@ -7,13 +7,13 @@
 <section style="background: var(--navy);" class="py-10 lg:py-16">
     <div class="max-w-7xl mx-auto px-6">
 
-        {{-- Heading --}}
-        <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px; margin-bottom: 1rem;">
-            <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong> {{ $heading }}
-        </h2>
-
-        {{-- Champagne rule --}}
-        <div style="height: 3px; background: var(--champagne); width: 14rem; margin-bottom: 1.75rem;"></div>
+        {{-- Heading + champagne rule (canonical width: fit-content wrapper) --}}
+        <div style="width: fit-content; margin-bottom: 2rem;">
+            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong> {{ $heading }}
+            </h2>
+            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+        </div>
 
         {{-- Body --}}
         <p class="font-body" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5; max-width: 56rem;">

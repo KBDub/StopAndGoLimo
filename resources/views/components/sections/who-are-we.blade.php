@@ -15,11 +15,11 @@
 <section class="py-12 lg:py-[6.25rem]" style="background: var(--cloud-light);">
     <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
             {{-- Image column --}}
             <div class="{{ $imgOrder }} w-full">
-                <div class="overflow-hidden w-full aspect-[4/3]" style="box-shadow: var(--shadow-card);">
+                <div class="overflow-hidden w-full aspect-[1/1]" style="box-shadow: var(--shadow-card);">
                     <img
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"

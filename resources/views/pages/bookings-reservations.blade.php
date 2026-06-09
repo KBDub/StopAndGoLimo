@@ -41,4 +41,6 @@
         image="/images/heroes/hero-home.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.three-steps />
 </x-layouts.page>

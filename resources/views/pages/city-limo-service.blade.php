@@ -1,7 +1,7 @@
 @php
 $heroConfig = [
     'New Lenox' => [
-        'heading'       => 'New Lenox Airport Shuttle,',
+        'heading'       => '24/7 New Lenox Airport Shuttle,',
         'headingBold'   => 'Limo & Party Bus Service',
         'subtitle'      => 'Reliable, local transportation',
         'subtitleIn'    => 'based in New Lenox since 2009',

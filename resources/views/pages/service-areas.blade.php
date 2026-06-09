@@ -69,4 +69,30 @@
         imagePosition="center center"
     />
 
+    <x-sections.info-strip
+        headingPrefix="Covering the"
+        headingBold="Southwest Suburbs"
+        heading=""
+        body="We serve New Lenox, Naperville, Aurora, Joliet, and more than 20 communities across the southwest suburbs of Chicago. Whether you need a ride to O'Hare, Midway, or a local event, our drivers are ready around the clock."
+    />
+
+    <x-sections.areas-we-serve
+        heading="Areas We"
+        headingBold="Proudly Serve"
+        background="light"
+    />
+
+    <x-sections.free-instant-quote
+        heading="Get Your"
+        headingBold="Free Instant Quote"
+        headingTail=""
+        body="Tell us your pickup location, destination, and date. We'll match you with the right vehicle and confirm your booking fast."
+        image="/images/sections/chauffeurs.jpg"
+        imageAlt="Professional chauffeur ready to serve, Stop and Go Airport Shuttle"
+        imageAspect="4/3"
+        imageObjectPosition="center top"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+    />
+
 </x-layouts.page>

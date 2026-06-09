@@ -829,7 +829,7 @@
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center gap-8 border border-white/8 bg-navy-light p-8">
                     <div class="flex-1">
-                        <span class="font-head font-bold text-xs tracking-widest text-champagne">10 &mdash; Components</span>
+                        <span class="font-head font-bold text-xs tracking-widest text-champagne">Section Components</span>
                         <h2 class="font-head font-bold text-3xl text-white mt-2 mb-3">Section Components (14 active)</h2>
                         <p class="text-muted-light max-w-xl">All 14 Blade section components with their props, aspect ratios, and usage examples, plus live previews of compact components. Kept on a separate page so this guide stays fast to navigate.</p>
                         <p class="text-muted text-xs mt-3 font-mono">resources/views/components/sections/</p>

@@ -16,7 +16,7 @@
         </div>
 
         {{-- Body --}}
-        <p class="font-body" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5; max-width: 56rem;">
+        <p class="font-body" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
             {{ $body }}
         </p>
 

@@ -1104,3 +1104,70 @@ All properties already spec-compliant: `var(--font-body)` throughout, no raw hex
 | Photo row padding | `map-contact-section.blade.php` | Flagged for client review |
 | Inline CTA button hand-rolled | `cta-free-quote-banner.blade.php` | Fixed in this pass |
 | Map overlay `rgba(10,14,35,0.62)` raw color | `map-contact-section.blade.php` | Functional overlay; token equivalent pending |
+
+---
+
+## Standard Hero Template Pattern — `x-sections.category-hero`
+
+> **Documented:** 2026-06-09
+> **File:** `resources/views/components/sections/category-hero.blade.php`
+> **Reference:** `docs/branding-requirements.md` §4 (Typography), §7 (Layout), §11 (Imagery)
+
+### Purpose
+
+The `category-hero` component is the **single approved hero template** for all pages on the site. Every page hero must use this component and pass parameters — never hand-roll a custom hero section.
+
+### Props Reference
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `heading` | string | `'Elevate Your Travel Experience'` | H1 first line, Regular 400 weight |
+| `headingBold` | string | `'With Luxury and Comfort'` | H1 second line, Bold 700 weight |
+| `subtitle` | string | `'Discover the joy of seamless journeys'` | Lead text line 1, Poppins 400 |
+| `subtitleIn` | string | `''` | Lead text line 2, used for location suffix (e.g. `"in Plainfield, Illinois"`) — renders as a separate `<span class="block">` beneath `subtitle` |
+| `description` | string | `''` | Optional body paragraph, Montserrat 1.25rem, max-width 680px. Omit on simple hero pages. |
+| `buttonText` | string | `'Book a Ride'` | CTA label |
+| `buttonHref` | string | `'/contact'` | CTA destination. Passing `/contact` or `/booking` auto-triggers the contact modal instead of a page link. |
+| `buttonRadius` | string | `'soft'` | Button corner radius: `square`, `soft`, `rounded`, `pill` |
+| `image` | string | `'/images/heroes/hero-home.jpg'` | Full-bleed background photo path. All hero images live in `public/images/heroes/`. |
+| `imagePosition` | string | `'center center'` | CSS `object-position` value for background photo cropping |
+
+### Usage Pattern
+
+```blade
+<x-sections.category-hero
+    heading="About"
+    headingBold="Us"
+    subtitle="The Most Convenient Shuttle Service"
+    subtitleIn="in Plainfield, Illinois"
+    description="Optional body paragraph text here."
+    buttonText="Book a Ride"
+    buttonHref="/contact"
+    image="/images/heroes/stopngolimo-about-us.jpg"
+    imagePosition="center center"
+/>
+```
+
+### Layout and Typography Standards
+
+- **Section height:** `min-height: 100svh` — always full viewport height. No vertical padding; content centers internally via flex.
+- **Content alignment:** Always `text-center`. The content wrapper is `max-w-4xl mx-auto px-6`.
+- **H1:** Poppins (`font-head`), `clamp(2rem, 6vw, 3.5rem)`, line-height `1.2`, letter-spacing `-1px`. Two-line weight split: `heading` is Regular 400, `headingBold` is Bold 700.
+- **Subtitle (Lead):** Poppins (`font-head`), `clamp(1rem, 2.5vw, 1.3125rem)`, weight 400, line-height `1.5`, letter-spacing `-0.5px`, opacity `0.9`, `text-align: center`. The `subtitleIn` location suffix renders as a second `<span class="block">` at the same size and weight — same Lead style, new line.
+- **Description (Body):** Montserrat (`font-body`), `1.25rem`, line-height `1.5`, `max-width: 680px`, opacity `0.85`. Only include when the page needs an introductory paragraph in the hero.
+- **Button:** `x-ui.button-outline-light` — ghost white on dark. Default radius `soft`.
+
+### Imagery Standards
+
+- All hero images saved to `public/images/heroes/` using the naming pattern `stopngolimo-[page-slug].jpg`.
+- Overlay: `var(--navy-dark)` at exactly **20% opacity** on an absolute-inset `<div>` over the photo. Never use a gradient token for photo overlays.
+- No rounded corners on the image container.
+
+### `subtitleIn` Convention
+
+Use `subtitleIn` whenever the hero subtitle has a location-specific suffix. This keeps the base subtitle reusable across pages while making the location easy to swap.
+
+**Examples:**
+- About Us: `subtitle="The Most Convenient Shuttle Service"` + `subtitleIn="in Plainfield, Illinois"`
+- Service area page: `subtitle="Airport Shuttle Service"` + `subtitleIn="in New Lenox, Illinois"`
+- Generic page (no location): pass only `subtitle`, leave `subtitleIn` empty or omit it.

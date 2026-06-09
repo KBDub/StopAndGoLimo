@@ -2,6 +2,7 @@
     'heading'       => 'Elevate Your Travel Experience',
     'headingBold'   => 'With Luxury and Comfort',
     'subtitle'      => 'Discover the joy of seamless journeys',
+    'subtitleIn'    => '',
     'description'   => '',
     'buttonText'    => 'Book a Ride',
     'buttonHref'    => '/contact',
@@ -41,8 +42,11 @@
 
         {{-- Subtitle (Lead) --}}
         @if($subtitle)
-            <p class="font-head text-white mb-5" style="font-size: clamp(1rem, 2.5vw, 1.3125rem); font-weight: 400; line-height: 1.5; letter-spacing: -0.5px; opacity: 0.9;">
-                {{ $subtitle }}
+            <p class="font-head text-white mb-5" style="font-size: clamp(1rem, 2.5vw, 1.3125rem); font-weight: 400; line-height: 1.5; letter-spacing: -0.5px; opacity: 0.9; text-align: center;">
+                <span class="block">{{ $subtitle }}</span>
+                @if($subtitleIn)
+                    <span class="block">{{ $subtitleIn }}</span>
+                @endif
             </p>
         @endif
 

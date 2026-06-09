@@ -189,13 +189,15 @@
                     >
                 </div>
 
-                {{-- Heading — Poppins, weight 600 per spec --}}
-                <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
-                    {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
-                </h3>
+                @if($heading)
+                    {{-- Heading — Poppins, weight 600 per spec --}}
+                    <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
+                        {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
+                    </h3>
 
-                {{-- Champagne rule --}}
-                <x-ui.banner-thin-champagne />
+                    {{-- Champagne rule --}}
+                    <x-ui.banner-thin-champagne />
+                @endif
 
                 {{-- Body --}}
                 @if($body)

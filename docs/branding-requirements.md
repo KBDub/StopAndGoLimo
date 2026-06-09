@@ -168,6 +168,8 @@ All values are unitless — see Absolute Rule §3.9.
 
 All buttons use Poppins (`font-head`) and tracking-wide. Corner radius is controlled by the `radius` prop on `x-ui.button` — default is `soft` (10px). Options: `square` (0px), `soft` (10px), `rounded` (20px), `pill` (9999px). Size is controlled by the `size` prop — options: `sm`, `md` (default), `lg`, `xl`.
 
+**CTA buttons in section content columns** must be center-aligned (`text-align: center` on the wrapper div) and always use `radius="soft"` (10px). Never use `radius="square"` for section CTAs. Example: `<x-ui.button-navy-gold href="..." size="md" radius="soft">`.
+
 | Component | Use case | Text color | Background |
 |---|---|---|---|
 | `x-ui.button-champagne-gradient` | Primary CTA (Book a Ride) | Navy | Champagne gradient |
@@ -222,6 +224,7 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 - **Standard section backgrounds:** Midnight Navy (`bg-navy`, `bg-navy-light`, `bg-navy-dark`) or Cloud Grey (`bg-cloud-light`). No other background colors on page sections.
 - **Section alternation:** Midnight Navy sections alternate with Cloud Grey sections where light-mode breathing room is needed.
 - **Max file length:** 800 lines per Blade file. Split into sub-components if longer.
+- **Content-column image spacing:** When an image grid appears between two text blocks inside a content column, use `margin-top: 2rem; margin-bottom: 2rem` (32px each). This is the standard text-to-image gap for left-aligned body content sections (e.g. `x-sections.our-key-offers`).
 
 ---
 

@@ -37,7 +37,7 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
     }
     @@media (min-width: 1024px) {
         .sg-key-offers-body {
-            grid-template-columns: 65fr 35fr;
+            grid-template-columns: 75fr 25fr;
         }
     }
 </style>
@@ -88,12 +88,12 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
 
             {{-- Left column: text, images, text, cta ──────────── --}}
             <div>
-                <p class="font-body" style="font-size: 1.125rem; font-weight: 400; color: var(--slate); line-height: 1.7;">
+                <p class="font-body" style="font-size: 1.25rem; font-weight: 400; color: var(--slate); line-height: 1.5;">
                     {{ $para1 }}
                 </p>
 
-                {{-- 2×2 image grid (16:9 aspect) ──────────────── --}}
-                <div class="grid grid-cols-2 gap-3 my-8">
+                {{-- 2×2 image grid (16:9 aspect) — 2rem margin above + below per §7 content-image spec --}}
+                <div class="grid grid-cols-2 gap-3" style="margin-top: 2rem; margin-bottom: 2rem;">
                     <img
                         src="/images/services/walking-to-vehicle.jpg"
                         alt="Chauffeur walking a client to a black luxury SUV"
@@ -124,19 +124,20 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
                     />
                 </div>
 
-                <p class="font-body" style="font-size: 1.125rem; font-weight: 400; color: var(--slate); line-height: 1.7;">
+                <p class="font-body" style="font-size: 1.25rem; font-weight: 400; color: var(--slate); line-height: 1.5;">
                     {{ $para2 }}
                 </p>
 
-                <div class="mt-8">
-                    <x-ui.button-navy-gold :href="$ctaHref" size="base" radius="square">
+                {{-- CTA: center-aligned, soft radius (10px) per §6.1 --}}
+                <div style="text-align: center; margin-top: 2rem;">
+                    <x-ui.button-navy-gold :href="$ctaHref" size="md" radius="soft">
                         {{ $ctaLabel }}
                     </x-ui.button-navy-gold>
                 </div>
             </div>
 
             {{-- Right column: service navigation cards ─────────── --}}
-            <div class="flex flex-col">
+            <div class="flex flex-col gap-2">
                 <x-ui.service-thin-rect-card
                     label="Airport Shuttle Service"
                     href="/airport-shuttle"

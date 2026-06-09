@@ -43,4 +43,10 @@
     />
 
     <x-sections.three-steps />
+
+    <x-sections.areas-we-serve
+        heading="Your"
+        headingBold="Trusted Local Partner"
+        background="dark"
+    />
 </x-layouts.page>

@@ -41,4 +41,6 @@
         image="/images/heroes/stopngolimo-about-us.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.our-story />
 </x-layouts.page>

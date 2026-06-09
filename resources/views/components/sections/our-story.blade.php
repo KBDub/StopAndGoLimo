@@ -36,7 +36,7 @@ $entries = [
         </div>
 
         {{-- Story entries --}}
-        <div class="max-w-5xl grid grid-cols-1" style="gap: 3rem;">
+        <div class="max-w-5xl grid grid-cols-1" style="gap: 3rem; padding-left: 3rem;">
 
             @foreach($entries as $entry)
                 <div>

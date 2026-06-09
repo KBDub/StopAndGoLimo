@@ -139,6 +139,10 @@ Route::get('/demo/premium', function () {
     return view('pages.demo-premium');
 })->name('demo.premium');
 
+Route::get('/demo/live-components', function () {
+    return view('pages.demo-live-components');
+})->name('demo.live-components');
+
 
 // ─── Service Area ────────────────────────────────────────────────────────────
 

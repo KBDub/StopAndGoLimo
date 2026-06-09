@@ -711,188 +711,137 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 09 Section Components ───────────────────────────── --}}
-        @php
-        $sectionComponents = [
-                    [
-                        'num'   => '01',
-                        'tag'   => 'x-sections.category-hero',
-                        'file'  => 'resources/views/components/sections/category-hero.blade.php',
-                        'desc'  => 'Full-bleed photo hero with overlay, H1 + lead text, and a primary CTA button. Occupies 100svh on desktop.',
-                        'props' => ['heading', 'headingBold', 'subheading', 'body', 'buttonText', 'buttonHref', 'image', 'imageAlt'],
-                        'ar'    => '100svh desktop, auto mobile',
-                        'code'  => "<x-sections.category-hero\n    heading=\"Elevate Your\"\n    headingBold=\"Travel Experience\"\n    subheading=\"Discover the joy of seamless journeys\"\n    body=\"Stop &amp; Go Airport Shuttle Service Inc.\"\n    buttonText=\"Book a Ride\"\n    buttonHref=\"/booking\"\n    image=\"/images/hero.jpg\"\n    imageAlt=\"Luxury limousine on a highway\"\n/>",
-                    ],
-                    [
-                        'num'   => '02',
-                        'tag'   => 'x-sections.travel-in-style',
-                        'file'  => 'resources/views/components/sections/travel-in-style.blade.php',
-                        'desc'  => 'Two-column image + text section. Image position (left/right) and background (navy/cloud) are both props. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'body', 'buttonText', 'buttonHref', 'image', 'imageAlt', 'imagePosition', 'background'],
-                        'ar'    => '4/3 image column',
-                        'code'  => "<x-sections.travel-in-style\n    heading=\"Travel in\"\n    headingBold=\"Style\"\n    body=\"Stop &amp; Go is your premier provider...\"\n    buttonText=\"About Us\"\n    buttonHref=\"/about-us\"\n    image=\"/images/sections/travel-in-style.jpg\"\n    imageAlt=\"Guests enjoying a luxury limo ride\"\n    imagePosition=\"left\"\n    background=\"navy\"\n/>",
-                    ],
-                    [
-                        'num'   => '03',
-                        'tag'   => 'x-sections.free-instant-quote',
-                        'file'  => 'resources/views/components/sections/free-instant-quote.blade.php',
-                        'desc'  => 'Full-width quote request form section on navy. Two-column layout: pitch copy left, form fields right. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'subheading'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.free-instant-quote\n    heading=\"Get a Free\"\n    headingBold=\"Instant Quote\"\n    subheading=\"No hidden fees. Book in minutes.\"\n/>",
-                    ],
-                    [
-                        'num'   => '04',
-                        'tag'   => 'x-sections.service-locations',
-                        'file'  => 'resources/views/components/sections/service-locations.blade.php',
-                        'desc'  => 'Dark navy section listing key service city cards with H5 city name, body copy, and a link. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'locations (array: name, href, body)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.service-locations\n    heading=\"We Serve\"\n    headingBold=\"Your City\"\n    :locations=\"[\n        ['name' => 'Naperville', 'href' => '/naperville', 'body' => 'Airport transfers and event transport.'],\n    ]\"\n/>",
-                    ],
-                    [
-                        'num'   => '05',
-                        'tag'   => 'x-sections.areas-we-serve',
-                        'file'  => 'resources/views/components/sections/areas-we-serve.blade.php',
-                        'desc'  => 'Cloud-light section with a 3-column city link grid. City names use Poppins (var(--font-head)) at 25px (1.5625rem) with a pin SVG icon. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'areas (array: name, href)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.areas-we-serve\n    heading=\"Areas We\"\n    headingBold=\"Proudly Serve\"\n    :areas=\"[\n        ['name' => 'Joliet',     'href' => '/joliet-limo'],\n        ['name' => 'Naperville', 'href' => '/naperville-limo'],\n    ]\"\n/>",
-                    ],
-                    [
-                        'num'   => '06',
-                        'tag'   => 'x-sections.why-choose-us',
-                        'file'  => 'resources/views/components/sections/why-choose-us.blade.php',
-                        'desc'  => 'Dark navy 3-column icon + feature card grid. Card H3 = Montserrat 25px (var(--font-body)), card body = 17px override. 100px outer padding.',
-                        'props' => ['heading', 'headingBold', 'features (array: icon, title, body)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.why-choose-us\n    heading=\"Why Choose\"\n    headingBold=\"Us\"\n    :features=\"[\n        ['icon' => '✈', 'title' => 'On-Time Guarantee', 'body' => 'We monitor your flight in real time.'],\n    ]\"\n/>",
-                    ],
-                    [
-                        'num'   => '07',
-                        'tag'   => 'x-sections.airport-shuttle-service',
-                        'file'  => 'resources/views/components/sections/airport-shuttle-service.blade.php',
-                        'desc'  => 'Cloud-light info section about airport shuttle offerings. Body 20px/1.5, line-height unitless. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'body', 'buttonText', 'buttonHref'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.airport-shuttle-service\n    heading=\"Airport Shuttle\"\n    headingBold=\"Service\"\n    body=\"Professional transfers to O'Hare and Midway...\"\n    buttonText=\"Book Your Ride\"\n    buttonHref=\"/booking\"\n/>",
-                    ],
-                    [
-                        'num'   => '08',
-                        'tag'   => 'x-sections.map-contact-section',
-                        'file'  => 'resources/views/components/sections/map-contact-section.blade.php',
-                        'desc'  => 'Navy section with embedded Google Map, contact info, and SM label-rule dividers (3px champagne, 30% width). H2 spec + social links.',
-                        'props' => ['heading', 'headingBold', 'phone', 'email', 'address', 'mapSrc'],
-                        'ar'    => 'map 4/3, section height auto',
-                        'code'  => "<x-sections.map-contact-section\n    heading=\"Find\"\n    headingBold=\"Us\"\n    phone=\"(815) 585-6922\"\n    email=\"info@stopandgolimo.com\"\n    address=\"New Lenox, IL 60451\"\n    mapSrc=\"https://maps.google.com/...\"\n/>",
-                    ],
-                    [
-                        'num'   => '09',
-                        'tag'   => 'x-sections.our-services',
-                        'file'  => 'resources/views/components/sections/our-services.blade.php',
-                        'desc'  => 'Navy services card grid. H2 base color var(--cloud-light), bold word var(--champagne), font-weight 700. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'services (array: icon, title, href, body)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.our-services\n    heading=\"Our\"\n    headingBold=\"Services\"\n    :services=\"[\n        ['icon' => '✈', 'title' => 'Airport Shuttle', 'href' => '/airport-shuttle', 'body' => 'O'Hare and Midway transfers.'],\n    ]\"\n/>",
-                    ],
-                    [
-                        'num'   => '10',
-                        'tag'   => 'x-sections.faq',
-                        'file'  => 'resources/views/components/sections/faq.blade.php',
-                        'desc'  => 'Cloud-light Alpine.js accordion. Question bar: Poppins 16px (var(--font-head)), navy bg. Answer panel: Poppins 20px, cloud bg, 3px champagne left border. py-12 lg:py-[6.25rem].',
-                        'props' => ['faqs (array: question, answer)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.faq\n    :faqs=\"[\n        ['question' => 'Do you monitor flight delays?', 'answer' => 'Yes, we track your flight in real time.'],\n    ]\"\n/>",
-                    ],
-                    [
-                        'num'   => '11',
-                        'tag'   => 'x-sections.share-your-experience',
-                        'file'  => 'resources/views/components/sections/share-your-experience.blade.php',
-                        'desc'  => 'Cloud-light location testimonial/review grid. City sub-heading uses H5 tag, Poppins 20px/600. Body 20px/1.5 Montserrat. py-12 lg:py-[6.25rem].',
-                        'props' => ['heading', 'headingBold', 'locations (array: city, address, body)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.share-your-experience\n    heading=\"Share Your\"\n    headingBold=\"Experience\"\n    :locations=\"[\n        ['city' => 'Naperville', 'address' => 'Naperville, IL 60540', 'body' => 'Trusted by Naperville families...'],\n    ]\"\n/>",
-                    ],
-                    [
-                        'num'   => '12',
-                        'tag'   => 'x-sections.cta-free-quote-banner',
-                        'file'  => 'resources/views/components/sections/cta-free-quote-banner.blade.php',
-                        'desc'  => 'Compact navy CTA action strip. H2 clamp spec + 0.5px letter-spacing. Subheading 20px/1.5. Button uses x-ui.button-champagne-solid. Padding is intentionally smaller than content sections (3rem not 100px).',
-                        'props' => ['heading', 'subheading', 'buttonText', 'buttonHref'],
-                        'ar'    => 'height auto (compact strip)',
-                        'code'  => "<x-sections.cta-free-quote-banner\n    heading=\"Get a Free Instant Quote\"\n    subheading=\"Book your ride in minutes. No hidden fees.\"\n    buttonText=\"Get My Free Quote\"\n    buttonHref=\"/booking\"\n/>",
-                    ],
-                    [
-                        'num'   => '13',
-                        'tag'   => 'x-sections.base-footer',
-                        'file'  => 'resources/views/components/sections/base-footer.blade.php',
-                        'desc'  => 'Site-wide footer. var(--font-body) throughout, champagne link colors, no raw hex, no uppercase. Copyright year 2026, full legal name "Stop and Go Airport Shuttle Service Inc."',
-                        'props' => ['(none — all content is hard-coded per branding spec)'],
-                        'ar'    => 'height auto',
-                        'code'  => "<x-sections.base-footer />",
-                    ],
-        ];
-        @endphp
+        {{-- ── 09 Champagne Underbar ───────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10">
-                    <span class="font-head font-bold text-xs tracking-widest text-champagne">09 &mdash; Section Components</span>
-                    <h2 class="font-head font-bold text-3xl text-white mt-2">Section Components (13 active)</h2>
-                    <p class="text-muted-light mt-3">All active blade files in <code class="font-mono text-champagne text-sm">resources/views/components/sections/</code>. Each renders as a self-contained page section. The <code class="font-mono text-champagne text-sm">old/</code> subdirectory holds legacy print-shop files and is out of scope.</p>
+                    <span class="font-head font-bold text-xs tracking-widest text-champagne">09 &mdash; Underbar</span>
+                    <h2 class="font-head font-bold text-3xl text-white mt-2">Champagne Heading Underbar</h2>
+                    <p class="text-muted-light mt-3 max-w-3xl">The 3px champagne rule that anchors H2 headings in most content sections. Width is always 116% of the heading text, never a fixed value, never full-width. The key is wrapping both the heading and the rule in a <code class="font-mono text-champagne text-sm">width: fit-content</code> container so the 116% resolves against the heading itself, not the section.</p>
                 </div>
-                @foreach($sectionComponents as $comp)
-                <div class="border border-white/8 bg-navy-light mb-5 overflow-hidden">
-                    <div class="flex items-start gap-5 px-6 pt-5 pb-4 border-b border-white/6">
-                        <span class="font-head font-extrabold text-2xl text-white/20 flex-shrink-0 w-8">{{ $comp['num'] }}</span>
-                        <div class="flex-1 min-w-0">
-                            <p class="font-mono text-champagne text-sm font-semibold mb-0.5">&lt;{{ $comp['tag'] }} /&gt;</p>
-                            <p class="font-mono text-muted text-xs">{{ $comp['file'] }}</p>
+
+                {{-- Centered heading --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">Centered heading</h3>
+                    <p class="text-muted text-xs mb-6 font-mono">Areas We Serve, Share Your Experience, Why Choose Us, FAQ &mdash; margin: 0 auto + margin-left: -8%</p>
+                    <div style="background:var(--navy);padding:3rem 2rem;text-align:center;">
+                        <div style="width:fit-content;margin:0 auto 0;text-align:center;">
+                            <p class="font-head text-white" style="font-size:clamp(1.75rem,5vw,3rem);font-weight:400;line-height:1.2;letter-spacing:0.5px;margin:0;">Section <strong style="font-weight:700;">Heading</strong></p>
+                            <div style="height:3px;background:var(--champagne);width:116%;margin-left:-8%;margin-top:0.85rem;"></div>
                         </div>
                     </div>
-                    <div class="px-6 py-4 border-b border-white/6">
-                        <p class="text-cloud text-sm leading-relaxed">{{ $comp['desc'] }}</p>
-                        <div class="flex flex-wrap gap-4 mt-3">
+                </div>
+
+                {{-- Left-aligned heading --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">Left-aligned heading</h3>
+                    <p class="text-muted text-xs mb-6 font-mono">Info Strip, Travel in Style, Free Instant Quote, Map/Social &mdash; no margin auto, no margin-left offset</p>
+                    <div style="background:var(--navy);padding:3rem 2rem;">
+                        <div style="width:fit-content;margin-bottom:0;">
+                            <p class="font-head text-white" style="font-size:clamp(1.75rem,5vw,3rem);font-weight:400;line-height:1.2;letter-spacing:0.5px;margin:0;">Airport <strong style="font-weight:700;">Shuttle Service</strong></p>
+                            <div style="height:3px;background:var(--champagne);width:116%;margin-top:0.85rem;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- On light surface --}}
+                <div class="bg-cloud border border-cloud-dark p-7 mb-5">
+                    <h3 class="font-head font-semibold text-navy mb-1">On light surface</h3>
+                    <p class="text-muted-dark text-xs mb-6 font-mono">Cloud-light sections: H2 color switches to var(--navy). The 3px rule stays var(--champagne).</p>
+                    <div style="background:var(--cloud-light);padding:3rem 2rem;">
+                        <div style="width:fit-content;margin-bottom:0;">
+                            <p class="font-head" style="font-size:clamp(1.75rem,5vw,3rem);font-weight:400;line-height:1.2;letter-spacing:0.5px;margin:0;color:var(--navy);">Our <strong style="font-weight:700;">Services</strong></p>
+                            <div style="height:3px;background:var(--champagne);width:116%;margin-top:0.85rem;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                {{-- SM label-rule variant --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">SM label-rule variant</h3>
+                    <p class="text-muted text-xs mb-6 font-mono">Used under short column labels in Map/Contact. width: 30%, no fit-content wrapper needed.</p>
+                    <div style="background:var(--navy);padding:2rem;">
+                        <div class="grid grid-cols-3 gap-8 max-w-sm">
+                            @foreach(['Phone', 'Email', 'Address'] as $label)
                             <div>
-                                <span class="text-muted text-xs font-mono tracking-widest">PROPS</span>
-                                <p class="text-cloud text-xs mt-1">{{ implode(', ', $comp['props']) }}</p>
+                                <p class="font-head font-semibold text-sm tracking-widest" style="color:var(--cloud);">{{ $label }}</p>
+                                <div style="height:3px;background:var(--champagne);width:30%;margin-top:0.5rem;margin-bottom:1rem;"></div>
+                                <p class="text-xs" style="color:var(--cloud);">example content</p>
                             </div>
-                            <div>
-                                <span class="text-muted text-xs font-mono tracking-widest">ASPECT RATIO</span>
-                                <p class="text-cloud text-xs mt-1">{{ $comp['ar'] }}</p>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Never do --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">Common mistakes</h3>
+                    <p class="text-muted text-xs mb-6">These patterns break at different screen sizes or violate branding rules. Never use them.</p>
+                    <div class="grid md:grid-cols-2 gap-5">
+                        <div class="border p-5 bg-black/20" style="border-color:rgba(239,68,68,0.4);">
+                            <div style="background:var(--navy);padding:2rem;">
+                                <p class="font-head text-white" style="font-size:clamp(1.75rem,5vw,3rem);font-weight:400;line-height:1.2;margin:0;">Section <strong style="font-weight:700;">Heading</strong></p>
+                                <div style="height:3px;background:var(--champagne);width:14rem;margin-top:0.85rem;"></div>
+                            </div>
+                            <div class="mt-3">
+                                <p class="text-xs font-mono" style="color:#f87171;">&#10007; width: 14rem (fixed rem value)</p>
+                                <p class="text-muted text-xs mt-1">Fixed rem/px values ignore actual heading width and break at different viewport sizes and font sizes.</p>
+                            </div>
+                        </div>
+                        <div class="border p-5 bg-black/20" style="border-color:rgba(239,68,68,0.4);">
+                            <div style="background:var(--navy);padding:2rem;">
+                                <p class="font-head text-white" style="font-size:clamp(1.75rem,5vw,3rem);font-weight:400;line-height:1.2;margin:0;border-bottom:3px solid var(--champagne);padding-bottom:0.85rem;">Section <strong style="font-weight:700;">Heading</strong></p>
+                            </div>
+                            <div class="mt-3">
+                                <p class="text-xs font-mono" style="color:#f87171;">&#10007; border-bottom on the &lt;h2&gt; tag</p>
+                                <p class="text-muted text-xs mt-1">The rule is always a separate &lt;div&gt; below the heading, never a CSS border on the heading element itself.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="px-6 py-4 bg-black/20">
-                        <p class="text-muted text-xs font-mono tracking-widest mb-2">USAGE EXAMPLE</p>
-                        <pre class="font-mono text-cloud/70 text-xs overflow-x-auto whitespace-pre-wrap">{{ $comp['code'] }}</pre>
-                    </div>
-                </div>
-                @endforeach
-
-                {{-- Live previews of compact components --}}
-                <div class="mt-10 mb-4">
-                    <h3 class="font-head font-semibold text-white text-xl mb-1">Live Previews</h3>
-                    <p class="text-muted text-sm">Compact components rendered inline. Full-bleed heroes and map sections render best in their native page context.</p>
                 </div>
 
-                <div class="border border-white/8 mb-5 overflow-hidden">
-                    <p class="font-mono text-champagne text-xs px-4 py-2 bg-navy-dark border-b border-white/6">12 &mdash; x-sections.cta-free-quote-banner</p>
-                    <x-sections.cta-free-quote-banner />
-                </div>
+                {{-- Code block --}}
+                <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                    <p class="font-mono text-champagne text-xs mb-1">Heading underbar &mdash; docs/branding-requirements.md §14</p>
+                    <p class="font-mono text-muted text-xs mb-3">The fit-content wrapper is mandatory. Without it, width: 116% resolves to 116% of the section, not the heading.</p>
+                    <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">@verbatim{{-- Centered heading --}}
+<div style="width: fit-content; margin: 0 auto 2rem; text-align: center;">
+    <h2>Section <strong>Heading</strong></h2>
+    <div style="height:3px;background:var(--champagne);width:116%;margin-left:-8%;margin-top:0.85rem;"></div>
+</div>
 
-                <div class="border border-white/8 mb-5 overflow-hidden">
-                    <p class="font-mono text-champagne text-xs px-4 py-2 bg-navy-dark border-b border-white/6">05 &mdash; x-sections.areas-we-serve</p>
-                    <x-sections.areas-we-serve />
-                </div>
+{{-- Left-aligned heading --}}
+<div style="width: fit-content; margin-bottom: 2rem;">
+    <h2>Section <strong>Heading</strong></h2>
+    <div style="height:3px;background:var(--champagne);width:116%;margin-top:0.85rem;"></div>
+</div>
 
-                <div class="border border-white/8 mb-5 overflow-hidden">
-                    <p class="font-mono text-champagne text-xs px-4 py-2 bg-navy-dark border-b border-white/6">10 &mdash; x-sections.faq</p>
-                    <x-sections.faq />
+{{-- SM label-rule variant (no wrapper needed; 30% of the column) --}}
+<div style="height:3px;background:var(--champagne);width:30%;margin-top:0.5rem;margin-bottom:1rem;"></div>
+{{-- No aspect ratio: underbars are 3px tall; width tracks heading text --}}@endverbatim</pre>
                 </div>
-
             </div>
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
+        {{-- ── Section Components Link ──────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-center gap-8 border border-white/8 bg-navy-light p-8">
+                    <div class="flex-1">
+                        <span class="font-head font-bold text-xs tracking-widest text-champagne">10 &mdash; Components</span>
+                        <h2 class="font-head font-bold text-3xl text-white mt-2 mb-3">Section Components (14 active)</h2>
+                        <p class="text-muted-light max-w-xl">All 14 Blade section components with their props, aspect ratios, and usage examples, plus live previews of compact components. Kept on a separate page so this guide stays fast to navigate.</p>
+                        <p class="text-muted text-xs mt-3 font-mono">resources/views/components/sections/</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <x-ui.button-champagne-gradient href="/demo/live-components">View Section Components &rarr;</x-ui.button-champagne-gradient>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
 
         {{-- ── Brand Personality / Closing ───────────────────── --}}
         <section class="py-16 bg-grad-navy-to-gold">

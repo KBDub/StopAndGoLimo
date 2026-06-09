@@ -1,3 +1,25 @@
+@php
+$heroConfig = [
+    'New Lenox' => [
+        'heading'       => 'New Lenox Airport Shuttle,',
+        'headingBold'   => 'Limo & Party Bus Service',
+        'subtitle'      => 'Reliable, local transportation',
+        'subtitleIn'    => 'based in New Lenox since 2009',
+        'image'         => '/images/heroes/hero-new-lenox.png',
+        'imagePosition' => 'center center',
+    ],
+];
+
+$hero = $heroConfig[$city] ?? [
+    'heading'       => $city,
+    'headingBold'   => 'Limo Service',
+    'subtitle'      => '24/7 luxury limo and airport shuttle service in ' . $city . ', Illinois',
+    'subtitleIn'    => '',
+    'image'         => '/images/heroes/hero-services.jpg',
+    'imagePosition' => 'center center',
+];
+@endphp
+
 @push('structured-data')
 <script type="application/ld+json">
 {
@@ -40,16 +62,17 @@
     :title="$city . ' Limo Service | Stop and Go Limo — ' . $city . ', ' . $state"
     :metaDescription="'24/7 luxury limo and airport shuttle service in ' . $city . ', ' . $state . '. Airport transfers, weddings, corporate travel, and special events. Call (815) 585-6922.'"
     currentPage="service-areas"
-    ogImage="/images/heroes/hero-services.jpg"
+    :ogImage="$hero['image']"
     :ogImageAlt="'Luxury limo service in ' . $city . ', ' . $state"
 >
     <x-sections.category-hero
-        :heading="$city"
-        headingBold="Limo Service"
-        :subtitle="'24/7 luxury limo and airport shuttle service in ' . $city . ', Illinois'"
+        :heading="$hero['heading']"
+        :headingBold="$hero['headingBold']"
+        :subtitle="$hero['subtitle']"
+        :subtitleIn="$hero['subtitleIn']"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
-        imagePosition="center center"
+        :image="$hero['image']"
+        :imagePosition="$hero['imagePosition']"
     />
 </x-layouts.page>

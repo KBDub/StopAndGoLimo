@@ -16,7 +16,7 @@
         </div>
 
         {{-- Body --}}
-        <div class="w-full max-w-5xl mx-auto">
+        <div class="w-full max-w-7xl mx-auto">
             <p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
                 {{ $body }}
             </p>

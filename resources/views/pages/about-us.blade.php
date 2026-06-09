@@ -45,4 +45,6 @@
     <x-sections.our-story />
 
     <x-sections.who-are-we />
+
+    <x-sections.free-instant-quote />
 </x-layouts.page>

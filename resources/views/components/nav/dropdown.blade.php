@@ -7,7 +7,7 @@
 
   CSS hover chain: .nav-item:hover .dropdown { opacity:1; visibility:visible; }
 --}}
-@props(['label' => '', 'panel' => 'standard', 'heading' => null])
+@props(['label' => '', 'panel' => 'standard', 'heading' => null, 'href' => '#'])
 
 @php
     $panelClass = match ($panel) {
@@ -18,7 +18,7 @@
 @endphp
 
 <div class="nav-item">
-    <a href="#" class="nav-link" aria-haspopup="true">
+    <a href="{{ $href }}" class="nav-link" aria-haspopup="true">
         {{ $label }}
         <span class="caret">&#9660;</span>
     </a>

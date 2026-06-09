@@ -14,7 +14,7 @@
 
         <x-nav.link href="/" :active="request()->is('/')">Welcome</x-nav.link>
 
-        <x-nav.dropdown label="About">
+        <x-nav.dropdown label="About" href="/about-us">
             <x-nav.item href="/about-us" title="About Us"  sub="Our story & chauffeurs" />
             <x-nav.item href="/rates"    title="Rates"     sub="Transparent flat pricing" />
             <x-nav.item href="/gallery"  title="Gallery"   sub="Our luxury fleet" />
@@ -22,7 +22,7 @@
 
         <x-nav.link href="/bookings-reservations" :active="request()->is('bookings-reservations')">Booking</x-nav.link>
 
-        <x-nav.dropdown label="Services" panel="mega">
+        <x-nav.dropdown label="Services" panel="mega" href="/our-services">
             <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle"       sub="O'Hare & Midway transfers" />
             <x-nav.item href="/wedding-limousine-services"       title="Wedding Limousine"     sub="Elegant event transport" />
             <x-nav.flyout title="Party Bus" sub="Groups & celebrations">
@@ -41,7 +41,7 @@
             <x-nav.item href="/grad-day-transportation"         title="Grad Day Transport"    sub="Graduation transport" />
         </x-nav.dropdown>
 
-        <x-nav.dropdown label="Special Events">
+        <x-nav.dropdown label="Special Events" href="/special-event-limousine">
             <x-nav.item href="/six-flags-party-bus"              title="Six Flags Party Bus" />
             <x-nav.item href="/chicago-golf-party-bus"           title="Golfing Party Bus" />
             <x-nav.item href="/chicago-concert-party-bus-rental" title="Concert Party Bus Rental" />
@@ -50,7 +50,7 @@
             <x-nav.item href="/chicago-blackhawks-party-bus"     title="Chicago Blackhawks Party Bus" />
         </x-nav.dropdown>
 
-        <x-nav.dropdown label="Service Areas" panel="areas" heading="22 Chicagoland Southwest Suburbs, 24/7">
+        <x-nav.dropdown label="Service Areas" panel="areas" href="/service-areas" heading="22 Chicagoland Southwest Suburbs, 24/7">
             <x-nav.item compact href="/new-lenox-airport-shuttle-limo-service"   title="New Lenox" />
             <x-nav.item compact href="/naperville-airport-shuttle-limo-service"  title="Naperville" />
             <x-nav.item compact href="/aurora-limo-service"                      title="Aurora" />

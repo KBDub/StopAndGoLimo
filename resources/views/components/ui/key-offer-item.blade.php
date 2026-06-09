@@ -1,5 +1,6 @@
 @props([
     'icon'    => '',
+    'viewBox' => '0 0 24 24',
     'label'   => 'Feature',
     'divider' => true,
 ])
@@ -12,6 +13,8 @@
         padding: 0.875rem 1.5rem;
         flex: 1;
         position: relative;
+        border-top: 1px dotted var(--cloud);
+        border-bottom: 1px dotted var(--cloud);
     }
     .sg-key-offer__icon {
         flex-shrink: 0;
@@ -51,7 +54,9 @@
 <div class="sg-key-offer">
 
     @if($icon)
-    <span class="sg-key-offer__icon">{!! $icon !!}</span>
+    <span class="sg-key-offer__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="{{ $viewBox }}" aria-hidden="true" fill="currentColor">{!! $icon !!}</svg>
+    </span>
     @endif
 
     <span class="sg-key-offer__label">{{ $label }}</span>

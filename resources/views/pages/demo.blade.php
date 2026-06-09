@@ -1208,20 +1208,24 @@
                     <div style="background: var(--cloud-light); display: flex; flex-wrap: wrap; align-items: stretch;">
                         <x-ui.key-offer-item
                             label="1-15 Passengers"
-                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z\'/></svg>'"
+                            viewBox="0 0 448 512"
+                            icon='<path d="M313.6 304c-28.7 0-42.5 16-89.6 16-47.1 0-60.8-16-89.6-16C60.2 304 0 364.2 0 438.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-25.6c0-74.2-60.2-134.4-134.4-134.4zM400 464H48v-25.6c0-47.6 38.8-86.4 86.4-86.4 14.6 0 38.3 16 89.6 16 51.7 0 74.9-16 89.6-16 47.6 0 86.4 38.8 86.4 86.4V464zM224 288c79.5 0 144-64.5 144-144S303.5 0 224 0 80 64.5 80 144s64.5 144 144 144zm0-240c52.9 0 96 43.1 96 96s-43.1 96-96 96-96-43.1-96-96 43.1-96 96-96z"/>'
                         />
                         <x-ui.key-offer-item
                             label="Any Occasion"
-                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z\'/></svg>'"
+                            viewBox="0 0 512 512"
+                            icon='<path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>'
                         />
                         <x-ui.key-offer-item
                             label="Music System"
-                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z\'/></svg>'"
+                            viewBox="0 0 512 512"
+                            icon='<path d="M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"/>'
                         />
                         <x-ui.key-offer-item
                             label="Various Brands"
+                            viewBox="0 0 512 512"
                             :divider="false"
-                            :icon="'<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'currentColor\'><path d=\'M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z\'/></svg>'"
+                            icon='<path d="M499.99 176h-59.87l-16.64-41.6C406.38 91.63 365.57 64 319.5 64h-127c-46.06 0-86.88 27.63-103.99 70.4L71.87 176H12.01C4.2 176-1.53 183.34.37 190.91l6 24C7.7 220.25 12.5 224 18.01 224h20.07C24.65 235.73 16 252.78 16 272v48c0 16.12 6.16 30.67 16 41.93V416c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-32h256v32c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32v-54.07c9.84-11.25 16-25.8 16-41.93v-48c0-19.22-8.65-36.27-22.07-48H494c5.51 0 10.31-3.75 11.64-9.09l6-24c1.89-7.57-3.84-14.91-11.65-14.91zm-352.06-17.83c7.29-18.22 24.94-30.17 44.57-30.17h127c19.63 0 37.28 11.95 44.57 30.17L384 208H128l19.93-49.83zM96 319.8c-19.2 0-32-12.76-32-31.9S76.8 256 96 256s48 28.71 48 47.85-28.8 15.95-48 15.95zm320 0c-19.2 0-48 3.19-48-15.95S396.8 256 416 256s32 12.76 32 31.9-12.8 31.9-32 31.9z"/>'
                         />
                     </div>
                     <p class="font-mono text-muted text-xs mt-2">Strip container: <code class="text-champagne">background: var(--cloud-light); display: flex; flex-wrap: wrap;</code></p>
@@ -1234,7 +1238,8 @@
                         <table class="w-full text-xs font-mono text-muted-light border-collapse">
                             <thead><tr class="border-b border-white/10"><th class="text-left pb-2 text-champagne">Prop</th><th class="text-left pb-2 text-champagne">Type</th><th class="text-left pb-2 text-champagne">Default</th></tr></thead>
                             <tbody>
-                                <tr class="border-b border-white/5"><td class="py-1.5">icon</td><td>string (raw SVG)</td><td>''</td></tr>
+                                <tr class="border-b border-white/5"><td class="py-1.5">icon</td><td>string (&lt;path&gt; only)</td><td>''</td></tr>
+                                <tr class="border-b border-white/5"><td class="py-1.5">viewBox</td><td>string</td><td>'0 0 24 24'</td></tr>
                                 <tr class="border-b border-white/5"><td class="py-1.5">label</td><td>string</td><td>'Feature'</td></tr>
                                 <tr><td class="py-1.5">divider</td><td>boolean</td><td>true</td></tr>
                             </tbody>
@@ -1249,17 +1254,20 @@
 
     &lt;x-ui.key-offer-item
         label="1-15 Passengers"
-        :icon="'&lt;svg ...&gt;&lt;/svg&gt;'"
+        viewBox="0 0 448 512"
+        icon="&lt;path d='...FA path...'/&gt;"
     /&gt;
     &lt;x-ui.key-offer-item
         label="Any Occasion"
-        :icon="'&lt;svg ...&gt;&lt;/svg&gt;'"
+        viewBox="0 0 512 512"
+        icon="&lt;path d='...FA path...'/&gt;"
     /&gt;
     {{-- Last item: no divider --}}
     &lt;x-ui.key-offer-item
         label="Various Brands"
+        viewBox="0 0 512 512"
         :divider="false"
-        :icon="'&lt;svg ...&gt;&lt;/svg&gt;'"
+        icon="&lt;path d='...FA path...'/&gt;"
     /&gt;
 &lt;/div&gt;</pre>
                     </div>

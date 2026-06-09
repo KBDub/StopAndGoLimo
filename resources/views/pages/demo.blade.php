@@ -1277,65 +1277,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 15 — our-key-offers ──────────────────────────────── --}}
-        <section class="py-16">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="mb-8">
-                    <span class="font-head font-bold text-xs tracking-widest text-champagne">§15</span>
-                    <h2 class="font-head text-2xl text-white mt-1 mb-1">
-                        <strong style="font-weight: 700; color: var(--champagne);">15 — x-sections.</strong>our-key-offers
-                    </h2>
-                    <p class="text-muted text-sm">Full-width key-offer strip, 65/35 two-column body, 2×2 image grid, service navigation cards.</p>
-                </div>
-
-                {{-- Live preview --}}
-                <div class="mb-10">
-                    <p class="font-mono text-champagne text-xs mb-3">Live preview</p>
-                    <x-sections.our-key-offers />
-                </div>
-
-                {{-- Spec + code --}}
-                <div class="grid lg:grid-cols-2 gap-8">
-                    <div class="bg-navy-dark px-6 py-5 border border-white/8">
-                        <p class="font-mono text-champagne text-xs mb-3">Props</p>
-                        <table class="w-full text-xs font-mono text-muted-light border-collapse">
-                            <thead><tr class="border-b border-white/10"><th class="text-left pb-2 text-champagne">Prop</th><th class="text-left pb-2 text-champagne">Type</th><th class="text-left pb-2 text-champagne">Default</th></tr></thead>
-                            <tbody>
-                                <tr class="border-b border-white/5"><td class="py-1.5">headingPlain</td><td>string</td><td>'Our'</td></tr>
-                                <tr class="border-b border-white/5"><td class="py-1.5">headingBold</td><td>string</td><td>'Key Offers'</td></tr>
-                                <tr class="border-b border-white/5"><td class="py-1.5">para1</td><td>string</td><td>intro paragraph</td></tr>
-                                <tr class="border-b border-white/5"><td class="py-1.5">para2</td><td>string</td><td>secondary paragraph</td></tr>
-                                <tr class="border-b border-white/5"><td class="py-1.5">ctaLabel</td><td>string</td><td>'Book a ride'</td></tr>
-                                <tr><td class="py-1.5">ctaHref</td><td>string</td><td>'/book-a-ride'</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="bg-navy-dark px-6 py-5 border border-white/8">
-                        <p class="font-mono text-champagne text-xs mb-1">Usage</p>
-                        <p class="font-mono text-muted text-xs mb-3">resources/views/components/sections/our-key-offers.blade.php</p>
-                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Default (all props optional) --}}
-&lt;x-sections.our-key-offers /&gt;
-
-{{-- Custom heading + CTA --}}
-&lt;x-sections.our-key-offers
-    headingPlain="Why choose"
-    headingBold="Stop &amp; Go"
-    ctaLabel="Get a free quote"
-    ctaHref="/contact"
-/&gt;</pre>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
-
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex flex-col md:flex-row md:items-center gap-8 border border-white/8 bg-navy-light p-8">
                     <div class="flex-1">
                         <span class="font-head font-bold text-xs tracking-widest text-champagne">Section Components</span>
-                        <h2 class="font-head font-bold text-3xl text-white mt-2 mb-3">Section Components (15 active)</h2>
+                        <h2 class="font-head font-bold text-3xl text-white mt-2 mb-3">Section Components (14 active)</h2>
                         <p class="text-muted-light max-w-xl">All 14 Blade section components with their props, aspect ratios, and usage examples, plus live previews of compact components. Kept on a separate page so this guide stays fast to navigate.</p>
                         <p class="text-muted text-xs mt-3 font-mono">resources/views/components/sections/</p>
                     </div>

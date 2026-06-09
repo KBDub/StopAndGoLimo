@@ -30,12 +30,15 @@
     ogImageAlt="Book a luxury limo or airport shuttle with Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Book"
-        headingBold="Your Ride"
-        subtitle="Reserve your airport shuttle or limousine today, available 24/7"
-        buttonText="Get a Quote"
-        buttonHref="/get-a-quote"
-        image="/images/heroes/hero-services.jpg"
+        heading="Booking &"
+        headingBold="Reservations"
+        :headingTwoLines="false"
+        subtitle="Reserve your"
+        subtitleIn="trusted transportation service"
+        description="Our booking and reservations, made simple. Our trusted transportation services are backed by a streamlined system that ensures quick and accurate confirmations. Whether you're scheduling in advance or need last-minute arrangements, we're committed to delivering a seamless and reliable experience."
+        buttonText="Book a ride"
+        buttonHref="/contact"
+        image="/images/heroes/hero-home.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

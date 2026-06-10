@@ -96,6 +96,8 @@ $hero = $heroConfig[$city] ?? [
             body="Stop & Go provides professional transportation in New Lenox with 24/7 airport shuttle service to O'Hare and Midway, luxury limousine service for weddings and events, and party bus rentals. Based at 400 E Lincoln Hwy, we serve all New Lenox neighborhoods with reliable local expertise. Whether you need a New Lenox airport shuttle, limo service, or party bus, our experienced local chauffeurs deliver exceptional service across the suburb."
         />
 
+        <x-sections.three-steps />
+            
         <x-sections.free-instant-quote
             heading="Why choose"
             headingBold="us?"
@@ -127,6 +129,8 @@ $hero = $heroConfig[$city] ?? [
             directions="• Downtown New Lenox to O'Hare: 45 to 55 minutes via I-80 East to I-55 North • West New Lenox to O'Hare: 50 to 60 minutes • New Lenox to Midway Airport: 40 to 50 minutes via I-80 East to I-55 North • New Lenox I-80/I-55 corridor to both airports"
         />
 
+        <x-sections.our-services />
+            
         <x-sections.city-info-grid :boxes="[
             ['heading' => 'North New Lenox',              'items' => ['Spencer Crossing', 'Fox Hill', 'North subdivisions', 'Route 30 corridor', 'LaGrange Road North areas']],
             ['heading' => 'South New Lenox',              'items' => ['Hickory Creek', 'South New Lenox neighborhoods', 'East side New Lenox', 'Route 52 areas', 'Near Frankfort border']],
@@ -136,5 +140,16 @@ $hero = $heroConfig[$city] ?? [
             ['heading' => 'New Lenox High Schools',       'items' => ['Lincoln-Way East High School area', 'Lincoln-Way Central High School area', 'Lincoln-Way West High School area', 'New Lenox Elementary areas', 'Local middle schools']],
         ]" />
     @endif
+
+{{-- standard sections for all --}}
+<x-sections.faq />
+
+<x-sections.share-your-experience />
+
+<x-sections.map-contact-section />
+
+<x-ui.banner-thin-cloud />
+
+<x-sections.base-footer />
 
 </x-layouts.page>

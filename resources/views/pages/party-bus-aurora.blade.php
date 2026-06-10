@@ -40,4 +40,12 @@
         image="/images/heroes/hero-party-bus-aurora.png"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="The"
+        headingBold="Ultimate Party Bus"
+        heading="Experience in Aurora"
+        body="Looking for the ultimate way to party in Aurora? Stop settling for ordinary nights. Our party bus Aurora service brings the celebration to you with luxury, booming music, dazzling lights, and an energy-filled ride your friends will talk about for years."
+    />
+
 </x-layouts.page>

@@ -105,30 +105,30 @@ Route::get('/chicago-bulls-party-bus',          fn () => view('pages.chicago-bul
 Route::get('/chicago-blackhawks-party-bus',     fn () => view('pages.chicago-blackhawks-party-bus'))->name('chicago-blackhawks-party-bus');
 
 
-// ─── City Limo Service Pages ──────────────────────────────────────────────────
+// ─── City / Service Area Pages ────────────────────────────────────────────────
 
-Route::get('/new-lenox-airport-shuttle-limo-service',   fn () => view('pages.city-limo-service', ['city' => 'New Lenox',   'state' => 'IL']))->name('city.new-lenox');
-Route::get('/naperville-airport-shuttle-limo-service',  fn () => view('pages.city-limo-service', ['city' => 'Naperville',  'state' => 'IL']))->name('city.naperville');
-Route::get('/aurora-limo-service',                      fn () => view('pages.city-limo-service', ['city' => 'Aurora',      'state' => 'IL']))->name('city.aurora');
-Route::get('/24-7-north-aurora-il-limo-service',        fn () => view('pages.city-limo-service', ['city' => 'North Aurora','state' => 'IL']))->name('city.north-aurora');
-Route::get('/plainfield-limousine-shuttle-service',     fn () => view('pages.city-limo-service', ['city' => 'Plainfield',  'state' => 'IL']))->name('city.plainfield');
-Route::get('/24-7-joliet-il-limo-services',             fn () => view('pages.city-limo-service', ['city' => 'Joliet',      'state' => 'IL']))->name('city.joliet');
-Route::get('/morris-il-limo-service',                   fn () => view('pages.city-limo-service', ['city' => 'Morris',      'state' => 'IL']))->name('city.morris');
-Route::get('/24-7-minooka-il-limo-service',             fn () => view('pages.city-limo-service', ['city' => 'Minooka',     'state' => 'IL']))->name('city.minooka');
-Route::get('/24-7-channahon-il-limo-service',           fn () => view('pages.city-limo-service', ['city' => 'Channahon',   'state' => 'IL']))->name('city.channahon');
-Route::get('/24-7-elwood-il-limo-service',              fn () => view('pages.city-limo-service', ['city' => 'Elwood',      'state' => 'IL']))->name('city.elwood');
-Route::get('/romeoville-airport-shuttle-limo-service',  fn () => view('pages.city-limo-service', ['city' => 'Romeoville',  'state' => 'IL']))->name('city.romeoville');
-Route::get('/24-7-lockport-il-limo-service',            fn () => view('pages.city-limo-service', ['city' => 'Lockport',    'state' => 'IL']))->name('city.lockport');
-Route::get('/24-7-frankfort-il-limo-service',           fn () => view('pages.city-limo-service', ['city' => 'Frankfort',   'state' => 'IL']))->name('city.frankfort');
-Route::get('/24-7-mokena-il-limo-service',              fn () => view('pages.city-limo-service', ['city' => 'Mokena',      'state' => 'IL']))->name('city.mokena');
-Route::get('/24-7-orland-park-il-limo-service',         fn () => view('pages.city-limo-service', ['city' => 'Orland Park', 'state' => 'IL']))->name('city.orland-park');
-Route::get('/24-7-manhattan-limo-service',              fn () => view('pages.city-limo-service', ['city' => 'Manhattan',   'state' => 'IL']))->name('city.manhattan');
-Route::get('/24-7-homer-glen-limo-service',             fn () => view('pages.city-limo-service', ['city' => 'Homer Glen',  'state' => 'IL']))->name('city.homer-glen');
-Route::get('/24-7-lemont-il-limo-service',              fn () => view('pages.city-limo-service', ['city' => 'Lemont',      'state' => 'IL']))->name('city.lemont');
-Route::get('/24-7-monee-il-limo-service',               fn () => view('pages.city-limo-service', ['city' => 'Monee',       'state' => 'IL']))->name('city.monee');
-Route::get('/bolingbrook-airport-shuttle-ohare-midway', fn () => view('pages.city-limo-service', ['city' => 'Bolingbrook', 'state' => 'IL']))->name('city.bolingbrook');
-Route::get('/oswego-il-limo-service',                   fn () => view('pages.city-limo-service', ['city' => 'Oswego',      'state' => 'IL']))->name('city.oswego');
-Route::get('/24-7-montgomery-il-limo-service',          fn () => view('pages.city-limo-service', ['city' => 'Montgomery',  'state' => 'IL']))->name('city.montgomery');
+Route::get('/new-lenox-airport-shuttle-limo-service',   fn () => view('pages.new-lenox-airport-shuttle-limo-service'))->name('new-lenox-airport-shuttle-limo-service');
+Route::get('/naperville-airport-shuttle-limo-service',  fn () => view('pages.naperville-airport-shuttle-limo-service'))->name('naperville-airport-shuttle-limo-service');
+Route::get('/aurora-limo-service',                      fn () => view('pages.aurora-limo-service'))->name('aurora-limo-service');
+Route::get('/24-7-north-aurora-il-limo-service',        fn () => view('pages.24-7-north-aurora-il-limo-service'))->name('24-7-north-aurora-il-limo-service');
+Route::get('/plainfield-limousine-shuttle-service',     fn () => view('pages.plainfield-limousine-shuttle-service'))->name('plainfield-limousine-shuttle-service');
+Route::get('/24-7-joliet-il-limo-services',             fn () => view('pages.24-7-joliet-il-limo-services'))->name('24-7-joliet-il-limo-services');
+Route::get('/morris-il-limo-service',                   fn () => view('pages.morris-il-limo-service'))->name('morris-il-limo-service');
+Route::get('/24-7-minooka-il-limo-service',             fn () => view('pages.24-7-minooka-il-limo-service'))->name('24-7-minooka-il-limo-service');
+Route::get('/24-7-channahon-il-limo-service',           fn () => view('pages.24-7-channahon-il-limo-service'))->name('24-7-channahon-il-limo-service');
+Route::get('/24-7-elwood-il-limo-service',              fn () => view('pages.24-7-elwood-il-limo-service'))->name('24-7-elwood-il-limo-service');
+Route::get('/romeoville-airport-shuttle-limo-service',  fn () => view('pages.romeoville-airport-shuttle-limo-service'))->name('romeoville-airport-shuttle-limo-service');
+Route::get('/24-7-lockport-il-limo-service',            fn () => view('pages.24-7-lockport-il-limo-service'))->name('24-7-lockport-il-limo-service');
+Route::get('/24-7-frankfort-il-limo-service',           fn () => view('pages.24-7-frankfort-il-limo-service'))->name('24-7-frankfort-il-limo-service');
+Route::get('/24-7-mokena-il-limo-service',              fn () => view('pages.24-7-mokena-il-limo-service'))->name('24-7-mokena-il-limo-service');
+Route::get('/24-7-orland-park-il-limo-service',         fn () => view('pages.24-7-orland-park-il-limo-service'))->name('24-7-orland-park-il-limo-service');
+Route::get('/24-7-manhattan-limo-service',              fn () => view('pages.24-7-manhattan-limo-service'))->name('24-7-manhattan-limo-service');
+Route::get('/24-7-homer-glen-limo-service',             fn () => view('pages.24-7-homer-glen-limo-service'))->name('24-7-homer-glen-limo-service');
+Route::get('/24-7-lemont-il-limo-service',              fn () => view('pages.24-7-lemont-il-limo-service'))->name('24-7-lemont-il-limo-service');
+Route::get('/24-7-monee-il-limo-service',               fn () => view('pages.24-7-monee-il-limo-service'))->name('24-7-monee-il-limo-service');
+Route::get('/bolingbrook-airport-shuttle-ohare-midway', fn () => view('pages.bolingbrook-airport-shuttle-ohare-midway'))->name('bolingbrook-airport-shuttle-ohare-midway');
+Route::get('/oswego-il-limo-service',                   fn () => view('pages.oswego-il-limo-service'))->name('oswego-il-limo-service');
+Route::get('/24-7-montgomery-il-limo-service',          fn () => view('pages.24-7-montgomery-il-limo-service'))->name('24-7-montgomery-il-limo-service');
 
 
 Route::get('/demo', function () {
@@ -150,17 +150,6 @@ Route::get('/service-areas', function () {
     return view('pages.service-areas');
 })->name('service-areas');
 
-Route::get('/service-areas/{slug}', function (string $slug) {
-    $city = collect(PrimaryLocations::all())->first(
-        fn ($loc) => Str::slug(($loc['city'] ?? $loc['name']) . '-' . $loc['state']) === $slug
-    );
-
-    if (! $city) {
-        abort(404);
-    }
-
-    return view('pages.service-areas.show', compact('city', 'slug'));
-})->name('service-areas.show');
 
 
 // ─── Page Management ─────────────────────────────────────────────────────────

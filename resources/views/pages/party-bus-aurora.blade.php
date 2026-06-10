@@ -32,12 +32,12 @@
     ogImageAlt="Party bus rental in Aurora, Illinois"
 >
     <x-sections.category-hero
-        heading="Party Bus"
-        headingBold="Aurora"
-        subtitle="Fun, safe group transportation in Aurora, Illinois"
+        heading=""
+        headingBold="Party Bus Aurora"
+        subtitle="your local Party Buses for every occasion"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/hero-party-bus-aurora.png"
         imagePosition="center center"
     />
 </x-layouts.page>

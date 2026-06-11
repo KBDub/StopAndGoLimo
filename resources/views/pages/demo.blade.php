@@ -1747,7 +1747,9 @@
 
                         <div>
                             <p class="font-mono text-champagne text-xs mb-3">invert — light question bar, navy text</p>
-                            <x-ui.faq variant="invert" />
+                            <div style="background: var(--navy); padding: 1.5rem;">
+                                <x-ui.faq variant="invert" />
+                            </div>
                         </div>
 
                     </div>

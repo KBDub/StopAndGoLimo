@@ -1723,10 +1723,9 @@
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
-                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">19 — x-ui.</strong>faq
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); background: var(--champagne); line-height: 1.2; letter-spacing: 0.5px; padding: 0.35rem 0.85rem;">
+                        <strong style="font-weight: 700; color: var(--navy-dark);">19 — x-ui.</strong>faq
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">

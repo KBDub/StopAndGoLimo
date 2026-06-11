@@ -50,4 +50,33 @@
 
     <x-sections.three-steps :invertBg="true" />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        descHeading="Why Choose Us?"
+        descSubheading="Our Aurora Party Bus Will Turn Any Night into an Epic Celebration"
+        :descBullets="[
+            'Luxury interiors and premium sound systems: You feel the energy the moment you step onboard. Great music, great vibes, great ride.',
+            'Room for your whole crew: Our buses hold large groups so nobody gets left behind.',
+            'Professional, friendly drivers: We handle the driving so you can stay focused on the fun.',
+            'Flexible rental packages: We match your schedule, group size, and party style.',
+            'Fully licensed and insured: Your safety matters as much as your good time.',
+        ]"
+        descClosing="Aurora locals trust us for unforgettable nights and easy planning. Our buses book fast, so don't wait to lock in your date."
+    />
+
+    <x-sections.travel-in-style
+        heading="Where the Fun"
+        headingBold="Never Ends"
+        body="Ready to celebrate in style? Climb into our fully loaded party bus and feel the energy the moment you step on. Booming music, vibrant lights, plush seating, and nonstop fun from start to finish. Your friends will talk about this night for years."
+        buttonText="Book Your Party Bus"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/party-bus-aurora.jpg"
+        imageAlt="Guests celebrating on a party bus in Aurora, Illinois"
+        imagePosition="right"
+        background="navy"
+    />
+
 </x-layouts.page>

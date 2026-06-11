@@ -9,6 +9,7 @@
     'formAction'          => '/get-a-quote',
     'submitLabel'         => 'Send Message',
     'imageObjectPosition' => 'center',
+    'defaultVehicle'      => '',
     'showInfoBox'         => false,
     'infoHeading'      => 'So What Are You',
     'infoHeadingBold'  => 'Waiting For?',
@@ -17,6 +18,11 @@
         'Every client review reflects the same standard: reliability, professionalism, and a seamless experience from start to finish. When you book a limo with us, you are not just securing a ride, you are choosing a service trusted by clients who expect results, not excuses.',
         'Whether it is a corporate transfer, special event, or private hire, our system ensures your booking and reservations are confirmed quickly, managed efficiently, and executed flawlessly.',
     ],
+    'rightVariant'     => 'image',
+    'descHeading'      => 'Why Choose Us?',
+    'descSubheading'   => '',
+    'descBullets'      => [],
+    'descClosing'      => '',
 ])
 
 <section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
@@ -90,17 +96,17 @@
                             class="w-full font-body"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
-                            <option value="Limousine Service">Limousine Service</option>
-                            <option value="Airport Transportation">Airport Transportation</option>
-                            <option value="Party Bus">Party Bus</option>
-                            <option value="Chartered Bus">Chartered Bus</option>
-                            <option value="Corporate Transportation">Corporate Transportation</option>
-                            <option value="Wedding">Wedding</option>
-                            <option value="Special Event">Special Event</option>
-                            <option value="Sporting Event">Sporting Event</option>
-                            <option value="Concert">Concert</option>
-                            <option value="Wine Tour">Wine Tour</option>
-                            <option value="Chauffeur">Chauffeur</option>
+                            <option value="Limousine Service" @selected($defaultVehicle === 'Limousine Service')>Limousine Service</option>
+                            <option value="Airport Transportation" @selected($defaultVehicle === 'Airport Transportation')>Airport Transportation</option>
+                            <option value="Party Bus" @selected($defaultVehicle === 'Party Bus')>Party Bus</option>
+                            <option value="Chartered Bus" @selected($defaultVehicle === 'Chartered Bus')>Chartered Bus</option>
+                            <option value="Corporate Transportation" @selected($defaultVehicle === 'Corporate Transportation')>Corporate Transportation</option>
+                            <option value="Wedding" @selected($defaultVehicle === 'Wedding')>Wedding</option>
+                            <option value="Special Event" @selected($defaultVehicle === 'Special Event')>Special Event</option>
+                            <option value="Sporting Event" @selected($defaultVehicle === 'Sporting Event')>Sporting Event</option>
+                            <option value="Concert" @selected($defaultVehicle === 'Concert')>Concert</option>
+                            <option value="Wine Tour" @selected($defaultVehicle === 'Wine Tour')>Wine Tour</option>
+                            <option value="Chauffeur" @selected($defaultVehicle === 'Chauffeur')>Chauffeur</option>
                         </select>
                     </div>
 
@@ -185,69 +191,119 @@
                 </form>
             </div>
 
-            {{-- ── Right: Image + Copy / Info Box ───────────────────────── --}}
-            <div class="w-full">
+            {{-- ── Right column ─────────────────────────────────────────── --}}
+            @if($rightVariant === 'description')
 
-                {{-- Photo --}}
-                <div class="w-full overflow-hidden mb-6" style="aspect-ratio: {{ $imageAspect }};">
-                    <img
-                        src="{{ $image }}"
-                        alt="{{ $imageAlt }}"
-                        class="w-full h-full object-cover"
-                        style="object-position: {{ $imageObjectPosition }};"
-                        loading="lazy"
-                    >
-                </div>
-
-                @if($showInfoBox)
-
-                    {{-- Heading --}}
-                    <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 400; color: var(--navy); line-height: 1.3; text-align: center;">
-                        {{ $infoHeading }} <strong style="font-weight: 700;">{{ $infoHeadingBold }}</strong>
-                    </h3>
-
-                    {{-- Champagne rule --}}
-                    <x-ui.banner-thin-champagne />
-
-                    {{-- Star rating --}}
-                    <p class="font-head mt-4 mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy); text-align: center; letter-spacing: 0.5px;">
-                        Rated 5 stars by our clients
-                    </p>
-                    <p style="text-align: center; font-size: 1.375rem; color: var(--champagne); line-height: 1; margin-bottom: 1.5rem;" aria-label="5 out of 5 stars">
-                        &#9733;&#9733;&#9733;&#9733;&#9733;
-                    </p>
-
-                    {{-- Info box --}}
-                    <div style="border: 1px solid var(--champagne); padding: 1.5rem;">
-                        @foreach($infoLines as $line)
-                            <p class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--slate); line-height: 1.6; {{ !$loop->last ? 'margin-bottom: 1rem;' : 'margin: 0;' }}">
-                                {{ $line }}
-                            </p>
-                        @endforeach
+                {{-- Description panel — slides in from the right on scroll --}}
+                <div class="w-full"
+                     x-data="{ visible: false }"
+                     x-init="new IntersectionObserver(([e]) => { if(e.isIntersecting) visible = true }, { threshold: 0.12 }).observe($el)"
+                     :style="visible ? 'opacity:1; transform:translateX(0)' : 'opacity:0; transform:translateX(3rem)'"
+                     style="transition: opacity 0.7s ease-out, transform 0.7s ease-out;"
+                >
+                    {{-- Heading with champagne underbar --}}
+                    <div style="width: fit-content; margin-bottom: 1.5rem;">
+                        <h3 class="font-head" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
+                            {{ $descHeading }}
+                        </h3>
+                        <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                     </div>
 
-                @else
+                    {{-- Subheading --}}
+                    @if($descSubheading)
+                        <p class="font-head mb-5" style="font-size: 1.125rem; font-weight: 600; color: var(--navy); line-height: 1.3;">
+                            {{ $descSubheading }}
+                        </p>
+                    @endif
 
-                    @if($heading)
-                        {{-- Heading — Poppins, weight 600 per spec --}}
-                        <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
-                            {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
+                    {{-- Bullet list --}}
+                    @if(!empty($descBullets))
+                        <ul style="margin: 0 0 1.5rem; padding: 0; list-style: none;">
+                            @foreach($descBullets as $bullet)
+                                <li class="font-body" style="font-size: 1rem; color: var(--slate); line-height: 1.6; padding: 0.5rem 0 0.5rem 1.25rem; position: relative; {{ !$loop->last ? 'border-bottom: 1px solid var(--cloud-dark);' : '' }}">
+                                    <span style="position: absolute; left: 0; top: 0.6rem; color: var(--champagne); font-size: 0.75rem;">&#9679;</span>
+                                    {{ $bullet }}
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+
+                    {{-- Closing trust line --}}
+                    @if($descClosing)
+                        <p class="font-body" style="font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.5; border-left: 3px solid var(--champagne); padding-left: 1rem;">
+                            {{ $descClosing }}
+                        </p>
+                    @endif
+
+                </div>
+
+            @else
+
+                {{-- Image + Copy / Info Box (default) --}}
+                <div class="w-full">
+
+                    {{-- Photo --}}
+                    <div class="w-full overflow-hidden mb-6" style="aspect-ratio: {{ $imageAspect }};">
+                        <img
+                            src="{{ $image }}"
+                            alt="{{ $imageAlt }}"
+                            class="w-full h-full object-cover"
+                            style="object-position: {{ $imageObjectPosition }};"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    @if($showInfoBox)
+
+                        {{-- Heading --}}
+                        <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 400; color: var(--navy); line-height: 1.3; text-align: center;">
+                            {{ $infoHeading }} <strong style="font-weight: 700;">{{ $infoHeadingBold }}</strong>
                         </h3>
 
                         {{-- Champagne rule --}}
                         <x-ui.banner-thin-champagne />
-                    @endif
 
-                    {{-- Body --}}
-                    @if($body)
-                        <p class="font-body mt-4" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
-                            {{ $body }}
+                        {{-- Star rating --}}
+                        <p class="font-head mt-4 mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy); text-align: center; letter-spacing: 0.5px;">
+                            Rated 5 stars by our clients
                         </p>
+                        <p style="text-align: center; font-size: 1.375rem; color: var(--champagne); line-height: 1; margin-bottom: 1.5rem;" aria-label="5 out of 5 stars">
+                            &#9733;&#9733;&#9733;&#9733;&#9733;
+                        </p>
+
+                        {{-- Info box --}}
+                        <div style="border: 1px solid var(--champagne); padding: 1.5rem;">
+                            @foreach($infoLines as $line)
+                                <p class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--slate); line-height: 1.6; {{ !$loop->last ? 'margin-bottom: 1rem;' : 'margin: 0;' }}">
+                                    {{ $line }}
+                                </p>
+                            @endforeach
+                        </div>
+
+                    @else
+
+                        @if($heading)
+                            {{-- Heading — Poppins, weight 600 per spec --}}
+                            <h3 class="font-head mb-4" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
+                                {{ $heading }} <strong style="font-weight: 700; color: var(--navy);">{{ $headingBold }}</strong> {{ $headingTail }}
+                            </h3>
+
+                            {{-- Champagne rule --}}
+                            <x-ui.banner-thin-champagne />
+                        @endif
+
+                        {{-- Body --}}
+                        @if($body)
+                            <p class="font-body mt-4" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
+                                {{ $body }}
+                            </p>
+                        @endif
+
                     @endif
 
-                @endif
+                </div>
 
-            </div>
+            @endif
 
         </div>
     </div>

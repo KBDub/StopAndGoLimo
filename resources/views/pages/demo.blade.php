@@ -1746,7 +1746,7 @@
                         </div>
 
                         <div>
-                            <p class="font-mono text-champagne text-xs mb-3">invert — dark answer panel</p>
+                            <p class="font-mono text-champagne text-xs mb-3">invert — light question bar, navy text</p>
                             <x-ui.faq variant="invert" />
                         </div>
 

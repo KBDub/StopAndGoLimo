@@ -12,14 +12,14 @@
 $isInvert = $variant === 'invert';
 
 $questionStyle  = $isInvert
-    ? 'background: var(--navy-light); color: var(--white);'
+    ? 'background: var(--cloud-light); color: var(--navy);'
     : 'background: var(--navy); color: var(--cloud-light);';
 
 $answerStyle    = $isInvert
     ? 'background: var(--cloud); color: var(--navy); border-left: 3px solid var(--champagne);'
     : 'background: var(--cloud); color: var(--navy); border-left: 3px solid var(--champagne);';
 
-$answerTextColor = $isInvert ? 'var(--navy)' : 'var(--navy)';
+$answerTextColor = 'var(--navy)';
 @endphp
 
 <div>

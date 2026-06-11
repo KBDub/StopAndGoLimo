@@ -40,6 +40,12 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 **Midnight Navy (#15152C, hsl(240, 35%, 13%)):** Deep, authoritative, and refined. Signals trust and premium quality.
 **Champagne Gold (#DCB57E):** Warm, understated luxury. Not flashy — the kind of gold that belongs in first class.
 
+**Em dash handling in copy:** Em dashes (—) in headings and subheadings should be avoided. Preferred replacements, in order:
+1. **Rephrase as a "we/our" or action statement** that shows the customer how the company helps them. Example: "Aurora Party Bus — Turns Any Night into an Epic Celebration" becomes "Our Aurora Party Bus Will Turn Any Night into an Epic Celebration."
+2. **Use a comma** when a direct rephrase is awkward. Example: "Book Fast — Spots Fill Quickly" becomes "Book Fast, Spots Fill Quickly."
+
+This applies to all headings, subheadings, and section labels. Em dashes in body copy prose are permitted where a natural pause is needed and no simpler rephrase exists.
+
 ---
 
 ## 3. Absolute Rules (Never Break)

@@ -127,3 +127,4 @@ Full rules in `docs/branding-requirements.md` — read it before any UI change.
 -   Always ask when unsure rather than assuming
 -   Always read `docs/branding-requirements.md` before any UI or copy change
 -   Always read `docs/image-video-control.md` before any image or video change
+-   **Em dashes in headings/subheadings:** Rephrase as a "we/our" or action statement showing how the company helps the customer (e.g. "Will Turn" instead of "—Turns"). Use a comma as a secondary option. See `docs/branding-requirements.md` §2 for the full rule.

@@ -13,6 +13,7 @@
 <div
     id="{{ $compId }}"
     x-data="{ expanded: false }"
+    @pm-expand.stop="expanded = true"
     class="overflow-hidden transition-all duration-300 border"
     style="background: var(--navy-dark); border-color: rgba(255,255,255,0.09);"
 >

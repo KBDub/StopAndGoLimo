@@ -186,6 +186,7 @@
         $nextTick(() => setTimeout(() => {
             let el = document.getElementById($event.detail.targetId);
             if (!el) return;
+            el.dispatchEvent(new CustomEvent('pm-expand'));
             el.scrollIntoView({ behavior: 'smooth', block: 'center' });
             el.classList.add('ring-2','ring-champagne','bg-champagne/10');
             setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
@@ -264,6 +265,7 @@
             $nextTick(() => setTimeout(() => {
                 let el = document.getElementById($event.detail.targetId);
                 if (!el) return;
+                el.dispatchEvent(new CustomEvent('pm-expand'));
                 el.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 el.classList.add('ring-2','ring-champagne','bg-champagne/10');
                 setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);

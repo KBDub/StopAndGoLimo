@@ -1277,6 +1277,137 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 15 — dropdown ────────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">15 — x-ui.</strong>dropdown
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        A branded Alpine.js dropdown. The trigger shares the same <code class="font-mono text-champagne text-sm">variant</code>, <code class="font-mono text-champagne text-sm">size</code>, and <code class="font-mono text-champagne text-sm">radius</code> system as <code class="font-mono text-champagne text-sm">x-ui.button</code>. Default radius is <strong style="color: var(--champagne);">soft</strong> (6px, matching the button default). The panel always uses sharp corners per brand rule §3.2.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                    {{-- Live previews --}}
+                    <div class="space-y-10">
+
+                        {{-- Radius variants --}}
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-4">Radius variants — champagne-gradient (default variant)</p>
+                            <div class="grid grid-cols-1 gap-4" style="max-width: 340px;">
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">soft (default)</p>
+                                    <x-ui.dropdown radius="soft" label="Select a service" />
+                                </div>
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">square</p>
+                                    <x-ui.dropdown radius="square" label="Select a service" />
+                                </div>
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">rounded</p>
+                                    <x-ui.dropdown radius="rounded" label="Select a service" />
+                                </div>
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">pill</p>
+                                    <x-ui.dropdown radius="pill" label="Select a service" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- Variant examples --}}
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-4">Variant examples — radius="soft"</p>
+                            <div class="grid grid-cols-1 gap-4" style="max-width: 340px;">
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">navy-gold</p>
+                                    <x-ui.dropdown variant="navy-gold" label="Select a service" />
+                                </div>
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">outline-champagne</p>
+                                    <x-ui.dropdown variant="outline-champagne" label="Select a service" />
+                                </div>
+                                <div>
+                                    <p class="font-mono text-muted text-[11px] mb-1.5">white-navy</p>
+                                    <x-ui.dropdown variant="white-navy" label="Select a service" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="font-mono text-muted text-xs">Click any trigger to open the panel. Selected value is highlighted in champagne.</p>
+                    </div>
+
+                    {{-- Spec + code --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10">
+                                        <th class="text-left pb-2 text-champagne">Prop</th>
+                                        <th class="text-left pb-2 text-champagne">Type</th>
+                                        <th class="text-left pb-2 text-champagne">Default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">label</td><td>string</td><td>'Select an option'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">options</td><td>array</td><td>3 sample items</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">variant</td><td>string</td><td>'champagne-gradient'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">size</td><td>string</td><td>'base'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">radius</td><td>string</td><td>'soft'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">name</td><td>string</td><td>null</td></tr>
+                                    <tr><td class="py-1.5">id</td><td>string</td><td>null</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="font-mono text-muted text-[11px] mt-3">radius options: square | soft | rounded | pill</p>
+                            <p class="font-mono text-muted text-[11px]">variant options: champagne-gradient | champagne-solid | navy-gold | outline-champagne | white-navy | outline-light</p>
+                        </div>
+
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/dropdown.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Default (soft radius, champagne-gradient) --}}
+&lt;x-ui.dropdown
+    label="Select a service"
+    :options="[
+        ['label' =&gt; 'Airport Shuttle', 'value' =&gt; 'shuttle'],
+        ['label' =&gt; 'Party Bus',       'value' =&gt; 'party-bus'],
+        ['label' =&gt; 'Wedding Limo',    'value' =&gt; 'wedding'],
+    ]"
+/&gt;
+
+{{-- Square, outlined, with form name --}}
+&lt;x-ui.dropdown
+    radius="square"
+    variant="outline-champagne"
+    label="Pick a city"
+    :options="$cities"
+    name="city"
+/&gt;
+
+{{-- Pill, navy-gold, large --}}
+&lt;x-ui.dropdown
+    radius="pill"
+    variant="navy-gold"
+    size="lg"
+    label="Choose your vehicle"
+    :options="$vehicles"
+/&gt;</pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

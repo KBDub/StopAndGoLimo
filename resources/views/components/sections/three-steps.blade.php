@@ -16,9 +16,10 @@
             'body'   => 'Once confirmed, your luxury ride is locked in. All that\'s left is to sit back and enjoy the experience!',
         ],
     ],
+    'invertBg' => false,
 ])
 
-<section style="background: var(--navy);" class="py-12 lg:py-[6.25rem]">
+<section style="background: {{ $invertBg ? 'var(--white)' : 'var(--navy)' }};" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

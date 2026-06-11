@@ -259,7 +259,16 @@
     <div
         class="border"
         style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"
-        @pm-open-page.window="pagesOpen = true"
+        @pm-open-page.window="
+            pagesOpen = true;
+            $nextTick(() => setTimeout(() => {
+                let el = document.getElementById($event.detail.targetId);
+                if (!el) return;
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                el.classList.add('ring-2','ring-champagne','bg-champagne/10');
+                setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
+            }, 300))
+        "
     >
 
         <button

@@ -86,4 +86,16 @@
         descClosing="Naperville locals trust us for unforgettable nights and easy planning. Our buses book fast, so lock in your date before it's gone."
     />
 
+    <x-sections.travel-in-style
+        heading="Where the Party"
+        headingBold="Never Stops"
+        body="Our Naperville party bus puts you and your crew at the heart of the celebration. Step onboard with booming sound systems, dazzling lights, and plush seating, and let the party take over. Every ride is packed with energy, laughs, and memories that last. Naperville locals count on us for safe, exciting nights out that turn ordinary evenings into legendary celebrations."
+        buttonText="Book Your Party Bus"
+        buttonHref="/bookings-reservations"
+        image="/images/heroes/hero-party-bus-naperville.jpg"
+        imageAlt="Guests celebrating on a Stop and Go party bus in Naperville, Illinois"
+        imagePosition="right"
+        background="navy"
+    />
+
 </x-layouts.page>

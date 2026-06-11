@@ -284,28 +284,23 @@
         </button>
 
         <div x-show="pagesOpen" x-cloak x-transition class="border-t px-5 py-6" style="border-color: rgba(255,255,255,0.08);">
-            @foreach($groups as $groupName => $group)
-                <div class="mb-10 last:mb-0">
-                    {{-- Group heading --}}
-                    <h2 class="font-head font-bold text-base mb-4 flex items-center gap-2" style="color: var(--cloud-light);">
-                        <span class="w-2.5 h-2.5 shrink-0" style="background: var(--champagne);"></span>
-                        {{ $groupName }}
-                        <span class="font-normal text-sm" style="color: var(--slate);">
-                            ({{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }})
-                        </span>
-                    </h2>
-
-                    {{-- Page cards grid --}}
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        @foreach($group['pages'] as $page)
-                            <x-ui.page-management-page-card
-                                :page="$page"
-                                :componentColorMap="$componentColorMap"
-                            />
-                        @endforeach
-                    </div>
-                </div>
-            @endforeach
+            @php
+                $allPages = [];
+                foreach ($groups as $group) {
+                    foreach ($group['pages'] as $page) {
+                        $allPages[] = $page;
+                    }
+                }
+                usort($allPages, fn($a, $b) => strcmp($a['name'], $b['name']));
+            @endphp
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                @foreach($allPages as $page)
+                    <x-ui.page-management-page-card
+                        :page="$page"
+                        :componentColorMap="$componentColorMap"
+                    />
+                @endforeach
+            </div>
         </div>
 
     </div>

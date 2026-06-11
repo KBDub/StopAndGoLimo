@@ -84,6 +84,7 @@ Route::get('/airport-shuttle-ohare-midway',   fn () => view('pages.airport-shutt
 Route::get('/wedding-limousine-services',     fn () => view('pages.wedding-limousine-services'))->name('wedding-limousine-services');
 Route::get('/party-bus-aurora',               fn () => view('pages.party-bus-aurora'))->name('party-bus-aurora');
 Route::get('/party-bus-rental-naperville',    fn () => view('pages.party-bus-rental-naperville'))->name('party-bus-rental-naperville');
+Route::get('/party-bus-rental-chicago',      fn () => view('pages.party-bus-rental-chicago'))->name('party-bus-rental-chicago');
 Route::get('/prom-party-bus-rental-illinois', fn () => view('pages.prom-party-bus-rental-illinois'))->name('prom-party-bus-rental-illinois');
 Route::get('/new-bus-rental',                 fn () => view('pages.new-bus-rental'))->name('new-bus-rental');
 Route::get('/coach-buses',                    fn () => view('pages.coach-buses'))->name('coach-buses');

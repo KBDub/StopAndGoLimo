@@ -1408,6 +1408,107 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 16 — accordion ───────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">16 — x-ui.</strong>accordion
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        An Alpine.js accordion with four variants and four radius options. Default radius is <strong style="color: var(--champagne);">soft</strong> (6px). One item is open at a time by default — pass <code class="font-mono text-champagne text-sm">:allowMultiple="true"</code> to lift that restriction.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                    {{-- Live previews --}}
+                    <div class="space-y-8">
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">navy (default) — radius soft</p>
+                            <x-ui.accordion />
+                        </div>
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">outline-champagne — radius soft</p>
+                            <x-ui.accordion variant="outline-champagne" />
+                        </div>
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">cloud — radius square</p>
+                            <x-ui.accordion variant="cloud" radius="square" />
+                        </div>
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">outline-cloud — radius rounded — allowMultiple</p>
+                            <x-ui.accordion variant="outline-cloud" radius="rounded" :allowMultiple="true" />
+                        </div>
+
+                    </div>
+
+                    {{-- Spec + code --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10">
+                                        <th class="text-left pb-2 text-champagne">Prop</th>
+                                        <th class="text-left pb-2 text-champagne">Type</th>
+                                        <th class="text-left pb-2 text-champagne">Default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">items</td><td>array</td><td>3 sample items</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">variant</td><td>string</td><td>'navy'</td></tr>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">radius</td><td>string</td><td>'soft'</td></tr>
+                                    <tr><td class="py-1.5">allowMultiple</td><td>boolean</td><td>false</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="font-mono text-muted text-[11px] mt-3">variant options: navy | outline-champagne | cloud | outline-cloud</p>
+                            <p class="font-mono text-muted text-[11px]">radius options: square | soft | rounded | pill</p>
+                        </div>
+
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/accordion.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Default (navy, soft radius) --}}
+&lt;x-ui.accordion :items="[
+    ['title' =&gt; 'Do you serve O\'Hare?',
+     'body'  =&gt; 'Yes, 24/7 to both O\'Hare and Midway.'],
+    ['title' =&gt; 'How far in advance?',
+     'body'  =&gt; 'At least 24 hours recommended.'],
+]" /&gt;
+
+{{-- Light surface, square, multiple open --}}
+&lt;x-ui.accordion
+    variant="cloud"
+    radius="square"
+    :allowMultiple="true"
+    :items="$faqItems"
+/&gt;
+
+{{-- Outlined champagne, pill --}}
+&lt;x-ui.accordion
+    variant="outline-champagne"
+    radius="pill"
+    :items="$faqItems"
+/&gt;</pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

@@ -69,4 +69,21 @@
         ]"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        descHeading="Why Choose Us?"
+        descSubheading="Our Naperville Party Bus Turns Any Night into an Unforgettable Celebration"
+        :descBullets="[
+            'Luxury interiors and premium sound systems: The fun starts the moment you step onboard. Great music, great vibes, every time.',
+            'Room for your whole crew: Our buses hold large groups so nobody gets left behind.',
+            'Professional, friendly drivers: We handle the driving so you stay focused on the celebration.',
+            'Flexible rental packages: We match your schedule, group size, and party style.',
+            'Fully licensed and insured: Your safety matters as much as your good time.',
+        ]"
+        descClosing="Naperville locals trust us for unforgettable nights and easy planning. Our buses book fast, so lock in your date before it's gone."
+    />
+
 </x-layouts.page>

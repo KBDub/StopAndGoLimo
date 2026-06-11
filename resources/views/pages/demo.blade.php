@@ -1718,6 +1718,87 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 19 — x-ui.faq ────────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">19 — x-ui.</strong>faq
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        Alpine.js accordion rows — no section wrapper, no heading. Drop directly onto any surface. Two variants: <strong style="color: var(--champagne);">default</strong> (navy question bar, cloud answer panel) and <strong style="color: var(--champagne);">invert</strong> (navy-light question bar, navy-dark answer panel for use on dark backgrounds).
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                    {{-- Live previews --}}
+                    <div class="space-y-10">
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">default — light answer panel</p>
+                            <x-ui.faq />
+                        </div>
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-3">invert — dark answer panel</p>
+                            <x-ui.faq variant="invert" />
+                        </div>
+
+                    </div>
+
+                    {{-- Spec + code --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10">
+                                        <th class="text-left pb-2 text-champagne">Prop</th>
+                                        <th class="text-left pb-2 text-champagne">Type</th>
+                                        <th class="text-left pb-2 text-champagne">Default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">faqs</td><td>array</td><td>4 sample items</td></tr>
+                                    <tr><td class="py-1.5">variant</td><td>string</td><td>'default'</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="font-mono text-muted text-[11px] mt-3">variant options: default | invert</p>
+                            <p class="font-mono text-muted text-[11px]">faqs array shape: ['question' =&gt; '...', 'answer' =&gt; '...']</p>
+                            <p class="font-mono text-muted text-[11px] mt-2">First item opens by default. All others closed.</p>
+                        </div>
+
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/faq.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Default (light answer panel) --}}
+&lt;x-ui.faq :faqs="[
+    ['question' =&gt; 'Do you serve O\'Hare?',
+     'answer'   =&gt; 'Yes, 24/7 to both O\'Hare and Midway.'],
+    ['question' =&gt; 'How far in advance?',
+     'answer'   =&gt; 'At least 24 hours recommended.'],
+]" /&gt;
+
+{{-- Invert (dark answer panel, for navy backgrounds) --}}
+&lt;x-ui.faq
+    variant="invert"
+    :faqs="$pageFaqs"
+/&gt;</pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

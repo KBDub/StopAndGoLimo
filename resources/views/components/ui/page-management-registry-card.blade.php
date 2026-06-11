@@ -57,21 +57,15 @@
         <div class="space-y-1.5">
             @foreach($pages as $p)
                 @php
-                    $targetId = 'page-' . ltrim(str_replace('/', '-', $p['url']), '-');
-                    if ($targetId === 'page-') {
-                        $targetId = 'page-home';
-                    }
+                    $targetId  = 'page-' . ltrim(str_replace('/', '-', $p['url']), '-');
+                    if ($targetId === 'page-') { $targetId = 'page-home'; }
+                    $urlParts  = explode('/', trim($p['url'], '/'));
+                    $groupSlug = $urlParts[0] ?: 'home';
                 @endphp
                 <div class="flex items-center justify-between gap-2 text-sm">
                     <a
                         href="#{{ $targetId }}"
-                        @click="$nextTick(() => {
-                            let el = document.getElementById('{{ $targetId }}');
-                            if (!el) return;
-                            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            el.classList.add('ring-2','ring-champagne','bg-champagne/10');
-                            setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
-                        })"
+                        @click.prevent="window.dispatchEvent(new CustomEvent('pm-open-page', { detail: { groupSlug: '{{ $groupSlug }}', targetId: '{{ $targetId }}' } }))"
                         class="font-head font-medium truncate transition-colors"
                         style="color: var(--cloud-light);"
                         onmouseenter="this.style.color='var(--champagne)'"

@@ -128,13 +128,7 @@
                         <span class="font-mono text-xs font-medium opacity-60 shrink-0 w-14">{{ $typeLabel }}</span>
                         <a
                             href="#{{ $compRegistryId }}"
-                            @click="$nextTick(() => {
-                                let el = document.getElementById('{{ $compRegistryId }}');
-                                if (!el) return;
-                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                el.classList.add('ring-2','ring-champagne','bg-champagne/10');
-                                setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
-                            })"
+                            @click.prevent="window.dispatchEvent(new CustomEvent('pm-open-registry', { detail: { targetId: '{{ $compRegistryId }}' } }))"
                             class="font-medium hover:underline hover:opacity-80 transition-opacity"
                         >{{ $label }}</a>
 

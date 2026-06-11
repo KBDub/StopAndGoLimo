@@ -9,6 +9,8 @@
 [x-cloak] { display: none !important; }
 .pm-pill-hover:hover { background: color-mix(in srgb, var(--champagne) 12%, transparent); color: var(--champagne); border-color: var(--champagne); }
 .pm-accordion-header:hover { background: color-mix(in srgb, var(--white) 4%, transparent) !important; }
+#pm-search::placeholder { color: var(--slate); opacity: 1; }
+#pm-search { -webkit-appearance: none; appearance: none; }
 </style>
 
 {{-- Tailwind safelist for dynamic inter-link classes --}}
@@ -180,7 +182,20 @@
 {{-- ═══════════════════════════════════════════════════════════ --}}
 {{-- ACCORDION 2: All Components                                --}}
 {{-- ═══════════════════════════════════════════════════════════ --}}
-<div x-data="{ open: false }" class="mb-8 border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);">
+<div
+    x-data="{ open: false }"
+    @pm-open-registry.window="
+        open = true;
+        $nextTick(() => setTimeout(() => {
+            let el = document.getElementById($event.detail.targetId);
+            if (!el) return;
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.classList.add('ring-2','ring-champagne','bg-champagne/10');
+            setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
+        }, 300))
+    "
+    class="mb-8 border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"
+>
 
     <button
         @click="open = !open"
@@ -252,7 +267,8 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/>
             </svg>
             <input
-                type="search"
+                id="pm-search"
+                type="text"
                 x-model="search"
                 placeholder="Search pages or components..."
                 class="w-full pl-9 pr-4 py-2.5 font-body text-sm border transition-colors focus:outline-none"
@@ -299,7 +315,11 @@
     {{-- ═══════════════════════════════════════════════════════ --}}
     {{-- ACCORDION 3: Pages                                      --}}
     {{-- ═══════════════════════════════════════════════════════ --}}
-    <div class="border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);">
+    <div
+        class="border"
+        style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"
+        @pm-open-page.window="pagesOpen = true"
+    >
 
         <button
             @click="pagesOpen = !pagesOpen"
@@ -322,33 +342,67 @@
             </span>
         </button>
 
-        <div x-show="pagesOpen" x-cloak x-transition class="border-t px-5 py-6" style="border-color: rgba(255,255,255,0.08);">
+        <div x-show="pagesOpen" x-cloak x-transition class="border-t px-5 py-4" style="border-color: rgba(255,255,255,0.08);">
             @foreach($groups as $groupName => $group)
+                {{-- Group accordion — closed by default --}}
                 <div
+                    x-data="{ groupOpen: false }"
                     x-show="activeGroup === 'all' || activeGroup === '{{ $group['slug'] }}'"
-                    class="mb-8 last:mb-0"
+                    @pm-open-page.window="
+                        if ($event.detail.groupSlug === '{{ $group['slug'] }}') {
+                            groupOpen = true;
+                            $nextTick(() => setTimeout(() => {
+                                let el = document.getElementById($event.detail.targetId);
+                                if (!el) return;
+                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                el.classList.add('ring-2','ring-champagne','bg-champagne/10');
+                                setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
+                            }, 300));
+                        }
+                    "
+                    class="mb-2 border"
+                    style="border-color: rgba(255,255,255,0.08);"
                 >
-                    <h2 class="font-head font-bold text-base mb-4 flex items-center gap-2"
-                        style="color: var(--cloud-light);">
-                        <span class="w-2.5 h-2.5 shrink-0" style="background: var(--champagne);"></span>
-                        {{ $groupName }}
-                        <span class="font-normal text-sm" style="color: var(--slate);">
-                            ({{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }})
+                    {{-- Group header --}}
+                    <button
+                        @click="groupOpen = !groupOpen"
+                        class="pm-accordion-header w-full flex items-center justify-between gap-3 px-4 py-3 transition-colors"
+                        style="background: var(--navy-dark);"
+                    >
+                        <div class="flex items-center gap-2.5">
+                            <svg class="w-3.5 h-3.5 transition-transform shrink-0" :class="{ 'rotate-90': groupOpen }"
+                                 style="color: var(--slate);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                            <span class="w-2 h-2 shrink-0" style="background: var(--champagne);"></span>
+                            <span class="font-head font-semibold text-sm" style="color: var(--cloud-light);">{{ $groupName }}</span>
+                        </div>
+                        <span class="font-body text-xs" style="color: var(--slate);">
+                            {{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }}
                         </span>
-                    </h2>
+                    </button>
 
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        @foreach($group['pages'] as $page)
-                            @php
-                                $pageSearchString = addslashes(strtolower($page['name'] . ' ' . $page['url']));
-                            @endphp
-                            <div x-show="search === '' || '{{ $pageSearchString }}'.includes(search.toLowerCase().trim())">
-                                <x-ui.page-management-page-card
-                                    :page="$page"
-                                    :componentColorMap="$componentColorMap"
-                                />
-                            </div>
-                        @endforeach
+                    {{-- Group pages grid --}}
+                    <div
+                        x-show="groupOpen"
+                        x-cloak
+                        x-transition
+                        class="border-t px-4 py-4"
+                        style="border-color: rgba(255,255,255,0.07); background: var(--navy-light);"
+                    >
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                            @foreach($group['pages'] as $page)
+                                @php
+                                    $pageSearchString = addslashes(strtolower($page['name'] . ' ' . $page['url']));
+                                @endphp
+                                <div x-show="search === '' || '{{ $pageSearchString }}'.includes(search.toLowerCase().trim())">
+                                    <x-ui.page-management-page-card
+                                        :page="$page"
+                                        :componentColorMap="$componentColorMap"
+                                    />
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             @endforeach

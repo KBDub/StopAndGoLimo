@@ -79,18 +79,9 @@
         background="navy"
     />
 
-    <x-sections.travel-in-style
-        heading="Our Mission"
-        headingBold="and Values"
-        subtitle="Core Values"
-        body="At Stop and Go, we are committed to delivering safe, unforgettable, and fun experiences on every party bus ride. Our focus is on making your celebration seamless, memorable, and full of energy, while ensuring your satisfaction and trust every step of the way."
-        buttonText="Rent a Party Bus"
-        buttonHref="/bookings-reservations"
+    <x-sections.our-mission
         image="/images/heroes/hero-party-bus-aurora.png"
         imageAlt="Guests celebrating on a Stop and Go party bus in Aurora, Illinois"
-        imagePosition="right"
-        background="navy"
-        slideIn="left"
     />
 
     <x-sections.text-block-slide-in

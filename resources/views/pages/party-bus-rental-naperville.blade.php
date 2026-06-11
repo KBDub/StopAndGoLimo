@@ -98,4 +98,9 @@
         background="navy"
     />
 
+    <x-sections.our-mission
+        image="/images/heroes/hero-party-bus-naperville.jpg"
+        imageAlt="Guests celebrating on a Stop and Go party bus in Naperville, Illinois"
+    />
+
 </x-layouts.page>

@@ -16,10 +16,10 @@ $questionStyle  = $isInvert
     : 'background: var(--navy); color: var(--cloud-light);';
 
 $answerStyle    = $isInvert
-    ? 'background: var(--cloud); color: var(--navy); border-left: 3px solid var(--champagne);'
+    ? 'background: var(--navy-dark); color: var(--cloud-light); border-left: 3px solid var(--champagne);'
     : 'background: var(--cloud); color: var(--navy); border-left: 3px solid var(--champagne);';
 
-$answerTextColor = 'var(--navy)';
+$answerTextColor = $isInvert ? 'var(--cloud-light)' : 'var(--navy)';
 @endphp
 
 <div>

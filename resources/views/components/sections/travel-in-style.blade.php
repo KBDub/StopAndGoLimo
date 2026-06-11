@@ -9,6 +9,7 @@
     'imageAlt'      => 'Guests enjoying a luxury limo ride with Stop and Go Airport Shuttle',
     'imagePosition' => 'left',
     'background'    => 'navy',
+    'slideIn'       => '',
 ])
 
 @php
@@ -20,15 +21,23 @@
     // On mobile image is always on top. On desktop, imagePosition drives column order.
     $imgOrder = $imagePosition === 'right' ? 'order-first lg:order-last' : 'order-first lg:order-first';
     $txtOrder = $imagePosition === 'right' ? 'order-last lg:order-first' : 'order-last lg:order-last';
+
+    // Slide-in variant — mirrors the sg-slide-in pattern from image-slide-in.blade.php
+    $doSlide       = $slideIn === 'left';
+    $sectionExtra  = $doSlide ? ' overflow-hidden' : '';
+    $imgSlideClass = $doSlide ? ' sg-tis-slide-in' : '';
+    $imgSlideStyle = $doSlide ? 'opacity: 0; transform: translateX(-4rem); transition: opacity 0.7s ease, transform 0.7s ease;' : '';
+    $txtSlideClass = $doSlide ? ' sg-tis-slide-in' : '';
+    $txtSlideStyle = $doSlide ? 'opacity: 0; transform: translateX(-4rem); transition: opacity 0.7s ease 150ms, transform 0.7s ease 150ms;' : '';
 @endphp
 
-<section style="{{ $bgStyle }}" class="py-12 lg:py-[6.25rem]">
+<section style="{{ $bgStyle }}" class="py-12 lg:py-[6.25rem]{{ $sectionExtra }}">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {{-- Image column --}}
-            <div class="{{ $imgOrder }} w-full">
+            <div class="{{ $imgOrder }} w-full{{ $imgSlideClass }}" style="{{ $imgSlideStyle }}">
                 <div class="overflow-hidden w-full aspect-[4/3]" style="background: var(--navy-dark); box-shadow: var(--shadow-card);">
                     <img
                         src="{{ $image }}"
@@ -40,7 +49,7 @@
             </div>
 
             {{-- Text column --}}
-            <div class="{{ $txtOrder }} w-full" style="{{ $panelBg }}">
+            <div class="{{ $txtOrder }} w-full{{ $txtSlideClass }}" style="{{ $panelBg }}{{ $txtSlideStyle ? ' ' . $txtSlideStyle : '' }}">
 
                 {{-- H2 --}}
                 <h2 class="font-head mb-5" style="font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.2; letter-spacing: 0.5px; {{ $textColor }}">
@@ -84,3 +93,23 @@
         </div>
     </div>
 </section>
+
+@if($doSlide)
+<script>
+(function () {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.sg-tis-slide-in').forEach(function (el) {
+        observer.observe(el);
+    });
+})();
+</script>
+@endif

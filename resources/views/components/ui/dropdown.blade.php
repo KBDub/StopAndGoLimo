@@ -122,14 +122,15 @@
                 <li
                     role="option"
                     @click="selected = {{ json_encode($option['value']) }}; selectedLabel = {{ json_encode($option['label']) }}; open = false"
+                    @mouseenter="$el.dataset.hover = '1'"
+                    @mouseleave="$el.dataset.hover = '0'"
                     :aria-selected="selected === {{ json_encode($option['value']) }}"
                     class="px-5 py-3 cursor-pointer font-head text-[14px] font-medium transition-colors duration-150"
-                    :class="selected === {{ json_encode($option['value']) }}
-                        ? 'text-navy'
-                        : 'text-cloud-light hover:text-champagne'"
                     :style="selected === {{ json_encode($option['value']) }}
-                        ? 'background: var(--champagne);'
-                        : 'background: transparent;'"
+                        ? 'background: var(--champagne); color: var(--navy);'
+                        : ($el.dataset.hover === '1'
+                            ? 'background: color-mix(in srgb, var(--champagne) 12%, transparent); color: var(--champagne);'
+                            : 'background: transparent; color: var(--cloud-light);')"
                 >
                     {{ $option['label'] }}
                 </li>

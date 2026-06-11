@@ -561,11 +561,191 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 08 Navigation & Mega Menu ───────────────────────── --}}
+        {{-- ── 08 Inline Text Links & CSS Variables ────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10">
-                    <span class="font-head font-bold text-xs tracking-widest text-champagne">08 &mdash; Navigation</span>
+                    <span class="font-head font-bold text-xs tracking-widest text-champagne">08 &mdash; Text Links &amp; Variables</span>
+                    <h2 class="font-head font-bold text-3xl text-white mt-2">Inline Text Links &amp; CSS Variables</h2>
+                    <p class="text-muted-light mt-3 max-w-3xl">Inline link patterns and the full Twilight Luxe CSS token reference. Always use <code class="font-mono text-champagne text-sm">var(--token)</code> — never a raw hex, rgb(), or hsl() value.</p>
+                </div>
+
+                {{-- button-text-link: sliding arrow --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">x-ui.button-text-link &mdash; Sliding arrow CTA</h3>
+                    <p class="text-muted text-xs mb-6">Champagne text, transparent background. On hover: text lightens to <code class="font-mono text-champagne">champagne-light</code> and the flex gap widens from <code class="font-mono text-champagne">gap-2</code> (8px) to <code class="font-mono text-champagne">gap-3</code> (12px) — the arrow slides 4px right. Use for prominent inline CTAs: "View Rates &rarr;", "See All Services &rarr;".</p>
+                    <div class="flex flex-wrap gap-8 items-center mb-4">
+                        <div class="text-center">
+                            <x-ui.button-text-link href="#">View Rates &rarr;</x-ui.button-text-link>
+                            <p class="text-muted text-xs mt-2 font-mono">on dark bg</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.button-text-link href="#">See All Services &rarr;</x-ui.button-text-link>
+                            <p class="text-muted text-xs mt-2 font-mono">on dark bg</p>
+                        </div>
+                        <div class="inline-block px-6 py-3 border border-cloud-dark" style="background: var(--cloud-light);">
+                            <x-ui.button-text-link href="#" class="!text-champagne-dark">View Rates &rarr;</x-ui.button-text-link>
+                            <p class="text-xs mt-2 font-mono" style="color: var(--slate);">on light surface</p>
+                        </div>
+                    </div>
+                    <div class="bg-navy-dark px-6 py-5 border border-white/8 mt-4">
+                        <p class="font-mono text-champagne text-xs mb-1">x-ui.button-text-link &mdash; resources/views/components/ui/button-text-link.blade.php</p>
+                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-2 overflow-x-auto whitespace-pre-wrap">&lt;x-ui.button-text-link href="/rates"&gt;View Rates &amp;rarr;&lt;/x-ui.button-text-link&gt;
+{{-- On a light surface, darken the text so it reads against cloud-light: --}}
+&lt;x-ui.button-text-link href="/rates" class="!text-champagne-dark"&gt;View Rates &amp;rarr;&lt;/x-ui.button-text-link&gt;
+{{-- Hover: gap-2 (8px) → gap-3 (12px). Arrow slides 4px right. Transition: 200ms ease-out. --}}</pre>
+                    </div>
+                </div>
+
+                {{-- button-text-champagne: simpler --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">x-ui.button-text-champagne &mdash; Simple arrow</h3>
+                    <p class="text-muted text-xs mb-6">A lighter-weight inline link. Always appends <code class="font-mono text-champagne">&rarr;</code> automatically &mdash; do not add it manually in the slot. Hover lightens to <code class="font-mono text-champagne">champagne-light</code>. No sliding gap animation. Use for softer, less prominent CTAs.</p>
+                    <div class="flex flex-wrap gap-8 items-center mb-4">
+                        <div class="text-center">
+                            <x-ui.button-text-champagne href="#">Learn More</x-ui.button-text-champagne>
+                            <p class="text-muted text-xs mt-2 font-mono">button-text-champagne</p>
+                        </div>
+                        <div class="text-center">
+                            <x-ui.button-text-champagne href="#">About Our Fleet</x-ui.button-text-champagne>
+                            <p class="text-muted text-xs mt-2 font-mono">button-text-champagne</p>
+                        </div>
+                    </div>
+                    <div class="bg-navy-dark px-6 py-5 border border-white/8 mt-4">
+                        <p class="font-mono text-champagne text-xs mb-1">x-ui.button-text-champagne &mdash; resources/views/components/ui/button-text-champagne.blade.php</p>
+                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-2 overflow-x-auto whitespace-pre-wrap">&lt;x-ui.button-text-champagne href="/about-us"&gt;Learn More&lt;/x-ui.button-text-champagne&gt;
+{{-- Arrow is appended automatically. Never add &amp;rarr; in the slot. --}}
+{{-- No href renders a &lt;button&gt; instead of &lt;a&gt;. --}}</pre>
+                    </div>
+                </div>
+
+                {{-- Azure inline prose link --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-1">Azure inline <code class="font-mono text-champagne text-sm">&lt;a&gt;</code> &mdash; Prose link</h3>
+                    <p class="text-muted text-xs mb-6">Plain <code class="font-mono text-champagne">&lt;a href&gt;</code> tags in body copy use <code class="font-mono text-champagne">var(--azure)</code>. On hover they deepen to <code class="font-mono text-champagne">var(--azure-dark)</code>. Azure is the only approved colour for prose inline links &mdash; never champagne, never white. Works on both navy and cloud-light surfaces.</p>
+                    <div class="flex flex-wrap gap-6 items-start mb-4">
+                        <div style="background: var(--navy); padding: 1.5rem 2rem; max-width: 34rem;">
+                            <p class="font-body" style="font-size: 1.0625rem; color: var(--cloud); line-height: 1.6;">
+                                We provide <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">reliable service</a> across Chicagoland, including <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">O&rsquo;Hare and Midway</a> routes.
+                            </p>
+                            <p class="text-muted text-xs mt-3 font-mono">on var(--navy)</p>
+                        </div>
+                        <div style="background: var(--cloud-light); padding: 1.5rem 2rem; max-width: 34rem;">
+                            <p class="font-body" style="font-size: 1.0625rem; color: var(--slate); line-height: 1.6;">
+                                We provide <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">reliable service</a> across Chicagoland, including <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">O&rsquo;Hare and Midway</a> routes.
+                            </p>
+                            <p class="text-xs mt-3 font-mono" style="color: var(--slate);">on var(--cloud-light)</p>
+                        </div>
+                    </div>
+                    <div class="bg-navy-dark px-6 py-5 border border-white/8 mt-4">
+                        <p class="font-mono text-champagne text-xs mb-1">Inline prose link &mdash; always azure, never champagne</p>
+                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-2 overflow-x-auto whitespace-pre-wrap">&lt;a href="/about-us"
+   style="color: var(--azure); text-decoration: underline;
+          text-decoration-color: var(--azure); text-underline-offset: 3px;
+          transition: color 0.15s;"&gt;reliable service&lt;/a&gt;
+{{-- Hover deepens to var(--azure-dark). Rule: azure = inline prose links only. --}}
+{{-- Never use azure on buttons or section backgrounds. --}}</pre>
+                    </div>
+                </div>
+
+                {{-- CSS Variable reference --}}
+                <div class="bg-navy-light border border-white/8 p-7 mb-5">
+                    <h3 class="font-head font-semibold text-white mb-5">CSS Custom Properties &mdash; Complete Reference</h3>
+                    <p class="text-muted text-xs mb-6">All tokens defined in <code class="font-mono text-champagne">resources/css/app.css :root</code>. Every colour, shadow, and font value in the site resolves to one of these. Raw hex values are never permitted in component files.</p>
+
+                    {{-- Color tokens --}}
+                    <h4 class="font-head font-semibold text-sm mb-3" style="color: var(--champagne);">Color Tokens</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 mb-8">
+                        @foreach([
+                            ['--navy-light',      '#252235', 'Navy Light',      'Elevated navy surface'],
+                            ['--navy',            '#15152C', 'Midnight Navy',   'Primary background'],
+                            ['--navy-dark',       '#0F1223', 'Navy Dark',       'Deep panels, code blocks'],
+                            ['--champagne-light', '#E9C79E', 'Champagne Light', 'Hover / lighten state'],
+                            ['--champagne',       '#DCB57E', 'Champagne Gold',  'Brand accent, CTAs, rules'],
+                            ['--champagne-dark',  '#C49A5E', 'Champagne Dark',  'Active / press state'],
+                            ['--cloud-light',     '#F4F5F7', 'Cloud Light',     'Light section bg'],
+                            ['--cloud',           '#E8E9EC', 'Cloud',           'Body text on navy'],
+                            ['--cloud-dark',      '#D4D6DB', 'Cloud Dark',      'Input borders, dividers'],
+                            ['--slate-light',     '#8B939C', 'Slate Light',     'Muted labels'],
+                            ['--slate',           '#69727D', 'Slate',           'Body text on light bg'],
+                            ['--slate-dark',      '#4A5159', 'Slate Dark',      'Strong secondary text'],
+                            ['--azure-light',     '#94ACDB', 'Azure Light',     'Focus ring, info tint'],
+                            ['--azure',           '#5A7EC8', 'Azure',           'Inline links, highlights'],
+                            ['--azure-dark',      '#385A9F', 'Azure Dark',      'Link hover state'],
+                            ['--white',           '#FFFFFF', 'White',           'Pure white text / bg'],
+                        ] as [$tok, $hex, $lbl, $use])
+                        <div class="flex items-center gap-3 bg-navy-dark border border-white/8 px-3 py-2.5">
+                            <div style="width:28px;height:28px;flex-shrink:0;background:{{ $hex }};border:1px solid rgba(255,255,255,0.14);"></div>
+                            <div>
+                                <p class="font-mono text-xs leading-tight" style="color: var(--champagne);">var({{ $tok }})</p>
+                                <p class="font-mono text-xs leading-tight" style="color: var(--slate-light);">{{ $hex }} &middot; {{ $lbl }}</p>
+                                <p class="font-mono text-xs leading-tight" style="color: var(--cloud); opacity: 0.5;">{{ $use }}</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    {{-- Shadow tokens --}}
+                    <h4 class="font-head font-semibold text-sm mb-3" style="color: var(--champagne);">Shadow Tokens</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
+                        @foreach([
+                            ['--shadow-card',         '0 0 10px 0 rgba(0,0,0,0.5)',           'Section image cards'],
+                            ['--shadow-champagne',    '0 4px 20px rgba(220,181,126,0.20)',     'Champagne glow sm'],
+                            ['--shadow-champagne-lg', '0 8px 30px rgba(220,181,126,0.32)',     'Champagne glow lg &mdash; CTA hover'],
+                            ['--shadow-azure',        '0 4px 20px rgba(90,126,200,0.20)',      'Azure glow sm'],
+                            ['--shadow-azure-lg',     '0 8px 30px rgba(90,126,200,0.32)',      'Azure glow lg'],
+                            ['--shadow-sm',           '0 1px 2px rgba(0,0,0,0.05)',            'Utility sm'],
+                            ['--shadow-md',           '0 4px 6px rgba(0,0,0,0.10)',            'Utility md'],
+                            ['--shadow-lg',           '0 10px 15px rgba(0,0,0,0.10)',          'Utility lg'],
+                            ['--shadow-xl',           '0 20px 25px rgba(0,0,0,0.15)',          'Utility xl'],
+                        ] as [$tok, $val, $use])
+                        <div class="bg-navy-dark border border-white/8 px-3 py-2.5">
+                            <p class="font-mono text-xs" style="color: var(--champagne);">var({{ $tok }})</p>
+                            <p class="font-mono text-xs" style="color: var(--slate-light);">{!! $val !!}</p>
+                            <p class="font-mono text-xs" style="color: var(--cloud); opacity: 0.5;">{!! $use !!}</p>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    {{-- Typography tokens --}}
+                    <h4 class="font-head font-semibold text-sm mb-3" style="color: var(--champagne);">Typography Tokens</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                        @foreach([
+                            ['--font-head',            'Poppins, sans-serif',    'Headings, nav, labels, buttons'],
+                            ['--font-body',            'Montserrat, sans-serif', 'Body copy, captions, form fields'],
+                            ['--font-size-h1',         '32px / 28px mobile',    'Page H1'],
+                            ['--font-size-h2',         '32px / 28px mobile',    'Section H2'],
+                            ['--font-size-h3',         '28px / 24px mobile',    'Sub-section H3'],
+                            ['--font-size-h4',         '24px / 20px mobile',    'Column headings H4'],
+                            ['--font-size-h5',         '20px / 18px mobile',    'Labels H5'],
+                            ['--font-size-body-lg',    '22px',                  'Large body copy'],
+                            ['--font-size-body',       '20px / 18px mobile',    'Default body'],
+                            ['--font-size-body-sm',    '18px',                  'Small body, captions'],
+                            ['--font-size-button',     '18px',                  'Button labels'],
+                            ['--font-size-nav',        '18px',                  'Navigation links'],
+                            ['--font-weight-light',    '300',                   'Light weight'],
+                            ['--font-weight-regular',  '400',                   'Regular weight'],
+                            ['--font-weight-semibold', '600',                   'Semibold weight'],
+                            ['--font-weight-bold',     '700',                   'Bold weight'],
+                        ] as [$tok, $val, $use])
+                        <div class="bg-navy-dark border border-white/8 px-3 py-2.5">
+                            <p class="font-mono text-xs" style="color: var(--champagne);">var({{ $tok }})</p>
+                            <p class="font-mono text-xs" style="color: var(--slate-light);">{{ $val }}</p>
+                            <p class="font-mono text-xs" style="color: var(--cloud); opacity: 0.5;">{{ $use }}</p>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
+        {{-- ── 09 Navigation & Mega Menu ───────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-10">
+                    <span class="font-head font-bold text-xs tracking-widest text-champagne">09 &mdash; Navigation</span>
                     <h2 class="font-head font-bold text-3xl text-white mt-2">Navigation &amp; Mega Menu</h2>
                     <p class="text-muted-light mt-3">Navy bar, Poppins links, champagne hover with a 3px underline. Three dropdown shapes: standard, two-column mega with nested Party Bus flyout, and a 22-city four-column areas grid. Hover to explore.</p>
                 </div>
@@ -711,11 +891,11 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 09 Champagne Underbar ───────────────────────────── --}}
+        {{-- ── 10 Champagne Underbar ───────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="mb-10">
-                    <span class="font-head font-bold text-xs tracking-widest text-champagne">09 &mdash; Underbar</span>
+                    <span class="font-head font-bold text-xs tracking-widest text-champagne">10 &mdash; Underbar</span>
                     <h2 class="font-head font-bold text-3xl text-white mt-2">Champagne Heading Underbar</h2>
                     <p class="text-muted-light mt-3 max-w-3xl">The 3px champagne rule that anchors H2 headings in most content sections. Width is always 116% of the heading text, never a fixed value, never full-width. The key is wrapping both the heading and the rule in a <code class="font-mono text-champagne text-sm">width: fit-content</code> container so the 116% resolves against the heading itself, not the section.</p>
                 </div>
@@ -824,13 +1004,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 10 — Section Template ────────────────────────────── --}}
+        {{-- ── 11 — Section Template ────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">10 — Section</strong> Template
+                        <strong style="font-weight: 700; color: var(--champagne);">11 — Section</strong> Template
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -912,13 +1092,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 11 — service-thin-rect-card ─────────────────────── --}}
+        {{-- ── 12 — service-thin-rect-card ─────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">11 — x-ui.</strong>service-thin-rect-card
+                        <strong style="font-weight: 700; color: var(--champagne);">12 — x-ui.</strong>service-thin-rect-card
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1025,13 +1205,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 12 — rect-box ────────────────────────────────────── --}}
+        {{-- ── 13 — rect-box ────────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">12 — x-ui.</strong>rect-box
+                        <strong style="font-weight: 700; color: var(--champagne);">13 — x-ui.</strong>rect-box
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1100,13 +1280,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 13 — service-card ────────────────────────────────── --}}
+        {{-- ── 14 — service-card ────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">13 — x-ui.</strong>service-card
+                        <strong style="font-weight: 700; color: var(--champagne);">14 — x-ui.</strong>service-card
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1185,13 +1365,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 14 — key-offer-item ─────────────────────────────── --}}
+        {{-- ── 15 — key-offer-item ─────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">14 — x-ui.</strong>key-offer-item
+                        <strong style="font-weight: 700; color: var(--champagne);">15 — x-ui.</strong>key-offer-item
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1277,13 +1457,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 15 — dropdown ────────────────────────────────────── --}}
+        {{-- ── 16 — dropdown ────────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">15 — x-ui.</strong>dropdown
+                        <strong style="font-weight: 700; color: var(--champagne);">16 — x-ui.</strong>dropdown
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1408,13 +1588,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 16 — accordion ───────────────────────────────────── --}}
+        {{-- ── 17 — accordion ───────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">16 — x-ui.</strong>accordion
+                        <strong style="font-weight: 700; color: var(--champagne);">17 — x-ui.</strong>accordion
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1509,13 +1689,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 17 — Spacing ─────────────────────────────────────── --}}
+        {{-- ── 18 — Spacing ─────────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">17 —</strong> Spacing
+                        <strong style="font-weight: 700; color: var(--champagne);">18 —</strong> Spacing
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1612,13 +1792,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 18 — x-ui.chip ────────────────────────────────────── --}}
+        {{-- ── 19 — x-ui.chip ────────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">18 — x-ui.</strong>chip
+                        <strong style="font-weight: 700; color: var(--champagne);">19 — x-ui.</strong>chip
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>
@@ -1718,13 +1898,13 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
-        {{-- ── 19 — x-ui.faq ────────────────────────────────────── --}}
+        {{-- ── 20 — x-ui.faq ────────────────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">
 
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
-                        <strong style="font-weight: 700; color: var(--champagne);">19 — x-ui.</strong>faq
+                        <strong style="font-weight: 700; color: var(--champagne);">20 — x-ui.</strong>faq
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>

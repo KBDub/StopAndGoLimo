@@ -1509,6 +1509,215 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 17 — Spacing ─────────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">17 —</strong> Spacing
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <p class="font-body mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5; max-width: 56rem;">
+                    Standard spacing values used across all components and sections. No variants — these are fixed system values.
+                </p>
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+
+                    {{-- Section padding --}}
+                    <div class="border p-5" style="background: var(--navy-light); border-color: rgba(255,255,255,0.08);">
+                        <p class="font-head font-semibold text-xs mb-3" style="color: var(--champagne);">Section padding</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Standard</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">py-10 lg:py-16</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Compact</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">py-6 lg:py-10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Container --}}
+                    <div class="border p-5" style="background: var(--navy-light); border-color: rgba(255,255,255,0.08);">
+                        <p class="font-head font-semibold text-xs mb-3" style="color: var(--champagne);">Container rail</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Max width</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">max-w-7xl</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Side padding</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">px-6</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Center</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">mx-auto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Component internal --}}
+                    <div class="border p-5" style="background: var(--navy-light); border-color: rgba(255,255,255,0.08);">
+                        <p class="font-head font-semibold text-xs mb-3" style="color: var(--champagne);">Component internal</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Card body</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">p-5</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Accordion header</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">px-5 py-4</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Accordion body</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">px-5 py-5</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Between accordions</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">mb-3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- Grid gaps --}}
+                    <div class="border p-5" style="background: var(--navy-light); border-color: rgba(255,255,255,0.08);">
+                        <p class="font-head font-semibold text-xs mb-3" style="color: var(--champagne);">Grid gaps</p>
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Chip rows</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">gap-2</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Registry cards</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">gap-3</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">Page cards</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">gap-4</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <span class="font-mono text-xs" style="color: var(--cloud);">KPI stats bar</span>
+                                <span class="font-mono text-xs" style="color: var(--slate);">gap-4 mb-8</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
+        {{-- ── 18 — x-ui.chip ────────────────────────────────────── --}}
+        <section class="py-16">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">18 — x-ui.</strong>chip
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        Inline status and metadata labels. Six color variants, two sizes. Default is <strong style="color: var(--champagne);">champagne / sm</strong>. All variants use CSS custom properties — no raw hex or Tailwind color classes.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+
+                    {{-- Live previews --}}
+                    <div class="space-y-8">
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-4">sm (default)</p>
+                            <div class="flex flex-wrap gap-2">
+                                <x-ui.chip variant="champagne-solid">Landing page</x-ui.chip>
+                                <x-ui.chip variant="champagne">7 shared</x-ui.chip>
+                                <x-ui.chip variant="azure">Active</x-ui.chip>
+                                <x-ui.chip variant="cloud">Dynamic</x-ui.chip>
+                                <x-ui.chip variant="slate">0 unique</x-ui.chip>
+                                <x-ui.chip variant="navy">3 total</x-ui.chip>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-4">md</p>
+                            <div class="flex flex-wrap gap-2">
+                                <x-ui.chip variant="champagne-solid" size="md">Landing page</x-ui.chip>
+                                <x-ui.chip variant="champagne" size="md">7 shared</x-ui.chip>
+                                <x-ui.chip variant="azure" size="md">Active</x-ui.chip>
+                                <x-ui.chip variant="cloud" size="md">Dynamic</x-ui.chip>
+                                <x-ui.chip variant="slate" size="md">0 unique</x-ui.chip>
+                                <x-ui.chip variant="navy" size="md">3 total</x-ui.chip>
+                            </div>
+                        </div>
+
+                        <div>
+                            <p class="font-mono text-champagne text-xs mb-4">In context — page card chips</p>
+                            <div class="flex flex-wrap gap-1.5 border p-4" style="background: var(--navy-dark); border-color: rgba(255,255,255,0.09);">
+                                <x-ui.chip variant="champagne-solid">Landing page</x-ui.chip>
+                                <x-ui.chip variant="azure">Active</x-ui.chip>
+                                <x-ui.chip variant="champagne">7 shared</x-ui.chip>
+                                <x-ui.chip variant="slate">0 unique</x-ui.chip>
+                                <x-ui.chip variant="slate">7 total</x-ui.chip>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {{-- Spec + code --}}
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-3">Props</p>
+                            <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                                <thead>
+                                    <tr class="border-b border-white/10">
+                                        <th class="text-left pb-2 text-champagne">Prop</th>
+                                        <th class="text-left pb-2 text-champagne">Type</th>
+                                        <th class="text-left pb-2 text-champagne">Default</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-white/5"><td class="py-1.5">variant</td><td>string</td><td>'champagne'</td></tr>
+                                    <tr><td class="py-1.5">size</td><td>string</td><td>'sm'</td></tr>
+                                </tbody>
+                            </table>
+                            <p class="font-mono text-muted text-[11px] mt-3">variant options: champagne-solid | champagne | azure | cloud | slate | navy</p>
+                            <p class="font-mono text-muted text-[11px]">size options: sm | md</p>
+                        </div>
+
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/chip.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Default (champagne tint, sm) --}}
+&lt;x-ui.chip&gt;7 shared&lt;/x-ui.chip&gt;
+
+{{-- Solid fill (primary labels) --}}
+&lt;x-ui.chip variant="champagne-solid"&gt;Landing page&lt;/x-ui.chip&gt;
+
+{{-- Status (azure = active/info) --}}
+&lt;x-ui.chip variant="azure"&gt;Active&lt;/x-ui.chip&gt;
+
+{{-- Neutral (cloud = secondary state) --}}
+&lt;x-ui.chip variant="cloud" size="md"&gt;Dynamic&lt;/x-ui.chip&gt;
+
+{{-- Muted (slate = low-emphasis meta) --}}
+&lt;x-ui.chip variant="slate"&gt;0 unique&lt;/x-ui.chip&gt;</pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

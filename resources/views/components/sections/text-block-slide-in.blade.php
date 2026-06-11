@@ -33,11 +33,15 @@
                 </div>
             @endif
 
-            {{-- White body card --}}
-            @if($body)
+            {{-- White body card — slot takes priority over body prop when provided --}}
+            @if($slot->isNotEmpty() || $body)
                 <div style="background: var(--white); padding: 2rem 2.5rem; margin-bottom: 2rem;">
                     <p class="font-body" style="font-size: 1.0625rem; font-weight: 400; line-height: 1.6; color: var(--slate); text-align: center; margin: 0;">
-                        {{ $body }}
+                        @if($slot->isNotEmpty())
+                            {!! $slot !!}
+                        @else
+                            {{ $body }}
+                        @endif
                     </p>
                 </div>
             @endif

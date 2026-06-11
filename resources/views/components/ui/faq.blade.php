@@ -24,7 +24,7 @@ $answerTextColor = $isInvert ? 'var(--cloud-light)' : 'var(--navy)';
 
 <div>
     @foreach($faqs as $index => $faq)
-        <div x-data="{ open: {{ $index === 0 ? 'true' : 'false' }} }" style="margin-bottom: 3px;">
+        <div x-data="{ open: false }" style="margin-bottom: 3px;">
 
             <button
                 @click="open = !open"

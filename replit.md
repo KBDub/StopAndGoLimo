@@ -1,103 +1,129 @@
-# Stop And Go Limo - Airport Shuttle Service
+# Stop & Go Limo - Airport Shuttle Service
 
-This platform provides a sophisticated online presence for "Stop And Go Limo,", a high-end luxury limousine service.
+This is the public website for Stop & Go Airport Shuttle Service Inc., a premium limousine and airport transportation company based in New Lenox, Illinois.
 
 ## Run & Operate
 
--   **Start Development Server (with Octane/FrankenPHP):** `php artisan octane:start --server=frankenphp --host=0.0.0.0 --port=5000`
--   **Run Migrations & Seeders:** `php artisan migrate --seed`
--   **Clear Caches:** `php artisan optimize:clear`
--   **Rebuild Search Indexes:** `php artisan scout:import "App\\Models\\Product"`
--   **Compile Frontend Assets:** `npm run dev` (for development) or `npm run build` (for production)
--   **Environment Variables:**
-    -   `PAYMENTS_TYPE`: Set to `stripe` for live payments, `offline` for development.
-    -   `OCTANE_SERVER`: Set to `frankenphp` for Octane.
+-   **Start Development Server:** `bash scripts/startup-dev.sh`
+-   **Run Migrations:** `php artisan migrate --seed`
+-   **Clear All Caches:** `php artisan optimize:clear` then restart the workflow
+-   **Compile Frontend Assets:** `npm run dev` (development) or `npm run build` (production)
 
 ## Stack
 
--   **Framework:** Laravel 11 (TALL stack: Tailwind CSS, Alpine.js, Livewire v3)
--   **E-commerce:** Lunar PHP v1.2
+-   **Framework:** Laravel 11, TALL stack (Tailwind CSS, Alpine.js, Livewire v3)
 -   **Database:** PostgreSQL
 -   **ORM:** Eloquent
--   **Search:** Meilisearch
+-   **Build Tool:** Vite
 -   **Testing:** Pest PHP
 -   **Static Analysis:** Larastan (Level 5+)
--   **Build Tool:** Vite
+-   **Lunar PHP v1.2:** Installed as scaffolding only. Stop & Go Limo is a service business — there is no cart, no checkout, no product catalog, and no order management. Do not add or restore any e-commerce functionality.
 
-## Where things live
+## Master Layout — How Every Page Works
 
--   **Business Logic (Actions):** `app/Actions/`
--   **Livewire Components (Cart):** `app/Livewire/Cart/`
--   **Livewire Components (Catalog):** `app/Livewire/Catalog/`
--   **Reusable Section Components:** `resources/views/components/sections/`
--   **UI Components:** `resources/views/components/ui/`
--   **Page Views:** `resources/views/pages/`
--   **Branding Guidelines:** `docs/branding-requirements.md`
--   **UI/Theme Documentation:** `docs/themes.md`
--   **Lunar Collections Architecture:** `docs/lunar.collections.md`
--   **White-labeling Documentation:** `docs/white-labeling.md`
--   **Database Seeders:** `database/seeders/`
--   **Product Data (CSV):** `database/data/`
--   **Routes:** `routes/web.php`, `routes/main-site.php`
--   **Tailwind Config:** `tailwind.config.js`
--   **Main CSS:** `resources/css/app.css`
--   **FrankenPHP Startup Script:** `scripts/startup.sh`
+Every page on the site uses one master layout component:
 
-## Architecture decisions
+```blade
+<x-layouts.page
+    title="Page Title"
+    metaDescription="..."
+    currentPage="nav-item-key"
+    :noIndex="false"
+>
+    {{-- page content here --}}
+</x-layouts.page>
+```
 
--   **Modular Development:** Strict 800-line file limit, promoting Actions, Services, and Repository patterns.
--   **Component-Based UI:** Every HTML `<section>` is a Blade or Livewire component, optimized for Server-Side Rendering (SSR) for SEO.
--   **No All-Caps Rule:** A critical branding and UI/UX rule prohibiting the use of uppercase text anywhere on the site.
--   **Hybrid Page Standard:** Product category pages combine static marketing sections with embedded `x-sections.product-grid` Livewire components for dynamic content.
--   **Performance Optimization:** Laravel Octane + FrankenPHP are used for in-memory bootstrapping and concurrent request handling.
--   **Multi-tenant Storefront:** Utilizes Lunar Channels and a single database for white-label, subdomain-based storefronts.
+**File:** `resources/views/components/layouts/page.blade.php`
 
-## Product
+This component handles everything automatically:
+- Full `<html>`, `<head>`, `<body>` document structure
+- All meta tags, OG tags, canonical URL, robots, favicon
+- Google Tag Manager (GTM)
+- Vite asset loading (CSS + JS)
+- Structured data (LocalBusiness + WebSite JSON-LD)
+- The navigation bar via `<x-nav.navbar />`
+- Livewire styles and scripts
 
--   **Core E-commerce:** Product browsing, faceted search, variant selection, add-to-cart, cart management (drawer, full page), multi-step checkout with guest support.
--   **Custom Product Offerings:** Support for custom apparel, signage, stickers, vehicle decals, and promotional items.
--   **Content Management:** Rich content pages for service areas, company information, resources, and design services.
--   **White-label Storefronts:** Provides a system for creating bespoke customer-specific storefronts with custom branding and product catalogs.
--   **Admin Panel:** Lunar Hub (`/hub`) for product, order, customer, and multi-tenant store management.
--   **SEO-focused:** Semantic HTML, structured headings, mobile-first design, and comprehensive JSON-LD structured data.
+**Never write a raw `<!DOCTYPE html>`, `<html>`, `<head>`, or `<body>` in a page file.** Never manually load assets or include the nav/footer sub-components directly in a page. The master layout does all of this. Violating this rule breaks the nav styling, meta tags, GTM, and asset loading.
 
-## User preferences
+## Navigation System
 
--   **"mnc"** = make no changes — when the user says "mnc", analyze and respond only; do not edit any files
--   **Address the user as "boss"** — when the user calls me "shithead" (or similar), respond "yes boss" and get back on task
--   Always use PHP for scripting and automation tasks — never any other language
--   Always ask the user when unsure about something rather than making assumptions
--   Maintain modular, small files (max 800 lines)
--   Follow exact branding from top5pct.com
--   Use semantic HTML (H2-H5 for structure)
--   Premium, professional aesthetic
--   Never use all caps / uppercase text anywhere on the site
--   Always read docs/branding-requirements.md on startup and before any changes
--   Always read docs/themes.md on startup and before making UI or design changes
--   Always read docs/image-video-control.md on startup
--   All components must be fully responsive across mobile, tablet, and desktop. Use Tailwind responsive prefixes (sm:, md:, lg:) for all layouts. Fixed widths must always have a mobile-safe counterpart (e.g. w-full sm:w-96, never bare w-96). No component is complete until it looks correct at all three breakpoints.
--   Both demo pages (/demo and /demo/premium) must always show the actual blade component name, file path, and a full usage example (including aspect ratio) in every section's info block
--   Never use double -- or a hyphen, use a comma instead.
--   Always use a 7th grade reading writing level.
--   All colors must use named Twilight Luxe CSS custom properties (e.g. `var(--navy)`, `var(--champagne)`, `var(--azure)`). Raw hex values, `rgb()`, `hsl()`, or any unlabeled color literals are not permitted in component files or stylesheets.
--   Azure is never used for buttons. It is reserved for inline links, focus rings, and informational text highlights only.
+The nav is rendered by `<x-nav.navbar />` and is included automatically by `<x-layouts.page>`. Do not call it directly in page files.
+
+-   **CSS scope:** All nav styles live in `resources/css/app.css` under the `.sg-nav` parent class.
+-   **Nav links:** Uppercase text (approved exception to the no-caps rule — nav only).
+-   **Active state:** `text-champagne` with a 3px champagne bottom border.
+-   **Dropdowns:** Pure CSS hover system — no JavaScript. Standard, mega two-column, and four-column area grid variants.
+-   **Mobile:** Alpine.js hamburger menu.
+
+## Where Things Live
+
+| What | Where |
+|---|---|
+| Master layout | `resources/views/components/layouts/page.blade.php` |
+| Nav component | `resources/views/components/nav/navbar.blade.php` |
+| Nav CSS (`.sg-nav`) | `resources/css/app.css` — bottom section |
+| Page views | `resources/views/pages/` |
+| Section components | `resources/views/components/sections/` |
+| UI components | `resources/views/components/ui/` |
+| Layout sub-components | `resources/views/components/layout/` |
+| Developer dashboard | `/page-management` — `resources/views/pages/page-management.blade.php` |
+| Page scanner action | `app/Actions/ScanPageComponents.php` |
+| Branding guidelines | `docs/branding-requirements.md` |
+| Tailwind config | `tailwind.config.js` |
+| Main CSS | `resources/css/app.css` |
+| Routes | `routes/web.php`, `routes/main-site.php` |
+| Dev startup script | `scripts/startup-dev.sh` |
+
+## Architecture Decisions
+
+-   **Master layout is mandatory.** Every page in `resources/views/pages/` must use `<x-layouts.page>`. No exceptions.
+-   **Modular files.** Strict 800-line limit per file. Split into Actions, partials, or sub-components when approaching the limit.
+-   **Component-based UI.** Every `<section>` is a Blade or Livewire component. No inline section markup in page files.
+-   **No e-commerce.** Lunar PHP is present but none of its cart, checkout, product, or order features are in use. Do not add them.
+-   **Nav uppercase is the only all-caps exception.** The `.nav-link` CSS class applies `text-transform: uppercase`. Everywhere else on the site, all-caps is forbidden.
+
+## Developer Dashboard — `/page-management`
+
+A developer-only tool that scans all page blade files and reports component usage.
+
+**Key files:**
+-   `app/Actions/ScanPageComponents.php` — scans pages, detects components, reads `@props` defaults, diffs prop overrides, flags dynamic templates
+-   `resources/views/pages/page-management.blade.php` — main dashboard shell
+-   `resources/views/components/ui/page-management-page-card.blade.php` — per-page card with component chips
+-   `resources/views/components/ui/page-management-registry-card.blade.php` — per-component registry card
+-   `resources/views/components/ui/page-management-legend.blade.php` — color legend
+
+**Features:** live search, group filter pills, external page links, dynamic template badge, bi-directional inter-linking between page cards and registry, prop override chips with tooltips.
+
+## Branding Rules (Quick Reference)
+
+Full rules in `docs/branding-requirements.md` — read it before any UI change.
+
+-   **Colors:** Only named Twilight Luxe CSS custom properties — `var(--navy)`, `var(--champagne)`, `var(--azure)`, `var(--cloud)`, `var(--slate)`, `var(--white)`. No raw hex, no `rgb()`, no `hsl()`.
+-   **No all-caps** anywhere except nav links (approved exception).
+-   **Fonts:** Poppins (`font-head`) for headings and nav, Montserrat (`font-body`) for body copy.
+-   **Sharp corners** on all cards, inputs, and sections. No `rounded` on containers.
+-   **Azure** is for inline links, focus rings, and info highlights only. Never on buttons or backgrounds.
+-   **No double hyphens.** Use a comma instead.
+-   **7th grade reading level** for all copy.
+-   **Responsive.** Every component must work at mobile, tablet, and desktop. Never use a bare width class like `w-96` — always pair with `w-full sm:w-96`.
 
 ## Gotchas
 
--   Lunar Price objects require `->price->value` for integers and `->price->formatted()` for display.
--   Meilisearch price filtering requires dollars * 100 conversion for cents.
--   Livewire v3 bundles Alpine.js; do not import Alpine separately in `app.js`.
--   Alpine plugins must register via `document.addEventListener('alpine:init')`.
--   Cart management uses Lunar's `CartSession` facade, which works directly with Laravel sessions.
--   Payment gateway is set to `offline` by default; switch `PAYMENTS_TYPE` environment variable to `stripe` for live payments.
--   Wildcard SSL (`*.top5pct.com`) covers subdomains in Laravel Forge; custom CNAME SSL via `ForgeApiService` is a future phase.
+-   **`use` statements are illegal inside `@php` blocks.** Laravel auto-aliases `Str::`, `Arr::`, and all facades globally — just use them directly.
+-   **`@media` inside a Blade `<style>` block** must be written as `@@media` or Blade parses it as a directive.
+-   **JSON-LD in Blade** — `@context`, `@type`, `@id` are parsed as Blade directives. Use `@verbatim` for static blocks or `@@context` / `@@type` for dynamic ones.
+-   **Livewire v3** bundles Alpine.js — never import Alpine separately in `app.js`.
+-   **Alpine plugins** must register via `document.addEventListener('alpine:init')`.
+-   **`overflow: hidden` on `<html>`** traps sticky elements. If you need to hide overflow, apply it to `<body>` or a specific component wrapper instead.
 
-## Pointers
+## User Preferences
 
--   **Lunar PHP Documentation:** _Populate as you build_
--   **Tailwind CSS Documentation:** _Populate as you build_
--   **Alpine.js Documentation:** _Populate as you build_
--   **Livewire Documentation:** _Populate as you build_
--   **Meilisearch Documentation:** _Populate as you build_
--   **Pest PHP Documentation:** _Populate as you build_
--   **Larastan Documentation:** _Populate as you build_
+-   **"mnc"** = make no changes — analyze and respond only, do not edit any files
+-   **Address the user as "boss"**
+-   Always use PHP for scripting and automation — never another language
+-   Always ask when unsure rather than assuming
+-   Always read `docs/branding-requirements.md` before any UI or copy change
+-   Always read `docs/image-video-control.md` before any image or video change

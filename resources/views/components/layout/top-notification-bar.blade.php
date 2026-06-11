@@ -66,11 +66,6 @@
                 </a>
             </div>
 
-            {{-- Cart at far right (kept for Lunar e-commerce compatibility) --}}
-            <div class="shrink-0">
-                @livewire('cart.cart-icon')
-            </div>
-
         </div>
 
     </div>

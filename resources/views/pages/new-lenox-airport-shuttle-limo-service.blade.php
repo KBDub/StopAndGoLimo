@@ -123,21 +123,6 @@
 
     <x-sections.map-contact-section />
 
-    <x-sections.text-block-slide-in
-        headingPrefix="Our Commitment"
-        headingBold="to New Lenox"
-        body="At Stop and Go, we are committed to safe, reliable transportation throughout New Lenox. Every ride is handled with care, on time, and by a driver you can trust."
-        bulletLabel="Our Promise to You"
-        :bullets="[
-            'On-time pickups, every time',
-            'Friendly, licensed, professional drivers',
-            'Clean, fully insured vehicles',
-            '24/7 availability for every occasion',
-        ]"
-        buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
-    />
-
     <x-ui.banner-thin-cloud />
 
     <x-sections.base-footer />

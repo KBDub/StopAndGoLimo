@@ -2,8 +2,6 @@
     'headingPrefix' => '',
     'headingBold'   => '',
     'body'          => '',
-    'bulletLabel'   => '',
-    'bullets'       => [],
     'buttonText'    => '',
     'buttonHref'    => '#',
     'directions'    => '',
@@ -36,31 +34,11 @@
             @endif
 
             {{-- White body card --}}
-            @if($body || !empty($bullets))
+            @if($body)
                 <div style="background: var(--white); padding: 2rem 2.5rem; margin-bottom: 2rem;">
-
-                    @if($body)
-                        <p class="font-body" style="font-size: 1.0625rem; font-weight: 400; line-height: 1.6; color: var(--slate); text-align: center; margin: 0 0 {{ !empty($bullets) ? '1.5rem' : '0' }};">
-                            {{ $body }}
-                        </p>
-                    @endif
-
-                    @if(!empty($bullets))
-                        @if($bulletLabel)
-                            <p class="font-head" style="font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.08em; color: var(--champagne); margin-bottom: 0.75rem; text-align: center;">
-                                {{ $bulletLabel }}
-                            </p>
-                        @endif
-                        <ul style="list-style: none; margin: 0; padding: 0;">
-                            @foreach($bullets as $bullet)
-                                <li class="font-body" style="font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.6; padding: 0.4rem 0 0.4rem 1.5rem; position: relative; {{ !$loop->last ? 'border-bottom: 1px solid var(--cloud-dark);' : '' }}">
-                                    <span style="position: absolute; left: 0; top: 0.5rem; color: var(--champagne); font-size: 0.8rem;">&#9679;</span>
-                                    {{ $bullet }}
-                                </li>
-                            @endforeach
-                        </ul>
-                    @endif
-
+                    <p class="font-body" style="font-size: 1.0625rem; font-weight: 400; line-height: 1.6; color: var(--slate); text-align: center; margin: 0;">
+                        {{ $body }}
+                    </p>
                 </div>
             @endif
 

@@ -7,10 +7,7 @@
 
 <style>
 [x-cloak] { display: none !important; }
-.pm-pill-hover:hover { background: color-mix(in srgb, var(--champagne) 12%, transparent); color: var(--champagne); border-color: var(--champagne); }
 .pm-accordion-header:hover { background: color-mix(in srgb, var(--white) 4%, transparent) !important; }
-#pm-search::placeholder { color: var(--slate); opacity: 1; }
-#pm-search { -webkit-appearance: none; appearance: none; }
 </style>
 
 {{-- Tailwind safelist for dynamic inter-link classes --}}
@@ -256,65 +253,9 @@
 </div>
 
 {{-- ═══════════════════════════════════════════════════════════ --}}
-{{-- Search + filter + Pages accordion                          --}}
+{{-- ACCORDION 3: Pages                                         --}}
 {{-- ═══════════════════════════════════════════════════════════ --}}
-<div x-data="{ search: '', activeGroup: 'all', pagesOpen: true }">
-
-    {{-- Search + filter bar --}}
-    <div class="mb-4 flex flex-wrap items-center gap-3">
-        <div class="relative flex-1 min-w-[220px] sm:max-w-xs">
-            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none" style="color: var(--slate);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/>
-            </svg>
-            <input
-                id="pm-search"
-                type="text"
-                x-model="search"
-                placeholder="Search pages or components..."
-                class="w-full pl-9 pr-4 py-2.5 font-body text-sm border transition-colors focus:outline-none"
-                style="background: var(--navy-light); border-color: rgba(255,255,255,0.12); color: var(--cloud-light);"
-                onfocus="this.style.borderColor='var(--champagne)'"
-                onblur="this.style.borderColor='rgba(255,255,255,0.12)'"
-            />
-        </div>
-        <svg class="w-4 h-4 shrink-0" style="color: var(--slate);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z"/>
-        </svg>
-        <div class="flex flex-wrap gap-2">
-            <button
-                @click="activeGroup = 'all'"
-                class="pm-pill font-head font-semibold text-xs px-3 py-1.5 border transition-colors"
-                :style="activeGroup === 'all'
-                    ? 'background: var(--champagne); color: var(--navy); border-color: var(--champagne);'
-                    : 'background: transparent; color: var(--slate); border-color: rgba(255,255,255,0.15);'"
-            >All Groups</button>
-            @foreach($groups as $groupName => $group)
-                <button
-                    @click="activeGroup = '{{ $group['slug'] }}'"
-                    class="pm-pill font-head font-semibold text-xs px-3 py-1.5 border transition-colors pm-pill-hover"
-                    :style="activeGroup === '{{ $group['slug'] }}'
-                        ? 'background: var(--champagne); color: var(--navy); border-color: var(--champagne);'
-                        : 'background: transparent; color: var(--slate); border-color: rgba(255,255,255,0.15);'"
-                >{{ $groupName }} {{ count($group['pages']) }}</button>
-            @endforeach
-        </div>
-    </div>
-
-    {{-- Active group label row --}}
-    <div class="flex flex-wrap gap-2 mb-6">
-        @foreach($groups as $groupName => $group)
-            <span
-                x-show="activeGroup === 'all' || activeGroup === '{{ $group['slug'] }}'"
-                x-cloak
-                class="font-head font-semibold text-xs px-2.5 py-1 border"
-                style="background: color-mix(in srgb, var(--champagne) 15%, transparent); color: var(--champagne); border-color: color-mix(in srgb, var(--champagne) 35%, transparent);"
-            >{{ $groupName }} ({{ count($group['pages']) }})</span>
-        @endforeach
-    </div>
-
-    {{-- ═══════════════════════════════════════════════════════ --}}
-    {{-- ACCORDION 3: Pages                                      --}}
-    {{-- ═══════════════════════════════════════════════════════ --}}
+<div x-data="{ pagesOpen: true }">
     <div
         class="border"
         style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"
@@ -347,7 +288,6 @@
                 {{-- Group accordion — closed by default --}}
                 <div
                     x-data="{ groupOpen: false }"
-                    x-show="activeGroup === 'all' || activeGroup === '{{ $group['slug'] }}'"
                     @pm-open-page.window="
                         if ($event.detail.groupSlug === '{{ $group['slug'] }}') {
                             groupOpen = true;
@@ -392,15 +332,10 @@
                     >
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
                             @foreach($group['pages'] as $page)
-                                @php
-                                    $pageSearchString = addslashes(strtolower($page['name'] . ' ' . $page['url']));
-                                @endphp
-                                <div x-show="search === '' || '{{ $pageSearchString }}'.includes(search.toLowerCase().trim())">
-                                    <x-ui.page-management-page-card
-                                        :page="$page"
-                                        :componentColorMap="$componentColorMap"
-                                    />
-                                </div>
+                                <x-ui.page-management-page-card
+                                    :page="$page"
+                                    :componentColorMap="$componentColorMap"
+                                />
                             @endforeach
                         </div>
                     </div>

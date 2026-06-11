@@ -56,31 +56,31 @@
 
         <div class="flex flex-wrap gap-1.5 mt-3 ml-6">
             @if($page['is_landing'])
-                <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold font-head"
+                <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
                       style="background: var(--champagne); color: var(--navy);">
                     Landing page
                 </span>
             @endif
             <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
-                  style="background: rgba(46,158,107,0.18); color: #5ecf9a;">
+                  style="background: color-mix(in srgb, var(--azure) 15%, transparent); color: var(--azure);">
                 Active
             </span>
             @if($page['is_dynamic'])
                 <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
-                      style="background: rgba(139,92,246,0.18); color: #c4b5fd;">
+                      style="background: color-mix(in srgb, var(--cloud) 12%, transparent); color: var(--cloud);">
                     Dynamic
                 </span>
             @endif
-            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-body"
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
                   style="background: color-mix(in srgb, var(--champagne) 14%, transparent); color: var(--champagne);">
                 {{ $page['shared_count'] }} shared
             </span>
-            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-body"
-                  style="background: rgba(255,255,255,0.06); color: var(--slate);">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
+                  style="background: color-mix(in srgb, var(--slate) 20%, transparent); color: var(--slate);">
                 {{ $page['unique_count'] }} unique
             </span>
-            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-body"
-                  style="background: rgba(255,255,255,0.04); color: var(--slate);">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
+                  style="background: color-mix(in srgb, var(--slate) 12%, transparent); color: var(--slate);">
                 {{ $page['total_count'] }} total
             </span>
         </div>

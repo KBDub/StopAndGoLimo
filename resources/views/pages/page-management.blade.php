@@ -120,7 +120,7 @@
 {{-- ═══════════════════════════════════════════════════════════ --}}
 {{-- ACCORDION 1: Shared Components                             --}}
 {{-- ═══════════════════════════════════════════════════════════ --}}
-<div x-data="{ open: true }" class="mb-3 border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);">
+<div x-data="{ open: false }" class="mb-3 border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);">
 
     <button
         @click="open = !open"
@@ -192,7 +192,7 @@
             setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
         }, 300))
     "
-    class="mb-8 border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"
+    class="mb-3 border" style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"
 >
 
     <button

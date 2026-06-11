@@ -43,7 +43,8 @@
                     {{ $isLivewire ? 'livewire:' . $displayComp : $comp }}
                 </p>
             </div>
-            <span class="shrink-0 inline-flex items-center px-2.5 py-1 font-bold text-sm {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
+            <span class="shrink-0 inline-flex items-center px-2.5 py-1 font-head font-bold text-sm"
+                  style="background: var(--champagne); color: var(--navy);">
                 {{ $usageCount }}
             </span>
         </div>

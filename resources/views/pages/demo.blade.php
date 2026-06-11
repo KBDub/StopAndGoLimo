@@ -619,32 +619,27 @@
                     </div>
                 </div>
 
-                {{-- Azure inline prose link --}}
+                {{-- Champagne underbar inline link --}}
                 <div class="bg-navy-light border border-white/8 p-7 mb-5">
-                    <h3 class="font-head font-semibold text-white mb-1">Azure inline <code class="font-mono text-champagne text-sm">&lt;a&gt;</code> &mdash; Prose link</h3>
-                    <p class="text-muted text-xs mb-6">Plain <code class="font-mono text-champagne">&lt;a href&gt;</code> tags in body copy use <code class="font-mono text-champagne">var(--azure)</code>. On hover they deepen to <code class="font-mono text-champagne">var(--azure-dark)</code>. Azure is the only approved colour for prose inline links &mdash; never champagne, never white. Works on both navy and cloud-light surfaces.</p>
+                    <h3 class="font-head font-semibold text-white mb-1">Champagne underbar inline <code class="font-mono text-champagne text-sm">&lt;a&gt;</code> &mdash; Prose link</h3>
+                    <p class="text-muted text-xs mb-6">An inline <code class="font-mono text-champagne">&lt;a href&gt;</code> inside body copy that carries the brand accent. Uses <code class="font-mono text-champagne">var(--champagne)</code> for both the text and the underline rule, with a 3px offset so the line sits clear of the descenders. This is our only approved inline prose link style &mdash; used in <code class="font-mono text-champagne">x-sections.our-mission</code> on the phrase "memorable, and full of energy,".</p>
                     <div class="flex flex-wrap gap-6 items-start mb-4">
-                        <div style="background: var(--navy); padding: 1.5rem 2rem; max-width: 34rem;">
-                            <p class="font-body" style="font-size: 1.0625rem; color: var(--cloud); line-height: 1.6;">
-                                We provide <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">reliable service</a> across Chicagoland, including <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">O&rsquo;Hare and Midway</a> routes.
+                        <div style="background: var(--navy); padding: 1.5rem 2rem; max-width: 36rem;">
+                            <p class="font-body" style="font-size: 1.25rem; color: var(--cloud); line-height: 1.5;">
+                                Our focus is on making your celebration seamless, <a href="#" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">memorable, and full of energy,</a> while ensuring your satisfaction every step of the way.
                             </p>
-                            <p class="text-muted text-xs mt-3 font-mono">on var(--navy)</p>
-                        </div>
-                        <div style="background: var(--cloud-light); padding: 1.5rem 2rem; max-width: 34rem;">
-                            <p class="font-body" style="font-size: 1.0625rem; color: var(--slate); line-height: 1.6;">
-                                We provide <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">reliable service</a> across Chicagoland, including <a href="#" style="color: var(--azure); text-decoration: underline; text-decoration-color: var(--azure); text-underline-offset: 3px; transition: color 0.15s;">O&rsquo;Hare and Midway</a> routes.
-                            </p>
-                            <p class="text-xs mt-3 font-mono" style="color: var(--slate);">on var(--cloud-light)</p>
+                            <p class="text-muted text-xs mt-3 font-mono">on var(--navy) &mdash; exact x-sections.our-mission usage</p>
                         </div>
                     </div>
                     <div class="bg-navy-dark px-6 py-5 border border-white/8 mt-4">
-                        <p class="font-mono text-champagne text-xs mb-1">Inline prose link &mdash; always azure, never champagne</p>
-                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-2 overflow-x-auto whitespace-pre-wrap">&lt;a href="/about-us"
-   style="color: var(--azure); text-decoration: underline;
-          text-decoration-color: var(--azure); text-underline-offset: 3px;
-          transition: color 0.15s;"&gt;reliable service&lt;/a&gt;
-{{-- Hover deepens to var(--azure-dark). Rule: azure = inline prose links only. --}}
-{{-- Never use azure on buttons or section backgrounds. --}}</pre>
+                        <p class="font-mono text-champagne text-xs mb-1">Champagne underbar prose link &mdash; x-sections.our-mission</p>
+                        <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 mt-2 overflow-x-auto whitespace-pre-wrap">&lt;a href="/bookings-reservations"
+   style="color: var(--champagne); text-decoration: underline;
+          text-decoration-color: var(--champagne); text-underline-offset: 3px;"&gt;
+    memorable, and full of energy,
+&lt;/a&gt;
+{{-- Use only inside body copy on a navy background. --}}
+{{-- No hover colour change — the underline provides sufficient affordance. --}}</pre>
                     </div>
                 </div>
 

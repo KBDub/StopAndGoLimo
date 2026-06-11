@@ -211,7 +211,7 @@
             <span class="font-head font-semibold text-sm" style="color: var(--cloud-light);">All Components</span>
             <span class="font-body text-xs" style="color: var(--slate);">Every component detected across the site, sorted by usage</span>
         </div>
-        <span class="shrink-0 font-head font-bold text-xs px-3 py-1" style="background: var(--navy-dark); color: var(--champagne); border: 1px solid rgba(220,181,126,0.3);">
+        <span class="shrink-0 font-head font-bold text-xs px-3 py-1" style="background: var(--champagne); color: var(--navy);">
             {{ count($componentUsageMap) }} components
         </span>
     </button>

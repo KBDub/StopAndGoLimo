@@ -40,4 +40,33 @@
         image="/images/heroes/hero-party-bus-naperville.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="The Party Starts the Moment"
+        headingBold="You Step Onboard"
+        heading=""
+        body="Looking for the ultimate way to celebrate in Naperville? Our party bus service brings the celebration to you with luxury seating, booming music, and dazzling lights. From birthdays to bachelorette parties, every ride is an energy-filled experience your friends will talk about for years."
+    />
+
+    <x-sections.three-steps
+        :invertBg="true"
+        :steps="[
+            [
+                'number' => 'Step 1',
+                'title'  => 'Fill Out Our Booking Form',
+                'body'   => 'Share your event date, group size, and destination. Our simple online form takes less than two minutes to complete.',
+            ],
+            [
+                'number' => 'Step 2',
+                'title'  => 'We Confirm Your Reservation',
+                'body'   => 'Our team will reach out to lock in your date, answer any questions, and make sure every detail is set before your ride.',
+            ],
+            [
+                'number' => 'Step 3',
+                'title'  => 'Board and Celebrate',
+                'body'   => 'Your driver arrives on time and ready to go. Sit back, turn up the music, and let the celebration begin.',
+            ],
+        ]"
+    />
+
 </x-layouts.page>

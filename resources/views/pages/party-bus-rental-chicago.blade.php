@@ -41,4 +41,18 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Every Occasion"
+        headingBold="Covered"
+        subtitle="Driven by certified drivers you can trust"
+        body="Stop & Go delivers luxury party bus experiences for weddings, proms, birthdays, and every celebration."
+        buttonText="About Us"
+        buttonHref="/about-us"
+        image="/images/heroes/hero-party-bus-interior.png"
+        imageAlt="Vibrant party bus interior with luxury seating, colorful lights, and entertainment system"
+        imagePosition="left"
+        background="navy"
+        slideIn="left"
+    />
+
 </x-layouts.page>

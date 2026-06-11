@@ -52,7 +52,7 @@
                     @foreach(['Reliability', 'Customer Satisfaction', 'Fun and Celebration'] as $item)
                         <li class="font-body flex items-center gap-3 mb-2"
                             style="font-size: 1.0625rem; font-weight: 600; color: var(--cloud-light);">
-                            <svg style="flex-shrink: 0; color: var(--champagne);"
+                            <svg style="flex-shrink: 0; color: var(--white);"
                                  width="18" height="18" viewBox="0 0 24 24"
                                  fill="currentColor" aria-hidden="true">
                                 <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 9 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>

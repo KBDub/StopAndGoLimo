@@ -4,3 +4,4 @@
 - [Twilight Luxe brand system](twilight-luxe-brand.md) — Stop & Go Limo brand tokens, component names, and demo page architecture.
 - [Demo page rule](demo-page-rule.md) — x-sections.* components must never appear on demo.blade.php; demo is for x-ui.* only.
 - [Blade @media escape in style blocks](blade-media-escape.md) — @media inside a Blade <style> block is parsed as a directive; always write @@media to emit the literal @media rule.
+- [Approved decorative SVG icon exception](approved-svg-icons.md) — thumbs-up SVG is approved for x-sections.our-mission bullet items; branding rule §3.5 otherwise bans decorative icons.

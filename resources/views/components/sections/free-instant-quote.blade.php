@@ -195,11 +195,8 @@
             @if($rightVariant === 'description')
 
                 {{-- Description panel — slides in from the right on scroll --}}
-                <div class="w-full"
-                     x-data="{ visible: false }"
-                     x-init="new IntersectionObserver(([e]) => { if(e.isIntersecting) visible = true }, { threshold: 0.12 }).observe($el)"
-                     :style="visible ? 'opacity:1; transform:translateX(0)' : 'opacity:0; transform:translateX(3rem)'"
-                     style="transition: opacity 0.7s ease-out, transform 0.7s ease-out;"
+                <div class="w-full sg-fiq-desc-slide-in"
+                     style="opacity: 0; transform: translateX(4rem); transition: opacity 0.7s ease, transform 0.7s ease;"
                 >
                     {{-- Heading with champagne underbar --}}
                     <div style="width: fit-content; margin-bottom: 1.5rem;">
@@ -308,3 +305,23 @@
         </div>
     </div>
 </section>
+
+@if($rightVariant === 'description')
+<script>
+(function () {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.sg-fiq-desc-slide-in').forEach(function (el) {
+        observer.observe(el);
+    });
+})();
+</script>
+@endif

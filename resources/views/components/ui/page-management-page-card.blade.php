@@ -13,34 +13,38 @@
 <div
     id="{{ $pageSlug }}"
     x-data="{ expanded: false }"
-    class="bg-white shadow-sm border border-cloud overflow-hidden transition-all duration-300"
+    class="overflow-hidden transition-all duration-300 border"
+    style="background: var(--navy-dark); border-color: rgba(255,255,255,0.09);"
 >
-    <div class="w-full text-left p-5">
+    <div class="p-4">
         <div class="flex items-start justify-between gap-2">
             <button
                 @click="expanded = !expanded"
-                class="flex items-start gap-2 min-w-0 flex-1 text-left hover:opacity-80 transition-opacity"
+                class="flex items-start gap-2 min-w-0 flex-1 text-left transition-opacity hover:opacity-80"
             >
                 <svg
-                    class="w-4 h-4 text-slate transition-transform shrink-0 mt-0.5"
+                    class="w-4 h-4 transition-transform shrink-0 mt-0.5"
                     :class="{ 'rotate-90': expanded }"
+                    style="color: var(--slate);"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 >
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                 </svg>
                 <div class="min-w-0">
-                    <h3 class="font-bold text-navy truncate font-head">{{ $page['name'] }}</h3>
-                    <p class="text-xs text-slate break-all mt-0.5">{{ $page['url'] }}</p>
+                    <h3 class="font-head font-bold text-sm truncate" style="color: var(--cloud-light);">{{ $page['name'] }}</h3>
+                    <p class="font-mono text-xs mt-0.5 break-all" style="color: var(--slate);">{{ $page['url'] }}</p>
                 </div>
             </button>
 
-            {{-- External live-page link --}}
             <a
                 href="{{ $page['url'] }}"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Open live page"
-                class="shrink-0 text-slate hover:text-champagne transition-colors p-1"
+                class="shrink-0 p-1 transition-colors"
+                style="color: var(--slate);"
+                onmouseenter="this.style.color='var(--champagne)'"
+                onmouseleave="this.style.color='var(--slate)'"
             >
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,32 +53,43 @@
             </a>
         </div>
 
-        <div class="flex flex-wrap gap-2 mt-3 ml-6">
+        <div class="flex flex-wrap gap-1.5 mt-3 ml-6">
             @if($page['is_landing'])
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-champagne text-navy">
+                <span class="inline-flex items-center px-2 py-0.5 text-xs font-semibold font-head"
+                      style="background: var(--champagne); color: var(--navy);">
                     Landing page
                 </span>
             @endif
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
+                  style="background: rgba(46,158,107,0.18); color: #5ecf9a;">
                 Active
             </span>
             @if($page['is_dynamic'])
-                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700">
+                <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-head"
+                      style="background: rgba(139,92,246,0.18); color: #c4b5fd;">
                     Dynamic
                 </span>
             @endif
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-champagne/20 text-navy">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-body"
+                  style="background: color-mix(in srgb, var(--champagne) 14%, transparent); color: var(--champagne);">
                 {{ $page['shared_count'] }} shared
             </span>
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-azure/10 text-azure">
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-body"
+                  style="background: rgba(255,255,255,0.06); color: var(--slate);">
                 {{ $page['unique_count'] }} unique
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 text-xs font-medium font-body"
+                  style="background: rgba(255,255,255,0.04); color: var(--slate);">
+                {{ $page['total_count'] }} total
             </span>
         </div>
     </div>
 
-    <div x-show="expanded" x-cloak x-transition class="border-t border-cloud p-5">
+    <div x-show="expanded" x-cloak x-transition
+         class="border-t p-4"
+         style="border-color: rgba(255,255,255,0.07); background: var(--navy);">
         @if(count($page['all_components']) > 0)
-            <h4 class="text-xs font-semibold text-slate mb-3">Components (in page order)</h4>
+            <h4 class="font-head text-xs font-semibold mb-3" style="color: var(--slate);">Components in page order</h4>
             <div class="space-y-1.5">
                 @foreach($page['all_components'] as $index => $compStruct)
                     @php
@@ -87,53 +102,42 @@
                         $isShared         = in_array($compKey, $page['shared_components'], true);
 
                         if ($isLivewire) {
-                            $label     = Str::of($displayComponent)->replace(['.', '-', '_'], ' ')->title();
-                            $typeLabel = 'Livewire';
+                            $label = Str::of($displayComponent)->replace(['.', '-', '_'], ' ')->title(); $typeLabel = 'Livewire';
                         } elseif (Str::startsWith($compKey, 'sections.')) {
-                            $label     = Str::of(Str::after($compKey, 'sections.'))->replace(['-', '_'], ' ')->title();
-                            $typeLabel = 'Section';
+                            $label = Str::of(Str::after($compKey, 'sections.'))->replace(['-', '_'], ' ')->title(); $typeLabel = 'Section';
                         } elseif (Str::startsWith($compKey, 'layout.')) {
-                            $label     = Str::of(Str::after($compKey, 'layout.'))->replace(['-', '_'], ' ')->title();
-                            $typeLabel = 'Layout';
+                            $label = Str::of(Str::after($compKey, 'layout.'))->replace(['-', '_'], ' ')->title(); $typeLabel = 'Layout';
                         } elseif (Str::startsWith($compKey, 'ui.')) {
-                            $label     = Str::of(Str::after($compKey, 'ui.'))->replace(['-', '_'], ' ')->title();
-                            $typeLabel = 'Ui';
+                            $label = Str::of(Str::after($compKey, 'ui.'))->replace(['-', '_'], ' ')->title(); $typeLabel = 'Ui';
                         } else {
-                            $label     = Str::of($compKey)->replace(['-', '_'], ' ')->title();
-                            $typeLabel = 'Other';
+                            $label = Str::of($compKey)->replace(['-', '_'], ' ')->title(); $typeLabel = 'Other';
                         }
 
                         $nestedLivewire = $page['component_livewire_map'][$compKey] ?? [];
                         $compRegistryId = 'comp-' . Str::slug($compKey, '-');
 
-                        // Build an ordered list of overrides for rendering.
-                        $overrideList  = [];
+                        $overrideList = [];
                         foreach ($overrides as $prop => $data) {
                             $overrideList[] = array_merge(['prop' => $prop], $data);
                         }
                         $overrideCount = count($overrideList);
                     @endphp
 
-                    <div class="flex items-center flex-wrap gap-2 px-3 py-1.5 rounded text-sm {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
+                    <div class="flex items-center flex-wrap gap-2 px-3 py-1.5 text-sm {{ $color['bg'] }} {{ $color['text'] }} border {{ $color['border'] }}">
                         <span class="w-2.5 h-2.5 rounded-full shrink-0 {{ $color['dot'] }}"></span>
-                        <span class="text-xs font-medium opacity-60 shrink-0 w-14">{{ $typeLabel }}</span>
-
-                        {{-- Component label — inter-links to registry entry --}}
+                        <span class="font-mono text-xs font-medium opacity-60 shrink-0 w-14">{{ $typeLabel }}</span>
                         <a
                             href="#{{ $compRegistryId }}"
-                            @click="
-                                $nextTick(() => {
-                                    let el = document.getElementById('{{ $compRegistryId }}');
-                                    if (!el) return;
-                                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                    el.classList.add('ring-2', 'ring-champagne', 'bg-champagne/10');
-                                    setTimeout(() => el.classList.remove('ring-2', 'ring-champagne', 'bg-champagne/10'), 1500);
-                                })
-                            "
+                            @click="$nextTick(() => {
+                                let el = document.getElementById('{{ $compRegistryId }}');
+                                if (!el) return;
+                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                el.classList.add('ring-2','ring-champagne','bg-champagne/10');
+                                setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
+                            })"
                             class="font-medium hover:underline hover:opacity-80 transition-opacity"
                         >{{ $label }}</a>
 
-                        {{-- Non-default prop override chips --}}
                         @if($overrideCount > 0)
                             @php
                                 $firstChips = array_slice($overrideList, 0, 2);
@@ -147,56 +151,46 @@
                                             {{ $ov['prop'] }}: &quot;{{ Str::limit((string) $ov['value'], 20) }}&quot;
                                         </span>
                                         @if(isset($ov['default']) && $ov['default'] !== null)
-                                            <div class="absolute bottom-full left-0 mb-1 px-2 py-1 bg-navy text-white text-[9px] font-mono whitespace-nowrap z-20 opacity-0 group-hover/chip:opacity-100 transition-opacity pointer-events-none shadow-lg">
+                                            <div class="absolute bottom-full left-0 mb-1 px-2 py-1 text-[9px] font-mono whitespace-nowrap z-20 opacity-0 group-hover/chip:opacity-100 transition-opacity pointer-events-none shadow-lg"
+                                                 style="background: var(--navy); color: var(--white);">
                                                 Default: &quot;{{ Str::limit((string) $ov['default'], 30) }}&quot;
                                             </div>
                                         @endif
                                     </div>
                                 @endforeach
-
                                 @if($moreCount > 0)
-                                    <span
-                                        @mouseenter="showExtra = true"
-                                        @mouseleave="showExtra = false"
-                                        class="inline-flex items-center px-1.5 py-0.5 bg-amber-50 text-amber-600 border border-amber-200 font-mono text-[10px] cursor-pointer hover:bg-amber-100 transition-colors whitespace-nowrap"
-                                    >+{{ $moreCount }} more</span>
+                                    <span @mouseenter="showExtra = true" @mouseleave="showExtra = false"
+                                          class="inline-flex items-center px-1.5 py-0.5 bg-amber-50 text-amber-600 border border-amber-200 font-mono text-[10px] cursor-pointer hover:bg-amber-100 whitespace-nowrap">
+                                        +{{ $moreCount }} more
+                                    </span>
                                     <div x-show="showExtra" x-cloak class="inline-flex items-center gap-1 flex-wrap">
                                         @foreach($extraChips as $ov)
-                                            <div class="relative group/chip2 inline-block">
-                                                <span class="inline-flex items-center px-1.5 py-0.5 bg-amber-100 text-amber-800 border border-amber-200 font-mono text-[10px] whitespace-nowrap">
-                                                    {{ $ov['prop'] }}: &quot;{{ Str::limit((string) $ov['value'], 20) }}&quot;
-                                                </span>
-                                                @if(isset($ov['default']) && $ov['default'] !== null)
-                                                    <div class="absolute bottom-full left-0 mb-1 px-2 py-1 bg-navy text-white text-[9px] font-mono whitespace-nowrap z-20 opacity-0 group-hover/chip2:opacity-100 transition-opacity pointer-events-none shadow-lg">
-                                                        Default: &quot;{{ Str::limit((string) $ov['default'], 30) }}&quot;
-                                                    </div>
-                                                @endif
-                                            </div>
+                                            <span class="inline-flex items-center px-1.5 py-0.5 bg-amber-100 text-amber-800 border border-amber-200 font-mono text-[10px] whitespace-nowrap">
+                                                {{ $ov['prop'] }}: &quot;{{ Str::limit((string) $ov['value'], 20) }}&quot;
+                                            </span>
                                         @endforeach
                                     </div>
                                 @endif
                             </div>
                         @endif
 
-                        {{-- Nested Livewire chips --}}
                         @if(!empty($nestedLivewire))
-                            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 text-[10px] font-medium border border-purple-200 shrink-0">
+                            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 bg-purple-100 text-purple-700 text-[10px] font-medium border border-purple-200 shrink-0">
                                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
                                 {{ implode(', ', $nestedLivewire) }}
                             </span>
                         @endif
-
                         @if($isShared)
-                            <span class="text-[10px] opacity-50 shrink-0">shared</span>
+                            <span class="font-mono text-[10px] opacity-50 shrink-0">shared</span>
                         @endif
-                        <span class="text-[10px] opacity-40 shrink-0 ml-auto">{{ $index + 1 }}</span>
+                        <span class="font-mono text-[10px] opacity-40 shrink-0 ml-auto">{{ $index + 1 }}</span>
                     </div>
                 @endforeach
             </div>
         @else
-            <p class="text-sm text-slate italic">No components found. Page may not be created yet.</p>
+            <p class="font-body text-sm italic" style="color: var(--slate);">No components found.</p>
         @endif
     </div>
 </div>

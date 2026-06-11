@@ -283,61 +283,26 @@
             </span>
         </button>
 
-        <div x-show="pagesOpen" x-cloak x-transition class="border-t px-5 py-4" style="border-color: rgba(255,255,255,0.08);">
+        <div x-show="pagesOpen" x-cloak x-transition class="border-t px-5 py-6" style="border-color: rgba(255,255,255,0.08);">
             @foreach($groups as $groupName => $group)
-                {{-- Group accordion — closed by default --}}
-                <div
-                    x-data="{ groupOpen: false }"
-                    @pm-open-page.window="
-                        if ($event.detail.groupSlug === '{{ $group['slug'] }}') {
-                            groupOpen = true;
-                            $nextTick(() => setTimeout(() => {
-                                let el = document.getElementById($event.detail.targetId);
-                                if (!el) return;
-                                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                el.classList.add('ring-2','ring-champagne','bg-champagne/10');
-                                setTimeout(() => el.classList.remove('ring-2','ring-champagne','bg-champagne/10'), 1500);
-                            }, 300));
-                        }
-                    "
-                    class="mb-2 border"
-                    style="border-color: rgba(255,255,255,0.08);"
-                >
-                    {{-- Group header --}}
-                    <button
-                        @click="groupOpen = !groupOpen"
-                        class="pm-accordion-header w-full flex items-center justify-between gap-3 px-4 py-3 transition-colors"
-                        style="background: var(--navy-dark);"
-                    >
-                        <div class="flex items-center gap-2.5">
-                            <svg class="w-3.5 h-3.5 transition-transform shrink-0" :class="{ 'rotate-90': groupOpen }"
-                                 style="color: var(--slate);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                            <span class="w-2 h-2 shrink-0" style="background: var(--champagne);"></span>
-                            <span class="font-head font-semibold text-sm" style="color: var(--cloud-light);">{{ $groupName }}</span>
-                        </div>
-                        <span class="font-body text-xs" style="color: var(--slate);">
-                            {{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }}
+                <div class="mb-10 last:mb-0">
+                    {{-- Group heading --}}
+                    <h2 class="font-head font-bold text-base mb-4 flex items-center gap-2" style="color: var(--cloud-light);">
+                        <span class="w-2.5 h-2.5 shrink-0" style="background: var(--champagne);"></span>
+                        {{ $groupName }}
+                        <span class="font-normal text-sm" style="color: var(--slate);">
+                            ({{ count($group['pages']) }} {{ Str::plural('page', count($group['pages'])) }})
                         </span>
-                    </button>
+                    </h2>
 
-                    {{-- Group pages grid --}}
-                    <div
-                        x-show="groupOpen"
-                        x-cloak
-                        x-transition
-                        class="border-t px-4 py-4"
-                        style="border-color: rgba(255,255,255,0.07); background: var(--navy-light);"
-                    >
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                            @foreach($group['pages'] as $page)
-                                <x-ui.page-management-page-card
-                                    :page="$page"
-                                    :componentColorMap="$componentColorMap"
-                                />
-                            @endforeach
-                        </div>
+                    {{-- Page cards grid --}}
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        @foreach($group['pages'] as $page)
+                            <x-ui.page-management-page-card
+                                :page="$page"
+                                :componentColorMap="$componentColorMap"
+                            />
+                        @endforeach
                     </div>
                 </div>
             @endforeach

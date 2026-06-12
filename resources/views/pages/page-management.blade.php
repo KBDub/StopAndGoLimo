@@ -207,13 +207,13 @@
                     <div class="flex items-center gap-2 shrink-0">
                         <button
                             title="Copy component name"
-                            class="p-1 transition-colors opacity-0 group-hover:opacity-100"
-                            style="color: var(--slate);"
+                            class="p-1 transition-all opacity-40 group-hover:opacity-100"
+                            style="color: var(--cloud);"
                             onclick="event.stopPropagation();
                                 var b=this, ci=b.querySelector('.sc-ci'), ck=b.querySelector('.sc-ck');
                                 navigator.clipboard.writeText('{{ addslashes($copyKey) }}');
-                                ci.style.display='none'; ck.style.display='block'; b.style.color='var(--champagne)';
-                                setTimeout(function(){ ci.style.display='block'; ck.style.display='none'; b.style.color='var(--slate)'; }, 1500);"
+                                ci.style.display='none'; ck.style.display='block'; b.style.color='var(--champagne)'; b.style.opacity='1';
+                                setTimeout(function(){ ci.style.display='block'; ck.style.display='none'; b.style.color='var(--cloud)'; b.style.opacity=''; }, 1500);"
                         >
                             <svg class="sc-ci w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>

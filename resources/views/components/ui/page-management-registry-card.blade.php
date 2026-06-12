@@ -24,7 +24,7 @@
     style="background: var(--navy-dark); border-color: rgba(255,255,255,0.09);"
 >
     {{-- Header row: toggle (flex-1) + copy button (sibling, never nested) --}}
-    <div class="flex items-stretch"
+    <div class="group/row flex items-stretch"
          onmouseenter="this.style.background='rgba(255,255,255,0.03)'"
          onmouseleave="this.style.background='transparent'">
 
@@ -61,14 +61,12 @@
         {{-- Copy button — sibling, not nested inside toggle button --}}
         <button
             title="Copy component name"
-            class="shrink-0 px-3 self-stretch flex items-center transition-colors opacity-0 hover:opacity-100 focus:opacity-100"
-            style="color: var(--slate);"
-            onmouseenter="this.style.opacity='1'"
-            onmouseleave="this.style.opacity='0'"
+            class="shrink-0 px-3 self-stretch flex items-center transition-all opacity-40 group-hover/row:opacity-100"
+            style="color: var(--cloud);"
             onclick="var b=this, ci=b.querySelector('.rc-ci'), ck=b.querySelector('.rc-ck');
                      navigator.clipboard.writeText('{{ $copyKeyJs }}');
-                     ci.style.display='none'; ck.style.display='block'; b.style.color='var(--champagne)';
-                     setTimeout(function(){ ci.style.display='block'; ck.style.display='none'; b.style.color='var(--slate)'; }, 1500);"
+                     ci.style.display='none'; ck.style.display='block'; b.style.color='var(--champagne)'; b.style.opacity='1';
+                     setTimeout(function(){ ci.style.display='block'; ck.style.display='none'; b.style.color='var(--cloud)'; b.style.opacity=''; }, 1500);"
         >
             <svg class="rc-ci w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>

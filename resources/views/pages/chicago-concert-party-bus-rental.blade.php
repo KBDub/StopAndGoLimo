@@ -28,16 +28,16 @@
     title="Concert Party Bus Rental Chicago | Stop and Go Limo"
     metaDescription="Ride together to the biggest shows in Chicago from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="special-events"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/heroes/hero-chicago-concert-party-bus.jpg"
     ogImageAlt="Concert party bus rental from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Concert"
+        heading="Chicago Concert"
         headingBold="Party Bus"
-        subtitle="Ride together to the biggest shows in Chicago"
+        subtitle="Discover the Joy of Seamless Journeys"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/hero-chicago-concert-party-bus.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

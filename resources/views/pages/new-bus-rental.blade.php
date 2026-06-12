@@ -40,4 +40,11 @@
         image="/images/heroes/hero-new-bus-rental.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Travel in"
+        headingBold="Style"
+        body="At Stop & Go Airport Shuttle Service Inc., we understand that celebrations are meant to be memorable and fun. That is why we offer premier party bus rental services in Plainfield, IL, designed to elevate your event to the next level of enjoyment and luxury. With our years of experience in providing high-end transportation solutions, you can trust us to deliver an unparalleled travel experience for any occasion."
+    />
+
 </x-layouts.page>

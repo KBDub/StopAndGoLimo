@@ -28,7 +28,7 @@
     title="Chicago Bears Party Bus | Stop and Go Limo — New Lenox, IL"
     metaDescription="Game day group transportation to Soldier Field from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="special-events"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/heroes/hero-chicago-bears-party-bus.jpg"
     ogImageAlt="Chicago Bears party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
@@ -37,7 +37,7 @@
         subtitle="Game day group transportation to Soldier Field"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/hero-chicago-bears-party-bus.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

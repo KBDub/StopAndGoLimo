@@ -375,4 +375,114 @@
 </div>
 </section>
 
+{{-- ═══════════════════════════════════════════════════════════ --}}
+{{-- IFRAME HOVER PREVIEW POPUP                                --}}
+{{-- ═══════════════════════════════════════════════════════════ --}}
+<div id="pm-preview"
+     style="display:none; position:fixed; z-index:9999; top:0; left:0; pointer-events:none;"
+     onmouseenter="window._pmPreviewEnter()"
+     onmouseleave="window._pmPreviewLeave()">
+    <div style="background: var(--navy-dark); border: 1px solid var(--champagne); box-shadow: 0 12px 40px rgba(0,0,0,0.75);">
+        {{-- URL label bar --}}
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:5px 10px; border-bottom:1px solid rgba(255,255,255,0.1); gap:8px;">
+            <span style="font-family:monospace; font-size:10px; color:var(--champagne); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;" id="pm-preview-url"></span>
+            <span style="font-size:9px; color:var(--slate); white-space:nowrap; flex-shrink:0;">live preview</span>
+        </div>
+        {{-- Scaled iframe container --}}
+        <div style="width:380px; height:238px; overflow:hidden; position:relative; background:var(--navy);">
+            <iframe id="pm-preview-iframe"
+                    src="about:blank"
+                    scrolling="no"
+                    style="width:1280px; height:800px; border:none; transform:scale(0.296875); transform-origin:0 0; pointer-events:none; display:block;"
+            ></iframe>
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    var popup   = document.getElementById('pm-preview');
+    var iframe  = document.getElementById('pm-preview-iframe');
+    var urlLbl  = document.getElementById('pm-preview-url');
+
+    var showTimer  = null;
+    var hideTimer  = null;
+    var loadedUrl  = null;   // what's currently in the iframe src
+    var pendingUrl = null;   // url we intend to show
+
+    var POPUP_W  = 382;   // border + 380 content
+    var POPUP_H  = 270;   // bar + 238 content + border
+
+    function position(rect) {
+        var left = rect.right + 14;
+        var top  = rect.top - 20;
+
+        if (left + POPUP_W > window.innerWidth - 16) {
+            left = rect.left - POPUP_W - 14;
+        }
+        if (left < 8) { left = 8; }
+
+        if (top + POPUP_H > window.innerHeight - 16) {
+            top = window.innerHeight - POPUP_H - 16;
+        }
+        if (top < 8) { top = 8; }
+
+        popup.style.left = left + 'px';
+        popup.style.top  = top  + 'px';
+    }
+
+    function showPopup(url, rect) {
+        clearTimeout(hideTimer);
+        position(rect);
+        urlLbl.textContent = url;
+
+        if (loadedUrl !== url) {
+            iframe.src = window.location.origin + url;
+            loadedUrl  = url;
+        }
+
+        popup.style.display      = 'block';
+        popup.style.pointerEvents = 'auto';
+        popup.style.opacity      = '1';
+    }
+
+    function hidePopup() {
+        popup.style.display      = 'none';
+        popup.style.pointerEvents = 'none';
+        // Release memory — clear iframe after a short pause
+        setTimeout(function () {
+            if (popup.style.display === 'none') {
+                iframe.src = 'about:blank';
+                loadedUrl  = null;
+            }
+        }, 400);
+    }
+
+    // Capture-phase delegation — works even inside scrollable containers
+    document.addEventListener('mouseenter', function (e) {
+        var el = e.target && e.target.closest ? e.target.closest('[data-preview]') : null;
+        if (!el) return;
+        var url = el.dataset.preview;
+        if (!url) return;
+        pendingUrl = url;
+        clearTimeout(hideTimer);
+        clearTimeout(showTimer);
+        showTimer = setTimeout(function () {
+            showPopup(url, el.getBoundingClientRect());
+        }, 240);
+    }, true);
+
+    document.addEventListener('mouseleave', function (e) {
+        var el = e.target && e.target.closest ? e.target.closest('[data-preview]') : null;
+        if (!el) return;
+        clearTimeout(showTimer);
+        hideTimer = setTimeout(hidePopup, 320);
+    }, true);
+
+    // Keep popup alive when cursor moves onto it
+    window._pmPreviewEnter = function () { clearTimeout(hideTimer); };
+    window._pmPreviewLeave = function () { hideTimer = setTimeout(hidePopup, 320); };
+}());
+</script>
+
 </x-layouts.page>

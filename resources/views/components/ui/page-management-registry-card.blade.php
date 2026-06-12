@@ -97,6 +97,7 @@
                 <div class="flex items-center justify-between gap-2 text-sm">
                     <a
                         href="#{{ $targetId }}"
+                        data-preview="{{ $p['url'] }}"
                         @click.prevent="window.dispatchEvent(new CustomEvent('pm-open-page', { detail: { groupSlug: '{{ $groupSlug }}', targetId: '{{ $targetId }}' } }))"
                         class="font-head font-medium truncate transition-colors"
                         style="color: var(--cloud-light);"

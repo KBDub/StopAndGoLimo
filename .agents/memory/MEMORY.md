@@ -6,3 +6,5 @@
 - [Demo page rule](demo-page-rule.md) — x-sections.* components must never appear on demo.blade.php; demo is for x-ui.* only.
 - [Blade @media escape in style blocks](blade-media-escape.md) — @media inside a Blade <style> block is parsed as a directive; always write @@media to emit the literal @media rule.
 - [Approved decorative SVG icon exception](approved-svg-icons.md) — thumbs-up SVG is approved for x-sections.our-mission bullet items; branding rule §3.5 otherwise bans decorative icons.
+- [Nested button breaks Alpine scope](nested-button-alpine.md) — a <button> inside another <button> is invalid HTML; browser restructures the DOM, snapping Alpine's scope chain and causing "X is not defined" errors. Use sibling buttons in a flex row instead.
+- [Alpine nested x-data in Livewire](alpine-nested-xdata-livewire.md) — nested x-data scopes inside Livewire-rendered Blade components are unreliable; use vanilla JS onclick/ondblclick for any new interactive state inside an existing Alpine component.

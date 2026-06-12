@@ -28,16 +28,16 @@
     title="Chicago Bulls Party Bus | Stop and Go Limo — New Lenox, IL"
     metaDescription="Group rides to the United Center for Bulls games from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="special-events"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/heroes/hero-chicago-bulls-party-bus.jpg"
     ogImageAlt="Chicago Bulls party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Chicago Bulls"
+        heading="Ride the #1 Chicago Bulls"
         headingBold="Party Bus"
-        subtitle="Group rides to the United Center for Bulls games"
+        subtitle="Discover the Joy of Seamless Journeys"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/hero-chicago-bulls-party-bus.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

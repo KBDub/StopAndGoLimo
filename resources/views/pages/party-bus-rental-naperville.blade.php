@@ -109,6 +109,17 @@
         buttonText="Contact Us"
         buttonHref="/contact"
         directions="Trusted Naperville party bus company · Reliable service for any celebration · Custom trips for any group or event · Serving all Naperville neighborhoods · Perfect for birthdays, bachelor and bachelorette parties, concerts, and special events · Naperville party bus rental available"
-    >As a trusted <a href="https://reviews.birdeye.com/stop-go-airport-shuttle-service-inc-156042976679034?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Naperville party</a> bus company, Stop &amp; Go provides full-service luxury transportation including wedding party buses, prom limo buses, birthday and celebration buses, bachelor and bachelorette shuttles, and concert and sporting event transfers. Our professional drivers and modern fleet deliver safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with convenient access to I-88, I-355, and I-55 for smooth transportation to downtown Naperville, O&rsquo;Hare, and Midway.</x-sections.text-block-slide-in>
+    >As a trusted <a href="https://reviews.birdeye.com/stop-go-airport-shuttle-service-inc-156042976679034?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Naperville party</a> bus company, Stop &amp; Go provides full-service luxury transportation including wedding party buses, prom limo buses, birthday and celebration buses, bachelor and bachelorette shuttles, and concert and sporting event transfers. Our professional drivers and modern fleet deliver safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with convenient access to I-88, I-355, and I-55 for smooth transportation to downtown Naperville, O&rsquo;Hare, and Midway.
+    </x-sections.text-block-slide-in>
+
+    <x-sections.faq />
+
+    <x-sections.share-your-experience />
+
+    <x-sections.map-contact-section />
+
+    <x-ui.banner-thin-cloud />
+
+    <x-sections.base-footer />
 
 </x-layouts.page>

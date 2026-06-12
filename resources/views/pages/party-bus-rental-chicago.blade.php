@@ -171,4 +171,15 @@
         ]"
     />
 
+
+    <x-sections.faq />
+
+    <x-sections.share-your-experience />
+
+    <x-sections.map-contact-section />
+
+    <x-ui.banner-thin-cloud />
+
+    <x-sections.base-footer />
+
 </x-layouts.page>

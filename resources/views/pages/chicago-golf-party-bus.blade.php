@@ -61,4 +61,14 @@
         body="Relax on the green with a round of golf using our Golf Party Bus Rental in Chicago for stylish transportation. Enjoy a Chicago golf outing party bus with spacious interiors, ample storage, and comfortable seating. Perfect for groups, our party bus rental for golf groups in Chicago ensures everyone travels together in comfort. Make your experience even better with a Chicago Golf Party Bus, combining convenience and luxury to make your golf outing memorable."
     />
 
+    <x-sections.faq />
+
+    <x-sections.share-your-experience />
+
+    <x-sections.map-contact-section />
+
+    <x-ui.banner-thin-cloud />
+
+    <x-sections.base-footer />
+        
 </x-layouts.page>

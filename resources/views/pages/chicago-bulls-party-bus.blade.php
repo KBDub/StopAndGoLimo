@@ -40,4 +40,12 @@
         image="/images/heroes/hero-chicago-bulls-party-bus.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Ride the Chicago Bulls"
+        headingBold="Party Bus"
+        heading="and Arrive in Style at the United Center"
+        body="For NBA enthusiasts and Chicago Bulls fans, Stop & Go offers United Center Party Buses, including the Bulls Party Bus. Ride in style with our Chicago Bulls Party Bus and enjoy a luxurious, stress-free trip to the game. Arrive ready to cheer on your team at the iconic United Center, home to legends like Michael Jordan and host to thrilling rivalries and major events."
+    />
+
 </x-layouts.page>

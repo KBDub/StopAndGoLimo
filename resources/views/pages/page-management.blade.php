@@ -81,6 +81,32 @@
     $sharedUsageMap   = array_filter($componentUsageMap, fn($usages) => count($usages) >= 2);
     $sharedUniqueCount = count($sharedUsageMap);
     $pageOnlyCount     = count($componentUsageMap) - $sharedUniqueCount;
+
+    // Build cross-page prop variant map: compKey → propName → {default, values[]}
+    $componentPropVariantsMap = [];
+    foreach ($groups as $group) {
+        foreach ($group['pages'] as $page) {
+            foreach ($page['all_components'] as $compStruct) {
+                $k = $compStruct['key'];
+                foreach ($compStruct['overrides'] as $prop => $data) {
+                    $cleanProp = ltrim($prop, ':');
+                    if (!isset($componentPropVariantsMap[$k][$cleanProp])) {
+                        $componentPropVariantsMap[$k][$cleanProp] = [
+                            'default' => $data['default'],
+                            'values'  => [],
+                        ];
+                    }
+                    if ($data['default'] !== null && $componentPropVariantsMap[$k][$cleanProp]['default'] === null) {
+                        $componentPropVariantsMap[$k][$cleanProp]['default'] = $data['default'];
+                    }
+                    $trimmedVal = trim($data['value'], '"\'');
+                    if (!in_array($trimmedVal, $componentPropVariantsMap[$k][$cleanProp]['values'], true)) {
+                        $componentPropVariantsMap[$k][$cleanProp]['values'][] = $trimmedVal;
+                    }
+                }
+            }
+        }
+    }
 @endphp
 
 {{-- ── Header ─────────────────────────────────────────────── --}}
@@ -144,6 +170,7 @@
     </button>
 
     <div x-show="open" x-cloak x-transition class="border-t px-5 py-5" style="border-color: rgba(255,255,255,0.08);">
+        <p class="font-body text-xs mb-3" style="color: var(--slate);">Double-click any card to jump to its registry entry.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
             @foreach($sharedUsageMap as $comp => $compPages)
                 @php
@@ -151,6 +178,8 @@
                     $dispComp = $isLw ? Str::after($comp, 'livewire:') : $comp;
                     $color    = $componentColorMap[$comp] ?? ['dot' => 'bg-slate'];
                     $cnt      = count($compPages);
+                    $sharedCompId = 'comp-' . Str::slug($comp, '-');
+                    $copyKey  = $isLw ? 'livewire:' . $dispComp : $comp;
                     if ($isLw) {
                         $sLabel = Str::of($dispComp)->replace(['.', '-', '_'], ' ')->title();
                     } elseif (Str::startsWith($comp, 'sections.')) {
@@ -163,13 +192,38 @@
                         $sLabel = Str::of($comp)->replace(['-', '_'], ' ')->title();
                     }
                 @endphp
-                <div class="flex items-center justify-between gap-3 px-4 py-3 border"
-                     style="background: var(--navy-dark); border-color: rgba(255,255,255,0.07);">
+                <div
+                    ondblclick="window.dispatchEvent(new CustomEvent('pm-open-registry', { detail: { targetId: '{{ $sharedCompId }}' } }))"
+                    onmouseenter="this.style.borderColor='rgba(212,175,55,0.35)'"
+                    onmouseleave="this.style.borderColor='rgba(255,255,255,0.07)'"
+                    class="group flex items-center justify-between gap-3 px-4 py-3 border cursor-pointer select-none transition-colors"
+                    style="background: var(--navy-dark); border-color: rgba(255,255,255,0.07);"
+                    title="Double-click to open in All Components"
+                >
                     <div class="flex items-center gap-2.5 min-w-0">
                         <span class="w-2 h-2 rounded-full shrink-0 {{ $color['dot'] }}"></span>
                         <span class="font-body text-sm font-medium truncate" style="color: var(--cloud-light);">{{ $sLabel }}</span>
                     </div>
-                    <span class="shrink-0 font-mono font-bold text-xs px-2 py-0.5" style="color: var(--champagne);">+{{ $cnt }}</span>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button
+                            title="Copy component name"
+                            class="p-1 transition-colors opacity-0 group-hover:opacity-100"
+                            style="color: var(--slate);"
+                            onclick="event.stopPropagation();
+                                var b=this, ci=b.querySelector('.sc-ci'), ck=b.querySelector('.sc-ck');
+                                navigator.clipboard.writeText('{{ addslashes($copyKey) }}');
+                                ci.style.display='none'; ck.style.display='block'; b.style.color='var(--champagne)';
+                                setTimeout(function(){ ci.style.display='block'; ck.style.display='none'; b.style.color='var(--slate)'; }, 1500);"
+                        >
+                            <svg class="sc-ci w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                            </svg>
+                            <svg class="sc-ck w-3.5 h-3.5" style="display:none;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                        <span class="font-mono font-bold text-xs px-2 py-0.5" style="color: var(--champagne);">+{{ $cnt }}</span>
+                    </div>
                 </div>
             @endforeach
         </div>
@@ -247,6 +301,7 @@
                     :isLivewire="$isLivewire"
                     :usageCount="$usageCount"
                     :compId="$compId"
+                    :propVariants="$componentPropVariantsMap[$comp] ?? []"
                 />
             @endforeach
         </div>

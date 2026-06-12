@@ -40,4 +40,11 @@
         image="/images/heroes/hero-prom-party-bus-rental-illinois.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Luxury Prom Party Bus"
+        headingBold="Coverage Across Illinois"
+        body="Stop & Go offers luxury prom party bus rentals from Romeoville, Naperville, Joliet, Plainfield, New Lenox, and surrounding suburbs to venues across Illinois. Professional chauffeurs, modern sound systems, and customizable lighting ensure a safe, stylish, and unforgettable prom experience for students and peace of mind for parents."
+    />
+
 </x-layouts.page>

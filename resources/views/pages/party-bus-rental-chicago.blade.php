@@ -66,6 +66,38 @@
         :whiteBackground="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        descHeading="Why Choose Us?"
+        descSubheading="Our Chicago Party Bus Turns Any Night into an Unforgettable Celebration"
+        :descBullets="[
+            'Luxury interiors and premium sound systems: The fun starts the moment you step onboard. Great music, great vibes, every time.',
+            'Room for your whole crew: Our buses hold large groups so nobody gets left behind.',
+            'Professional, friendly drivers: We handle the driving so you stay focused on the celebration.',
+            'Flexible rental packages: We match your schedule, group size, and party style.',
+            'Fully licensed and insured: Your safety matters as much as your good time.',
+        ]"
+        descClosing="Chicago locals trust us for unforgettable nights and easy planning. Our buses book fast, so lock in your date before it is gone."
+    />
+
+    <x-sections.travel-in-style
+        heading="Party Bus Rental"
+        headingBold="Chicago"
+        subtitle="for Every Occasion"
+        body="Our Chicago party bus rental offers luxury transportation for weddings, proms, birthdays, and parties. Serving Naperville, Aurora, Joliet, Plainfield, New Lenox, Bolingbrook, Romeoville, and all Chicago suburbs, we provide unforgettable celebrations with professional drivers, sound systems, LED lights, full bars, and seating for 10 to 40 passengers."
+        buttonText="Book Party Bus"
+        buttonHref="/bookings-reservations"
+        image="/images/heroes/party-bus-rental-chicago.png"
+        imageAlt="Luxury party bus exterior serving Chicago and the surrounding suburbs"
+        imagePosition="right"
+        background="navy"
+    />
+
+    <x-sections.our-services />
+
     <x-sections.city-info-grid
         :boxes="[
             [
@@ -108,38 +140,27 @@
                     'Evening group outings',
                 ],
             ],
+            [
+                'heading' => 'Bolingbrook Party Bus',
+                'items'   => [
+                    'Wedding celebration rides',
+                    'Prom limousine service',
+                    'Birthday group trips',
+                    'Concert and game day rides',
+                    'Nightlife shuttle service',
+                ],
+            ],
+            [
+                'heading' => 'Romeoville Party Bus',
+                'items'   => [
+                    'Wedding party transport',
+                    'Prom and school events',
+                    'Birthday party transportation',
+                    'Concert and sports shuttles',
+                    'Night out with friends',
+                ],
+            ],
         ]"
     />
 
-    <x-sections.free-instant-quote
-        rightVariant="description"
-        defaultVehicle="Party Bus"
-        formAction="/get-a-quote"
-        submitLabel="Send Message"
-        descHeading="Why Choose Us?"
-        descSubheading="Our Chicago Party Bus Turns Any Night into an Unforgettable Celebration"
-        :descBullets="[
-            'Luxury interiors and premium sound systems: The fun starts the moment you step onboard. Great music, great vibes, every time.',
-            'Room for your whole crew: Our buses hold large groups so nobody gets left behind.',
-            'Professional, friendly drivers: We handle the driving so you stay focused on the celebration.',
-            'Flexible rental packages: We match your schedule, group size, and party style.',
-            'Fully licensed and insured: Your safety matters as much as your good time.',
-        ]"
-        descClosing="Chicago locals trust us for unforgettable nights and easy planning. Our buses book fast, so lock in your date before it is gone."
-    />
-
-    <x-sections.travel-in-style
-        heading="Party Bus Rental"
-        headingBold="Chicago"
-        subtitle="for Every Occasion"
-        body="Our Chicago party bus rental offers luxury transportation for weddings, proms, birthdays, and parties. Serving Naperville, Aurora, Joliet, Plainfield, New Lenox, Bolingbrook, Romeoville, and all Chicago suburbs, we provide unforgettable celebrations with professional drivers, sound systems, LED lights, full bars, and seating for 10 to 40 passengers."
-        buttonText="Book Party Bus"
-        buttonHref="/bookings-reservations"
-        image="/images/heroes/party-bus-rental-chicago.png"
-        imageAlt="Luxury party bus exterior serving Chicago and the surrounding suburbs"
-        imagePosition="right"
-        background="navy"
-    />
-
-    <x-sections.our-services />
 </x-layouts.page>

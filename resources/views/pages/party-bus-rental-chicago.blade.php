@@ -66,6 +66,51 @@
         :whiteBackground="true"
     />
 
+    <x-sections.city-info-grid
+        :boxes="[
+            [
+                'heading' => 'Naperville Party Bus',
+                'items'   => [
+                    'Wedding party transportation',
+                    'Prom and school event rides',
+                    'Birthday celebrations',
+                    'Concert and sports trips',
+                    'Nightlife and group outings',
+                ],
+            ],
+            [
+                'heading' => 'Aurora Party Bus',
+                'items'   => [
+                    'Luxury wedding shuttles',
+                    'Prom limo packages',
+                    'Birthday party rentals',
+                    'Sporting event rides',
+                    'Night out party trips',
+                ],
+            ],
+            [
+                'heading' => 'Joliet Party Bus',
+                'items'   => [
+                    'Elegant wedding buses',
+                    'Safe prom transport',
+                    'Birthday party buses',
+                    'Concert and event trips',
+                    'Group night out rides',
+                ],
+            ],
+            [
+                'heading' => 'Plainfield Party Bus',
+                'items'   => [
+                    'Wedding guest shuttles',
+                    'Prom night transport',
+                    'Birthday limo rentals',
+                    'Sports and concert trips',
+                    'Evening group outings',
+                ],
+            ],
+        ]"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         defaultVehicle="Party Bus"

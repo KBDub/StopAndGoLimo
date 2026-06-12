@@ -1,6 +1,7 @@
 @props([
     'heading'             => 'Party Limousine Services for',
     'headingBold'         => 'Special Events',
+    'headingTail'         => '',
     'body'                => 'Celebrate in style with our spacious, fully equipped party limousines. We keep the energy high from pickup to drop off. Whether it\'s a birthday bash, prom night, bachelor or bachelorette party, or a night out with friends, our limos bring the perfect mix of comfort, fun, and head-turning appeal to every special occasion.',
     'image'               => '/images/sections/limousine-comfort.jpg',
     'imageAlt'            => 'Group enjoying a party limousine, Stop and Go Airport Shuttle in New Lenox, Illinois',
@@ -32,7 +33,7 @@
                 {{-- H2 + champagne underbar (fit-content wrapper, left-aligned) --}}
                 <div style="width: fit-content; margin-bottom: 2rem;">
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
-                        {{ $heading }} <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
+                        {{ $heading }}@if($heading) @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>@if($headingTail) {{ $headingTail }}@endif
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
                 </div>

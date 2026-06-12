@@ -60,8 +60,9 @@
     />
 
     <x-sections.party-limo-image
-        heading="You Can Count On"
+        heading=""
         headingBold="Comfort"
+        headingTail="You Can Count On"
         body="Our buses are climate-controlled, spacious, and designed with passenger comfort in mind. With clean interiors, smooth suspension, and ample legroom, every ride feels relaxed no matter the distance."
         image="/images/sections/new-bus-rental-comfort.jpg"
         imageAlt="Luxury bus interior with comfortable seating, Stop and Go Airport Shuttle in New Lenox, Illinois"

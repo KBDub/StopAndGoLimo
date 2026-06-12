@@ -172,6 +172,14 @@
     />
 
 
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional Transportation"
+        headingBold="Solutions"
+        buttonText="Contact"
+        buttonHref="/contact"
+        directions="• Downtown Chicago to events: 25–40 minutes via I-88 East to IL-59 North • Crossroads Area to parties: 30–45 minutes • Chicago to celebrations: 20–35 minutes via I-88 East • All Chicago neighborhoods served for party bus rentals"
+    >As a trusted Chicago party bus provider, Stop &amp; Go offers complete luxury transportation services including wedding party buses, prom limo buses, birthday party buses, bachelor and bachelorette shuttles, and concert and sporting event transportation. Our expert chauffeurs and modern fleet ensure safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with easy access to I-88, I-355, and I-55 for stress-free transportation to downtown Chicago, O&rsquo;Hare, and Midway.</x-sections.text-block-slide-in>
+
     <x-sections.faq />
 
     <x-sections.share-your-experience />

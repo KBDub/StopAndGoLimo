@@ -28,16 +28,16 @@
     title="Prom Party Bus Rental Illinois | Stop and Go Limo"
     metaDescription="Safe, stylish prom night party bus transportation in Illinois. Serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="services"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/heroes/hero-prom-party-bus-rental-illinois.jpg"
     ogImageAlt="Prom party bus rental in Illinois"
 >
     <x-sections.category-hero
-        heading="Prom"
-        headingBold="Party Bus"
-        subtitle="Safe, stylish prom night transportation across Illinois"
+        heading="Prom Party Bus"
+        headingBold="Service"
+        subtitle="Parent-Approved Safety & Professional Chauffeurs"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/hero-prom-party-bus-rental-illinois.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

@@ -41,6 +41,12 @@
         imagePosition="center center"
     />
 
+    <x-sections.info-strip
+        headingPrefix="Ride in Style to Support the"
+        headingBold="Stanley Cup Holders"
+        body="Turn every trip to a Chicago Blackhawks game at the United Center into an unforgettable celebration with our Chicago Blackhawks party bus rental. Enjoy a hassle-free and festive experience with a party bus to United Center Blackhawks game, letting you support the Stanley Cup holders without the stress of traffic or parking."
+    />
+
     <x-sections.free-instant-quote
         defaultVehicle="Party Bus"
         formAction="/get-a-quote"

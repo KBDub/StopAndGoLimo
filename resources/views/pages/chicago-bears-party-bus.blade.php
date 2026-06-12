@@ -40,4 +40,11 @@
         image="/images/heroes/hero-chicago-bears-party-bus.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Prepare for the Game the"
+        headingBold="Right Way"
+        body="Book a Chicago Bears Party Bus for the ultimate game day experience! Our Chicago Bears party bus rental offers luxury, comfort, and convenience, making every trip unforgettable. Enjoy top-tier service with our Chicago Bears Party Bus service and arrive in style as the Bears take on rivals like the Green Bay Packers at Soldier Field."
+    />
+
 </x-layouts.page>

@@ -28,16 +28,16 @@
     title="Chicago Blackhawks Party Bus | Stop and Go Limo — New Lenox, IL"
     metaDescription="Group rides to the United Center for Blackhawks games from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="special-events"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"
     ogImageAlt="Chicago Blackhawks party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
         heading="Chicago Blackhawks"
         headingBold="Party Bus"
-        subtitle="Group rides to the United Center for Blackhawks games"
+        subtitle="Discover the Joy of Seamless Journeys"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

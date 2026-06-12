@@ -49,20 +49,16 @@
     />
 
     <x-sections.free-instant-quote
-        rightVariant="description"
         defaultVehicle="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        descHeading="Why Choose Us?"
-        descSubheading="Your Six Flags Adventure Starts the Moment You Step Onboard"
-        :descBullets="[
-            'Door-to-door group pickup: We collect your whole crew so no one drives, parks, or gets separated.',
-            'Premium sound systems and LED lighting: The party starts on the way there, not when you arrive.',
-            'Professional, licensed drivers: We handle the route so your group stays safe and on schedule.',
-            'Flexible packages for any group size: Family trips, school groups, birthday parties, and corporate outings all welcome.',
-            'Fully insured and permitted: Ride with confidence knowing every detail is handled.',
-        ]"
-        descClosing="Six Flags trips book fast on peak weekends. Lock in your date early and leave the driving to us."
+        image="/images/heroes/hero-six-flags-party-bus.jpg"
+        imageAlt="Riders on a roller coaster at Six Flags Great America, Chicago"
+        imageAspect="4/3"
+        heading="Enjoy a Hassle-Free Journey to"
+        headingBold="Six Flags"
+        headingTail="with Our Chicago Party Bus"
+        body="Our Six Flags Party Bus provides the perfect transportation solution for groups heading to and from Six Flags Great America in Chicago. Whether you are planning a school trip, corporate outing, or family adventure, Stop & Go Airport Shuttle Service makes it easy to travel together in comfort. Choose from our party bus rental options and skip the hassle of parking while enjoying a fun, stress-free ride to the park."
     />
 
 </x-layouts.page>

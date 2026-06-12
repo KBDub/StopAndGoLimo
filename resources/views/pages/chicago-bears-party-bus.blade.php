@@ -47,4 +47,16 @@
         body="Book a Chicago Bears Party Bus for the ultimate game day experience! Our Chicago Bears party bus rental offers luxury, comfort, and convenience, making every trip unforgettable. Enjoy top-tier service with our Chicago Bears Party Bus service and arrive in style as the Bears take on rivals like the Green Bay Packers at Soldier Field."
     />
 
+    <x-sections.free-instant-quote
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        image="/images/heroes/hero-chicago-bears-fiq.jpg"
+        imageAlt="Soldier Field lit up on game day in Chicago"
+        imageAspect="4/3"
+        heading="Enjoy"
+        headingBold="Both the Game & the Ride"
+        bodyHtml="Located in Chicago&#8217;s Near South Side, Soldier Field draws massive crowds for Bears games, soccer, rugby matches, and concerts. Make your trip effortless by riding on a <a href='/rates/' style='color: var(--navy); text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Chicago Bears Party Bus</a>, perfect for groups of up to 36 passengers."
+    />
+
 </x-layouts.page>

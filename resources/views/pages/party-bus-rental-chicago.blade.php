@@ -62,7 +62,9 @@
         body="Stop & Go Party Bus Rental Chicago offers luxury limo party buses for weddings, proms, birthdays, and nights out. With sound systems, LED lights, full bars, and seating for 10–40, we provide unforgettable transportation from Joliet, Plainfield, New Lenox, Naperville, Aurora, and Chicago suburbs."
     />
 
-    <x-sections.three-steps />
+    <x-sections.three-steps 
+        :whiteBackground="true"
+    />
 
     
 </x-layouts.page>

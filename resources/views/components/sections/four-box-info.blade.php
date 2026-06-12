@@ -34,7 +34,7 @@
     ],
 ])
 
-<section style="background: var(--cloud-light);" class="py-12 lg:py-[6.25rem]">
+<section id="four-box-info" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">

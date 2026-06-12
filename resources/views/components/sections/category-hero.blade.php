@@ -16,7 +16,7 @@
     $isModal = $buttonHref === '/contact' || $buttonHref === '/booking';
 @endphp
 
-<section class="relative flex items-center justify-center overflow-hidden isolate" style="min-height: 100svh;">
+<section id="category-hero" class="relative flex items-center justify-center overflow-hidden isolate" style="min-height: 100svh; scroll-margin-top: 80px;">
 
     {{-- Background image + overlay --}}
     <div class="absolute inset-0">

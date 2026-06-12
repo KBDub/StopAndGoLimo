@@ -12,7 +12,7 @@
     $txtOrder = $imagePosition === 'right' ? 'order-last lg:order-first' : 'order-last lg:order-last';
 @endphp
 
-<section class="py-12 lg:py-[6.25rem]" style="background: var(--cloud-light);">
+<section id="who-are-we" class="py-12 lg:py-[6.25rem]" style="background: var(--cloud-light); scroll-margin-top: 80px;">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">

@@ -16,7 +16,7 @@
         : 'background: var(--navy);';
 @endphp
 
-<section style="{{ $bgStyle }}" class="py-12 lg:py-[6.25rem] overflow-hidden">
+<section id="image-slide-in" style="{{ $bgStyle }}; scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem] overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

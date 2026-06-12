@@ -31,7 +31,7 @@
     $txtSlideStyle = $doSlide ? 'opacity: 0; transform: translateX(-4rem); transition: opacity 0.7s ease 150ms, transform 0.7s ease 150ms;' : '';
 @endphp
 
-<section style="{{ $bgStyle }}" class="py-12 lg:py-[6.25rem]{{ $sectionExtra }}">
+<section id="travel-in-style" style="{{ $bgStyle }}; scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]{{ $sectionExtra }}">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

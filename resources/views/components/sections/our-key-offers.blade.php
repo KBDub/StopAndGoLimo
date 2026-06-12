@@ -47,7 +47,7 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
      Layer 1: section (full-width cloud-light bg)
      Layer 2: max-w-7xl constrained container
      ═══════════════════════════════════════════════════════════ --}}
-<section style="background: var(--cloud-light);" class="py-12 lg:py-20">
+<section id="our-key-offers" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-20">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Heading + champagne rule --}}

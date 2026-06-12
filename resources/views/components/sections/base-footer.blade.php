@@ -5,7 +5,7 @@
     'termsHref'   => '/terms-conditions',
 ])
 
-<footer style="background: var(--navy-dark); border-top: 1px solid var(--navy-light);" class="py-4">
+<footer id="base-footer" style="background: var(--navy-dark); border-top: 1px solid var(--navy-light); scroll-margin-top: 80px;" class="py-4">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 items-center">
 

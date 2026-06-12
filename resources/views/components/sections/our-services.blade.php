@@ -55,7 +55,7 @@
     ],
 ])
 
-<section style="background: var(--navy-dark);" class="py-12 lg:py-[6.25rem]">
+<section id="our-services" style="background: var(--navy-dark); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Centered heading + champagne underbar --}}

@@ -17,7 +17,7 @@
 ])
 
 {{-- Outer wrapper: position relative + overflow hidden so map clips at bottom --}}
-<div style="position: relative; overflow: hidden;">
+<div id="map-contact-section" style="position: relative; overflow: hidden; scroll-margin-top: 80px;">
 
     {{-- ── Row 1: full-width car image with social content ── --}}
     <div style="position: relative; overflow: hidden;">

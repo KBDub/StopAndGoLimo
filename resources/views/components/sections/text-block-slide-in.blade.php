@@ -14,7 +14,7 @@
         : 'background: var(--navy);';
 @endphp
 
-<section style="{{ $bgStyle }}" class="py-12 lg:py-[6.25rem] overflow-hidden">
+<section id="text-block-slide-in" style="{{ $bgStyle }}; scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem] overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Single block: heading + rule + body card + button + directions — slides in as one unit --}}

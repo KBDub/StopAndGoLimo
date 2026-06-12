@@ -53,7 +53,7 @@
 }
 </style>
 
-<section style="background: {{ $sectionBg }};" class="py-12 lg:py-[6.25rem]">
+<section id="points-of-interest" style="background: {{ $sectionBg }}; scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Heading + champagne rule --}}

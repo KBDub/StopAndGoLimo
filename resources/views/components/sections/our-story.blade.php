@@ -24,7 +24,7 @@ $entries = [
 ];
 @endphp
 
-<section class="py-12 lg:py-[6.25rem]" style="background: var(--navy);">
+<section id="our-story" class="py-12 lg:py-[6.25rem]" style="background: var(--navy); scroll-margin-top: 80px;">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Section heading with left-aligned champagne underbar --}}

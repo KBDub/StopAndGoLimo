@@ -22,7 +22,7 @@
 ])
 
 {{-- Outer wrapper: Midnight Navy visible as decorative side and top/bottom bands --}}
-<section style="background: var(--navy); padding: 6.25rem 2rem;">
+<section id="why-choose-us" style="background: var(--navy); padding: 6.25rem 2rem; scroll-margin-top: 80px;">
 
     {{-- Inner inlay: Navy Light — the content box --}}
     <div style="background: var(--navy-light); padding: 35px 35px;">

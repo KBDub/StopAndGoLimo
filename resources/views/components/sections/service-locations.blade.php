@@ -18,7 +18,7 @@
     ],
 ])
 
-<section style="background: var(--navy);" class="py-12 lg:py-[6.25rem]">
+<section id="service-locations" style="background: var(--navy); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

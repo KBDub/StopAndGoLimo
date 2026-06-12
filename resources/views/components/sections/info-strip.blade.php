@@ -5,7 +5,7 @@
     'body'          => 'We offer a diverse selection of limousines to suit your needs. Choose from our standard limos or stretch limousines, all maintained to the highest standards to ensure a comfortable and stylish ride. Whether you\'re planning a celebration or need reliable airport transportation, our fleet is ready to accommodate you.',
 ])
 
-<section style="background: var(--navy);" class="py-10 lg:py-16">
+<section id="info-strip" style="background: var(--navy); scroll-margin-top: 80px;" class="py-10 lg:py-16">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Heading + champagne rule (canonical width: fit-content wrapper) --}}

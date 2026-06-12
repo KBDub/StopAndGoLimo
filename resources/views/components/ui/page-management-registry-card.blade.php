@@ -12,8 +12,10 @@
 ])
 
 @php
-    $copyKey   = $isLivewire ? 'livewire:' . $displayComp : $comp;
-    $copyKeyJs = addslashes($copyKey);
+    $copyKey    = $isLivewire ? 'livewire:' . $displayComp : $comp;
+    $copyKeyJs  = addslashes($copyKey);
+    // Anchor suffix — only sections get a stable #id; layouts/ui/nav fall back to top of page
+    $anchorSuffix = Str::startsWith($comp, 'sections.') ? '#' . Str::after($comp, '.') : '';
 @endphp
 
 <div
@@ -97,7 +99,7 @@
                 <div class="flex items-center justify-between gap-2 text-sm">
                     <a
                         href="#{{ $targetId }}"
-                        data-preview="{{ $p['url'] }}"
+                        data-preview="{{ $p['url'] }}{{ $anchorSuffix }}"
                         @click.prevent="window.dispatchEvent(new CustomEvent('pm-open-page', { detail: { groupSlug: '{{ $groupSlug }}', targetId: '{{ $targetId }}' } }))"
                         class="font-head font-medium truncate transition-colors"
                         style="color: var(--cloud-light);"

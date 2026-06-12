@@ -48,6 +48,25 @@
         body="Experience luxury and style on your way to the next big show with a Chicago Concert Party Bus from Stop & Go Airport Shuttle Service. Choose a concert party bus rental in Chicago or a party bus rental for concerts in Chicago to accommodate any group size and enjoy a fun, hassle-free night out."
     />
 
+    <x-sections.points-of-interest
+        heading="Concert Venues We"
+        headingBold="Serve in Chicago"
+        :points="[
+            ['name' => 'Jay Pritzker Pavilion',                    'href' => '#'],
+            ['name' => 'Millennium Park',                          'href' => '#'],
+            ['name' => 'City Winery',                              'href' => '#'],
+            ['name' => 'The United Center',                        'href' => '#'],
+            ['name' => 'Huntington Bank Pavilion',                 'href' => '#'],
+            ['name' => 'The Vic Theatre',                          'href' => '#'],
+            ['name' => 'The Chicago Theatre',                      'href' => '#'],
+            ['name' => 'Symphony Center (Chicago Symphony Orchestra)', 'href' => '#'],
+            ['name' => 'Lincoln Hall',                             'href' => '#'],
+            ['name' => 'House of Blues',                           'href' => '#'],
+            ['name' => 'Soldier Field',                            'href' => '#'],
+            ['name' => 'Metro',                                    'href' => '#'],
+        ]"
+    />
+
     <x-sections.free-instant-quote
         defaultVehicle="Party Bus"
         formAction="/get-a-quote"

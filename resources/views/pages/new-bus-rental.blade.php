@@ -47,4 +47,16 @@
         body="At Stop & Go Airport Shuttle Service Inc., we understand that celebrations are meant to be memorable and fun. That is why we offer premier party bus rental services in Plainfield, IL, designed to elevate your event to the next level of enjoyment and luxury. With our years of experience in providing high-end transportation solutions, you can trust us to deliver an unparalleled travel experience for any occasion."
     />
 
+    <x-sections.free-instant-quote
+        defaultVehicle="Chartered Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        image="/images/heroes/hero-new-bus-rental-fiq.jpg"
+        imageAlt="Luxury bus rental in Plainfield and New Lenox, Illinois"
+        imageAspect="4/3"
+        heading="Book Your New Bus"
+        headingBold="Rental Today"
+        body="Stop & Go Airport Shuttle Service offers late-model buses for groups of all sizes in Plainfield, New Lenox, and the southwest suburbs of Chicago. Whether you are planning a corporate outing, a school trip, or a special celebration, our modern fleet delivers comfort, reliability, and style. Book early to secure your preferred date and enjoy a stress-free group travel experience with a professional chauffeur from start to finish."
+    />
+
 </x-layouts.page>

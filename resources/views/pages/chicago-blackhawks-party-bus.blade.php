@@ -40,4 +40,17 @@
         image="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.free-instant-quote
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        image="/images/heroes/hero-chicago-blackhawks-fiq.png"
+        imageAlt="Chicago Blackhawks party bus at the United Center"
+        imageAspect="4/3"
+        heading="The Best Games Need"
+        headingBold="the Best Rides"
+        bodyHtml="Transform your trip to a Chicago Blackhawks game at the United Center into an unforgettable night with our Chicago Blackhawks <a href='/bookings-reservations/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>party bus service</a>. Enjoy the ultimate Chicago Blackhawks party bus rental and make every game day special. Skip the hassle of traffic and parking with a party bus to United Center Blackhawks game, and celebrate in style with a Luxury <a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Blackhawks Party Bus</a> in Chicago. When the Blackhawks clinch a victory, continue the fun by turning the bus into your personal party venue."
+    />
+
 </x-layouts.page>

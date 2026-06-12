@@ -105,7 +105,8 @@ Full rules in `docs/branding-requirements.md` — read it before any UI change.
 -   **No all-caps** anywhere except nav links (approved exception).
 -   **Fonts:** Poppins (`font-head`) for headings and nav, Montserrat (`font-body`) for body copy.
 -   **Sharp corners** on all cards, inputs, and sections. No `rounded` on containers.
--   **Azure** is for inline links, focus rings, and info highlights only. Never on buttons or backgrounds.
+-   **Inline prose links:** `var(--champagne)` is the **only** approved color for inline links in body copy — on any background. Style: `color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;`. Never use navy, azure, or any other color for prose links.
+-   **Azure** is for focus rings and informational text highlights only. Never for prose links, buttons, or backgrounds.
 -   **No double hyphens.** Use a comma instead.
 -   **7th grade reading level** for all copy.
 -   **Responsive.** Every component must work at mobile, tablet, and desktop. Never use a bare width class like `w-96` — always pair with `w-full sm:w-96`.

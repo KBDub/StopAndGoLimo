@@ -622,7 +622,7 @@
                 {{-- Champagne underbar inline link --}}
                 <div class="bg-navy-light border border-white/8 p-7 mb-5">
                     <h3 class="font-head font-semibold text-white mb-1">Champagne underbar inline <code class="font-mono text-champagne text-sm">&lt;a&gt;</code> &mdash; Prose link</h3>
-                    <p class="text-muted text-xs mb-6">An inline <code class="font-mono text-champagne">&lt;a href&gt;</code> inside body copy that carries the brand accent. Uses <code class="font-mono text-champagne">var(--champagne)</code> for both the text and the underline rule, with a 3px offset so the line sits clear of the descenders. This is our only approved inline prose link style &mdash; used in <code class="font-mono text-champagne">x-sections.our-mission</code> on the phrase "memorable, and full of energy,".</p>
+                    <p class="text-muted text-xs mb-6">An inline <code class="font-mono text-champagne">&lt;a href&gt;</code> inside body copy that carries the brand accent. Uses <code class="font-mono text-champagne">var(--champagne)</code> for both the text and the underline rule, with a 3px offset so the line sits clear of the descenders. <strong class="text-champagne">This is the only approved inline prose link style</strong> &mdash; applies on all backgrounds (navy, cloud-light, white). Never use navy, azure, or any other color for a prose link.</p>
                     <div class="flex flex-wrap gap-6 items-start mb-4">
                         <div style="background: var(--navy); padding: 1.5rem 2rem; max-width: 36rem;">
                             <p class="font-body" style="font-size: 1.25rem; color: var(--cloud); line-height: 1.5;">
@@ -638,7 +638,7 @@
           text-decoration-color: var(--champagne); text-underline-offset: 3px;"&gt;
     memorable, and full of energy,
 &lt;/a&gt;
-{{-- Use only inside body copy on a navy background. --}}
+{{-- Use inside body copy on any background (navy, cloud-light, white). --}}
 {{-- No hover colour change — the underline provides sufficient affordance. --}}</pre>
                     </div>
                 </div>

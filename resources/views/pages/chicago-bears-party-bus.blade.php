@@ -56,7 +56,7 @@
         imageAspect="4/3"
         heading="Enjoy"
         headingBold="Both the Game & the Ride"
-        bodyHtml="Located in Chicago&#8217;s Near South Side, Soldier Field draws massive crowds for Bears games, soccer, rugby matches, and concerts. Make your trip effortless by riding on a <a href='/rates/' style='color: var(--navy); text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Chicago Bears Party Bus</a>, perfect for groups of up to 36 passengers."
+        bodyHtml="Located in Chicago&#8217;s Near South Side, Soldier Field draws massive crowds for Bears games, soccer, rugby matches, and concerts. Make your trip effortless by riding on a <a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Chicago Bears Party Bus</a>, perfect for groups of up to 36 passengers."
     />
 
 </x-layouts.page>

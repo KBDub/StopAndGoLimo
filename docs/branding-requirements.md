@@ -112,11 +112,14 @@ All values are unitless — see Absolute Rule §3.9.
 
 ### Link Styles
 
-| Class | Use |
+| Class / Pattern | Use |
 |---|---|
-| `.link-champagne` | Inline champagne link in body copy (underline on hover) |
+| `.link-champagne` | Inline link in body copy — Poppins semibold, champagne text, champagne underline, hover lightens |
+| Inline style (bodyHtml) | When a link lives inside a `bodyHtml` prop string, use: `style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;"` |
 | `.link-nav-stopngo` | Nav link: cloud text, champagne on hover |
 | `x-ui.button-text-link` | Arrow-link CTA, e.g. "View Rates &rarr;" |
+
+> **Champagne is the only approved inline prose link color** — on any background (navy, cloud-light, white, or image overlay). Never use navy, azure, or any other color for an inline `<a>` in body copy.
 
 ---
 
@@ -135,7 +138,7 @@ All values are unitless — see Absolute Rule §3.9.
 
 > **Note on Tailwind vs CSS var naming:** Slate uses `slate` in both Tailwind (`text-slate`, `bg-slate`) and CSS (`var(--slate)` / `var(--slate-light)` / `var(--slate-dark)`). The legacy Tailwind alias `muted` is being retired during the CSS cleanup phase. See `docs/rebranding.md`.
 >
-> **Azure usage rule:** Azure must not appear on section backgrounds, cards, or decorative surfaces, and is never used for buttons. It is reserved for inline links, focus rings, and informational text highlights only.
+> **Azure usage rule:** Azure must not appear on section backgrounds, cards, or decorative surfaces, and is never used for buttons or inline prose links. It is reserved for focus rings and informational text highlights only.
 >
 > **Branded CSS colors requirement:** Every color used anywhere on the site must reference a named CSS custom property from the Twilight Luxe token set (e.g. `var(--navy)`, `var(--champagne)`, `var(--azure)`). Raw hex values, `rgb()`, `hsl()`, or any other unlabeled color literals are not permitted in component files or stylesheets.
 
@@ -154,7 +157,7 @@ All values are unitless — see Absolute Rule §3.9.
 3. **White** — cards, containers, text on navy
 4. **Cloud Grey** — light-mode section alternation and breathing room
 5. **Slate** — secondary text, captions, metadata
-6. **Azure** — secondary CTAs, links, focus states, informational highlights. Buttons only; never on section backgrounds.
+6. **Azure** — focus states and informational highlights only. Never for prose links, buttons, or section backgrounds.
 
 ### 5.4 — Brand Gradients
 

@@ -3,6 +3,7 @@
     'headingBold'      => 'unforgettable experience',
     'headingTail'      => 'now!',
     'body'             => 'Our professional drivers are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. With their expertise and commitment to service, you can relax knowing that your transportation needs are handled with care and precision, making every ride a truly exceptional experience.',
+    'bodyHtml'         => '',
     'image'            => '/images/sections/chauffeurs.jpg',
     'imageAlt'         => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
     'imageAspect'      => '4/3',
@@ -289,10 +290,14 @@
                             <x-ui.banner-thin-champagne />
                         @endif
 
-                        {{-- Body --}}
-                        @if($body)
+                        {{-- Body — bodyHtml allows branded inline links; falls back to escaped body prop --}}
+                        @if($bodyHtml || $body)
                             <p class="font-body mt-4" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
-                                {{ $body }}
+                                @if($bodyHtml)
+                                    {!! $bodyHtml !!}
+                                @else
+                                    {{ $body }}
+                                @endif
                             </p>
                         @endif
 

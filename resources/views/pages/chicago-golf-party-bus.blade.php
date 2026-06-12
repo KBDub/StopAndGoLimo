@@ -41,6 +41,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.free-instant-quote
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        image="/images/heroes/hero-chicago-golf-fiq.jpg"
+        imageAlt="Golf group arriving at a Chicago area golf course in a party bus"
+        imageAspect="4/3"
+        heading="Your Golf Outing,"
+        headingBold="Elevated"
+        headingTail="with Stop & Go"
+        body="Our Chicago Golf Party Bus takes the hassle out of group golf trips. We handle all the driving so your crew can focus on the game. Spacious interiors, ample club storage, and a professional driver ensure your group arrives together, relaxed, and ready to play."
+    />
+
     <x-sections.info-strip
         headingPrefix="Premier"
         headingBold="Golf Party Bus"

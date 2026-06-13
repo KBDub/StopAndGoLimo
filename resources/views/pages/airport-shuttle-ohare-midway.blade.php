@@ -82,4 +82,15 @@
         ]"
     />
 
+    <x-sections.image-slide-in
+        headingPrefix="24/7 Airport Shuttle to"
+        headingBold="O'Hare & Midway"
+        body="Our New Lenox airport shuttle provides 24/7 service to O'Hare and Midway with on-time pickups. Serving downtown New Lenox, nearby neighborhoods, and suburbs, our shuttle ensures stress-free travel with luggage assistance, flight monitoring, and expert navigation for efficient New Lenox to O'Hare and Midway trips."
+        buttonText="Book Airport Shuttle"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/new-lenox-airport.png"
+        imageAlt="Stop and Go Airport Shuttle vehicle ready for New Lenox airport pickup"
+        imageAspect="3/2"
+    />
+
 </x-layouts.page>

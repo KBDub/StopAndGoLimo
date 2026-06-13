@@ -52,6 +52,7 @@
         imageAlt="Happy group smiling inside a limo with Stop and Go Airport Shuttle Service Inc."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
+        inverted=true
     />
 
     <x-sections.travel-in-style

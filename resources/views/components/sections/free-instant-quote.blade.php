@@ -22,6 +22,7 @@
     'rightVariant'     => 'image',
     'descHeading'      => 'Why Choose Us?',
     'descSubheading'   => '',
+    'descBody'         => '',
     'descBullets'      => [],
     'descClosing'      => '',
 ])
@@ -209,8 +210,15 @@
 
                     {{-- Subheading --}}
                     @if($descSubheading)
-                        <p class="font-head mb-5" style="font-size: 1.125rem; font-weight: 600; color: var(--navy); line-height: 1.3;">
+                        <p class="font-head mb-4" style="font-size: 1.125rem; font-weight: 600; color: var(--navy); line-height: 1.3;">
                             {{ $descSubheading }}
+                        </p>
+                    @endif
+
+                    {{-- Optional intro paragraph between subheading and bullets --}}
+                    @if($descBody)
+                        <p class="font-body mb-5" style="font-size: 1rem; font-weight: 400; color: var(--slate); line-height: 1.6;">
+                            {{ $descBody }}
                         </p>
                     @endif
 

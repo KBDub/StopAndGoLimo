@@ -48,4 +48,20 @@
         body="Stop & Go offers 24/7 airport shuttle service from New Lenox, Plainfield, Naperville, Aurora, Joliet, and Chicago suburbs to O'Hare and Midway. Reliable, door-to-door service with professional drivers, flight monitoring, and luggage assistance ensures stress-free travel for individuals, families, and groups."
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        defaultVehicle="Airport Transportation"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Transportation Services"
+        descBody="As a trusted provider of airport transportation, Stop & Go offers complete airport shuttle services throughout the Chicago suburbs:"
+        :descBullets="[
+            'Party bus rental for weddings, proms, birthdays, and nights out',
+            'Limousine service for weddings, events, and special occasions',
+            'Corporate group transportation for business meetings and outings',
+            'Elegant Wedding vehicles for your special day',
+            'Custom packages for concerts, sporting events, and private celebrations',
+        ]"
+        descClosing="Our professional drivers know Naperville, Aurora, Joliet, Plainfield, New Lenox, and surrounding areas, ensuring safe, reliable, and punctual airport shuttle experiences for every traveler."
+    />
+
 </x-layouts.page>

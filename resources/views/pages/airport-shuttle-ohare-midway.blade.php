@@ -49,19 +49,27 @@
     />
 
     <x-sections.free-instant-quote
-        rightVariant="description"
         defaultVehicle="Airport Transportation"
-        descHeading="Why Choose Us?"
-        descSubheading="Complete Transportation Services"
-        descBody="As a trusted provider of airport transportation, Stop & Go offers complete airport shuttle services throughout the Chicago suburbs:"
-        :descBullets="[
-            'Party bus rental for weddings, proms, birthdays, and nights out',
-            'Limousine service for weddings, events, and special occasions',
-            'Corporate group transportation for business meetings and outings',
-            'Elegant Wedding vehicles for your special day',
-            'Custom packages for concerts, sporting events, and private celebrations',
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        image="/images/sections/airport-pickup.jpg"
+        imageAlt="Professional limousine parked beside a private jet on the airport tarmac"
+        imageAspect="16/9"
+        heading="Arrive with Ease, Depart with"
+        headingBold="Peace"
+        body="Stop & Go provides premier airport shuttle service throughout the Chicago suburbs. From New Lenox and Plainfield to Naperville, Aurora, and Joliet, our professional drivers monitor your flight in real time, assist with luggage, and deliver you to the terminal with time to spare on every single trip."
+    />
+
+    <x-sections.points-of-interest
+        heading="Our Commitment to"
+        headingBold="Every Traveler"
+        :points="[
+            ['name' => 'Guaranteed On-Time Airport Pickup', 'href' => '#'],
+            ['name' => 'Dependable and Punctual',           'href' => '#'],
+            ['name' => 'Safety and Professionalism',        'href' => '#'],
+            ['name' => 'Eco-Friendly and Community Minded', 'href' => '#'],
+            ['name' => 'VIP Comfort Tailored to You',       'href' => '#'],
         ]"
-        descClosing="Our professional drivers know Naperville, Aurora, Joliet, Plainfield, New Lenox, and surrounding areas, ensuring safe, reliable, and punctual airport shuttle experiences for every traveler."
     />
 
 </x-layouts.page>

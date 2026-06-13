@@ -369,7 +369,7 @@
             @endphp
 
             {{-- ── Export toolbar ── --}}
-            <div class="flex flex-wrap items-center justify-start gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
+            <div class="flex flex-wrap items-center justify-end gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
 
                 {{-- Export button — vanilla JS, no Alpine --}}
                 <button

@@ -369,7 +369,19 @@
             @endphp
 
             {{-- ── Export toolbar ── --}}
-            <div class="flex flex-wrap items-center justify-end gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
+
+                {{-- Checkbox --}}
+                <label class="flex items-center gap-2 cursor-pointer select-none"
+                       title="When checked, each page entry includes its list of section components">
+                    <input
+                        type="checkbox"
+                        id="pm-export-sections"
+                        checked
+                        style="accent-color: var(--champagne); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0;"
+                    >
+                    <span class="font-body text-sm" style="color: var(--slate);">Include sections</span>
+                </label>
 
                 {{-- Export button — vanilla JS, no Alpine --}}
                 <button
@@ -386,18 +398,6 @@
                     </svg>
                     Export JSON
                 </button>
-
-                {{-- Checkbox --}}
-                <label class="flex items-center gap-2 cursor-pointer select-none"
-                       title="When checked, each page entry includes its list of section components">
-                    <input
-                        type="checkbox"
-                        id="pm-export-sections"
-                        checked
-                        style="accent-color: var(--champagne); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0;"
-                    >
-                    <span class="font-body text-sm" style="color: var(--slate);">Include sections</span>
-                </label>
             </div>
 
             {{-- Embedded export data (server-rendered, no HTTP round-trip on download) --}}

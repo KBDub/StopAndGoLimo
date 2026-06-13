@@ -62,7 +62,7 @@
         buttonHref="/about-us#"
         image="/images/sections/blog-limo.jpg"
         imageAlt="Guests celebrating inside a Stop & Go Airport Shuttle limousine"
-        imagePosition="left"
+        inverted=true
     />
 
     <x-sections.faq />

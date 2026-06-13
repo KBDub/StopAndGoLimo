@@ -1,27 +1,30 @@
 @props([
-    'heading'       => 'Travel in',
-    'headingBold'   => 'Style',
-    'subtitle'      => '',
-    'body'          => '',
-    'buttonText'    => 'About Us',
-    'buttonHref'    => '/about-us',
-    'image'         => '/images/sections/travel-in-style.jpg',
-    'imageAlt'      => 'Guests enjoying a luxury limo ride with Stop and Go Airport Shuttle',
-    'imagePosition' => 'left',
-    'background'    => 'navy',
-    'slideIn'       => '',
-    'note'          => '',
+    'heading'     => 'Travel in',
+    'headingBold' => 'Style',
+    'subtitle'    => '',
+    'body'        => '',
+    'note'        => '',
+    'buttonText'  => 'About Us',
+    'buttonHref'  => '/about-us',
+    'image'       => '/images/sections/travel-in-style.jpg',
+    'imageAlt'    => 'Guests enjoying a luxury limo ride with Stop and Go Airport Shuttle',
+    'imageLeft'   => true,
+    'inverted'    => false,
+    'slideIn'     => '',
 ])
 
 @php
-    $bgStyle   = $background === 'cloud' ? 'background: var(--cloud-light);' : 'background: var(--navy);';
-    $textColor = $background === 'cloud' ? 'color: var(--navy);'             : 'color: var(--white);';
-    $bodyColor = $background === 'cloud' ? 'color: var(--slate);'            : 'color: var(--cloud);';
-    $panelBg   = $background === 'cloud' ? ''                                : 'background: var(--navy); padding: 2.5rem;';
+    // inverted=false → cloud-light bg, navy text (default / light variant)
+    // inverted=true  → navy bg, white text (dark variant)
+    $bgStyle   = $inverted ? 'background: var(--navy);'               : 'background: var(--cloud-light);';
+    $textColor = $inverted ? 'color: var(--white);'                   : 'color: var(--navy);';
+    $bodyColor = $inverted ? 'color: var(--cloud);'                   : 'color: var(--slate);';
+    $panelBg   = $inverted ? 'background: var(--navy); padding: 2.5rem;' : '';
 
-    // On mobile image is always on top. On desktop, imagePosition drives column order.
-    $imgOrder = $imagePosition === 'right' ? 'order-first lg:order-last' : 'order-first lg:order-first';
-    $txtOrder = $imagePosition === 'right' ? 'order-last lg:order-first' : 'order-last lg:order-last';
+    // imageLeft=true  → image on left, text on right (default)
+    // imageLeft=false → image on right, text on left
+    $imgOrder = $imageLeft ? 'order-first lg:order-first' : 'order-first lg:order-last';
+    $txtOrder = $imageLeft ? 'order-last lg:order-last'  : 'order-last lg:order-first';
 
     // Slide-in variant — mirrors the sg-slide-in pattern from image-slide-in.blade.php
     $doSlide       = $slideIn === 'left';
@@ -81,7 +84,7 @@
                 {{-- CTA --}}
                 @if($buttonHref && $buttonText)
                     <div class="mb-6">
-                        @if($background === 'cloud')
+                        @if(!$inverted)
                             <x-ui.button-champagne-solid href="{{ $buttonHref }}">
                                 {{ $buttonText }}
                             </x-ui.button-champagne-solid>

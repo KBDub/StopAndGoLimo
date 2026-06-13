@@ -75,8 +75,8 @@
         buttonHref="/bookings-reservations"
         image="/images/sections/party-bus-aurora.jpg"
         imageAlt="Guests celebrating on a party bus in Aurora, Illinois"
-        imagePosition="right"
-        background="navy"
+        :imageLeft="false"
+        inverted=true
     />
 
     <x-sections.our-mission

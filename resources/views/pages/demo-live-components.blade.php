@@ -38,10 +38,10 @@
             'num'   => '02',
             'tag'   => 'x-sections.travel-in-style',
             'file'  => 'resources/views/components/sections/travel-in-style.blade.php',
-            'desc'  => 'Two-column image + text section. Image position (left/right) and background (navy/cloud) are both props. py-12 lg:py-[6.25rem].',
-            'props' => ['heading', 'headingBold', 'body', 'buttonText', 'buttonHref', 'image', 'imageAlt', 'imagePosition', 'background'],
+            'desc'  => 'Two-column image + text section. imageLeft (bool, default true) puts image on left; false flips to right. inverted (bool, default false) gives cloud-light bg; true gives navy bg. py-12 lg:py-[6.25rem].',
+            'props' => ['heading', 'headingBold', 'subtitle', 'body', 'note', 'buttonText', 'buttonHref', 'image', 'imageAlt', 'imageLeft', 'inverted', 'slideIn'],
             'ar'    => '4/3 image column',
-            'code'  => "<x-sections.travel-in-style\n    heading=\"Travel in\"\n    headingBold=\"Style\"\n    body=\"Stop &amp; Go is your premier provider...\"\n    buttonText=\"About Us\"\n    buttonHref=\"/about-us\"\n    image=\"/images/sections/travel-in-style.jpg\"\n    imageAlt=\"Guests enjoying a luxury limo ride\"\n    imagePosition=\"left\"\n    background=\"navy\"\n/>",
+            'code'  => "<x-sections.travel-in-style\n    heading=\"Travel in\"\n    headingBold=\"Style\"\n    body=\"Stop &amp; Go is your premier provider...\"\n    buttonText=\"About Us\"\n    buttonHref=\"/about-us\"\n    image=\"/images/sections/travel-in-style.jpg\"\n    imageAlt=\"Guests enjoying a luxury limo ride\"\n    inverted=true\n/>",
         ],
         [
             'num'   => '03',

@@ -94,8 +94,8 @@
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-party-bus-naperville.jpg"
         imageAlt="Guests celebrating on a Stop and Go party bus in Naperville, Illinois"
-        imagePosition="right"
-        background="navy"
+        :imageLeft="false"
+        inverted=true
     />
 
     <x-sections.our-mission

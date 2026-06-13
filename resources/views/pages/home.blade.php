@@ -55,7 +55,7 @@
         buttonHref="/about-us"
         image="/images/sections/travel-in-style.jpg"
         imageAlt="Friends celebrating inside a Stop and Go Limo"
-        imagePosition="left"
+        inverted=true
     />
 
 

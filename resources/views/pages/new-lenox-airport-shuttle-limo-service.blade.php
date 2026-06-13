@@ -63,8 +63,7 @@
         buttonHref="/about-us"
         image="/images/sections/new-lenox-limo.png"
         imageAlt="White luxury limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
-        imagePosition="left"
-        background="navy"
+        inverted=true
     />
 
     <x-sections.info-strip

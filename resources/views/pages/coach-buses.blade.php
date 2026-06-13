@@ -50,8 +50,17 @@
         note="A $200 deposit is required."
         image="/images/sections/party-smile-limo.jpg"
         imageAlt="Happy group smiling inside a limo with Stop and Go Airport Shuttle Service Inc."
-        imagePosition="left"
-        background="cloud"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
+    <x-sections.travel-in-style
+        heading="Charter Bus for"
+        headingBold="Sports Teams"
+        body="Renting a coach bus is a great choice for sports teams. Traveling together helps the whole team stay connected and build camaraderie on the road. Players can focus and talk strategy on the way there, then relax on the way home. No one has to worry about driving, parking, or arranging rides. Our spacious charter buses give athletes plenty of room to stretch out and arrive comfortable and ready to perform."
+        image="/images/sections/sports-teams-bus.jpg"
+        imageAlt="Sports team members joining hands together before a game"
+        :imageLeft="false"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
     />

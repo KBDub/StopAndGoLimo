@@ -50,8 +50,7 @@
         buttonHref="/about-us"
         image="/images/heroes/hero-party-bus-interior.png"
         imageAlt="Vibrant party bus interior with luxury seating, colorful lights, and entertainment system"
-        imagePosition="left"
-        background="navy"
+        inverted=true
         slideIn="left"
     />
 
@@ -92,8 +91,8 @@
         buttonHref="/bookings-reservations"
         image="/images/heroes/party-bus-rental-chicago.png"
         imageAlt="Luxury party bus exterior serving Chicago and the surrounding suburbs"
-        imagePosition="right"
-        background="navy"
+        :imageLeft="false"
+        inverted=true
     />
 
     <x-sections.our-services />

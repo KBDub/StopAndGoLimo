@@ -12,9 +12,9 @@
         {{ $heading }}
     </h3>
     @if(count($items))
-        <ul style="padding: 0; margin: 0; list-style: none;">
+        <ul style="padding: 0; margin: 0 auto; list-style: none; display: inline-block; text-align: left;">
             @foreach($items as $item)
-                <li class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--cloud-light); line-height: 1.6; margin-bottom: 0.35rem; display: flex; align-items: baseline; justify-content: center; gap: 0.45rem;">
+                <li class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--cloud-light); line-height: 1.6; margin-bottom: 0.35rem; display: flex; align-items: baseline; gap: 0.45rem;">
                     <span style="flex-shrink: 0; color: var(--champagne); font-size: 0.55rem; line-height: 1.8;">&#9679;</span>
                     <span>{{ $item }}</span>
                 </li>

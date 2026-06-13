@@ -42,6 +42,17 @@
         imagePosition="center center"
     />
 
+    <x-sections.free-instant-quote
+        heading="Your"
+        headingBold="Personal Chauffeur"
+        headingTail="Awaits"
+        body="Our chauffeurs are licensed, insured, and background-checked for your peace of mind. From business meetings to special events, we deliver a smooth, on-time experience every time. Sit back, relax, and let us handle the drive while you focus on what matters most."
+        image="/images/sections/chauffeur-suit-pickup.jpg"
+        imageAlt="Stop and Go professional chauffeur in suit ready for client pickup"
+        imageAspect="16/9"
+        rightVariant="image"
+    />
+
     <x-sections.info-strip
         headingBold="Safety Measures"
         heading="and Regulations"

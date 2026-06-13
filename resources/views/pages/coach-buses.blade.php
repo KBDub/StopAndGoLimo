@@ -42,4 +42,18 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Rent a"
+        headingBold="Charter Bus"
+        subtitle="From Stop & Go Airport Shuttle Service Inc."
+        body="We provide charter bus rentals to clients in New Lenox, Plainfield, and across the greater Chicago area. Our professional chauffeurs are committed to getting your group to the destination and back safely and on time. We welcome wedding parties, school groups, sports teams, vacationing groups, and anyone who wants reliable, stylish transportation without the stress of driving."
+        note="A $200 deposit is required."
+        image="/images/sections/party-smile-limo.jpg"
+        imageAlt="Happy group smiling inside a limo with Stop and Go Airport Shuttle Service Inc."
+        imagePosition="left"
+        background="cloud"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
 </x-layouts.page>

@@ -10,6 +10,7 @@
     'imagePosition' => 'left',
     'background'    => 'navy',
     'slideIn'       => '',
+    'note'          => '',
 ])
 
 @php
@@ -65,8 +66,15 @@
 
                 {{-- Body --}}
                 @if($body)
-                    <p class="font-body mb-7" style="font-size: 1.25rem; line-height: 1.5; {{ $bodyColor }}">
+                    <p class="font-body mb-5" style="font-size: 1.25rem; line-height: 1.5; {{ $bodyColor }}">
                         {{ $body }}
+                    </p>
+                @endif
+
+                {{-- Optional note --}}
+                @if($note)
+                    <p class="font-body mb-7" style="font-size: 0.9375rem; font-weight: 600; {{ $textColor }}">
+                        {{ $note }}
                     </p>
                 @endif
 

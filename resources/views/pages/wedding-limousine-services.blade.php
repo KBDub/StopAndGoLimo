@@ -40,4 +40,12 @@
         image="/images/sections/wedding-hero.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Your"
+        headingBold="Dream Wedding Ride"
+        heading="Starts Here"
+        body="Our diverse fleet of luxury vehicles is dedicated to providing exceptional transportation solutions for your wedding day. Whether you're envisioning an intimate ride or a grand procession, we offer a range of options to suit every preference."
+    />
+
 </x-layouts.page>

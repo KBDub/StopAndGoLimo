@@ -97,4 +97,15 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.travel-in-style
+        heading=""
+        headingBold="Chicagoland Attractions"
+        body="Chicago is packed with great places to visit. Spend time outdoors at Navy Pier, Lake Michigan, the Chicago Riverwalk, and Millennium Park. Skydeck Chicago offers some of the best views in the city. For science and art, visit the Shedd Aquarium, Lincoln Park Zoo, Field Museum, and Art Institute of Chicago. Sports fans can catch a game at Soldier Field, Wrigley Field, or the United Center. And no trip to Chicago is complete without authentic deep-dish pizza."
+        image="/images/sections/chicago-skyline.jpg"
+        imageAlt="Chicago skyline viewed from Lake Michigan"
+        :imageLeft="false"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
 </x-layouts.page>

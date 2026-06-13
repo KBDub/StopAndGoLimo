@@ -369,7 +369,7 @@
             @endphp
 
             {{-- ── Export toolbar ── --}}
-            <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
+            <div class="flex flex-wrap items-center justify-end gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
 
                 {{-- Checkbox --}}
                 <label class="flex items-center gap-2 cursor-pointer select-none"

@@ -25,19 +25,21 @@
 @endpush
 
 <x-layouts.page
-    title="Coach Buses | Stop and Go Limo — New Lenox, IL"
-    metaDescription="Large-group coach bus charters for Illinois and beyond. Serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    title="Coach Bus Rentals | Stop and Go Limo — New Lenox, IL"
+    metaDescription="Charter coach bus rentals for groups of all sizes in New Lenox, Plainfield, and the Southwest suburbs. Professional drivers, pristine vehicles. Call (815) 585-6922."
     currentPage="services"
-    ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Coach bus charters in New Lenox, Illinois"
+    ogImage="/images/coach-buses-hero.jpg"
+    ogImageAlt="Charter coach bus available for group rentals at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Coach"
-        headingBold="Buses"
-        subtitle="Large-group charters for Illinois and beyond"
+        heading="Arrive in Unforgettable Style with"
+        headingBold="Our Professional Chauffeurs"
+        subtitle="Coach Buses"
+        description="Spacious, comfortable charter coach buses for corporate events, sports teams, weddings, and group travel throughout the Southwest suburbs."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/coach-buses-hero.jpg"
         imagePosition="center center"
     />
+
 </x-layouts.page>

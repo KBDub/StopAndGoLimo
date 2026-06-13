@@ -32,12 +32,12 @@
     ogImageAlt="Airport shuttle service to O'Hare and Midway from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Airport"
-        headingBold="Shuttle"
-        subtitle="O'Hare and Midway airport transfers, available 24/7"
+        heading="24/7 Airport Shuttle Service"
+        headingBold="New Lenox & Naperville"
+        subtitle="Reliable Transportation for Every Flight"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/airport-ohare-midway.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

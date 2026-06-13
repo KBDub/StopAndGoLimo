@@ -93,4 +93,13 @@
         imageAspect="3/2"
     />
 
+    <x-sections.city-info-grid :boxes="[
+        ['heading' => 'New Lenox Area',    'items' => ['Downtown New Lenox', 'New Lenox Industrial Parks', 'Route 30 Corridor', 'Country Club Estates', 'Local Shopping & Transit Hubs']],
+        ['heading' => 'Plainfield Area',   'items' => ['Downtown Plainfield', 'Laraway Road & 127th Street Area', 'Settlers\' Park Neighborhood', 'Plainfield Central Business District', 'Local Schools & Community Centers']],
+        ['heading' => 'Naperville Area',   'items' => ['Naperville City Center', 'Riverwalk District', 'Downtown Naperville', 'North Naperville', 'West Naperville']],
+        ['heading' => 'Aurora Area',       'items' => ['Downtown Aurora', 'Fox Valley Area', 'North Aurora', 'West Aurora', 'Boulder Hill']],
+        ['heading' => 'Joliet Area',       'items' => ['Downtown Joliet', 'Historic District', 'Cathedral Area', 'Rialto Square Theatre', 'Pilcher Park Area']],
+        ['heading' => 'Chicago Suburbs',   'items' => ['Bolingbrook', 'Romeoville', 'Lockport', 'Homer Glen', 'Woodridge']],
+    ]" />
+
 </x-layouts.page>

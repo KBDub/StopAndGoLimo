@@ -76,4 +76,15 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.travel-in-style
+        heading="Charter Bus for"
+        headingBold="Corporate Events"
+        body="A charter bus removes the headache of coordinating individual rides and parking at corporate events. Everyone arrives together and on time. The ride also gives your team a chance to connect, review the agenda, and walk in ready. No logistics stress, just a smooth, professional arrival."
+        image="/images/sections/comfort-event-bus.jpg"
+        imageAlt="Comfortable charter bus ready for corporate event transportation"
+        :imageLeft="false"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
 </x-layouts.page>

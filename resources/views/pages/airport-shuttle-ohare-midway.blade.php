@@ -67,8 +67,12 @@
     />
 
     <x-sections.points-of-interest
-        heading="Our Commitment to"
-        headingBold="Every Traveler"
+        heading="Arrive with"
+        headingBold="Ease,"
+        headingTail=" Depart with"
+        headingBold2="Peace"
+        :columns="2"
+        icon="plane"
         :points="[
             ['name' => 'Guaranteed On-Time Airport Pickup', 'href' => '#'],
             ['name' => 'Dependable and Punctual',           'href' => '#'],

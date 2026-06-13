@@ -7,15 +7,16 @@
 ])
 
 @if($as === 'info-list')
-<div style="background: var(--navy-dark); padding: 2rem 1.75rem; border-radius: 0;">
-    <h3 class="font-head mb-4" style="font-size: 1.125rem; font-weight: 600; line-height: 1.3; color: var(--champagne);">
+<div style="background: var(--navy-dark); padding: 2rem 1.75rem; border-radius: 0; text-align: center;">
+    <h3 class="font-head mb-4" style="font-size: 1.125rem; font-weight: 600; line-height: 1.3; color: var(--champagne); text-align: center;">
         {{ $heading }}
     </h3>
     @if(count($items))
-        <ul style="padding-left: 1.25rem; margin: 0; list-style-type: disc;">
+        <ul style="padding: 0; margin: 0; list-style: none;">
             @foreach($items as $item)
-                <li class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--cloud-light); line-height: 1.6; margin-bottom: 0.35rem;">
-                    {{ $item }}
+                <li class="font-body" style="font-size: 1rem; font-weight: 400; color: var(--cloud-light); line-height: 1.6; margin-bottom: 0.35rem; display: flex; align-items: baseline; justify-content: center; gap: 0.45rem;">
+                    <span style="flex-shrink: 0; color: var(--champagne); font-size: 0.55rem; line-height: 1.8;">&#9679;</span>
+                    <span>{{ $item }}</span>
                 </li>
             @endforeach
         </ul>

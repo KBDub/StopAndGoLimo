@@ -32,12 +32,12 @@
     ogImageAlt="Wedding limousine service in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Wedding"
-        headingBold="Limousine"
-        subtitle="Elegant transportation for your perfect day"
+        heading="Make a Grand Entrance with"
+        headingBold="Picture Perfect Wedding Day Transport"
+        subtitle="Elegant Wedding Limo"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/wedding-hero.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

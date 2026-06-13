@@ -48,4 +48,15 @@
         body="Our diverse fleet of luxury vehicles is dedicated to providing exceptional transportation solutions for your wedding day. Whether you're envisioning an intimate ride or a grand procession, we offer a range of options to suit every preference."
     />
 
+    <x-sections.free-instant-quote
+        heading="Your"
+        headingBold="Private Sanctuary"
+        headingTail=""
+        body="Our limousines are designed to offer a serene and luxurious environment, perfect for your special day. With spacious leather seating, ambient lighting, and thoughtful amenities, each ride becomes a memorable part of your wedding experience."
+        image="/images/sections/wedding-limo-fleet.jpg"
+        imageAlt="Luxury wedding limousine interior with leather seating and ambient lighting"
+        imageAspect="16/10"
+        rightVariant="image"
+    />
+
 </x-layouts.page>

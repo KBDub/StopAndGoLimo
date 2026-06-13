@@ -351,14 +351,86 @@
 
         <div x-show="pagesOpen" x-cloak x-transition class="border-t px-5 py-6" style="border-color: rgba(255,255,255,0.08);">
             @php
-                $allPages = [];
-                foreach ($groups as $group) {
+                $allPages    = [];
+                $exportPages = [];
+                foreach ($groups as $groupSlug => $group) {
                     foreach ($group['pages'] as $page) {
-                        $allPages[] = $page;
+                        $allPages[]    = $page;
+                        $exportPages[] = [
+                            'name'       => $page['name'],
+                            'url'        => $page['url'],
+                            'group'      => $groupSlug,
+                            'components' => array_values($page['components'] ?? []),
+                        ];
                     }
                 }
-                usort($allPages, fn($a, $b) => strcmp($a['name'], $b['name']));
+                usort($allPages,    fn($a, $b) => strcmp($a['name'], $b['name']));
+                usort($exportPages, fn($a, $b) => strcmp($a['name'], $b['name']));
             @endphp
+
+            {{-- ── Export toolbar ── --}}
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-5 pb-4 border-b" style="border-color: rgba(255,255,255,0.08);">
+
+                {{-- Checkbox --}}
+                <label class="flex items-center gap-2 cursor-pointer select-none"
+                       title="When checked, each page entry includes its list of section components">
+                    <input
+                        type="checkbox"
+                        id="pm-export-sections"
+                        checked
+                        style="accent-color: var(--champagne); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0;"
+                    >
+                    <span class="font-body text-sm" style="color: var(--slate);">Include sections</span>
+                </label>
+
+                {{-- Export button — vanilla JS, no Alpine --}}
+                <button
+                    onclick="pmExportPages()"
+                    class="flex items-center gap-2 px-4 py-1.5 font-head font-semibold text-xs transition-colors border"
+                    style="color: var(--champagne); border-color: var(--champagne); background: transparent; letter-spacing: 0.04em;"
+                    onmouseenter="this.style.background='color-mix(in srgb, var(--champagne) 10%, transparent)'"
+                    onmouseleave="this.style.background='transparent'"
+                    title="Download all pages as a JSON file"
+                >
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0121 9.414V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Export JSON
+                </button>
+            </div>
+
+            {{-- Embedded export data (server-rendered, no HTTP round-trip on download) --}}
+            <script>
+            var _pmExportPages = {!! json_encode($exportPages, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!};
+
+            function pmExportPages() {
+                var includeSections = document.getElementById('pm-export-sections').checked;
+                var now  = new Date().toISOString();
+                var pages = _pmExportPages.map(function (p) {
+                    var entry = { name: p.name, url: p.url, group: p.group };
+                    if (includeSections && p.components && p.components.length) {
+                        entry.sections = p.components;
+                    }
+                    return entry;
+                });
+                var payload = JSON.stringify({
+                    exported_at : now,
+                    total_pages : pages.length,
+                    pages       : pages
+                }, null, 2);
+                var blob = new Blob([payload], { type: 'application/json' });
+                var a    = document.createElement('a');
+                a.href   = URL.createObjectURL(blob);
+                a.download = 'stop-go-pages-' + now.slice(0, 10) + '.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            }
+            </script>
+
+            {{-- Page grid --}}
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 @foreach($allPages as $page)
                     <x-ui.page-management-page-card

@@ -102,4 +102,13 @@
         ['heading' => 'Chicago Suburbs',   'items' => ['Bolingbrook', 'Romeoville', 'Lockport', 'Homer Glen', 'Woodridge']],
     ]" />
 
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional"
+        headingBold="Transportation Solutions"
+        body="As a trusted Chicago area transportation company, Stop & Go provides full-service airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Aurora, Joliet, and all surrounding suburbs. Our professional drivers and modern fleet deliver safe, comfortable, and on-time service with convenient access to I‑88, I‑355, and I‑55 for smooth airport transfers every time."
+        buttonText="Book Your Ride"
+        buttonHref="/bookings-reservations"
+        directions="Downtown Naperville to O'Hare: 25–40 minutes via I‑88 East to I‑294 North • Crossroads Area to Midway: 30–45 minutes • Naperville to airport terminals: 20–35 minutes via I‑88 East • All Naperville neighborhoods served for airport shuttle • Round-trip packages available for O'Hare and Midway"
+    />
+
 </x-layouts.page>

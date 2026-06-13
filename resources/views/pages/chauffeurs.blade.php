@@ -32,12 +32,13 @@
     ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Professional"
-        headingBold="Chauffeurs"
-        subtitle="Experienced, licensed drivers at your service"
+        heading="Professional Chauffeur Service in"
+        headingBold="New Lenox &amp; Plainfield, Illinois"
+        subtitle="Chauffeurs"
+        description="Professional chauffeur services for any event or personal need, offering a luxurious and stress-free ride."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/chauffeur-hero.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

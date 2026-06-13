@@ -108,4 +108,15 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.free-instant-quote
+        heading="Book Your"
+        headingBold="Charter Bus"
+        headingTail="Today"
+        body="Get a free instant quote for your next group trip. Whether you need a coach bus for a corporate outing, wedding, sports team, or group vacation, our professional drivers are ready to get your group there safely and on time."
+        image="/images/sections/coach-bus-quote.jpg"
+        imageAlt="Luxury coach bus ready for group charter service in New Lenox, Illinois"
+        imageAspect="3/2"
+        rightVariant="image"
+    />
+
 </x-layouts.page>

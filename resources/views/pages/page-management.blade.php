@@ -383,7 +383,7 @@
                     <span class="font-body text-sm" style="color: var(--slate);">Include sections</span>
                 </label>
 
-                {{-- Export button — vanilla JS, no Alpine --}}
+                {{-- Export JSON button — vanilla JS, no Alpine --}}
                 <button
                     onclick="pmExportPages()"
                     class="flex items-center gap-2 px-4 py-1.5 font-head font-semibold text-xs transition-colors border"
@@ -397,6 +397,22 @@
                               d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0121 9.414V19a2 2 0 01-2 2z"/>
                     </svg>
                     Export JSON
+                </button>
+
+                {{-- Export CSV button — vanilla JS, no Alpine --}}
+                <button
+                    onclick="pmExportCSV()"
+                    class="flex items-center gap-2 px-4 py-1.5 font-head font-semibold text-xs transition-colors border"
+                    style="color: var(--champagne); border-color: var(--champagne); background: transparent; letter-spacing: 0.04em;"
+                    onmouseenter="this.style.background='color-mix(in srgb, var(--champagne) 10%, transparent)'"
+                    onmouseleave="this.style.background='transparent'"
+                    title="Download all pages as a CSV spreadsheet"
+                >
+                    <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 10h18M3 14h18M10 3v18M14 3v18M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/>
+                    </svg>
+                    Export CSV
                 </button>
             </div>
 
@@ -423,6 +439,62 @@
                 var a    = document.createElement('a');
                 a.href   = URL.createObjectURL(blob);
                 a.download = 'stop-go-pages-' + now.slice(0, 10) + '.json';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(a.href);
+            }
+
+            /* ── CSV helpers ── */
+            function pmCsvCell(v) {
+                v = (v == null) ? '' : String(v);
+                if (v.indexOf(',') !== -1 || v.indexOf('"') !== -1 || v.indexOf('\n') !== -1 || v.indexOf('\r') !== -1) {
+                    return '"' + v.replace(/"/g, '""') + '"';
+                }
+                return v;
+            }
+            function pmPrettyComp(key) {
+                var s = key.replace(/^(sections\.|livewire:|ui\.|layout\.)/, '');
+                return s.replace(/[-_]/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+            }
+
+            function pmExportCSV() {
+                var includeSections = document.getElementById('pm-export-sections').checked;
+                var MAX = 20;
+
+                /* Header row */
+                var header = ['name', 'url', 'group'];
+                if (includeSections) {
+                    for (var i = 1; i <= MAX; i++) {
+                        header.push('section ' + i + ' name');
+                        header.push('section ' + i + ' value');
+                    }
+                }
+
+                var rows = [header.map(pmCsvCell).join(',')];
+
+                _pmExportPages.forEach(function (p) {
+                    var row = [p.name, p.url, p.group];
+                    if (includeSections) {
+                        var comps = p.components || [];
+                        for (var i = 0; i < MAX; i++) {
+                            if (i < comps.length) {
+                                row.push(pmPrettyComp(comps[i]));
+                                row.push(comps[i]);
+                            } else {
+                                row.push('');
+                                row.push('');
+                            }
+                        }
+                    }
+                    rows.push(row.map(pmCsvCell).join(','));
+                });
+
+                var now  = new Date().toISOString();
+                var blob = new Blob([rows.join('\r\n')], { type: 'text/csv' });
+                var a    = document.createElement('a');
+                a.href   = URL.createObjectURL(blob);
+                a.download = 'stop-go-pages-' + now.slice(0, 10) + '.csv';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);

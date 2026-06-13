@@ -8,3 +8,4 @@
 - [Approved decorative SVG icon exception](approved-svg-icons.md) — thumbs-up SVG is approved for x-sections.our-mission bullet items; branding rule §3.5 otherwise bans decorative icons.
 - [Nested button breaks Alpine scope](nested-button-alpine.md) — a <button> inside another <button> is invalid HTML; browser restructures the DOM, snapping Alpine's scope chain and causing "X is not defined" errors. Use sibling buttons in a flex row instead.
 - [Alpine nested x-data in Livewire](alpine-nested-xdata-livewire.md) — nested x-data scopes inside Livewire-rendered Blade components are unreliable; use vanilla JS onclick/ondblclick for any new interactive state inside an existing Alpine component.
+- [Section id required on x-sections components](section-id-required.md) — every <section> in an x-sections.* component needs id="component-name" + scroll-margin-top:80px; without it the /page-management scanner cannot detect the component.

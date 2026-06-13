@@ -83,6 +83,7 @@ The nav is rendered by `<x-nav.navbar />` and is included automatically by `<x-l
 -   **Component-based UI.** Every `<section>` is a Blade or Livewire component. No inline section markup in page files.
 -   **No e-commerce.** Lunar PHP is present but none of its cart, checkout, product, or order features are in use. Do not add them.
 -   **Nav uppercase is the only all-caps exception.** The `.nav-link` CSS class applies `text-transform: uppercase`. Everywhere else on the site, all-caps is forbidden.
+-   **Every `<section>` in a sections component MUST have `id="component-name"` and `style="... scroll-margin-top: 80px;"`.** This is required for the Developer Dashboard (`/page-management`) to detect and display the component correctly. A section tag without an `id` will not appear in the component registry. Example: `<section id="banner-image" style="background: ...; scroll-margin-top: 80px;">`.
 
 ## Developer Dashboard — `/page-management`
 

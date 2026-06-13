@@ -235,6 +235,7 @@ Cards use sharp corners, navy-light backgrounds on dark sections, white backgrou
 - **Max file length:** 800 lines per Blade file. Split into sub-components if longer.
 - **Content-column image spacing:** When an image grid appears between two text blocks inside a content column, use `margin-top: 2rem; margin-bottom: 2rem` (32px each). This is the standard text-to-image gap for left-aligned body content sections (e.g. `x-sections.our-key-offers`).
 - **Demo page rule:** Never add `x-sections.*` Blade components to `resources/views/pages/demo.blade.php`. The demo page is for `x-ui.*` (atomic UI) components only. Section components belong on their respective page files or the `/demo/live-components` page.
+- **Section `id` is required.** Every `<section>` element in an `x-sections.*` component MUST carry `id="component-name"` (matching the component's Blade filename slug) and `style="... scroll-margin-top: 80px;"`. Without the `id`, the Developer Dashboard (`/page-management`) scanner cannot detect or register the component. Example: `<section id="banner-image" style="background: var(--cloud-light); scroll-margin-top: 80px;">`.
 
 ---
 

@@ -20,7 +20,7 @@
     $textOrder    = $imageLeft ? 'order: 1;' : 'order: 0;';
 @endphp
 
-<section style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-16">
+<section id="banner-image" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-16">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">

@@ -59,4 +59,13 @@
         rightVariant="image"
     />
 
+    <x-sections.banner-image
+        headingPrefix="Celebrate in"
+        headingBold="Style"
+        body="Every detail of your ride is thoughtfully planned to ensure a smooth and enjoyable experience. From the moment you step into our limousines, our professional chauffeurs are dedicated to providing attentive service, ensuring timely arrivals, and accommodating your needs, allowing you to focus on celebrating your special day."
+        image="/images/sections/wedding-couple.jpg"
+        imageAlt="Couple after their wedding using Stop and Go Limo transportation"
+        imageAspect="730/460"
+    />
+
 </x-layouts.page>

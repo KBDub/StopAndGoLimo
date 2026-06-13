@@ -66,4 +66,14 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.travel-in-style
+        heading="Charter Bus for"
+        headingBold="Wedding Parties"
+        body="A charter bus makes wedding day travel easy and fun for everyone. The whole wedding party rides together to and from the venue, so no one gets lost and everyone arrives on time. Guests can skip the stress of finding parking, navigating unfamiliar routes, or arranging their own rides. Everyone sits back, relaxes, and keeps the celebration going. The couple can feel confident that reliable transportation is handled, while their bachelors, bachelorettes, and guests enjoy every mile."
+        image="/images/sections/wedding-party-bus.jpg"
+        imageAlt="Joyful wedding party celebrating outside the venue"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
 </x-layouts.page>

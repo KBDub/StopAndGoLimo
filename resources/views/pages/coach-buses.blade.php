@@ -87,4 +87,14 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.travel-in-style
+        heading="Charter Bus for"
+        headingBold="Group Vacations"
+        body="Group trips are exciting but can be hard to coordinate. A charter bus solves that. Everyone travels together in one vehicle, so no one gets left behind or lost. The shared ride gives your group more time to enjoy each other without the stress of traffic or unfamiliar routes. It is also more cost-efficient. One bus price covers everyone, instead of separate costs for gas, tolls, and parking. Sit back, relax, and let our professional drivers handle the road."
+        image="/images/sections/women-celebrating-limo.jpg"
+        imageAlt="Three women laughing and celebrating on a group trip with Stop and Go Limo"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
 </x-layouts.page>

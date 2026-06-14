@@ -72,7 +72,9 @@
         body="Stop & Go provides professional transportation in New Lenox with 24/7 airport shuttle service to O'Hare and Midway, luxury limousine service for weddings and events, and party bus rentals. Based at 400 E Lincoln Hwy, we serve all New Lenox neighborhoods with reliable local expertise. Whether you need a New Lenox airport shuttle, limo service, or party bus, our experienced local chauffeurs deliver exceptional service across the suburb."
     />
 
-    <x-sections.three-steps />
+    <x-sections.three-steps
+        :inverted="true"    
+    />
 
     <x-sections.free-instant-quote
         heading="Why choose"

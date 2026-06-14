@@ -88,6 +88,36 @@
     <x-sections.city-info-grid
         :boxes="[
             [
+                'heading' => 'Primary Cities',
+                'items'   => [
+                    'New Lenox limousine service',
+                    'Plainfield luxury limo service',
+                    'Naperville limousine services',
+                    'Aurora limo service Chicago',
+                    'Joliet limousine service',
+                ],
+            ],
+            [
+                'heading' => 'Nearby Suburbs',
+                'items'   => [
+                    'Bolingbrook luxury limousine',
+                    'Romeoville limo service',
+                    'Orland Park limousine services',
+                    'Frankfort limo service',
+                    'Mokena luxury limousine',
+                ],
+            ],
+            [
+                'heading' => 'Extended Suburbs',
+                'items'   => [
+                    'Tinley Park limo service',
+                    'Homer Glen luxury limo',
+                    'Lockport limousine services',
+                    'Lemont limo service',
+                    'Downers Grove luxury limo',
+                ],
+            ],
+            [
                 'heading' => 'Airport Access',
                 'items'   => [
                     'O\'Hare Airport limousine service',

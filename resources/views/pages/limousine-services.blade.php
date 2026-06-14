@@ -110,4 +110,15 @@
         ]"
     />
 
+    <x-sections.image-slide-in
+        headingPrefix="Professional Transportation"
+        headingBold="Solutions"
+        body="As New Lenox's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services, including airport shuttles, limousine service, party bus rentals, corporate transportation, and wedding vehicles. Our knowledge of New Lenox, Plainfield, and the entire Chicago Southwest suburbs ensures efficient and reliable service throughout the region, including direct trips to O'Hare and Midway airports."
+        buttonText="Contact Us"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/limousine-professional.jpg"
+        imageAlt="Professional Stop and Go limousine ready for client service in New Lenox, Illinois"
+        imageAspect="16/9"
+    />
+
 </x-layouts.page>

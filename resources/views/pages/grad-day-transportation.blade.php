@@ -37,7 +37,7 @@
         subtitle="Safe, on-time rides for your graduation celebration"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/graduation-day-hats-in-air.png"
         imagePosition="center center"
     />
 </x-layouts.page>

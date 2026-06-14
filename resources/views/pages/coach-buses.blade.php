@@ -42,7 +42,7 @@
         imagePosition="center center"
     />
 
-    {{-- TODO fix the subtitle prop on the hero section
+    {{-- TODO fix the subtitle prop on the section
         the 'subtitle="From Stop & Go Airport Shuttle Service Inc."'
         is actually the remainder of the header after the bolad
     --}}

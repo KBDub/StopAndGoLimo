@@ -177,8 +177,10 @@ final class ScanPageComponents
         $defaults   = [];
 
         // Match 'name' => value pairs; value may be a quoted string, null, [], or an expression.
+        // The single/double-quoted string alternatives use [^'\\]|\\. to correctly skip
+        // backslash-escaped characters (e.g. \'s inside a default string value).
         preg_match_all(
-            '/[\'"]([a-zA-Z_]\w*)[\'"](?:\s*=>\s*((?:[^,\'"\\[\\]]|\'[^\']*\'|"[^"]*"|\[[^\]]*\])+))?/s',
+            '/[\'"]([a-zA-Z_]\w*)[\'"](?:\s*=>\s*((?:[^,\'"\\[\\]]|\'(?:[^\'\\\\]|\\\\.)*\'|"(?:[^"\\\\]|\\\\.)*"|\[[^\]]*\])+))?/s',
             $propsBlock,
             $pm,
             PREG_SET_ORDER

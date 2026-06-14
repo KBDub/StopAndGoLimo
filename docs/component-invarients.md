@@ -14,36 +14,43 @@ This document catalogs every layout variant and metadata variant identifier used
 
 ## Layout Variant Names
 
-### Color & Theme (Inversion) — Standardization Target
+### Color & Theme (Inversion)
 
-The same concept — "flip this component to its opposite color scheme" — is currently expressed four different ways. All four should converge on `inverted`.
+**Canonical name: `inverted`**
 
-| Current prop | Component(s) | Default bg | What it does |
-|---|---|---|---|
-| `inverted` | `sections.banner-image`, `sections.company-highlight`, `sections.travel-in-style` | navy | Flips to white background |
-| `invertBg` | `sections.three-steps` | navy | Same as `inverted` — rename target |
-| `whiteBackground` | `sections.three-steps` | navy | White bg on a navy-default component — rename target |
-| `navy` | `sections.image-slide-in`, `sections.text-block-slide-in`, `ui.accordion` | white | Forces navy on a white-default component — inverse of `inverted`, rename target |
+`inverted` always means "flip from the component's default background." Direction does not matter — the prop name is the same regardless of whether the default is navy or white.
 
-**Standardization rule:** `inverted` always means "flip from the component's default background." A navy-default component with `:inverted="true"` renders white. A white-default component with `:inverted="true"` renders navy. The prop name is identical regardless of which direction the flip goes.
+| Status | Prop | Component(s) | Default bg | Action |
+|---|---|---|---|---|
+| canonical | `inverted` | `sections.banner-image`, `sections.company-highlight`, `sections.travel-in-style` | navy | No change |
+| non-canonical | `invertBg` | `sections.three-steps` | navy | Rename to `inverted` |
+| non-canonical | `whiteBackground` | `sections.three-steps` | navy | Rename to `inverted` |
+| non-canonical | `navy` | `sections.image-slide-in`, `sections.text-block-slide-in`, `ui.accordion` | white | Rename to `inverted` |
 
-Additional color/theme props that are not strict inversions:
+Out of scope for now (not strict inversions — separate decisions required):
 
 | Prop | Component(s) | Notes |
 |---|---|---|
-| `light` | `sections.areas-we-serve`, `sections.points-of-interest` | Light/white variant — candidate for `inverted` consolidation |
-| `background` | `sections.areas-we-serve`, `sections.image-slide-in`, `sections.text-block-slide-in`, `ui.banner-thin-cloud` | Raw background override (accepts a CSS value) |
-| `soft` | `sections.category-hero`, `ui.dropdown`, `ui.accordion` | Softer visual style (lighter borders, muted tones) |
+| `light` | `sections.areas-we-serve`, `sections.points-of-interest` | Partial-style variant, not a strict flip |
+| `background` | `sections.areas-we-serve`, `sections.image-slide-in`, `sections.text-block-slide-in`, `ui.banner-thin-cloud` | Raw CSS value override |
+| `soft` | `sections.category-hero`, `ui.dropdown`, `ui.accordion` | Softer style, not a color flip |
 
 ---
 
 ### Image Layout
 
+**Canonical name: `imagePosition`** — accepts a named value (`'left'`, `'right'`, `'top'`, etc.). Boolean props `imageLeft` and `imageRight` are non-canonical shorthands that must be replaced.
+
+| Status | Prop | Component(s) | Action |
+|---|---|---|---|
+| canonical | `imagePosition` | `sections.category-hero`, `sections.who-are-we` | No change |
+| non-canonical | `imageLeft` | `sections.banner-image`, `sections.travel-in-style`, `ui.banner-full-bleed-2-image` | Replace with `:imagePosition="'left'"` |
+| non-canonical | `imageRight` | `ui.banner-full-bleed-2-image` | Replace with `:imagePosition="'right'"` |
+
+Already canonical — no changes needed:
+
 | Prop | Component(s) | Notes |
 |---|---|---|
-| `imageLeft` | `sections.banner-image`, `sections.travel-in-style`, `ui.banner-full-bleed-2-image` | Image on the left side |
-| `imageRight` | `ui.banner-full-bleed-2-image` | Image on the right side |
-| `imagePosition` | `sections.category-hero`, `sections.who-are-we` | Named position slot (e.g. `left`, `right`, `top`) |
 | `imageAspect` | `sections.image-slide-in`, `sections.party-limo-image`, `sections.banner-image`, `sections.free-instant-quote` | Aspect ratio of the image container |
 | `imageObjectPosition` | `sections.party-limo-image`, `sections.banner-image`, `sections.free-instant-quote` | CSS `object-position` value for cropping |
 | `center` | `sections.party-limo-image`, `sections.banner-image`, `sections.free-instant-quote` | Centers the image or content block |
@@ -147,23 +154,55 @@ These props carry page-specific content. The same component used on 10 pages may
 
 ## Standardization Roadmap
 
-### Phase 1 — Inversion prop unification
+The work happens **inside the component Blade files themselves**. Each non-canonical prop is renamed to its canonical form in the component's `@props` block and template logic. Every page that passes the old prop name is updated at the same time. The Page Management scanner then automatically sees the canonical name — no aliases or extra entries are added to the PM page.
 
-All "flip the color scheme" props should be renamed to `inverted`.
+**Rule: no non-canonical prop name is ever added to `$layoutPropNames`.**
 
-| Component | Old prop | New prop |
+---
+
+### Phase 1 — Inversion: rename to `inverted`
+
+Each component below has its internal prop renamed and all page call-sites updated.
+
+| Component | Remove | Replace with | Page call-sites to update |
+|---|---|---|---|
+| `sections.three-steps` | `invertBg` | `inverted` | `party-bus-aurora`, `party-bus-rental-naperville` |
+| `sections.three-steps` | `whiteBackground` | `inverted` | `party-bus-rental-chicago` |
+| `sections.image-slide-in` | `navy` | `inverted` | All pages using `:navy="true"` |
+| `sections.text-block-slide-in` | `navy` | `inverted` | All pages using `:navy="true"` |
+| `ui.accordion` | `navy` | `inverted` | All pages using `:navy="true"` |
+
+After this phase, `$layoutPropNames` entries `whiteBackground` and `imageLeft`/`imageRight` are removed and replaced by the already-present `inverted` and `imagePosition`.
+
+---
+
+### Phase 2 — Image layout: rename to `imagePosition`
+
+Each component's `imageLeft` / `imageRight` boolean is replaced by `imagePosition` accepting `'left'` or `'right'`. Internal template logic is updated to branch on the value instead of the boolean.
+
+| Component | Remove | Replace with | Default |
+|---|---|---|---|
+| `sections.banner-image` | `imageLeft` (bool) | `imagePosition` (string) | `'right'` |
+| `sections.travel-in-style` | `imageLeft` (bool) | `imagePosition` (string) | `'right'` |
+| `ui.banner-full-bleed-2-image` | `imageLeft` (bool), `imageRight` (bool) | `imagePosition` (string) | `'left'` |
+
+Page call-sites: anywhere `:imageLeft="true"` or `:imageRight="true"` is passed — update to `:imagePosition="'left'"` or `:imagePosition="'right'"`.
+
+---
+
+### Phase 3 — Structure & Visibility Toggles
+
+All toggle names are already canonical. No renames needed. Verify call-sites are consistent.
+
+| Canonical prop | Component(s) | Status |
 |---|---|---|
-| `sections.three-steps` | `invertBg` | `inverted` |
-| `sections.three-steps` | `whiteBackground` | `inverted` |
-| `sections.image-slide-in` | `navy` | `inverted` |
-| `sections.text-block-slide-in` | `navy` | `inverted` |
-| `ui.accordion` | `navy` | `inverted` |
-| `sections.areas-we-serve` | `light` | `inverted` |
-| `sections.points-of-interest` | `light` | `inverted` |
-
-### Phase 2 — Page Management registry
-
-Once prop names are standardized, update `$layoutPropNames` in `resources/views/pages/page-management.blade.php` to replace `invertBg`, `whiteBackground`, `navy`, and `light` with `inverted` and remove the old names.
+| `columns` | `sections.points-of-interest`, `sections.company-highlight` | Canonical |
+| `rightVariant` | `sections.free-instant-quote` | Canonical |
+| `slideIn` | `sections.travel-in-style` | Canonical |
+| `headingTwoLines` | `sections.category-hero` | Canonical |
+| `buttonRadius` | `sections.category-hero` | Canonical |
+| `showInfoBox` | `sections.free-instant-quote` | Canonical |
+| `showSingleButton` | `sections.share-your-experience` | Canonical |
 
 ---
 
@@ -171,10 +210,10 @@ Once prop names are standardized, update `$layoutPropNames` in `resources/views/
 
 The scanner in `app/Actions/ScanPageComponents.php` reads each component's `@props([...])` block via `readComponentDefaults()`. Any prop whose page-usage value differs from its default is recorded as an override.
 
-The `$layoutPropNames` array in `page-management.blade.php` controls which overrides surface as **Layout Variants** vs **Meta Variants** in the registry cards.
+The `$layoutPropNames` array in `page-management.blade.php` controls which overrides surface as **Layout Variants** vs **Meta Variants** in the registry cards. It holds only canonical names. As non-canonical props are eliminated from components, their old names are removed from this list — never supplemented with aliases.
 
-Current `$layoutPropNames` list:
+Current `$layoutPropNames` list (canonical names only):
 `inverted`, `imageLeft`, `imageRight`, `background`, `columns`, `rightVariant`, `slideIn`, `showInfoBox`, `imagePosition`, `imageAspect`, `headingTwoLines`, `buttonRadius`, `imageObjectPosition`, `imageObjectFit`, `size`, `variant`, `layout`, `direction`, `as`, `radius`, `whiteBackground`
 
-Missing from current list (should be added):
-`invertBg`, `navy`, `light`, `soft`, `center`, `splitRatio`, `showSingleButton`, `rounded`
+After Phase 1 + Phase 2 complete, remove from this list: `imageLeft`, `imageRight`, `whiteBackground`
+(They will no longer exist as prop names in any component.)

@@ -40,4 +40,11 @@
         image="/images/sections/graduation-day-hats-in-air.png"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Celebrate Your Big Day"
+        headingBold="With Stylish Grad Party Transportation"
+        heading=""
+        body="Celebrate your graduation in style with safe, comfortable, and memorable Grad Party transportation for you and your loved ones. Our rides ensure everyone enjoys the day with ease and excitement, creating lasting memories for both students and family. Arrive together, celebrate your achievement, and make this milestone a moment you will cherish forever."
+    />
 </x-layouts.page>

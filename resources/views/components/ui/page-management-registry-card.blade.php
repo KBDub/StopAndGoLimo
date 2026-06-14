@@ -8,32 +8,34 @@
     'isLivewire',
     'usageCount',
     'compId',
-    'propVariants' => [],
+    'layoutVariants' => [],
+    'metaVariants'   => [],
 ])
 
 @php
-    $copyKey    = $isLivewire ? 'livewire:' . $displayComp : $comp;
-    $copyKeyJs  = addslashes($copyKey);
-    // Anchor suffix — only sections get a stable #id; layouts/ui/nav fall back to top of page
+    $copyKey      = $isLivewire ? 'livewire:' . $displayComp : $comp;
+    $copyKeyJs    = addslashes($copyKey);
     $anchorSuffix = Str::startsWith($comp, 'sections.') ? '#' . Str::after($comp, '.') : '';
+    $hasLayout    = !empty($layoutVariants);
+    $hasMeta      = !empty($metaVariants);
 @endphp
 
 <div
     id="{{ $compId }}"
-    x-data="{ expanded: false }"
+    x-data="{ expanded: false, showMeta: false }"
     @pm-expand.stop="expanded = true"
     class="overflow-hidden transition-all duration-300 border"
     style="background: var(--navy-dark); border-color: rgba(255,255,255,0.09);"
 >
-    {{-- Header row: toggle (flex-1) + copy button (sibling, never nested) --}}
+    {{-- Header row --}}
     <div class="group/row flex items-stretch"
          onmouseenter="this.style.background='rgba(255,255,255,0.03)'"
          onmouseleave="this.style.background='transparent'">
 
-        {{-- Expand toggle --}}
+        {{-- Expand toggle (flex-1, no badge inside) --}}
         <button
             @click="expanded = !expanded"
-            class="flex-1 text-left px-4 py-4 transition-colors group/header"
+            class="flex-1 text-left px-4 py-4 transition-colors"
             style="background: transparent;"
         >
             <div class="flex items-center gap-3">
@@ -53,14 +55,38 @@
                     </div>
                     <p class="font-mono text-xs truncate mt-0.5" style="color: var(--slate);">{{ $copyKey }}</p>
                 </div>
-                <span class="shrink-0 inline-flex items-center px-2.5 py-1 font-head font-bold text-sm"
-                      style="background: var(--champagne); color: var(--navy);">
-                    {{ $usageCount }}
-                </span>
             </div>
         </button>
 
-        {{-- Copy button — sibling, not nested inside toggle button --}}
+        {{-- Meta-variants toggle — only when there are meta props --}}
+        @if($hasMeta)
+            <button
+                @click="showMeta = !showMeta"
+                title="Toggle metadata prop variants"
+                class="shrink-0 self-stretch flex items-center px-2.5 transition-colors"
+                :style="showMeta ? 'color: var(--champagne); opacity: 1;' : 'color: var(--slate); opacity: 0.45;'"
+                onmouseenter="this.style.opacity='1'"
+                onmouseleave="if(!this.closest('[x-data]').__x.$data.showMeta) this.style.opacity='0.45'"
+            >
+                {{-- Unchecked: visible by default before Alpine boots (no x-cloak) --}}
+                <svg x-show="!showMeta" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="1" stroke-width="2"/>
+                </svg>
+                {{-- Checked: hidden until Alpine sets showMeta=true --}}
+                <svg x-show="showMeta" x-cloak class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="1" stroke-width="2"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 12l4 4 6-7"/>
+                </svg>
+            </button>
+        @endif
+
+        {{-- Instance count badge --}}
+        <span class="shrink-0 inline-flex items-center self-stretch px-2.5 font-head font-bold text-sm"
+              style="background: var(--champagne); color: var(--navy);">
+            {{ $usageCount }}
+        </span>
+
+        {{-- Copy button --}}
         <button
             title="Copy component name"
             class="shrink-0 px-3 self-stretch flex items-center transition-all opacity-40 group-hover/row:opacity-100"
@@ -84,7 +110,59 @@
          class="border-t p-4"
          style="border-color: rgba(255,255,255,0.07); background: var(--navy);">
 
-        {{-- Pages list --}}
+        {{-- ── Layout Prop Variants (above page list) ─────────── --}}
+        @if($hasLayout)
+            <div class="mb-4">
+                <h4 class="font-head text-xs font-semibold mb-2"
+                    style="color: var(--slate); text-transform: uppercase; letter-spacing: 0.07em;">
+                    Layout Variants
+                </h4>
+                <div class="space-y-1.5">
+                    @foreach($layoutVariants as $propName => $info)
+                        @php
+                            $lv_default       = $info['default'];
+                            $lv_counts        = $info['counts'] ?? [];
+                            $lv_override_sum  = array_sum($lv_counts);
+                            $lv_default_count = $usageCount - $lv_override_sum;
+                        @endphp
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="font-mono text-[11px] font-semibold shrink-0"
+                                  style="color: var(--champagne); min-width: 5rem;">{{ $propName }}</span>
+                            {{-- Non-default value pills --}}
+                            @foreach($lv_counts as $val => $cnt)
+                                @php
+                                    $lv_val_lower = strtolower($val);
+                                    if ($lv_val_lower === 'true') {
+                                        $pillStyle = 'background: color-mix(in srgb, var(--champagne) 15%, transparent); color: var(--champagne); border-color: color-mix(in srgb, var(--champagne) 40%, transparent);';
+                                    } elseif ($lv_val_lower === 'false') {
+                                        $pillStyle = 'background: color-mix(in srgb, var(--azure) 10%, transparent); color: var(--cloud); border-color: rgba(255,255,255,0.12);';
+                                    } else {
+                                        $pillStyle = 'background: color-mix(in srgb, var(--azure) 8%, transparent); color: var(--cloud-light); border-color: rgba(255,255,255,0.10);';
+                                    }
+                                @endphp
+                                <span class="inline-flex items-center gap-1 px-1.5 py-0.5 font-mono text-[10px] border"
+                                      style="{{ $pillStyle }}"
+                                      title="{{ $val }}">
+                                    {{ $val }}
+                                    <span style="opacity: 0.6;">· {{ $cnt }}</span>
+                                </span>
+                            @endforeach
+                            {{-- Default value pill (dashed border, muted) --}}
+                            @if($lv_default !== null && $lv_default_count > 0)
+                                <span class="inline-flex items-center gap-1 px-1.5 py-0.5 font-mono text-[10px] border"
+                                      style="color: var(--slate); border-color: rgba(255,255,255,0.12); border-style: dashed;"
+                                      title="default value">
+                                    {{ $lv_default }}
+                                    <span style="opacity: 0.55;">· {{ $lv_default_count }} def</span>
+                                </span>
+                            @endif
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @endif
+
+        {{-- ── Pages list ──────────────────────────────────────── --}}
         <h4 class="font-head text-xs font-semibold mb-2" style="color: var(--slate);">
             Used on {{ $usageCount }} {{ \Illuminate\Support\Str::plural('page', $usageCount) }}
         </h4>
@@ -111,14 +189,16 @@
             @endforeach
         </div>
 
-        {{-- Prop variants across pages --}}
-        @if(!empty($propVariants))
-            <div class="mt-4 pt-4 border-t" style="border-color: rgba(255,255,255,0.07);">
+        {{-- ── Metadata Prop Variants (below page list, toggleable) ── --}}
+        @if($hasMeta)
+            <div x-show="showMeta" x-cloak x-transition
+                 class="mt-4 pt-4 border-t"
+                 style="border-color: rgba(255,255,255,0.07);">
                 <h4 class="font-head text-xs font-semibold mb-3" style="color: var(--slate);">
-                    Prop variants across pages
+                    Metadata prop variants
                 </h4>
                 <div class="space-y-2.5">
-                    @foreach($propVariants as $propName => $info)
+                    @foreach($metaVariants as $propName => $info)
                         @php
                             $distinctValues = $info['values'];
                             $defaultVal     = $info['default'];

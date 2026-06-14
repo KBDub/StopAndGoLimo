@@ -82,26 +82,53 @@
     $sharedUniqueCount = count($sharedUsageMap);
     $pageOnlyCount     = count($componentUsageMap) - $sharedUniqueCount;
 
-    // Build cross-page prop variant map: compKey → propName → {default, values[]}
-    $componentPropVariantsMap = [];
+    // Props that control layout/visual structure (not content)
+    $layoutPropNames = [
+        'inverted', 'imageLeft', 'imageRight', 'background', 'columns',
+        'rightVariant', 'slideIn', 'showInfoBox', 'imagePosition',
+        'imageAspect', 'headingTwoLines', 'buttonRadius', 'imageObjectPosition',
+        'imageObjectFit', 'size', 'variant', 'layout', 'direction', 'as', 'radius',
+    ];
+
+    // Split props into layout variants (structural) and meta variants (content)
+    // Layout variants track per-value counts; meta variants track distinct values only.
+    $componentLayoutVariantsMap = [];
+    $componentMetaVariantsMap   = [];
     foreach ($groups as $group) {
         foreach ($group['pages'] as $page) {
             foreach ($page['all_components'] as $compStruct) {
                 $k = $compStruct['key'];
                 foreach ($compStruct['overrides'] as $prop => $data) {
-                    $cleanProp = ltrim($prop, ':');
-                    if (!isset($componentPropVariantsMap[$k][$cleanProp])) {
-                        $componentPropVariantsMap[$k][$cleanProp] = [
-                            'default' => $data['default'],
-                            'values'  => [],
-                        ];
-                    }
-                    if ($data['default'] !== null && $componentPropVariantsMap[$k][$cleanProp]['default'] === null) {
-                        $componentPropVariantsMap[$k][$cleanProp]['default'] = $data['default'];
-                    }
+                    $cleanProp  = ltrim($prop, ':');
                     $trimmedVal = trim($data['value'], '"\'');
-                    if (!in_array($trimmedVal, $componentPropVariantsMap[$k][$cleanProp]['values'], true)) {
-                        $componentPropVariantsMap[$k][$cleanProp]['values'][] = $trimmedVal;
+                    $isLayout   = in_array($cleanProp, $layoutPropNames, true)
+                                  || in_array($trimmedVal, ['true', 'false'], true);
+
+                    if ($isLayout) {
+                        if (!isset($componentLayoutVariantsMap[$k][$cleanProp])) {
+                            $componentLayoutVariantsMap[$k][$cleanProp] = [
+                                'default' => $data['default'],
+                                'counts'  => [],
+                            ];
+                        }
+                        if ($data['default'] !== null && $componentLayoutVariantsMap[$k][$cleanProp]['default'] === null) {
+                            $componentLayoutVariantsMap[$k][$cleanProp]['default'] = $data['default'];
+                        }
+                        $componentLayoutVariantsMap[$k][$cleanProp]['counts'][$trimmedVal]
+                            = ($componentLayoutVariantsMap[$k][$cleanProp]['counts'][$trimmedVal] ?? 0) + 1;
+                    } else {
+                        if (!isset($componentMetaVariantsMap[$k][$cleanProp])) {
+                            $componentMetaVariantsMap[$k][$cleanProp] = [
+                                'default' => $data['default'],
+                                'values'  => [],
+                            ];
+                        }
+                        if ($data['default'] !== null && $componentMetaVariantsMap[$k][$cleanProp]['default'] === null) {
+                            $componentMetaVariantsMap[$k][$cleanProp]['default'] = $data['default'];
+                        }
+                        if (!in_array($trimmedVal, $componentMetaVariantsMap[$k][$cleanProp]['values'], true)) {
+                            $componentMetaVariantsMap[$k][$cleanProp]['values'][] = $trimmedVal;
+                        }
                     }
                 }
             }
@@ -301,7 +328,8 @@
                     :isLivewire="$isLivewire"
                     :usageCount="$usageCount"
                     :compId="$compId"
-                    :propVariants="$componentPropVariantsMap[$comp] ?? []"
+                    :layoutVariants="$componentLayoutVariantsMap[$comp] ?? []"
+                    :metaVariants="$componentMetaVariantsMap[$comp] ?? []"
                 />
             @endforeach
         </div>

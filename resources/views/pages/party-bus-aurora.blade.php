@@ -48,7 +48,7 @@
         body="Looking for the ultimate way to party in Aurora? Stop settling for ordinary nights. Our party bus Aurora service brings the celebration to you with luxury, booming music, dazzling lights, and an energy-filled ride your friends will talk about for years."
     />
 
-    <x-sections.three-steps :invertBg="true" />
+    <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
         rightVariant="description"
@@ -75,7 +75,7 @@
         buttonHref="/bookings-reservations"
         image="/images/sections/party-bus-aurora.jpg"
         imageAlt="Guests celebrating on a party bus in Aurora, Illinois"
-        :imageLeft="false"
+        :imagePosition="'right'"
         inverted=true
     />
 

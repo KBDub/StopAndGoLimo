@@ -62,7 +62,7 @@
     />
 
     <x-sections.three-steps
-        :whiteBackground="true"
+        :inverted="true"
     />
 
     <x-sections.free-instant-quote
@@ -91,7 +91,7 @@
         buttonHref="/bookings-reservations"
         image="/images/heroes/party-bus-rental-chicago.png"
         imageAlt="Luxury party bus exterior serving Chicago and the surrounding suburbs"
-        :imageLeft="false"
+        :imagePosition="'right'"
         inverted=true
     />
 

@@ -16,13 +16,10 @@
             'body'   => 'Once confirmed, your luxury ride is locked in. All that\'s left is to sit back and enjoy the experience!',
         ],
     ],
-    'whiteBackground' => false,
-    'invertBg'        => false,
+    'inverted' => false,
 ])
 
-@php $usesWhiteBg = $whiteBackground || $invertBg; @endphp
-
-<section id="three-steps" style="background: {{ $usesWhiteBg ? 'var(--white)' : 'var(--navy)' }}; scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
+<section id="three-steps" style="background: {{ $inverted ? 'var(--white)' : 'var(--navy)' }}; scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

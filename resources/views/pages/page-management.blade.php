@@ -85,11 +85,10 @@
     // Props that control layout/visual structure (not content).
     // Classification is name-based only — no boolean-value heuristics.
     $layoutPropNames = [
-        'inverted', 'imageLeft', 'imageRight', 'background', 'columns',
-        'rightVariant', 'slideIn', 'showInfoBox', 'imagePosition',
-        'imageAspect', 'headingTwoLines', 'buttonRadius', 'imageObjectPosition',
-        'imageObjectFit', 'size', 'variant', 'layout', 'direction', 'as', 'radius',
-        'whiteBackground',
+        'inverted', 'imagePosition', 'imageAspect', 'imageObjectPosition',
+        'imageObjectFit', 'background', 'columns', 'rightVariant', 'slideIn',
+        'showInfoBox', 'headingTwoLines', 'buttonRadius', 'size', 'variant',
+        'layout', 'direction', 'as', 'radius',
     ];
 
     // Split props into layout variants (structural) and meta variants (content).

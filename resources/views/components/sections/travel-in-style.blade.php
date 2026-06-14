@@ -9,7 +9,7 @@
     'buttonHref'  => '/about-us',
     'image'       => '/images/sections/travel-in-style.jpg',
     'imageAlt'    => 'Guests enjoying a luxury limo ride with Stop and Go Airport Shuttle',
-    'imageLeft'   => true,
+    'imagePosition' => 'left',
     'inverted'    => false,
     'slideIn'     => '',
 ])
@@ -22,10 +22,10 @@
     $bodyColor = $inverted ? 'color: var(--cloud);'                   : 'color: var(--slate);';
     $panelBg   = $inverted ? 'background: var(--navy); padding: 2.5rem;' : '';
 
-    // imageLeft=true  → image on left, text on right (default)
-    // imageLeft=false → image on right, text on left
-    $imgOrder = $imageLeft ? 'order-first lg:order-first' : 'order-first lg:order-last';
-    $txtOrder = $imageLeft ? 'order-last lg:order-last'  : 'order-last lg:order-first';
+    // imagePosition='left'  → image on left, text on right (default)
+    // imagePosition='right' → image on right, text on left
+    $imgOrder = $imagePosition === 'left' ? 'order-first lg:order-first' : 'order-first lg:order-last';
+    $txtOrder = $imagePosition === 'left' ? 'order-last lg:order-last'   : 'order-last lg:order-first';
 
     // Slide-in variant — mirrors the sg-slide-in pattern from image-slide-in.blade.php
     $doSlide       = $slideIn === 'left';

@@ -25,7 +25,7 @@ This document catalogs every layout variant and metadata variant identifier used
 | canonical | `inverted` | `sections.banner-image`, `sections.company-highlight`, `sections.travel-in-style` | navy | No change |
 | non-canonical | `invertBg` | `sections.three-steps` | navy | Rename to `inverted` |
 | non-canonical | `whiteBackground` | `sections.three-steps` | navy | Rename to `inverted` |
-| non-canonical | `navy` | `sections.image-slide-in`, `sections.text-block-slide-in`, `ui.accordion` | white | Rename to `inverted` |
+| ~~non-canonical~~ | ~~`navy`~~ | ~~`sections.image-slide-in`, `sections.text-block-slide-in`, `ui.accordion`~~ | — | **Not a prop.** `'navy'` is the string default *value* of `background`/`variant` in these components, not a prop name. No rename needed. |
 
 Out of scope for now (not strict inversions — separate decisions required):
 
@@ -160,49 +160,48 @@ The work happens **inside the component Blade files themselves**. Each non-canon
 
 ---
 
-### Phase 1 — Inversion: rename to `inverted`
+### Phase 1 — Inversion: rename to `inverted` ✅ Complete
 
-Each component below has its internal prop renamed and all page call-sites updated.
-
-| Component | Remove | Replace with | Page call-sites to update |
+| Component | Removed | Replaced with | Call-sites updated |
 |---|---|---|---|
 | `sections.three-steps` | `invertBg` | `inverted` | `party-bus-aurora`, `party-bus-rental-naperville` |
 | `sections.three-steps` | `whiteBackground` | `inverted` | `party-bus-rental-chicago` |
-| `sections.image-slide-in` | `navy` | `inverted` | All pages using `:navy="true"` |
-| `sections.text-block-slide-in` | `navy` | `inverted` | All pages using `:navy="true"` |
-| `ui.accordion` | `navy` | `inverted` | All pages using `:navy="true"` |
+| `sections.image-slide-in` | — | — | `'navy'` was the string *value* of `background`, not a prop name. No rename needed. |
+| `sections.text-block-slide-in` | — | — | Same — `'navy'` is the default value of `background`. |
+| `ui.accordion` | — | — | Same — `'navy'` is the default value of `variant`. |
 
-After this phase, `$layoutPropNames` entries `whiteBackground` and `imageLeft`/`imageRight` are removed and replaced by the already-present `inverted` and `imagePosition`.
+`$layoutPropNames` updated: `whiteBackground` removed (prop no longer exists in any component).
 
 ---
 
-### Phase 2 — Image layout: rename to `imagePosition`
+### Phase 2 — Image layout: rename to `imagePosition` ✅ Complete
 
-Each component's `imageLeft` / `imageRight` boolean is replaced by `imagePosition` accepting `'left'` or `'right'`. Internal template logic is updated to branch on the value instead of the boolean.
+Boolean `imageLeft` props replaced by `imagePosition` (string: `'left'` / `'right'`). Internal template logic updated to branch on value.
 
-| Component | Remove | Replace with | Default |
-|---|---|---|---|
-| `sections.banner-image` | `imageLeft` (bool) | `imagePosition` (string) | `'right'` |
-| `sections.travel-in-style` | `imageLeft` (bool) | `imagePosition` (string) | `'right'` |
-| `ui.banner-full-bleed-2-image` | `imageLeft` (bool), `imageRight` (bool) | `imagePosition` (string) | `'left'` |
+**Note on `ui.banner-full-bleed-2-image`:** its `imageLeft` and `imageRight` props are **image source URLs** (not position booleans) — they render the left and right panel images respectively. They are not position controls and are not in scope for this rename.
 
-Page call-sites: anywhere `:imageLeft="true"` or `:imageRight="true"` is passed — update to `:imagePosition="'left'"` or `:imagePosition="'right'"`.
+| Component | Removed | Replaced with | Default | Call-sites updated |
+|---|---|---|---|---|
+| `sections.banner-image` | `imageLeft` (bool) | `imagePosition` (string) | `'left'` | `party-bus-rental-chicago`, `party-bus-rental-naperville`, `party-bus-aurora` |
+| `sections.travel-in-style` | `imageLeft` (bool) | `imagePosition` (string) | `'left'` | `coach-buses` (3×), `limousine-services`, `party-bus-rental-chicago`, `party-bus-rental-naperville`, `party-bus-aurora` |
+
+`$layoutPropNames` updated: `imageLeft` and `imageRight` removed (neither exists as a position prop in any component).
 
 ---
 
 ### Phase 3 — Structure & Visibility Toggles
 
-All toggle names are already canonical. No renames needed. Verify call-sites are consistent.
+All toggle names are already canonical. No renames needed.
 
-| Canonical prop | Component(s) | Status |
-|---|---|---|
-| `columns` | `sections.points-of-interest`, `sections.company-highlight` | Canonical |
-| `rightVariant` | `sections.free-instant-quote` | Canonical |
-| `slideIn` | `sections.travel-in-style` | Canonical |
-| `headingTwoLines` | `sections.category-hero` | Canonical |
-| `buttonRadius` | `sections.category-hero` | Canonical |
-| `showInfoBox` | `sections.free-instant-quote` | Canonical |
-| `showSingleButton` | `sections.share-your-experience` | Canonical |
+| Canonical prop | Component(s) |
+|---|---|
+| `columns` | `sections.points-of-interest`, `sections.company-highlight` |
+| `rightVariant` | `sections.free-instant-quote` |
+| `slideIn` | `sections.travel-in-style` |
+| `headingTwoLines` | `sections.category-hero` |
+| `buttonRadius` | `sections.category-hero` |
+| `showInfoBox` | `sections.free-instant-quote` |
+| `showSingleButton` | `sections.share-your-experience` |
 
 ---
 
@@ -210,10 +209,7 @@ All toggle names are already canonical. No renames needed. Verify call-sites are
 
 The scanner in `app/Actions/ScanPageComponents.php` reads each component's `@props([...])` block via `readComponentDefaults()`. Any prop whose page-usage value differs from its default is recorded as an override.
 
-The `$layoutPropNames` array in `page-management.blade.php` controls which overrides surface as **Layout Variants** vs **Meta Variants** in the registry cards. It holds only canonical names. As non-canonical props are eliminated from components, their old names are removed from this list — never supplemented with aliases.
+The `$layoutPropNames` array in `page-management.blade.php` controls which overrides surface as **Layout Variants** vs **Meta Variants** in the registry cards. It holds only canonical names. Non-canonical props are eliminated from components and removed from this list — never supplemented with aliases.
 
-Current `$layoutPropNames` list (canonical names only):
-`inverted`, `imageLeft`, `imageRight`, `background`, `columns`, `rightVariant`, `slideIn`, `showInfoBox`, `imagePosition`, `imageAspect`, `headingTwoLines`, `buttonRadius`, `imageObjectPosition`, `imageObjectFit`, `size`, `variant`, `layout`, `direction`, `as`, `radius`, `whiteBackground`
-
-After Phase 1 + Phase 2 complete, remove from this list: `imageLeft`, `imageRight`, `whiteBackground`
-(They will no longer exist as prop names in any component.)
+Current `$layoutPropNames` list (post Phase 1 + 2):
+`inverted`, `imagePosition`, `imageAspect`, `imageObjectPosition`, `imageObjectFit`, `background`, `columns`, `rightVariant`, `slideIn`, `showInfoBox`, `headingTwoLines`, `buttonRadius`, `size`, `variant`, `layout`, `direction`, `as`, `radius`

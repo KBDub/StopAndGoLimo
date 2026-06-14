@@ -64,7 +64,7 @@
         body="Renting a coach bus offers numerous benefits for sports teams, particularly in terms of convenience, comfort, and logistics. Traveling on a charter bus ensures the entire team can stay together, fostering camaraderie during the ride there and back. It's also an excellent opportunity for players to focus and discuss strategies on the way to their destination while getting into a winning mindset. On the way home, the team can relax in reclining seats and unwind comfortably without dealing with the stresses of driving and arranging car rides. Our spacious charter buses allow athletes plenty of space to stretch out comfortably."
         image="/images/sections/sports-teams-bus.jpg"
         imageAlt="Sports team members joining hands together before a game"
-        :imageLeft="false"
+        :imagePosition="'right'"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
     />
@@ -85,7 +85,7 @@
         body="Charter bus travel eliminates the stress of coordinating individual travel arrangements and parking concerns, ensuring everyone arrives at corporate events punctually and together. It also offers a valuable opportunity for team building and event preparation, allowing attendees to strategize and review event proceedings during their journey."
         image="/images/sections/comfort-event-bus.jpg"
         imageAlt="Comfortable charter bus ready for corporate event transportation"
-        :imageLeft="false"
+        :imagePosition="'right'"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
     />
@@ -106,7 +106,7 @@
         body="There are many Chicago attractions and iconic attractions our clients can enjoy, whether you are a local or visiting for a short time. If you want to spend time outdoors, check out Navy Pier, Lake Michigan, Hyde Park, Chicago Riverwalk, and Millennium Park. Skydeck Chicago is a must-visit for some of the best views in the Windy City. Those who love science and art have a wide range of attractions to visit, including the Shedd Aquarium, Lincoln Park Zoo, Field Museum, and Art Institute of Chicago. Sports fans should also visit some local sports venues, such as the United Center, Soldier Field, Wintrust Arena, Rate Field, and Wrigley Field, and see a game if possible. Make sure you don't leave this fabulous city without trying authentic deep-dish pizza. Restaurants cater to every craving and preference, and plenty of local businesses serve incredible, memorable meals you wish you had closer to home."
         image="/images/sections/chicago-skyline.jpg"
         imageAlt="Chicago skyline viewed from Lake Michigan"
-        :imageLeft="false"
+        :imagePosition="'right'"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
     />

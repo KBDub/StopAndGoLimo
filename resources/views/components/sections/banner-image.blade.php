@@ -6,7 +6,7 @@
     'imageAlt'            => '',
     'imageAspect'         => '16/10',
     'imageObjectPosition' => 'center',
-    'imageLeft'           => true,
+    'imagePosition'       => 'left',
     'inverted'            => false,
 ])
 
@@ -16,8 +16,8 @@
     $boldColor    = $inverted ? 'color: var(--champagne);'        : 'color: var(--navy);';
     $bodyColor    = $inverted ? 'color: var(--cloud-light);'      : 'color: var(--slate);';
     $ruleColor    = 'background: var(--champagne);';
-    $imgOrder     = $imageLeft ? 'order: 0;' : 'order: 1;';
-    $textOrder    = $imageLeft ? 'order: 1;' : 'order: 0;';
+    $imgOrder     = $imagePosition === 'left' ? 'order: 0;' : 'order: 1;';
+    $textOrder    = $imagePosition === 'left' ? 'order: 1;' : 'order: 0;';
 @endphp
 
 <section id="banner-image" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-16">

@@ -49,7 +49,7 @@
     />
 
     <x-sections.three-steps
-        :invertBg="true"
+        :inverted="true"
         :steps="[
             [
                 'number' => 'Step 1',
@@ -94,7 +94,7 @@
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-party-bus-naperville.jpg"
         imageAlt="Guests celebrating on a Stop and Go party bus in Naperville, Illinois"
-        :imageLeft="false"
+        :imagePosition="'right'"
         inverted=true
     />
 

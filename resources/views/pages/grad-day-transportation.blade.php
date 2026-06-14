@@ -81,7 +81,8 @@
         submitLabel="Send Message"
         defaultVehicle="Limousine Service"
         rightVariant="description"
-        descHeading="Features & Safety"
+        descHeading="Make your Graduation Day Epic!"
+        descSubheading="Features & Safety"
         :descBullets="[
             'LED & Ambient Lighting: Bright, stylish lighting to create a fun, celebratory mood for your graduation ride.',
             'Premium Sound Systems & Screens: Enjoy your favorite playlists and videos with high-quality audio and entertainment throughout the vehicle.',
@@ -92,5 +93,6 @@
         ]"
         descImage="/images/sections/celebrate-your-big-event.png"
         descImageAlt="Happy graduates celebrating on graduation day — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        :descImageTop="true"
     />
 </x-layouts.page>

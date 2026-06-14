@@ -27,6 +27,7 @@
     'descClosing'      => '',
     'descImage'        => '',
     'descImageAlt'     => '',
+    'descImageTop'     => false,
 ])
 
 <section id="free-instant-quote" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
@@ -202,6 +203,18 @@
                 <div class="w-full sg-fiq-desc-slide-in"
                      style="opacity: 0; transform: translateX(4rem); transition: opacity 0.7s ease, transform 0.7s ease;"
                 >
+                    {{-- Optional image at top of desc panel --}}
+                    @if($descImage && $descImageTop)
+                        <div class="w-full overflow-hidden mb-6" style="aspect-ratio: 16/9;">
+                            <img
+                                src="{{ $descImage }}"
+                                alt="{{ $descImageAlt }}"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
+                    @endif
+
                     {{-- Heading with champagne underbar --}}
                     <div style="width: fit-content; margin-bottom: 1.5rem;">
                         <h3 class="font-head" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">

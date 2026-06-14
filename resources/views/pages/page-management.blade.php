@@ -76,7 +76,7 @@
             }
         }
     }
-    uasort($componentUsageMap, fn($a, $b) => count($b) - count($a));
+    ksort($componentUsageMap);
 
     $sharedUsageMap   = array_filter($componentUsageMap, fn($usages) => count($usages) >= 2);
     $sharedUniqueCount = count($sharedUsageMap);
@@ -339,7 +339,7 @@
 {{-- ═══════════════════════════════════════════════════════════ --}}
 {{-- ACCORDION 3: Pages                                         --}}
 {{-- ═══════════════════════════════════════════════════════════ --}}
-<div x-data="{ pagesOpen: true }">
+<div x-data="{ pagesOpen: false }">
     <div
         class="border"
         style="border-color: rgba(255,255,255,0.10); background: var(--navy-light);"

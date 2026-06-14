@@ -123,4 +123,10 @@
         imageAspect="16/9"
     />
 
+    <x-sections.info-strip
+        headingPrefix="The Essence of"
+        headingBold="Luxury Transportation"
+        body="Stop & Go provides premier limousine services in New Lenox, Plainfield, Naperville, Aurora, Joliet, and across the Chicago suburbs. Our luxury limos feature professional chauffeurs, immaculate vehicles, and personalized service for weddings, corporate events, airport transfers, and special occasions. Experience comfort, style, and punctuality with Stop & Go's full-service fleet."
+    />
+
 </x-layouts.page>

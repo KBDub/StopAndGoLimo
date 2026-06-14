@@ -40,4 +40,18 @@
         image="/images/sections/chauffeur-suit-pickup.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.free-instant-quote
+        heading="Book Your"
+        headingBold="Corporate Car Service"
+        headingTail="Today"
+        body="Tell us your group size, pickup location, and date. Our team will match you with the right vehicle and confirm your corporate transfer fast."
+        image="/images/services/corporate-car.jpg"
+        imageAlt="Corporate limousine service in New Lenox, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        defaultVehicle="Corporate Transportation"
+    />
 </x-layouts.page>

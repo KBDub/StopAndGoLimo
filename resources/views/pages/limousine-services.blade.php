@@ -86,7 +86,7 @@
         buttonHref="/bookings-reservations"
     />
 
-    <x-sections.our-services />
+    <x-sections.our-services :showFlourishes="true" />
 
     <x-sections.city-info-grid
         :boxes="[

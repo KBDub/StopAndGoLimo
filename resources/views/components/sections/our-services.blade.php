@@ -1,7 +1,8 @@
 @props([
-    'heading'     => 'Our',
-    'headingBold' => 'Services',
-    'services'    => [
+    'heading'          => 'Our',
+    'headingBold'      => 'Services',
+    'showFlourishes'   => false,
+    'services'         => [
         [
             'label' => 'Party Bus',
             'href'  => '/party-bus-aurora',
@@ -55,8 +56,19 @@
     ],
 ])
 
-<section id="our-services" style="background: var(--navy-dark); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
-    <div class="max-w-7xl mx-auto px-6">
+<section id="our-services" style="background: var(--navy-dark); scroll-margin-top: 80px;{{ $showFlourishes ? ' position: relative; overflow: hidden;' : '' }}" class="py-12 lg:py-[6.25rem]">
+
+    @if($showFlourishes)
+        {{-- Cosmetic flourish overlays — positioned at top corners, screen blend removes the navy backing --}}
+        <img src="/images/decorative/our-services-flourish-left.png"
+             alt="" aria-hidden="true"
+             style="position: absolute; top: 0; left: 0; width: 55%; max-width: 700px; pointer-events: none; mix-blend-mode: screen; opacity: 0.9; z-index: 0;" />
+        <img src="/images/decorative/our-services-flourish-right.png"
+             alt="" aria-hidden="true"
+             style="position: absolute; top: 0; right: 0; width: 55%; max-width: 700px; pointer-events: none; mix-blend-mode: screen; opacity: 0.9; z-index: 0;" />
+    @endif
+
+    <div class="max-w-7xl mx-auto px-6" style="{{ $showFlourishes ? 'position: relative; z-index: 1;' : '' }}">
 
         {{-- Centered heading + champagne underbar --}}
         <div style="width: fit-content; margin: 0 auto 6rem; text-align: center;">

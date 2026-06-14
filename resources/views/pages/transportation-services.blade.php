@@ -37,7 +37,7 @@
         subtitle="Point-to-point rides across the Southwest suburbs"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/corporate-service.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

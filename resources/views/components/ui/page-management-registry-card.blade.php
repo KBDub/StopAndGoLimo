@@ -81,8 +81,8 @@
         @endif
 
         {{-- Instance count badge — fixed height, vertically centred --}}
-        <span class="shrink-0 self-center font-head font-bold text-xs px-3 py-1"
-              style="background: var(--champagne); color: var(--navy);">
+        <span class="shrink-0 font-head font-bold text-xs px-3 py-1"
+              style="background: var(--champagne); color: var(--navy); align-self: center;">
             {{ $usageCount }}
         </span>
 

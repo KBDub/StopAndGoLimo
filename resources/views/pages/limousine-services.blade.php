@@ -42,18 +42,13 @@
         imagePosition="center center"
     />
 
-    <x-sections.three-steps />
-
-    <x-sections.travel-in-style
-        heading="Experienced Chauffeurs"
-        headingBold="Committed to Excellence"
-        body="Our limousine service stands out through exceptional chauffeur service. Every driver is trained in safety and customer care. Our chauffeurs ensure timely arrivals, handle your luggage, open doors, and hold the highest standard of professionalism on every ride."
-        image="/images/sections/limousine-services-tis.png"
-        imageAlt="Professional Stop and Go limousine chauffeur ready to assist a client"
-        :imagePosition="'right'"
-        buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+    <x-sections.info-strip
+        headingPrefix="The Essence of"
+        headingBold="Luxury Transportation"
+        body="Stop & Go provides premier limousine services in New Lenox, Plainfield, Naperville, Aurora, Joliet, and across the Chicago suburbs. Our luxury limos feature professional chauffeurs, immaculate vehicles, and personalized service for weddings, corporate events, airport transfers, and special occasions. Experience comfort, style, and punctuality with Stop & Go's full-service fleet."
     />
+        
+    <x-sections.three-steps />
 
     <x-sections.free-instant-quote
         heading="Book Your Next"
@@ -77,36 +72,49 @@
         descImageAlt="Luxurious limousine interior with premium leather seating and ambient lighting"
     />
 
+    <x-sections.travel-in-style
+        heading="Experienced Chauffeurs"
+        headingBold="Committed to Excellence"
+        body="Our limousine service stands out through exceptional chauffeur service. Every driver is trained in safety and customer care. Our chauffeurs ensure timely arrivals, handle your luggage, open doors, and hold the highest standard of professionalism on every ride."
+        image="/images/sections/limousine-services-tis.png"
+        imageAlt="Professional Stop and Go limousine chauffeur ready to assist a client"
+        :imagePosition="'right'"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
+    <x-sections.our-services />
+
     <x-sections.city-info-grid
         :boxes="[
             [
-                'heading' => 'Primary Cities',
+                'heading' => 'Airport Access',
                 'items'   => [
-                    'New Lenox limousine service',
-                    'Plainfield luxury limo service',
-                    'Naperville limousine services',
-                    'Aurora limo service Chicago',
-                    'Joliet limousine service',
+                    'O\'Hare Airport limousine service',
+                    'Midway Airport limo service',
+                    '24/7 airport pickup',
+                    'Flight tracking & meet & greet',
+                    'Luggage handling included',
                 ],
             ],
             [
-                'heading' => 'Nearby Suburbs',
+                'heading' => 'Downtown & City Coverage',
                 'items'   => [
-                    'Bolingbrook luxury limousine',
-                    'Romeoville limo service',
-                    'Orland Park limousine services',
-                    'Frankfort limo service',
-                    'Mokena luxury limousine',
+                    'Downtown Chicago limousine service',
+                    'Chicago suburbs luxury limo',
+                    'Corporate & executive service',
+                    'Event and wedding coverage',
+                    'Special occasion transport',
                 ],
             ],
             [
-                'heading' => 'Extended Suburbs',
+                'heading' => 'Regional & Border Areas',
                 'items'   => [
-                    'Tinley Park limo service',
-                    'Homer Glen luxury limo',
-                    'Lockport limousine services',
-                    'Lemont limo service',
-                    'Downers Grove luxury limo',
+                    'Indiana border limousine service',
+                    'Wisconsin border limousine service',
+                    'Interstate connections',
+                    'Nearby Illinois towns',
+                    'Full Chicago metro coverage',
                 ],
             ],
         ]"
@@ -121,12 +129,6 @@
         image="/images/sections/limousine-professional.jpg"
         imageAlt="Professional Stop and Go limousine ready for client service in New Lenox, Illinois"
         imageAspect="16/9"
-    />
-
-    <x-sections.info-strip
-        headingPrefix="The Essence of"
-        headingBold="Luxury Transportation"
-        body="Stop & Go provides premier limousine services in New Lenox, Plainfield, Naperville, Aurora, Joliet, and across the Chicago suburbs. Our luxury limos feature professional chauffeurs, immaculate vehicles, and personalized service for weddings, corporate events, airport transfers, and special occasions. Experience comfort, style, and punctuality with Stop & Go's full-service fleet."
     />
 
 </x-layouts.page>

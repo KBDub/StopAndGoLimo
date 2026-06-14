@@ -79,7 +79,7 @@
     <x-sections.travel-in-style
         heading="Charter Bus for"
         headingBold="Corporate Events"
-        body="Charter bus travel eliminates the stress of coordinating individual travel arrangements and parking concerns, ensuring everyone arrives at corporate events punctually and together. It also offers a valuable opportunity for team building and event preparation, allowing attendees to strategize and review event proceedings during their journey."
+        body="A charter bus removes the headache of coordinating individual rides and parking at corporate events. Everyone arrives together and on time. The ride also gives your team a chance to connect, review the agenda, and walk in ready. No logistics stress, just a smooth, professional arrival."
         image="/images/sections/comfort-event-bus.jpg"
         imageAlt="Comfortable charter bus ready for corporate event transportation"
         :imageLeft="false"
@@ -112,7 +112,7 @@
         heading="Book Your"
         headingBold="Charter Bus"
         headingTail="Today"
-        body="Get a free instant quote for your next group trip. Whether you need a coach bus for a corporate outing, wedding, sports team, or group vacation, our professional drivers are ready to get your group there safely and on time."
+        body="Charter bus travel eliminates the stress of coordinating individual travel arrangements and parking concerns, ensuring everyone arrives at corporate events punctually and together. It also offers a valuable opportunity for team building and event preparation, allowing attendees to strategize and review event proceedings during their journey."
         image="/images/sections/coach-bus-quote.jpg"
         imageAlt="Luxury coach bus ready for group charter service in New Lenox, Illinois"
         imageAspect="3/2"

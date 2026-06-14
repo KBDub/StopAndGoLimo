@@ -37,7 +37,7 @@
         subtitle="Executive ground transportation for business travel"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/chauffeur-suit-pickup.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

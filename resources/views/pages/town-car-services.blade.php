@@ -47,4 +47,19 @@
         heading=""
         body="Our town car service offers an elegant blend of luxury, comfort, and professionalism for both personal and business travel. Slide into plush leather seats and enjoy climate-controlled interiors. Expect punctual, courteous chauffeurs who handle every detail, from luggage assistance to navigating traffic with local expertise."
     />
+
+    <x-sections.free-instant-quote
+        heading="Reserve Your"
+        headingBold="Town Car"
+        headingTail="Today"
+        body="Whether you need a ride to the airport, a corporate transfer, or a comfortable trip across town, our town car service is ready when you are. Tell us your pickup location, date, and group size, and we will handle the rest with care and professionalism."
+        image="/images/sections/elderly-relaxing-corporate.jpg"
+        imageAlt="Passenger relaxing in a luxury town car — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        defaultVehicle="Limousine Service"
+        rightVariant="image"
+    />
 </x-layouts.page>

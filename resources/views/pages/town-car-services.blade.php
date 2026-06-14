@@ -62,4 +62,15 @@
         defaultVehicle="Limousine Service"
         rightVariant="image"
     />
+
+    <x-sections.party-limo-image
+        heading="Arrive in Comfort,"
+        headingBold="Every Time"
+        headingTail=""
+        body="Our town cars make a statement the moment they pull up. Clean, polished, and driven by a professional chauffeur, every arrival is smooth and on time. From airport pickups to corporate drop-offs, we take the stress out of getting there so you can focus on what matters."
+        image="/images/sections/limousine-arrival.jpg"
+        imageAlt="Luxury limousine arriving for a client pickup — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+    />
 </x-layouts.page>

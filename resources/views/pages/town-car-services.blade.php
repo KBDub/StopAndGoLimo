@@ -40,4 +40,11 @@
         image="/images/sections/driver-classy.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="More Than a Ride."
+        headingBold="A Refined Journey"
+        heading=""
+        body="Our town car service offers an elegant blend of luxury, comfort, and professionalism for both personal and business travel. Slide into plush leather seats and enjoy climate-controlled interiors. Expect punctual, courteous chauffeurs who handle every detail, from luggage assistance to navigating traffic with local expertise."
+    />
 </x-layouts.page>

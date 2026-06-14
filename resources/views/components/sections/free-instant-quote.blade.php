@@ -25,6 +25,8 @@
     'descBody'         => '',
     'descBullets'      => [],
     'descClosing'      => '',
+    'descImage'        => '',
+    'descImageAlt'     => '',
 ])
 
 <section id="free-instant-quote" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
@@ -239,6 +241,18 @@
                         <p class="font-body" style="font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.5; border-left: 3px solid var(--champagne); padding-left: 1rem;">
                             {{ $descClosing }}
                         </p>
+                    @endif
+
+                    {{-- Optional image below desc text --}}
+                    @if($descImage)
+                        <div class="w-full overflow-hidden mt-6" style="aspect-ratio: 16/9;">
+                            <img
+                                src="{{ $descImage }}"
+                                alt="{{ $descImageAlt }}"
+                                class="w-full h-full object-cover"
+                                loading="lazy"
+                            >
+                        </div>
                     @endif
 
                 </div>

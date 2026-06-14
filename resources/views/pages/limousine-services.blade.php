@@ -41,4 +41,27 @@
         image="/images/sections/limousine-professional.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.free-instant-quote
+        heading="Book Your Next"
+        headingBold="Limousine"
+        headingTail="Today"
+        body="Our professional chauffeurs are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. Relax knowing your transportation is handled with care and precision, making every ride a truly exceptional experience."
+        rightVariant="description"
+        defaultVehicle="Limousine Service"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Transportation Services"
+        descBody="As your trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of New Lenox, Plainfield, and all Chicago suburbs ensures efficient and reliable transportation throughout the region."
+        descImage="/images/sections/limousine-interior.png"
+        descImageAlt="Luxurious limousine interior with premium leather seating and ambient lighting"
+    />
+
 </x-layouts.page>

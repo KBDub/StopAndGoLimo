@@ -48,7 +48,9 @@
         body="Stop & Go provides premier limousine services in New Lenox, Plainfield, Naperville, Aurora, Joliet, and across the Chicago suburbs. Our luxury limos feature professional chauffeurs, immaculate vehicles, and personalized service for weddings, corporate events, airport transfers, and special occasions. Experience comfort, style, and punctuality with Stop & Go's full-service fleet."
     />
         
-    <x-sections.three-steps />
+    <x-sections.three-steps
+        :inverted="true"    
+    />
 
     <x-sections.free-instant-quote
         heading="Book Your Next"
@@ -79,6 +81,7 @@
         image="/images/sections/limousine-services-tis.png"
         imageAlt="Professional Stop and Go limousine chauffeur ready to assist a client"
         :imagePosition="'right'"
+        :inverted="true"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
     />
@@ -159,6 +162,15 @@
         image="/images/sections/limousine-professional.jpg"
         imageAlt="Professional Stop and Go limousine ready for client service in New Lenox, Illinois"
         imageAspect="16/9"
+    />
+
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional Transportation"
+        headingBold="Solutions"
+        body="As New Lenox's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including airport shuttle, limousine service, party bus rentals, corporate transportation, and wedding vehicles. Our intimate knowledge of New Lenox, Plainfield, Naperville, and the entire southwest suburbs ensures efficient, reliable transportation throughout the region, including direct connections to O'Hare and Midway airports."
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+        directions="• New Lenox to O'Hare Airport: 45–55 min via I-355 North  •  New Lenox to Midway: 30–40 min via I-57 North  •  Plainfield to O'Hare: 50–65 min  •  Naperville to O'Hare: 35–45 min via I-88"
     />
 
 </x-layouts.page>

@@ -42,6 +42,8 @@
         imagePosition="center center"
     />
 
+    <x-sections.three-steps />
+
     <x-sections.travel-in-style
         heading="Experienced Chauffeurs"
         headingBold="Committed to Excellence"

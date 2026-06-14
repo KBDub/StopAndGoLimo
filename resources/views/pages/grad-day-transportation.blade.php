@@ -95,4 +95,14 @@
         descImageAlt="Happy graduates celebrating on graduation day — Stop and Go Airport Shuttle, New Lenox, Illinois"
         :descImageTop="true"
     />
+
+    <x-sections.our-services />
+
+    <x-sections.text-block-slide-in
+        headingPrefix="Trusted Grad Day"
+        headingBold="Transportation"
+        body="As a trusted transportation provider for over 15 years, Stop & Go offers luxury Grad Day transportation, including group rides and school celebration trips. Our professional, family-focused drivers and spacious, fully equipped vehicles make every ride safe, fun, and unforgettable. Celebrate your achievement with friends and loved ones and make your Grad Day truly memorable."
+        buttonText="Book Your Grad Day Ride"
+        buttonHref="/bookings-reservations"
+    />
 </x-layouts.page>

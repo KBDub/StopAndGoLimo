@@ -80,8 +80,8 @@
             </button>
         @endif
 
-        {{-- Instance count badge --}}
-        <span class="shrink-0 inline-flex items-center self-stretch px-2.5 font-head font-bold text-sm"
+        {{-- Instance count badge — full row height, matches prod styling --}}
+        <span class="shrink-0 self-stretch flex items-center justify-center font-head font-bold text-xs px-3"
               style="background: var(--champagne); color: var(--navy);">
             {{ $usageCount }}
         </span>
@@ -113,56 +113,68 @@
         {{-- ── Layout Prop Variants (above page list) ─────────── --}}
         @if($hasLayout)
             <div class="mb-4">
-                <h4 class="font-head text-xs font-semibold mb-2"
+                <h4 class="font-head text-xs font-semibold mb-3"
                     style="color: var(--slate); text-transform: uppercase; letter-spacing: 0.07em;">
                     Layout Variants
                 </h4>
-                <div class="space-y-1.5">
+                <div class="space-y-3">
                     @foreach($layoutVariants as $propName => $info)
                         @php
                             $lv_default       = $info['default'];
-                            $lv_counts        = $info['counts'] ?? [];
-                            $lv_override_sum  = array_sum($lv_counts);
+                            $lv_pages         = $info['pages'] ?? [];
+                            $lv_override_sum  = array_sum(array_map('count', $lv_pages));
                             $lv_default_count = $usageCount - $lv_override_sum;
                         @endphp
-                        <div class="flex items-center gap-1.5 flex-wrap">
-                            <span class="font-mono text-[11px] font-semibold shrink-0"
-                                  style="color: var(--champagne); min-width: 5rem;">{{ $propName }}</span>
-                            {{-- Non-default value pills --}}
-                            @foreach($lv_counts as $val => $cnt)
-                                @php
-                                    $lv_val_lower = strtolower($val);
-                                    if ($lv_val_lower === 'true') {
-                                        $pillStyle = 'background: color-mix(in srgb, var(--champagne) 15%, transparent); color: var(--champagne); border-color: color-mix(in srgb, var(--champagne) 40%, transparent);';
-                                    } elseif ($lv_val_lower === 'false') {
-                                        $pillStyle = 'background: color-mix(in srgb, var(--azure) 10%, transparent); color: var(--cloud); border-color: rgba(255,255,255,0.12);';
-                                    } else {
-                                        $pillStyle = 'background: color-mix(in srgb, var(--azure) 8%, transparent); color: var(--cloud-light); border-color: rgba(255,255,255,0.10);';
-                                    }
-                                @endphp
-                                <span class="inline-flex items-center gap-1 px-1.5 py-0.5 font-mono text-[10px] border"
-                                      style="{{ $pillStyle }}"
-                                      title="{{ $val }}">
-                                    {{ $val }}
-                                    <span style="opacity: 0.6;">· {{ $cnt }}</span>
-                                </span>
-                            @endforeach
-                            {{-- Default value pill (dashed border, muted) --}}
-                            @if($lv_default !== null && $lv_default_count > 0)
-                                <span class="inline-flex items-center gap-1 px-1.5 py-0.5 font-mono text-[10px] border"
-                                      style="color: var(--slate); border-color: rgba(255,255,255,0.12); border-style: dashed;"
-                                      title="default value">
-                                    {{ $lv_default }}
-                                    <span style="opacity: 0.55;">· {{ $lv_default_count }} def</span>
-                                </span>
-                            @endif
+                        <div>
+                            <span class="font-mono text-[11px] font-semibold block mb-1.5"
+                                  style="color: var(--champagne);">{{ $propName }}</span>
+                            <div class="ml-3 space-y-2">
+                                {{-- Non-default values with their page lists --}}
+                                @foreach($lv_pages as $val => $valPages)
+                                    @php $valCnt = count($valPages); @endphp
+                                    <div>
+                                        <span class="inline-flex items-center gap-1 px-1.5 py-0.5 font-mono text-[10px] border mb-1"
+                                              style="background: color-mix(in srgb, var(--azure) 8%, transparent); color: var(--cloud-light); border-color: rgba(255,255,255,0.10);">
+                                            {{ $val }}<span style="opacity: 0.6;"> · {{ $valCnt }}</span>
+                                        </span>
+                                        <div class="ml-3 space-y-0.5">
+                                            @foreach($valPages as $vp)
+                                                @php
+                                                    $lv_tid      = 'page-' . ltrim(str_replace('/', '-', $vp['url']), '-');
+                                                    if ($lv_tid === 'page-') { $lv_tid = 'page-home'; }
+                                                    $lv_parts    = explode('/', trim($vp['url'], '/'));
+                                                    $lv_grp      = $lv_parts[0] ?: 'home';
+                                                @endphp
+                                                <div class="flex items-center justify-between gap-2">
+                                                    <a
+                                                        href="#{{ $lv_tid }}"
+                                                        @click.prevent="window.dispatchEvent(new CustomEvent('pm-open-page', { detail: { groupSlug: '{{ $lv_grp }}', targetId: '{{ $lv_tid }}' } }))"
+                                                        class="font-head font-medium text-xs truncate transition-colors"
+                                                        style="color: var(--cloud-light);"
+                                                        onmouseenter="this.style.color='var(--champagne)'"
+                                                        onmouseleave="this.style.color='var(--cloud-light)'"
+                                                    >{{ $vp['name'] }}</a>
+                                                    <span class="font-mono text-[10px] shrink-0" style="color: var(--slate);">{{ $vp['url'] }}</span>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                                {{-- Default value pill — dashed, no page list --}}
+                                @if($lv_default !== null && $lv_default_count > 0)
+                                    <span class="inline-flex items-center gap-1 px-1.5 py-0.5 font-mono text-[10px] border"
+                                          style="color: var(--slate); border-color: rgba(255,255,255,0.12); border-style: dashed;">
+                                        {{ $lv_default }}<span style="opacity: 0.55;"> · {{ $lv_default_count }} def</span>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
                     @endforeach
                 </div>
             </div>
         @endif
 
-        {{-- ── Pages list ──────────────────────────────────────── --}}
+        {{-- ── Pages list (unchanged) ───────────────────────────── --}}
         <h4 class="font-head text-xs font-semibold mb-2" style="color: var(--slate);">
             Used on {{ $usageCount }} {{ \Illuminate\Support\Str::plural('page', $usageCount) }}
         </h4>
@@ -189,7 +201,7 @@
             @endforeach
         </div>
 
-        {{-- ── Metadata Prop Variants (below page list, toggleable) ── --}}
+        {{-- ── Metadata Prop Variants (toggleable via header checkbox) ── --}}
         @if($hasMeta)
             <div x-show="showMeta" x-cloak x-transition
                  class="mt-4 pt-4 border-t"

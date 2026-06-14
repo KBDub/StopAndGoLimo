@@ -82,16 +82,18 @@
     $sharedUniqueCount = count($sharedUsageMap);
     $pageOnlyCount     = count($componentUsageMap) - $sharedUniqueCount;
 
-    // Props that control layout/visual structure (not content)
+    // Props that control layout/visual structure (not content).
+    // Classification is name-based only — no boolean-value heuristics.
     $layoutPropNames = [
         'inverted', 'imageLeft', 'imageRight', 'background', 'columns',
         'rightVariant', 'slideIn', 'showInfoBox', 'imagePosition',
         'imageAspect', 'headingTwoLines', 'buttonRadius', 'imageObjectPosition',
         'imageObjectFit', 'size', 'variant', 'layout', 'direction', 'as', 'radius',
+        'whiteBackground',
     ];
 
-    // Split props into layout variants (structural) and meta variants (content)
-    // Layout variants track per-value counts; meta variants track distinct values only.
+    // Split props into layout variants (structural) and meta variants (content).
+    // Layout variants track pages-per-value; meta variants track distinct values only.
     $componentLayoutVariantsMap = [];
     $componentMetaVariantsMap   = [];
     foreach ($groups as $group) {
@@ -101,21 +103,20 @@
                 foreach ($compStruct['overrides'] as $prop => $data) {
                     $cleanProp  = ltrim($prop, ':');
                     $trimmedVal = trim($data['value'], '"\'');
-                    $isLayout   = in_array($cleanProp, $layoutPropNames, true)
-                                  || in_array($trimmedVal, ['true', 'false'], true);
+                    $isLayout   = in_array($cleanProp, $layoutPropNames, true);
 
                     if ($isLayout) {
                         if (!isset($componentLayoutVariantsMap[$k][$cleanProp])) {
                             $componentLayoutVariantsMap[$k][$cleanProp] = [
                                 'default' => $data['default'],
-                                'counts'  => [],
+                                'pages'   => [],
                             ];
                         }
                         if ($data['default'] !== null && $componentLayoutVariantsMap[$k][$cleanProp]['default'] === null) {
                             $componentLayoutVariantsMap[$k][$cleanProp]['default'] = $data['default'];
                         }
-                        $componentLayoutVariantsMap[$k][$cleanProp]['counts'][$trimmedVal]
-                            = ($componentLayoutVariantsMap[$k][$cleanProp]['counts'][$trimmedVal] ?? 0) + 1;
+                        $componentLayoutVariantsMap[$k][$cleanProp]['pages'][$trimmedVal][]
+                            = ['name' => $page['name'], 'url' => $page['url']];
                     } else {
                         if (!isset($componentMetaVariantsMap[$k][$cleanProp])) {
                             $componentMetaVariantsMap[$k][$cleanProp] = [

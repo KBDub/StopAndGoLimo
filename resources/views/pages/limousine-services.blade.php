@@ -42,6 +42,17 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Experienced Chauffeurs"
+        headingBold="Committed to Excellence"
+        body="Our limousine service stands out through exceptional chauffeur service. Every driver is trained in safety and customer care. Our chauffeurs ensure timely arrivals, handle your luggage, open doors, and hold the highest standard of professionalism on every ride."
+        image="/images/sections/limousine-services-tis.png"
+        imageAlt="Professional Stop and Go limousine chauffeur ready to assist a client"
+        :imageLeft="false"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+    />
+
     <x-sections.free-instant-quote
         heading="Book Your Next"
         headingBold="Limousine"

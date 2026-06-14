@@ -42,10 +42,13 @@
         imagePosition="center center"
     />
 
+    {{-- TODO fix the subtitle prop on the hero section
+        the 'subtitle="From Stop & Go Airport Shuttle Service Inc."'
+        is actually the remainder of the header after the bolad
+    --}}
     <x-sections.travel-in-style
         heading="Rent a"
         headingBold="Charter Bus"
-        subtitle="From Stop & Go Airport Shuttle Service Inc."
         body="Stop & Go Airport Shuttle Service Inc. provides charter bus rental services to New Lenox and Plainfield, Illinois clients. Our professional chauffeurs are committed to getting groups to their destinations and back safely and on schedule. Groups can rent our buses for trips inside and outside of the greater Chicago metropolitan area. We cater to wedding parties, school groups, sports teams, vacationing groups, and others who want reliable and stylish transportation without the stress of having to drive themselves."
         note="A $200 deposit is required."
         image="/images/sections/party-smile-limo.jpg"

@@ -42,12 +42,12 @@
     />
 
     <x-sections.free-instant-quote
-        heading="Book Your"
-        headingBold="Corporate Car Service"
-        headingTail="Today"
-        body="Tell us your group size, pickup location, and date. Our team will match you with the right vehicle and confirm your corporate transfer fast."
-        image="/images/services/corporate-car.jpg"
-        imageAlt="Corporate limousine service in New Lenox, Illinois — Stop and Go Airport Shuttle"
+        heading="Your Trusted Partner for"
+        headingBold="Corporate Car Transportation"
+        headingTail=""
+        body="Enjoy a blend of comfort, professionalism, and reliability. Our licensed chauffeurs are dedicated to delivering exceptional service for every journey whether it is business travel, airport transfers, special events, or daily commutes. Punctual, discreet, and attentive, we ensure you arrive relaxed and on time every time."
+        image="/images/services/corporate-limo.png"
+        imageAlt="Business professionals working in a corporate limousine — Stop and Go Airport Shuttle"
         imageAspect="16/9"
         imageObjectPosition="center"
         formAction="/get-a-quote"

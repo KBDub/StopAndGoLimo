@@ -80,8 +80,8 @@
             </button>
         @endif
 
-        {{-- Instance count badge — full row height, matches prod styling --}}
-        <span class="shrink-0 self-stretch flex items-center justify-center font-head font-bold text-xs px-3"
+        {{-- Instance count badge — fixed height, vertically centred --}}
+        <span class="shrink-0 my-auto font-head font-bold text-xs px-3 py-1"
               style="background: var(--champagne); color: var(--navy);">
             {{ $usageCount }}
         </span>

@@ -257,7 +257,7 @@
                     @endif
 
                     {{-- Optional image below desc text --}}
-                    @if($descImage)
+                    @if($descImage && !$descImageTop)
                         <div class="w-full overflow-hidden mt-6" style="aspect-ratio: 16/9;">
                             <img
                                 src="{{ $descImage }}"

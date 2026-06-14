@@ -37,7 +37,7 @@
         subtitle="Premium sedan service for any occasion"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/driver-classy.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

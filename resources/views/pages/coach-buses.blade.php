@@ -69,7 +69,7 @@
     <x-sections.travel-in-style
         heading="Charter Bus for"
         headingBold="Wedding Parties"
-        body="Party buses are a blast and make wedding days and parties way smoother, no one has to worry about getting from place to place, and everyone can keep the party going! The wedding party stays together to and from the venue, ensuring no one gets lost while driving and everyone can get where they need to on time. The wedding party can avoid worrying about taking multiple cars, parking, and navigating unfamiliar routes. Everyone can sit back and enjoy the ride in comfort. The couple can focus on other areas of their wedding day and feel confident that reliable transportation is secure. Let our professional bus drivers safely drive while your bachelors, bachelorettes, and other wedding party guests enjoy the party."
+        bodyHtml='Party buses are a blast and make wedding days and parties way smoother, no one has to worry about getting from place to place, and everyone can keep the party going! The <a href="/wedding-limousine-services" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">wedding party</a> stays together to and from the venue, ensuring no one gets lost while driving and everyone can get where they need to on time. The wedding party can avoid worrying about taking multiple cars, parking, and navigating unfamiliar routes. Everyone can sit back and enjoy the ride in comfort. The couple can focus on other areas of their wedding day and feel confident that reliable transportation is secure. Let our professional bus drivers safely drive while your bachelors, bachelorettes, and other wedding party guests enjoy the party.'
         image="/images/sections/wedding-party-bus.jpg"
         imageAlt="Joyful wedding party celebrating outside the venue"
         buttonText="Book a Ride"
@@ -109,10 +109,10 @@
     />
 
     <x-sections.free-instant-quote
-        heading="Book Your"
+        heading="Book Your Next"
         headingBold="Charter Bus"
-        headingTail="Today"
-        body="Get a free instant quote for your next group trip. Whether you need a coach bus for a corporate outing, wedding, sports team, or group vacation, our professional drivers are ready to get your group there safely and on time."
+        headingTail="With Us!"
+        body="Charter bus travel eliminates the stress of coordinating individual travel arrangements and parking concerns, ensuring everyone arrives at corporate events punctually and together. It also offers a valuable opportunity for team building and event preparation, allowing attendees to strategize and review event proceedings during their journey."
         image="/images/sections/coach-bus-quote.jpg"
         imageAlt="Luxury coach bus ready for group charter service in New Lenox, Illinois"
         imageAspect="3/2"

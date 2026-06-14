@@ -3,6 +3,7 @@
     'headingBold' => 'Style',
     'subtitle'    => '',
     'body'        => '',
+    'bodyHtml'    => '',
     'note'        => '',
     'buttonText'  => 'About Us',
     'buttonHref'  => '/about-us',
@@ -68,7 +69,11 @@
                 @endif
 
                 {{-- Body --}}
-                @if($body)
+                @if($bodyHtml)
+                    <p class="font-body mb-5" style="font-size: 1.25rem; line-height: 1.5; {{ $bodyColor }}">
+                        {!! $bodyHtml !!}
+                    </p>
+                @elseif($body)
                     <p class="font-body mb-5" style="font-size: 1.25rem; line-height: 1.5; {{ $bodyColor }}">
                         {{ $body }}
                     </p>

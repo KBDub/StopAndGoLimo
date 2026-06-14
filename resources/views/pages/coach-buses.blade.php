@@ -42,7 +42,7 @@
         imagePosition="center center"
     />
 
-    {{-- TODO fix the subtitle prop on the section
+    {{-- TODO fix the subtitle to have a headingTail instead of an incorrect subtitle
         the 'subtitle="From Stop & Go Airport Shuttle Service Inc."'
         is actually the remainder of the header after the bolad
     --}}

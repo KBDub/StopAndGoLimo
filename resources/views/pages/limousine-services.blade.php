@@ -32,12 +32,13 @@
     ogImageAlt="Luxury limousine services in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Limousine"
-        headingBold="Services"
-        subtitle="Classic luxury limos for any occasion"
+        heading="The Essence of"
+        headingBold="Luxury Transportation"
+        subtitle="24/7 Limo, Airport Shuttle & Party Bus Services"
+        description="Professional Chauffeur Service Throughout New Lenox, Plainfield & All Chicago Suburbs"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/limousine-professional.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

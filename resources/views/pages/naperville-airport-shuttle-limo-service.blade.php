@@ -57,6 +57,51 @@
         body="Stop & Go provides Naperville with 24/7 airport shuttle service to O'Hare and Midway, limousine service for weddings and events, and party bus rentals for celebrations. Serving downtown, North Naperville, and surrounding areas, our professional chauffeurs deliver reliable, comfortable transportation for every occasion."
     />
 
+    <x-sections.three-steps
+        :steps="[
+            [
+                'number' => 'Step 1',
+                'title'  => 'Submit Your Request',
+                'body'   => 'Fill out our simple online form with your contact info, event type, and preferred booking date.',
+            ],
+            [
+                'number' => 'Step 2',
+                'title'  => 'Confirm the Details',
+                'body'   => 'Our team will reach out to confirm availability, pricing, and answer any questions you have.',
+            ],
+            [
+                'number' => 'Step 3',
+                'title'  => 'Travel With Confidence',
+                'body'   => 'Once confirmed, your luxury Naperville ride is locked in. All that\'s left is to sit back and enjoy the experience.',
+            ],
+        ]"
+    />
+
+    <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/naperville-fiq.jpg"
+        imageAlt="Aerial view of Naperville, Illinois — Stop and Go Airport Shuttle Service"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Transportation Solutions for Naperville Residents"
+        descBody="As Naperville's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Naperville airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of Naperville, from the Riverwalk to downtown, from Route 59 to I-88, ensures efficient and reliable transportation throughout the community."
+        descImage="/images/sections/naperville-fiq.jpg"
+        descImageAlt="Aerial view of Naperville, Illinois — Stop and Go Airport Shuttle Service"
+        :descImageTop="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

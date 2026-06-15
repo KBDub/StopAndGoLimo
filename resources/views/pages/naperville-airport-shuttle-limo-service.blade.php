@@ -125,6 +125,15 @@
         ['heading' => 'Central Naperville', 'items' => ['Royal Melbourne', 'Glenmeade', 'Whispering Meadows', 'Eagle Pointe', 'Western Springs neighborhood']],
     ]" />
 
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional Transportation Solutions"
+        headingBold="for Naperville Residents"
+        body="As Naperville's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Naperville airport shuttle, Naperville limo service, Naperville party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Naperville, from downtown Riverwalk to North Naperville and South & West neighborhoods, from Route 59 corridor to I-88 and I-355 access, ensures efficient, reliable transportation throughout the community and for Naperville to O'Hare trips."
+        buttonText="Contact"
+        buttonHref="/get-a-quote"
+        directions="• Downtown Naperville to O'Hare: 35 to 50 minutes via I-88 East • West Naperville to O'Hare: 40 to 55 minutes • Naperville to Midway Airport: 30 to 45 minutes via I-55 North • Naperville I-88 corridor to both airports"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

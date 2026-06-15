@@ -47,6 +47,7 @@
         image="/images/sections/downtown-naperville-aerial.jpg"
         imageAlt="Aerial view of downtown Naperville, Illinois — Stop and Go Airport Shuttle"
         imagePosition="left"
+        :inverted="true"
     />
 
     <x-sections.faq />

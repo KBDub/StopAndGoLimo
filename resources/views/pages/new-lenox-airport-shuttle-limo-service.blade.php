@@ -96,6 +96,9 @@
             'Wedding vehicles to make your special day seamless',
         ]"
         descClosing="Our intimate knowledge of New Lenox, from downtown to the Route 30 corridor, from LaGrange Road to I-80 access, ensures efficient and reliable transportation throughout our hometown."
+        descImage="/images/sections/black-limousine-new-lenox.png"
+        descImageAlt="Black limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
+        :descImageTop="true"
     />
 
     <x-sections.image-slide-in

@@ -58,6 +58,7 @@
     />
 
     <x-sections.three-steps
+        :inverted="true"
         :steps="[
             [
                 'number' => 'Step 1',

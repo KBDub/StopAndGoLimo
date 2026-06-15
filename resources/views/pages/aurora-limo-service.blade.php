@@ -81,6 +81,17 @@
         :descImageTop="true"
     />
 
+    <x-sections.travel-in-style
+        heading="Aurora Airport Shuttle to"
+        headingBold="O'Hare & Midway"
+        body="Our airport shuttle provides 24/7 service to O'Hare and Midway with guaranteed on-time pickups. Serving downtown, North and West neighborhoods, and the Fox Valley area, our shuttle ensures stress-free travel with luggage assistance, flight monitoring, and expert navigation for efficient trips to O'Hare and Midway."
+        buttonText="Book Aurora Airport Shuttle"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/aurora-airport.jpg"
+        imageAlt="Airport transportation in Aurora, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

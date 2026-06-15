@@ -38,6 +38,18 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Every Occasion"
+        headingBold="Covered"
+        subtitle="Driven by certified drivers you can trust"
+        body="Stop & Go provides reliable transportation throughout Plainfield. We offer a professional 24/7 Plainfield airport shuttle to O'Hare and Midway."
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/plainfield-limo.jpg"
+        imageAlt="Limousine service in Plainfield, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

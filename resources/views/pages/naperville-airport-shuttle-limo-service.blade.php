@@ -50,6 +50,13 @@
         :inverted="true"
     />
 
+    <x-sections.info-strip
+        headingPrefix="Reliable & On-Time"
+        headingBold="Every Trip"
+        heading=""
+        body="Stop & Go provides Naperville with 24/7 airport shuttle service to O'Hare and Midway, limousine service for weddings and events, and party bus rentals for celebrations. Serving downtown, North Naperville, and surrounding areas, our professional chauffeurs deliver reliable, comfortable transportation for every occasion."
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

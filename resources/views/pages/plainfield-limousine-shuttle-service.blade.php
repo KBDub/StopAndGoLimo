@@ -57,6 +57,52 @@
         body="Stop & Go provides transportation throughout Plainfield with reliable airport shuttle service to O'Hare and Midway, elegant limo service for weddings and events, and party bus rentals. Serving all neighborhoods, our professional team ensures comfort and reliability with easy access to both Chicago airports."
     />
 
+    <x-sections.three-steps
+        :inverted="true"
+        :steps="[
+            [
+                'number' => 'Step 1',
+                'title'  => 'Submit Your Request',
+                'body'   => 'Fill out our simple online form with your contact info, event type, and preferred booking date.',
+            ],
+            [
+                'number' => 'Step 2',
+                'title'  => 'Confirm the Details',
+                'body'   => 'Our team will reach out to confirm availability, pricing, and answer any questions you have.',
+            ],
+            [
+                'number' => 'Step 3',
+                'title'  => 'Travel With Confidence',
+                'body'   => 'Once confirmed, your luxury Plainfield ride is locked in. All that\'s left is to sit back and enjoy the experience.',
+            ],
+        ]"
+    />
+
+    <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/plainfield-fiq.jpg"
+        imageAlt="Airport transfer vehicle interior — Stop and Go Airport Shuttle, Plainfield Illinois"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Plainfield Transportation Services"
+        descBody="As Plainfield's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Plainfield airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of Plainfield, from downtown to Wynstone, Settlers' Park, and Whispering Meadows, from Route 59 to Route 126 and I-55 access, ensures efficient and reliable transportation throughout this thriving Will County community."
+        descImage="/images/sections/plainfield-fiq.jpg"
+        descImageAlt="Airport transfer vehicle interior — Stop and Go Airport Shuttle, Plainfield Illinois"
+        :descImageTop="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

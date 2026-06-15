@@ -114,6 +114,73 @@
         imagePosition="right"
     />
 
+    <x-sections.our-services />
+
+    <x-sections.city-info-grid
+        :boxes="[
+            [
+                'heading' => 'North Plainfield',
+                'items'   => [
+                    'Wynstone',
+                    'Settlers\' Park',
+                    'Whispering Meadows',
+                    'North subdivisions',
+                    '135th Street areas',
+                ],
+            ],
+            [
+                'heading' => 'South Plainfield',
+                'items'   => [
+                    'South Plainfield neighborhoods',
+                    'Eastern Creek area',
+                    'Route 126 corridor',
+                    'Local parks & recreation areas',
+                    'Countryside residential neighborhoods',
+                ],
+            ],
+            [
+                'heading' => 'West Plainfield',
+                'items'   => [
+                    'West Plainfield neighborhoods',
+                    'Near Romeoville border',
+                    'Near Joliet border',
+                    'Modern subdivisions',
+                    'Industrial & commercial areas',
+                ],
+            ],
+            [
+                'heading' => 'Downtown & Central Plainfield',
+                'items'   => [
+                    'Downtown Plainfield',
+                    'Historic downtown area',
+                    'Village Links Golf Course area',
+                    'Central business district',
+                    'Plainfield Road corridor',
+                ],
+            ],
+            [
+                'heading' => 'Major Roads & Access',
+                'items'   => [
+                    'Route 59 corridor',
+                    'Route 126 corridor',
+                    'I-55 access points',
+                    'Historic Route 66 areas',
+                    'Local connector roads',
+                ],
+            ],
+            [
+                'heading' => 'Plainfield High Schools',
+                'items'   => [
+                    'Plainfield North High School area',
+                    'Plainfield South High School area',
+                    'Plainfield East High School area',
+                    'Plainfield Central High School area',
+                    'Nearby school facilities & parks',
+                ],
+            ],
+        ]"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

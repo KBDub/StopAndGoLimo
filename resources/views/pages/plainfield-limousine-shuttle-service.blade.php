@@ -103,6 +103,17 @@
         :descImageTop="true"
     />
 
+    <x-sections.travel-in-style
+        heading="24/7 Plainfield Airport Shuttle to"
+        headingBold="O'Hare & Midway"
+        body="Our Plainfield airport shuttle provides round-the-clock service to O'Hare and Midway with on-time pickups from anywhere in Plainfield. Serving downtown, Wynstone, Settlers' Park, Whispering Meadows, and other neighborhoods, we ensure stress-free travel with flight monitoring, luggage assistance, and expert I-55 navigation for efficient Plainfield to O'Hare and Plainfield to Midway trips."
+        buttonText="Book Airport Shuttle"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/plainfield-shuttle.jpg"
+        imageAlt="Airport shuttle service in Plainfield, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

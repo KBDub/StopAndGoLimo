@@ -114,6 +114,17 @@
         :inverted="true"
     />
 
+    <x-sections.our-services />
+
+    <x-sections.city-info-grid :boxes="[
+        ['heading' => 'North Naperville',   'items' => ['Tall Grass', 'Winding Creek', 'White Eagle', 'Ashwood Park', 'Timber Ridge']],
+        ['heading' => 'South Naperville',   'items' => ['South Naperville neighborhoods', 'East side Naperville', 'Route 53 corridor', 'Mound Road areas', 'South Route 59 corridor']],
+        ['heading' => 'West Naperville',    'items' => ['Green Trails', 'Cress Creek', 'Brookdale', 'Meadow Glens', 'River Run']],
+        ['heading' => 'Downtown Naperville','items' => ['Downtown Naperville (Riverwalk area)', 'Historic District', 'Jefferson Hill neighborhood', 'Hobson West', 'Springbrook Prairie']],
+        ['heading' => 'Near Major Roads',   'items' => ['Central Naperville', 'Washington Street area', 'Naper Boulevard corridor', 'Naperville Station area', 'Fort Hill neighborhood']],
+        ['heading' => 'Central Naperville', 'items' => ['Royal Melbourne', 'Glenmeade', 'Whispering Meadows', 'Eagle Pointe', 'Western Springs neighborhood']],
+    ]" />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

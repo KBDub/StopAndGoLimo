@@ -80,11 +80,22 @@
         heading="Why choose"
         headingBold="us?"
         headingTail=""
-        body="As New Lenox's locally-based transportation provider since 2009, Stop & Go offers 24/7 airport shuttle to O'Hare and Midway, limousine service for weddings and events, party bus rentals, corporate transportation, and wedding vehicles. Our intimate knowledge of New Lenox, from downtown to the Route 30 corridor, from LaGrange Road to I-80, ensures reliable service throughout our hometown."
         image="/images/sections/black-limousine-new-lenox.png"
         imageAlt="Black limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
         imageAspect="16/9"
         imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Complete Plainfield Transportation Services"
+        descBody="As New Lenox's locally-based transportation provider since 2009, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'New Lenox airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of New Lenox, from downtown to the Route 30 corridor, from LaGrange Road to I-80 access, ensures efficient and reliable transportation throughout our hometown."
     />
 
     <x-sections.image-slide-in

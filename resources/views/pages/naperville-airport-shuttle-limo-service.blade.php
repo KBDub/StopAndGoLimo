@@ -102,6 +102,18 @@
         :descImageTop="true"
     />
 
+    <x-sections.travel-in-style
+        heading="Naperville Airport"
+        headingBold="Shuttle Service"
+        body="Our Naperville airport shuttle provides 24/7 service to O'Hare and Midway with guaranteed on-time pickups. Serving downtown Naperville, North Naperville, and areas along Route 59, our Naperville airport shuttle ensures stress-free travel with luggage assistance, flight monitoring, and expert navigation for efficient Naperville to O'Hare and Naperville to Midway trips."
+        buttonText="Book Naperville Shuttle"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/naperville-limo-service.jpg"
+        imageAlt="Luxury limousine service in Naperville, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

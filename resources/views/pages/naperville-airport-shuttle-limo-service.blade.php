@@ -38,6 +38,17 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Every Occasion"
+        headingBold="Covered"
+        body="Stop & Go offers dependable transportation services throughout Naperville. It provides a professional 24/7 Naperville airport shuttle to O'Hare and Midway."
+        buttonText="Book Naperville Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/downtown-naperville-aerial.jpg"
+        imageAlt="Aerial view of downtown Naperville, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

@@ -28,13 +28,13 @@
     ogImageAlt="Luxury limo service in Aurora, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Aurora"
-        headingBold="Limo & Airport Shuttle"
-        subtitle="Reliable, professional transportation"
-        subtitleIn="serving Aurora, Illinois"
+        heading="Aurora Airport Shuttle,"
+        headingBold="Limo & Party Bus"
+        subtitle="Local & trusted rides"
+        subtitleIn="Aurora Airport & Event Transport"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/aurora-hero.jpg"
         imagePosition="center center"
     />
 

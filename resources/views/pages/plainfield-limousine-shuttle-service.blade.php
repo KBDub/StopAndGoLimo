@@ -28,13 +28,13 @@
     ogImageAlt="Luxury limo service in Plainfield, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Plainfield"
-        headingBold="Limo & Airport Shuttle"
-        subtitle="Reliable, professional transportation"
-        subtitleIn="serving Plainfield, Illinois"
+        heading="24/7 Plainfield Airport Shuttle,"
+        headingBold="Limo & Party Bus"
+        subtitle="Reliable transportation service throughout"
+        subtitleIn="Plainfield, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/plainfield-hero.jpg"
         imagePosition="center center"
     />
 

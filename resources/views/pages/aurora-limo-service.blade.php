@@ -92,6 +92,17 @@
         imagePosition="right"
     />
 
+    <x-sections.our-services />
+
+    <x-sections.city-info-grid :boxes="[
+        ['heading' => 'North Aurora',             'items' => ['North Aurora', 'Fox Valley Mall area', 'Orchard Road corridor', 'West Galena Boulevard neighborhoods', 'North Aurora residential areas']],
+        ['heading' => 'South Aurora',             'items' => ['South Aurora neighborhoods', 'Eola Road corridor', 'Route 59 access areas', 'New York Street neighborhoods', 'Aurora East Side residential areas']],
+        ['heading' => 'West Aurora',              'items' => ['West Aurora neighborhoods', 'Boulder Hill area', 'Orchard Road vicinity', 'I-88 corridor businesses', 'Montgomery Road access areas']],
+        ['heading' => 'Central & Downtown Aurora','items' => ['Downtown Aurora', 'Historic Downtown Aurora', 'Fox Riverfront area', 'Aurora City Hall vicinity', 'Two Rivers neighborhood']],
+        ['heading' => 'Nearby Suburbs',           'items' => ['Montgomery', 'Sugar Grove', 'Oswego', 'Batavia', 'Yorkville']],
+        ['heading' => 'Wedding Venues',           'items' => ['Ballydoyle event center', 'Gaslite Manor', 'Naperville IL Banquets near Aurora', 'Hollywood Casino Aurora', 'Area churches and reception halls']],
+    ]" />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

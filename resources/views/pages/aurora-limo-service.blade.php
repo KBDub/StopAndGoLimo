@@ -56,6 +56,31 @@
         imageObjectPosition="center"
     />
 
+    <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/aurora-city.jpg"
+        imageAlt="City of Aurora, Illinois — Stop and Go Airport Shuttle Service"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Aurora Transportation Services"
+        descBody="As Aurora's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Aurora airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of Aurora, from downtown to North and West Aurora, ensures efficient and reliable transportation throughout this vibrant city."
+        descImage="/images/sections/aurora-city.jpg"
+        descImageAlt="City of Aurora, Illinois — Stop and Go Airport Shuttle Service"
+        :descImageTop="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

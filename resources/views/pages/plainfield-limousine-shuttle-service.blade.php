@@ -50,6 +50,13 @@
         imagePosition="left"
     />
 
+    <x-sections.info-strip
+        headingPrefix="Reliable & Stylish"
+        headingBold="Plainfield Transportation"
+        heading=""
+        body="Stop & Go provides transportation throughout Plainfield with reliable airport shuttle service to O'Hare and Midway, elegant limo service for weddings and events, and party bus rentals. Serving all neighborhoods, our professional team ensures comfort and reliability with easy access to both Chicago airports."
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

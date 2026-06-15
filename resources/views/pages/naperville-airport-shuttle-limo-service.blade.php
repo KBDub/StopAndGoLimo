@@ -34,7 +34,7 @@
         subtitleIn="serving Naperville, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/downtown-naperville-aerial.jpg"
         imagePosition="center center"
     />
 

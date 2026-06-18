@@ -536,7 +536,7 @@ html {
 .sg-nav .dropdown a:hover { background: var(--navy-dark); border-left-color: var(--champagne); }
 .sg-nav .dropdown a:hover .d-title { color: var(--champagne); }
 .sg-nav .dropdown-mega { min-width: 520px; display: grid; grid-template-columns: 1fr 1fr; }
-.sg-nav .dropdown-areas { min-width: 560px; display: grid; grid-template-columns: repeat(4,1fr); padding: 14px 8px; }
+.sg-nav .dropdown-areas { min-width: 560px; display: grid; grid-template-columns: repeat(4,1fr); padding: 14px 8px; left: auto; right: 0; }
 .sg-nav .dropdown-areas a { padding: 8px 16px; border-left: 0; border-bottom: 2px solid transparent; }
 .sg-nav .dropdown-areas a:hover { border-left: 0; border-bottom-color: var(--champagne); background: var(--navy-dark); }
 .sg-nav .dropdown-areas .d-title { font-size: 13px; }

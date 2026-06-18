@@ -94,7 +94,6 @@
         imageAlt="Flexible transportation options in Lockport, Illinois — Stop and Go Airport Shuttle"
         imageAspect="16/9"
         imagePosition="left"
-        :inverted="true"
     />
 
     <x-sections.faq />

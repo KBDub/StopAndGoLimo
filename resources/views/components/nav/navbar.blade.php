@@ -22,7 +22,7 @@
                 <x-nav.item href="/gallery"  title="Gallery"   sub="Our luxury fleet" />
             </x-nav.dropdown>
 
-            <x-nav.link href="/bookings-reservations" :active="request()->is('bookings-reservations')">Booking</x-nav.link>
+            <x-nav.link href="/bookings-reservations" :active="request()->is('bookings-reservations')">Reservations</x-nav.link>
 
             <x-nav.dropdown label="Services" panel="mega" href="/our-services">
                 <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle"       sub="O'Hare & Midway transfers" />

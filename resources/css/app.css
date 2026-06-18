@@ -496,7 +496,7 @@ html {
     letter-spacing: .04em; text-transform: uppercase;
     color: var(--cloud); padding: 16px 10px; display: inline-flex;
     align-items: center; gap: 6px; text-decoration: none;
-    transition: color .2s; position: relative;
+    transition: color .2s; position: relative; white-space: nowrap;
 }
 .sg-nav .nav-link::before,
 .sg-nav .nav-link::after {

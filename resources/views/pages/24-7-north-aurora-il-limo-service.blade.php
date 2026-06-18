@@ -51,6 +51,33 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/north-aurora-city-of-aurora.png"
+        imageAlt="City of Aurora, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete North Aurora Transportation Services"
+        descBody="As North Aurora's trusted transportation provider, our North Aurora limo service offers complete luxury transportation services:"
+        :descBullets="[
+            'Stylish wedding limo for unforgettable ceremonies and receptions',
+            'On-time airport shuttle for stress-free arrivals and departures',
+            'Fun party bus rental for celebrations and group travel',
+            'Reliable chauffeur service for executive and personal trips',
+            'Seamless event transportation to keep your special occasions smooth',
+            'Professional limousine transportation for premium comfort and style',
+        ]"
+        descClosing="Our team focuses on punctuality, safety, and your satisfaction, ensuring every ride is safe, comfortable, and dependable. Book your ride now using our quick contact form."
+        descImage="/images/sections/north-aurora-city-of-aurora.png"
+        descImageAlt="City of Aurora, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

@@ -28,9 +28,18 @@
     'descImage'        => '',
     'descImageAlt'     => '',
     'descImageTop'     => false,
+    'inverted'         => false,
 ])
 
-<section id="free-instant-quote" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
+@php
+    $sectionBg   = $inverted ? 'background: var(--navy);'   : 'background: var(--cloud-light);';
+    $descHead    = $inverted ? 'color: var(--white);'        : 'color: var(--navy);';
+    $descSub     = $inverted ? 'color: var(--cloud);'        : 'color: var(--navy);';
+    $descText    = $inverted ? 'color: var(--cloud);'        : 'color: var(--slate);';
+    $descClose   = $inverted ? 'color: var(--cloud);'        : 'color: var(--navy);';
+@endphp
+
+<section id="free-instant-quote" style="{{ $sectionBg }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -217,7 +226,7 @@
 
                     {{-- Heading with champagne underbar --}}
                     <div style="width: fit-content; margin-bottom: 1.5rem;">
-                        <h3 class="font-head" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; color: var(--navy); line-height: 1.3;">
+                        <h3 class="font-head" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; {{ $descHead }} line-height: 1.3;">
                             {{ $descHeading }}
                         </h3>
                         <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
@@ -225,14 +234,14 @@
 
                     {{-- Subheading --}}
                     @if($descSubheading)
-                        <p class="font-head mb-4" style="font-size: 1.125rem; font-weight: 600; color: var(--navy); line-height: 1.3;">
+                        <p class="font-head mb-4" style="font-size: 1.125rem; font-weight: 600; {{ $descSub }} line-height: 1.3;">
                             {{ $descSubheading }}
                         </p>
                     @endif
 
                     {{-- Optional intro paragraph between subheading and bullets --}}
                     @if($descBody)
-                        <p class="font-body mb-5" style="font-size: 1rem; font-weight: 400; color: var(--slate); line-height: 1.6;">
+                        <p class="font-body mb-5" style="font-size: 1rem; font-weight: 400; {{ $descText }} line-height: 1.6;">
                             {{ $descBody }}
                         </p>
                     @endif
@@ -241,7 +250,7 @@
                     @if(!empty($descBullets))
                         <ul style="margin: 0 0 1.5rem; padding: 0; list-style: none;">
                             @foreach($descBullets as $bullet)
-                                <li class="font-body" style="font-size: 1rem; color: var(--slate); line-height: 1.6; padding: 0.5rem 0 0.5rem 1.25rem; position: relative; {{ !$loop->last ? 'border-bottom: 1px solid var(--cloud-dark);' : '' }}">
+                                <li class="font-body" style="font-size: 1rem; {{ $descText }} line-height: 1.6; padding: 0.5rem 0 0.5rem 1.25rem; position: relative; {{ !$loop->last ? 'border-bottom: 1px solid var(--cloud-dark);' : '' }}">
                                     <span style="position: absolute; left: 0; top: 0.6rem; color: var(--champagne); font-size: 0.75rem;">&#9679;</span>
                                     {{ $bullet }}
                                 </li>
@@ -251,7 +260,7 @@
 
                     {{-- Closing trust line --}}
                     @if($descClosing)
-                        <p class="font-body" style="font-size: 1rem; font-weight: 600; color: var(--navy); line-height: 1.5; border-left: 3px solid var(--champagne); padding-left: 1rem;">
+                        <p class="font-body" style="font-size: 1rem; font-weight: 600; {{ $descClose }} line-height: 1.5; border-left: 3px solid var(--champagne); padding-left: 1rem;">
                             {{ $descClosing }}
                         </p>
                     @endif

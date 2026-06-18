@@ -74,6 +74,29 @@
         :descImageTop="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-confidence"
+        heading="Travel with Confidence and Sophistication"
+        headingBold="Across the City"
+        body="Whether you are planning a special evening in historic downtown Lockport or heading to a critical business meeting, the quality of your ride defines your entire day. Our Lockport limo service provides a dedicated professional driver who manages every logistical detail while you relax in a quiet, high-end cabin. By choosing a Lockport wedding limo rental, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, punctuality, and superior service standards."
+        image="/images/sections/lockport-travel-confidence.png"
+        imageAlt="Travel with confidence across Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
+    <x-sections.image-info-card
+        id="image-info-card-flexible"
+        heading="Flexible Transportation Options for"
+        headingBold="Active Illinois Residents"
+        body="For passengers who need more versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily schedule. This flexible service lets you visit multiple local destinations at your own pace, with a private driver standing by for your immediate departure. Our reliable Lockport to O'Hare airport car service guarantees you arrive at your terminal without the unpredictable wait times of standard ride-sharing apps. Whether you are attending several corporate appointments or touring regional landmarks, having a private vehicle at your disposal keeps your schedule fluid."
+        image="/images/sections/lockport-flexible-transport.png"
+        imageAlt="Flexible transportation options in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

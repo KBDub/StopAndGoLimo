@@ -34,7 +34,7 @@
         subtitleIn="serving North Aurora, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/north-aurora-il.png"
         imagePosition="center center"
     />
 

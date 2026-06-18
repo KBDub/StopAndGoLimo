@@ -495,7 +495,7 @@ html {
     font-family: var(--font-head); font-weight: 400; font-size: 15px;
     letter-spacing: .04em; text-transform: uppercase;
     color: var(--cloud); padding: 16px 10px; display: inline-flex;
-    align-items: center; gap: 4px; text-decoration: none;
+    align-items: center; justify-content: center; gap: 4px; text-decoration: none;
     transition: color .2s; position: relative; width: fit-content;
 }
 .sg-nav .nav-link::before,

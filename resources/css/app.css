@@ -500,12 +500,12 @@ html {
 }
 .sg-nav .nav-link::before,
 .sg-nav .nav-link::after {
-    content: ''; position: absolute; left: 0; right: 0; height: 3px;
+    content: ''; position: absolute; left: 0; right: 0; height: 2px;
     background: var(--champagne); transform: scaleX(0);
     transition: transform .35s ease;
 }
-.sg-nav .nav-link::before { top: 0;    transform-origin: left; }
-.sg-nav .nav-link::after  { bottom: 0; transform-origin: right; }
+.sg-nav .nav-link::before { top: 5px;    transform-origin: left; }
+.sg-nav .nav-link::after  { bottom: 5px; transform-origin: right; }
 .sg-nav .nav-link:hover,
 .sg-nav .nav-item:hover .nav-link { color: var(--champagne); }
 .sg-nav .nav-link:hover::before,

@@ -47,7 +47,7 @@
                 <x-nav.item href="/six-flags-party-bus"              title="Six Flags Party Bus" />
                 <x-nav.item href="/chicago-golf-party-bus"           title="Golfing Party Bus" />
                 <x-nav.item href="/chicago-concert-party-bus-rental" title="Concert Party Bus Rental" />
-                <x-nav.item href="/chicago-bears-party-bus"          title="Chicago Bears Party &amp; Limo Bus" />
+                <x-nav.item href="/chicago-bears-party-bus"          title="Chicago Bears Party & Limo Bus" />
                 <x-nav.item href="/chicago-bulls-party-bus"          title="Chicago Bulls Party Bus" />
                 <x-nav.item href="/chicago-blackhawks-party-bus"     title="Chicago Blackhawks Party Bus" />
             </x-nav.dropdown>

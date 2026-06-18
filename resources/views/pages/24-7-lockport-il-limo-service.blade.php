@@ -53,8 +53,8 @@
         heading="Why choose"
         headingBold="us?"
         headingTail=""
-        image="/images/sections/lockport-limo-transport.png"
-        imageAlt="Limousine transport in Lockport, Illinois — Stop and Go Airport Shuttle"
+        image="/images/sections/lockport-airport-transportation.png"
+        imageAlt="Airport transportation in Lockport, Illinois — Stop and Go Airport Shuttle"
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
@@ -69,8 +69,8 @@
             'Wedding vehicles to make your special day seamless',
         ]"
         descClosing="Our knowledge of Lockport, from the historic downtown canal district to Route 7, Route 171, and I-355 access, ensures efficient and reliable transportation throughout Will County."
-        descImage="/images/sections/lockport-limo-transport.png"
-        descImageAlt="Limousine transport in Lockport, Illinois — Stop and Go Airport Shuttle"
+        descImage="/images/sections/lockport-airport-transportation.png"
+        descImageAlt="Airport transportation in Lockport, Illinois — Stop and Go Airport Shuttle"
         :descImageTop="true"
     />
 

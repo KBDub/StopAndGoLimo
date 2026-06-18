@@ -38,6 +38,17 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Travel with Confidence"
+        headingBold="and Sophistication"
+        body="Whether you need a ride for a special evening in historic downtown Lockport or a critical business meeting, the quality of your ride matters. Our Lockport limo service pairs you with a professional driver who handles every detail, so you can relax in a quiet, high-end cabin. Skip the parking headaches and focus on what matters most. We serve clients who value safety, punctuality, and superior service on every trip."
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/lockport-limo-transport.png"
+        imageAlt="Limousine service in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

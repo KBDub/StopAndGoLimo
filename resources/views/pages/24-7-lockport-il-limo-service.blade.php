@@ -106,6 +106,11 @@
         imagePosition="left"
     />
 
+    <x-sections.our-services
+        heading="What We"
+        headingBold="Offer"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

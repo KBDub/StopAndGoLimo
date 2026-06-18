@@ -13,7 +13,7 @@
 ])
 
 @php
-    $bgStyle   = $inverted ? 'background: var(--navy);'        : 'background: var(--cloud-light);';
+    $bgStyle   = $inverted ? 'background: var(--navy);'        : 'background: var(--white);';
     $headColor = $inverted ? 'color: var(--white);'            : 'color: var(--navy);';
     $bodyColor = $inverted ? 'color: var(--cloud);'            : 'color: var(--slate);';
     $barColor  = 'background: var(--champagne);';
@@ -48,7 +48,6 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; {{ $headColor }}">
                         @if($heading)<span>{{ $heading }}</span> @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>@if($headingTail) <span>{{ $headingTail }}</span>@endif
                     </h2>
-                    <div style="height: 3px; {{ $barColor }} width: 116%; margin-top: 0.85rem;"></div>
                 </div>
 
                 {{-- Body --}}

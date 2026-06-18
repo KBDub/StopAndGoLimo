@@ -38,6 +38,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Reliable North Aurora Limo"
+        headingBold="and Shuttle Service"
+        subtitle="for All Occasions"
+        body="Travel around North Aurora with confidence and style using our 24/7 North Aurora, IL limo service. Whether you need a timely airport shuttle, a luxurious wedding limo, or reliable transportation for any special occasion, we provide professional drivers, clean vehicles, and on-time service to make every ride smooth and stress-free. Book now and experience worry-free travel today!"
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/north-aurora-happy-clients.png"
+        imageAlt="Happy clients in a North Aurora limousine — Stop and Go Airport Shuttle"
+        imagePosition="left"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

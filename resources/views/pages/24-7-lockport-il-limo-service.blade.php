@@ -60,8 +60,18 @@
         rightVariant="description"
         descHeading="Why Choose Us?"
         descSubheading="Our Lockport limo service makes every ride safe, comfortable, and stress-free."
-        descBody="Don't risk delays on your special day. Our chauffeur service in Lockport, IL guarantees safe, reliable, and comfortable rides for weddings, parties, and corporate events. Reserve your ride now with our quick online form and enjoy a hassle-free experience from start to finish."
-        :descBullets="[]"
+        descBody="As Lockport's trusted transportation provider, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Lockport airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our knowledge of Lockport, from the historic downtown canal district to Route 7, Route 171, and I-355 access, ensures efficient and reliable transportation throughout Will County."
+        descImage="/images/sections/lockport-limo-transport.png"
+        descImageAlt="Limousine transport in Lockport, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
     />
 
     <x-sections.faq />

@@ -480,7 +480,7 @@ html {
 .sg-nav .nav-bar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding: 0 24px; background: var(--navy); position: relative; }
 .sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--cloud); padding: 20px 12px 20px 0; }
 .sg-nav .nav-logo span { color: var(--champagne); }
-.sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 6px; }
+.sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 0; }
 .sg-nav .nav-cta-btn {
     font-family: var(--font-head); font-weight: 400; font-size: 20px;
     letter-spacing: .08em; word-spacing: 5px; text-transform: uppercase;

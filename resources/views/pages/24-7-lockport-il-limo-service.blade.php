@@ -49,6 +49,21 @@
         imagePosition="left"
     />
 
+    <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/lockport-limo-transport.png"
+        imageAlt="Limousine transport in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descSubheading="Our Lockport limo service makes every ride safe, comfortable, and stress-free."
+        descBody="Don't risk delays on your special day. Our chauffeur service in Lockport, IL guarantees safe, reliable, and comfortable rides for weddings, parties, and corporate events. Reserve your ride now with our quick online form and enjoy a hassle-free experience from start to finish."
+        :descBullets="[]"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

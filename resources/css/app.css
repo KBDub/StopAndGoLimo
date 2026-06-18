@@ -482,18 +482,19 @@ html {
 .sg-nav .nav-logo span { color: var(--champagne); }
 .sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 6px; }
 .sg-nav .nav-cta-btn {
-    font-family: var(--font-head); font-weight: 600; font-size: 15px;
-    letter-spacing: .08em; text-transform: uppercase;
-    color: var(--champagne); border: 2px solid var(--champagne);
-    padding: 11px 36px; text-decoration: none; white-space: nowrap;
-    border-radius: 6px; transition: background .2s, color .2s;
+    font-family: var(--font-head); font-weight: 400; font-size: 20px;
+    letter-spacing: .08em; word-spacing: 5px; text-transform: uppercase;
+    color: var(--champagne); border: 1px solid var(--champagne);
+    padding: 12px 30px; text-decoration: none; white-space: nowrap;
+    border-radius: 10px; margin-right: 10px;
+    transition: background .2s, color .2s;
 }
 .sg-nav .nav-cta-btn:hover { background: var(--champagne); color: var(--navy); }
 .sg-nav .nav-item { position: relative; }
 .sg-nav .nav-link {
-    font-family: var(--font-head); font-weight: 600; font-size: 13.5px;
+    font-family: var(--font-head); font-weight: 400; font-size: 15px;
     letter-spacing: .04em; text-transform: uppercase;
-    color: var(--cloud); padding: 16px 16px; display: inline-flex;
+    color: var(--cloud); padding: 16px 10px; display: inline-flex;
     align-items: center; gap: 6px; text-decoration: none;
     transition: color .2s; position: relative;
 }

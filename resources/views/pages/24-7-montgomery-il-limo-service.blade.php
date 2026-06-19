@@ -73,6 +73,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-dynamic"
+        heading="Dynamic Transportation Solutions for"
+        headingBold="Modern Illinois Residents"
+        body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations, from the local parks to the historic village hall area, at your own speed with a private driver standing by for your departure. Our reliable Montgomery to O'Hare airport shuttle guarantees that you arrive at your terminal on time without the unpredictable wait times often associated with standard ride-sharing applications. Having a private vehicle at your disposal helps you maintain a truly productive and fluid schedule."
+        image="/images/sections/montgomery-dynamic-transport.png"
+        imageAlt="Dynamic transportation options in Montgomery, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

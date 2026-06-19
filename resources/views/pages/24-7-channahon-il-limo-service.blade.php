@@ -69,6 +69,16 @@
         imagePosition="left"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-memorable"
+        heading="Creating Memorable Arrivals for Your"
+        headingBold="Special Occasions"
+        body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from local weddings to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with the highest level of care to ensure your event remains truly unforgettable."
+        image="/images/sections/channahon-ontime-arrival.png"
+        imageAlt="On-time arrival in Channahon, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

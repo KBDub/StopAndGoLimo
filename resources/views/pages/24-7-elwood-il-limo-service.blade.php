@@ -47,6 +47,16 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :inverted="true"
+        :descImageTop="true"
+        descHeading="Why choose us?"
+        descBody="With our Party Bus Rental in Elwood IL, you can travel with ease and enjoy a fun, spacious ride without worrying about transportation."
+        descImage="/images/sections/elwood-transportation.png"
+        descImageAlt="Wedding and event transportation in Elwood, Illinois — Stop and Go Airport Shuttle"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

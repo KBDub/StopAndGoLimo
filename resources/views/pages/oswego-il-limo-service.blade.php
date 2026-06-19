@@ -66,6 +66,17 @@
         descClosing="Our experienced team prioritizes punctuality, safety, and customer satisfaction, ensuring every ride is safe, comfortable, and professional. Request your ride today using our quick contact form."
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-refined"
+        heading="Experience Refined Travel Throughout"
+        headingBold="the Oswego Region"
+        body="Whether you are planning a rustic ceremony at a local farm venue or heading to a critical business engagement, the quality of your transportation defines your entire day. Our premier Oswego IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Oswego barn wedding limo, you skip the common hassles of navigation and parking to focus entirely on your personal celebrations. Our modern fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards across the area."
+        image="/images/sections/oswego-refined-travel.png"
+        imageAlt="Refined limo travel throughout the Oswego, Illinois region — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

@@ -34,7 +34,7 @@
         subtitleIn="serving Bolingbrook, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/bolingbrook-il.png"
         imagePosition="center center"
     />
 

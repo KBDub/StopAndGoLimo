@@ -89,7 +89,12 @@
         descImageAlt="Wedding and event transportation in Elwood, Illinois — Stop and Go Airport Shuttle"
     />
 
+    <x-sections.our-services />
+
     <x-sections.faq />
+
+    <x-sections.areas-we-serve background="dark" />
+
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

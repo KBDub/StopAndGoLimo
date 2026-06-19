@@ -51,6 +51,19 @@
         :inverted="true"
     />
 
+    <x-sections.travel-in-style
+        heading="Minooka Airport"
+        headingBold="Shuttle Service"
+        subheading="to O'Hare & Midway"
+        body="Our Minooka IL limo service provides airport transportation to O'Hare and Midway with guaranteed on-time pickups. Serving Minooka, Channahon, and areas along Ridge Road, we ensure stress-free travel with luggage assistance, flight monitoring, and expert navigation for efficient Minooka to O'Hare and Minooka to Midway trips."
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/naperville-limo-service.jpg"
+        imageAlt="Airport shuttle service from Minooka, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.three-steps />
 
     <x-sections.free-instant-quote

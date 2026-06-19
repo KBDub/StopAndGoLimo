@@ -73,6 +73,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-flexible"
+        heading="Flexible Transportation Options Built for"
+        headingBold="Modern Residents"
+        body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple local destinations, from the business parks to the regional golf courses, at your own speed with a private driver standing by for your departure. Our reliable Manhattan IL to O'Hare car service ensures that you arrive at your terminal on time without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a truly fluid schedule."
+        image="/images/sections/manhattan-flexible-transport.png"
+        imageAlt="Flexible transportation options in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

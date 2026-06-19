@@ -70,6 +70,16 @@
         imagePosition="left"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-occasions"
+        heading="Creating Elegant Arrivals for Your"
+        headingBold="Significant Milestones"
+        body="A luxury limousine adds a vital layer of elegance to the most significant milestones on your social calendar, from traditional weddings to formal high school graduations. We specialize in providing high-end transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at venues like Cog Hill or The Monte Bello Estate and works diligently to provide a seamless experience for every guest. From the initial pick up until the final drop-off of the night, we manage your transportation with the highest level of care."
+        image="/images/sections/lemont-special-occasions.png"
+        imageAlt="Party bus and special occasion transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

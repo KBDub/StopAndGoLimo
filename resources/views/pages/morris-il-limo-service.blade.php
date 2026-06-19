@@ -98,6 +98,16 @@
         imagePosition="left"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-elegant"
+        heading="Elegant Transportation for"
+        headingBold="Life's Big Moments"
+        body="A luxury limousine provides the essential finishing touch to the most important events on your calendar, from weddings to graduations. We specialize in providing high-end transport for proms, anniversary celebrations, and sporting events, ensuring that your group arrives together and in style. We understand the nuances of local event logistics and work tirelessly to provide a flawless experience for you and your guests. From the initial pickup to the final drop-off, we treat your special occasion with the professional care and attention it deserves, making sure your travel is as memorable as the event itself."
+        image="/images/sections/morris-elegant-arrivals.png"
+        imageAlt="Elegant transportation for special occasions in Morris, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

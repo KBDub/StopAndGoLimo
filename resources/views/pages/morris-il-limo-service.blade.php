@@ -87,6 +87,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-flexible"
+        heading="Personalized Transportation"
+        headingBold="Tailored to Your Day"
+        body="For travelers who require a higher degree of flexibility, our hourly limo service is the ideal choice for a busy itinerary. This option gives you the freedom to explore the area at your own pace, knowing that your professional driver is waiting on standby to whisk you away to your next stop. Our specialized Morris to O'Hare limo transfer ensures you reach your terminal on time without the common delays of ride-sharing apps. Whether you are hopping between corporate meetings or visiting multiple landmarks in a single afternoon, having a dedicated vehicle at your disposal ensures you maintain a fluid schedule."
+        image="/images/sections/morris-flexible-transport.png"
+        imageAlt="Personalized transportation in Morris, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

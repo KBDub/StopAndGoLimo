@@ -51,6 +51,17 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Planning a special day? Our Wedding limo in Monee IL ensures elegant, comfortable, and stress-free transportation while we handle all the details."
+        descBody="From weddings and private events to business travel and special occasions, our event transportation in Monee IL and chauffeur service in Monee IL provide reliable, comfortable, and on-time rides. We focus on safety, punctuality, and a smooth experience so every trip feels effortless from start to finish. Request your ride today using our quick contact form and secure your transportation promptly."
+        descImage="/images/sections/monee-wedding-events.png"
+        descImageAlt="Wedding and event transportation in Monee, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

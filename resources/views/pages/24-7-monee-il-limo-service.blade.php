@@ -34,7 +34,7 @@
         subtitleIn="serving Monee, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/monee-il.png"
         imagePosition="center center"
     />
 

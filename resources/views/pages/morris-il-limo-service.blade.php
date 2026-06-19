@@ -53,6 +53,17 @@
         body="Stop & Go provides Morris with 24/7 airport shuttle service to O'Hare and Midway, limousine service for weddings and events, and party bus rentals for celebrations. Serving downtown Morris, Grundy County, and surrounding areas, our professional chauffeurs deliver reliable, comfortable transportation for every occasion."
     />
 
+    <x-sections.three-steps :inverted="true" />
+
+    <x-sections.party-limo-image
+        heading="Complete Transportation Solutions for"
+        headingBold="Morris Residents"
+        body="As Morris's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Morris airport shuttle for timely arrivals and departures, limousine service for weddings and special occasions, party bus rental for celebrations and group travel, corporate transportation for business meetings, and wedding vehicles to make your special day seamless. Our intimate knowledge of Morris, from the Illinois River to downtown, ensures efficient and reliable transportation throughout the community."
+        image="/images/sections/morris-airport.png"
+        imageAlt="Morris Municipal Airport, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

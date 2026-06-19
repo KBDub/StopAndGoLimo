@@ -51,6 +51,19 @@
         :inverted="true"
     />
 
+    <x-sections.three-steps />
+
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Complete Transportation Solutions for Minooka Residents"
+        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services: airport shuttle for timely arrivals and departures, limousine service for weddings, events, and special occasions, party bus rental for celebrations and group travel, corporate transportation for business meetings and executive travel, and wedding vehicles to make your special day seamless. Our intimate knowledge of Minooka, from local neighborhoods to downtown, from Ridge Road to I-80, ensures efficient and reliable transportation throughout the community."
+        descImage="/images/sections/naperville-fiq.jpg"
+        descImageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
+        :inverted="true"
+    />
+
     <x-sections.travel-in-style
         heading="Minooka Airport"
         headingBold="Shuttle Service"
@@ -64,17 +77,74 @@
         :inverted="true"
     />
 
-    <x-sections.three-steps />
+    <x-sections.our-services
+        heading="What we"
+        headingBold="offer"
+    />
 
-    <x-sections.free-instant-quote
-        rightVariant="description"
-        descHeading="Why choose us?"
-        descSubheading="Complete Transportation Solutions for Minooka Residents"
-        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services: airport shuttle for timely arrivals and departures, limousine service for weddings, events, and special occasions, party bus rental for celebrations and group travel, corporate transportation for business meetings and executive travel, and wedding vehicles to make your special day seamless. Our intimate knowledge of Minooka, from local neighborhoods to downtown, from Ridge Road to I-80, ensures efficient and reliable transportation throughout the community."
-        descImage="/images/sections/naperville-fiq.jpg"
-        descImageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
-        :descImageTop="true"
-        :inverted="true"
+    <x-sections.city-info-grid
+        :boxes="[
+            [
+                'heading' => 'North Minooka',
+                'items'   => [
+                    'Areas near Ridge Road (US-6)',
+                    'Northern residential neighborhoods',
+                    'Minooka High School area',
+                    'Mondamin Street neighborhoods',
+                    'Routes toward Shorewood',
+                ],
+            ],
+            [
+                'heading' => 'South Minooka',
+                'items'   => [
+                    'Areas near I-80 access',
+                    'Southern residential communities',
+                    'Bluff Road corridor',
+                    'Nearby Channahon border areas',
+                    'South of US-6',
+                ],
+            ],
+            [
+                'heading' => 'West Minooka',
+                'items'   => [
+                    'West side residential neighborhoods',
+                    'Grove Road area',
+                    'McEvilly Road corridor',
+                    'Open suburban developments',
+                    'Routes toward Morris',
+                ],
+            ],
+            [
+                'heading' => 'Downtown Minooka',
+                'items'   => [
+                    'Minooka downtown district',
+                    'Ridge Road business area',
+                    'Local shops and restaurants',
+                    'Community parks and village center',
+                    'Municipal and civic buildings',
+                ],
+            ],
+            [
+                'heading' => 'Near Major Roads',
+                'items'   => [
+                    'Ridge Road (US-6 corridor)',
+                    'I-80 access points',
+                    'I-55 nearby access routes',
+                    'River Road connections',
+                    'Bridge Street area',
+                ],
+            ],
+            [
+                'heading' => 'Central Minooka',
+                'items'   => [
+                    'Core residential neighborhoods',
+                    'Schools and park districts',
+                    'Local community areas',
+                    'Mid-town residential zones',
+                    'Central access to all main roads',
+                ],
+            ],
+        ]"
     />
 
     <x-sections.faq />

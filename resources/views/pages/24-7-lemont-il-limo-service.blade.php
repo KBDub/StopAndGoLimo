@@ -48,6 +48,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-sophisticated"
+        heading="Travel with Confidence and Sophistication"
+        headingBold="Across the Area"
+        body="Whether you are planning an elegant ceremony at a historic local church or heading to a critical business engagement, the quality of your ride defines your entire day. Our premier Lemont IL limo service provides a dedicated professional driver who manages every logistical detail of local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Lemont wedding estate limo, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
+        image="/images/sections/lemont-sophisticated-travel.png"
+        imageAlt="Travel with confidence in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

@@ -34,7 +34,7 @@
         subtitleIn="serving Lemont, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/lemont-il.png"
         imagePosition="center center"
     />
 

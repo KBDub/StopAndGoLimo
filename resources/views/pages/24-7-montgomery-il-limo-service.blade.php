@@ -38,6 +38,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Montgomery IL"
+        headingBold="Limo Service"
+        subheading="for All Occasions"
+        body="Travel with confidence using our 24/7 Montgomery IL limo service. Whether you need a prompt airport shuttle in Montgomery IL, a stylish wedding limo in Montgomery IL, or reliable transportation for any occasion, we provide clean vehicles, professional drivers, and seamless service from start to finish. Book now and enjoy stress-free, comfortable rides."
+        buttonText="About Us"
+        buttonHref="/about-us"
+        image="/images/sections/montgomery-wedding-transport.png"
+        imageAlt="Wedding and event transportation in Montgomery, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

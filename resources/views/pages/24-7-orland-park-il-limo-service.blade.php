@@ -47,7 +47,19 @@
         buttonHref="/about-us"
         image="/images/sections/orland-park-limo.png"
         imageAlt="Comfortable limousine service in Orland Park, Illinois — Stop and Go Airport Shuttle"
-        imagePosition="right"
+        imagePosition="left"
+        :inverted="true"
+    />
+
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Our Party Bus Rental in Orland Park IL and shuttle service make group travel easy, safe, and on time for any occasion."
+        descBody="From weddings and private events to business travel, our event transportation in Orland Park IL and chauffeur service in Orland Park IL deliver reliable, comfortable, and on-time rides. Backed by our 24/7 Orland Park IL limo service, we make every trip smooth, stress-free, and professionally managed from start to finish."
+        descImage="/images/sections/orland-park-transportation.png"
+        descImageAlt="Orland Park limousine transportation — Stop and Go Airport Shuttle"
+        :descImageTop="true"
+        :inverted="true"
     />
 
     <x-sections.faq />

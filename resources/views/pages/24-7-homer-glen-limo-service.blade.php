@@ -69,6 +69,16 @@
         imagePosition="left"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-occasions"
+        heading="Creating Memorable Arrivals for Your"
+        headingBold="Special Occasions"
+        body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from local weddings to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at venues like DiNolfo's or Zachary's Red Barn and works diligently to provide a seamless experience for every guest. From your first pickup until the final drop-off of the night, we manage your transportation with the highest level of care."
+        image="/images/sections/homer-glen-special-occasions.png"
+        imageAlt="Special occasion transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

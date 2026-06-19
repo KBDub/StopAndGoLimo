@@ -62,6 +62,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-sophisticated"
+        heading="Experience Unmatched Comfort with"
+        headingBold="Every Local Trip"
+        body="Whether you are planning an elegant rustic wedding at a local farm venue or heading to an important corporate engagement, the quality of your ride defines your entire day. Our premier Manhattan IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Manhattan farm wedding limo, you skip the common hassles of navigation and parking to focus entirely on your personal celebrations. Our modern fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards across Will County."
+        image="/images/sections/manhattan-sophisticated-travel.png"
+        imageAlt="Sophisticated travel in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

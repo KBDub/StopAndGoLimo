@@ -47,6 +47,12 @@
         :inverted="true"
     />
 
+    <x-sections.info-strip
+        headingBold="Reliable & Stylish"
+        heading="Bolingbrook Transportation"
+        body="Stop &amp; Go provides 24/7 airport shuttle service to O'Hare and Midway, luxury limo service for weddings and events, and party bus rentals in Bolingbrook. With direct I-55 access and close proximity to both Chicago airports, we deliver reliable, professional transportation for business travel and celebrations throughout this southwest suburb."
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

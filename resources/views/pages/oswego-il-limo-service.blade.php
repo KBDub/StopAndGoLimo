@@ -82,10 +82,20 @@
         heading="Dynamic Transportation Solutions for"
         headingBold="Modern Illinois Residents"
         body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations, from the business parks to the scenic Fox River trails, at your own speed with a private driver standing by for your departure. Our reliable Oswego to O'Hare airport shuttle guarantees that you arrive at your terminal on time without the unpredictable wait times often associated with standard ride-sharing applications. Having a private vehicle at your disposal helps you maintain a truly productive and fluid schedule."
-        image="/images/sections/oswego-unforgettable-experience.png"
-        imageAlt="Arrive at an unforgettable experience using our services in Oswego, Illinois — Stop and Go Airport Shuttle"
+        image="/images/sections/oswego-dynamic-transport.png"
+        imageAlt="Dynamic transportation solutions in Oswego, Illinois — Stop and Go Airport Shuttle"
         imageAspect="16/9"
         imagePosition="left"
+    />
+
+    <x-sections.image-info-card
+        id="image-info-card-elegant"
+        heading="Creating Elegant Arrivals for Your"
+        headingBold="Significant Milestones"
+        body="A luxury limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from traditional church ceremonies to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at unique venues like Venue 5126 or Arranmore Farm and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with the highest level of care and professionalism."
+        image="/images/sections/oswego-unforgettable-experience.png"
+        imageAlt="Elegant arrivals for special milestones in Oswego, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
     />
 
     <x-sections.faq />

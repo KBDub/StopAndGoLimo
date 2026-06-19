@@ -47,6 +47,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-comfort"
+        heading="Experience Unmatched Comfort"
+        headingBold="with Every Booking"
+        body="Whether you are commuting for a corporate meeting or checking into your hotel for a relaxing vacation, the quality of your transportation defines your travel experience. Our elite Channahon IL limo service provides a dedicated professional driver who manages every detail of local navigation while you enjoy a quiet, premium cabin. By utilizing a specialized Channahon executive car service, you skip the hassles of city traffic and parking logistics to focus entirely on your personal priorities. Our modern fleet delivers a sophisticated travel solution for clients who value safety, punctuality, and high-end service standards in the area."
+        image="/images/sections/channahon-comfort.png"
+        imageAlt="Comfortable transport experience in Channahon, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

@@ -38,6 +38,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Manhattan"
+        headingBold="Limo Service"
+        subheading="for All Occasions"
+        body="Ride with confidence using our 24/7 Manhattan IL limo service, built for travelers who expect reliability and comfort. Whether you need a dependable airport shuttle in Manhattan IL, a stylish wedding limo in Manhattan IL, or a fun Party Bus Rental in Manhattan IL, we deliver on-time pickups, spotless vehicles, and professional service every step of the way. Book today and enjoy transportation that works around your schedule, not the other way around."
+        buttonText="About Us"
+        buttonHref="/about-us"
+        image="/images/sections/manhattan-limo.png"
+        imageAlt="Airport transportation in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

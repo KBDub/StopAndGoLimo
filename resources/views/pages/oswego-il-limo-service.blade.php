@@ -47,6 +47,25 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :inverted="true"
+        :descImageTop="true"
+        descImage="/images/sections/north-aurora-city-of-aurora.png"
+        descImageAlt="City of Aurora, Illinois near Oswego — Stop and Go Airport Shuttle"
+        descHeading="Why choose us?"
+        descSubheading="Efficient Oswego Transportation Services"
+        descBody="As Oswego's trusted transportation provider, our services offer complete luxury travel options:"
+        :descBullets="[
+            'Elegant wedding limos for unforgettable ceremonies and receptions',
+            'Reliable airport shuttles for stress-free arrivals and departures',
+            'Chauffeur service in Oswego IL for executive and personal trips',
+            'Event transportation in Oswego IL to keep special occasions seamless',
+            'Limousine transportation in Oswego IL for premium comfort and style',
+        ]"
+        descClosing="Our experienced team prioritizes punctuality, safety, and customer satisfaction, ensuring every ride is safe, comfortable, and professional. Request your ride today using our quick contact form."
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

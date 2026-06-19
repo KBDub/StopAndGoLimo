@@ -95,6 +95,9 @@
     />
 
     <x-sections.faq />
+
+    <x-sections.areas-we-serve background="dark" />
+
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

@@ -94,6 +94,11 @@
         imageAspect="16/9"
     />
 
+    <x-sections.our-services
+        heading="What we"
+        headingBold="offer"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

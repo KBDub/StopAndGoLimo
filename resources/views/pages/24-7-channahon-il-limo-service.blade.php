@@ -34,7 +34,7 @@
         subtitleIn="serving Channahon, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/channahon-il.png"
         imagePosition="center center"
     />
 

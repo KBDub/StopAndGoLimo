@@ -38,6 +38,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Minooka IL"
+        headingBold="Limo Service"
+        subheading="for All Occasions"
+        body="Travel around Minooka with ease using our 24/7 Minooka IL limo service. Whether you need airport transportation, weddings, group rides, or corporate travel, we deliver safe, comfortable, and on-time service for every occasion. Our experienced drivers focus on smooth, stress-free rides so you can arrive without worry."
+        buttonText="About Us"
+        buttonHref="/about-us"
+        image="/images/sections/minooka-limo.png"
+        imageAlt="Happy clients in a limousine in Minooka, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="left"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

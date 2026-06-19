@@ -59,6 +59,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-flexible"
+        heading="Flexible Transportation Options for Active"
+        headingBold="Illinois Residents"
+        body="For passengers who need a higher level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily schedule. This flexible service allows you to visit multiple local destinations at your own pace with a private driver standing by for your immediate departure. Our reliable Lemont to Midway airport shuttle guarantees that you arrive at your terminal without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several corporate appointments or touring regional landmarks, having a private vehicle at your disposal helps you maintain a truly fluid and efficient schedule."
+        image="/images/sections/lemont-flexible-transport.png"
+        imageAlt="Flexible transportation options in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

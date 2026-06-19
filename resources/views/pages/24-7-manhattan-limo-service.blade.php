@@ -51,6 +51,17 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Our chauffeur service in Manhattan offers professional drivers and reliable rides without the stress."
+        descBody="From a dependable airport shuttle in Manhattan to an elegant wedding limo in Manhattan and an exciting Party Bus Rental in Manhattan, our 24/7 Manhattan limo service is built for every occasion. With professional drivers, spotless vehicles, and on-time pickups, we handle all the details so you can focus on what matters most."
+        descImage="/images/sections/manhattan-transportation.png"
+        descImageAlt="Fleet car interior in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

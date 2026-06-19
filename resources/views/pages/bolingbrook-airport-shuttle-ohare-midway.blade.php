@@ -84,6 +84,19 @@
         :inverted="true"
     />
 
+    <x-sections.our-services />
+
+    <x-sections.city-info-grid
+        :boxes="[
+            ['heading' => 'North Bolingbrook', 'items' => ['Family neighborhoods', 'Near Kings Road', 'Quick I-55 access', 'Close to schools & parks', 'Fast O\'Hare & Midway trips']],
+            ['heading' => 'South Bolingbrook', 'items' => ['Winston Park', 'South Subdivisions', 'I-55 Corridor', 'Romeoville Border', 'New Developments']],
+            ['heading' => 'West Bolingbrook', 'items' => ['West Subdivisions', 'Naperville Border', 'I-55 Business Corridor', 'Route 53 Area', 'Industrial Park']],
+            ['heading' => 'Central Bolingbrook', 'items' => ['Crossroads', 'Weber Road', 'Promenade', 'Main Street', 'Central Business District']],
+            ['heading' => 'Old Town', 'items' => ['Downtown Bolingbrook', 'Village Hall', 'Bolingbrook Road', 'Historic District', 'Central Park']],
+            ['heading' => 'Crossroads Area', 'items' => ['Crossroads Shopping Center', 'Restaurant Row', 'Entertainment District', 'Adjacent Subdivisions', 'I-55 Access Points']],
+        ]"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

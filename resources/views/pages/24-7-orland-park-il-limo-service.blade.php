@@ -62,6 +62,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-confidence"
+        heading="Travel with Total Luxury to"
+        headingBold="Every Local Destination"
+        body="Whether you are planning a high-end shopping excursion at Orland Square Mall or heading to an important corporate dinner, the quality of your ride defines your entire experience. Our premier Orland Park IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Orland Park black car service, you skip the common frustrations of navigating crowded parking lots and busy intersections to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
+        image="/images/sections/orland-park-confidence.png"
+        imageAlt="Travel with confidence in Orland Park, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

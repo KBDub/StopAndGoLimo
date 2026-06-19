@@ -47,6 +47,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-sophisticated"
+        heading="Experience Refined Travel Throughout the"
+        headingBold="Homer Glen Area"
+        body="Whether you are planning a grand wedding at a local estate or heading to a critical business engagement, the quality of your transportation defines your entire day. Our premier Homer Glen IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Homer Glen black car service, you skip the common hassles of navigation and parking to focus entirely on your personal priorities. Our modern fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
+        image="/images/sections/homer-glen-sophisticated-travel.png"
+        imageAlt="Refined travel in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

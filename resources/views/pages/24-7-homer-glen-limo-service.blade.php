@@ -34,7 +34,7 @@
         subtitleIn="serving Homer Glen, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/homer-glen-il.png"
         imagePosition="center center"
     />
 

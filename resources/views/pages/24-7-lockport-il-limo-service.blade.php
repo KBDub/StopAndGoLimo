@@ -47,6 +47,7 @@
         image="/images/sections/lockport-limo-transport.png"
         imageAlt="Limousine service in Lockport, Illinois — Stop and Go Airport Shuttle"
         imagePosition="left"
+        :inverted="true"
     />
 
     <x-sections.free-instant-quote
@@ -112,6 +113,7 @@
     />
 
     <x-sections.faq />
+    <x-sections.areas-we-serve background="dark"/>
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

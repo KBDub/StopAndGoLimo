@@ -38,6 +38,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Mokena IL"
+        headingBold="Limo Service"
+        subheading="for All Occasions"
+        body="Enjoy worry-free travel with our 24/7 Mokena IL limo service, designed for comfort, reliability, and perfect timing. Whether you are planning a special celebration or arriving in style with a wedding limo in Mokena IL, we deliver professional service, clean vehicles, and on-time pickups that make every ride effortless from start to finish."
+        buttonText="About Us"
+        buttonHref="/about-us"
+        image="/images/sections/mokena-limo.png"
+        imageAlt="Business traveler in a limousine in Mokena, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

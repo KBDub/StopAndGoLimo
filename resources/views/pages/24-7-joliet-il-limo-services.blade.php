@@ -53,6 +53,18 @@
         :inverted="true"
     />
 
+    <x-sections.three-steps :inverted="true" />
+
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :inverted="true"
+        :descImageTop="true"
+        descHeading="Why choose us?"
+        descBody="As Joliet's trusted transportation provider, Stop & Go offers complete luxury transportation services — Joliet airport shuttle for timely arrivals and departures, limousine service for weddings and special occasions, party bus rental for celebrations and group travel, and corporate transportation for business meetings. Our intimate knowledge of Joliet, from the downtown Historic District to the I-80 corridor, from Route 59 to I-55 access, ensures efficient and reliable transportation throughout this vibrant Will County community."
+        descImage="/images/sections/joliet-transportation.png"
+        descImageAlt="Wedding and event transportation in Joliet, Illinois — Stop and Go Airport Shuttle"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

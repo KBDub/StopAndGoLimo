@@ -80,6 +80,11 @@
         imageAspect="16/9"
     />
 
+    <x-sections.our-services
+        heading="What we"
+        headingBold="offer"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

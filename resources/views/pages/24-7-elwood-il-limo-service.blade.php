@@ -38,6 +38,15 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Elwood IL"
+        headingBold="Limo Service"
+        body="Enjoy stress-free travel with our 24/7 Elwood IL limo service, built for comfort, reliability, and punctuality. Whether you need a wedding limo in Elwood IL, an airport shuttle in Elwood IL, or transportation for any special event, we provide professional drivers, clean vehicles, and on-time service to make every ride smooth and effortless."
+        image="/images/sections/elwood-limo.png"
+        imageAlt="Happy client in a Stop and Go limousine in Elwood, Illinois"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

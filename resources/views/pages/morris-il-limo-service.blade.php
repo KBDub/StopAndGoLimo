@@ -47,6 +47,12 @@
         :inverted="true"
     />
 
+    <x-sections.info-strip
+        headingBold="Reliable & On-Time"
+        heading="Every Trip"
+        body="Stop & Go provides Morris with 24/7 airport shuttle service to O'Hare and Midway, limousine service for weddings and events, and party bus rentals for celebrations. Serving downtown Morris, Grundy County, and surrounding areas, our professional chauffeurs deliver reliable, comfortable transportation for every occasion."
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

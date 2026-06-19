@@ -97,6 +97,12 @@
         ]"
     />
 
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional Transportation Solutions"
+        headingBold="Throughout Bolingbrook"
+        body="As Bolingbrook's trusted transportation provider, Stop &amp; Go offers complete luxury transportation services including Bolingbrook airport shuttle, Bolingbrook limo service, Bolingbrook party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Bolingbrook, from Old Town to Crossroads, Kings Road, and Winston Park, with easy access to I-55 and Naperville Road, ensures efficient, reliable transportation throughout this thriving southwest suburb and for Bolingbrook to O'Hare and Bolingbrook to Midway trips."
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

@@ -74,6 +74,16 @@
         descImageAlt="Airport shuttle in Bolingbrook, Illinois — Stop and Go Airport Shuttle"
     />
 
+    <x-sections.travel-in-style
+        heading="24/7 Bolingbrook Airport Shuttle"
+        headingBold="to O'Hare & Midway"
+        body="Our Bolingbrook airport shuttle provides round-the-clock service to O'Hare and Midway with on-time pickups from anywhere in Bolingbrook. Serving Old Town, Crossroads Shopping Center, Kings Road, Winston Park, and other neighborhoods, we ensure stress-free travel with flight monitoring, luggage assistance, and expert I-55 and I-355 navigation for efficient Bolingbrook to O'Hare and Bolingbrook to Midway trips."
+        image="/images/sections/bolingbrook-airport.png"
+        imageAlt="Airport shuttle service in Bolingbrook, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

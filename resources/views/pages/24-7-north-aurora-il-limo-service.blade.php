@@ -104,6 +104,8 @@
         ['heading' => 'Wedding Venues',            'items' => ['Ballydoyle event center', 'Gaslite Manor', 'Naperville IL Banquets near Aurora', 'Hollywood Casino Aurora', 'Area churches and reception halls']],
     ]" />
 
+    <x-sections.faq />
+        
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions"
         headingBold="for North Aurora Residents"
@@ -113,7 +115,6 @@
         directions="• Downtown Aurora to O'Hare: 45–60 minutes via I‑88/I‑294 North • West Aurora to O'Hare: 45–60 minutes • Aurora to Midway Airport: 50–65 minutes via I‑88/I‑294/I‑55 South • Aurora I‑88/I‑80 corridor to both airports"
     />
 
-    <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

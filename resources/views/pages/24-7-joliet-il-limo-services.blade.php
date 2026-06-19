@@ -34,7 +34,7 @@
         subtitleIn="serving Joliet, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/joliet-il.png"
         imagePosition="center center"
     />
 

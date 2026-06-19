@@ -84,6 +84,16 @@
         imagePosition="left"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-elegant"
+        heading="Creating Elegant Arrivals for Your"
+        headingBold="Significant Milestones"
+        body="A luxury limousine adds a vital layer of elegance to the most significant milestones on your social calendar, from traditional weddings to formal high school graduations. We specialize in providing high-end transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury and style. Our team understands the specific logistics required for large-scale events at venues like Elements by The Odyssey and works diligently to provide a seamless experience for every guest in your group. From the initial pickup to the final drop-off of the night, we manage your transportation with the highest level of care to ensure your event is perfect."
+        image="/images/sections/orland-park-elegant.png"
+        imageAlt="Creating elegant arrivals in Orland Park, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

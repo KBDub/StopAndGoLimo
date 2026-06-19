@@ -94,10 +94,7 @@
         imageAspect="16/9"
     />
 
-    <x-sections.our-services
-        heading="What we"
-        headingBold="offer"
-    />
+    <x-sections.our-services />
 
     <x-sections.faq />
     <x-sections.areas-we-serve background="dark"/>

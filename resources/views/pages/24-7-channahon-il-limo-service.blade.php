@@ -38,6 +38,15 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Channahon IL"
+        headingBold="Limo Service"
+        body="Travel around Channahon with ease using our Channahon IL limo service. Whether you need a reliable Channahon airport limo service, a stylish wedding limo in Channahon IL, or a professional chauffeur service in Channahon IL, we provide safe, comfortable, and on-time transportation for every occasion. Our experienced drivers ensure each ride is smooth, stress-free, and tailored to your needs."
+        image="/images/sections/channahon-limo.png"
+        imageAlt="Happy clients in a limousine in Channahon, Illinois — Stop and Go Airport Shuttle"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

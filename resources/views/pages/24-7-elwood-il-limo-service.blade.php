@@ -47,6 +47,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-sophisticated"
+        heading="Experience Sophisticated Travel"
+        headingBold="Throughout the Elwood Region"
+        body="Whether you are commuting for a corporate meeting at the massive intermodal center or arriving at a hotel for a well-deserved vacation, the quality of your transportation defines your entire experience. Our premier Elwood IL limo service provides a dedicated professional driver who manages every detail of the local heavy traffic while you relax in a quiet, high-end cabin. By choosing a specialized Elwood logistics car service, you skip the common hassles of navigating industrial routes and truck traffic to focus entirely on your personal priorities. Our modern fleet delivers a sophisticated travel solution for clients who value safety and punctuality above all else."
+        image="/images/sections/elwood-comfort.png"
+        imageAlt="Experience comfort and sophistication in Elwood, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

@@ -38,6 +38,15 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Oswego IL"
+        headingBold="Limo Service"
+        body="Travel smarter and ride with confidence using our 24/7 Oswego IL limo service, designed for reliability and comfort at any hour. Whether you need a dependable airport shuttle in Oswego IL or a fun, spacious party bus rental in Oswego IL for a night out or group event, we deliver clean vehicles, professional drivers, and on-time service that makes every trip smooth and stress-free from start to finish."
+        image="/images/sections/oswego-happy-clients.png"
+        imageAlt="Happy clients using Stop and Go limo service in Oswego, Illinois"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

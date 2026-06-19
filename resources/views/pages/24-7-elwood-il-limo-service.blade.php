@@ -58,6 +58,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-dynamic"
+        heading="Dynamic Transportation Solutions for Modern"
+        headingBold="Illinois Residents"
+        body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations, from the local business parks to the scenic Midewin National Tallgrass Prairie, at your own speed with a private driver standing by for your departure. Our reliable Elwood to O'Hare airport shuttle guarantees that you arrive at your terminal on time without the unpredictable wait times often associated with standard ride-sharing applications. Having a private vehicle at your disposal helps you maintain a truly productive and efficient schedule."
+        image="/images/sections/elwood-dynamic-transport.png"
+        imageAlt="Dynamic transportation in Elwood, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

@@ -38,6 +38,15 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Frankfort IL"
+        headingBold="Limo Service"
+        body="Travel through Frankfort in comfort and confidence with our 24/7 Frankfort IL limo service. Whether you are planning a memorable celebration with a Party Bus Rental in Frankfort IL or arriving in style with a wedding limo in Frankfort IL, we deliver dependable, comfortable, and on-time transportation. Our experienced drivers focus on safety, punctuality, and premium service so every ride feels effortless from start to finish."
+        image="/images/sections/frankfort-limo.png"
+        imageAlt="Happy clients in a limousine in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

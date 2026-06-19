@@ -73,6 +73,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-occasions"
+        heading="Creating Memorable Arrivals for Your"
+        headingBold="Special Occasions"
+        body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from rustic barn weddings to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at unique venues like the Crozehead Cooperage or local banquet halls and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with care."
+        image="/images/sections/monee-memorable-arrivals.png"
+        imageAlt="Transportation for special occasions in Monee, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

@@ -74,6 +74,19 @@
         :inverted="true"
     />
 
+    <x-sections.our-services />
+
+    <x-sections.image-info-card
+        id="image-info-card-sophisticated"
+        heading="Arrive in Comfort and Style"
+        headingBold="Every Single Time"
+        body="Whether you are traveling for business or arriving at your hotel for a long-awaited vacation, the way you navigate the city sets the tone for your entire stay. Our premier Morris IL limo service ensures you have a dedicated driver ready to manage the logistics of local traffic while you relax in a premium vehicle. By choosing a local Grundy County chauffeur service, you eliminate the stress of navigation and parking, allowing you to focus on your destination. Our fleet provides a sophisticated solution for those who demand punctuality, safety, and a high level of personal service."
+        image="/images/sections/morris-sophisticated-travel.png"
+        imageAlt="Comfortable and stylish travel in Morris, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

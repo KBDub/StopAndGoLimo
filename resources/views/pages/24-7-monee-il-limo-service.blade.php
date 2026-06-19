@@ -38,6 +38,19 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Monee IL"
+        headingBold="Limo Service"
+        subheading="for All Occasions"
+        body="Travel with ease and style using our 24/7 Monee IL limo service. Whether you need an airport shuttle in Monee IL, a wedding limo in Monee IL for a special occasion, or professional transportation for any event, we provide clean vehicles, experienced drivers, and on-time service. Book now and enjoy a stress-free ride today."
+        buttonText="About Us"
+        buttonHref="/about-us"
+        image="/images/sections/monee-event-transport.png"
+        imageAlt="Event transportation in Monee, Illinois — Stop and Go Airport Shuttle"
+        imagePosition="left"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

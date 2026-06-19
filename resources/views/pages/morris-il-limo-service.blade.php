@@ -38,6 +38,15 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Every Occasion"
+        headingBold="Covered"
+        body="Reliable and on-time transportation for airport trips, events, and corporate travel. Get a fast Morris IL limo quote or book a Morris Illinois party bus rental today."
+        image="/images/sections/morris-limo.png"
+        imageAlt="White limousine in Morris, Illinois — Stop and Go Airport Shuttle"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

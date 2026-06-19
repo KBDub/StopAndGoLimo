@@ -58,6 +58,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-dynamic"
+        heading="Dynamic Transportation Solutions for"
+        headingBold="Modern Travelers"
+        body="For passengers who need a high level of versatility, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple local destinations at your own speed with a private driver standing by for your immediate departure. Our reliable Channahon to Midway limo service guarantees that you arrive at the airport terminal without the unpredictable wait times often found with standard ride-sharing platforms. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a productive and fluid schedule."
+        image="/images/sections/channahon-dynamic-transport.png"
+        imageAlt="Dynamic transportation in Channahon, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

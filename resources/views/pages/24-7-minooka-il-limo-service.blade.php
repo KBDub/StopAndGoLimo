@@ -51,6 +51,19 @@
         :inverted="true"
     />
 
+    <x-sections.three-steps />
+
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Complete Transportation Solutions for Minooka Residents"
+        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services: airport shuttle for timely arrivals and departures, limousine service for weddings, events, and special occasions, party bus rental for celebrations and group travel, corporate transportation for business meetings and executive travel, and wedding vehicles to make your special day seamless. Our intimate knowledge of Minooka, from local neighborhoods to downtown, from Ridge Road to I-80, ensures efficient and reliable transportation throughout the community."
+        descImage="/images/sections/naperville-fiq.jpg"
+        descImageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

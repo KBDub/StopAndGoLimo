@@ -65,6 +65,17 @@
         descImageAlt="Wedding and event transportation in Joliet, Illinois — Stop and Go Airport Shuttle"
     />
 
+    <x-sections.travel-in-style
+        heading="24/7 Joliet Airport Shuttle to"
+        headingBold="O'Hare & Midway"
+        body="Our Joliet airport shuttle provides 24/7 service to O'Hare and Midway with guaranteed on-time pickups. Serving downtown Joliet, West Joliet, and the I-80 corridor, our Joliet airport shuttle ensures stress-free travel with luggage assistance, flight monitoring, and expert navigation for efficient Joliet to O'Hare and Joliet to Midway trips."
+        image="/images/sections/joliet-airport-shuttle.webp"
+        imageAlt="Chicago O'Hare International Airport tower — Stop and Go Airport Shuttle serving Joliet"
+        imagePosition="right"
+    />
+
+    <x-sections.our-services />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

@@ -34,7 +34,7 @@
         subtitleIn="serving Montgomery, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/montgomery-il.png"
         imagePosition="center center"
     />
 

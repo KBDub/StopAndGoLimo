@@ -47,7 +47,18 @@
         buttonHref="/about-us"
         image="/images/sections/montgomery-wedding-transport.png"
         imageAlt="Wedding and event transportation in Montgomery, Illinois — Stop and Go Airport Shuttle"
-        imagePosition="right"
+        imagePosition="left"
+        :inverted="true"
+    />
+
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        descHeading="Why choose us?"
+        descSubheading="Our Chauffeur service in Montgomery IL makes every ride easy, comfortable, and stress-free."
+        descBody="From stylish wedding rides to reliable airport shuttle in Montgomery IL, exciting Party Bus Rental in Montgomery IL, seamless event transportation in Montgomery IL, and professional limousine transportation in Montgomery IL, we provide safe, comfortable, and punctual service every time. Our team prioritizes safety, timeliness, and customer satisfaction to make every trip effortless. Book your ride now using our quick contact form and secure your transportation today!"
+        descImage="/images/sections/montgomery-limo-service.png"
+        descImageAlt="Limousine service in Montgomery, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
         :inverted="true"
     />
 

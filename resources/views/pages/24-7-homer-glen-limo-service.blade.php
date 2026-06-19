@@ -58,6 +58,17 @@
         imagePosition="right"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-flexible"
+        heading="Dynamic Transportation Solutions for Modern"
+        headingBold="Illinois Residents"
+        body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations at your own speed with a private driver standing by for your immediate departure. Our reliable Homer Glen to O'Hare airport limo guarantees that you arrive at your terminal without the unpredictable wait times often found with standard ride-sharing platforms. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a productive and efficient schedule."
+        image="/images/sections/homer-glen-flexible-transport.png"
+        imageAlt="Dynamic transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         :inverted="true"

@@ -76,6 +76,33 @@
 
     <x-sections.our-services />
 
+    <x-sections.city-info-grid :boxes="[
+        [
+            'heading' => 'North Joliet',
+            'items'   => ['Historic District', 'Cathedral Area', 'Joliet City Center', 'Rialto Square Theatre area', 'Pilcher Park area'],
+        ],
+        [
+            'heading' => 'South Joliet',
+            'items'   => ['South Joliet neighborhoods', 'East side Joliet', 'Route 53 corridor', 'Mound Road areas', 'Ruby Street corridor'],
+        ],
+        [
+            'heading' => 'West Joliet',
+            'items'   => ['Rockdale', 'Crest Hill (border)', 'I-80 corridor businesses', 'Route 30 areas', 'Plainfield Road corridor'],
+        ],
+        [
+            'heading' => 'Downtown & Central Joliet',
+            'items'   => ['Historic District', 'Cathedral Area', 'Joliet City Center', 'Rialto Square Theatre area', 'Pilcher Park area'],
+        ],
+        [
+            'heading' => 'Industrial & Business Corridors',
+            'items'   => ['Renwick Road area', 'Joliet Township', 'I-55 North neighborhoods', 'Bolingbrook border area', 'North Crest Hill'],
+        ],
+        [
+            'heading' => 'Nearby Suburbs & Communities',
+            'items'   => ['Shorewood', 'Plainfield border', 'Aurora border areas', 'Naperville border areas', 'Joliet Slammers area'],
+        ],
+    ]" />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

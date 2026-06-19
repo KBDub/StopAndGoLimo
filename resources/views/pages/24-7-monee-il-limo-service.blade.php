@@ -74,14 +74,24 @@
     />
 
     <x-sections.image-info-card
+        id="image-info-card-dynamic"
+        heading="Dynamic Transportation Solutions for"
+        headingBold="Modern Illinois Residents"
+        body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations at your own speed with a private driver standing by for your immediate departure. Our reliable Monee to O'Hare airport transfer guarantees that you arrive at your terminal on time without the unpredictable wait times often found with standard ride-sharing platforms. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a truly productive and fluid schedule."
+        image="/images/sections/monee-memorable-arrivals.png"
+        imageAlt="Dynamic transportation options in Monee, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="left"
+    />
+
+    <x-sections.image-info-card
         id="image-info-card-occasions"
         heading="Creating Memorable Arrivals for Your"
         headingBold="Special Occasions"
         body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from rustic barn weddings to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at unique venues like the Crozehead Cooperage or local banquet halls and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with care."
-        image="/images/sections/monee-memorable-arrivals.png"
+        image="/images/sections/monee-dynamic-transport.png"
         imageAlt="Transportation for special occasions in Monee, Illinois — Stop and Go Airport Shuttle"
         imageAspect="16/9"
-        imagePosition="left"
     />
 
     <x-sections.faq />

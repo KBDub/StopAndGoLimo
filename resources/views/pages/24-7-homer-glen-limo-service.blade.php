@@ -47,6 +47,16 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :inverted="true"
+        :descImageTop="true"
+        descHeading="Why choose us?"
+        descBody="With our 24/7 Homer Glen limo service, you never have to worry about transportation. Enjoy professional drivers, reliable scheduling, and comfortable rides for any occasion."
+        descImage="/images/sections/homer-glen-transportation.png"
+        descImageAlt="Limousine transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

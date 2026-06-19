@@ -28,13 +28,13 @@
     ogImageAlt="Luxury limo service in Oswego, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Oswego"
-        headingBold="Limo & Airport Shuttle"
-        subtitle="Reliable, professional transportation"
-        subtitleIn="serving Oswego, Illinois"
+        heading="24/7 Limo & Airport Shuttle"
+        headingBold="Service in Oswego IL"
+        subtitle="Reliable Oswego limo and shuttle service"
+        subtitleIn="for all occasions"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/oswego-il.png"
         imagePosition="center center"
     />
 

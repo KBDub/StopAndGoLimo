@@ -62,6 +62,17 @@
         :inverted="true"
     />
 
+    <x-sections.image-info-card
+        id="image-info-card-sophisticated"
+        heading="Travel with Confidence and Sophistication"
+        headingBold="Across the Town"
+        body="Whether you are planning a special evening at a local estate or heading to a critical business engagement, the quality of your ride defines your entire day. Our premier Mokena IL limo service provides a dedicated professional driver who manages every logistical detail of local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Mokena corporate car service, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
+        image="/images/sections/mokena-sophisticated-travel.png"
+        imageAlt="Sophisticated travel in Mokena, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imagePosition="right"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

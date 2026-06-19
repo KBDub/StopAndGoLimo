@@ -34,7 +34,7 @@
         subtitleIn="serving Morris, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/morris-il.png"
         imagePosition="center center"
     />
 

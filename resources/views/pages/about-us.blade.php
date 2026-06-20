@@ -65,6 +65,8 @@
         inverted=true
     />
 
+    <x-sections.review-slider />
+
     <x-sections.faq />
 
     <x-sections.share-your-experience 

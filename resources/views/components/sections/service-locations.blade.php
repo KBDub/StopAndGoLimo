@@ -25,7 +25,7 @@
 
             {{-- Left: Heading + body --}}
             <div class="text-center">
-                <h2 class="font-head mb-5" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                <h2 class="font-head mb-5" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
                     {{ $heading }} <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
                 </h2>
                 @if($body)

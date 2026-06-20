@@ -306,7 +306,7 @@
                         <x-ui.banner-thin-champagne />
 
                         {{-- Star rating --}}
-                        <p class="font-head mt-4 mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy); text-align: center; letter-spacing: 0.5px;">
+                        <p class="font-head mt-4 mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy); text-align: center; letter-spacing: var(--letter-spacing-h2);">
                             Rated 5 stars by our clients
                         </p>
                         <p style="text-align: center; font-size: 1.375rem; color: var(--champagne); line-height: 1; margin-bottom: 1.5rem;" aria-label="5 out of 5 stars">

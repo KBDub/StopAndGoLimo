@@ -25,7 +25,7 @@
 
         {{-- Heading + champagne rule --}}
         <div style="width: fit-content; margin: 0 auto 1.5rem; text-align: center;">
-            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
                 Share <strong style="font-weight: 700;">Your Experience</strong> With Us
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>

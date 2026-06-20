@@ -434,9 +434,9 @@
                 <div class="bg-navy-light border border-white/8 p-7 mb-6">
                     <h3 class="font-head font-semibold text-white mb-6">Type Scale</h3>
                     <div class="space-y-5 divide-y divide-white/6">
-                        <div class="pb-5"><p class="text-muted text-xs font-mono mb-2">H1 &bull; Poppins &bull; clamp(2rem, 6vw, 3.5rem) &bull; 400 base / 700 bold split &bull; letter-spacing: -1px &bull; LH 1.2</p><p class="font-head text-white" style="font-size:clamp(2rem,6vw,3.5rem);font-weight:400;line-height:1.2;letter-spacing:-1px;">Travel in <strong style="font-weight:700;">Style</strong></p></div>
-                        <div class="py-5"><p class="text-muted text-xs font-mono mb-2">H2 &bull; Poppins &bull; clamp(1.75rem, 5vw, 3rem) &bull; 400 base / 700 bold split &bull; letter-spacing: 0.5px &bull; LH 1.2</p><p class="font-head text-white" style="font-size:clamp(1.75rem,5vw,3rem);font-weight:400;line-height:1.2;letter-spacing:0.5px;">Section <strong style="font-weight:700;">Title</strong></p></div>
-                        <div class="py-5"><p class="text-muted text-xs font-mono mb-2">H3 &bull; Poppins &bull; 30px (1.875rem) &bull; SemiBold &bull; LH 1.3</p><p class="font-head font-semibold text-3xl text-white">Subsection Heading</p></div>
+                        <div class="pb-5"><p class="text-muted text-xs font-mono mb-2">H1 &bull; Poppins &bull; var(--font-size-h1) &mdash; clamp(2rem, 6vw, 3.75rem) &bull; max 60px &bull; 400 base / 700 bold split &bull; var(--letter-spacing-h1) -1px &bull; LH 1.2</p><p class="font-head text-white" style="font-size:var(--font-size-h1);font-weight:400;line-height:1.2;letter-spacing:var(--letter-spacing-h1);">Travel in <strong style="font-weight:700;">Style</strong></p></div>
+                        <div class="py-5"><p class="text-muted text-xs font-mono mb-2">H2 &bull; Poppins &bull; var(--font-size-h2) &mdash; clamp(1.75rem, 5vw, 2.5rem) &bull; max 40px &bull; 400 base / 700 bold split &bull; var(--letter-spacing-h2) 0.5px &bull; LH 1.2</p><p class="font-head text-white" style="font-size:var(--font-size-h2);font-weight:400;line-height:1.2;letter-spacing:var(--letter-spacing-h2);">Section <strong style="font-weight:700;">Title</strong></p></div>
+                        <div class="py-5"><p class="text-muted text-xs font-mono mb-2">H3 &bull; Poppins &bull; var(--font-size-h3) &mdash; 1.875rem / 30px &bull; SemiBold &bull; LH 1.3</p><p class="font-head font-semibold text-white" style="font-size:var(--font-size-h3);line-height:1.3;">Subsection Heading</p></div>
                         <div class="py-5"><p class="text-muted text-xs font-mono mb-2">H4 &bull; Poppins &bull; 24px (1.5rem) &bull; SemiBold &bull; Champagne accent</p><p class="font-head font-semibold text-2xl text-champagne">Card Title in Champagne</p></div>
                         <div class="py-5"><p class="text-muted text-xs font-mono mb-2">H5 &bull; Poppins &bull; 20px (1.25rem) &bull; SemiBold &bull; city sub-headings, location names</p><p class="font-head font-semibold text-xl text-white">Minor Heading</p></div>
                         <div class="py-5"><p class="text-muted text-xs font-mono mb-2">Lead &bull; Poppins &bull; clamp(1rem, 2.5vw, 1.3125rem) &bull; Regular &bull; letter-spacing: -0.5px &bull; LH 1.5</p><p class="font-head text-cloud" style="font-size:clamp(1rem,2.5vw,1.3125rem);line-height:1.5;letter-spacing:-0.5px;">Premier luxury limousine and airport shuttle service across New Lenox, Naperville, and the greater Chicagoland southwest suburbs.</p></div>
@@ -708,16 +708,19 @@
                         @foreach([
                             ['--font-head',            'Poppins, sans-serif',    'Headings, nav, labels, buttons'],
                             ['--font-body',            'Montserrat, sans-serif', 'Body copy, captions, form fields'],
-                            ['--font-size-h1',         '32px / 28px mobile',    'Page H1'],
-                            ['--font-size-h2',         '32px / 28px mobile',    'Section H2'],
-                            ['--font-size-h3',         '28px / 24px mobile',    'Sub-section H3'],
-                            ['--font-size-h4',         '24px / 20px mobile',    'Column headings H4'],
-                            ['--font-size-h5',         '20px / 18px mobile',    'Labels H5'],
-                            ['--font-size-body-lg',    '22px',                  'Large body copy'],
-                            ['--font-size-body',       '20px / 18px mobile',    'Default body'],
-                            ['--font-size-body-sm',    '18px',                  'Small body, captions'],
-                            ['--font-size-button',     '18px',                  'Button labels'],
-                            ['--font-size-nav',        '18px',                  'Navigation links'],
+                            ['--font-size-h1',         'clamp(2rem,6vw,3.75rem) max 60px',  'Page H1 — fluid, no mobile override'],
+                            ['--font-size-h2',         'clamp(1.75rem,5vw,2.5rem) max 40px','Section H2 — fluid, no mobile override'],
+                            ['--font-size-h3',         '1.875rem (30px)',        'Sub-section H3'],
+                            ['--font-size-h4',         '1.5rem (24px) / 1.25rem mobile',    'Column headings H4'],
+                            ['--font-size-h5',         '1.25rem (20px) / 1.125rem mobile',  'Labels H5'],
+                            ['--font-size-body-lg',    '1.375rem (22px)',        'Large body copy'],
+                            ['--font-size-body',       '1.25rem (20px) / 1.125rem mobile',  'Default body'],
+                            ['--font-size-body-sm',    '1.125rem (18px)',        'Small body, captions'],
+                            ['--font-size-button',     '1.125rem (18px)',        'Button labels'],
+                            ['--font-size-nav',        '1.125rem (18px)',        'Navigation links'],
+                            ['--letter-spacing-h1',    '-1px',                  'H1 letter spacing'],
+                            ['--letter-spacing-h2',    '0.5px',                 'H2 letter spacing'],
+                            ['--letter-spacing-lead',  '-0.5px',                'Lead / intro letter spacing'],
                             ['--font-weight-light',    '300',                   'Light weight'],
                             ['--font-weight-regular',  '400',                   'Regular weight'],
                             ['--font-weight-semibold', '600',                   'Semibold weight'],

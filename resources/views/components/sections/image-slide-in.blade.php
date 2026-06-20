@@ -27,7 +27,7 @@
                 style="opacity: 0; transform: translateX(4rem); transition: opacity 0.7s ease, transform 0.7s ease; background: var(--navy-dark); padding: 2.5rem;"
             >
                 {{-- Heading: two-part branding (plain 400 + bold 700 champagne) --}}
-                <h2 class="font-head mb-5" style="font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; color: var(--cloud-light);">
+                <h2 class="font-head mb-5" style="font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--cloud-light);">
                     @if($headingPrefix){{ $headingPrefix }} @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
                 </h2>
 

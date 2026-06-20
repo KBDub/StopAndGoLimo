@@ -29,7 +29,7 @@
 
         {{-- Heading + subtitle --}}
         <div class="max-w-7xl mx-auto px-6 pt-6 pb-8">
-            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; letter-spacing: 0.5px; color: var(--cloud-light); line-height: 1.2; margin-bottom: 1rem;">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; letter-spacing: var(--letter-spacing-h2); color: var(--cloud-light); line-height: 1.2; margin-bottom: 1rem;">
                 Why <strong style="color: var(--champagne); font-weight: 700;">Choose Us?</strong>
             </h2>
             <p class="font-body" style="font-size: 30px; line-height: 1.5; color: var(--cloud-light); text-align: right;">

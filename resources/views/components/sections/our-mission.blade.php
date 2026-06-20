@@ -27,7 +27,7 @@
 
                 {{-- Heading --}}
                 <h2 class="font-head mb-5"
-                    style="font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.2; letter-spacing: 0.5px; color: var(--white);">
+                    style="font-size: var(--font-size-h2); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--white);">
                     <span style="font-weight: 400;">Our Mission </span><span style="font-weight: 700; color: var(--champagne);">and Values</span>
                 </h2>
 

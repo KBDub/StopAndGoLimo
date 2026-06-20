@@ -8,7 +8,7 @@
 {{-- CTA strip: compact padding is intentional — this is an action strip, not a standard content section --}}
 <section id="cta-free-quote-banner" style="background: var(--navy); padding: 3rem 1.5rem; text-align: center; scroll-margin-top: 80px;">
 
-    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 700; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px; margin: 0 0 0.75rem;">
+    <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 700; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); margin: 0 0 0.75rem;">
         {{ $heading }}
     </h2>
 

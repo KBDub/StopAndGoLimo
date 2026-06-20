@@ -52,7 +52,7 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
 
         {{-- Heading + champagne rule --}}
         <div style="width: fit-content; margin-bottom: 2rem;">
-            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: 0.5px;">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
                 {{ $headingPlain }} <strong style="font-weight: 700;">{{ $headingBold }}</strong>
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>

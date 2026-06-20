@@ -32,7 +32,7 @@
         <div style="position: relative; z-index: 1; padding: 3rem 2.5rem; max-width: 60%; display: flex; flex-direction: column; justify-content: flex-end; gap: 1.75rem; min-height: 320px;">
 
             {{-- H2 — Social heading at H2 spec --}}
-            <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; letter-spacing: 0.5px; color: var(--cloud-light); line-height: 1.2; margin: 0;">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; letter-spacing: var(--letter-spacing-h2); color: var(--cloud-light); line-height: 1.2; margin: 0;">
                 {{ $heading }}<br>
                 <strong style="font-weight: 700;">{{ $headingBold }}</strong>
             </h2>

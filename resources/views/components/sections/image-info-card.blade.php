@@ -45,7 +45,7 @@
 
                 {{-- H2 + champagne underbar --}}
                 <div style="width: fit-content; margin-bottom: 2rem;">
-                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; {{ $headColor }}">
+                    <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); {{ $headColor }}">
                         @if($heading)<span>{{ $heading }}</span> @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>@if($headingTail) <span>{{ $headingTail }}</span>@endif
                     </h2>
                 </div>

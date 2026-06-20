@@ -26,7 +26,7 @@
             {{-- Heading: two-part branding --}}
             @if($headingPrefix || $headingBold)
                 <div style="width: fit-content; margin: 0 auto 2rem; text-align: center;">
-                    <h2 class="font-head" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; color: var(--cloud-light);">
+                    <h2 class="font-head" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--cloud-light);">
                         @if($headingPrefix){{ $headingPrefix }} @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>

@@ -63,9 +63,9 @@ export default {
                 body: ['Montserrat', 'Arial', ...defaultTheme.fontFamily.sans],
             },
             fontSize: {
-                'h1': ['32px', { lineHeight: '1.2', fontWeight: '700' }],
-                'h2': ['32px', { lineHeight: '1.3', fontWeight: '700' }],
-                'h3': ['28px', { lineHeight: '1.3', fontWeight: '600' }],
+                'h1': ['60px', { lineHeight: '1.2', fontWeight: '400', letterSpacing: '-1px' }],
+                'h2': ['40px', { lineHeight: '1.2', fontWeight: '400', letterSpacing: '0.5px' }],
+                'h3': ['30px', { lineHeight: '1.3', fontWeight: '600' }],
                 'h4': ['24px', { lineHeight: '1.4', fontWeight: '600' }],
                 'h5': ['20px', { lineHeight: '1.4', fontWeight: '600' }],
             },

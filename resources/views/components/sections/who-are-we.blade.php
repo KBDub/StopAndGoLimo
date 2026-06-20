@@ -34,7 +34,7 @@
 
                 {{-- H2 with left-aligned champagne underbar --}}
                 <div style="width: fit-content; margin-bottom: 2.5rem;">
-                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); line-height: 1.2; letter-spacing: 0.5px; color: var(--navy);">
+                    <h2 class="font-head" style="font-size: var(--font-size-h2); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--navy);">
                         <span style="font-weight: 400;">{{ $heading }} </span><span style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</span>
                     </h2>
                     <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>

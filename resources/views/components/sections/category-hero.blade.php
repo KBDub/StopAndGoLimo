@@ -34,7 +34,7 @@
     <div class="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
 
         {{-- H1 --}}
-        <h1 class="font-head text-white mb-4" style="font-size: clamp(2rem, 6vw, 3.5rem); line-height: 1.2; letter-spacing: -1px;">
+        <h1 class="font-head text-white mb-4" style="font-size: var(--font-size-h1); line-height: 1.2; letter-spacing: var(--letter-spacing-h1);">
             @if($headingTwoLines)
                 <span class="block font-normal">{{ $heading }}</span>
                 @if($headingBold)
@@ -50,7 +50,7 @@
 
         {{-- Subtitle (Lead) --}}
         @if($subtitle)
-            <p class="font-head text-white mb-5" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.5px; opacity: 0.9; text-align: right;">
+            <p class="font-head text-white mb-5" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); opacity: 0.9; text-align: right;">
                 <span class="block">{{ $subtitle }}</span>
                 @if($subtitleIn)
                     <span class="block" style="font-weight: 700;">{{ $subtitleIn }}</span>

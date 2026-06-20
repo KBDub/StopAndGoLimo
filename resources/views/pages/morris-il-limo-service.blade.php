@@ -28,11 +28,12 @@
     ogImageAlt="Luxury limo service in Morris, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Morris"
-        headingBold="Limo & Airport Shuttle"
+        heading="Morris IL Airport Shuttle and"
+        headingBold="Limo Service"
         :headingTwoLines="false"
-        subtitle="Reliable, professional transportation"
+        subtitle="Grundy County's trusted private transportation, available around the clock"
         subtitleIn="serving Morris, Illinois"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle and limousine service throughout Morris, Illinois and Grundy County. We offer flat-rate, door-to-door transfers to O'Hare International Airport (ORD) and Midway International Airport (MDW) for Morris residents and businesses, with real-time flight tracking and 24-hour availability every day of the year. Morris sits along the I-80 corridor at Route 47, making it an important connection point between the southwest suburbs and the broader Illinois region. Whether you are a professional heading to the airport, a family planning a vacation, or a group celebrating a special occasion, we have the vehicle and the team for your trip. We provide wedding limousines, party buses for birthday and bachelorette groups, corporate executive car service, quinceañera transportation, prom group buses, and full coach bus charters for larger events. Our fleet is modern, clean, and well-maintained. Every driver is background-checked, uniformed, and professionally trained. We serve the Morris community, Grundy County, and connect clients to destinations throughout all of Chicagoland. Flat-rate pricing, no surprises. Call us or book online."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/morris-il.png"

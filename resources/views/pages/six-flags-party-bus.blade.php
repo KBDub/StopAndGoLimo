@@ -32,10 +32,11 @@
     ogImageAlt="Six Flags party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Six Flags"
-        headingBold="Party Bus"
+        heading="Six Flags Party Bus"
+        headingBold="from the Chicago Suburbs"
         :headingTwoLines="false"
-        subtitle="Discover the Joy of Seamless Journeys"
+        subtitle="Skip the parking lot and start the fun on the ride over"
+        description="Stop & Go Airport Shuttle Service, Inc. takes your group to Six Flags Great America in style. We pick up families, birthday groups, school groups, and friend crews from communities throughout Chicagoland, including the southwest, west, north, and northwest suburbs, and deliver everyone to the park entrance without the hassle of parking or managing multiple cars. Our party buses and Mercedes Sprinter vans are perfect for groups of all sizes. Kids and adults alike love the ride, with comfortable seating, great sound, and a fun atmosphere that builds excitement before you even arrive. Our professional, background-checked chauffeurs handle all the details, from routing to return trip pickup timing. We are a great choice for birthday parties, quinceañera day trips, end-of-school group celebrations, family reunions, and any occasion that deserves a bigger-than-usual adventure. Our pricing is flat-rate and all-inclusive, so there are no surprises when the day is done. Book early for summer weekends and holidays. Our Six Flags buses fill up fast. Call us or reserve your group online today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-six-flags-party-bus.jpg"

@@ -60,10 +60,11 @@
     ogImageAlt="Luxury limousine service across the Southwest suburbs of Chicago, Illinois"
 >
     <x-sections.category-hero
-        heading="Service"
-        headingBold="Areas"
+        heading="Our Service Areas"
+        headingBold="Across Chicagoland and Illinois"
         :headingTwoLines="false"
-        subtitle="24/7 luxury limo and airport shuttle service across the Southwest suburbs"
+        subtitle="Private chauffeured transportation, wherever you need us"
+        description="Stop & Go Airport Shuttle Service, Inc. covers all of Chicagoland and Illinois. Our dual hubs in New Lenox and Naperville give us fast response times across the entire Chicago metropolitan area. We serve southwest suburban communities including Joliet, Plainfield, Frankfort, Mokena, Lockport, Homer Glen, and Orland Park. We also serve the western suburbs including Aurora, Elgin, Schaumburg, Bolingbrook, Downers Grove, and Elmhurst. Our coverage extends north through Des Plaines, Arlington Heights, Palatine, and Waukegan, and into all Chicago neighborhoods. No matter which direction your trip takes you, we are ready. Whether you need a private airport transfer to O'Hare (ORD) or Midway (MDW), a stretch limousine for a wedding, a party bus for a birthday or bachelorette group, a corporate Sprinter for a business roadshow, or a coach bus for a large group event, we operate wherever our clients need us. We also serve private aviation terminals at Chicago Executive Airport and other regional FBOs. Distance is never a barrier."
         buttonText="Book a Ride"
         buttonHref="/contact"
         image="/images/heroes/hero-service-areas.jpg"

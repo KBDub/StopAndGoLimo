@@ -32,10 +32,11 @@
     ogImageAlt="Graduation day transportation in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Grad Day"
-        headingBold="Transportation"
+        heading="Grad Day Transportation"
+        headingBold="Service in Illinois"
         :headingTwoLines="false"
-        subtitle="Safe, on-time rides for your graduation celebration"
+        subtitle="Your celebration starts the moment you step on board"
+        description="Stop & Go Airport Shuttle Service, Inc. provides safe, professional Grad Day transportation for students and groups throughout Illinois. Grad Day is a signature Illinois tradition, a full day of fun following graduation ceremonies, and our party buses and limo buses are the perfect way to celebrate it. We pick up your group, keep everyone together throughout the day, and make sure everyone gets home safely when the celebration is over. Our vehicles include party buses for larger groups and Mercedes Sprinter vans for smaller parties, each one loaded with comfortable seating, LED lighting, and premium sound to set the right mood. Every chauffeur is background-checked, professionally trained, and dedicated to making the day memorable and worry-free for students and parents alike. We serve high schools throughout Chicagoland, including schools in Will County, DuPage County, Cook County, Kane County, and surrounding areas. Our service area spans the entire Chicago metropolitan area. Pricing is flat-rate and all-inclusive, with clear quotes before you book. Grad Day buses fill up fast, so reserve your group's spot well in advance. Book today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/graduation-day-hats-in-air.png"

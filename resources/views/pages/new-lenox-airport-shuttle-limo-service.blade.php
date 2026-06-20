@@ -44,11 +44,12 @@
     ogImageAlt="Luxury limo service in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 New Lenox Airport Shuttle,"
+        heading="New Lenox Airport Shuttle,"
         headingBold="Limo & Party Bus Service"
         :headingTwoLines="false"
-        subtitle="Reliable, local transportation"
+        subtitle="Your hometown transportation company, available 24 hours a day"
         subtitleIn="based in New Lenox since 2009"
+        description="Stop & Go Airport Shuttle Service, Inc. is proud to call New Lenox home. Our primary location at 400 E Lincoln Hwy puts us right in the heart of the community, ready to serve our neighbors around the clock, every day of the year. We provide private airport transfers to O'Hare (ORD) and Midway (MDW) with flat-rate pricing and real-time flight tracking. No matter when your flight lands or departs, we are ready. Beyond airport runs, we serve the full range of New Lenox life: wedding limousines for couples celebrating at local venues, party buses for prom groups from Lincoln-Way District schools, corporate car service for executives heading to Chicago or the western business corridors, quinceañera and birthday group transportation, and more. We serve families throughout all New Lenox neighborhoods, near Silver Cross Hospital, along Lincoln Highway (Route 30), and throughout Will County. From New Lenox, we also connect clients to communities across all of Chicagoland, including the north, northwest, and western suburbs. Our chauffeurs are background-checked, uniformed, and trained to deliver a seamless experience every time. We are your neighbors and we take that seriously. Call us any time or book online."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-new-lenox.png"

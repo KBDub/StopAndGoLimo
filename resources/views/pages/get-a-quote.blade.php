@@ -31,9 +31,10 @@
 >
     <x-sections.category-hero
         heading="Get"
-        headingBold="a Quote"
+        headingBold="a Free Quote"
         :headingTwoLines="false"
-        subtitle="Fast, free quotes for any trip across the Southwest suburbs"
+        subtitle="Fast answers for airport runs, events, and every occasion"
+        description="Getting a quote from Stop & Go Airport Shuttle Service, Inc. is fast, easy, and completely free. Tell us your pickup location, destination, date, time, and group size, and we will get back to you with a clear, all-inclusive flat-rate price. We provide quotes for every type of trip: airport transfers to O'Hare and Midway, corporate car service, wedding limousines, prom and grad day party buses, bachelorette and birthday group transportation, quinceañera limo packages, sports fan shuttles, concert party buses, and more. Our service area covers all of Chicagoland, from the southwest suburbs through the western corridor along I-88, north through Schaumburg, Arlington Heights, and Waukegan, and into every Chicago neighborhood. We also handle longer-haul trips to Rockford, Peoria, Bloomington, and beyond. There are no hidden fees and no commitments when you request a quote. Our pricing is transparent from the first number we give you. Fill out the form below, call us at any time, or send us a message, and we will get your rate to you quickly so you can plan with confidence."
         buttonText="Call (815) 585-6922"
         buttonHref="tel:+18155856922"
         image="/images/heroes/hero-services.jpg"

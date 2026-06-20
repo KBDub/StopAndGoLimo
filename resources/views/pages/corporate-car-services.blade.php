@@ -32,10 +32,11 @@
     ogImageAlt="Corporate car service in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Corporate"
-        headingBold="Car Service"
+        heading="Corporate Car Service"
+        headingBold="for Chicagoland Executives"
         :headingTwoLines="false"
-        subtitle="Executive ground transportation for business travel"
+        subtitle="Private executive transportation, billed simply and clearly"
+        description="Stop & Go Airport Shuttle Service, Inc. provides professional corporate car service throughout Chicagoland and Illinois. We serve business travelers, executive assistants, and corporate travel managers who need reliable, on-time private transportation every time. Whether you need an executive sedan or luxury SUV for an airport run to O'Hare or Midway, a Mercedes Sprinter for a corporate roadshow with multiple stops, or a coach bus for a large team outing or corporate event, we have the vehicle and the team to deliver. Our background-checked, uniformed chauffeurs handle every trip with discretion and precision. We offer flat-rate pricing, corporate account billing, and centralized invoicing for businesses that need organized expense management. Our service area covers the I-80 and I-55 corridors in the southwest suburbs, the I-88 tech corridor through Naperville, Downers Grove, and Schaumburg, Oak Brook and Elmhurst corporate centers, and the downtown Chicago Loop. We also serve corporate campuses in the north and northwest suburbs, including Arlington Heights, Palatine, Des Plaines, and Elk Grove Village. For visiting executives, client entertainment, or employee group transportation, we are the professional choice throughout the Chicago metropolitan area."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/chauffeur-suit-pickup.jpg"

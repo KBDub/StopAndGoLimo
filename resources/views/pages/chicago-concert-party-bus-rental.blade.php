@@ -32,10 +32,11 @@
     ogImageAlt="Concert party bus rental from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Chicago Concert"
-        headingBold="Party Bus"
+        heading="Chicago Concert Party Bus"
+        headingBold="from the Suburbs"
         :headingTwoLines="false"
-        subtitle="Discover the Joy of Seamless Journeys"
+        subtitle="Your group, your music, zero parking stress"
+        description="Stop & Go Airport Shuttle Service, Inc. takes your group to concerts throughout Chicago and the greater Chicagoland area in style. We serve the United Center, Wrigley Field, Soldier Field, Allstate Arena, Huntington Bank Pavilion, Hollywood Casino Amphitheater, and more. We pick up groups from communities throughout all of Chicagoland: the southwest and south suburbs, the western suburbs including Aurora and Elgin, the northwest suburbs including Schaumburg and Arlington Heights, and the north shore. Concert night is for celebrating, not for worrying about parking or navigating Chicago traffic. We handle all of that. Our party buses seat 20 to 40-plus passengers and come with premium sound systems, LED cabin lighting, and a vibrant atmosphere that gets the energy going before the show even starts. Every chauffeur is professional, background-checked, and experienced with Chicago venue logistics. Whether you are going for a birthday celebration, a bachelorette night, a group of coworkers, or a crew of music fans, our concert party bus service makes the whole evening better. All trips are flat-rate, with a clear quote before you book."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-chicago-concert-party-bus.jpg"

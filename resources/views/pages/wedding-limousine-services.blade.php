@@ -32,10 +32,11 @@
     ogImageAlt="Wedding limousine service in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Picture Perfect Wedding Day Transport"
-        headingBold=""
+        heading="Wedding Limousine Service"
+        headingBold="in the Chicago Suburbs"
         :headingTwoLines="false"
-        subtitle="Elegant Wedding Limo"
+        subtitle="Elegant chauffeured transportation for your perfect day"
+        description="Stop & Go Airport Shuttle Service, Inc. provides luxury wedding limousine service throughout the Chicago suburbs and all of Chicagoland. Your wedding day deserves seamless, elegant transportation, and we deliver exactly that. Our wedding fleet includes classic stretch limousines for the bridal party, luxury SUVs for the couple's private arrival, and Mercedes Sprinter vans or coach buses for shuttling wedding guests between your venue, ceremony site, and hotel. We serve couples celebrating at venues throughout the southwest suburbs, including CD & ME, Southern Charm Venues, Jacob Henry Mansion, Prestwick Country Club, Hotel Arista, and many others. We also serve venues in the western suburbs, the north suburbs, and all of Chicago. Our chauffeurs arrive early, dressed in formal attire, and ready to make your entrance unforgettable. We coordinate with your wedding planner and venue on timing to ensure everything runs smoothly. Every vehicle is impeccably clean and ready for photos. Flat-rate pricing covers the full service with no surprises. We recommend booking 6 to 12 months in advance for spring and summer weekend dates, which fill quickly. Contact us today to reserve your wedding transportation."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/wedding-hero.jpg"

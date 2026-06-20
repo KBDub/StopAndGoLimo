@@ -32,10 +32,11 @@
     ogImageAlt="Airport shuttle service to O'Hare and Midway from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Airport Shuttle Service"
-        headingBold="New Lenox & Naperville"
+        heading="Airport Shuttle Service"
+        headingBold="to O'Hare and Midway"
         :headingTwoLines="false"
-        subtitle="Reliable Transportation for Every Flight"
+        subtitle="Private door-to-door transfers, available 24 hours a day"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle service to O'Hare International Airport (ORD) and Midway International Airport (MDW) for passengers throughout Chicagoland. We offer flat-rate, door-to-door transfers with no surge pricing and no hidden fees. Every driver is background-checked, uniformed, and experienced navigating both airports efficiently at any hour. We monitor all flights in real time, so if your flight is delayed, rerouted, or lands early, we adjust automatically. You will not be left waiting and you will not be charged extra. We serve passengers from our primary locations in New Lenox and Naperville, as well as communities throughout the southwest suburbs including Joliet, Plainfield, Frankfort, and Mokena; the western suburbs including Bolingbrook, Romeoville, Aurora, and Elgin; the northwest suburbs including Schaumburg, Arlington Heights, and Palatine; the north suburbs including Waukegan and Highland Park; and every neighborhood in the city of Chicago. We accommodate solo travelers, families with multiple bags, corporate groups, and airport groups of any size. Our fleet includes executive sedans, luxury SUVs, Mercedes Sprinter vans, and coach buses. Available 24 hours a day, 7 days a week, 365 days a year. Book online or call us any time."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/airport-ohare-midway.jpg"

@@ -44,9 +44,10 @@
 >
     <x-sections.category-hero
         heading="Our"
-        headingBold="Services"
+        headingBold="Chauffeured Transportation Services"
         :headingTwoLines="false"
-        subtitle="Professional luxury transportation in Plainfield and New Lenox, Illinois"
+        subtitle="Airport transfers, limousines, party buses, and more"
+        description="At Stop & Go Airport Shuttle Service, Inc., we offer a full range of private transportation services for every occasion throughout Chicagoland and all of Illinois. Need a smooth, on-time ride to O'Hare or Midway? We provide flat-rate, door-to-door service with real-time flight tracking. Planning a wedding and need a stretch limousine for the bridal party or a Sprinter van for guests? We handle that. Looking for a party bus for a bachelorette party, a quinceañera, a birthday, a prom group, or a night out in Chicago? We have the right bus for your crew. Corporate executives can count on us for private car service, hourly charter, and multi-stop roadshows throughout the Chicago metropolitan area, from the Loop to the western tech corridor along I-88, to the north shore, and all points between. Sports fans travel with us to Soldier Field, the United Center, and beyond. We also provide full-size coach buses for large group events, school outings, and corporate gatherings. Whatever brings your group together, we provide the professional chauffeured transportation to get you there safely and in style."
         buttonText="Book a Ride"
         buttonHref="/contact"
         image="/images/heroes/hero-services.jpg"

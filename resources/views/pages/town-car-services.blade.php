@@ -32,10 +32,11 @@
     ogImageAlt="Town car service in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Town Car"
-        headingBold="Services"
+        heading="Town Car and Executive Sedan"
+        headingBold="Service in Chicagoland"
         :headingTwoLines="false"
-        subtitle="Premium sedan service for any occasion"
+        subtitle="Private, comfortable rides for airports, business, and special events"
+        description="Stop & Go Airport Shuttle Service, Inc. provides premium town car and executive sedan service throughout the Chicago metropolitan area. Our luxury sedans are perfect for private airport transfers to O'Hare (ORD) and Midway (MDW), solo or small-group corporate travel, client entertainment, and any occasion where you want a clean, quiet, professional ride. Every chauffeur is background-checked, uniformed, and trained to deliver a seamless experience. Our flat-rate pricing means you know your cost before you book. No surge pricing, no surprises. We serve communities throughout all of Chicagoland: the southwest suburbs including New Lenox, Joliet, and Frankfort; the western suburbs including Naperville, Aurora, and Elgin; the north and northwest suburbs including Schaumburg, Arlington Heights, and Waukegan; and all Chicago neighborhoods. For couples who want a polished arrival on their wedding day, professionals heading to an important meeting, or anyone who simply wants dependable private transportation, our town car service is the right choice. Available 24 hours a day, seven days a week. Book online or call us any time."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/driver-classy.jpg"

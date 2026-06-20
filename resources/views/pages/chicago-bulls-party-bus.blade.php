@@ -32,10 +32,11 @@
     ogImageAlt="Chicago Bulls party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Ride the #1 Chicago Bulls"
-        headingBold="Party Bus"
+        heading="Chicago Bulls Party Bus"
+        headingBold="to the United Center"
         :headingTwoLines="false"
-        subtitle="Discover the Joy of Seamless Journeys"
+        subtitle="Ride together, cheer together, celebrate together"
+        description="Stop & Go Airport Shuttle Service, Inc. brings your group to Chicago Bulls games at the United Center in style. We serve communities throughout Chicagoland, including the southwest, west, north, and northwest suburbs, with party bus service designed for groups who want to make the whole evening part of the celebration. Skip the parking and the postgame gridlock. Our chauffeurs handle every detail of the trip so your crew can focus on the fun. Our party buses are loaded with premium sound, LED cabin lighting, and comfortable seating for 20 to 40-plus guests. Whether you are organizing a work outing, a birthday party, a group of longtime season ticket holders, or a special night out, we set the right tone from the moment the doors open. Every trip is flat-rate. You know the total cost before you book. Our professional, background-checked drivers have experience navigating game-night Chicago so nothing interrupts your night. Book your Bulls party bus today and give your group a ride that matches the energy of the game."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-chicago-bulls-party-bus.jpg"

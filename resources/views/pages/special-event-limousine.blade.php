@@ -45,9 +45,10 @@
 >
     <x-sections.category-hero
         heading="Special Event"
-        headingBold="Limousine"
+        headingBold="Limousine Service"
         :headingTwoLines="false"
-        subtitle="Party limousine rental in New Lenox and Plainfield, Illinois"
+        subtitle="For every milestone, every celebration, every occasion"
+        description="Stop & Go Airport Shuttle Service, Inc. provides special event limousine service for every occasion that deserves a memorable arrival. We serve weddings, proms, quinceañera celebrations, birthday parties, bachelorette nights, anniversary dinners, corporate galas, graduation celebrations, sports events, concerts, casino nights, and any milestone worth marking with a stretch limousine or luxury party bus. Our fleet includes stretch limousines, luxury SUVs, Mercedes Sprinter vans, and full-size party buses, each one clean, modern, and ready for your event. Every chauffeur is professional, uniformed, and background-checked. We serve all of Chicagoland, from the southwest suburbs including New Lenox, Plainfield, and Joliet, through the western communities of Aurora, Elgin, and Schaumburg, north through Arlington Heights and Waukegan, and into every Chicago neighborhood. Our flat-rate pricing means your group knows the total cost up front, with no hidden fees on the night of the event. We work with you on timing, pickup locations, and any special requests so the transportation side of your event is one less thing to worry about. Call us or request a quote online to start planning."
         buttonText="Book a Ride"
         buttonHref="/contact"
         image="/images/heroes/hero-special-event.jpg"

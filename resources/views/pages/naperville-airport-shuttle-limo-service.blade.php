@@ -28,11 +28,12 @@
     ogImageAlt="Luxury limo service in Naperville, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Naperville"
-        headingBold="Limo & Airport Shuttle"
+        heading="Naperville Airport Shuttle and"
+        headingBold="Limousine Service"
         :headingTwoLines="false"
-        subtitle="Reliable, professional transportation"
+        subtitle="Private chauffeured transportation to O'Hare, Midway, and beyond"
         subtitleIn="serving Naperville, Illinois"
+        description="Stop & Go Airport Shuttle Service, Inc. operates a full-service transportation hub in Naperville at 3420 Lacrosse Ln, giving us fast access to DuPage County, Will County, and all of Chicagoland for private airport transfers, limousine service, party bus rentals, and corporate transportation. We serve Naperville residents and businesses heading to O'Hare International Airport (ORD) and Midway International Airport (MDW) with flat-rate, door-to-door service and real-time flight tracking. We also serve the I-88 corporate corridor, Naperville's downtown Riverwalk, Hotel Arista, Hotel Indigo, and surrounding business parks in Downers Grove, Lisle, and Warrenville. For special occasions, our fleet of stretch limousines, luxury SUVs, Mercedes Sprinter vans, and party buses covers weddings, proms, quinceañeras, bachelorette parties, birthdays, corporate outings, and more. Our chauffeurs are background-checked, uniformed, and professional, ready around the clock. We serve Bolingbrook, Lisle, Aurora, Downers Grove, Warrenville, and North Aurora, as well as communities throughout all of Chicagoland. Our pricing is always flat-rate and clearly quoted. Call us any time or book online today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/downtown-naperville-aerial.jpg"

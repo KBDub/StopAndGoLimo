@@ -32,10 +32,11 @@
     ogImageAlt="Transportation services in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Transportation"
-        headingBold="Services"
+        heading="Private Transportation Services"
+        headingBold="Across Chicagoland and Illinois"
         :headingTwoLines="false"
-        subtitle="Point-to-point rides across the Southwest suburbs"
+        subtitle="Point-to-point and hourly rides for every occasion"
+        description="Stop & Go Airport Shuttle Service, Inc. offers private transportation services for every need, from point-to-point airport runs to hourly charters, group event shuttles, and long-haul transfers across Illinois. We serve corporate travelers, families, couples, and event groups throughout all of Chicagoland. Our coverage spans the southwest and south suburbs, the western communities along I-88 and I-290, the northwest suburbs including Schaumburg, Arlington Heights, and Palatine, the north suburbs including Waukegan and Highland Park, and the city of Chicago. Our fleet covers every group size and occasion: executive sedans for solo business travelers heading to O'Hare or Midway, luxury SUVs for small family groups, Mercedes Sprinter vans for wedding guests or corporate teams, stretch limousines for proms and quinceañeras, and party buses and coach buses for larger celebrations. Whether you need a single airport transfer, a full day of corporate stops, or a group shuttle for a wedding or special event, we customize the trip to fit your schedule. Every ride includes a background-checked chauffeur, flat-rate pricing, and real-time communication. We are available 24 hours a day, every day of the year."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/corporate-service.jpg"

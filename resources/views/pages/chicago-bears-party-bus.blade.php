@@ -32,10 +32,11 @@
     ogImageAlt="Chicago Bears party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Chicago Bears"
-        headingBold="Party Bus"
+        heading="Chicago Bears Party Bus"
+        headingBold="to Soldier Field"
         :headingTwoLines="false"
-        subtitle="Game day group transportation to Soldier Field"
+        subtitle="Travel to the game together, no parking, no hassle"
+        description="Stop & Go Airport Shuttle Service, Inc. makes Bears game day easy for groups throughout Chicagoland. Our Chicago Bears party bus service picks up your crew from communities across the southwest, west, north, and northwest suburbs and takes everyone straight to Soldier Field and back. Forget the parking fees and the postgame traffic. We handle all of that so your group can focus on the game. Our party buses come with premium sound systems, LED lighting, and comfortable seating for groups of all sizes, from 20 to 40-plus passengers. Our professional, background-checked chauffeurs know the routes and handle all the logistics. Whether it is a regular season game, a playoff run, or a tailgate gathering, we are ready. Our pricing is flat-rate, with a clear all-inclusive quote before you book. Groups of coworkers, families, birthday parties, and lifelong Bears fans all ride with us. Book your Bears game day party bus early. Game days fill fast, especially for big matchups and playoff weekends. Call us or request your group quote online today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-chicago-bears-party-bus.jpg"

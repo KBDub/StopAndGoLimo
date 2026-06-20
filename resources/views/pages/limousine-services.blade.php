@@ -32,11 +32,11 @@
     ogImageAlt="Luxury limousine services in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="The Essence of"
-        headingBold="Luxury Transportation"
+        heading="Luxury Limousine Service"
+        headingBold="Throughout Chicagoland"
         :headingTwoLines="false"
-        subtitle="24/7 Limo, Airport Shuttle & Party Bus Services"
-        description="Professional Chauffeur Service Throughout New Lenox, Plainfield & All Chicago Suburbs"
+        subtitle="Professional chauffeured transportation for every occasion"
+        description="Stop & Go Airport Shuttle Service, Inc. offers luxury limousine service throughout all of Chicagoland and Illinois. Our stretch limousines, executive sedans, luxury SUVs, Mercedes Sprinter vans, and party buses are available for every occasion. We serve airport travelers heading to O'Hare and Midway, wedding parties arriving in style at venues across the region, prom and grad day groups celebrating a milestone, birthday and bachelorette guests ready for a night out, quinceañera courts making a grand entrance, corporate executives traveling between meetings, and sports fans heading to games throughout the city. Our service area covers all of Chicagoland, from the southwest suburbs of Joliet and Frankfort through the western communities of Aurora, Elgin, and Schaumburg, north through Arlington Heights and Waukegan, and into every Chicago neighborhood. Every vehicle in our fleet is clean, late-model, and well-maintained. Every chauffeur is background-checked, uniformed, and trained to deliver a seamless professional experience from the moment we arrive. Our pricing is always flat-rate, with no surge fees and no hidden charges. Call us or book online today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/limousine-professional.jpg"

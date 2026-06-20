@@ -33,9 +33,10 @@
 >
     <x-sections.category-hero
         heading="Aurora"
-        headingBold="Party Bus"
+        headingBold="Party Bus Rental"
         :headingTwoLines="false"
-        subtitle="your local Party Buses for every occasion"
+        subtitle="Aurora's go-to party bus for every celebration"
+        description="Stop & Go Airport Shuttle Service, Inc. provides party bus rental in Aurora, Illinois and all surrounding communities. Aurora is the second-largest city in Illinois, full of energy, great venues, and a diverse community of residents and families. Our party buses are the best way to experience it all with your group. Whether you are planning a birthday night out, a bachelorette party, a quinceañera celebration, a prom group, a casino trip to Hollywood Casino Aurora, or a group outing to a concert or sporting event in Chicago, we have the vehicle and the team to deliver an unforgettable experience. Our party buses seat 20 to 40-plus passengers, with LED lighting, premium sound, and comfortable seating. Every chauffeur is professional, background-checked, and familiar with Aurora and all of Chicagoland. We also serve North Aurora, Oswego, Naperville, Bolingbrook, Elgin, and all nearby communities. We provide airport shuttle service from Aurora to O'Hare and Midway for groups traveling together. Our pricing is flat-rate and all-inclusive, so your group knows the total cost before the party starts. Book your Aurora party bus today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-party-bus-aurora.png"

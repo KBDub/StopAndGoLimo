@@ -28,11 +28,12 @@
     ogImageAlt="Luxury limo service in Plainfield, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Plainfield Airport Shuttle,"
-        headingBold="Limo & Party Bus"
+        heading="Plainfield Airport Shuttle,"
+        headingBold="Limo & Party Bus Service"
         :headingTwoLines="false"
-        subtitle="Reliable transportation service throughout"
-        subtitleIn="Plainfield, Illinois"
+        subtitle="Private transportation for every Plainfield occasion"
+        subtitleIn="serving Plainfield, Illinois"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle, limousine, and party bus service throughout Plainfield, Illinois and all surrounding Will County communities. We offer flat-rate, door-to-door transfers to O'Hare International Airport (ORD) and Midway International Airport (MDW) for Plainfield residents, with real-time flight tracking and 24-hour availability every day of the year. We also serve the full range of Plainfield occasions: wedding limousines for couples at local venues, party buses for Plainfield North and South High School prom groups, birthday and bachelorette celebrations, quinceañera transportation, corporate car service along the Route 59 corridor, and group outings throughout Chicagoland and beyond. Our fleet includes executive sedans, luxury SUVs, stretch limousines, Mercedes Sprinter vans, and full-size party buses and coach buses. Every driver is background-checked, uniformed, and professionally trained. Plainfield is one of the fastest-growing communities in Illinois and we are proud to serve it. From Plainfield, we also connect our clients to destinations across all of Chicagoland, including the western, north, and northwest suburbs. Our pricing is flat-rate and clearly quoted. Reserve online or call us any time."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/plainfield-hero.jpg"

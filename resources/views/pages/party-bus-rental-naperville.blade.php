@@ -33,9 +33,10 @@
 >
     <x-sections.category-hero
         heading="Naperville"
-        headingBold="Party Bus"
+        headingBold="Party Bus Rental"
         :headingTwoLines="false"
-        subtitle="Your local party bus experts for birthdays, bachelorette parties, and group celebrations"
+        subtitle="Naperville's trusted party bus for every occasion"
+        description="Stop & Go Airport Shuttle Service, Inc. provides party bus rental in Naperville, Illinois for every occasion and every group size. Naperville is one of the most vibrant communities in the Chicago suburbs, with a thriving downtown Riverwalk, top-rated restaurants, and easy access to Chicago for concerts and events. Whether you are celebrating a bachelorette party, a birthday night out, a quinceañera, a prom group, a corporate team outing, or a special occasion at Hotel Arista, Hotel Indigo, or any Naperville venue, our party buses make the experience better from the moment we arrive. Our buses seat 20 to 40-plus passengers, with LED lighting, premium sound systems, and comfortable seating throughout. Every chauffeur is professional, background-checked, and familiar with Naperville and surrounding communities throughout Chicagoland. We also provide airport shuttle service from Naperville to O'Hare and Midway for groups traveling together. All pricing is flat-rate, all-inclusive, and clearly quoted before you book. Naperville party buses book quickly for peak dates, so reserve yours today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-party-bus-naperville.jpg"

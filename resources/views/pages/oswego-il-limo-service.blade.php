@@ -28,11 +28,12 @@
     ogImageAlt="Luxury limo service in Oswego, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Limo & Airport Shuttle"
-        headingBold="Service in Oswego IL"
+        heading="Oswego Airport Shuttle and"
+        headingBold="Limo Service"
         :headingTwoLines="false"
-        subtitle="Reliable Oswego limo and shuttle service"
-        subtitleIn="for all occasions"
+        subtitle="Kendall County's trusted private transportation, available 24/7"
+        subtitleIn="serving Oswego, Illinois"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle and limousine service throughout Oswego, Illinois and Kendall County. We offer flat-rate, door-to-door transfers to O'Hare International Airport (ORD) and Midway International Airport (MDW) for Oswego residents and families, with real-time flight tracking and 24-hour availability every day of the year. Whether you are a professional heading to the airport, a family traveling for the holidays, or a group heading out together, we have the right vehicle for your trip. We also serve Oswego with a full range of event transportation: wedding limousines for couples at local venues, party buses for birthday and bachelorette celebrations, quinceañera transportation, prom group buses, and corporate car service along the US-34 corridor. Our fleet includes executive sedans, luxury SUVs, Mercedes Sprinter vans, and stretch limousines. We serve Yorkville, Montgomery, Aurora, and all surrounding Kendall, Kane, and Will County communities, as well as all of Chicagoland. Every driver is professional, background-checked, and uniformed. Our pricing is flat-rate with no hidden fees. Call us or book online today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/oswego-il.png"

@@ -29,10 +29,10 @@
 >
     <x-sections.category-hero
         heading="Aurora Airport Shuttle,"
-        headingBold="Limo & Party Bus"
+        headingBold="Limo & Party Bus Service"
         :headingTwoLines="false"
-        subtitle="Local & trusted rides"
-        subtitleIn="Aurora Airport & Event Transport"
+        subtitle="Trusted private transportation throughout Aurora and the Fox Valley"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle, limousine, and party bus service throughout Aurora, Illinois, the second-largest city in the state. We offer flat-rate, door-to-door transfers to O'Hare International Airport (ORD) and Midway International Airport (MDW) for Aurora residents and businesses, with real-time flight tracking and 24-hour availability. For corporate travelers along the I-88 corridor and the Fox Valley business community, we provide executive sedans, luxury SUVs, and Mercedes Sprinter vans for professional, discreet business travel. For celebrations, our party buses and stretch limousines are ready for birthdays, bachelorette parties, quinceañera court arrivals, prom groups, wedding parties, and any occasion that deserves a special entrance. We also serve North Aurora, Oswego, Naperville, Elgin, Geneva, and all surrounding Fox Valley, Kane, and DuPage County communities, as well as destinations throughout all of Chicagoland. Every driver is background-checked, uniformed, and professionally trained. Pricing is flat-rate and all-inclusive. Whether you need a car for one or a bus for forty, we are your transportation partner in Aurora. Book online or call us any time."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/aurora-hero.jpg"

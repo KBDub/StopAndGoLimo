@@ -28,11 +28,12 @@
     ogImageAlt="Luxury limo service in Bolingbrook, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Bolingbrook"
-        headingBold="Limo & Airport Shuttle"
+        heading="Bolingbrook Airport Shuttle and"
+        headingBold="Limousine Service"
         :headingTwoLines="false"
-        subtitle="Reliable, professional transportation"
+        subtitle="Executive and event transportation from Bolingbrook, 24/7"
         subtitleIn="serving Bolingbrook, Illinois"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle and limousine service throughout Bolingbrook, Illinois. We offer flat-rate, door-to-door transfers to O'Hare International Airport (ORD) and Midway International Airport (MDW), with real-time flight tracking and 24-hour availability so we are always ready when you need us. Bolingbrook is a major hub for corporate headquarters and logistics operations along I-355 and I-55, and our executive car service is the professional choice for business travelers and visiting executives throughout the Promenade Bolingbrook corridor and surrounding business parks. We also serve the full range of Bolingbrook occasions: wedding limousines, prom and grad day party buses, birthday and bachelorette group transportation, quinceañera celebrations, and any occasion that calls for professional chauffeured service. Our fleet includes executive sedans, luxury SUVs, Mercedes Sprinter vans, stretch limousines, and party buses. From Bolingbrook, we connect clients throughout all of Chicagoland, including the western suburbs of Downers Grove and Naperville, and north through Schaumburg and Arlington Heights. Every chauffeur is background-checked, uniformed, and available around the clock. Our pricing is always flat-rate. Call us or reserve online today."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/bolingbrook-il.png"

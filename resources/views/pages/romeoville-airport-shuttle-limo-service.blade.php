@@ -28,11 +28,12 @@
     ogImageAlt="Luxury limo service in Romeoville, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Romeoville Airport Shuttle,"
-        headingBold="Limo & Party Bus"
+        heading="Romeoville Airport Shuttle,"
+        headingBold="Limo & Party Bus Service"
         :headingTwoLines="false"
-        subtitle="Reliable transportation services throughout"
-        subtitleIn="Romeoville, Illinois"
+        subtitle="Private transportation from Romeoville to O'Hare, Midway, and beyond"
+        subtitleIn="serving Romeoville, Illinois"
+        description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle, limousine, and party bus service throughout Romeoville, Illinois. Situated along I-55 at Route 53 near Lewis University Airport (LOT), Romeoville is a key hub for private aviation and ground transportation in Will County. We offer flat-rate, door-to-door transfers to O'Hare International Airport (ORD) and Midway International Airport (MDW) for Romeoville residents, with real-time flight tracking and 24-hour availability. We also serve Lewis University with corporate and private aviation ground transport. For events and celebrations, our party buses and stretch limousines serve Romeoville for birthday and bachelorette groups, wedding parties, quinceañera celebrations, prom and grad day groups, and any occasion that deserves professional chauffeured service. Our fleet includes executive sedans, luxury SUVs, Mercedes Sprinter vans, and party buses. We serve Bolingbrook, Plainfield, Lockport, and all neighboring Will County communities, as well as destinations throughout all of Chicagoland. Flat-rate pricing, no hidden fees. Book online or call us any time."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/romeoville-il.png"

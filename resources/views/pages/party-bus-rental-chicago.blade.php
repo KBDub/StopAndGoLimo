@@ -32,10 +32,11 @@
     ogImageAlt="Party bus rental serving Chicago, Illinois"
 >
     <x-sections.category-hero
-        heading="Reliable & Stylish"
-        headingBold="Party Bus and Limo Transportation"
+        heading="Party Bus and Limo Rental"
+        headingBold="in Chicago and the Suburbs"
         :headingTwoLines="false"
-        description="Stop & Go delivers luxury party bus experiences for weddings, proms, birthdays, and every celebration."
+        subtitle="Every occasion, every group, one trusted transportation company"
+        description="Stop & Go Airport Shuttle Service, Inc. delivers luxury party bus and limousine transportation throughout Chicago and all of Chicagoland. Whether your group is heading to a bachelorette party in the city, a birthday night on the North Side, a wedding in the suburbs, a quinceañera celebration, a prom night, a concert at the United Center, or a sporting event at Soldier Field or Wrigley Field, we have the right vehicle and the right chauffeur for the occasion. Our fleet includes stretch limousines, luxury SUVs, Mercedes Sprinter vans, party buses, and coach buses, each one impeccably clean and ready for your group. Every driver is professional, background-checked, and experienced navigating Chicago and the suburbs any night of the week. We pick up and drop off throughout all of Chicagoland: the southwest, south, west, northwest, and north suburbs, and every Chicago neighborhood. Our pricing is always flat-rate with no surprise charges. Request a free quote online or call us to reserve your vehicle. We book up fast on weekends and for major events throughout the year."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-party-bus-chicago.webp"

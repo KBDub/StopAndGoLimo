@@ -30,10 +30,11 @@
     ogImageAlt="Luxury limousine rates at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Our"
-        headingBold="Rates"
+        heading="Our Rates and"
+        headingBold="Flat-Rate Pricing"
         :headingTwoLines="false"
-        subtitle="Transparent flat-rate pricing, no surprises"
+        subtitle="All-inclusive pricing with no hidden fees, ever"
+        description="At Stop & Go Airport Shuttle Service, Inc., we believe you should know exactly what your ride costs before you book. No surge fees, no hidden charges, no surprises when the trip ends. Our pricing is flat-rate for all airport transfers to O'Hare and Midway from communities throughout Chicagoland, including the southwest suburbs, western suburbs, north suburbs, and the city of Chicago. We offer competitive rates across our full fleet: executive sedans, luxury SUVs, Mercedes Sprinter vans, stretch limousines, party buses, and coach buses. Wedding couples, corporate executives, prom groups, bachelorette parties, quinceañera courts, birthday groups, sports fans, and concert-goers all receive the same transparent, all-inclusive pricing. Our rates cover your chauffeur, fuel, and standard tolls. Gratuity is always straightforward. We never charge extra when your flight is delayed, because we monitor every flight in real time and adjust automatically. Request a free quote online or call us any time for a custom rate on your specific trip."
         buttonText="Book a Ride"
         buttonHref="/contact"
         image="/images/sections/rates-hero.jpg"

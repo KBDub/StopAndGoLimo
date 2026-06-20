@@ -32,10 +32,11 @@
     ogImageAlt="Golf party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Chicago Golf"
-        headingBold="Party Bus"
+        heading="Golf Outing Party Bus"
+        headingBold="in Chicagoland"
         :headingTwoLines="false"
-        subtitle="Discover the Joy of Seamless Journeys"
+        subtitle="Tee off together, travel in style, enjoy every moment"
+        description="Stop & Go Airport Shuttle Service, Inc. keeps your golf outing group together from the first tee to the final putt. We provide party bus and luxury van service for golf outings throughout Chicagoland, from private clubs in the southwest and south suburbs to courses in the western suburbs and the north shore. Whether you are organizing a corporate golf day, a bachelor party outing, a charity scramble, or an annual group tradition, we handle transportation so your crew can enjoy every moment together. Our vehicles include party buses for groups of 20-plus and Mercedes Sprinter vans for smaller outings, all equipped with comfortable seating, climate control, and room for bags. Our professional, background-checked chauffeurs manage all the logistics: pickup times, routes, and drop-off, so nobody has to worry about driving or coordinating separate cars. We serve communities throughout all of Chicagoland, including the southwest, west, north, and northwest suburbs. We offer flat-rate pricing with a clear all-inclusive quote before you book. Book your golf outing bus today and let your group focus on the game."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-chicago-golf-party-bus.jpg"

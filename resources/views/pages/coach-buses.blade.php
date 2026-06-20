@@ -32,11 +32,11 @@
     ogImageAlt="Charter coach bus available for group rentals at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Arrive in Unforgettable Style"
-        headingBold=""
+        heading="Charter Coach Bus Rental"
+        headingBold="Throughout Chicagoland"
         :headingTwoLines="false"
-        subtitle="Coach Buses"
-        description="Spacious, comfortable charter coach buses for corporate events, sports teams, weddings, and group travel throughout the Southwest suburbs."
+        subtitle="Spacious, comfortable group travel for any size crowd"
+        description="Stop & Go Airport Shuttle Service, Inc. offers charter coach bus rental for large groups throughout Chicagoland and all of Illinois. Our full-size coach buses comfortably seat 40 to 56 passengers, making them the perfect solution for corporate events, team travel, school and university group outings, wedding guest shuttles, sports fan trips, concert-goers, and any gathering that needs everyone moving together. Our coaches are clean, late-model, and well-maintained, with comfortable seating, climate control, and generous luggage storage. Every charter includes a professional, background-checked chauffeur who handles routing, timing, and logistics so you can focus on your group. We serve communities throughout all of Chicagoland: the southwest and south suburbs, the western suburbs including Aurora, Elgin, and Bolingbrook, the northwest suburbs including Schaumburg and Arlington Heights, and the city of Chicago and its surrounding neighborhoods. Whether your group is heading to O'Hare for an international trip, traveling to a corporate conference, or shuttling guests between a wedding venue and hotel, our coach buses deliver a comfortable, organized experience. Contact us for a free group quote."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/coach-buses-hero.jpg"

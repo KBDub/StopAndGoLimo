@@ -32,11 +32,11 @@
     ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Professional Chauffeur Service"
-        headingBold=""
+        heading="Our"
+        headingBold="Professional Chauffeurs"
         :headingTwoLines="false"
-        subtitle="Chauffeurs"
-        description="Professional chauffeur services for any event or personal need, offering a luxurious and stress-free ride."
+        subtitle="Vetted, uniformed, and trained for every occasion"
+        description="At Stop & Go Airport Shuttle Service, Inc., our chauffeurs are the foundation of everything we do. Every driver on our team is background-checked, IDOT-compliant, and professionally trained before their first trip. We require clean driving records, safety certifications, and ongoing service standards that reflect the level of care our clients expect. Our chauffeurs arrive in uniform, on time, and ready to assist with luggage, open doors, and make your experience seamless from start to finish. We serve corporate executives heading to O'Hare or Midway, wedding parties arriving in style, prom groups celebrating a milestone, bachelorette and birthday guests ready to enjoy the night, quinceañera courts making a grand entrance, and families who simply want a safe, comfortable ride. Our service area covers all of Chicagoland, from the southwest suburbs through the western and north corridors, and into the city of Chicago. We monitor all flights in real time, so our drivers are always prepared for early arrivals or late departures. When you ride with us, you are in the hands of a professional who takes pride in getting you there safely, on time, and in comfort."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/chauffeur-hero.jpg"

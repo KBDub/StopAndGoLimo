@@ -32,10 +32,11 @@
     ogImageAlt="Chicago Blackhawks party bus from New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Chicago Blackhawks"
-        headingBold="Party Bus"
+        heading="Chicago Blackhawks Party Bus"
+        headingBold="to the United Center"
         :headingTwoLines="false"
-        subtitle="Discover the Joy of Seamless Journeys"
+        subtitle="Get to the game together and arrive in style"
+        description="Stop & Go Airport Shuttle Service, Inc. is your go-to transportation partner for Chicago Blackhawks games at the United Center. We pick up your group from communities throughout Chicagoland, including the southwest, west, north, and northwest suburbs, and get everyone to the game comfortably and on time. No parking fees, no driving stress, no splitting the group across separate cars. Our party buses seat 20 to 40-plus passengers, with premium sound systems, LED lighting, and plenty of room for your whole crew to get the energy going before the puck drops. Every chauffeur is professional, background-checked, and experienced navigating Chicago on game nights. We handle pickup, drop-off, and the postgame return trip, all included in your flat-rate price. Whether you are planning a company outing, a birthday celebration, a group of coworkers, or a passionate crew of Blackhawks fans, we make the experience better before you even step inside the arena. Book your Blackhawks party bus early and get your group on the ice road to the United Center."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"

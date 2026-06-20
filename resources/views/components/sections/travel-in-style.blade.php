@@ -88,16 +88,10 @@
 
                 {{-- CTA --}}
                 @if($buttonHref && $buttonText)
-                    <div class="mb-6">
-                        @if(!$inverted)
-                            <x-ui.button-champagne-solid href="{{ $buttonHref }}">
-                                {{ $buttonText }}
-                            </x-ui.button-champagne-solid>
-                        @else
-                            <x-ui.button-outline-champagne href="{{ $buttonHref }}">
-                                {{ $buttonText }}
-                            </x-ui.button-outline-champagne>
-                        @endif
+                    <div class="mb-6 text-center">
+                        <x-ui.button-champagne-solid href="{{ $buttonHref }}">
+                            {{ $buttonText }}
+                        </x-ui.button-champagne-solid>
                     </div>
                 @endif
 

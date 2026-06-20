@@ -197,7 +197,7 @@
 
                     {{-- Submit --}}
                     <div class="text-center">
-                        <x-ui.button-champagne-solid type="submit" radius="square">
+                        <x-ui.button-champagne-solid type="submit" radius="soft">
                             {{ $submitLabel }}
                         </x-ui.button-champagne-solid>
                     </div>

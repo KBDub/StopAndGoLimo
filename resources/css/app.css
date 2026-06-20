@@ -488,7 +488,7 @@ html {
     border-radius: 10px;
     transition: background .2s, color .2s;
 }
-.sg-nav .nav-cta-btn:hover { background: var(--champagne); color: var(--navy); }
+.sg-nav .nav-cta-btn:hover { background: var(--champagne-light); color: var(--navy); }
 .sg-nav .nav-item { position: relative; display: flex; align-items: center; }
 .sg-nav .nav-link {
     font-family: var(--font-head); font-weight: 400; font-size: 15px;

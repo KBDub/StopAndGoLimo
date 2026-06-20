@@ -24,7 +24,7 @@ This is the authoritative scale. All values live as CSS custom properties in `ap
 | Level | CSS token | Value | Max | Weight split | Letter-spacing token | LH | Use |
 |---|---|---|---|---|---|---|---|
 | **H1** | `var(--font-size-h1)` | `clamp(2rem, 6vw, 3.75rem)` | **60px** | 400 base + 700 `<strong>` | `var(--letter-spacing-h1)` (-1px) | 1.2 | Page hero titles |
-| **H2** | `var(--font-size-h2)` | `clamp(1.75rem, 5vw, 2.5rem)` | **40px** | 400 base + 700 `<strong>` | `var(--letter-spacing-h2)` (0.5px) | 1.2 | Section headings |
+| **H2** | `var(--font-size-h2)` | `clamp(1.75rem, 5vw, 1.875rem)` | **30px** | 400 base + 700 `<strong>` | `var(--letter-spacing-h2)` (0.5px) | 1.2 | Section headings |
 | **H3** | `var(--font-size-h3)` | `1.875rem` | **30px** | SemiBold 600 | none | 1.3 | Subsection headings |
 | **H4** | `var(--font-size-h4)` | `1.5rem` | **24px** | SemiBold 600 | none | 1.4 | Card titles |
 | **H5** | `var(--font-size-h5)` | `1.25rem` | **20px** | SemiBold 600 | none | 1.4 | Minor headings |
@@ -47,7 +47,7 @@ This is the authoritative scale. All values live as CSS custom properties in `ap
 
 ```css
 --font-size-h1: clamp(2rem, 6vw, 3.75rem);   /* max 60px */
---font-size-h2: clamp(1.75rem, 5vw, 2.5rem); /* max 40px */
+--font-size-h2: clamp(1.75rem, 5vw, 1.875rem); /* max 30px */
 --font-size-h3: 1.875rem;                     /* 30px */
 --font-size-h4: 1.5rem;                       /* 24px */
 --font-size-h5: 1.25rem;                      /* 20px */
@@ -68,7 +68,7 @@ The Tailwind `text-h*` tokens reflect the max (desktop) value of each level. The
 | Token | Size | LH | Weight | Letter-spacing |
 |---|---|---|---|---|
 | `text-h1` | 60px | 1.2 | 400 | -1px |
-| `text-h2` | 40px | 1.2 | 400 | 0.5px |
+| `text-h2` | 30px | 1.2 | 400 | 0.5px |
 | `text-h3` | 30px | 1.3 | 600 | — |
 | `text-h4` | 24px | 1.4 | 600 | — |
 | `text-h5` | 20px | 1.4 | 600 | — |

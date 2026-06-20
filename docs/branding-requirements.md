@@ -78,7 +78,7 @@ Both are loaded via Google Fonts. The import is in `resources/css/app.css`.
 | Level | Size | Weight | Font | Letter-spacing | Line-height | Use |
 |---|---|---|---|---|---|---|
 | H1 | `var(--font-size-h1)` — `clamp(2rem, 6vw, 3.75rem)` (max 60px) | 400 base + 700 bold `<strong>` | Poppins via `var(--font-head)` | `var(--letter-spacing-h1)` (-1px) | 1.2 | Page hero titles |
-| H2 | `var(--font-size-h2)` — `clamp(1.75rem, 5vw, 2.5rem)` (max 40px) | 400 base + 700 bold `<strong>` | Poppins via `var(--font-head)` | `var(--letter-spacing-h2)` (0.5px) | 1.2 | Section headings |
+| H2 | `var(--font-size-h2)` — `clamp(1.75rem, 5vw, 1.875rem)` (max 30px) | 400 base + 700 bold `<strong>` | Poppins via `var(--font-head)` | `var(--letter-spacing-h2)` (0.5px) | 1.2 | Section headings |
 | H3 | `var(--font-size-h3)` — 1.875rem (30px) | SemiBold 600 | Poppins via `var(--font-head)` | none | 1.3 | Subsection headings |
 | H4 | 24px / 1.5rem | SemiBold 600 | Poppins via `var(--font-head)` | none | 1.3 | Card titles, champagne accent color |
 | H5 | 20px / 1.25rem | SemiBold 600 | Poppins via `var(--font-head)` | none | 1.3 | Minor headings |

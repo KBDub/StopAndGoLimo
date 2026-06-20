@@ -85,6 +85,37 @@
         :inverted="true"
     />
 
+    <x-sections.our-services />
+
+    <x-sections.city-info-grid
+        :boxes="[
+            [
+                'heading' => 'North Romeoville',
+                'items'   => ['Highpoint', 'Montego Bay', 'Independence Grove', 'North subdivisions', 'Near Bolingbrook border'],
+            ],
+            [
+                'heading' => 'South Romeoville',
+                'items'   => ['South Romeoville neighborhoods', 'I-55 corridor businesses', 'Near Plainfield border', 'Near Lockport border', 'Route 53 areas (south)'],
+            ],
+            [
+                'heading' => 'East Romeoville',
+                'items'   => ['Independence Grove (east side)', 'Montego Bay (east side)', 'North subdivisions (east)', 'Near Naperville border', 'Route 53 corridor'],
+            ],
+            [
+                'heading' => 'Central Romeoville',
+                'items'   => ['Downtown Romeoville', 'Village Hall area', 'Romeo Road neighborhoods', 'Historic Romeoville', 'Weber Road central'],
+            ],
+            [
+                'heading' => 'West Romeoville',
+                'items'   => ['Weber Road corridor (west)', 'Montego Bay (west)', 'Highpoint (west)', 'West Romeoville neighborhoods', 'I-55 corridor access'],
+            ],
+            [
+                'heading' => 'I-55 Corridor Areas',
+                'items'   => ['Weber Road corridor', 'I-55 access points', 'Route 53 intersections', 'Business and commercial zones', 'Central, North, South Romeoville'],
+            ],
+        ]"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

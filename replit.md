@@ -121,6 +121,22 @@ Full rules in `docs/branding-requirements.md` — read it before any UI change.
 -   **Alpine plugins** must register via `document.addEventListener('alpine:init')`.
 -   **`overflow: hidden` on `<html>`** traps sticky elements. If you need to hide overflow, apply it to `<body>` or a specific component wrapper instead.
 
+## SEO — Negative Keywords
+
+The following words are **negative keywords** — never use them in page copy, headings, meta titles, meta descriptions, alt text, or structured data. Search engines use semantic clustering to determine a site's niche. Using these terms pulls the site into the budget/rideshare niche and repels the high-intent, high-value clients Stop & Go targets.
+
+| Avoid | Use instead |
+|---|---|
+| taxi, cab, taxicab | chauffeur, private car service |
+| cheap, budget, discount | competitive luxury rates, premier pricing |
+| shared ride, rideshare | private transfer, exclusive transportation |
+| Uber, Lyft | executive car service, black car service |
+| ride-hailing | chauffeured transportation |
+
+**Approved replacement phrases** (from SEO research): "competitive luxury rates," "value-driven excellence," "premier pricing," "executive transfer," "chauffeured transportation."
+
+Full SEO research is in `docs/seo/`.
+
 ## User Preferences
 
 -   **"mnc"** = make no changes — analyze and respond only, do not edit any files

@@ -88,6 +88,7 @@ export default {
     safelist: [
         'translate-x-1',
         'translate-x-6',
+        'hover:text-azure',
     ],
     plugins: [],
 };

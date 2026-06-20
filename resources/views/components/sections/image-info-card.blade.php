@@ -25,6 +25,13 @@
 <section id="{{ $id }}" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
+        {{-- H2 — full-width row, centered above the two columns --}}
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); {{ $headColor }}">
+                @if($heading)<span>{{ $heading }}</span> @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>@if($headingTail) <span>{{ $headingTail }}</span>@endif
+            </h2>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {{-- Image column --}}
@@ -42,13 +49,6 @@
 
             {{-- Text column --}}
             <div class="w-full {{ $txtOrder }}">
-
-                {{-- H2 + champagne underbar --}}
-                <div style="width: fit-content; margin-bottom: 2rem;">
-                    <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); {{ $headColor }}">
-                        @if($heading)<span>{{ $heading }}</span> @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>@if($headingTail) <span>{{ $headingTail }}</span>@endif
-                    </h2>
-                </div>
 
                 {{-- Body --}}
                 @if($body)

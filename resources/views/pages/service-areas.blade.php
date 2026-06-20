@@ -84,14 +84,10 @@
     />
 
     <x-sections.free-instant-quote
-        heading="Get Your"
-        headingBold="Free Instant Quote"
-        headingTail=""
-        body="Tell us your pickup location, destination, and date. We'll match you with the right vehicle and confirm your booking fast."
-        image="/images/sections/chauffeurs.jpg"
-        imageAlt="Professional chauffeur ready to serve, Stop and Go Airport Shuttle"
-        imageAspect="4/3"
-        imageObjectPosition="center top"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descBody="With our 24/7 service across the Southwest suburbs, you never have to worry about transportation. We are always nearby and ready when you need us."
+        descClosing="From elegant wedding limos to timely O'Hare and Midway airport shuttles, fun party bus rentals, and professional corporate car service, we deliver dependable rides every time. Our team focuses on safety, punctuality, and customer satisfaction to make every trip effortless."
         formAction="/get-a-quote"
         submitLabel="Send Message"
     />

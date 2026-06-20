@@ -210,7 +210,7 @@
 
                 {{-- Description panel — slides in from the right on scroll --}}
                 <div class="w-full sg-fiq-desc-slide-in"
-                     style="opacity: 0; transform: translateX(4rem); transition: opacity 0.7s ease, transform 0.7s ease;"
+                     style="opacity: 0; transform: translateX(4rem); transition: opacity 1.6s ease, transform 1.6s ease;"
                 >
                     {{-- Optional image at top of desc panel --}}
                     @if($descImage && $descImageTop)

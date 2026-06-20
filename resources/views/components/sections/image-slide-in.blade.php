@@ -24,7 +24,7 @@
             {{-- Left: text box, slides in from right --}}
             <div
                 class="sg-slide-in"
-                style="opacity: 0; transform: translateX(4rem); transition: opacity 2.4s ease, transform 2.0s ease; background: var(--navy-dark); padding: 2.5rem;"
+                style="opacity: 0; transform: translateX(4rem); transition: opacity 1.6s ease, transform 1.6s ease; background: var(--navy-dark); padding: 2.5rem;"
             >
                 {{-- Heading: two-part branding (plain 400 + bold 700 champagne) --}}
                 <h2 class="font-head mb-5" style="font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--cloud-light);">
@@ -52,7 +52,7 @@
             <div
                 class="sg-slide-in"
                 data-delay="150"
-                style="opacity: 0; transform: translateX(4rem); transition: opacity 2.4s ease 150ms, transform 2.0s ease 150ms;"
+                style="opacity: 0; transform: translateX(4rem); transition: opacity 1.6s ease 150ms, transform 1.6s ease 150ms;"
             >
                 @if($image)
                     <div class="w-full overflow-hidden" style="aspect-ratio: {{ $imageAspect }};">

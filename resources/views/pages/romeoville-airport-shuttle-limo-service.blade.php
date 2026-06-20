@@ -38,6 +38,16 @@
         imagePosition="center center"
     />
 
+    <x-sections.travel-in-style
+        heading="Every Occasion"
+        headingBold="Covered"
+        subtitle="Driven by certified drivers you can trust"
+        body="Stop & Go provides reliable transportation throughout Romeoville. We offer a professional 24/7 Romeoville airport shuttle to O'Hare and Midway, luxury limousine service for weddings and events, and party bus rentals for celebrations. Serving all Romeoville neighborhoods, we deliver reliable, professional transportation throughout the Chicago area."
+        image="/images/sections/romeoville-airport-shuttle.png"
+        imageAlt="Airport shuttle service in Romeoville, Illinois — Stop and Go Airport Shuttle"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

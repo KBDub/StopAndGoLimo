@@ -35,7 +35,7 @@
         subtitle="Transparent flat-rate pricing, no surprises"
         buttonText="Book a Ride"
         buttonHref="/contact"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/rates-hero.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

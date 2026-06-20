@@ -77,6 +77,16 @@
         body="We serve New Lenox, Naperville, Aurora, Joliet, and more than 20 communities across the southwest suburbs of Chicago. Whether you need a ride to O'Hare, Midway, or a local event, our drivers are ready around the clock."
     />
 
+    <x-sections.travel-in-style
+        heading="Every Occasion"
+        headingBold="Covered"
+        subtitle="Driven by certified drivers you can trust"
+        body="Stop & Go provides reliable transportation across all 20+ Southwest suburb communities. We offer a professional 24/7 airport shuttle to O'Hare and Midway, luxury limousine service for weddings and special events, party bus rentals for group celebrations, and corporate car service for business travel. Whether you're in New Lenox, Naperville, Aurora, Joliet, Plainfield, Romeoville, or any community in between, our certified drivers are ready around the clock."
+        image="/images/sections/limousine-arrival.jpg"
+        imageAlt="Luxury limousine arriving for a client in the Southwest suburbs — Stop and Go Airport Shuttle"
+        imagePosition="right"
+    />
+
     <x-sections.areas-we-serve
         heading="Areas We"
         headingBold="Proudly Serve"

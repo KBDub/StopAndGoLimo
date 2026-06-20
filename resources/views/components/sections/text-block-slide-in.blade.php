@@ -20,7 +20,7 @@
         {{-- Single block: heading + rule + body card + button + directions — slides in as one unit --}}
         <div
             class="sg-text-slide-in"
-            style="opacity: 0; transform: translateX(4rem); transition: opacity 0.7s ease, transform 0.7s ease; background: var(--navy-dark); padding: 2.5rem 3rem;"
+            style="opacity: 0; transform: translateX(4rem); transition: opacity 1.2s ease, transform 1.0s ease; background: var(--navy-dark); padding: 2.5rem 3rem;"
         >
 
             {{-- Heading: two-part branding --}}

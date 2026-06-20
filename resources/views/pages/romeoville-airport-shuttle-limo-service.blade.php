@@ -28,13 +28,13 @@
     ogImageAlt="Luxury limo service in Romeoville, Illinois"
 >
     <x-sections.category-hero
-        heading="24/7 Romeoville"
-        headingBold="Limo & Airport Shuttle"
-        subtitle="Reliable, professional transportation"
-        subtitleIn="serving Romeoville, Illinois"
+        heading="24/7 Romeoville Airport Shuttle,"
+        headingBold="Limo & Party Bus"
+        subtitle="Reliable transportation services throughout"
+        subtitleIn="Romeoville, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/romeoville-il.png"
         imagePosition="center center"
     />
 

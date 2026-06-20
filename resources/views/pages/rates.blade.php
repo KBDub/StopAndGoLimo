@@ -38,4 +38,11 @@
         image="/images/sections/rates-hero.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.info-strip
+        headingBold="Glide to Your Destination"
+        heading="With Prestige and Comfort"
+        body="We are dedicated to putting the customer first. Our goal is to deliver exceptional service that exceeds your expectations. Our team goes the extra mile to ensure you receive the quality experience you deserve."
+    />
+
 </x-layouts.page>

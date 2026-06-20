@@ -75,6 +75,16 @@
         descClosing="Our intimate knowledge of Romeoville, from Highpoint to Montego Bay, from Independence Grove to the I-55 corridor, ensures efficient and reliable transportation throughout our southwest suburb."
     />
 
+    <x-sections.travel-in-style
+        heading="24/7 Romeoville Airport Shuttle to"
+        headingBold="O'Hare & Midway"
+        body="Our Romeoville airport shuttle provides round-the-clock service to O'Hare and Midway with on-time pickups from anywhere in Romeoville. Serving Highpoint, Montego Bay, Independence Grove, Weber Road, and other neighborhoods, we ensure stress-free travel with flight monitoring, luggage assistance, and expert I-55 and Route 53 navigation for efficient Romeoville to O'Hare and Romeoville to Midway trips."
+        image="/images/sections/romeoville-airport.png"
+        imageAlt="Airport shuttle service from Romeoville, Illinois to O'Hare and Midway — Stop and Go"
+        imagePosition="right"
+        :inverted="true"
+    />
+
     <x-sections.faq />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

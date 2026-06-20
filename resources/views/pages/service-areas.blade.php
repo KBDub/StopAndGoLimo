@@ -85,9 +85,20 @@
 
     <x-sections.free-instant-quote
         rightVariant="description"
+        :descImageTop="true"
+        descImage="/images/sections/chicago-skyline.jpg"
+        descImageAlt="Stop and Go Airport Shuttle Service covering the Southwest suburbs of Chicago"
         descHeading="Why Choose Us?"
-        descBody="With our 24/7 service across the Southwest suburbs, you never have to worry about transportation. We are always nearby and ready when you need us."
-        descClosing="From elegant wedding limos to timely O'Hare and Midway airport shuttles, fun party bus rentals, and professional corporate car service, we deliver dependable rides every time. Our team focuses on safety, punctuality, and customer satisfaction to make every trip effortless."
+        descSubheading="Complete Southwest Suburbs Transportation"
+        descBody="As the Southwest suburbs' locally-based transportation provider, Stop & Go offers complete luxury transportation services across 20+ communities:"
+        :descBullets="[
+            'Airport shuttle to O\'Hare and Midway, available 24/7',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate car service for business meetings and executive travel',
+            'Town car and chauffeur service for premium point-to-point rides',
+        ]"
+        descClosing="Serving New Lenox, Plainfield, Naperville, Joliet, Aurora, Romeoville, and every community in between, our drivers know every route and are ready around the clock."
         formAction="/get-a-quote"
         submitLabel="Send Message"
     />

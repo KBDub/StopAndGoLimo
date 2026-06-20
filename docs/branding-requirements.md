@@ -355,7 +355,36 @@ Every component must pass all three breakpoints:
 
 ---
 
-## 12. SEO and Structured Data
+## 12. Hero Text Standards
+
+### 12.1 — Structure Rule: One H1, Nothing Else
+
+Every page hero contains **exactly one H1.** There are no H2, H3, or any other heading tags inside the hero. The subtitle and description render as styled paragraph elements only.
+
+### 12.2 — Subtitle
+
+- 6–12 words, center-aligned
+- Renders at Lead paragraph size — not a heading element
+- Adds context or intent; does not repeat the H1
+
+### 12.3 — Description
+
+| Requirement | Rule |
+|---|---|
+| **Length** | 150–200 words |
+| **Company name** | Must include **"Stop & Go Airport Shuttle Service, Inc."** at least once |
+| **Voice** | First person plural — "we," "our," "us" throughout. Never third person. |
+| **Inclusivity** | Must acknowledge the full range of customers we serve: corporate and executive travelers, airport and private transfer clients, wedding parties, prom and graduation groups, bachelorette and birthday celebrations, quinceañera groups, sports fans, concert-goers, and other special occasions. Not every description covers every type — rotate coverage so all are represented across the site. |
+| **Reading level** | 7th grade. Short sentences. Active voice. |
+| **SEO** | Include the city name, at least one airport reference (O'Hare, Midway, or relevant FBO), and at least one approved term (chauffeur, private car service, executive transportation, chauffeured transportation). |
+| **Forbidden words** | No negative keywords: taxi, cab, cheap, budget, discount, rideshare, Uber, Lyft, ride-hailing. |
+| **Tone** | Warm, confident, professional. Never boastful. |
+
+See `docs/hero-standardization.md` and `docs/h1s.md` for the full page-by-page audit and approved copy for every page.
+
+---
+
+## 13. SEO and Structured Data
 
 - Semantic HTML is required: one H1 per page, logical H2-H5 hierarchy, no skipped levels
 - Every page needs JSON-LD structured data (LocalBusiness, Service, or BreadcrumbList)

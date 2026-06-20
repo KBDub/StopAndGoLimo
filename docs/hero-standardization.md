@@ -26,6 +26,40 @@ All pages previously rendered `x-ui.button-outline-light` (ghost white outline).
 
 ---
 
+## Hero Text Content Specification
+
+### Rule: One H1, No Other Headings in the Hero
+
+Every hero section must contain **exactly one H1** (rendered via the `heading` + `headingBold` props on `x-sections.category-hero`). There are no H2, H3, or any other heading tags inside the hero component. The subtitle and description render as styled paragraph elements — never as headings.
+
+### Subtitle
+
+- A single short supporting phrase — 6 to 12 words maximum
+- Renders at Lead size (Poppins, `clamp(1rem, 2.5vw, 1.3125rem)`, Regular 400)
+- Center-aligned — not a heading element
+- Must not repeat the H1 verbatim
+- Should add context or intent (service type, mood, or geographic scope)
+
+### Description
+
+- **Length:** 150–200 words, measured before rendering
+- **Company name:** Must include the full legal name **"Stop & Go Airport Shuttle Service, Inc."** at least once
+- **Voice:** First person plural — use "we," "our," "us" throughout. Never write in third person about the company.
+- **Inclusivity:** Each description must acknowledge the full range of customer types we serve. Rotate coverage across: corporate and executive travelers, airport and private transfer clients, wedding parties, prom and graduation groups, bachelorette and birthday parties, quinceañera celebrations, sports fans, concert-goers, and any other special occasion.
+- **Reading level:** 7th grade. Short sentences. Plain words. Active voice.
+- **SEO:** Include the city name, at least one airport reference (O'Hare, Midway, or the relevant FBO), and at least one approved service vocabulary term (chauffeur, private car service, executive transportation, chauffeured transportation, etc.). No negative keywords (taxi, cab, cheap, rideshare, Uber, Lyft).
+- **Tone:** Warm, confident, professional. Never boastful.
+
+### Summary
+
+| Element | Tag rendered | Length | Required content |
+|---|---|---|---|
+| H1 | `<h1>` | 4–10 words | Primary keyword + geo or service type |
+| Subtitle | `<p>` (Lead style) | 6–12 words | Supporting context, not a repetition of H1 |
+| Description | `<p>` (Body style) | 150–200 words | Company name, we/our voice, inclusive customer reference, city + airport, approved vocabulary |
+
+---
+
 ## Component Reference
 
 **File:** `resources/views/components/sections/category-hero.blade.php`

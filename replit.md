@@ -145,4 +145,4 @@ Full SEO research is in `docs/seo/`.
 -   Always ask when unsure rather than assuming
 -   Always read `docs/branding-requirements.md` before any UI or copy change
 -   Always read `docs/image-video-control.md` before any image or video change
--   **Em dashes in headings/subheadings:** Rephrase as a "we/our" or action statement showing how the company helps the customer (e.g. "Will Turn" instead of "—Turns"). Use a comma as a secondary option. See `docs/branding-requirements.md` §2 for the full rule.
+-   **No em dashes anywhere.** Em dashes (—) are banned from all website copy: headings, subheadings, body text, descriptions, meta content, and documentation copy. Use a comma, period, or rephrase naturally. See `docs/branding-requirements.md` §2 for the full rule.

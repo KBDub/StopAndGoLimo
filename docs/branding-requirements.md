@@ -40,11 +40,12 @@ The Twilight Luxe brand communicates **premium, understated luxury.** Think firs
 **Midnight Navy (#15152C, hsl(240, 35%, 13%)):** Deep, authoritative, and refined. Signals trust and premium quality.
 **Champagne Gold (#DCB57E):** Warm, understated luxury. Not flashy — the kind of gold that belongs in first class.
 
-**Em dash handling in copy:** Em dashes (—) in headings and subheadings should be avoided. Preferred replacements, in order:
-1. **Rephrase as a "we/our" or action statement** that shows the customer how the company helps them. Example: "Aurora Party Bus — Turns Any Night into an Epic Celebration" becomes "Our Aurora Party Bus Will Turn Any Night into an Epic Celebration."
-2. **Use a comma** when a direct rephrase is awkward. Example: "Book Fast — Spots Fill Quickly" becomes "Book Fast, Spots Fill Quickly."
+**Em dash ban — all copy:** Em dashes (—) are not permitted anywhere on the site. This includes headings, subheadings, body copy, hero descriptions, meta descriptions, alt text, structured data, and all documentation that becomes website content. Preferred replacements, in order:
+1. **Rephrase as a "we/our" or action statement** that shows the customer how the company helps them. Example: "Aurora Party Bus, Turning Any Night into an Epic Celebration" or "Our Aurora Party Bus Will Turn Any Night into an Epic Celebration."
+2. **Use a comma** when a direct rephrase is awkward. Example: "Book Fast, Spots Fill Quickly."
+3. **Use a period** to break the sentence into two when a comma reads awkwardly.
 
-This applies to all headings, subheadings, and section labels. Em dashes in body copy prose are permitted where a natural pause is needed and no simpler rephrase exists.
+No exceptions. Em dashes in any form are banned from all website copy and content.
 
 ---
 
@@ -52,7 +53,7 @@ This applies to all headings, subheadings, and section labels. Em dashes in body
 
 1. **No `text-transform: uppercase` anywhere on the site** — except the approved navigation exceptions in §8.2. Mixed case and title case are allowed everywhere. Never use all-uppercase text.
 2. **Sharp corners on all containers, cards, and inputs.** No `rounded` classes on sections, cards, or form inputs. Buttons use the `radius` prop on `x-ui.button` — the default is `soft` (10px). Pass `radius="square"` for a fully square button.
-3. **Never use double hyphens (--).** Use a comma or em dash instead.
+3. **Never use double hyphens (--)** and never use em dashes (—). Use a comma or rephrase naturally instead.
 4. **7th-grade reading level** for all body copy. Short sentences. Plain words.
 5. **No icons** — with one approved exception. Do not use Heroicons or any other SVG icon library. **Font Awesome 6 is the sole approved icon library** and may only be used for functional location and contact indicators (map pin, phone). Do not use Font Awesome for decorative or illustrative purposes.
 6. **No color outside the palette.** If a color is not in the Twilight Luxe 5+White palette or the three semantic colors, it is not allowed.

@@ -16,13 +16,14 @@
     $bgStyle   = $inverted ? 'background: var(--navy);'        : 'background: var(--white);';
     $headColor = $inverted ? 'color: var(--white);'            : 'color: var(--navy);';
     $bodyColor = $inverted ? 'color: var(--cloud);'            : 'color: var(--slate);';
-    $barColor  = 'background: var(--champagne);';
 
-    $imgOrder = $imagePosition === 'left' ? 'order-first lg:order-first' : 'order-first lg:order-last';
-    $txtOrder = $imagePosition === 'left' ? 'order-last  lg:order-last'  : 'order-last  lg:order-first';
+    $imgOrder  = $imagePosition === 'left' ? 'order-first lg:order-first' : 'order-first lg:order-last';
+    $txtOrder  = $imagePosition === 'left' ? 'order-last  lg:order-last'  : 'order-last  lg:order-first';
+
+    $translate = $imagePosition === 'left' ? '-4rem' : '4rem';
 @endphp
 
-<section id="{{ $id }}" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
+<section id="{{ $id }}" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem] overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- H2 — full-width row, centered above the two columns --}}
@@ -34,8 +35,11 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
-            {{-- Image column --}}
-            <div class="w-full {{ $imgOrder }}">
+            {{-- Image column — slides in from the image side --}}
+            <div
+                class="w-full sg-info-card-slide {{ $imgOrder }}"
+                style="opacity: 0; transform: translateX({{ $translate }}); transition: opacity 1.6s ease, transform 1.6s ease;"
+            >
                 <div class="w-full overflow-hidden" style="aspect-ratio: {{ $imageAspect }}; box-shadow: var(--shadow-card);">
                     <img
                         src="{{ $image }}"
@@ -47,9 +51,11 @@
                 </div>
             </div>
 
-            {{-- Text column --}}
-            <div class="w-full {{ $txtOrder }}">
-
+            {{-- Text column — slides in from same side, 150ms stagger --}}
+            <div
+                class="w-full sg-info-card-slide {{ $txtOrder }}"
+                style="opacity: 0; transform: translateX({{ $translate }}); transition: opacity 1.6s ease 150ms, transform 1.6s ease 150ms;"
+            >
                 {{-- Body --}}
                 @if($body)
                     <p class="font-body" style="font-size: 1.25rem; font-weight: 400; line-height: 1.5; {{ $bodyColor }}">
@@ -62,3 +68,23 @@
         </div>
     </div>
 </section>
+
+{{-- Intersection Observer: scoped to this section's id so multiple instances on one page work correctly --}}
+<script>
+(function () {
+    var section = document.getElementById('{{ $id }}');
+    if (!section) return;
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    section.querySelectorAll('.sg-info-card-slide').forEach(function (el) {
+        observer.observe(el);
+    });
+})();
+</script>

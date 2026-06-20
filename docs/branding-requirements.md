@@ -626,3 +626,92 @@ Stack multiple cards with `margin-bottom: 3px` between items — matching the FA
 
 **Reference component:** `resources/views/components/ui/service-thin-rect-card.blade.php`
 **Used in section:** `x-sections.our-key-offers` (in progress)
+
+## 19. Scroll-Triggered Slide-In Animations
+
+All slide-in animation components share a unified timing standard. Use this section as the reference before adding or modifying any scroll-triggered animation.
+
+### 19.1 — Unified timing standard
+
+| Property | Value |
+|---|---|
+| **Duration — opacity** | `1.6s` |
+| **Duration — transform** | `1.6s` |
+| **Easing** | `ease` |
+| **Starting opacity** | `0` |
+| **Starting transform** | `translateX(±4rem)` (direction depends on component) |
+| **End state** | `opacity: 1; transform: translateX(0)` |
+| **Observer threshold** | `0.15` (fires when 15% of the element is visible) |
+| **Stagger delay (second panel)** | `150ms` |
+
+Inline CSS sets the starting state. The IntersectionObserver fires the end state by removing the transform and setting opacity to 1. CSS `transition` handles the animated interpolation.
+
+### 19.2 — Components using the standard
+
+| Component | Class | Direction | Stagger |
+|---|---|---|---|
+| `x-sections.image-slide-in` — text panel | `.sg-slide-in` | from right (`+4rem`) | none (fires first) |
+| `x-sections.image-slide-in` — image panel | `.sg-slide-in` | from right (`+4rem`) | 150ms |
+| `x-sections.text-block-slide-in` | `.sg-text-slide-in` | from right (`+4rem`) | none |
+| `x-sections.free-instant-quote` — desc panel | `.sg-fiq-desc-slide-in` | from right (`+4rem`) | none |
+| `x-sections.image-info-card` — image column | `.sg-info-card-slide` | directional (see §19.3) | none (fires first) |
+| `x-sections.image-info-card` — text column | `.sg-info-card-slide` | directional (see §19.3) | 150ms |
+
+### 19.3 — Directional slide-in (`x-sections.image-info-card`)
+
+The `image-info-card` component derives slide direction from its `imagePosition` prop:
+
+| `imagePosition` prop | Both columns slide from |
+|---|---|
+| `right` (default) | Right — `translateX(+4rem)` |
+| `left` | Left — `translateX(-4rem)` |
+
+Both the image column and the text column always slide from the same side. The text column receives a 150ms stagger delay. This gives a natural left-to-right or right-to-left cascade that follows where the eye enters the layout.
+
+The IntersectionObserver is scoped to `document.getElementById('{{ $id }}')` so multiple `image-info-card` instances on the same page each manage their own animation independently.
+
+### 19.4 — Implementation pattern
+
+```blade
+{{-- Panel with animation (fires first) --}}
+<div
+    class="sg-your-class"
+    style="opacity: 0; transform: translateX(4rem); transition: opacity 1.6s ease, transform 1.6s ease;"
+>
+    ...
+</div>
+
+{{-- Second panel with stagger --}}
+<div
+    class="sg-your-class"
+    style="opacity: 0; transform: translateX(4rem); transition: opacity 1.6s ease 150ms, transform 1.6s ease 150ms;"
+>
+    ...
+</div>
+
+<script>
+(function () {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateX(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.sg-your-class').forEach(function (el) {
+        observer.observe(el);
+    });
+})();
+</script>
+```
+
+For components that can appear multiple times on one page (like `image-info-card`), scope the `querySelectorAll` to the section's `id` instead of `document` to avoid cross-instance interference.
+
+### 19.5 — Rules
+
+- **Never change** the 1.6s duration or 0.15 threshold without updating this document and all affected components.
+- **Never use CSS `animation`** — only CSS `transition` triggered by the IntersectionObserver. This ensures the animation only fires once (on enter) and respects scroll position.
+- **Always add `overflow-hidden`** to the `<section>` wrapping any animated panels to prevent horizontal scrollbars from the off-screen starting position.
+- **Do not animate the H2** in `image-info-card` — it sits in its own full-width row above the grid and renders statically.

@@ -32,6 +32,7 @@
     <x-sections.category-hero
         heading="Get"
         headingBold="a Quote"
+        :headingTwoLines="false"
         subtitle="Fast, free quotes for any trip across the Southwest suburbs"
         buttonText="Call (815) 585-6922"
         buttonHref="tel:+18155856922"

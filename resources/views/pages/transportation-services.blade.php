@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Transportation"
         headingBold="Services"
+        :headingTwoLines="false"
         subtitle="Point-to-point rides across the Southwest suburbs"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

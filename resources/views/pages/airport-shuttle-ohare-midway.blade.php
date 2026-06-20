@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="24/7 Airport Shuttle Service"
         headingBold="New Lenox & Naperville"
+        :headingTwoLines="false"
         subtitle="Reliable Transportation for Every Flight"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

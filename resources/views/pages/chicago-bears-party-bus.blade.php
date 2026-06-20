@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Chicago Bears"
         headingBold="Party Bus"
+        :headingTwoLines="false"
         subtitle="Game day group transportation to Soldier Field"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

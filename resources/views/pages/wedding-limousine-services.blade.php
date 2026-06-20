@@ -32,8 +32,9 @@
     ogImageAlt="Wedding limousine service in New Lenox, Illinois"
 >
     <x-sections.category-hero
-        heading="Make a Grand Entrance with"
-        headingBold="Picture Perfect Wedding Day Transport"
+        heading="Picture Perfect Wedding Day Transport"
+        headingBold=""
+        :headingTwoLines="false"
         subtitle="Elegant Wedding Limo"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

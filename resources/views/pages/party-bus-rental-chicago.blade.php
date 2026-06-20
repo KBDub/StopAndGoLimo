@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Reliable & Stylish"
         headingBold="Party Bus and Limo Transportation"
+        :headingTwoLines="false"
         description="Stop & Go delivers luxury party bus experiences for weddings, proms, birthdays, and every celebration."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

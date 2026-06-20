@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="New Bus"
         headingBold="Rental"
+        :headingTwoLines="false"
         subtitle="Luxury Party Bus Rental in Plainfield & New Lenox, Illinois"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

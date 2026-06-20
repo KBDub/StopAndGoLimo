@@ -32,8 +32,9 @@
     ogImageAlt="Charter coach bus available for group rentals at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
-        heading="Arrive in Unforgettable Style with"
-        headingBold="Our Professional Chauffeurs"
+        heading="Arrive in Unforgettable Style"
+        headingBold=""
+        :headingTwoLines="false"
         subtitle="Coach Buses"
         description="Spacious, comfortable charter coach buses for corporate events, sports teams, weddings, and group travel throughout the Southwest suburbs."
         buttonText="Book a Ride"

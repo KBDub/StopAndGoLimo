@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 Plainfield Airport Shuttle,"
         headingBold="Limo & Party Bus"
+        :headingTwoLines="false"
         subtitle="Reliable transportation service throughout"
         subtitleIn="Plainfield, Illinois"
         buttonText="Book a Ride"

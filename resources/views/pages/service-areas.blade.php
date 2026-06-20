@@ -62,6 +62,7 @@
     <x-sections.category-hero
         heading="Service"
         headingBold="Areas"
+        :headingTwoLines="false"
         subtitle="24/7 luxury limo and airport shuttle service across the Southwest suburbs"
         buttonText="Book a Ride"
         buttonHref="/contact"

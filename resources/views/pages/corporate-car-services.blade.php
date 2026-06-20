@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Corporate"
         headingBold="Car Service"
+        :headingTwoLines="false"
         subtitle="Executive ground transportation for business travel"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

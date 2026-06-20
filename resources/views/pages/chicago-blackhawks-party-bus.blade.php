@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Chicago Blackhawks"
         headingBold="Party Bus"
+        :headingTwoLines="false"
         subtitle="Discover the Joy of Seamless Journeys"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

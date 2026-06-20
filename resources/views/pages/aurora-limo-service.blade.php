@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="Aurora Airport Shuttle,"
         headingBold="Limo & Party Bus"
+        :headingTwoLines="false"
         subtitle="Local & trusted rides"
         subtitleIn="Aurora Airport & Event Transport"
         buttonText="Book a Ride"

@@ -67,14 +67,14 @@
 
         {{-- Single CTA --}}
         @if($isModal)
-            <x-ui.button-outline-light
+            <x-ui.button-champagne-gradient
                 radius="{{ $buttonRadius }}"
                 onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-            >{{ $buttonText }}</x-ui.button-outline-light>
+            >{{ $buttonText }}</x-ui.button-champagne-gradient>
         @else
-            <x-ui.button-outline-light href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
+            <x-ui.button-champagne-gradient href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
                 {{ $buttonText }}
-            </x-ui.button-outline-light>
+            </x-ui.button-champagne-gradient>
         @endif
 
     </div>

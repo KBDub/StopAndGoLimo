@@ -46,6 +46,7 @@
     <x-sections.category-hero
         heading="24/7 New Lenox Airport Shuttle,"
         headingBold="Limo & Party Bus Service"
+        :headingTwoLines="false"
         subtitle="Reliable, local transportation"
         subtitleIn="based in New Lenox since 2009"
         buttonText="Book a Ride"

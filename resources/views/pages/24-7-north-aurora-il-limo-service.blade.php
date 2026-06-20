@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 North Aurora"
         headingBold="Limo & Airport Shuttle"
+        :headingTwoLines="false"
         subtitle="Reliable, professional transportation"
         subtitleIn="serving North Aurora, Illinois"
         buttonText="Book a Ride"

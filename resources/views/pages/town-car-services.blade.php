@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Town Car"
         headingBold="Services"
+        :headingTwoLines="false"
         subtitle="Premium sedan service for any occasion"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

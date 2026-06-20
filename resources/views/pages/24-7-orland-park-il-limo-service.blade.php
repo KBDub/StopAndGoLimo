@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 Orland Park"
         headingBold="Limo & Airport Shuttle"
+        :headingTwoLines="false"
         subtitle="Reliable, professional transportation"
         subtitleIn="serving Orland Park, Illinois"
         buttonText="Book a Ride"

@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 Romeoville Airport Shuttle,"
         headingBold="Limo & Party Bus"
+        :headingTwoLines="false"
         subtitle="Reliable transportation services throughout"
         subtitleIn="Romeoville, Illinois"
         buttonText="Book a Ride"

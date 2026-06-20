@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Chicago Concert"
         headingBold="Party Bus"
+        :headingTwoLines="false"
         subtitle="Discover the Joy of Seamless Journeys"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

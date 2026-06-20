@@ -32,6 +32,7 @@
     <x-sections.category-hero
         heading="Our"
         headingBold="Gallery"
+        :headingTwoLines="false"
         subtitle="A look at our luxury fleet and service"
         buttonText="Book a Ride"
         buttonHref="/contact"

@@ -46,6 +46,7 @@
     <x-sections.category-hero
         heading="Special Event"
         headingBold="Limousine"
+        :headingTwoLines="false"
         subtitle="Party limousine rental in New Lenox and Plainfield, Illinois"
         buttonText="Book a Ride"
         buttonHref="/contact"

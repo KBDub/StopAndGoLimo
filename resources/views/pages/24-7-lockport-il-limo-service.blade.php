@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 Lockport"
         headingBold="Limo & Airport Shuttle"
+        :headingTwoLines="false"
         subtitle="Reliable, professional transportation"
         subtitleIn="serving Lockport, Illinois"
         buttonText="Book a Ride"

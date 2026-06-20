@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Prom Party Bus"
         headingBold="Service"
+        :headingTwoLines="false"
         subtitle="Parent-Approved Safety & Professional Chauffeurs"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

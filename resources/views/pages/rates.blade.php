@@ -32,6 +32,7 @@
     <x-sections.category-hero
         heading="Our"
         headingBold="Rates"
+        :headingTwoLines="false"
         subtitle="Transparent flat-rate pricing, no surprises"
         buttonText="Book a Ride"
         buttonHref="/contact"

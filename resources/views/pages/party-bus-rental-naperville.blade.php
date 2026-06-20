@@ -32,8 +32,9 @@
     ogImageAlt="Party bus rental in Naperville, Illinois"
 >
     <x-sections.category-hero
-        heading=""
-        headingBold="Party Bus Naperville"
+        heading="Naperville"
+        headingBold="Party Bus"
+        :headingTwoLines="false"
         subtitle="Your local party bus experts for birthdays, bachelorette parties, and group celebrations"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

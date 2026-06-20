@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="The Essence of"
         headingBold="Luxury Transportation"
+        :headingTwoLines="false"
         subtitle="24/7 Limo, Airport Shuttle & Party Bus Services"
         description="Professional Chauffeur Service Throughout New Lenox, Plainfield & All Chicago Suburbs"
         buttonText="Book a Ride"

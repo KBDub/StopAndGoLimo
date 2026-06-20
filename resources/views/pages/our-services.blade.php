@@ -45,6 +45,7 @@
     <x-sections.category-hero
         heading="Our"
         headingBold="Services"
+        :headingTwoLines="false"
         subtitle="Professional luxury transportation in Plainfield and New Lenox, Illinois"
         buttonText="Book a Ride"
         buttonHref="/contact"

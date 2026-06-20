@@ -34,6 +34,7 @@
     <x-sections.category-hero
         heading="Grad Day"
         headingBold="Transportation"
+        :headingTwoLines="false"
         subtitle="Safe, on-time rides for your graduation celebration"
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"

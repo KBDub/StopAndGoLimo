@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 Morris"
         headingBold="Limo & Airport Shuttle"
+        :headingTwoLines="false"
         subtitle="Reliable, professional transportation"
         subtitleIn="serving Morris, Illinois"
         buttonText="Book a Ride"

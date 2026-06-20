@@ -30,6 +30,7 @@
     <x-sections.category-hero
         heading="24/7 Limo & Airport Shuttle"
         headingBold="Service in Oswego IL"
+        :headingTwoLines="false"
         subtitle="Reliable Oswego limo and shuttle service"
         subtitleIn="for all occasions"
         buttonText="Book a Ride"

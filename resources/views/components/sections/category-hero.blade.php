@@ -50,7 +50,7 @@
 
         {{-- Subtitle (Lead) --}}
         @if($subtitle)
-            <p class="font-head text-white mb-5" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); opacity: 0.9; text-align: right;">
+            <p class="font-head text-white mb-5" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); opacity: 0.9; text-align: center;">
                 <span class="block">{{ $subtitle }}</span>
                 @if($subtitleIn)
                     <span class="block" style="font-weight: 700;">{{ $subtitleIn }}</span>
@@ -60,7 +60,7 @@
 
         {{-- Optional body paragraph --}}
         @if($description)
-            <p class="font-body font-bold text-white max-w-7xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; letter-spacing: -0.4px; text-align: right; text-shadow: var(--text-shadow-subtle); opacity: 0.95;">
+            <p class="font-body font-bold text-white max-w-7xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; letter-spacing: -0.4px; text-align: center; text-shadow: var(--text-shadow-subtle); opacity: 0.95;">
                 {{ $description }}
             </p>
         @endif

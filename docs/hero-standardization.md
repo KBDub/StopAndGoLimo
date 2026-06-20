@@ -12,9 +12,11 @@
 
 **Fix applied:** `:headingTwoLines="false"` added to 43 pages via PHP script. Copy revised on 5 additional pages. Home page split is intentional — left unchanged.
 
-### Issue 2 — Subtitle Right-Justification ✅ BY DESIGN
+### Issue 2 — Subtitle & Description Alignment ✅ RESOLVED
 
-`text-align: right` on the subtitle `<p>` is intentional. No changes made. Not a prop.
+All three hero text elements (H1, subtitle, description) are center-aligned. This is the default for all hero pages and is not a prop.
+
+**Fix applied:** `text-align: right` removed from subtitle `<p>` (line 56) and description `<p>` (line 66) in `category-hero.blade.php`. Both now inherit `text-center` from the wrapper `<div>`. One edit covers all 51 pages.
 
 ### Issue 3 — Button Style ✅ RESOLVED
 
@@ -33,7 +35,7 @@ All pages previously rendered `x-ui.button-outline-light` (ghost white outline).
 | `heading` | `'Elevate Your Travel Experience'` | Normal-weight portion of H1 |
 | `headingBold` | `'With Luxury and Comfort'` | Bold portion of H1. Set `headingBold=""` to suppress. |
 | `headingTwoLines` | `true` | `false` = heading + headingBold on one line |
-| `subtitle` | `'Discover the joy of seamless journeys'` | Always right-aligned — by design |
+| `subtitle` | `'Discover the joy of seamless journeys'` | Center-aligned — default for all pages, not a prop |
 | `subtitleIn` | `''` | Optional bold second subtitle line |
 | `description` | `''` | Optional body paragraph |
 | `buttonText` | `'Book a Ride'` | — |
@@ -146,4 +148,4 @@ Renders as: "24/7 {City} **Limo & Airport Shuttle**" on one line.
 | Party Bus Aurora: heading/headingBold restructured | Manual edit | `party-bus-aurora.blade.php` |
 | Party Bus Naperville: heading/headingBold restructured | Manual edit | `party-bus-rental-naperville.blade.php` |
 | Home: no change | Two-line split intentional | — |
-| Subtitle alignment: no change | Right-aligned by design | — |
+| Subtitle & description: `right` → `center` | One-time component edit (lines 56, 66) | `category-hero.blade.php` |

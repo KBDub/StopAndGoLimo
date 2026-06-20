@@ -60,7 +60,7 @@
 
         {{-- Optional body paragraph --}}
         @if($description)
-            <p class="font-body font-bold text-white max-w-5xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; letter-spacing: -0.4px; text-align: right; text-shadow: var(--text-shadow-subtle); opacity: 0.95;">
+            <p class="font-body font-bold text-white max-w-7xl mx-auto mb-7" style="font-size: 1.25rem; line-height: 1.5; letter-spacing: -0.4px; text-align: right; text-shadow: var(--text-shadow-subtle); opacity: 0.95;">
                 {{ $description }}
             </p>
         @endif

@@ -11,7 +11,7 @@ $slides = [
         ],
         [
             'name'   => 'Tisha Krakowski',
-            'review' => 'We have used Stop & Go Airport Shuttle Service Inc. several times. Our rides always show up on time and the customer service is always top notch. The drivers are all nice and we enjoy talking to them. If you need a ride call Vince! I always recommend this company.',
+            'review' => 'We have used Stop & Go Airport Shuttle Service Inc. several times. Our rides always show up on time and the customer service is always top notch. The drivers are all nice and we enjoy talking to them. If you need a ride, call Vince! I always recommend this company.',
         ],
     ],
     [
@@ -21,7 +21,7 @@ $slides = [
         ],
         [
             'name'   => 'Kevin Walsh',
-            'review' => 'Vincent could not have been more professional getting our reservation in place for our family of 11 to O\'Hare. Our driver Michael made us feel safe driving the busy expressway so we\'d arrive on time for our international flight to Ireland. He was very helpful loading and unloading our luggage. He will be our first choice next time we fly!',
+            'review' => 'Vincent could not have been more professional getting our reservation in place for our family of 11 to O\'Hare. Our driver Michael made us feel safe on the busy expressway so we\'d arrive on time for our international flight to Ireland. He was very helpful loading and unloading our luggage. He will be our first choice next time we fly!',
         ],
         [
             'name'   => 'Ivette Nunez',
@@ -57,23 +57,31 @@ $total = count($slides);
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
         </div>
 
-        {{-- Slider --}}
+        {{-- Slider wrapper --}}
         <div
             x-data="{
                 current: 0,
                 total: {{ $total }},
                 timer: null,
                 startAuto() {
+                    this.stopAuto();
                     this.timer = setInterval(() => {
                         this.current = (this.current + 1) % this.total;
-                    }, 5000);
+                    }, 3000);
                 },
                 stopAuto() {
-                    clearInterval(this.timer);
+                    if (this.timer) { clearInterval(this.timer); this.timer = null; }
+                },
+                next() {
+                    this.current = (this.current + 1) % this.total;
+                    this.startAuto();
+                },
+                prev() {
+                    this.current = (this.current - 1 + this.total) % this.total;
+                    this.startAuto();
                 },
                 goTo(i) {
                     this.current = i;
-                    this.stopAuto();
                     this.startAuto();
                 },
                 init() {
@@ -82,16 +90,15 @@ $total = count($slides);
             }"
             @mouseenter="stopAuto()"
             @mouseleave="startAuto()"
-            style="position: relative;"
         >
             {{-- Track --}}
             <div style="overflow: hidden;">
                 <div
                     class="flex"
-                    style="transition: transform 0.7s ease-in-out; will-change: transform;"
+                    style="transition: transform 2s cubic-bezier(0.45, 0.05, 0.55, 0.95); will-change: transform;"
                     :style="`transform: translateX(-${current * 100}%)`"
                 >
-                    @foreach ($slides as $slideIndex => $cards)
+                    @foreach ($slides as $cards)
                         <div class="w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-3 gap-5">
                             @foreach ($cards as $card)
                                 <x-ui.review-card
@@ -105,18 +112,43 @@ $total = count($slides);
                 </div>
             </div>
 
-            {{-- Dot indicators --}}
-            <div style="display: flex; justify-content: center; align-items: center; gap: 0.6rem; margin-top: 2rem;">
-                @for ($d = 0; $d < $total; $d++)
-                    <button
-                        @click="goTo({{ $d }})"
-                        style="width: 12px; height: 12px; border-radius: 50%; border: none; cursor: pointer; transition: background 0.3s, transform 0.3s; padding: 0;"
-                        :style="current === {{ $d }}
-                            ? 'background: var(--champagne); transform: scale(1.25);'
-                            : 'background: var(--slate);'"
-                        aria-label="Go to slide {{ $d + 1 }}"
-                    ></button>
-                @endfor
+            {{-- Controls: dots + prev / next --}}
+            <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2.25rem;">
+
+                {{-- Prev --}}
+                <button
+                    @click="prev()"
+                    class="font-head"
+                    style="display: inline-flex; align-items: center; gap: 0.45rem; background: transparent; border: 2px solid var(--champagne); color: var(--champagne); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; transition: background 0.25s, color 0.25s; line-height: 1;"
+                    onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
+                    onmouseout="this.style.background='transparent'; this.style.color='var(--champagne)';"
+                    aria-label="Previous slide"
+                >&#8592; Prev</button>
+
+                {{-- Dots --}}
+                <div style="display: flex; align-items: center; gap: 0.55rem;">
+                    @for ($d = 0; $d < $total; $d++)
+                        <button
+                            @click="goTo({{ $d }})"
+                            style="width: 11px; height: 11px; border-radius: 50%; border: 2px solid var(--champagne); cursor: pointer; padding: 0; transition: background 0.3s, transform 0.3s;"
+                            :style="current === {{ $d }}
+                                ? 'background: var(--champagne); transform: scale(1.3);'
+                                : 'background: transparent;'"
+                            aria-label="Go to slide {{ $d + 1 }}"
+                        ></button>
+                    @endfor
+                </div>
+
+                {{-- Next --}}
+                <button
+                    @click="next()"
+                    class="font-head"
+                    style="display: inline-flex; align-items: center; gap: 0.45rem; background: transparent; border: 2px solid var(--champagne); color: var(--champagne); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; transition: background 0.25s, color 0.25s; line-height: 1;"
+                    onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
+                    onmouseout="this.style.background='transparent'; this.style.color='var(--champagne)';"
+                    aria-label="Next slide"
+                >Next &#8594;</button>
+
             </div>
 
         </div>

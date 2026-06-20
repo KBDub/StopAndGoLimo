@@ -35,7 +35,7 @@
         subtitle="A look at our luxury fleet and service"
         buttonText="Book a Ride"
         buttonHref="/contact"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/gallery-hero.jpg"
         imagePosition="center center"
     />
 </x-layouts.page>

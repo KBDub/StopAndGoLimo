@@ -40,12 +40,6 @@
         imagePosition="center center"
     />
 
-    <x-sections.info-strip
-        headingBold="Reliable & Stylish"
-        heading="Joliet Transportation"
-        body="Stop & Go offers 24/7 Joliet airport shuttle service, limousine service for weddings and events, and party bus rentals for celebrations. Serving all Joliet neighborhoods, our professional chauffeurs provide reliable, comfortable transportation to O'Hare, Midway, and throughout the Chicago area."
-    />
-
     <x-sections.travel-in-style
         heading="Every Occasion"
         headingBold="Covered"
@@ -55,6 +49,13 @@
         :inverted="true"
     />
 
+
+    <x-sections.info-strip
+        headingBold="Reliable & Stylish"
+        heading="Joliet Transportation"
+        body="Stop & Go offers 24/7 Joliet airport shuttle service, limousine service for weddings and events, and party bus rentals for celebrations. Serving all Joliet neighborhoods, our professional chauffeurs provide reliable, comfortable transportation to O'Hare, Midway, and throughout the Chicago area."
+    />
+    
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
@@ -70,6 +71,8 @@
         descImageAlt="Wedding and event transportation in Joliet, Illinois — Stop and Go Airport Shuttle"
     />
 
+    <x-sections.review-slider :inverted="true" />
+
     <x-sections.travel-in-style
         heading="24/7 Joliet Airport Shuttle to"
         headingBold="O'Hare & Midway"
@@ -77,9 +80,10 @@
         image="/images/sections/joliet-airport-shuttle.webp"
         imageAlt="Chicago O'Hare International Airport tower — Stop and Go Airport Shuttle serving Joliet"
         imagePosition="right"
+        :inverted="true"
     />
 
-    <x-sections.our-services />
+    <x-sections.our-services :inverted="true" />
 
     <x-sections.city-info-grid :boxes="[
         [

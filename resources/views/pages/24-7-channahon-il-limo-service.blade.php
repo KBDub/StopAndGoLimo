@@ -49,6 +49,19 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :inverted="true"
+        :descImageTop="true"
+        descHeading="Why choose us?"
+        descSubheading="With our limo service, you can arrive at your destination stress-free."
+        descBody="We make every ride easy, comfortable, and stress-free. Whether you need an elegant wedding limo in Channahon IL, a timely Channahon airport limo service, a fun Party Bus Rental in Channahon IL, or a professional chauffeur service in Channahon IL, our team ensures reliable, safe, and enjoyable transportation for every occasion."
+        descImage="/images/sections/channahon-transportation.png"
+        descImageAlt="Premium interior of a limousine in Channahon, Illinois — Stop and Go Airport Shuttle"
+    />
+
+    <x-sections.review-slider :inverted="true" />
+        
     <x-sections.image-info-card
         id="image-info-card-comfort"
         heading="Experience Unmatched Comfort"
@@ -79,17 +92,6 @@
         image="/images/sections/channahon-ontime-arrival.png"
         imageAlt="On-time arrival in Channahon, Illinois — Stop and Go Airport Shuttle"
         imageAspect="16/9"
-    />
-
-    <x-sections.free-instant-quote
-        rightVariant="description"
-        :inverted="true"
-        :descImageTop="true"
-        descHeading="Why choose us?"
-        descSubheading="With our limo service, you can arrive at your destination stress-free."
-        descBody="We make every ride easy, comfortable, and stress-free. Whether you need an elegant wedding limo in Channahon IL, a timely Channahon airport limo service, a fun Party Bus Rental in Channahon IL, or a professional chauffeur service in Channahon IL, our team ensures reliable, safe, and enjoyable transportation for every occasion."
-        descImage="/images/sections/channahon-transportation.png"
-        descImageAlt="Premium interior of a limousine in Channahon, Illinois — Stop and Go Airport Shuttle"
     />
 
     <x-sections.our-services

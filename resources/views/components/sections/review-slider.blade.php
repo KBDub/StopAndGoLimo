@@ -3,6 +3,15 @@
 @php
 $sectionBg    = $inverted ? 'background: var(--white);'  : 'background: var(--navy);';
 $headingColor = $inverted ? 'color: var(--navy);'        : 'color: var(--white);';
+$btnStyle     = $inverted
+    ? 'background: transparent; border: 2px solid var(--navy); color: var(--navy);'
+    : 'background: transparent; border: 2px solid var(--champagne); color: var(--champagne);';
+$btnHoverOn   = $inverted
+    ? "this.style.background='var(--navy)'; this.style.color='var(--white)';"
+    : "this.style.background='var(--champagne)'; this.style.color='var(--navy)';";
+$btnHoverOff  = $inverted
+    ? "this.style.background='transparent'; this.style.color='var(--navy)';"
+    : "this.style.background='transparent'; this.style.color='var(--champagne)';";
 
 $realCards = [
     ['name' => 'Tarsha Williams',  'review' => 'This limo company has the best customer service and has all the amenities. The limo driver was friendly and made the experience truly enjoyable. Highly recommend!'],
@@ -140,6 +149,7 @@ $extTotal     = count($extended);    // 14
                                 :name="$card['name']"
                                 :review="$card['review']"
                                 :stars="5"
+                                :inverted="$inverted"
                             />
                         </div>
                     @endforeach
@@ -153,9 +163,9 @@ $extTotal     = count($extended);    // 14
                 <button
                     @click="prev(); startAuto();"
                     class="font-head"
-                    style="display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; border: 2px solid var(--champagne); color: var(--champagne); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; line-height: 1; transition: background 0.22s, color 0.22s;"
-                    onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
-                    onmouseout="this.style.background='transparent'; this.style.color='var(--champagne)';"
+                    style="display: inline-flex; align-items: center; gap: 0.4rem; {{ $btnStyle }} font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; line-height: 1; transition: background 0.22s, color 0.22s;"
+                    onmouseover="{{ $btnHoverOn }}"
+                    onmouseout="{{ $btnHoverOff }}"
                     aria-label="Previous review"
                 >&#8592; Prev</button>
 
@@ -177,9 +187,9 @@ $extTotal     = count($extended);    // 14
                 <button
                     @click="next(); startAuto();"
                     class="font-head"
-                    style="display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; border: 2px solid var(--champagne); color: var(--champagne); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; line-height: 1; transition: background 0.22s, color 0.22s;"
-                    onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
-                    onmouseout="this.style.background='transparent'; this.style.color='var(--champagne)';"
+                    style="display: inline-flex; align-items: center; gap: 0.4rem; {{ $btnStyle }} font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; line-height: 1; transition: background 0.22s, color 0.22s;"
+                    onmouseover="{{ $btnHoverOn }}"
+                    onmouseout="{{ $btnHoverOff }}"
                     aria-label="Next review"
                 >Next &#8594;</button>
 

@@ -58,9 +58,6 @@
         <div class="flex-1 flex items-center whitespace-nowrap">
 
             <div class="flex items-center gap-6 mx-auto shrink-0">
-                <a href="/reviews" class="hidden md:flex items-center gap-1 font-semibold text-cloud/80 hover:text-champagne transition-colors">
-                    Reviews
-                </a>
                 <a href="/service-areas" class="hidden md:flex items-center gap-1 font-semibold text-cloud/80 hover:text-champagne transition-colors">
                     Service Areas
                 </a>

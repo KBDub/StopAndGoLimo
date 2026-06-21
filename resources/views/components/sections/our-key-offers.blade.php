@@ -140,12 +140,12 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
             <div class="flex flex-col gap-2">
                 <x-ui.service-thin-rect-card
                     label="Airport Shuttle Service"
-                    href="/airport-shuttle"
+                    href="/airport-shuttle-ohare-midway"
                     :icon="$svgPlane"
                 />
                 <x-ui.service-thin-rect-card
                     label="Chauffeur"
-                    href="/chauffeur"
+                    href="/chauffeurs"
                     :icon="$svgUser"
                 />
                 <x-ui.service-thin-rect-card
@@ -155,37 +155,37 @@ $svgHeart = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
                 />
                 <x-ui.service-thin-rect-card
                     label="Corporate Car Services"
-                    href="/corporate-car"
+                    href="/corporate-car-services"
                     :icon="$svgBriefcase"
                 />
                 <x-ui.service-thin-rect-card
                     label="Party Bus"
-                    href="/party-bus"
+                    href="/party-bus-rental-chicago"
                     :icon="$svgMusic"
                 />
                 <x-ui.service-thin-rect-card
                     label="Limousine Services"
-                    href="/limousine"
+                    href="/limousine-services"
                     :icon="$svgCar"
                 />
                 <x-ui.service-thin-rect-card
                     label="Special Event Limousine"
-                    href="/special-events"
+                    href="/special-event-limousine"
                     :icon="$svgStar"
                 />
                 <x-ui.service-thin-rect-card
                     label="Town Car Services"
-                    href="/town-car"
+                    href="/town-car-services"
                     :icon="$svgCar"
                 />
                 <x-ui.service-thin-rect-card
                     label="Transportation Services"
-                    href="/transportation"
+                    href="/transportation-services"
                     :icon="$svgRoad"
                 />
                 <x-ui.service-thin-rect-card
                     label="Wedding Limousine Services"
-                    href="/wedding-limo"
+                    href="/wedding-limousine-services"
                     :icon="$svgHeart"
                 />
             </div>

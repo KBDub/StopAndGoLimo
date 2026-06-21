@@ -8,12 +8,12 @@
             <div class="mb-5">
                 <h4 class="font-head font-semibold text-navy text-base mb-2 border-b border-cloud-dark pb-1 text-center">Services</h4>
                 <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 text-sm text-center">
-                    <a href="/airport-transfers" class="link-notification font-medium">Airport Transfers</a>
-                    <a href="/corporate-transportation" class="link-notification font-medium">Corporate Travel</a>
-                    <a href="/special-events" class="link-notification font-medium">Special Events</a>
-                    <a href="/group-transportation" class="link-notification font-medium">Group Transportation</a>
-                    <a href="/long-distance" class="link-notification font-medium">Long Distance</a>
-                    <a href="/hourly-charter" class="link-notification font-medium">Hourly Charter</a>
+                    <a href="/airport-shuttle-ohare-midway" class="link-notification font-medium">Airport Shuttle</a>
+                    <a href="/corporate-car-services" class="link-notification font-medium">Corporate Travel</a>
+                    <a href="/special-event-limousine" class="link-notification font-medium">Special Events</a>
+                    <a href="/party-bus-rental-chicago" class="link-notification font-medium">Party Buses</a>
+                    <a href="/limousine-services" class="link-notification font-medium">Limousine Services</a>
+                    <a href="/transportation-services" class="link-notification font-medium">Transportation</a>
                 </div>
             </div>
 
@@ -23,11 +23,10 @@
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-sm text-center">
                     <a href="/" class="link-notification">Home</a>
                     <a href="/about-us" class="link-notification">About Us</a>
-                    <a href="/booking" class="link-notification">Book a Ride</a>
+                    <a href="/bookings-reservations" class="link-notification">Book a Ride</a>
                     <a href="/service-areas" class="link-notification">Service Areas</a>
-                    <a href="/reviews" class="link-notification">Reviews</a>
-                    <a href="/privacy-policy" class="link-notification">Privacy Policy</a>
-                    <a href="/terms-of-use" class="link-notification">Terms of Use</a>
+                    <span class="text-slate">Privacy Policy</span>
+                    <span class="text-slate">Terms of Use</span>
                     <a href="#" onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('open-contact-modal'))" class="link-notification">Contact Us</a>
                 </div>
             </div>
@@ -56,11 +55,10 @@
                 <ul class="space-y-1.5 text-sm text-center">
                     <li><a href="/" class="link-notification">Home</a></li>
                     <li><a href="/about-us" class="link-notification">About Us</a></li>
-                    <li><a href="/booking" class="link-notification">Book a Ride</a></li>
+                    <li><a href="/bookings-reservations" class="link-notification">Book a Ride</a></li>
                     <li><a href="/service-areas" class="link-notification">Service Areas</a></li>
-                    <li><a href="/reviews" class="link-notification">Reviews</a></li>
-                    <li><a href="/privacy-policy" class="link-notification">Privacy Policy</a></li>
-                    <li><a href="/terms-of-use" class="link-notification">Terms of Use</a></li>
+                    <li><span class="text-slate">Privacy Policy</span></li>
+                    <li><span class="text-slate">Terms of Use</span></li>
                     <li>
                         <a href="#"
                            onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('open-contact-modal'))"
@@ -76,60 +74,55 @@
                 <h4 class="font-head font-semibold text-navy text-xl mb-3 text-center">Services</h4>
                 <div class="columns-5 gap-x-2 text-sm">
 
-                    {{-- Airport Transfers --}}
+                    {{-- Airport Shuttle --}}
                     <h5 class="font-head font-semibold text-navy mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/airport-transfers" class="text-navy hover:text-champagne transition-colors no-underline">Airport Transfers</a>
+                        <a href="/airport-shuttle-ohare-midway" class="text-navy hover:text-champagne transition-colors no-underline">Airport Shuttle</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
-                        <li><a href="/airport-transfers/ohare" class="link-notification">O'Hare (ORD)</a></li>
-                        <li><a href="/airport-transfers/midway" class="link-notification">Midway (MDW)</a></li>
-                        <li><a href="/airport-transfers/rockford" class="link-notification">Rockford (RFD)</a></li>
-                        <li><a href="/airport-transfers/milwaukee" class="link-notification">Milwaukee (MKE)</a></li>
-                        <li><a href="/airport-transfers/private-charter" class="link-notification">Private Charter</a></li>
+                        <li><a href="/airport-shuttle-ohare-midway" class="link-notification">O'Hare &amp; Midway</a></li>
                     </ul>
 
                     {{-- Corporate --}}
                     <h5 class="font-head font-semibold text-navy mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/corporate-transportation" class="text-navy hover:text-champagne transition-colors no-underline">Corporate Travel</a>
+                        <a href="/corporate-car-services" class="text-navy hover:text-champagne transition-colors no-underline">Corporate Travel</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
-                        <li><a href="/corporate-transportation/executive-car" class="link-notification">Executive Car Service</a></li>
-                        <li><a href="/corporate-transportation/group-shuttle" class="link-notification">Group Shuttles</a></li>
-                        <li><a href="/corporate-transportation/road-shows" class="link-notification">Road Shows</a></li>
+                        <li><a href="/corporate-car-services" class="link-notification">Executive Car Service</a></li>
+                        <li><a href="/chauffeurs" class="link-notification">Chauffeurs</a></li>
+                        <li><a href="/town-car-services" class="link-notification">Town Car Services</a></li>
                     </ul>
 
                     {{-- Special Events --}}
                     <h5 class="font-head font-semibold text-navy mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/special-events" class="text-navy hover:text-champagne transition-colors no-underline">Special Events</a>
+                        <a href="/special-event-limousine" class="text-navy hover:text-champagne transition-colors no-underline">Special Events</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
-                        <li><a href="/special-events/weddings" class="link-notification">Weddings</a></li>
-                        <li><a href="/special-events/prom-homecoming" class="link-notification">Prom &amp; Homecoming</a></li>
-                        <li><a href="/special-events/concerts" class="link-notification">Concerts</a></li>
-                        <li><a href="/special-events/sporting-events" class="link-notification">Sporting Events</a></li>
+                        <li><a href="/wedding-limousine-services" class="link-notification">Weddings</a></li>
+                        <li><a href="/prom-party-bus-rental-illinois" class="link-notification">Prom &amp; Homecoming</a></li>
+                        <li><a href="/chicago-concert-party-bus-rental" class="link-notification">Concerts</a></li>
+                        <li><a href="/grad-day-transportation" class="link-notification">Grad Day</a></li>
                     </ul>
 
-                    {{-- Group / Long Distance --}}
+                    {{-- Party Buses --}}
                     <h5 class="font-head font-semibold text-navy mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/group-transportation" class="text-navy hover:text-champagne transition-colors no-underline">Group Travel</a>
+                        <a href="/party-bus-rental-chicago" class="text-navy hover:text-champagne transition-colors no-underline">Party Buses</a>
                     </h5>
                     <ul class="space-y-1 mb-4 text-center">
-                        <li><a href="/group-transportation/minibus" class="link-notification">Mini Bus</a></li>
-                        <li><a href="/group-transportation/charter-bus" class="link-notification">Charter Bus</a></li>
-                        <li><a href="/long-distance" class="link-notification">Long Distance</a></li>
-                        <li><a href="/hourly-charter" class="link-notification">Hourly Charter</a></li>
+                        <li><a href="/party-bus-rental-chicago" class="link-notification">Party Bus Chicago</a></li>
+                        <li><a href="/party-bus-aurora" class="link-notification">Party Bus Aurora</a></li>
+                        <li><a href="/party-bus-rental-naperville" class="link-notification">Party Bus Naperville</a></li>
+                        <li><a href="/new-bus-rental" class="link-notification">New Bus Rental</a></li>
+                        <li><a href="/coach-buses" class="link-notification">Coach Buses</a></li>
                     </ul>
 
-                    {{-- Fleet --}}
+                    {{-- Limousines --}}
                     <h5 class="font-head font-semibold text-navy mb-1.5 break-after-avoid text-center text-sm">
-                        <a href="/our-fleet" class="text-navy hover:text-champagne transition-colors no-underline">Our Fleet</a>
+                        <a href="/limousine-services" class="text-navy hover:text-champagne transition-colors no-underline">Limousines</a>
                     </h5>
                     <ul class="space-y-1 text-center">
-                        <li><a href="/our-fleet/sedan" class="link-notification">Luxury Sedan</a></li>
-                        <li><a href="/our-fleet/suv" class="link-notification">Premium SUV</a></li>
-                        <li><a href="/our-fleet/stretch-limo" class="link-notification">Stretch Limo</a></li>
-                        <li><a href="/our-fleet/sprinter-van" class="link-notification">Sprinter Van</a></li>
-                        <li><a href="/our-fleet/coach-bus" class="link-notification">Coach Bus</a></li>
+                        <li><a href="/limousine-services" class="link-notification">Limousine Services</a></li>
+                        <li><a href="/transportation-services" class="link-notification">Transportation Services</a></li>
+                        <li><a href="/our-services" class="link-notification">All Services</a></li>
                     </ul>
 
                 </div>

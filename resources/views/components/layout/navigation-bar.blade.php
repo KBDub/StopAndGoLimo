@@ -112,7 +112,7 @@
 
                 {{-- Booking (no dropdown) --}}
                 <div class="relative self-stretch flex items-stretch">
-                    <a href="/booking" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'booking' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">Booking</a>
+                    <a href="/bookings-reservations" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'booking' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">Booking</a>
                 </div>
 
                 {{-- ══ Services (mega, two-col with Party Bus flyout) ════ --}}
@@ -121,7 +121,7 @@
                     @mouseenter="openMenu = 'services'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/services" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'services' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">
+                    <a href="/our-services" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'services' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">
                         Services
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'services' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -139,11 +139,11 @@
                         <div class="bg-navy-dark border-t-[3px] border-champagne shadow-champagne-lg">
                             {{-- Two-column grid of services --}}
                             <div class="grid grid-cols-2">
-                                <a href="/airport-shuttle" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                <a href="/airport-shuttle-ohare-midway" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Airport Shuttle</span>
                                     <span class="text-sm text-muted mt-0.5">O'Hare and Midway transfers</span>
                                 </a>
-                                <a href="/wedding-limousine" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                <a href="/wedding-limousine-services" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Wedding Limousine</span>
                                     <span class="text-sm text-muted mt-0.5">Elegant event transport</span>
                                 </a>
@@ -153,7 +153,7 @@
                                     @mouseenter="openMenu = 'services-partybus'"
                                     @mouseleave="openMenu = 'services'"
                                 >
-                                    <a href="/party-bus" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
+                                    <a href="/party-bus-rental-chicago" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
                                         <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Party Bus <span class="text-champagne/60 text-xs ml-1">&#9654;</span></span>
                                         <span class="text-sm text-muted mt-0.5">Groups and celebrations</span>
                                     </a>
@@ -169,20 +169,20 @@
                                         style="width: 240px;"
                                     >
                                         <div class="bg-navy-dark border border-champagne/20 border-l-[3px] border-l-champagne shadow-champagne-lg">
-                                            <a href="/party-bus/aurora" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                            <a href="/party-bus-aurora" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Party Bus, Aurora</span>
                                             </a>
-                                            <a href="/party-bus/naperville" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group">
+                                            <a href="/party-bus-rental-naperville" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group">
                                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Party Bus, Naperville</span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <a href="/prom-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                <a href="/prom-party-bus-rental-illinois" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Prom Party Bus</span>
                                     <span class="text-sm text-muted mt-0.5">Safe prom-night transport</span>
                                 </a>
-                                <a href="/bus-rental" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                <a href="/new-bus-rental" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">New Bus Rental</span>
                                     <span class="text-sm text-muted mt-0.5">Latest-model coaches</span>
                                 </a>
@@ -194,7 +194,7 @@
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Limousine Services</span>
                                     <span class="text-sm text-muted mt-0.5">Classic luxury limos</span>
                                 </a>
-                                <a href="/corporate-car-service" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                <a href="/corporate-car-services" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Corporate Car Service</span>
                                     <span class="text-sm text-muted mt-0.5">Executive ground service</span>
                                 </a>
@@ -230,7 +230,7 @@
                     @mouseenter="openMenu = 'events'"
                     @mouseleave="openMenu = null"
                 >
-                    <a href="/special-events" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'special-events' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">
+                    <a href="/special-event-limousine" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center gap-0.5 {{ $currentPage === 'special-events' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">
                         Special Events
                         <svg class="w-3 h-3 shrink-0 transition-transform duration-200 transform-gpu pointer-events-none" :class="openMenu === 'events' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                     </a>
@@ -249,10 +249,10 @@
                             <a href="/six-flags-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Six Flags Party Bus</span>
                             </a>
-                            <a href="/golfing-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                            <a href="/chicago-golf-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Golfing Party Bus</span>
                             </a>
-                            <a href="/concert-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                            <a href="/chicago-concert-party-bus-rental" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Concert Party Bus Rental</span>
                             </a>
                             <a href="/chicago-bears-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
@@ -290,10 +290,36 @@
                         style="width: 560px; max-width: calc(100vw - 20px);"
                     >
                         <div class="bg-navy-dark border-t-[3px] border-champagne shadow-champagne-lg">
-                            <p class="px-5 pt-4 pb-2 font-head font-semibold text-xs tracking-widest text-champagne/70">22 Chicagoland Southwest Suburbs, 24/7</p>
+                            <p class="px-5 pt-4 pb-2 font-head font-semibold text-xs tracking-widest text-champagne/70">Chicagoland Suburbs, 24/7</p>
+                            @php
+                                $areaLinks = [
+                                    'Aurora'       => '/aurora-limo-service',
+                                    'Bolingbrook'  => '/bolingbrook-airport-shuttle-ohare-midway',
+                                    'Channahon'    => '/24-7-channahon-il-limo-service',
+                                    'Elwood'       => '/24-7-elwood-il-limo-service',
+                                    'Frankfort'    => '/24-7-frankfort-il-limo-service',
+                                    'Homer Glen'   => '/24-7-homer-glen-limo-service',
+                                    'Joliet'       => '/24-7-joliet-il-limo-services',
+                                    'Lemont'       => '/24-7-lemont-il-limo-service',
+                                    'Lockport'     => '/24-7-lockport-il-limo-service',
+                                    'Manhattan'    => '/24-7-manhattan-limo-service',
+                                    'Minooka'      => '/24-7-minooka-il-limo-service',
+                                    'Mokena'       => '/24-7-mokena-il-limo-service',
+                                    'Monee'        => '/24-7-monee-il-limo-service',
+                                    'Montgomery'   => '/24-7-montgomery-il-limo-service',
+                                    'Morris'       => '/morris-il-limo-service',
+                                    'Naperville'   => '/naperville-airport-shuttle-limo-service',
+                                    'New Lenox'    => '/new-lenox-airport-shuttle-limo-service',
+                                    'North Aurora' => '/24-7-north-aurora-il-limo-service',
+                                    'Orland Park'  => '/24-7-orland-park-il-limo-service',
+                                    'Oswego'       => '/oswego-il-limo-service',
+                                    'Plainfield'   => '/plainfield-limousine-shuttle-service',
+                                    'Romeoville'   => '/romeoville-airport-shuttle-limo-service',
+                                ];
+                            @endphp
                             <div class="grid grid-cols-4 gap-0 pb-3">
-                                @foreach(['New Lenox','Naperville','Aurora','North Aurora','Plainfield','Joliet','Morris','Minooka','Channahon','Elwood','Romeoville','Lockport','Frankfort','Mokena','Orland Park','Manhattan','Homer Glen','Lemont','Monee','Bolingbrook','Oswego','Montgomery'] as $city)
-                                <a href="/service-areas/{{ Str::slug($city) }}" class="px-4 py-2 font-head text-sm text-cloud hover:text-champagne hover:bg-white/5 transition-colors">{{ $city }}</a>
+                                @foreach($areaLinks as $city => $href)
+                                <a href="{{ $href }}" class="px-4 py-2 font-head text-sm text-cloud hover:text-champagne hover:bg-white/5 transition-colors">{{ $city }}</a>
                                 @endforeach
                             </div>
                         </div>
@@ -302,7 +328,7 @@
 
                 {{-- Contact (no dropdown) --}}
                 <div class="relative self-stretch flex items-stretch">
-                    <a href="/contact" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'contact' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">Contact</a>
+                    <a href="/get-a-quote" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'contact' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">Contact</a>
                 </div>
 
             </div>
@@ -343,7 +369,7 @@
                 </div>
             </div>
 
-            <a href="/booking" class="block px-3 py-2.5 text-sm font-semibold text-cloud hover:text-champagne hover:bg-white/5 transition-colors">Booking</a>
+            <a href="/bookings-reservations" class="block px-3 py-2.5 text-sm font-semibold text-cloud hover:text-champagne hover:bg-white/5 transition-colors">Booking</a>
 
             <div>
                 <button @click="openMobile = openMobile === 'services' ? null : 'services'" class="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-cloud hover:text-champagne hover:bg-white/5 transition-colors">
@@ -351,16 +377,16 @@
                     <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'services' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
                 <div x-show="openMobile === 'services'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-champagne ml-3">
-                    <a href="/airport-shuttle" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Airport Shuttle</a>
-                    <a href="/wedding-limousine" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Wedding Limousine</a>
-                    <a href="/party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Party Bus</a>
-                    <a href="/party-bus/aurora" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Party Bus, Aurora</a>
-                    <a href="/party-bus/naperville" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Party Bus, Naperville</a>
-                    <a href="/prom-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Prom Party Bus</a>
-                    <a href="/bus-rental" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">New Bus Rental</a>
+                    <a href="/airport-shuttle-ohare-midway" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Airport Shuttle</a>
+                    <a href="/wedding-limousine-services" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Wedding Limousine</a>
+                    <a href="/party-bus-rental-chicago" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Party Bus</a>
+                    <a href="/party-bus-aurora" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Party Bus, Aurora</a>
+                    <a href="/party-bus-rental-naperville" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Party Bus, Naperville</a>
+                    <a href="/prom-party-bus-rental-illinois" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Prom Party Bus</a>
+                    <a href="/new-bus-rental" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">New Bus Rental</a>
                     <a href="/coach-buses" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Coach Buses</a>
                     <a href="/limousine-services" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Limousine Services</a>
-                    <a href="/corporate-car-service" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Corporate Car Service</a>
+                    <a href="/corporate-car-services" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Corporate Car Service</a>
                     <a href="/town-car-services" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Town Car Services</a>
                     <a href="/chauffeurs" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chauffeurs</a>
                     <a href="/special-event-limousine" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Special Event Limousine</a>
@@ -376,8 +402,8 @@
                 </button>
                 <div x-show="openMobile === 'events'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-champagne ml-3">
                     <a href="/six-flags-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Six Flags Party Bus</a>
-                    <a href="/golfing-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Golfing Party Bus</a>
-                    <a href="/concert-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Concert Party Bus Rental</a>
+                    <a href="/chicago-golf-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Golfing Party Bus</a>
+                    <a href="/chicago-concert-party-bus-rental" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Concert Party Bus Rental</a>
                     <a href="/chicago-bears-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chicago Bears Party and Limo Bus</a>
                     <a href="/chicago-bulls-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chicago Bulls Party Bus</a>
                     <a href="/chicago-blackhawks-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chicago Blackhawks Party Bus</a>
@@ -390,13 +416,13 @@
                     <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'areas' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
                 <div x-show="openMobile === 'areas'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-champagne ml-3">
-                    @foreach(['New Lenox','Naperville','Aurora','North Aurora','Plainfield','Joliet','Morris','Minooka','Channahon','Elwood','Romeoville','Lockport','Frankfort','Mokena','Orland Park','Manhattan','Homer Glen','Lemont','Monee','Bolingbrook','Oswego','Montgomery'] as $city)
-                    <a href="/service-areas/{{ Str::slug($city) }}" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">{{ $city }}</a>
+                    @foreach($areaLinks as $city => $href)
+                    <a href="{{ $href }}" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">{{ $city }}</a>
                     @endforeach
                 </div>
             </div>
 
-            <a href="/contact" class="block px-3 py-2.5 text-sm font-semibold text-cloud hover:text-champagne hover:bg-white/5 transition-colors">Contact</a>
+            <a href="/get-a-quote" class="block px-3 py-2.5 text-sm font-semibold text-cloud hover:text-champagne hover:bg-white/5 transition-colors">Contact</a>
 
         </div>
     </div>

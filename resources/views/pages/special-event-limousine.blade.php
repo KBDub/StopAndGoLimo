@@ -71,6 +71,8 @@
         imageAspect="4/3"
     />
 
+    <x-sections.review-slider />
+
     <x-sections.free-instant-quote
         heading="Book Your"
         headingBold="Special Event Limo"
@@ -83,6 +85,8 @@
         formAction="/get-a-quote"
         submitLabel="Send Message"
     />
+    
+    <x-sections.why-choose-us />
 
     {{-- standard sections for all --}}
     <x-sections.faq />

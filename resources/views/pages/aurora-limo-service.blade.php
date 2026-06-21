@@ -39,13 +39,6 @@
         imagePosition="center center"
     />
 
-    <x-sections.info-strip
-        headingPrefix="Reliable & Stylish"
-        headingBold="Aurora Transportation"
-        heading=""
-        body="Stop & Go provides 24/7 airport shuttle service to O'Hare and Midway, luxury limo service for weddings and events, and party bus rentals. With professional drivers and modern vehicles, we ensure punctual, comfortable service for early morning airport rides, weddings, or parties throughout Chicago, Naperville, Aurora, Joliet, Plainfield, New Lenox, and surrounding suburbs."
-    />
-
     <x-sections.party-limo-image
         heading="Aurora Limo Service for"
         headingBold="Weddings & Events"
@@ -56,6 +49,15 @@
         imageAspect="4/3"
         imageObjectPosition="center"
     />
+
+    <x-sections.info-strip
+        headingPrefix="Reliable & Stylish"
+        headingBold="Aurora Transportation"
+        heading=""
+        body="Stop & Go provides 24/7 airport shuttle service to O'Hare and Midway, luxury limo service for weddings and events, and party bus rentals. With professional drivers and modern vehicles, we ensure punctual, comfortable service for early morning airport rides, weddings, or parties throughout Chicago, Naperville, Aurora, Joliet, Plainfield, New Lenox, and surrounding suburbs."
+    />
+
+    <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
         heading="Why choose"
@@ -82,6 +84,8 @@
         :descImageTop="true"
     />
 
+    <x-sections.review-slider />
+            
     <x-sections.travel-in-style
         heading="Aurora Airport Shuttle to"
         headingBold="O'Hare & Midway"

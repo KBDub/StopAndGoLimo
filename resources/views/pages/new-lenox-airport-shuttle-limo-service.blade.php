@@ -103,6 +103,8 @@
         :descImageTop="true"
     />
 
+    <x-sections.review-slider />
+
     <x-sections.image-slide-in
         headingPrefix="24/7 New Lenox Airport Shuttle"
         headingBold="to O'Hare & Midway"

@@ -88,12 +88,6 @@
         imagePosition="right"
     />
 
-    <x-sections.areas-we-serve
-        heading="Areas We"
-        headingBold="Proudly Serve"
-        background="light"
-    />
-
     <x-sections.free-instant-quote
         rightVariant="description"
         :descImageTop="true"
@@ -113,6 +107,16 @@
         formAction="/get-a-quote"
         submitLabel="Send Message"
     />
+
+    <x-sections.areas-we-serve
+        heading="Areas We"
+        headingBold="Proudly Serve"
+        background="light"
+    />
+
+    <x-sections.our-services />
+            
+    <x-sections.review-slider />
 
     {{-- standard sections for all --}}
     <x-sections.faq />

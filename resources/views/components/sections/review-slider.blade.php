@@ -4,14 +4,14 @@
 $sectionBg    = $inverted ? 'background: var(--white);'  : 'background: var(--navy);';
 $headingColor = $inverted ? 'color: var(--navy);'        : 'color: var(--white);';
 $btnStyle     = $inverted
-    ? 'background: transparent; border: 2px solid var(--navy); color: var(--navy);'
+    ? 'background: var(--champagne-light); border: 2px solid var(--champagne-light); color: var(--navy);'
     : 'background: transparent; border: 2px solid var(--champagne); color: var(--champagne);';
 $btnHoverOn   = $inverted
-    ? "this.style.background='var(--navy)'; this.style.color='var(--white)';"
+    ? "this.style.background='var(--navy)'; this.style.borderColor='var(--navy)'; this.style.color='var(--white)';"
     : "this.style.background='var(--champagne)'; this.style.color='var(--navy)';";
 $btnHoverOff  = $inverted
-    ? "this.style.background='transparent'; this.style.color='var(--navy)';"
-    : "this.style.background='transparent'; this.style.color='var(--champagne)';";
+    ? "this.style.background='var(--champagne-light)'; this.style.borderColor='var(--champagne-light)'; this.style.color='var(--navy)';"
+    : "this.style.background='transparent'; this.style.color='var(--champagne)'";
 
 $realCards = [
     ['name' => 'Tarsha Williams',  'review' => 'This limo company has the best customer service and has all the amenities. The limo driver was friendly and made the experience truly enjoyable. Highly recommend!'],

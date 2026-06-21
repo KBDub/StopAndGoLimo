@@ -7,7 +7,7 @@ $btnStyle     = $inverted
     ? 'background: var(--champagne-light); border: 2px solid var(--navy); color: var(--navy);'
     : 'background: transparent; border: 2px solid var(--champagne); color: var(--champagne);';
 $btnHoverOn   = $inverted
-    ? "this.style.background='var(--navy)'; this.style.borderColor='var(--navy)'; this.style.color='var(--white)';"
+    ? "this.style.background='var(--navy)'; this.style.borderColor='var(--champagne-light)'; this.style.color='var(--white)';"
     : "this.style.background='var(--champagne)'; this.style.color='var(--navy)';";
 $btnHoverOff  = $inverted
     ? "this.style.background='var(--champagne-light)'; this.style.borderColor='var(--champagne-light)'; this.style.color='var(--navy)';"
@@ -42,7 +42,7 @@ $extTotal     = count($extended);    // 14
             <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; {{ $headingColor }} line-height: 1.2; letter-spacing: var(--letter-spacing-h2); text-align: center;">
                 What Our <strong style="font-weight: 700; color: var(--champagne);">Clients Say</strong>
             </h2>
-            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem; margin-left: -8%;"></div>
         </div>
 
         {{-- Slider --}}

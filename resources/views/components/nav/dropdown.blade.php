@@ -11,9 +11,10 @@
 
 @php
     $panelClass = match ($panel) {
-        'mega'  => 'dropdown dropdown-mega',
-        'areas' => 'dropdown dropdown-areas',
-        default => 'dropdown',
+        'mega'       => 'dropdown dropdown-mega',
+        'mega-three' => 'dropdown dropdown-mega-three',
+        'areas'      => 'dropdown dropdown-areas',
+        default      => 'dropdown',
     };
 @endphp
 

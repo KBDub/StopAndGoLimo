@@ -24,23 +24,28 @@
 
             <x-nav.link href="/bookings-reservations" :active="request()->is('bookings-reservations')">Reservations</x-nav.link>
 
-            <x-nav.dropdown label="Services" panel="mega" href="/our-services">
-                <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle"       sub="O'Hare & Midway transfers" />
-                <x-nav.item href="/wedding-limousine-services"       title="Wedding Limousine"     sub="Elegant event transport" />
-                <x-nav.flyout title="Party Bus" sub="Groups & celebrations">
+            <x-nav.dropdown label="Services" panel="mega-three" href="/our-services">
+                {{-- Row 1 --}}
+                <x-nav.item href="/limousine-services"              title="Limousine Services"      sub="Classic luxury limos" />
+                <x-nav.item href="/wedding-limousine-services"      title="Wedding Limousines"      sub="Elegant event transport" />
+                <x-nav.flyout title="Party Buses" sub="Groups &amp; celebrations" dir="left">
                     <x-nav.item href="/party-bus-aurora"            title="Party Bus, Aurora" />
                     <x-nav.item href="/party-bus-rental-naperville" title="Party Bus, Naperville" />
                 </x-nav.flyout>
-                <x-nav.item href="/prom-party-bus-rental-illinois"  title="Prom Party Bus"        sub="Safe prom-night transport" />
-                <x-nav.item href="/new-bus-rental"                  title="New Bus Rental"        sub="Latest-model coaches" />
-                <x-nav.item href="/coach-buses"                     title="Coach Buses"           sub="Large-group charters" />
-                <x-nav.item href="/limousine-services"              title="Limousine Services"    sub="Classic luxury limos" />
-                <x-nav.item href="/corporate-car-services"          title="Corporate Car Service" sub="Executive ground service" />
-                <x-nav.item href="/town-car-services"               title="Town Car Services"     sub="Premium sedans" />
-                <x-nav.item href="/chauffeurs"                      title="Chauffeurs"            sub="Professional drivers" />
-                <x-nav.item href="/special-event-limousine"         title="Special Event Limo"    sub="Any occasion" />
-                <x-nav.item href="/transportation-services"         title="Transportation"        sub="Point-to-point rides" />
-                <x-nav.item href="/grad-day-transportation"         title="Grad Day Transport"    sub="Graduation transport" />
+                {{-- Row 2 --}}
+                <x-nav.item href="/town-car-services"               title="Town Car Services"       sub="Premium sedans" />
+                <x-nav.item href="/corporate-car-services"          title="Corporate Car Services"  sub="Executive ground service" />
+                <x-nav.item href="/transportation-services"         title="Transportation"          sub="Point-to-point rides" />
+                {{-- Row 3 --}}
+                <x-nav.item href="/chauffeurs"                      title="Chauffeurs"              sub="Professional drivers" />
+                <x-nav.item href="/coach-buses"                     title="Coach Buses"             sub="Large-group charters" />
+                <x-nav.item href="/special-event-limousine"         title="Special Event Limousines" sub="Any occasion" />
+                {{-- Row 4 (2 items) --}}
+                <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle Services" sub="O'Hare &amp; Midway transfers" />
+                <x-nav.item href="/new-bus-rental"                  title="New Bus Rentals"         sub="Latest-model coaches" />
+                {{-- Row 5 (2 items) --}}
+                <x-nav.item href="/grad-day-transportation"         title="Graduation Day Limos"    sub="Graduation transport" />
+                <x-nav.item href="/prom-party-bus-rental-illinois"  title="Prom Party Buses"        sub="Safe prom-night transport" />
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">

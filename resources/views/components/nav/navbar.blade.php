@@ -52,7 +52,7 @@
                 <x-nav.item href="/chicago-blackhawks-party-bus"     title="Chicago Blackhawks Party Bus" />
             </x-nav.dropdown>
 
-            <x-nav.dropdown label="Service Areas" panel="areas" href="/service-areas" heading="22 Chicagoland Suburbs, 24/7">
+            <x-nav.dropdown label="Service Areas" panel="areas" href="/service-areas" heading="All Chicagoland Suburbs, 24/7, Exceptional Service 365">
                 <x-nav.item compact href="/aurora-limo-service"                      title="Aurora" />
                 <x-nav.item compact href="/bolingbrook-airport-shuttle-ohare-midway" title="Bolingbrook" />
                 <x-nav.item compact href="/24-7-channahon-il-limo-service"           title="Channahon" />

@@ -46,25 +46,16 @@
         body="Travel with confidence using our 24/7 Lemont IL limo service, designed for comfort, reliability, and on-time rides. Whether you need an airport shuttle in Lemont IL, a stylish wedding limo in Lemont IL, or professional transportation for any occasion, we provide clean vehicles, experienced drivers, and seamless service from start to finish. Book now and enjoy stress-free travel today."
         image="/images/sections/lemont-limo.png"
         imageAlt="Happy clients enjoying a limousine ride in Lemont, Illinois — Stop and Go Airport Shuttle"
-        imagePosition="right"
         :inverted="true"
     />
 
     <x-sections.free-instant-quote
-        heading="Why choose"
-        headingBold="us?"
-        headingTail=""
-        image="/images/sections/lemont-transportation.png"
-        imageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
-        imageAspect="16/9"
-        imageObjectPosition="center"
         rightVariant="description"
+        :descImageTop="true"
         descHeading="Why choose us?"
-        descSubheading="With our Party Bus Rental in Lemont IL, your group travels in comfort and style. Enjoy reliable, hassle-free transportation anytime."
-        descBody="Whether you need a wedding limo in Lemont IL, an airport shuttle in Lemont IL, a Party Bus Rental in Lemont IL, chauffeur service in Lemont IL, or event transportation in Lemont IL, our 24/7 Lemont IL limo service ensures every ride is safe, comfortable, and on time. Book now using the contact form to reserve your ride today."
+        descBody="With our Party Bus Rental in Lemont IL, your group travels in comfort and style. Enjoy reliable, hassle-free transportation anytime."
         descImage="/images/sections/lemont-transportation.png"
         descImageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
-        :descImageTop="true"
     />
 
     <x-sections.image-info-card

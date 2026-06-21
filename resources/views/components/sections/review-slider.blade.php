@@ -1,4 +1,9 @@
+@props(['inverted' => false])
+
 @php
+$sectionBg    = $inverted ? 'background: var(--white);'  : 'background: var(--navy);';
+$headingColor = $inverted ? 'color: var(--navy);'        : 'color: var(--white);';
+
 $realCards = [
     ['name' => 'Tarsha Williams',  'review' => 'This limo company has the best customer service and has all the amenities. The limo driver was friendly and made the experience truly enjoyable. Highly recommend!'],
     ['name' => 'Necole Matlock',   'review' => 'My family and I had a wonderful time using the party bus. It was a great experience. I highly recommend this company to anyone looking for reliable, fun transportation.'],
@@ -20,12 +25,12 @@ $extended     = array_merge($prepended, $realCards, $appended);
 $extTotal     = count($extended);    // 14
 @endphp
 
-<section id="review-slider" style="background: var(--navy); scroll-margin-top: 80px;" class="py-12 lg:py-[5rem]">
+<section id="review-slider" style="{{ $sectionBg }} scroll-margin-top: 80px;" class="py-12 lg:py-[5rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Heading --}}
         <div style="width: fit-content; margin: 0 auto 3rem;">
-            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--white); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); text-align: center;">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; {{ $headingColor }} line-height: 1.2; letter-spacing: var(--letter-spacing-h2); text-align: center;">
                 What Our <strong style="font-weight: 700; color: var(--champagne);">Clients Say</strong>
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>

@@ -1,6 +1,7 @@
 @props([
     'heading'     => 'Our',
     'headingBold' => 'Services',
+    'inverted'    => false,
     'services'    => [
         [
             'label' => 'Party Bus',
@@ -55,12 +56,17 @@
     ],
 ])
 
-<section id="our-services" style="background: var(--navy-dark); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
+@php
+$sectionBg    = $inverted ? 'background: var(--white);'      : 'background: var(--navy-dark);';
+$headingColor = $inverted ? 'color: var(--navy);'            : 'color: var(--cloud-light);';
+@endphp
+
+<section id="our-services" style="{{ $sectionBg }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Centered heading + champagne underbar --}}
         <div style="width: fit-content; margin: 0 auto 6rem; text-align: center;">
-            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
+            <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; {{ $headingColor }} line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
                 {{ $heading }} <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>

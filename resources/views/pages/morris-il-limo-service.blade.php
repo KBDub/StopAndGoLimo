@@ -77,6 +77,9 @@
             'Wedding vehicles to make your special day seamless',
         ]"
         descClosing="Our intimate knowledge of Morris, from the Illinois River to downtown, ensures efficient and reliable transportation throughout the community."
+        descImage="/images/sections/morris-airport.png"
+        descImageAlt="Morris Municipal Airport, Illinois — Stop and Go Airport Shuttle Service"
+        :descImageTop="true"
     />
 
     <x-sections.party-limo-image

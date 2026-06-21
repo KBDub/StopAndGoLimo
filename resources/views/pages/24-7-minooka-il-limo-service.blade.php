@@ -56,10 +56,25 @@
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/naperville-fiq.jpg"
+        imageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
         rightVariant="description"
         descHeading="Why choose us?"
         descSubheading="Complete Transportation Solutions for Minooka Residents"
-        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services: airport shuttle for timely arrivals and departures, limousine service for weddings, events, and special occasions, party bus rental for celebrations and group travel, corporate transportation for business meetings and executive travel, and wedding vehicles to make your special day seamless. Our intimate knowledge of Minooka, from local neighborhoods to downtown, from Ridge Road to I-80, ensures efficient and reliable transportation throughout the community."
+        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Minooka airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of Minooka, from local neighborhoods to downtown, from Ridge Road to I-80, ensures efficient and reliable transportation throughout the community."
         descImage="/images/sections/naperville-fiq.jpg"
         descImageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
         :descImageTop="true"

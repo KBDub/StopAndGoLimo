@@ -77,6 +77,8 @@
         descClosing="Our intimate knowledge of Romeoville, from Highpoint to Montego Bay, from Independence Grove to the I-55 corridor, ensures efficient and reliable transportation throughout our southwest suburb."
     />
 
+    <x-sections.review-slider :inverted="true" />
+
     <x-sections.travel-in-style
         heading="24/7 Romeoville Airport Shuttle to"
         headingBold="O'Hare & Midway"

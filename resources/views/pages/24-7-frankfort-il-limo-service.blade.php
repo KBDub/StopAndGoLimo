@@ -49,6 +49,18 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :inverted="true"
+        :descImageTop="true"
+        descHeading="Why choose us?"
+        descBody="Enjoy stress-free group travel with our Party Bus Rental in Frankfort IL. Safe, spacious, and reliable rides for any celebration."
+        descImage="/images/sections/frankfort-transportation.png"
+        descImageAlt="Fleet of vehicles in Frankfort, Illinois — Stop and Go Airport Shuttle"
+    />
+
+    <x-sections.review-slider />
+
     <x-sections.image-info-card
         id="image-info-card-sophisticated"
         heading="Travel with Confidence and Sophistication"
@@ -79,16 +91,6 @@
         image="/images/sections/frankfort-elegant-arrivals.png"
         imageAlt="Elegant arrivals in Frankfort, Illinois — Stop and Go Airport Shuttle"
         imageAspect="16/9"
-    />
-
-    <x-sections.free-instant-quote
-        rightVariant="description"
-        :inverted="true"
-        :descImageTop="true"
-        descHeading="Why choose us?"
-        descBody="Enjoy stress-free group travel with our Party Bus Rental in Frankfort IL. Safe, spacious, and reliable rides for any celebration."
-        descImage="/images/sections/frankfort-transportation.png"
-        descImageAlt="Fleet of vehicles in Frankfort, Illinois — Stop and Go Airport Shuttle"
     />
 
     <x-sections.our-services />

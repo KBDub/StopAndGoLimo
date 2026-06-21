@@ -37,7 +37,7 @@
 @endpush
 
 <x-layouts.page
-    title="Special Event Limousine | Party Limo Rental — New Lenox and Plainfield, IL"
+    title="Special Events"
     metaDescription="Party limousine rental in New Lenox and Plainfield, Illinois. Weddings, proms, birthdays, and all special events. Professional drivers, on-time guarantee. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-special-event.jpg"

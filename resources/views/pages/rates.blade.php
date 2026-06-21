@@ -23,7 +23,7 @@
 @endpush
 
 <x-layouts.page
-    title="Rates | Stop and Go Limo — New Lenox, IL"
+    title="Rates &amp; Pricing"
     metaDescription="Transparent flat-rate limo and shuttle pricing with no surprises. Serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="rates"
     ogImage="/images/heroes/hero-services.jpg"

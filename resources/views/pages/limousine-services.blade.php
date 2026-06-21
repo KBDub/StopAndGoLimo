@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Limousine Services | Stop and Go Limo — New Lenox, IL"
+    title="Limo Services"
     metaDescription="Classic luxury limousine service for any occasion in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

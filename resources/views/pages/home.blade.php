@@ -32,7 +32,7 @@
 @endpush
 
 <x-layouts.page
-    title="Luxury Limo Service in Joliet, IL | Stop & Go Airport Shuttle Service, Inc."
+    title="Chicagoland Limo"
     metaDescription=""
     currentPage="home"
     ogImage=""

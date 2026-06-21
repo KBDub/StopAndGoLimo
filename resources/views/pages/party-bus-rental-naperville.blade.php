@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Party Bus Rental Naperville, IL | Stop and Go Limo"
+    title="Naperville Bus"
     metaDescription="Party bus rental in Naperville, Illinois. Perfect for birthdays, bachelorette parties, and group celebrations. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-party-bus-naperville.jpg"

@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Party Bus Rental Chicago, IL | Stop and Go Limo"
+    title="Chicago Party Bus"
     metaDescription="Luxury party bus and limo rental serving Chicago and the surrounding suburbs. Perfect for weddings, proms, birthdays, and every celebration. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-party-bus-chicago.webp"

@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Professional Chauffeurs | Stop and Go Limo — New Lenox, IL"
+    title="Chauffeurs"
     metaDescription="Licensed, insured, and background-checked professional chauffeurs serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

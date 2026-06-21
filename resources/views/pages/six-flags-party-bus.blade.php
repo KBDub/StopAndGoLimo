@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Six Flags Party Bus | Stop and Go Limo — New Lenox, IL"
+    title="Six Flags Bus"
     metaDescription="Group party bus rides to Six Flags Great America from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-six-flags-party-bus.jpg"

@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Town Car Services | Stop and Go Limo — New Lenox, IL"
+    title="Town Car Service"
     metaDescription="Premium sedan and town car service for any occasion in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

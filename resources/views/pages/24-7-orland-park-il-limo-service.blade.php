@@ -21,7 +21,7 @@
 @endpush
 
 <x-layouts.page
-    title="Orland Park Limo & Airport Shuttle Service | Stop and Go Airport Shuttle"
+    title="Orland Park Limo"
     metaDescription="24/7 luxury limo and airport shuttle service in Orland Park, IL. Airport transfers to O'Hare and Midway, weddings, corporate travel, and special events. Call (815) 585-6922."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-services.jpg"

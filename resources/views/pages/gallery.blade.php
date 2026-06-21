@@ -23,7 +23,7 @@
 @endpush
 
 <x-layouts.page
-    title="Gallery | Stop and Go Limo — New Lenox, IL"
+    title="Fleet Gallery"
     metaDescription="Browse our luxury fleet of limousines, party buses, and shuttle vehicles. Serving New Lenox, Plainfield, and the Southwest suburbs."
     currentPage="gallery"
     ogImage="/images/heroes/hero-services.jpg"

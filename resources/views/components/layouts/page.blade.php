@@ -27,7 +27,7 @@
     @endif
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Stop & Go Airport Shuttle Service, Inc.</title>
+    <title>{{ $title }} – Stop & Go Airport Shuttle Service, Inc.</title>
     <meta name="description" content="{{ $metaDescription }}">
     <meta name="robots" content="{{ $noIndex ? 'noindex,nofollow' : 'index,follow' }}">
     <link rel="canonical" href="{{ $resolvedCanonical }}">
@@ -38,7 +38,7 @@
     <meta name="ICBM" content="41.4977, -87.9573">
     <meta name="theme-color" content="#DCB57E">
     <link rel="icon" href="/images/favicons/stop-and-go-airport-shuttle-service-favicon.png" type="image/x-icon">
-    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:title" content="{{ $title }} – Stop & Go Airport Shuttle Service, Inc.">
     <meta property="og:description" content="{{ $metaDescription }}">
     <meta property="og:type" content="{{ $ogType }}">
     <meta property="og:url" content="{{ $resolvedCanonical }}">

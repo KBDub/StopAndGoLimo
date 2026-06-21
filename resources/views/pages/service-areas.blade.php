@@ -53,7 +53,7 @@
 @endpush
 
 <x-layouts.page
-    title="Service Areas | Stop and Go Limo — Southwest Chicago Suburbs, IL"
+    title="Service Areas"
     metaDescription="24/7 luxury limo and airport shuttle service in New Lenox, Plainfield, Joliet, Naperville, Aurora, and surrounding Southwest suburbs. Safe, comfortable, on-time. Call (815) 585-6922."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-service-areas.jpg"

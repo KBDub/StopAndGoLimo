@@ -36,7 +36,7 @@
 @endpush
 
 <x-layouts.page
-    title="Our Services | Stop and Go Limo — Plainfield and New Lenox, IL"
+    title="Our Services"
     metaDescription="Professional luxury transportation in Plainfield and New Lenox, Illinois. Airport transfers to O'Hare and Midway, corporate travel, weddings, and special events. Serving since 2009. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

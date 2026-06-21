@@ -23,7 +23,7 @@
 @endpush
 
 <x-layouts.page
-    title="About Us | Stop and Go Limo — New Lenox, IL"
+    title="About Us"
     metaDescription="Learn about Stop and Go Airport Shuttle Service Inc. Professional chauffeurs serving New Lenox, Plainfield, and the Southwest suburbs since 2009."
     currentPage="about"
     ogImage="/images/heroes/hero-services.jpg"

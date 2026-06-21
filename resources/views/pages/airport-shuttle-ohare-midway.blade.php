@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Airport Shuttle — O'Hare and Midway | Stop and Go Limo"
+    title="Airport Shuttle"
     metaDescription="24/7 airport shuttle and limousine service to O'Hare and Midway from New Lenox, Plainfield, and the Southwest suburbs. Flat rates, no surprises. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Corporate Car Service | Stop and Go Limo — New Lenox, IL"
+    title="Corporate Cars"
     metaDescription="Executive ground transportation for business travel in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

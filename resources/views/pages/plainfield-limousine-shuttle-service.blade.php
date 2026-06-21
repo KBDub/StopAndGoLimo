@@ -21,7 +21,7 @@
 @endpush
 
 <x-layouts.page
-    title="Plainfield Limo & Airport Shuttle Service | Stop and Go Airport Shuttle"
+    title="Plainfield Limo"
     metaDescription="24/7 luxury limo and airport shuttle service in Plainfield, IL. Airport transfers to O'Hare and Midway, weddings, corporate travel, and special events. Call (815) 585-6922."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-services.jpg"

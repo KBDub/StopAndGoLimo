@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Golfing Party Bus Chicago | Stop and Go Limo — New Lenox, IL"
+    title="Golf Party Bus"
     metaDescription="Tee off in style with a chauffeured golf group bus from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-golf-party-bus.jpg"

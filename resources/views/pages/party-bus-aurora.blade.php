@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Party Bus Rental Aurora, IL | Stop and Go Limo"
+    title="Aurora Party Bus"
     metaDescription="Fun, safe party bus rental in Aurora, Illinois. Perfect for birthdays, bachelorette parties, and group celebrations. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

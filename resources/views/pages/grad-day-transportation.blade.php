@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Grad Day Transportation | Stop and Go Limo — New Lenox, IL"
+    title="Grad Day Bus"
     metaDescription="Safe, on-time graduation day transportation in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

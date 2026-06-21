@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Coach Bus Rentals | Stop and Go Limo — New Lenox, IL"
+    title="Coach Bus Rental"
     metaDescription="Charter coach bus rentals for groups of all sizes in New Lenox, Plainfield, and the Southwest suburbs. Professional drivers, pristine vehicles. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/coach-buses-hero.jpg"

@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Wedding Limousine Services | Stop and Go Limo — New Lenox, IL"
+    title="Wedding Limos"
     metaDescription="Elegant wedding limousine service in New Lenox, Plainfield, and the Southwest suburbs. Make your special day unforgettable. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

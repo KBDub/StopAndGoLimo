@@ -25,7 +25,7 @@
 @endpush
 
 <x-layouts.page
-    title="Transportation Services | Stop and Go Limo — New Lenox, IL"
+    title="Transportation"
     metaDescription="Point-to-point luxury transportation across the Southwest suburbs. Serving New Lenox, Plainfield, Joliet, and beyond. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"

@@ -23,7 +23,7 @@
 @endpush
 
 <x-layouts.page
-    title="Get a Quote | Stop and Go Limo — New Lenox, IL"
+    title="Get a Quote"
     metaDescription="Get a free, instant quote for airport shuttle or limousine service in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
     currentPage="contact"
     ogImage="/images/heroes/hero-services.jpg"

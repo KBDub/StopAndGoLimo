@@ -50,6 +50,21 @@
         body="Experience luxury and style on your way to the next big show with a Chicago Concert Party Bus from Stop & Go Airport Shuttle Service. Choose a concert party bus rental in Chicago or a party bus rental for concerts in Chicago to accommodate any group size and enjoy a fun, hassle-free night out."
     />
 
+    <x-sections.free-instant-quote
+        defaultVehicle="Party Bus"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        image="/images/heroes/hero-chicago-concert-fiq.jpg"
+        imageAlt="Concert crowd with stage lights at a Chicago live music venue"
+        imageAspect="4/3"
+        heading="Experience Concert-Going Like a Rock Star with"
+        headingBold="Chicago's Premier Party Bus"
+        headingTail="Rentals"
+        body="When you rent a party bus for a concert in Chicago with Stop & Go, you will experience the ultimate Chicago Concert Party Bus service, with top-notch customer care that makes you feel like a rock star as you head to the show. Enjoy a luxury concert transportation party bus with a professional chauffeur, so you can relax and focus on the night's excitement. Our Chicago concert party bus service is designed for convenience and fun, and we recommend booking early due to high demand, especially for buses with restrooms. Bring all your friends on a group concert party bus in Chicago and make your concert experience unforgettable."
+    />
+        
+    <x-sections.review-slider />
+
     <x-sections.points-of-interest
         heading="Concert Venues We"
         headingBold="Serve in Chicago"
@@ -68,20 +83,7 @@
             ['name' => 'Metro',                                    'href' => '#'],
         ]"
     />
-
-    <x-sections.free-instant-quote
-        defaultVehicle="Party Bus"
-        formAction="/get-a-quote"
-        submitLabel="Send Message"
-        image="/images/heroes/hero-chicago-concert-fiq.jpg"
-        imageAlt="Concert crowd with stage lights at a Chicago live music venue"
-        imageAspect="4/3"
-        heading="Experience Concert-Going Like a Rock Star with"
-        headingBold="Chicago's Premier Party Bus"
-        headingTail="Rentals"
-        body="When you rent a party bus for a concert in Chicago with Stop & Go, you will experience the ultimate Chicago Concert Party Bus service, with top-notch customer care that makes you feel like a rock star as you head to the show. Enjoy a luxury concert transportation party bus with a professional chauffeur, so you can relax and focus on the night's excitement. Our Chicago concert party bus service is designed for convenience and fun, and we recommend booking early due to high demand, especially for buses with restrooms. Bring all your friends on a group concert party bus in Chicago and make your concert experience unforgettable."
-    />
-
+            
     <x-sections.faq preset="concert-party-bus" />
 
     <x-sections.share-your-experience />

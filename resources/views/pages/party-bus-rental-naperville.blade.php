@@ -72,11 +72,18 @@
     />
 
     <x-sections.free-instant-quote
+        image="/images/sections/party-bus-rental-naperville-fiq.png"
+        imageAlt="Party bus rental in Naperville, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
         rightVariant="description"
         defaultVehicle="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
         descHeading="Why Choose Us?"
+        descImage="/images/sections/party-bus-rental-naperville-fiq.png"
+        descImageAlt="Party bus rental in Naperville, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
         descSubheading="Our Naperville Party Bus Turns Any Night into an Unforgettable Celebration"
         :descBullets="[
             'Luxury interiors and premium sound systems: The fun starts the moment you step onboard. Great music, great vibes, every time.',
@@ -87,6 +94,8 @@
         ]"
         descClosing="Naperville locals trust us for unforgettable nights and easy planning. Our buses book fast, so lock in your date before it's gone."
     />
+
+    <x-sections.review-slider :inverted="true" />
 
     <x-sections.travel-in-style
         heading="Where the Party"

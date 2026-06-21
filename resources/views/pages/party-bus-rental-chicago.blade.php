@@ -83,7 +83,9 @@
         ]"
         descClosing="Chicago locals trust us for unforgettable nights and easy planning. Our buses book fast, so lock in your date before it is gone."
     />
-
+        
+    <x-sections.review-slider :inverted="true" />
+            
     <x-sections.travel-in-style
         heading="Party Bus Rental"
         headingBold="Chicago"

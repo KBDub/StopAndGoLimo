@@ -69,6 +69,8 @@
         descClosing="Aurora locals trust us for unforgettable nights and easy planning. Our buses book fast, so don't wait to lock in your date."
     />
 
+    <x-sections.review-slider :inverted="true" />
+
     <x-sections.travel-in-style
         heading="Where the Fun"
         headingBold="Never Ends"

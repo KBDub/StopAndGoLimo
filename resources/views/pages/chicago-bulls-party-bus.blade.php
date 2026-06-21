@@ -63,6 +63,8 @@
         bodyHtml="Experience Chicago&#8217;s United Center at its finest! Rent a Stop &amp; Go Party Bus and ride in style and comfort with a Chicago Bulls Party Bus.<br><br><a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>View our Bulls Party Bus Packages</a> and enjoy stress-free Stop &amp; Go Bulls Transportation to the game, celebrate post-game victories, and party on a luxurious Party Bus to the Bulls Game, where legends like Michael Jordan made this arena iconic!"
     />
 
+    <x-sections.review-slider />
+            
     <x-sections.faq preset="bulls-party-bus" />
 
     <x-sections.share-your-experience />

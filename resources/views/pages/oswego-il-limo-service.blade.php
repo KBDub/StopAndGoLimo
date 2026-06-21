@@ -109,7 +109,7 @@
         headingBold="Oswego Residents"
         body="As a trusted transportation provider in Oswego, Stop & Go offers luxury travel services including airport shuttles, limo service, Oswego car service, party buses, corporate transportation, and wedding vehicles. Our expertise, from downtown to Fox Valley and North to West Oswego, ensures reliable service throughout this vibrant Illinois community and for trips to O'Hare and Midway."
         buttonText="Contact"
-        buttonHref="/get-in-touch"
+        buttonHref="/get-a-quote"
         directions="• Downtown Oswego to O'Hare: 50–65 minutes via IL-71 to I-88 East to I-294 North  • Oswego to Midway Airport: 45–60 minutes via IL-71 to I-55 North  • All Oswego neighborhoods served  • Kendall County to both airports"
     />
 

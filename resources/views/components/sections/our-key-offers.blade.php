@@ -4,7 +4,7 @@
     'para1'        => 'At Stop & Go Airport Shuttle Service Inc., we know how hard it can be to find a reliable ride. That\'s why we work hard to offer clean vehicles, fast customer support, and respectful service every time. Our goal is to give you a smooth, worry-free travel experience that exceeds your expectations.',
     'para2'        => 'Stop & Go Airport Shuttle Service Inc. offers premium transportation for weddings, parties, sports events, and concerts across New Lenox and Plainfield, IL. We have years of experience providing quality service for any occasion. Whether you need a ride to a lavish wedding, a special prom night, a big party, or a major sporting event, our locally owned business is proud to serve you.',
     'ctaLabel'     => 'Book a ride',
-    'ctaHref'      => '/book-a-ride',
+    'ctaHref'      => '/bookings-reservations',
 ])
 
 @php

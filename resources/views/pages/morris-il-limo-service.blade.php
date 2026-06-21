@@ -115,7 +115,7 @@
         headingBold="Morris Residents"
         body="As Morris's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Morris airport shuttle, Morris limo service, Morris party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Morris, from Historic Downtown and the Riverwalk area to Rockwell Estates, West Acres, and Saratoga Estates, from Illinois Route 47 to U.S. Route 6 and I-80 access, ensures efficient, reliable transportation throughout the community and for Morris to O'Hare trips."
         buttonText="Contact"
-        buttonHref="/get-in-touch"
+        buttonHref="/get-a-quote"
         directions="• Downtown Morris to O'Hare: 70–90 minutes via I-80 East to I-294 North  • Morris to Midway Airport: 65–80 minutes via I-80 East to I-55 North  • All Morris neighborhoods served  • Grundy County to both airports"
     />
 

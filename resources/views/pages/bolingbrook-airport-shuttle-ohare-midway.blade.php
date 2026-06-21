@@ -104,7 +104,7 @@
         headingBold="Throughout Bolingbrook"
         body="As Bolingbrook's trusted transportation provider, Stop & Go offers complete luxury transportation services including Bolingbrook airport shuttle, Bolingbrook limo service, Bolingbrook party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Bolingbrook, from Old Town to Crossroads, Kings Road, and Winston Park, with easy access to I-55 and Naperville Road, ensures efficient, reliable transportation throughout this thriving southwest suburb and for Bolingbrook to O'Hare and Bolingbrook to Midway trips."
         buttonText="Contact"
-        buttonHref="/get-in-touch"
+        buttonHref="/get-a-quote"
         directions="• Downtown Bolingbrook to O'Hare: 35–50 minutes via I-55 North to I-294 North  • Crossroads Area to O'Hare: 35–45 minutes  • Bolingbrook to Midway Airport: 30–40 minutes via I-55 North  • All Bolingbrook neighborhoods to both airports"
     />
 

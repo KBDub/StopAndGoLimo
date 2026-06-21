@@ -1,0 +1,1933 @@
+{
+  "site": "https://newlenoxlimoservice.com",
+  "business": "Stop & Go Airport Shuttle Service Inc.",
+  "extracted": "2026-06-21",
+  "identifier": "FAQ sections identified by the \"Frequently Asked Questions\" heading on each page.",
+  "notes": [
+    "Two FAQ block types exist site-wide: a shared 'general' set (6 Q&As reused verbatim on many service/info/display pages) and 'unique' page-specific sets.",
+    "faq_type='general' pages all share the identical general_faq_set; load it once for a single shared accordion and skip per-page duplication.",
+    "Unique-set templates observed: airport-shuttle (10 Q&As, localized per city), the '24-7-{city}' limo template (6 localized Q&As), an 'Aurora limo' wine-tour set (6 Q&As), party-bus sets (6 Q&As), prom (10), limousine (10), and grad-day (6).",
+    "URL pattern does NOT reliably predict template (e.g. 24-7-joliet uses the 10-Q airport template; bolingbrook/oswego too). Every page was read individually.",
+    "Pages with a 'content_issue' field have live-site QA problems (mis-localized or mis-pasted FAQ copy). See content_bugs[] for the consolidated list."
+  ],
+  "general_faq_set": [
+    {
+      "question": "Do you offer group transportation or party bus services?",
+      "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+    },
+    {
+      "question": "What is your cancellation and refund policy?",
+      "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+    },
+    {
+      "question": "How far in advance should I book my limousine?",
+      "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+    },
+    {
+      "question": "What happens if my flight is delayed?",
+      "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+    },
+    {
+      "question": "Are your prices all-inclusive or are there hidden fees?",
+      "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+    },
+    {
+      "question": "Do your chauffeurs have professional training and background checks?",
+      "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "airport-shuttle-ohare-midway",
+      "url": "https://newlenoxlimoservice.com/airport-shuttle-ohare-midway/",
+      "title": "Airport Shuttle Service",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does airport shuttle service cost from New Lenox or Naperville to O'Hare?",
+          "answer": "Pricing varies by vehicle type, distance, and time. Sedans typically $75–95, SUVs and vans higher. Midway service $10–15 less. Round-trip bookings receive discounts. Contact us for exact quotes."
+        },
+        {
+          "question": "How early should I schedule pickup for my flight?",
+          "answer": "Domestic flights: 2.5–3 hrs before departure. International: 3–4 hrs. Midway slightly less. Drivers account for traffic and TSA times."
+        },
+        {
+          "question": "Do you provide airport shuttle service for early morning flights?",
+          "answer": "Yes! Our airport shuttle operates 24/7. Early morning pickups are available from 3–6 AM from all Chicago suburbs."
+        },
+        {
+          "question": "How does flight tracking work for return pickups?",
+          "answer": "We monitor flights in real-time and adjust your pickup automatically for delays or early arrivals—no calls needed."
+        },
+        {
+          "question": "Can I book airport shuttle service for same-day travel?",
+          "answer": "Yes, subject to availability. Call us for same-day airport shuttle service from New Lenox, Naperville, or nearby suburbs."
+        },
+        {
+          "question": "Do you offer shared airport shuttle service or only private rides?",
+          "answer": "Both! Private rides are direct and non-stop. Shared shuttles cost less and may include multiple pickups."
+        },
+        {
+          "question": "What if my flight is cancelled?",
+          "answer": "Notify us 2 hrs before pickup for no charge. Return trips are monitored automatically. Flexible cancellation policies apply."
+        },
+        {
+          "question": "Do you provide child safety seats for airport transportation?",
+          "answer": "Yes! Free with advance notice. Specify child's age/weight; we comply with Illinois safety laws."
+        },
+        {
+          "question": "Can I make stops on the way to the airport?",
+          "answer": "Yes, with notice. Stops usually add 10–15 min and a small fee. Allow extra time to ensure on-time arrival."
+        },
+        {
+          "question": "How do I find my driver for return airport pickups?",
+          "answer": "Drivers meet you at baggage claim or customs for international arrivals. You receive driver info via text in advance."
+        }
+      ]
+    },
+    {
+      "slug": "party-bus-rental-chicago",
+      "url": "https://newlenoxlimoservice.com/party-bus-rental-chicago/",
+      "title": "Party Bus",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does a party bus cost?",
+          "answer": "Pricing varies by bus size, rental length, and date. Rates typically range $150–250/hr with a 3–4 hour minimum. Contact us for exact quotes for weddings, proms, or parties."
+        },
+        {
+          "question": "How many passengers fit on a party bus?",
+          "answer": "Our fleet accommodates 15–40 passengers depending on vehicle. We recommend the right bus based on your group size for weddings, proms, or nights out."
+        },
+        {
+          "question": "Can we bring alcohol on the bus?",
+          "answer": "Yes! Adults 21+ may bring alcohol. Full bars are included with ice bins and cup holders. All passengers must follow Illinois open container laws. No underage drinking."
+        },
+        {
+          "question": "What's included in the rental?",
+          "answer": "Rates include the bus, professional chauffeur, fuel, and amenities like sound system, LED lights, and bar setup. Gratuity, tolls, or special requests may be extra."
+        },
+        {
+          "question": "How far in advance should I book?",
+          "answer": "Popular dates (proms, weddings, holidays) should be booked 2–3 months ahead. Standard weekends, 3–4 weeks. Last-minute rentals may be available depending on fleet."
+        },
+        {
+          "question": "What areas do you serve?",
+          "answer": "We serve Naperville, Aurora, Joliet, Plainfield, New Lenox, Bolingbrook, Romeoville, Orland Park, and all Chicago suburbs. Pickup anywhere in the metro area."
+        },
+        {
+          "question": "Do you provide prom party bus service?",
+          "answer": "Yes! Our buses can handle multiple stops for bars, restaurants, or venues. Additional stops may extend rental time. Chauffeurs know the best routes."
+        },
+        {
+          "question": "Can we make multiple stops?",
+          "answer": "Yes! Our buses can handle multiple stops for bars, restaurants, or venues. Additional stops may extend rental time. Chauffeurs know the best routes."
+        },
+        {
+          "question": "Is smoking allowed?",
+          "answer": "No. All party buses are non-smoking. Vaping and e-cigarettes are also prohibited. Chauffeur can make brief stops outside if needed."
+        },
+        {
+          "question": "What if the bus is damaged?",
+          "answer": "Any damage beyond normal wear is the renter's responsibility. Includes stains, burns, or equipment damage. Deposits may apply and are refunded after inspection."
+        }
+      ]
+    },
+    {
+      "slug": "prom-party-bus-rental-illinois",
+      "url": "https://newlenoxlimoservice.com/prom-party-bus-rental-illinois/",
+      "title": "Prom Party Bus",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "Do you offer party bus rentals for prom?",
+          "answer": "Yes. Stop & Go provides prom party bus rentals for group events."
+        },
+        {
+          "question": "What size groups can you accommodate?",
+          "answer": "Party buses and group vehicles are available for various group sizes."
+        },
+        {
+          "question": "Do you serve Chicago suburbs like Naperville and Aurora?",
+          "answer": "Yes. They serve Naperville, Aurora, Joliet, New Lenox, Plainfield, and surrounding areas for a prom party bus near me."
+        },
+        {
+          "question": "Are professional drivers provided?",
+          "answer": "Yes. All drivers are professional and undergo background checks."
+        },
+        {
+          "question": "Can I book a party bus for other events too?",
+          "answer": "Yes. Party buses can be used for concerts, sporting events, weddings, birthdays, and more."
+        },
+        {
+          "question": "Is advanced booking recommended?",
+          "answer": "Yes. For special events like prom, early booking is advised."
+        },
+        {
+          "question": "Do you have flexible pickup options?",
+          "answer": "Yes. They provide pickup and drop-off service throughout the Chicago suburbs with an affordable prom party bus."
+        },
+        {
+          "question": "What types of vehicles do you offer?",
+          "answer": "They offer party buses, limousines, and group transportation vehicles."
+        },
+        {
+          "question": "Do you provide service for multiple stops on prom night?",
+          "answer": "Yes. Stop & Go offers flexible pickups and drop-offs throughout the Chicago suburbs for prom and group."
+        },
+        {
+          "question": "How do I reserve a party bus?",
+          "answer": "Reservations can be made by contacting Stop & Go through their website or phone."
+        }
+      ]
+    },
+    {
+      "slug": "limousine-services",
+      "url": "https://newlenoxlimoservice.com/limousine-services/",
+      "title": "Limousine Services",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does limousine service cost in Chicago?",
+          "answer": "Limousine pricing varies by vehicle, distance, and time. Contact us for your exact limo service quote."
+        },
+        {
+          "question": "Do you provide limousine service to O'Hare and Midway airports?",
+          "answer": "Yes! Airport limo service is 24/7 from all Chicago suburbs with flight tracking and meet-and-greet options."
+        },
+        {
+          "question": "How far in advance should I book limousine services?",
+          "answer": "Book weddings 2-3 months ahead, corporate trips 1-2 weeks. Last-minute limo service depends on availability."
+        },
+        {
+          "question": "What areas do your limousine services cover?",
+          "answer": "We serve New Lenox, Plainfield, Naperville, Aurora, Joliet, Bolingbrook, Romeoville, Orland Park, and all Chicago suburbs."
+        },
+        {
+          "question": "Are your chauffeurs professional and licensed?",
+          "answer": "All chauffeurs are licensed, insured, background-checked, and trained for safe, professional limo service."
+        },
+        {
+          "question": "Can I see your limousine fleet before booking?",
+          "answer": "Yes! Schedule a visit to view our luxury sedans, stretch limos, and SUV limousines."
+        },
+        {
+          "question": "What's included in your limousine service rates?",
+          "answer": "Rates cover vehicle, chauffeur, fuel, insurance, and standard amenities. Optional extras may apply."
+        },
+        {
+          "question": "Do you offer limousine service for corporate accounts?",
+          "answer": "Yes! Corporate accounts include priority booking, invoicing, and executive transportation services."
+        },
+        {
+          "question": "Is alcohol allowed in your limousines?",
+          "answer": "Adults 21+ may bring alcohol for special occasions. Corporate trips follow strict policies; airport limo follows TSA rules."
+        },
+        {
+          "question": "What happens if my flight is delayed for airport limo service?",
+          "answer": "Flight tracking adjusts your pickup automatically, so your limo is ready when you land at O'Hare or Midway."
+        }
+      ]
+    },
+    {
+      "slug": "new-lenox-airport-shuttle-limo-service",
+      "url": "https://newlenoxlimoservice.com/new-lenox-airport-shuttle-limo-service/",
+      "title": "New Lenox (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does New Lenox airport shuttle to O'Hare cost?",
+          "answer": "Pricing depends on your pickup location and number of passengers. Round-trip options often save money. Contact our New Lenox office for an exact quote."
+        },
+        {
+          "question": "Do you serve all Lincoln-Way high schools for prom?",
+          "answer": "Yes, we serve Lincoln-Way East, West, North, and Central with safe, supervised prom limo service. Book 2–3 months in advance for popular dates."
+        },
+        {
+          "question": "What's the best route from New Lenox to O'Hare?",
+          "answer": "Typically I-80 East to I-55 North to I-290 West. Our local drivers know traffic patterns and alternate routes to ensure on-time arrivals."
+        },
+        {
+          "question": "Why should I use a New Lenox-based company instead of an app?",
+          "answer": "We are local, accountable, and professional. Your booking supports a hometown business with drivers who know New Lenox streets."
+        },
+        {
+          "question": "Can you pick up from anywhere in New Lenox?",
+          "answer": "Yes, we provide door-to-door pickup from any neighborhood, including downtown, Spencer Crossing, Fox Hill, and Hickory Creek."
+        },
+        {
+          "question": "Do you provide New Lenox party bus to Chicago Bears games?",
+          "answer": "Yes, we offer safe, comfortable rides to Soldier Field and return trips, so you can enjoy the game without parking or driving worries."
+        },
+        {
+          "question": "Do you offer corporate accounts for New Lenox businesses?",
+          "answer": "Yes, many local businesses use our executive shuttle and corporate services. Accounts get priority booking and consolidated billing."
+        },
+        {
+          "question": "How early should I book Lincoln-Way prom limo service?",
+          "answer": "Book at least 2–3 months in advance to secure popular dates and ensure availability."
+        },
+        {
+          "question": "How long does New Lenox to Midway airport take?",
+          "answer": "Typically 40–50 minutes via I-80 to I-55 North. We plan for traffic to ensure timely arrivals."
+        },
+        {
+          "question": "Do you monitor flights for New Lenox airport shuttle returns?",
+          "answer": "Yes, all return trips include flight monitoring. If your flight changes, we adjust pickup times automatically."
+        }
+      ]
+    },
+    {
+      "slug": "gallery",
+      "url": "https://newlenoxlimoservice.com/gallery/",
+      "title": "Gallery",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "wedding-limousine-services",
+      "url": "https://newlenoxlimoservice.com/wedding-limousine-services/",
+      "title": "Wedding Limousine Services",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "corporate-car-services",
+      "url": "https://newlenoxlimoservice.com/corporate-car-services/",
+      "title": "Corporate Car Service",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "coach-buses",
+      "url": "https://newlenoxlimoservice.com/coach-buses/",
+      "title": "Coach Buses",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "transportation-services",
+      "url": "https://newlenoxlimoservice.com/transportation-services/",
+      "title": "Transportation Services",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "special-event-limousine",
+      "url": "https://newlenoxlimoservice.com/special-event-limousine/",
+      "title": "Special Event Limousine",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "six-flags-party-bus",
+      "url": "https://newlenoxlimoservice.com/six-flags-party-bus/",
+      "title": "Six Flags Party Bus",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "chicago-bears-party-bus",
+      "url": "https://newlenoxlimoservice.com/chicago-bears-party-bus/",
+      "title": "Chicago Bears Party & Limo Bus",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "town-car-services",
+      "url": "https://newlenoxlimoservice.com/town-car-services/",
+      "title": "Town Car Services",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "new-bus-rental",
+      "url": "https://newlenoxlimoservice.com/new-bus-rental/",
+      "title": "New Bus Rental",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "naperville-airport-shuttle-limo-service",
+      "url": "https://newlenoxlimoservice.com/naperville-airport-shuttle-limo-service/",
+      "title": "Naperville (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does Naperville airport shuttle to O'Hare cost?",
+          "answer": "Naperville airport shuttle service to O'Hare typically costs $65–$85 for a sedan, depending on location. North Naperville may be less, while southern areas may be higher. Round-trip Naperville to O'Hare transportation is discounted. SUVs cost more. Use our quote form or call for exact pricing."
+        },
+        {
+          "question": "Do you provide Naperville limo service for Naperville Central and Naperville North proms?",
+          "answer": "Absolutely! Naperville limo service for proms is a popular choice. We serve Naperville Central and Naperville North High School with safe, elegant prom transportation. Our prom packages include professional chauffeurs and parent approved safety features. Book early, as Naperville prom limo service fills months in advance."
+        },
+        {
+          "question": "Can you pick up from any Naperville neighborhood?",
+          "answer": "Yes! Our Naperville airport shuttle, limo service, and party bus rental offer door-to-door pickup throughout Naperville. Whether you're in downtown near the Riverwalk, North Naperville, or off Route 59, we come to you. Simply provide your address when booking your Naperville transportation service."
+        },
+        {
+          "question": "Do you serve Naperville wedding venues like Hotel Arista and Naper Settlement?",
+          "answer": "Yes! Our Naperville limo service serves popular wedding venues including Hotel Arista, Naper Settlement, The Arrowhead Golf Club, downtown Naperville locations, and area churches. We know each venue's arrival, parking, and timing requirements, and our coordinators help plan your Naperville wedding limousine service."
+        },
+        {
+          "question": "How early should I book Naperville airport shuttle for my flight?",
+          "answer": "For O'Hare flights, schedule your Naperville airport shuttle pickup 2.5 to 3 hours before domestic departures and 3 to 4 hours for international travel. Midway typically requires 2 to 2.5 hours. Our Naperville to O'Hare transportation accounts for traffic, time of day, and terminal location to ensure on-time arrival."
+        },
+        {
+          "question": "Do you offer Naperville party bus for Chicago Bears games?",
+          "answer": "Yes! Naperville party bus service for Chicago Bears games at Soldier Field is popular. Our buses transport groups from Naperville with pregame setup, comfortable travel, and return trips. No parking or designated driver worries, just enjoy the game. Book early, as Naperville party bus dates sell out quickly."
+        },
+        {
+          "question": "What's the best route from Naperville to O'Hare?",
+          "answer": "The fastest route is usually I-88 East to I-290 North, taking 35 to 50 minutes depending on traffic and your Naperville location. Our airport shuttle drivers monitor traffic and adjust routes as needed. Sometimes Route 59 North to I-294 is better. We know the most efficient routes for Naperville to O'Hare transportation and pick the best one for your departure time."
+        },
+        {
+          "question": "Do you provide corporate accounts for Naperville businesses?",
+          "answer": "Yes! Many Naperville companies use our corporate transportation services. We offer account billing, consolidated invoicing, and priority booking for businesses needing Naperville airport shuttles, executive limos, or client transportation. Contact our corporate team to set up your Naperville business account."
+        },
+        {
+          "question": "Can Naperville party bus make stops at downtown bars and restaurants?",
+          "answer": "Absolutely! Our Naperville party bus rental can handle multiple stops for bar crawls, restaurants, or downtown venues. Popular routes include Washington Street and entertainment districts. Share your itinerary when booking, and we'll coordinate timing for your Naperville celebration."
+        },
+        {
+          "question": "Do you monitor flights for Naperville airport shuttle return pickups?",
+          "answer": "Yes! All return Naperville airport shuttle service includes complimentary flight monitoring. Whether returning from O'Hare or Midway, we track your flight and adjust pickup if delayed or early. Your driver will meet you at baggage claim with a name sign. This is included with all Naperville airport return trips."
+        }
+      ]
+    },
+    {
+      "slug": "aurora-limo-service",
+      "url": "https://newlenoxlimoservice.com/aurora-limo-service/",
+      "title": "Aurora (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does Aurora airport shuttle to O'Hare cost?",
+          "answer": "Aurora airport shuttle pricing varies by location and passengers. Round-trip Aurora to O'Hare offers best value. Contact us for your Aurora pickup quote."
+        },
+        {
+          "question": "Do you provide 24/7 Aurora airport shuttle service?",
+          "answer": "Our Aurora airport shuttle runs 24/7 to O'Hare and Midway. Schedule any time for reliable, professional pickup anywhere in Aurora."
+        },
+        {
+          "question": "Which Aurora high schools do you provide prom limo service for?",
+          "answer": "Aurora prom limo service is available for all area high schools, including East Aurora, West Aurora, Waubonsie Valley, and Metea Valley."
+        },
+        {
+          "question": "Can you pick up from any Aurora neighborhood?",
+          "answer": "We provide door-to-door pickup from any Aurora neighborhood, including downtown, North and West Aurora, Montgomery, Sugar Grove, and Boulder Hill."
+        },
+        {
+          "question": "Do you serve Aurora wedding venues?",
+          "answer": "Aurora limo service regularly serves all major wedding venues, including Ballydoyle, Gaslite Manor, Naperville IL Banquets, and Hollywood Casino Aurora."
+        },
+        {
+          "question": "What's the fastest route from Aurora to O'Hare?",
+          "answer": "The fastest route from Aurora to O'Hare is I-88 East to I-290 North. Our drivers monitor traffic to ensure efficient, on-time service."
+        },
+        {
+          "question": "Do you offer Aurora party bus for Chicago Bears games?",
+          "answer": "Aurora party bus service transports groups to Chicago Bears games, concerts, and events safely and comfortably with no parking or driving hassles."
+        },
+        {
+          "question": "Do you provide Aurora corporate transportation accounts?",
+          "answer": "Aurora corporate transportation accounts provide priority booking, account billing, and reliable shuttle and limo service for businesses and executives."
+        },
+        {
+          "question": "How early should I book Aurora airport shuttle?",
+          "answer": "Schedule Aurora airport shuttle pickups 2.5–3 hours before domestic O'Hare flights, 3–4 hours for international, and 2.5 hours for Midway flights."
+        },
+        {
+          "question": "Do you monitor flights for Aurora airport shuttle returns?",
+          "answer": "All return trips include Aurora flight monitoring. Our drivers adjust pickup for delays and meet passengers at baggage claim with a sign."
+        }
+      ]
+    },
+    {
+      "slug": "plainfield-limousine-shuttle-service",
+      "url": "https://newlenoxlimoservice.com/plainfield-limousine-shuttle-service/",
+      "title": "Plainfield (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does Plainfield airport shuttle to O'Hare cost?",
+          "answer": "Pricing depends on your Plainfield location and number of passengers. Round-trip Plainfield to O'Hare offers better value. Contact us for an exact quote."
+        },
+        {
+          "question": "Do you serve all four Plainfield high schools for prom?",
+          "answer": "Yes! We serve Plainfield North, South, East, and Central High Schools with safe, supervised prom limo service. Book 2-3 months in advance as popular dates fill quickly."
+        },
+        {
+          "question": "What's the best route from Plainfield to O'Hare?",
+          "answer": "The fastest route is I-55 North to I-290 West (40-55 minutes). Drivers monitor traffic and may use I-55 to I-294 if needed to ensure on-time arrivals."
+        },
+        {
+          "question": "Do you provide Plainfield limo service for weddings?",
+          "answer": "Yes! We offer elegant wedding transportation throughout Plainfield and Chicago suburbs with professional chauffeurs and luxury vehicles."
+        },
+        {
+          "question": "Can you pickup from North, South, East, AND Central Plainfield areas?",
+          "answer": "Yes! Our airport shuttle, limo, and party bus service provide door-to-door pickup anywhere in Plainfield. Just give your address when booking."
+        },
+        {
+          "question": "Do you provide Plainfield party bus to downtown Chicago?",
+          "answer": "Yes! Our party buses travel from Plainfield to downtown Chicago for concerts, sports, and celebrations. Safe, fun, and no need for a designated driver."
+        },
+        {
+          "question": "Do you offer corporate shuttles for Plainfield Route 59 businesses?",
+          "answer": "Yes! We provide corporate transportation along Route 59 and throughout Plainfield, including executive airport shuttles and client transport."
+        },
+        {
+          "question": "How early should I book Plainfield prom limo service?",
+          "answer": "Book 2-3 months in advance to secure your preferred vehicle and group rates for Plainfield North, South, East, and Central High Schools."
+        },
+        {
+          "question": "How long does Plainfield to Midway airport take?",
+          "answer": "Plainfield to Midway takes 30-40 minutes via I-55 North. Our shuttle service provides reliable and competitive transportation."
+        },
+        {
+          "question": "Do you monitor flights for Plainfield airport shuttle returns?",
+          "answer": "Yes! We track your flight and adjust pickup times automatically. Your driver will meet you at baggage claim with a name sign."
+        }
+      ]
+    },
+    {
+      "slug": "morris-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/morris-il-limo-service/",
+      "title": "Morris (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "How much does Naperville airport shuttle to O'Hare cost?",
+          "answer": "Naperville airport shuttle service to O'Hare typically costs $65–$85 for a sedan, depending on location. North Naperville may be less, while southern areas may be higher. Round-trip Naperville to O'Hare transportation is discounted. SUVs cost more. Use our quote form or call for exact pricing."
+        },
+        {
+          "question": "Do you provide Naperville limo service for Naperville Central and Naperville North proms?",
+          "answer": "Absolutely! Naperville limo service for proms is a popular choice. We serve Naperville Central and Naperville North High School with safe, elegant prom transportation. Our prom packages include professional chauffeurs and parent approved safety features. Book early, as Naperville prom limo service fills months in advance."
+        },
+        {
+          "question": "Can you pick up from any Naperville neighborhood?",
+          "answer": "Yes! Our Naperville airport shuttle, limo service, and party bus rental offer door-to-door pickup throughout Naperville. Whether you're in downtown near the Riverwalk, North Naperville, or off Route 59, we come to you. Simply provide your address when booking your Naperville transportation service."
+        },
+        {
+          "question": "Do you serve Naperville wedding venues like Hotel Arista and Naper Settlement?",
+          "answer": "Yes! Our Naperville limo service serves popular wedding venues including Hotel Arista, Naper Settlement, The Arrowhead Golf Club, downtown Naperville locations, and area churches. We know each venue's arrival, parking, and timing requirements, and our coordinators help plan your Naperville wedding limousine service."
+        },
+        {
+          "question": "How early should I book Naperville airport shuttle for my flight?",
+          "answer": "For O'Hare flights, schedule your Naperville airport shuttle pickup 2.5 to 3 hours before domestic departures and 3 to 4 hours for international travel. Midway typically requires 2 to 2.5 hours. Our Naperville to O'Hare transportation accounts for traffic, time of day, and terminal location to ensure on-time arrival."
+        },
+        {
+          "question": "Do you offer Naperville party bus for Chicago Bears games?",
+          "answer": "Yes! Naperville party bus service for Chicago Bears games at Soldier Field is popular. Our buses transport groups from Naperville with pregame setup, comfortable travel, and return trips. No parking or designated driver worries, just enjoy the game. Book early, as Naperville party bus dates sell out quickly."
+        }
+      ],
+      "content_issue": "LIVE PAGE BUG: FAQ block and body copy are not localized — duplicated from Naperville verbatim (still says 'Naperville'). Recommend rewriting for Morris."
+    },
+    {
+      "slug": "24-7-minooka-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-minooka-il-limo-service/",
+      "title": "Minooka (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer 24/7 limo service in Minooka IL?",
+          "answer": "Yes, our 24/7 Minooka IL limo service is available day and night for airport trips, events, and urgent rides when you cannot wait."
+        },
+        {
+          "question": "What airport transportation options are available in Minooka IL?",
+          "answer": "We provide reliable Airport Shuttle Minooka IL and airport transportation Minooka IL to and from major airports, offering on-time pickups, flight tracking, and flexible scheduling for a seamless travel experience."
+        },
+        {
+          "question": "Can I book wedding transportation in Minooka Illinois?",
+          "answer": "Yes, we offer wedding transportation Minooka Illinois with coordinated pickup times and smooth service to keep your day on schedule."
+        },
+        {
+          "question": "Is late night limo service available in Minooka?",
+          "answer": "Yes, our late night limo service Minooka is ideal for after hours events, early flights, and last minute travel needs."
+        },
+        {
+          "question": "Do you provide car service in Minooka IL?",
+          "answer": "Our Minooka Car Service provides reliable, comfortable transportation for all your needs. The Minooka IL car service covers business travel, private trips, airport transfers, and special occasions, ensuring punctuality, professional drivers, and a seamless travel experience."
+        },
+        {
+          "question": "How far in advance should I book a limo in Minooka?",
+          "answer": "We recommend booking early, but our team can often handle same day requests depending on availability."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-channahon-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-channahon-il-limo-service/",
+      "title": "Channahon (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What services do you provide in Channahon IL?",
+          "answer": "We offer a range of transportation options including Channahon airport limo service, wedding limo in Channahon IL, party bus rentals, and chauffeur service in Channahon IL. Our team ensures safe, reliable, and on-time rides for any occasion."
+        },
+        {
+          "question": "How do I book a Channahon airport limo service?",
+          "answer": "Booking a Channahon airport limo service is quick and easy. You can reserve online or call our team directly. Our service ensures every ride is punctual, stress-free, and reliable, whether it's for arrivals or departures."
+        },
+        {
+          "question": "What makes your wedding limo in Channahon IL special?",
+          "answer": "Our chauffeur service in Channahon IL is perfect for corporate travel, special events, or personal appointments. You'll enjoy professional drivers who prioritize safety, comfort, and punctuality."
+        },
+        {
+          "question": "Do you offer a chauffeur service in Channahon IL for business or special events?",
+          "answer": "Our chauffeur service in Channahon IL is perfect for corporate travel, special events, or personal appointments. You'll enjoy professional drivers who prioritize safety, punctuality, and comfort."
+        },
+        {
+          "question": "Can I rent a Party Bus Rental in Channahon IL for group events?",
+          "answer": "Absolutely. Our Party Bus Rental in Channahon IL is perfect for birthdays, parties, and group outings. We ensure a fun, safe, and reliable ride for all passengers."
+        },
+        {
+          "question": "Is your limo service in Channahon IL available at all hours?",
+          "answer": "Yes! We operate around the clock to meet all your transportation needs. From airport trips to weddings, we guarantee timely and professional rides whenever you need them."
+        }
+      ],
+      "content_issue": "LIVE PAGE BUG: Q3 ('wedding limo special') answer is mis-pasted — it repeats the chauffeur-service answer. Q6 had a typo ('s your...') normalized to 'Is your...'."
+    },
+    {
+      "slug": "24-7-joliet-il-limo-services",
+      "url": "https://newlenoxlimoservice.com/24-7-joliet-il-limo-services/",
+      "title": "Joliet (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does Joliet airport shuttle to O'Hare cost?",
+          "answer": "Joliet airport shuttle pricing varies by location and passengers. Round-trip Joliet to O'Hare offers best value. Contact us for your Joliet pickup quote."
+        },
+        {
+          "question": "What's the best route from Joliet to O'Hare?",
+          "answer": "The fastest route from Joliet to O'Hare is usually I-55 North to I-290 West. Our Joliet airport shuttle drivers monitor traffic and choose the best route for your flight."
+        },
+        {
+          "question": "Do you serve all Joliet neighborhoods?",
+          "answer": "Our Joliet airport shuttle, limo, and party bus provide door-to-door pickup from anywhere in Joliet, including downtown, West Joliet, Rockdale, Cathedral Area, and all neighborhoods."
+        },
+        {
+          "question": "Do you serve Joliet wedding venues like Chateau Bu-De?",
+          "answer": "Our Joliet limo service serves all popular wedding venues, including Chateau Bu-De, Silver Oaks, White Fence Farm, Reserve 22, and local churches. We handle arrivals, parking, and timing for a perfect day."
+        },
+        {
+          "question": "How early should I schedule Joliet airport shuttle pickup?",
+          "answer": "For O'Hare flights, schedule your Joliet airport shuttle 2.5–3 hours early for domestic, 3–4 hours for international. Midway flights: 2–2.5 hours. Drivers account for traffic, drive time, TSA, and terminal."
+        },
+        {
+          "question": "Do you provide Joliet party bus for casino trips?",
+          "answer": "Joliet party bus service to Harrah's, Hollywood Casino, and other regional casinos. Comfortable travel, entertainment, round-trip service, no parking or designated driver needed."
+        },
+        {
+          "question": "Can you provide transportation to Joliet Slammers games?",
+          "answer": "Our Joliet transportation services provide rides to Joliet Slammers games at DuPage Medical Group Field. Whether a party bus, limo, or family transportation, we serve all local Joliet entertainment venues, including downtown sports and entertainment destinations."
+        },
+        {
+          "question": "Do you offer Joliet corporate accounts?",
+          "answer": "Many Joliet businesses along I-80 and in the growing business community use our corporate transportation. We offer account billing, consolidated invoicing, and priority booking for Joliet airport shuttles, executive limos, and client transportation. Contact us to set up your company account."
+        },
+        {
+          "question": "How far in advance should I book for Joliet prom?",
+          "answer": "Book Joliet prom limo service 2–3 months in advance, especially for Joliet West, Central, and Catholic Academy proms. Early booking ensures preferred vehicles and best group rates. Contact us once your prom date is set."
+        },
+        {
+          "question": "Do you monitor flights for Joliet airport shuttle returns?",
+          "answer": "All return Joliet airport shuttle service includes complimentary flight monitoring. From O'Hare or Midway, we track flights and adjust pickup for delays. Your driver waits at baggage claim with a name sign."
+        }
+      ]
+    },
+    {
+      "slug": "romeoville-airport-shuttle-limo-service",
+      "url": "https://newlenoxlimoservice.com/romeoville-airport-shuttle-limo-service/",
+      "title": "Romeoville (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does Romeoville airport shuttle to O'Hare cost?",
+          "answer": "Pricing depends on your Romeoville location and passenger count. We offer competitive, transparent rates with all fees included. Contact us for an exact quote."
+        },
+        {
+          "question": "Do you serve all Romeoville neighborhoods?",
+          "answer": "Yes! We provide door-to-door service from anywhere in Romeoville, including Highpoint, Montego Bay, Independence Grove, Weber Road areas, and all other neighborhoods."
+        },
+        {
+          "question": "What's the best route from Romeoville to O'Hare?",
+          "answer": "The fastest route is usually I-55 North to I-294 North or I-290 West, taking about 40–55 minutes depending on traffic and pickup location."
+        },
+        {
+          "question": "Do you provide Romeoville limo service for weddings?",
+          "answer": "Yes! We serve weddings throughout Romeoville and nearby Chicago suburbs with professional chauffeurs and luxury vehicles."
+        },
+        {
+          "question": "Can you provide Romeoville party bus to Chicago?",
+          "answer": "Absolutely! Our party buses safely transport your group to downtown Chicago, concerts, sporting events, or nights out, eliminating parking hassles and designated driver needs."
+        },
+        {
+          "question": "Do you offer Romeoville corporate shuttle service?",
+          "answer": "Yes! We provide executive airport shuttle, client transportation, and corporate event shuttles for Romeoville businesses along the I-55 corridor."
+        },
+        {
+          "question": "Do you provide prom limo for Romeoville High School?",
+          "answer": "Yes! Our limo service provides safe, supervised prom transportation for Romeoville High School students with professional chauffeurs and group pricing."
+        },
+        {
+          "question": "How early should I schedule Romeoville airport shuttle pickup?",
+          "answer": "For O'Hare domestic flights, 2.5–3 hours before departure; international, 3–4 hours. For Midway, 2–2.5 hours is sufficient."
+        },
+        {
+          "question": "How long does Romeoville to Midway take?",
+          "answer": "Romeoville to Midway typically takes 30–40 minutes via I-55 North, making it quick and convenient for Southwest Airlines and other travelers."
+        },
+        {
+          "question": "Do you monitor flights for Romeoville airport shuttle returns?",
+          "answer": "Yes! All return trips include flight monitoring. If your flight is early or delayed, we adjust pickup automatically, meeting you at baggage claim."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-lockport-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-lockport-il-limo-service/",
+      "title": "Lockport (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Wedding limo in Lockport IL – What Options Are Available?",
+          "answer": "We offer a variety of elegant wedding limo in Lockport IL options to suit your style and event size. Every vehicle provides comfort, luxury, and a memorable experience for your special day."
+        },
+        {
+          "question": "Party Bus Rental in Lockport IL – Can I Book for Group Events?",
+          "answer": "Yes! Our Party Bus Rental in Lockport IL is perfect for birthdays, parties, and group outings. Spacious, safe, and fun, our buses ensure everyone travels together comfortably."
+        },
+        {
+          "question": "Event transportation in Lockport IL – What Services Do You Offer?",
+          "answer": "Our event transportation in Lockport IL covers weddings, corporate events, concerts, and other special occasions. We provide reliable, on-time, and comfortable rides for any event."
+        },
+        {
+          "question": "Chauffeur service in Lockport IL – What Is Included?",
+          "answer": "Our chauffeur service in Lockport IL provides professional drivers, clean and comfortable vehicles, and personalized routes for business travel, special events, or personal appointments."
+        },
+        {
+          "question": "Airport limo service in Lockport IL – How Do I Book?",
+          "answer": "Booking an airport limo service in Lockport IL is simple. You can reserve online or call our team directly to ensure a timely, safe, and stress-free ride to or from the airport."
+        },
+        {
+          "question": "Are Your Services Safe and Reliable in Lockport IL?",
+          "answer": "Yes. All our vehicles, including wedding limos, party buses, event transportation, chauffeur services, and airport limos, are professionally maintained. Our drivers are experienced and licensed to guarantee safe and dependable rides."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-frankfort-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-frankfort-il-limo-service/",
+      "title": "Frankfort (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Can I book an Aurora limo for wine tours or sightseeing trips?",
+          "answer": "Yes! Our Aurora limo service offers hourly rentals for sightseeing, wine tours, or city tours, letting you explore Aurora and nearby attractions in comfort and style."
+        },
+        {
+          "question": "Do you have vehicles suitable for group travel in Aurora?",
+          "answer": "Absolutely. We offer luxury SUVs, stretch limousines, and party buses, perfect for small groups or large parties traveling together in Aurora."
+        },
+        {
+          "question": "Are your Aurora limousines pet-friendly?",
+          "answer": "Yes! We welcome well-behaved pets in our vehicles. Please notify us when booking so we can prepare your limousine accordingly."
+        },
+        {
+          "question": "Can I customize my Aurora limo experience?",
+          "answer": "Definitely. From music playlists and onboard refreshments to decorations for special events, we tailor your Aurora limo service to your preferences."
+        },
+        {
+          "question": "Do you offer last-minute Aurora limo bookings?",
+          "answer": "Yes, depending on availability. Contact us directly, and we will do our best to accommodate last-minute requests for luxury transportation in Aurora."
+        },
+        {
+          "question": "Is your Aurora limo service safe during nighttime travel?",
+          "answer": "Absolutely. All our vehicles are regularly maintained, and our professional drivers are trained for safe night and early morning travel, ensuring peace of mind."
+        }
+      ],
+      "content_issue": "LIVE PAGE BUG: FAQ block is not localized — duplicated 'Aurora limo' wine-tour/pet-friendly content verbatim (says 'Aurora' throughout). Q6 also had a stray 'Q:' prefix. Recommend rewriting for Frankfort."
+    },
+    {
+      "slug": "24-7-mokena-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-mokena-il-limo-service/",
+      "title": "Mokena (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What does your 24/7 Mokena IL limo service include?",
+          "answer": "Our 24/7 Mokena IL limo service offers reliable transportation at any time for events, group travel, and special occasions. We focus on punctual pickups, comfortable vehicles, and professional drivers so your ride is always stress free."
+        },
+        {
+          "question": "How early should I book a wedding limo in Mokena IL?",
+          "answer": "Booking a wedding limo in Mokena IL as early as possible is recommended, especially during peak wedding seasons. Early booking helps ensure availability and allows us to plan every detail for your big day."
+        },
+        {
+          "question": "Is Party Bus Rental in Mokena IL available for group events?",
+          "answer": "Yes, our Party Bus Rental in Mokena IL is ideal for birthdays, celebrations, and group outings. It offers spacious seating, a fun atmosphere, and safe transportation for everyone traveling together."
+        },
+        {
+          "question": "What types of events are covered by event transportation in Mokena IL?",
+          "answer": "Our event transportation in Mokena IL supports weddings, corporate events, private parties, and special occasions. We provide dependable service to keep your event running smoothly and on schedule."
+        },
+        {
+          "question": "Who typically uses your chauffeur service in Mokena IL?",
+          "answer": "Our chauffeur service in Mokena IL is commonly used for business travel, formal events, airport trips, and personal appointments. Clients choose this service for professionalism, discretion, and comfort."
+        },
+        {
+          "question": "How do I request pricing or availability for Mokena services?",
+          "answer": "You can request pricing or availability by completing our contact form. Our team will respond quickly to confirm details and help you choose the right service for your needs."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-orland-park-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-orland-park-il-limo-service/",
+      "title": "Orland Park (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What does your 24/7 Orland Park IL limo service include?",
+          "answer": "Our 24/7 Orland Park IL limo service provides reliable transportation at any time for events, group travel, and special occasions. We focus on punctual pickups, clean vehicles, and professional drivers for a stress-free experience."
+        },
+        {
+          "question": "How far in advance should I book a wedding limo in Orland Park IL?",
+          "answer": "We recommend booking your wedding limo in Orland Park IL as early as possible, especially during peak wedding seasons. Early booking helps secure availability and allows us to plan every detail for your special day."
+        },
+        {
+          "question": "Is Party Bus Rental in Orland Park IL available for group events?",
+          "answer": "Yes, our Party Bus Rental in Orland Park IL is ideal for birthdays, celebrations, nights out, and group events. It offers spacious seating and safe transportation so everyone can travel together comfortably."
+        },
+        {
+          "question": "What types of events are covered by event transportation in Orland Park IL?",
+          "answer": "Our event transportation in Orland Park IL is available for weddings, corporate events, private parties, and special occasions. We help ensure your event runs smoothly with dependable and on-time service."
+        },
+        {
+          "question": "Who typically uses your chauffeur service in Orland Park IL?",
+          "answer": "Our chauffeur service in Orland Park IL is commonly used for business travel, formal events, airport transfers, and personal appointments. Clients choose this service for professionalism, comfort, and reliability."
+        },
+        {
+          "question": "How do I request pricing or availability for Orland Park services?",
+          "answer": "You can request pricing or availability by completing our contact form. Our team will respond quickly to confirm details and help you choose the right transportation option."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-manhattan-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-manhattan-limo-service/",
+      "title": "Manhattan (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer transportation at all hours?",
+          "answer": "Yes, our 24/7 Manhattan limo service is available day and night to accommodate early flights, late events, and last-minute transportation needs. You can book anytime using the contact form for fast confirmation."
+        },
+        {
+          "question": "Do you provide wedding transportation?",
+          "answer": "Yes, a wedding limo in Manhattan is available for ceremonies, receptions, and photo sessions, with clean vehicles and professional drivers."
+        },
+        {
+          "question": "Are party buses available for group events?",
+          "answer": "A Party Bus Rental in Manhattan is perfect for birthdays, celebrations, and group outings, offering plenty of space and a comfortable ride."
+        },
+        {
+          "question": "Who should use a chauffeur service?",
+          "answer": "Our chauffeur service in Manhattan is ideal for corporate travel, special occasions, and clients who prefer a professional and stress free experience."
+        },
+        {
+          "question": "Can I book transportation for special events?",
+          "answer": "We provide dependable transportation for concerts, sporting events, and private gatherings throughout Manhattan and surrounding areas."
+        },
+        {
+          "question": "How early should I reserve my ride?",
+          "answer": "Booking early helps secure availability, especially during busy seasons, but we also accommodate last minute requests whenever possible."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-homer-glen-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-homer-glen-limo-service/",
+      "title": "Homer Glen (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "How do I book transportation with your service?",
+          "answer": "Booking is simple. Just use our contact form to reserve your ride with our 24/7 Homer Glen limo service, and our team will confirm your pickup quickly."
+        },
+        {
+          "question": "Do you offer airport transportation?",
+          "answer": "Yes, our airport shuttle in Homer Glen ensures you get to and from flights on time, with professional drivers and comfortable vehicles."
+        },
+        {
+          "question": "Can I rent a vehicle for a wedding?",
+          "answer": "Absolutely. Our wedding limo in Homer Glen provides elegant, reliable transportation for ceremonies, receptions, and photos, making your special day effortless."
+        },
+        {
+          "question": "Are party buses available for group events?",
+          "answer": "Yes, a Party Bus Rental in Homer Glen is perfect for birthdays, celebrations, and nights out, offering spacious, fun, and safe rides for everyone."
+        },
+        {
+          "question": "Do you provide service for corporate or private events?",
+          "answer": "Our event transportation in Homer Glen is ideal for corporate gatherings, private parties, and any special occasion, with professional service and on-time arrivals."
+        },
+        {
+          "question": "Is a chauffeur service available?",
+          "answer": "Yes, our chauffeur service in Homer Glen offers experienced drivers who focus on safety, punctuality, and a stress-free, comfortable ride for every client."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-lemont-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-lemont-il-limo-service/",
+      "title": "Lemont (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "How do I book your limo service?",
+          "answer": "Booking is quick and easy. Book now — we ensure professional drivers, reliable pickups, and smooth rides every time."
+        },
+        {
+          "question": "Do you provide airport transportation?",
+          "answer": "Yes, our airport shuttle in Lemont IL guarantees on-time arrivals and departures with safe, comfortable vehicles."
+        },
+        {
+          "question": "Can I rent a vehicle for a wedding?",
+          "answer": "Absolutely. Our wedding limo in Lemont IL provides elegant, reliable transportation for ceremonies, receptions, and photos, making your special day effortless."
+        },
+        {
+          "question": "Are party buses available for group events?",
+          "answer": "Yes, a Party Bus Rental in Lemont IL is perfect for birthdays, celebrations, or nights out, offering spacious, fun, and safe rides for everyone."
+        },
+        {
+          "question": "Do you offer service for corporate or private events?",
+          "answer": "Our event transportation in Lemont IL is ideal for corporate gatherings, private parties, and special occasions, with punctual, professional service."
+        },
+        {
+          "question": "Is a chauffeur service available?",
+          "answer": "Yes, our chauffeur service in Lemont IL provides experienced drivers who focus on safety, comfort, and a stress-free ride for every client."
+        }
+      ]
+    },
+    {
+      "slug": "24-7-monee-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-monee-il-limo-service/",
+      "title": "Monee (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What services do you offer for airport travel?",
+          "answer": "We provide safe and timely airport shuttle in Monee IL, ensuring you arrive at your flight stress-free and on schedule."
+        },
+        {
+          "question": "Can I book a wedding limo for my special day?",
+          "answer": "Absolutely! Our wedding limo in Monee IL delivers elegant, comfortable, and punctual transportation so your celebration starts in style."
+        },
+        {
+          "question": "Do you have options for group outings?",
+          "answer": "Yes! Our Party Bus Rental in Monee IL is perfect for birthdays, parties, and group events, giving you fun, spacious, and hassle-free travel."
+        },
+        {
+          "question": "Is professional chauffeur service available?",
+          "answer": "Our chauffeur service in Monee IL offers experienced drivers who prioritize safety, punctuality, and a seamless travel experience for any occasion."
+        },
+        {
+          "question": "Can you handle corporate or special events?",
+          "answer": "We specialize in event transportation in Monee IL, providing reliable, comfortable, and on-time service for weddings, business trips, and private events."
+        },
+        {
+          "question": "Do you offer full limousine transportation?",
+          "answer": "You can request pricing or availability by completing our contact form. Our team will respond quickly to confirm details and help you choose the right service for your needs."
+        }
+      ],
+      "content_issue": "LIVE PAGE: Q6 ('full limousine transportation?') answer is mis-pasted generic 'request pricing' boilerplate rather than a real answer."
+    },
+    {
+      "slug": "24-7-elwood-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-elwood-il-limo-service/",
+      "title": "Elwood (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "How can I get to the airport on time?",
+          "answer": "Our drivers provide reliable service, and our airport shuttle in Elwood IL ensures you arrive on time, comfortably, and stress-free."
+        },
+        {
+          "question": "Do you offer transportation for weddings?",
+          "answer": "Yes! Celebrate in style with a wedding limo in Elwood IL that is elegant, clean, and perfectly timed for your big day."
+        },
+        {
+          "question": "Can I book transportation for a group event?",
+          "answer": "Absolutely. Our Party Bus Rental in Elwood IL is ideal for parties, group outings, or special occasions, offering a fun and spacious ride."
+        },
+        {
+          "question": "Are professional drivers available for hire?",
+          "answer": "Yes, our chauffeur service in Elwood IL provides skilled drivers who prioritize safety, punctuality, and a smooth, comfortable ride."
+        },
+        {
+          "question": "Can you handle corporate or private events?",
+          "answer": "Yes, depending on availability. Contact us directly, and we will do our best to accommodate last-minute requests for luxury transportation in Aurora."
+        },
+        {
+          "question": "Do you provide high-end limousine options?",
+          "answer": "Absolutely. All our vehicles are regularly maintained, and our professional drivers are trained for safe night and early morning travel, ensuring peace of mind."
+        }
+      ],
+      "content_issue": "LIVE PAGE BUG: Q5 and Q6 answers are mis-pasted from the Aurora set (Q5 ends '...transportation in Aurora'; Q6 is the Aurora night-travel boilerplate). Q1-Q4 are Elwood-localized."
+    },
+    {
+      "slug": "24-7-north-aurora-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-north-aurora-il-limo-service/",
+      "title": "North Aurora (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What types of wedding transportation do you offer?",
+          "answer": "We provide a luxurious wedding limo in North Aurora for your special day, ensuring comfort, style, and punctual arrivals for every celebration."
+        },
+        {
+          "question": "How can I arrange an airport ride?",
+          "answer": "Our airport shuttle in North Aurora offers on-time pickups and professional drivers, making your trip to and from the airport completely stress-free."
+        },
+        {
+          "question": "Do you have group transportation options?",
+          "answer": "Yes! Our Party Bus Rental in North Aurora is perfect for parties, events, or group outings, combining fun, space, and safety in every ride."
+        },
+        {
+          "question": "Can I hire a private driver for business or personal trips?",
+          "answer": "Our chauffeur service in North Aurora provides professional, reliable drivers for corporate travel, errands, or special occasions, ensuring a smooth experience."
+        },
+        {
+          "question": "Do you provide transportation for events?",
+          "answer": "We offer event transportation in North Aurora, covering weddings, private parties, corporate events, and more with safe and comfortable rides."
+        },
+        {
+          "question": "Are there other luxury options available?",
+          "answer": "Our limousine transportation in North Aurora gives you premium vehicles and professional service for any occasion where style, comfort, and reliability matter."
+        }
+      ]
+    },
+    {
+      "slug": "bolingbrook-airport-shuttle-ohare-midway",
+      "url": "https://newlenoxlimoservice.com/bolingbrook-airport-shuttle-ohare-midway/",
+      "title": "Bolingbrook (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 10,
+      "faqs": [
+        {
+          "question": "How much does Bolingbrook airport shuttle to O'Hare cost?",
+          "answer": "Pricing depends on your location and number of passengers. Bolingbrook residents often enjoy lower rates thanks to being close to O'Hare. Contact us for an exact quote."
+        },
+        {
+          "question": "How close is Bolingbrook to Chicago airports?",
+          "answer": "Bolingbrook is 35-50 minutes to O'Hare and 30-40 minutes to Midway. Direct I-55 access makes both airports very convenient."
+        },
+        {
+          "question": "Do you provide Bolingbrook limo service for Bolingbrook Golf Club weddings?",
+          "answer": "Yes, we serve weddings at Bolingbrook Golf Club and other local venues. Our chauffeurs and luxury vehicles ensure smooth, professional service."
+        },
+        {
+          "question": "Do you provide Bolingbrook party bus to downtown Chicago?",
+          "answer": "Yes, our party buses safely transport groups to downtown Chicago, concerts, sporting events, and nightlife. No designated driver needed."
+        },
+        {
+          "question": "Do you offer Bolingbrook corporate shuttle service?",
+          "answer": "Yes, we provide door-to-door service from anywhere in Bolingbrook including Old Town, Crossroads, Kings Road, and Winston Park."
+        },
+        {
+          "question": "Do you provide prom limo for Bolingbrook High School?",
+          "answer": "Yes, we serve businesses in Bolingbrook with executive airport shuttles, client transportation, and corporate event service. Accounts get priority booking."
+        },
+        {
+          "question": "Do you offer corporate accounts for New Lenox businesses?",
+          "answer": "Yes, we provide safe prom transportation for Bolingbrook High School and Valley View High School with professional chauffeurs and group pricing."
+        },
+        {
+          "question": "What's the best route from Bolingbrook to O'Hare?",
+          "answer": "The fastest route is I-55 North to I-294 North or I-290 West. Our drivers monitor traffic to ensure the quickest route."
+        },
+        {
+          "question": "How long does Bolingbrook to Midway take?",
+          "answer": "Bolingbrook to Midway takes about 30-40 minutes via I-55. It's one of the shortest drives from any southwest suburb."
+        },
+        {
+          "question": "Can I book last-minute Bolingbrook airport shuttle?",
+          "answer": "Yes, we often accommodate same-day requests. Call early as availability may vary."
+        }
+      ],
+      "content_issue": "LIVE PAGE BUG: Q5-Q7 question/answer pairs are jumbled (corporate vs prom answers swapped), and Q7's question says 'New Lenox businesses' instead of Bolingbrook. Recommend re-pairing and localizing."
+    },
+    {
+      "slug": "oswego-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/oswego-il-limo-service/",
+      "title": "Oswego (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "How can I book your transportation services?",
+          "answer": "Booking is easy and convenient. Reserve your ride online or by phone and enjoy a reliable airport shuttle in Oswego IL that ensures on-time arrivals and stress-free travel."
+        },
+        {
+          "question": "Do you offer group transportation options?",
+          "answer": "Yes! Our Party Bus Rental in Oswego IL is perfect for birthdays, bachelor parties, or group outings, providing a fun and spacious way to travel safely."
+        },
+        {
+          "question": "Can I hire a professional driver for personal or corporate trips?",
+          "answer": "Absolutely. Our chauffeur service in Oswego IL guarantees professional drivers, comfortable vehicles, and punctual service for all types of trips."
+        },
+        {
+          "question": "Do you provide transportation for special events?",
+          "answer": "Yes, we specialize in event transportation in Oswego IL, including weddings, corporate functions, and private parties, ensuring reliable and seamless travel."
+        },
+        {
+          "question": "Do you have premium vehicle options available?",
+          "answer": "We offer limousine transportation in Oswego IL, giving you stylish, high-end rides for any occasion while maintaining comfort, safety, and professionalism."
+        },
+        {
+          "question": "Are your services safe and reliable?",
+          "answer": "All our vehicles are maintained to the highest standards, and our trained drivers prioritize safety and timeliness for every ride, whether it's a shuttle, limo, or special event service."
+        }
+      ],
+      "content_issue": "Minor: closing body heading reads 'Professional Transportation Solutions for Aurora Residents' (should be Oswego). FAQ block itself is correctly Oswego-localized."
+    },
+    {
+      "slug": "24-7-montgomery-il-limo-service",
+      "url": "https://newlenoxlimoservice.com/24-7-montgomery-il-limo-service/",
+      "title": "Montgomery (Service Area)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What types of rides does your service offer?",
+          "answer": "We provide a full range of transportation options including limousine transportation in Montgomery IL, ensuring a luxurious and comfortable experience for any occasion."
+        },
+        {
+          "question": "Can I book an airport shuttle for timely travel?",
+          "answer": "Yes! Our airport shuttle in Montgomery IL guarantees on-time pickups and drop-offs so you can travel stress-free and arrive promptly."
+        },
+        {
+          "question": "Do you offer group transportation options?",
+          "answer": "Absolutely. Our Party Bus Rental in Montgomery IL is perfect for birthdays, parties, and group outings with plenty of space and fun amenities."
+        },
+        {
+          "question": "Is event transportation available for special occasions?",
+          "answer": "Yes, our event transportation in Montgomery IL provides professional, reliable service for weddings, corporate events, and private gatherings."
+        },
+        {
+          "question": "Can I hire a personal driver?",
+          "answer": "Our chauffeur service in Montgomery IL offers professional, experienced drivers who prioritize safety, punctuality, and comfort on every ride."
+        },
+        {
+          "question": "How do I book a ride quickly?",
+          "answer": "Booking is simple! Use our contact form to secure your transportation with 24/7 availability and enjoy reliable, hassle-free service for any trip."
+        }
+      ]
+    },
+    {
+      "slug": "chauffeurs",
+      "url": "https://newlenoxlimoservice.com/chauffeurs/",
+      "title": "Chauffeurs",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "our-services",
+      "url": "https://newlenoxlimoservice.com/our-services/",
+      "title": "Our Services",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "about-us",
+      "url": "https://newlenoxlimoservice.com/about-us/",
+      "title": "About Us",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "rates",
+      "url": "https://newlenoxlimoservice.com/rates/",
+      "title": "Rates",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "bookings-reservations",
+      "url": "https://newlenoxlimoservice.com/bookings-reservations/",
+      "title": "Booking & Reservations",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "service-areas",
+      "url": "https://newlenoxlimoservice.com/service-areas/",
+      "title": "Service Areas (hub)",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Can I book an Aurora limo for wine tours or sightseeing trips?",
+          "answer": "Yes! Our Aurora limo service offers hourly rentals for sightseeing, wine tours, or city tours, letting you explore Aurora and nearby attractions in comfort and style."
+        },
+        {
+          "question": "Do you have vehicles suitable for group travel in Aurora?",
+          "answer": "Absolutely. We offer luxury SUVs, stretch limousines, and party buses, perfect for small groups or large parties traveling together in Aurora."
+        },
+        {
+          "question": "Are your Aurora limousines pet-friendly?",
+          "answer": "Yes! We welcome well-behaved pets in our vehicles. Please notify us when booking so we can prepare your limousine accordingly."
+        },
+        {
+          "question": "Can I customize my Aurora limo experience?",
+          "answer": "Definitely. From music playlists and onboard refreshments to decorations for special events, we tailor your Aurora limo service to your preferences."
+        },
+        {
+          "question": "Do you offer last-minute Aurora limo bookings?",
+          "answer": "Yes, depending on availability. Contact us directly, and we will do our best to accommodate last-minute requests for luxury transportation in Aurora."
+        },
+        {
+          "question": "Is your Aurora limo service safe during nighttime travel?",
+          "answer": "Absolutely. All our vehicles are regularly maintained, and our professional drivers are trained for safe night and early morning travel, ensuring peace of mind."
+        }
+      ],
+      "content_issue": "LIVE PAGE BUG: The Service Areas hub page is an un-localized Aurora template (H1 reads 'Aurora IL Limo Service'); its FAQ is the same 6 'Aurora' wine-tour/pet-friendly set later copied onto Frankfort. Q6 has a stray 'Q:' prefix. Recommend rebuilding as a true hub page."
+    },
+    {
+      "slug": "party-bus-aurora",
+      "url": "https://newlenoxlimoservice.com/party-bus-aurora/",
+      "title": "Party Bus for Aurora",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What occasions are your party buses perfect for?",
+          "answer": "Our fleet is ideal for birthdays, weddings, proms, bachelor and bachelorette parties, concerts, sporting events, and any night you want to celebrate in style. Guests love our party bus rental Aurora service for making group events unforgettable."
+        },
+        {
+          "question": "How many people can ride in your buses?",
+          "answer": "We offer multiple sizes to fit small to large groups comfortably. From intimate celebrations to big nights out, our buses are designed for fun and socializing, the perfect choice if you're searching for a party bus Aurora IL experience."
+        },
+        {
+          "question": "What features come with your party buses?",
+          "answer": "Every ride includes premium sound systems, dynamic lighting, plush seating, and modern amenities that keep the energy high. When you choose a party bus Aurora, it's luxury and excitement from start to finish."
+        },
+        {
+          "question": "Are your drivers trained and the buses insured?",
+          "answer": "Yes. All of our professional drivers are experienced and licensed, and our vehicles are fully insured. With our Aurora party bus services, safety and peace of mind are always priorities."
+        },
+        {
+          "question": "How do I make a reservation?",
+          "answer": "Booking is simple. You can reserve online or call our team. We recommend reserving early, especially for weekends and special dates, to secure your party bus rental Aurora on the day you need it."
+        },
+        {
+          "question": "Can I customize my party bus experience?",
+          "answer": "Absolutely. We offer flexible packages tailored to your schedule, group size, and event type. Whether you need extra time, special stops, or custom pick ups, our party bus Aurora IL options adapt to fit your celebration."
+        }
+      ]
+    },
+    {
+      "slug": "party-bus-rental-naperville",
+      "url": "https://newlenoxlimoservice.com/party-bus-rental-naperville/",
+      "title": "Party Bus for Naperville",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "How many people can fit on your buses?",
+          "answer": "Our Party Buses come in a variety of sizes designed to accommodate group celebrations of all kinds. Whether you're planning a night out with friends or a big event, our party bus rental Naperville options offer spacious seating so everyone can ride comfortably."
+        },
+        {
+          "question": "Can we customize our ride?",
+          "answer": "Yes! From music and lighting to route stops, you can tailor your experience to suit your celebration. That's one of the reasons customers choose our Naperville party bus rental service for birthdays, concerts, and special outings."
+        },
+        {
+          "question": "Are drivers trained and professional?",
+          "answer": "Absolutely. All chauffeurs with Stop & Go undergo thorough background checks and professional training to ensure a safe, smooth, and enjoyable journey on our Party Buses, whether you're celebrating or heading to an event."
+        },
+        {
+          "question": "What occasions are your buses best for?",
+          "answer": "Our Party Buses are perfect for a huge range of events, from weddings and prom nights to bachelor/bachelorette parties and city nights out. Many locals book our Naperville party bus rental for celebrations where group fun and safety matter most."
+        },
+        {
+          "question": "Do you offer transportation to and from airports?",
+          "answer": "Yes! While we're known for Party Buses, we also provide airport shuttle services. If you need travel to or from O'Hare, Midway, or other regional airports, our party bus rental Naperville IL fleet can be part of your transportation plan."
+        },
+        {
+          "question": "How far in advance should I book?",
+          "answer": "To ensure availability, especially on weekends or for big celebrations, we recommend booking early. Many customers secure their party bus rental Naperville dates 1–2 weeks ahead, and for peak events even earlier to guarantee the best options."
+        }
+      ]
+    },
+    {
+      "slug": "chicago-golf-party-bus",
+      "url": "https://newlenoxlimoservice.com/chicago-golf-party-bus/",
+      "title": "Golfing Party Bus",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "chicago-concert-party-bus-rental",
+      "url": "https://newlenoxlimoservice.com/chicago-concert-party-bus-rental/",
+      "title": "Concert Party Bus Rental",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "chicago-bulls-party-bus",
+      "url": "https://newlenoxlimoservice.com/chicago-bulls-party-bus/",
+      "title": "Chicago Bulls Party Bus",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "chicago-blackhawks-party-bus",
+      "url": "https://newlenoxlimoservice.com/chicago-blackhawks-party-bus/",
+      "title": "Chicago Blackhawks Party Bus",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    },
+    {
+      "slug": "grad-day-transportation",
+      "url": "https://newlenoxlimoservice.com/grad-day-transportation/",
+      "title": "Grad Day Transportation",
+      "faq_type": "unique",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "What is included in Grad Day transportation?",
+          "answer": "Our Grad Day rides include professional drivers, spacious vehicles, premium sound and lighting, and all amenities needed for a safe, fun, and memorable celebration."
+        },
+        {
+          "question": "How many passengers can a Grad Day vehicle hold?",
+          "answer": "We offer vehicles for groups of all sizes, from small family groups to larger friend circles, ensuring everyone travels together comfortably."
+        },
+        {
+          "question": "Are the drivers trained and insured?",
+          "answer": "Yes! All our drivers undergo professional training, background checks, and safety briefings to guarantee a secure and worry-free Grad Day experience."
+        },
+        {
+          "question": "Can families ride with students?",
+          "answer": "Absolutely. Our Grad Day transportation is family-friendly, making it easy for parents and loved ones to join and celebrate the achievement together."
+        },
+        {
+          "question": "How do I book Grad Day transportation?",
+          "answer": "You can book online or contact us directly to select your vehicle, schedule your ride, and confirm your group size and amenities for a seamless experience."
+        },
+        {
+          "question": "What areas do you serve for Grad Day rides?",
+          "answer": "We proudly serve Naperville, New Lenox, Aurora, Joliet, Plainfield, and surrounding areas, providing convenient and reliable service wherever your celebration takes place."
+        }
+      ]
+    },
+    {
+      "slug": "home",
+      "url": "https://newlenoxlimoservice.com/",
+      "title": "Home / Welcome",
+      "faq_type": "general",
+      "faq_count": 6,
+      "faqs": [
+        {
+          "question": "Do you offer group transportation or party bus services?",
+          "answer": "Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event."
+        },
+        {
+          "question": "What is your cancellation and refund policy?",
+          "answer": "We offer flexible cancellation options. Please notify us at least 24 hours in advance for a full refund. Cancellations made less than 24 hours before the scheduled service may be subject to a fee."
+        },
+        {
+          "question": "How far in advance should I book my limousine?",
+          "answer": "To ensure availability, especially during peak seasons and weekends, we recommend booking at least 1-2 weeks in advance. For special events like weddings or proms, booking as early as possible is advised."
+        },
+        {
+          "question": "What happens if my flight is delayed?",
+          "answer": "No worries! We monitor all flight statuses in real-time and adjust pickup times accordingly at no extra cost. Your chauffeur will be there when you land, ready to take you to your destination."
+        },
+        {
+          "question": "Are your prices all-inclusive or are there hidden fees?",
+          "answer": "We believe in transparency. Our quotes include all standard fees such as taxes, tolls, and gratuities unless otherwise stated and there are no hidden charges."
+        },
+        {
+          "question": "Do your chauffeurs have professional training and background checks?",
+          "answer": "Yes, all our chauffeurs undergo thorough background checks, have professional driving licenses, and receive extensive customer service and safety training to guarantee a secure and pleasant ride."
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "total_pages": 50,
+    "cities_covered": 22,
+    "unique_set_pages": 30,
+    "general_set_pages": 20,
+    "total_qas_including_shared_duplicates": 344,
+    "distinct_unique_qas": 224
+  },
+  "content_bugs": [
+    {
+      "slug": "morris-il-limo-service",
+      "title": "Morris (Service Area)",
+      "url": "https://newlenoxlimoservice.com/morris-il-limo-service/",
+      "issue": "LIVE PAGE BUG: FAQ block and body copy are not localized — duplicated from Naperville verbatim (still says 'Naperville'). Recommend rewriting for Morris."
+    },
+    {
+      "slug": "24-7-channahon-il-limo-service",
+      "title": "Channahon (Service Area)",
+      "url": "https://newlenoxlimoservice.com/24-7-channahon-il-limo-service/",
+      "issue": "LIVE PAGE BUG: Q3 ('wedding limo special') answer is mis-pasted — it repeats the chauffeur-service answer. Q6 had a typo ('s your...') normalized to 'Is your...'."
+    },
+    {
+      "slug": "24-7-frankfort-il-limo-service",
+      "title": "Frankfort (Service Area)",
+      "url": "https://newlenoxlimoservice.com/24-7-frankfort-il-limo-service/",
+      "issue": "LIVE PAGE BUG: FAQ block is not localized — duplicated 'Aurora limo' wine-tour/pet-friendly content verbatim (says 'Aurora' throughout). Q6 also had a stray 'Q:' prefix. Recommend rewriting for Frankfort."
+    },
+    {
+      "slug": "24-7-monee-il-limo-service",
+      "title": "Monee (Service Area)",
+      "url": "https://newlenoxlimoservice.com/24-7-monee-il-limo-service/",
+      "issue": "LIVE PAGE: Q6 ('full limousine transportation?') answer is mis-pasted generic 'request pricing' boilerplate rather than a real answer."
+    },
+    {
+      "slug": "24-7-elwood-il-limo-service",
+      "title": "Elwood (Service Area)",
+      "url": "https://newlenoxlimoservice.com/24-7-elwood-il-limo-service/",
+      "issue": "LIVE PAGE BUG: Q5 and Q6 answers are mis-pasted from the Aurora set (Q5 ends '...transportation in Aurora'; Q6 is the Aurora night-travel boilerplate). Q1-Q4 are Elwood-localized."
+    },
+    {
+      "slug": "bolingbrook-airport-shuttle-ohare-midway",
+      "title": "Bolingbrook (Service Area)",
+      "url": "https://newlenoxlimoservice.com/bolingbrook-airport-shuttle-ohare-midway/",
+      "issue": "LIVE PAGE BUG: Q5-Q7 question/answer pairs are jumbled (corporate vs prom answers swapped), and Q7's question says 'New Lenox businesses' instead of Bolingbrook. Recommend re-pairing and localizing."
+    },
+    {
+      "slug": "oswego-il-limo-service",
+      "title": "Oswego (Service Area)",
+      "url": "https://newlenoxlimoservice.com/oswego-il-limo-service/",
+      "issue": "Minor: closing body heading reads 'Professional Transportation Solutions for Aurora Residents' (should be Oswego). FAQ block itself is correctly Oswego-localized."
+    },
+    {
+      "slug": "service-areas",
+      "title": "Service Areas (hub)",
+      "url": "https://newlenoxlimoservice.com/service-areas/",
+      "issue": "LIVE PAGE BUG: The Service Areas hub page is an un-localized Aurora template (H1 reads 'Aurora IL Limo Service'); its FAQ is the same 6 'Aurora' wine-tour/pet-friendly set later copied onto Frankfort. Q6 has a stray 'Q:' prefix. Recommend rebuilding as a true hub page."
+    }
+  ]
+}

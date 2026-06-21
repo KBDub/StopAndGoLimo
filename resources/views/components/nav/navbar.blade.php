@@ -41,13 +41,12 @@
                     <x-nav.item href="/party-bus-aurora"            title="Aurora Party Bus" />
                     <x-nav.item href="/party-bus-rental-naperville" title="Naperville Party Bus" />
                 </x-nav.flyout>
-                {{-- Row 4 (2 items + spacer) --}}
+                {{-- Row 4 (3 items) --}}
                 <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle Services" sub="O'Hare & Midway transfers" />
                 <x-nav.item href="/new-bus-rental"                  title="New Bus Rentals"          sub="Latest-model coaches" />
-                <div></div>
-                {{-- Row 5 (2 items) --}}
-                <x-nav.item href="/grad-day-transportation"         title="Graduation Day Limos"     sub="Graduation transport" />
                 <x-nav.item href="/prom-party-bus-rental-illinois"  title="Prom Party Buses"         sub="Safe prom-night transport" />
+                {{-- Row 5 (1 item) --}}
+                <x-nav.item href="/grad-day-transportation"         title="Graduation Day Limos"     sub="Graduation transport" />
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">

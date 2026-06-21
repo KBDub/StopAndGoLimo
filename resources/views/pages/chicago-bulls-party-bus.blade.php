@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Bulls Party Bus"
-    metaDescription="Group rides to the United Center for Bulls games from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Ride to the United Center for Bulls games in a luxury party bus from anywhere in Chicagoland. Safe, fun group transportation. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-bulls-party-bus.jpg"
     ogImageAlt="Chicago Bulls party bus from New Lenox, Illinois"

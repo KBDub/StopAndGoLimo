@@ -38,7 +38,7 @@
 
 <x-layouts.page
     title="New Lenox Limo"
-    metaDescription="24/7 luxury limo and airport shuttle service in New Lenox, IL. Airport transfers to O'Hare and Midway, weddings, corporate travel, and special events. Call (815) 585-6922."
+    metaDescription="Stop & Go is headquartered in New Lenox, IL. Airport transfers to O'Hare and Midway, corporate travel, weddings, and events. Call (815) 585-6922."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-new-lenox.png"
     ogImageAlt="Luxury limo service in New Lenox, Illinois"

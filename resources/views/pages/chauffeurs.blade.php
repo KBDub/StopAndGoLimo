@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Chauffeurs"
-    metaDescription="Licensed, insured, and background-checked professional chauffeurs serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Meet our licensed, background-checked professional chauffeurs serving Chicagoland. Experienced, discreet, and always on time. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."

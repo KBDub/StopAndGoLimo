@@ -33,7 +33,7 @@
 
 <x-layouts.page
     title="Chicagoland Limo"
-    metaDescription=""
+    metaDescription="Premium limousine and airport shuttle across Chicagoland. Professional chauffeurs, flat rates, and 24/7 service to O'Hare and Midway. Call (815) 585-6922."
     currentPage="home"
     ogImage=""
     ogImageAlt="Luxury Limo Service in Joliet, IL serving Chicagoland"

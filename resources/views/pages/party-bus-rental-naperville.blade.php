@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Naperville Bus"
-    metaDescription="Party bus rental in Naperville, Illinois. Perfect for birthdays, bachelorette parties, and group celebrations. Call (815) 585-6922."
+    metaDescription="Party bus rental in Naperville, IL for birthdays, bachelorette parties, and group outings. Serving all of Chicagoland. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-party-bus-naperville.jpg"
     ogImageAlt="Party bus rental in Naperville, Illinois"

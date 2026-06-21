@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Aurora Party Bus"
-    metaDescription="Fun, safe party bus rental in Aurora, Illinois. Perfect for birthdays, bachelorette parties, and group celebrations. Call (815) 585-6922."
+    metaDescription="Party bus rental in Aurora, IL for birthdays, bachelorette parties, and group celebrations. Serving all of Chicagoland. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Party bus rental in Aurora, Illinois"

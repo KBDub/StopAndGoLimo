@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Prom Party Bus"
-    metaDescription="Safe, stylish prom night party bus transportation in Illinois. Serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Safe, stylish prom night party bus service across Illinois and Chicagoland. Parents trust us, students love us. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-prom-party-bus-rental-illinois.jpg"
     ogImageAlt="Prom party bus rental in Illinois"

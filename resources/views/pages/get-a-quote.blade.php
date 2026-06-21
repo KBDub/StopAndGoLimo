@@ -24,7 +24,7 @@
 
 <x-layouts.page
     title="Get a Quote"
-    metaDescription="Get a free, instant quote for airport shuttle or limousine service in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Get a free quote for airport shuttle or limousine service anywhere in Chicagoland. Flat rates, fast response, no hidden fees. Call (815) 585-6922."
     currentPage="contact"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Get a free limo quote from Stop and Go Airport Shuttle Service Inc."

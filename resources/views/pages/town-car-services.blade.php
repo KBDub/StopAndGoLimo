@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Town Car Service"
-    metaDescription="Premium sedan and town car service for any occasion in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Stylish sedan and town car service for every occasion in Chicagoland. Professional drivers, flat rates, on-time pickup. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Town car service in New Lenox, Illinois"

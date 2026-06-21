@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Grad Day Bus"
-    metaDescription="Safe, on-time graduation day transportation in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="On-time graduation day transportation for groups and families across Chicagoland. Limos, party buses, and shuttle service. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Graduation day transportation in New Lenox, Illinois"

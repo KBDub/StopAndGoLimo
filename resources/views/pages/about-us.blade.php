@@ -24,7 +24,7 @@
 
 <x-layouts.page
     title="About Us"
-    metaDescription="Learn about Stop and Go Airport Shuttle Service Inc. Professional chauffeurs serving New Lenox, Plainfield, and the Southwest suburbs since 2009."
+    metaDescription="Serving Chicagoland since 2009, Stop & Go is a family-owned limo and shuttle company. Licensed chauffeurs, flat rates, on-time service. Call (815) 585-6922."
     currentPage="about"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."

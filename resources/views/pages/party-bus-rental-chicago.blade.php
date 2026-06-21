@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Chicago Party Bus"
-    metaDescription="Luxury party bus and limo rental serving Chicago and the surrounding suburbs. Perfect for weddings, proms, birthdays, and every celebration. Call (815) 585-6922."
+    metaDescription="Luxury party bus rental in Chicago and Chicagoland. Perfect for birthdays, bachelorettes, proms, and group celebrations. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-party-bus-chicago.webp"
     ogImageAlt="Party bus rental serving Chicago, Illinois"

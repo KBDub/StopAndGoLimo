@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Bears Party Bus"
-    metaDescription="Game day group transportation to Soldier Field from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Ride to Soldier Field in style for every Bears game. Group party bus service from anywhere in Chicagoland. Safe, fun, no parking hassles. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-bears-party-bus.jpg"
     ogImageAlt="Chicago Bears party bus from New Lenox, Illinois"

@@ -37,7 +37,7 @@
 
 <x-layouts.page
     title="Our Services"
-    metaDescription="Professional luxury transportation in Plainfield and New Lenox, Illinois. Airport transfers to O'Hare and Midway, corporate travel, weddings, and special events. Serving since 2009. Call (815) 585-6922."
+    metaDescription="Airport shuttles, limousines, party buses, and corporate car service across Chicagoland. Available 24/7 to O'Hare and Midway. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Professional luxury limousine service in Plainfield and New Lenox, Illinois"

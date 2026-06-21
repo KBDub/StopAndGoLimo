@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Limo Services"
-    metaDescription="Classic luxury limousine service for any occasion in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Elegant limousine service for any occasion across Chicagoland. Airport transfers, weddings, corporate events, and more. Available 24/7. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Luxury limousine services in New Lenox, Illinois"

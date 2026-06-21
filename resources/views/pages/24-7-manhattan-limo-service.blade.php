@@ -22,7 +22,7 @@
 
 <x-layouts.page
     title="Manhattan IL Limo"
-    metaDescription="24/7 luxury limo and airport shuttle service in Manhattan, IL. Airport transfers to O'Hare and Midway, weddings, corporate travel, and special events. Call (815) 585-6922."
+    metaDescription="24/7 limo and airport shuttle service in Manhattan, IL. Transfers to O'Hare and Midway, corporate travel, weddings, and events. Call (815) 585-6922."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Luxury limo service in Manhattan, Illinois"

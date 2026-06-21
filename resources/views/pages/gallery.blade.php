@@ -24,7 +24,7 @@
 
 <x-layouts.page
     title="Fleet Gallery"
-    metaDescription="Browse our luxury fleet of limousines, party buses, and shuttle vehicles. Serving New Lenox, Plainfield, and the Southwest suburbs."
+    metaDescription="Browse our luxury fleet of limousines, party buses, coach buses, and shuttle vehicles serving Chicagoland. Pristine vehicles for every occasion."
     currentPage="gallery"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Luxury fleet gallery at Stop and Go Airport Shuttle Service Inc."

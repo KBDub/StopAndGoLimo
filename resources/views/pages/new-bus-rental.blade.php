@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Party Bus Rental"
-    metaDescription="Latest-model bus rental for any group occasion in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Rent the latest-model party and shuttle buses for any group occasion in Chicagoland. Weddings, events, airport runs, and more. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-new-bus-rental.jpg"
     ogImageAlt="Bus rental in New Lenox, Illinois"

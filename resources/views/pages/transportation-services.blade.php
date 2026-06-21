@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Transportation"
-    metaDescription="Point-to-point luxury transportation across the Southwest suburbs. Serving New Lenox, Plainfield, Joliet, and beyond. Call (815) 585-6922."
+    metaDescription="Reliable private transportation across all of Chicagoland. Airport runs, corporate trips, special events, and point-to-point rides. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Transportation services in New Lenox, Illinois"

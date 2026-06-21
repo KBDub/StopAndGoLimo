@@ -54,7 +54,7 @@
 
 <x-layouts.page
     title="Service Areas"
-    metaDescription="24/7 luxury limo and airport shuttle service in New Lenox, Plainfield, Joliet, Naperville, Aurora, and surrounding Southwest suburbs. Safe, comfortable, on-time. Call (815) 585-6922."
+    metaDescription="Stop & Go serves all of Chicagoland, from New Lenox and Joliet to Chicago, Naperville, Aurora, and the north and northwest suburbs. Call (815) 585-6922."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-service-areas.jpg"
     ogImageAlt="Luxury limousine service across the Southwest suburbs of Chicago, Illinois"

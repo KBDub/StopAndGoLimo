@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Coach Bus Rental"
-    metaDescription="Charter coach bus rentals for groups of all sizes in New Lenox, Plainfield, and the Southwest suburbs. Professional drivers, pristine vehicles. Call (815) 585-6922."
+    metaDescription="Charter coach bus rental for large groups across Chicagoland. Pristine vehicles, professional drivers, and room for everyone. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/coach-buses-hero.jpg"
     ogImageAlt="Charter coach bus available for group rentals at Stop and Go Airport Shuttle Service Inc."

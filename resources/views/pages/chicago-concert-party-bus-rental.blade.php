@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Concert Party Bus"
-    metaDescription="Ride together to the biggest shows in Chicago from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Get to every Chicago concert or show in a luxury party bus. Group transportation from across Chicagoland to any venue. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-concert-party-bus.jpg"
     ogImageAlt="Concert party bus rental from New Lenox, Illinois"

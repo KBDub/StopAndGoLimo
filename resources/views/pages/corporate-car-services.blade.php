@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Corporate Cars"
-    metaDescription="Executive ground transportation for business travel in New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Executive car service for Chicagoland business travel. On-time, professional, and discreet. Airport transfers and corporate events. Call (815) 585-6922."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Corporate car service in New Lenox, Illinois"

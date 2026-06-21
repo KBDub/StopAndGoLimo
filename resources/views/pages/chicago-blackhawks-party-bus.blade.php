@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Blackhawks Bus"
-    metaDescription="Group rides to the United Center for Blackhawks games from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Get to the United Center for every Blackhawks game in a luxury party bus. Group service from anywhere in Chicagoland. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"
     ogImageAlt="Chicago Blackhawks party bus from New Lenox, Illinois"

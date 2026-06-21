@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Six Flags Bus"
-    metaDescription="Group party bus rides to Six Flags Great America from New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    metaDescription="Skip the parking and ride to Six Flags Great America in a group party bus from anywhere in Chicagoland. Fun starts before you arrive. Call (815) 585-6922."
     currentPage="special-events"
     ogImage="/images/heroes/hero-six-flags-party-bus.jpg"
     ogImageAlt="Six Flags party bus from New Lenox, Illinois"

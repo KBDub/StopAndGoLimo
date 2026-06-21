@@ -115,9 +115,9 @@
                     <a href="/bookings-reservations" class="px-2 h-full text-base font-semibold leading-tight text-center inline-flex items-center {{ $currentPage === 'booking' ? 'text-champagne border-b-[3px] border-champagne' : 'text-cloud hover:text-champagne hover:border-b-[3px] hover:border-champagne' }} transition-colors">Booking</a>
                 </div>
 
-                {{-- ══ Services (mega, two-col with Party Bus flyout) ════ --}}
+                {{-- ══ Services (mega, three-col with Party Bus flyout left) ════ --}}
                 <div
-                    class="self-stretch flex items-stretch"
+                    class="relative self-stretch flex items-stretch"
                     @mouseenter="openMenu = 'services'"
                     @mouseleave="openMenu = null"
                 >
@@ -133,28 +133,30 @@
                         x-transition:leave="transition ease-in duration-75"
                         x-transition:leave-start="opacity-100"
                         x-transition:leave-end="opacity-0"
-                        class="absolute top-full left-0 z-50 pt-2 -mt-2"
-                        style="width: 560px; max-width: calc(100vw - 20px);"
+                        class="absolute top-full z-50 pt-2 -mt-2"
+                        style="width: 720px; max-width: calc(100vw - 20px); left: 50%; transform: translateX(-50%);"
                     >
                         <div class="bg-navy-dark border-t-[3px] border-champagne shadow-champagne-lg">
-                            {{-- Two-column grid of services --}}
-                            <div class="grid grid-cols-2">
-                                <a href="/airport-shuttle-ohare-midway" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Airport Shuttle</span>
-                                    <span class="text-sm text-muted mt-0.5">O'Hare and Midway transfers</span>
+                            {{-- Three-column grid of services --}}
+                            <div class="grid grid-cols-3">
+
+                                {{-- Row 1 --}}
+                                <a href="/limousine-services" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Limousine Services</span>
+                                    <span class="text-sm text-muted mt-0.5">Classic luxury limos</span>
                                 </a>
-                                <a href="/wedding-limousine-services" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Wedding Limousine</span>
+                                <a href="/wedding-limousine-services" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Wedding Limousines</span>
                                     <span class="text-sm text-muted mt-0.5">Elegant event transport</span>
                                 </a>
-                                {{-- Party Bus with flyout --}}
+                                {{-- Party Buses — col 3, flyout opens LEFT (right-full) --}}
                                 <div
-                                    class="relative border-b border-r border-white/8"
+                                    class="relative border-b border-white/8"
                                     @mouseenter="openMenu = 'services-partybus'"
                                     @mouseleave="openMenu = 'services'"
                                 >
                                     <a href="/party-bus-rental-chicago" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
-                                        <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Party Bus <span class="text-champagne/60 text-xs ml-1">&#9654;</span></span>
+                                        <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Party Buses <span class="text-champagne/60 text-xs ml-1">&#9664;</span></span>
                                         <span class="text-sm text-muted mt-0.5">Groups and celebrations</span>
                                     </a>
                                     <div
@@ -165,10 +167,10 @@
                                         x-transition:leave="transition ease-in duration-75"
                                         x-transition:leave-start="opacity-100"
                                         x-transition:leave-end="opacity-0"
-                                        class="absolute top-0 left-full z-50"
+                                        class="absolute top-0 right-full z-50"
                                         style="width: 240px;"
                                     >
-                                        <div class="bg-navy-dark border border-champagne/20 border-l-[3px] border-l-champagne shadow-champagne-lg">
+                                        <div class="bg-navy-dark border border-champagne/20 border-r-[3px] border-r-champagne shadow-champagne-lg">
                                             <a href="/party-bus-aurora" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Party Bus, Aurora</span>
                                             </a>
@@ -178,47 +180,57 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="/prom-party-bus-rental-illinois" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Prom Party Bus</span>
-                                    <span class="text-sm text-muted mt-0.5">Safe prom-night transport</span>
-                                </a>
-                                <a href="/new-bus-rental" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">New Bus Rental</span>
-                                    <span class="text-sm text-muted mt-0.5">Latest-model coaches</span>
-                                </a>
-                                <a href="/coach-buses" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Coach Buses</span>
-                                    <span class="text-sm text-muted mt-0.5">Large-group charters</span>
-                                </a>
-                                <a href="/limousine-services" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Limousine Services</span>
-                                    <span class="text-sm text-muted mt-0.5">Classic luxury limos</span>
-                                </a>
-                                <a href="/corporate-car-services" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Corporate Car Service</span>
-                                    <span class="text-sm text-muted mt-0.5">Executive ground service</span>
-                                </a>
+
+                                {{-- Row 2 --}}
                                 <a href="/town-car-services" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Town Car Services</span>
                                     <span class="text-sm text-muted mt-0.5">Premium sedans</span>
                                 </a>
-                                <a href="/chauffeurs" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                <a href="/corporate-car-services" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Corporate Car Services</span>
+                                    <span class="text-sm text-muted mt-0.5">Executive ground service</span>
+                                </a>
+                                <a href="/transportation-services" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Transportation</span>
+                                    <span class="text-sm text-muted mt-0.5">Point-to-point rides</span>
+                                </a>
+
+                                {{-- Row 3 --}}
+                                <a href="/chauffeurs" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chauffeurs</span>
                                     <span class="text-sm text-muted mt-0.5">Professional drivers</span>
                                 </a>
-                                <a href="/special-event-limousine" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Special Event Limousine</span>
+                                <a href="/coach-buses" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Coach Buses</span>
+                                    <span class="text-sm text-muted mt-0.5">Large-group charters</span>
+                                </a>
+                                <a href="/special-event-limousine" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Special Event Limousines</span>
                                     <span class="text-sm text-muted mt-0.5">Any occasion</span>
                                 </a>
-                                <a href="/transportation-services" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Transportation Services</span>
-                                    <span class="text-sm text-muted mt-0.5">Point-to-point rides</span>
+
+                                {{-- Row 4 (2 items) --}}
+                                <a href="/airport-shuttle-ohare-midway" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Airport Shuttle Services</span>
+                                    <span class="text-sm text-muted mt-0.5">O'Hare and Midway transfers</span>
                                 </a>
+                                <a href="/new-bus-rental" class="flex flex-col px-5 py-3 border-b border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">New Bus Rentals</span>
+                                    <span class="text-sm text-muted mt-0.5">Latest-model coaches</span>
+                                </a>
+                                <div class="border-b border-white/8"></div>
+
+                                {{-- Row 5 (2 items, last row — no border-b) --}}
                                 <a href="/grad-day-transportation" class="flex flex-col px-5 py-3 border-r border-white/8 hover:bg-white/5 transition-colors group">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Grad Day Transportation</span>
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Graduation Day Limos</span>
                                     <span class="text-sm text-muted mt-0.5">Graduation transport</span>
                                 </a>
+                                <a href="/prom-party-bus-rental-illinois" class="flex flex-col px-5 py-3 border-r border-white/8 hover:bg-white/5 transition-colors group">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Prom Party Buses</span>
+                                    <span class="text-sm text-muted mt-0.5">Safe prom-night transport</span>
+                                </a>
                                 <div></div>
+
                             </div>
                         </div>
                     </div>

@@ -36,7 +36,7 @@
         subtitle="See every vehicle we offer, inside and out"
         description="Stop & Go Airport Shuttle Service, Inc. operates one of the most well-maintained private transportation fleets in the Chicago metropolitan area. Browse executive sedans and full-size luxury SUVs for airport and corporate travel, Mercedes Sprinter vans for wedding guests and teams, stretch limousines for proms and quinceañeras, and party buses and coach buses for large group celebrations. Every vehicle in our gallery is inspected and detailed before every trip. Our uniformed chauffeurs take pride in presenting a vehicle that reflects the quality of our service. Browse our fleet and find the right match for your next occasion."
         buttonText="Book a Ride"
-        buttonHref="/contact"
+        buttonHref="/get-a-quote"
         image="/images/sections/gallery-hero.jpg"
         imagePosition="center center"
     />

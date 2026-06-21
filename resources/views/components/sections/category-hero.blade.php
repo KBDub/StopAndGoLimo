@@ -6,14 +6,14 @@
     'subtitleIn'      => '',
     'description'     => '',
     'buttonText'      => 'Book a Ride',
-    'buttonHref'      => '/contact',
+    'buttonHref'      => '/get-a-quote',
     'buttonRadius'    => 'soft',
     'image'           => '/images/heroes/hero-home.jpg',
     'imagePosition'   => 'center center',
 ])
 
 @php
-    $isModal = $buttonHref === '/contact' || $buttonHref === '/booking';
+    $isModal = $buttonHref === '/get-a-quote' || $buttonHref === '/booking';
 @endphp
 
 <section id="category-hero" class="relative flex items-center justify-center overflow-hidden isolate" style="min-height: 100svh; scroll-margin-top: 80px;">

@@ -36,7 +36,7 @@
         subtitle="All-inclusive pricing with no hidden fees, ever"
         description="At Stop & Go Airport Shuttle Service, Inc., you know exactly what your ride costs before you book. No surge fees, no hidden charges, no surprises at the end of the trip. Our flat-rate pricing covers airport transfers to O'Hare and Midway from anywhere in Chicagoland, plus weddings, proms, corporate charters, party buses, and coach bus events. Every rate includes your chauffeur, fuel, and standard tolls. We monitor every flight in real time and never charge extra for delays. Request a free quote online or call us any time for a custom rate."
         buttonText="Book a Ride"
-        buttonHref="/contact"
+        buttonHref="/get-a-quote"
         image="/images/sections/rates-hero.jpg"
         imagePosition="center center"
     />

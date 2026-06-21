@@ -154,7 +154,7 @@
         headingBold="Minooka Residents"
         body="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Minooka airport shuttle, Minooka limo service, Minooka party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Minooka, from local neighborhoods and downtown areas to surrounding communities, from Ridge Road corridor to I-80 and nearby I-55 access, ensures efficient, reliable transportation throughout the community and for Minooka to O'Hare trips."
         buttonText="Contact Us"
-        buttonHref="/contact"
+        buttonHref="/get-a-quote"
     />
 
     <x-sections.faq />

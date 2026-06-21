@@ -91,7 +91,7 @@
         headingBold="Solutions"
         body="Stop and Go is a trusted party bus company serving Aurora and the surrounding area. We offer full-service rides for weddings, proms, birthdays, bachelorette parties, concerts, and any night you want to celebrate. Our professional drivers and well-maintained fleet keep every ride safe, comfortable, and full of energy. We turn ordinary nights into celebrations your friends will talk about for years."
         buttonText="Contact Us"
-        buttonHref="/contact"
+        buttonHref="/get-a-quote"
         directions="Serving Aurora, Naperville, and all of Chicagoland · Perfect for birthdays, bachelorette parties, concerts, and special events · Party bus rental available 24/7"
     />
 

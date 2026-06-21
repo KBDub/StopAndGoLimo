@@ -188,7 +188,7 @@
         headingBold="Plainfield"
         body="As Plainfield's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Plainfield airport shuttle, corporate transportation, wedding vehicles, and other services. Our intimate knowledge of Plainfield, from downtown to Wynstone, Settlers' Park, and Whispering Meadows, with easy access to Route 59 and I-55, ensures efficient, reliable transportation throughout this vibrant Will County community."
         buttonText="Contact Us"
-        buttonHref="/contact"
+        buttonHref="/get-a-quote"
         directions="• Downtown Plainfield to O'Hare: 50–65 minutes via I-55 North • West Plainfield to O'Hare: 55–70 minutes • Plainfield to Midway Airport: 45–55 minutes via I-55 North • Plainfield I-80/I-55 corridor to both airports"
     />
 

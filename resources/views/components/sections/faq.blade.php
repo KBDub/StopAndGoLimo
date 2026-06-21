@@ -1,31 +1,13 @@
 @props([
-    'faqs' => [
-        [
-            'question' => 'Do you offer group transportation or party bus services?',
-            'answer'   => 'Yes, we have a range of party buses and vans suitable for groups of various sizes. Perfect for bachelor/bachelorette parties, corporate outings, or any group event.',
-        ],
-        [
-            'question' => 'What is your cancellation and refund policy?',
-            'answer'   => 'We ask for at least 24 hours notice for cancellations. Full refunds apply when canceled within that window. Cancellations made less than 24 hours before your reservation may incur a fee.',
-        ],
-        [
-            'question' => 'How far in advance should I book my limousine?',
-            'answer'   => 'We recommend booking at least 24 to 48 hours ahead. For special events like weddings or proms, booking 2 to 4 weeks in advance ensures your preferred vehicle is available.',
-        ],
-        [
-            'question' => 'What happens if my flight is delayed?',
-            'answer'   => 'We monitor your flight in real time. If your flight is delayed, your driver adjusts their arrival at no extra charge. We wait up to 60 minutes after landing at no additional cost.',
-        ],
-        [
-            'question' => 'Are your prices all-inclusive or are there hidden fees?',
-            'answer'   => 'Our quoted prices include all fees, no surprises. Gratuity is not included but is always appreciated.',
-        ],
-        [
-            'question' => 'Do your chauffeurs have professional training and background checks?',
-            'answer'   => 'All of our chauffeurs pass thorough background checks and complete professional driver training. They are licensed, insured, and committed to giving you a safe, comfortable ride.',
-        ],
-    ],
+    'preset' => null,
+    'faqs'   => null,
 ])
+
+@php
+$faqs ??= $preset
+    ? (config('faqs.' . $preset) ?? config('faqs.general'))
+    : config('faqs.general');
+@endphp
 
 <section id="faq" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">

@@ -93,7 +93,7 @@
 
     <x-sections.our-services />
 
-    <x-sections.faq />
+    <x-sections.faq preset="frankfort" />
 
     <x-sections.areas-we-serve background="dark" />
 

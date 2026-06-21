@@ -174,7 +174,7 @@
     />
 
 
-    <x-sections.faq />
+    <x-sections.faq preset="party-bus" />
 
     <x-sections.share-your-experience />
 

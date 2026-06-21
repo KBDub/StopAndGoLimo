@@ -114,7 +114,7 @@
         body="As Joliet's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Joliet airport shuttle, Joliet limo service, Joliet party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Joliet, from the downtown Historic District to the I-80 corridor, from Route 59 to I-55 access, ensures efficient and reliable transportation throughout this vibrant Will County community."
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="joliet" />
 
     <x-sections.areas-we-serve background="dark" />
 

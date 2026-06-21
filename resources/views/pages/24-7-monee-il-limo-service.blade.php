@@ -101,7 +101,7 @@
         headingBold="offer"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="monee" />
     <x-sections.areas-we-serve background="dark"/>
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />

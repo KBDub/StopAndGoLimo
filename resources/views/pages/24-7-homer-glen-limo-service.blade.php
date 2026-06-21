@@ -96,7 +96,7 @@
         descImageAlt="Limousine transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="homer-glen" />
 
     <x-sections.areas-we-serve background="dark" />
 

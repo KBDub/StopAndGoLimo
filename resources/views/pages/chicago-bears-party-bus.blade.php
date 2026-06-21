@@ -61,7 +61,7 @@
         bodyHtml="Located in Chicago&#8217;s Near South Side, Soldier Field draws massive crowds for Bears games, soccer, rugby matches, and concerts. Make your trip effortless by riding on a <a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Chicago Bears Party Bus</a>, perfect for groups of up to 36 passengers.<br><br>Choose a Game Day party bus to <a href='/get-a-quote/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Chicago Bears</a> or a party bus to Soldier Field Bears game and enjoy a hassle-free, luxurious experience.<br><br>Celebrate in style with a <a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>Luxury Bears party bus in Chicago</a>, featuring premium music systems, LED lighting, and four fully stocked bars. Turn every trip to the stadium into an unforgettable game day party!"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="bears-party-bus" />
 
     <x-sections.share-your-experience />
 

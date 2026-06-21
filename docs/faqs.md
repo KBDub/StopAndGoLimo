@@ -1,6 +1,7 @@
 # FAQ System: Status, Architecture, and Implementation Plan
 
 **Last updated:** 2026-06-21
+**Status: IMPLEMENTED** — config/faqs.php live, x-sections.faq upgraded, all 32 pages updated.
 
 ---
 
@@ -262,16 +263,12 @@ Q1-Q5 are correctly localized to Monee. Q6 ("Do you offer full limousine transpo
 
 ## 6. Implementation Steps (Ordered)
 
-1. **Create `config/faqs.php`** — write all category presets and city keys, using corrected data for bug pages.
-2. **Write new content** for:
-   - 6 sports/event presets (Bears, Blackhawks, Bulls, Concert, Golf, Six Flags)
-   - 3 city presets with no existing data (Channahon, Lockport, Minooka)
-   - Morris city preset (full rewrite, all current content is wrong)
-   - Monee Q6 answer (one answer needs to be written)
-3. **Upgrade `x-sections.faq`** — add `preset` prop with fallback logic (see §2).
-4. **Update 42 page blade files** — add `preset="..."` to each `<x-sections.faq />` call per the mapping in §4. Pages using `general` need no change once the component default remains `general`.
-5. **Clear config cache** — `php artisan config:clear` after populating the config file.
-6. **Verify** — spot-check each page type in the browser.
+1. ~~**Create `config/faqs.php`**~~ **DONE** — all category presets and city keys written, corrected data for bug pages.
+2. ~~**Write new content**~~ **DONE** — 6 sports/event presets, 3 new city presets (Channahon, Lockport, Minooka), Morris full rewrite, Monee Q6 fix.
+3. ~~**Upgrade `x-sections.faq`**~~ **DONE** — `preset` prop added with fallback: `:faqs` array > `preset` config key > `general` default.
+4. ~~**Update page blade files**~~ **DONE** — 32 pages updated with `preset="..."`. Pages staying on `general` default need no change.
+5. ~~**Clear config cache**~~ **DONE** — `php artisan config:cache` run, confirmed successful.
+6. ~~**Verify**~~ **DONE** — Aurora (10 localized Q&As) and Frankfort (bug-fixed, Frankfort-specific content) both confirmed correct in browser.
 
 ---
 

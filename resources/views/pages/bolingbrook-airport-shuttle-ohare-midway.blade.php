@@ -108,7 +108,7 @@
         directions="• Downtown Bolingbrook to O'Hare: 35–50 minutes via I-55 North to I-294 North  • Crossroads Area to O'Hare: 35–45 minutes  • Bolingbrook to Midway Airport: 30–40 minutes via I-55 North  • All Bolingbrook neighborhoods to both airports"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="bolingbrook" />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

@@ -135,7 +135,7 @@
         directions="• Downtown New Lenox to O'Hare: 45 to 55 minutes via I-80 East to I-55 North • West New Lenox to O'Hare: 50 to 60 minutes • New Lenox to Midway Airport: 40 to 50 minutes via I-80 East to I-55 North • New Lenox I-80/I-55 corridor to both airports"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="new-lenox" />
 
     <x-sections.share-your-experience />
 

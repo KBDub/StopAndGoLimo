@@ -137,7 +137,7 @@
         directions="• Downtown Naperville to O'Hare: 35 to 50 minutes via I-88 East • West Naperville to O'Hare: 40 to 55 minutes • Naperville to Midway Airport: 30 to 45 minutes via I-55 North • Naperville I-88 corridor to both airports"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="naperville" />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

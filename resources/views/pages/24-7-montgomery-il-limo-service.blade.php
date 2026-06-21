@@ -101,7 +101,7 @@
         headingBold="offer"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="montgomery" />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

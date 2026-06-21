@@ -95,7 +95,7 @@
         directions="Serving Aurora, Naperville, and all of Chicagoland · Perfect for birthdays, bachelorette parties, concerts, and special events · Party bus rental available 24/7"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="party-bus" />
 
     <x-sections.share-your-experience />
 

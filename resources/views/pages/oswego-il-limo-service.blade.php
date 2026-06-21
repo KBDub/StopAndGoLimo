@@ -102,7 +102,7 @@
 
     <x-sections.our-services />
 
-    <x-sections.faq />
+    <x-sections.faq preset="oswego" />
 
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions for"

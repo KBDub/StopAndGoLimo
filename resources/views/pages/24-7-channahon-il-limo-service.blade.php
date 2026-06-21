@@ -97,7 +97,7 @@
         headingBold="offer"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="channahon" />
 
     <x-sections.areas-we-serve background="dark" />
 

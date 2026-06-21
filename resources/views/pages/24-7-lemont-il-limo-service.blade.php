@@ -97,7 +97,7 @@
         descImageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="lemont" />
 
     <x-sections.areas-we-serve background="dark" />
 

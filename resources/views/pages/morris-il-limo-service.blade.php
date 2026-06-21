@@ -119,7 +119,7 @@
         directions="• Downtown Morris to O'Hare: 70–90 minutes via I-80 East to I-294 North  • Morris to Midway Airport: 65–80 minutes via I-80 East to I-55 North  • All Morris neighborhoods served  • Grundy County to both airports"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="morris" />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

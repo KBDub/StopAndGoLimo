@@ -157,7 +157,7 @@
         buttonHref="/get-a-quote"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="minooka" />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

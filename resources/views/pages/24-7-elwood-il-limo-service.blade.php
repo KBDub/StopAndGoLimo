@@ -95,7 +95,7 @@
 
     <x-sections.our-services />
 
-    <x-sections.faq />
+    <x-sections.faq preset="elwood" />
 
     <x-sections.areas-we-serve background="dark" />
 

@@ -106,7 +106,7 @@
         ['heading' => 'Wedding Venues',            'items' => ['Ballydoyle event center', 'Gaslite Manor', 'Naperville IL Banquets near Aurora', 'Hollywood Casino Aurora', 'Area churches and reception halls']],
     ]" />
 
-    <x-sections.faq />
+    <x-sections.faq preset="north-aurora" />
         
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions"

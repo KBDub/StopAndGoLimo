@@ -127,7 +127,7 @@
         directions="• Downtown Romeoville to O'Hare: 40–50 minutes via I-55 North  • West Romeoville to O'Hare: 45–55 minutes  • Romeoville to Midway Airport: 30–40 minutes via I-55 North  • Romeoville I-55 corridor to both airports"
     />
 
-    <x-sections.faq />
+    <x-sections.faq preset="romeoville" />
     <x-sections.share-your-experience />
     <x-sections.map-contact-section />
     <x-ui.banner-thin-cloud />

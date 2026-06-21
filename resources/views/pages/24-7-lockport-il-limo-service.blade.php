@@ -61,7 +61,7 @@
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
-        :inverted="true"
+        :inverted="false"
         descHeading="Why Choose Us?"
         descSubheading="Our Lockport limo service makes every ride safe, comfortable, and stress-free."
         descBody="As Lockport's trusted transportation provider, Stop & Go offers complete luxury transportation services:"

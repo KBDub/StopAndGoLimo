@@ -23,7 +23,7 @@
     $translate = $imagePosition === 'left' ? '-4rem' : '4rem';
 @endphp
 
-<section id="{{ $id }}" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem] overflow-hidden">
+<section id="{{ $id }}" style="{{ $bgStyle }} scroll-margin-top: 80px;" class="mt-12 mb-12 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- H2 — full-width row, centered above the two columns --}}

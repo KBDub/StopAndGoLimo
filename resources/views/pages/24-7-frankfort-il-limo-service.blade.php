@@ -58,7 +58,6 @@
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
-        :inverted="true"
         descHeading="Why choose us?"
         descSubheading="Enjoy stress-free group travel with our Party Bus Rental in Frankfort IL. Safe, spacious, and reliable rides for any celebration."
         descBody="Make every event run smoothly with dependable event transportation in Frankfort IL and professional chauffeur service in Frankfort IL. Skip the stress of traffic and timing with on-time pickups, comfortable vehicles, and experienced drivers who handle everything for you. Reserve your ride today and travel with total confidence."

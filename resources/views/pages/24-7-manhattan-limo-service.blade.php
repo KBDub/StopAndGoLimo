@@ -61,7 +61,6 @@
         descImage="/images/sections/manhattan-transportation.png"
         descImageAlt="Fleet car interior in Manhattan, Illinois — Stop and Go Airport Shuttle"
         :descImageTop="true"
-        :inverted="true"
     />
 
     <x-sections.image-info-card

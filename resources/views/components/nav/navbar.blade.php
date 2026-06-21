@@ -52,29 +52,29 @@
                 <x-nav.item href="/chicago-blackhawks-party-bus"     title="Chicago Blackhawks Party Bus" />
             </x-nav.dropdown>
 
-            <x-nav.dropdown label="Service Areas" panel="areas" href="/service-areas" heading="22 Chicagoland Southwest Suburbs, 24/7">
-                <x-nav.item compact href="/new-lenox-airport-shuttle-limo-service"   title="New Lenox" />
-                <x-nav.item compact href="/naperville-airport-shuttle-limo-service"  title="Naperville" />
+            <x-nav.dropdown label="Service Areas" panel="areas" href="/service-areas" heading="22 Chicagoland Suburbs, 24/7">
                 <x-nav.item compact href="/aurora-limo-service"                      title="Aurora" />
-                <x-nav.item compact href="/24-7-north-aurora-il-limo-service"        title="North Aurora" />
-                <x-nav.item compact href="/plainfield-limousine-shuttle-service"     title="Plainfield" />
-                <x-nav.item compact href="/24-7-joliet-il-limo-services"             title="Joliet" />
-                <x-nav.item compact href="/morris-il-limo-service"                   title="Morris" />
-                <x-nav.item compact href="/24-7-minooka-il-limo-service"             title="Minooka" />
+                <x-nav.item compact href="/bolingbrook-airport-shuttle-ohare-midway" title="Bolingbrook" />
                 <x-nav.item compact href="/24-7-channahon-il-limo-service"           title="Channahon" />
                 <x-nav.item compact href="/24-7-elwood-il-limo-service"              title="Elwood" />
-                <x-nav.item compact href="/romeoville-airport-shuttle-limo-service"  title="Romeoville" />
-                <x-nav.item compact href="/24-7-lockport-il-limo-service"            title="Lockport" />
                 <x-nav.item compact href="/24-7-frankfort-il-limo-service"           title="Frankfort" />
-                <x-nav.item compact href="/24-7-mokena-il-limo-service"              title="Mokena" />
-                <x-nav.item compact href="/24-7-orland-park-il-limo-service"         title="Orland Park" />
-                <x-nav.item compact href="/24-7-manhattan-limo-service"              title="Manhattan" />
                 <x-nav.item compact href="/24-7-homer-glen-limo-service"             title="Homer Glen" />
+                <x-nav.item compact href="/24-7-joliet-il-limo-services"             title="Joliet" />
                 <x-nav.item compact href="/24-7-lemont-il-limo-service"              title="Lemont" />
+                <x-nav.item compact href="/24-7-lockport-il-limo-service"            title="Lockport" />
+                <x-nav.item compact href="/24-7-manhattan-limo-service"              title="Manhattan" />
+                <x-nav.item compact href="/24-7-minooka-il-limo-service"             title="Minooka" />
+                <x-nav.item compact href="/24-7-mokena-il-limo-service"              title="Mokena" />
                 <x-nav.item compact href="/24-7-monee-il-limo-service"               title="Monee" />
-                <x-nav.item compact href="/bolingbrook-airport-shuttle-ohare-midway" title="Bolingbrook" />
-                <x-nav.item compact href="/oswego-il-limo-service"                   title="Oswego" />
                 <x-nav.item compact href="/24-7-montgomery-il-limo-service"          title="Montgomery" />
+                <x-nav.item compact href="/morris-il-limo-service"                   title="Morris" />
+                <x-nav.item compact href="/naperville-airport-shuttle-limo-service"  title="Naperville" />
+                <x-nav.item compact href="/new-lenox-airport-shuttle-limo-service"   title="New Lenox" />
+                <x-nav.item compact href="/24-7-north-aurora-il-limo-service"        title="North Aurora" />
+                <x-nav.item compact href="/24-7-orland-park-il-limo-service"         title="Orland Park" />
+                <x-nav.item compact href="/oswego-il-limo-service"                   title="Oswego" />
+                <x-nav.item compact href="/plainfield-limousine-shuttle-service"     title="Plainfield" />
+                <x-nav.item compact href="/romeoville-airport-shuttle-limo-service"  title="Romeoville" />
             </x-nav.dropdown>
 
         </div>

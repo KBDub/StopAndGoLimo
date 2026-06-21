@@ -82,6 +82,8 @@
         :descImageTop="true"
     />
 
+    <x-sections.review-slider />
+
     <x-sections.party-limo-image
         heading="Complete Transportation Solutions for"
         headingBold="Morris Residents"

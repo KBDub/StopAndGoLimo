@@ -4,7 +4,7 @@
 $sectionBg    = $inverted ? 'background: var(--white);'  : 'background: var(--navy);';
 $headingColor = $inverted ? 'color: var(--navy);'        : 'color: var(--white);';
 $btnStyle     = $inverted
-    ? 'background: var(--champagne-light); border: 2px solid var(--champagne-light); color: var(--navy);'
+    ? 'background: var(--champagne-light); border: 2px solid var(--navy); color: var(--navy);'
     : 'background: transparent; border: 2px solid var(--champagne); color: var(--champagne);';
 $btnHoverOn   = $inverted
     ? "this.style.background='var(--navy)'; this.style.borderColor='var(--navy)'; this.style.color='var(--white)';"

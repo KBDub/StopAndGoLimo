@@ -6,10 +6,10 @@
     dir     string   right (default) | left
   CSS hover chain: .has-flyout:hover > .flyout { opacity:1; visibility:visible; }
 --}}
-@props(['title' => '', 'sub' => null, 'dir' => 'right'])
+@props(['title' => '', 'sub' => null, 'dir' => 'right', 'href' => '#'])
 
 <div class="has-flyout">
-    <a href="#">
+    <a href="{{ $href }}">
         <span class="d-title">{{ $title }}</span>
         @if ($sub)<span class="d-sub">{{ $sub }}</span>@endif
         @if ($dir === 'left')

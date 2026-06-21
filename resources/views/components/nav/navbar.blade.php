@@ -26,26 +26,28 @@
 
             <x-nav.dropdown label="Services" panel="mega-three" href="/our-services">
                 {{-- Row 1 --}}
-                <x-nav.item href="/limousine-services"              title="Limousine Services"      sub="Classic luxury limos" />
-                <x-nav.item href="/wedding-limousine-services"      title="Wedding Limousines"      sub="Elegant event transport" />
-                <x-nav.flyout title="Party Buses" sub="Groups &amp; celebrations" dir="left">
-                    <x-nav.item href="/party-bus-aurora"            title="Party Bus, Aurora" />
-                    <x-nav.item href="/party-bus-rental-naperville" title="Party Bus, Naperville" />
-                </x-nav.flyout>
-                {{-- Row 2 --}}
-                <x-nav.item href="/town-car-services"               title="Town Car Services"       sub="Premium sedans" />
-                <x-nav.item href="/corporate-car-services"          title="Corporate Car Services"  sub="Executive ground service" />
-                <x-nav.item href="/transportation-services"         title="Transportation"          sub="Point-to-point rides" />
-                {{-- Row 3 --}}
-                <x-nav.item href="/chauffeurs"                      title="Chauffeurs"              sub="Professional drivers" />
-                <x-nav.item href="/coach-buses"                     title="Coach Buses"             sub="Large-group charters" />
+                <x-nav.item href="/limousine-services"              title="Limousine Services"       sub="Classic luxury limos" />
+                <x-nav.item href="/wedding-limousine-services"      title="Wedding Limousines"       sub="Elegant event transport" />
                 <x-nav.item href="/special-event-limousine"         title="Special Event Limousines" sub="Any occasion" />
-                {{-- Row 4 (2 items) --}}
-                <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle Services" sub="O'Hare &amp; Midway transfers" />
-                <x-nav.item href="/new-bus-rental"                  title="New Bus Rentals"         sub="Latest-model coaches" />
+                {{-- Row 2 --}}
+                <x-nav.item href="/town-car-services"               title="Town Car Services"        sub="Premium sedans" />
+                <x-nav.item href="/corporate-car-services"          title="Corporate Car Services"   sub="Executive ground service" />
+                <x-nav.item href="/transportation-services"         title="Transportation"           sub="Point-to-point rides" />
+                {{-- Row 3 --}}
+                <x-nav.item href="/chauffeurs"                      title="Chauffeurs"               sub="Professional drivers" />
+                <x-nav.item href="/coach-buses"                     title="Coach Buses"              sub="Large-group charters" />
+                <x-nav.flyout title="Party Buses" sub="Groups & celebrations" dir="left" href="/party-bus-rental-chicago">
+                    <x-nav.item href="/party-bus-rental-chicago"    title="Chicago Party Bus" />
+                    <x-nav.item href="/party-bus-aurora"            title="Aurora Party Bus" />
+                    <x-nav.item href="/party-bus-rental-naperville" title="Naperville Party Bus" />
+                </x-nav.flyout>
+                {{-- Row 4 (2 items + spacer) --}}
+                <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle Services" sub="O'Hare & Midway transfers" />
+                <x-nav.item href="/new-bus-rental"                  title="New Bus Rentals"          sub="Latest-model coaches" />
+                <div></div>
                 {{-- Row 5 (2 items) --}}
-                <x-nav.item href="/grad-day-transportation"         title="Graduation Day Limos"    sub="Graduation transport" />
-                <x-nav.item href="/prom-party-bus-rental-illinois"  title="Prom Party Buses"        sub="Safe prom-night transport" />
+                <x-nav.item href="/grad-day-transportation"         title="Graduation Day Limos"     sub="Graduation transport" />
+                <x-nav.item href="/prom-party-bus-rental-illinois"  title="Prom Party Buses"         sub="Safe prom-night transport" />
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">

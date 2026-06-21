@@ -57,6 +57,28 @@
 
     <x-sections.three-steps :inverted="true" />
 
+    <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/morris-airport.png"
+        imageAlt="Morris Municipal Airport, Illinois — Stop and Go Airport Shuttle Service"
+        imageAspect="16/9"
+        imageObjectPosition="center"
+        rightVariant="description"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Transportation Solutions for Morris Residents"
+        descBody="As Morris's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        :descBullets="[
+            'Morris airport shuttle for timely arrivals and departures',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate transportation for business meetings and executive travel',
+            'Wedding vehicles to make your special day seamless',
+        ]"
+        descClosing="Our intimate knowledge of Morris, from the Illinois River to downtown, ensures efficient and reliable transportation throughout the community."
+    />
+
     <x-sections.party-limo-image
         heading="Complete Transportation Solutions for"
         headingBold="Morris Residents"

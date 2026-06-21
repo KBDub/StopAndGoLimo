@@ -81,6 +81,8 @@
         :inverted="true"
     />
 
+    <x-sections.review-slider :inverted="true"/>
+
     <x-sections.travel-in-style
         heading="Minooka Airport"
         headingBold="Shuttle Service"

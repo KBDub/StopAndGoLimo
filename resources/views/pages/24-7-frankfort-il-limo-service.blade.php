@@ -50,13 +50,22 @@
     />
 
     <x-sections.free-instant-quote
+        heading="Why choose"
+        headingBold="us?"
+        headingTail=""
+        image="/images/sections/frankfort-transportation.png"
+        imageAlt="Fleet of vehicles in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
         rightVariant="description"
         :inverted="true"
-        :descImageTop="true"
         descHeading="Why choose us?"
-        descBody="Enjoy stress-free group travel with our Party Bus Rental in Frankfort IL. Safe, spacious, and reliable rides for any celebration."
+        descSubheading="Enjoy stress-free group travel with our Party Bus Rental in Frankfort IL. Safe, spacious, and reliable rides for any celebration."
+        descBody="Make every event run smoothly with dependable event transportation in Frankfort IL and professional chauffeur service in Frankfort IL. Skip the stress of traffic and timing with on-time pickups, comfortable vehicles, and experienced drivers who handle everything for you. Reserve your ride today and travel with total confidence."
+        descClosing="Book your ride in minutes using our online form."
         descImage="/images/sections/frankfort-transportation.png"
         descImageAlt="Fleet of vehicles in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        :descImageTop="true"
     />
 
     <x-sections.review-slider />

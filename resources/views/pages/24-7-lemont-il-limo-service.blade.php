@@ -50,6 +50,15 @@
         :inverted="true"
     />
 
+    <x-sections.free-instant-quote
+        rightVariant="description"
+        :descImageTop="true"
+        descHeading="Why choose us?"
+        descBody="With our Party Bus Rental in Lemont IL, your group travels in comfort and style. Enjoy reliable, hassle-free transportation anytime."
+        descImage="/images/sections/lemont-transportation.png"
+        descImageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
+    />
+
     <x-sections.image-info-card
         id="image-info-card-sophisticated"
         heading="Travel with Confidence and Sophistication"
@@ -85,16 +94,6 @@
     <x-sections.our-services
         heading="What we"
         headingBold="offer"
-    />
-
-    <x-sections.free-instant-quote
-        rightVariant="description"
-        :inverted="true"
-        :descImageTop="true"
-        descHeading="Why choose us?"
-        descBody="With our Party Bus Rental in Lemont IL, your group travels in comfort and style. Enjoy reliable, hassle-free transportation anytime."
-        descImage="/images/sections/lemont-transportation.png"
-        descImageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
     />
 
     <x-sections.faq preset="lemont" />

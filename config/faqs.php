@@ -163,6 +163,33 @@ return [
         ],
     ],
 
+    'graduation' => [
+        [
+            'question' => 'What is included in Grad Day transportation?',
+            'answer'   => 'Our Grad Day rides include professional drivers, spacious vehicles, premium sound and lighting, and all amenities needed for a safe, fun, and memorable celebration.',
+        ],
+        [
+            'question' => 'How many passengers can a Grad Day vehicle hold?',
+            'answer'   => 'We offer vehicles for groups of all sizes, from small family groups to larger friend circles, ensuring everyone travels together comfortably.',
+        ],
+        [
+            'question' => 'Are the drivers trained and insured?',
+            'answer'   => 'Yes! All our drivers undergo professional training, background checks, and safety briefings to guarantee a secure and worry-free Grad Day experience.',
+        ],
+        [
+            'question' => 'Can families ride with students?',
+            'answer'   => 'Absolutely. Our Grad Day transportation is family-friendly, making it easy for parents and loved ones to join and celebrate the achievement together.',
+        ],
+        [
+            'question' => 'How do I book Grad Day transportation?',
+            'answer'   => 'You can book online or contact us directly to select your vehicle, schedule your ride, and confirm your group size and amenities for a seamless experience.',
+        ],
+        [
+            'question' => 'What areas do you serve for Grad Day rides?',
+            'answer'   => 'We proudly serve Naperville, New Lenox, Aurora, Joliet, Plainfield, and surrounding areas, providing convenient and reliable service wherever your celebration takes place.',
+        ],
+    ],
+
     'limousine' => [
         [
             'question' => 'How much does limousine service cost in Chicago?',

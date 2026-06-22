@@ -58,7 +58,7 @@
         :descImageTop="true"
         descImage="/images/sections/wedding-limo-fleet.jpg"
         descImageAlt="Luxury wedding limousine interior with leather seating and ambient lighting"
-        descHeading="Why Choose Us?"
+        descHeading="Your Private Sanctuary"
         descSubheading="Complete Wedding Transportation"
         descBody="As your trusted wedding transportation partner, Stop & Go Airport Shuttle Service, Inc. provides elegant, flawless service for your most important day:"
         :descBullets="[
@@ -73,6 +73,8 @@
         submitLabel="Send Message"
     />
 
+    <x-sections.why-choose-us />
+
     <x-sections.banner-image
         headingPrefix="Celebrate in"
         headingBold="Style"
@@ -81,5 +83,13 @@
         imageAlt="Couple after their wedding using Stop and Go Limo transportation"
         imageAspect="730/460"
     />
+
+    <x-sections.review-slider />
+
+    <x-sections.faq />
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
 
 </x-layouts.page>

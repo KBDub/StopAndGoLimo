@@ -479,6 +479,7 @@ html {
 .sg-nav .nav-bar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding: 0 24px; background: var(--navy); position: relative; }
 .sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--cloud); padding: 20px 12px 20px 0; }
 .sg-nav .nav-logo span { color: var(--champagne); }
+.sg-nav .nav-logo-img { height: 64px; width: auto; display: block; }
 .sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 0; }
 .sg-nav .nav-cta-btn {
     font-family: var(--font-head); font-weight: 400; font-size: 20px;
@@ -643,6 +644,7 @@ html {
 @media (max-width: 767px) {
     .sg-nav .nav-links    { display: none; }
     .sg-nav .nav-cta-btn  { display: none; }
+    .sg-nav .nav-logo-img { height: 48px; }
     .sg-nav .dropdown-mega { grid-template-columns: 1fr; min-width: 240px; }
     .sg-nav-states { grid-template-columns: 1fr; }
 }

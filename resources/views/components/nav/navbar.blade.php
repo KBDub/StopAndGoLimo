@@ -11,7 +11,7 @@
         <a href="/" class="nav-logo">
             <img src="/images/logos/stop-and-go-inverted-logo-large.svg"
                  alt="Stop &amp; Go Airport Shuttle Service, Inc."
-                 class="h-12 md:h-16 w-auto transition-all duration-300">
+                 class="nav-logo-img">
         </a>
 
         {{-- Col 2 (desktop): nav links — show/hide handled by CSS media queries --}}

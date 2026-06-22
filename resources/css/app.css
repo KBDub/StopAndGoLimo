@@ -482,20 +482,26 @@ html {
 .sg-nav .nav-logo-img { height: 64px; width: auto; display: block; }
 .sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 0; }
 .sg-nav .nav-cta-btn {
-    font-family: var(--font-head); font-weight: 400; font-size: 20px;
-    letter-spacing: .08em; word-spacing: 5px; text-transform: uppercase;
+    font-family: var(--font-head); font-weight: 400;
+    font-size: clamp(13px, calc(2.724vw - 14.86px), 20px);
+    letter-spacing: .07em;
+    word-spacing: clamp(2px, calc(1.167vw - 9.942px), 5px);
+    text-transform: uppercase;
     color: var(--champagne); border: 1px solid var(--champagne);
-    padding: 8px 52px; text-decoration: none; white-space: nowrap;
+    padding: 7px clamp(16px, calc(14vw - 127px), 52px);
+    text-decoration: none; white-space: nowrap;
     border-radius: 10px;
     transition: background .2s, color .2s;
 }
 .sg-nav .nav-cta-btn:hover { background: var(--champagne-light); color: var(--navy); }
 .sg-nav .nav-item { position: relative; display: flex; align-items: center; }
 .sg-nav .nav-link {
-    font-family: var(--font-head); font-weight: 400; font-size: 15px;
+    font-family: var(--font-head); font-weight: 400;
+    font-size: clamp(11px, calc(1.556vw - 4.92px), 15px);
     letter-spacing: .04em; text-transform: uppercase;
-    color: var(--cloud); padding: 16px 10px; display: inline-flex;
-    align-items: center; gap: 4px; text-decoration: none;
+    color: var(--cloud);
+    padding: 16px clamp(6px, calc(1.556vw - 9.92px), 10px);
+    display: inline-flex; align-items: center; gap: 4px; text-decoration: none;
     transition: color .2s; position: relative; white-space: nowrap;
 }
 .sg-nav .nav-link::before,
@@ -649,12 +655,10 @@ html {
     .sg-nav-states { grid-template-columns: 1fr; }
 }
 
-/* ── Tablet (768px–1023px): full nav, compressed sizes ───────────────────── */
+/* ── Tablet (768px–1023px): full nav, clamp() handles font/padding shrinking ─ */
 @media (min-width: 768px) and (max-width: 1023px) {
     .sg-nav .nav-mobile-cta { display: none; }
     .sg-nav .nav-hamburger  { display: none; }
-    .sg-nav .nav-link { font-size: 11px; letter-spacing: .02em; padding: 16px 6px; }
-    .sg-nav .nav-cta-btn { font-size: 13px; padding: 7px 16px; word-spacing: 2px; letter-spacing: .05em; }
 }
 
 /* ── Desktop (>=1024px): full nav, hide mobile-only elements ─────────────── */

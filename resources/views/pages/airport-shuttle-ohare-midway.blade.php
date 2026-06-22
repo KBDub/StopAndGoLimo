@@ -50,6 +50,8 @@
         body="Stop & Go offers 24/7 airport shuttle service from New Lenox, Plainfield, Naperville, Aurora, Joliet, and Chicago suburbs to O'Hare and Midway. Reliable, door-to-door service with professional drivers, flight monitoring, and luggage assistance ensures stress-free travel for individuals, families, and groups."
     />
 
+    <x-sections.three-steps :inverted="true" />
+
     <x-sections.free-instant-quote
         rightVariant="description"
         defaultVehicle="Airport Transportation"

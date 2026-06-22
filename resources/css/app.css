@@ -477,7 +477,7 @@ html {
 .sg-nav .n-phone { color: var(--champagne); font-weight: 600; font-family: var(--font-head); }
 .sg-nav .n-book  { color: var(--champagne); font-weight: 600; font-family: var(--font-head); letter-spacing: .05em; text-transform: uppercase; }
 .sg-nav .nav-bar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding: 0 24px; background: var(--navy); position: relative; }
-.sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--cloud); padding: 20px 12px 20px 0; }
+.sg-nav .nav-logo { font-family: var(--font-head); font-weight: 700; font-size: 16px; color: var(--cloud); padding: 20px 12px 20px 0; min-width: max-content; }
 .sg-nav .nav-logo span { color: var(--champagne); }
 .sg-nav .nav-logo-img { height: 64px; width: auto; display: block; }
 .sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 0; }

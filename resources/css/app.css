@@ -483,12 +483,12 @@ html {
 .sg-nav .nav-links { display: flex; align-items: center; justify-content: center; gap: 0; }
 .sg-nav .nav-cta-btn {
     font-family: var(--font-head); font-weight: 400;
-    font-size: clamp(13px, calc(2.724vw - 14.86px), 20px);
+    font-size: clamp(13px, calc(2.121vw - 7.152px), 20px);
     letter-spacing: .07em;
-    word-spacing: clamp(2px, calc(1.167vw - 9.942px), 5px);
+    word-spacing: clamp(2px, calc(0.909vw - 6.636px), 5px);
     text-transform: uppercase;
     color: var(--champagne); border: 1px solid var(--champagne);
-    padding: 7px clamp(16px, calc(14vw - 127px), 52px);
+    padding: 7px clamp(16px, calc(10.909vw - 87.635px), 52px);
     text-decoration: none; white-space: nowrap;
     border-radius: 10px;
     transition: background .2s, color .2s;
@@ -497,10 +497,10 @@ html {
 .sg-nav .nav-item { position: relative; display: flex; align-items: center; }
 .sg-nav .nav-link {
     font-family: var(--font-head); font-weight: 400;
-    font-size: clamp(11px, calc(1.556vw - 4.92px), 15px);
+    font-size: clamp(11px, calc(1.212vw - 0.515px), 15px);
     letter-spacing: .04em; text-transform: uppercase;
     color: var(--cloud);
-    padding: 16px clamp(6px, calc(1.556vw - 9.92px), 10px);
+    padding: 16px clamp(6px, calc(1.212vw - 5.515px), 10px);
     display: inline-flex; align-items: center; gap: 4px; text-decoration: none;
     transition: color .2s; position: relative; white-space: nowrap;
 }
@@ -646,8 +646,8 @@ html {
 }
 .sg-nav .nav-drawer-cta:hover { background: var(--champagne-light); }
 
-/* ── Mobile (<768px): collapse to logo | mobile-cta | hamburger ──────────── */
-@media (max-width: 767px) {
+/* ── Mobile (<950px): collapse to logo | mobile-cta | hamburger ──────────── */
+@media (max-width: 949px) {
     .sg-nav .nav-links    { display: none; }
     .sg-nav .nav-cta-btn  { display: none; }
     .sg-nav .nav-logo-img { height: 48px; }
@@ -655,14 +655,8 @@ html {
     .sg-nav-states { grid-template-columns: 1fr; }
 }
 
-/* ── Tablet (768px–1023px): full nav, clamp() handles font/padding shrinking ─ */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .sg-nav .nav-mobile-cta { display: none; }
-    .sg-nav .nav-hamburger  { display: none; }
-}
-
-/* ── Desktop (>=1024px): full nav, hide mobile-only elements ─────────────── */
-@media (min-width: 1024px) {
+/* ── Desktop (>=950px): full nav, hide mobile-only elements ──────────────── */
+@media (min-width: 950px) {
     .sg-nav .nav-mobile-cta { display: none; }
     .sg-nav .nav-hamburger  { display: none; }
 }

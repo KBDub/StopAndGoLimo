@@ -40,4 +40,28 @@
         image="/images/heroes/hero-get-a-quote.jpg"
         imagePosition="center center"
     />
+
+    <x-sections.free-instant-quote
+        heading="Request Your"
+        headingBold="Free Quote"
+        headingTail=""
+        rightVariant="description"
+        :descImageTop="true"
+        descImage="/images/sections/chicago-skyline.jpg"
+        descImageAlt="Stop and Go Airport Shuttle Service covering the Southwest suburbs of Chicago"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Chicagoland Transportation"
+        descBody="As a trusted Chicagoland transportation provider, Stop & Go Airport Shuttle Service, Inc. offers flat-rate, all-inclusive pricing across every service we provide:"
+        :descBullets="[
+            'Airport shuttle to O\'Hare and Midway, available 24/7',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group travel',
+            'Corporate car service for business meetings and executive travel',
+            'Town car and chauffeur service for premium point-to-point rides',
+        ]"
+        descClosing="Serving New Lenox, Plainfield, Naperville, Joliet, Aurora, Romeoville, and every community in between, our drivers know every route and are ready around the clock."
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+    />
+
 </x-layouts.page>

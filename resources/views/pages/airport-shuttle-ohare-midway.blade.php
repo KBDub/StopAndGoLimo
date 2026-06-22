@@ -53,11 +53,18 @@
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
+        image="/images/sections/airport-pickup-fiq.jpg"
+        imageAlt="Airport pickup service — Stop and Go Airport Shuttle"
+        imageAspect="16/9"
+        imageObjectPosition="center"
         rightVariant="description"
         defaultVehicle="Airport Transportation"
         formAction="/get-a-quote"
         submitLabel="Send Message"
         descHeading="Why Choose Us?"
+        descImage="/images/sections/airport-pickup-fiq.jpg"
+        descImageAlt="Airport pickup service — Stop and Go Airport Shuttle"
+        :descImageTop="true"
         descSubheading="Complete Transportation Services"
         descBody="As a trusted provider of airport transportation, Stop & Go offers complete airport shuttle services throughout the Chicago suburbs:"
         :descBullets="[

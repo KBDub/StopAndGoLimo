@@ -47,8 +47,8 @@
         headingTail=""
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/sections/chicago-skyline.jpg"
-        descImageAlt="Stop and Go Airport Shuttle Service covering the Southwest suburbs of Chicago"
+        descImage="/images/sections/limousine-professional.jpg"
+        descImageAlt="Professional Stop and Go limousine ready for client service in New Lenox, Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Chicagoland Transportation"
         descBody="As a trusted Chicagoland transportation provider, Stop & Go Airport Shuttle Service, Inc. offers flat-rate, all-inclusive pricing across every service we provide:"
@@ -63,5 +63,13 @@
         formAction="/get-a-quote"
         submitLabel="Send Message"
     />
+
+    <x-sections.review-slider />
+
+    <x-sections.faq />
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
 
 </x-layouts.page>

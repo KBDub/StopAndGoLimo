@@ -568,8 +568,103 @@ html {
 .sg-nav-state { border: 1px solid rgba(255,255,255,.07); background: var(--navy-light); padding: 20px; text-align: center; }
 .sg-nav-hint { font-size: 13px; color: var(--slate); margin-top: 14px; font-style: italic; }
 
+/* ── Nav actions col (desktop CTA + mobile hamburger) ─────────────────────── */
+.sg-nav .nav-actions { display: flex; align-items: center; }
+
+/* ── Mobile CTA — center column below lg ─────────────────────────────────── */
+.sg-nav .nav-mobile-cta {
+    font-family: var(--font-head); font-weight: 600; font-size: 12px;
+    letter-spacing: .06em; text-transform: uppercase;
+    color: var(--champagne); border: 1px solid var(--champagne);
+    padding: 7px 14px; text-decoration: none; white-space: nowrap;
+    border-radius: 8px; justify-self: center; align-self: center;
+    transition: background .2s, color .2s;
+}
+.sg-nav .nav-mobile-cta:hover { background: rgba(220,181,126,.12); }
+
+/* ── Hamburger button ─────────────────────────────────────────────────────── */
+.sg-nav .nav-hamburger {
+    background: none; border: 1px solid rgba(220,181,126,.35);
+    color: var(--champagne); padding: 9px 11px; cursor: pointer;
+    line-height: 0; border-radius: 4px;
+    transition: background .2s, border-color .2s;
+    display: flex; align-items: center; justify-content: center;
+}
+.sg-nav .nav-hamburger:hover { background: rgba(220,181,126,.1); border-color: var(--champagne); }
+
+/* ── Mobile drawer ────────────────────────────────────────────────────────── */
+.sg-nav .nav-drawer {
+    background: var(--navy-dark);
+    border-top: 2px solid rgba(220,181,126,.25);
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.sg-nav .nav-drawer-inner {
+    display: flex; flex-direction: column;
+    padding: 8px 24px 28px;
+}
+.sg-nav .nav-drawer-link {
+    font-family: var(--font-head); font-size: 14px; font-weight: 700;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--cloud); padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    text-decoration: none; transition: color .18s;
+}
+.sg-nav .nav-drawer-link:hover { color: var(--champagne); }
+.sg-nav .nav-drawer-group {
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    padding: 4px 0 8px;
+}
+.sg-nav .nav-drawer-heading {
+    font-family: var(--font-head); font-size: 12px; font-weight: 700;
+    letter-spacing: .10em; text-transform: uppercase;
+    color: var(--champagne); display: block;
+    padding: 10px 0 6px;
+}
+.sg-nav .nav-drawer-sub {
+    font-family: var(--font-body); font-size: 14px; font-weight: 400;
+    color: var(--slate-light); padding: 5px 0 5px 12px; display: block;
+    text-decoration: none; border-left: 2px solid transparent;
+    transition: color .18s, border-color .18s;
+}
+.sg-nav .nav-drawer-sub:hover { color: var(--champagne); border-left-color: var(--champagne); }
+.sg-nav .nav-drawer-cta {
+    font-family: var(--font-head); font-size: 14px; font-weight: 700;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--navy); background: var(--champagne);
+    padding: 13px 24px; text-align: center; text-decoration: none;
+    margin-top: 16px; display: block;
+    transition: background .2s;
+}
+.sg-nav .nav-drawer-cta:hover { background: var(--champagne-light); }
+
+/* ── Mobile (<1024px): collapse to logo | mobile-cta | hamburger ─────────── */
+@media (max-width: 1023px) {
+    .sg-nav .nav-links    { display: none; }
+    .sg-nav .nav-cta-btn  { display: none; }
+}
+
+/* ── Desktop (>=1024px): full nav, hide mobile-only elements ─────────────── */
+@media (min-width: 1024px) {
+    .sg-nav .nav-mobile-cta { display: none; }
+    .sg-nav .nav-hamburger  { display: none; }
+}
+
+/* ── Desktop: slightly compressed (1280px–1400px) ────────────────────────── */
+@media (min-width: 1280px) and (max-width: 1400px) {
+    .sg-nav .nav-link { font-size: 13px; }
+    .sg-nav .nav-cta-btn { font-size: 16px; padding: 8px 32px; }
+}
+
+/* ── Desktop: compressed (1024px–1279px) ─────────────────────────────────── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .sg-nav .nav-link { font-size: 11px; letter-spacing: .025em; padding: 16px 7px; }
+    .sg-nav .nav-cta-btn { font-size: 12px; padding: 7px 18px; word-spacing: 2px; letter-spacing: .05em; }
+}
+
+/* ── Mobile breakpoint fix (replaces broken 780px rule) ──────────────────── */
 @media (max-width: 780px) {
     .sg-nav .dropdown-mega { grid-template-columns: 1fr; min-width: 240px; }
-    .sg-nav .nav-bar { flex-wrap: wrap; }
     .sg-nav-states { grid-template-columns: 1fr; }
 }

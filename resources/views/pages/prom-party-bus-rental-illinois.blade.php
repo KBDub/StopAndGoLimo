@@ -58,6 +58,15 @@
         ['heading' => 'Chicago Suburbs',  'items' => ['Plainfield', 'Bolingbrook', 'Lockport', 'Homer Glen', 'Orland Park']],
     ]" />
 
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional Transportation"
+        headingBold="Solutions"
+        body="Our New Lenox prom party buses provide 24/7 service to local venues with on-time pickups. Serving downtown New Lenox, nearby neighborhoods, and suburbs, our buses ensure safe, fun, and reliable transport with professional drivers, flexible pickups, and smooth prom-night travel."
+        buttonText="Book Your Prom Ride"
+        buttonHref="/bookings-reservations"
+        directions="New Lenox to Joliet prom venues: 15–25 min via I‑80  •  Romeoville to prom sites: 20–30 min via I‑55  •  Naperville to local event locations: 25–35 min via I‑88  •  All Chicago suburbs served with flexible pickups and drop-offs  •  Group packages available for multiple stops and after-party returns"
+    />
+
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.travel-in-style

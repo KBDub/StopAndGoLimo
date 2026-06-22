@@ -43,10 +43,6 @@
         imagePosition="center center"
     />
 
-    {{-- TODO fix the subtitle to have a headingTail instead of an incorrect subtitle
-        the 'subtitle="From Stop & Go Airport Shuttle Service Inc."'
-        is actually the remainder of the header after the bolad
-    --}}
     <x-sections.travel-in-style
         heading="Rent a"
         headingBold="Charter Bus"
@@ -112,6 +108,8 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.why-choose-us />
+        
     <x-sections.free-instant-quote
         heading="Book Your Next"
         headingBold="Charter Bus"
@@ -123,4 +121,13 @@
         rightVariant="image"
     />
 
+    <x-sections.review-slider />
+
+    <x-sections.faq preset="coach-buses" />
+
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
+        
 </x-layouts.page>

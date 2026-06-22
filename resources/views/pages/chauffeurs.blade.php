@@ -43,6 +43,23 @@
         imagePosition="center center"
     />
 
+    <x-sections.info-strip
+        headingBold="Safety Measures"
+        heading="and Regulations"
+        body="We want our clients to have the best time no matter what occasion they celebrate. Stop & Go Airport Shuttle Service Inc. provides clean and safe transportation services so everyone can enjoy the experience. We prioritize your enjoyment by ensuring that your celebrations are safe and fun, adhering to all safety regulations while providing a clean environment so you can focus on having a fantastic time. Our vehicles are well-maintained and always road-ready, and we always abide by laws and regulations."
+    />
+        
+    <x-sections.company-highlight
+        heading="Our"
+        headingBold="Commitment to You"
+        :items="[
+            ['icon' => 'car',      'heading' => 'Pristine Cars',        'body' => 'Meticulously maintained and clean for a luxurious ride.'],
+            ['icon' => 'user-tie', 'heading' => 'Professional Drivers', 'body' => 'Skilled and respectful, ensuring a great experience.'],
+        ]"
+    />
+
+    <x-sections.why-choose-us />
+
     <x-sections.free-instant-quote
         heading="Your"
         headingBold="Personal Chauffeur"
@@ -54,19 +71,13 @@
         rightVariant="image"
     />
 
-    <x-sections.info-strip
-        headingBold="Safety Measures"
-        heading="and Regulations"
-        body="We want our clients to have the best time no matter what occasion they celebrate. Stop & Go Airport Shuttle Service Inc. provides clean and safe transportation services so everyone can enjoy the experience. We prioritize your enjoyment by ensuring that your celebrations are safe and fun, adhering to all safety regulations while providing a clean environment so you can focus on having a fantastic time. Our vehicles are well-maintained and always road-ready, and we always abide by laws and regulations."
-    />
+    <x-sections.review-slider />
 
-    <x-sections.company-highlight
-        heading="Our"
-        headingBold="Commitment to You"
-        :items="[
-            ['icon' => 'car',      'heading' => 'Pristine Cars',        'body' => 'Meticulously maintained and clean for a luxurious ride.'],
-            ['icon' => 'user-tie', 'heading' => 'Professional Drivers', 'body' => 'Skilled and respectful, ensuring a great experience.'],
-        ]"
-    />
+    <x-sections.faq preset="chauffeurs" />
+    
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
 
 </x-layouts.page>

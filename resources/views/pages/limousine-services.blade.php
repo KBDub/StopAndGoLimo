@@ -159,10 +159,10 @@
     <x-sections.image-slide-in
         headingPrefix="Professional Transportation"
         headingBold="Solutions"
-        body="As New Lenox's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services, including airport shuttles, limousine service, party bus rentals, corporate transportation, and wedding vehicles. Our knowledge of New Lenox, Plainfield, and the entire Chicago Southwest suburbs ensures efficient and reliable service throughout the region, including direct trips to O'Hare and Midway airports."
+        body="As New Lenox's trusted transportation provider since 2015, Stop & Go offers complete luxury transportation services, including airport shuttles, limousine service, party bus rentals, corporate transportation, and wedding vehicles. Our knowledge of New Lenox, Plainfield, and the entire Chicago Southwest suburbs ensures efficient and reliable service throughout the region, including direct trips to O'Hare and Midway airports."
         buttonText="Contact Us"
         buttonHref="/bookings-reservations"
-        image="/images/sections/limousine-professional.jpg"
+        image="/images/sections/orland-park-confidence.png"
         imageAlt="Professional Stop and Go limousine ready for client service in New Lenox, Illinois"
         imageAspect="16/9"
     />
@@ -176,6 +176,9 @@
         directions="• New Lenox to O'Hare Airport: 45–55 min via I-355 North  •  New Lenox to Midway: 30–40 min via I-57 North  •  Plainfield to O'Hare: 50–65 min  •  Naperville to O'Hare: 35–45 min via I-88"
     />
 
-    <x-sections.faq preset="limousine" />
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
 
 </x-layouts.page>

@@ -639,32 +639,24 @@ html {
 }
 .sg-nav .nav-drawer-cta:hover { background: var(--champagne-light); }
 
-/* ── Mobile (<1024px): collapse to logo | mobile-cta | hamburger ─────────── */
-@media (max-width: 1023px) {
+/* ── Mobile (<768px): collapse to logo | mobile-cta | hamburger ──────────── */
+@media (max-width: 767px) {
     .sg-nav .nav-links    { display: none; }
     .sg-nav .nav-cta-btn  { display: none; }
+    .sg-nav .dropdown-mega { grid-template-columns: 1fr; min-width: 240px; }
+    .sg-nav-states { grid-template-columns: 1fr; }
+}
+
+/* ── Tablet (768px–1023px): full nav, compressed sizes ───────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .sg-nav .nav-mobile-cta { display: none; }
+    .sg-nav .nav-hamburger  { display: none; }
+    .sg-nav .nav-link { font-size: 11px; letter-spacing: .02em; padding: 16px 6px; }
+    .sg-nav .nav-cta-btn { font-size: 13px; padding: 7px 16px; word-spacing: 2px; letter-spacing: .05em; }
 }
 
 /* ── Desktop (>=1024px): full nav, hide mobile-only elements ─────────────── */
 @media (min-width: 1024px) {
     .sg-nav .nav-mobile-cta { display: none; }
     .sg-nav .nav-hamburger  { display: none; }
-}
-
-/* ── Desktop: slightly compressed (1280px–1400px) ────────────────────────── */
-@media (min-width: 1280px) and (max-width: 1400px) {
-    .sg-nav .nav-link { font-size: 13px; }
-    .sg-nav .nav-cta-btn { font-size: 16px; padding: 8px 32px; }
-}
-
-/* ── Desktop: compressed (1024px–1279px) ─────────────────────────────────── */
-@media (min-width: 1024px) and (max-width: 1279px) {
-    .sg-nav .nav-link { font-size: 11px; letter-spacing: .025em; padding: 16px 7px; }
-    .sg-nav .nav-cta-btn { font-size: 12px; padding: 7px 18px; word-spacing: 2px; letter-spacing: .05em; }
-}
-
-/* ── Mobile breakpoint fix (replaces broken 780px rule) ──────────────────── */
-@media (max-width: 780px) {
-    .sg-nav .dropdown-mega { grid-template-columns: 1fr; min-width: 240px; }
-    .sg-nav-states { grid-template-columns: 1fr; }
 }

@@ -75,6 +75,8 @@
         descImageAlt="Luxurious limousine interior with premium leather seating and ambient lighting"
     />
 
+    <x-sections.review-slider :inverted="true" />
+
     <x-sections.travel-in-style
         heading="Experienced Chauffeurs"
         headingBold="Committed to Excellence"
@@ -173,5 +175,7 @@
         buttonHref="/bookings-reservations"
         directions="• New Lenox to O'Hare Airport: 45–55 min via I-355 North  •  New Lenox to Midway: 30–40 min via I-57 North  •  Plainfield to O'Hare: 50–65 min  •  Naperville to O'Hare: 35–45 min via I-88"
     />
+
+    <x-sections.faq preset="limousine" />
 
 </x-layouts.page>

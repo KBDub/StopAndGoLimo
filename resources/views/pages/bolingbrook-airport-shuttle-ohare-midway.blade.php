@@ -43,7 +43,7 @@
     <x-sections.travel-in-style
         heading="Every Occasion Covered"
         headingBold="Driven by certified drivers you can trust"
-        body="Stop &amp; Go provides reliable transportation throughout Bolingbrook. We offer a professional 24/7 Bolingbrook airport shuttle to O'Hare and Midway."
+        body="Stop & Go provides reliable transportation throughout Bolingbrook. We offer a professional 24/7 Bolingbrook airport shuttle to O'Hare and Midway."
         image="/images/sections/bolingbrook-limo.png"
         imageAlt="Happy clients in a limousine in Bolingbrook, Illinois — Stop and Go Airport Shuttle"
         :inverted="true"
@@ -52,7 +52,7 @@
     <x-sections.info-strip
         headingBold="Reliable & Stylish"
         heading="Bolingbrook Transportation"
-        body="Stop &amp; Go provides 24/7 airport shuttle service to O'Hare and Midway, luxury limo service for weddings and events, and party bus rentals in Bolingbrook. With direct I-55 access and close proximity to both Chicago airports, we deliver reliable, professional transportation for business travel and celebrations throughout this southwest suburb."
+        body="Stop & Go provides 24/7 airport shuttle service to O'Hare and Midway, luxury limo service for weddings and events, and party bus rentals in Bolingbrook. With direct I-55 access and close proximity to both Chicago airports, we deliver reliable, professional transportation for business travel and celebrations throughout this southwest suburb."
     />
 
     <x-sections.three-steps :inverted="true" />
@@ -76,6 +76,8 @@
         descImageAlt="Airport shuttle in Bolingbrook, Illinois — Stop and Go Airport Shuttle"
     />
 
+    <x-sections.review-slider :inverted="true" />
+        
     <x-sections.travel-in-style
         heading="24/7 Bolingbrook Airport Shuttle"
         headingBold="to O'Hare & Midway"

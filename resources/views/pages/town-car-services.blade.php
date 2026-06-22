@@ -56,11 +56,11 @@
         headingTail="Today"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/sections/corporate-limo.jpg"
-        descImageAlt="Luxury town car ready for client pickup — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        descImage="/images/sections/elderly-relaxing-corporate.jpg"
+        descImageAlt="Passenger relaxing in a luxury town car — Stop and Go Airport Shuttle, New Lenox, Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Town Car Services"
-        descBody="As a trusted provider of town car service, Stop & Go delivers an elegant blend of luxury, comfort, and professionalism for both personal and business travel:"
+        descBody="As a trusted provider of town car service, Stop & Go Airport Shuttle Service, Inc. delivers an elegant blend of luxury, comfort, and professionalism for both personal and business travel:"
         :descBullets="[
             'Airport transfers to O\'Hare and Midway, available 24/7',
             'Corporate transportation for executives and business meetings',
@@ -75,10 +75,10 @@
     />
 
     <x-sections.party-limo-image
-        heading="Arrive in Comfort,"
-        headingBold="Every Time"
-        headingTail=""
-        body="Our town cars make a statement the moment they pull up. Clean, polished, and driven by a professional chauffeur, every arrival is smooth and on time. From airport pickups to corporate drop-offs, we take the stress out of getting there so you can focus on what matters."
+        heading="Rent a Town Car"
+        headingBold="from Stop & Go"
+        headingTail="Airport Shuttle Service, Inc."
+        body="Our town car service offers an elegant blend of luxury, comfort, and professionalism for both personal and business travel. Slide into plush leather seats and enjoy climate-controlled interiors. Expect punctual, courteous chauffeurs who handle every detail, from luggage assistance to navigating traffic with local expertise."
         image="/images/sections/limousine-arrival.jpg"
         imageAlt="Luxury limousine arriving for a client pickup — Stop and Go Airport Shuttle, New Lenox, Illinois"
         imageAspect="16/9"

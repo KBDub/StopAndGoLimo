@@ -107,4 +107,17 @@
         buttonText="Book Your Grad Day Ride"
         buttonHref="/bookings-reservations"
     />
+
+    <x-sections.travel-in-style
+        heading="Celebrate Grad Day"
+        headingBold="in Style"
+        body="Your graduation is a milestone worth celebrating in comfort and class. Stop and Go provides safe, spacious, and stylish transportation for students and families across Chicagoland. Our professional chauffeurs make sure everyone arrives together, on time, and ready to enjoy every moment. From New Lenox to Naperville, your Grad Day ride will be as memorable as the day itself."
+        buttonText="Book Your Grad Day Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/smiling-on-graduation-day.jpg"
+        imageAlt="Smiling graduates celebrating on graduation day with Stop and Go Limo"
+        imagePosition="right"
+        :inverted="true"
+    />
+
 </x-layouts.page>

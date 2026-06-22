@@ -12,3 +12,9 @@ id = "5rMRQiIPRL-Wx1MREyDDA"
 uri = "file://docs/white-labeling.md"
 type = "text"
 title = "White-Labeling Architecture (updated)"
+
+[[outputs]]
+id = "XXE1gZsy5XoMJZp-J4Idd"
+uri = "file://docs/mobile.md"
+type = "text"
+title = "Mobile Navigation Documentation"

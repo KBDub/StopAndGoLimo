@@ -49,9 +49,9 @@
             {{-- CTA button — centered --}}
             @if($buttonHref && $buttonText)
                 <div style="text-align: center; margin-bottom: 1.75rem;">
-                    <x-ui.button-outline-champagne :href="$buttonHref" radius="soft" size="md">
+                    <x-ui.button-champagne-solid href="{{ $buttonHref }}">
                         {{ $buttonText }}
-                    </x-ui.button-outline-champagne>
+                    </x-ui.button-champagne-solid>
                 </div>
             @endif
 

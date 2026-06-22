@@ -100,14 +100,6 @@
 
     <x-sections.our-services />
 
-    <x-sections.text-block-slide-in
-        headingPrefix="Trusted Grad Day"
-        headingBold="Transportation"
-        body="As a trusted transportation provider for over 15 years, Stop & Go offers luxury Grad Day transportation, including group rides and school celebration trips. Our professional, family-focused drivers and spacious, fully equipped vehicles make every ride safe, fun, and unforgettable. Celebrate your achievement with friends and loved ones and make your Grad Day truly memorable."
-        buttonText="Book Your Grad Day Ride"
-        buttonHref="/bookings-reservations"
-    />
-
     <x-sections.travel-in-style
         heading="Celebrate Grad Day"
         headingBold="in Style"
@@ -117,7 +109,16 @@
         image="/images/sections/smiling-on-graduation-day.jpg"
         imageAlt="Smiling graduates celebrating on graduation day with Stop and Go Limo"
         imagePosition="right"
-        :inverted="true"
     />
+
+    <x-sections.text-block-slide-in
+        headingPrefix="Trusted Grad Day"
+        headingBold="Transportation"
+        body="As a trusted transportation provider for over 15 years, Stop & Go offers luxury Grad Day transportation, including group rides and school celebration trips. Our professional, family-focused drivers and spacious, fully equipped vehicles make every ride safe, fun, and unforgettable. Celebrate your achievement with friends and loved ones and make your Grad Day truly memorable."
+        buttonText="Book Your Grad Day Ride"
+        buttonHref="/bookings-reservations"
+    />
+
+
 
 </x-layouts.page>

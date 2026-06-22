@@ -56,4 +56,14 @@
         submitLabel="Send Message"
         defaultVehicle="Corporate Transportation"
     />
+
+    <x-sections.review-slider />
+
+    <x-sections.faq preset="corporate" />
+
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
+
 </x-layouts.page>

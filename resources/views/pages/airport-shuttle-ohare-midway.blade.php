@@ -117,4 +117,6 @@
         directions="Downtown Naperville to O'Hare: 25–40 minutes via I‑88 East to I‑294 North • Crossroads Area to Midway: 30–45 minutes • Naperville to airport terminals: 20–35 minutes via I‑88 East • All Naperville neighborhoods served for airport shuttle • Round-trip packages available for O'Hare and Midway"
     />
 
+    <x-sections.faq preset="airport-shuttle" />
+
 </x-layouts.page>

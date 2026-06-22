@@ -54,15 +54,24 @@
         heading="Reserve Your"
         headingBold="Town Car"
         headingTail="Today"
-        body="Whether you need a ride to the airport, a corporate transfer, or a comfortable trip across town, our town car service is ready when you are. Tell us your pickup location, date, and group size, and we will handle the rest with care and professionalism."
-        image="/images/sections/elderly-relaxing-corporate.jpg"
-        imageAlt="Passenger relaxing in a luxury town car — Stop and Go Airport Shuttle, New Lenox, Illinois"
-        imageAspect="16/9"
-        imageObjectPosition="center"
+        rightVariant="description"
+        :descImageTop="true"
+        descImage="/images/sections/corporate-limo.jpg"
+        descImageAlt="Luxury town car ready for client pickup — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Town Car Services"
+        descBody="As a trusted provider of town car service, Stop & Go delivers an elegant blend of luxury, comfort, and professionalism for both personal and business travel:"
+        :descBullets="[
+            'Airport transfers to O\'Hare and Midway, available 24/7',
+            'Corporate transportation for executives and business meetings',
+            'Point-to-point town car service throughout Chicagoland',
+            'Hourly chauffeur service for events, appointments, and errands',
+            'Wedding and special occasion town car rentals',
+        ]"
+        descClosing="Serving New Lenox, Plainfield, Naperville, Joliet, Aurora, and the greater Chicagoland area, our professional chauffeurs are ready around the clock."
         formAction="/get-a-quote"
         submitLabel="Send Message"
         defaultVehicle="Limousine Service"
-        rightVariant="image"
     />
 
     <x-sections.party-limo-image

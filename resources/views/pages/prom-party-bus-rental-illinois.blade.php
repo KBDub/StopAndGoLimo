@@ -49,37 +49,7 @@
         body="Stop & Go offers luxury prom party bus rentals from Romeoville, Naperville, Joliet, Plainfield, New Lenox, and surrounding suburbs to venues across Illinois. Professional chauffeurs, modern sound systems, and customizable lighting ensure a safe, stylish, and unforgettable prom experience for students and peace of mind for parents."
     />
 
-    <x-sections.city-info-grid :boxes="[
-        ['heading' => 'New Lenox Prom',   'items' => ['Prom party buses from New Lenox', '24/7 availability for prom night', 'Professional, licensed chauffeurs', 'Flexible pickup throughout New Lenox', 'Safe, on-time prom transportation']],
-        ['heading' => 'Joliet Prom',      'items' => ['Service throughout Joliet area', 'Group transportation for prom', 'Professional chauffeurs available', 'Spacious party bus options', 'Timely arrivals for events']],
-        ['heading' => 'Romeoville Prom',  'items' => ['Transportation in Romeoville', '15–40 passenger buses', 'LED lights and sound systems', 'Supervised travel for students', 'Flexible residential pickups']],
-        ['heading' => 'Naperville Prom',  'items' => ['Coverage in Naperville suburbs', 'Safe and reliable prom transport', 'Experienced, courteous drivers', 'Flexible pickup points', 'On-time venue arrivals']],
-        ['heading' => 'Aurora Prom',      'items' => ['Prom transport in Aurora area', 'Large group party buses', 'Bluetooth sound and lighting', 'Driver-supervised journeys', 'Smooth rides to prom venues']],
-        ['heading' => 'Chicago Suburbs',  'items' => ['Plainfield', 'Bolingbrook', 'Lockport', 'Homer Glen', 'Orland Park']],
-    ]" />
-
-    <x-sections.text-block-slide-in
-        headingPrefix="Professional Transportation"
-        headingBold="Solutions"
-        body="Our New Lenox prom party buses provide 24/7 service to local venues with on-time pickups. Serving downtown New Lenox, nearby neighborhoods, and suburbs, our buses ensure safe, fun, and reliable transport with professional drivers, flexible pickups, and smooth prom-night travel."
-        buttonText="Book Your Prom Ride"
-        buttonHref="/bookings-reservations"
-        directions="New Lenox to Joliet prom venues: 15–25 min via I‑80  •  Romeoville to prom sites: 20–30 min via I‑55  •  Naperville to local event locations: 25–35 min via I‑88  •  All Chicago suburbs served with flexible pickups and drop-offs  •  Group packages available for multiple stops and after-party returns"
-    />
-
     <x-sections.three-steps :inverted="true" />
-
-    <x-sections.travel-in-style
-        heading="Arrive at Prom"
-        headingBold="in Style"
-        body="Make prom night unforgettable with Stop and Go. Our luxury party buses and limousines serve students and families across Chicagoland, from New Lenox and Naperville to Aurora, Joliet, and beyond. Professional chauffeurs, premium sound systems, and spacious interiors turn every mile into part of the celebration. Safe, on-time, and stress-free for parents and students alike."
-        buttonText="Book Your Prom Ride"
-        buttonHref="/bookings-reservations"
-        image="/images/sections/prom-night-2.jpg"
-        imageAlt="Students arriving at prom in a luxury party bus — Stop and Go Limo Illinois"
-        imagePosition="left"
-        :inverted="true"
-    />
 
     <x-sections.free-instant-quote
         heading="Book Your"
@@ -103,5 +73,43 @@
         formAction="/get-a-quote"
         submitLabel="Send Message"
     />
+
+    <x-sections.review-slider />
+
+    <x-sections.travel-in-style
+        heading="Arrive at Prom"
+        headingBold="in Style"
+        body="Make prom night unforgettable with Stop and Go. Our luxury party buses and limousines serve students and families across Chicagoland, from New Lenox and Naperville to Aurora, Joliet, and beyond. Professional chauffeurs, premium sound systems, and spacious interiors turn every mile into part of the celebration. Safe, on-time, and stress-free for parents and students alike."
+        buttonText="Book Your Prom Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/prom-night-2.jpg"
+        imageAlt="Students arriving at prom in a luxury party bus — Stop and Go Limo Illinois"
+        imagePosition="left"
+    />
+
+    <x-sections.city-info-grid :boxes="[
+        ['heading' => 'New Lenox Prom',   'items' => ['Prom party buses from New Lenox', '24/7 availability for prom night', 'Professional, licensed chauffeurs', 'Flexible pickup throughout New Lenox', 'Safe, on-time prom transportation']],
+        ['heading' => 'Joliet Prom',      'items' => ['Service throughout Joliet area', 'Group transportation for prom', 'Professional chauffeurs available', 'Spacious party bus options', 'Timely arrivals for events']],
+        ['heading' => 'Romeoville Prom',  'items' => ['Transportation in Romeoville', '15–40 passenger buses', 'LED lights and sound systems', 'Supervised travel for students', 'Flexible residential pickups']],
+        ['heading' => 'Naperville Prom',  'items' => ['Coverage in Naperville suburbs', 'Safe and reliable prom transport', 'Experienced, courteous drivers', 'Flexible pickup points', 'On-time venue arrivals']],
+        ['heading' => 'Aurora Prom',      'items' => ['Prom transport in Aurora area', 'Large group party buses', 'Bluetooth sound and lighting', 'Driver-supervised journeys', 'Smooth rides to prom venues']],
+        ['heading' => 'Chicago Suburbs',  'items' => ['Plainfield', 'Bolingbrook', 'Lockport', 'Homer Glen', 'Orland Park']],
+    ]" />
+
+    <x-sections.text-block-slide-in
+        headingPrefix="Professional Transportation"
+        headingBold="Solutions"
+        body="Our New Lenox prom party buses provide 24/7 service to local venues with on-time pickups. Serving downtown New Lenox, nearby neighborhoods, and suburbs, our buses ensure safe, fun, and reliable transport with professional drivers, flexible pickups, and smooth prom-night travel."
+        buttonText="Book Your Prom Ride"
+        buttonHref="/bookings-reservations"
+        directions="New Lenox to Joliet prom venues: 15–25 min via I‑80  •  Romeoville to prom sites: 20–30 min via I‑55  •  Naperville to local event locations: 25–35 min via I‑88  •  All Chicago suburbs served with flexible pickups and drop-offs  •  Group packages available for multiple stops and after-party returns"
+    />
+
+    <x-sections.faq preset="prom" />
+
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
 
 </x-layouts.page>

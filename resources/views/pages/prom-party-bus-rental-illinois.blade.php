@@ -51,6 +51,18 @@
 
     <x-sections.three-steps :inverted="true" />
 
+    <x-sections.travel-in-style
+        heading="Arrive at Prom"
+        headingBold="in Style"
+        body="Make prom night unforgettable with Stop and Go. Our luxury party buses and limousines serve students and families across Chicagoland, from New Lenox and Naperville to Aurora, Joliet, and beyond. Professional chauffeurs, premium sound systems, and spacious interiors turn every mile into part of the celebration. Safe, on-time, and stress-free for parents and students alike."
+        buttonText="Book Your Prom Ride"
+        buttonHref="/bookings-reservations"
+        image="/images/sections/prom-night-2.jpg"
+        imageAlt="Students arriving at prom in a luxury party bus — Stop and Go Limo Illinois"
+        imagePosition="left"
+        :inverted="true"
+    />
+
     <x-sections.free-instant-quote
         heading="Book Your"
         headingBold="Prom Party Bus"

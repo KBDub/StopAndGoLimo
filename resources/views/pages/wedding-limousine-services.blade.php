@@ -54,11 +54,23 @@
         heading="Your"
         headingBold="Private Sanctuary"
         headingTail=""
-        body="Our limousines are designed to offer a serene and luxurious environment, perfect for your special day. With spacious leather seating, ambient lighting, and thoughtful amenities, each ride becomes a memorable part of your wedding experience."
-        image="/images/sections/wedding-limo-fleet.jpg"
-        imageAlt="Luxury wedding limousine interior with leather seating and ambient lighting"
-        imageAspect="16/10"
-        rightVariant="image"
+        rightVariant="description"
+        :descImageTop="true"
+        descImage="/images/sections/wedding-limo-fleet.jpg"
+        descImageAlt="Luxury wedding limousine interior with leather seating and ambient lighting"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Wedding Transportation"
+        descBody="As your trusted wedding transportation partner, Stop & Go Airport Shuttle Service, Inc. provides elegant, flawless service for your most important day:"
+        :descBullets="[
+            'Bridal party and groomsmen transportation in luxury limousines',
+            'Wedding ceremony and reception transfers, perfectly timed',
+            'Guest shuttle service between venues and hotels',
+            'Engagement parties, rehearsal dinners, and day-after brunches',
+            'Stretch limousines, SUVs, and party buses for every wedding size',
+        ]"
+        descClosing="Serving couples throughout New Lenox, Plainfield, Naperville, Joliet, Aurora, and all of Chicagoland, our professional chauffeurs make every moment seamless."
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
     />
 
     <x-sections.banner-image

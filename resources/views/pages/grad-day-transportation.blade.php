@@ -111,6 +111,8 @@
         imagePosition="right"
     />
 
+    <x-sections.review-slider :inverted="true" />
+        
     <x-sections.text-block-slide-in
         headingPrefix="Trusted Grad Day"
         headingBold="Transportation"
@@ -119,6 +121,11 @@
         buttonHref="/bookings-reservations"
     />
 
+    <x-sections.faq preset="graduation" />
 
-
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
+    
 </x-layouts.page>

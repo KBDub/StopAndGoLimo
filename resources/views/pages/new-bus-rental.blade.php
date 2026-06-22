@@ -61,6 +61,8 @@
         body="Stop & Go Airport Shuttle Service offers late-model buses for groups of all sizes in Plainfield, New Lenox, and the southwest suburbs of Chicago. Whether you are planning a corporate outing, a school trip, or a special celebration, our modern fleet delivers comfort, reliability, and style. Book early to secure your preferred date and enjoy a stress-free group travel experience with a professional chauffeur from start to finish."
     />
 
+    <x-sections.why-choose-us />
+
     <x-sections.party-limo-image
         heading=""
         headingBold="Comfort"
@@ -71,5 +73,14 @@
         imageAspect="16/9"
         imageObjectPosition="center"
     />
+
+    <x-sections.review-slider />
+
+    <x-sections.faq />
+
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
 
 </x-layouts.page>

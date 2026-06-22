@@ -46,14 +46,23 @@
     <x-sections.free-instant-quote
         heading="Book Your Next"
         headingBold="Transportation Ride"
-        headingTail="With Us!"
-        body="Getting from point A to point B should be simple, comfortable, and stress-free. Our transportation service covers airport pickups, corporate transfers, special events, and everyday rides across the Southwest suburbs. Tell us your details and we will have the right vehicle ready for you."
-        image="/images/sections/limousine-couple.jpg"
-        imageAlt="Couple enjoying a luxury limousine ride — Stop and Go Airport Shuttle, New Lenox, Illinois"
-        imageAspect="16/9"
-        imageObjectPosition="center"
+        headingTail=""
+        rightVariant="description"
+        :descImageTop="true"
+        descImage="/images/sections/limousine-couple.jpg"
+        descImageAlt="Couple enjoying a luxury limousine ride — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        descHeading="Why Choose Us?"
+        descSubheading="Complete Transportation Services"
+        descBody="As a trusted Chicagoland transportation provider, Stop & Go Airport Shuttle Service, Inc. delivers safe, comfortable, and professional rides for every occasion:"
+        :descBullets="[
+            'Airport transfers to O\'Hare and Midway, available 24/7',
+            'Corporate car service for executive and business travel',
+            'Limousine service for weddings, events, and special occasions',
+            'Party bus rental for celebrations and group outings',
+            'Town car and chauffeur service for premium point-to-point rides',
+        ]"
+        descClosing="Serving New Lenox, Plainfield, Naperville, Joliet, Aurora, Romeoville, and every community in between, our professional chauffeurs are ready around the clock."
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        rightVariant="image"
     />
 </x-layouts.page>

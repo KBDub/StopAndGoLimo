@@ -74,14 +74,26 @@
         defaultVehicle="Limousine Service"
     />
 
+    <x-sections.why-choose-us />
+
     <x-sections.party-limo-image
         heading="Rent a Town Car"
         headingBold="from Stop & Go"
         headingTail="Airport Shuttle Service, Inc."
-        body="Our town car service offers an elegant blend of luxury, comfort, and professionalism for both personal and business travel. Slide into plush leather seats and enjoy climate-controlled interiors. Expect punctual, courteous chauffeurs who handle every detail, from luggage assistance to navigating traffic with local expertise."
+        body="Stop & Go Airport Shuttle Service Inc. offers impeccably maintained charter buses and professional drivers to groups in New Lenox, Plainfield, and throughout the greater Chicago area. Whether you’re organizing a wedding, corporate event, school outing, sports team trip, or group vacation, we deliver reliable, stylish transportation, without the stress of driving."
         image="/images/sections/limousine-arrival.jpg"
         imageAlt="Luxury limousine arriving for a client pickup — Stop and Go Airport Shuttle, New Lenox, Illinois"
         imageAspect="16/9"
         imageObjectPosition="center"
+        :inverted="true"
     />
+
+    <x-sections.review-slider :inverted="true" />
+
+    <x-sections.faq />
+    <x-sections.share-your-experience />
+    <x-sections.map-contact-section />
+    <x-ui.banner-thin-cloud />
+    <x-sections.base-footer />
+
 </x-layouts.page>

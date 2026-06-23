@@ -18,3 +18,9 @@ id = "XXE1gZsy5XoMJZp-J4Idd"
 uri = "file://docs/mobile.md"
 type = "text"
 title = "Mobile Navigation Documentation"
+
+[[outputs]]
+id = "9CzbHIErSCj8wFFK3DueU"
+uri = "file://docs/form-submission.md"
+type = "text"
+title = "Quote Form Submission — Diagnosis and Build Plan"

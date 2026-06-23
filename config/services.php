@@ -36,7 +36,7 @@ return [
     ],
 
     'gtm' => [
-        'id' => env('GTM_ID'),
+        'id' => 'GTM-PSQ56PHX',
     ],
 
     'recaptcha' => [
@@ -45,7 +45,7 @@ return [
     ],
 
     'ga4' => [
-        'id' => env('GA4_MEASUREMENT_ID'),
+        'id' => 'G-ESPKXP777G',
     ],
 
     'stripe' => [

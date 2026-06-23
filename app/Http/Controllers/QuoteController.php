@@ -46,9 +46,12 @@ class QuoteController extends Controller
             Mail::to($notifyEmail)->send(new QuoteSubmitted($quote));
         }
 
+        $firstName = explode(' ', trim($validated['name']))[0];
+
         return redirect()
             ->route('get-a-quote')
             ->with('quote_success', true)
+            ->with('quote_name', $firstName)
             ->with('quote_reference', $reference);
     }
 }

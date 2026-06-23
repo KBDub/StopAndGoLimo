@@ -39,6 +39,83 @@
     $descClose   = $inverted ? 'color: var(--cloud);'        : 'color: var(--navy);';
 @endphp
 
+{{-- ── Quote Success Modal ───────────────────────────────────────────────── --}}
+@if(session('quote_success'))
+<div
+    x-data="{
+        open: true,
+        progress: 100,
+        _timer: null,
+        init() {
+            const duration = 7000;
+            const tick     = 50;
+            let elapsed    = 0;
+            this._timer = setInterval(() => {
+                elapsed      += tick;
+                this.progress = Math.max(0, 100 - (elapsed / duration * 100));
+                if (elapsed >= duration) this.close();
+            }, tick);
+        },
+        close() {
+            clearInterval(this._timer);
+            this.open = false;
+        }
+    }"
+    x-show="open"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    style="position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(10, 22, 50, 0.82);"
+    @keydown.escape.window="close()"
+    @click.self="close()"
+>
+    <div style="position: relative; width: 100%; max-width: 26rem; background: var(--white); border-top: 5px solid var(--champagne); overflow: hidden;">
+
+        {{-- Close button --}}
+        <button
+            @click="close()"
+            type="button"
+            style="position: absolute; top: 0.75rem; right: 0.875rem; background: none; border: none; cursor: pointer; color: var(--slate); font-size: 1.25rem; line-height: 1; padding: 0.25rem;"
+            aria-label="Close"
+        >&times;</button>
+
+        {{-- Body --}}
+        <div style="padding: 2rem 2rem 1.5rem;">
+
+            {{-- Wingcrest mark --}}
+            <p class="font-head text-center" style="font-size: 0.6875rem; letter-spacing: 0.15em; color: var(--champagne); margin: 0 0 0.75rem; text-transform: uppercase;">Stop &amp; Go Airport Shuttle Service, Inc.</p>
+
+            {{-- Thank-you heading --}}
+            <h2 class="font-head text-center" style="font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 700; color: var(--navy); margin: 0 0 0.875rem; line-height: 1.2;">
+                Thank you, {{ session('quote_name', 'there') }}!
+            </h2>
+
+            {{-- Message --}}
+            <p class="font-body text-center" style="font-size: 0.9375rem; color: var(--slate); margin: 0 0 1.25rem; line-height: 1.65;">
+                We received your quote request and will be in touch with you shortly.
+            </p>
+
+            {{-- Reference --}}
+            <p class="font-body text-center" style="font-size: 0.8125rem; color: var(--slate); margin: 0;">
+                Reference: <strong style="color: var(--navy);">{{ session('quote_reference') }}</strong>
+            </p>
+
+        </div>
+
+        {{-- Countdown progress bar --}}
+        <div style="height: 4px; background: var(--cloud);">
+            <div
+                :style="'width: ' + progress + '%; background: var(--champagne); height: 100%; transition: width 0.05s linear;'"
+            ></div>
+        </div>
+
+    </div>
+</div>
+@endif
+
 <style>
 .sg-quote-field:focus {
     border-color: var(--navy);
@@ -63,15 +140,7 @@
                     * indicates required fields
                 </p>
 
-                {{-- Success message --}}
-                @if(session('quote_success'))
-                <div class="mb-6 px-4 py-4 font-body" style="background: #f0faf3; border-left: 4px solid var(--champagne);">
-                    <p style="font-size: 0.9375rem; font-weight: 700; color: var(--navy); margin: 0 0 4px;">Your quote request was sent!</p>
-                    <p style="font-size: 0.875rem; color: var(--slate); margin: 0;">
-                        Reference: <strong>{{ session('quote_reference') }}</strong>. We will follow up with you shortly.
-                    </p>
-                </div>
-                @endif
+                {{-- Success handled by modal below --}}
 
                 {{-- Validation errors --}}
                 @if($errors->any())

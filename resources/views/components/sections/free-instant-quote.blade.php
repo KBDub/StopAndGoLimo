@@ -98,11 +98,6 @@
                 We received your quote request and will be in touch with you shortly.
             </p>
 
-            {{-- Reference --}}
-            <p class="font-body text-center" style="font-size: 0.8125rem; color: var(--slate); margin: 0;">
-                Reference: <strong style="color: var(--navy);">{{ session('quote_reference') }}</strong>
-            </p>
-
         </div>
 
         {{-- Countdown progress bar --}}

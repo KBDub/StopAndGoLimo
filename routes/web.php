@@ -4,13 +4,13 @@ use App\Http\Controllers\StorefrontController;
 use Illuminate\Support\Facades\Route;
 
 // ─── First-Party Deployment Domain — serves the main marketing site ──────────
-// top5pct.dreamstudiosolutions.com is the Replit deployment URL; it is NOT a
+// stopngolimo.dreamstudiosolutions.com is the Replit deployment URL; it is NOT a
 // tenant storefront. By registering it explicitly (before the wildcard domain
 // group below), Laravel routes it to the main marketing site instead of the
 // storefront controller which requires current_store.
-Route::domain('top5pct.' . env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.com'))
+Route::domain('stopngolimo.' . env('TENANT_BASE_DOMAIN', 'dreamstudiosolutions.com'))
     ->middleware(['web'])
-    ->as('top5pct.')
+    ->as('stopngolimo.')
     ->group(base_path('routes/main-site.php'));
 
 // ─── White-Label Storefronts — {subdomain}.TENANT_BASE_DOMAIN ────────────────

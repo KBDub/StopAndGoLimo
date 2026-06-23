@@ -41,8 +41,9 @@
 
 <style>
 .sg-quote-field:focus {
-    border-color: var(--champagne);
+    border-color: var(--navy);
     outline: none;
+    box-shadow: 0 0 0 1px var(--navy), 0 0 0 4px var(--champagne);
 }
 </style>
 
@@ -256,10 +257,7 @@
 
                     {{-- Secured by reCAPTCHA indicator --}}
                     <p class="font-body text-center" style="font-size: 0.6875rem; color: var(--slate); line-height: 1.5;">
-                        Protected by reCAPTCHA &nbsp;&bull;&nbsp;
-                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Privacy</a>
-                        &nbsp;&bull;&nbsp;
-                        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Terms</a>
+                        Protected by reCAPTCHA
                     </p>
 
                 </form>

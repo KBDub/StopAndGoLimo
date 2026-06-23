@@ -1,151 +1,144 @@
-# Quote Form Submission — Current State and Build Plan
+# Quote Form Submission — Implementation Reference
 
 ## Overview
 
-The quote form on `/get-a-quote` (component `x-sections.free-instant-quote`) currently **does not work**. It submits via `method="GET"` to a GET-only route, so all field data is discarded as URL query parameters and nothing is saved or emailed. This document captures the full diagnosis and the exact build plan so work can resume once mail credentials are available.
+The quote form on `/get-a-quote` (component `x-sections.free-instant-quote`) is fully implemented. Submissions are validated, saved to the database, and trigger an email notification to the business owner via GoDaddy SMTP.
 
 ---
 
-## Files Involved
+## Files
 
 | Role | File |
 |---|---|
 | Page | `resources/views/pages/get-a-quote.blade.php` |
 | Form component | `resources/views/components/sections/free-instant-quote.blade.php` |
+| Controller | `app/Http/Controllers/QuoteController.php` |
+| Mailable | `app/Mail/QuoteSubmitted.php` |
+| Email template | `resources/views/emails/quote-submitted.blade.php` |
 | Routes | `routes/main-site.php` |
-| Existing contact controller | `app/Http/Controllers/ContactController.php` |
-| Existing custom-order controller | `app/Http/Controllers/CustomOrderController.php` |
-| Shared model | `app/Models/CustomOrderRequest.php` |
-| Database table | `custom_order_requests` (migration already ran) |
+| Model | `app/Models/CustomOrderRequest.php` |
+| Database table | `custom_order_requests` |
 
 ---
 
-## Issue Inventory
+## Request Flow
 
-### Form (`free-instant-quote.blade.php`)
-
-| Problem | Detail |
-|---|---|
-| `method="GET"` | Submits fields as query params to the GET page route — nothing is processed |
-| No `@csrf` directive | Any POST route will reject the request with HTTP 419 without the token |
-| CAPTCHA is a placeholder | A `<div>` showing "reCAPTCHA will load here" — no actual verification |
-| No success or error feedback | User sees no message after submitting |
-| Missing pickup location field | Only destination is collected; pickup is needed for a complete quote |
-
-### Routes (`routes/main-site.php`)
-
-| What exists | What is missing |
-|---|---|
-| `GET /get-a-quote` renders the page | No `POST /get-a-quote` route |
-| `POST /contact/message` → `ContactController::sendMessage` | Different form (contact modal), different field names (`firstName`, `lastName`, `message`) |
-| `POST /custom-order/submit` → `CustomOrderController::submit` | Apparel-only; expects `orderType=apparel`; imports Lunar cart models |
-
-### Existing Controllers
-
-Both `ContactController` and `CustomOrderController` carry `T5P-` reference prefixes and logic specific to an apparel business. They must not be modified for the limo quote flow. A dedicated `QuoteController` is required.
-
-### Email / Notifications
-
-| Setting | Current value |
-|---|---|
-| `MAIL_MAILER` | `log` — emails written to `storage/logs/laravel.log`, never sent |
-| `MAIL_FROM_ADDRESS` | `hello@example.com` — placeholder |
-| Mailable class for quotes | None exists |
-| Email template | None exists |
-
-### Database
-
-The `custom_order_requests` table and `CustomOrderRequest` model are clean and reusable. Quote submissions will use `order_type = 'quote'` and reference prefix `SG-QT-`.
+```
+User submits form (POST /get-a-quote)
+  → CSRF verified by Laravel middleware
+  → QuoteController::submit()
+      → Validate fields
+      → Save to custom_order_requests (order_type='quote', status='pending')
+      → Mail::to(QUOTE_NOTIFY_EMAIL)->send(new QuoteSubmitted($quote))
+  → Redirect GET /get-a-quote
+      → session('quote_success') shows reference number to user
+```
 
 ---
 
-## Build Plan
+## Form Fields
 
-### Step 1 — Update the form (`free-instant-quote.blade.php`)
+| Field | Name | Required | Notes |
+|---|---|---|---|
+| Full name | `name` | Yes | |
+| Phone | `phone` | Yes | |
+| Email | `email` | Yes | validated as email |
+| Vehicle type | `vehicle_type` | Yes | select — 11 options |
+| Passengers | `passengers` | Yes | select — 1 through 13+ |
+| Pickup location | `pickup_location` | Yes | added during implementation |
+| Destination | `destination` | No | |
+| Booking date | `booking_date` | No | date input |
+| Additional info | `additional_info` | No | textarea |
 
-- Change `method="GET"` to `method="POST"`
-- Add `@csrf` immediately inside the opening `<form>` tag
-- Add a pickup location field (text input, `name="pickup_location"`, required) above or beside the destination field
-- Add a success flash message block (shown when `session('quote_success')` is set)
-- Add an error summary block (shown when `$errors->any()`)
-
-### Step 2 — Add the POST route (`routes/main-site.php`)
-
-```php
-Route::post('/get-a-quote', [\App\Http\Controllers\QuoteController::class, 'submit'])
-    ->name('quote.submit');
-```
-
-### Step 3 — Create `QuoteController`
-
-**File:** `app/Http/Controllers/QuoteController.php`
-
-Responsibilities:
-- Validate all fields (name, phone, email, vehicle_type, passengers, pickup_location, destination, booking_date, additional_info)
-- Save to `custom_order_requests` with `order_type = 'quote'`, reference `SG-QT-XXXXXXXX`, status `pending`
-- Fire `Mail::to($notifyAddress)->send(new QuoteSubmitted($record))` to notify the business
-- Redirect back with `session()->flash('quote_success', true)` on success
-- Let Laravel validation errors redirect back automatically with `$errors`
-
-### Step 4 — Create `QuoteSubmitted` Mailable
-
-**File:** `app/Mail/QuoteSubmitted.php`
-
-Responsibilities:
-- Accept a `CustomOrderRequest $quote` in the constructor
-- Render `resources/views/emails/quote-submitted.blade.php`
-- Subject line: "New Quote Request — {$quote->reference}"
-
-### Step 5 — Create the email template
-
-**File:** `resources/views/emails/quote-submitted.blade.php`
-
-Plain, readable notification to the business owner containing:
-- Reference number
-- Name, phone, email
-- Vehicle type, passengers
-- Pickup location, destination, booking date
-- Additional information
-- Link to reply to the customer
-
-### Step 6 — Configure `.env` mail credentials
-
-Required keys (values to be supplied by the client):
-
-```env
-MAIL_MAILER=smtp
-MAIL_HOST=
-MAIL_PORT=587
-MAIL_USERNAME=
-MAIL_PASSWORD=
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=
-MAIL_FROM_NAME="Stop and Go Airport Shuttle"
-QUOTE_NOTIFY_EMAIL=
-```
-
-`QUOTE_NOTIFY_EMAIL` is the address that receives new quote notification emails (typically the owner's inbox).
-
-### Step 7 — reCAPTCHA v3
-
-Requires two keys from the Google reCAPTCHA console:
-
-```env
-RECAPTCHA_SITE_KEY=
-RECAPTCHA_SECRET_KEY=
-```
-
-Implementation: load the reCAPTCHA v3 script, inject a hidden `g-recaptcha-response` token on form submit, verify the token server-side in `QuoteController` before saving.
+All fields use `old()` so values are repopulated on a validation failure redirect.
 
 ---
 
-## Decisions Needed Before Building
+## Database
 
-| # | Decision | Status |
+Records are saved to `custom_order_requests` using the shared `CustomOrderRequest` model.
+
+| Column | Value |
+|---|---|
+| `reference` | `SG-QT-` + 8 random uppercase chars (e.g. `SG-QT-AB12CD34`) |
+| `order_type` | `quote` |
+| `contact_name` | from `name` field |
+| `contact_email` | from `email` field |
+| `contact_phone` | from `phone` field |
+| `payload` | full validated array (all fields) |
+| `status` | `pending` |
+| `submitted_at` | `now()` |
+
+---
+
+## Email Notification
+
+**Mailable:** `App\Mail\QuoteSubmitted`
+**Template:** `resources/views/emails/quote-submitted.blade.php`
+**Subject:** `New Quote Request — SG-QT-XXXXXXXX`
+**Recipient:** `QUOTE_NOTIFY_EMAIL` secret
+
+The email is a self-contained HTML document styled in navy/champagne matching the brand. It contains:
+- Reference number badge
+- Contact section: name, phone, email (with `mailto:` link)
+- Trip section: vehicle type, passengers, pickup, destination, booking date
+- Additional information block (only shown if provided)
+- "Reply to [Name]" button that opens a pre-addressed reply email
+
+---
+
+## Mail Configuration
+
+All mail settings are stored in Replit Secrets and shared env vars — nothing sensitive is in `.env`.
+
+| Key | Where | Value |
 |---|---|---|
-| 1 | Mail provider (Gmail SMTP, Mailgun, Postmark, SendGrid, other) | Waiting on credentials |
-| 2 | Email address to receive quote notifications | Waiting on credentials |
-| 3 | reCAPTCHA site key and secret key | Waiting on credentials |
+| `MAIL_MAILER` | shared env var | `smtp` |
+| `MAIL_SCHEME` | shared env var | `smtps` (required for port 465 — Symfony mailer uses `smtps`, not `ssl`) |
+| `MAIL_HOST` | shared env var | `smtp.secureserver.net` |
+| `MAIL_PORT` | shared env var | `465` |
+| `MAIL_USERNAME` | shared env var | `vincent@newlenoxlimoservice.com` |
+| `MAIL_FROM_ADDRESS` | shared env var | `vincent@newlenoxlimoservice.com` |
+| `MAIL_FROM_NAME` | shared env var | `Stop and Go Airport Shuttle` |
+| `MAIL_PASSWORD` | Replit Secret | GoDaddy email password |
+| `QUOTE_NOTIFY_EMAIL` | Replit Secret | Recipient address for new quote alerts |
+
+**Critical:** Symfony's SMTP transport requires the scheme `smtps` for SSL connections on port 465. Using `ssl` throws `UnsupportedSchemeException`. Do not change this.
+
+---
+
+## Dev Environment Limitation
+
+Replit's sandbox blocks outbound SMTP (ports 465 and 587 both time out). This means:
+
+- In **development**: `Mail::send()` will hang then fail with a connection timeout. Use `MAIL_MAILER=log` locally to write emails to `storage/logs/laravel.log` for inspection without sending.
+- In **production** (deployed): GoDaddy SMTP works correctly. The first real submission will deliver the notification email.
+
+To test locally, override the mailer inline in the artisan shell or set `MAIL_MAILER=log` temporarily.
+
+---
+
+## User-Facing Feedback
+
+**Success** — shown after redirect when `session('quote_success')` is set:
+- Champagne left-border box with the message "Your quote request was sent!"
+- Reference number displayed (e.g. `SG-QT-AB12CD34`)
+- "We will follow up with you shortly."
+
+**Validation errors** — shown when `$errors->any()`:
+- Red left-border box listing each error
+- All previously entered values are repopulated via `old()`
+
+---
+
+## CAPTCHA
+
+The form still shows a placeholder block ("reCAPTCHA will load here"). reCAPTCHA v3 is not yet implemented. To add it:
+
+1. Register a v3 site at [google.com/recaptcha](https://www.google.com/recaptcha)
+2. Add `RECAPTCHA_SITE_KEY` and `RECAPTCHA_SECRET_KEY` as Replit Secrets
+3. Load the v3 JS in the form, inject a hidden `g-recaptcha-response` token on submit
+4. Verify the token in `QuoteController::submit()` before saving
 
 ---
 
@@ -155,6 +148,6 @@ Implementation: load the reCAPTCHA v3 script, inject a hidden `g-recaptcha-respo
 |---|---|---|
 | General contact modal | `ContactController::sendMessage` | `T5P-MSG-` |
 | Apparel custom order | `CustomOrderController::submit` | `T5P-` |
-| **Limo quote (new)** | `QuoteController::submit` | `SG-QT-` |
+| Limo quote | `QuoteController::submit` | `SG-QT-` |
 
-The `T5P-` prefix is leftover from the project this site was scaffolded from. All new limo-specific submissions use `SG-` prefixes.
+The `T5P-` prefixes are leftover from the project this site was scaffolded from. All limo-specific submissions use `SG-` prefixes.

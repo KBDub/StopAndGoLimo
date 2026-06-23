@@ -529,19 +529,28 @@
         var sgWidgetId = null;
         var sgSubmitBtn = sgForm.querySelector('[type="submit"]');
 
+        function sgDisableSubmit() {
+            if (sgSubmitBtn) {
+                sgSubmitBtn.disabled     = true;
+                sgSubmitBtn.textContent  = 'Sending\u2026';
+                sgSubmitBtn.style.opacity = '0.6';
+                sgSubmitBtn.style.cursor  = 'not-allowed';
+            }
+        }
+
         function sgRecaptchaCallback(token) {
             document.getElementById('sg-recaptcha-token').value = token;
             sgForm.submit();
         }
 
         function sgRecaptchaExpired() {
-            if (sgSubmitBtn) sgSubmitBtn.disabled = false;
+            // Token expired after disable — submit anyway; button stays locked.
             sgForm.submit();
         }
 
         function sgRecaptchaError() {
-            // reCAPTCHA unavailable (e.g. dev domain not registered) — submit anyway
-            // Server-side skips verification outside production
+            // reCAPTCHA unavailable (e.g. dev domain not registered) — submit anyway.
+            // Server-side skips verification outside production.
             sgForm.submit();
         }
 
@@ -564,13 +573,18 @@
 
             sgForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                if (sgSubmitBtn) sgSubmitBtn.disabled = true;
+                sgDisableSubmit();
                 if (sgWidgetId !== null) {
                     grecaptcha.reset(sgWidgetId);
                     grecaptcha.execute(sgWidgetId);
                 } else {
                     sgForm.submit();
                 }
+            });
+        } else {
+            // No reCAPTCHA configured — disable on native submit.
+            sgForm.addEventListener('submit', function () {
+                sgDisableSubmit();
             });
         }
     }

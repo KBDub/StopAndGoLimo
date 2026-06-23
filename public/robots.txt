@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
 
-Disallow: /cart
-Disallow: /checkout
-
 # Sitemaps
 Sitemap: https://www.newlenoxlimoservice.com/sitemap.xml

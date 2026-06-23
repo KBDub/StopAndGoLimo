@@ -114,7 +114,10 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        $notifyEmail = config('mail.quote_notify_email', env('QUOTE_NOTIFY_EMAIL'));
+        // config() reads from mail.php → env(). getenv() is a direct OS-level
+        // fallback that bypasses Dotenv's repository, ensuring Replit secrets
+        // are always found even when not present in the .env file.
+        $notifyEmail = config('mail.quote_notify_email') ?: getenv('QUOTE_NOTIFY_EMAIL');
 
         if ($notifyEmail) {
             try {

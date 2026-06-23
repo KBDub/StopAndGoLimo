@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.newlenoxlimoservice.com/sitemap.xml
+Sitemap: https://newlenoxlimoservice.com/sitemap.xml

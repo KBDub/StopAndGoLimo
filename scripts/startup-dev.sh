@@ -39,14 +39,49 @@ fi
 # .env — OS-level env vars (Replit shared vars / secrets) are present in
 # /proc/PID/environ but are invisible to $_ENV / getenv() in web context.
 # Writing them into .env here ensures Dotenv picks them up on every request.
-if [ -n "${QUOTE_NOTIFY_EMAIL}" ]; then
-    if grep -q "^QUOTE_NOTIFY_EMAIL=" .env; then
-        sed -i "s|^QUOTE_NOTIFY_EMAIL=.*|QUOTE_NOTIFY_EMAIL=${QUOTE_NOTIFY_EMAIL}|" .env
+
+sg_inject_env() {
+    local KEY="$1"
+    local VAL="$2"
+    if [ -z "$VAL" ]; then return; fi
+    if grep -q "^${KEY}=" .env; then
+        sed -i "s|^${KEY}=.*|${KEY}=${VAL}|" .env
     else
-        echo "QUOTE_NOTIFY_EMAIL=${QUOTE_NOTIFY_EMAIL}" >> .env
+        echo "${KEY}=${VAL}" >> .env
     fi
+}
+
+if [ -n "${QUOTE_NOTIFY_EMAIL}" ]; then
+    sg_inject_env "QUOTE_NOTIFY_EMAIL" "${QUOTE_NOTIFY_EMAIL}"
     echo "[startup] QUOTE_NOTIFY_EMAIL injected into .env"
 fi
+
+# Mail — non-sensitive values are hard-coded here to bypass the
+# Replit secrets vs shared-env-var precedence ambiguity (secrets win
+# over .env via Dotenv createImmutable, so stale secret values would
+# silently override the correct ones if we relied on $MAIL_HOST etc.).
+# MAIL_PASSWORD is read from the Replit secret and written to .env.
+# All MAIL_* OS env vars are then unset so PHP reads exclusively from .env.
+sg_inject_env "MAIL_MAILER"       "smtp"
+sg_inject_env "MAIL_HOST"         "smtp.gmail.com"
+sg_inject_env "MAIL_PORT"         "587"
+sg_inject_env "MAIL_ENCRYPTION"   "tls"
+sg_inject_env "MAIL_USERNAME"     "stopngovr@gmail.com"
+sg_inject_env "MAIL_FROM_ADDRESS" "stopngovr@gmail.com"
+sg_inject_env "MAIL_FROM_NAME"    "Stop and Go Airport Shuttle"
+echo "[startup] MAIL_* (non-sensitive) written to .env"
+
+if [ -n "${MAIL_PASSWORD}" ]; then
+    sg_inject_env "MAIL_PASSWORD" "${MAIL_PASSWORD}"
+    echo "[startup] MAIL_PASSWORD injected into .env"
+else
+    echo "[startup] WARNING: MAIL_PASSWORD secret is not set — mail will fail."
+fi
+
+# Unset all MAIL_* OS env vars so Dotenv reads the .env values above,
+# not stale values baked into Replit secrets or shared env vars.
+unset MAIL_MAILER MAIL_HOST MAIL_PORT MAIL_ENCRYPTION \
+      MAIL_USERNAME MAIL_FROM_ADDRESS MAIL_FROM_NAME MAIL_PASSWORD
 
 # Start Laravel server in background
 echo "[startup] Starting Laravel..."

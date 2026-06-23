@@ -55,7 +55,7 @@ MAIL_HOST = "smtp.gmail.com"
 MAIL_PORT = "587"
 MAIL_USERNAME = "stopngovr@gmail.com"
 MAIL_FROM_ADDRESS = "stopngovr@gmail.com"
-QUOTE_NOTIFY_EMAIL = "vincent@newlenoxlimoservice.com"
+QUOTE_NOTIFY_EMAIL = "vincent@newlenoxlimoservice.com,stopngovr@gmail.com"
 MAIL_ENCRYPTION = "tls"
 
 [userenv.development]

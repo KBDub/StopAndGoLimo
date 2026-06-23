@@ -117,14 +117,17 @@ class QuoteController extends Controller
         // config() reads from mail.php → env(). getenv() is a direct OS-level
         // fallback that bypasses Dotenv's repository, ensuring Replit secrets
         // are always found even when not present in the .env file.
-        $notifyEmail = config('mail.quote_notify_email') ?: getenv('QUOTE_NOTIFY_EMAIL');
+        $notifyEmail  = config('mail.quote_notify_email') ?: getenv('QUOTE_NOTIFY_EMAIL');
+        $recipients   = $notifyEmail
+            ? array_values(array_filter(array_map('trim', explode(',', $notifyEmail))))
+            : [];
 
-        if ($notifyEmail) {
+        if (!empty($recipients)) {
             try {
-                Mail::to($notifyEmail)->send(new QuoteSubmitted($quote));
+                Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));
                 Log::info('[QuoteController] Notification email sent', [
                     'reference' => $reference,
-                    'to'        => $notifyEmail,
+                    'to'        => implode(', ', $recipients),
                     'host'      => config('mail.mailers.smtp.host'),
                     'port'      => config('mail.mailers.smtp.port'),
                     'scheme'    => config('mail.mailers.smtp.scheme'),

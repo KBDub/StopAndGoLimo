@@ -45,7 +45,7 @@ return [
             'port' => env('MAIL_PORT', 2525),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
-            'timeout' => null,
+            'timeout' => 8,
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url(env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
         ],
 
@@ -112,5 +112,7 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'support@top5pct.com'),
         'name' => env('MAIL_FROM_NAME', 'Top5Pct Support'),
     ],
+
+    'quote_notify_email' => env('QUOTE_NOTIFY_EMAIL'),
 
 ];

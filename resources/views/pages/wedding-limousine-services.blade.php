@@ -38,7 +38,7 @@
         subtitle="Elegant chauffeured transportation for your perfect day"
         description="Stop & Go Airport Shuttle Service, Inc. provides luxury wedding limousine service throughout the Chicago suburbs. Our wedding fleet includes stretch limousines for the bridal party, luxury SUVs for the couple, and Mercedes Sprinter vans or coach buses for guest shuttles. We serve venues throughout the southwest suburbs, western suburbs, north suburbs, and all of Chicago. Chauffeurs arrive early, coordinate with your planner, and ensure a seamless experience. Every vehicle is impeccably clean. Flat-rate pricing, no surprises. We recommend booking 6 to 12 months in advance for spring and summer weekends. Contact us today to reserve."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/wedding-hero.jpg"
         imagePosition="center center"
     />

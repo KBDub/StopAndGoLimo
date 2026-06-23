@@ -38,7 +38,7 @@
         subtitle="Brand-new luxury buses for birthdays, proms, and every celebration"
         description="Stop & Go Airport Shuttle Service, Inc. offers party bus rental in New Lenox, Plainfield, and throughout all of Chicagoland. Our newest buses are ready for birthday nights, bachelorette parties, prom send-offs, quinceañera arrivals, graduation celebrations, and group trips to concerts or sporting events. Premium interiors with LED lighting, top-of-the-line sound, and comfortable seating. Every bus includes a professional, background-checked chauffeur. We serve New Lenox, Plainfield, Joliet, Frankfort, Mokena, and communities throughout Chicagoland. Flat-rate, all-inclusive pricing. Book early as prom season and summer weekends fill fast."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/heroes/hero-new-bus-rental.jpg"
         imagePosition="center center"
     />

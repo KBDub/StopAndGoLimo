@@ -35,7 +35,7 @@
         subtitleIn="serving Joliet, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides 24-hour limousine and airport shuttle service throughout Joliet, Illinois, the seat of Will County. We offer flat-rate, door-to-door transfers to O'Hare (ORD) and Midway (MDW) with real-time flight tracking, available every hour of the day. Beyond airport travel, we serve Joliet with wedding limousines, prom and grad day buses, birthday and bachelorette transportation, quinceañera celebrations, corporate car service, and entertainment shuttles to Harrah's and Hollywood Casino. Background-checked, uniformed chauffeurs. We serve Plainfield, Bolingbrook, New Lenox, Romeoville, and Lockport. Flat-rate pricing. Book online or call."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/joliet-il.png"
         imagePosition="center center"
     />

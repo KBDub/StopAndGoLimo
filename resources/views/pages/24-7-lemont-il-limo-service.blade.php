@@ -35,7 +35,7 @@
         subtitleIn="serving Lemont, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides 24-hour limousine and airport shuttle service throughout Lemont, Illinois. Sitting at the convergence of Cook, DuPage, and Will counties, Lemont offers fast access to both O'Hare (ORD) and Midway (MDW). We offer flat-rate, door-to-door transfers with real-time flight tracking, available every day. We serve Argonne National Laboratory and the local business community, and provide wedding limousines, birthday and bachelorette party buses, quinceañera transportation, and corporate car service. Background-checked, uniformed chauffeurs. We serve Homer Glen, Romeoville, Bolingbrook, and Orland Park. Flat-rate pricing. Book online or call us."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/lemont-il.png"
         imagePosition="center center"
     />

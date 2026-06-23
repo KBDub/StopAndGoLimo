@@ -50,7 +50,7 @@
         subtitle="For every milestone, every celebration, every occasion"
         description="Stop & Go Airport Shuttle Service, Inc. provides special event limousine service for every occasion. We serve weddings, proms, quinceañera celebrations, birthday parties, bachelorette nights, corporate galas, graduation celebrations, sports events, and concerts. Our fleet includes stretch limousines, luxury SUVs, Mercedes Sprinter vans, and full-size party buses. Every chauffeur is professional, uniformed, and background-checked. We cover all of Chicagoland, from the southwest suburbs through Aurora and Schaumburg, north to Waukegan, and into every Chicago neighborhood. Flat-rate pricing, no hidden fees. Call us or request a quote online to start planning."
         buttonText="Book a Ride"
-        buttonHref="/get-a-quote"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/heroes/hero-special-event.jpg"
         imagePosition="center 50%"
     />

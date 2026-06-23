@@ -6,14 +6,15 @@
     'subtitleIn'      => '',
     'description'     => '',
     'buttonText'      => 'Book a Ride',
-    'buttonHref'      => '/get-a-quote',
+    'buttonHref'      => 'https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo',
     'buttonRadius'    => 'soft',
     'image'           => '/images/heroes/hero-home.jpg',
     'imagePosition'   => 'center center',
 ])
 
 @php
-    $isModal = $buttonHref === '/get-a-quote' || $buttonHref === '/booking';
+    $isModal    = $buttonHref === '/get-a-quote' || $buttonHref === '/booking';
+    $isExternal = str_starts_with($buttonHref, 'http');
 @endphp
 
 <section id="category-hero" class="relative flex items-center justify-center overflow-hidden isolate" style="min-height: 100svh; scroll-margin-top: 80px;">
@@ -70,6 +71,13 @@
             <x-ui.button-champagne-gradient
                 radius="{{ $buttonRadius }}"
                 onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+            >{{ $buttonText }}</x-ui.button-champagne-gradient>
+        @elseif($isExternal)
+            <x-ui.button-champagne-gradient
+                href="{{ $buttonHref }}"
+                radius="{{ $buttonRadius }}"
+                target="_blank"
+                rel="noopener noreferrer"
             >{{ $buttonText }}</x-ui.button-champagne-gradient>
         @else
             <x-ui.button-champagne-gradient href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">

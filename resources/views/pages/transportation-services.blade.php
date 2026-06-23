@@ -38,7 +38,7 @@
         subtitle="Point-to-point and hourly rides for every occasion"
         description="Stop & Go Airport Shuttle Service, Inc. offers private transportation for every need: airport runs to O'Hare and Midway, hourly charters, event shuttles, and long-haul transfers across Illinois. We serve corporate travelers, families, couples, and event groups throughout all of Chicagoland. Our fleet covers every group size: executive sedans, luxury SUVs, Mercedes Sprinter vans, stretch limousines, party buses, and coach buses. Every ride includes a background-checked chauffeur, flat-rate pricing, and real-time communication. We are available 24 hours a day, every day of the year."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/corporate-service.jpg"
         imagePosition="center center"
     />

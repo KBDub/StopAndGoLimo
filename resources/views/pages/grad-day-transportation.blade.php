@@ -38,7 +38,7 @@
         subtitle="Your celebration starts the moment you step on board"
         description="Stop & Go Airport Shuttle Service, Inc. provides safe Grad Day transportation for students throughout Illinois. We pick up your group, keep everyone together all day, and make sure everyone gets home safely. Our party buses and Mercedes Sprinter vans feature comfortable seating, LED lighting, and premium sound. Every chauffeur is background-checked and trained to make the day memorable and worry-free for students and parents. We serve high schools throughout Chicagoland across all metro counties. Flat-rate, all-inclusive pricing with clear quotes before you book. Grad Day buses fill fast, so reserve early."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/graduation-day-hats-in-air.png"
         imagePosition="center center"
     />

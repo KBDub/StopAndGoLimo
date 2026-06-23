@@ -38,7 +38,7 @@
         subtitle="Safe, stylish, and parent-approved prom transportation"
         description="Stop & Go Airport Shuttle Service, Inc. makes prom night safe and unforgettable for students throughout Illinois. Our buses pick up groups from home, take everyone to dinner and the venue, and bring them safely back, with a professional, background-checked chauffeur behind the wheel. Premium LED lighting, great sound, and comfortable seating for any group size. We serve high schools throughout Chicagoland, including Lincoln-Way District, Plainfield North and South, Naperville North and Central, Schaumburg, Arlington Heights, and many more. Flat-rate, all-inclusive pricing. Prom buses book fast from March through June. Reserve early."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/heroes/hero-prom-party-bus-rental-illinois.jpg"
         imagePosition="center center"
     />

@@ -35,7 +35,7 @@
         subtitleIn="serving Minooka, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides 24-hour limousine and airport shuttle service throughout Minooka, Illinois. Situated at the Will and Grundy County line near I-80, we offer flat-rate transfers to O'Hare (ORD) and Midway (MDW) with real-time flight monitoring, available any time. We also serve Minooka with birthday and bachelorette party buses, quinceañera celebrations, wedding parties, prom groups from Minooka Community High School, and corporate executive car service. Background-checked, uniformed chauffeurs. We serve Channahon, Morris, and Joliet. Flat-rate, clearly quoted pricing. Book online or call us any time."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/minooka-il.png"
         imagePosition="center center"
     />

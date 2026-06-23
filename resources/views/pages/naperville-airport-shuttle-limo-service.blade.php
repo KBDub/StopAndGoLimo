@@ -35,7 +35,7 @@
         subtitleIn="serving Naperville, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. operates a full-service hub in Naperville at 3420 Lacrosse Ln, giving us fast access to DuPage and Will counties and all of Chicagoland. We serve Naperville residents and businesses heading to O'Hare (ORD) and Midway (MDW) with flat-rate, door-to-door service and real-time flight tracking. We also serve the I-88 corridor, Hotel Arista, Hotel Indigo, and nearby business parks. Our fleet covers weddings, proms, quinceañeras, bachelorette parties, and corporate outings. Background-checked, uniformed chauffeurs available around the clock. Always flat-rate. Call us or book online today."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/downtown-naperville-aerial.jpg"
         imagePosition="center center"
     />

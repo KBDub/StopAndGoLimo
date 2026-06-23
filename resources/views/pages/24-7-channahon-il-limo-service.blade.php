@@ -35,7 +35,7 @@
         subtitleIn="serving Channahon, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides 24-hour limousine and airport shuttle service throughout Channahon, Illinois. Sitting at the I-55 and I-80 crossroads, residents have easy access to O'Hare (ORD) and Midway (MDW). We offer flat-rate, door-to-door transfers with real-time flight tracking, every day of the year. Beyond airport runs, we serve Channahon with wedding limousines, birthday and event group transportation, and corporate car service throughout Will and Grundy counties. Every driver is background-checked, uniformed, and professional. We also serve Minooka, Joliet, and Morris. Flat-rate pricing, no hidden fees. Book online or call us any time."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/channahon-il.png"
         imagePosition="center center"
     />

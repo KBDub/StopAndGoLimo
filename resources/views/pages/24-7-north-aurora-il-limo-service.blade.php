@@ -35,7 +35,7 @@
         subtitleIn="serving North Aurora, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides 24-hour limousine and airport shuttle service throughout North Aurora, Illinois. Positioned in Kane County near I-88 and Route 31, North Aurora offers fast access to O'Hare (ORD) and Midway (MDW). We offer flat-rate, door-to-door transfers with real-time flight monitoring, available every hour of the day and night. We also serve North Aurora with wedding limousines, birthday and bachelorette party buses, quinceañera transportation, prom group buses, and corporate car service along the I-88 corridor. Background-checked, uniformed chauffeurs. We serve Batavia, Geneva, Aurora, Oswego, and Naperville. Flat-rate pricing. Book online or call."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/north-aurora-il.png"
         imagePosition="center center"
     />

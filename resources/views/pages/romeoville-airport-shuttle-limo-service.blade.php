@@ -35,7 +35,7 @@
         subtitleIn="serving Romeoville, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides private airport shuttle, limousine, and party bus service throughout Romeoville, Illinois. Flat-rate transfers to O'Hare (ORD) and Midway (MDW) with real-time flight tracking, 24 hours a day. We also serve Lewis University with corporate and private aviation ground transport. Our party buses and limousines cover birthday and bachelorette groups, wedding parties, quinceañera celebrations, and prom and grad day groups. We serve Bolingbrook, Plainfield, Lockport, and neighboring Will County communities. Flat-rate pricing, no hidden fees. Book online or call us any time."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/romeoville-il.png"
         imagePosition="center center"
     />

@@ -35,7 +35,7 @@
         subtitleIn="serving Homer Glen, Illinois"
         description="Stop & Go Airport Shuttle Service, Inc. provides 24-hour limousine and airport shuttle service throughout Homer Glen, Illinois. Situated along 143rd Street with easy access to I-355 and I-55, we offer flat-rate transfers to O'Hare (ORD) and Midway (MDW) with real-time flight monitoring, available around the clock. We also serve Homer Glen with wedding limousines, birthday and bachelorette party buses, quinceañera transportation, prom group buses, and corporate car service. Background-checked, uniformed chauffeurs. We serve Lockport, Lemont, Orland Park, and Joliet. Flat-rate pricing. Book online or call us any time."
         buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/sections/homer-glen-il.png"
         imagePosition="center center"
     />

@@ -56,6 +56,7 @@ MAIL_HOST = "smtp.office365.com"
 MAIL_PORT = "587"
 MAIL_USERNAME = "vincent@newlenoxlimoservice.com"
 MAIL_FROM_ADDRESS = "vincent@newlenoxlimoservice.com"
+QUOTE_NOTIFY_EMAIL = "vincent@newlenoxlimoservice.com"
 
 [userenv.development]
 SESSION_DRIVER = "file"

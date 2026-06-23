@@ -49,6 +49,13 @@ STAFF_ADMIN_HASH = "$2y$12$TJGTDRPVswe8zdRzH1QYpu3OFlxUc1U4yMtO2D8oKzslEeHJQoGgC
 ASSET_URL = "https://top-5-pct.replit.app"
 STRIPE_WEBHOOK_SECRET = "whsec_placeholder"
 SCOUT_DRIVER = "database"
+MAIL_MAILER = "smtp"
+MAIL_SCHEME = "ssl"
+MAIL_FROM_NAME = "Stop and Go Airport Shuttle"
+MAIL_HOST = "smtp.secureserver.net"
+MAIL_PORT = "465"
+MAIL_USERNAME = "vincent@newlenoxlimoservice.com"
+MAIL_FROM_ADDRESS = "vincent@newlenoxlimoservice.com"
 
 [userenv.development]
 SESSION_DRIVER = "file"

@@ -32,8 +32,6 @@ echo "[startup] Laravel ready after ${ELAPSED}s. Running warm-up requests..."
 # F: Hit key pages to warm OPcache and pre-compile Blade templates.
 # These requests happen before real users arrive.
 curl --silent --output /dev/null --max-time 60 http://localhost:5000/ &
-curl --silent --output /dev/null --max-time 60 http://localhost:5000/custom-apparel &
-curl --silent --output /dev/null --max-time 60 http://localhost:5000/signs &
 wait
 
 echo "[startup] Warm-up complete. Site is ready."

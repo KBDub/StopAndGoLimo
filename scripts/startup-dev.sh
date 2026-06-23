@@ -44,10 +44,15 @@ sg_inject_env() {
     local KEY="$1"
     local VAL="$2"
     if [ -z "$VAL" ]; then return; fi
+    # Strip any surrounding quotes from VAL, then re-wrap in double quotes
+    # so Dotenv can parse values that contain spaces (e.g. MAIL_FROM_NAME).
+    local STRIPPED="${VAL%\"}"
+    STRIPPED="${STRIPPED#\"}"
+    local QUOTED="\"${STRIPPED}\""
     if grep -q "^${KEY}=" .env; then
-        sed -i "s|^${KEY}=.*|${KEY}=${VAL}|" .env
+        sed -i "s|^${KEY}=.*|${KEY}=${QUOTED}|" .env
     else
-        echo "${KEY}=${VAL}" >> .env
+        printf '%s=%s\n' "${KEY}" "${QUOTED}" >> .env
     fi
 }
 

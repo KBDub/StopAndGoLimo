@@ -109,8 +109,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'support@top5pct.com'),
-        'name' => env('MAIL_FROM_NAME', 'Top5Pct Support'),
+        'address' => env('MAIL_FROM_ADDRESS', 'vincent@newlenoxlimoservice.com'),
+        'name' => env('MAIL_FROM_NAME', 'Stop & Go Airport Shuttle Service, Inc. Support'),
     ],
 
     'quote_notify_email' => env('QUOTE_NOTIFY_EMAIL'),

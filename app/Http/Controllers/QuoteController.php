@@ -26,7 +26,7 @@ class QuoteController extends Controller
                 'remoteip' => $request->ip(),
             ]);
             $result = $verify->json();
-            if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
+            if (!($result['success'] ?? false)) {
                 return back()->withInput()->withErrors(['form' => 'We could not verify your submission. Please try again.']);
             }
         }

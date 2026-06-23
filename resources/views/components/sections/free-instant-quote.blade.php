@@ -175,7 +175,8 @@
                         <input type="text" name="sg_website" id="sg_website" tabindex="-1" autocomplete="off">
                     </div>
 
-                    {{-- reCAPTCHA v3 token (populated by JS on submit) --}}
+                    {{-- reCAPTCHA v2 Invisible widget anchor + token --}}
+                    <div id="sg-recaptcha-widget"></div>
                     <input type="hidden" name="g_recaptcha_response" id="sg-recaptcha-token">
 
                     {{-- Name --}}
@@ -525,23 +526,48 @@
 
 <script>
 (function () {
-    // ── reCAPTCHA v3 — generate token on submit ──────────────────────────────
-    var sgForm = document.querySelector('form[data-recaptcha-key]');
-    if (sgForm) {
-        var sgSiteKey = sgForm.dataset.recaptchaKey;
+    // ── reCAPTCHA v2 Invisible — render widget, execute on submit ────────────
+    var sgForm    = document.querySelector('form[data-recaptcha-key]');
+    var sgWidget  = document.getElementById('sg-recaptcha-widget');
+    if (sgForm && sgWidget) {
+        var sgSiteKey  = sgForm.dataset.recaptchaKey;
+        var sgWidgetId = null;
+        var sgSubmitBtn = sgForm.querySelector('[type="submit"]');
+
+        function sgRecaptchaCallback(token) {
+            document.getElementById('sg-recaptcha-token').value = token;
+            sgForm.submit();
+        }
+
+        function sgRecaptchaExpired() {
+            if (sgSubmitBtn) sgSubmitBtn.disabled = false;
+        }
+
+        function sgInitRecaptcha() {
+            if (typeof grecaptcha !== 'undefined' && typeof grecaptcha.render === 'function') {
+                sgWidgetId = grecaptcha.render(sgWidget, {
+                    sitekey:          sgSiteKey,
+                    size:             'invisible',
+                    callback:         sgRecaptchaCallback,
+                    'expired-callback': sgRecaptchaExpired
+                });
+            } else {
+                setTimeout(sgInitRecaptcha, 100);
+            }
+        }
+
         if (sgSiteKey) {
+            sgInitRecaptcha();
+
             sgForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                var submitBtn = sgForm.querySelector('[type="submit"]');
-                if (submitBtn) submitBtn.disabled = true;
-                grecaptcha.ready(function () {
-                    grecaptcha.execute(sgSiteKey, { action: 'quote' }).then(function (token) {
-                        document.getElementById('sg-recaptcha-token').value = token;
-                        sgForm.submit();
-                    }).catch(function () {
-                        if (submitBtn) submitBtn.disabled = false;
-                    });
-                });
+                if (sgSubmitBtn) sgSubmitBtn.disabled = true;
+                if (sgWidgetId !== null) {
+                    grecaptcha.reset(sgWidgetId);
+                    grecaptcha.execute(sgWidgetId);
+                } else {
+                    sgForm.submit();
+                }
             });
         }
     }

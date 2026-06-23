@@ -20,8 +20,9 @@ class QuoteController extends Controller
         $ip = $request->ip();
 
         // ── reCAPTCHA v2 Invisible verification ───────────────────────────────
+        // Only enforced in production — dev domains are not registered with Google
         $recaptchaSecret = config('services.recaptcha.secret_key');
-        if ($recaptchaSecret) {
+        if ($recaptchaSecret && app()->environment('production')) {
             $token  = $request->input('g_recaptcha_response', '');
             $verify = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
                 'secret'   => $recaptchaSecret,

@@ -541,15 +541,23 @@
 
         function sgRecaptchaExpired() {
             if (sgSubmitBtn) sgSubmitBtn.disabled = false;
+            sgForm.submit();
+        }
+
+        function sgRecaptchaError() {
+            // reCAPTCHA unavailable (e.g. dev domain not registered) — submit anyway
+            // Server-side skips verification outside production
+            sgForm.submit();
         }
 
         function sgInitRecaptcha() {
             if (typeof grecaptcha !== 'undefined' && typeof grecaptcha.render === 'function') {
                 sgWidgetId = grecaptcha.render(sgWidget, {
-                    sitekey:          sgSiteKey,
-                    size:             'invisible',
-                    callback:         sgRecaptchaCallback,
-                    'expired-callback': sgRecaptchaExpired
+                    sitekey:            sgSiteKey,
+                    size:               'invisible',
+                    callback:           sgRecaptchaCallback,
+                    'expired-callback': sgRecaptchaExpired,
+                    'error-callback':   sgRecaptchaError
                 });
             } else {
                 setTimeout(sgInitRecaptcha, 100);

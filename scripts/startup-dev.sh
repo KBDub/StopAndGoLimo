@@ -29,11 +29,23 @@ if [ ! -L public/storage ]; then
 fi
 
 # One-time staff password reset — runs only when STAFF_ADMIN_HASH is set.
-# After confirming the password change took effect in production, delete
-# STAFF_ADMIN_HASH from the environment secrets to disable this step.
 if [ -n "${STAFF_ADMIN_HASH}" ]; then
     echo "[startup] Applying staff password reset..."
     php artisan staff:reset-passwords
+fi
+
+# Inject Replit env vars that must be visible to PHP web-request workers.
+# PHP's built-in server workers only see env vars that Dotenv loaded from
+# .env — OS-level env vars (Replit shared vars / secrets) are present in
+# /proc/PID/environ but are invisible to $_ENV / getenv() in web context.
+# Writing them into .env here ensures Dotenv picks them up on every request.
+if [ -n "${QUOTE_NOTIFY_EMAIL}" ]; then
+    if grep -q "^QUOTE_NOTIFY_EMAIL=" .env; then
+        sed -i "s|^QUOTE_NOTIFY_EMAIL=.*|QUOTE_NOTIFY_EMAIL=${QUOTE_NOTIFY_EMAIL}|" .env
+    else
+        echo "QUOTE_NOTIFY_EMAIL=${QUOTE_NOTIFY_EMAIL}" >> .env
+    fi
+    echo "[startup] QUOTE_NOTIFY_EMAIL injected into .env"
 fi
 
 # Start Laravel server in background

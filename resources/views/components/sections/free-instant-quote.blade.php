@@ -68,7 +68,7 @@
     x-transition:leave="transition ease-in duration-150"
     x-transition:leave-start="opacity-100"
     x-transition:leave-end="opacity-0"
-    style="position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(10, 22, 50, 0.82);"
+    class="sg-quote-modal-overlay"
     @keydown.escape.window="close()"
     @click.self="close()"
 >
@@ -121,6 +121,16 @@
     border-color: var(--navy);
     outline: none;
     box-shadow: 0 0 0 1px var(--navy), 0 0 0 4px var(--champagne);
+}
+.sg-quote-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background: rgba(10, 22, 50, 0.82);
 }
 </style>
 

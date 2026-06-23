@@ -8,6 +8,7 @@ use App\Mail\QuoteSubmitted;
 use App\Models\CustomOrderRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
@@ -15,6 +16,21 @@ class QuoteController extends Controller
 {
     public function submit(Request $request): RedirectResponse
     {
+        // reCAPTCHA v3 — verify token when a secret key is configured
+        $recaptchaSecret = config('services.recaptcha.secret_key');
+        if ($recaptchaSecret) {
+            $token    = $request->input('g_recaptcha_response', '');
+            $verify   = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret'   => $recaptchaSecret,
+                'response' => $token,
+                'remoteip' => $request->ip(),
+            ]);
+            $result = $verify->json();
+            if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
+                return back()->withInput()->withErrors(['form' => 'We could not verify your submission. Please try again.']);
+            }
+        }
+
         // Honeypot — real users never see or fill this field
         if ($request->filled('sg_website')) {
             $reference = 'SG-QT-' . strtoupper(Str::random(8));

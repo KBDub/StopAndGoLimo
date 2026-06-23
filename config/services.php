@@ -39,6 +39,11 @@ return [
         'id' => env('GTM_ID'),
     ],
 
+    'recaptcha' => [
+        'site_key'   => env('RECAPTCHA_SITE_KEY'),
+        'secret_key' => env('RECAPTCHA_SECRET_KEY'),
+    ],
+
     'ga4' => [
         'id' => env('GA4_MEASUREMENT_ID'),
     ],

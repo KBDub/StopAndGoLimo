@@ -164,7 +164,9 @@
                 </div>
                 @endif
 
-                <form action="{{ $formAction }}" method="POST" novalidate>
+                <form action="{{ $formAction }}" method="POST" novalidate
+                    data-recaptcha-key="{{ config('services.recaptcha.site_key') }}"
+                >
                     @csrf
 
                     {{-- Honeypot — never visible to humans; bots fill it and get silently rejected --}}
@@ -172,6 +174,9 @@
                         <label for="sg_website">Leave this blank</label>
                         <input type="text" name="sg_website" id="sg_website" tabindex="-1" autocomplete="off">
                     </div>
+
+                    {{-- reCAPTCHA v3 token (populated by JS on submit) --}}
+                    <input type="hidden" name="g_recaptcha_response" id="sg-recaptcha-token">
 
                     {{-- Name --}}
                     <div class="mb-5">
@@ -520,6 +525,27 @@
 
 <script>
 (function () {
+    // ── reCAPTCHA v3 — generate token on submit ──────────────────────────────
+    var sgForm = document.querySelector('form[data-recaptcha-key]');
+    if (sgForm) {
+        var sgSiteKey = sgForm.dataset.recaptchaKey;
+        if (sgSiteKey) {
+            sgForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var submitBtn = sgForm.querySelector('[type="submit"]');
+                if (submitBtn) submitBtn.disabled = true;
+                grecaptcha.ready(function () {
+                    grecaptcha.execute(sgSiteKey, { action: 'quote' }).then(function (token) {
+                        document.getElementById('sg-recaptcha-token').value = token;
+                        sgForm.submit();
+                    }).catch(function () {
+                        if (submitBtn) submitBtn.disabled = false;
+                    });
+                });
+            });
+        }
+    }
+
     // ── Phone mask (___) ___-____ ────────────────────────────────────────────
     var phone = document.getElementById('sg-phone');
     if (phone) {

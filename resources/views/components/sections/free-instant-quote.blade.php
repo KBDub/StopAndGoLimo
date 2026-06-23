@@ -55,7 +55,30 @@
                     "*" indicates required fields
                 </p>
 
-                <form action="{{ $formAction }}" method="GET" novalidate>
+                {{-- Success message --}}
+                @if(session('quote_success'))
+                <div class="mb-6 px-4 py-4 font-body" style="background: #f0faf3; border-left: 4px solid var(--champagne);">
+                    <p style="font-size: 0.9375rem; font-weight: 700; color: var(--navy); margin: 0 0 4px;">Your quote request was sent!</p>
+                    <p style="font-size: 0.875rem; color: var(--slate); margin: 0;">
+                        Reference: <strong>{{ session('quote_reference') }}</strong>. We will follow up with you shortly.
+                    </p>
+                </div>
+                @endif
+
+                {{-- Validation errors --}}
+                @if($errors->any())
+                <div class="mb-6 px-4 py-4 font-body" style="background: #fff5f5; border-left: 4px solid #c0392b;">
+                    <p style="font-size: 0.9375rem; font-weight: 700; color: #c0392b; margin: 0 0 8px;">Please fix the following:</p>
+                    <ul style="margin: 0; padding: 0 0 0 1.25rem;">
+                        @foreach($errors->all() as $error)
+                            <li style="font-size: 0.875rem; color: var(--slate); margin-bottom: 4px;">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                <form action="{{ $formAction }}" method="POST" novalidate>
+                    @csrf
 
                     {{-- Name --}}
                     <div class="mb-5">
@@ -66,6 +89,7 @@
                             type="text"
                             name="name"
                             required
+                            value="{{ old('name') }}"
                             class="w-full font-body"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                         >
@@ -81,6 +105,7 @@
                                 type="tel"
                                 name="phone"
                                 required
+                                value="{{ old('phone') }}"
                                 class="w-full font-body"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
@@ -93,6 +118,7 @@
                                 type="email"
                                 name="email"
                                 required
+                                value="{{ old('email') }}"
                                 class="w-full font-body"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
@@ -110,17 +136,17 @@
                             class="w-full font-body"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
-                            <option value="Limousine Service" @selected($defaultVehicle === 'Limousine Service')>Limousine Service</option>
-                            <option value="Airport Transportation" @selected($defaultVehicle === 'Airport Transportation')>Airport Transportation</option>
-                            <option value="Party Bus" @selected($defaultVehicle === 'Party Bus')>Party Bus</option>
-                            <option value="Chartered Bus" @selected($defaultVehicle === 'Chartered Bus')>Chartered Bus</option>
-                            <option value="Corporate Transportation" @selected($defaultVehicle === 'Corporate Transportation')>Corporate Transportation</option>
-                            <option value="Wedding" @selected($defaultVehicle === 'Wedding')>Wedding</option>
-                            <option value="Special Event" @selected($defaultVehicle === 'Special Event')>Special Event</option>
-                            <option value="Sporting Event" @selected($defaultVehicle === 'Sporting Event')>Sporting Event</option>
-                            <option value="Concert" @selected($defaultVehicle === 'Concert')>Concert</option>
-                            <option value="Wine Tour" @selected($defaultVehicle === 'Wine Tour')>Wine Tour</option>
-                            <option value="Chauffeur" @selected($defaultVehicle === 'Chauffeur')>Chauffeur</option>
+                            <option value="Limousine Service" @selected(old('vehicle_type', $defaultVehicle) === 'Limousine Service')>Limousine Service</option>
+                            <option value="Airport Transportation" @selected(old('vehicle_type', $defaultVehicle) === 'Airport Transportation')>Airport Transportation</option>
+                            <option value="Party Bus" @selected(old('vehicle_type', $defaultVehicle) === 'Party Bus')>Party Bus</option>
+                            <option value="Chartered Bus" @selected(old('vehicle_type', $defaultVehicle) === 'Chartered Bus')>Chartered Bus</option>
+                            <option value="Corporate Transportation" @selected(old('vehicle_type', $defaultVehicle) === 'Corporate Transportation')>Corporate Transportation</option>
+                            <option value="Wedding" @selected(old('vehicle_type', $defaultVehicle) === 'Wedding')>Wedding</option>
+                            <option value="Special Event" @selected(old('vehicle_type', $defaultVehicle) === 'Special Event')>Special Event</option>
+                            <option value="Sporting Event" @selected(old('vehicle_type', $defaultVehicle) === 'Sporting Event')>Sporting Event</option>
+                            <option value="Concert" @selected(old('vehicle_type', $defaultVehicle) === 'Concert')>Concert</option>
+                            <option value="Wine Tour" @selected(old('vehicle_type', $defaultVehicle) === 'Wine Tour')>Wine Tour</option>
+                            <option value="Chauffeur" @selected(old('vehicle_type', $defaultVehicle) === 'Chauffeur')>Chauffeur</option>
                         </select>
                     </div>
 
@@ -148,8 +174,21 @@
                         </select>
                     </div>
 
-                    {{-- Destination + Booking Date --}}
+                    {{-- Pickup + Destination --}}
                     <div class="grid grid-cols-2 gap-4 mb-5">
+                        <div>
+                            <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
+                                Pickup Location <span style="color: var(--navy);">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                name="pickup_location"
+                                required
+                                value="{{ old('pickup_location') }}"
+                                class="w-full font-body"
+                                style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
+                            >
+                        </div>
                         <div>
                             <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
                                 Destination Location
@@ -157,21 +196,25 @@
                             <input
                                 type="text"
                                 name="destination"
+                                value="{{ old('destination') }}"
                                 class="w-full font-body"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
                         </div>
-                        <div>
-                            <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                                Booking Date
-                            </label>
-                            <input
-                                type="date"
-                                name="booking_date"
-                                class="w-full font-body"
-                                style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
-                            >
-                        </div>
+                    </div>
+
+                    {{-- Booking Date --}}
+                    <div class="mb-5">
+                        <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
+                            Booking Date
+                        </label>
+                        <input
+                            type="date"
+                            name="booking_date"
+                            value="{{ old('booking_date') }}"
+                            class="w-full font-body"
+                            style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
+                        >
                     </div>
 
                     {{-- Additional Information --}}
@@ -184,7 +227,7 @@
                             rows="4"
                             class="w-full font-body"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; resize: vertical;"
-                        ></textarea>
+                        >{{ old('additional_info') }}</textarea>
                     </div>
 
                     {{-- CAPTCHA placeholder --}}

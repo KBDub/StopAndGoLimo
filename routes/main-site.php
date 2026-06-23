@@ -264,6 +264,9 @@ Route::get('/order-confirmation/{orderId}', function (int $orderId) {
     return view('pages.order-confirmation', ['orderId' => $orderId]);
 })->name('order-confirmation');
 
+Route::post('/get-a-quote', [\App\Http\Controllers\QuoteController::class, 'submit'])
+    ->name('quote.submit');
+
 Route::post('/contact/message', [\App\Http\Controllers\ContactController::class, 'sendMessage'])
     ->name('contact.message');
 

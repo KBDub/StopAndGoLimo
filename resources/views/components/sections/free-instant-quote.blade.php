@@ -167,6 +167,12 @@
                 <form action="{{ $formAction }}" method="POST" novalidate>
                     @csrf
 
+                    {{-- Honeypot — never visible to humans; bots fill it and get silently rejected --}}
+                    <div style="position: absolute; left: -9999px; top: -9999px; opacity: 0;" aria-hidden="true">
+                        <label for="sg_website">Leave this blank</label>
+                        <input type="text" name="sg_website" id="sg_website" tabindex="-1" autocomplete="off">
+                    </div>
+
                     {{-- Name --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">

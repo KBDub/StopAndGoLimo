@@ -15,6 +15,16 @@ class QuoteController extends Controller
 {
     public function submit(Request $request): RedirectResponse
     {
+        // Honeypot — real users never see or fill this field
+        if ($request->filled('sg_website')) {
+            $reference = 'SG-QT-' . strtoupper(Str::random(8));
+            return redirect()
+                ->route('get-a-quote')
+                ->with('quote_success', true)
+                ->with('quote_name', 'there')
+                ->with('quote_reference', $reference);
+        }
+
         $validated = $request->validate([
             'name'             => 'required|string|max:150',
             'phone'            => 'required|string|max:50',

@@ -39,6 +39,13 @@
     $descClose   = $inverted ? 'color: var(--cloud);'        : 'color: var(--navy);';
 @endphp
 
+<style>
+.sg-quote-field:focus {
+    border-color: var(--champagne);
+    outline: none;
+}
+</style>
+
 <section id="free-instant-quote" style="{{ $sectionBg }} scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 
@@ -52,7 +59,7 @@
                     Free Instant Quotes
                 </h2>
                 <p class="font-body text-center mb-6" style="font-size: 0.8125rem; color: var(--slate);">
-                    "*" indicates required fields
+                    * indicates required fields
                 </p>
 
                 {{-- Success message --}}
@@ -83,14 +90,14 @@
                     {{-- Name --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Enter your Name <span style="color: var(--navy);">*</span>
+                            Enter your Full Name <span style="color: var(--champagne);">*</span>
                         </label>
                         <input
                             type="text"
                             name="name"
                             required
                             value="{{ old('name') }}"
-                            class="w-full font-body"
+                            class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                         >
                     </div>
@@ -99,41 +106,48 @@
                     <div class="grid grid-cols-2 gap-4 mb-5">
                         <div>
                             <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                                Enter your Phone Number <span style="color: var(--navy);">*</span>
+                                Enter your Phone Number <span style="color: var(--champagne);">*</span>
                             </label>
                             <input
                                 type="tel"
+                                id="sg-phone"
                                 name="phone"
                                 required
+                                inputmode="numeric"
+                                placeholder="(___) ___-____"
                                 value="{{ old('phone') }}"
-                                class="w-full font-body"
+                                class="w-full font-body sg-quote-field"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
                         </div>
                         <div>
                             <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                                Enter your Email Address <span style="color: var(--navy);">*</span>
+                                Enter your Email Address <span style="color: var(--champagne);">*</span>
                             </label>
                             <input
                                 type="email"
+                                id="sg-email"
                                 name="email"
                                 required
                                 value="{{ old('email') }}"
-                                class="w-full font-body"
+                                class="w-full font-body sg-quote-field"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
+                            <span id="sg-email-error" class="font-body" style="display:none; font-size: 0.75rem; color: #c0392b; margin-top: 3px; display: none;">
+                                Please enter a valid email address.
+                            </span>
                         </div>
                     </div>
 
                     {{-- Vehicle Type --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Vehicle Type <span style="color: var(--navy);">*</span>
+                            Vehicle Type <span style="color: var(--champagne);">*</span>
                         </label>
                         <select
                             name="vehicle_type"
                             required
-                            class="w-full font-body"
+                            class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
                             <option value="Limousine Service" @selected(old('vehicle_type', $defaultVehicle) === 'Limousine Service')>Limousine Service</option>
@@ -153,12 +167,12 @@
                     {{-- Number of Passengers --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Number of Passengers <span style="color: var(--navy);">*</span>
+                            Number of Passengers <span style="color: var(--champagne);">*</span>
                         </label>
                         <select
                             name="passengers"
                             required
-                            class="w-full font-body"
+                            class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
                             <option value="1">1</option>
@@ -178,26 +192,27 @@
                     <div class="grid grid-cols-2 gap-4 mb-5">
                         <div>
                             <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                                Pickup Location <span style="color: var(--navy);">*</span>
+                                Pickup Location <span style="color: var(--champagne);">*</span>
                             </label>
                             <input
                                 type="text"
                                 name="pickup_location"
                                 required
                                 value="{{ old('pickup_location') }}"
-                                class="w-full font-body"
+                                class="w-full font-body sg-quote-field"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
                         </div>
                         <div>
                             <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                                Destination Location
+                                Destination Location <span style="color: var(--champagne);">*</span>
                             </label>
                             <input
                                 type="text"
                                 name="destination"
+                                required
                                 value="{{ old('destination') }}"
-                                class="w-full font-body"
+                                class="w-full font-body sg-quote-field"
                                 style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                             >
                         </div>
@@ -206,13 +221,15 @@
                     {{-- Booking Date --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Booking Date
+                            Booking Date <span style="color: var(--champagne);">*</span>
                         </label>
                         <input
                             type="date"
                             name="booking_date"
+                            required
+                            min="{{ date('Y-m-d') }}"
                             value="{{ old('booking_date') }}"
-                            class="w-full font-body"
+                            class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                         >
                     </div>
@@ -224,26 +241,26 @@
                         </label>
                         <textarea
                             name="additional_info"
-                            rows="4"
-                            class="w-full font-body"
+                            rows="2"
+                            class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; resize: vertical;"
                         >{{ old('additional_info') }}</textarea>
                     </div>
 
-                    {{-- CAPTCHA placeholder --}}
-                    <div class="mb-6">
-                        <p class="font-head mb-2" style="font-size: 0.9375rem; font-weight: 700; color: var(--navy);">Captcha</p>
-                        <div style="border: 1px solid var(--cloud-dark); padding: 0.75rem; background: var(--cloud-light); font-size: 0.8125rem; color: var(--slate);" class="font-body">
-                            reCAPTCHA will load here
-                        </div>
-                    </div>
-
                     {{-- Submit --}}
-                    <div class="text-center">
+                    <div class="text-center mb-4">
                         <x-ui.button-champagne-solid type="submit" radius="soft">
                             {{ $submitLabel }}
                         </x-ui.button-champagne-solid>
                     </div>
+
+                    {{-- Secured by reCAPTCHA indicator --}}
+                    <p class="font-body text-center" style="font-size: 0.6875rem; color: var(--slate); line-height: 1.5;">
+                        Protected by reCAPTCHA &nbsp;&bull;&nbsp;
+                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Privacy</a>
+                        &nbsp;&bull;&nbsp;
+                        <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Terms</a>
+                    </p>
 
                 </form>
             </div>
@@ -417,3 +434,43 @@
 })();
 </script>
 @endif
+
+<script>
+(function () {
+    // ── Phone mask (___) ___-____ ────────────────────────────────────────────
+    var phone = document.getElementById('sg-phone');
+    if (phone) {
+        phone.addEventListener('input', function () {
+            var digits = this.value.replace(/\D/g, '').substring(0, 10);
+            var out = '';
+            if (digits.length === 0) {
+                out = '';
+            } else if (digits.length <= 3) {
+                out = '(' + digits;
+            } else if (digits.length <= 6) {
+                out = '(' + digits.substring(0, 3) + ') ' + digits.substring(3);
+            } else {
+                out = '(' + digits.substring(0, 3) + ') ' + digits.substring(3, 6) + '-' + digits.substring(6);
+            }
+            this.value = out;
+        });
+    }
+
+    // ── Email format validation as-you-type ─────────────────────────────────
+    var email  = document.getElementById('sg-email');
+    var emailErr = document.getElementById('sg-email-error');
+    if (email && emailErr) {
+        email.addEventListener('input', function () {
+            var val   = this.value;
+            var valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val);
+            if (val.length > 0 && !valid) {
+                emailErr.style.display = 'block';
+                email.style.borderColor = '#c0392b';
+            } else {
+                emailErr.style.display = 'none';
+                email.style.borderColor = '';
+            }
+        });
+    }
+})();
+</script>

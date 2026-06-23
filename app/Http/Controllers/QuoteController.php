@@ -22,8 +22,8 @@ class QuoteController extends Controller
             'vehicle_type'     => 'required|string|max:100',
             'passengers'       => 'required|string|max:20',
             'pickup_location'  => 'required|string|max:255',
-            'destination'      => 'nullable|string|max:255',
-            'booking_date'     => 'nullable|date',
+            'destination'      => 'required|string|max:255',
+            'booking_date'     => 'required|date|after_or_equal:today',
             'additional_info'  => 'nullable|string|max:5000',
         ]);
 

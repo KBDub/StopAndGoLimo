@@ -7,34 +7,8 @@ use App\Data\PrimaryLocations;
 // ─── Sitemap ─────────────────────────────────────────────────────────────────
 
 Route::get('/sitemap.xml', function () {
-    $products = collect();
-    $collections = collect();
-
-    try {
-        $products = \Lunar\Models\Product::with('urls')
-            ->where('status', 'published')
-            ->get()
-            ->map(fn ($p) => (object)[
-                'slug'       => $p->urls->first()?->slug,
-                'updated_at' => $p->updated_at,
-            ])
-            ->filter(fn ($p) => $p->slug)
-            ->values();
-    } catch (\Throwable) {}
-
-    try {
-        $collections = \Lunar\Models\Collection::with('urls')
-            ->get()
-            ->map(fn ($c) => (object)[
-                'slug'       => $c->urls->first()?->slug,
-                'updated_at' => $c->updated_at,
-            ])
-            ->filter(fn ($c) => $c->slug)
-            ->values();
-    } catch (\Throwable) {}
-
     return response()
-        ->view('sitemaps.sitemap', compact('products', 'collections'))
+        ->view('sitemaps.sitemap')
         ->header('Content-Type', 'application/xml; charset=utf-8');
 })->name('sitemap');
 

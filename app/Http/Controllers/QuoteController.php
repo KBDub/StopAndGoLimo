@@ -114,13 +114,10 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        // config() reads from mail.php → env(). getenv() is a direct OS-level
-        // fallback that bypasses Dotenv's repository, ensuring Replit secrets
-        // are always found even when not present in the .env file.
-        $notifyEmail  = config('mail.quote_notify_email') ?: getenv('QUOTE_NOTIFY_EMAIL');
-        $recipients   = $notifyEmail
-            ? array_values(array_filter(array_map('trim', explode(',', $notifyEmail))))
-            : [];
+        $recipients = [
+            'vincent@newlenoxlimoservice.com',
+            'stopngovr@gmail.com',
+        ];
 
         if (!empty($recipients)) {
             try {
@@ -135,7 +132,7 @@ class QuoteController extends Controller
             } catch (\Throwable $e) {
                 Log::error('[QuoteController] Email send FAILED', [
                     'reference' => $reference,
-                    'to'        => $notifyEmail,
+                    'to'        => implode(', ', $recipients),
                     'host'      => config('mail.mailers.smtp.host'),
                     'port'      => config('mail.mailers.smtp.port'),
                     'scheme'    => config('mail.mailers.smtp.scheme'),

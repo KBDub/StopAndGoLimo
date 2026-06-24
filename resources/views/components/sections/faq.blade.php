@@ -9,6 +9,24 @@ $faqs ??= $preset
     : config('faqs.general');
 @endphp
 
+@push('structured-data')
+@php
+$faqJsonLd = [
+    '@context'   => 'https://schema.org',
+    '@type'      => 'FAQPage',
+    'mainEntity' => collect($faqs)->map(fn ($faq) => [
+        '@type'          => 'Question',
+        'name'           => $faq['question'],
+        'acceptedAnswer' => [
+            '@type' => 'Answer',
+            'text'  => $faq['answer'],
+        ],
+    ])->values()->all(),
+];
+@endphp
+<script type="application/ld+json">{!! json_encode($faqJsonLd, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}</script>
+@endpush
+
 <section id="faq" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">
 

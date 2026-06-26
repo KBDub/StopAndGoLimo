@@ -28,8 +28,8 @@
     "@@context": "https://schema.org",
     "@@type": "BreadcrumbList",
     "itemListElement": [
-        { "@@type": "ListItem", "position": 1, "name": "Home",          "item": "https://www.stopandgoairportshuttle.com" },
-        { "@@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://www.stopandgoairportshuttle.com/service-areas" },
+        { "@@type": "ListItem", "position": 1, "name": "Home",          "item": "https://newlenoxlimoservice.com" },
+        { "@@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://newlenoxlimoservice.com/service-areas" },
         { "@@type": "ListItem", "position": 3, "name": "New Lenox",     "item": "{{ request()->url() }}" }
     ]
 }

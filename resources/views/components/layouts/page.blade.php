@@ -10,8 +10,8 @@
 ])
 @php
     $resolvedOgImage    = $ogImage
-        ? 'https://www.stopandgoairportshuttle.com' . $ogImage
-        : 'https://www.stopandgoairportshuttle.com/images/og-tags/stopngo-og-home.jpg';
+        ? 'https://newlenoxlimoservice.com' . $ogImage
+        : 'https://newlenoxlimoservice.com/images/og-tags/stopngo-og-home.jpg';
     $resolvedOgImageAlt = $ogImageAlt ?? 'Stop & Go Airport Shuttle Service, Inc. — Premium limousine and airport transportation in Illinois.';
     $resolvedCanonical  = $canonical ?? request()->url();
 @endphp
@@ -70,9 +70,9 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "image": "https://www.stopandgoairportshuttle.com/images/stopngo-logo.png",
-        "@id": "https://www.stopandgoairportshuttle.com",
-        "url": "https://www.stopandgoairportshuttle.com",
+        "image": "https://newlenoxlimoservice.com/images/stopngo-logo.png",
+        "@id": "https://newlenoxlimoservice.com",
+        "url": "https://newlenoxlimoservice.com",
         "telephone": "815-585-6922",
         "priceRange": "$$",
         "address": {
@@ -108,12 +108,12 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Stop & Go Limo",
-        "url": "https://www.stopandgoairportshuttle.com",
+        "url": "https://newlenoxlimoservice.com",
         "potentialAction": {
             "@type": "SearchAction",
             "target": {
                 "@type": "EntryPoint",
-                "urlTemplate": "https://www.stopandgoairportshuttle.com/service-areas?q={search_term_string}"
+                "urlTemplate": "https://newlenoxlimoservice.com/service-areas?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
         }

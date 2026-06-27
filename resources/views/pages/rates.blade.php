@@ -23,7 +23,7 @@
 @endpush
 
 <x-layouts.page
-    title="Rates &amp; Pricing"
+    title="Rates & Pricing"
     metaDescription="Clear, flat-rate pricing for every trip, no surprises. Limo, shuttle, and party bus rates for Chicagoland. Call (815) 585-6922."
     currentPage="rates"
     ogImage="/images/heroes/hero-services.jpg"

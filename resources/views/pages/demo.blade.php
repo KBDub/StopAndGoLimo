@@ -1,5 +1,5 @@
 <x-layouts.page
-    title="Brand Style Guide — Stop &amp; Go Airport Shuttle Service, Inc."
+    title="Brand Style Guide — Stop & Go Airport Shuttle Service, Inc."
     metaDescription="Twilight Luxe brand style guide for Stop &amp; Go Airport Shuttle Service Inc. Color palette, typography, buttons, banners, and mega menu."
     currentPage="demo"
     :noIndex="true"

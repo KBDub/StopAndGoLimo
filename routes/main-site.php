@@ -105,6 +105,21 @@ Route::get('/bolingbrook-airport-shuttle-ohare-midway', fn () => view('pages.bol
 Route::get('/oswego-il-limo-service',                   fn () => view('pages.oswego-il-limo-service'))->name('oswego-il-limo-service');
 Route::get('/24-7-montgomery-il-limo-service',          fn () => view('pages.24-7-montgomery-il-limo-service'))->name('24-7-montgomery-il-limo-service');
 
+// ─── Converted Blog Pages ─────────────────────────────────────────────────────
+
+Route::get('/new-lenox-limo-service',                        fn () => view('pages.new-lenox-limo-service'))->name('new-lenox-limo-service');
+Route::get('/how-to-plan-a-party-bus-experience',            fn () => view('pages.how-to-plan-a-party-bus-experience'))->name('how-to-plan-a-party-bus-experience');
+Route::get('/limo-service-new-lenox-il-airport-shuttle',     fn () => view('pages.limo-service-new-lenox-il-airport-shuttle'))->name('limo-service-new-lenox-il-airport-shuttle');
+Route::get('/limo',                                          fn () => view('pages.limo'))->name('limo');
+Route::get('/party-bus-limo-bus',                            fn () => view('pages.party-bus-limo-bus'))->name('party-bus-limo-bus');
+Route::get('/party-bus-rental-aurora-il-night-out',          fn () => view('pages.party-bus-rental-aurora-il-night-out'))->name('party-bus-rental-aurora-il-night-out');
+Route::get('/party-bus-for-special-events-aurora',           fn () => view('pages.party-bus-for-special-events-aurora'))->name('party-bus-for-special-events-aurora');
+Route::get('/wedding-party-bus-rental-for-your-big-day',     fn () => view('pages.wedding-party-bus-rental-for-your-big-day'))->name('wedding-party-bus-rental-for-your-big-day');
+Route::get('/rent-the-party-bus-of-your-dreams',             fn () => view('pages.rent-the-party-bus-of-your-dreams'))->name('rent-the-party-bus-of-your-dreams');
+Route::get('/renting-a-party-bus-2026-ultimate-party',       fn () => view('pages.renting-a-party-bus-2026-ultimate-party'))->name('renting-a-party-bus-2026-ultimate-party');
+Route::get('/best-limo-services-near-me-february-2026',      fn () => view('pages.best-limo-services-near-me-february-2026'))->name('best-limo-services-near-me-february-2026');
+Route::get('/best-party-bus-rentals-naperville-il',          fn () => view('pages.best-party-bus-rentals-naperville-il'))->name('best-party-bus-rentals-naperville-il');
+
 
 Route::get('/demo', function () {
     return view('pages.demo');

@@ -38,7 +38,7 @@
     title="Limo Service Near Me in New Lenox and Chicagoland"
     metaDescription="Professional limo service near you in New Lenox and throughout Chicagoland. Airport transfers, weddings, corporate travel, party buses, and more. Call (815) 585-6922."
     currentPage="our-services"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/heroes/best-limo-services-hero.png"
     ogImageAlt="Professional limo service near you, Stop and Go Airport Shuttle Service"
 >
     <x-sections.category-hero
@@ -49,7 +49,7 @@
         description="When you need quality limo service near you in New Lenox or anywhere in the southwest Chicago suburbs, Stop & Go Airport Shuttle Service, Inc. is ready. We have been providing professional chauffeured transportation throughout Will County and Chicagoland since 2009. Our flat-rate limo service covers airport transfers to O'Hare and Midway, corporate travel, wedding limousines, party bus rentals, prom transportation, quinceañera vehicles, and special event service for any occasion. Every vehicle in our fleet is professionally maintained. Every chauffeur is background-checked, uniformed, and trained to the highest professional standard. We serve New Lenox, Naperville, Aurora, Joliet, Frankfort, Mokena, Homer Glen, Orland Park, and communities throughout the region. Transparent pricing means no surprises, no surge fees, and no last-minute cancellations. Whether you are booking an airport run for tomorrow morning or planning transportation for a wedding six months away, we are here to help. Call (815) 585-6922 or book online anytime."
         buttonText="Book Now"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/heroes/best-limo-services-hero.png"
         imagePosition="center center"
     />
 
@@ -101,16 +101,18 @@
         </div>
     </section>
 
+    <x-sections.limo-vs-rideshare />
+
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
         heading="Why choose"
         headingBold="us?"
         headingTail=""
-        image="/images/sections/chauffeur-hero.jpg"
-        imageAlt="Professional limo service near you in Chicagoland"
-        imageAspect="16/9"
-        imageObjectPosition="center top"
+        image="/images/sections/special-event-limo.png"
+        imageAlt="Special event limousine service, Stop and Go Airport Shuttle Service"
+        imageAspect="4/3"
+        imageObjectPosition="center"
         rightVariant="description"
         descHeading="What to Look for in a Local Limo Service"
         descSubheading="Stop & Go checks every box"
@@ -124,8 +126,8 @@
             'Do they serve your suburb or neighborhood? Yes, all of Chicagoland.',
         ]"
         descClosing="Call (815) 585-6922 or book online. We are ready when you need us."
-        descImage="/images/sections/chauffeur-hero.jpg"
-        descImageAlt="Professional chauffeur ready for service"
+        descImage="/images/sections/special-event-limo.png"
+        descImageAlt="Special event limousine service throughout Chicagoland"
         :descImageTop="true"
     />
 

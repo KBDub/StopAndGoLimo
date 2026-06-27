@@ -92,6 +92,7 @@ Before writing any new markup, check whether one of the components created durin
 | `x-sections.aurora-night-out` | H2 intro + two-column (4-item checklist left, Aurora venue/routing prose + CTA right) on navy | City-specific why-party-bus section with local venue and routing detail |
 | `x-sections.wedding-transport-guide` | H2 intro + 4-card 2×2 grid (navy cards on white bg) + centered CTA | Wedding-day rider segments: bridal party, groomsmen, guest shuttle, airport arrivals |
 | `x-sections.party-bus-niche-occasions` | H2 intro + 6-card 3-col grid (navy cards on white bg) | Niche occasion expansion: tailgates, holidays, milestones, festivals, sports teams, surprise parties |
+| `x-sections.limo-vs-rideshare` | H2 intro + two-column (5-item checklist left, comparison prose + CTA right) on navy | Pro limo vs. rideshare app differentiator — guaranteed vehicle, chauffeur, flat-rate, flight tracking |
 
 If the page content fits one of these patterns, use the existing component. Pass an `id` prop if the section needs a different anchor.
 

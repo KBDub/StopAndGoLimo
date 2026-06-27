@@ -38,7 +38,7 @@
     title="Rent the Party Bus of Your Dreams"
     metaDescription="Rent a luxury party bus in Chicagoland for birthdays, bachelorettes, weddings, proms, and more. Professional chauffeurs, flat-rate pricing. Call (815) 585-6922."
     currentPage="our-services"
-    ogImage="/images/heroes/hero-party-bus-chicago.webp"
+    ogImage="/images/heroes/party-bus-dreams-hero.png"
     ogImageAlt="Luxury party bus rental, Stop and Go Airport Shuttle Service"
 >
     <x-sections.category-hero
@@ -49,7 +49,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. makes it easy to rent the party bus you have been imagining. We serve New Lenox, Aurora, Naperville, Joliet, and communities across Chicagoland with a fleet of luxury party buses for every type of occasion. Birthday celebrations, bachelorette parties, prom nights, wedding parties, corporate outings, concert trips, and sporting events all come alive when your group rides together on a professionally driven party bus. Our vehicles come equipped with premium sound systems, LED lighting, leather seating, and ample space to socialize and enjoy the ride. Every chauffeur is background-checked, uniformed, and committed to a smooth, safe, on-time experience. We also provide flat-rate airport transfers to O'Hare and Midway for groups arriving together. Pricing is straightforward with no hidden fees. Booking is easy online or over the phone. The party starts the moment you step on board. Call (815) 585-6922 or book online today."
         buttonText="Book Your Party Bus"
         buttonHref="/get-a-quote"
-        image="/images/heroes/hero-party-bus-chicago.webp"
+        image="/images/heroes/party-bus-dreams-hero.png"
         imagePosition="center center"
     />
 
@@ -99,14 +99,16 @@
         </div>
     </section>
 
+    <x-sections.party-bus-niche-occasions />
+
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
         heading="Reserve your"
         headingBold="party bus"
         headingTail="today"
-        image="/images/sections/new-bus-rental-comfort.jpg"
-        imageAlt="Luxury party bus ready for rental with Stop and Go"
+        image="/images/sections/party-bus-dreams-interior.jpg"
+        imageAlt="Luxury party bus interior with neon LED lighting, Stop and Go"
         imageAspect="4/3"
         imageObjectPosition="center"
         rightVariant="description"
@@ -122,8 +124,8 @@
             'Available 24 hours a day, 7 days a week',
         ]"
         descClosing="We serve New Lenox, Aurora, Naperville, Joliet, and all of Chicagoland. Call (815) 585-6922 or book online anytime."
-        descImage="/images/sections/new-bus-rental-comfort.jpg"
-        descImageAlt="Premium party bus interior with Stop and Go"
+        descImage="/images/sections/party-bus-dreams-interior.jpg"
+        descImageAlt="Party bus interior with LED lighting and premium seating"
         :descImageTop="true"
     />
 

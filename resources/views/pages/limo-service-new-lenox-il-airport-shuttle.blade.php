@@ -71,6 +71,10 @@
         body="Every airport transfer is a flat rate. No surge pricing when a storm rolls in. No meter ticking while you wait for your bags. No extra charge because rush hour added 20 minutes to the route. You see the price when you book and that is the price you pay. We serve O'Hare, Midway, Rockford, Milwaukee, and Gary airports from New Lenox and all surrounding communities."
     />
 
+    <x-sections.airport-vehicle-guide />
+
+    <x-sections.airport-chauffeur-detail />
+
     <section id="airport-logistics" style="background: var(--cloud-light); scroll-margin-top: 80px;">
         <div class="max-w-7xl mx-auto px-6 py-12 lg:py-[6.25rem]">
             <div class="text-center mb-12">

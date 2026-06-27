@@ -38,7 +38,7 @@
     title="Party Bus Rental in Aurora IL for a Night Out"
     metaDescription="Party bus rental in Aurora, IL for a night out your crew will never forget. Professional chauffeurs, LED lighting, premium sound, and flat-rate pricing. Call (815) 585-6922."
     currentPage="service-areas"
-    ogImage="/images/heroes/hero-party-bus-aurora.png"
+    ogImage="/images/heroes/party-bus-aurora-il.png"
     ogImageAlt="Party bus rental in Aurora IL, Stop and Go Airport Shuttle Service"
 >
     <x-sections.category-hero
@@ -49,7 +49,7 @@
         description="Aurora, Illinois has no shortage of great nights out, and Stop & Go Airport Shuttle Service, Inc. makes sure your group arrives in style for every one of them. Our Aurora party bus rental service takes the stress out of planning a night on the town. No one has to drive. No one has to worry about parking downtown or getting home safely. We pick up your group, take you where you want to go, and bring you back when you are ready. Our party buses come equipped with premium sound systems, LED lighting, leather seating, and room for your whole crew to move around and celebrate. We serve birthdays, bachelorette parties, prom groups, concerts, sporting events, and any other occasion worth celebrating in Aurora and the surrounding Fox Valley area. Every chauffeur is background-checked, uniformed, and trained to provide a safe and professional experience. We also serve airport transfers to O'Hare and Midway. Call us or book online anytime."
         buttonText="Book a Party Bus"
         buttonHref="/get-a-quote"
-        image="/images/heroes/hero-party-bus-aurora.png"
+        image="/images/heroes/party-bus-aurora-il.png"
         imagePosition="center center"
     />
 
@@ -99,13 +99,15 @@
         </div>
     </section>
 
+    <x-sections.aurora-night-out />
+
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
         heading="Plan your"
         headingBold="Aurora night out"
         headingTail="today"
-        image="/images/sections/aurora-hero.jpg"
+        image="/images/sections/party-bus-aurora-illinois.png"
         imageAlt="Party bus rental in Aurora, Illinois"
         imageAspect="4/3"
         imageObjectPosition="center"
@@ -122,7 +124,7 @@
             'Available 24 hours a day, 7 days a week',
         ]"
         descClosing="Call (815) 585-6922 or book online to reserve your Aurora party bus today."
-        descImage="/images/sections/aurora-hero.jpg"
+        descImage="/images/sections/party-bus-aurora-illinois.png"
         descImageAlt="Aurora IL party bus rental with Stop and Go"
         :descImageTop="true"
     />

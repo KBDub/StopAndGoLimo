@@ -83,6 +83,8 @@ Before writing any new markup, check whether one of the components created durin
 |---|---|---|
 | `x-sections.vehicle-match` | H2 intro + sized card grid + occasion card grid + pricing strip | Vehicle selector, group-size guide, event-type grids |
 | `x-sections.on-board-experience` | H2 intro + two-column (checklist left, prose + CTA right) on navy | Amenities list, trust/value-prop paired with a CTA |
+| `x-sections.limo-services-grid` | H2 intro + H3 + 6-card occasion grid (3-col desktop, champagne left border) on cloud-light | Service-type index for a location or vehicle page |
+| `x-sections.why-chauffeured` | H2 intro + two-column (9-item checklist left, comparison table + CTA right) on navy | Trust/differentiation section with competitive comparison |
 
 If the page content fits one of these patterns, use the existing component. Pass an `id` prop if the section needs a different anchor.
 

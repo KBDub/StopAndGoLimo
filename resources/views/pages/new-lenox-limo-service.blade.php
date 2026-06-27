@@ -71,6 +71,8 @@
         body="From a solo airport run to a full wedding party convoy, Stop & Go has you covered. Our New Lenox limo service includes airport transfers, corporate travel, wedding limousines, prom party buses, and special event transportation. We serve all of New Lenox including downtown, Spencer Crossing, Fox Hill, and the Route 30 corridor. Our chauffeurs know Will County roads and are always on time."
     />
 
+    <x-sections.limo-services-grid />
+
     <section id="vehicle-types" style="background: var(--cloud-light); scroll-margin-top: 80px;">
         <div class="max-w-7xl mx-auto px-6 py-12 lg:py-[6.25rem]">
             <div class="text-center mb-12">
@@ -97,6 +99,8 @@
             </div>
         </div>
     </section>
+
+    <x-sections.why-chauffeured />
 
     <x-sections.three-steps :inverted="true" />
 

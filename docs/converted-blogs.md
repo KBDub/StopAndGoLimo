@@ -112,6 +112,29 @@ Framework components that already own their territory (do not replicate):
 | `x-sections.base-footer` | Site footer |
 | `x-ui.banner-thin-cloud` | Thin decorative banner |
 
+### Image reuse — use what is already on the page
+
+Before sourcing or requesting any image for a new mid-section, check what images are already in use on the same page. Every page has at least two images available by the time mid-sections are built:
+
+| Component | Image prop | Typical path |
+|---|---|---|
+| `x-sections.category-hero` | `image` | `/images/heroes/...` |
+| `x-sections.travel-in-style` | `image` | `/images/sections/...` |
+| `x-sections.free-instant-quote` | `image` and `descImage` | `/images/sections/...` |
+
+**Rule:** If a new mid-section layout includes an image slot (decorative photo, card image, section background, etc.), reuse one of the images already declared on that page. Do not assume new photography is available, do not leave a placeholder path, and do not request new assets.
+
+**How to apply:**
+1. Read the page file before writing the new component.
+2. Identify the `image=` and `descImage=` values already in use.
+3. Pass one of those paths into the new component's image prop.
+
+**Example — party-bus-limo-bus.blade.php has two reusable images:**
+- `/images/sections/women-celebrating-limo.jpg` (from `x-sections.travel-in-style`)
+- `/images/sections/party-smile-limo.jpg` (from `x-sections.free-instant-quote`)
+
+If a future mid-section on that page needs a photo, use one of those two. No new assets required.
+
 ### CTA buttons in mid-sections
 
 All call-to-action buttons in new mid-sections must follow these rules:

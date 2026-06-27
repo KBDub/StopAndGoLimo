@@ -7,6 +7,67 @@ and build checklist before the page is live.
 
 ---
 
+## Global Content Extraction Rules
+
+These rules apply to every page conversion without exception. They override any per-page notes.
+
+### What to include
+
+Only bring in content that passes all three of these tests:
+
+1. **It is original, useful copy** — written for the reader, not for a search engine. Real information about services, vehicles, areas, or how to book.
+2. **It lives above the testimonials/FAQ cutoff** — see "What to exclude" below.
+3. **It has no academic citations, legal boilerplate, or policy text** — if a paragraph reads like a journal article or government notice, discard it entirely.
+
+Good content to carry forward:
+
+- Introductory paragraphs that describe the service or location
+- Named bullet lists of features, amenities, or benefits
+- Comparison tables (vehicles, features, pricing tiers) — rewritten in branded voice
+- Step-by-step booking or planning guides
+- Event-type callouts (weddings, proms, corporate, airport)
+- Pricing context (general rate ranges are fine; specific prices must be verified before publishing)
+
+### What to exclude — hard cutoffs
+
+Stop extracting content at the **first** of these elements encountered on the page (whichever comes first):
+
+- "Testimonials from Clients" heading or any client testimonial block
+- "Frequently Asked Questions" heading or any FAQ accordion
+- Any "Leave a Reply" or WordPress comment form
+- The site footer (address, hours, social icons, copyright)
+- The site navigation (top nav, sidebar nav, mobile menu)
+
+**Nothing below any of those cutoffs may appear on the converted page.** The site already has its own branded testimonial (`x-sections.review-slider`) and FAQ (`x-sections.faq`) components — do not duplicate them with WordPress content.
+
+### Junk to discard — even when it appears above the cutoff
+
+The WordPress pages contain filler and AI-generated padding that must not carry over:
+
+| Type | Example | Action |
+|---|---|---|
+| Academic citations | "The Church: an Alternative Urban Transportation Amenity, 2000" | Delete the sentence entirely |
+| Policy/legal boilerplate | Paragraphs about alcohol taxes, minimum drinking age laws, server training mandates | Delete the entire section |
+| Keyword stuffing | "Party Bus Experience" repeated 10+ times in a single section | Rewrite naturally — one mention per section max |
+| British spellings | "favourite", "colour", "organise" | Replace with American English |
+| External links | Links to Wikipedia, newlenoxlimoservice.com old domain, third-party articles | Remove all external links |
+| Self-referential anchor text | "visit https://newlenoxlimoservice.com/ to view more of our party bus services" | Remove entirely |
+| Duplicate headings | Same heading appearing as both H2 and H3 in the same section | Keep one; delete the duplicate |
+| Blank or near-blank sections | A heading with one sentence of filler beneath it | Delete the heading and the filler |
+
+### Voice and copy standards
+
+All extracted copy must be rewritten to meet these standards before use:
+
+- **7th grade reading level** — short sentences, plain words, active voice
+- **No em dashes** — use a comma, period, or rephrase
+- **No all-caps** except nav links (approved exception)
+- **No negative keywords** — no taxi, cab, cheap, budget, rideshare, Uber, Lyft
+- **No double hyphens** — use a comma instead
+- **Branded voice** — first person plural ("we", "our"), confident, premium but approachable
+
+---
+
 ## Conversion Queue
 
 All pages below are sourced from `https://i6iuzknsnq-staging.wpdns.site/`. Pages with full

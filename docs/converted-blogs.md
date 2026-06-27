@@ -72,6 +72,27 @@ Rules for those sections:
 3. **Each section must stand on its own.** It should have a clear topic, a heading, and at least one paragraph or structured element (list, table, card grid). No orphan headings with no body.
 4. **Sections should be reusable components where the content pattern repeats across pages.** If two or more pages share the same layout pattern (features table, event-type grid, vehicle comparison), build it as a new shared `x-sections.*` Blade component rather than duplicating inline markup.
 
+### CTA buttons in mid-sections
+
+All call-to-action buttons in new mid-sections must follow these rules:
+
+- **Component:** always use `<x-ui.button-champagne-gradient>` — never a raw `<a>` styled to look like a button
+- **Radius:** always `radius="soft"` — never the default square (`rounded`) and never a pill shape
+- **Alignment:** wrap the button in `<div class="text-center">` so it is centered under its associated text
+- **Supporting text:** if a phone number or secondary CTA follows the button, place it inside the same `<div class="text-center">` wrapper, beneath the button, in small body font
+
+Example:
+```blade
+<div class="text-center">
+    <x-ui.button-champagne-gradient href="/get-a-quote" size="md" radius="soft">
+        Get a Free Instant Quote
+    </x-ui.button-champagne-gradient>
+    <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.85rem;" class="mt-3">
+        or call <a href="tel:+18155856922" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">(815) 585-6922</a>
+    </p>
+</div>
+```
+
 ### Voice and copy standards
 
 All extracted copy must be rewritten to meet these standards before use:

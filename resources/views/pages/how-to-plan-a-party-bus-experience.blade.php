@@ -235,13 +235,14 @@
                         <p style="font-family: var(--font-body); font-size: 0.95rem; color: var(--slate); line-height: 1.7;" class="mb-6">
                             For weekend dates, we recommend booking four to six weeks out. Spring prom weekends and peak summer dates fill three to four months ahead. If you have a specific date in mind, call us now to check availability. Securing your vehicle early also gives you time to lock in your route and any custom requests.
                         </p>
-                        <a href="/get-a-quote"
-                           style="display: inline-block; background: var(--champagne); color: var(--navy); font-family: var(--font-head); font-weight: 700; font-size: 1rem; padding: 0.9rem 2rem; letter-spacing: 0.04em; text-decoration: none;">
-                            Get a Free Instant Quote
-                        </a>
-                        <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.85rem; line-height: 1.5;" class="mt-3">
-                            or call <a href="tel:+18155856922" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">(815) 585-6922</a> anytime, 24 hours a day
-                        </p>
+                        <div class="text-center">
+                            <x-ui.button-champagne-gradient href="/get-a-quote" size="md" radius="soft">
+                                Get a Free Instant Quote
+                            </x-ui.button-champagne-gradient>
+                            <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.85rem; line-height: 1.5;" class="mt-3">
+                                or call <a href="tel:+18155856922" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">(815) 585-6922</a> anytime, 24 hours a day
+                            </p>
+                        </div>
                     </div>
                 </div>
 

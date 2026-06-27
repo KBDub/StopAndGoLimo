@@ -38,7 +38,7 @@
     title="New Lenox Limo Service"
     metaDescription="Professional limo service in New Lenox, IL. Airport transfers to O'Hare and Midway, weddings, proms, corporate travel, and more. Call (815) 585-6922."
     currentPage="service-areas"
-    ogImage="/images/heroes/hero-services.jpg"
+    ogImage="/images/sections/limousine-couple.jpg"
     ogImageAlt="Luxury limo service in New Lenox, Illinois"
 >
     <x-sections.category-hero
@@ -49,7 +49,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. has been serving New Lenox with professional limo service since 2009. We are based at 400 E Lincoln Hwy, right in the heart of the community, and we are ready around the clock every day of the year. Whether you need a flat-rate airport transfer to O'Hare or Midway, a stretch limousine for your wedding, a party bus for prom night, or a town car for a corporate meeting, we have the right vehicle for you. Our fleet includes executive sedans, luxury SUVs, stretch limousines, and spacious coach buses. Every vehicle is professionally maintained and every chauffeur is background-checked and uniformed. We serve all of New Lenox and surrounding Will County communities, including Frankfort, Mokena, Joliet, and Homer Glen. Corporate executives, wedding couples, prom groups, quinceañera celebrations, bachelorette parties, sports fans, and concert-goers all count on us every day. Book online or call us anytime."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/sections/limousine-couple.jpg"
         imagePosition="center center"
     />
 

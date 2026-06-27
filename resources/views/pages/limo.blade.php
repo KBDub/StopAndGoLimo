@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "Service",
-    "name": "Limo Service",
+    "name": "Professional Limo Service — Chicagoland",
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
@@ -17,8 +17,8 @@
             "addressCountry": "US"
         }
     },
-    "areaServed": "Illinois",
-    "description": "Professional limo service throughout Chicagoland. Airport transfers, weddings, corporate travel, prom, and special events. Call (815) 585-6922."
+    "areaServed": { "@@type": "State", "name": "Illinois" },
+    "description": "From booking to drop-off, Stop & Go delivers professional limo service across Chicagoland. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking, and pre-inspected vehicles on every ride."
 }
 </script>
 <script type="application/ld+json">
@@ -35,103 +35,75 @@
 @endpush
 
 <x-layouts.page
-    title="Limo Service"
-    metaDescription="Professional limo service throughout Chicagoland. Airport transfers to O'Hare and Midway, weddings, corporate travel, prom, and special events. Call (815) 585-6922."
+    title="What a Professional Limo Service Includes | Stop & Go Chicagoland"
+    metaDescription="From booking to drop-off — here is what a professional limo service actually delivers. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking. Call (815) 585-6922."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Professional limo service, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Professional limo service throughout Chicagoland, Stop and Go Airport Shuttle"
 >
     <x-sections.category-hero
-        heading="Professional"
-        headingBold="Limo Service"
+        heading="What a Professional"
+        headingBold="Limo Service Includes"
         :headingTwoLines="false"
-        subtitle="Your ride for every occasion, available 24 hours a day"
-        description="Stop & Go Airport Shuttle Service, Inc. is Chicagoland's trusted provider of professional limo service for every type of occasion. We serve New Lenox, Naperville, Aurora, Joliet, and communities across the southwest, west, and northwest suburbs. Whether you need a single executive sedan for a corporate meeting or a full fleet of vehicles for a wedding party, we have the right solution. Our team of uniformed, background-checked chauffeurs provides flat-rate airport transfers to O'Hare and Midway, luxury limousine service for weddings and special events, party bus rentals for groups of all sizes, and corporate transportation for businesses throughout the region. We also serve prom and graduation groups, quinceañera celebrations, bachelorette and birthday parties, concert-goers, and sports fans heading to games in Chicago. Every vehicle in our fleet is professionally maintained. Booking is easy online or over the phone. We are available 24 hours a day, every day of the year. Call (815) 585-6922 to get started."
-        buttonText="Book a Ride"
-        buttonHref="/bookings-reservations"
+        subtitle="From booking to drop-off, every detail is handled before you see the car"
+        description="Most people have never booked a professional limo service before. They know it is a step above a regular car, but they are not sure what they are actually getting. Stop & Go Airport Shuttle Service, Inc. has been running chauffeured transportation throughout Chicagoland since 2009, and we believe you should know exactly what you are paying for before you pay for it. A professional limo service is not just a nicer vehicle. It is a flat rate that locks at booking. It is a chauffeur who arrives 10 minutes early. It is a vehicle that is detailed and inspected before your pickup. It is real-time flight tracking for airport rides. It is a named sign at baggage claim. It is luggage handled at both ends. On this page we explain what every single one of those things means in practice, and how to know when to book for your particular occasion."
+        buttonText="Get a Free Quote"
+        buttonHref="/get-a-quote"
         image="/images/heroes/hero-services.jpg"
         imagePosition="center center"
     />
 
     <x-sections.travel-in-style
-        heading="Limo Service for"
-        headingBold="Every Occasion"
-        subtitle="One call covers every transportation need"
-        body="From a solo airport run to a full wedding party convoy, Stop & Go handles every type of chauffeured transportation. Our fleet includes executive sedans, luxury SUVs, stretch limousines, and coach buses. Every vehicle is clean, maintained, and driven by a professional. We serve the entire Chicagoland area from our New Lenox base, 24 hours a day."
-        buttonText="View Rates"
-        buttonHref="/rates"
+        heading="Your Chauffeur"
+        headingBold="Arrives Ready"
+        subtitle="The work that happens on our end before you see the vehicle"
+        body="When your chauffeur pulls up, everything is already done. The vehicle has been through a pre-trip inspection and a full detail. The route is planned, accounting for current traffic and any construction on your corridor. If your trip involves a flight, that flight number has been pulled and is being tracked. Climate is set to a comfortable default. For airport arrivals, your chauffeur is positioned at the correct terminal before your wheels touch the runway. None of this happens by accident. It is a preparation checklist that runs before every single pickup."
+        buttonText="Book a Ride"
+        buttonHref="/bookings-reservations"
         image="/images/sections/corporate-limo.jpg"
-        imageAlt="Professional limo service available throughout Chicagoland"
+        imageAlt="Professional chauffeur preparing for a limo service pickup in Chicagoland"
         :inverted="true"
     />
 
     <x-sections.info-strip
-        headingBold="No Surge Pricing."
-        heading="No Surprises. Just a Great Ride."
-        body="Every trip with Stop & Go is a flat rate. You see the price when you book and that is the price you pay. No meter running. No surge fees during storms or peak hours. No mystery charges on your invoice. Just professional transportation at a fair, transparent price. We have been earning the trust of Chicagoland riders since 2009."
+        headingBold="No Meter. No Surge."
+        heading="One Rate, From the Start."
+        body="Flat-rate pricing means your fare is locked the moment you confirm your reservation. Traffic adds nothing to your bill. Peak-hour demand adds nothing. Weather adds nothing. You see the number before you book, and that is the number on your receipt. No recalculations at drop-off. No mystery line items. Just the rate you agreed to."
     />
 
-    <section id="service-menu" style="background: var(--cloud-light); scroll-margin-top: 80px;">
-        <div class="max-w-7xl mx-auto px-6 py-12 lg:py-[6.25rem]">
-            <div class="text-center mb-12">
-                <h2 style="font-family: var(--font-head); font-size: var(--font-size-h2); color: var(--navy); letter-spacing: var(--letter-spacing-h2); line-height: 1.2;" class="mb-4">
-                    Every Service, <strong>One Provider</strong>
-                </h2>
-                <p style="font-family: var(--font-body); font-size: 1.25rem; color: var(--slate); line-height: 1.5;" class="max-w-2xl mx-auto">
-                    Stop & Go covers every ground transportation need across Chicagoland.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                @foreach([
-                    ['title' => 'Airport Transfers',        'desc' => 'Flat-rate rides to O\'Hare and Midway with real-time flight tracking and meet-and-greet service.',       'href' => '/airport-shuttle-ohare-midway'],
-                    ['title' => 'Wedding Limousine',        'desc' => 'Elegant limousine service for brides, grooms, and wedding parties on your most important day.',           'href' => '/wedding-limousine-services'],
-                    ['title' => 'Corporate Travel',         'desc' => 'Professional executive transportation for meetings, conferences, and client entertainment.',                'href' => '/corporate-car-services'],
-                    ['title' => 'Party Bus Rental',         'desc' => 'Spacious, fully equipped party buses for birthdays, bachelorettes, proms, and group celebrations.',       'href' => '/party-bus-rental-chicago'],
-                    ['title' => 'Special Events',           'desc' => 'Concert transportation, sporting events, galas, quinceañeras, and any occasion worth celebrating.',       'href' => '/special-event-limousine'],
-                    ['title' => 'Prom and Graduation',      'desc' => 'Safe, stylish transportation for prom groups and graduation celebrations throughout Illinois.',            'href' => '/prom-party-bus-rental-illinois'],
-                ] as $svc)
-                <a href="{{ $svc['href'] }}" style="text-decoration: none;">
-                    <div style="background: var(--navy); padding: 1.75rem; height: 100%; transition: background 0.2s;" onmouseover="this.style.background='var(--navy-light)'" onmouseout="this.style.background='var(--navy)'">
-                        <h3 style="font-family: var(--font-head); font-size: 1.2rem; font-weight: 600; color: var(--champagne); line-height: 1.3;" class="mb-3">{{ $svc['title'] }}</h3>
-                        <p style="font-family: var(--font-body); color: var(--cloud); font-size: 1rem; line-height: 1.5;">{{ $svc['desc'] }}</p>
-                    </div>
-                </a>
-                @endforeach
-            </div>
-        </div>
-    </section>
+    <x-sections.limo-process-steps />
+
+    <x-sections.limo-booking-timeline />
 
     <x-sections.three-steps :inverted="true" />
 
     <x-sections.free-instant-quote
-        heading="Why choose"
-        headingBold="us?"
+        heading="Ready to"
+        headingBold="book your limo?"
         headingTail=""
         image="/images/sections/driver-classy.jpg"
-        imageAlt="Professional chauffeur ready to serve throughout Chicagoland"
+        imageAlt="Professional uniformed chauffeur ready for a limo service pickup"
         imageAspect="16/9"
         imageObjectPosition="center top"
         rightVariant="description"
-        descHeading="The Stop & Go Standard"
-        descSubheading="Every ride, every time"
-        descBody="We built our reputation one ride at a time. Here is what every customer gets:"
+        descHeading="What Every Stop & Go Ride Guarantees"
+        descSubheading="The same standard on every trip, every time"
+        descBody="Whether it is your first ride or your fiftieth, here is what you can count on:"
         :descBullets="[
-            'Flat-rate pricing locked in at booking, no surprises',
-            'Uniformed, background-checked chauffeurs',
-            'Professionally maintained vehicles, inspected regularly',
-            'On-time pickups guaranteed',
+            'Flat-rate price locked at booking, no adjustments at drop-off',
+            'Uniformed, background-checked chauffeur on every ride',
+            'Vehicle detailed and inspected before your pickup',
+            'Chauffeur on-site 10 to 15 minutes before your scheduled time',
+            'Real-time flight tracking for every airport pickup',
             'Available 24 hours a day, 365 days a year',
-            'Local Chicagoland expertise since 2009',
         ]"
-        descClosing="Ready to book? Call (815) 585-6922 or reserve online in minutes."
+        descClosing="Call (815) 585-6922 or get a free quote online. We cover all of Chicagoland."
         descImage="/images/sections/driver-classy.jpg"
-        descImageAlt="Professional chauffeur with luxury vehicle"
+        descImageAlt="Professional chauffeur ready to provide limo service"
         :descImageTop="true"
     />
 
     <x-sections.review-slider />
-
-    <x-sections.our-services />
 
     <x-sections.faq preset="general" />
 

@@ -93,6 +93,9 @@ Before writing any new markup, check whether one of the components created durin
 | `x-sections.wedding-transport-guide` | H2 intro + 4-card 2×2 grid (navy cards on white bg) + centered CTA | Wedding-day rider segments: bridal party, groomsmen, guest shuttle, airport arrivals |
 | `x-sections.party-bus-niche-occasions` | H2 intro + 6-card 3-col grid (navy cards on white bg) | Niche occasion expansion: tailgates, holidays, milestones, festivals, sports teams, surprise parties |
 | `x-sections.limo-vs-rideshare` | H2 intro + two-column (5-item checklist left, comparison prose + CTA right) on navy | Pro limo vs. rideshare app differentiator — guaranteed vehicle, chauffeur, flat-rate, flight tracking |
+| `x-sections.naperville-night-out` | H2 intro + two-column (4-item checklist left, venue/planning prose + CTA right) on navy | Naperville-specific routes: downtown, prom high schools, Chicago runs, DuPage suburb loop |
+| `x-sections.limo-process-steps` | H2 intro + 6-card 2×3 numbered grid on white bg | Booking-to-drop-off process transparency: locks rate, confirms, prepares vehicle, early arrival, ride, drop-off |
+| `x-sections.limo-booking-timeline` | H2 intro + 6-card 3-col grid on cloud-light, colored top border by urgency | Occasion-specific booking lead times: airport 24hr, corporate 48hr, night out 1-2wk, prom 2-4mo, wedding 6-12mo, holiday 4-6wk |
 
 If the page content fits one of these patterns, use the existing component. Pass an `id` prop if the section needs a different anchor.
 

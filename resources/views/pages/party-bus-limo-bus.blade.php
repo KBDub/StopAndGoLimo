@@ -71,6 +71,8 @@
         body="Our party bus limo buses are a great fit for birthdays, bachelorette parties, bachelor parties, proms and school dances, weddings and rehearsal dinners, concerts and sporting events, corporate outings, quinceañera celebrations, and holiday parties. No matter the occasion, the ride itself becomes part of the memory."
     />
 
+    <x-sections.party-bus-occasions />
+
     <section id="amenities" style="background: var(--cloud-light); scroll-margin-top: 80px;">
         <div class="max-w-7xl mx-auto px-6 py-12 lg:py-[6.25rem]">
             <div class="text-center mb-12">
@@ -98,6 +100,8 @@
             </div>
         </div>
     </section>
+
+    <x-sections.party-bus-advantage />
 
     <x-sections.three-steps :inverted="true" />
 

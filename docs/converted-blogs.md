@@ -87,6 +87,8 @@ Before writing any new markup, check whether one of the components created durin
 | `x-sections.why-chauffeured` | H2 intro + two-column (9-item checklist left, comparison table + CTA right) on navy | Trust/differentiation section with competitive comparison |
 | `x-sections.airport-vehicle-guide` | H2 intro + H3 + 4-card fleet selector (champagne top border) on cloud-light | Airport vehicle/fleet selector by group size |
 | `x-sections.airport-chauffeur-detail` | H2 intro + two-column (4-item checklist left, cost comparison table + CTA right) on navy | Airport chauffeur service detail with cost-of-driving comparison |
+| `x-sections.party-bus-occasions` | H2 intro + H3 + 6-card occasion grid (3-col desktop, champagne left border) on white/cloud-light cards | Party bus occasion index with hyper-local Chicagoland copy |
+| `x-sections.party-bus-advantage` | H2 intro + two-column (4-item checklist left, flexible scheduling prose + CTA right) on navy | Group travel advantage / why one bus beats multiple cars |
 
 If the page content fits one of these patterns, use the existing component. Pass an `id` prop if the section needs a different anchor.
 

@@ -24,9 +24,10 @@ Good content to carry forward:
 - Introductory paragraphs that describe the service or location
 - Named bullet lists of features, amenities, or benefits
 - Comparison tables (vehicles, features, pricing tiers) — rewritten in branded voice
-- Step-by-step booking or planning guides
 - Event-type callouts (weddings, proms, corporate, airport)
 - Pricing context (general rate ranges are fine; specific prices must be verified before publishing)
+
+**Do not carry forward** booking steps, safety/etiquette guides, or how-to process lists. The site already has approved branded components for those purposes (`x-sections.three-steps`, `x-sections.free-instant-quote`). Do not duplicate that content in the mid-sections.
 
 ### What to exclude — hard cutoffs
 
@@ -54,6 +55,22 @@ The WordPress pages contain filler and AI-generated padding that must not carry 
 | Self-referential anchor text | "visit https://newlenoxlimoservice.com/ to view more of our party bus services" | Remove entirely |
 | Duplicate headings | Same heading appearing as both H2 and H3 in the same section | Keep one; delete the duplicate |
 | Blank or near-blank sections | A heading with one sentence of filler beneath it | Delete the heading and the filler |
+
+### Mid-section count and heading structure
+
+Each converted page may have **no more than 2 or 3 new mid-sections** inserted between the hero and the standard footer stack (`x-sections.three-steps`, `x-sections.free-instant-quote`, `x-sections.review-slider`, `x-sections.faq`).
+
+Rules for those sections:
+
+1. **Maximum 3 new mid-sections per page.** Two is preferred. One is acceptable if the content is rich enough. Never add more than 3.
+2. **Every section needs a coherent heading hierarchy.** The page `<h1>` lives in the hero. New mid-sections must follow this order:
+   - Section title: `<h2>`
+   - Sub-topics within that section: `<h3>`
+   - Detail beneath a sub-topic: `<h4>` or `<h5>`
+   - Never skip a level (no jumping from `<h2>` to `<h4>`)
+   - Never use `<h1>` inside a mid-section
+3. **Each section must stand on its own.** It should have a clear topic, a heading, and at least one paragraph or structured element (list, table, card grid). No orphan headings with no body.
+4. **Sections should be reusable components where the content pattern repeats across pages.** If two or more pages share the same layout pattern (features table, event-type grid, vehicle comparison), build it as a new shared `x-sections.*` Blade component rather than duplicating inline markup.
 
 ### Voice and copy standards
 

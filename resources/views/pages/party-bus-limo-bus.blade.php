@@ -49,7 +49,7 @@
         description="A party bus limo bus is the best of both worlds: the spacious interior of a group bus combined with the luxury finishes of a limousine. Stop & Go Airport Shuttle Service, Inc. operates a fleet of party bus limo buses serving New Lenox, Aurora, Naperville, Joliet, and all of Chicagoland. Whether you are celebrating a birthday, planning a bachelorette night, organizing a prom group, heading to a concert, or gathering a corporate team, our party bus limo buses keep everyone together in comfort and style. Premium sound systems, LED lighting, plush leather seating, and climate control come standard. Every vehicle is maintained to strict safety standards and every chauffeur is background-checked and uniformed. No one has to drive. No one has to coordinate pickups. The party starts the moment your group steps on board and does not stop until we drop you off at the end of the night. Call us or book online anytime."
         buttonText="Get a Quote"
         buttonHref="/get-a-quote"
-        image="/images/heroes/hero-party-bus-chicago.webp"
+        image="/images/heroes/hero-party-bus-interior.png"
         imagePosition="center center"
     />
 
@@ -109,8 +109,8 @@
         heading="Book your"
         headingBold="party bus"
         headingTail="today"
-        image="/images/sections/party-smile-limo.jpg"
-        imageAlt="Group enjoying a party bus limo bus with Stop and Go"
+        image="/images/sections/luxurious-party-bus.png"
+        imageAlt="Luxurious party bus limo bus interior, Stop and Go"
         imageAspect="4/3"
         imageObjectPosition="center"
         rightVariant="description"
@@ -126,8 +126,8 @@
             'Available 24 hours a day for any occasion',
         ]"
         descClosing="Ready to plan your group event? Call (815) 585-6922 or get a free quote online. We serve all of Chicagoland."
-        descImage="/images/sections/party-smile-limo.jpg"
-        descImageAlt="Happy group on a party bus limo bus"
+        descImage="/images/sections/luxurious-party-bus.png"
+        descImageAlt="Luxurious party bus limo bus interior, Stop and Go"
         :descImageTop="true"
     />
 

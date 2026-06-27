@@ -72,6 +72,40 @@ Rules for those sections:
 3. **Each section must stand on its own.** It should have a clear topic, a heading, and at least one paragraph or structured element (list, table, card grid). No orphan headings with no body.
 4. **Sections should be reusable components where the content pattern repeats across pages.** If two or more pages share the same layout pattern (features table, event-type grid, vehicle comparison), build it as a new shared `x-sections.*` Blade component rather than duplicating inline markup.
 
+### Component reuse and creation — what is allowed
+
+When building mid-sections, always work in this order:
+
+**Step 1 — Try to match an existing conversion-round component first.**
+Before writing any new markup, check whether one of the components created during this blog conversion round fits the content. These are the approved reusable components from this round:
+
+| Component | Layout pattern | Best for |
+|---|---|---|
+| `x-sections.vehicle-match` | H2 intro + sized card grid + occasion card grid + pricing strip | Vehicle selector, group-size guide, event-type grids |
+| `x-sections.on-board-experience` | H2 intro + two-column (checklist left, prose + CTA right) on navy | Amenities list, trust/value-prop paired with a CTA |
+
+If the page content fits one of these patterns, use the existing component. Pass an `id` prop if the section needs a different anchor.
+
+**Step 2 — Create a new conversion-round component if the pattern is genuinely new.**
+If no existing conversion-round component fits, create a new `x-sections.*` Blade file. Follow the same conventions: `@props` block with documented defaults, doc-block header, `id="{{ $id }}"` + `scroll-margin-top: 80px` on the `<section>` tag.
+
+**Step 3 — Never use or create framework-type components for mid-section content.**
+Framework components are the pre-existing site infrastructure components. They are fixed and serve specific structural roles. Do not use them as mid-section content blocks and do not create new ones that duplicate their roles.
+
+Framework components that already own their territory (do not replicate):
+
+| Component | Owns |
+|---|---|
+| `x-sections.category-hero` | Page hero / H1 |
+| `x-sections.three-steps` | How-to / booking process steps |
+| `x-sections.free-instant-quote` | Quote form with image + description |
+| `x-sections.review-slider` | Client testimonials |
+| `x-sections.faq` | FAQ accordion |
+| `x-sections.share-your-experience` | Social / UGC CTA |
+| `x-sections.map-contact-section` | Map + contact info |
+| `x-sections.base-footer` | Site footer |
+| `x-ui.banner-thin-cloud` | Thin decorative banner |
+
 ### CTA buttons in mid-sections
 
 All call-to-action buttons in new mid-sections must follow these rules:

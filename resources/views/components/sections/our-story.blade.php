@@ -1,12 +1,13 @@
 @props([
     'heading'     => 'The Stop & Go',
     'headingBold' => 'Story',
+    'entries'     => null,
 ])
 
 @php
-$entries = [
+$resolvedEntries = $entries ?? [
     [
-        'title' => 'March 26, 2015 — Vincent Rover',
+        'title' => 'March 26, 2015, Vincent Rover',
         'body'  => 'Stop & Go Airport Shuttle Service was established more than ten years ago with a vision to provide <strong>trustworthy</strong> transportation solutions to the New Lenox community. From our modest beginnings with just a few vehicles, we quickly built a reputation for <strong>professional</strong> and courteous service, earning the trust of our growing clientele.',
     ],
     [
@@ -38,7 +39,7 @@ $entries = [
         {{-- Story entries --}}
         <div class="max-w-5xl grid grid-cols-1" style="gap: 3rem; padding-left: 3rem;">
 
-            @foreach($entries as $entry)
+            @foreach($resolvedEntries as $entry)
                 <div>
 
                     {{-- Entry title — sits above the border, not inside it --}}

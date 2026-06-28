@@ -499,15 +499,195 @@
         body="On-demand apps recalculate fares based on traffic, peak demand, and event nights. Stop & Go does not. The rate we quote you is the rate on your receipt, every single time. All tolls on I-294, I-88, and I-355 are included. Taxes are included. Our complimentary grace period for standard flight delays is included. There is no meter running during the drive, and there is no peak-hour adjustment. Whether you are traveling on a quiet Tuesday morning or a sold-out holiday weekend, the flat rate you locked at booking is the only number that matters. This transparency is one reason corporate travel managers, frequent business travelers, and families planning vacation departures from New Lenox, Joliet, Frankfort, and across Will County keep choosing us over every on-demand alternative."
     />
 
-    <x-sections.limo-services-grid id="airport-services" />
+    <x-sections.limo-services-grid
+        id="airport-services"
+        heading="Airport Shuttle Services"
+        headingBold="for Chicagoland Travelers"
+        subheading="Every Type of Airport Transfer We Handle"
+        intro="Stop & Go has been running airport shuttle service from New Lenox since 2015. We cover O'Hare and Midway daily from every Will County community, with real-time flight tracking, flat-rate pricing, and a chauffeur who arrives early. Below is a look at the airport transfer types our clients book most often."
+        :cards="[
+            [
+                'service' => 'O\'Hare International Transfers',
+                'copy'    => 'Stop & Go runs O\'Hare (ORD) transfers daily from New Lenox, Joliet, Frankfort, Mokena, Orland Park, and all of Will County. We know every terminal, every arrivals lane, and the fastest I-80 and I-55 corridors. Your flat rate locks at booking. Your flight is tracked in real time. We are there whether your wheels touch down on time or two hours late.',
+            ],
+            [
+                'service' => 'Midway International Transfers',
+                'copy'    => 'Midway (MDW) is a natural choice for Southwest Suburbs travelers, often 30 to 40 minutes from New Lenox via I-355 or Route 50. We provide door-to-door Midway transfers with the same flat-rate pricing, real-time flight tracking, and meet-and-greet service as our O\'Hare runs. Early-morning departures and late-night returns are fully covered.',
+            ],
+            [
+                'service' => 'Corporate and Executive Airport Runs',
+                'copy'    => 'Executives and frequent business travelers across the I-80 and I-88 corridors book recurring airport accounts with Stop & Go. We handle O\'Hare and Midway runs for law firms, financial firms, logistics companies, and healthcare systems across Will County. Centralized billing, digital receipts, and a single dispatch contact make account management simple.',
+            ],
+            [
+                'service' => 'Meet-and-Greet Inside the Terminal',
+                'copy'    => 'For inside-terminal service, your chauffeur waits at baggage claim with a name sign before your bags reach the belt. We track your flight to the gate so the timing is exact. Not when the app says you landed, but when you actually walk out. Luggage is handled and your vehicle is waiting.',
+            ],
+            [
+                'service' => 'Group Airport Shuttles',
+                'copy'    => 'Moving a whole party to O\'Hare or Midway — a wedding group flying out, a corporate team heading to a conference, or a family traveling together — is simplest in one coordinated vehicle. Our group airport shuttle keeps everyone together with ample luggage space and a single flat rate for the whole group.',
+            ],
+            [
+                'service' => '24/7 Early-Morning and Late-Night Service',
+                'copy'    => 'Pre-dawn departures and midnight arrivals are a standard part of our operation. Our dispatch line is staffed around the clock, 365 days a year, including holidays. A real person confirms your pickup before dawn and manages your late-night return. The rate does not change based on hour or day.',
+            ],
+        ]"
+        ctaHref="/get-a-quote"
+    />
 
-    <x-sections.limo-process-steps id="airport-process" />
+    <x-sections.limo-process-steps
+        id="airport-process"
+        heading="Six Steps That Happen Before"
+        headingBold="Your Chauffeur Knocks"
+        intro="A professional airport shuttle is not just a car that shows up. Here is every step our team takes from the moment you book to the moment your chauffeur arrives at your door or meets you at baggage claim."
+        :steps="[
+            [
+                'num'   => '01',
+                'title' => 'You book and your flat rate locks',
+                'body'  => 'Online form or one phone call. Takes about two minutes. The moment you confirm, your fare is locked. No meter. No surge pricing. No adjustment for traffic, time of day, or flight delays. That number is the number on your receipt.',
+            ],
+            [
+                'num'   => '02',
+                'title' => 'Your flight number enters our tracking system',
+                'body'  => 'The day before your transfer, our team pulls your flight and adds it to real-time tracking. Not just the scheduled time: the actual position of your aircraft. From this point forward, we know where your plane is at all times.',
+            ],
+            [
+                'num'   => '03',
+                'title' => 'Your vehicle is prepared and pre-inspected',
+                'body'  => 'The assigned vehicle goes through a pre-trip inspection and a full detail before your pickup. Climate is set. Luggage space is confirmed. For group shuttles, the vehicle is right-sized to your party and bags. Everything is ready before your chauffeur leaves our lot.',
+            ],
+            [
+                'num'   => '04',
+                'title' => 'Your chauffeur departs early',
+                'body'  => 'Our standard is 10 to 15 minutes ahead of your scheduled pickup. For airport arrivals, your chauffeur is at the terminal before your flight lands: not when you walk out the door, but before your wheels touch the runway.',
+            ],
+            [
+                'num'   => '05',
+                'title' => 'Your flight shifts and we adjust automatically',
+                'body'  => 'If your flight is delayed by 20 minutes, your pickup adjusts by 20 minutes. If you land early, we are already there. You never call us to report a delay. Our tracking system sees the change before you do, and our dispatch adjusts in real time.',
+            ],
+            [
+                'num'   => '06',
+                'title' => 'Arrival: curbside or inside-terminal',
+                'body'  => 'For curbside pickup, your chauffeur is at the designated area the moment you step outside. For meet-and-greet service, your name sign is waiting at baggage claim before your bags reach the belt. Luggage is handled. Your vehicle is climate-controlled and ready. Your rate does not change.',
+            ],
+        ]"
+    />
 
-    <x-sections.party-bus-occasions id="airport-occasions" />
+    <x-sections.party-bus-occasions
+        id="airport-occasions"
+        heading="Every Type of Traveler"
+        headingBold="We Serve"
+        subheading="Who Books Our Airport Shuttle"
+        intro="Stop & Go's airport shuttle serves travelers from every background and every reason to travel. Here is a look at the groups who book with us most often and what each booking typically includes."
+        :occasions="[
+            [
+                'occasion' => 'Business Frequent Flyers',
+                'copy'     => 'The frequent business traveler books Stop & Go for the same reason they book the same hotel every trip: consistency. The flat rate is the same whether it is a Monday morning or a Friday night. The chauffeur is always uniformed and professional. The vehicle is always clean. Recurring accounts can pre-schedule weekly runs and manage billing in one place.',
+            ],
+            [
+                'occasion' => 'Corporate Executive Clients',
+                'copy'     => 'C-suite executives, visiting board members, and VIP clients arriving at O\'Hare or Midway expect discretion and reliability in equal measure. Our executive vehicles offer quiet cabins, leather seating, and climate control. We handle the inside-terminal meet-and-greet so your guest steps off the plane into professional hands.',
+            ],
+            [
+                'occasion' => 'Medical and Healthcare Travelers',
+                'copy'     => 'Physicians, administrators, and clinical staff from Silver Cross Hospital and healthcare systems across Will County use Stop & Go for airport runs between campuses and conferences. We also serve patients who require private ground transportation to and from O\'Hare and Midway for specialty medical appointments at Chicago-area centers.',
+            ],
+            [
+                'occasion' => 'Families Traveling with Children',
+                'copy'     => 'Family airport travel is far easier with a private shuttle. Child seats are available on request at no extra charge: specify your child\'s age and weight when booking. Our vehicles carry full family luggage loads. Your chauffeur handles bags at both ends. No circling for parking, no long-term lot shuttle, and no surge pricing when you arrive as a group.',
+            ],
+            [
+                'occasion' => 'Wedding Guests Arriving from Out of Town',
+                'copy'     => 'Out-of-town wedding guests arriving at O\'Hare or Midway receive a professional name-sign greeting at baggage claim and a comfortable ride to their hotel or venue. We coordinate multi-arrival pickups under a single booking contact so the couple and their planner manage one vendor, not six. Every guest arrives relaxed and on time.',
+            ],
+            [
+                'occasion' => 'Senior and Accessibility-First Travelers',
+                'copy'     => 'Traveling seniors and passengers who prioritize door-to-door service over navigating parking garages and long-term lots choose Stop & Go for the simplicity. Your chauffeur comes to your door, handles your luggage at both ends, and returns you home after your flight. No driving in unfamiliar traffic, no parking fees, and no relying on family members for a pickup.',
+            ],
+        ]"
+        ctaHref="/get-a-quote"
+    />
 
-    <x-sections.party-bus-advantage id="airport-advantage" />
+    <x-sections.party-bus-advantage
+        id="airport-advantage"
+        heading="Why Private Transfer Beats"
+        headingBold="Parking or Rideshare"
+        intro="Long-term airport parking at O'Hare runs $22 to $32 a day. Economy lot shuttles add 20 minutes each way. On-demand rideshare fares from the Southwest Suburbs surge during peak hours and events. A Stop & Go private transfer eliminates all three. One flat rate, door to door, with a professional chauffeur who handles your luggage and a rate that does not change when a Bears game ends."
+        leftHeading="The Private Transfer Advantage"
+        :checklist="[
+            [
+                'feature' => 'Flat rate locked at booking, no surge pricing',
+                'detail'  => 'On-demand apps reprice based on traffic, time of day, and event demand. Stop & Go locks your fare when you confirm. The number we quote is the number on your receipt, whether you travel at noon or 4 a.m.',
+            ],
+            [
+                'feature' => 'No parking fees, no long-term lot shuttles',
+                'detail'  => 'Economy parking at O\'Hare is a daily expense that compounds on every trip. Add the shuttle ride from the lot and you have spent 30 minutes before you even reach your terminal. A private transfer door-to-door eliminates both.',
+            ],
+            [
+                'feature' => 'Flight tracked, pickup adjusts automatically',
+                'detail'  => 'If your return flight is delayed, your ride adjusts automatically. You do not call us. You do not scramble for a pickup. Our dispatch monitors your flight in real time and your chauffeur is there when you land.',
+            ],
+            [
+                'feature' => 'Luggage handled at both ends',
+                'detail'  => 'From your front door to the check-in drop-off, and from baggage claim to your vehicle, your chauffeur handles the bags. For families and business travelers with full luggage, this alone is worth the booking.',
+            ],
+        ]"
+        rightHeading="The Southwest Suburbs Route Is Our Home Turf"
+        :rightParagraphs="[
+            'Our chauffeurs run the I-80 corridor from Will County to O\'Hare and the I-355 connector to Midway more often than any route in our operation. We know where the congestion builds on the Tri-State Tollway in the morning. We know the construction cycle on I-55. We know which terminal lanes at O\'Hare move fastest for a Tuesday 6 a.m. drop-off versus a Friday evening rush. That local knowledge is not something an algorithm replicates.',
+            'We serve New Lenox, Joliet, Frankfort, Mokena, Orland Park, Tinley Park, Plainfield, Bolingbrook, Romeoville, and every Will County community between here and the Cook County line. The drive to O\'Hare is between 45 and 75 minutes depending on the hour. Midway is often 30 to 40 minutes from the Southwest Suburbs. Your chauffeur knows both and plans the departure time accordingly.',
+            'For corporate accounts and frequent travelers, Stop & Go offers recurring scheduling and centralized billing that on-demand apps simply do not. Your travel manager books the run, the chauffeur shows up, and the receipt goes to accounts payable with no credit card friction. The same professional experience, every week, for every team member making the same airport run.',
+        ]"
+        ctaHeading="Ready to book your airport transfer?"
+        ctaBody="Get your flat-rate quote in minutes. We serve all of Will County and Chicagoland and are available 24 hours a day, 365 days a year."
+        ctaHref="/get-a-quote"
+    />
 
-    <x-sections.limo-booking-timeline id="airport-timeline" />
+    <x-sections.limo-booking-timeline
+        id="airport-timeline"
+        heading="Airport Shuttle"
+        headingBold="Booking Lead Times"
+        intro="Airport transfers are more flexible than wedding and event bookings, but timing still matters. Here is the booking lead time that works best for each type of airport shuttle trip, including the windows when availability gets tight."
+        :items="[
+            [
+                'occasion' => 'Standard Airport Transfer',
+                'timing'   => '24 hours in advance',
+                'detail'   => 'Most airport transfers to O\'Hare and Midway can be booked the day before, or even the same morning when we have availability. We recommend booking at least one night ahead for guaranteed availability.',
+                'urgency'  => 'low',
+            ],
+            [
+                'occasion' => 'Same-Day Emergency Booking',
+                'timing'   => 'Call us directly',
+                'detail'   => 'If you need a same-day airport transfer, call (815) 585-6922 rather than booking online. Our dispatch will confirm availability and lock your rate on the call. Same-day pickups are possible in most cases.',
+                'urgency'  => 'low',
+            ],
+            [
+                'occasion' => 'Corporate Recurring Account',
+                'timing'   => 'Set it up once',
+                'detail'   => 'Corporate accounts and frequent travelers can pre-schedule recurring weekly runs at a locked flat rate. Your travel manager submits the schedule once and we handle every run automatically. Contact us to set up your account.',
+                'urgency'  => 'low',
+            ],
+            [
+                'occasion' => 'Holiday and Peak Travel Periods',
+                'timing'   => '4 to 6 weeks ahead',
+                'detail'   => 'Thanksgiving weekend, the days before and after Christmas, and New Year\'s travel windows are our highest-demand periods. Availability in the Southwest Suburbs fills quickly. Book as early as possible for holiday travel.',
+                'urgency'  => 'high',
+            ],
+            [
+                'occasion' => 'Group Airport Shuttle (5+ Travelers)',
+                'timing'   => '1 to 2 weeks ahead',
+                'detail'   => 'Moving five or more travelers to O\'Hare or Midway together requires a larger vehicle and advance coordination. Book one to two weeks out to secure the right vehicle and luggage capacity for your group.',
+                'urgency'  => 'medium',
+            ],
+            [
+                'occasion' => 'FBO and Private Aviation Transfers',
+                'timing'   => '48 hours minimum',
+                'detail'   => 'Chicago Executive (PWK), Gary/Chicago (GYY), and DuPage (DPA) FBO transfers involve coordination with private terminal schedules. Book at least 48 hours ahead so we can confirm your FBO protocol and timing.',
+                'urgency'  => 'medium',
+            ],
+        ]"
+        legend="Champagne border = book early. Blue = moderate lead time. Slate = flexible."
+    />
 
     <x-sections.three-steps
         :inverted="true"

@@ -90,7 +90,30 @@
 
     <x-sections.core-services-differentiator-band />
 
-    <x-sections.our-story />
+    <x-sections.our-story
+        :entries="[
+            [
+                'title' => 'How We Started: Airport Transfers From Will County, 2015',
+                'body'  => 'Stop &amp; Go Airport Shuttle Service, Inc. was founded in New Lenox on March 26, 2015, with a single mission: give Will County families and business travelers a reliable, professional alternative to leaving a car at the long-term lot. Our first bookings were airport transfers to O\'Hare and Midway from New Lenox, Frankfort, Mokena, and Joliet. We ran them on flat-rate pricing from day one, because we believed the traveler deserved to know the full cost before they confirmed. That commitment has not changed. Every service on this page still runs on the same principle.',
+            ],
+            [
+                'title' => 'Building the Corporate Ground Account Program',
+                'body'  => 'Within the first two years, law firms, financial firms, and manufacturing companies along the I-80 and I-88 corridors began booking recurring executive airport runs. They needed more than a car service. They needed a single vendor who showed up every time, invoiced consistently, and required no last-minute scrambling from their travel managers. We built a corporate account program around exactly that. Today, businesses across the I-88 Innovation Corridor in Oak Brook, Downers Grove, and Naperville use Stop &amp; Go as their exclusive ground transportation vendor for O\'Hare and Midway transfers.',
+            ],
+            [
+                'title' => 'Expanding Into Weddings, Limousines, and Special Events',
+                'body'  => 'As our airport reputation grew, wedding planners and families began asking us to handle event transportation. We added stretch limousines, luxury SUVs, and coordinated multi-vehicle bookings for ceremonies, receptions, and bridal parties across Will County. Today our wedding service covers everything from the getaway car to the 200-person guest shuttle loop between the hotel, the ceremony, and the reception. We still run the same flat-rate model. One price, confirmed at booking, covering every vehicle in your wedding plan.',
+            ],
+            [
+                'title' => 'Charter Buses, Transportation Escort, and Full-Coverage Service',
+                'body'  => 'Clients who trusted us for airport transfers and weddings began asking for larger vehicles: charter buses for corporate team outings, convention shuttles, church group trips, and quinceañera courts. We added a charter bus fleet to meet the demand. Alongside it, we built out our transportation escort capability for multi-vehicle VIP convoys, dignitary arrivals, and large event coordination. From a single airport sedan to a 12-vehicle wedding fleet managed by one dispatcher, we now cover the full spectrum of ground transportation across Chicagoland.',
+            ],
+            [
+                'title' => 'Seven Pillars Today, One Standard Across All of Them',
+                'body'  => 'Stop &amp; Go now operates across seven core service categories: airport shuttle, bus charter, chauffeur service, limousine service, transportation escort, transportation service, and wedding service. Every single one of them runs on the same operating standard we set on day one in 2015. Background-checked chauffeur on every booking. Vehicle inspected and detailed before every pickup. Flat rate locked at confirmation. Dispatch staffed 24 hours a day, 365 days a year. The service area has grown to cover all of Chicagoland, but the standard has not changed from the first Will County airport run.',
+            ],
+        ]"
+    />
 
     <x-sections.review-slider />
 

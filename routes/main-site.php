@@ -105,6 +105,21 @@ Route::get('/bolingbrook-airport-shuttle-ohare-midway', fn () => view('pages.bol
 Route::get('/oswego-il-limo-service',                   fn () => view('pages.oswego-il-limo-service'))->name('oswego-il-limo-service');
 Route::get('/24-7-montgomery-il-limo-service',          fn () => view('pages.24-7-montgomery-il-limo-service'))->name('24-7-montgomery-il-limo-service');
 
+// ─── Core Service Pillars ────────────────────────────────────────────────────
+
+Route::get('/core-services', fn () => view('pages.core-services.index'))->name('core-services');
+
+Route::prefix('core-services')->name('core-services.')->group(function () {
+    Route::get('/airport-shuttle',       fn () => view('pages.core-services.airport-shuttle'))->name('airport-shuttle');
+    Route::get('/bus-charter',            fn () => view('pages.core-services.bus-charter'))->name('bus-charter');
+    Route::get('/chauffeur-service',      fn () => view('pages.core-services.chauffeur-service'))->name('chauffeur-service');
+    Route::get('/limousine-service',      fn () => view('pages.core-services.limousine-service'))->name('limousine-service');
+    Route::get('/transportation-escort',  fn () => view('pages.core-services.transportation-escort'))->name('transportation-escort');
+    Route::get('/transportation-service', fn () => view('pages.core-services.transportation-service'))->name('transportation-service');
+    Route::get('/wedding-service',        fn () => view('pages.core-services.wedding-service'))->name('wedding-service');
+});
+
+
 // ─── Converted Blog Pages ─────────────────────────────────────────────────────
 
 Route::get('/new-lenox-limo-service',                        fn () => view('pages.new-lenox-limo-service'))->name('new-lenox-limo-service');

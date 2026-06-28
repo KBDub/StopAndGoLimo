@@ -117,6 +117,7 @@ Route::prefix('core-services')->name('core-services.')->group(function () {
     Route::get('/transportation-escort',  fn () => view('pages.core-services.transportation-escort'))->name('transportation-escort');
     Route::get('/transportation-service', fn () => view('pages.core-services.transportation-service'))->name('transportation-service');
     Route::get('/wedding-service',        fn () => view('pages.core-services.wedding-service'))->name('wedding-service');
+    Route::get('/special-events',         fn () => view('pages.core-services.special-events'))->name('special-events');
 });
 
 

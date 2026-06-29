@@ -62,7 +62,7 @@
 
 <x-layouts.page
     title="Core Service Pillars | Stop & Go Airport Shuttle &amp; Limo"
-    metaDescription="Seven professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, and more. Chicagoland. (815) 585-6922."
+    metaDescription="Eight professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, special events, and more. Chicagoland. (815) 585-6922."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Core transportation services from Stop and Go Airport Shuttle Service in New Lenox Illinois"
@@ -72,8 +72,8 @@
         heading="Our Core"
         headingBold="Service Pillars"
         :headingTwoLines="false"
-        subtitle="Seven professional services. One trusted local team."
-        description="Stop & Go Airport Shuttle Service, Inc. has been serving Will County and Chicagoland from our New Lenox headquarters since 2015. Over more than a decade, we have grown our operation to cover seven distinct categories of professional chauffeured transportation, each one backed by the same commitment to reliability, flat-rate pricing, and background-checked professionals that built our reputation in the Southwest Suburbs. From a 4 a.m. airport run to O'Hare, to a 100-person wedding guest shuttle, to an executive convoy for a visiting board, to door-to-door transport for a parent heading to Silver Cross Hospital. We handle all of it. One company, one dispatch line open 24 hours a day, and one standard of service across every vehicle type and every occasion. Whether you are a corporate travel manager booking recurring rides for your executive team, a bride coordinating transportation for 200 wedding guests, a family sending a parent to Midway for the first time, or a senior needing a professional driver for a medical appointment. This is the right place. Explore all seven of our core service categories below and find the right fit for your need."
+        subtitle="Eight professional services. One trusted local team."
+        description="Stop & Go Airport Shuttle Service, Inc. has been serving Will County and Chicagoland from our New Lenox headquarters since 2015. Over more than a decade, we have grown our operation to cover eight distinct categories of professional chauffeured transportation, each one backed by the same commitment to reliability, flat-rate pricing, and background-checked professionals that built our reputation in the Southwest Suburbs. From a 4 a.m. airport run to O'Hare, to a 100-person wedding guest shuttle, to an executive convoy for a visiting board, to door-to-door transport for a parent heading to Silver Cross Hospital, to a group riding together to a sold-out Chicago concert with a return pickup locked at the same flat rate. We handle all of it. One company, one dispatch line open 24 hours a day, and one standard of service across every vehicle type and every occasion. Whether you are a corporate travel manager booking recurring rides for your executive team, a bride coordinating transportation for 200 wedding guests, a family sending a parent to Midway for the first time, or a group heading to a gala with no one willing to drive. This is the right place. Explore all eight of our core service categories below and find the right fit for your need."
         buttonText="Get a Free Quote"
         buttonHref="/get-a-quote"
         image="/images/heroes/hero-services.jpg"
@@ -81,7 +81,7 @@
     />
 
     <x-sections.info-strip
-        headingBold="Seven Services."
+        headingBold="Eight Services."
         heading="One Standard of Service."
         body="Every service on this page is backed by the same four guarantees: a flat rate that locks at booking with no surge pricing ever, a background-checked and uniformed chauffeur, a vehicle inspected and detailed before your pickup, and a dispatch team that answers 24 hours a day. We do not have a luxury tier and a budget tier. Every client, whether booking an airport sedan or a 50-passenger charter bus for a corporate event, gets the same preparation, the same professionalism, and the same commitment to being there on time. That consistency is why corporate accounts, wedding planners, and individual travelers across Chicagoland keep coming back."
     />
@@ -109,8 +109,8 @@
                 'body'  => 'Clients who trusted us for airport transfers and weddings began asking for larger vehicles: charter buses for corporate team outings, convention shuttles, church group trips, and quinceañera courts. We added a charter bus fleet to meet the demand. Alongside it, we built out our transportation escort capability for multi-vehicle VIP convoys, dignitary arrivals, and large event coordination. From a single airport sedan to a 12-vehicle wedding fleet managed by one dispatcher, we now cover the full spectrum of ground transportation across Chicagoland.',
             ],
             [
-                'title' => 'Seven Pillars Today, One Standard Across All of Them',
-                'body'  => 'Stop &amp; Go now operates across seven core service categories: airport shuttle, bus charter, chauffeur service, limousine service, transportation escort, transportation service, and wedding service. Every single one of them runs on the same operating standard we set on day one in 2015. Background-checked chauffeur on every booking. Vehicle inspected and detailed before every pickup. Flat rate locked at confirmation. Dispatch staffed 24 hours a day, 365 days a year. The service area has grown to cover all of Chicagoland, but the standard has not changed from the first Will County airport run.',
+                'title' => 'Eight Pillars Today, One Standard Across All of Them',
+                'body'  => 'Stop &amp; Go now operates across eight core service categories: airport shuttle, bus charter, chauffeur service, limousine service, transportation escort, transportation service, wedding service, and special events. Every single one of them runs on the same operating standard we set on day one in 2015. Background-checked chauffeur on every booking. Vehicle inspected and detailed before every pickup. Flat rate locked at confirmation. Dispatch staffed 24 hours a day, 365 days a year. The service area has grown to cover all of Chicagoland, but the standard has not changed from the first Will County airport run.',
             ],
         ]"
     />

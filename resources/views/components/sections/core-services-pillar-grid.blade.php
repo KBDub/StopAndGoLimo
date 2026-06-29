@@ -3,7 +3,7 @@
 {{--
     x-sections.core-services-pillar-grid
     ─────────────────────────────────────────────────────────────────────────────
-    7-tile clickable rectangular grid linking to each Core Service Pillar page.
+    8-tile clickable rectangular grid linking to each Core Service Pillar page.
     Used exclusively on /core-services landing page.
 
     Desktop: 2-column grid. Mobile: 1-column stack.
@@ -57,6 +57,12 @@ $pillars = [
         'name'        => 'Wedding Service',
         'description' => 'Complete wedding weekend transportation: bridal party, guest shuttles, getaway cars, rehearsal dinners, airport pickups for out-of-town guests, and day-after brunches, all in a single booking.',
         'href'        => '/core-services/wedding-service',
+    ],
+    [
+        'number'      => '08',
+        'name'        => 'Special Events',
+        'description' => 'Luxury group transportation for galas, concerts, sporting events, holiday parties, milestone celebrations, reunions, graduations, engagement parties, and every occasion where the group rides together at a flat rate locked before the night begins.',
+        'href'        => '/core-services/special-events',
     ],
 ];
 @endphp

@@ -20,9 +20,10 @@
             <x-nav.link href="/" :active="request()->is('/')">Welcome</x-nav.link>
 
             <x-nav.dropdown label="About" href="/about-us">
-                <x-nav.item href="/about-us" title="About Us"  sub="Our story &amp; chauffeurs" />
-                <x-nav.item href="/rates"    title="Rates"     sub="Transparent flat pricing" />
-                <x-nav.item href="/gallery"  title="Gallery"   sub="Our luxury fleet" />
+                <x-nav.item href="/about-us"      title="About Us"       sub="Our story & chauffeurs" />
+                <x-nav.item href="/rates"          title="Rates"          sub="Transparent flat pricing" />
+                <x-nav.item href="/core-services"  title="Core Services"  sub="All 8 service pillars" />
+                <x-nav.item href="/gallery"        title="Gallery"        sub="Our luxury fleet" />
             </x-nav.dropdown>
 
             <x-nav.link href="/bookings-reservations" :active="request()->is('bookings-reservations')">Reservations</x-nav.link>
@@ -39,13 +40,13 @@
                 {{-- Row 3 --}}
                 <x-nav.item href="/chauffeurs"                      title="Chauffeurs"               sub="Professional drivers" />
                 <x-nav.item href="/coach-buses"                     title="Coach Buses"              sub="Large-group charters" />
-                <x-nav.flyout title="Party Buses" sub="Groups &amp; celebrations" dir="left" href="/party-bus-rental-chicago">
+                <x-nav.flyout title="Party Buses" sub="Groups & celebrations" dir="left" href="/party-bus-rental-chicago">
                     <x-nav.item href="/party-bus-rental-chicago"    title="Chicago Party Bus" />
                     <x-nav.item href="/party-bus-aurora"            title="Aurora Party Bus" />
                     <x-nav.item href="/party-bus-rental-naperville" title="Naperville Party Bus" />
                 </x-nav.flyout>
                 {{-- Row 4 --}}
-                <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle Services" sub="O'Hare &amp; Midway transfers" />
+                <x-nav.item href="/airport-shuttle-ohare-midway"    title="Airport Shuttle Services" sub="O'Hare & Midway transfers" />
                 <x-nav.item href="/new-bus-rental"                  title="New Bus Rentals"          sub="Latest-model coaches" />
                 <x-nav.item href="/prom-party-bus-rental-illinois"  title="Prom Party Buses"         sub="Safe prom-night transport" />
                 {{-- Row 5 --}}
@@ -56,7 +57,7 @@
                 <x-nav.item href="/six-flags-party-bus"              title="Six Flags Party Bus" />
                 <x-nav.item href="/chicago-golf-party-bus"           title="Golfing Party Bus" />
                 <x-nav.item href="/chicago-concert-party-bus-rental" title="Concert Party Bus Rental" />
-                <x-nav.item href="/chicago-bears-party-bus"          title="Chicago Bears Party &amp; Limo Bus" />
+                <x-nav.item href="/chicago-bears-party-bus"          title="Chicago Bears Party & Limo Bus" />
                 <x-nav.item href="/chicago-bulls-party-bus"          title="Chicago Bulls Party Bus" />
                 <x-nav.item href="/chicago-blackhawks-party-bus"     title="Chicago Blackhawks Party Bus" />
             </x-nav.dropdown>
@@ -129,9 +130,10 @@
 
             <div class="nav-drawer-group">
                 <span class="nav-drawer-heading">About</span>
-                <a href="/about-us" class="nav-drawer-sub">About Us</a>
-                <a href="/rates"    class="nav-drawer-sub">Rates</a>
-                <a href="/gallery"  class="nav-drawer-sub">Gallery</a>
+                <a href="/about-us"     class="nav-drawer-sub">About Us</a>
+                <a href="/rates"        class="nav-drawer-sub">Rates</a>
+                <a href="/core-services" class="nav-drawer-sub">Core Services</a>
+                <a href="/gallery"      class="nav-drawer-sub">Gallery</a>
             </div>
 
             <a href="/bookings-reservations" class="nav-drawer-link">Reservations</a>

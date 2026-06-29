@@ -59,6 +59,71 @@
         <priority>0.9</priority>
     </url>
 
+    {{-- ─── Core Service Pillars ────────────────────────────────────────────── --}}
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/airport-shuttle</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/bus-charter</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/chauffeur-service</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/limousine-service</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/transportation-escort</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/transportation-service</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/wedding-service</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://newlenoxlimoservice.com/core-services/special-events</loc>
+        <lastmod>2026-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     {{-- ─── Services ────────────────────────────────────────────────────────── --}}
 
     <url>

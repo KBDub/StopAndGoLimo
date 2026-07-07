@@ -93,7 +93,7 @@
                 "name": "Executive Chauffeur Service",
                 "description": "Professional executive chauffeur service for business travel across the I-80 and I-88 corridors. Quiet cabin, plush leather seating, privacy partition, and on-time performance for executives and corporate clients.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Airport Chauffeur Service",
                 "description": "Professional chauffeur service to O'Hare, Midway, and Chicago Executive Airport from New Lenox, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, luggage assistance, flat-rate pricing.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Wedding Chauffeur Service",
                 "description": "Professional wedding day chauffeur service across Will County. Formally attired driver, red carpet arrival, white-glove coordination between ceremony, photos, and reception.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "Corporate Chauffeur Service",
                 "description": "Corporate chauffeur service for client pickups, roadshows, and multi-stop business days. Centralized billing, digital receipts, single dispatch contact, and 24/7/365 availability.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "VIP Chauffeur Service",
                 "description": "White-glove VIP chauffeur service for high-profile guests, executives, and distinguished visitors. Discreet, polished, and professional from the moment the door opens.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "Hourly Chauffeur Service",
                 "description": "Flexible hourly chauffeur hire across New Lenox, Joliet, Naperville, and all of Will County. Dedicated driver and vehicle for multiple stops, events, and full-day itineraries.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Hourly rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

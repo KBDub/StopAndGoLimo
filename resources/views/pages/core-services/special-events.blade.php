@@ -93,7 +93,7 @@
                 "name": "Gala and Formal Event Transportation",
                 "description": "Luxury transportation to galas, black-tie dinners, award ceremonies, and formal fundraisers across Chicagoland. Professionally attired chauffeur, spotless vehicle, confirmed arrival and departure timing.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Concert and Sporting Event Transportation",
                 "description": "Group transportation to concerts and games at the United Center, Soldier Field, Wrigley Field, Allstate Arena, and Northerly Island. Curbside drop-off and confirmed return pickup at a flat rate, no surge when the event ends.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Holiday Party and Corporate Event Transportation",
                 "description": "Group transportation for holiday parties, end-of-year celebrations, and company events across Will County and the I-80 corridor. Multi-stop coordination, centralized billing, and flat-rate pricing for the whole group.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "Milestone Birthday and Anniversary Transportation",
                 "description": "Limousine and group transportation for landmark birthdays, anniversaries, and milestone celebrations across Will County and Chicagoland. Multi-stop evening itinerary, ambient lighting, and a rate locked before the night begins.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "Group Reunion and Outing Transportation",
                 "description": "Private group charter transportation for family reunions, alumni outings, club events, and day trips across Chicagoland. One dedicated vehicle, one chauffeur, and one flat rate for the whole group.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "Graduation and Achievement Celebration Transportation",
                 "description": "Graduation and achievement celebration transportation for high school, college, and professional milestones across Will County. Group arrival in one vehicle, multi-stop celebration itinerary, and flat-rate all-inclusive pricing.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

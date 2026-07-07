@@ -93,7 +93,7 @@
                 "name": "Stretch Limousine Rental",
                 "description": "Stretch limousine rentals for 8 to 16 passengers across Will County and Chicagoland. Plush leather seating, ambient LED lighting, premium audio, privacy partition, and a background-checked chauffeur. Flat-rate, all-inclusive pricing.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Wedding Limousine Service",
                 "description": "Wedding limousine service for the bridal party, newlywed getaway, and guest shuttles across Will County. Formally attired chauffeur, red carpet arrival, multi-stop coordination. Book 6 to 12 months ahead.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Quinceañera Limousine Service",
                 "description": "Quinceañera limousine service across New Lenox, Joliet, and Will County. Carries the quinceañera and her entire court from the home gathering through the church and reception. Multi-stop itinerary coordination.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "Prom Limousine Service",
                 "description": "Prom and homecoming limousine service for Lincoln-Way and Joliet Township students. Background-checked chauffeur, group travel, confirmed pickup and drop-off details for parents. Book 2 to 3 months ahead.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "Bachelorette and Night-Out Limousine",
                 "description": "Bachelorette party and group night-out limousine service across Chicagoland. Multi-stop bar and venue routing, ambient lighting, premium audio, built-in coolers. Flat-rate pricing with no surge at the end of the night.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "Concert Limousine Service",
                 "description": "Concert limousine service to the United Center, Soldier Field, Allstate Arena, Wrigley Field, and Northerly Island. Curbside drop-off, no parking, guaranteed return pickup at a price set in advance.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

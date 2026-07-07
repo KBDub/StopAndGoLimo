@@ -93,7 +93,7 @@
                 "name": "Airport Transportation",
                 "description": "Flat-rate airport transportation to O'Hare, Midway, and Chicago Executive Airport from New Lenox, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, luggage assistance, and 24/7/365 dispatch.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 2000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Corporate Transportation",
                 "description": "Professional corporate transportation for executives, clients, and business events across the I-80 and I-88 corridors. Centralized billing, digital receipts, quiet cabin, and privacy partition.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 2000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Special Event Transportation",
                 "description": "Luxury transportation for galas, concerts, celebrations, and events across Chicagoland. Group-sized vehicles, no surge pricing on the return, and guaranteed pickup at a rate set in advance.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 2000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "Private Charter Transportation",
                 "description": "Private charter transportation for groups of any size across Will County and Chicagoland. Dedicated vehicle and chauffeur, multi-stop itinerary coordination, and flat-rate pricing for the whole group.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 2000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "Luxury Limousine Transportation",
                 "description": "Stretch limousine transportation for weddings, quinceañeras, proms, and celebrations. Ambient lighting, plush leather seating, premium audio, and background-checked chauffeur on every rental.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 2000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "City Tour and Leisure Transportation",
                 "description": "Private city tour and leisure transportation for individuals and groups departing from New Lenox and across the Southwest Suburbs. Customized Chicago itineraries, hourly hire, and no parking.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Hourly rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 2000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

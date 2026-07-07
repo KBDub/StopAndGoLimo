@@ -93,7 +93,7 @@
                 "name": "Wedding Limousine Service",
                 "description": "Luxury stretch limousine for the bridal party across Will County and Chicagoland. Formally attired chauffeur, red carpet arrival, climate-controlled interior, multi-stop coordination. Book 6 to 12 months ahead for peak Saturdays.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Bridal Party Transportation",
                 "description": "Spacious, elegant transportation for the full bridal party from getting-ready through ceremony, photos, and reception. Keeps the party together and on the timeline all day.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Wedding Party Bus",
                 "description": "Luxury party bus for larger wedding parties who want to travel together and celebrate between venues. Plush wrap-around seating, premium audio, club lighting, and a background-checked chauffeur.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "Wedding Guest Shuttle",
                 "description": "Guest shuttle service between hotel, ceremony, and reception for wedding guests across Will County. Timed loops, venue staging, and a single dispatch contact coordinating the full guest transportation plan.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "Wedding Getaway Car",
                 "description": "Luxury getaway car staged at the reception for a grand exit. Red carpet departure, professionally attired chauffeur, and seamless coordination with the full day's transportation plan.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "Wedding Airport Transport",
                 "description": "Airport transfers for the couple's honeymoon departure and for out-of-town guests arriving at O'Hare and Midway. Real-time flight tracking, meet-and-greet, luggage assistance, and 24/7/365 dispatch.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

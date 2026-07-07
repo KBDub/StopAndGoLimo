@@ -93,7 +93,7 @@
                 "name": "Airport Escort Transportation",
                 "description": "Door-to-door escorted airport transportation to O'Hare, Midway, and Chicago Executive Airport. Real-time flight tracking, curbside or inside-terminal meet-and-greet, luggage assistance. Chauffeur accompanies from pickup through terminal arrival.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Corporate Escort Transportation",
                 "description": "Discreet executive escort transportation for client visits, roadshows, and multi-stop corporate schedules. Chauffeur accompanies throughout the full business day, managing route and timing across Chicagoland.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Private Charter Escort",
                 "description": "Private escorted charters for groups of any size across New Lenox, Joliet, and all of Will County. Dedicated chauffeur accompanies the group from first pickup to final drop-off, handling every stop and timing detail.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "School Dance Escort Transportation",
                 "description": "Parent-trusted escort transportation for proms and school dances across New Lenox, Frankfort, Mokena, and Will County. Background-checked chauffeur, confirmed pickup and drop-off details, on-time return.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "City Tour Escort Service",
                 "description": "Private escorted city tours of Chicago from New Lenox and across the Southwest Suburbs. Chauffeur guides clients between landmarks at their own pace, handling driving and parking throughout the day.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Hourly rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "Anniversary and Occasion Escort",
                 "description": "Escorted luxury transportation for anniversaries, romantic evenings, and personal celebrations across New Lenox and Will County. Professional chauffeur accompanies the couple for the full evening, handling all logistics.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

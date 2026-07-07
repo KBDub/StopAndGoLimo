@@ -93,7 +93,7 @@
                 "name": "Corporate Shuttle Bus",
                 "description": "Professional shuttle buses for corporate teams, conferences, and business events across Chicagoland and the I-80 and I-88 corridors. Flat-rate pricing, centralized billing, and 24/7 dispatch.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -103,7 +103,7 @@
                 "name": "Wedding Party Bus Shuttle",
                 "description": "Charter buses and party buses for wedding parties moving between venues across Will County. Keeps the whole bridal party together, on schedule, and celebrating.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -113,7 +113,7 @@
                 "name": "Airport Group Charter Bus",
                 "description": "Group charter bus transfers to O'Hare and Midway for corporate travel parties, wedding guests, and large families. One vehicle, ample luggage space, flat-rate pricing.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -123,7 +123,7 @@
                 "name": "Concert and Event Charter Bus",
                 "description": "Charter buses to Chicago's major venues: United Center, Soldier Field, Allstate Arena, Wrigley Field, and Northerly Island. No parking, no surge pricing, guaranteed pickup after the show.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -133,7 +133,7 @@
                 "name": "Quinceañera Charter Bus",
                 "description": "Spacious charter buses for quinceañera celebrations, keeping the quinceañera and her court of honor together from the ceremony to the reception.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
         {
@@ -143,7 +143,7 @@
                 "name": "Winery and Brewery Tour Bus",
                 "description": "Illinois winery and brewery tour transportation for groups. Everyone rides together, no one drives, and the experience stays enjoyable from the first stop to the last.",
                 "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
-                "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "description": "Flat-rate — contact for quote" }
+                "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
     ]

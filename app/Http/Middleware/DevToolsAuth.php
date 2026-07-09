@@ -12,20 +12,12 @@ final class DevToolsAuth
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $user = config('devtools.user');
-        $pass = config('devtools.pass');
-
-        if (
-            !$user ||
-            !$pass ||
-            $request->getUser() !== $user ||
-            $request->getPassword() !== $pass
-        ) {
-            return response('Unauthorized', 401, [
-                'WWW-Authenticate' => 'Basic realm="Dev Tools"',
-            ]);
+        if ($request->session()->get('devtools_authed') === true) {
+            return $next($request);
         }
 
-        return $next($request);
+        $redirectTo = $request->fullUrl();
+
+        return redirect('/devtools-login?redirect_to=' . urlencode($redirectTo));
     }
 }

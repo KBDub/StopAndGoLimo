@@ -152,6 +152,33 @@ Route::get('/service-areas', function () {
 
 
 
+// ─── Dev Tools Login ─────────────────────────────────────────────────────────
+
+Route::get('/devtools-login', fn () => view('pages.devtools-login'));
+
+Route::post('/devtools-login', function (\Illuminate\Http\Request $request) {
+    $user = config('devtools.user');
+    $pass = config('devtools.pass');
+
+    if (
+        $user && $pass &&
+        $request->input('dt_user') === $user &&
+        $request->input('dt_pass') === $pass
+    ) {
+        $request->session()->put('devtools_authed', true);
+        $redirectTo = $request->input('redirect_to', '/page-management');
+        return redirect($redirectTo);
+    }
+
+    return redirect('/devtools-login')
+        ->with('devtools_error', 'Incorrect username or password.');
+})->middleware('throttle:5,1');
+
+Route::get('/devtools-logout', function (\Illuminate\Http\Request $request) {
+    $request->session()->forget('devtools_authed');
+    return redirect('/devtools-login');
+})->middleware('devtools.auth');
+
 // ─── Page Management ─────────────────────────────────────────────────────────
 
 Route::get('/page-management', function () {

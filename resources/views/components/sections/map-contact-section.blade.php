@@ -3,8 +3,8 @@
     'imageAlt'     => 'Stop & Go Airport Shuttle Service luxury vehicle',
     'heading'      => 'Follow Us On',
     'headingBold'  => 'Social Media',
-    'facebook'     => 'https://www.facebook.com/',
-    'twitter'      => 'https://twitter.com/',
+    'facebook'     => 'https://www.facebook.com/p/Stop-Go-Airport-Shuttle-Service-61566415887805/',
+    'instagram'    => 'https://www.instagram.com/stopngo_airportshuttle/',
     'mapSrc'       => 'https://maps.google.com/maps?q=Stop+%26+Go+Airport+Shuttle+Service&ll=41.67,-87.91&output=embed&z=9',
     'address'      => '400 E Lincoln Hwy, Suite 101A, New Lenox, IL 60451',
     'businessName' => 'Stop & Go Airport Shuttle Service, Inc.',
@@ -38,9 +38,9 @@
             </h2>
 
             <div style="display: flex; gap: 0.75rem;">
-                <x-ui.facebook-chip :href="$facebook" />
-                <x-ui.twitter-chip  :href="$twitter" />
-                <x-ui.email-chip    href="mailto:{{ $email }}" />
+                <x-ui.facebook-chip   :href="$facebook" />
+                <x-ui.instagram-chip :href="$instagram" />
+                <x-ui.email-chip     href="mailto:{{ $email }}" />
             </div>
         </div>
     </div>

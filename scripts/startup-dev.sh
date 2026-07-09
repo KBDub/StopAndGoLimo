@@ -61,6 +61,16 @@ if [ -n "${QUOTE_NOTIFY_EMAIL}" ]; then
     echo "[startup] QUOTE_NOTIFY_EMAIL injected into .env"
 fi
 
+if [ -n "${DEVTOOLS_USER}" ]; then
+    sg_inject_env "DEVTOOLS_USER" "${DEVTOOLS_USER}"
+    echo "[startup] DEVTOOLS_USER injected into .env"
+fi
+
+if [ -n "${DEVTOOLS_PASS}" ]; then
+    sg_inject_env "DEVTOOLS_PASS" "${DEVTOOLS_PASS}"
+    echo "[startup] DEVTOOLS_PASS injected into .env"
+fi
+
 # Mail — non-sensitive values are hard-coded here to bypass the
 # Replit secrets vs shared-env-var precedence ambiguity (secrets win
 # over .env via Dotenv createImmutable, so stale secret values would

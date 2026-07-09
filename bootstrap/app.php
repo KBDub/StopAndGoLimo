@@ -19,6 +19,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'cacheResponse'       => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
             'doNotCacheResponse'  => \Spatie\ResponseCache\Middlewares\DoNotCacheResponse::class,
             'identify.store'      => \App\Http\Middleware\IdentifyStore::class,
+            'devtools.auth'       => \App\Http\Middleware\DevToolsAuth::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

@@ -137,17 +137,11 @@ Route::get('/best-limo-services-near-me-february-2026',      fn () => view('page
 Route::get('/best-party-bus-rentals-naperville-il',          fn () => view('pages.best-party-bus-rentals-naperville-il'))->name('best-party-bus-rentals-naperville-il');
 
 
-Route::get('/demo', function () {
-    return view('pages.demo');
+Route::prefix('demo')->middleware('devtools.auth')->group(function () {
+    Route::get('/',               fn () => view('pages.demo'));
+    Route::get('/premium',        fn () => view('pages.demo-premium'))->name('demo.premium');
+    Route::get('/live-components', fn () => view('pages.demo-live-components'))->name('demo.live-components');
 });
-
-Route::get('/demo/premium', function () {
-    return view('pages.demo-premium');
-})->name('demo.premium');
-
-Route::get('/demo/live-components', function () {
-    return view('pages.demo-live-components');
-})->name('demo.live-components');
 
 
 // ─── Service Area ────────────────────────────────────────────────────────────
@@ -164,7 +158,7 @@ Route::get('/page-management', function () {
     $scanner = new \App\Actions\ScanPageComponents();
     $groups = $scanner->execute();
     return view('pages.page-management', compact('groups'));
-})->name('page-management');
+})->middleware('devtools.auth')->name('page-management');
 
 // ─── Collections ─────────────────────────────────────────────────────────────
 

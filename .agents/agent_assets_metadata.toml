@@ -24,3 +24,15 @@ id = "9CzbHIErSCj8wFFK3DueU"
 uri = "file://docs/form-submission.md"
 type = "text"
 title = "Quote Form Submission — Implementation Reference"
+
+[[outputs]]
+id = "8cF-k2acBCDlkPjREHAAu"
+uri = "file://page-management-system.zip"
+type = "unspecified"
+title = "Page Management System"
+
+[[outputs]]
+id = "iXF0_M6tzGiP8-qPR-lDb"
+uri = "file://email-mailable-system.zip"
+type = "unspecified"
+title = "Email Mailable System"

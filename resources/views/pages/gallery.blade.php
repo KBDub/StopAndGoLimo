@@ -61,6 +61,9 @@
         direction="right"
     />
 
+    <x-ui.banner-thin-champagne />
+
+
     {{-- ── 4. Sticky section-index strip ──────────────────────────── --}}
     <div style="background: var(--navy); border-top: 1px solid rgba(255,255,255,0.07); border-bottom: 1px solid rgba(255,255,255,0.07); position: sticky; top: 80px; z-index: 40;">
         <div class="max-w-7xl mx-auto px-4">

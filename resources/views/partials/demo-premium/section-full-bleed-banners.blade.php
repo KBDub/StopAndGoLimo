@@ -19,7 +19,7 @@
             <p class="text-sm text-charcoal-light">Full-width image that acts as the entire banner. Optionally wraps in a link.</p>
         </div>
         <x-ui.banner-full-bleed-image
-            image="/images/demo/ModCloth3600x1024.webp"
+            image="https://top-5-pct.replit.app/images/demo/ModCloth3600x1024.webp"
             alt="Custom signage and apparel by Top 5 Percent"
             href="/custom-apparel"
         />
@@ -32,8 +32,8 @@
             <p class="text-sm text-charcoal-light">Two images side by side, edge-to-edge with text overlay on the left. Configurable split ratio.</p>
         </div>
         <x-ui.banner-full-bleed-2-image
-            imageLeft="/images/demo/gymshark1.avif"
-            imageRight="/images/demo/gymshark2.avif"
+            imageLeft="https://top-5-pct.replit.app/images/demo/gymshark1.avif"
+            imageRight="https://top-5-pct.replit.app/images/demo/gymshark1.avif"
             altLeft="Custom apparel"
             altRight="Custom apparel lifestyle"
             title="For every occasion"

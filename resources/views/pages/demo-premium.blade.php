@@ -64,5 +64,6 @@
     </main>
 
     <x-layout.footer />
+    @livewireScripts
 </body>
 </html>

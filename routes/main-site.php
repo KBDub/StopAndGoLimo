@@ -137,7 +137,7 @@ Route::get('/best-limo-services-near-me-february-2026',      fn () => view('page
 Route::get('/best-party-bus-rentals-naperville-il',          fn () => view('pages.best-party-bus-rentals-naperville-il'))->name('best-party-bus-rentals-naperville-il');
 
 
-Route::prefix('demo')->middleware('devtools.auth')->group(function () {
+Route::prefix('demo')->/*middleware('devtools.auth')->*/group(function () {
     Route::get('/',               fn () => view('pages.demo'));
     Route::get('/premium',        fn () => view('pages.demo-premium'))->name('demo.premium');
     Route::get('/live-components', fn () => view('pages.demo-live-components'))->name('demo.live-components');

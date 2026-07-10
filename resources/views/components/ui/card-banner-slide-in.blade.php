@@ -14,8 +14,8 @@
     aspect-ratio: 16/7; width: 100%;
 }
 #{{ $uid }} {
-    transform: translateX({{ $direction === 'right' ? '80px' : '-80px' }});
-    opacity: 0; transition: transform 0.7s ease, opacity 0.7s ease;
+    transform: translateX({{ $direction === 'right' ? '100%' : '-100%' }});
+    opacity: 0; transition: transform 1.1s ease-out, opacity 1.1s ease-out;
 }
 #{{ $uid }}.is-visible { transform: translateX(0); opacity: 1; }
 .sg-slide-banner img { width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease; }
@@ -57,7 +57,7 @@
         entries.forEach(function(entry) {
             if (entry.isIntersecting) { el.classList.add('is-visible'); obs.disconnect(); }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05 });
     obs.observe(el);
 })();
 </script>

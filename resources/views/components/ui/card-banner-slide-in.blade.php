@@ -12,10 +12,12 @@
 .sg-slide-banner {
     position: relative; overflow: hidden; display: block; text-decoration: none;
     aspect-ratio: 16/7; width: 100%;
+}
+#{{ $uid }} {
     transform: translateX({{ $direction === 'right' ? '80px' : '-80px' }});
     opacity: 0; transition: transform 0.7s ease, opacity 0.7s ease;
 }
-.sg-slide-banner.is-visible { transform: translateX(0); opacity: 1; }
+#{{ $uid }}.is-visible { transform: translateX(0); opacity: 1; }
 .sg-slide-banner img { width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s ease; }
 .sg-slide-banner:hover img { transform: scale(1.05); }
 .sg-slide-banner-overlay {

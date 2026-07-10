@@ -153,42 +153,13 @@
             {{-- ── Bottom controls ───────────────────────────────────── --}}
             @if($chipNav)
 
-            {{-- Chip-nav: [ ← Prev chip ] [ dots ] [ Next → chip ] --}}
+            {{-- Chip-nav: ← Prev | Next → (shared component, exact testimonial spec) --}}
             <template x-if="n > 1">
-                <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 1.25rem;">
-
-                    {{-- ← Prev chip --}}
-                    <button
-                        x-on:click="prev(); startTimer();"
-                        class="font-head"
-                        style="display: inline-flex; align-items: center; gap: 0.4rem;
-                               background: color-mix(in srgb, var(--champagne) 14%, transparent);
-                               color: var(--champagne);
-                               border: 1px solid var(--champagne);
-                               font-size: 0.8rem; font-weight: 600; letter-spacing: 0.4px;
-                               padding: 0.4rem 1rem; cursor: pointer; line-height: 1;
-                               transition: background 0.2s ease, color 0.2s ease;"
-                        onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
-                        onmouseout="this.style.background='color-mix(in srgb, var(--champagne) 14%, transparent)'; this.style.color='var(--champagne)';"
-                        aria-label="Previous image"
-                    >&#8592; Prev</button>
-
-                    {{-- Next → chip --}}
-                    <button
-                        x-on:click="next(); startTimer();"
-                        class="font-head"
-                        style="display: inline-flex; align-items: center; gap: 0.4rem;
-                               background: color-mix(in srgb, var(--champagne) 14%, transparent);
-                               color: var(--champagne);
-                               border: 1px solid var(--champagne);
-                               font-size: 0.8rem; font-weight: 600; letter-spacing: 0.4px;
-                               padding: 0.4rem 1rem; cursor: pointer; line-height: 1;
-                               transition: background 0.2s ease, color 0.2s ease;"
-                        onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
-                        onmouseout="this.style.background='color-mix(in srgb, var(--champagne) 14%, transparent)'; this.style.color='var(--champagne)';"
-                        aria-label="Next image"
-                    >Next &#8594;</button>
-
+                <div>
+                    <x-ui.left-right-button-control
+                        prevAction="prev(); startTimer();"
+                        nextAction="next(); startTimer();"
+                    />
                 </div>
             </template>
 

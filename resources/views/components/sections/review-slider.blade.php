@@ -157,18 +157,11 @@ $extTotal     = count($extended);    // 14
             </div>
 
             {{-- Controls: prev · dots · next --}}
-            <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2.25rem;">
-
-                {{-- Prev --}}
-                <button
-                    @click="prev(); startAuto();"
-                    class="font-head"
-                    style="display: inline-flex; align-items: center; gap: 0.4rem; {{ $btnStyle }} font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; line-height: 1; transition: background 0.22s, color 0.22s;"
-                    onmouseover="{{ $btnHoverOn }}"
-                    onmouseout="{{ $btnHoverOff }}"
-                    aria-label="Previous review"
-                >&#8592; Prev</button>
-
+            <x-ui.left-right-button-control
+                prevAction="prev(); startAuto();"
+                nextAction="next(); startAuto();"
+                :inverted="$inverted"
+            >
                 {{-- Dots — one per real card, desktop only --}}
                 <div class="hidden lg:flex" style="align-items: center; gap: 0.55rem;">
                     @for ($d = 0; $d < $realCount; $d++)
@@ -182,18 +175,7 @@ $extTotal     = count($extended);    // 14
                         ></button>
                     @endfor
                 </div>
-
-                {{-- Next --}}
-                <button
-                    @click="next(); startAuto();"
-                    class="font-head"
-                    style="display: inline-flex; align-items: center; gap: 0.4rem; {{ $btnStyle }} font-size: 0.78rem; font-weight: 700; letter-spacing: 0.6px; padding: 0.45rem 1rem; cursor: pointer; line-height: 1; transition: background 0.22s, color 0.22s;"
-                    onmouseover="{{ $btnHoverOn }}"
-                    onmouseout="{{ $btnHoverOff }}"
-                    aria-label="Next review"
-                >Next &#8594;</button>
-
-            </div>
+            </x-ui.left-right-button-control>
 
         </div>
 

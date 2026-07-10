@@ -173,18 +173,6 @@
                         aria-label="Previous image"
                     >&#8592; Prev</button>
 
-                    {{-- Dot indicators --}}
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <template x-for="(img, idx) in images" :key="idx">
-                            <button
-                                x-on:click="jumpTo(idx)"
-                                class="h-1.5 transition-all duration-300"
-                                :class="idx === current ? 'w-6 bg-champagne' : 'w-1.5 bg-slate hover:bg-slate'"
-                                :aria-label="'Go to image ' + (idx + 1)"
-                            ></button>
-                        </template>
-                    </div>
-
                     {{-- Next → chip --}}
                     <button
                         x-on:click="next(); startTimer();"

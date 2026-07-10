@@ -50,7 +50,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. offers a full range of private transportation throughout Chicagoland. Flat-rate airport transfers to O'Hare and Midway with real-time flight tracking. Stretch limousines and Sprinter vans for weddings. Party buses for bachelorette parties, quinceañeras, birthdays, and prom groups. Executive car service and multi-stop charters for corporate travelers along the I-88 corridor, the Loop, and the north shore. Coach buses for large group events and corporate gatherings. Sports fan shuttles to Soldier Field and the United Center. Whatever the occasion, we get you there safely and in style."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/heroes/hero-services.jpg"
+        image="/images/gallery/promo-airport-transfer-passengers-private-jet.jpg"
         imagePosition="center 40%"
     />
 

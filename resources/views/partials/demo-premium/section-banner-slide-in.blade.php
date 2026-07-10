@@ -14,10 +14,10 @@
             <div>
                 <p class="text-sm text-charcoal-light mb-3 font-semibold">Slides in from the left</p>
                 <x-ui.card-banner-slide-in
-                    image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
-                    alt="Custom shirts, hoodies, and caps in Joliet"
-                    title="Custom Shirts"
-                    href="/custom-apparel/custom-shirts"
+                    image="/images/gallery/fleet-hummer-h2-stretch-white-side-trees.jpg"
+                    alt="White Hummer H2 stretch limousine"
+                    title="Stretch Limousines"
+                    href="/services/stretch-limousines"
                     direction="left"
                 />
             </div>
@@ -25,10 +25,10 @@
             <div>
                 <p class="text-sm text-charcoal-light mb-3 font-semibold">Slides in from the right</p>
                 <x-ui.card-banner-slide-in
-                    image="/images/dtf-transfers/top5pct-dtf-t-shirt-printing.jpg"
-                    alt="DTF transfers printing in Joliet"
-                    title="DTF Transfers"
-                    href="/custom-apparel/printing-options/dtf-printing"
+                    image="/images/gallery/fleet-party-bus-chicago-skyline-night.jpg"
+                    alt="Party bus on Chicago street at night"
+                    title="Party Buses"
+                    href="/services/party-buses"
                     direction="right"
                 />
             </div>
@@ -41,10 +41,10 @@
 
             <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
             <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.card-banner-slide-in
-    image="/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg"
-    alt="Custom shirts, hoodies, and caps in Joliet"
-    title="Custom Shirts"
-    href="/custom-apparel/custom-shirts"
+    image="/images/gallery/fleet-hummer-h2-stretch-white-side-trees.jpg"
+    alt="White Hummer H2 stretch limousine"
+    title="Stretch Limousines"
+    href="/services/stretch-limousines"
     direction="left"
 /&gt;
 {{-- Aspect ratio: 16:7 (full width) --}}

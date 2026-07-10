@@ -162,8 +162,8 @@
             </p>
 
             <div class="space-y-8">
-                <x-ui.carousel-rotating-images :images="$fleetRowA" :visible="3" :interval="3800" />
-                <x-ui.carousel-rotating-images :images="$fleetRowB" :visible="2" :interval="4000" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$fleetRowA" :visible="3" :interval="3800" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$fleetRowB" :visible="2" :interval="4000" />
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <img
@@ -182,9 +182,9 @@
                     >
                 </div>
 
-                <x-ui.carousel-rotating-images :images="$fleetRowD" :visible="3" :interval="3600" />
-                <x-ui.carousel-rotating-images :images="$fleetRowE" :visible="3" :interval="4200" />
-                <x-ui.carousel-rotating-images :images="$fleetRowF" :visible="3" :interval="3500" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$fleetRowD" :visible="3" :interval="3600" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$fleetRowE" :visible="3" :interval="4200" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$fleetRowF" :visible="3" :interval="3500" />
             </div>
 
         </div>
@@ -223,8 +223,8 @@
             </p>
 
             <div class="space-y-8">
-                <x-ui.carousel-rotating-images :images="$weddingRowA" :visible="3" :interval="3800" />
-                <x-ui.carousel-rotating-images :images="$weddingRowB" :visible="2" :interval="4000" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$weddingRowA" :visible="3" :interval="3800" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$weddingRowB" :visible="2" :interval="4000" />
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <img
@@ -279,8 +279,8 @@
             </p>
 
             <div class="space-y-8">
-                <x-ui.carousel-rotating-images :images="$chauffeurRowA" :visible="3" :interval="4000" />
-                <x-ui.carousel-rotating-images :images="$chauffeurRowB" :visible="2" :interval="3700" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$chauffeurRowA" :visible="3" :interval="4000" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$chauffeurRowB" :visible="2" :interval="3700" />
             </div>
 
         </div>
@@ -323,9 +323,9 @@
             </p>
 
             <div class="space-y-8">
-                <x-ui.carousel-rotating-images :images="$clientsRowA" :visible="3" :interval="3800" />
-                <x-ui.carousel-rotating-images :images="$clientsRowB" :visible="2" :interval="4200" />
-                <x-ui.carousel-rotating-images :images="$clientsRowC" :visible="3" :interval="3600" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$clientsRowA" :visible="3" :interval="3800" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$clientsRowB" :visible="2" :interval="4200" />
+                <x-ui.carousel-rotating-images :chip-nav="true" :images="$clientsRowC" :visible="3" :interval="3600" />
             </div>
 
         </div>

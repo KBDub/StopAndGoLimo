@@ -77,6 +77,8 @@
         </div>
     </div>
 
+    <div style="height: 3.5rem; background: var(--navy-dark);"></div>
+
     {{-- ── 5. Mini About Us — 2 pics, 1 row, no carousel ──────────── --}}
     <section id="about-us-mini" style="background: var(--navy-dark); scroll-margin-top: 80px;" class="py-12">
         <div class="max-w-7xl mx-auto px-6">

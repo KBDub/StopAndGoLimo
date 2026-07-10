@@ -58,9 +58,15 @@
             } else {
                 this.vis = {{ (int) $visible }};
             }
+        },
+        preload() {
+            this.images.forEach(function(img) {
+                var i = new Image();
+                i.src = img.src;
+            });
         }
     }"
-    x-init="applyResponsive(); startTimer(); window.addEventListener('resize', () => applyResponsive())"
+    x-init="preload(); applyResponsive(); startTimer(); window.addEventListener('resize', () => applyResponsive())"
     {{ $attributes->merge(['class' => 'w-full']) }}
 >
     <template x-if="images.length > 0">

@@ -104,52 +104,36 @@
     {{-- ── 6. Our Fleet ─────────────────────────────────────────────── --}}
     @php
     $fleetRowA = [
-        ['src' => '/images/gallery/fleet-mercedes-sprinter-black-chicago-skyline.jpg',    'alt' => 'Mercedes Sprinter van against the Chicago skyline'],
-        ['src' => '/images/gallery/fleet-cadillac-escalade-stretch-white-doors-open.jpg', 'alt' => 'Cadillac Escalade stretch limousine with doors open'],
-        ['src' => '/images/gallery/fleet-hummer-h2-stretch-white-front.jpg',              'alt' => 'Hummer H2 stretch limousine front view'],
-        ['src' => '/images/gallery/fleet-chevy-suburban-black-front-driveway.jpg',        'alt' => 'Chevrolet Suburban luxury SUV in driveway'],
-        ['src' => '/images/gallery/fleet-chrysler-300-stretch-black-side-trees.jpg',      'alt' => 'Chrysler 300 stretch limousine side view'],
-        ['src' => '/images/gallery/fleet-lincoln-mkt-stretch-limo-road-white.jpg',        'alt' => 'Lincoln MKT stretch limousine on the road'],
-        ['src' => '/images/gallery/fleet-lincoln-mkx-suv-black-promo.jpg',                'alt' => 'Lincoln MKX luxury SUV promo shot'],
-        ['src' => '/images/gallery/fleet-cadillac-xt5-white-front-driveway.jpg',          'alt' => 'Cadillac XT5 white luxury SUV in driveway'],
+        ['src' => '/images/gallery/fleet-mercedes-sprinter-black-chicago-skyline.jpg', 'alt' => 'Mercedes Sprinter van against the Chicago skyline'],
+        ['src' => '/images/gallery/fleet-chevy-suburban-black-front-driveway.jpg',     'alt' => 'Chevrolet Suburban luxury SUV in driveway'],
+        ['src' => '/images/gallery/fleet-lincoln-mkx-suv-black-promo.jpg',             'alt' => 'Lincoln MKX luxury SUV promo shot'],
+        ['src' => '/images/gallery/fleet-cadillac-xt5-white-front-driveway.jpg',       'alt' => 'Cadillac XT5 white luxury SUV in driveway'],
     ];
     $fleetRowB = [
-        ['src' => '/images/gallery/interior-escalade-stretch-teal-lighting-tv.jpg',       'alt' => 'Escalade stretch interior with teal lighting and TV'],
-        ['src' => '/images/gallery/interior-escalade-stretch-purple-lighting-tv.jpg',     'alt' => 'Escalade stretch interior with purple lighting and TV'],
-        ['src' => '/images/gallery/interior-party-bus-bar-blue-lighting.jpg',             'alt' => 'Party bus bar with blue LED lighting'],
-        ['src' => '/images/gallery/interior-party-bus-bar-blue-lighting-2.jpg',           'alt' => 'Party bus interior bar area with blue lighting'],
-        ['src' => '/images/gallery/interior-escalade-stretch-black-leather-sunroof.jpg',  'alt' => 'Escalade stretch interior with black leather seating and sunroof'],
-        ['src' => '/images/gallery/interior-party-bus-multicolor-led-tv.jpg',             'alt' => 'Party bus interior with multicolor LED lighting and TV'],
+        ['src' => '/images/gallery/interior-party-bus-bar-blue-lighting.jpg',           'alt' => 'Party bus bar with blue LED lighting'],
+        ['src' => '/images/gallery/interior-party-bus-bar-blue-lighting-2.jpg',         'alt' => 'Party bus interior bar area with blue lighting'],
+        ['src' => '/images/gallery/interior-escalade-stretch-black-leather-sunroof.jpg','alt' => 'Escalade stretch interior with black leather seating and sunroof'],
     ];
     $fleetRowD = [
-        ['src' => '/images/gallery/fleet-sprinter-vans-suv-sedan-lineup-building.jpg',   'alt' => 'Full lineup of Sprinter vans, SUV, and sedan at building'],
-        ['src' => '/images/gallery/fleet-hummer-h2-stretch-white-side-trees.jpg',        'alt' => 'Hummer H2 stretch limousine side view with trees'],
-        ['src' => '/images/gallery/fleet-hummer-h2-stretch-white-night.jpg',             'alt' => 'Hummer H2 stretch limousine at night'],
-        ['src' => '/images/gallery/fleet-chrysler-300-stretch-black-rear-building.jpg',  'alt' => 'Chrysler 300 stretch limousine rear view near building'],
+        ['src' => '/images/gallery/fleet-sprinter-vans-suv-sedan-lineup-building.jpg',  'alt' => 'Full lineup of Sprinter vans, SUV, and sedan at building'],
         ['src' => '/images/gallery/fleet-lincoln-mkt-transit-van-pair-black.jpg',        'alt' => 'Pair of Lincoln MKT transit vans in black'],
         ['src' => '/images/gallery/fleet-sprinter-van-black-studio-shot.jpg',            'alt' => 'Mercedes Sprinter van black studio shot'],
         ['src' => '/images/gallery/fleet-sprinter-van-pair-black-parking.jpg',           'alt' => 'Pair of black Sprinter vans in parking lot'],
         ['src' => '/images/gallery/fleet-mercedes-sprinter-black-door-open-grass.jpg',   'alt' => 'Mercedes Sprinter black with door open on grass'],
     ];
     $fleetRowE = [
-        ['src' => '/images/gallery/interior-stretch-limo-starlight-ceiling-blue.jpg',    'alt' => 'Stretch limousine interior with starlight ceiling and blue lighting'],
         ['src' => '/images/gallery/interior-party-bus-black-leather-bench-speakers.jpg', 'alt' => 'Party bus interior with black leather bench seating and speakers'],
-        ['src' => '/images/gallery/interior-lincoln-navigator-rear-seat-black.jpg',      'alt' => 'Lincoln Navigator rear seat black leather interior'],
-        ['src' => '/images/gallery/interior-lincoln-navigator-rear-seat-black-2.jpg',    'alt' => 'Lincoln Navigator rear seat alternate view'],
-        ['src' => '/images/gallery/interior-lincoln-navigator-front-console-wood.jpg',   'alt' => 'Lincoln Navigator front console with wood trim'],
-        ['src' => '/images/gallery/interior-hummer-h2-stretch-cabin.jpg',                'alt' => 'Hummer H2 stretch limousine cabin interior'],
-        ['src' => '/images/gallery/interior-chrysler-300-stretch-green-lighting.jpg',    'alt' => 'Chrysler 300 stretch interior with green lighting'],
-        ['src' => '/images/gallery/interior-chrysler-300-stretch-red-lighting.jpg',      'alt' => 'Chrysler 300 stretch interior with red lighting'],
+        ['src' => '/images/gallery/interior-lincoln-navigator-rear-seat-black.jpg',       'alt' => 'Lincoln Navigator rear seat black leather interior'],
+        ['src' => '/images/gallery/interior-lincoln-navigator-rear-seat-black-2.jpg',     'alt' => 'Lincoln Navigator rear seat alternate view'],
+        ['src' => '/images/gallery/interior-lincoln-navigator-front-console-wood.jpg',    'alt' => 'Lincoln Navigator front console with wood trim'],
     ];
     $fleetRowF = [
-        ['src' => '/images/gallery/interior-chrysler-300-rear-seats-tan-black.jpg',      'alt' => 'Chrysler 300 rear seats in tan and black'],
         ['src' => '/images/gallery/interior-ford-transit-passenger-rows-gray.jpg',       'alt' => 'Ford Transit passenger rows gray interior'],
         ['src' => '/images/gallery/interior-sprinter-van-passenger-rows.jpg',            'alt' => 'Sprinter van passenger rows interior'],
         ['src' => '/images/gallery/interior-sprinter-van-front-cab-seats.jpg',           'alt' => 'Sprinter van front cab and seats'],
         ['src' => '/images/gallery/interior-stretch-limo-door-open-entry.jpg',           'alt' => 'Stretch limousine door open entry view'],
         ['src' => '/images/gallery/fleet-cadillac-xt5-white-front-2.jpg',               'alt' => 'Cadillac XT5 white luxury SUV alternate view'],
         ['src' => '/images/gallery/fleet-chevy-suburban-black-rear-street.jpg',         'alt' => 'Chevrolet Suburban black rear view on street'],
-        ['src' => '/images/gallery/fleet-lincoln-mkt-stretch-limo-side-white.jpg',      'alt' => 'Lincoln MKT stretch limousine side view white'],
     ];
     @endphp
 
@@ -255,7 +239,6 @@
     {{-- ── 8. Professional Chauffeur ────────────────────────────────── --}}
     @php
     $chauffeurRowA = [
-        ['src' => '/images/gallery/about-chauffeur-uniform-white-gloves-limo.jpg',      'alt' => 'Professional chauffeur in uniform with white gloves beside limousine'],
         ['src' => '/images/gallery/promo-airport-transfer-passengers-private-jet.jpg',  'alt' => 'Airport transfer passengers beside private jet'],
         ['src' => '/images/gallery/promo-private-jet-sedan-tarmac-render.jpg',          'alt' => 'Private jet and luxury sedan on tarmac'],
         ['src' => '/images/gallery/fleet-lincoln-mkx-black-grille-closeup.jpg',         'alt' => 'Lincoln MKX black grille closeup'],

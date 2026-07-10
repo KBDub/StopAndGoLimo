@@ -111,6 +111,17 @@ Full rules in `docs/branding-requirements.md` — read it before any UI change.
 -   **No double hyphens.** Use a comma instead.
 -   **7th grade reading level** for all copy.
 -   **Responsive.** Every component must work at mobile, tablet, and desktop. Never use a bare width class like `w-96` — always pair with `w-full sm:w-96`.
+-   **H2 section heading underbar:** The `width: fit-content` wrapper is mandatory. Without it, `width: 116%` resolves against the full section width. The blurb `<p>` lives OUTSIDE the fit-content wrapper. Correct pattern:
+    ```html
+    <div style="width: fit-content; margin-bottom: 1.5rem;">
+        <h2 class="font-head" style="font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; color: var(--cloud-light); ...">
+            Regular <strong style="font-weight: 700; color: var(--champagne);">Bold</strong>
+        </h2>
+        <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+    </div>
+    <p class="font-body" style="... margin-bottom: 2rem;">Blurb outside the fit-content wrapper.</p>
+    ```
+    Never use a fixed width (`4rem`, `14rem`, etc.) for H2 underbars. Fixed widths are only for H3/H4 sub-headings.
 
 ## Gotchas
 

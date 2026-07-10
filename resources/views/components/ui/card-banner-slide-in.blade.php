@@ -40,7 +40,7 @@
 
 <a href="{{ $href }}" class="sg-slide-banner" id="{{ $uid }}">
     @if($image)
-        <img src="{{ $image }}" alt="{{ $alt }}" loading="lazy">
+        <img src="{{ $image }}" alt="{{ $alt }}" loading="eager">
     @else
         <div style="width:100%;height:100%;background:#2c2c2c;"></div>
     @endif
@@ -53,11 +53,25 @@
 (function() {
     var el = document.getElementById('{{ $uid }}');
     if (!el) return;
+    function reveal() { el.classList.add('is-visible'); }
+    // offsetTop is layout-based and unaffected by CSS transform.
+    // IntersectionObserver uses the visual (transformed) rect in most browsers,
+    // so a translateX(-100%) element is never seen as intersecting. We bypass
+    // that by checking the layout position directly.
+    function isInLayoutViewport() {
+        return el.offsetTop < (window.pageYOffset + window.innerHeight);
+    }
+    if (isInLayoutViewport()) {
+        setTimeout(reveal, 80);
+        return;
+    }
+    // For elements far below the fold, use observer with a wide horizontal
+    // rootMargin so the transform offset doesn't prevent detection.
     var obs = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
-            if (entry.isIntersecting) { el.classList.add('is-visible'); obs.disconnect(); }
+            if (entry.isIntersecting) { reveal(); obs.disconnect(); }
         });
-    }, { threshold: 0.05 });
+    }, { threshold: 0.05, rootMargin: '0px 200% 0px 200%' });
     obs.observe(el);
 })();
 </script>

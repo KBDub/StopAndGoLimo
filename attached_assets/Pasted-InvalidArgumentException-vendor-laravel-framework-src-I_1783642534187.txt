@@ -1,0 +1,57 @@
+InvalidArgumentException
+vendor/laravel/framework/src/Illuminate/View/FileViewFinder.php:138
+View [partials.demo-premium.section-lp-banner-images] not found.
+
+LARAVEL
+12.63.0
+PHP
+8.5.4
+UNHANDLED
+CODE 0
+500
+GET
+https://newlenoxlimoservice.com/demo/premium
+
+Exception trace
+3 vendor frames
+
+Illuminate\View\Factory->make(string, array)
+resources/views/pages/demo-premium.blade.php:46
+
+41        <div class="bg-linen py-48 flex flex-col items-center justify-center gap-3">
+42            <p class="text-charcoal-light text-sm tracking-widest">Scroll down to preview each component</p>
+43            <svg class="w-6 h-6 text-sunburst animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+44        </div>
+45
+46        @include('partials.demo-premium.section-lp-banner-images')
+47        @include('partials.demo-premium.section-banner-slide-in')
+48        @include('partials.demo-premium.section-carousel-rotating-images')
+49        @include('partials.demo-premium.section-full-bleed-banners')
+50        @include('partials.demo-premium.section-hero-full-bleed')
+51        @include('partials.demo-premium.section-product-cards')
+52        @include('partials.demo-premium.section-category-grid')
+53        @include('partials.demo-premium.section-carousel')
+54        @include('partials.demo-premium.section-sticky-cart')
+55        @include('partials.demo-premium.section-quick-view')
+56
+57        <section class="py-16 bg-gold-gradient">
+58
+15 vendor frames
+
+Illuminate\Pipeline\Pipeline->{closure:Illuminate\Pipeline\Pipeline::prepareDestination():178}(object(Illuminate\Http\Request))
+app/Http/Middleware/DevToolsAuth.php:16
+
+1 vendor frame
+
+Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(object(Illuminate\Http\Request))
+app/Http/Middleware/LogRequestIp.php:16
+
+14 vendor frames
+
+Illuminate\Pipeline\Pipeline->{closure:{closure:Illuminate\Pipeline\Pipeline::carry():194}:195}(object(Illuminate\Http\Request))
+app/Http/Middleware/ForceWww.php:20
+
+35 vendor frames
+
+require(string)
+public/frankenphp-worker.php:7

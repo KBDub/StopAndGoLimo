@@ -1,0 +1,56 @@
+service-thin-rect-card — horizontal variant
+Current state: Vertical only. Full-width (width: 100%), stacks as a column list. No horizontal prop exists.
+
+Can we do it? Yes, cleanly. The card's structure (icon + label in a flex row) is already horizontal internally — the only thing "vertical" about it is its full-width block behavior. A :horizontal boolean prop would add a second CSS block:
+
+.sg-svc-rect.is-horizontal {
+    width: auto;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    border-bottom: 3px solid transparent;
+    box-shadow: none;
+}
+.sg-svc-rect.is-horizontal:hover {
+    background: var(--navy);
+    box-shadow: none;
+    border-bottom-color: var(--champagne);
+}
+
+Wrap a row of them in a flex gap-1 bg-navy bar and they become a sticky page-index anchor strip — exactly what a gallery section header needs. This is the right pattern.
+
+Gallery page — full layout plan
+Sections in order
+#	Section	Component	Key images
+1	Hero	x-sections.category-hero or x-ui.banner-full-bleed-image	fleet-sprinter-vans-suv-sedan-lineup-building.jpg
+2	slideIn-L — Our Fleet	x-ui.card-banner-slide-in direction="left"	fleet-cadillac-escalade-stretch-white-street.jpg
+3	slideIn-R — Wedding	x-ui.card-banner-slide-in direction="right"	clients-wedding-couple-outside-suv-trees.jpg
+4	Sticky section index	horizontal service-thin-rect-card row (new variant)	anchors: Fleet, Weddings, Chauffeur, Clients, Our Story
+5	About Us mini	Static 2-col image row (NOT carousel)	2 pics — see below
+6	Our Fleet	Blurb + carousel rows + static rows	25 fleet + 19 interior images
+7	Weddings	Blurb + carousel rows	13 wedding-tagged images
+8	Professional Chauffeur	Blurb + carousel rows	chauffeur, promo, airport images
+9	Our Clients	Blurb + carousel rows	anniversary, prom, quinceañera, etc.
+10	Our Story	2×2 image grid (attached layout)	see below
+About Us mini (#5) — 1 row, 2 pics
+The user says "not Carousel" and "1 row 2 pics." These are the two people-forward shots:
+
+about-vincent-new-lenox-ribbon-cutting-award.jpg (Vincent with Emily Johnson)
+clients-womens-group-inside-party-bus-daytime.jpg (group of women, New Lenox ribbon-cut event)
+Side-by-side, equal width, no rotation, no hover carousel behavior. Simple grid grid-cols-2 gap-4.
+
+Our Story (#10) — 2×2 grid (attached layout)
+Matching the attachment exactly:
+
+Top-left	Top-right
+about-new-lenox-chamber-ribbon-cutting-certificate-2024.jpg	about-vincent-new-lenox-ribbon-cutting-award.jpg
+Bottom-left	Bottom-right
+about-bolingbrook-chamber-member-plaque-2024.jpg	clients-womens-group-inside-party-bus-daytime.jpg
+Additional "about" images on hand for later expansion: about-joliet-chamber-ribbon-cutting.jpg, about-new-lenox-ribbon-cutting-ceremony-village-hall.jpg, about-owner-vincent-rover-transit-van.jpg, about-vincent-owner-at-desk-office.jpg.
+
+Fleet section — carousel row strategy
+We have 44 fleet/interior images. Proposed mix:
+
+3-image carousel — exterior hero shots (Sprinter, Escalade, Hummer, Suburban, Chrysler 300)
+2-image carousel — interior pairs (Escalade stretch teal + purple, party bus bar shots)
+1-image carousel or static full-width — standout singles (fleet-full-lineup-parking-lot-mixed.jpg, fleet-party-bus-chicago-skyline-night.jpg)
+Static 2-col row — side-by-side parked vehicles or before/after interior

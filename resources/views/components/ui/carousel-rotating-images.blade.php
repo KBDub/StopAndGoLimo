@@ -159,6 +159,7 @@
                     <x-ui.left-right-button-control
                         prevAction="prev(); startTimer();"
                         nextAction="next(); startTimer();"
+                        gap="3.5rem"
                     />
                 </div>
             </template>

@@ -3,6 +3,7 @@
     'nextAction' => 'next()',
     'inverted'   => false,
     'marginTop'  => '2.25rem',
+    'gap'        => '1.5rem',
 ])
 
 @php
@@ -17,7 +18,7 @@ $btnHoverOff = $inverted
     : "this.style.background='transparent'; this.style.color='var(--champagne)';";
 @endphp
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: {{ $marginTop }};">
+<div style="display: flex; justify-content: center; align-items: center; gap: {{ $gap }}; margin-top: {{ $marginTop }};">
 
     <button
         x-on:click="{{ $prevAction }}"

@@ -2,6 +2,7 @@
     'images'   => [],
     'visible'  => 3,
     'interval' => 3500,
+    'chipNav'  => false,
 ])
 
 {{--
@@ -9,6 +10,9 @@
     Center slot: width:600px, aspect-ratio:4/3, max-width:100% (or 50%-gap for vis=2).
     Side slots (vis=3): width:300px, aspect-ratio:4/3, max-width:100%.
     On mobile (< 768px): always collapses to vis=1 regardless of prop.
+
+    chipNav=false (default): side arrow buttons on image track + dot strip below.
+    chipNav=true:            no side arrows; bottom row is [ ← Prev chip | dots | Next → chip ].
 --}}
 
 <div
@@ -118,7 +122,8 @@
 
                 </div>
 
-                {{-- Prev / Next arrows --}}
+                {{-- Side arrow buttons — default nav only (not chip-nav) --}}
+                @if(!$chipNav)
                 <template x-if="n > 1">
                     <div>
                         <button
@@ -141,10 +146,67 @@
                         </button>
                     </div>
                 </template>
+                @endif
 
             </div>
 
-            {{-- Dot indicators --}}
+            {{-- ── Bottom controls ───────────────────────────────────── --}}
+            @if($chipNav)
+
+            {{-- Chip-nav: [ ← Prev chip ] [ dots ] [ Next → chip ] --}}
+            <template x-if="n > 1">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 1.25rem;">
+
+                    {{-- ← Prev chip --}}
+                    <button
+                        x-on:click="prev(); startTimer();"
+                        class="font-head"
+                        style="display: inline-flex; align-items: center; gap: 0.4rem;
+                               background: color-mix(in srgb, var(--champagne) 14%, transparent);
+                               color: var(--champagne);
+                               border: 1px solid var(--champagne);
+                               font-size: 0.8rem; font-weight: 600; letter-spacing: 0.4px;
+                               padding: 0.4rem 1rem; cursor: pointer; line-height: 1;
+                               transition: background 0.2s ease, color 0.2s ease;"
+                        onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
+                        onmouseout="this.style.background='color-mix(in srgb, var(--champagne) 14%, transparent)'; this.style.color='var(--champagne)';"
+                        aria-label="Previous image"
+                    >&#8592; Prev</button>
+
+                    {{-- Dot indicators --}}
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <template x-for="(img, idx) in images" :key="idx">
+                            <button
+                                x-on:click="jumpTo(idx)"
+                                class="h-1.5 transition-all duration-300"
+                                :class="idx === current ? 'w-6 bg-champagne' : 'w-1.5 bg-slate hover:bg-slate'"
+                                :aria-label="'Go to image ' + (idx + 1)"
+                            ></button>
+                        </template>
+                    </div>
+
+                    {{-- Next → chip --}}
+                    <button
+                        x-on:click="next(); startTimer();"
+                        class="font-head"
+                        style="display: inline-flex; align-items: center; gap: 0.4rem;
+                               background: color-mix(in srgb, var(--champagne) 14%, transparent);
+                               color: var(--champagne);
+                               border: 1px solid var(--champagne);
+                               font-size: 0.8rem; font-weight: 600; letter-spacing: 0.4px;
+                               padding: 0.4rem 1rem; cursor: pointer; line-height: 1;
+                               transition: background 0.2s ease, color 0.2s ease;"
+                        onmouseover="this.style.background='var(--champagne)'; this.style.color='var(--navy)';"
+                        onmouseout="this.style.background='color-mix(in srgb, var(--champagne) 14%, transparent)'; this.style.color='var(--champagne)';"
+                        aria-label="Next image"
+                    >Next &#8594;</button>
+
+                </div>
+            </template>
+
+            @else
+
+            {{-- Default nav: dot strip only --}}
             <div class="flex justify-center gap-2 mt-4">
                 <template x-for="(img, idx) in images" :key="idx">
                     <button
@@ -155,6 +217,8 @@
                     ></button>
                 </template>
             </div>
+
+            @endif
 
         </div>
     </template>

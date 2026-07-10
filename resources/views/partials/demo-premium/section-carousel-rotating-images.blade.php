@@ -11,14 +11,14 @@
 
         @php
         $carouselImages = [
-            ['src' => '/images/custom-shirts/top5pct-custom-t-shirts-main.jpg',                     'alt' => 'Custom t-shirts in Joliet'],
-            ['src' => '/images/custom-shirts/top5pct-custom-rhinestone-shirt-cap-hoodie-joliet.jpg', 'alt' => 'Rhinestone shirts, caps, and hoodies'],
-            ['src' => '/images/custom-shirts/top5pct-custom-glitter-shirt-cap-hoodie-joliet.jpg',   'alt' => 'Glitter shirts, caps, and hoodies'],
-            ['src' => '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg',         'alt' => 'Vinyl shirts, caps, and hoodies'],
-            ['src' => '/images/spirit-wear/top5pct-spiritwear-fanwear-joliet-plainfield-shorewood.jpg', 'alt' => 'Spirit wear and fan wear Joliet'],
-            ['src' => '/images/corporate-wear/toptpct-custom-polo-shirts-joliet-shorewood-crest-hill.jpg', 'alt' => 'Custom polo shirts Joliet'],
-            ['src' => '/images/custom-shirts/top5pct-custom-foil-shirts-hoodies-caps-joliet.jpg',   'alt' => 'Foil shirts, hoodies, and caps'],
-            ['src' => '/images/custom-shirts/top5pct-custom-holographic-shirt-hoodie-cap-joliet.jpg', 'alt' => 'Holographic shirts, hoodies, and caps'],
+            ['src' => '/images/gallery/fleet-cadillac-escalade-stretch-white-street.jpg',        'alt' => 'White Cadillac Escalade stretch limousine'],
+            ['src' => '/images/gallery/fleet-lincoln-mkt-stretch-limo-side-white.jpg',           'alt' => 'White Lincoln MKT stretch limousine side view'],
+            ['src' => '/images/gallery/fleet-hummer-h2-stretch-white-front.jpg',                 'alt' => 'White Hummer H2 stretch limousine front view'],
+            ['src' => '/images/gallery/fleet-chevy-suburban-black-front-driveway.jpg',           'alt' => 'Black Chevy Suburban executive SUV'],
+            ['src' => '/images/gallery/fleet-mercedes-sprinter-black-chicago-skyline.jpg',       'alt' => 'Black Mercedes Sprinter van with Chicago skyline'],
+            ['src' => '/images/gallery/interior-escalade-stretch-teal-lighting-tv.jpg',          'alt' => 'Escalade stretch interior with teal lighting and TV'],
+            ['src' => '/images/gallery/clients-wedding-couple-limo-interior-dance-floor.jpg',    'alt' => 'Wedding couple inside luxury limousine with dance floor'],
+            ['src' => '/images/gallery/clients-bridal-party-outside-sprinter.jpg',               'alt' => 'Bridal party outside black Sprinter van'],
         ];
         @endphp
 
@@ -48,9 +48,9 @@
             <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
             <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.carousel-rotating-images
     :images="[
-        ['src' =&gt; '/images/custom-shirts/top5pct-custom-t-shirts-main.jpg', 'alt' =&gt; 'Custom t-shirts in Joliet'],
-        ['src' =&gt; '/images/custom-shirts/top5pct-custom-vinyl-shirts-caps-hoodies.jpg', 'alt' =&gt; 'Vinyl shirts'],
-        ['src' =&gt; '/images/spirit-wear/top5pct-spiritwear-fanwear-joliet-plainfield-shorewood.jpg', 'alt' =&gt; 'Spirit wear'],
+        ['src' =&gt; '/images/gallery/fleet-cadillac-escalade-stretch-white-street.jpg', 'alt' =&gt; 'White Cadillac Escalade stretch limousine'],
+        ['src' =&gt; '/images/gallery/fleet-lincoln-mkt-stretch-limo-side-white.jpg',    'alt' =&gt; 'White Lincoln MKT stretch limousine'],
+        ['src' =&gt; '/images/gallery/fleet-mercedes-sprinter-black-chicago-skyline.jpg', 'alt' =&gt; 'Black Mercedes Sprinter van'],
     ]"
     :visible="3"
     :interval="3500"

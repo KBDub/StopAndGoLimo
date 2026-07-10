@@ -50,8 +50,8 @@
     href="/products/classic-crew-neck"
     :variants="['S', 'M', 'L', 'XL', '2XL', '3XL']"
     :images="[
-        ['src' =&gt; '/images/product-photo-1.jpg', 'alt' =&gt; 'Front view'],
-        ['src' =&gt; '/images/product-photo-2.jpg', 'alt' =&gt; 'Back view'],
+        ['src' =&gt; '/images/gallery/fleet-lincoln-mkt-stretch-limo-side-white.jpg', 'alt' =&gt; 'White Lincoln MKT stretch limousine side view'],
+        ['src' =&gt; '/images/gallery/interior-stretch-limo-starlight-ceiling-blue.jpg', 'alt' =&gt; 'Stretch limo interior with starlight ceiling'],
     ]"
 /&gt;
 {{-- images prop optional; shows placeholder if omitted --}}

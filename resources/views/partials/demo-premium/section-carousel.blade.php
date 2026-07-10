@@ -23,9 +23,9 @@
             <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
             <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.carousel-product
     :images="[
-        ['src' =&gt; '/images/product-photo-1.jpg', 'alt' =&gt; 'Product front view'],
-        ['src' =&gt; '/images/product-photo-2.jpg', 'alt' =&gt; 'Product back view'],
-        ['src' =&gt; '/images/product-photo-3.jpg', 'alt' =&gt; 'Product detail view'],
+        ['src' =&gt; '/images/gallery/fleet-cadillac-escalade-stretch-white-street.jpg', 'alt' =&gt; 'White Cadillac Escalade stretch limousine'],
+        ['src' =&gt; '/images/gallery/interior-escalade-stretch-teal-lighting-tv.jpg',  'alt' =&gt; 'Escalade stretch interior with teal lighting'],
+        ['src' =&gt; '/images/gallery/fleet-cadillac-escalade-stretch-white-doors-open.jpg', 'alt' =&gt; 'Escalade stretch with doors open'],
     ]"
     alt="Custom crew neck t-shirt"
 /&gt;

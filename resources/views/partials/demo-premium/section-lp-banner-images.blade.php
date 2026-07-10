@@ -6,27 +6,27 @@
                 <h2 class="text-h2 font-bold text-charcoal mb-2">Landing page banner images</h2>
                 <div class="h-1 bg-sunburst"></div>
             </div>
-            <p class="text-charcoal-light max-w-4xl mx-auto">Two-up banner grid linking to sub-category pages. Hover reveals the category name centered over a transparent charcoal overlay with olive text. Odd last banner centers itself in a half-width column. Demo shows 3 banners (Custom Apparel sub-categories in nav order).</p>
+            <p class="text-charcoal-light max-w-4xl mx-auto">Two-up banner grid linking to sub-category pages. Hover reveals the category name centered over a transparent charcoal overlay with olive text. Odd last banner centers itself in a half-width column. Demo shows 3 banners (Stop &amp; Go fleet service categories).</p>
         </div>
 
         <x-ui.card-lp-banner-images :banners="[
             [
-                'image' => '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
-                'alt'   => 'Custom shirts, hoodies, and caps in Joliet',
-                'title' => 'Custom Shirts',
-                'href'  => '/custom-apparel/custom-shirts',
+                'image' => '/images/gallery/fleet-cadillac-escalade-stretch-white-street.jpg',
+                'alt'   => 'Stretch limousines for weddings and special events',
+                'title' => 'Stretch Limousines',
+                'href'  => '/services/stretch-limousines',
             ],
             [
-                'image' => '/images/dtf-transfers/top5pct-dtf-t-shirt-printing.jpg',
-                'alt'   => 'DTF transfers printing in Joliet',
-                'title' => 'DTF Transfers',
-                'href'  => '/custom-apparel/printing-options/dtf-printing',
+                'image' => '/images/gallery/fleet-chevy-suburban-black-front-driveway.jpg',
+                'alt'   => 'Executive SUV airport transfers',
+                'title' => 'Executive SUVs',
+                'href'  => '/services/executive-suv',
             ],
             [
-                'image' => '/images/reunion-shirts/toptpct-banner-banner-family-reunion-shirts-joliet-shorewood.jpg',
-                'alt'   => 'Family and class reunion shirts in Joliet and Shorewood',
-                'title' => 'Reunion Shirts',
-                'href'  => '/custom-apparel/group-wear/reunion-shirts',
+                'image' => '/images/gallery/fleet-mercedes-sprinter-black-chicago-skyline.jpg',
+                'alt'   => 'Sprinter van group transportation Chicago',
+                'title' => 'Sprinter Vans',
+                'href'  => '/services/sprinter-vans',
             ],
         ]" />
 
@@ -37,16 +37,16 @@
             <h3 class="text-lg font-semibold text-charcoal mb-3">Full usage example</h3>
             <pre class="bg-charcoal text-linen text-sm p-4 overflow-x-auto mb-6"><code>&lt;x-ui.card-lp-banner-images :banners="[
     [
-        'image' =&gt; '/images/custom-shirts/top5pct-banner-custom-apparel-custom-shirts-custom-hoodies-custom-caps.jpg',
-        'alt'   =&gt; 'Custom shirts, hoodies, and caps in Joliet',
-        'title' =&gt; 'Custom Shirts',
-        'href'  =&gt; '/custom-apparel/custom-shirts',
+        'image' =&gt; '/images/gallery/fleet-cadillac-escalade-stretch-white-street.jpg',
+        'alt'   =&gt; 'Stretch limousines for weddings and special events',
+        'title' =&gt; 'Stretch Limousines',
+        'href'  =&gt; '/services/stretch-limousines',
     ],
     [
-        'image' =&gt; '/images/dtf-transfers/top5pct-dtf-t-shirt-printing.jpg',
-        'alt'   =&gt; 'DTF transfers printing in Joliet',
-        'title' =&gt; 'DTF Transfers',
-        'href'  =&gt; '/custom-apparel/printing-options/dtf-printing',
+        'image' =&gt; '/images/gallery/fleet-chevy-suburban-black-front-driveway.jpg',
+        'alt'   =&gt; 'Executive SUV airport transfers',
+        'title' =&gt; 'Executive SUVs',
+        'href'  =&gt; '/services/executive-suv',
     ],
 ]" /&gt;
 {{-- Aspect ratio: 16:7 (full width per banner) --}}

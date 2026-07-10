@@ -69,7 +69,7 @@
         :variantCount="3"
         :quickAdd="true"
         href="/products/classic-crew-neck"
-        image="/images/custom-shirts/top5pct-custom-t-shirts-main.jpg"
+        image="/images/gallery/fleet-chevy-suburban-black-front-driveway.jpg"
     /&gt;
 
 &lt;/div&gt;

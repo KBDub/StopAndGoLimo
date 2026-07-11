@@ -1,6 +1,6 @@
 @props([
     'image'    => '/images/heroes/hero-party-bus-aurora.png',
-    'imageAlt' => 'Stop and Go team committed to delivering safe, unforgettable party bus experiences',
+    'imageAlt' => config('client.business_name') . ' team committed to delivering safe, unforgettable party bus experiences',
 ])
 
 <section id="our-mission" style="background: var(--navy); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem] overflow-hidden">

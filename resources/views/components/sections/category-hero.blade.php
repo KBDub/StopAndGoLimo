@@ -23,7 +23,7 @@
     <div class="absolute inset-0">
         <img
             src="{{ $image }}"
-            alt="Stop &amp; Go Limo airport shuttle service"
+            alt="{{ $clientConfig->business_name }} airport shuttle service"
             class="w-full h-full object-cover"
             style="object-position: {{ $imagePosition }};"
             loading="eager"

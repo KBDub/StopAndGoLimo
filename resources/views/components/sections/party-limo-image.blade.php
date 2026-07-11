@@ -4,7 +4,7 @@
     'headingTail'         => '',
     'body'                => 'Celebrate in style with our spacious, fully equipped party limousines. We keep the energy high from pickup to drop off. Whether it\'s a birthday bash, prom night, bachelor or bachelorette party, or a night out with friends, our limos bring the perfect mix of comfort, fun, and head-turning appeal to every special occasion.',
     'image'               => '/images/sections/limousine-comfort.jpg',
-    'imageAlt'            => 'Group enjoying a party limousine, Stop and Go Airport Shuttle in New Lenox, Illinois',
+    'imageAlt'            => 'Group enjoying a party limousine, ' . config('client.business_name') . ' in New Lenox, Illinois',
     'imageAspect'         => '4/3',
     'imageObjectPosition' => 'center',
 ])

@@ -2,7 +2,7 @@
 
 return [
 
-    'business_name'        => 'Stop & Go Airport Shuttle Service Inc.',
+    'business_name'        => 'Stop & Go Airport Shuttle Service, Inc.',
     'business_name_short'  => 'Stop & Go Limo',
     'tagline'              => 'Premium Limousine & Airport Shuttle Service',
     'tagline_alt'          => 'Serving the Chicagoland & Southwest Suburbs Since 2015',
@@ -52,7 +52,7 @@ return [
     /* ── Logo ───────────────────────────────────────────────── */
     'logo' => [
         'url'    => '/images/logos/stopngo-logo.png',
-        'alt'    => 'Stop & Go Airport Shuttle Service Inc.',
+        'alt'    => 'Stop & Go Airport Shuttle Service, Inc.',
         'width'  => 300,
         'height' => 60,
     ],

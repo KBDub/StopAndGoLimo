@@ -8,7 +8,7 @@
     'buttonText'  => 'About Us',
     'buttonHref'  => '/about-us',
     'image'       => '/images/sections/travel-in-style.jpg',
-    'imageAlt'    => 'Guests enjoying a luxury limo ride with Stop and Go Airport Shuttle',
+    'imageAlt'    => 'Guests enjoying a luxury limo ride with ' . config('client.business_name'),
     'imagePosition' => 'left',
     'inverted'    => false,
     'slideIn'     => '',

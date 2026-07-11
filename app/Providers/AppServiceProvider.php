@@ -10,6 +10,7 @@ use App\Shipping\FreeShippingModifier;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Lunar\Base\ShippingModifiers;
 use Lunar\Base\TelemetryServiceInterface;
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        View::share('clientConfig', (object) config('client'));
+
         RateLimiter::for('api', function (Request $request) {
             return Limit::none();
         });

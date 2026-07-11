@@ -5,7 +5,7 @@
     'headingTail'         => '',
     'body'                => '',
     'image'               => '/images/sections/travel-in-style.jpg',
-    'imageAlt'            => 'Luxury transportation service — Stop and Go Airport Shuttle',
+    'imageAlt'            => 'Luxury transportation service — ' . config('client.business_name'),
     'imageAspect'         => '4/3',
     'imageObjectPosition' => 'center',
     'imagePosition'       => 'right',

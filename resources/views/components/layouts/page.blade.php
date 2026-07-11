@@ -46,7 +46,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ $resolvedOgImageAlt }}">
-    <meta property="og:site_name" content="Stop & Go Limo">
+    <meta property="og:site_name" content="{{ $clientConfig->business_name_short }}">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $title }}">
@@ -64,19 +64,18 @@
     @if($jsFile)
     <script type="module" src="/build/{{ $jsFile }}"></script>
     @endif
-    @verbatim
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "@@context": "https://schema.org",
+        "@@type": "LocalBusiness",
+        "name": "{!! $clientConfig->business_name !!}",
         "image": "https://newlenoxlimoservice.com/images/stopngo-logo.png",
-        "@id": "https://newlenoxlimoservice.com",
+        "@@id": "https://newlenoxlimoservice.com",
         "url": "https://newlenoxlimoservice.com",
-        "telephone": "708-315-4445",
+        "telephone": "{!! $clientConfig->phone_raw !!}",
         "priceRange": "$$",
         "address": {
-            "@type": "PostalAddress",
+            "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
             "addressLocality": "New Lenox",
             "addressRegion": "IL",
@@ -84,12 +83,12 @@
             "addressCountry": "US"
         },
         "geo": {
-            "@type": "GeoCoordinates",
+            "@@type": "GeoCoordinates",
             "latitude": 41.4977,
             "longitude": -87.9573
         },
         "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
+            "@@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
             "opens": "00:00",
             "closes": "23:59"
@@ -105,21 +104,20 @@
     </script>
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Stop & Go Limo",
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
+        "name": "{!! $clientConfig->business_name !!}",
         "url": "https://newlenoxlimoservice.com",
         "potentialAction": {
-            "@type": "SearchAction",
+            "@@type": "SearchAction",
             "target": {
-                "@type": "EntryPoint",
+                "@@type": "EntryPoint",
                 "urlTemplate": "https://newlenoxlimoservice.com/service-areas?q={search_term_string}"
             },
             "query-input": "required name=search_term_string"
         }
     }
     </script>
-    @endverbatim
     @stack('structured-data')
     @if(config('services.recaptcha.site_key'))
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>

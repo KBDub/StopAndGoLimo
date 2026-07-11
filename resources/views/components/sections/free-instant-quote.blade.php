@@ -5,7 +5,7 @@
     'body'             => 'Our professional drivers are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. With their expertise and commitment to service, you can relax knowing that your transportation needs are handled with care and precision, making every ride a truly exceptional experience.',
     'bodyHtml'         => '',
     'image'            => '/images/sections/chauffeurs.jpg',
-    'imageAlt'         => 'Professional chauffeur at the wheel, Stop and Go Airport Shuttle',
+    'imageAlt'         => 'Professional chauffeur at the wheel, ' . config('client.business_name'),
     'imageAspect'      => '4/3',
     'formAction'          => '/get-a-quote',
     'submitLabel'         => 'Send Message',

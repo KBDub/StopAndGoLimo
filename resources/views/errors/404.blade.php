@@ -1,4 +1,4 @@
-<x-layouts.page title="Page Not Found" metaDescription="The page you were looking for does not exist. You will be redirected to the Stop & Go Limo homepage." currentPage="404">
+<x-layouts.page title="Page Not Found" :metaDescription="'The page you were looking for does not exist. Return to the ' . $clientConfig->business_name . ' homepage.'" currentPage="404">
 
     @push('structured-data')
 @verbatim

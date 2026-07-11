@@ -92,7 +92,7 @@
         headingBold="Group Vacations"
         body="As exciting as a group vacation can be, there's often a lot of stress involved when you're trying to coordinate multiple people getting to and from the destination on time without any problems. A charter bus simplifies the planning and prevents the need for everyone to travel separately in different cars to get to the same place. The shared travel experience allows attendees to spend extra time together without worrying about navigating unfamiliar routes and dealing with traffic that can add unnecessary stress. It can also be a more cost-efficient option for the group. Renting a charter bus is one price rather than everybody having to pay for their own gas, tolls, and parking if they traveled separately. Family reunions can sit back, appreciate the ride, and leave the driving to the professionals."
         image="/images/sections/women-celebrating-limo.jpg"
-        imageAlt="Three women laughing and celebrating on a group trip with Stop and Go Limo"
+        imageAlt="Three women laughing and celebrating on a group trip with Stop & Go Airport Shuttle Service, Inc."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
     />

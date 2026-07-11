@@ -107,7 +107,7 @@
         buttonText="Book Your Grad Day Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/smiling-on-graduation-day.jpg"
-        imageAlt="Smiling graduates celebrating on graduation day with Stop and Go Limo"
+        imageAlt="Smiling graduates celebrating on graduation day with Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
     />
 

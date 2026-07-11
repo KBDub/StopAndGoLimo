@@ -4,7 +4,7 @@
 {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Get a Quote | Stop and Go Limo — New Lenox, IL",
+    "name": "Get a Quote | Stop & Go Airport Shuttle Service, Inc. — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/get-a-quote",
     "description": "Get a free, instant quote for airport shuttle or limousine service in New Lenox, Plainfield, and the Southwest suburbs."
 }

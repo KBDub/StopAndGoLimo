@@ -45,8 +45,8 @@
         heading="Limo Service"
         headingBold="Near You"
         :headingTwoLines="false"
-        subtitle="Professional chauffeured transportation throughout Chicagoland since 2009"
-        description="When you need quality limo service near you in New Lenox or anywhere in the southwest Chicago suburbs, Stop & Go Airport Shuttle Service, Inc. is ready. We have been providing professional chauffeured transportation throughout Will County and Chicagoland since 2009. Our flat-rate limo service covers airport transfers to O'Hare and Midway, corporate travel, wedding limousines, party bus rentals, prom transportation, quinceañera vehicles, and special event service for any occasion. Every vehicle in our fleet is professionally maintained. Every chauffeur is background-checked, uniformed, and trained to the highest professional standard. We serve New Lenox, Naperville, Aurora, Joliet, Frankfort, Mokena, Homer Glen, Orland Park, and communities throughout the region. Transparent pricing means no surprises, no surge fees, and no last-minute cancellations. Whether you are booking an airport run for tomorrow morning or planning transportation for a wedding six months away, we are here to help. or book online anytime."
+        subtitle="Professional chauffeured transportation throughout Chicagoland since 2015"
+        description="When you need quality limo service near you in New Lenox or anywhere in the southwest Chicago suburbs, Stop & Go Airport Shuttle Service, Inc. is ready. We have been providing professional chauffeured transportation throughout Will County and Chicagoland since 2015. Our flat-rate limo service covers airport transfers to O'Hare and Midway, corporate travel, wedding limousines, party bus rentals, prom transportation, quinceañera vehicles, and special event service for any occasion. Every vehicle in our fleet is professionally maintained. Every chauffeur is background-checked, uniformed, and trained to the highest professional standard. We serve New Lenox, Naperville, Aurora, Joliet, Frankfort, Mokena, Homer Glen, Orland Park, and communities throughout the region. Transparent pricing means no surprises, no surge fees, and no last-minute cancellations. Whether you are booking an airport run for tomorrow morning or planning transportation for a wedding six months away, we are here to help. or book online anytime."
         buttonText="Book Now"
         buttonHref="/bookings-reservations"
         image="/images/heroes/best-limo-services-hero.png"
@@ -68,7 +68,7 @@
     <x-sections.info-strip
         headingBold="What Sets a Professional"
         heading="Limo Service Apart"
-        body="Not all transportation services are the same. A professional limo service means a guaranteed pickup, not a hoped-for match. It means a chauffeur who knows your destination and arrives early. It means a vehicle that has been inspected and detailed before your ride. It means flat-rate pricing so you never get a surprise charge at the end. Stop & Go has delivered that standard to Chicagoland clients since 2009."
+        body="Not all transportation services are the same. A professional limo service means a guaranteed pickup, not a hoped-for match. It means a chauffeur who knows your destination and arrives early. It means a vehicle that has been inspected and detailed before your ride. It means flat-rate pricing so you never get a surprise charge at the end. Stop & Go has delivered that standard to Chicagoland clients since 2015."
     />
 
     <section id="services-near-me" style="background: var(--cloud-light); scroll-margin-top: 80px;">

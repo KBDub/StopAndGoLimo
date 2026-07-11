@@ -4,7 +4,7 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Bookings and Reservations | Stop and Go Limo — New Lenox, IL",
+    "name": "Bookings and Reservations | Stop & Go Airport Shuttle Service, Inc. — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/bookings-reservations",
     "description": "Reserve your airport shuttle or limousine today. Available 24/7, serving New Lenox, Plainfield, and the Southwest suburbs."
 }

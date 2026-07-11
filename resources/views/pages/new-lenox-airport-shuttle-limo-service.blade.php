@@ -48,7 +48,7 @@
         headingBold="Limo & Party Bus Service"
         :headingTwoLines="false"
         subtitle="Your hometown transportation company, available 24 hours a day"
-        subtitleIn="based in New Lenox since 2009"
+        subtitleIn="based in New Lenox since 2015"
         description="Stop & Go Airport Shuttle Service, Inc. is proud to call New Lenox home. Our primary office at 400 E Lincoln Hwy puts us at the heart of the community, ready around the clock every day. We provide flat-rate airport transfers to O'Hare and Midway with real-time flight tracking. We also serve Lincoln-Way District prom groups, wedding couples, corporate executives, quinceañera celebrations, and families throughout Will County. Our chauffeurs are background-checked, uniformed, and always on time. From New Lenox, we connect clients across all of Chicagoland. We are your neighbors and we take that seriously. Call us or book online."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
@@ -89,7 +89,7 @@
         rightVariant="description"
         descHeading="Why choose us?"
         descSubheading="Complete Plainfield Transportation Services"
-        descBody="As New Lenox's locally-based transportation provider since 2009, Stop & Go offers complete luxury transportation services:"
+        descBody="As New Lenox's locally-based transportation provider since 2015, Stop & Go offers complete luxury transportation services:"
         :descBullets="[
             'New Lenox airport shuttle for timely arrivals and departures',
             'Limousine service for weddings, events, and special occasions',
@@ -131,7 +131,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions"
         headingBold="Throughout New Lenox"
-        body="As New Lenox's trusted transportation provider since 2009, Stop & Go offers complete luxury transportation services including New Lenox airport shuttle, New Lenox limo service, New Lenox party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of New Lenox, from downtown to Spencer Crossing, Fox Hill, and Hickory Creek, with easy access to Route 30 and I-80, ensures efficient, reliable transportation throughout this thriving Will County community and for New Lenox to O'Hare trips."
+        body="As New Lenox's trusted transportation provider since 2015, Stop & Go offers complete luxury transportation services including New Lenox airport shuttle, New Lenox limo service, New Lenox party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of New Lenox, from downtown to Spencer Crossing, Fox Hill, and Hickory Creek, with easy access to Route 30 and I-80, ensures efficient, reliable transportation throughout this thriving Will County community and for New Lenox to O'Hare trips."
         buttonText="Contact"
         buttonHref="/get-a-quote"
         directions="• Downtown New Lenox to O'Hare: 45 to 55 minutes via I-80 East to I-55 North • West New Lenox to O'Hare: 50 to 60 minutes • New Lenox to Midway Airport: 40 to 50 minutes via I-80 East to I-55 North • New Lenox I-80/I-55 corridor to both airports"

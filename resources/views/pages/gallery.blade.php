@@ -4,7 +4,7 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Gallery | Stop and Go Limo — New Lenox, IL",
+    "name": "Gallery | Stop & Go Airport Shuttle Service, Inc. — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/gallery",
     "description": "Browse our luxury fleet of limousines, party buses, and shuttle vehicles. Serving New Lenox, Plainfield, and the Southwest suburbs."
 }

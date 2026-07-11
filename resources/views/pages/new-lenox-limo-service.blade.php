@@ -46,7 +46,7 @@
         headingBold="Limo Service"
         :headingTwoLines="false"
         subtitle="Premium chauffeured transportation, available 24 hours a day"
-        description="Stop & Go Airport Shuttle Service, Inc. has been serving New Lenox with professional limo service since 2009. We are based at 400 E Lincoln Hwy, right in the heart of the community, and we are ready around the clock every day of the year. Whether you need a flat-rate airport transfer to O'Hare or Midway, a stretch limousine for your wedding, a party bus for prom night, or a town car for a corporate meeting, we have the right vehicle for you. Our fleet includes executive sedans, luxury SUVs, stretch limousines, and spacious coach buses. Every vehicle is professionally maintained and every chauffeur is background-checked and uniformed. We serve all of New Lenox and surrounding Will County communities, including Frankfort, Mokena, Joliet, and Homer Glen. Corporate executives, wedding couples, prom groups, quinceañera celebrations, bachelorette parties, sports fans, and concert-goers all count on us every day. Book online or call us anytime."
+        description="Stop & Go Airport Shuttle Service, Inc. has been serving New Lenox with professional limo service since 2015. We are based at 400 E Lincoln Hwy, right in the heart of the community, and we are ready around the clock every day of the year. Whether you need a flat-rate airport transfer to O'Hare or Midway, a stretch limousine for your wedding, a party bus for prom night, or a town car for a corporate meeting, we have the right vehicle for you. Our fleet includes executive sedans, luxury SUVs, stretch limousines, and spacious coach buses. Every vehicle is professionally maintained and every chauffeur is background-checked and uniformed. We serve all of New Lenox and surrounding Will County communities, including Frankfort, Mokena, Joliet, and Homer Glen. Corporate executives, wedding couples, prom groups, quinceañera celebrations, bachelorette parties, sports fans, and concert-goers all count on us every day. Book online or call us anytime."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/limousine-professional.jpg"
@@ -57,7 +57,7 @@
         heading="Every Occasion"
         headingBold="Covered"
         subtitle="Driven by professional chauffeurs you can trust"
-        body="Stop & Go provides reliable transportation throughout New Lenox and all of Chicagoland. From flat-rate airport runs to O'Hare and Midway, to limousine service for weddings and special events, to party bus rentals for groups of all sizes, we handle every type of trip with care and professionalism. Our team has been earning the trust of Will County residents and businesses since 2009."
+        body="Stop & Go provides reliable transportation throughout New Lenox and all of Chicagoland. From flat-rate airport runs to O'Hare and Midway, to limousine service for weddings and special events, to party bus rentals for groups of all sizes, we handle every type of trip with care and professionalism. Our team has been earning the trust of Will County residents and businesses since 2015."
         buttonText="View Our Services"
         buttonHref="/our-services"
         image="/images/sections/classy-limo.jpg"
@@ -114,7 +114,7 @@
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Why New Lenox Chooses Stop & Go"
-        descSubheading="Locally based since 2009"
+        descSubheading="Locally based since 2015"
         descBody="We are more than a transportation company. We are your New Lenox neighbors. Here is what sets us apart:"
         :descBullets="[
             'Flat-rate pricing with no hidden fees or surge charges',
@@ -122,7 +122,7 @@
             'Background-checked, uniformed chauffeurs on every ride',
             'On-time guarantee, every time',
             'Available 24 hours a day, every day of the year',
-            'Serving New Lenox since 2009 with thousands of satisfied rides',
+            'Serving New Lenox since 2015 with thousands of satisfied rides',
         ]"
         descClosing="Whether it is your first ride with us or your fiftieth, you get the same professional service every time."
         descImage="/images/sections/blog-limo.jpg"

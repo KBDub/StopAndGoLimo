@@ -5,7 +5,7 @@ return [
     'business_name'        => 'Stop & Go Airport Shuttle Service Inc.',
     'business_name_short'  => 'Stop & Go Limo',
     'tagline'              => 'Premium Limousine & Airport Shuttle Service',
-    'tagline_alt'          => 'Serving the Chicagoland Southwest Suburbs Since 2009',
+    'tagline_alt'          => 'Serving the Chicagoland & Southwest Suburbs Since 2015',
 
     'phone'                => '(708) 315-4445',
     'phone_alt'            => null,

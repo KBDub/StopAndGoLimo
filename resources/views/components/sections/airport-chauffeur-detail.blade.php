@@ -82,7 +82,7 @@
                             <tr style="border-bottom: 2px solid var(--champagne);">
                                 <th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--champagne); font-family: var(--font-head); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em;">Cost</th>
                                 <th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--champagne); font-family: var(--font-head); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em;">Driving Yourself</th>
-                                <th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--champagne); font-family: var(--font-head); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em;">Stop &amp; Go Limo</th>
+                                <th style="text-align: left; padding: 0.75rem 0.5rem; color: var(--champagne); font-family: var(--font-head); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.04em;">Stop &amp; Go Airport Shuttle Service, Inc.</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -26,7 +26,7 @@
                 What You Get on Every Stop &amp; Go Party Bus
             </h2>
             <p style="font-family: var(--font-body); font-size: 1.2rem; color: var(--cloud); line-height: 1.7;">
-                Every vehicle in our fleet is inspected before each booking. Every chauffeur is background-checked, licensed, insured, and in uniform when they arrive at your door. We are licensed and insured in Illinois, and we operate under a strict on-time guarantee. When you book with Stop &amp; Go, you are not booking a ride. You are booking a professional transportation experience with a company that has served the southwest suburbs since 2009.
+                Every vehicle in our fleet is inspected before each booking. Every chauffeur is background-checked, licensed, insured, and in uniform when they arrive at your door. We are licensed and insured in Illinois, and we operate under a strict on-time guarantee. When you book with Stop &amp; Go, you are not booking a ride. You are booking a professional transportation experience with a company that has served the southwest suburbs since 2015.
             </p>
         </div>
 

@@ -17,8 +17,8 @@
         <loc>https://www.newlenoxlimoservice.com/</loc>
         <image:image>
             <image:loc>https://www.newlenoxlimoservice.com/images/og-tags/stopandgo-og-home.jpg</image:loc>
-            <image:title>Airport Transfers in New Lenox, IL — Stop and Go Limo</image:title>
-            <image:caption>Professional airport transfers to O'Hare and Midway from New Lenox and Chicagoland. Serving since 2009.</image:caption>
+            <image:title>Airport Transfers in New Lenox, IL — Stop & Go Airport Shuttle Service, Inc.</image:title>
+            <image:caption>Professional airport transfers to O'Hare and Midway from New Lenox and Chicagoland. Serving since 2015.</image:caption>
         </image:image>
     </url>
 
@@ -28,8 +28,8 @@
         <loc>https://www.newlenoxlimoservice.com/service-areas</loc>
         <image:image>
             <image:loc>https://www.newlenoxlimoservice.com/images/limo/stopandgo-fleet-new-lenox.jpg</image:loc>
-            <image:title>Stop and Go Limo — Service Areas in Chicagoland</image:title>
-            <image:caption>Stop and Go Limo serves New Lenox, Joliet, Plainfield, Romeoville, Naperville, and communities across Will and DuPage County.</image:caption>
+            <image:title>Stop & Go Airport Shuttle Service, Inc. — Service Areas in Chicagoland</image:title>
+            <image:caption>Stop & Go Airport Shuttle Service, Inc. serves New Lenox, Joliet, Plainfield, Romeoville, Naperville, and communities across Will and DuPage County.</image:caption>
         </image:image>
     </url>
 

@@ -42,7 +42,7 @@
         heading="Elevate Your Travel Experience"
         headingBold="With Luxury and Comfort"
         subtitle="Discover the joy of seamless journeys"
-        description="Stop & Go Airport Shuttle Service, Inc. has served Chicagoland since 2009. Headquartered in New Lenox and Naperville, we cover the entire metro area, from Joliet and Plainfield through Aurora and Elgin, north to Arlington Heights and Waukegan, and into downtown Chicago. Our fleet includes executive sedans, luxury SUVs, Mercedes Sprinter vans, stretch limousines, party buses, and coach buses. Every driver is background-checked, uniformed, and trained. We monitor every flight in real time. Flat-rate pricing, no surge fees, no surprises. Whatever your occasion, we are ready around the clock, 365 days a year."
+        description="Stop & Go Airport Shuttle Service, Inc. has served Chicagoland since 2015. Headquartered in New Lenox and Naperville, we cover the entire metro area, from Joliet and Plainfield through Aurora and Elgin, north to Arlington Heights and Waukegan, and into downtown Chicago. Our fleet includes executive sedans, luxury SUVs, Mercedes Sprinter vans, stretch limousines, party buses, and coach buses. Every driver is background-checked, uniformed, and trained. We monitor every flight in real time. Flat-rate pricing, no surge fees, no surprises. Whatever your occasion, we are ready around the clock, 365 days a year."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/gallery/fleet-mercedes-sprinter-black-chicago-skyline.jpg"
@@ -55,7 +55,7 @@
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/travel-in-style.jpg"
-        imageAlt="Friends celebrating inside a Stop and Go Limo"
+        imageAlt="Friends celebrating inside a Stop & Go Airport Shuttle Service, Inc."
         inverted=true
     />
 

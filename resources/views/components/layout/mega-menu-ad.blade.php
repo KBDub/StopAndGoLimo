@@ -1,8 +1,8 @@
 @php
     $image = $image ?? '/images/place-holder.1x1.jpg';
-    $alt   = $alt   ?? 'Stop & Go Limo — premium airport shuttle service';
+    $alt   = $alt   ?? 'Stop & Go Airport Shuttle Service, Inc. — premium airport shuttle service';
     $tag   = $tag   ?? 'Available 24/7';
-    $title = $title ?? 'Stop & Go Limo';
+    $title = $title ?? 'Stop & Go Airport Shuttle Service, Inc.';
     $desc  = $desc  ?? 'Premium airport shuttle and limousine service in Illinois.';
     $cta   = $cta   ?? 'Learn More';
     $href  = $href  ?? '/booking';

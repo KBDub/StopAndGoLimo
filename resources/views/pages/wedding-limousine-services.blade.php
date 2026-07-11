@@ -80,7 +80,7 @@
         headingBold="Style"
         body="Every detail of your ride is thoughtfully planned to ensure a smooth and enjoyable experience. From the moment you step into our limousines, our professional chauffeurs are dedicated to providing attentive service, ensuring timely arrivals, and accommodating your needs, allowing you to focus on celebrating your special day."
         image="/images/sections/wedding-couple.jpg"
-        imageAlt="Couple after their wedding using Stop and Go Limo transportation"
+        imageAlt="Couple after their wedding using Stop & Go Airport Shuttle Service, Inc. transportation"
         imageAspect="730/460"
     />
 

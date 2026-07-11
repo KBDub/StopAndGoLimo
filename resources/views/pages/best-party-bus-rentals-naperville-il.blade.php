@@ -46,7 +46,7 @@
         headingBold="Party Bus Rentals"
         :headingTwoLines="false"
         subtitle="Premium group transportation for every occasion in the Naperville area"
-        description="Stop & Go Airport Shuttle Service, Inc. provides Naperville's most reliable party bus rentals for birthdays, bachelorette parties, proms, weddings, corporate events, and night out transportation throughout the Fox Valley and Chicagoland. We have been serving Naperville and surrounding communities since 2009 with a fleet of well-maintained party buses and uniformed, background-checked chauffeurs. Our party buses are equipped with premium sound systems, LED lighting, leather seating, and room for your entire group to relax and enjoy the ride together. No one has to drive and no one has to coordinate pickups. We pick your group up, take you where you want to go, and bring you home safely at the end of the night. We also provide flat-rate airport transfers to O'Hare and Midway for Naperville travelers. Corporate executives, wedding parties, prom groups, quinceañera celebrations, and sports fans all count on us for dependable group transportation. or book online today."
+        description="Stop & Go Airport Shuttle Service, Inc. provides Naperville's most reliable party bus rentals for birthdays, bachelorette parties, proms, weddings, corporate events, and night out transportation throughout the Fox Valley and Chicagoland. We have been serving Naperville and surrounding communities since 2015 with a fleet of well-maintained party buses and uniformed, background-checked chauffeurs. Our party buses are equipped with premium sound systems, LED lighting, leather seating, and room for your entire group to relax and enjoy the ride together. No one has to drive and no one has to coordinate pickups. We pick your group up, take you where you want to go, and bring you home safely at the end of the night. We also provide flat-rate airport transfers to O'Hare and Midway for Naperville travelers. Corporate executives, wedding parties, prom groups, quinceañera celebrations, and sports fans all count on us for dependable group transportation. or book online today."
         buttonText="Book a Party Bus"
         buttonHref="/get-a-quote"
         image="/images/heroes/naperville-party-bus-services.png"
@@ -57,7 +57,7 @@
         heading="Naperville Nights,"
         headingBold="Covered"
         subtitle="From downtown Naperville to Chicago and everywhere in between"
-        body="Stop & Go has been serving the Naperville area with professional group transportation since 2009. Whether your group is heading to downtown Naperville for dinner and a night out, going to a concert at Ribfest or another local event, or making a trip into Chicago for a Bears game or show, our party buses keep everyone together and on time. Our chauffeurs know DuPage and Will County roads and plan around traffic before it becomes a problem."
+        body="Stop & Go has been serving the Naperville area with professional group transportation since 2015. Whether your group is heading to downtown Naperville for dinner and a night out, going to a concert at Ribfest or another local event, or making a trip into Chicago for a Bears game or show, our party buses keep everyone together and on time. Our chauffeurs know DuPage and Will County roads and plan around traffic before it becomes a problem."
         buttonText="View Our Services"
         buttonHref="/naperville-airport-shuttle-limo-service"
         image="/images/sections/naperville-limo-service.jpg"
@@ -113,7 +113,7 @@
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Serving Naperville and the DuPage Area"
-        descSubheading="Professional transportation since 2009"
+        descSubheading="Professional transportation since 2015"
         descBody="We serve Naperville and the surrounding area for every type of group event. Every rental includes:"
         :descBullets="[
             'Door-to-door pickup and drop-off anywhere in the Naperville area',

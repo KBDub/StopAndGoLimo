@@ -10,7 +10,7 @@
         { "@type": "City", "name": "New Lenox", "addressRegion": "IL", "addressCountry": "US" },
         { "@type": "City", "name": "Plainfield", "addressRegion": "IL", "addressCountry": "US" }
     ],
-    "description": "Stop and Go Limo provides party limousine rentals for weddings, proms, birthdays, and all special events in New Lenox and Plainfield, Illinois."
+    "description": "Stop & Go Airport Shuttle Service, Inc. provides party limousine rentals for weddings, proms, birthdays, and all special events in New Lenox and Plainfield, Illinois."
 }
 </script>
 <script type="application/ld+json">

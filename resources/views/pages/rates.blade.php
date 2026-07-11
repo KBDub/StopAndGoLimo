@@ -4,7 +4,7 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Rates | Stop and Go Limo — New Lenox, IL",
+    "name": "Rates | Stop & Go Airport Shuttle Service, Inc. — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/rates",
     "description": "Transparent flat-rate limo and shuttle pricing. No surprises. Serving New Lenox, Plainfield, and the Southwest suburbs."
 }

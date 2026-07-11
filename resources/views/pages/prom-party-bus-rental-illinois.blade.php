@@ -58,7 +58,7 @@
         rightVariant="description"
         :descImageTop="true"
         descImage="/images/sections/prom-night.jpg"
-        descImageAlt="Students celebrating on a prom night party bus — Stop and Go Limo Illinois"
+        descImageAlt="Students celebrating on a prom night party bus — Stop & Go Airport Shuttle Service, Inc. Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Transportation Services"
         descBody="As a trusted provider of prom transportation, Stop and Go delivers a high-end prom party bus experience throughout Illinois and the surrounding suburbs:"
@@ -83,7 +83,7 @@
         buttonText="Book Your Prom Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/prom-night-2.jpg"
-        imageAlt="Students arriving at prom in a luxury party bus — Stop and Go Limo Illinois"
+        imageAlt="Students arriving at prom in a luxury party bus — Stop & Go Airport Shuttle Service, Inc. Illinois"
         imagePosition="left"
     />
 

@@ -113,7 +113,7 @@
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Serving Aurora, Naperville, and All of Chicagoland"
-        descSubheading="Professional event transportation since 2009"
+        descSubheading="Professional event transportation since 2015"
         descBody="Every special event rental includes:"
         :descBullets="[
             'Door-to-door pickup and drop-off at the venue',

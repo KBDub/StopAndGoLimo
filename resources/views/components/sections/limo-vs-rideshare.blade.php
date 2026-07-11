@@ -78,7 +78,7 @@
                     Rideshare apps work by matching you to whoever is available in the area. The vehicle varies. The driver's experience varies. The price varies based on demand at that exact moment. That is fine for low-stakes trips. It is not the right tool for a 5 a.m. O'Hare flight, a wedding morning, or a corporate client pickup.
                 </p>
                 <p style="font-family: var(--font-body); font-size: 1.05rem; color: var(--cloud); line-height: 1.75;" class="mb-5">
-                    Stop & Go has operated in Chicagoland since 2009. Our clients are business travelers who cannot miss a flight, couples who have one shot at a perfect wedding day, and families who need a safe and reliable ride home after a late night. For all of them, the answer is the same: a confirmed professional chauffeur in the right vehicle, at the agreed time, at the agreed price.
+                    Stop & Go has operated in Chicagoland since 2015. Our clients are business travelers who cannot miss a flight, couples who have one shot at a perfect wedding day, and families who need a safe and reliable ride home after a late night. For all of them, the answer is the same: a confirmed professional chauffeur in the right vehicle, at the agreed time, at the agreed price.
                 </p>
                 <p style="font-family: var(--font-body); font-size: 1.05rem; color: var(--cloud); line-height: 1.75;" class="mb-8">
                     We serve all of Chicagoland from our New Lenox base: Will, DuPage, Kane, Cook, and Lake counties. Whether your pickup is in a south suburb, a north suburb, or downtown Chicago, we cover it with the same standard.

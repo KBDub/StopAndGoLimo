@@ -57,7 +57,7 @@
         heading="Aurora Nights,"
         headingBold="Done Right"
         subtitle="From Fox Valley to downtown Chicago, we take your group anywhere"
-        body="Stop & Go has been serving the Aurora area with professional group transportation since 2009. Whether your night starts in Aurora and ends in Chicago, or you are making a full evening loop through the Fox Valley, our chauffeurs know the routes and the timing. Your group rolls together, stays together, and gets home safely together."
+        body="Stop & Go has been serving the Aurora area with professional group transportation since 2015. Whether your night starts in Aurora and ends in Chicago, or you are making a full evening loop through the Fox Valley, our chauffeurs know the routes and the timing. Your group rolls together, stays together, and gets home safely together."
         buttonText="View Our Services"
         buttonHref="/our-services"
         image="/images/sections/party-bus-aurora.jpg"

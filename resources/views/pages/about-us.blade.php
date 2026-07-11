@@ -4,9 +4,9 @@
 {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "name": "About Us | Stop and Go Limo — New Lenox, IL",
+    "name": "About Us | Stop & Go Airport Shuttle Service, Inc. — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/about-us",
-    "description": "Learn about Stop and Go Airport Shuttle Service Inc. Professional chauffeurs serving New Lenox, Plainfield, and the Southwest suburbs since 2009."
+    "description": "Learn about Stop & Go Airport Shuttle Service, Inc. Professional chauffeurs serving New Lenox, Plainfield, and the Southwest suburbs since 2015."
 }
 </script>
 <script type="application/ld+json">
@@ -24,17 +24,17 @@
 
 <x-layouts.page
     title="About Us"
-    metaDescription="Serving Chicagoland since 2009, Stop & Go is a family-owned limo and shuttle company. Licensed chauffeurs, flat rates, on-time service."
+    metaDescription="Serving Chicagoland since 2015, Stop & Go is a family-owned limo and shuttle company. Licensed chauffeurs, flat rates, on-time service."
     currentPage="about"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."
 >
     <x-sections.category-hero
         heading="About"
-        headingBold="Stop & Go Limo"
+        headingBold="Stop & Go Airport Shuttle Service, Inc."
         :headingTwoLines="false"
-        subtitle="Proudly serving Chicagoland since 2009"
-        description="Stop & Go Airport Shuttle Service, Inc. was founded in 2009 with one goal: give Chicagoland a professional transportation company people can count on every time. Based in New Lenox and Naperville, we serve all of Chicagoland, from the southwest suburbs through the western communities of Elgin and Schaumburg, north to Arlington Heights, Waukegan, and the North Shore. We are IDOT licensed and fully insured. Our background-checked, uniformed chauffeurs are available around the clock. From airport runs to weddings, proms, and corporate travel, we are proud of the communities we serve and look forward to earning your trust."
+        subtitle="Proudly serving Chicagoland since 2015"
+        description="Stop & Go Airport Shuttle Service, Inc. was founded in 2015 with one goal: give Chicagoland a professional transportation company people can count on every time. Based in New Lenox and Naperville, we serve all of Chicagoland, from the southwest suburbs through the western communities of Elgin and Schaumburg, north to Arlington Heights, Waukegan, and the North Shore. We are IDOT licensed and fully insured. Our background-checked, uniformed chauffeurs are available around the clock. From airport runs to weddings, proms, and corporate travel, we are proud of the communities we serve and look forward to earning your trust."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
         image="/images/heroes/stopngolimo-about-us.jpg"

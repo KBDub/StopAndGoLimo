@@ -10,14 +10,14 @@
         { "@type": "City", "name": "Plainfield", "addressRegion": "IL", "addressCountry": "US" },
         { "@type": "City", "name": "New Lenox", "addressRegion": "IL", "addressCountry": "US" }
     ],
-    "description": "Stop and Go Limo provides professional airport transfers, corporate travel, wedding limousines, and special event transportation to O'Hare and Midway. Serving Plainfield, New Lenox, and greater Chicagoland since 2009."
+    "description": "Stop & Go Airport Shuttle Service, Inc. provides professional airport transfers, corporate travel, wedding limousines, and special event transportation to O'Hare and Midway. Serving Plainfield, New Lenox, and greater Chicagoland since 2015."
 }
 </script>
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Our Services | Stop and Go Limo — Plainfield and New Lenox, IL",
+    "name": "Our Services | Stop & Go Airport Shuttle Service, Inc. — Plainfield and New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/our-services",
     "description": "Professional luxury transportation in Plainfield and New Lenox, Illinois. Airport transfers, corporate travel, weddings, and special events."
 }

@@ -34,7 +34,7 @@
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Service Areas | Stop and Go Limo — Southwest Chicago Suburbs, IL",
+    "name": "Service Areas | Stop & Go Airport Shuttle Service, Inc. — Southwest Chicago Suburbs, IL",
     "url": "https://www.newlenoxlimoservice.com/service-areas",
     "description": "24/7 luxury limo and airport shuttle service in New Lenox, Plainfield, Joliet, Naperville, Aurora, and surrounding Southwest suburbs."
 }

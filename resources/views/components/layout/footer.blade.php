@@ -46,7 +46,7 @@
             {{-- Logo --}}
             <div id="logo" class="col-span-1 text-center">
                 <img src="/images/logos/stopngo-logo.png" alt="Stop & Go Limo" class="h-10 mb-3 mx-auto">
-                <p class="text-sm text-slate leading-relaxed">Premium airport shuttle and limousine service. Serving O'Hare, Midway, and all of Illinois since 2009.</p>
+                <p class="text-sm text-slate leading-relaxed">Premium airport shuttle and limousine service. Serving O'Hare, Midway, and all of Illinois since 2015.</p>
             </div>
 
             {{-- Quick Links --}}

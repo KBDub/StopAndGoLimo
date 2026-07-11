@@ -30,13 +30,11 @@
             {{-- Right: Chamber of Commerce section --}}
             <div style="text-align: center;">
 
-                {{-- Single community icon --}}
-                <div style="margin: 0 auto 1.5rem;">
-                    <img
-                        src="/icons/community-people2.svg"
-                        alt="Stop and Go Limo chamber of commerce community members icon"
-                        style="width: 5rem; height: auto; display: block; margin: 0 auto;"
-                    >
+                {{-- Three community icons, evenly spaced --}}
+                <div style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; margin-bottom: 1.5rem;">
+                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
+                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
+                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
                 </div>
 
                 {{-- Chamber heading --}}

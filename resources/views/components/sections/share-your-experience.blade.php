@@ -2,17 +2,25 @@
     'locations' => [
         [
             'city'        => 'Naperville',
-            'address'     => '3420 Lacrosse Ln, Suite 116,',
+            'address'     => '3420 Lacrosse Ln,',
             'addressLine2'=> 'Naperville, IL 60564',
-            'phone'       => '',
-            'reviewHref'  => '#',
+            'phone'       => '(708) 315-4445',
+            'reviewHref'  => 'https://g.page/r/CWeyyTCAKEUzEBM/review',
+        ],
+        [
+            'city'        => 'Joliet',
+            'address'     => '70 McDonald Ave,',
+            'addressLine2'=> 'Joliet, IL 60431',
+            'phone'       => '(708) 315-4445',
+            'reviewHref'  => 'https://g.page/r/CT7X_aFxwzxuEBM/review',
+            'headquarters'=> true,
         ],
         [
             'city'        => 'New Lenox',
-            'address'     => '400 E. Lincoln Hwy,',
+            'address'     => '400 E. Lincoln Hwy, Suite 101A,',
             'addressLine2'=> 'New Lenox, IL 60451',
             'phone'       => '(708) 315-4445',
-            'reviewHref'  => '#',
+            'reviewHref'  => 'https://g.page/r/CcsjbjmL3EXpEBM/review',
         ],
     ],
     'showSingleButton'   => false,
@@ -51,9 +59,9 @@
 
         @else
 
-            {{-- Inner dark card: two location columns --}}
+            {{-- Inner dark card: three location columns --}}
             <div style="background: var(--navy); padding: 2.5rem 3rem;">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
                     @foreach($locations as $location)
                         <div style="text-align: center;">
 
@@ -66,22 +74,31 @@
                             </div>
 
                             {{-- City name — H5 spec: Poppins 20px / SemiBold 600 --}}
-                            <h5 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); margin-bottom: 1rem;">
+                            <h5 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); margin-bottom: 0.5rem;">
                                 {{ $location['city'] }}
                             </h5>
 
+                            {{-- Headquarters badge --}}
+                            @if(!empty($location['headquarters']))
+                                <p class="font-body" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--champagne); opacity: 0.75; margin-bottom: 0.85rem;">HEADQUARTERS</p>
+                            @else
+                                <div style="margin-bottom: 1.5rem;"></div>
+                            @endif
+
                             {{-- Address --}}
-                            <p class="font-body" style="color: var(--cloud-light); font-size: 1.25rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                            <p class="font-body" style="color: var(--cloud-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
                                 {{ $location['address'] }}<br>
                                 {{ $location['addressLine2'] }}<br>
-                                Phone: {{ $location['phone'] }}
+                                {{ $location['phone'] }}
                             </p>
 
                             {{-- Review button --}}
                             <x-ui.button
                                 variant="champagne-solid"
                                 radius="soft"
-                                href="{{ $location['reviewHref'] }}">
+                                href="{{ $location['reviewHref'] }}"
+                                target="_blank"
+                                rel="noopener">
                                 Leave a Review
                             </x-ui.button>
 

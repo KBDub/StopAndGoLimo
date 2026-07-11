@@ -9,7 +9,7 @@ return [
 
     'phone'                => '(708) 315-4445',
     'phone_alt'            => null,
-    'phone_raw'            => '+7083154445',
+    'phone_raw'            => '+17083154445',
     'email'                => 'vincent@newlenoxlimoservice.com',
     'website'              => 'https://newlenoxlimoservice.com',
 
@@ -83,6 +83,51 @@ return [
         'cloud_grey'     => '#E8E9EC',
         'slate'          => '#69727D',
         'white'          => '#FFFFFF',
+    ],
+
+    /* ── Google Business Profile Locations ─────────────────── */
+    'gbp_locations' => [
+        [
+            'gbp_name'      => 'Stop & Go Airport Shuttle Service of Naperville',
+            'city'          => 'Naperville',
+            'street'        => '3420 Lacrosse Ln',
+            'city_state_zip'=> 'Naperville, IL 60564',
+            'phone'         => '(708) 315-4445',
+            'phone_raw'     => '+17083154445',
+            'review_url'    => 'https://g.page/r/CWeyyTCAKEUzEBM/review',
+            'headquarters'  => false,
+        ],
+        [
+            'gbp_name'      => 'Stop & Go Airport Shuttle Service of Joliet',
+            'city'          => 'Joliet',
+            'street'        => '70 McDonald Ave',
+            'city_state_zip'=> 'Joliet, IL 60431',
+            'phone'         => '(708) 315-4445',
+            'phone_raw'     => '+17083154445',
+            'review_url'    => 'https://g.page/r/CT7X_aFxwzxuEBM/review',
+            'headquarters'  => true,
+        ],
+        [
+            'gbp_name'      => 'Stop & Go Airport Shuttle Service of New Lenox',
+            'city'          => 'New Lenox',
+            'street'        => '400 E Lincoln Hwy Suite 101A',
+            'city_state_zip'=> 'New Lenox, IL 60451',
+            'phone'         => '(708) 315-4445',
+            'phone_raw'     => '+17083154445',
+            'review_url'    => 'https://g.page/r/CcsjbjmL3EXpEBM/review',
+            'headquarters'  => false,
+        ],
+        // Chicago location — GBP listing pending
+        // [
+        //     'gbp_name'      => 'Stop & Go Airport Shuttle Service of Chicago',
+        //     'city'          => 'Chicago',
+        //     'street'        => '',
+        //     'city_state_zip'=> 'Chicago, IL',
+        //     'phone'         => '(708) 315-4445',
+        //     'phone_raw'     => '+17083154445',
+        //     'review_url'    => '',
+        //     'headquarters'  => false,
+        // ],
     ],
 
     /* ── Social Media ───────────────────────────────────────── */

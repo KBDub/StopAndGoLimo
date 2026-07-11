@@ -6,7 +6,7 @@
     "name": "New Lenox Limo Service",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -57,7 +57,7 @@
         heading="Every Occasion"
         headingBold="Covered"
         subtitle="Driven by professional chauffeurs you can trust"
-        body="Stop & Go provides reliable transportation throughout New Lenox and all of Chicagoland. From flat-rate airport runs to O'Hare and Midway, to limousine service for weddings and special events, to party bus rentals for groups of all sizes, we handle every type of trip with care and professionalism. Our team has been earning the trust of Will County residents and businesses since 2015."
+        body="Stop & Go Airport Shuttle Service, Inc. provides reliable transportation throughout New Lenox and all of Chicagoland. From flat-rate airport runs to O'Hare and Midway, to limousine service for weddings and special events, to party bus rentals for groups of all sizes, we handle every type of trip with care and professionalism. Our team has been earning the trust of Will County residents and businesses since 2015."
         buttonText="View Our Services"
         buttonHref="/our-services"
         image="/images/sections/classy-limo.jpg"
@@ -68,7 +68,7 @@
     <x-sections.info-strip
         headingBold="Your Complete"
         heading="New Lenox Transportation Solution"
-        body="From a solo airport run to a full wedding party convoy, Stop & Go has you covered. Our New Lenox limo service includes airport transfers, corporate travel, wedding limousines, prom party buses, and special event transportation. We serve all of New Lenox including downtown, Spencer Crossing, Fox Hill, and the Route 30 corridor. Our chauffeurs know Will County roads and are always on time."
+        body="From a solo airport run to a full wedding party convoy, Stop & Go Airport Shuttle Service, Inc. has you covered. Our New Lenox limo service includes airport transfers, corporate travel, wedding limousines, prom party buses, and special event transportation. We serve all of New Lenox including downtown, Spencer Crossing, Fox Hill, and the Route 30 corridor. Our chauffeurs know Will County roads and are always on time."
     />
 
     <x-sections.limo-services-grid />
@@ -113,7 +113,7 @@
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
-        descHeading="Why New Lenox Chooses Stop & Go"
+        descHeading="Why New Lenox Chooses Stop & Go Airport Shuttle Service, Inc."
         descSubheading="Locally based since 2015"
         descBody="We are more than a transportation company. We are your New Lenox neighbors. Here is what sets us apart:"
         :descBullets="[

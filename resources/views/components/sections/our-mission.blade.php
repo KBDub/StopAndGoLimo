@@ -40,7 +40,7 @@
                 {{-- Body with inline champagne underbar link --}}
                 <p class="font-body mb-7"
                    style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
-                    At Stop and Go, we are committed to delivering safe, unforgettable, and fun experiences on every party bus ride. Our focus is on making your celebration seamless, <a href="/bookings-reservations" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">memorable, and full of energy,</a> while ensuring your satisfaction and trust every step of the way.
+                    At Stop & Go Airport Shuttle Service, Inc., we are committed to delivering safe, unforgettable, and fun experiences on every party bus ride. Our focus is on making your celebration seamless, <a href="/bookings-reservations" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">memorable, and full of energy,</a> while ensuring your satisfaction and trust every step of the way.
                 </p>
 
                 {{-- Safety First block --}}

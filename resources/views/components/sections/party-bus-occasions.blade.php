@@ -33,7 +33,7 @@
 --}}
 
 @php
-$resolvedIntro = $intro ?? 'Stop & Go party bus limo buses are booked for all kinds of occasions across Chicagoland every weekend. Here is a look at the events we cover most often, and what makes each one a great fit for group transportation.';
+$resolvedIntro = $intro ?? 'Stop & Go Airport Shuttle Service, Inc. party bus limo buses are booked for all kinds of occasions across Chicagoland every weekend. Here is a look at the events we cover most often, and what makes each one a great fit for group transportation.';
 
 $resolvedOccasions = $occasions ?? [
     [

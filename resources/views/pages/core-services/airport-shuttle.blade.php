@@ -5,7 +5,7 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
     "@id": "https://newlenoxlimoservice.com/#business",
-    "name": "Stop & Go Airport Shuttle Service Inc.",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
     "telephone": "",
@@ -83,8 +83,8 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Airport Shuttle Services — Stop & Go",
-    "description": "Full list of airport shuttle services offered by Stop & Go Airport Shuttle Service Inc. from New Lenox, Illinois.",
+    "name": "Airport Shuttle Services — Stop & Go Airport Shuttle Service, Inc.",
+    "description": "Full list of airport shuttle services offered by Stop & Go Airport Shuttle Service, Inc. from New Lenox, Illinois.",
     "itemListElement": [
         {
             "@type": "ListItem", "position": 1,
@@ -92,7 +92,7 @@
                 "@type": "Product",
                 "name": "O'Hare Airport Shuttle",
                 "description": "Direct shuttle service to O'Hare International Airport (ORD) from New Lenox, Joliet, and across Will County. Real-time flight tracking, curbside or meet-and-greet, luggage assistance, flat-rate all-inclusive pricing.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -102,7 +102,7 @@
                 "@type": "Product",
                 "name": "Midway Airport Shuttle",
                 "description": "Shuttle service to Midway International Airport (MDW) from New Lenox, Orland Park, Frankfort, and the Southwest Suburbs. Often 30 to 45 minutes from the southwest suburbs. Real-time flight tracking, flat-rate pricing.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -112,7 +112,7 @@
                 "@type": "Product",
                 "name": "Private Airport Transfer",
                 "description": "Private, direct airport transfers to O'Hare and Midway — your party only, no extra stops. Flat-rate, background-checked chauffeur, real-time flight tracking, meet-and-greet.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -122,7 +122,7 @@
                 "@type": "Product",
                 "name": "Door-to-Door Airport Shuttle",
                 "description": "Picks you up at your door and delivers you to your terminal at O'Hare or Midway. No transfers, no parking, no waiting on a curb. 24/7/365 dispatch.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -132,7 +132,7 @@
                 "@type": "Product",
                 "name": "Flat-Rate Airport Transfer",
                 "description": "Flat-rate means the price you are quoted is the price you pay — no surge pricing, no surprises. All-inclusive: taxes, tolls, and a complimentary grace period for standard delays.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -142,7 +142,7 @@
                 "@type": "Product",
                 "name": "Early-Morning Airport Shuttle",
                 "description": "Reliable pre-dawn pickups to O'Hare and Midway from New Lenox, Joliet, and across Will County. Chauffeur arrives on time even before dawn. 24/7/365 dispatch.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -152,7 +152,7 @@
                 "@type": "Product",
                 "name": "Late-Night Airport Service",
                 "description": "24/7 airport service for late arrivals and red-eye departures. Flight tracked in real time — if your flight is delayed, your chauffeur adjusts automatically.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -162,7 +162,7 @@
                 "@type": "Product",
                 "name": "Corporate Airport Shuttle",
                 "description": "Moves executives and teams to and from O'Hare and Midway professionally. Centralized billing, digital receipts, real-time flight tracking, inside-terminal meet-and-greet. Serving I-80 and I-88 business corridors.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -172,7 +172,7 @@
                 "@type": "Product",
                 "name": "Executive Airport Transfer",
                 "description": "Quiet, polished airport transportation in a late-model executive vehicle with leather seating, dual-zone climate control, and a noise-insulated cabin. Inside-terminal meet-and-greet with luggage assistance.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -182,7 +182,7 @@
                 "@type": "Product",
                 "name": "Group Airport Shuttle",
                 "description": "Moves your whole party to O'Hare or Midway together — wedding parties, corporate teams, families. Right-sized vehicle, ample luggage space, one flat rate for the whole group.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -192,7 +192,7 @@
                 "@type": "Product",
                 "name": "Meet-and-Greet Airport Service",
                 "description": "Chauffeur inside the terminal with a name sign and luggage assistance at O'Hare, Midway, and Chicago Executive (PWK). Flight monitored in real time with a complimentary grace period for standard delays.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -202,7 +202,7 @@
                 "@type": "Product",
                 "name": "Curbside Airport Pickup",
                 "description": "Chauffeur waiting at the designated pickup area once you have collected your luggage. Flight tracked and timed so there is no long wait at the curb.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -212,7 +212,7 @@
                 "@type": "Product",
                 "name": "Round-Trip Airport Shuttle",
                 "description": "Book departure and return in one reservation. Return flight tracked in real time — a delayed landing means a ride waiting, not a scramble.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -221,8 +221,8 @@
             "item": {
                 "@type": "Product",
                 "name": "New Lenox Airport Shuttle",
-                "description": "Stop & Go's hometown airport shuttle, headquartered on Lincoln Highway in New Lenox since 2015. Door-to-door to O'Hare and Midway via I-80 and I-55.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "description": "Stop & Go Airport Shuttle Service, Inc.'s hometown airport shuttle, headquartered on Lincoln Highway in New Lenox since 2015. Door-to-door to O'Hare and Midway via I-80 and I-55.",
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -232,7 +232,7 @@
                 "@type": "Product",
                 "name": "Joliet Airport Shuttle",
                 "description": "Airport shuttle from Joliet to O'Hare and Midway, serving North, South, West, and Downtown Joliet and the I-80 and I-55 corridors.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -242,7 +242,7 @@
                 "@type": "Product",
                 "name": "Naperville Airport Shuttle",
                 "description": "Airport shuttle from Naperville to O'Hare and Midway. Second location in Naperville. Serves Route 59 corridor and I-88 corporate campuses.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -252,7 +252,7 @@
                 "@type": "Product",
                 "name": "Will County Airport Shuttle",
                 "description": "Airport shuttle across all of Will County — New Lenox, Joliet, Frankfort, Mokena, Lockport, Plainfield, and beyond. I-80 and I-55 corridor expertise.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -262,7 +262,7 @@
                 "@type": "Product",
                 "name": "Chicago Executive (PWK) Transfer",
                 "description": "Ground transportation to and from Chicago Executive Airport (PWK) in Wheeling for private aviation travelers. Coordinated with flight timing, professional and discreet.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -272,7 +272,7 @@
                 "@type": "Product",
                 "name": "Gary/Chicago Airport Shuttle",
                 "description": "Shuttle service to Gary/Chicago International Airport (GYY) from New Lenox, Joliet, and the Southwest Suburbs. Same door-to-door luxury as O'Hare and Midway service.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -282,7 +282,7 @@
                 "@type": "Product",
                 "name": "FBO Airport Shuttle",
                 "description": "Direct tarmac and ramp-side access at Signature and Atlantic FBO terminals. Coordinated with pilots and private aviation schedules. Highest-level discretion and professionalism.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -292,7 +292,7 @@
                 "@type": "Product",
                 "name": "Wedding Guest Airport Shuttle",
                 "description": "Tracks arriving wedding guests at O'Hare and Midway, meets them with a name sign, and delivers them to their hotel or venue. Multi-arrival coordination under one dispatch contact.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -302,7 +302,7 @@
                 "@type": "Product",
                 "name": "Family Airport Shuttle with Child Seats",
                 "description": "Airport shuttle for families with child car seats installed on request. Rear-facing, forward-facing, or booster seat available. Ample luggage space, climate-controlled vehicle.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -312,7 +312,7 @@
                 "@type": "Product",
                 "name": "Flight-Tracked Airport Pickup",
                 "description": "Flight monitored in real time from booking through landing. Pickup adjusts automatically based on actual arrival, not scheduled time. Complimentary grace period for standard delays.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -322,7 +322,7 @@
                 "@type": "Product",
                 "name": "24/7 Airport Shuttle Service",
                 "description": "Airport shuttle service operating 24 hours a day, 7 days a week, 365 days a year. Pre-dawn, late-night, holiday, and standard transfers all covered at the same flat rate.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -332,7 +332,7 @@
                 "@type": "Product",
                 "name": "Luxury Airport Transfer",
                 "description": "Airport transfer in a late-model vehicle with plush leather seating, climate control, and a quiet cabin. Professionally attired chauffeur, meet-and-greet, luggage assistance, real-time flight tracking.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -342,7 +342,7 @@
                 "@type": "Product",
                 "name": "Hotel Airport Shuttle",
                 "description": "Hotel-to-airport and airport-to-hotel shuttle for guests and visitors across Will County and Chicagoland. Pairs with wedding guest and corporate transportation.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -352,7 +352,7 @@
                 "@type": "Product",
                 "name": "Senior Airport Shuttle",
                 "description": "Compassionate, door-to-door airport shuttle for senior travelers. Patient professional chauffeur, luggage assistance at both ends, child-seat-free vehicles with easy entry.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -362,7 +362,7 @@
                 "@type": "Product",
                 "name": "Suburb-to-Airport Shuttle",
                 "description": "Door-to-door luxury transfers from the Southwest Suburbs to O'Hare and Midway. Serving New Lenox, Frankfort, Mokena, Orland Park, Tinley Park, Plainfield, and Bolingbrook via I-80, I-55, and I-355.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -372,7 +372,7 @@
                 "@type": "Product",
                 "name": "Corporate Airport Account",
                 "description": "Centralized billing, digital receipts, and account management for businesses needing recurring airport transfers for executives and clients across the I-80 and I-88 corridors.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -381,8 +381,8 @@
             "item": {
                 "@type": "Product",
                 "name": "DuPage Airport Transfer",
-                "description": "Ground transportation to and from DuPage Airport (DPA) in West Chicago for private aviation travelers. Same flat-rate, professional standard as all Stop & Go airport transfers.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "description": "Ground transportation to and from DuPage Airport (DPA) in West Chicago for private aviation travelers. Same flat-rate, professional standard as all Stop & Go Airport Shuttle Service, Inc. airport transfers.",
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 75, "highPrice": 450, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
@@ -462,11 +462,11 @@
 @endpush
 
 <x-layouts.page
-    title="Airport Shuttle Service to O'Hare &amp; Midway | Stop &amp; Go"
+    title="Airport Shuttle Service to O'Hare &amp; Midway | Stop &amp; Go Airport Shuttle Service, Inc."
     metaDescription="Flat-rate airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, 24/7."
     currentPage="our-services"
     ogImage="/images/heroes/airport-ohare-midway.jpg"
-    ogImageAlt="Stop and Go airport shuttle service vehicle at O'Hare International Airport"
+    ogImageAlt="Stop & Go Airport Shuttle Service, Inc. airport shuttle service vehicle at O'Hare International Airport"
 >
 
     <x-sections.category-hero
@@ -489,14 +489,14 @@
         buttonText="Book Your Transfer"
         buttonHref="/get-a-quote"
         image="/images/sections/driver-classy.jpg"
-        imageAlt="Professional Stop & Go chauffeur ready for an airport shuttle pickup in Chicagoland"
+        imageAlt="Professional Stop & Go Airport Shuttle Service, Inc. chauffeur ready for an airport shuttle pickup in Chicagoland"
         :inverted="true"
     />
 
     <x-sections.info-strip
         headingBold="No Surge. No Meter."
         heading="Your Flat Rate Locks at Booking."
-        body="On-demand apps recalculate fares based on traffic, peak demand, and event nights. Stop & Go does not. The rate we quote you is the rate on your receipt, every single time. All tolls on I-294, I-88, and I-355 are included. Taxes are included. Our complimentary grace period for standard flight delays is included. There is no meter running during the drive, and there is no peak-hour adjustment. Whether you are traveling on a quiet Tuesday morning or a sold-out holiday weekend, the flat rate you locked at booking is the only number that matters. This transparency is one reason corporate travel managers, frequent business travelers, and families planning vacation departures from New Lenox, Joliet, Frankfort, and across Will County keep choosing us over every on-demand alternative."
+        body="On-demand apps recalculate fares based on traffic, peak demand, and event nights. Stop & Go Airport Shuttle Service, Inc. does not. The rate we quote you is the rate on your receipt, every single time. All tolls on I-294, I-88, and I-355 are included. Taxes are included. Our complimentary grace period for standard flight delays is included. There is no meter running during the drive, and there is no peak-hour adjustment. Whether you are traveling on a quiet Tuesday morning or a sold-out holiday weekend, the flat rate you locked at booking is the only number that matters. This transparency is one reason corporate travel managers, frequent business travelers, and families planning vacation departures from New Lenox, Joliet, Frankfort, and across Will County keep choosing us over every on-demand alternative."
     />
 
     <x-sections.limo-services-grid
@@ -504,11 +504,11 @@
         heading="Airport Shuttle Services"
         headingBold="for Chicagoland Travelers"
         subheading="Every Type of Airport Transfer We Handle"
-        intro="Stop & Go has been running airport shuttle service from New Lenox since 2015. We cover O'Hare and Midway daily from every Will County community, with real-time flight tracking, flat-rate pricing, and a chauffeur who arrives early. Below is a look at the airport transfer types our clients book most often."
+        intro="Stop & Go Airport Shuttle Service, Inc. has been running airport shuttle service from New Lenox since 2015. We cover O'Hare and Midway daily from every Will County community, with real-time flight tracking, flat-rate pricing, and a chauffeur who arrives early. Below is a look at the airport transfer types our clients book most often."
         :cards="[
             [
                 'service' => 'O\'Hare International Transfers',
-                'copy'    => 'Stop & Go runs O\'Hare (ORD) transfers daily from New Lenox, Joliet, Frankfort, Mokena, Orland Park, and all of Will County. We know every terminal, every arrivals lane, and the fastest I-80 and I-55 corridors. Your flat rate locks at booking. Your flight is tracked in real time. We are there whether your wheels touch down on time or two hours late.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. runs O\'Hare (ORD) transfers daily from New Lenox, Joliet, Frankfort, Mokena, Orland Park, and all of Will County. We know every terminal, every arrivals lane, and the fastest I-80 and I-55 corridors. Your flat rate locks at booking. Your flight is tracked in real time. We are there whether your wheels touch down on time or two hours late.',
             ],
             [
                 'service' => 'Midway International Transfers',
@@ -516,7 +516,7 @@
             ],
             [
                 'service' => 'Corporate and Executive Airport Runs',
-                'copy'    => 'Executives and frequent business travelers across the I-80 and I-88 corridors book recurring airport accounts with Stop & Go. We handle O\'Hare and Midway runs for law firms, financial firms, logistics companies, and healthcare systems across Will County. Centralized billing, digital receipts, and a single dispatch contact make account management simple.',
+                'copy'    => 'Executives and frequent business travelers across the I-80 and I-88 corridors book recurring airport accounts with Stop & Go Airport Shuttle Service, Inc.. We handle O\'Hare and Midway runs for law firms, financial firms, logistics companies, and healthcare systems across Will County. Centralized billing, digital receipts, and a single dispatch contact make account management simple.',
             ],
             [
                 'service' => 'Meet-and-Greet Inside the Terminal',
@@ -578,11 +578,11 @@
         heading="Every Type of Traveler"
         headingBold="We Serve"
         subheading="Who Books Our Airport Shuttle"
-        intro="Stop & Go's airport shuttle serves travelers from every background and every reason to travel. Here is a look at the groups who book with us most often and what each booking typically includes."
+        intro="Stop & Go Airport Shuttle Service, Inc.'s airport shuttle serves travelers from every background and every reason to travel. Here is a look at the groups who book with us most often and what each booking typically includes."
         :occasions="[
             [
                 'occasion' => 'Business Frequent Flyers',
-                'copy'     => 'The frequent business traveler books Stop & Go for the same reason they book the same hotel every trip: consistency. The flat rate is the same whether it is a Monday morning or a Friday night. The chauffeur is always uniformed and professional. The vehicle is always clean. Recurring accounts can pre-schedule weekly runs and manage billing in one place.',
+                'copy'     => 'The frequent business traveler books Stop & Go Airport Shuttle Service, Inc. for the same reason they book the same hotel every trip: consistency. The flat rate is the same whether it is a Monday morning or a Friday night. The chauffeur is always uniformed and professional. The vehicle is always clean. Recurring accounts can pre-schedule weekly runs and manage billing in one place.',
             ],
             [
                 'occasion' => 'Corporate Executive Clients',
@@ -590,7 +590,7 @@
             ],
             [
                 'occasion' => 'Medical and Healthcare Travelers',
-                'copy'     => 'Physicians, administrators, and clinical staff from Silver Cross Hospital and healthcare systems across Will County use Stop & Go for airport runs between campuses and conferences. We also serve patients who require private ground transportation to and from O\'Hare and Midway for specialty medical appointments at Chicago-area centers.',
+                'copy'     => 'Physicians, administrators, and clinical staff from Silver Cross Hospital and healthcare systems across Will County use Stop & Go Airport Shuttle Service, Inc. for airport runs between campuses and conferences. We also serve patients who require private ground transportation to and from O\'Hare and Midway for specialty medical appointments at Chicago-area centers.',
             ],
             [
                 'occasion' => 'Families Traveling with Children',
@@ -602,7 +602,7 @@
             ],
             [
                 'occasion' => 'Senior and Accessibility-First Travelers',
-                'copy'     => 'Traveling seniors and passengers who prioritize door-to-door service over navigating parking garages and long-term lots choose Stop & Go for the simplicity. Your chauffeur comes to your door, handles your luggage at both ends, and returns you home after your flight. No driving in unfamiliar traffic, no parking fees, and no relying on family members for a pickup.',
+                'copy'     => 'Traveling seniors and passengers who prioritize door-to-door service over navigating parking garages and long-term lots choose Stop & Go Airport Shuttle Service, Inc. for the simplicity. Your chauffeur comes to your door, handles your luggage at both ends, and returns you home after your flight. No driving in unfamiliar traffic, no parking fees, and no relying on family members for a pickup.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -612,12 +612,12 @@
         id="airport-advantage"
         heading="Why Private Transfer Beats"
         headingBold="Parking or Rideshare"
-        intro="Long-term airport parking at O'Hare runs $22 to $32 a day. Economy lot shuttles add 20 minutes each way. On-demand rideshare fares from the Southwest Suburbs surge during peak hours and events. A Stop & Go private transfer eliminates all three. One flat rate, door to door, with a professional chauffeur who handles your luggage and a rate that does not change when a Bears game ends."
+        intro="Long-term airport parking at O'Hare runs $22 to $32 a day. Economy lot shuttles add 20 minutes each way. On-demand rideshare fares from the Southwest Suburbs surge during peak hours and events. A Stop & Go Airport Shuttle Service, Inc. private transfer eliminates all three. One flat rate, door to door, with a professional chauffeur who handles your luggage and a rate that does not change when a Bears game ends."
         leftHeading="The Private Transfer Advantage"
         :checklist="[
             [
                 'feature' => 'Flat rate locked at booking, no surge pricing',
-                'detail'  => 'On-demand apps reprice based on traffic, time of day, and event demand. Stop & Go locks your fare when you confirm. The number we quote is the number on your receipt, whether you travel at noon or 4 a.m.',
+                'detail'  => 'On-demand apps reprice based on traffic, time of day, and event demand. Stop & Go Airport Shuttle Service, Inc. locks your fare when you confirm. The number we quote is the number on your receipt, whether you travel at noon or 4 a.m.',
             ],
             [
                 'feature' => 'No parking fees, no long-term lot shuttles',
@@ -636,7 +636,7 @@
         :rightParagraphs="[
             'Our chauffeurs run the I-80 corridor from Will County to O\'Hare and the I-355 connector to Midway more often than any route in our operation. We know where the congestion builds on the Tri-State Tollway in the morning. We know the construction cycle on I-55. We know which terminal lanes at O\'Hare move fastest for a Tuesday 6 a.m. drop-off versus a Friday evening rush. That local knowledge is not something an algorithm replicates.',
             'We serve New Lenox, Joliet, Frankfort, Mokena, Orland Park, Tinley Park, Plainfield, Bolingbrook, Romeoville, and every Will County community between here and the Cook County line. The drive to O\'Hare is between 45 and 75 minutes depending on the hour. Midway is often 30 to 40 minutes from the Southwest Suburbs. Your chauffeur knows both and plans the departure time accordingly.',
-            'For corporate accounts and frequent travelers, Stop & Go offers recurring scheduling and centralized billing that on-demand apps simply do not. Your travel manager books the run, the chauffeur shows up, and the receipt goes to accounts payable with no credit card friction. The same professional experience, every week, for every team member making the same airport run.',
+            'For corporate accounts and frequent travelers, Stop & Go Airport Shuttle Service, Inc. offers recurring scheduling and centralized billing that on-demand apps simply do not. Your travel manager books the run, the chauffeur shows up, and the receipt goes to accounts payable with no credit card friction. The same professional experience, every week, for every team member making the same airport run.',
         ]"
         ctaHeading="Ready to book your airport transfer?"
         ctaBody="Get your flat-rate quote in minutes. We serve all of Will County and Chicagoland and are available 24 hours a day, 365 days a year."
@@ -715,13 +715,13 @@
         headingBold="airport shuttle?"
         headingTail=""
         image="/images/heroes/airport-ohare-midway.jpg"
-        imageAlt="Stop & Go airport shuttle vehicle at O'Hare International Airport in Chicago"
+        imageAlt="Stop & Go Airport Shuttle Service, Inc. airport shuttle vehicle at O'Hare International Airport in Chicago"
         imageAspect="16/9"
         imageObjectPosition="center center"
         rightVariant="description"
         descHeading="What Every Airport Shuttle Includes"
         descSubheading="The same standard on every transfer, every time"
-        descBody="Whether you are heading to O'Hare at 4 a.m. or returning from Midway at midnight, here is what is included in every Stop & Go airport shuttle booking:"
+        descBody="Whether you are heading to O'Hare at 4 a.m. or returning from Midway at midnight, here is what is included in every Stop & Go Airport Shuttle Service, Inc. airport shuttle booking:"
         :descBullets="[
             'Real-time flight tracking: pickup adjusts automatically, no extra charge for standard delays',
             'Curbside or inside-terminal meet-and-greet with a name sign and luggage assist at both ends',

@@ -5,7 +5,7 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
     "@id": "https://newlenoxlimoservice.com/#business",
-    "name": "Stop & Go Airport Shuttle Service Inc.",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
     "telephone": "",
@@ -83,8 +83,8 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Transportation Escort Services — Stop & Go",
-    "description": "Full list of escorted transportation services offered by Stop & Go Airport Shuttle Service Inc. from New Lenox, Illinois.",
+    "name": "Transportation Escort Services — Stop & Go Airport Shuttle Service, Inc.",
+    "description": "Full list of escorted transportation services offered by Stop & Go Airport Shuttle Service, Inc. from New Lenox, Illinois.",
     "itemListElement": [
         {
             "@type": "ListItem", "position": 1,
@@ -92,7 +92,7 @@
                 "@type": "Product",
                 "name": "Airport Escort Transportation",
                 "description": "Door-to-door escorted airport transportation to O'Hare, Midway, and Chicago Executive Airport. Real-time flight tracking, curbside or inside-terminal meet-and-greet, luggage assistance. Chauffeur accompanies from pickup through terminal arrival.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -102,7 +102,7 @@
                 "@type": "Product",
                 "name": "Corporate Escort Transportation",
                 "description": "Discreet executive escort transportation for client visits, roadshows, and multi-stop corporate schedules. Chauffeur accompanies throughout the full business day, managing route and timing across Chicagoland.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -112,7 +112,7 @@
                 "@type": "Product",
                 "name": "Private Charter Escort",
                 "description": "Private escorted charters for groups of any size across New Lenox, Joliet, and all of Will County. Dedicated chauffeur accompanies the group from first pickup to final drop-off, handling every stop and timing detail.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -122,7 +122,7 @@
                 "@type": "Product",
                 "name": "School Dance Escort Transportation",
                 "description": "Parent-trusted escort transportation for proms and school dances across New Lenox, Frankfort, Mokena, and Will County. Background-checked chauffeur, confirmed pickup and drop-off details, on-time return.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -132,7 +132,7 @@
                 "@type": "Product",
                 "name": "City Tour Escort Service",
                 "description": "Private escorted city tours of Chicago from New Lenox and across the Southwest Suburbs. Chauffeur guides clients between landmarks at their own pace, handling driving and parking throughout the day.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -142,7 +142,7 @@
                 "@type": "Product",
                 "name": "Anniversary and Occasion Escort",
                 "description": "Escorted luxury transportation for anniversaries, romantic evenings, and personal celebrations across New Lenox and Will County. Professional chauffeur accompanies the couple for the full evening, handling all logistics.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 500, "highPrice": 8000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
@@ -196,7 +196,7 @@
             "name": "Is escorted transportation available for seniors and medical appointments?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Stop & Go provides attentive, door-through-door escorted transportation for seniors and clients traveling to medical appointments at Silver Cross Hospital and facilities across Will County and Chicagoland. Our chauffeurs assist at every step, from the front door through the appointment arrival and back home."
+                "text": "Yes. Stop & Go Airport Shuttle Service, Inc. provides attentive, door-through-door escorted transportation for seniors and clients traveling to medical appointments at Silver Cross Hospital and facilities across Will County and Chicagoland. Our chauffeurs assist at every step, from the front door through the appointment arrival and back home."
             }
         },
         {
@@ -204,7 +204,7 @@
             "name": "Do you provide escorted transportation for school dances?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Stop & Go provides parent-trusted escorted transportation for proms, homecoming dances, and school formals across the Lincoln-Way and Joliet Township communities. A background-checked, professionally trained chauffeur accompanies the group, no student has to drive, and pickup and drop-off details are confirmed in advance so families always know the plan."
+                "text": "Yes. Stop & Go Airport Shuttle Service, Inc. provides parent-trusted escorted transportation for proms, homecoming dances, and school formals across the Lincoln-Way and Joliet Township communities. A background-checked, professionally trained chauffeur accompanies the group, no student has to drive, and pickup and drop-off details are confirmed in advance so families always know the plan."
             }
         },
         {
@@ -222,11 +222,11 @@
 @endpush
 
 <x-layouts.page
-    title="Transportation Escort Service | Accompanied Travel | Stop &amp; Go"
+    title="Transportation Escort Service | Accompanied Travel | Stop &amp; Go Airport Shuttle Service, Inc."
     metaDescription="Professional escorted transportation service across New Lenox, Joliet, Naperville, and all of Will County. Dedicated chauffeur for airport transfers, city tours, corporate travel, school dances, and personal occasions."
     currentPage="our-services"
     ogImage="/images/heroes/hero-special-event.jpg"
-    ogImageAlt="Stop and Go professional transportation escort service for events and personal occasions across Will County"
+    ogImageAlt="Stop & Go Airport Shuttle Service, Inc. professional transportation escort service for events and personal occasions across Will County"
 >
 
     <x-sections.category-hero
@@ -245,18 +245,18 @@
         heading="One Chauffeur."
         headingBold="The Whole Trip Handled."
         subtitle=""
-        body="The difference between escorted transportation and a standard car service is the difference between a concierge and a delivery. With a standard transfer, a driver drops you off and leaves. With Stop & Go escorted transportation, your chauffeur is with you from the moment you leave your door to the moment you return home. They manage every mile, every stop, every wait, and every timing adjustment in between. For airport travel, that means the chauffeur carries your bags from the front door, guides you through check-in, and is inside the terminal at baggage claim with your name sign when you land. For a corporate roadshow, it means a professionally attired driver who waits between meetings, adapts to a shifting schedule, and keeps the whole business day moving. For a school dance, it means parents have a professional, background-checked adult behind the wheel the entire evening, with confirmed pickup and drop-off details communicated in advance. For an anniversary or city tour, it means your whole evening is handled, end to end, while you focus on the occasion. Stop & Go has been building that experience across Will County since 2015, and the escort standard is the same on every booking."
+        body="The difference between escorted transportation and a standard car service is the difference between a concierge and a delivery. With a standard transfer, a driver drops you off and leaves. With Stop & Go Airport Shuttle Service, Inc. escorted transportation, your chauffeur is with you from the moment you leave your door to the moment you return home. They manage every mile, every stop, every wait, and every timing adjustment in between. For airport travel, that means the chauffeur carries your bags from the front door, guides you through check-in, and is inside the terminal at baggage claim with your name sign when you land. For a corporate roadshow, it means a professionally attired driver who waits between meetings, adapts to a shifting schedule, and keeps the whole business day moving. For a school dance, it means parents have a professional, background-checked adult behind the wheel the entire evening, with confirmed pickup and drop-off details communicated in advance. For an anniversary or city tour, it means your whole evening is handled, end to end, while you focus on the occasion. Stop & Go Airport Shuttle Service, Inc. has been building that experience across Will County since 2015, and the escort standard is the same on every booking."
         buttonText="Book an Escort"
         buttonHref="/get-a-quote"
         image="/images/sections/special-event-limo.png"
-        imageAlt="Stop &amp; Go professional chauffeur escorting client to a luxury vehicle for door-to-door service"
+        imageAlt="Stop &amp; Go Airport Shuttle Service, Inc. professional chauffeur escorting client to a luxury vehicle for door-to-door service"
         :inverted="true"
     />
 
     <x-sections.info-strip
         headingBold="Flat-Rate Pricing."
         heading="The Full Escort, One Clear Quote."
-        body="Escorted transportation that reprices midway through the engagement undermines the entire value of the service. Stop & Go escort transportation is flat-rate or hourly, confirmed in writing before the booking begins, with no adjustments for traffic, waiting time within the agreed engagement, or time of day. The quote covers the chauffeur, the vehicle, fuel, and tolls for the full escort. For multi-stop and full-day engagements, the hourly rate is confirmed upfront and the total is calculable before your chauffeur arrives at the door. There is no meter running, no surge pricing, and no surprise total at the end."
+        body="Escorted transportation that reprices midway through the engagement undermines the entire value of the service. Stop & Go Airport Shuttle Service, Inc. escort transportation is flat-rate or hourly, confirmed in writing before the booking begins, with no adjustments for traffic, waiting time within the agreed engagement, or time of day. The quote covers the chauffeur, the vehicle, fuel, and tolls for the full escort. For multi-stop and full-day engagements, the hourly rate is confirmed upfront and the total is calculable before your chauffeur arrives at the door. There is no meter running, no surge pricing, and no surprise total at the end."
     />
 
     <x-sections.limo-services-grid
@@ -264,11 +264,11 @@
         heading="Transportation Escort"
         headingBold="Services We Provide"
         subheading="Every Type of Escorted Transportation We Handle"
-        intro="Stop & Go provides professional escort transportation for a wide range of clients and occasions across Will County and Chicagoland. Here is a look at the escort bookings our clients rely on most and what each engagement typically includes."
+        intro="Stop & Go Airport Shuttle Service, Inc. provides professional escort transportation for a wide range of clients and occasions across Will County and Chicagoland. Here is a look at the escort bookings our clients rely on most and what each engagement typically includes."
         :cards="[
             [
                 'service' => 'Airport Escort Transportation',
-                'copy'    => 'Stop & Go airport escort service accompanies you door-to-door from your home to your terminal and from your arrival gate back to your front door. Your chauffeur carries luggage at both ends, monitors your flight in real time, and is inside the terminal at baggage claim with your name sign before your bags reach the belt. For departures, they are at your door before your scheduled pickup and deliver you to the terminal with time to spare. This covers O\'Hare, Midway, and Chicago Executive Airport.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. airport escort service accompanies you door-to-door from your home to your terminal and from your arrival gate back to your front door. Your chauffeur carries luggage at both ends, monitors your flight in real time, and is inside the terminal at baggage claim with your name sign before your bags reach the belt. For departures, they are at your door before your scheduled pickup and deliver you to the terminal with time to spare. This covers O\'Hare, Midway, and Chicago Executive Airport.',
             ],
             [
                 'service' => 'Corporate Escort Transportation',
@@ -276,19 +276,19 @@
             ],
             [
                 'service' => 'School Dance and Prom Escort',
-                'copy'    => 'Stop & Go school dance escorts are designed as much for the parents as the students. A professional, background-checked chauffeur accompanies the group from the first pickup through dinner and the dance, then delivers every student home on schedule. Pickup and drop-off details are confirmed in advance, no student is behind the wheel, and the group stays together the entire evening. Families across the Lincoln-Way and Joliet Township communities have trusted Stop & Go with their students since 2015.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. school dance escorts are designed as much for the parents as the students. A professional, background-checked chauffeur accompanies the group from the first pickup through dinner and the dance, then delivers every student home on schedule. Pickup and drop-off details are confirmed in advance, no student is behind the wheel, and the group stays together the entire evening. Families across the Lincoln-Way and Joliet Township communities have trusted Stop & Go Airport Shuttle Service, Inc. with their students since 2015.',
             ],
             [
                 'service' => 'Private Group Charter Escort',
-                'copy'    => 'A private escorted charter keeps any group together with one dedicated chauffeur managing the full route from start to finish. Whether it is a corporate outing, a family event, a celebration, or a group day trip across Chicagoland, Stop & Go private charter escorts handle every stop and every timing detail. No one drives. No one gets separated. The organizer has a single dispatch contact for the entire engagement.',
+                'copy'    => 'A private escorted charter keeps any group together with one dedicated chauffeur managing the full route from start to finish. Whether it is a corporate outing, a family event, a celebration, or a group day trip across Chicagoland, Stop & Go Airport Shuttle Service, Inc. private charter escorts handle every stop and every timing detail. No one drives. No one gets separated. The organizer has a single dispatch contact for the entire engagement.',
             ],
             [
                 'service' => 'Chicago City Tour Escort',
-                'copy'    => 'Stop & Go city tour escorts provide a private, accompanied exploration of Chicago for visiting guests, families, and groups departing from New Lenox and across the Southwest Suburbs. Your chauffeur guides the day between landmarks at your pace: the Magnificent Mile, Navy Pier, Millennium Park, the Riverwalk, and beyond. Driving and parking are fully managed, and the itinerary can be adjusted on the fly. It is the relaxed, comfortable way to experience the city.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. city tour escorts provide a private, accompanied exploration of Chicago for visiting guests, families, and groups departing from New Lenox and across the Southwest Suburbs. Your chauffeur guides the day between landmarks at your pace: the Magnificent Mile, Navy Pier, Millennium Park, the Riverwalk, and beyond. Driving and parking are fully managed, and the itinerary can be adjusted on the fly. It is the relaxed, comfortable way to experience the city.',
             ],
             [
                 'service' => 'Anniversary and Personal Occasion Escort',
-                'copy'    => 'A special evening is better when neither person has to manage the logistics. Stop & Go anniversary and occasion escorts provide a professional chauffeur for the full evening: from your door to dinner, between venues, and back home at the end of the night. The chauffeur manages the route and the timing so you remain completely present for the occasion. Plush seating, ambient lighting, and a quiet cabin create the right atmosphere for a milestone evening.',
+                'copy'    => 'A special evening is better when neither person has to manage the logistics. Stop & Go Airport Shuttle Service, Inc. anniversary and occasion escorts provide a professional chauffeur for the full evening: from your door to dinner, between venues, and back home at the end of the night. The chauffeur manages the route and the timing so you remain completely present for the occasion. Plush seating, ambient lighting, and a quiet cabin create the right atmosphere for a milestone evening.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -298,7 +298,7 @@
         id="escort-process"
         heading="Six Ways Your Escort"
         headingBold="Chauffeur Shows Up Prepared"
-        intro="An escorted transportation engagement requires more preparation than a point-to-point transfer. Here is how Stop & Go builds every escort booking before your chauffeur arrives."
+        intro="An escorted transportation engagement requires more preparation than a point-to-point transfer. Here is how Stop & Go Airport Shuttle Service, Inc. builds every escort booking before your chauffeur arrives."
         :steps="[
             [
                 'num'   => '01',
@@ -338,19 +338,19 @@
         heading="Every Client Who Benefits"
         headingBold="from Escorted Transportation"
         subheading="Who Books Our Transportation Escort Service"
-        intro="Escorted transportation serves a broader range of clients than most people expect. Here is a look at who books Stop & Go escort service most often and why the accompanied model fits their specific needs."
+        intro="Escorted transportation serves a broader range of clients than most people expect. Here is a look at who books Stop & Go Airport Shuttle Service, Inc. escort service most often and why the accompanied model fits their specific needs."
         :occasions="[
             [
                 'occasion' => 'Business Executives and Corporate Clients',
-                'copy'     => 'An executive roadshow with four meetings across the Chicago metro has no room for a driver who disappears between stops. Stop & Go corporate escort transportation keeps a dedicated chauffeur with the executive or client team for the full business day, managing multi-stop schedules, adapting to shifting timing, and maintaining the quiet, professional cabin that business travel demands. Corporate escorts include centralized billing and a single dispatch contact.',
+                'copy'     => 'An executive roadshow with four meetings across the Chicago metro has no room for a driver who disappears between stops. Stop & Go Airport Shuttle Service, Inc. corporate escort transportation keeps a dedicated chauffeur with the executive or client team for the full business day, managing multi-stop schedules, adapting to shifting timing, and maintaining the quiet, professional cabin that business travel demands. Corporate escorts include centralized billing and a single dispatch contact.',
             ],
             [
                 'occasion' => 'VIP and Distinguished Guests',
-                'copy'     => 'VIP guests and distinguished visitors arriving at O\'Hare or Midway receive a qualitatively different experience from a standard transfer. Stop & Go VIP escort service begins inside the terminal at baggage claim, continues through a discreet, professionally appointed vehicle, and ends at the hotel or venue with luggage handled at both ends. The chauffeur manages every detail between the gate and the destination.',
+                'copy'     => 'VIP guests and distinguished visitors arriving at O\'Hare or Midway receive a qualitatively different experience from a standard transfer. Stop & Go Airport Shuttle Service, Inc. VIP escort service begins inside the terminal at baggage claim, continues through a discreet, professionally appointed vehicle, and ends at the hotel or venue with luggage handled at both ends. The chauffeur manages every detail between the gate and the destination.',
             ],
             [
                 'occasion' => 'Students Attending Proms and School Dances',
-                'copy'     => 'A Stop & Go school dance escort is structured specifically around parent accountability. The chauffeur is background-checked and professionally trained, every student is listed in the booking, pickup and drop-off details are confirmed with parents before the evening begins, and the group travels together in one vehicle. Students enjoy a memorable, celebratory ride. Parents know exactly who is behind the wheel and where their student is throughout the night.',
+                'copy'     => 'A Stop & Go Airport Shuttle Service, Inc. school dance escort is structured specifically around parent accountability. The chauffeur is background-checked and professionally trained, every student is listed in the booking, pickup and drop-off details are confirmed with parents before the evening begins, and the group travels together in one vehicle. Students enjoy a memorable, celebratory ride. Parents know exactly who is behind the wheel and where their student is throughout the night.',
             ],
             [
                 'occasion' => 'Seniors and Clients with Medical Appointments',
@@ -358,11 +358,11 @@
             ],
             [
                 'occasion' => 'Families Hosting Visiting Guests',
-                'copy'     => 'When out-of-town guests arrive from O\'Hare or Midway, a Stop & Go airport escort turns the arrival into a welcoming experience rather than a logistics problem. Your guest is met inside the terminal with a name sign, escorted to a clean and comfortable vehicle, and delivered directly to your door or their hotel. For visiting families across multiple days, day-hire escort service keeps guests comfortable and oriented without anyone needing to drive.',
+                'copy'     => 'When out-of-town guests arrive from O\'Hare or Midway, a Stop & Go Airport Shuttle Service, Inc. airport escort turns the arrival into a welcoming experience rather than a logistics problem. Your guest is met inside the terminal with a name sign, escorted to a clean and comfortable vehicle, and delivered directly to your door or their hotel. For visiting families across multiple days, day-hire escort service keeps guests comfortable and oriented without anyone needing to drive.',
             ],
             [
                 'occasion' => 'Couples and Individuals on Personal Occasions',
-                'copy'     => 'An anniversary dinner, a romantic evening out, or a personal milestone is better when the logistics are invisible. Stop & Go occasion escorts provide a professional chauffeur for the full evening, managing the route and timing so you stay fully present for whatever the occasion means to you. Shopping escorts give you the full day: a chauffeur who drives, parks, and carries bags between the Magnificent Mile, Oak Brook, or wherever the day takes you.',
+                'copy'     => 'An anniversary dinner, a romantic evening out, or a personal milestone is better when the logistics are invisible. Stop & Go Airport Shuttle Service, Inc. occasion escorts provide a professional chauffeur for the full evening, managing the route and timing so you stay fully present for whatever the occasion means to you. Shopping escorts give you the full day: a chauffeur who drives, parks, and carries bags between the Magnificent Mile, Oak Brook, or wherever the day takes you.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -394,9 +394,9 @@
         ]"
         rightHeading="Serving Will County and Chicagoland Since 2015"
         :rightParagraphs="[
-            'Stop & Go has been providing professional escort transportation across Will County since 2015. We know the terminal layouts at O\'Hare and Midway, the school dance venues across the Lincoln-Way communities, the medical campuses in New Lenox and Joliet, the corporate office corridors along I-80 and I-88, and the Chicago landmark routes that visiting guests most want to see. That local knowledge supports the escort model in ways that a generic transportation company cannot.',
+            'Stop & Go Airport Shuttle Service, Inc. has been providing professional escort transportation across Will County since 2015. We know the terminal layouts at O\'Hare and Midway, the school dance venues across the Lincoln-Way communities, the medical campuses in New Lenox and Joliet, the corporate office corridors along I-80 and I-88, and the Chicago landmark routes that visiting guests most want to see. That local knowledge supports the escort model in ways that a generic transportation company cannot.',
             'For families booking school dance escorts, we provide a direct line of communication to the chauffeur throughout the evening on request. For corporate clients, we coordinate directly with executive assistants and travel managers so the principal never has to manage the logistics. For seniors and medical clients, we brief the chauffeur on any specific assistance requirements in advance of the pickup.',
-            'Every Stop & Go escort booking is backed by 24/7/365 dispatch, fully licensed and insured operation, a background-checked and professionally trained chauffeur, and flat-rate or hourly pricing confirmed before the engagement begins. The figure agreed upon at booking is the figure on your receipt.',
+            'Every Stop & Go Airport Shuttle Service, Inc. escort booking is backed by 24/7/365 dispatch, fully licensed and insured operation, a background-checked and professionally trained chauffeur, and flat-rate or hourly pricing confirmed before the engagement begins. The figure agreed upon at booking is the figure on your receipt.',
         ]"
         ctaHeading="Ready to book your escort?"
         ctaBody="Get your flat-rate or hourly quote in minutes. We serve all of Will County and Chicagoland and are available 24 hours a day, 365 days a year."
@@ -442,7 +442,7 @@
             [
                 'occasion' => 'Senior and Medical Escort',
                 'timing'   => '24 to 48 hours ahead',
-                'detail'   => 'Senior and medical appointment escorts are available with 24 to 48 hours notice in most cases. For recurring appointments, Stop & Go can set up a standing schedule so the same chauffeur provides consistent, familiar service each visit.',
+                'detail'   => 'Senior and medical appointment escorts are available with 24 to 48 hours notice in most cases. For recurring appointments, Stop & Go Airport Shuttle Service, Inc. can set up a standing schedule so the same chauffeur provides consistent, familiar service each visit.',
                 'urgency'  => 'low',
             ],
         ]"
@@ -475,13 +475,13 @@
         headingBold="escort transportation?"
         headingTail=""
         image="/images/sections/limousine-professional.jpg"
-        imageAlt="Stop &amp; Go professional chauffeur ready to escort clients across Will County and Chicagoland"
+        imageAlt="Stop &amp; Go Airport Shuttle Service, Inc. professional chauffeur ready to escort clients across Will County and Chicagoland"
         imageAspect="16/9"
         imageObjectPosition="center center"
         rightVariant="description"
         descHeading="What Every Escort Booking Includes"
         descSubheading="The same professional standard from first pickup to final drop-off"
-        descBody="Whether you are booking an airport escort for a solo traveler or a school dance escort for a group of ten, here is what every Stop &amp; Go escort engagement provides:"
+        descBody="Whether you are booking an airport escort for a solo traveler or a school dance escort for a group of ten, here is what every Stop &amp; Go Airport Shuttle Service, Inc. escort engagement provides:"
         :descBullets="[
             'Background-checked, professionally trained chauffeur dedicated to your engagement from start to finish',
             'One chauffeur stays with you through every stop, every wait, and the final drop-off home',

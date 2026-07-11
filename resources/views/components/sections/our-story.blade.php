@@ -1,5 +1,5 @@
 @props([
-    'heading'     => 'The Stop & Go',
+    'heading'     => 'The Stop & Go Airport Shuttle Service, Inc.',
     'headingBold' => 'Story',
     'entries'     => null,
 ])
@@ -20,7 +20,7 @@ $resolvedEntries = $entries ?? [
     ],
     [
         'title' => 'Today and Beyond',
-        'body'  => 'Today, Stop & Go continues to uphold a commitment to <strong>quality</strong> and <strong>dedication</strong> in every trip. Our focus on safety, <strong>timeliness</strong>, and customer satisfaction has made us a preferred transportation provider in the region. Moving forward, we remain committed to growing our fleet and expanding our service areas to serve you better.',
+        'body'  => 'Today, Stop & Go Airport Shuttle Service, Inc. continues to uphold a commitment to <strong>quality</strong> and <strong>dedication</strong> in every trip. Our focus on safety, <strong>timeliness</strong>, and customer satisfaction has made us a preferred transportation provider in the region. Moving forward, we remain committed to growing our fleet and expanding our service areas to serve you better.',
     ],
 ];
 @endphp

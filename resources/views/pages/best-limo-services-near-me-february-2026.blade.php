@@ -6,7 +6,7 @@
     "name": "Limo Service Near Me — Chicagoland",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Professional limo service near you in New Lenox and throughout Chicagoland. Airport transfers, weddings, corporate travel, party buses, and more."
     currentPage="our-services"
     ogImage="/images/heroes/best-limo-services-hero.png"
-    ogImageAlt="Professional limo service near you, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Professional limo service near you, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Limo Service"
@@ -57,7 +57,7 @@
         heading="Local Expertise,"
         headingBold="Chicagoland-Wide Service"
         subtitle="Based in New Lenox. Serving the entire region."
-        body="Stop & Go is headquartered at 400 E Lincoln Hwy in New Lenox, which puts us in an ideal position to serve Will, DuPage, Kane, Cook, and Lake counties efficiently. Whether your pickup is in a southwest suburb, a north suburb, or downtown Chicago, our chauffeurs know the routes, the traffic patterns, and the best ways to get you where you need to go on time."
+        body="Stop & Go Airport Shuttle Service, Inc. is headquartered at 400 E Lincoln Hwy in New Lenox, which puts us in an ideal position to serve Will, DuPage, Kane, Cook, and Lake counties efficiently. Whether your pickup is in a southwest suburb, a north suburb, or downtown Chicago, our chauffeurs know the routes, the traffic patterns, and the best ways to get you where you need to go on time."
         buttonText="See Our Service Area"
         buttonHref="/service-areas"
         image="/images/sections/driver-classy.jpg"
@@ -68,7 +68,7 @@
     <x-sections.info-strip
         headingBold="What Sets a Professional"
         heading="Limo Service Apart"
-        body="Not all transportation services are the same. A professional limo service means a guaranteed pickup, not a hoped-for match. It means a chauffeur who knows your destination and arrives early. It means a vehicle that has been inspected and detailed before your ride. It means flat-rate pricing so you never get a surprise charge at the end. Stop & Go has delivered that standard to Chicagoland clients since 2015."
+        body="Not all transportation services are the same. A professional limo service means a guaranteed pickup, not a hoped-for match. It means a chauffeur who knows your destination and arrives early. It means a vehicle that has been inspected and detailed before your ride. It means flat-rate pricing so you never get a surprise charge at the end. Stop & Go Airport Shuttle Service, Inc. has delivered that standard to Chicagoland clients since 2015."
     />
 
     <section id="services-near-me" style="background: var(--cloud-light); scroll-margin-top: 80px;">
@@ -78,7 +78,7 @@
                     Every Service, <strong>Right Near You</strong>
                 </h2>
                 <p style="font-family: var(--font-body); font-size: 1.25rem; color: var(--slate); line-height: 1.5;" class="max-w-2xl mx-auto">
-                    Stop & Go provides the full range of chauffeured transportation services throughout the Chicagoland area.
+                    Stop & Go Airport Shuttle Service, Inc. provides the full range of chauffeured transportation services throughout the Chicagoland area.
                 </p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -110,13 +110,13 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/special-event-limo.png"
-        imageAlt="Special event limousine service, Stop and Go Airport Shuttle Service"
+        imageAlt="Special event limousine service, Stop & Go Airport Shuttle Service, Inc."
         imageAspect="4/3"
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="What to Look for in a Local Limo Service"
-        descSubheading="Stop & Go checks every box"
-        descBody="When evaluating any chauffeured transportation provider, ask these questions. Here is how Stop & Go answers each one:"
+        descSubheading="Stop & Go Airport Shuttle Service, Inc. checks every box"
+        descBody="When evaluating any chauffeured transportation provider, ask these questions. Here is how Stop & Go Airport Shuttle Service, Inc. answers each one:"
         :descBullets="[
             'Are chauffeurs background-checked and professionally licensed? Yes, every one of them.',
             'Is pricing flat-rate or does it vary by mileage? Flat-rate, always.',

@@ -1,5 +1,5 @@
 {{--
-  x-nav.navbar — Stop & Go primary navigation (Twilight Luxe)
+  x-nav.navbar — Stop & Go Airport Shuttle Service, Inc. primary navigation (Twilight Luxe)
   Desktop: pure CSS hover dropdowns (app.css).
   Mobile (<lg): Alpine.js hamburger drawer.
 --}}

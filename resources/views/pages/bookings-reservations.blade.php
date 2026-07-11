@@ -27,7 +27,7 @@
     metaDescription="Reserve your limousine or airport shuttle today. Available 24/7 across Chicagoland, including O'Hare and Midway transfers."
     currentPage="booking"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Book a luxury limo or airport shuttle with Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Book a luxury limo or airport shuttle with Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Book"
@@ -46,7 +46,7 @@
     <x-sections.free-instant-quote
         :showInfoBox="true"
         image="/images/sections/vincent-in-limo.jpg"
-        imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service Inc., in the driver seat"
+        imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service, Inc., in the driver seat"
         imageAspect="4/3"
         imageObjectPosition="top"
         heading=""

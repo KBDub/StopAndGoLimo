@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Lockport, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Lockport, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -47,7 +47,7 @@
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/lockport-limo-transport.png"
-        imageAlt="Limousine service in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Limousine service in Lockport, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="left"
         :inverted="true"
     />
@@ -57,14 +57,14 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/lockport-airport-transportation.png"
-        imageAlt="Airport transportation in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Airport transportation in Lockport, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
         :inverted="false"
         descHeading="Why Choose Us?"
         descSubheading="Our Lockport limo service makes every ride safe, comfortable, and stress-free."
-        descBody="As Lockport's trusted transportation provider, Stop & Go offers complete luxury transportation services:"
+        descBody="As Lockport's trusted transportation provider, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services:"
         :descBullets="[
             'Lockport airport shuttle for timely arrivals and departures',
             'Limousine service for weddings, events, and special occasions',
@@ -74,7 +74,7 @@
         ]"
         descClosing="Our knowledge of Lockport, from the historic downtown canal district to Route 7, Route 171, and I-355 access, ensures efficient and reliable transportation throughout Will County."
         descImage="/images/sections/lockport-airport-transportation.png"
-        descImageAlt="Airport transportation in Lockport, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Airport transportation in Lockport, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -84,7 +84,7 @@
         headingBold="Across the City"
         body="Whether you are planning a special evening in the historic downtown district or heading to a critical business engagement, the quality of your ride defines your entire day. Our premier Lockport IL limo service provides a dedicated professional driver who manages every logistical detail of local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Lockport wedding limo rental, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
         image="/images/sections/lockport-travel-confidence.png"
-        imageAlt="Travel with confidence across Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Travel with confidence across Lockport, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -95,7 +95,7 @@
         headingBold="Active Illinois Residents"
         body="For passengers who need a higher level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily schedule. This flexible service allows you to visit multiple local destinations at your own pace with a private driver standing by for your immediate departure. Our reliable Lockport to O'Hare airport car service guarantees that you arrive at your terminal without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several corporate appointments or touring regional landmarks, having a private vehicle at your disposal helps you maintain a truly fluid schedule."
         image="/images/sections/lockport-flexible-transport.png"
-        imageAlt="Flexible transportation options in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Flexible transportation options in Lockport, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -106,7 +106,7 @@
         headingBold="Significant Milestones"
         body="A luxury limousine adds a vital layer of elegance to the most significant milestones on your social calendar, from traditional weddings to formal high school graduations. We specialize in providing high-end transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at historic venues and works diligently to provide a seamless experience for every guest. From the initial pick up until the final drop-off of the night, we manage your transportation with the highest level of care to ensure your event is perfect."
          image="/images/sections/lockport-elegant-arrivals.png"
-        imageAlt="Creating elegant arrivals in Lockport, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Creating elegant arrivals in Lockport, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

@@ -6,7 +6,7 @@
     "headline": "How to Plan a Party Bus Experience in Chicagoland",
     "publisher": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,10 +39,10 @@
 
 <x-layouts.page
     title="How to Plan a Party Bus Experience in Chicagoland"
-    metaDescription="Wondering how to plan the perfect party bus experience near New Lenox, Naperville, or Joliet IL? Stop & Go covers how to choose the right bus, what amenities to expect, and what it costs."
+    metaDescription="Wondering how to plan the perfect party bus experience near New Lenox, Naperville, or Joliet IL? Stop & Go Airport Shuttle Service, Inc. covers how to choose the right bus, what amenities to expect, and what it costs."
     currentPage="our-services"
     ogImage="/images/heroes/hero-party-bus-interior.png"
-    ogImageAlt="Luxury party bus interior, Stop and Go Airport Shuttle Service Inc., New Lenox IL"
+    ogImageAlt="Luxury party bus interior, Stop & Go Airport Shuttle Service, Inc., New Lenox IL"
 >
     <x-sections.category-hero
         heading="How to Plan a"
@@ -73,7 +73,7 @@
         rightVariant="description"
         descHeading="We Serve All of Chicagoland"
         descSubheading="Party buses for every group, every occasion"
-        descBody="From the southwest suburbs to downtown Chicago and everything in between, Stop &amp; Go gets your group there together and on time."
+        descBody="From the southwest suburbs to downtown Chicago and everything in between, Stop &amp; Go Airport Shuttle Service, Inc. gets your group there together and on time."
         :descBullets="[
             'New Lenox, Frankfort, Mokena, Joliet, Lockport',
             'Naperville, Aurora, Bolingbrook, Plainfield',
@@ -83,7 +83,7 @@
         ]"
         descClosing="Call or fill out the form. We are available 24 hours a day."
         descImage="/images/heroes/hero-party-bus-chicago.webp"
-        descImageAlt="Party bus exterior, Stop and Go Airport Shuttle Service Inc."
+        descImageAlt="Party bus exterior, Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 

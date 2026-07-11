@@ -1,7 +1,7 @@
 @props([
     'heading'     => 'Airport Shuttle',
     'headingTail' => 'Service',
-    'body'        => 'At Stop & Go Airport Shuttle Service Inc., we know that air travel does not start and stop at the airport. A peaceful travel experience can make or break your trip, which is why it\'s so important to get started the right way with a smooth, reliable, direct ride to the airport. We take care of everything you need so you can genuinely enjoy stress-free travel to and from any of Chicago\'s airports, including:',
+    'body'        => 'At Stop & Go Airport Shuttle Service, Inc., we know that air travel does not start and stop at the airport. A peaceful travel experience can make or break your trip, which is why it\'s so important to get started the right way with a smooth, reliable, direct ride to the airport. We take care of everything you need so you can genuinely enjoy stress-free travel to and from any of Chicago\'s airports, including:',
     'image'       => '/images/sections/ohare-international-airport.jpg',
     'imageAlt'    => 'Chicago O\'Hare International Airport terminal and control tower',
     'airports'    => [

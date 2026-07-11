@@ -29,7 +29,7 @@
     metaDescription="Charter coach bus rental for large groups across Chicagoland. Pristine vehicles, professional drivers, and room for everyone."
     currentPage="services"
     ogImage="/images/coach-buses-hero.jpg"
-    ogImageAlt="Charter coach bus available for group rentals at Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Charter coach bus available for group rentals at Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Charter Coach Bus Rental"
@@ -46,10 +46,10 @@
     <x-sections.travel-in-style
         heading="Rent a"
         headingBold="Charter Bus"
-        body="Stop & Go Airport Shuttle Service Inc. provides charter bus rental services to New Lenox and Plainfield, Illinois clients. Our professional chauffeurs are committed to getting groups to their destinations and back safely and on schedule. Groups can rent our buses for trips inside and outside of the greater Chicago metropolitan area. We cater to wedding parties, school groups, sports teams, vacationing groups, and others who want reliable and stylish transportation without the stress of having to drive themselves."
+        body="Stop & Go Airport Shuttle Service, Inc. provides charter bus rental services to New Lenox and Plainfield, Illinois clients. Our professional chauffeurs are committed to getting groups to their destinations and back safely and on schedule. Groups can rent our buses for trips inside and outside of the greater Chicago metropolitan area. We cater to wedding parties, school groups, sports teams, vacationing groups, and others who want reliable and stylish transportation without the stress of having to drive themselves."
         note="A $200 deposit is required."
         image="/images/sections/party-smile-limo.jpg"
-        imageAlt="Happy group smiling inside a limo with Stop and Go Airport Shuttle Service Inc."
+        imageAlt="Happy group smiling inside a limo with Stop & Go Airport Shuttle Service, Inc."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         inverted=true

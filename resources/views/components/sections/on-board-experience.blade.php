@@ -5,14 +5,14 @@
     ─────────────────────────────────────────────────────────────────────────────
     Two-column trust and amenities section on a navy background.
 
-    H2  — "What You Get on Every Stop & Go Party Bus"
+    H2  — "What You Get on Every Stop & Go Airport Shuttle Service, Inc. Party Bus"
       H3 — Amenities That Come Standard (7-item checklist, left column)
       H3 — One Vehicle. One Group. One Fixed Price. (logistics copy, right column)
         H4 — How far in advance should you book?
              Centered CTA button (radius="soft") + phone number
 
     Voice-search SEO: answers "what amenities come on a party bus?" and
-    "why book with Stop & Go?"
+    "why book with Stop & Go Airport Shuttle Service, Inc.?"
     ─────────────────────────────────────────────────────────────────────────────
     Props
       id  string  Section id attribute. Defaults to 'on-board-experience'.
@@ -23,10 +23,10 @@
 
         <div class="max-w-3xl mb-12">
             <h2 style="font-family: var(--font-head); font-size: var(--font-size-h2); color: var(--white); letter-spacing: var(--letter-spacing-h2); line-height: 1.2; font-weight: 700;" class="mb-5">
-                What You Get on Every Stop &amp; Go Party Bus
+                What You Get on Every Stop &amp; Go Airport Shuttle Service, Inc. Party Bus
             </h2>
             <p style="font-family: var(--font-body); font-size: 1.2rem; color: var(--cloud); line-height: 1.7;">
-                Every vehicle in our fleet is inspected before each booking. Every chauffeur is background-checked, licensed, insured, and in uniform when they arrive at your door. We are licensed and insured in Illinois, and we operate under a strict on-time guarantee. When you book with Stop &amp; Go, you are not booking a ride. You are booking a professional transportation experience with a company that has served the southwest suburbs since 2015.
+                Every vehicle in our fleet is inspected before each booking. Every chauffeur is background-checked, licensed, insured, and in uniform when they arrive at your door. We are licensed and insured in Illinois, and we operate under a strict on-time guarantee. When you book with Stop &amp; Go Airport Shuttle Service, Inc., you are not booking a ride. You are booking a professional transportation experience with a company that has served the southwest suburbs since 2015.
             </p>
         </div>
 

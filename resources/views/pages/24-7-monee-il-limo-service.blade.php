@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Monee, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Monee, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -48,7 +48,7 @@
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/monee-event-transport.png"
-        imageAlt="Event transportation in Monee, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Event transportation in Monee, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="left"
         :inverted="true"
     />
@@ -59,7 +59,7 @@
         descSubheading="Planning a special day? Our Wedding limo in Monee IL ensures elegant, comfortable, and stress-free transportation while we handle all the details."
         descBody="From weddings and private events to business travel and special occasions, our event transportation in Monee IL and chauffeur service in Monee IL provide reliable, comfortable, and on-time rides. We focus on safety, punctuality, and a smooth experience so every trip feels effortless from start to finish. Request your ride today using our quick contact form and secure your transportation promptly."
         descImage="/images/sections/monee-wedding-events.png"
-        descImageAlt="Wedding and event transportation in Monee, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Wedding and event transportation in Monee, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
         :inverted="true"
     />
@@ -70,7 +70,7 @@
         headingBold="the Monee Area"
         body="Whether you are commuting for a corporate meeting at one of the major local distribution centers or arriving at a hotel for a well-deserved vacation, the quality of your transportation defines your entire experience. Our premier Monee IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you enjoy a quiet, high-end cabin. By choosing a specialized Monee executive car service, you skip the common hassles of navigation and parking to focus entirely on your personal priorities. Our modern fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and high-end service standards."
         image="/images/sections/monee-sophisticated-travel.png"
-        imageAlt="Sophisticated travel in Monee, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Sophisticated travel in Monee, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -81,7 +81,7 @@
         headingBold="Modern Illinois Residents"
         body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations at your own speed with a private driver standing by for your immediate departure. Our reliable Monee to O'Hare airport transfer guarantees that you arrive at your terminal on time without the unpredictable wait times often found with standard ride-sharing platforms. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a truly productive and fluid schedule."
         image="/images/sections/monee-memorable-arrivals.png"
-        imageAlt="Dynamic transportation options in Monee, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Dynamic transportation options in Monee, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -92,7 +92,7 @@
         headingBold="Special Occasions"
         body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from rustic barn weddings to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at unique venues like the Crozehead Cooperage or local banquet halls and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with care."
         image="/images/sections/monee-dynamic-transport.png"
-        imageAlt="Transportation for special occasions in Monee, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Transportation for special occasions in Monee, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

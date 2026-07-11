@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Elwood, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Elwood, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -45,7 +45,7 @@
         headingBold="Limo Service"
         body="Enjoy stress-free travel with our 24/7 Elwood IL limo service, built for comfort, reliability, and punctuality. Whether you need a wedding limo in Elwood IL, an airport shuttle in Elwood IL, or transportation for any special event, we provide professional drivers, clean vehicles, and on-time service to make every ride smooth and effortless."
         image="/images/sections/elwood-limo.png"
-        imageAlt="Happy client in a Stop and Go limousine in Elwood, Illinois"
+        imageAlt="Happy client in a Stop & Go Airport Shuttle Service, Inc. limousine in Elwood, Illinois"
         :inverted="true"
     />
 
@@ -57,7 +57,7 @@
         descBody="From professional chauffeur service in Elwood IL to reliable event transportation in Elwood IL and premium limousine transportation in Elwood IL, we provide safe, comfortable, and on-time rides for any occasion. Our experienced team focuses on punctuality, safety, and customer satisfaction to make every trip effortless."
         descClosing="Book your ride today using our quick contact form and secure your transportation instantly."
         descImage="/images/sections/elwood-transportation.png"
-        descImageAlt="Wedding and event transportation in Elwood, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Wedding and event transportation in Elwood, Illinois — Stop & Go Airport Shuttle Service, Inc."
     />
 
     <x-sections.image-info-card
@@ -66,7 +66,7 @@
         headingBold="Throughout the Elwood Region"
         body="Whether you are commuting for a corporate meeting at the massive intermodal center or arriving at a hotel for a well-deserved vacation, the quality of your transportation defines your entire experience. Our premier Elwood IL limo service provides a dedicated professional driver who manages every detail of the local heavy traffic while you relax in a quiet, high-end cabin. By choosing a specialized Elwood logistics car service, you skip the common hassles of navigating industrial routes and truck traffic to focus entirely on your personal priorities. Our modern fleet delivers a sophisticated travel solution for clients who value safety and punctuality above all else."
         image="/images/sections/elwood-comfort.png"
-        imageAlt="Experience comfort and sophistication in Elwood, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Experience comfort and sophistication in Elwood, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -77,7 +77,7 @@
         headingBold="Illinois Residents"
         body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations, from the local business parks to the scenic Midewin National Tallgrass Prairie, at your own speed with a private driver standing by for your departure. Our reliable Elwood to O'Hare airport shuttle guarantees that you arrive at your terminal on time without the unpredictable wait times often associated with standard ride-sharing applications. Having a private vehicle at your disposal helps you maintain a truly productive and efficient schedule."
         image="/images/sections/elwood-dynamic-transport.png"
-        imageAlt="Dynamic transportation in Elwood, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Dynamic transportation in Elwood, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -88,7 +88,7 @@
         headingBold="Special Occasions"
         body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from rustic farm ceremonies to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at unique venues like the Children's Garden or nearby banquet halls and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with the highest level of care."
         image="/images/sections/elwood-memorable-travel.png"
-        imageAlt="Memorable travel in Elwood, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Memorable travel in Elwood, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

@@ -47,7 +47,7 @@
         headingPrefix="Enjoy Your Trip With Us! Experience a "
         headingBold="24/7 Service You Can Trust"
         heading=""
-        body="Stop & Go offers 24/7 airport shuttle service from New Lenox, Plainfield, Naperville, Aurora, Joliet, and Chicago suburbs to O'Hare and Midway. Reliable, door-to-door service with professional drivers, flight monitoring, and luggage assistance ensures stress-free travel for individuals, families, and groups."
+        body="Stop & Go Airport Shuttle Service, Inc. offers 24/7 airport shuttle service from New Lenox, Plainfield, Naperville, Aurora, Joliet, and Chicago suburbs to O'Hare and Midway. Reliable, door-to-door service with professional drivers, flight monitoring, and luggage assistance ensures stress-free travel for individuals, families, and groups."
     />
 
     <x-sections.three-steps :inverted="true" />
@@ -59,7 +59,7 @@
         submitLabel="Send Message"
         descHeading="Why Choose Us?"
         descSubheading="Complete Transportation Services"
-        descBody="As a trusted provider of airport transportation, Stop & Go offers complete airport shuttle services throughout the Chicago suburbs:"
+        descBody="As a trusted provider of airport transportation, Stop & Go Airport Shuttle Service, Inc. offers complete airport shuttle services throughout the Chicago suburbs:"
         :descBullets="[
             'Party bus rental for weddings, proms, birthdays, and nights out',
             'Limousine service for weddings, events, and special occasions',
@@ -95,7 +95,7 @@
         buttonText="Book Airport Shuttle"
         buttonHref="/bookings-reservations"
         image="/images/sections/new-lenox-airport.png"
-        imageAlt="Stop and Go Airport Shuttle vehicle ready for New Lenox airport pickup"
+        imageAlt="Stop & Go Airport Shuttle Service, Inc. vehicle ready for New Lenox airport pickup"
         imageAspect="3/2"
     />
 
@@ -111,7 +111,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional"
         headingBold="Transportation Solutions"
-        body="As a trusted Chicago area transportation company, Stop & Go provides full-service airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Aurora, Joliet, and all surrounding suburbs. Our professional drivers and modern fleet deliver safe, comfortable, and on-time service with convenient access to I‑88, I‑355, and I‑55 for smooth airport transfers every time."
+        body="As a trusted Chicago area transportation company, Stop & Go Airport Shuttle Service, Inc. provides full-service airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Aurora, Joliet, and all surrounding suburbs. Our professional drivers and modern fleet deliver safe, comfortable, and on-time service with convenient access to I‑88, I‑355, and I‑55 for smooth airport transfers every time."
         buttonText="Book Your Ride"
         buttonHref="/bookings-reservations"
         directions="Downtown Naperville to O'Hare: 25–40 minutes via I‑88 East to I‑294 North • Crossroads Area to Midway: 30–45 minutes • Naperville to airport terminals: 20–35 minutes via I‑88 East • All Naperville neighborhoods served for airport shuttle • Round-trip packages available for O'Hare and Midway"

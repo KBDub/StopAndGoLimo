@@ -27,7 +27,7 @@
     metaDescription="Browse our luxury fleet of limousines, party buses, coach buses, and shuttle vehicles serving Chicagoland. Pristine vehicles for every occasion."
     currentPage="gallery"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Luxury fleet gallery at Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Luxury fleet gallery at Stop & Go Airport Shuttle Service, Inc."
 >
 
     {{-- ── 1. Hero ──────────────────────────────────────────────────── --}}
@@ -92,7 +92,7 @@
                 >
                 <img
                     src="/images/gallery/clients-womens-group-inside-party-bus-daytime.jpg"
-                    alt="Group of women celebrating inside a Stop and Go party bus"
+                    alt="Group of women celebrating inside a Stop & Go Airport Shuttle Service, Inc. party bus"
                     class="w-full object-cover"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
@@ -157,14 +157,14 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <img
                         src="/images/gallery/fleet-full-lineup-parking-lot-mixed.jpg"
-                        alt="Full lineup of Stop and Go fleet vehicles in parking lot"
+                        alt="Full lineup of Stop & Go Airport Shuttle Service, Inc. fleet vehicles in parking lot"
                         class="w-full object-cover"
                         style="aspect-ratio: 16/9;"
                         loading="lazy"
                     >
                     <img
                         src="/images/gallery/fleet-party-bus-chicago-skyline-night.jpg"
-                        alt="Stop and Go party bus against the Chicago skyline at night"
+                        alt="Stop & Go Airport Shuttle Service, Inc. party bus against the Chicago skyline at night"
                         class="w-full object-cover"
                         style="aspect-ratio: 16/9;"
                         loading="lazy"
@@ -218,7 +218,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <img
                         src="/images/gallery/clients-bride-exiting-sprinter-van.jpg"
-                        alt="Bride exiting a Stop and Go Sprinter van on her wedding day"
+                        alt="Bride exiting a Stop & Go Airport Shuttle Service, Inc. Sprinter van on her wedding day"
                         class="w-full object-cover"
                         style="aspect-ratio: 4/3;"
                         loading="lazy"
@@ -249,7 +249,7 @@
         ['src' => '/images/gallery/clients-prom-couple-outside-black-suv.jpg',          'alt' => 'Prom couple outside black luxury SUV'],
         ['src' => '/images/gallery/clients-prom-group-inside-transit-van.jpg',          'alt' => 'Prom group inside transit van'],
         ['src' => '/images/gallery/clients-casual-group-outside-black-transit-van.jpg', 'alt' => 'Group of guests outside black transit van'],
-        ['src' => '/images/gallery/about-owner-vincent-rover-transit-van.jpg',          'alt' => 'Owner Vincent beside a Stop and Go transit van'],
+        ['src' => '/images/gallery/about-owner-vincent-rover-transit-van.jpg',          'alt' => 'Owner Vincent beside a Stop & Go Airport Shuttle Service, Inc. transit van'],
     ];
     @endphp
 
@@ -285,7 +285,7 @@
         ['src' => '/images/gallery/clients-bolingbrook-chamber-group-sprinter.jpg',        'alt' => 'Bolingbrook Chamber of Commerce group outside Sprinter'],
     ];
     $clientsRowB = [
-        ['src' => '/images/gallery/clients-family-group-inside-party-bus.jpg',             'alt' => 'Family group inside Stop and Go party bus'],
+        ['src' => '/images/gallery/clients-family-group-inside-party-bus.jpg',             'alt' => 'Family group inside Stop & Go Airport Shuttle Service, Inc. party bus'],
         ['src' => '/images/gallery/clients-womens-group-inside-party-bus-daytime.jpg',     'alt' => "Women's group inside party bus during daytime"],
         ['src' => '/images/gallery/clients-prom-couple-outside-black-suv.jpg',             'alt' => 'Prom couple outside black luxury SUV'],
         ['src' => '/images/gallery/clients-prom-group-inside-transit-van.jpg',             'alt' => 'Prom group inside transit van'],
@@ -330,7 +330,7 @@
                 <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body" style="font-size: 1.125rem; color: var(--cloud); line-height: 1.7; max-width: 62ch; margin-bottom: 2rem;">
-                Stop and Go Airport Shuttle Service, Inc. was founded on a simple idea: everyone deserves a comfortable, reliable, and professional ride. Based in New Lenox, Illinois, we have grown into a trusted transportation partner for families, businesses, and event planners across the Chicago metropolitan area. We are proud members of the New Lenox and Bolingbrook Chambers of Commerce.
+                Stop & Go Airport Shuttle Service, Inc. was founded on a simple idea: everyone deserves a comfortable, reliable, and professional ride. Based in New Lenox, Illinois, we have grown into a trusted transportation partner for families, businesses, and event planners across the Chicago metropolitan area. We are proud members of the New Lenox and Bolingbrook Chambers of Commerce.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -357,7 +357,7 @@
                 >
                 <img
                     src="/images/gallery/clients-womens-group-inside-party-bus-daytime.jpg"
-                    alt="Group of women celebrating inside a Stop and Go party bus"
+                    alt="Group of women celebrating inside a Stop & Go Airport Shuttle Service, Inc. party bus"
                     class="w-full object-cover"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"

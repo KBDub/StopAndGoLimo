@@ -1,6 +1,6 @@
 <x-layouts.page
     title="Brand Style Guide — Stop & Go Airport Shuttle Service, Inc."
-    metaDescription="Twilight Luxe brand style guide for Stop &amp; Go Airport Shuttle Service Inc. Color palette, typography, buttons, banners, and mega menu."
+    metaDescription="Twilight Luxe brand style guide for Stop &amp; Go Airport Shuttle Service, Inc. Color palette, typography, buttons, banners, and mega menu."
     currentPage="demo"
     :noIndex="true"
 >
@@ -13,7 +13,7 @@
                 <span class="inline-block font-head font-semibold text-xs tracking-widest text-champagne border border-champagne/40 px-5 py-2 mb-8 bg-champagne/5">Brand Style Guide</span>
                 <h1 class="font-head font-extrabold text-4xl md:text-6xl mb-6 leading-tight bg-grad-champagne-shine bg-clip-text" style="-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Stop &amp; Go Airport Shuttle Service, Inc.</h1>
                 <p class="text-muted-light text-lg max-w-xl mx-auto mb-4">A refined navy-and-champagne palette engineered for premium ground transportation, confident, quiet, and first class.</p>
-                <p class="text-sm tracking-widest text-muted font-head"><strong class="text-champagne font-semibold">Stop &amp; Go Airport Shuttle Service Inc.</strong> &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet, Chicago and all of Illinois</p>
+                <p class="text-sm tracking-widest text-muted font-head"><strong class="text-champagne font-semibold">Stop &amp; Go Airport Shuttle Service, Inc.</strong> &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet, Chicago and all of Illinois</p>
             </div>
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
@@ -756,7 +756,7 @@
                     <x-ui.banner-thin-champagne />
                     <x-ui.banner-thin-navy />
                     <div class="nav-bar">
-                        <div class="nav-logo">Stop &amp; Go <span>Limo</span></div>
+                        <div class="nav-logo">Stop &amp; Go Airport Shuttle Service, Inc. <span>Limo</span></div>
                         <div class="nav-item"><a href="#" class="nav-link active">Welcome</a></div>
                         <div class="nav-item">
                             <a href="#" class="nav-link">About <span class="caret">&#9660;</span></a>

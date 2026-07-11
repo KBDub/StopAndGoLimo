@@ -46,7 +46,7 @@
     <x-sections.info-strip
         headingPrefix="Luxury Prom Party Bus"
         headingBold="Coverage Across Illinois"
-        body="Stop & Go offers luxury prom party bus rentals from Romeoville, Naperville, Joliet, Plainfield, New Lenox, and surrounding suburbs to venues across Illinois. Professional chauffeurs, modern sound systems, and customizable lighting ensure a safe, stylish, and unforgettable prom experience for students and peace of mind for parents."
+        body="Stop & Go Airport Shuttle Service, Inc. offers luxury prom party bus rentals from Romeoville, Naperville, Joliet, Plainfield, New Lenox, and surrounding suburbs to venues across Illinois. Professional chauffeurs, modern sound systems, and customizable lighting ensure a safe, stylish, and unforgettable prom experience for students and peace of mind for parents."
     />
 
     <x-sections.three-steps :inverted="true" />
@@ -61,7 +61,7 @@
         descImageAlt="Students celebrating on a prom night party bus — Stop & Go Airport Shuttle Service, Inc. Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Transportation Services"
-        descBody="As a trusted provider of prom transportation, Stop and Go delivers a high-end prom party bus experience throughout Illinois and the surrounding suburbs:"
+        descBody="As a trusted provider of prom transportation, Stop & Go Airport Shuttle Service, Inc. delivers a high-end prom party bus experience throughout Illinois and the surrounding suburbs:"
         :descBullets="[
             'Party bus rentals for proms, birthdays, school events, and nights out',
             'Limousine service for proms, formal events, and special occasions',
@@ -79,7 +79,7 @@
     <x-sections.travel-in-style
         heading="Arrive at Prom"
         headingBold="in Style"
-        body="Make prom night unforgettable with Stop and Go. Our luxury party buses and limousines serve students and families across Chicagoland, from New Lenox and Naperville to Aurora, Joliet, and beyond. Professional chauffeurs, premium sound systems, and spacious interiors turn every mile into part of the celebration. Safe, on-time, and stress-free for parents and students alike."
+        body="Make prom night unforgettable with Stop & Go Airport Shuttle Service, Inc.. Our luxury party buses and limousines serve students and families across Chicagoland, from New Lenox and Naperville to Aurora, Joliet, and beyond. Professional chauffeurs, premium sound systems, and spacious interiors turn every mile into part of the celebration. Safe, on-time, and stress-free for parents and students alike."
         buttonText="Book Your Prom Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/prom-night-2.jpg"

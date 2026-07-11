@@ -5,7 +5,7 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
     "@id": "https://newlenoxlimoservice.com/#business",
-    "name": "Stop & Go Airport Shuttle Service Inc.",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
     "telephone": "",
@@ -83,8 +83,8 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Luxury Limousine Services — Stop & Go",
-    "description": "Full list of luxury limousine services offered by Stop & Go Airport Shuttle Service Inc. from New Lenox, Illinois.",
+    "name": "Luxury Limousine Services — Stop & Go Airport Shuttle Service, Inc.",
+    "description": "Full list of luxury limousine services offered by Stop & Go Airport Shuttle Service, Inc. from New Lenox, Illinois.",
     "itemListElement": [
         {
             "@type": "ListItem", "position": 1,
@@ -92,7 +92,7 @@
                 "@type": "Product",
                 "name": "Stretch Limousine Rental",
                 "description": "Stretch limousine rentals for 8 to 16 passengers across Will County and Chicagoland. Plush leather seating, ambient LED lighting, premium audio, privacy partition, and a background-checked chauffeur. Flat-rate, all-inclusive pricing.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -102,7 +102,7 @@
                 "@type": "Product",
                 "name": "Wedding Limousine Service",
                 "description": "Wedding limousine service for the bridal party, newlywed getaway, and guest shuttles across Will County. Formally attired chauffeur, red carpet arrival, multi-stop coordination. Book 6 to 12 months ahead.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -112,7 +112,7 @@
                 "@type": "Product",
                 "name": "Quinceañera Limousine Service",
                 "description": "Quinceañera limousine service across New Lenox, Joliet, and Will County. Carries the quinceañera and her entire court from the home gathering through the church and reception. Multi-stop itinerary coordination.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -122,7 +122,7 @@
                 "@type": "Product",
                 "name": "Prom Limousine Service",
                 "description": "Prom and homecoming limousine service for Lincoln-Way and Joliet Township students. Background-checked chauffeur, group travel, confirmed pickup and drop-off details for parents. Book 2 to 3 months ahead.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -132,7 +132,7 @@
                 "@type": "Product",
                 "name": "Bachelorette and Night-Out Limousine",
                 "description": "Bachelorette party and group night-out limousine service across Chicagoland. Multi-stop bar and venue routing, ambient lighting, premium audio, built-in coolers. Flat-rate pricing with no surge at the end of the night.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -142,7 +142,7 @@
                 "@type": "Product",
                 "name": "Concert Limousine Service",
                 "description": "Concert limousine service to the United Center, Soldier Field, Allstate Arena, Wrigley Field, and Northerly Island. Curbside drop-off, no parking, guaranteed return pickup at a price set in advance.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 250, "highPrice": 5000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
@@ -188,7 +188,7 @@
             "name": "Is the limousine rental price all-inclusive?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Stop & Go limousine pricing is flat-rate and all-inclusive. The quote you receive covers the vehicle, the chauffeur, fuel, tolls, and the duration of your rental. There is no surge pricing and no hidden fees added on the day of your event."
+                "text": "Yes. Stop & Go Airport Shuttle Service, Inc. limousine pricing is flat-rate and all-inclusive. The quote you receive covers the vehicle, the chauffeur, fuel, tolls, and the duration of your rental. There is no surge pricing and no hidden fees added on the day of your event."
             }
         },
         {
@@ -222,11 +222,11 @@
 @endpush
 
 <x-layouts.page
-    title="Luxury Limousine Service | Will County &amp; Chicagoland | Stop &amp; Go"
+    title="Luxury Limousine Service | Will County &amp; Chicagoland | Stop &amp; Go Airport Shuttle Service, Inc."
     metaDescription="Luxury stretch limousine service for weddings, quinceañeras, proms, concerts, and milestone celebrations across New Lenox, Joliet, Naperville, and all of Will County. Flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/best-limo-services-hero.png"
-    ogImageAlt="Stop and Go luxury stretch limousine service for celebrations across Will County and Chicagoland"
+    ogImageAlt="Stop & Go Airport Shuttle Service, Inc. luxury stretch limousine service for celebrations across Will County and Chicagoland"
 >
 
     <x-sections.category-hero
@@ -245,18 +245,18 @@
         heading="The Celebration Starts"
         headingBold="the Moment the Door Opens"
         subtitle=""
-        body="A stretch limousine does something an ordinary car cannot: it makes the ride part of the event. The moment your group steps inside, the atmosphere shifts. Wrap-around plush leather seating keeps everyone together and facing each other. Color-shifting ambient LED lighting sets the tone before the first stop. Premium audio fills the cabin. Built-in coolers keep drinks cold between venues. And a background-checked, professionally attired chauffeur handles every mile so no one in the group has to think about parking, timing, or getting home. For weddings and quinceañeras, that means the bridal party or the court of honor arrives relaxed, on schedule, and photo-ready. For concerts and nights out, it means the energy is already built by the time the group walks through the door. For proms and school dances, it means parents know exactly who is behind the wheel and where the group is headed. Stop & Go has been building those moments across Will County since 2015, and the limousine experience we deliver is the same whether it is a weeknight anniversary dinner or a peak-season Saturday wedding."
+        body="A stretch limousine does something an ordinary car cannot: it makes the ride part of the event. The moment your group steps inside, the atmosphere shifts. Wrap-around plush leather seating keeps everyone together and facing each other. Color-shifting ambient LED lighting sets the tone before the first stop. Premium audio fills the cabin. Built-in coolers keep drinks cold between venues. And a background-checked, professionally attired chauffeur handles every mile so no one in the group has to think about parking, timing, or getting home. For weddings and quinceañeras, that means the bridal party or the court of honor arrives relaxed, on schedule, and photo-ready. For concerts and nights out, it means the energy is already built by the time the group walks through the door. For proms and school dances, it means parents know exactly who is behind the wheel and where the group is headed. Stop & Go Airport Shuttle Service, Inc. has been building those moments across Will County since 2015, and the limousine experience we deliver is the same whether it is a weeknight anniversary dinner or a peak-season Saturday wedding."
         buttonText="Get a Limo Quote"
         buttonHref="/get-a-quote"
         image="/images/sections/limousine-services-tis.png"
-        imageAlt="Interior of a Stop &amp; Go luxury stretch limousine with ambient lighting and plush seating"
+        imageAlt="Interior of a Stop &amp; Go Airport Shuttle Service, Inc. luxury stretch limousine with ambient lighting and plush seating"
         :inverted="false"
     />
 
     <x-sections.info-strip
         headingBold="Flat-Rate Pricing."
         heading="Locked at Booking. No Surprises."
-        body="Limousine pricing that changes on the day of your event adds stress to a day that already has enough of it. Stop & Go flat-rate pricing works differently: the quote you receive before your event is the figure on your receipt after it. Fuel, tolls, the chauffeur, and the full duration of your booking are all covered in that single number. There is no meter running while you are inside the venue, no surge pricing when the concert ends and every rideshare app doubles its rates, and no extra charges added because your event ran long. The rate locks at booking and stays locked, so your event budget stays intact."
+        body="Limousine pricing that changes on the day of your event adds stress to a day that already has enough of it. Stop & Go Airport Shuttle Service, Inc. flat-rate pricing works differently: the quote you receive before your event is the figure on your receipt after it. Fuel, tolls, the chauffeur, and the full duration of your booking are all covered in that single number. There is no meter running while you are inside the venue, no surge pricing when the concert ends and every rideshare app doubles its rates, and no extra charges added because your event ran long. The rate locks at booking and stays locked, so your event budget stays intact."
     />
 
     <x-sections.limo-services-grid
@@ -264,7 +264,7 @@
         heading="Limousine Services"
         headingBold="for Every Celebration"
         subheading="Every Occasion We Serve in a Stretch Limousine"
-        intro="Stop & Go has been delivering luxury limousine service across Will County and Chicagoland since 2015. Here is a look at the celebrations and occasions our clients book most often, and what each limousine rental typically includes."
+        intro="Stop & Go Airport Shuttle Service, Inc. has been delivering luxury limousine service across Will County and Chicagoland since 2015. Here is a look at the celebrations and occasions our clients book most often, and what each limousine rental typically includes."
         :cards="[
             [
                 'service' => 'Stretch Limousine Rental',
@@ -272,23 +272,23 @@
             ],
             [
                 'service' => 'Wedding Limousine Service',
-                'copy'    => 'A wedding day runs on timing, and Stop & Go wedding limousine service is built around that reality. Your chauffeur arrives in formal attire, rolls out a red carpet, and coordinates every leg from getting-ready photos through the reception exit. We have worked at venues across Will County, including the Jacob Henry Mansion in Joliet, CD &amp; ME in Frankfort, and Prestwick Country Club, and we keep backup options in reserve so your day stays on track no matter what.',
+                'copy'    => 'A wedding day runs on timing, and Stop & Go Airport Shuttle Service, Inc. wedding limousine service is built around that reality. Your chauffeur arrives in formal attire, rolls out a red carpet, and coordinates every leg from getting-ready photos through the reception exit. We have worked at venues across Will County, including the Jacob Henry Mansion in Joliet, CD &amp; ME in Frankfort, and Prestwick Country Club, and we keep backup options in reserve so your day stays on track no matter what.',
             ],
             [
                 'service' => 'Quinceañera Limousine Service',
-                'copy'    => 'A quinceañera carries the quinceañera and her full court of honor through a multi-stop day: home gathering, church arrival, photo stops, and the grand reception entrance. Stop & Go quinceañera limousines are sized for the whole court, with ambient lighting, premium audio, and a stocked soft bar with sparkling cider. We have coordinated quinceañera celebrations across New Lenox, Joliet, and Will County since 2015, and we know how to keep a full itinerary on schedule.',
+                'copy'    => 'A quinceañera carries the quinceañera and her full court of honor through a multi-stop day: home gathering, church arrival, photo stops, and the grand reception entrance. Stop & Go Airport Shuttle Service, Inc. quinceañera limousines are sized for the whole court, with ambient lighting, premium audio, and a stocked soft bar with sparkling cider. We have coordinated quinceañera celebrations across New Lenox, Joliet, and Will County since 2015, and we know how to keep a full itinerary on schedule.',
             ],
             [
                 'service' => 'Prom and School Dance Limousine',
-                'copy'    => 'Stop & Go prom limousines serve the Lincoln-Way and Joliet Township communities of New Lenox, Frankfort, Mokena, and Will County. Every chauffeur is background-checked and professionally trained, every vehicle is licensed and insured, and pickup and drop-off details are confirmed in advance so parents know exactly who is behind the wheel and where the group is headed. The whole group travels together in plush leather comfort with ambient lighting and premium audio.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. prom limousines serve the Lincoln-Way and Joliet Township communities of New Lenox, Frankfort, Mokena, and Will County. Every chauffeur is background-checked and professionally trained, every vehicle is licensed and insured, and pickup and drop-off details are confirmed in advance so parents know exactly who is behind the wheel and where the group is headed. The whole group travels together in plush leather comfort with ambient lighting and premium audio.',
             ],
             [
                 'service' => 'Bachelorette and Night-Out Limousine',
-                'copy'    => 'Stop & Go bachelorette and group night-out limousines keep the entire group together for bar crawls, dinner-and-drinks evenings, and multi-stop nights across Chicagoland. The ride starts the moment the doors close: color-shifting ambient lighting, premium Bluetooth audio, and built-in coolers make the limousine part of the celebration. Your rate is set in advance with no surge pricing at the end of the night, and every chauffeur is background-checked and professionally trained.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. bachelorette and group night-out limousines keep the entire group together for bar crawls, dinner-and-drinks evenings, and multi-stop nights across Chicagoland. The ride starts the moment the doors close: color-shifting ambient lighting, premium Bluetooth audio, and built-in coolers make the limousine part of the celebration. Your rate is set in advance with no surge pricing at the end of the night, and every chauffeur is background-checked and professionally trained.',
             ],
             [
                 'service' => 'Concert Limousine Service',
-                'copy'    => 'Stop & Go concert limousines run from New Lenox, Joliet, and across Will County to Chicago\'s major venues: the United Center, Soldier Field, Allstate Arena, Wrigley Field, and Huntington Bank Pavilion at Northerly Island. Your chauffeur knows the venue drop-off lanes so you arrive together without circling for a spot. Your return pickup is confirmed at a rate locked before the show, with no surge pricing when the crowd empties out.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. concert limousines run from New Lenox, Joliet, and across Will County to Chicago\'s major venues: the United Center, Soldier Field, Allstate Arena, Wrigley Field, and Huntington Bank Pavilion at Northerly Island. Your chauffeur knows the venue drop-off lanes so you arrive together without circling for a spot. Your return pickup is confirmed at a rate locked before the show, with no surge pricing when the crowd empties out.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -298,7 +298,7 @@
         id="limousine-process"
         heading="Six Steps That Happen Before"
         headingBold="Your Limousine Arrives"
-        intro="A great limousine experience is built on preparation. Here is every step Stop & Go takes from the moment you inquire to the moment your chauffeur pulls up to the door."
+        intro="A great limousine experience is built on preparation. Here is every step Stop & Go Airport Shuttle Service, Inc. takes from the moment you inquire to the moment your chauffeur pulls up to the door."
         :steps="[
             [
                 'num'   => '01',
@@ -338,31 +338,31 @@
         heading="Every Celebration That Belongs"
         headingBold="in a Limousine"
         subheading="Who Books Our Luxury Limousines Most Often"
-        intro="Luxury limousine service fits more occasions than people expect. Here is a look at the events and milestones Stop & Go serves most often, and what each limousine booking typically includes."
+        intro="Luxury limousine service fits more occasions than people expect. Here is a look at the events and milestones Stop & Go Airport Shuttle Service, Inc. serves most often, and what each limousine booking typically includes."
         :occasions="[
             [
                 'occasion' => 'Weddings and Bridal Parties',
-                'copy'     => 'Wedding limousine service from Stop & Go covers the full day, from getting-ready pickups to the newlyweds\' getaway and optional guest shuttles between hotel and venue. A formally attired chauffeur, a red carpet arrival, and meticulous timing coordination make the transportation match the day it is serving. Peak spring and summer Saturday dates book 6 to 12 months in advance.',
+                'copy'     => 'Wedding limousine service from Stop & Go Airport Shuttle Service, Inc. covers the full day, from getting-ready pickups to the newlyweds\' getaway and optional guest shuttles between hotel and venue. A formally attired chauffeur, a red carpet arrival, and meticulous timing coordination make the transportation match the day it is serving. Peak spring and summer Saturday dates book 6 to 12 months in advance.',
             ],
             [
                 'occasion' => 'Quinceañeras and Court of Honor',
-                'copy'     => 'The quinceañera and her damas and chambelanes travel together through every stop of the day. Stop & Go quinceañera limousines are sized for the full court and designed around a multi-stop itinerary that covers the home, the church, the photo locations, and the reception. Parents appreciate the confirmed logistics and the peace of mind that comes with a licensed, insured, background-checked chauffeur.',
+                'copy'     => 'The quinceañera and her damas and chambelanes travel together through every stop of the day. Stop & Go Airport Shuttle Service, Inc. quinceañera limousines are sized for the full court and designed around a multi-stop itinerary that covers the home, the church, the photo locations, and the reception. Parents appreciate the confirmed logistics and the peace of mind that comes with a licensed, insured, background-checked chauffeur.',
             ],
             [
                 'occasion' => 'Proms, Homecoming, and School Dances',
-                'copy'     => 'Prom night in a stretch limousine keeps the whole group together, removes the designated driver problem entirely, and gives parents a professional, accountable operator at the wheel. Stop & Go serves the Lincoln-Way and Joliet Township communities with a prom limousine experience that is as fun for the students as it is reassuring for the families. Prom season books 2 to 3 months ahead.',
+                'copy'     => 'Prom night in a stretch limousine keeps the whole group together, removes the designated driver problem entirely, and gives parents a professional, accountable operator at the wheel. Stop & Go Airport Shuttle Service, Inc. serves the Lincoln-Way and Joliet Township communities with a prom limousine experience that is as fun for the students as it is reassuring for the families. Prom season books 2 to 3 months ahead.',
             ],
             [
                 'occasion' => 'Sweet 16 and Milestone Birthdays',
-                'copy'     => 'A milestone birthday deserves an arrival that matches the moment. Stop & Go birthday limousines cover sweet sixteens, 21st birthdays, and landmark 30th, 40th, 50th, and beyond celebrations with a group-sized vehicle, ambient lighting, and a chauffeur who handles the route while the group focuses on the occasion. Every stop, from dinner to the surprise venue, is part of the plan.',
+                'copy'     => 'A milestone birthday deserves an arrival that matches the moment. Stop & Go Airport Shuttle Service, Inc. birthday limousines cover sweet sixteens, 21st birthdays, and landmark 30th, 40th, 50th, and beyond celebrations with a group-sized vehicle, ambient lighting, and a chauffeur who handles the route while the group focuses on the occasion. Every stop, from dinner to the surprise venue, is part of the plan.',
             ],
             [
                 'occasion' => 'Bachelorette and Bachelor Parties',
-                'copy'     => 'A bachelorette or bachelor party night built around one limousine is simpler, safer, and more fun than splitting the group across separate rideshare pickups. Stop & Go bachelorette and bachelor limousines handle the multi-stop route while the group handles the celebration. The rate is set before the night starts with no surge pricing at the end, and everyone rides home in the same vehicle.',
+                'copy'     => 'A bachelorette or bachelor party night built around one limousine is simpler, safer, and more fun than splitting the group across separate rideshare pickups. Stop & Go Airport Shuttle Service, Inc. bachelorette and bachelor limousines handle the multi-stop route while the group handles the celebration. The rate is set before the night starts with no surge pricing at the end, and everyone rides home in the same vehicle.',
             ],
             [
                 'occasion' => 'Anniversaries and Romantic Evenings',
-                'copy'     => 'An anniversary dinner or milestone date night is elevated when neither person has to think about the drive, the parking, or the timing. Stop & Go anniversary limousine service provides a quiet, elegant vehicle for two with a chauffeur who manages the evening entirely. Ambient lighting, plush seating, and a professional driver make the occasion feel as special as it is.',
+                'copy'     => 'An anniversary dinner or milestone date night is elevated when neither person has to think about the drive, the parking, or the timing. Stop & Go Airport Shuttle Service, Inc. anniversary limousine service provides a quiet, elegant vehicle for two with a chauffeur who manages the evening entirely. Ambient lighting, plush seating, and a professional driver make the occasion feel as special as it is.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -381,7 +381,7 @@
             ],
             [
                 'feature' => 'Flat rate locked at booking, no surge pricing',
-                'detail'  => 'Rideshare apps reprice when a concert ends or a venue closes and every car in the area gets requested at once. Stop & Go locks your rate when you confirm the booking. The quote you receive is the receipt you sign after the event.',
+                'detail'  => 'Rideshare apps reprice when a concert ends or a venue closes and every car in the area gets requested at once. Stop & Go Airport Shuttle Service, Inc. locks your rate when you confirm the booking. The quote you receive is the receipt you sign after the event.',
             ],
             [
                 'feature' => 'The ride becomes part of the celebration',
@@ -389,14 +389,14 @@
             ],
             [
                 'feature' => 'Background-checked chauffeur on every booking',
-                'detail'  => 'Every Stop & Go chauffeur is background-checked, professionally trained, and formally attired. For proms, school dances, and celebrations involving minors, that accountability is not optional. Parents know who is driving and where the group is headed before the first pickup.',
+                'detail'  => 'Every Stop & Go Airport Shuttle Service, Inc. chauffeur is background-checked, professionally trained, and formally attired. For proms, school dances, and celebrations involving minors, that accountability is not optional. Parents know who is driving and where the group is headed before the first pickup.',
             ],
         ]"
         rightHeading="Will County's Limousine Company Since 2015"
         :rightParagraphs="[
-            'Stop & Go has been delivering luxury limousine service across Will County since 2015. Our chauffeurs know the venue access roads at the Jacob Henry Mansion in Joliet, the church parking sequences for large quinceañera celebrations in New Lenox and Frankfort, the concert drop-off protocols at the United Center and Soldier Field, and the quickest routes to every banquet hall and country club in the region. That local knowledge keeps multi-stop itineraries on schedule when a single wrong turn would cost 20 minutes.',
+            'Stop & Go Airport Shuttle Service, Inc. has been delivering luxury limousine service across Will County since 2015. Our chauffeurs know the venue access roads at the Jacob Henry Mansion in Joliet, the church parking sequences for large quinceañera celebrations in New Lenox and Frankfort, the concert drop-off protocols at the United Center and Soldier Field, and the quickest routes to every banquet hall and country club in the region. That local knowledge keeps multi-stop itineraries on schedule when a single wrong turn would cost 20 minutes.',
             'We serve New Lenox, Joliet, Frankfort, Mokena, Naperville, Orland Park, Tinley Park, Plainfield, Bolingbrook, Romeoville, Aurora, and all of Chicagoland from our Lincoln Highway headquarters, with a second location in Naperville for DuPage County celebrations. Whatever the occasion and wherever it takes you, the limousine standard is the same.',
-            'For weddings and large-scale events with multiple vehicles and complex logistics, Stop & Go provides a single dispatch contact who coordinates the full fleet. Your planner works with one person, every vehicle is accounted for, and every arrival is timed to the minute. It is the same professional organization behind every booking, whether it is one limousine for an anniversary dinner or four vehicles for a 200-person wedding.',
+            'For weddings and large-scale events with multiple vehicles and complex logistics, Stop & Go Airport Shuttle Service, Inc. provides a single dispatch contact who coordinates the full fleet. Your planner works with one person, every vehicle is accounted for, and every arrival is timed to the minute. It is the same professional organization behind every booking, whether it is one limousine for an anniversary dinner or four vehicles for a 200-person wedding.',
         ]"
         ctaHeading="Ready to book your limousine?"
         ctaBody="Get your flat-rate quote in minutes. We serve all of Will County and Chicagoland and are available 24 hours a day, 365 days a year."
@@ -475,13 +475,13 @@
         headingBold="luxury limousine?"
         headingTail=""
         image="/images/sections/limousine-comfort.jpg"
-        imageAlt="Luxury limousine interior with plush leather seating and ambient lighting for a Stop &amp; Go celebration"
+        imageAlt="Luxury limousine interior with plush leather seating and ambient lighting for a Stop &amp; Go Airport Shuttle Service, Inc. celebration"
         imageAspect="16/9"
         imageObjectPosition="center center"
         rightVariant="description"
         descHeading="What Every Limousine Rental Includes"
         descSubheading="The same standard on every booking, every celebration"
-        descBody="Whether you are booking a wedding limousine for 14 or a concert night for 8, here is what every Stop &amp; Go limousine rental includes:"
+        descBody="Whether you are booking a wedding limousine for 14 or a concert night for 8, here is what every Stop &amp; Go Airport Shuttle Service, Inc. limousine rental includes:"
         :descBullets="[
             'Background-checked, formally attired chauffeur on every rental, arriving before the first pickup',
             'Stretch limousine detailed and mechanically inspected before your rental date',

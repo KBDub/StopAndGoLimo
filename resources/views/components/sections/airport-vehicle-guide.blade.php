@@ -11,7 +11,7 @@
       H3 — "Airport Fleet Options" (4 cards, 4-col desktop)
 
     Voice-search SEO: answers "what size car do I need for the airport?" and
-    "what vehicles does Stop & Go offer for airport transfers from New Lenox?"
+    "what vehicles does Stop & Go Airport Shuttle Service, Inc. offer for airport transfers from New Lenox?"
     ─────────────────────────────────────────────────────────────────────────────
     Props
       id  string  Section id attribute. Defaults to 'airport-vehicle-guide'.

@@ -6,7 +6,7 @@
     "headline": "Renting a Party Bus: The Ultimate Party Guide",
     "publisher": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": ""
     },
     "description": "Everything you need to know about renting a party bus in Chicagoland. Events, amenities, choosing the right vehicle, and booking tips."
@@ -27,10 +27,10 @@
 
 <x-layouts.page
     title="Renting a Party Bus: The Ultimate Party Guide"
-    metaDescription="Everything you need to know about renting a party bus in Chicagoland. Events, amenities, how to choose the right vehicle, and booking tips from Stop & Go."
+    metaDescription="Everything you need to know about renting a party bus in Chicagoland. Events, amenities, how to choose the right vehicle, and booking tips from Stop & Go Airport Shuttle Service, Inc.."
     currentPage="our-services"
     ogImage="/images/heroes/hero-party-bus-interior.png"
-    ogImageAlt="Luxury party bus interior, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Luxury party bus interior, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Renting a Party Bus:"

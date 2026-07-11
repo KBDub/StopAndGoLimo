@@ -1,4 +1,4 @@
-# Stop & Go Limo — Font & Typography Reference
+# Stop & Go Airport Shuttle Service, Inc. — Font & Typography Reference
 
 > **Single source of truth:** All heading font sizes and letter-spacing live in CSS custom properties in `app.css`. Components consume `var(--font-size-h*)` and `var(--letter-spacing-h*)` — never hardcoded values.
 

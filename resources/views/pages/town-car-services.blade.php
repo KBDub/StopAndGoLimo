@@ -57,7 +57,7 @@
         rightVariant="description"
         :descImageTop="true"
         descImage="/images/sections/elderly-relaxing-corporate.jpg"
-        descImageAlt="Passenger relaxing in a luxury town car — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        descImageAlt="Passenger relaxing in a luxury town car — Stop & Go Airport Shuttle Service, Inc., New Lenox, Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Town Car Services"
         descBody="As a trusted provider of town car service, Stop & Go Airport Shuttle Service, Inc. delivers an elegant blend of luxury, comfort, and professionalism for both personal and business travel:"
@@ -78,11 +78,11 @@
 
     <x-sections.party-limo-image
         heading="Rent a Town Car"
-        headingBold="from Stop & Go"
+        headingBold="from Stop & Go Airport Shuttle Service, Inc."
         headingTail="Airport Shuttle Service, Inc."
-        body="Stop & Go Airport Shuttle Service Inc. offers impeccably maintained charter buses and professional drivers to groups in New Lenox, Plainfield, and throughout the greater Chicago area. Whether you’re organizing a wedding, corporate event, school outing, sports team trip, or group vacation, we deliver reliable, stylish transportation, without the stress of driving."
+        body="Stop & Go Airport Shuttle Service, Inc. offers impeccably maintained charter buses and professional drivers to groups in New Lenox, Plainfield, and throughout the greater Chicago area. Whether you’re organizing a wedding, corporate event, school outing, sports team trip, or group vacation, we deliver reliable, stylish transportation, without the stress of driving."
         image="/images/sections/limousine-arrival.jpg"
-        imageAlt="Luxury limousine arriving for a client pickup — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        imageAlt="Luxury limousine arriving for a client pickup — Stop & Go Airport Shuttle Service, Inc., New Lenox, Illinois"
         imageAspect="16/9"
         imageObjectPosition="center"
         :inverted="true"

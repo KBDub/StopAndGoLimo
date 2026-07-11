@@ -6,7 +6,7 @@
     "name": "Party Bus Limo Bus",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Party bus limo bus rentals for groups throughout Chicagoland. Birthdays, weddings, proms, concerts, and corporate events. Professional chauffeurs."
     currentPage="our-services"
     ogImage="/images/heroes/hero-party-bus-chicago.webp"
-    ogImageAlt="Party bus limo bus, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Party bus limo bus, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Party Bus"
@@ -61,7 +61,7 @@
         buttonText="View Our Fleet"
         buttonHref="/our-services"
         image="/images/sections/women-celebrating-limo.jpg"
-        imageAlt="Group celebrating on a party bus limo bus with Stop and Go"
+        imageAlt="Group celebrating on a party bus limo bus with Stop & Go Airport Shuttle Service, Inc."
         :inverted="false"
     />
 
@@ -110,7 +110,7 @@
         headingBold="party bus"
         headingTail="today"
         image="/images/sections/luxurious-party-bus.png"
-        imageAlt="Luxurious party bus limo bus interior, Stop and Go"
+        imageAlt="Luxurious party bus limo bus interior, Stop & Go Airport Shuttle Service, Inc."
         imageAspect="4/3"
         imageObjectPosition="center"
         rightVariant="description"
@@ -127,7 +127,7 @@
         ]"
         descClosing="Ready to plan your group event? or get a free quote online. We serve all of Chicagoland."
         descImage="/images/sections/luxurious-party-bus.png"
-        descImageAlt="Luxurious party bus limo bus interior, Stop and Go"
+        descImageAlt="Luxurious party bus limo bus interior, Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 

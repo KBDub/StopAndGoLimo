@@ -4,7 +4,7 @@
 {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "url": "https://www.newlenoxlimoservice.com/service-areas",
     "telephone": "",
     "address": {
@@ -27,7 +27,7 @@
         { "@type": "City", "name": "Mokena",      "addressRegion": "IL", "addressCountry": "US" },
         { "@type": "City", "name": "Orland Park", "addressRegion": "IL", "addressCountry": "US" }
     ],
-    "description": "Stop and Go Airport Shuttle Service Inc provides 24/7 luxury limo and airport shuttle service across New Lenox, Plainfield, Joliet, Naperville, Aurora, and the greater Southwest suburbs of Chicago, Illinois."
+    "description": "Stop & Go Airport Shuttle Service, Inc. provides 24/7 luxury limo and airport shuttle service across New Lenox, Plainfield, Joliet, Naperville, Aurora, and the greater Southwest suburbs of Chicago, Illinois."
 }
 </script>
 <script type="application/ld+json">
@@ -54,7 +54,7 @@
 
 <x-layouts.page
     title="Service Areas"
-    metaDescription="Stop & Go serves all of Chicagoland, from New Lenox and Joliet to Chicago, Naperville, Aurora, and the north and northwest suburbs."
+    metaDescription="Stop & Go Airport Shuttle Service, Inc. serves all of Chicagoland, from New Lenox and Joliet to Chicago, Naperville, Aurora, and the north and northwest suburbs."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-service-areas.jpg"
     ogImageAlt="Luxury limousine service across the Southwest suburbs of Chicago, Illinois"
@@ -82,7 +82,7 @@
         heading="Every Area"
         headingBold="Covered"
         subtitle="Driven by certified drivers you can trust"
-        body="Stop & Go serves the greater Chicago and Chicagoland area with professional 24/7 airport shuttle service to O'Hare and Midway, luxury limousine service for weddings and special events, party bus rentals for group celebrations, and corporate car service for business travel. From downtown Chicago to the Southwest suburbs, including New Lenox, Naperville, Joliet, and Hinsdale, our certified drivers know every route and are ready around the clock."
+        body="Stop & Go Airport Shuttle Service, Inc. serves the greater Chicago and Chicagoland area with professional 24/7 airport shuttle service to O'Hare and Midway, luxury limousine service for weddings and special events, party bus rentals for group celebrations, and corporate car service for business travel. From downtown Chicago to the Southwest suburbs, including New Lenox, Naperville, Joliet, and Hinsdale, our certified drivers know every route and are ready around the clock."
         image="/images/sections/limousine-professional.jpg"
         imageAlt="Professional chauffeur providing luxury transportation across Chicago and the Southwest suburbs"
         imagePosition="right"
@@ -92,10 +92,10 @@
         rightVariant="description"
         :descImageTop="true"
         descImage="/images/sections/chicago-skyline.jpg"
-        descImageAlt="Stop and Go Airport Shuttle Service covering the Southwest suburbs of Chicago"
+        descImageAlt="Stop & Go Airport Shuttle Service, Inc. covering the Southwest suburbs of Chicago"
         descHeading="Why Choose Us?"
         descSubheading="Complete Southwest Suburbs Transportation"
-        descBody="As the Southwest suburbs' locally-based transportation provider, Stop & Go offers complete luxury transportation services across 20+ communities:"
+        descBody="As the Southwest suburbs' locally-based transportation provider, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services across 20+ communities:"
         :descBullets="[
             'Airport shuttle to O\'Hare and Midway, available 24/7',
             'Limousine service for weddings, events, and special occasions',

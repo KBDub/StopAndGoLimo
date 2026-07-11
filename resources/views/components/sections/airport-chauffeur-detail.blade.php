@@ -6,7 +6,7 @@
     Two-column trust section on a navy background.
     Matches the on-board-experience visual pattern.
 
-    H2  — "What Sets a Stop & Go Chauffeur Apart"
+    H2  — "What Sets a Stop & Go Airport Shuttle Service, Inc. Chauffeur Apart"
       H3 — "What Every Airport Pickup Includes" (4-item checklist, left)
       H3 — "The Real Cost of Driving Yourself" (cost comparison prose, right)
         H4 — CTA block with button + phone
@@ -23,7 +23,7 @@
 
         <div class="max-w-3xl mb-12">
             <h2 style="font-family: var(--font-head); font-size: var(--font-size-h2); color: var(--white); letter-spacing: var(--letter-spacing-h2); line-height: 1.2; font-weight: 700;" class="mb-5">
-                What Sets a Stop &amp; Go Chauffeur Apart
+                What Sets a Stop &amp; Go Airport Shuttle Service, Inc. Chauffeur Apart
             </h2>
             <p style="font-family: var(--font-body); font-size: 1.2rem; color: var(--cloud); line-height: 1.7;">
                 A scheduled airport transfer is only as good as the chauffeur behind it. Our drivers are not gig-economy workers picking up rides between other jobs. They are professional, trained chauffeurs who know Will County roads, know the terminals at O'Hare and Midway, and know exactly what to do when a flight lands 40 minutes early or two hours late.

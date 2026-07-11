@@ -47,7 +47,7 @@
         headingPrefix="Ride the Chicago Bulls"
         headingBold="Party Bus"
         heading="and Arrive in Style at the United Center"
-        body="For NBA enthusiasts and Chicago Bulls fans, Stop & Go offers United Center Party Buses, including the Bulls Party Bus. Ride in style with our Chicago Bulls Party Bus and enjoy a luxurious, stress-free trip to the game. Arrive ready to cheer on your team at the iconic United Center, home to legends like Michael Jordan and host to thrilling rivalries and major events."
+        body="For NBA enthusiasts and Chicago Bulls fans, Stop & Go Airport Shuttle Service, Inc. offers United Center Party Buses, including the Bulls Party Bus. Ride in style with our Chicago Bulls Party Bus and enjoy a luxurious, stress-free trip to the game. Arrive ready to cheer on your team at the iconic United Center, home to legends like Michael Jordan and host to thrilling rivalries and major events."
     />
 
     <x-sections.free-instant-quote
@@ -60,7 +60,7 @@
         heading="Elevate Your Chicago Bulls"
         headingBold="Game Day"
         headingTail="with Our Buses"
-        bodyHtml="Experience Chicago&#8217;s United Center at its finest! Rent a Stop &amp; Go Party Bus and ride in style and comfort with a Chicago Bulls Party Bus.<br><br><a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>View our Bulls Party Bus Packages</a> and enjoy stress-free Stop &amp; Go Bulls Transportation to the game, celebrate post-game victories, and party on a luxurious Party Bus to the Bulls Game, where legends like Michael Jordan made this arena iconic!"
+        bodyHtml="Experience Chicago&#8217;s United Center at its finest! Rent a Stop &amp; Go Airport Shuttle Service, Inc. Party Bus and ride in style and comfort with a Chicago Bulls Party Bus.<br><br><a href='/rates/' style='color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;'>View our Bulls Party Bus Packages</a> and enjoy stress-free Stop &amp; Go Airport Shuttle Service, Inc. Bulls Transportation to the game, celebrate post-game victories, and party on a luxurious Party Bus to the Bulls Game, where legends like Michael Jordan made this arena iconic!"
     />
 
     <x-sections.review-slider />

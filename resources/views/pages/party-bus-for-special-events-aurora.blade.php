@@ -6,7 +6,7 @@
     "name": "Party Bus for Special Events Aurora",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Party bus for special events in Aurora and Naperville. Festivals, galas, corporate outings, concerts, and quinceañeras. Professional chauffeurs."
     currentPage="our-services"
     ogImage="/images/heroes/hero-special-event.jpg"
-    ogImageAlt="Party bus for special events in Aurora, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Party bus for special events in Aurora, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Party Bus for"
@@ -68,7 +68,7 @@
     <x-sections.info-strip
         headingBold="Any Occasion,"
         heading="One Call Away"
-        body="Stop & Go handles party bus transportation for festivals, corporate galas, charity events, quinceañeras, holiday parties, prom and homecoming nights, concert trips, sporting events, and private celebrations of any kind. If your group is heading somewhere special together, we are the right call. We serve Aurora, Naperville, and all of Chicagoland."
+        body="Stop & Go Airport Shuttle Service, Inc. handles party bus transportation for festivals, corporate galas, charity events, quinceañeras, holiday parties, prom and homecoming nights, concert trips, sporting events, and private celebrations of any kind. If your group is heading somewhere special together, we are the right call. We serve Aurora, Naperville, and all of Chicagoland."
     />
 
     <section id="event-types" style="background: var(--cloud-light); scroll-margin-top: 80px;">

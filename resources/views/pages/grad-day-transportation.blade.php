@@ -76,7 +76,7 @@
         headingBold="Epic!"
         headingTail=""
         image="/images/sections/celebrate-your-big-event.png"
-        imageAlt="Happy graduates celebrating on graduation day — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        imageAlt="Happy graduates celebrating on graduation day — Stop & Go Airport Shuttle Service, Inc., New Lenox, Illinois"
         imageAspect="4/3"
         imageObjectPosition="center top"
         formAction="/get-a-quote"
@@ -94,7 +94,7 @@
             'Professional & Family-Focused Drivers: All drivers complete professional training, background checks, and safety briefings for a secure, worry-free graduation day.',
         ]"
         descImage="/images/sections/celebrate-your-big-event.png"
-        descImageAlt="Happy graduates celebrating on graduation day — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        descImageAlt="Happy graduates celebrating on graduation day — Stop & Go Airport Shuttle Service, Inc., New Lenox, Illinois"
         :descImageTop="true"
     />
 
@@ -103,7 +103,7 @@
     <x-sections.travel-in-style
         heading="Celebrate Grad Day"
         headingBold="in Style"
-        body="Your graduation is a milestone worth celebrating in comfort and class. Stop and Go provides safe, spacious, and stylish transportation for students and families across Chicagoland. Our professional chauffeurs make sure everyone arrives together, on time, and ready to enjoy every moment. From New Lenox to Naperville, your Grad Day ride will be as memorable as the day itself."
+        body="Your graduation is a milestone worth celebrating in comfort and class. Stop & Go Airport Shuttle Service, Inc. provides safe, spacious, and stylish transportation for students and families across Chicagoland. Our professional chauffeurs make sure everyone arrives together, on time, and ready to enjoy every moment. From New Lenox to Naperville, your Grad Day ride will be as memorable as the day itself."
         buttonText="Book Your Grad Day Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/smiling-on-graduation-day.jpg"
@@ -116,7 +116,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Trusted Grad Day"
         headingBold="Transportation"
-        body="As a trusted transportation provider for over 15 years, Stop & Go offers luxury Grad Day transportation, including group rides and school celebration trips. Our professional, family-focused drivers and spacious, fully equipped vehicles make every ride safe, fun, and unforgettable. Celebrate your achievement with friends and loved ones and make your Grad Day truly memorable."
+        body="As a trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers luxury Grad Day transportation, including group rides and school celebration trips. Our professional, family-focused drivers and spacious, fully equipped vehicles make every ride safe, fun, and unforgettable. Celebrate your achievement with friends and loved ones and make your Grad Day truly memorable."
         buttonText="Book Your Grad Day Ride"
         buttonHref="/bookings-reservations"
     />

@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Lemont, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Lemont, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -45,7 +45,7 @@
         headingBold="Limo Service"
         body="Travel with confidence using our 24/7 Lemont IL limo service, designed for comfort, reliability, and on-time rides. Whether you need an airport shuttle in Lemont IL, a stylish wedding limo in Lemont IL, or professional transportation for any occasion, we provide clean vehicles, experienced drivers, and seamless service from start to finish. Book now and enjoy stress-free travel today."
         image="/images/sections/lemont-limo.png"
-        imageAlt="Happy clients enjoying a limousine ride in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Happy clients enjoying a limousine ride in Lemont, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :inverted="true"
     />
 
@@ -54,7 +54,7 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/lemont-transportation.png"
-        imageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Wedding transportation in Lemont, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
@@ -62,7 +62,7 @@
         descSubheading="With our Party Bus Rental in Lemont IL, your group travels in comfort and style. Enjoy reliable, hassle-free transportation anytime."
         descBody="Whether you need a wedding limo in Lemont IL, an airport shuttle in Lemont IL, a Party Bus Rental in Lemont IL, chauffeur service in Lemont IL, or event transportation in Lemont IL, our 24/7 Lemont IL limo service ensures every ride is safe, comfortable, and on time. Book now using the contact form to reserve your ride today."
         descImage="/images/sections/lemont-transportation.png"
-        descImageAlt="Wedding transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Wedding transportation in Lemont, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -72,7 +72,7 @@
         headingBold="Across the Area"
         body="Whether you are planning an elegant ceremony at a historic local church or heading to a critical business engagement, the quality of your ride defines your entire day. Our premier Lemont IL limo service provides a dedicated professional driver who manages every logistical detail of local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Lemont wedding estate limo, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
         image="/images/sections/lemont-sophisticated-travel.png"
-        imageAlt="Travel with confidence in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Travel with confidence in Lemont, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -83,7 +83,7 @@
         headingBold="Illinois Residents"
         body="For passengers who need a higher level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily schedule. This flexible service allows you to visit multiple local destinations at your own pace with a private driver standing by for your immediate departure. Our reliable Lemont to Midway airport shuttle guarantees that you arrive at your terminal without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several corporate appointments or touring regional landmarks, having a private vehicle at your disposal helps you maintain a truly fluid and efficient schedule."
         image="/images/sections/lemont-flexible-transport.png"
-        imageAlt="Flexible transportation options in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Flexible transportation options in Lemont, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -94,7 +94,7 @@
         headingBold="Significant Milestones"
         body="A luxury limousine adds a vital layer of elegance to the most significant milestones on your social calendar, from traditional weddings to formal high school graduations. We specialize in providing high-end transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at venues like Cog Hill or The Monte Bello Estate and works diligently to provide a seamless experience for every guest. From the initial pick up until the final drop-off of the night, we manage your transportation with the highest level of care."
         image="/images/sections/lemont-special-occasions.png"
-        imageAlt="Party bus and special occasion transportation in Lemont, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Party bus and special occasion transportation in Lemont, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

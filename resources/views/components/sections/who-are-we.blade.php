@@ -3,7 +3,7 @@
     'headingBold'   => 'we?',
     'stat'          => 'Over 15,000 happy customers',
     'image'         => '/images/sections/who-are-we.jpg',
-    'imageAlt'      => 'Vincent Rover, founder of Stop & Go Airport Shuttle Service Inc., at the New Lenox Chamber ribbon cutting ceremony',
+    'imageAlt'      => 'Vincent Rover, founder of Stop & Go Airport Shuttle Service, Inc., at the New Lenox Chamber ribbon cutting ceremony',
     'imagePosition' => 'left',
 ])
 

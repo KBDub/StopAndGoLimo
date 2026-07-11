@@ -7,7 +7,7 @@
     {{-- ═══════════════════════════════════════════════════════════════════════
          STOP AND GO LIMO — Image Sitemap
          Domain: www.newlenoxlimoservice.com
-         Add entries here as real Stop & Go images are added to the project.
+         Add entries here as real Stop & Go Airport Shuttle Service, Inc. images are added to the project.
          Source of truth: docs/image-video-control.md
     ══════════════════════════════════════════════════════════════════════════ --}}
 
@@ -36,7 +36,7 @@
     {{-- ─── Products (dynamic from Lunar DB) ───────────────────────────── --}}
 
     @foreach($products ?? [] as $product)
-    {{-- Add product image entries here once Stop & Go product images are uploaded --}}
+    {{-- Add product image entries here once Stop & Go Airport Shuttle Service, Inc. product images are uploaded --}}
     @endforeach
 
 </urlset>

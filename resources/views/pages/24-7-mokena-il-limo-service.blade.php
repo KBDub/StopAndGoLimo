@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Mokena, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Mokena, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -48,7 +48,7 @@
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/mokena-limo.png"
-        imageAlt="Business traveler in a limousine in Mokena, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Business traveler in a limousine in Mokena, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
         :inverted="true"
     />
@@ -59,7 +59,7 @@
         descSubheading="Planning a group outing? Our Party Bus Rental in Mokena IL gives you a fun, spacious, and stress-free way to travel while we handle the driving."
         descBody="From weddings and private events to business travel and special occasions, our event transportation in Mokena IL and chauffeur service in Mokena IL deliver reliable, comfortable, and on-time rides. Backed by our 24/7 Mokena IL limo service, we focus on safety, punctuality, and a smooth experience so every trip feels effortless from start to finish. Request your ride today using our quick contact form and we will confirm the details promptly."
         descImage="/images/sections/mokena-transportation.png"
-        descImageAlt="Professional chauffeur in Mokena, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Professional chauffeur in Mokena, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
         :inverted="true"
     />
@@ -70,7 +70,7 @@
         headingBold="Across the Town"
         body="Whether you are planning a special evening at a local estate or heading to a critical business engagement, the quality of your ride defines your entire day. Our premier Mokena IL limo service provides a dedicated professional driver who manages every logistical detail of local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Mokena corporate car service, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
         image="/images/sections/mokena-sophisticated-travel.png"
-        imageAlt="Sophisticated travel in Mokena, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Sophisticated travel in Mokena, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -81,7 +81,7 @@
         headingBold="Active Illinois Residents"
         body="For passengers who need a higher level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily schedule. This flexible service allows you to visit multiple local destinations at your own pace with a private driver standing by for your immediate departure. Our reliable Mokena to O'Hare airport shuttle guarantees that you arrive at your terminal without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several corporate appointments or touring regional landmarks, having a private vehicle at your disposal helps you maintain a truly fluid schedule."
         image="/images/sections/mokena-event-transport.png"
-        imageAlt="Flexible transportation options in Mokena, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Flexible transportation options in Mokena, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -92,7 +92,7 @@
         headingBold="Significant Milestones"
         body="A luxury limousine adds a vital layer of elegance to the most significant milestones on your social calendar, from traditional weddings to formal high school graduations. We specialize in providing high-end transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at venues like the Monte Bello Estate and works diligently to provide a seamless experience for every guest. From the initial pickup until the final drop-off of the night, we manage your transportation with the highest level of care."
         image="/images/sections/mokena-special-occasions.png"
-        imageAlt="Special occasion transportation in Mokena, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Special occasion transportation in Mokena, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

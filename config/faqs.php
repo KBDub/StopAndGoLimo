@@ -123,7 +123,7 @@ return [
     'prom' => [
         [
             'question' => 'Do you offer party bus rentals for prom?',
-            'answer'   => 'Yes! Stop and Go provides dedicated prom party bus rentals throughout the Chicago suburbs. Our vehicles are chauffeur-driven, clean, and designed to make prom night special and stress free.',
+            'answer'   => 'Yes! Stop & Go Airport Shuttle Service, Inc. provides dedicated prom party bus rentals throughout the Chicago suburbs. Our vehicles are chauffeur-driven, clean, and designed to make prom night special and stress free.',
         ],
         [
             'question' => 'What size groups can you accommodate for prom?',

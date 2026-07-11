@@ -31,7 +31,7 @@
     <meta name="description" content="{{ $metaDescription }}">
     <meta name="robots" content="{{ $noIndex ? 'noindex,nofollow' : 'index,follow' }}">
     <link rel="canonical" href="{{ $resolvedCanonical }}">
-    <meta name="author" content="Stop & Go Airport Shuttle Service Inc.">
+    <meta name="author" content="Stop & Go Airport Shuttle Service, Inc.">
     <meta name="geo.region" content="US-IL">
     <meta name="geo.placename" content="New Lenox, IL">
     <meta name="geo.position" content="41.4977;-87.9573">

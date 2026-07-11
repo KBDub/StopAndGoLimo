@@ -50,7 +50,7 @@
         rightVariant="description"
         :descImageTop="true"
         descImage="/images/sections/limousine-couple.jpg"
-        descImageAlt="Couple enjoying a luxury limousine ride — Stop and Go Airport Shuttle, New Lenox, Illinois"
+        descImageAlt="Couple enjoying a luxury limousine ride — Stop & Go Airport Shuttle Service, Inc., New Lenox, Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Transportation Services"
         descBody="As a trusted Chicagoland transportation provider, Stop & Go Airport Shuttle Service, Inc. delivers safe, comfortable, and professional rides for every occasion:"

@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — New Lenox, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — New Lenox, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -38,7 +38,7 @@
 
 <x-layouts.page
     title="New Lenox Limo"
-    metaDescription="Stop & Go is headquartered in New Lenox, IL. Airport transfers to O'Hare and Midway, corporate travel, weddings, and events."
+    metaDescription="Stop & Go Airport Shuttle Service, Inc. is headquartered in New Lenox, IL. Airport transfers to O'Hare and Midway, corporate travel, weddings, and events."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-new-lenox.png"
     ogImageAlt="Luxury limo service in New Lenox, Illinois"
@@ -60,18 +60,18 @@
         heading="Every Occasion"
         headingBold="Covered"
         subtitle="Driven by certified drivers you can trust"
-        body="Stop & Go provides reliable transportation throughout New Lenox. We offer a professional 24/7 New Lenox airport shuttle to O'Hare and Midway."
+        body="Stop & Go Airport Shuttle Service, Inc. provides reliable transportation throughout New Lenox. We offer a professional 24/7 New Lenox airport shuttle to O'Hare and Midway."
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/new-lenox-limo.png"
-        imageAlt="White luxury limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
+        imageAlt="White luxury limousine in New Lenox, Illinois, Stop & Go Airport Shuttle Service, Inc."
         inverted=true
     />
 
     <x-sections.info-strip
         headingBold="Reliable & Stylish"
         heading="New Lenox Transportation"
-        body="Stop & Go provides professional transportation in New Lenox with 24/7 airport shuttle service to O'Hare and Midway, luxury limousine service for weddings and events, and party bus rentals. Based at 400 E Lincoln Hwy, we serve all New Lenox neighborhoods with reliable local expertise. Whether you need a New Lenox airport shuttle, limo service, or party bus, our experienced local chauffeurs deliver exceptional service across the suburb."
+        body="Stop & Go Airport Shuttle Service, Inc. provides professional transportation in New Lenox with 24/7 airport shuttle service to O'Hare and Midway, luxury limousine service for weddings and events, and party bus rentals. Based at 400 E Lincoln Hwy, we serve all New Lenox neighborhoods with reliable local expertise. Whether you need a New Lenox airport shuttle, limo service, or party bus, our experienced local chauffeurs deliver exceptional service across the suburb."
     />
 
     <x-sections.three-steps
@@ -83,13 +83,13 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/black-limousine-new-lenox.png"
-        imageAlt="Black limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
+        imageAlt="Black limousine in New Lenox, Illinois, Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Why choose us?"
         descSubheading="Complete Plainfield Transportation Services"
-        descBody="As New Lenox's locally-based transportation provider since 2015, Stop & Go offers complete luxury transportation services:"
+        descBody="As New Lenox's locally-based transportation provider since 2015, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services:"
         :descBullets="[
             'New Lenox airport shuttle for timely arrivals and departures',
             'Limousine service for weddings, events, and special occasions',
@@ -99,7 +99,7 @@
         ]"
         descClosing="Our intimate knowledge of New Lenox, from downtown to the Route 30 corridor, from LaGrange Road to I-80 access, ensures efficient and reliable transportation throughout our hometown."
         descImage="/images/sections/black-limousine-new-lenox.png"
-        descImageAlt="Black limousine in New Lenox, Illinois, Stop and Go Airport Shuttle"
+        descImageAlt="Black limousine in New Lenox, Illinois, Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -112,7 +112,7 @@
         buttonText="Book Airport Shuttle"
         buttonHref="/bookings-reservations"
         image="/images/sections/new-lenox-airport.png"
-        imageAlt="Aerial view of O'Hare airport, served by Stop and Go New Lenox Airport Shuttle"
+        imageAlt="Aerial view of O'Hare airport, served by Stop & Go Airport Shuttle Service, Inc. New Lenox Airport Shuttle"
         imageAspect="3/2"
     />
 
@@ -131,7 +131,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions"
         headingBold="Throughout New Lenox"
-        body="As New Lenox's trusted transportation provider since 2015, Stop & Go offers complete luxury transportation services including New Lenox airport shuttle, New Lenox limo service, New Lenox party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of New Lenox, from downtown to Spencer Crossing, Fox Hill, and Hickory Creek, with easy access to Route 30 and I-80, ensures efficient, reliable transportation throughout this thriving Will County community and for New Lenox to O'Hare trips."
+        body="As New Lenox's trusted transportation provider since 2015, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services including New Lenox airport shuttle, New Lenox limo service, New Lenox party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of New Lenox, from downtown to Spencer Crossing, Fox Hill, and Hickory Creek, with easy access to Route 30 and I-80, ensures efficient, reliable transportation throughout this thriving Will County community and for New Lenox to O'Hare trips."
         buttonText="Contact"
         buttonHref="/get-a-quote"
         directions="• Downtown New Lenox to O'Hare: 45 to 55 minutes via I-80 East to I-55 North • West New Lenox to O'Hare: 50 to 60 minutes • New Lenox to Midway Airport: 40 to 50 minutes via I-80 East to I-55 North • New Lenox I-80/I-55 corridor to both airports"

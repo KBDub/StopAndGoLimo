@@ -724,7 +724,7 @@ In addition to all rules in `docs/branding-requirements.md`:
 | **Fake stats** | Banned. No fabricated satisfaction percentages or ride counts unless documented and confirmed from GBP or internal records. |
 | **Voice search** | Every page answers at least 6 "how," "what," "can you," or "do you" questions natively in body prose. No FAQ-style Q&A in body copy — weave answers into paragraphs. |
 | **GBP service names** | Thread GBP service names naturally into copy. "our airport shuttle service" not just "we pick you up." |
-| **Company name** | Full legal name "Stop & Go Airport Shuttle Service, Inc." in the hero description sentence one. Short form "Stop & Go" acceptable everywhere else. |
+| **Company name** | Always use the full legal name "Stop & Go Airport Shuttle Service, Inc." in all copy, headings, alt text, and meta. Short form "Stop & Go Limo" is reserved exclusively for the logo, nav, and social media handles. |
 | **Persona language** | Each page explicitly addresses at least 2 personas by their situation, not by their label. |
 | **Industry references** | At least one named local employer or venue per page (CenterPoint, Silver Cross, Jacob Henry Mansion, Lincoln-Way, I-88 corridor, etc.). |
 | **No double hyphens** | Never. |

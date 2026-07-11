@@ -5,7 +5,7 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
     "@id": "https://newlenoxlimoservice.com/#business",
-    "name": "Stop & Go Airport Shuttle Service Inc.",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
     "telephone": "",
@@ -83,8 +83,8 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Charter Bus Services — Stop & Go",
-    "description": "Full list of charter bus and group transportation services offered by Stop & Go Airport Shuttle Service Inc. from New Lenox, Illinois.",
+    "name": "Charter Bus Services — Stop & Go Airport Shuttle Service, Inc.",
+    "description": "Full list of charter bus and group transportation services offered by Stop & Go Airport Shuttle Service, Inc. from New Lenox, Illinois.",
     "itemListElement": [
         {
             "@type": "ListItem", "position": 1,
@@ -92,7 +92,7 @@
                 "@type": "Product",
                 "name": "Corporate Shuttle Bus",
                 "description": "Professional shuttle buses for corporate teams, conferences, and business events across Chicagoland and the I-80 and I-88 corridors. Flat-rate pricing, centralized billing, and 24/7 dispatch.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -102,7 +102,7 @@
                 "@type": "Product",
                 "name": "Wedding Party Bus Shuttle",
                 "description": "Charter buses and party buses for wedding parties moving between venues across Will County. Keeps the whole bridal party together, on schedule, and celebrating.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -112,7 +112,7 @@
                 "@type": "Product",
                 "name": "Airport Group Charter Bus",
                 "description": "Group charter bus transfers to O'Hare and Midway for corporate travel parties, wedding guests, and large families. One vehicle, ample luggage space, flat-rate pricing.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -122,7 +122,7 @@
                 "@type": "Product",
                 "name": "Concert and Event Charter Bus",
                 "description": "Charter buses to Chicago's major venues: United Center, Soldier Field, Allstate Arena, Wrigley Field, and Northerly Island. No parking, no surge pricing, guaranteed pickup after the show.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -132,7 +132,7 @@
                 "@type": "Product",
                 "name": "Quinceañera Charter Bus",
                 "description": "Spacious charter buses for quinceañera celebrations, keeping the quinceañera and her court of honor together from the ceremony to the reception.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -142,7 +142,7 @@
                 "@type": "Product",
                 "name": "Winery and Brewery Tour Bus",
                 "description": "Illinois winery and brewery tour transportation for groups. Everyone rides together, no one drives, and the experience stays enjoyable from the first stop to the last.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 800, "highPrice": 15000, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
@@ -222,11 +222,11 @@
 @endpush
 
 <x-layouts.page
-    title="Charter Bus Service | Group Transportation Chicagoland | Stop &amp; Go"
+    title="Charter Bus Service | Group Transportation Chicagoland | Stop &amp; Go Airport Shuttle Service, Inc."
     metaDescription="Charter bus service for groups across Chicagoland. Corporate shuttles, wedding party buses, airport group charters, concert transportation, and quinceañera buses. Flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/hero-new-bus-rental.jpg"
-    ogImageAlt="Stop and Go charter bus service vehicle for group transportation across Chicagoland"
+    ogImageAlt="Stop & Go Airport Shuttle Service, Inc. charter bus service vehicle for group transportation across Chicagoland"
 >
 
     <x-sections.category-hero
@@ -249,14 +249,14 @@
         buttonText="Get a Charter Quote"
         buttonHref="/get-a-quote"
         image="/images/sections/sports-teams-bus.jpg"
-        imageAlt="Stop &amp; Go charter bus ready for group transportation across Chicagoland"
+        imageAlt="Stop &amp; Go Airport Shuttle Service, Inc. charter bus ready for group transportation across Chicagoland"
         :inverted="true"
     />
 
     <x-sections.info-strip
         headingBold="One Flat Rate."
         heading="Every Seat. No Surprise Fees."
-        body="On-demand apps reprice when demand spikes, when an event ends and the crowd pours out, and when your group needs the most flexibility. Stop & Go does not. The rate we quote for your charter covers the entire group, every stop, and the full duration of your booking. Tolls and fuel are included. The driver is included. There is no meter running while you are inside the venue, and there is no surge price when you call for the pickup. Whether you are booking a 12-person corporate shuttle or a full motorcoach for a family reunion, the figure you receive before you sign is the figure on your receipt after the trip."
+        body="On-demand apps reprice when demand spikes, when an event ends and the crowd pours out, and when your group needs the most flexibility. Stop & Go Airport Shuttle Service, Inc. does not. The rate we quote for your charter covers the entire group, every stop, and the full duration of your booking. Tolls and fuel are included. The driver is included. There is no meter running while you are inside the venue, and there is no surge price when you call for the pickup. Whether you are booking a 12-person corporate shuttle or a full motorcoach for a family reunion, the figure you receive before you sign is the figure on your receipt after the trip."
     />
 
     <x-sections.limo-services-grid
@@ -264,31 +264,31 @@
         heading="Charter Bus Services"
         headingBold="for Every Group Occasion"
         subheading="Every Type of Group Charter We Handle"
-        intro="Stop & Go has been coordinating group transportation across Chicagoland since 2015. From corporate shuttles to wedding party buses to concert charters, here is a look at the group bookings our clients rely on most."
+        intro="Stop & Go Airport Shuttle Service, Inc. has been coordinating group transportation across Chicagoland since 2015. From corporate shuttles to wedding party buses to concert charters, here is a look at the group bookings our clients rely on most."
         :cards="[
             [
                 'service' => 'Corporate Shuttle Bus',
-                'copy'    => 'Corporate teams traveling to conferences, conventions, and multi-venue meetings need transportation that runs like the workday: on schedule, professionally presented, and logistically invisible. Stop & Go corporate charters keep your team together, provide centralized billing for travel managers, and cover the I-80 and I-88 business corridors as well as downtown Chicago venues. One driver, one vehicle, one flat rate.',
+                'copy'    => 'Corporate teams traveling to conferences, conventions, and multi-venue meetings need transportation that runs like the workday: on schedule, professionally presented, and logistically invisible. Stop & Go Airport Shuttle Service, Inc. corporate charters keep your team together, provide centralized billing for travel managers, and cover the I-80 and I-88 business corridors as well as downtown Chicago venues. One driver, one vehicle, one flat rate.',
             ],
             [
                 'service' => 'Wedding Party Bus Shuttle',
-                'copy'    => 'A wedding day built around a caravan of separate cars is a wedding day waiting for something to go wrong. Stop & Go wedding charters keep the entire bridal party together from getting-ready photos through the last dance. We coordinate every stop, manage the timeline with your planner, and deliver the party to each venue on schedule. Our drivers have worked at venues across Will County, including Frankfort, Mokena, and Joliet.',
+                'copy'    => 'A wedding day built around a caravan of separate cars is a wedding day waiting for something to go wrong. Stop & Go Airport Shuttle Service, Inc. wedding charters keep the entire bridal party together from getting-ready photos through the last dance. We coordinate every stop, manage the timeline with your planner, and deliver the party to each venue on schedule. Our drivers have worked at venues across Will County, including Frankfort, Mokena, and Joliet.',
             ],
             [
                 'service' => 'Airport Group Charter',
-                'copy'    => 'Moving five or more people to O\'Hare or Midway together is simplest in one coordinated vehicle. Stop & Go group airport charters provide ample luggage space, a flat group rate, and a driver who knows the terminal lanes and curbside drop-off protocols at both airports. Whether it is a corporate travel party, a family flying out together, or a sports team heading to a tournament, one bus gets everyone there without splitting the group.',
+                'copy'    => 'Moving five or more people to O\'Hare or Midway together is simplest in one coordinated vehicle. Stop & Go Airport Shuttle Service, Inc. group airport charters provide ample luggage space, a flat group rate, and a driver who knows the terminal lanes and curbside drop-off protocols at both airports. Whether it is a corporate travel party, a family flying out together, or a sports team heading to a tournament, one bus gets everyone there without splitting the group.',
             ],
             [
                 'service' => 'Concert and Event Charter Bus',
-                'copy'    => 'Parking near the United Center, Soldier Field, Allstate Arena, or Wrigley Field costs as much as the tickets and adds 45 minutes each way. A Stop & Go concert charter solves that entirely. Your group loads up in New Lenox, Joliet, or anywhere across Will County, we handle venue traffic and dedicated drop-off lanes, and your return ride is staged at a price set in advance with no surge pricing when the crowd exits.',
+                'copy'    => 'Parking near the United Center, Soldier Field, Allstate Arena, or Wrigley Field costs as much as the tickets and adds 45 minutes each way. A Stop & Go Airport Shuttle Service, Inc. concert charter solves that entirely. Your group loads up in New Lenox, Joliet, or anywhere across Will County, we handle venue traffic and dedicated drop-off lanes, and your return ride is staged at a price set in advance with no surge pricing when the crowd exits.',
             ],
             [
                 'service' => 'Quinceañera Charter Bus',
-                'copy'    => 'A quinceañera spans multiple locations across a full day, and the court of honor needs to stay together the entire time. Stop & Go quinceañera charters coordinate the home gathering, the church arrival, the photo stops, and the grand entrance at the reception in one vehicle, keeping the quinceañera and her damas and chambelanes on schedule and celebrating. We have coordinated celebrations at venues across New Lenox, Joliet, and Will County since 2015.',
+                'copy'    => 'A quinceañera spans multiple locations across a full day, and the court of honor needs to stay together the entire time. Stop & Go Airport Shuttle Service, Inc. quinceañera charters coordinate the home gathering, the church arrival, the photo stops, and the grand entrance at the reception in one vehicle, keeping the quinceañera and her damas and chambelanes on schedule and celebrating. We have coordinated celebrations at venues across New Lenox, Joliet, and Will County since 2015.',
             ],
             [
                 'service' => 'Winery and Brewery Tour Bus',
-                'copy'    => 'Illinois has a growing trail of wineries and craft breweries, and the best way to experience more than one in a day is with a driver who handles every mile. Stop & Go winery and brewery tour charters provide a comfortable, climate-controlled bus for groups exploring the region, with stops planned in advance and a return time that keeps the evening on track. No one drives. Everyone enjoys the full experience.',
+                'copy'    => 'Illinois has a growing trail of wineries and craft breweries, and the best way to experience more than one in a day is with a driver who handles every mile. Stop & Go Airport Shuttle Service, Inc. winery and brewery tour charters provide a comfortable, climate-controlled bus for groups exploring the region, with stops planned in advance and a return time that keeps the evening on track. No one drives. Everyone enjoys the full experience.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -298,7 +298,7 @@
         id="charter-process"
         heading="Six Steps That Happen Before"
         headingBold="Your Group Boards the Bus"
-        intro="A great charter bus experience starts well before pickup day. Here is every step Stop & Go takes from the moment you request a quote to the moment your driver opens the door."
+        intro="A great charter bus experience starts well before pickup day. Here is every step Stop & Go Airport Shuttle Service, Inc. takes from the moment you request a quote to the moment your driver opens the door."
         :steps="[
             [
                 'num'   => '01',
@@ -338,7 +338,7 @@
         heading="Every Group That Benefits"
         headingBold="from a Charter Bus"
         subheading="Who Books Our Charter Buses Most Often"
-        intro="Charter buses serve a wide range of groups across Chicagoland. Here is a look at the occasions and travel parties that book Stop & Go most often, and what each charter typically includes."
+        intro="Charter buses serve a wide range of groups across Chicagoland. Here is a look at the occasions and travel parties that book Stop & Go Airport Shuttle Service, Inc. most often, and what each charter typically includes."
         :occasions="[
             [
                 'occasion' => 'Corporate Teams and Conference Groups',
@@ -350,11 +350,11 @@
             ],
             [
                 'occasion' => 'School and Church Group Outings',
-                'copy'     => 'Day trips, community events, and group excursions for schools and faith communities need a driver who is professional, dependable, and easy to coordinate. Stop & Go school and church charters provide a fully licensed and insured vehicle with a background-checked driver for group outings across Chicagoland.',
+                'copy'     => 'Day trips, community events, and group excursions for schools and faith communities need a driver who is professional, dependable, and easy to coordinate. Stop & Go Airport Shuttle Service, Inc. school and church charters provide a fully licensed and insured vehicle with a background-checked driver for group outings across Chicagoland.',
             ],
             [
                 'occasion' => 'Family Reunion Transportation',
-                'copy'     => 'Large family reunions often span multiple generations and multiple vehicles, which means someone always gets lost or misses the timing. A Stop & Go family reunion charter puts everyone together, coordinates pick-ups across multiple addresses, and keeps the whole group moving from venue to venue without anyone left behind.',
+                'copy'     => 'Large family reunions often span multiple generations and multiple vehicles, which means someone always gets lost or misses the timing. A Stop & Go Airport Shuttle Service, Inc. family reunion charter puts everyone together, coordinates pick-ups across multiple addresses, and keeps the whole group moving from venue to venue without anyone left behind.',
             ],
             [
                 'occasion' => 'Bachelor and Bachelorette Group Nights',
@@ -362,7 +362,7 @@
             ],
             [
                 'occasion' => 'Holiday Party Groups Downtown',
-                'copy'     => 'Company holiday parties at Chicago venues create a predictable transportation problem: everyone needs to get there, no one wants to drive, and Uber surge pricing at 11 p.m. on a Friday in December is not the answer. A Stop & Go holiday charter locks in the rate for the whole group before the party starts and stages the return pickup the moment the venue closes.',
+                'copy'     => 'Company holiday parties at Chicago venues create a predictable transportation problem: everyone needs to get there, no one wants to drive, and Uber surge pricing at 11 p.m. on a Friday in December is not the answer. A Stop & Go Airport Shuttle Service, Inc. holiday charter locks in the rate for the whole group before the party starts and stages the return pickup the moment the venue closes.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -385,18 +385,18 @@
             ],
             [
                 'feature' => 'No parking, no parking fees',
-                'detail'  => 'Event parking at major Chicago venues often runs $40 to $60 per car. Multiply that across the group and the parking cost alone exceeds the charter cost. A Stop & Go charter bus drops and picks up at the designated vehicle lanes and eliminates parking entirely.',
+                'detail'  => 'Event parking at major Chicago venues often runs $40 to $60 per car. Multiply that across the group and the parking cost alone exceeds the charter cost. A Stop & Go Airport Shuttle Service, Inc. charter bus drops and picks up at the designated vehicle lanes and eliminates parking entirely.',
             ],
             [
                 'feature' => 'Professional, licensed, and insured driver',
-                'detail'  => 'Every Stop & Go driver is background-checked, professionally trained, and operating in a fully licensed and insured vehicle. For groups that include minors, seniors, or traveling clients, that accountability matters. We confirm pickup and drop-off details in advance so families and organizers always know the plan.',
+                'detail'  => 'Every Stop & Go Airport Shuttle Service, Inc. driver is background-checked, professionally trained, and operating in a fully licensed and insured vehicle. For groups that include minors, seniors, or traveling clients, that accountability matters. We confirm pickup and drop-off details in advance so families and organizers always know the plan.',
             ],
         ]"
         rightHeading="Will County's Group Transportation Team Since 2015"
         :rightParagraphs="[
-            'Stop & Go has been coordinating group transportation across Will County since 2015. Our drivers know the venue access roads at Joliet\'s Jacob Henry Mansion, the church parking sequences for large quinceañera celebrations in New Lenox and Frankfort, the dedicated drop-off lanes at the United Center and Soldier Field, and the airport curbside protocols at both O\'Hare and Midway. That local knowledge reduces timing friction for every charter.',
+            'Stop & Go Airport Shuttle Service, Inc. has been coordinating group transportation across Will County since 2015. Our drivers know the venue access roads at Joliet\'s Jacob Henry Mansion, the church parking sequences for large quinceañera celebrations in New Lenox and Frankfort, the dedicated drop-off lanes at the United Center and Soldier Field, and the airport curbside protocols at both O\'Hare and Midway. That local knowledge reduces timing friction for every charter.',
             'We serve New Lenox, Joliet, Frankfort, Mokena, Naperville, Orland Park, Tinley Park, Plainfield, Bolingbrook, Romeoville, and all points across Will County and Chicagoland. Groups traveling from multiple pickup addresses are accommodated with a sequenced pickup run that minimizes total travel time before the first stop.',
-            'For recurring corporate charters and large-scale event transportation, Stop & Go offers account coordination with a single dispatch contact. Your travel manager submits the group\'s schedule, we handle every run, and billing is centralized so there is no per-person credit card friction on the day of the trip.',
+            'For recurring corporate charters and large-scale event transportation, Stop & Go Airport Shuttle Service, Inc. offers account coordination with a single dispatch contact. Your travel manager submits the group\'s schedule, we handle every run, and billing is centralized so there is no per-person credit card friction on the day of the trip.',
         ]"
         ctaHeading="Ready to book your group charter?"
         ctaBody="Get your flat-rate charter quote in minutes. We serve all of Will County and Chicagoland and are available 24 hours a day, 365 days a year."
@@ -475,13 +475,13 @@
         headingBold="group charter bus?"
         headingTail=""
         image="/images/heroes/hero-new-bus-rental-fiq.jpg"
-        imageAlt="Stop &amp; Go charter bus for group transportation across Will County and Chicagoland"
+        imageAlt="Stop &amp; Go Airport Shuttle Service, Inc. charter bus for group transportation across Will County and Chicagoland"
         imageAspect="16/9"
         imageObjectPosition="center center"
         rightVariant="description"
         descHeading="What Every Charter Bus Includes"
         descSubheading="The same professional standard on every group booking"
-        descBody="Whether you are moving a wedding party across Frankfort or shuttling a corporate team to a downtown Chicago conference, here is what comes with every Stop & Go charter:"
+        descBody="Whether you are moving a wedding party across Frankfort or shuttling a corporate team to a downtown Chicago conference, here is what comes with every Stop & Go Airport Shuttle Service, Inc. charter:"
         :descBullets="[
             'Professional, background-checked driver on every charter, arriving before the first pickup',
             'Vehicle right-sized to your group: mini bus, full-size charter bus, or motorcoach',

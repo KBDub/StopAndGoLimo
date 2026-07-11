@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Naperville, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Naperville, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -43,11 +43,11 @@
     <x-sections.travel-in-style
         heading="Every Occasion"
         headingBold="Covered"
-        body="Stop & Go offers dependable transportation services throughout Naperville. It provides a professional 24/7 Naperville airport shuttle to O'Hare and Midway."
+        body="Stop & Go Airport Shuttle Service, Inc. offers dependable transportation services throughout Naperville. It provides a professional 24/7 Naperville airport shuttle to O'Hare and Midway."
         buttonText="Book Naperville Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/downtown-naperville-aerial.jpg"
-        imageAlt="Aerial view of downtown Naperville, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Aerial view of downtown Naperville, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="left"
         :inverted="true"
     />
@@ -56,7 +56,7 @@
         headingPrefix="Reliable & On-Time"
         headingBold="Every Trip"
         heading=""
-        body="Stop & Go provides Naperville with 24/7 airport shuttle service to O'Hare and Midway, limousine service for weddings and events, and party bus rentals for celebrations. Serving downtown, North Naperville, and surrounding areas, our professional chauffeurs deliver reliable, comfortable transportation for every occasion."
+        body="Stop & Go Airport Shuttle Service, Inc. provides Naperville with 24/7 airport shuttle service to O'Hare and Midway, limousine service for weddings and events, and party bus rentals for celebrations. Serving downtown, North Naperville, and surrounding areas, our professional chauffeurs deliver reliable, comfortable transportation for every occasion."
     />
 
     <x-sections.three-steps
@@ -85,13 +85,13 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/naperville-fiq.jpg"
-        imageAlt="Aerial view of Naperville, Illinois — Stop and Go Airport Shuttle Service"
+        imageAlt="Aerial view of Naperville, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Why Choose Us?"
         descSubheading="Complete Transportation Solutions for Naperville Residents"
-        descBody="As Naperville's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        descBody="As Naperville's trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services:"
         :descBullets="[
             'Naperville airport shuttle for timely arrivals and departures',
             'Limousine service for weddings, events, and special occasions',
@@ -101,7 +101,7 @@
         ]"
         descClosing="Our intimate knowledge of Naperville, from the Riverwalk to downtown, from Route 59 to I-88, ensures efficient and reliable transportation throughout the community."
         descImage="/images/sections/naperville-fiq.jpg"
-        descImageAlt="Aerial view of Naperville, Illinois — Stop and Go Airport Shuttle Service"
+        descImageAlt="Aerial view of Naperville, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -114,7 +114,7 @@
         buttonText="Book Naperville Shuttle"
         buttonHref="/bookings-reservations"
         image="/images/sections/naperville-limo-service.jpg"
-        imageAlt="Luxury limousine service in Naperville, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Luxury limousine service in Naperville, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
         :inverted="true"
     />
@@ -133,7 +133,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions"
         headingBold="for Naperville Residents"
-        body="As Naperville's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Naperville airport shuttle, Naperville limo service, Naperville party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Naperville, from downtown Riverwalk to North Naperville and South & West neighborhoods, from Route 59 corridor to I-88 and I-355 access, ensures efficient, reliable transportation throughout the community and for Naperville to O'Hare trips."
+        body="As Naperville's trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services including Naperville airport shuttle, Naperville limo service, Naperville party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Naperville, from downtown Riverwalk to North Naperville and South & West neighborhoods, from Route 59 corridor to I-88 and I-355 access, ensures efficient, reliable transportation throughout the community and for Naperville to O'Hare trips."
         buttonText="Contact"
         buttonHref="/get-a-quote"
         directions="• Downtown Naperville to O'Hare: 35 to 50 minutes via I-88 East • West Naperville to O'Hare: 40 to 55 minutes • Naperville to Midway Airport: 30 to 45 minutes via I-55 North • Naperville I-88 corridor to both airports"

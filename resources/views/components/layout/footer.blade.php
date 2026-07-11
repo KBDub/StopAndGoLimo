@@ -154,7 +154,7 @@
         </div>
 
         <div id="copywrite" class="pt-2 border-t border-cloud-dark text-center text-slate">
-            <p class="text-xs pb-2">&copy; Copyright 2026 Stop &amp; Go Airport Shuttle Service Inc.</p>
+            <p class="text-xs pb-2">&copy; Copyright 2026 Stop &amp; Go Airport Shuttle Service, Inc.</p>
             <p class="text-xs mt-1">Powered by <span class="font-medium">Dream Studio Solutions</span></p>
         </div>
 

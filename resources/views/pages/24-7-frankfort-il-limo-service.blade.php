@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Frankfort, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Frankfort, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -45,7 +45,7 @@
         headingBold="Limo Service"
         body="Travel through Frankfort in comfort and confidence with our 24/7 Frankfort IL limo service. Whether you are planning a memorable celebration with a Party Bus Rental in Frankfort IL or arriving in style with a wedding limo in Frankfort IL, we deliver dependable, comfortable, and on-time transportation. Our experienced drivers focus on safety, punctuality, and premium service so every ride feels effortless from start to finish."
         image="/images/sections/frankfort-limo.png"
-        imageAlt="Happy clients in a limousine in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Happy clients in a limousine in Frankfort, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :inverted="true"
     />
 
@@ -54,7 +54,7 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/frankfort-transportation.png"
-        imageAlt="Fleet of vehicles in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Fleet of vehicles in Frankfort, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
@@ -63,7 +63,7 @@
         descBody="Make every event run smoothly with dependable event transportation in Frankfort IL and professional chauffeur service in Frankfort IL. Skip the stress of traffic and timing with on-time pickups, comfortable vehicles, and experienced drivers who handle everything for you. Reserve your ride today and travel with total confidence."
         descClosing="Book your ride in minutes using our online form."
         descImage="/images/sections/frankfort-transportation.png"
-        descImageAlt="Fleet of vehicles in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Fleet of vehicles in Frankfort, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -75,7 +75,7 @@
         headingBold="Across the Village"
         body="Whether you are planning a special evening in the historic downtown district or heading to a critical business engagement, the quality of your ride defines your entire day. Our premier Frankfort IL limo service provides a dedicated professional driver who manages every logistical detail of local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Frankfort wedding transportation service, you bypass the typical stresses of event parking and navigation to focus entirely on your personal priorities. Our local fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
         image="/images/sections/frankfort-sophisticated-travel.png"
-        imageAlt="Travel with confidence in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Travel with confidence in Frankfort, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -86,7 +86,7 @@
         headingBold="Illinois Residents"
         body="For passengers who need a higher level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily schedule. This flexible service allows you to visit multiple local destinations at your own pace with a private driver standing by for your immediate departure. Our reliable Frankfort to Midway airport car service guarantees that you arrive at your terminal without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several corporate appointments or touring regional landmarks, having a private vehicle at your disposal helps you maintain a truly fluid and efficient schedule."
         image="/images/sections/frankfort-flexible-transport.png"
-        imageAlt="Flexible transportation in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Flexible transportation in Frankfort, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -97,7 +97,7 @@
         headingBold="Significant Milestones"
         body="A luxury limousine adds a vital layer of elegance to the most significant milestones on your social calendar, from traditional weddings to formal high school graduations. We specialize in providing high-end transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at historic venues and works diligently to provide a seamless experience for every guest. From the initial pickup until the final drop-off of the night, we manage your transportation with the highest level of care."
         image="/images/sections/frankfort-elegant-arrivals.png"
-        imageAlt="Elegant arrivals in Frankfort, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Elegant arrivals in Frankfort, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

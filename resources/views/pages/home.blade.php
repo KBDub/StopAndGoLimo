@@ -51,7 +51,7 @@
     <x-sections.travel-in-style
         heading="Travel in"
         headingBold="Style"
-        body="Stop & Go Airport Shuttle Service Inc. is your premier provider of luxury limo service in New Lenox, IL. With years of experience and a commitment to quality, we offer reliable rides for any occasion, from elegant weddings to special events like proms."
+        body="Stop & Go Airport Shuttle Service, Inc. is your premier provider of luxury limo service in New Lenox, IL. With years of experience and a commitment to quality, we offer reliable rides for any occasion, from elegant weddings to special events like proms."
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/travel-in-style.jpg"

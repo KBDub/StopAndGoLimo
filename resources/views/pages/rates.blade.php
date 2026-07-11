@@ -27,7 +27,7 @@
     metaDescription="Clear, flat-rate pricing for every trip, no surprises. Limo, shuttle, and party bus rates for Chicagoland."
     currentPage="rates"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Luxury limousine rates at Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Luxury limousine rates at Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Our Rates and"

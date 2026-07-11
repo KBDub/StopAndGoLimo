@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Plainfield, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Plainfield, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -44,11 +44,11 @@
         heading="Every Occasion"
         headingBold="Covered"
         subtitle="Driven by certified drivers you can trust"
-        body="Stop & Go provides reliable transportation throughout Plainfield. We offer a professional 24/7 Plainfield airport shuttle to O'Hare and Midway."
+        body="Stop & Go Airport Shuttle Service, Inc. provides reliable transportation throughout Plainfield. We offer a professional 24/7 Plainfield airport shuttle to O'Hare and Midway."
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/plainfield-limo.jpg"
-        imageAlt="Limousine service in Plainfield, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Limousine service in Plainfield, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="left"
     />
 
@@ -56,7 +56,7 @@
         headingPrefix="Reliable & Stylish"
         headingBold="Plainfield Transportation"
         heading=""
-        body="Stop & Go provides transportation throughout Plainfield with reliable airport shuttle service to O'Hare and Midway, elegant limo service for weddings and events, and party bus rentals. Serving all neighborhoods, our professional team ensures comfort and reliability with easy access to both Chicago airports."
+        body="Stop & Go Airport Shuttle Service, Inc. provides transportation throughout Plainfield with reliable airport shuttle service to O'Hare and Midway, elegant limo service for weddings and events, and party bus rentals. Serving all neighborhoods, our professional team ensures comfort and reliability with easy access to both Chicago airports."
     />
 
     <x-sections.three-steps
@@ -85,13 +85,13 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/plainfield-fiq.jpg"
-        imageAlt="Airport transfer vehicle interior — Stop and Go Airport Shuttle, Plainfield Illinois"
+        imageAlt="Airport transfer vehicle interior — Stop & Go Airport Shuttle Service, Inc., Plainfield Illinois"
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Why Choose Us?"
         descSubheading="Complete Plainfield Transportation Services"
-        descBody="As Plainfield's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        descBody="As Plainfield's trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services:"
         :descBullets="[
             'Plainfield airport shuttle for timely arrivals and departures',
             'Limousine service for weddings, events, and special occasions',
@@ -101,7 +101,7 @@
         ]"
         descClosing="Our intimate knowledge of Plainfield, from downtown to Wynstone, Settlers' Park, and Whispering Meadows, from Route 59 to Route 126 and I-55 access, ensures efficient and reliable transportation throughout this thriving Will County community."
         descImage="/images/sections/plainfield-fiq.jpg"
-        descImageAlt="Airport transfer vehicle interior — Stop and Go Airport Shuttle, Plainfield Illinois"
+        descImageAlt="Airport transfer vehicle interior — Stop & Go Airport Shuttle Service, Inc., Plainfield Illinois"
         :descImageTop="true"
     />
 
@@ -114,7 +114,7 @@
         buttonText="Book Airport Shuttle"
         buttonHref="/bookings-reservations"
         image="/images/sections/plainfield-shuttle.jpg"
-        imageAlt="Airport shuttle service in Plainfield, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Airport shuttle service in Plainfield, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
     />
 
@@ -188,7 +188,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions Throughout"
         headingBold="Plainfield"
-        body="As Plainfield's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Plainfield airport shuttle, corporate transportation, wedding vehicles, and other services. Our intimate knowledge of Plainfield, from downtown to Wynstone, Settlers' Park, and Whispering Meadows, with easy access to Route 59 and I-55, ensures efficient, reliable transportation throughout this vibrant Will County community."
+        body="As Plainfield's trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services including Plainfield airport shuttle, corporate transportation, wedding vehicles, and other services. Our intimate knowledge of Plainfield, from downtown to Wynstone, Settlers' Park, and Whispering Meadows, with easy access to Route 59 and I-55, ensures efficient, reliable transportation throughout this vibrant Will County community."
         buttonText="Contact Us"
         buttonHref="/get-a-quote"
         directions="• Downtown Plainfield to O'Hare: 50–65 minutes via I-55 North • West Plainfield to O'Hare: 55–70 minutes • Plainfield to Midway Airport: 45–55 minutes via I-55 North • Plainfield I-80/I-55 corridor to both airports"

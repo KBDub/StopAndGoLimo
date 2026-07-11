@@ -73,7 +73,7 @@
 
     <x-sections.free-instant-quote
         image="/images/sections/party-bus-rental-naperville-fiq.png"
-        imageAlt="Party bus rental in Naperville, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Party bus rental in Naperville, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
@@ -82,7 +82,7 @@
         submitLabel="Send Message"
         descHeading="Why Choose Us?"
         descImage="/images/sections/party-bus-rental-naperville-fiq.png"
-        descImageAlt="Party bus rental in Naperville, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Party bus rental in Naperville, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
         descSubheading="Our Naperville Party Bus Turns Any Night into an Unforgettable Celebration"
         :descBullets="[
@@ -104,14 +104,14 @@
         buttonText="Book Your Party Bus"
         buttonHref="/bookings-reservations"
         image="/images/heroes/hero-party-bus-naperville.jpg"
-        imageAlt="Guests celebrating on a Stop and Go party bus in Naperville, Illinois"
+        imageAlt="Guests celebrating on a Stop & Go Airport Shuttle Service, Inc. party bus in Naperville, Illinois"
         :imagePosition="'right'"
         inverted=true
     />
 
     <x-sections.our-mission
         image="/images/heroes/hero-party-bus-naperville.jpg"
-        imageAlt="Guests celebrating on a Stop and Go party bus in Naperville, Illinois"
+        imageAlt="Guests celebrating on a Stop & Go Airport Shuttle Service, Inc. party bus in Naperville, Illinois"
     />
 
     <x-sections.text-block-slide-in
@@ -120,7 +120,7 @@
         buttonText="Contact Us"
         buttonHref="/get-a-quote"
         directions="Trusted Naperville party bus company · Reliable service for any celebration · Custom trips for any group or event · Serving all Naperville neighborhoods · Perfect for birthdays, bachelor and bachelorette parties, concerts, and special events · Naperville party bus rental available"
-    >As a trusted <a href="https://reviews.birdeye.com/stop-go-airport-shuttle-service-inc-156042976679034?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Naperville party</a> bus company, Stop &amp; Go provides full-service luxury transportation including wedding party buses, prom limo buses, birthday and celebration buses, bachelor and bachelorette shuttles, and concert and sporting event transfers. Our professional drivers and modern fleet deliver safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with convenient access to I-88, I-355, and I-55 for smooth transportation to downtown Naperville, O&rsquo;Hare, and Midway.
+    >As a trusted <a href="https://reviews.birdeye.com/stop-go-airport-shuttle-service-inc-156042976679034?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Naperville party</a> bus company, Stop &amp; Go Airport Shuttle Service, Inc. provides full-service luxury transportation including wedding party buses, prom limo buses, birthday and celebration buses, bachelor and bachelorette shuttles, and concert and sporting event transfers. Our professional drivers and modern fleet deliver safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with convenient access to I-88, I-355, and I-55 for smooth transportation to downtown Naperville, O&rsquo;Hare, and Midway.
     </x-sections.text-block-slide-in>
 
     <x-sections.faq preset="party-bus" />

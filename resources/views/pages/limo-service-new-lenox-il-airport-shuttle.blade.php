@@ -6,7 +6,7 @@
     "name": "New Lenox IL Limo Service and Airport Shuttle",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="24/7 limo service and airport shuttle from New Lenox IL to O'Hare and Midway. Flat-rate pricing, real-time flight tracking, and guaranteed on-time pickups."
     currentPage="service-areas"
     ogImage="/images/heroes/airport-ohare-midway.jpg"
-    ogImageAlt="O'Hare International Airport, served by Stop and Go limo service from New Lenox IL"
+    ogImageAlt="O'Hare International Airport, served by Stop & Go Airport Shuttle Service, Inc. limo service from New Lenox IL"
 >
     <x-sections.category-hero
         heading="New Lenox IL Limo Service"
@@ -57,11 +57,11 @@
         heading="Your Airport Run,"
         headingBold="Handled"
         subtitle="Local expertise you can count on every single time"
-        body="Stop & Go has been running airport transfers from New Lenox to O'Hare and Midway since 2015. We know I-80 at 5 a.m. We know Tri-State construction season. We know what it looks like when a flight lands 30 minutes early and the passenger is already at baggage claim. Our dispatchers monitor every flight in real time so your chauffeur is there when you land, not when the app says you should land."
+        body="Stop & Go Airport Shuttle Service, Inc. has been running airport transfers from New Lenox to O'Hare and Midway since 2015. We know I-80 at 5 a.m. We know Tri-State construction season. We know what it looks like when a flight lands 30 minutes early and the passenger is already at baggage claim. Our dispatchers monitor every flight in real time so your chauffeur is there when you land, not when the app says you should land."
         buttonText="View All Services"
         buttonHref="/our-services"
         image="/images/sections/ohare-international-airport.jpg"
-        imageAlt="O'Hare International Airport, served by Stop and Go from New Lenox, Illinois"
+        imageAlt="O'Hare International Airport, served by Stop & Go Airport Shuttle Service, Inc. from New Lenox, Illinois"
         :inverted="false"
     />
 
@@ -125,7 +125,7 @@
         rightVariant="description"
         descHeading="What Every Pickup Includes"
         descSubheading="No add-ons. No surprises."
-        descBody="Every airport transfer with Stop & Go comes with the following as standard:"
+        descBody="Every airport transfer with Stop & Go Airport Shuttle Service, Inc. comes with the following as standard:"
         :descBullets="[
             'Real-time flight tracking from booking through landing',
             'Professional meet-and-greet inside the terminal',

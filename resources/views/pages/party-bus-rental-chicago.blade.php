@@ -47,7 +47,7 @@
         heading="Every Occasion"
         headingBold="Covered"
         subtitle="Driven by certified drivers you can trust"
-        body="Stop & Go delivers luxury party bus experiences for weddings, proms, birthdays, and every celebration."
+        body="Stop & Go Airport Shuttle Service, Inc. delivers luxury party bus experiences for weddings, proms, birthdays, and every celebration."
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/heroes/hero-party-bus-interior.png"
@@ -60,7 +60,7 @@
         headingPrefix=""
         headingBold="Reliable & Stylish"
         heading="Party Bus and Limo Transportation"
-        body="Stop & Go Party Bus Rental Chicago offers luxury limo party buses for weddings, proms, birthdays, and nights out. With sound systems, LED lights, full bars, and seating for 10–40, we provide unforgettable transportation from Joliet, Plainfield, New Lenox, Naperville, Aurora, and Chicago suburbs."
+        body="Stop & Go Airport Shuttle Service, Inc. Party Bus Rental Chicago offers luxury limo party buses for weddings, proms, birthdays, and nights out. With sound systems, LED lights, full bars, and seating for 10–40, we provide unforgettable transportation from Joliet, Plainfield, New Lenox, Naperville, Aurora, and Chicago suburbs."
     />
 
     <x-sections.three-steps
@@ -107,7 +107,7 @@
         buttonText="Contact Us"
         buttonHref="/get-a-quote"
         directions="Trusted Chicago party bus company · Reliable service for any celebration · Custom trips for any group or event · Serving all Chicago neighborhoods and suburbs · Perfect for birthdays, bachelor and bachelorette parties, concerts, and special events · Chicago party bus rental available"
-    >As a trusted Chicago party bus provider, Stop &amp; Go offers complete luxury transportation services including wedding party buses, prom limo buses, birthday party buses, bachelor and bachelorette shuttles, and concert and sporting event transportation. Our expert chauffeurs and modern fleet ensure safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with easy access to I-88, I-355, and I-55 for stress-free transportation to downtown Chicago, O&rsquo;Hare, and Midway.
+    >As a trusted Chicago party bus provider, Stop &amp; Go Airport Shuttle Service, Inc. offers complete luxury transportation services including wedding party buses, prom limo buses, birthday party buses, bachelor and bachelorette shuttles, and concert and sporting event transportation. Our expert chauffeurs and modern fleet ensure safe, comfortable, and reliable service throughout Naperville, Aurora, Joliet, and all Chicago suburbs, with easy access to I-88, I-355, and I-55 for stress-free transportation to downtown Chicago, O&rsquo;Hare, and Midway.
     </x-sections.text-block-slide-in>
 
     <x-sections.city-info-grid

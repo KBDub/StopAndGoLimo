@@ -29,7 +29,7 @@
     metaDescription="Meet our licensed, background-checked professional chauffeurs serving Chicagoland. Experienced, discreet, and always on time."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Professional chauffeurs at Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Our"
@@ -46,7 +46,7 @@
     <x-sections.info-strip
         headingBold="Safety Measures"
         heading="and Regulations"
-        body="We want our clients to have the best time no matter what occasion they celebrate. Stop & Go Airport Shuttle Service Inc. provides clean and safe transportation services so everyone can enjoy the experience. We prioritize your enjoyment by ensuring that your celebrations are safe and fun, adhering to all safety regulations while providing a clean environment so you can focus on having a fantastic time. Our vehicles are well-maintained and always road-ready, and we always abide by laws and regulations."
+        body="We want our clients to have the best time no matter what occasion they celebrate. Stop & Go Airport Shuttle Service, Inc. provides clean and safe transportation services so everyone can enjoy the experience. We prioritize your enjoyment by ensuring that your celebrations are safe and fun, adhering to all safety regulations while providing a clean environment so you can focus on having a fantastic time. Our vehicles are well-maintained and always road-ready, and we always abide by laws and regulations."
     />
         
     <x-sections.company-highlight
@@ -66,7 +66,7 @@
         headingTail="Awaits"
         body="Our chauffeurs are licensed, insured, and background-checked for your peace of mind. From business meetings to special events, we deliver a smooth, on-time experience every time. Sit back, relax, and let us handle the drive while you focus on what matters most."
         image="/images/sections/chauffeur-suit-pickup.jpg"
-        imageAlt="Stop and Go professional chauffeur in suit ready for client pickup"
+        imageAlt="Stop & Go Airport Shuttle Service, Inc. professional chauffeur in suit ready for client pickup"
         imageAspect="16/9"
         rightVariant="image"
     />

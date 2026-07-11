@@ -7,7 +7,7 @@
     {{-- ═══════════════════════════════════════════════════════════════════════
          STOP AND GO LIMO — Video Sitemap
          Domain: www.newlenoxlimoservice.com
-         No Stop & Go videos have been assigned yet.
+         No Stop & Go Airport Shuttle Service, Inc. videos have been assigned yet.
          Add entries here once YouTube video IDs are confirmed.
          Source of truth: docs/image-video-control.md
     ══════════════════════════════════════════════════════════════════════════ --}}

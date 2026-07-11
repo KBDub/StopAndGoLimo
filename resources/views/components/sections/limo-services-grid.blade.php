@@ -31,7 +31,7 @@
 --}}
 
 @php
-$resolvedIntro = $intro ?? 'Stop & Go has been providing professional chauffeured transportation in New Lenox since 2015. We serve every occasion with the same commitment: the right vehicle, the right chauffeur, and a flat rate with no surprises. Below is a look at the services our New Lenox neighbors count on most.';
+$resolvedIntro = $intro ?? 'Stop & Go Airport Shuttle Service, Inc. has been providing professional chauffeured transportation in New Lenox since 2015. We serve every occasion with the same commitment: the right vehicle, the right chauffeur, and a flat rate with no surprises. Below is a look at the services our New Lenox neighbors count on most.';
 
 $resolvedCards = $cards ?? [
     [

@@ -6,7 +6,7 @@
     "name": "Professional Limo Service — Chicagoland",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": { "@@type": "State", "name": "Illinois" },
-    "description": "From booking to drop-off, Stop & Go delivers professional limo service across Chicagoland. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking, and pre-inspected vehicles on every ride."
+    "description": "From booking to drop-off, Stop & Go Airport Shuttle Service, Inc. delivers professional limo service across Chicagoland. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking, and pre-inspected vehicles on every ride."
 }
 </script>
 <script type="application/ld+json">
@@ -35,11 +35,11 @@
 @endpush
 
 <x-layouts.page
-    title="What a Professional Limo Service Includes | Stop & Go Chicagoland"
+    title="What a Professional Limo Service Includes | Stop & Go Airport Shuttle Service, Inc. Chicagoland"
     metaDescription="From booking to drop-off — here is what a professional limo service actually delivers. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Professional limo service throughout Chicagoland, Stop and Go Airport Shuttle"
+    ogImageAlt="Professional limo service throughout Chicagoland, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="What a Professional"
@@ -86,7 +86,7 @@
         imageAspect="16/9"
         imageObjectPosition="center top"
         rightVariant="description"
-        descHeading="What Every Stop & Go Ride Guarantees"
+        descHeading="What Every Stop & Go Airport Shuttle Service, Inc. Ride Guarantees"
         descSubheading="The same standard on every trip, every time"
         descBody="Whether it is your first ride or your fiftieth, here is what you can count on:"
         :descBullets="[

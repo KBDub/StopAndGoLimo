@@ -5,7 +5,7 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
     "@id": "https://newlenoxlimoservice.com/#business",
-    "name": "Stop & Go Airport Shuttle Service Inc.",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
     "telephone": "",
@@ -83,8 +83,8 @@
 {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Professional Chauffeur Services — Stop & Go",
-    "description": "Full list of professional chauffeur services offered by Stop & Go Airport Shuttle Service Inc. from New Lenox, Illinois.",
+    "name": "Professional Chauffeur Services — Stop & Go Airport Shuttle Service, Inc.",
+    "description": "Full list of professional chauffeur services offered by Stop & Go Airport Shuttle Service, Inc. from New Lenox, Illinois.",
     "itemListElement": [
         {
             "@type": "ListItem", "position": 1,
@@ -92,7 +92,7 @@
                 "@type": "Product",
                 "name": "Executive Chauffeur Service",
                 "description": "Professional executive chauffeur service for business travel across the I-80 and I-88 corridors. Quiet cabin, plush leather seating, privacy partition, and on-time performance for executives and corporate clients.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -102,7 +102,7 @@
                 "@type": "Product",
                 "name": "Airport Chauffeur Service",
                 "description": "Professional chauffeur service to O'Hare, Midway, and Chicago Executive Airport from New Lenox, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, luggage assistance, flat-rate pricing.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -112,7 +112,7 @@
                 "@type": "Product",
                 "name": "Wedding Chauffeur Service",
                 "description": "Professional wedding day chauffeur service across Will County. Formally attired driver, red carpet arrival, white-glove coordination between ceremony, photos, and reception.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -122,7 +122,7 @@
                 "@type": "Product",
                 "name": "Corporate Chauffeur Service",
                 "description": "Corporate chauffeur service for client pickups, roadshows, and multi-stop business days. Centralized billing, digital receipts, single dispatch contact, and 24/7/365 availability.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -132,7 +132,7 @@
                 "@type": "Product",
                 "name": "VIP Chauffeur Service",
                 "description": "White-glove VIP chauffeur service for high-profile guests, executives, and distinguished visitors. Discreet, polished, and professional from the moment the door opens.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         },
@@ -142,7 +142,7 @@
                 "@type": "Product",
                 "name": "Hourly Chauffeur Service",
                 "description": "Flexible hourly chauffeur hire across New Lenox, Joliet, Naperville, and all of Will County. Dedicated driver and vehicle for multiple stops, events, and full-day itineraries.",
-                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service Inc." },
+                "brand": { "@type": "Brand", "name": "Stop & Go Airport Shuttle Service, Inc." },
                 "offers": { "@type": "AggregateOffer", "offerCount": 5, "lowPrice": 95, "highPrice": 3500, "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
             }
         }
@@ -172,7 +172,7 @@
             "name": "What does a professional chauffeur service include?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A Stop & Go professional chauffeur service includes a background-checked, professionally trained driver in formal attire, a spotless and meticulously maintained vehicle with plush leather seating and climate control, door-to-door pickup and drop-off, and flat-rate all-inclusive pricing covering taxes and tolls. Airport chauffeur services also include real-time flight tracking and optional meet-and-greet inside the terminal."
+                "text": "A Stop & Go Airport Shuttle Service, Inc. professional chauffeur service includes a background-checked, professionally trained driver in formal attire, a spotless and meticulously maintained vehicle with plush leather seating and climate control, door-to-door pickup and drop-off, and flat-rate all-inclusive pricing covering taxes and tolls. Airport chauffeur services also include real-time flight tracking and optional meet-and-greet inside the terminal."
             }
         },
         {
@@ -204,7 +204,7 @@
             "name": "Is your chauffeur service available 24 hours a day?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes. Stop & Go operates 24 hours a day, 7 days a week, 365 days a year. Our dispatch line is staffed around the clock for pre-dawn airport departures, late-night arrivals, and overnight event transportation. The rate does not change based on time of day."
+                "text": "Yes. Stop & Go Airport Shuttle Service, Inc. operates 24 hours a day, 7 days a week, 365 days a year. Our dispatch line is staffed around the clock for pre-dawn airport departures, late-night arrivals, and overnight event transportation. The rate does not change based on time of day."
             }
         },
         {
@@ -222,11 +222,11 @@
 @endpush
 
 <x-layouts.page
-    title="Professional Chauffeur Service | New Lenox &amp; Will County | Stop &amp; Go"
+    title="Professional Chauffeur Service | New Lenox &amp; Will County | Stop &amp; Go Airport Shuttle Service, Inc."
     metaDescription="Professional chauffeur service across New Lenox, Joliet, Naperville, and all of Will County. Executive, airport, wedding, corporate, and VIP chauffeur service. Background-checked drivers."
     currentPage="our-services"
     ogImage="/images/sections/chauffeur-hero.jpg"
-    ogImageAlt="Stop and Go professional chauffeur in formal attire ready for client pickup in Will County"
+    ogImageAlt="Stop & Go Airport Shuttle Service, Inc. professional chauffeur in formal attire ready for client pickup in Will County"
 >
 
     <x-sections.category-hero
@@ -245,18 +245,18 @@
         heading="A Great Chauffeur Is More"
         headingBold="Than a Driver"
         subtitle=""
-        body="A great chauffeur is background-checked and formally trained, not just licensed. They arrive 10 to 15 minutes before your scheduled pickup, not at the curb when you are already outside. They manage your itinerary with the same attention to detail as the rest of your business or event day. For airport transfers, they are inside the terminal at baggage claim with your name on a sign before your bags reach the belt. For corporate roadshows, they maintain a quiet cabin with climate control and a privacy partition so you can take a call between stops. For weddings, they coordinate with your planner, arrive in formal attire, and treat your timeline as a non-negotiable. For VIP guest arrivals, they carry the kind of discretion and composure that makes a difficult day easier. At Stop & Go, the chauffeur standard is not an upcharge or an add-on. It is the baseline expectation on every booking, from a point-to-point transfer to a full day of multi-stop executive travel."
+        body="A great chauffeur is background-checked and formally trained, not just licensed. They arrive 10 to 15 minutes before your scheduled pickup, not at the curb when you are already outside. They manage your itinerary with the same attention to detail as the rest of your business or event day. For airport transfers, they are inside the terminal at baggage claim with your name on a sign before your bags reach the belt. For corporate roadshows, they maintain a quiet cabin with climate control and a privacy partition so you can take a call between stops. For weddings, they coordinate with your planner, arrive in formal attire, and treat your timeline as a non-negotiable. For VIP guest arrivals, they carry the kind of discretion and composure that makes a difficult day easier. At Stop & Go Airport Shuttle Service, Inc., the chauffeur standard is not an upcharge or an add-on. It is the baseline expectation on every booking, from a point-to-point transfer to a full day of multi-stop executive travel."
         buttonText="Book a Chauffeur"
         buttonHref="/get-a-quote"
         image="/images/sections/chauffeur-suit-pickup.jpg"
-        imageAlt="Stop &amp; Go professional chauffeur opening vehicle door for a client in New Lenox"
+        imageAlt="Stop &amp; Go Airport Shuttle Service, Inc. professional chauffeur opening vehicle door for a client in New Lenox"
         :inverted="false"
     />
 
     <x-sections.info-strip
         headingBold="Flat-Rate Pricing."
         heading="The Quote You Get Is the Bill You Pay."
-        body="On-demand apps reprice based on traffic, time of day, and demand. They can charge more during a concert night, a snowstorm, or simply because there are fewer cars available in your area. Stop & Go does not work that way. When you book a chauffeur service, your rate is locked at the time of booking. Taxes and tolls are included. Our complimentary grace period for standard flight delays is included on airport runs. There is no meter running while you are in a meeting, at a reception, or inside a venue. Whether you book a point-to-point transfer on a quiet Tuesday or an hourly day hire on a holiday weekend, the flat rate you agreed to at booking is the only number that matters."
+        body="On-demand apps reprice based on traffic, time of day, and demand. They can charge more during a concert night, a snowstorm, or simply because there are fewer cars available in your area. Stop & Go Airport Shuttle Service, Inc. does not work that way. When you book a chauffeur service, your rate is locked at the time of booking. Taxes and tolls are included. Our complimentary grace period for standard flight delays is included on airport runs. There is no meter running while you are in a meeting, at a reception, or inside a venue. Whether you book a point-to-point transfer on a quiet Tuesday or an hourly day hire on a holiday weekend, the flat rate you agreed to at booking is the only number that matters."
     />
 
     <x-sections.limo-services-grid
@@ -264,27 +264,27 @@
         heading="Chauffeur Services"
         headingBold="for Every Occasion"
         subheading="Every Type of Professional Chauffeur Booking We Handle"
-        intro="Stop & Go has been providing professional chauffeur service across Will County and Chicagoland since 2015. From executive transfers to wedding day coordination, here is a look at the chauffeur bookings our clients rely on most."
+        intro="Stop & Go Airport Shuttle Service, Inc. has been providing professional chauffeur service across Will County and Chicagoland since 2015. From executive transfers to wedding day coordination, here is a look at the chauffeur bookings our clients rely on most."
         :cards="[
             [
                 'service' => 'Executive Chauffeur Service',
-                'copy'    => 'Business travel on the I-80 and I-88 corridors runs on punctuality and discretion, and Stop & Go executive chauffeur service delivers both. Your chauffeur is professionally attired, background-checked, and trained to the standards executive clients and the assistants who book for them expect. The cabin offers plush leather seating, dual-zone climate control, a privacy partition, and a quiet ride built for calls and preparation between stops.',
+                'copy'    => 'Business travel on the I-80 and I-88 corridors runs on punctuality and discretion, and Stop & Go Airport Shuttle Service, Inc. executive chauffeur service delivers both. Your chauffeur is professionally attired, background-checked, and trained to the standards executive clients and the assistants who book for them expect. The cabin offers plush leather seating, dual-zone climate control, a privacy partition, and a quiet ride built for calls and preparation between stops.',
             ],
             [
                 'service' => 'Airport Chauffeur Service',
-                'copy'    => 'Stop & Go airport chauffeur service covers O\'Hare, Midway, and Chicago Executive Airport from New Lenox, Joliet, and all of Will County with real-time flight tracking and optional inside-terminal meet-and-greet. If your inbound flight shifts, your pickup adjusts automatically with no extra charge for standard delays. Flat-rate, all-inclusive pricing covers taxes and tolls. Your chauffeur is at the terminal before your wheels touch the runway.',
+                'copy'    => 'Stop & Go Airport Shuttle Service, Inc. airport chauffeur service covers O\'Hare, Midway, and Chicago Executive Airport from New Lenox, Joliet, and all of Will County with real-time flight tracking and optional inside-terminal meet-and-greet. If your inbound flight shifts, your pickup adjusts automatically with no extra charge for standard delays. Flat-rate, all-inclusive pricing covers taxes and tolls. Your chauffeur is at the terminal before your wheels touch the runway.',
             ],
             [
                 'service' => 'Wedding Chauffeur Service',
-                'copy'    => 'A wedding day cannot absorb a late vehicle, and Stop & Go wedding chauffeur service is built around that reality. Your chauffeur arrives in formal attire, manages the full itinerary from getting-ready photos through the reception exit, and coordinates directly with your planner so nothing is improvised on the day. We have worked at venues across Will County, from Frankfort and Mokena to the Jacob Henry Mansion in Joliet.',
+                'copy'    => 'A wedding day cannot absorb a late vehicle, and Stop & Go Airport Shuttle Service, Inc. wedding chauffeur service is built around that reality. Your chauffeur arrives in formal attire, manages the full itinerary from getting-ready photos through the reception exit, and coordinates directly with your planner so nothing is improvised on the day. We have worked at venues across Will County, from Frankfort and Mokena to the Jacob Henry Mansion in Joliet.',
             ],
             [
                 'service' => 'Corporate Chauffeur Service',
-                'copy'    => 'Client pickups, roadshows, and conference transfers all require the kind of reliable, professional ground transportation that reflects well on your company. Stop & Go corporate chauffeur service provides centralized billing, digital receipts, and a single dispatch contact for travel managers, plus the on-time execution that high-stakes corporate travel demands. We serve corporate campuses across the I-80 and I-88 business corridors and downtown Chicago.',
+                'copy'    => 'Client pickups, roadshows, and conference transfers all require the kind of reliable, professional ground transportation that reflects well on your company. Stop & Go Airport Shuttle Service, Inc. corporate chauffeur service provides centralized billing, digital receipts, and a single dispatch contact for travel managers, plus the on-time execution that high-stakes corporate travel demands. We serve corporate campuses across the I-80 and I-88 business corridors and downtown Chicago.',
             ],
             [
                 'service' => 'VIP Chauffeur Service',
-                'copy'    => 'Some arrivals call for white-glove service, and Stop & Go VIP chauffeur service is built around that standard. A professionally attired, background-checked chauffeur in a spotless vehicle with plush leather seating, ambient lighting, and a privacy partition makes the first impression before a word is spoken. We pair discretion with dependability on every VIP booking, whether it is a high-profile corporate guest or a distinguished personal occasion.',
+                'copy'    => 'Some arrivals call for white-glove service, and Stop & Go Airport Shuttle Service, Inc. VIP chauffeur service is built around that standard. A professionally attired, background-checked chauffeur in a spotless vehicle with plush leather seating, ambient lighting, and a privacy partition makes the first impression before a word is spoken. We pair discretion with dependability on every VIP booking, whether it is a high-profile corporate guest or a distinguished personal occasion.',
             ],
             [
                 'service' => 'Hourly Chauffeur Service',
@@ -298,7 +298,7 @@
         id="chauffeur-process"
         heading="Six Steps That Happen Before"
         headingBold="Your Chauffeur Opens the Door"
-        intro="Professional chauffeur service is built on preparation, not improvisation. Here is every step Stop & Go takes from the moment you book to the moment your chauffeur arrives at your door or meets you at the terminal."
+        intro="Professional chauffeur service is built on preparation, not improvisation. Here is every step Stop & Go Airport Shuttle Service, Inc. takes from the moment you book to the moment your chauffeur arrives at your door or meets you at the terminal."
         :steps="[
             [
                 'num'   => '01',
@@ -338,31 +338,31 @@
         heading="Every Client Who Benefits"
         headingBold="from a Professional Chauffeur"
         subheading="Who Books Our Chauffeur Service Most Often"
-        intro="A professional chauffeur is not a luxury reserved for any single occasion. Here is a look at the clients and situations Stop & Go serves most often, and what each chauffeur booking typically includes."
+        intro="A professional chauffeur is not a luxury reserved for any single occasion. Here is a look at the clients and situations Stop & Go Airport Shuttle Service, Inc. serves most often, and what each chauffeur booking typically includes."
         :occasions="[
             [
                 'occasion' => 'Executives and Business Frequent Travelers',
-                'copy'     => 'Executives and frequent business travelers across the I-80 and I-88 corridors book Stop & Go for the consistency that on-demand apps cannot provide. The flat rate is the same every trip. The chauffeur is always formally attired. The vehicle is always the same professional standard. Recurring accounts can pre-schedule weekly airport runs and manage billing through a single corporate contact.',
+                'copy'     => 'Executives and frequent business travelers across the I-80 and I-88 corridors book Stop & Go Airport Shuttle Service, Inc. for the consistency that on-demand apps cannot provide. The flat rate is the same every trip. The chauffeur is always formally attired. The vehicle is always the same professional standard. Recurring accounts can pre-schedule weekly airport runs and manage billing through a single corporate contact.',
             ],
             [
                 'occasion' => 'VIP and Corporate Guest Arrivals',
-                'copy'     => 'When a board member, visiting client, or distinguished guest arrives at O\'Hare or Midway, the ground transportation makes the first impression. Stop & Go VIP arrivals include inside-terminal meet-and-greet with a name sign, real-time flight tracking so the chauffeur is there regardless of schedule changes, and a quiet, professionally appointed vehicle for the ride to the hotel or office.',
+                'copy'     => 'When a board member, visiting client, or distinguished guest arrives at O\'Hare or Midway, the ground transportation makes the first impression. Stop & Go Airport Shuttle Service, Inc. VIP arrivals include inside-terminal meet-and-greet with a name sign, real-time flight tracking so the chauffeur is there regardless of schedule changes, and a quiet, professionally appointed vehicle for the ride to the hotel or office.',
             ],
             [
                 'occasion' => 'Couples Celebrating Anniversaries and Milestones',
-                'copy'     => 'An anniversary dinner, a milestone birthday, or a romantic evening out is elevated when neither person has to think about driving, parking, or getting home. Stop & Go date-night and milestone chauffeur service provides a professionally attired driver, an elegant vehicle, and a route tailored to the evening so the occasion stays exactly that.',
+                'copy'     => 'An anniversary dinner, a milestone birthday, or a romantic evening out is elevated when neither person has to think about driving, parking, or getting home. Stop & Go Airport Shuttle Service, Inc. date-night and milestone chauffeur service provides a professionally attired driver, an elegant vehicle, and a route tailored to the evening so the occasion stays exactly that.',
             ],
             [
                 'occasion' => 'Brides, Grooms, and Wedding Parties',
-                'copy'     => 'Wedding chauffeur service from Stop & Go covers the full day, from the first getting-ready pickup to the final send-off. Your chauffeur coordinates with your planner, manages venue arrival timing, and treats every leg of the day as a non-negotiable commitment. We have supported celebrations at venues across Will County and Chicagoland since 2015.',
+                'copy'     => 'Wedding chauffeur service from Stop & Go Airport Shuttle Service, Inc. covers the full day, from the first getting-ready pickup to the final send-off. Your chauffeur coordinates with your planner, manages venue arrival timing, and treats every leg of the day as a non-negotiable commitment. We have supported celebrations at venues across Will County and Chicagoland since 2015.',
             ],
             [
                 'occasion' => 'Corporate Roadshow and Multi-Stop Business Days',
-                'copy'     => 'A corporate roadshow with four stops across the Chicago metro is far easier when one chauffeur stays with the team all day. Your driver manages the route, adjusts the timing between meetings, and keeps the cabin ready for calls and prep between stops. Stop & Go roadshow chauffeur service comes with a privacy partition, climate control, and centralized billing for travel managers.',
+                'copy'     => 'A corporate roadshow with four stops across the Chicago metro is far easier when one chauffeur stays with the team all day. Your driver manages the route, adjusts the timing between meetings, and keeps the cabin ready for calls and prep between stops. Stop & Go Airport Shuttle Service, Inc. roadshow chauffeur service comes with a privacy partition, climate control, and centralized billing for travel managers.',
             ],
             [
                 'occasion' => 'Special Events and Milestone Celebrations',
-                'copy'     => 'Quinceañeras, milestone birthdays, graduations, and formal galas all benefit from a professional chauffeur who treats the event timeline as a priority. Stop & Go special event chauffeur service coordinates multi-stop itineraries, coordinates with venue staff, and keeps the celebration on schedule so the guest of honor and their family can stay fully present.',
+                'copy'     => 'Quinceañeras, milestone birthdays, graduations, and formal galas all benefit from a professional chauffeur who treats the event timeline as a priority. Stop & Go Airport Shuttle Service, Inc. special event chauffeur service coordinates multi-stop itineraries, coordinates with venue staff, and keeps the celebration on schedule so the guest of honor and their family can stay fully present.',
             ],
         ]"
         ctaHref="/get-a-quote"
@@ -372,31 +372,31 @@
         id="chauffeur-advantage"
         heading="Why Professional Chauffeur Service"
         headingBold="Beats Every Alternative"
-        intro="On-demand rideshare apps offer convenience at the cost of consistency. You never know who will show up, what the car will look like, or what the fare will be when your event ends and demand spikes. A Stop & Go professional chauffeur offers all of the convenience with none of those variables."
+        intro="On-demand rideshare apps offer convenience at the cost of consistency. You never know who will show up, what the car will look like, or what the fare will be when your event ends and demand spikes. A Stop & Go Airport Shuttle Service, Inc. professional chauffeur offers all of the convenience with none of those variables."
         leftHeading="The Professional Chauffeur Advantage"
         :checklist="[
             [
                 'feature' => 'Background-checked, formally trained chauffeur every time',
-                'detail'  => 'Every Stop & Go chauffeur is background-checked and professionally trained before their first booking. For corporate clients, VIP guests, and family milestones, knowing exactly who is behind the wheel is not optional. On-demand apps cannot offer that consistency.',
+                'detail'  => 'Every Stop & Go Airport Shuttle Service, Inc. chauffeur is background-checked and professionally trained before their first booking. For corporate clients, VIP guests, and family milestones, knowing exactly who is behind the wheel is not optional. On-demand apps cannot offer that consistency.',
             ],
             [
                 'feature' => 'Flat rate locked before the trip begins',
-                'detail'  => 'Rideshare apps reprice based on traffic, event demand, and time of day. When a sold-out concert ends or a late flight lands during a storm, the surge is significant. Stop & Go locks your rate at booking. The number we quote is the number on your receipt, any time of day or year.',
+                'detail'  => 'Rideshare apps reprice based on traffic, event demand, and time of day. When a sold-out concert ends or a late flight lands during a storm, the surge is significant. Stop & Go Airport Shuttle Service, Inc. locks your rate at booking. The number we quote is the number on your receipt, any time of day or year.',
             ],
             [
                 'feature' => 'Meticulously maintained vehicle on every booking',
-                'detail'  => 'Stop & Go vehicles are detailed and mechanically inspected before every service. You are not riding in a personal vehicle pressed into service. Plush leather seating, climate control, and a clean, professionally presented cabin are the standard, not the exception.',
+                'detail'  => 'Stop & Go Airport Shuttle Service, Inc. vehicles are detailed and mechanically inspected before every service. You are not riding in a personal vehicle pressed into service. Plush leather seating, climate control, and a clean, professionally presented cabin are the standard, not the exception.',
             ],
             [
                 'feature' => '24/7/365 dispatch, available for any hour',
-                'detail'  => 'Pre-dawn airport departures, midnight event pickups, and holiday travel all require a dispatch operation that does not go offline. Stop & Go runs 24 hours a day, 365 days a year, with a real dispatcher managing your booking from confirmation to drop-off.',
+                'detail'  => 'Pre-dawn airport departures, midnight event pickups, and holiday travel all require a dispatch operation that does not go offline. Stop & Go Airport Shuttle Service, Inc. runs 24 hours a day, 365 days a year, with a real dispatcher managing your booking from confirmation to drop-off.',
             ],
         ]"
         rightHeading="Serving Will County and Chicagoland Since 2015"
         :rightParagraphs="[
-            'Stop & Go has been providing professional chauffeur service across Will County since 2015. Our drivers know the I-80 and I-55 corridors to O\'Hare, the I-355 connector to Midway, the venue access roads at the Jacob Henry Mansion and the country clubs in Frankfort and Mokena, and the corporate campus parking protocols along the I-88 Innovation Corridor in Naperville and Oak Brook. That local knowledge matters when a tight schedule has no room for route uncertainty.',
+            'Stop & Go Airport Shuttle Service, Inc. has been providing professional chauffeur service across Will County since 2015. Our drivers know the I-80 and I-55 corridors to O\'Hare, the I-355 connector to Midway, the venue access roads at the Jacob Henry Mansion and the country clubs in Frankfort and Mokena, and the corporate campus parking protocols along the I-88 Innovation Corridor in Naperville and Oak Brook. That local knowledge matters when a tight schedule has no room for route uncertainty.',
             'We serve New Lenox, Joliet, Frankfort, Mokena, Naperville, Orland Park, Tinley Park, Plainfield, Bolingbrook, Romeoville, and all points across Will County and Chicagoland, with a second location in Naperville for DuPage County clients. Whether your chauffeur booking is a quick point-to-point transfer or a full-day hourly engagement, the same professional standard applies.',
-            'For corporate clients and frequent travelers, Stop & Go offers account coordination with centralized billing, digital receipts, and a single dispatch contact. Your travel manager submits the schedule, we handle every run, and the invoicing lands in accounts payable without the friction of per-trip credit card charges. It is the same experience, week after week, with the same professional team behind every booking.',
+            'For corporate clients and frequent travelers, Stop & Go Airport Shuttle Service, Inc. offers account coordination with centralized billing, digital receipts, and a single dispatch contact. Your travel manager submits the schedule, we handle every run, and the invoicing lands in accounts payable without the friction of per-trip credit card charges. It is the same experience, week after week, with the same professional team behind every booking.',
         ]"
         ctaHeading="Ready to book your chauffeur?"
         ctaBody="Get your flat-rate quote in minutes. We serve all of Will County and Chicagoland and are available 24 hours a day, 365 days a year."
@@ -475,13 +475,13 @@
         headingBold="professional chauffeur?"
         headingTail=""
         image="/images/sections/chauffeurs.jpg"
-        imageAlt="Stop &amp; Go professional chauffeurs ready for client service across Will County and Chicagoland"
+        imageAlt="Stop &amp; Go Airport Shuttle Service, Inc. professional chauffeurs ready for client service across Will County and Chicagoland"
         imageAspect="16/9"
         imageObjectPosition="center center"
         rightVariant="description"
         descHeading="What Every Chauffeur Booking Includes"
         descSubheading="The same professional standard on every transfer, every time"
-        descBody="Whether you are booking an executive airport transfer at 4 a.m. or a wedding day chauffeur for a full Saturday, here is what every Stop &amp; Go chauffeur booking includes:"
+        descBody="Whether you are booking an executive airport transfer at 4 a.m. or a wedding day chauffeur for a full Saturday, here is what every Stop &amp; Go Airport Shuttle Service, Inc. chauffeur booking includes:"
         :descBullets="[
             'Background-checked, professionally trained chauffeur in formal attire on every booking',
             'Meticulously maintained, pre-inspected vehicle with plush leather seating and climate control',

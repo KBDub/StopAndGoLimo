@@ -28,7 +28,7 @@
 
     <div class="header">
         <h1>New Quote Request</h1>
-        <p>Stop &amp; Go Airport Shuttle Service Inc.</p>
+        <p>Stop &amp; Go Airport Shuttle Service, Inc.</p>
     </div>
 
     <div class="body">
@@ -95,7 +95,7 @@
     </div>
 
     <div class="footer">
-        Stop &amp; Go Airport Shuttle Service Inc. &mdash; &mdash; newlenoxlimoservice.com<br>
+        Stop &amp; Go Airport Shuttle Service, Inc. &mdash; &mdash; newlenoxlimoservice.com<br>
         This is an automated notification. Reference: {{ $quote->reference }}
     </div>
 

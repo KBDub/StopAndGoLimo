@@ -6,7 +6,7 @@
     "name": "Party Bus Rental Aurora IL Night Out",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Party bus rental in Aurora, IL for a night out your crew will never forget. Professional chauffeurs, LED lighting, premium sound, and flat-rate pricing."
     currentPage="service-areas"
     ogImage="/images/heroes/party-bus-aurora-il.png"
-    ogImageAlt="Party bus rental in Aurora IL, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Party bus rental in Aurora IL, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Aurora IL"
@@ -57,11 +57,11 @@
         heading="Aurora Nights,"
         headingBold="Done Right"
         subtitle="From Fox Valley to downtown Chicago, we take your group anywhere"
-        body="Stop & Go has been serving the Aurora area with professional group transportation since 2015. Whether your night starts in Aurora and ends in Chicago, or you are making a full evening loop through the Fox Valley, our chauffeurs know the routes and the timing. Your group rolls together, stays together, and gets home safely together."
+        body="Stop & Go Airport Shuttle Service, Inc. has been serving the Aurora area with professional group transportation since 2015. Whether your night starts in Aurora and ends in Chicago, or you are making a full evening loop through the Fox Valley, our chauffeurs know the routes and the timing. Your group rolls together, stays together, and gets home safely together."
         buttonText="View Our Services"
         buttonHref="/our-services"
         image="/images/sections/party-bus-aurora.jpg"
-        imageAlt="Party bus in Aurora, Illinois with Stop and Go"
+        imageAlt="Party bus in Aurora, Illinois with Stop & Go Airport Shuttle Service, Inc."
         :inverted="true"
     />
 
@@ -125,7 +125,7 @@
         ]"
         descClosing="Call or book online to reserve your Aurora party bus today."
         descImage="/images/sections/party-bus-aurora-illinois.png"
-        descImageAlt="Aurora IL party bus rental with Stop and Go"
+        descImageAlt="Aurora IL party bus rental with Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 

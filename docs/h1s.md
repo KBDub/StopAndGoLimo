@@ -45,8 +45,8 @@ Stop & Go Airport Shuttle Service, Inc. has served the greater Chicago area sinc
 **Current subtitle:** "The Most Convenient Shuttle Service"
 **Current description:** "At Stop & Go Airport Shuttle Service Inc., we recognize the challenges of finding a reliable transportation provider. That's why we go the extra mile to offer exceptional services, ensuring clean vehicles, prompt customer support, and a commitment to treating every customer with the utmost respect. Our goal is to deliver a seamless, stress-free travel experience that exceeds your expectations."
 
-**Suggested H1:** "About" / **"Stop & Go Limo"**
-**Suggested subtitle:** "Proudly serving Chicagoland since 2009"
+**Suggested H1:** "About" / **"Stop & Go Airport Shuttle Service, Inc."**
+**Suggested subtitle:** "Proudly serving Chicagoland since 2015"
 
 **Suggested description:**
 Stop & Go Airport Shuttle Service, Inc. was founded in 2009 with one goal: to give families, executives, and event groups throughout the Chicago area a professional transportation option they can count on every time. We are based in New Lenox and Naperville, and we serve all of Chicagoland and Illinois, from the southwest and south suburbs through the western communities of Elgin, Schaumburg, and Downers Grove, and north to Arlington Heights, Waukegan, and the North Shore. Our background-checked, uniformed chauffeurs are available around the clock, every day of the year. We serve corporate travelers heading to O'Hare or Midway, families on vacation, couples on their wedding day, students heading to prom, quinceañera courts arriving in style, birthday groups out for a celebration, and sports fans heading to Soldier Field or the United Center. Our fleet ranges from executive sedans and luxury SUVs to stretch limousines, Mercedes Sprinter vans, party buses, and coach buses. We are IDOT licensed and carry $1.5 million in commercial liability coverage, because your safety matters. We are proud of the communities we serve and look forward to earning your trust.

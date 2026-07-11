@@ -6,7 +6,7 @@
     "name": "Wedding Party Bus Rental",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Wedding party bus rental throughout Chicagoland. Transport your bridal party and guests in comfort and style. Professional chauffeurs, flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/bus-rentals-for-wedding.png"
-    ogImageAlt="Wedding party bus rental, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Wedding party bus rental, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Wedding"
@@ -61,7 +61,7 @@
         buttonText="View Wedding Services"
         buttonHref="/wedding-limousine-services"
         image="/images/sections/wedding-party-bus.jpg"
-        imageAlt="Wedding party bus rental with Stop and Go Airport Shuttle Service"
+        imageAlt="Wedding party bus rental with Stop & Go Airport Shuttle Service, Inc."
         :inverted="false"
     />
 
@@ -108,7 +108,7 @@
         headingBold="wedding transportation"
         headingTail="today"
         image="/images/sections/wedding-party-bus-rental.png"
-        imageAlt="Wedding party bus rental with Stop and Go Airport Shuttle Service"
+        imageAlt="Wedding party bus rental with Stop & Go Airport Shuttle Service, Inc."
         imageAspect="4/3"
         imageObjectPosition="center top"
         rightVariant="description"

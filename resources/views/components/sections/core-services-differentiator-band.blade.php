@@ -3,7 +3,7 @@
 {{--
     x-sections.core-services-differentiator-band
     ─────────────────────────────────────────────────────────────────────────────
-    Full-width credibility section: "Why choose Stop & Go across all 7 services?"
+    Full-width credibility section: "Why choose Stop & Go Airport Shuttle Service, Inc. across all 7 services?"
     Used exclusively on /core-services landing page, below the pillar grid.
 
     Layout: white bg, two columns desktop / single column mobile.
@@ -20,7 +20,7 @@
         {{-- Section heading with champagne underbar --}}
         <div style="width: fit-content; margin-bottom: 3.5rem;">
             <h2 class="font-head" style="font-size: var(--font-size-h2); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--navy);">
-                <span style="font-weight: 400;">Why Every Client Chooses </span><span style="font-weight: 700; color: var(--champagne);">Stop &amp; Go</span>
+                <span style="font-weight: 400;">Why Every Client Chooses </span><span style="font-weight: 700; color: var(--champagne);">Stop &amp; Go Airport Shuttle Service, Inc.</span>
             </h2>
             <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
         </div>
@@ -32,7 +32,7 @@
                 @foreach([
                     [
                         'title' => 'Background-Checked on Every Ride',
-                        'body'  => 'Every chauffeur across all seven service categories goes through FBI fingerprint screening, motor vehicle record review, drug testing, and annual re-certification before they are ever behind the wheel for a Stop &amp; Go client. The same standard applies whether you are booking an airport sedan or a 50-passenger charter bus. There is no two-tier system. Every driver meets the same bar.',
+                        'body'  => 'Every chauffeur across all seven service categories goes through FBI fingerprint screening, motor vehicle record review, drug testing, and annual re-certification before they are ever behind the wheel for a Stop &amp; Go Airport Shuttle Service, Inc. client. The same standard applies whether you are booking an airport sedan or a 50-passenger charter bus. There is no two-tier system. Every driver meets the same bar.',
                     ],
                     [
                         'title' => 'Real-Time Flight Tracking on Every Airport Run',
@@ -61,7 +61,7 @@
                 </h3>
 
                 <p style="font-family: var(--font-body); font-size: 1.05rem; color: var(--slate); line-height: 1.8;" class="mb-5">
-                    Every Stop &amp; Go booking, regardless of which of the seven service categories you choose, runs through the same pre-trip checklist. The vehicle is detailed and inspected before your pickup. The route is planned in advance with current traffic factored in. The chauffeur is briefed on your schedule, your stops, and any special instructions. The flat rate is locked. For corporate accounts that book different vehicle types on different days of the week, this consistency is what makes us the preferred single vendor across all their ground transportation needs in Will County and along the I-88 corridor.
+                    Every Stop &amp; Go Airport Shuttle Service, Inc. booking, regardless of which of the seven service categories you choose, runs through the same pre-trip checklist. The vehicle is detailed and inspected before your pickup. The route is planned in advance with current traffic factored in. The chauffeur is briefed on your schedule, your stops, and any special instructions. The flat rate is locked. For corporate accounts that book different vehicle types on different days of the week, this consistency is what makes us the preferred single vendor across all their ground transportation needs in Will County and along the I-88 corridor.
                 </p>
 
                 <p style="font-family: var(--font-body); font-size: 1.05rem; color: var(--slate); line-height: 1.8;" class="mb-5">

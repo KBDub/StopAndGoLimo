@@ -1,6 +1,6 @@
 <x-layouts.page
     title="Section Components — Brand Style Guide"
-    metaDescription="All 13 active Blade section components for Stop and Go Airport Shuttle Service Inc. with props, aspect ratios, and live previews."
+    metaDescription="All 13 active Blade section components for Stop & Go Airport Shuttle Service, Inc. with props, aspect ratios, and live previews."
     currentPage="demo"
     :noIndex="true"
 >
@@ -32,7 +32,7 @@
             'desc'  => 'Full-bleed photo hero with overlay, H1 + lead text, and a primary CTA button. Occupies 100svh on desktop.',
             'props' => ['heading', 'headingBold', 'subheading', 'body', 'buttonText', 'buttonHref', 'image', 'imageAlt'],
             'ar'    => '100svh desktop, auto mobile',
-            'code'  => "<x-sections.category-hero\n    heading=\"Elevate Your\"\n    headingBold=\"Travel Experience\"\n    subheading=\"Discover the joy of seamless journeys\"\n    body=\"Stop &amp; Go Airport Shuttle Service Inc.\"\n    buttonText=\"Book a Ride\"\n    buttonHref=\"/booking\"\n    image=\"/images/hero.jpg\"\n    imageAlt=\"Luxury limousine on a highway\"\n/>",
+            'code'  => "<x-sections.category-hero\n    heading=\"Elevate Your\"\n    headingBold=\"Travel Experience\"\n    subheading=\"Discover the joy of seamless journeys\"\n    body=\"Stop &amp; Go Airport Shuttle Service, Inc.\"\n    buttonText=\"Book a Ride\"\n    buttonHref=\"/booking\"\n    image=\"/images/hero.jpg\"\n    imageAlt=\"Luxury limousine on a highway\"\n/>",
         ],
         [
             'num'   => '02',
@@ -41,7 +41,7 @@
             'desc'  => 'Two-column image + text section. imageLeft (bool, default true) puts image on left; false flips to right. inverted (bool, default false) gives cloud-light bg; true gives navy bg. py-12 lg:py-[6.25rem].',
             'props' => ['heading', 'headingBold', 'subtitle', 'body', 'note', 'buttonText', 'buttonHref', 'image', 'imageAlt', 'imageLeft', 'inverted', 'slideIn'],
             'ar'    => '4/3 image column',
-            'code'  => "<x-sections.travel-in-style\n    heading=\"Travel in\"\n    headingBold=\"Style\"\n    body=\"Stop &amp; Go is your premier provider...\"\n    buttonText=\"About Us\"\n    buttonHref=\"/about-us\"\n    image=\"/images/sections/travel-in-style.jpg\"\n    imageAlt=\"Guests enjoying a luxury limo ride\"\n    inverted=true\n/>",
+            'code'  => "<x-sections.travel-in-style\n    heading=\"Travel in\"\n    headingBold=\"Style\"\n    body=\"Stop &amp; Go Airport Shuttle Service, Inc. is your premier provider...\"\n    buttonText=\"About Us\"\n    buttonHref=\"/about-us\"\n    image=\"/images/sections/travel-in-style.jpg\"\n    imageAlt=\"Guests enjoying a luxury limo ride\"\n    inverted=true\n/>",
         ],
         [
             'num'   => '03',
@@ -146,7 +146,7 @@
             'num'   => '14',
             'tag'   => 'x-sections.base-footer',
             'file'  => 'resources/views/components/sections/base-footer.blade.php',
-            'desc'  => 'Site-wide footer. var(--font-body) throughout, champagne link colors, no raw hex, no uppercase. Copyright year 2026, full legal name "Stop and Go Airport Shuttle Service Inc."',
+            'desc'  => 'Site-wide footer. var(--font-body) throughout, champagne link colors, no raw hex, no uppercase. Copyright year 2026, full legal name "Stop & Go Airport Shuttle Service, Inc."',
             'props' => ['(none — all content is hard-coded per branding spec)'],
             'ar'    => 'height auto',
             'code'  => "<x-sections.base-footer />",

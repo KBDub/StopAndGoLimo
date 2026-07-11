@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Homer Glen, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Homer Glen, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -45,7 +45,7 @@
         headingBold="Limo Service"
         body="Travel with confidence using our 24/7 Homer Glen limo service, built for riders who value speed, comfort, and reliability. Whether you need a smooth airport shuttle in Homer Glen or a stylish wedding limo in Homer Glen, every ride is handled with professional drivers, spotless vehicles, and on-time pickups. Book today and enjoy transportation that works around your schedule, not the other way around."
         image="/images/sections/homer-glen-limo.png"
-        imageAlt="Airport transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Airport transportation in Homer Glen, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :inverted="true"
     />
 
@@ -54,7 +54,7 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/homer-glen-transportation.png"
-        imageAlt="Limousine transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Limousine transportation in Homer Glen, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
@@ -62,7 +62,7 @@
         descSubheading="With our 24/7 Homer Glen limo service, you never have to worry about transportation. Enjoy professional drivers, reliable scheduling, and comfortable rides for any occasion."
         descBody="Whether you need a wedding limo in Homer Glen, an airport shuttle in Homer Glen, a Party Bus Rental in Homer Glen, or a limousine in Homer Glen for special events, our 24/7 Homer Glen limo service makes every ride easy and stress free. Our professional team ensures safety, punctuality, and comfort on every trip. Book now using the contact form and secure your ride today."
         descImage="/images/sections/homer-glen-transportation.png"
-        descImageAlt="Limousine transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Limousine transportation in Homer Glen, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -72,7 +72,7 @@
         headingBold="Homer Glen Area"
         body="Whether you are planning a grand wedding at a local estate or heading to a critical business engagement, the quality of your transportation defines your entire day. Our premier Homer Glen IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Homer Glen black car service, you skip the common hassles of navigation and parking to focus entirely on your personal priorities. Our modern fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards."
         image="/images/sections/homer-glen-sophisticated-travel.png"
-        imageAlt="Refined travel in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Refined travel in Homer Glen, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -83,7 +83,7 @@
         headingBold="Illinois Residents"
         body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple destinations at your own speed with a private driver standing by for your immediate departure. Our reliable Homer Glen to O'Hare airport limo guarantees that you arrive at your terminal without the unpredictable wait times often found with standard ride-sharing platforms. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a productive and efficient schedule."
         image="/images/sections/homer-glen-flexible-transport.png"
-        imageAlt="Dynamic transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Dynamic transportation in Homer Glen, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -94,7 +94,7 @@
         headingBold="Special Occasions"
         body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from local weddings to formal graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at venues like DiNolfo's or Zachary's Red Barn and works diligently to provide a seamless experience for every guest. From your first pickup until the final drop-off of the night, we manage your transportation with the highest level of care."
         image="/images/sections/homer-glen-special-occasions.png"
-        imageAlt="Special occasion transportation in Homer Glen, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Special occasion transportation in Homer Glen, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

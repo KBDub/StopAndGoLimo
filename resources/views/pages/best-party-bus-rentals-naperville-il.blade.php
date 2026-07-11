@@ -6,7 +6,7 @@
     "name": "Party Bus Rentals Naperville IL",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Party bus rentals in Naperville, IL for birthdays, bachelorettes, proms, weddings, and corporate events. Professional chauffeurs, flat-rate pricing."
     currentPage="service-areas"
     ogImage="/images/heroes/naperville-party-bus-services.png"
-    ogImageAlt="Party bus rentals in Naperville IL, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Party bus rentals in Naperville IL, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Naperville IL"
@@ -57,11 +57,11 @@
         heading="Naperville Nights,"
         headingBold="Covered"
         subtitle="From downtown Naperville to Chicago and everywhere in between"
-        body="Stop & Go has been serving the Naperville area with professional group transportation since 2015. Whether your group is heading to downtown Naperville for dinner and a night out, going to a concert at Ribfest or another local event, or making a trip into Chicago for a Bears game or show, our party buses keep everyone together and on time. Our chauffeurs know DuPage and Will County roads and plan around traffic before it becomes a problem."
+        body="Stop & Go Airport Shuttle Service, Inc. has been serving the Naperville area with professional group transportation since 2015. Whether your group is heading to downtown Naperville for dinner and a night out, going to a concert at Ribfest or another local event, or making a trip into Chicago for a Bears game or show, our party buses keep everyone together and on time. Our chauffeurs know DuPage and Will County roads and plan around traffic before it becomes a problem."
         buttonText="View Our Services"
         buttonHref="/naperville-airport-shuttle-limo-service"
         image="/images/sections/naperville-limo-service.jpg"
-        imageAlt="Party bus rental in Naperville, Illinois with Stop and Go"
+        imageAlt="Party bus rental in Naperville, Illinois with Stop & Go Airport Shuttle Service, Inc."
         :inverted="true"
     />
 

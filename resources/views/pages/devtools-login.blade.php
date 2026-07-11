@@ -84,7 +84,7 @@
 <body>
 <div class="card">
     <h1>Developer Access</h1>
-    <p class="sub">Stop &amp; Go — restricted area</p>
+    <p class="sub">Stop &amp; Go Airport Shuttle Service, Inc. — restricted area</p>
 
     @if(session('devtools_error'))
         <div class="error">{{ session('devtools_error') }}</div>

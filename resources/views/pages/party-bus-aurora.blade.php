@@ -85,13 +85,13 @@
 
     <x-sections.our-mission
         image="/images/heroes/hero-party-bus-aurora.png"
-        imageAlt="Guests celebrating on a Stop and Go party bus in Aurora, Illinois"
+        imageAlt="Guests celebrating on a Stop & Go Airport Shuttle Service, Inc. party bus in Aurora, Illinois"
     />
 
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation"
         headingBold="Solutions"
-        body="Stop and Go is a trusted party bus company serving Aurora and the surrounding area. We offer full-service rides for weddings, proms, birthdays, bachelorette parties, concerts, and any night you want to celebrate. Our professional drivers and well-maintained fleet keep every ride safe, comfortable, and full of energy. We turn ordinary nights into celebrations your friends will talk about for years."
+        body="Stop & Go Airport Shuttle Service, Inc. is a trusted party bus company serving Aurora and the surrounding area. We offer full-service rides for weddings, proms, birthdays, bachelorette parties, concerts, and any night you want to celebrate. Our professional drivers and well-maintained fleet keep every ride safe, comfortable, and full of energy. We turn ordinary nights into celebrations your friends will talk about for years."
         buttonText="Contact Us"
         buttonHref="/get-a-quote"
         directions="Serving Aurora, Naperville, and all of Chicagoland · Perfect for birthdays, bachelorette parties, concerts, and special events · Party bus rental available 24/7"

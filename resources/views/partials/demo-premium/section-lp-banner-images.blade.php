@@ -6,7 +6,7 @@
                 <h2 class="text-h2 font-bold text-charcoal mb-2">Landing page banner images</h2>
                 <div class="h-1 bg-sunburst"></div>
             </div>
-            <p class="text-charcoal-light max-w-4xl mx-auto">Two-up banner grid linking to sub-category pages. Hover reveals the category name centered over a transparent charcoal overlay with olive text. Odd last banner centers itself in a half-width column. Demo shows 3 banners (Stop &amp; Go fleet service categories).</p>
+            <p class="text-charcoal-light max-w-4xl mx-auto">Two-up banner grid linking to sub-category pages. Hover reveals the category name centered over a transparent charcoal overlay with olive text. Odd last banner centers itself in a half-width column. Demo shows 3 banners (Stop &amp; Go Airport Shuttle Service, Inc. fleet service categories).</p>
         </div>
 
         <x-ui.card-lp-banner-images :banners="[

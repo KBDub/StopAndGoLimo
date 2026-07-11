@@ -27,7 +27,7 @@
     metaDescription="Get a free quote for airport shuttle or limousine service anywhere in Chicagoland. Flat rates, fast response, no hidden fees."
     currentPage="contact"
     ogImage="/images/heroes/hero-get-a-quote.jpg"
-    ogImageAlt="Get a free limo quote from Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Get a free limo quote from Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Get"
@@ -48,7 +48,7 @@
         rightVariant="description"
         :descImageTop="true"
         descImage="/images/sections/limousine-professional.jpg"
-        descImageAlt="Professional Stop and Go limousine ready for client service in New Lenox, Illinois"
+        descImageAlt="Professional Stop & Go Airport Shuttle Service, Inc. limousine ready for client service in New Lenox, Illinois"
         descHeading="Why Choose Us?"
         descSubheading="Complete Chicagoland Transportation"
         descBody="As a trusted Chicagoland transportation provider, Stop & Go Airport Shuttle Service, Inc. offers flat-rate, all-inclusive pricing across every service we provide:"

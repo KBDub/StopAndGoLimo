@@ -53,7 +53,7 @@
 
                 {{-- SEO community copy --}}
                 <p class="font-body" style="font-size: 1rem; line-height: 1.75; color: var(--cloud);">
-                    As an active chamber member in Naperville, Bolingbrook, and Orland Park, Stop &amp; Go is deeply rooted in the communities we serve. We believe outstanding Chicagoland transportation starts with local knowledge, neighborhood accountability, and a genuine commitment to every rider. From the southwest suburbs to the North Shore, we are your neighbors and your dedicated chauffeured transportation provider across the entire metro area.
+                    As an active chamber member in Naperville, Bolingbrook, and Orland Park, Stop &amp; Go Airport Shuttle Service, Inc. is deeply rooted in the communities we serve. We believe outstanding Chicagoland transportation starts with local knowledge, neighborhood accountability, and a genuine commitment to every rider. From the southwest suburbs to the North Shore, we are your neighbors and your dedicated chauffeured transportation provider across the entire metro area.
                 </p>
 
             </div>

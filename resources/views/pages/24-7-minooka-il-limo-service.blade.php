@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Minooka, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Minooka, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -48,7 +48,7 @@
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/minooka-limo.png"
-        imageAlt="Happy clients in a limousine in Minooka, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Happy clients in a limousine in Minooka, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="left"
         :inverted="true"
     />
@@ -60,13 +60,13 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/naperville-fiq.jpg"
-        imageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Luxury transportation services in Minooka, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="Why choose us?"
         descSubheading="Complete Transportation Solutions for Minooka Residents"
-        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services:"
+        descBody="As Minooka's trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services:"
         :descBullets="[
             'Minooka airport shuttle for timely arrivals and departures',
             'Limousine service for weddings, events, and special occasions',
@@ -76,7 +76,7 @@
         ]"
         descClosing="Our intimate knowledge of Minooka, from local neighborhoods to downtown, from Ridge Road to I-80, ensures efficient and reliable transportation throughout the community."
         descImage="/images/sections/naperville-fiq.jpg"
-        descImageAlt="Luxury transportation services in Minooka, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Luxury transportation services in Minooka, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
         :inverted="true"
     />
@@ -91,7 +91,7 @@
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/naperville-limo-service.jpg"
-        imageAlt="Airport shuttle service from Minooka, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Airport shuttle service from Minooka, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
         :inverted="true"
     />
@@ -169,7 +169,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional Solutions for"
         headingBold="Minooka Residents"
-        body="As Minooka's trusted transportation provider for over 15 years, Stop & Go offers complete luxury transportation services including Minooka airport shuttle, Minooka limo service, Minooka party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Minooka, from local neighborhoods and downtown areas to surrounding communities, from Ridge Road corridor to I-80 and nearby I-55 access, ensures efficient, reliable transportation throughout the community and for Minooka to O'Hare trips."
+        body="As Minooka's trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services including Minooka airport shuttle, Minooka limo service, Minooka party bus, corporate transportation, and wedding vehicles. Our intimate knowledge of Minooka, from local neighborhoods and downtown areas to surrounding communities, from Ridge Road corridor to I-80 and nearby I-55 access, ensures efficient, reliable transportation throughout the community and for Minooka to O'Hare trips."
         buttonText="Contact Us"
         buttonHref="/get-a-quote"
     />

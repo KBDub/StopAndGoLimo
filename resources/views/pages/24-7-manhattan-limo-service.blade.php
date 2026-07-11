@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — Manhattan, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — Manhattan, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -48,7 +48,7 @@
         buttonText="About Us"
         buttonHref="/about-us"
         image="/images/sections/manhattan-limo.png"
-        imageAlt="Airport transportation in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Airport transportation in Manhattan, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
         :inverted="true"
     />
@@ -59,7 +59,7 @@
         descSubheading="Our chauffeur service in Manhattan offers professional drivers and reliable rides without the stress."
         descBody="From a dependable airport shuttle in Manhattan to an elegant wedding limo in Manhattan and an exciting Party Bus Rental in Manhattan, our 24/7 Manhattan limo service is built for every occasion. With professional drivers, spotless vehicles, and on-time pickups, we handle all the details so you can focus on what matters most."
         descImage="/images/sections/manhattan-transportation.png"
-        descImageAlt="Fleet car interior in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="Fleet car interior in Manhattan, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
     />
 
@@ -69,7 +69,7 @@
         headingBold="Every Local Trip"
         body="Whether you are planning an elegant rustic wedding at a local farm venue or heading to an important corporate engagement, the quality of your ride defines your entire day. Our premier Manhattan IL limo service provides a dedicated professional driver who manages every detail of the local traffic while you relax in a quiet, high-end cabin. By choosing a specialized Manhattan farm wedding limo, you skip the common hassles of navigation and parking to focus entirely on your personal celebrations. Our modern fleet delivers a sophisticated travel solution for clients who value safety, absolute punctuality, and superior service standards across Will County."
         image="/images/sections/manhattan-sophisticated-travel.png"
-        imageAlt="Sophisticated travel in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Sophisticated travel in Manhattan, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="right"
     />
@@ -80,7 +80,7 @@
         headingBold="Modern Residents"
         body="For passengers who need a high level of versatility during their travels, our hourly chauffeur rentals provide the perfect answer for a demanding daily itinerary. This flexible service allows you to visit multiple local destinations, from the business parks to the regional golf courses, at your own speed with a private driver standing by for your departure. Our reliable Manhattan IL to O'Hare car service ensures that you arrive at your terminal on time without the unpredictable wait times often associated with standard ride-sharing applications. Whether you are attending several business appointments or touring local landmarks, having a private vehicle at your disposal helps you maintain a truly fluid schedule."
         image="/images/sections/manhattan-flexible-transport.png"
-        imageAlt="Flexible transportation options in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Flexible transportation options in Manhattan, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imagePosition="left"
     />
@@ -91,7 +91,7 @@
         headingBold="Special Occasions"
         body="A high-end limousine adds a layer of elegance to the most significant milestones on your social calendar, ranging from traditional ceremonies to formal high school graduations. We provide specialized transport for prom nights, milestone birthdays, and professional sporting events, ensuring your entire party travels together in total luxury. Our team understands the specific logistics required for large-scale events at venues like DeLair's Country Farm or Prairie Bluff and works diligently to provide a seamless experience for every guest in your group. From your first pickup until the final drop-off of the night, we manage your transportation with the highest level of care."
         image="/images/sections/manhattan-special-occasions.png"
-        imageAlt="Special occasion transportation in Manhattan, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Special occasion transportation in Manhattan, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
     />
 

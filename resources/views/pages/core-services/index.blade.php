@@ -5,7 +5,7 @@
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
     "@id": "https://newlenoxlimoservice.com/#business",
-    "name": "Stop & Go Airport Shuttle Service Inc.",
+    "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
     "telephone": "",
@@ -61,11 +61,11 @@
 @endpush
 
 <x-layouts.page
-    title="Core Service Pillars | Stop & Go Airport Shuttle &amp; Limo"
+    title="Core Service Pillars | Stop & Go Airport Shuttle Service, Inc. &amp; Limo"
     metaDescription="Eight professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, special events, and more. Chicagoland."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Core transportation services from Stop and Go Airport Shuttle Service in New Lenox Illinois"
+    ogImageAlt="Core transportation services from Stop & Go Airport Shuttle Service, Inc. in New Lenox Illinois"
 >
 
     <x-sections.category-hero
@@ -98,7 +98,7 @@
             ],
             [
                 'title' => 'Building the Corporate Ground Account Program',
-                'body'  => 'Within the first two years, law firms, financial firms, and manufacturing companies along the I-80 and I-88 corridors began booking recurring executive airport runs. They needed more than a car service. They needed a single vendor who showed up every time, invoiced consistently, and required no last-minute scrambling from their travel managers. We built a corporate account program around exactly that. Today, businesses across the I-88 Innovation Corridor in Oak Brook, Downers Grove, and Naperville use Stop &amp; Go as their exclusive ground transportation vendor for O\'Hare and Midway transfers.',
+                'body'  => 'Within the first two years, law firms, financial firms, and manufacturing companies along the I-80 and I-88 corridors began booking recurring executive airport runs. They needed more than a car service. They needed a single vendor who showed up every time, invoiced consistently, and required no last-minute scrambling from their travel managers. We built a corporate account program around exactly that. Today, businesses across the I-88 Innovation Corridor in Oak Brook, Downers Grove, and Naperville use Stop &amp; Go Airport Shuttle Service, Inc. as their exclusive ground transportation vendor for O\'Hare and Midway transfers.',
             ],
             [
                 'title' => 'Expanding Into Weddings, Limousines, and Special Events',
@@ -110,7 +110,7 @@
             ],
             [
                 'title' => 'Eight Pillars Today, One Standard Across All of Them',
-                'body'  => 'Stop &amp; Go now operates across eight core service categories: airport shuttle, bus charter, chauffeur service, limousine service, transportation escort, transportation service, wedding service, and special events. Every single one of them runs on the same operating standard we set on day one in 2015. Background-checked chauffeur on every booking. Vehicle inspected and detailed before every pickup. Flat rate locked at confirmation. Dispatch staffed 24 hours a day, 365 days a year. The service area has grown to cover all of Chicagoland, but the standard has not changed from the first Will County airport run.',
+                'body'  => 'Stop &amp; Go Airport Shuttle Service, Inc. now operates across eight core service categories: airport shuttle, bus charter, chauffeur service, limousine service, transportation escort, transportation service, wedding service, and special events. Every single one of them runs on the same operating standard we set on day one in 2015. Background-checked chauffeur on every booking. Vehicle inspected and detailed before every pickup. Flat rate locked at confirmation. Dispatch staffed 24 hours a day, 365 days a year. The service area has grown to cover all of Chicagoland, but the standard has not changed from the first Will County airport run.',
             ],
         ]"
     />

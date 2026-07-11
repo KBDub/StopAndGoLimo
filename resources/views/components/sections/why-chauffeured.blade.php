@@ -66,7 +66,7 @@
                     Private Limo vs. Standard Car Service
                 </h3>
                 <p style="font-family: var(--font-body); font-size: 1.05rem; color: var(--cloud); line-height: 1.75;" class="mb-6">
-                    Not all car services are the same. Here is how a professional limo service compares to a standard car booking so you know exactly what you are getting when you choose Stop &amp; Go.
+                    Not all car services are the same. Here is how a professional limo service compares to a standard car booking so you know exactly what you are getting when you choose Stop &amp; Go Airport Shuttle Service, Inc..
                 </p>
 
                 <div style="overflow-x: auto;">

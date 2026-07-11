@@ -24,10 +24,10 @@
 
 <x-layouts.page
     title="About Us"
-    metaDescription="Serving Chicagoland since 2015, Stop & Go is a family-owned limo and shuttle company. Licensed chauffeurs, flat rates, on-time service."
+    metaDescription="Serving Chicagoland since 2015, Stop & Go Airport Shuttle Service, Inc. is a family-owned limo and shuttle company. Licensed chauffeurs, flat rates, on-time service."
     currentPage="about"
     ogImage="/images/heroes/hero-services.jpg"
-    ogImageAlt="Professional chauffeurs at Stop and Go Airport Shuttle Service Inc."
+    ogImageAlt="Professional chauffeurs at Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="About"
@@ -49,7 +49,7 @@
 
     <x-sections.free-instant-quote
         image="/images/sections/vincent-in-limo.jpg"
-        imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service Inc., inside a luxury limousine"
+        imageAlt="Vincent Rover, founder of Stop & Go Airport Shuttle Service, Inc., inside a luxury limousine"
         imageAspect="2/3"
         heading=""
         body=""
@@ -62,7 +62,7 @@
         buttonText="Click Here"
         buttonHref="/about-us#"
         image="/images/sections/blog-limo.jpg"
-        imageAlt="Guests celebrating inside a Stop & Go Airport Shuttle limousine"
+        imageAlt="Guests celebrating inside a Stop & Go Airport Shuttle Service, Inc. limousine"
         inverted=true
     />
 

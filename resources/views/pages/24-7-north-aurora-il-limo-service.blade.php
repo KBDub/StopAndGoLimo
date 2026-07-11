@@ -3,7 +3,7 @@
 {
     "@@context": "https://schema.org",
     "@@type": "LocalBusiness",
-    "name": "Stop and Go Airport Shuttle Service Inc — North Aurora, IL",
+    "name": "Stop & Go Airport Shuttle Service, Inc. — North Aurora, IL",
     "url": "{{ request()->url() }}",
     "telephone": "",
     "address": {
@@ -48,7 +48,7 @@
         buttonText="Book a Ride"
         buttonHref="/bookings-reservations"
         image="/images/sections/north-aurora-happy-clients.png"
-        imageAlt="Happy clients in a North Aurora limousine — Stop and Go Airport Shuttle"
+        imageAlt="Happy clients in a North Aurora limousine — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="left"
         :inverted="true"
     />
@@ -58,7 +58,7 @@
         headingBold="us?"
         headingTail=""
         image="/images/sections/north-aurora-city-of-aurora.png"
-        imageAlt="City of Aurora, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="City of Aurora, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imageAspect="16/9"
         imageObjectPosition="center"
         rightVariant="description"
@@ -75,7 +75,7 @@
         ]"
         descClosing="Our team focuses on punctuality, safety, and your satisfaction, ensuring every ride is safe, comfortable, and dependable. Book your ride now using our quick contact form."
         descImage="/images/sections/north-aurora-city-of-aurora.png"
-        descImageAlt="City of Aurora, Illinois — Stop and Go Airport Shuttle"
+        descImageAlt="City of Aurora, Illinois — Stop & Go Airport Shuttle Service, Inc."
         :descImageTop="true"
         :inverted="true"
     />
@@ -87,7 +87,7 @@
         buttonText="Book Airport Shuttle"
         buttonHref="/bookings-reservations"
         image="/images/sections/north-aurora-airport.png"
-        imageAlt="Airport transportation in North Aurora, Illinois — Stop and Go Airport Shuttle"
+        imageAlt="Airport transportation in North Aurora, Illinois — Stop & Go Airport Shuttle Service, Inc."
         imagePosition="right"
         :inverted="true"
     />
@@ -111,7 +111,7 @@
     <x-sections.text-block-slide-in
         headingPrefix="Professional Transportation Solutions"
         headingBold="for North Aurora Residents"
-        body="As a trusted transportation provider in Aurora for over 15 years, Stop & Go offers complete luxury travel services including airport shuttles, Aurora limo, Aurora car service, party buses, corporate transportation, and wedding vehicles. Our local expertise, from downtown to Fox Valley and Aurora North to West Aurora, ensures efficient, reliable service throughout this vibrant Illinois community and for trips to O'Hare."
+        body="As a trusted transportation provider in Aurora for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury travel services including airport shuttles, Aurora limo, Aurora car service, party buses, corporate transportation, and wedding vehicles. Our local expertise, from downtown to Fox Valley and Aurora North to West Aurora, ensures efficient, reliable service throughout this vibrant Illinois community and for trips to O'Hare."
         buttonText="Contact Us"
         buttonHref="/get-a-quote"
         directions="• Downtown Aurora to O'Hare: 45–60 minutes via I‑88/I‑294 North • West Aurora to O'Hare: 45–60 minutes • Aurora to Midway Airport: 50–65 minutes via I‑88/I‑294/I‑55 South • Aurora I‑88/I‑80 corridor to both airports"

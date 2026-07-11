@@ -6,7 +6,7 @@
     "name": "Party Bus Rental Chicagoland",
     "provider": {
         "@@type": "LocalBusiness",
-        "name": "Stop & Go Airport Shuttle Service Inc.",
+        "name": "Stop & Go Airport Shuttle Service, Inc.",
         "telephone": "",
         "address": {
             "@@type": "PostalAddress",
@@ -39,7 +39,7 @@
     metaDescription="Rent a luxury party bus in Chicagoland for birthdays, bachelorettes, weddings, proms, and more. Professional chauffeurs, flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/party-bus-dreams-hero.png"
-    ogImageAlt="Luxury party bus rental, Stop and Go Airport Shuttle Service"
+    ogImageAlt="Luxury party bus rental, Stop & Go Airport Shuttle Service, Inc."
 >
     <x-sections.category-hero
         heading="Rent the Party Bus"
@@ -57,11 +57,11 @@
         heading="When the Ride Becomes"
         headingBold="the Celebration"
         subtitle="Everyone together, nobody driving"
-        body="The right party bus does not just get your group from Point A to Point B. It becomes part of the memory. Music playing, lights set just right, everyone laughing and together from the very first pickup. Stop & Go provides the vehicle, the chauffeur, and the experience. Your group provides the occasion. We will handle everything else."
+        body="The right party bus does not just get your group from Point A to Point B. It becomes part of the memory. Music playing, lights set just right, everyone laughing and together from the very first pickup. Stop & Go Airport Shuttle Service, Inc. provides the vehicle, the chauffeur, and the experience. Your group provides the occasion. We will handle everything else."
         buttonText="View Our Fleet"
         buttonHref="/our-services"
         image="/images/sections/party-smile-limo.jpg"
-        imageAlt="Group enjoying a luxury party bus with Stop and Go"
+        imageAlt="Group enjoying a luxury party bus with Stop & Go Airport Shuttle Service, Inc."
         :inverted="false"
     />
 
@@ -108,13 +108,13 @@
         headingBold="party bus"
         headingTail="today"
         image="/images/sections/party-bus-dreams-interior.jpg"
-        imageAlt="Luxury party bus interior with neon LED lighting, Stop and Go"
+        imageAlt="Luxury party bus interior with neon LED lighting, Stop & Go Airport Shuttle Service, Inc."
         imageAspect="4/3"
         imageObjectPosition="center"
         rightVariant="description"
         descHeading="What Every Rental Includes"
         descSubheading="Straightforward pricing. No surprises."
-        descBody="Every party bus rental with Stop & Go includes:"
+        descBody="Every party bus rental with Stop & Go Airport Shuttle Service, Inc. includes:"
         :descBullets="[
             'Door-to-door pickup and drop-off at locations you choose',
             'Flat-rate pricing locked in at the time of booking',

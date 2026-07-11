@@ -41,6 +41,7 @@
 
         {{-- Body copy --}}
         <p class="font-body" style="text-align: center; color: var(--navy); font-size: 20px; font-weight: 400; letter-spacing: -0.9px; line-height: 30px; max-width: 56rem; margin: 0 auto 2.5rem;">
+            Happilly serving all of Chicagoland for over 10 years.
             We'd love to hear about your journey! Leave a review and let us know how we can make your future trips even better.
             Your feedback helps us improve and ensures we keep delivering exceptional service.
         </p>

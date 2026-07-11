@@ -21,7 +21,7 @@ $realCards = [
     ['name' => 'Kevin Walsh',      'review' => 'Vincent could not have been more professional getting our reservation in place for our family of 11 to O\'Hare. Our driver Michael made us feel safe on the busy expressway so we\'d arrive on time for our international flight to Ireland. He was very helpful loading and unloading our luggage. He will be our first choice next time we fly!'],
     ['name' => 'Ivette Nunez',     'review' => 'This company has always been phenomenal about providing transportation for my family and I for over 10 years! Vince provides exceptional service and great, clean vehicles that are always on time.'],
     ['name' => 'Nemmz',            'review' => 'Highly recommended. Vince was fantastic. Always on time. Great conversationalist. Made the time fly by both going and coming back. It was a really positive experience and we are definitely going to be using them again the next time we are in town!'],
-    ['name' => 'Angela Crowder',   'review' => 'I recently used Stop & Go Airport Shuttle Service and could not be happier. From the first phone call to the pick-up and drop-off, everything was flawless. The team was incredibly friendly and accommodating and went above and beyond!'],
+    ['name' => 'Angela Crowder',   'review' => 'I recently used Stop & Go Airport Shuttle Service, Inc. and could not be happier. From the first phone call to the pick-up and drop-off, everything was flawless. The team was incredibly friendly and accommodating and went above and beyond!'],
 ];
 
 $realCount    = count($realCards);   // 8

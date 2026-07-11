@@ -8,7 +8,7 @@
 $resolvedEntries = $entries ?? [
     [
         'title' => 'March 26, 2015, Vincent Rover',
-        'body'  => 'Stop & Go Airport Shuttle Service was established more than ten years ago with a vision to provide <strong>trustworthy</strong> transportation solutions to the New Lenox community. From our modest beginnings with just a few vehicles, we quickly built a reputation for <strong>professional</strong> and courteous service, earning the trust of our growing clientele.',
+        'body'  => 'Stop & Go Airport Shuttle Service, Inc. was established more than ten years ago with a vision to provide <strong>trustworthy</strong> transportation solutions to the New Lenox community. From our modest beginnings with just a few vehicles, we quickly built a reputation for <strong>professional</strong> and courteous service, earning the trust of our growing clientele.',
     ],
     [
         'title' => 'Our Journey',

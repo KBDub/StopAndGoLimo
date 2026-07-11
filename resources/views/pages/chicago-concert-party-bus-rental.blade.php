@@ -47,7 +47,7 @@
         headingPrefix="Discover Chicago's Finest"
         headingBold="Concert Party Bus"
         heading="Rentals"
-        body="Experience luxury and style on your way to the next big show with a Chicago Concert Party Bus from Stop & Go Airport Shuttle Service. Choose a concert party bus rental in Chicago or a party bus rental for concerts in Chicago to accommodate any group size and enjoy a fun, hassle-free night out."
+        body="Experience luxury and style on your way to the next big show with a Chicago Concert Party Bus from Stop & Go Airport Shuttle Service, Inc.. Choose a concert party bus rental in Chicago or a party bus rental for concerts in Chicago to accommodate any group size and enjoy a fun, hassle-free night out."
     />
 
     <x-sections.free-instant-quote

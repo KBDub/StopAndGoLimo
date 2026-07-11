@@ -47,7 +47,7 @@
 
                 {{-- Body paragraphs --}}
                 <p class="font-body mb-7" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">
-                    At Stop &amp; Go Airport Shuttle Service, we are dedicated to providing <strong>the most reliable limousine and transportation services in New Lenox</strong> and nearby areas. With years of experience, we focus on delivering punctual, safe, and comfortable rides every time.
+                    At Stop &amp; Go Airport Shuttle Service, Inc., we are dedicated to providing <strong>the most reliable limousine and transportation services in New Lenox</strong> and nearby areas. With years of experience, we focus on delivering punctual, safe, and comfortable rides every time.
                 </p>
 
                 <p class="font-body mb-7" style="font-size: 1.25rem; line-height: 1.5; color: var(--slate);">

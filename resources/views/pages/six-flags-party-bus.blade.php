@@ -47,7 +47,7 @@
         headingPrefix="Travel in Style to"
         headingBold="Six Flags"
         heading="with Our Party Bus Service"
-        body="Book a Six Flags Party Bus with Stop & Go Airport Shuttle Service for a stylish and comfortable journey. Enjoy reliable Six Flags transportation for family, friends, or corporate groups, and make your trip hassle-free with a party bus to Six Flags Great America in Chicago that ensures everyone arrives on time and in style."
+        body="Book a Six Flags Party Bus with Stop & Go Airport Shuttle Service, Inc. for a stylish and comfortable journey. Enjoy reliable Six Flags transportation for family, friends, or corporate groups, and make your trip hassle-free with a party bus to Six Flags Great America in Chicago that ensures everyone arrives on time and in style."
     />
 
     <x-sections.free-instant-quote
@@ -60,7 +60,7 @@
         heading="Enjoy a Hassle-Free Journey to"
         headingBold="Six Flags"
         headingTail="with Our Chicago Party Bus"
-        bodyHtml='<a href="/bookings-reservations" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Our Six Flags Party Bus</a> provides the perfect transportation solution for groups heading to and from <a href="/rates" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Six Flags Great America in Chicago</a>. Whether you are planning a school trip, corporate outing, or family adventure, Stop &amp; Go Airport Shuttle Service makes it easy to travel together in comfort. Choose from our Chicago Six Flags party bus rental options, or get a <a href="/get-a-quote" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">luxury Six Flags party bus</a> quote and skip the hassle of parking while enjoying a fun, stress-free ride to the park.'
+        bodyHtml='<a href="/bookings-reservations" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Our Six Flags Party Bus</a> provides the perfect transportation solution for groups heading to and from <a href="/rates" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">Six Flags Great America in Chicago</a>. Whether you are planning a school trip, corporate outing, or family adventure, Stop &amp; Go Airport Shuttle Service, Inc. makes it easy to travel together in comfort. Choose from our Chicago Six Flags party bus rental options, or get a <a href="/get-a-quote" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">luxury Six Flags party bus</a> quote and skip the hassle of parking while enjoying a fun, stress-free ride to the park.'
     />
 
     <x-sections.review-slider />

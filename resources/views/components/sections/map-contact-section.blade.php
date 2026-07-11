@@ -1,6 +1,6 @@
 @props([
     'image'        => '/images/sections/car.jpg',
-    'imageAlt'     => 'Stop & Go Airport Shuttle Service luxury vehicle',
+    'imageAlt'     => 'Stop & Go Airport Shuttle Service, Inc. luxury vehicle',
     'heading'      => 'Follow Us On',
     'headingBold'  => 'Social Media',
     'facebook'     => 'https://www.facebook.com/p/Stop-Go-Airport-Shuttle-Service-61566415887805/',
@@ -112,7 +112,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Stop &amp; Go Airport Shuttle Service location map"
+            title="Stop &amp; Go Airport Shuttle Service, Inc. location map"
         ></iframe>
     </div>
 
@@ -126,7 +126,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Stop &amp; Go Airport Shuttle Service location map"
+            title="Stop &amp; Go Airport Shuttle Service, Inc. location map"
         ></iframe>
     </div>
 

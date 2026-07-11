@@ -24,7 +24,9 @@
 | Market position | Premium, luxury ground transportation |
 | Primary airports served | O'Hare (ORD), Midway (MDW) |
 
-**Brand name:** "Stop & Go Limo" — always with an ampersand, never "and." Never written in all caps. Short form used in logo, nav, footer, and social.
+**Brand name — full company name rule:** Always use the full legal name **"Stop & Go Airport Shuttle Service, Inc."** in all website copy, page content, section text, meta descriptions, structured data, and documentation. The short name "Stop & Go Limo" is reserved exclusively for the logo, nav bar, and social media handles. It must never appear in body copy, headings, or any on-page text.
+
+**Brand name:** "Stop & Go Airport Shuttle Service, Inc." — always with an ampersand, never "and." Never written in all caps.
 
 ---
 

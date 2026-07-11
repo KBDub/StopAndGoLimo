@@ -30,20 +30,21 @@
             {{-- Right: Chamber of Commerce section --}}
             <div style="text-align: center;">
 
+                {{-- H2 heading + underbar — same spec as left column --}}
+                <div style="width: fit-content; margin: 0 auto 1.5rem; text-align: center;">
+                    <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
+                        Proud Chamber of<br>
+                        <strong style="font-weight: 700; color: var(--champagne);">Commerce Member</strong>
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
+                </div>
+
                 {{-- Three community icons, evenly spaced --}}
-                <div style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; margin-bottom: 1.25rem;">
                     <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
                     <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
                     <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
                 </div>
-
-                {{-- Chamber heading --}}
-                <h4 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); letter-spacing: 0.04em; margin-bottom: 0.5rem;">
-                    Proud Chamber of Commerce Member
-                </h4>
-
-                {{-- Champagne rule (H4 fixed-width style) --}}
-                <div style="height: 3px; background: var(--champagne); width: 4rem; margin: 0 auto 1.25rem;"></div>
 
                 {{-- Chamber cities --}}
                 <p class="font-body" style="font-size: 1rem; color: var(--cloud-light); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.25rem;">

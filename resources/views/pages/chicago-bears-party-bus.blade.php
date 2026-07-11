@@ -7,7 +7,7 @@
     "name": "Chicago Bears Party Bus — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Game day group transportation to Soldier Field from New Lenox, Plainfield, and the Southwest suburbs. Chicago Bears party bus. Call (815) 585-6922."
+    "description": "Game day group transportation to Soldier Field from New Lenox, Plainfield, and the Southwest suburbs. Chicago Bears party bus."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Bears Party Bus"
-    metaDescription="Ride to Soldier Field in style for every Bears game. Group party bus service from anywhere in Chicagoland. Safe, fun, no parking hassles. Call (815) 585-6922."
+    metaDescription="Ride to Soldier Field in style for every Bears game. Group party bus service from anywhere in Chicagoland. Safe, fun, no parking hassles."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-bears-party-bus.jpg"
     ogImageAlt="Chicago Bears party bus from New Lenox, Illinois"

@@ -100,7 +100,7 @@ All section components rewritten:
 ### 1.11 — Layout Components
 - `layouts/page.blade.php` — default meta title, description, JSON-LD updated to Stop & Go
 - `layout/footer.blade.php` — brand name, links, address, phone, copy updated
-- `layout/top-notification-bar.blade.php` — phone (815) 585-6922, Stop & Go brand name
+- `layout/top-notification-bar.blade.php` — phone, Stop & Go brand name
 - `layout/mega-menu-ad.blade.php` — Stop & Go copy
 
 ### 1.12 — Page Files

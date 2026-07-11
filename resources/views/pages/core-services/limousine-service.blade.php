@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/best-limo-services-hero.png",
     "address": {
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Luxury Limousine Service | Will County &amp; Chicagoland | Stop &amp; Go"
-    metaDescription="Luxury stretch limousine service for weddings, quinceañeras, proms, concerts, and milestone celebrations across New Lenox, Joliet, Naperville, and all of Will County. Flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Luxury stretch limousine service for weddings, quinceañeras, proms, concerts, and milestone celebrations across New Lenox, Joliet, Naperville, and all of Will County. Flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/best-limo-services-hero.png"
     ogImageAlt="Stop and Go luxury stretch limousine service for celebrations across Will County and Chicagoland"
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Share Your Occasion and Group Size',
-                'body'   => 'Call our 24/7 dispatch at (815) 585-6922 or complete the quick online form. Tell us the occasion, date, number of passengers, and a rough itinerary. We confirm availability, recommend the right limousine, and provide a flat-rate quote within minutes.',
+                'body'   => 'Call our 24/7 dispatch or complete the quick online form. Tell us the occasion, date, number of passengers, and a rough itinerary. We confirm availability, recommend the right limousine, and provide a flat-rate quote within minutes.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             '24/7/365 dispatch: early evening pickups, late-night returns, and holiday rentals all covered',
             'Service across all of Will County and Chicagoland, including DuPage County from our Naperville location',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

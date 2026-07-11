@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": "Illinois",
-    "description": "Party bus rentals throughout Chicagoland. Birthdays, bachelorettes, weddings, proms, corporate events, and concerts. Call (815) 585-6922."
+    "description": "Party bus rentals throughout Chicagoland. Birthdays, bachelorettes, weddings, proms, corporate events, and concerts."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Rent the Party Bus of Your Dreams"
-    metaDescription="Rent a luxury party bus in Chicagoland for birthdays, bachelorettes, weddings, proms, and more. Professional chauffeurs, flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Rent a luxury party bus in Chicagoland for birthdays, bachelorettes, weddings, proms, and more. Professional chauffeurs, flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/party-bus-dreams-hero.png"
     ogImageAlt="Luxury party bus rental, Stop and Go Airport Shuttle Service"
@@ -46,7 +46,7 @@
         headingBold="of Your Dreams"
         :headingTwoLines="false"
         subtitle="Luxury group transportation for any occasion, anywhere in Chicagoland"
-        description="Stop & Go Airport Shuttle Service, Inc. makes it easy to rent the party bus you have been imagining. We serve New Lenox, Aurora, Naperville, Joliet, and communities across Chicagoland with a fleet of luxury party buses for every type of occasion. Birthday celebrations, bachelorette parties, prom nights, wedding parties, corporate outings, concert trips, and sporting events all come alive when your group rides together on a professionally driven party bus. Our vehicles come equipped with premium sound systems, LED lighting, leather seating, and ample space to socialize and enjoy the ride. Every chauffeur is background-checked, uniformed, and committed to a smooth, safe, on-time experience. We also provide flat-rate airport transfers to O'Hare and Midway for groups arriving together. Pricing is straightforward with no hidden fees. Booking is easy online or over the phone. The party starts the moment you step on board. Call (815) 585-6922 or book online today."
+        description="Stop & Go Airport Shuttle Service, Inc. makes it easy to rent the party bus you have been imagining. We serve New Lenox, Aurora, Naperville, Joliet, and communities across Chicagoland with a fleet of luxury party buses for every type of occasion. Birthday celebrations, bachelorette parties, prom nights, wedding parties, corporate outings, concert trips, and sporting events all come alive when your group rides together on a professionally driven party bus. Our vehicles come equipped with premium sound systems, LED lighting, leather seating, and ample space to socialize and enjoy the ride. Every chauffeur is background-checked, uniformed, and committed to a smooth, safe, on-time experience. We also provide flat-rate airport transfers to O'Hare and Midway for groups arriving together. Pricing is straightforward with no hidden fees. Booking is easy online or over the phone. The party starts the moment you step on board. or book online today."
         buttonText="Book Your Party Bus"
         buttonHref="/get-a-quote"
         image="/images/heroes/party-bus-dreams-hero.png"
@@ -123,7 +123,7 @@
             'On-time guarantee on every reservation',
             'Available 24 hours a day, 7 days a week',
         ]"
-        descClosing="We serve New Lenox, Aurora, Naperville, Joliet, and all of Chicagoland. Call (815) 585-6922 or book online anytime."
+        descClosing="We serve New Lenox, Aurora, Naperville, Joliet, and all of Chicagoland. or book online anytime."
         descImage="/images/sections/party-bus-dreams-interior.jpg"
         descImageAlt="Party bus interior with LED lighting and premium seating"
         :descImageTop="true"

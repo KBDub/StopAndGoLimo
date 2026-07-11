@@ -12,7 +12,7 @@
                 bg-navy-dark border-b border-champagne/20 text-[12.5px] text-slate-light">
         <span>Open 24/7 &nbsp;·&nbsp; New Lenox &amp; Naperville, IL</span>
         <span class="flex items-center gap-3">
-            <a href="tel:+18155856922" class="font-head font-semibold text-champagne no-underline">(815) 585-6922</a>
+            <a href="tel:+17083154445" class="font-head font-semibold text-champagne no-underline"></a>
             <span class="opacity-40">|</span>
             <a href="https://book.mylimobiz.com/v4/stopngo"
                class="font-head font-semibold uppercase tracking-wide text-champagne no-underline">Book Online &rarr;</a>

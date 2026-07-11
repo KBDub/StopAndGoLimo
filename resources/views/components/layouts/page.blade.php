@@ -73,7 +73,7 @@
         "image": "https://newlenoxlimoservice.com/images/stopngo-logo.png",
         "@id": "https://newlenoxlimoservice.com",
         "url": "https://newlenoxlimoservice.com",
-        "telephone": "815-585-6922",
+        "telephone": "708-315-4445",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",

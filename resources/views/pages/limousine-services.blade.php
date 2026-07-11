@@ -7,7 +7,7 @@
     "name": "Limousine Services — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Classic luxury limousine service for any occasion in New Lenox, Plainfield, and the Southwest suburbs of Chicago. Call (815) 585-6922."
+    "description": "Classic luxury limousine service for any occasion in New Lenox, Plainfield, and the Southwest suburbs of Chicago."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Limo Services"
-    metaDescription="Elegant limousine service for any occasion across Chicagoland. Airport transfers, weddings, corporate events, and more. Available 24/7. Call (815) 585-6922."
+    metaDescription="Elegant limousine service for any occasion across Chicagoland. Airport transfers, weddings, corporate events, and more. Available 24/7."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Luxury limousine services in New Lenox, Illinois"

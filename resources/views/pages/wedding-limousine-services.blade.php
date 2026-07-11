@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Wedding Limos"
-    metaDescription="Arrive in style on your wedding day with a luxury limo in Chicagoland. Elegant vehicles and professional chauffeurs. Call (815) 585-6922."
+    metaDescription="Arrive in style on your wedding day with a luxury limo in Chicagoland. Elegant vehicles and professional chauffeurs."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Wedding limousine service in New Lenox, Illinois"

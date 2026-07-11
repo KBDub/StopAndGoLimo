@@ -17,7 +17,7 @@
 | Primary address | 400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451 |
 | Secondary address | 3420 Lacrosse Ln Ste 116, Naperville, IL |
 | Tertiary address | 5700 Caton Farm Rd, Plainfield, IL 60586 |
-| Primary phone | (815) 585-6922 |
+| Primary phone | |
 | Secondary phone | (708) 315-4445 |
 | Email | vincent@newlenoxlimoservice.com |
 | In business since | 2009 |

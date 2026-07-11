@@ -7,7 +7,7 @@
     "publisher": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -81,7 +81,7 @@
             'Chicago, River North, Wicker Park, West Loop',
             'O\'Hare and Midway airport group pickups available',
         ]"
-        descClosing="Call (815) 585-6922 or fill out the form. We are available 24 hours a day."
+        descClosing="Call or fill out the form. We are available 24 hours a day."
         descImage="/images/heroes/hero-party-bus-chicago.webp"
         descImageAlt="Party bus exterior, Stop and Go Airport Shuttle Service Inc."
         :descImageTop="true"

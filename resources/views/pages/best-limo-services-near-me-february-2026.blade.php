@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": "Illinois",
-    "description": "Professional limo service near you in New Lenox and throughout Chicagoland. Airport transfers, weddings, corporate travel, and more. Call (815) 585-6922."
+    "description": "Professional limo service near you in New Lenox and throughout Chicagoland. Airport transfers, weddings, corporate travel, and more."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Limo Service Near Me in New Lenox and Chicagoland"
-    metaDescription="Professional limo service near you in New Lenox and throughout Chicagoland. Airport transfers, weddings, corporate travel, party buses, and more. Call (815) 585-6922."
+    metaDescription="Professional limo service near you in New Lenox and throughout Chicagoland. Airport transfers, weddings, corporate travel, party buses, and more."
     currentPage="our-services"
     ogImage="/images/heroes/best-limo-services-hero.png"
     ogImageAlt="Professional limo service near you, Stop and Go Airport Shuttle Service"
@@ -46,7 +46,7 @@
         headingBold="Near You"
         :headingTwoLines="false"
         subtitle="Professional chauffeured transportation throughout Chicagoland since 2009"
-        description="When you need quality limo service near you in New Lenox or anywhere in the southwest Chicago suburbs, Stop & Go Airport Shuttle Service, Inc. is ready. We have been providing professional chauffeured transportation throughout Will County and Chicagoland since 2009. Our flat-rate limo service covers airport transfers to O'Hare and Midway, corporate travel, wedding limousines, party bus rentals, prom transportation, quinceañera vehicles, and special event service for any occasion. Every vehicle in our fleet is professionally maintained. Every chauffeur is background-checked, uniformed, and trained to the highest professional standard. We serve New Lenox, Naperville, Aurora, Joliet, Frankfort, Mokena, Homer Glen, Orland Park, and communities throughout the region. Transparent pricing means no surprises, no surge fees, and no last-minute cancellations. Whether you are booking an airport run for tomorrow morning or planning transportation for a wedding six months away, we are here to help. Call (815) 585-6922 or book online anytime."
+        description="When you need quality limo service near you in New Lenox or anywhere in the southwest Chicago suburbs, Stop & Go Airport Shuttle Service, Inc. is ready. We have been providing professional chauffeured transportation throughout Will County and Chicagoland since 2009. Our flat-rate limo service covers airport transfers to O'Hare and Midway, corporate travel, wedding limousines, party bus rentals, prom transportation, quinceañera vehicles, and special event service for any occasion. Every vehicle in our fleet is professionally maintained. Every chauffeur is background-checked, uniformed, and trained to the highest professional standard. We serve New Lenox, Naperville, Aurora, Joliet, Frankfort, Mokena, Homer Glen, Orland Park, and communities throughout the region. Transparent pricing means no surprises, no surge fees, and no last-minute cancellations. Whether you are booking an airport run for tomorrow morning or planning transportation for a wedding six months away, we are here to help. or book online anytime."
         buttonText="Book Now"
         buttonHref="/bookings-reservations"
         image="/images/heroes/best-limo-services-hero.png"
@@ -125,7 +125,7 @@
             'Are they available 24 hours a day? Yes, every day of the year.',
             'Do they serve your suburb or neighborhood? Yes, all of Chicagoland.',
         ]"
-        descClosing="Call (815) 585-6922 or book online. We are ready when you need us."
+        descClosing="Call or book online. We are ready when you need us."
         descImage="/images/sections/special-event-limo.png"
         descImageAlt="Special event limousine service throughout Chicagoland"
         :descImageTop="true"

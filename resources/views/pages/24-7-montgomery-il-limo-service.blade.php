@@ -5,7 +5,7 @@
     "@@type": "LocalBusiness",
     "name": "Stop and Go Airport Shuttle Service Inc — Montgomery, IL",
     "url": "{{ request()->url() }}",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "address": {
         "@@type": "PostalAddress",
         "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -15,14 +15,14 @@
         "addressCountry": "US"
     },
     "areaServed": { "@@type": "City", "name": "Montgomery", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "24/7 luxury limo and airport shuttle service in Montgomery, IL. Airport transfers, weddings, corporate travel, and special events. Call (815) 585-6922."
+    "description": "24/7 luxury limo and airport shuttle service in Montgomery, IL. Airport transfers, weddings, corporate travel, and special events."
 }
 </script>
 @endpush
 
 <x-layouts.page
     title="Montgomery Limo"
-    metaDescription="24/7 limo and airport shuttle service in Montgomery, IL. Transfers to O'Hare and Midway, corporate travel, weddings, and events. Call (815) 585-6922."
+    metaDescription="24/7 limo and airport shuttle service in Montgomery, IL. Transfers to O'Hare and Midway, corporate travel, weddings, and events."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Luxury limo service in Montgomery, Illinois"

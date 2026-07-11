@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-chicago-concert-party-bus.jpg",
     "address": {
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Special Event Transportation | Will County &amp; Chicagoland | Stop &amp; Go"
-    metaDescription="Luxury special event transportation across New Lenox, Joliet, Naperville, and all of Will County. Galas, concerts, holiday parties, milestone celebrations, reunions, and graduations. Flat-rate pricing, no surge. Call (815) 585-6922."
+    metaDescription="Luxury special event transportation across New Lenox, Joliet, Naperville, and all of Will County. Galas, concerts, holiday parties, milestone celebrations, reunions, and graduations. Flat-rate pricing, no surge."
     currentPage="our-services"
     ogImage="/images/heroes/hero-chicago-concert-party-bus.jpg"
     ogImageAlt="Stop and Go special event transportation for groups across Will County and Chicagoland"
@@ -442,7 +442,7 @@
             [
                 'occasion' => 'Regular Concerts and Personal Occasion Evenings',
                 'timing'   => '48 hours to 1 week ahead',
-                'detail'   => 'Standard concert nights, personal occasion evenings, and smaller group special events can often be arranged with 48 hours to a week of notice. For smaller groups and weeknight events, same-day or next-day bookings are possible by calling dispatch directly at (815) 585-6922.',
+                'detail'   => 'Standard concert nights, personal occasion evenings, and smaller group special events can often be arranged with 48 hours to a week of notice. For smaller groups and weeknight events, same-day or next-day bookings are possible by calling dispatch directly',
                 'urgency'  => 'low',
             ],
         ]"
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Tell Us About Your Event',
-                'body'   => 'Call our 24/7 dispatch at (815) 585-6922 or complete the quick online form. Share the event type, date and time, venue, number of passengers, and any multi-stop needs. We confirm availability and provide a flat-rate quote for the full evening.',
+                'body'   => 'Call our 24/7 dispatch or complete the quick online form. Share the event type, date and time, venue, number of passengers, and any multi-stop needs. We confirm availability and provide a flat-rate quote for the full evening.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             'Vehicle right-sized to your group: sedan or limousine for smaller events, party bus or mini-coach for larger groups',
             'Service across all of Will County and Chicagoland, with a second location in Naperville for DuPage County clients',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

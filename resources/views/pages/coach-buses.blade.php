@@ -7,7 +7,7 @@
     "name": "Coach Bus Charters — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Large-group coach bus charters for Illinois and beyond. Serving New Lenox, Plainfield, Joliet, and the Southwest suburbs. Call (815) 585-6922."
+    "description": "Large-group coach bus charters for Illinois and beyond. Serving New Lenox, Plainfield, Joliet, and the Southwest suburbs."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Coach Bus Rental"
-    metaDescription="Charter coach bus rental for large groups across Chicagoland. Pristine vehicles, professional drivers, and room for everyone. Call (815) 585-6922."
+    metaDescription="Charter coach bus rental for large groups across Chicagoland. Pristine vehicles, professional drivers, and room for everyone."
     currentPage="services"
     ogImage="/images/coach-buses-hero.jpg"
     ogImageAlt="Charter coach bus available for group rentals at Stop and Go Airport Shuttle Service Inc."

@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": { "@@type": "City", "name": "Aurora", "addressRegion": "IL" },
-    "description": "Party bus for special events in Aurora and Naperville. Festivals, galas, concerts, corporate outings, and more. Professional chauffeurs. Call (815) 585-6922."
+    "description": "Party bus for special events in Aurora and Naperville. Festivals, galas, concerts, corporate outings, and more. Professional chauffeurs."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Party Bus for Special Events in Aurora"
-    metaDescription="Party bus for special events in Aurora and Naperville. Festivals, galas, corporate outings, concerts, and quinceañeras. Professional chauffeurs. Call (815) 585-6922."
+    metaDescription="Party bus for special events in Aurora and Naperville. Festivals, galas, corporate outings, concerts, and quinceañeras. Professional chauffeurs."
     currentPage="our-services"
     ogImage="/images/heroes/hero-special-event.jpg"
     ogImageAlt="Party bus for special events in Aurora, Stop and Go Airport Shuttle Service"
@@ -46,7 +46,7 @@
         headingBold="Special Events"
         :headingTwoLines="false"
         subtitle="Because special occasions deserve exceptional transportation"
-        description="Special events deserve exceptional transportation. Stop & Go Airport Shuttle Service, Inc. provides party bus service for special events throughout Aurora, Naperville, and all of Chicagoland. From festivals and galas to corporate outings and holiday parties, we make sure your group arrives together, on time, and in style. Our party buses are fully equipped with premium sound systems, LED lighting, comfortable leather seating, and climate control. No one has to drive, no one has to organize carpools, and no one has to search for parking at a crowded venue. We handle all of it so your group can focus on the event itself. Our chauffeurs are uniformed, background-checked professionals with years of experience navigating the Chicago suburbs. We serve events in Aurora, Naperville, Joliet, Chicago, and communities across the region. We also provide airport transfers to O'Hare and Midway for groups arriving from out of town. Book online or call (815) 585-6922 anytime."
+        description="Special events deserve exceptional transportation. Stop & Go Airport Shuttle Service, Inc. provides party bus service for special events throughout Aurora, Naperville, and all of Chicagoland. From festivals and galas to corporate outings and holiday parties, we make sure your group arrives together, on time, and in style. Our party buses are fully equipped with premium sound systems, LED lighting, comfortable leather seating, and climate control. No one has to drive, no one has to organize carpools, and no one has to search for parking at a crowded venue. We handle all of it so your group can focus on the event itself. Our chauffeurs are uniformed, background-checked professionals with years of experience navigating the Chicago suburbs. We serve events in Aurora, Naperville, Joliet, Chicago, and communities across the region. We also provide airport transfers to O'Hare and Midway for groups arriving from out of town. Book online or call anytime."
         buttonText="Book for Your Event"
         buttonHref="/get-a-quote"
         image="/images/heroes/hero-special-event.jpg"
@@ -123,7 +123,7 @@
             'Group sizes from 10 to 55 passengers',
             'Available 24 hours a day for events of any kind',
         ]"
-        descClosing="Plan your special event transportation today. Call (815) 585-6922 or book a free quote online."
+        descClosing="Plan your special event transportation today. or book a free quote online."
         descImage="/images/sections/comfort-event-bus.jpg"
         descImageAlt="Special event party bus in Aurora"
         :descImageTop="true"

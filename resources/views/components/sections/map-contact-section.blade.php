@@ -9,10 +9,10 @@
     'address'      => '400 E Lincoln Hwy, Suite 101A, New Lenox, IL 60451',
     'businessName' => 'Stop & Go Airport Shuttle Service, Inc.',
     'hours'        => 'Open 24/7 for your convenience. Reliable service, anytime you need it.',
-    'phone'        => '(815) 585-6922',
-    'phoneRaw'     => '+18155856922',
-    'phoneAlt'     => '(708) 315-4445',
-    'phoneAltRaw'  => '+17083154445',
+    'phone'        => '(708) 315-4445',
+    'phoneRaw'     => '+17083154445',
+    'phoneAlt'     => '',
+    'phoneAltRaw'  => '',
     'email'        => 'vincent@newlenoxlimoservice.com',
 ])
 

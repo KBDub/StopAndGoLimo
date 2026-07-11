@@ -6,7 +6,7 @@
     "@type": "LocalBusiness",
     "name": "Stop and Go Airport Shuttle Service Inc",
     "url": "https://www.newlenoxlimoservice.com/service-areas",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -36,7 +36,7 @@
     "@type": "WebPage",
     "name": "Service Areas | Stop and Go Limo — Southwest Chicago Suburbs, IL",
     "url": "https://www.newlenoxlimoservice.com/service-areas",
-    "description": "24/7 luxury limo and airport shuttle service in New Lenox, Plainfield, Joliet, Naperville, Aurora, and surrounding Southwest suburbs. Call (815) 585-6922."
+    "description": "24/7 luxury limo and airport shuttle service in New Lenox, Plainfield, Joliet, Naperville, Aurora, and surrounding Southwest suburbs."
 }
 </script>
 <script type="application/ld+json">
@@ -54,7 +54,7 @@
 
 <x-layouts.page
     title="Service Areas"
-    metaDescription="Stop & Go serves all of Chicagoland, from New Lenox and Joliet to Chicago, Naperville, Aurora, and the north and northwest suburbs. Call (815) 585-6922."
+    metaDescription="Stop & Go serves all of Chicagoland, from New Lenox and Joliet to Chicago, Naperville, Aurora, and the north and northwest suburbs."
     currentPage="service-areas"
     ogImage="/images/heroes/hero-service-areas.jpg"
     ogImageAlt="Luxury limousine service across the Southwest suburbs of Chicago, Illinois"

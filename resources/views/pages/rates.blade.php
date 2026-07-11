@@ -6,7 +6,7 @@
     "@type": "WebPage",
     "name": "Rates | Stop and Go Limo — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/rates",
-    "description": "Transparent flat-rate limo and shuttle pricing. No surprises. Serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    "description": "Transparent flat-rate limo and shuttle pricing. No surprises. Serving New Lenox, Plainfield, and the Southwest suburbs."
 }
 </script>
 <script type="application/ld+json">
@@ -24,7 +24,7 @@
 
 <x-layouts.page
     title="Rates & Pricing"
-    metaDescription="Clear, flat-rate pricing for every trip, no surprises. Limo, shuttle, and party bus rates for Chicagoland. Call (815) 585-6922."
+    metaDescription="Clear, flat-rate pricing for every trip, no surprises. Limo, shuttle, and party bus rates for Chicagoland."
     currentPage="rates"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Luxury limousine rates at Stop and Go Airport Shuttle Service Inc."

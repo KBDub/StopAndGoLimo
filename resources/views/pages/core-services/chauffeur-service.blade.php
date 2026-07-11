@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/sections/chauffeur-hero.jpg",
     "address": {
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Professional Chauffeur Service | New Lenox &amp; Will County | Stop &amp; Go"
-    metaDescription="Professional chauffeur service across New Lenox, Joliet, Naperville, and all of Will County. Executive, airport, wedding, corporate, and VIP chauffeur service. Background-checked drivers. Call (815) 585-6922."
+    metaDescription="Professional chauffeur service across New Lenox, Joliet, Naperville, and all of Will County. Executive, airport, wedding, corporate, and VIP chauffeur service. Background-checked drivers."
     currentPage="our-services"
     ogImage="/images/sections/chauffeur-hero.jpg"
     ogImageAlt="Stop and Go professional chauffeur in formal attire ready for client pickup in Will County"
@@ -442,7 +442,7 @@
             [
                 'occasion' => 'Airport Chauffeur Transfer',
                 'timing'   => '24 hours in advance',
-                'detail'   => 'Most airport chauffeur transfers can be booked the day before. Same-day airport bookings are possible when you call our dispatch at (815) 585-6922 directly. We always recommend booking at least one night ahead for early morning departures.',
+                'detail'   => 'Most airport chauffeur transfers can be booked the day before. Same-day airport bookings are possible when you call our dispatch directly. We always recommend booking at least one night ahead for early morning departures.',
                 'urgency'  => 'low',
             ],
         ]"
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Book Your Chauffeur',
-                'body'   => 'Complete our quick online form with your pickup address, destination, date, and time. Or call our 24/7 dispatch at (815) 585-6922. We confirm availability and provide a flat-rate quote within minutes. Multi-stop itineraries and hourly bookings are quoted on the same call.',
+                'body'   => 'Complete our quick online form with your pickup address, destination, date, and time. Or call our 24/7 dispatch We confirm availability and provide a flat-rate quote within minutes. Multi-stop itineraries and hourly bookings are quoted on the same call.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             'Multi-stop itinerary coordination confirmed in writing before your service date',
             'Service across all of Will County and Chicagoland, including DuPage County from our Naperville location',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

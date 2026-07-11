@@ -158,7 +158,7 @@ Example:
         Get a Free Instant Quote
     </x-ui.button-champagne-gradient>
     <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.85rem;" class="mt-3">
-        or call <a href="tel:+18155856922" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">(815) 585-6922</a>
+        or call <a href="tel:+17083154445" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;"></a>
     </p>
 </div>
 ```

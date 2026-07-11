@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/airport-ohare-midway.jpg",
     "address": {
@@ -428,7 +428,7 @@
             "name": "How far in advance should I book an airport shuttle?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We recommend booking at least 24 to 48 hours in advance to guarantee your vehicle and time slot. Same-day booking is often available when you call our 24/7 dispatch line at (815) 585-6922, but advance booking is always recommended for early morning pickups."
+                "text": "We recommend booking at least 24 to 48 hours in advance to guarantee your vehicle and time slot. Same-day booking is often available when you call our 24/7 dispatch line, but advance booking is always recommended for early morning pickups."
             }
         },
         {
@@ -463,7 +463,7 @@
 
 <x-layouts.page
     title="Airport Shuttle Service to O'Hare &amp; Midway | Stop &amp; Go"
-    metaDescription="Flat-rate airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, 24/7. Call (815) 585-6922."
+    metaDescription="Flat-rate airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, 24/7."
     currentPage="our-services"
     ogImage="/images/heroes/airport-ohare-midway.jpg"
     ogImageAlt="Stop and Go airport shuttle service vehicle at O'Hare International Airport"
@@ -658,7 +658,7 @@
             [
                 'occasion' => 'Same-Day Emergency Booking',
                 'timing'   => 'Call us directly',
-                'detail'   => 'If you need a same-day airport transfer, call (815) 585-6922 rather than booking online. Our dispatch will confirm availability and lock your rate on the call. Same-day pickups are possible in most cases.',
+                'detail'   => 'If you need a same-day airport transfer, call rather than booking online. Our dispatch will confirm availability and lock your rate on the call. Same-day pickups are possible in most cases.',
                 'urgency'  => 'low',
             ],
             [
@@ -695,7 +695,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Book Your Airport Transfer',
-                'body'   => 'Complete our quick online form with your pickup address, destination airport, flight number, and preferred departure time. Our team confirms your flat rate and availability within minutes. You can also call our 24/7 dispatch at (815) 585-6922.',
+                'body'   => 'Complete our quick online form with your pickup address, destination airport, flight number, and preferred departure time. Our team confirms your flat rate and availability within minutes. You can also call our 24/7 dispatch',
             ],
             [
                 'number' => 'Step 2',
@@ -732,7 +732,7 @@
             'Child seats available on request at no extra charge. Specify age and weight at booking.',
             'Service to O\'Hare, Midway, Chicago Executive (PWK), Gary/Chicago (GYY), DuPage (DPA), and all FBOs',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

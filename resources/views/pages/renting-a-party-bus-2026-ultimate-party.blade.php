@@ -7,7 +7,7 @@
     "publisher": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922"
+        "telephone": ""
     },
     "description": "Everything you need to know about renting a party bus in Chicagoland. Events, amenities, choosing the right vehicle, and booking tips."
 }
@@ -37,7 +37,7 @@
         headingBold="The Ultimate Guide"
         :headingTwoLines="false"
         subtitle="Everything your group needs to know before the celebration starts"
-        description="Renting a party bus is one of the most exciting ways to celebrate with friends or family. Stop & Go Airport Shuttle Service, Inc. serves New Lenox, Aurora, Naperville, Joliet, and all of Chicagoland with a fleet of luxury party buses ready for every type of event. Prom nights, birthday parties, bachelorette celebrations, wedding parties, corporate events, and concert trips all become more memorable when your entire group rides together. Our buses come equipped with premium sound systems, LED lighting, leather seating, and room to move. Every chauffeur is background-checked, uniformed, and dedicated to a safe, professional experience. No one needs to drive. No one needs to worry about parking. The celebration starts the moment your group steps on board and continues until we drop you off at the end of the night. We also offer flat-rate airport transfers to O'Hare and Midway for groups arriving from out of town. Book online or call (815) 585-6922 anytime."
+        description="Renting a party bus is one of the most exciting ways to celebrate with friends or family. Stop & Go Airport Shuttle Service, Inc. serves New Lenox, Aurora, Naperville, Joliet, and all of Chicagoland with a fleet of luxury party buses ready for every type of event. Prom nights, birthday parties, bachelorette celebrations, wedding parties, corporate events, and concert trips all become more memorable when your entire group rides together. Our buses come equipped with premium sound systems, LED lighting, leather seating, and room to move. Every chauffeur is background-checked, uniformed, and dedicated to a safe, professional experience. No one needs to drive. No one needs to worry about parking. The celebration starts the moment your group steps on board and continues until we drop you off at the end of the night. We also offer flat-rate airport transfers to O'Hare and Midway for groups arriving from out of town. Book online or call anytime."
         buttonText="Get a Quote"
         buttonHref="/get-a-quote"
         image="/images/heroes/hero-party-bus-interior.png"
@@ -138,7 +138,7 @@
                             Get a Free Quote
                         </x-ui.button-champagne-gradient>
                         <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.9rem; line-height: 1.5;" class="mt-4 text-center">
-                            or call <a href="tel:+18155856922" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">(815) 585-6922</a>
+                            or call <a href="tel:+17083154445" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;"></a>
                         </p>
                         <hr style="border-color: var(--champagne); opacity: 0.2; margin: 1.5rem 0;">
                         <h4 style="font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: var(--cloud); line-height: 1.3;" class="mb-3">

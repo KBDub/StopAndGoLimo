@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": { "@@type": "City", "name": "Naperville", "addressRegion": "IL" },
-    "description": "Party bus rentals in Naperville, IL for birthdays, bachelorettes, proms, weddings, and corporate events. Professional chauffeurs. Call (815) 585-6922."
+    "description": "Party bus rentals in Naperville, IL for birthdays, bachelorettes, proms, weddings, and corporate events. Professional chauffeurs."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Party Bus Rentals in Naperville IL"
-    metaDescription="Party bus rentals in Naperville, IL for birthdays, bachelorettes, proms, weddings, and corporate events. Professional chauffeurs, flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Party bus rentals in Naperville, IL for birthdays, bachelorettes, proms, weddings, and corporate events. Professional chauffeurs, flat-rate pricing."
     currentPage="service-areas"
     ogImage="/images/heroes/naperville-party-bus-services.png"
     ogImageAlt="Party bus rentals in Naperville IL, Stop and Go Airport Shuttle Service"
@@ -46,7 +46,7 @@
         headingBold="Party Bus Rentals"
         :headingTwoLines="false"
         subtitle="Premium group transportation for every occasion in the Naperville area"
-        description="Stop & Go Airport Shuttle Service, Inc. provides Naperville's most reliable party bus rentals for birthdays, bachelorette parties, proms, weddings, corporate events, and night out transportation throughout the Fox Valley and Chicagoland. We have been serving Naperville and surrounding communities since 2009 with a fleet of well-maintained party buses and uniformed, background-checked chauffeurs. Our party buses are equipped with premium sound systems, LED lighting, leather seating, and room for your entire group to relax and enjoy the ride together. No one has to drive and no one has to coordinate pickups. We pick your group up, take you where you want to go, and bring you home safely at the end of the night. We also provide flat-rate airport transfers to O'Hare and Midway for Naperville travelers. Corporate executives, wedding parties, prom groups, quinceañera celebrations, and sports fans all count on us for dependable group transportation. Call (815) 585-6922 or book online today."
+        description="Stop & Go Airport Shuttle Service, Inc. provides Naperville's most reliable party bus rentals for birthdays, bachelorette parties, proms, weddings, corporate events, and night out transportation throughout the Fox Valley and Chicagoland. We have been serving Naperville and surrounding communities since 2009 with a fleet of well-maintained party buses and uniformed, background-checked chauffeurs. Our party buses are equipped with premium sound systems, LED lighting, leather seating, and room for your entire group to relax and enjoy the ride together. No one has to drive and no one has to coordinate pickups. We pick your group up, take you where you want to go, and bring you home safely at the end of the night. We also provide flat-rate airport transfers to O'Hare and Midway for Naperville travelers. Corporate executives, wedding parties, prom groups, quinceañera celebrations, and sports fans all count on us for dependable group transportation. or book online today."
         buttonText="Book a Party Bus"
         buttonHref="/get-a-quote"
         image="/images/heroes/naperville-party-bus-services.png"
@@ -123,7 +123,7 @@
             'Airport transfers to O\'Hare and Midway available as part of any trip',
             'Available 24 hours a day, 7 days a week',
         ]"
-        descClosing="Call (815) 585-6922 or book online to reserve your Naperville party bus today."
+        descClosing="Call or book online to reserve your Naperville party bus today."
         descImage="/images/sections/naperville-fiq.jpg"
         descImageAlt="Party bus service in Naperville, Illinois"
         :descImageTop="true"

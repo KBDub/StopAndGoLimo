@@ -7,7 +7,7 @@
     "name": "Chicago Blackhawks Party Bus — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Group rides to the United Center for Blackhawks games from New Lenox, Plainfield, and the Southwest suburbs. Chicago Blackhawks party bus. Call (815) 585-6922."
+    "description": "Group rides to the United Center for Blackhawks games from New Lenox, Plainfield, and the Southwest suburbs. Chicago Blackhawks party bus."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Blackhawks Bus"
-    metaDescription="Get to the United Center for every Blackhawks game in a luxury party bus. Group service from anywhere in Chicagoland. Call (815) 585-6922."
+    metaDescription="Get to the United Center for every Blackhawks game in a luxury party bus. Group service from anywhere in Chicagoland."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"
     ogImageAlt="Chicago Blackhawks party bus from New Lenox, Illinois"

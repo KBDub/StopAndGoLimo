@@ -6,8 +6,8 @@
         [
             'city'    => 'Naperville',
             'address' => '3420 Lacrosse Ln, Suite 116, Naperville, IL 60564',
-            'phone'   => '(815) 585-6922',
-            'tel'     => '+18155856922',
+            'phone'   => '',
+            'tel'     => '+17083154445',
         ],
         [
             'city'    => 'New Lenox',

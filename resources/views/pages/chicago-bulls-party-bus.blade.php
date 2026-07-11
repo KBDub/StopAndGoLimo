@@ -7,7 +7,7 @@
     "name": "Chicago Bulls Party Bus — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Group rides to the United Center for Bulls games from New Lenox, Plainfield, and the Southwest suburbs. Chicago Bulls party bus. Call (815) 585-6922."
+    "description": "Group rides to the United Center for Bulls games from New Lenox, Plainfield, and the Southwest suburbs. Chicago Bulls party bus."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Bulls Party Bus"
-    metaDescription="Ride to the United Center for Bulls games in a luxury party bus from anywhere in Chicagoland. Safe, fun group transportation. Call (815) 585-6922."
+    metaDescription="Ride to the United Center for Bulls games in a luxury party bus from anywhere in Chicagoland. Safe, fun group transportation."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-bulls-party-bus.jpg"
     ogImageAlt="Chicago Bulls party bus from New Lenox, Illinois"

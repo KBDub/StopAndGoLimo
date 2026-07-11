@@ -34,7 +34,7 @@
             {{-- Row 3: Contact (no title) --}}
             <div class="text-sm space-y-1 text-center">
                 <p class="text-slate">400 E Lincoln Hwy Suite 101A, New Lenox, IL 60451</p>
-                <p><a href="tel:+18155856922" class="link-notification font-semibold">(815) 585-6922</a></p>
+                <p><a href="tel:+17083154445" class="link-notification font-semibold">(708) 315-4445</a></p>
                 <p><a href="mailto:vincent@newlenoxlimoservice.com" class="link-notification">vincent@newlenoxlimoservice.com</a></p>
             </div>
 
@@ -139,8 +139,8 @@
                         New Lenox, IL 60451
                     </p>
                     <p>
-                        <a href="tel:+18155856922" class="link-notification">
-                            (815) 585-6922
+                        <a href="tel:+17083154445" class="link-notification">
+                            (708) 315-4445
                         </a>
                     </p>
                     <p>

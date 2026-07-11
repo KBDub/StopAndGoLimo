@@ -375,7 +375,7 @@
                     <h3 class="font-head font-semibold text-white mb-4">Navigation Wrap Pattern</h3>
                     <div class="border border-white/10 overflow-hidden">
                         <x-ui.banner-thin-champagne />
-                        <div class="bg-navy text-muted text-center py-2 text-xs font-head font-semibold">Notification Bar &nbsp;&middot;&nbsp; Open 24/7 &nbsp;&middot;&nbsp; (815) 585-6922</div>
+                        <div class="bg-navy text-muted text-center py-2 text-xs font-head font-semibold">Notification Bar &nbsp;&middot;&nbsp; Open 24/7 &nbsp;&middot;&nbsp;</div>
                         <x-ui.banner-thin-champagne />
                         <x-ui.banner-thin-navy />
                         <div class="bg-navy text-white text-center py-4 text-sm font-head font-semibold">Stop &amp; Go Limo &nbsp;&middot;&nbsp; Navigation Bar</div>
@@ -751,7 +751,7 @@
                 <div class="sg-nav mb-2">
                     <div class="nav-notif">
                         <span>Open 24/7 &nbsp;&middot;&nbsp; New Lenox, Naperville, Joliet &amp; Chicago, IL</span>
-                        <span><span class="n-phone">(815) 585-6922</span> &nbsp;|&nbsp; <span class="n-book">Book Online &rarr;</span></span>
+                        <span><span class="n-phone"></span> &nbsp;|&nbsp; <span class="n-book">Book Online &rarr;</span></span>
                     </div>
                     <x-ui.banner-thin-champagne />
                     <x-ui.banner-thin-navy />
@@ -2005,7 +2005,7 @@
                 <p class="text-cloud/80 max-w-2xl mx-auto mb-4"><strong class="text-champagne">Midnight Navy (#15162C):</strong> The foundation. Deep, authoritative, and refined. It signals trust and premium quality without saying a word.</p>
                 <p class="text-cloud/80 max-w-2xl mx-auto mb-8"><strong class="text-champagne">Champagne Gold (#DCB57E):</strong> The accent. Warm, understated luxury. Not flashy, not cheap, but the kind of gold that belongs in a first-class cabin.</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <x-ui.button-champagne-gradient href="tel:+18155856922">Call (815) 585-6922</x-ui.button-champagne-gradient>
+                    <x-ui.button-champagne-gradient href="tel:+17083154445">Call</x-ui.button-champagne-gradient>
                     <x-ui.button-outline-light href="/demo/premium">View Premium Components</x-ui.button-outline-light>
                 </div>
             </div>

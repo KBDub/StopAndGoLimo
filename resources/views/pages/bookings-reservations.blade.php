@@ -6,7 +6,7 @@
     "@type": "WebPage",
     "name": "Bookings and Reservations | Stop and Go Limo — New Lenox, IL",
     "url": "https://www.newlenoxlimoservice.com/bookings-reservations",
-    "description": "Reserve your airport shuttle or limousine today. Available 24/7, serving New Lenox, Plainfield, and the Southwest suburbs. Call (815) 585-6922."
+    "description": "Reserve your airport shuttle or limousine today. Available 24/7, serving New Lenox, Plainfield, and the Southwest suburbs."
 }
 </script>
 <script type="application/ld+json">
@@ -24,7 +24,7 @@
 
 <x-layouts.page
     title="Book a Ride"
-    metaDescription="Reserve your limousine or airport shuttle today. Available 24/7 across Chicagoland, including O'Hare and Midway transfers. Call (815) 585-6922."
+    metaDescription="Reserve your limousine or airport shuttle today. Available 24/7 across Chicagoland, including O'Hare and Midway transfers."
     currentPage="booking"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Book a luxury limo or airport shuttle with Stop and Go Airport Shuttle Service Inc."

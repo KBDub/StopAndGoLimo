@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="What a Professional Limo Service Includes | Stop & Go Chicagoland"
-    metaDescription="From booking to drop-off — here is what a professional limo service actually delivers. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking. Call (815) 585-6922."
+    metaDescription="From booking to drop-off — here is what a professional limo service actually delivers. Flat-rate pricing, uniformed chauffeurs, real-time flight tracking."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Professional limo service throughout Chicagoland, Stop and Go Airport Shuttle"
@@ -97,7 +97,7 @@
             'Real-time flight tracking for every airport pickup',
             'Available 24 hours a day, 365 days a year',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We cover all of Chicagoland."
+        descClosing="Call or get a free quote online. We cover all of Chicagoland."
         descImage="/images/sections/driver-classy.jpg"
         descImageAlt="Professional chauffeur ready to provide limo service"
         :descImageTop="true"

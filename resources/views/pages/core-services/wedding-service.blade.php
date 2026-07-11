@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/bus-rentals-for-wedding.png",
     "address": {
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Wedding Transportation Service | Will County &amp; Chicagoland | Stop &amp; Go"
-    metaDescription="Full-day wedding transportation across New Lenox, Joliet, Naperville, and Will County. Wedding limousines, party buses, guest shuttles, getaway cars, and airport transfers. Coordinated under one team. Call (815) 585-6922."
+    metaDescription="Full-day wedding transportation across New Lenox, Joliet, Naperville, and Will County. Wedding limousines, party buses, guest shuttles, getaway cars, and airport transfers. Coordinated under one team."
     currentPage="our-services"
     ogImage="/images/heroes/bus-rentals-for-wedding.png"
     ogImageAlt="Stop and Go wedding transportation service for bridal parties and guests across Will County and Chicagoland"
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Tell Us About Your Wedding Day',
-                'body'   => 'Call our dispatch at (815) 585-6922 or complete the online quote form. Share your wedding date, venue or venues, estimated bridal party size, guest shuttle needs, and any airport transfers. We confirm availability and begin building your transportation plan.',
+                'body'   => 'Call our dispatch or complete the online quote form. Share your wedding date, venue or venues, estimated bridal party size, guest shuttle needs, and any airport transfers. We confirm availability and begin building your transportation plan.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             '24/7/365 dispatch managing every vehicle in real time from first pickup to final drop-off',
             'Airport transfers for out-of-town guests and honeymoon departures with real-time flight tracking',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. Peak-season Saturdays fill 6 to 12 months ahead. Lock your date early."
+        descClosing="Call or get a free quote online. Peak-season Saturdays fill 6 to 12 months ahead. Lock your date early."
         :descImageTop="true"
     />
 

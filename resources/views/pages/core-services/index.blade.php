@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-services.jpg",
     "address": {
@@ -62,7 +62,7 @@
 
 <x-layouts.page
     title="Core Service Pillars | Stop & Go Airport Shuttle &amp; Limo"
-    metaDescription="Eight professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, special events, and more. Chicagoland. (815) 585-6922."
+    metaDescription="Eight professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, special events, and more. Chicagoland."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Core transportation services from Stop and Go Airport Shuttle Service in New Lenox Illinois"

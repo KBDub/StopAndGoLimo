@@ -7,7 +7,7 @@
     "name": "Town Car Services — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Premium sedan and town car service for any occasion in New Lenox, Plainfield, and the Southwest suburbs of Chicago. Call (815) 585-6922."
+    "description": "Premium sedan and town car service for any occasion in New Lenox, Plainfield, and the Southwest suburbs of Chicago."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Town Car Service"
-    metaDescription="Stylish sedan and town car service for every occasion in Chicagoland. Professional drivers, flat rates, on-time pickup. Call (815) 585-6922."
+    metaDescription="Stylish sedan and town car service for every occasion in Chicagoland. Professional drivers, flat rates, on-time pickup."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Town car service in New Lenox, Illinois"

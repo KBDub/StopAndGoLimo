@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Airport Shuttle"
-    metaDescription="24/7 airport shuttle service to O'Hare and Midway from anywhere in Chicagoland. Flat rates, on-time pickup, professional chauffeurs. Call (815) 585-6922."
+    metaDescription="24/7 airport shuttle service to O'Hare and Midway from anywhere in Chicagoland. Flat rates, on-time pickup, professional chauffeurs."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Airport shuttle service to O'Hare and Midway from New Lenox, Illinois"

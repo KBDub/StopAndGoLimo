@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="New Lenox IL Limo Service & Airport Shuttle"
-    metaDescription="24/7 limo service and airport shuttle from New Lenox IL to O'Hare and Midway. Flat-rate pricing, real-time flight tracking, and guaranteed on-time pickups. Call (815) 585-6922."
+    metaDescription="24/7 limo service and airport shuttle from New Lenox IL to O'Hare and Midway. Flat-rate pricing, real-time flight tracking, and guaranteed on-time pickups."
     currentPage="service-areas"
     ogImage="/images/heroes/airport-ohare-midway.jpg"
     ogImageAlt="O'Hare International Airport, served by Stop and Go limo service from New Lenox IL"
@@ -46,7 +46,7 @@
         headingBold="& Airport Shuttle"
         :headingTwoLines="false"
         subtitle="Stress-free transfers to O'Hare and Midway, 24 hours a day"
-        description="Stop & Go Airport Shuttle Service, Inc. takes the stress out of airport travel for New Lenox and Will County residents. Our limo and shuttle service runs 24 hours a day to O'Hare and Midway, with flat-rate pricing and no hidden fees. We know the routes. We know the timing. We know how I-80 and I-55 behave during rush hour, during a snowstorm, and during construction season. A rideshare app cannot promise you a driver will show up. We can. Every pickup is a scheduled commitment, not a guess. Our chauffeurs arrive early, track your flight in real time, and wait if your plane is delayed. We serve the entire 60451 zip code and surrounding communities including Frankfort, Mokena, Joliet, and Homer Glen. Corporate travelers, families heading on vacation, wedding guests, and first-time flyers all trust us with their airport runs every day. Book your next trip online or call (815) 585-6922 anytime."
+        description="Stop & Go Airport Shuttle Service, Inc. takes the stress out of airport travel for New Lenox and Will County residents. Our limo and shuttle service runs 24 hours a day to O'Hare and Midway, with flat-rate pricing and no hidden fees. We know the routes. We know the timing. We know how I-80 and I-55 behave during rush hour, during a snowstorm, and during construction season. A rideshare app cannot promise you a driver will show up. We can. Every pickup is a scheduled commitment, not a guess. Our chauffeurs arrive early, track your flight in real time, and wait if your plane is delayed. We serve the entire 60451 zip code and surrounding communities including Frankfort, Mokena, Joliet, and Homer Glen. Corporate travelers, families heading on vacation, wedding guests, and first-time flyers all trust us with their airport runs every day. Book your next trip online or call anytime."
         buttonText="Book Airport Shuttle"
         buttonHref="/bookings-reservations"
         image="/images/heroes/airport-ohare-midway.jpg"

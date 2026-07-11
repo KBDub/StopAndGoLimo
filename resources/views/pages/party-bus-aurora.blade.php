@@ -7,7 +7,7 @@
     "name": "Party Bus Rental — Aurora, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "City", "name": "Aurora", "addressRegion": "IL", "addressCountry": "US" },
-    "description": "Fun, safe party bus rental in Aurora, Illinois. Perfect for birthdays, bachelorette parties, and group celebrations. Call (815) 585-6922."
+    "description": "Fun, safe party bus rental in Aurora, Illinois. Perfect for birthdays, bachelorette parties, and group celebrations."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Aurora Party Bus"
-    metaDescription="Party bus rental in Aurora, IL for birthdays, bachelorette parties, and group celebrations. Serving all of Chicagoland. Call (815) 585-6922."
+    metaDescription="Party bus rental in Aurora, IL for birthdays, bachelorette parties, and group celebrations. Serving all of Chicagoland."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Party bus rental in Aurora, Illinois"

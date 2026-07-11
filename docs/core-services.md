@@ -189,7 +189,7 @@ No new components for pillar pages. Two new `x-sections.*` components are needed
 | Field | Value |
 |---|---|
 | `title` | `"Core Service Pillars — Stop & Go Airport Shuttle & Limo"` |
-| `metaDescription` | `"Seven professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, and more. Chicagoland. (815) 585-6922."` |
+| `metaDescription` | `"Seven professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, and more. Chicagoland."` |
 | `currentPage` | `"our-services"` |
 
 ---
@@ -276,7 +276,7 @@ Every pillar page outputs **four** structured-data blocks inside `@push('structu
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/[hero-image].jpg",
     "address": {
@@ -318,7 +318,7 @@ Every pillar page outputs **four** structured-data blocks inside `@push('structu
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922"
+        "telephone": ""
     },
     "areaServed": [
         { "@@type": "City", "name": "New Lenox" },
@@ -514,7 +514,7 @@ O'Hare Airport Shuttle, Midway Airport Shuttle, Flat-Rate Airport Transfer, Exec
 **Hero image:** `airport-ohare-midway.jpg` (existing)
 **FAQ preset:** `"airport"` if it exists, otherwise `"general"`
 **Meta title:** `"Airport Shuttle Service — O'Hare & Midway | Stop & Go"`
-**Meta description:** `"Flat-rate airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, 24/7. Call (815) 585-6922."`
+**Meta description:** `"Flat-rate airport shuttle service to O'Hare and Midway from New Lenox, Naperville, Joliet, and all of Will County. Real-time flight tracking, meet-and-greet, 24/7."`
 
 ---
 
@@ -546,7 +546,7 @@ Group Airport Charter, Corporate Event Bus, Wedding Guest Shuttle, Quinceañera 
 **Hero image:** `hero-new-bus-rental.jpg` (existing)
 **FAQ preset:** `"party-bus"` (closest match)
 **Meta title:** `"Bus Charter Service — Groups of Every Size | Stop & Go"`
-**Meta description:** `"Charter bus service across Will County and Chicagoland. Weddings, corporate events, church groups, concerts, and more. Right-sized for your group. Call (815) 585-6922."`
+**Meta description:** `"Charter bus service across Will County and Chicagoland. Weddings, corporate events, church groups, concerts, and more. Right-sized for your group."`
 
 ---
 
@@ -578,7 +578,7 @@ Door-to-Door Chauffeur Service, New Lenox Chauffeur Service, Joliet Chauffeur Se
 **Hero image:** `chauffeur-hero.jpg` (existing)
 **FAQ preset:** `"general"`
 **Meta title:** `"Private Chauffeur Service — Chicagoland | Stop & Go"`
-**Meta description:** `"Professional chauffeur service for executive travel, C-suite commutes, VIP clients, and private transfers. Background-checked, uniformed, on time. Call (815) 585-6922."`
+**Meta description:** `"Professional chauffeur service for executive travel, C-suite commutes, VIP clients, and private transfers. Background-checked, uniformed, on time."`
 
 ---
 
@@ -610,7 +610,7 @@ Luxury Wedding Stretch Limo, Prom Night Stretch SUV Limo, Quinceañera Celebrati
 **Hero image:** `hero-special-event.jpg` (existing)
 **FAQ preset:** `"general"`
 **Meta title:** `"Limousine Service for Every Occasion — Chicagoland | Stop & Go"`
-**Meta description:** `"Stretch limousines, luxury SUVs, and executive sedans for weddings, proms, anniversaries, galas, and every celebration. Flat-rate pricing. Call (815) 585-6922."`
+**Meta description:** `"Stretch limousines, luxury SUVs, and executive sedans for weddings, proms, anniversaries, galas, and every celebration. Flat-rate pricing."`
 
 ---
 
@@ -642,7 +642,7 @@ VIP Escort Service, Executive Convoy Transport, Multi-Vehicle Wedding Escort, Di
 **Hero image:** `limousine-professional.jpg` (existing)
 **FAQ preset:** `"general"`
 **Meta title:** `"Transportation Escort Service — Multi-Vehicle | Stop & Go"`
-**Meta description:** `"Coordinated multi-vehicle escort for VIP clients, wedding fleets, executive convoys, and dignitary arrivals across Chicagoland. One dispatch contact. Call (815) 585-6922."`
+**Meta description:** `"Coordinated multi-vehicle escort for VIP clients, wedding fleets, executive convoys, and dignitary arrivals across Chicagoland. One dispatch contact."`
 
 ---
 
@@ -673,7 +673,7 @@ Private Car Service, Senior Transportation, Medical Appointment Transport, Door-
 **Hero image:** `corporate-limo.jpg` (existing)
 **FAQ preset:** `"general"`
 **Meta title:** `"Private Transportation Service — Will County | Stop & Go"`
-**Meta description:** `"Private ground transportation for families, seniors, corporate visitors, and event shuttles across Will County and Chicagoland. Flat-rate. Always on time. Call (815) 585-6922."`
+**Meta description:** `"Private ground transportation for families, seniors, corporate visitors, and event shuttles across Will County and Chicagoland. Flat-rate. Always on time."`
 
 ---
 
@@ -705,7 +705,7 @@ Bridal Party Limousine, Wedding Getaway Car, Wedding Guest Shuttle, Rehearsal Di
 **Hero image:** `wedding-hero.jpg` (existing)
 **FAQ preset:** `"general"` (consider creating a `"wedding"` preset before build)
 **Meta title:** `"Wedding Transportation Service — Complete Day Coverage | Stop & Go"`
-**Meta description:** `"Complete wedding transportation — bridal party, guest shuttles, airport arrivals, and rehearsal dinners. One vendor for the full weekend. Call (815) 585-6922."`
+**Meta description:** `"Complete wedding transportation — bridal party, guest shuttles, airport arrivals, and rehearsal dinners. One vendor for the full weekend."`
 
 ---
 

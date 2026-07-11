@@ -7,10 +7,10 @@ return [
     'tagline'              => 'Premium Limousine & Airport Shuttle Service',
     'tagline_alt'          => 'Serving the Chicagoland Southwest Suburbs Since 2009',
 
-    'phone'                => '(815) 585-6922',
+    'phone'                => '(708) 315-4445',
     'phone_alt'            => null,
-    'phone_raw'            => '+18155856922',
-    'email'                => 'info@stopandgolimo.com',
+    'phone_raw'            => '+7083154445',
+    'email'                => 'vincent@newlenoxlimoservice.com',
     'website'              => 'https://newlenoxlimoservice.com',
 
     'address' => [
@@ -22,7 +22,7 @@ return [
         'zip'        => '60451',
     ],
 
-    'year_incorporated'                 => 2009,
+    'year_incorporated'                 => 2015,
     'license_number'                    => '',
     'license_number_display_on_banner'  => false,
 
@@ -87,8 +87,8 @@ return [
 
     /* ── Social Media ───────────────────────────────────────── */
     'social' => [
-        'facebook'  => '',
-        'instagram' => '',
+        'facebook'  => 'https://www.facebook.com/p/Stop-Go-Airport-Shuttle-Service-61566415887805/',
+        'instagram' => 'https://www.instagram.com/stopngo_airportshuttle/',
         'twitter'   => '',
         'google'    => '',
         'yelp'      => '',

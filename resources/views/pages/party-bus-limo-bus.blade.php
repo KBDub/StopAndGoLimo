@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": "Illinois",
-    "description": "Party bus limo bus rentals for groups throughout Chicagoland. Birthdays, weddings, proms, concerts, and corporate events. Call (815) 585-6922."
+    "description": "Party bus limo bus rentals for groups throughout Chicagoland. Birthdays, weddings, proms, concerts, and corporate events."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Party Bus Limo Bus"
-    metaDescription="Party bus limo bus rentals for groups throughout Chicagoland. Birthdays, weddings, proms, concerts, and corporate events. Professional chauffeurs. Call (815) 585-6922."
+    metaDescription="Party bus limo bus rentals for groups throughout Chicagoland. Birthdays, weddings, proms, concerts, and corporate events. Professional chauffeurs."
     currentPage="our-services"
     ogImage="/images/heroes/hero-party-bus-chicago.webp"
     ogImageAlt="Party bus limo bus, Stop and Go Airport Shuttle Service"
@@ -125,7 +125,7 @@
             'On-time guarantee on every booking',
             'Available 24 hours a day for any occasion',
         ]"
-        descClosing="Ready to plan your group event? Call (815) 585-6922 or get a free quote online. We serve all of Chicagoland."
+        descClosing="Ready to plan your group event? or get a free quote online. We serve all of Chicagoland."
         descImage="/images/sections/luxurious-party-bus.png"
         descImageAlt="Luxurious party bus limo bus interior, Stop and Go"
         :descImageTop="true"

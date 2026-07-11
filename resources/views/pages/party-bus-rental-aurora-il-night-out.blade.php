@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": { "@@type": "City", "name": "Aurora", "addressRegion": "IL" },
-    "description": "Party bus rental in Aurora, IL for a night out. Professional chauffeurs, LED lighting, premium sound, and flat-rate pricing. Call (815) 585-6922."
+    "description": "Party bus rental in Aurora, IL for a night out. Professional chauffeurs, LED lighting, premium sound, and flat-rate pricing."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Party Bus Rental in Aurora IL for a Night Out"
-    metaDescription="Party bus rental in Aurora, IL for a night out your crew will never forget. Professional chauffeurs, LED lighting, premium sound, and flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Party bus rental in Aurora, IL for a night out your crew will never forget. Professional chauffeurs, LED lighting, premium sound, and flat-rate pricing."
     currentPage="service-areas"
     ogImage="/images/heroes/party-bus-aurora-il.png"
     ogImageAlt="Party bus rental in Aurora IL, Stop and Go Airport Shuttle Service"
@@ -123,7 +123,7 @@
             'Group sizes from 10 to 55 passengers',
             'Available 24 hours a day, 7 days a week',
         ]"
-        descClosing="Call (815) 585-6922 or book online to reserve your Aurora party bus today."
+        descClosing="Call or book online to reserve your Aurora party bus today."
         descImage="/images/sections/party-bus-aurora-illinois.png"
         descImageAlt="Aurora IL party bus rental with Stop and Go"
         :descImageTop="true"

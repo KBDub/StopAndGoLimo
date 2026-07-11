@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-special-event.jpg",
     "address": {
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Transportation Escort Service | Accompanied Travel | Stop &amp; Go"
-    metaDescription="Professional escorted transportation service across New Lenox, Joliet, Naperville, and all of Will County. Dedicated chauffeur for airport transfers, city tours, corporate travel, school dances, and personal occasions. Call (815) 585-6922."
+    metaDescription="Professional escorted transportation service across New Lenox, Joliet, Naperville, and all of Will County. Dedicated chauffeur for airport transfers, city tours, corporate travel, school dances, and personal occasions."
     currentPage="our-services"
     ogImage="/images/heroes/hero-special-event.jpg"
     ogImageAlt="Stop and Go professional transportation escort service for events and personal occasions across Will County"
@@ -436,7 +436,7 @@
             [
                 'occasion' => 'Airport Escort Transportation',
                 'timing'   => '24 to 48 hours ahead',
-                'detail'   => 'Airport escort bookings can typically be arranged 24 to 48 hours in advance. Same-day airport escorts are possible when you call our dispatch directly at (815) 585-6922. We always recommend booking at least the night before for pre-dawn departures.',
+                'detail'   => 'Airport escort bookings can typically be arranged 24 to 48 hours in advance. Same-day airport escorts are possible when you call our dispatch directly We always recommend booking at least the night before for pre-dawn departures.',
                 'urgency'  => 'low',
             ],
             [
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Tell Us About Your Escort Engagement',
-                'body'   => 'Call our 24/7 dispatch at (815) 585-6922 or complete the quick online form. Share the nature of the escort, the number of clients, every location involved, the duration, and any specific requirements. We confirm availability and provide a flat-rate or hourly quote.',
+                'body'   => 'Call our 24/7 dispatch or complete the quick online form. Share the nature of the escort, the number of clients, every location involved, the duration, and any specific requirements. We confirm availability and provide a flat-rate or hourly quote.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             'Parent-confirmed pickup and drop-off details on all school dance and prom escort engagements',
             '24/7/365 dispatch: pre-dawn airport escorts, late-night event returns, and senior appointment transport all covered',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

@@ -7,7 +7,7 @@
     "name": "Chicago Golf Party Bus — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Tee off in style with a chauffeured golf group bus from New Lenox, Plainfield, and the Southwest suburbs of Chicago. Call (815) 585-6922."
+    "description": "Tee off in style with a chauffeured golf group bus from New Lenox, Plainfield, and the Southwest suburbs of Chicago."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Golf Party Bus"
-    metaDescription="Tee off in style with a chauffeured golf group bus serving Chicagoland's top courses. No designated driver needed. Call (815) 585-6922."
+    metaDescription="Tee off in style with a chauffeured golf group bus serving Chicagoland's top courses. No designated driver needed."
     currentPage="special-events"
     ogImage="/images/heroes/hero-chicago-golf-party-bus.jpg"
     ogImageAlt="Golf party bus from New Lenox, Illinois"

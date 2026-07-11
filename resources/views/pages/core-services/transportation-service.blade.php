@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-services.jpg",
     "address": {
@@ -212,7 +212,7 @@
             "name": "How do I book transportation with Stop & Go?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "You can book by completing our quick online quote form or by calling our 24/7 dispatch line at (815) 585-6922. We confirm availability and provide a flat-rate quote within minutes. For large events and multi-vehicle bookings, we recommend calling directly so we can plan the full itinerary with you."
+                "text": "You can book by completing our quick online quote form or by calling our 24/7 dispatch line We confirm availability and provide a flat-rate quote within minutes. For large events and multi-vehicle bookings, we recommend calling directly so we can plan the full itinerary with you."
             }
         }
     ]
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Luxury Transportation Service | New Lenox &amp; Will County | Stop &amp; Go"
-    metaDescription="Professional luxury transportation service for every occasion across New Lenox, Joliet, Naperville, and all of Will County. Airport transfers, corporate, events, group charters, and limousines. Flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Professional luxury transportation service for every occasion across New Lenox, Joliet, Naperville, and all of Will County. Airport transfers, corporate, events, group charters, and limousines. Flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Stop and Go luxury transportation service for every occasion across Will County and Chicagoland"
@@ -442,7 +442,7 @@
             [
                 'occasion' => 'Airport Transfer and Personal Occasion',
                 'timing'   => '24 to 48 hours ahead',
-                'detail'   => 'Standard airport transfers and personal occasion transportation can typically be arranged 24 to 48 hours in advance. Same-day airport bookings are possible when you call our dispatch at (815) 585-6922. We always recommend booking the night before for pre-dawn departures.',
+                'detail'   => 'Standard airport transfers and personal occasion transportation can typically be arranged 24 to 48 hours in advance. Same-day airport bookings are possible when you call our dispatch We always recommend booking the night before for pre-dawn departures.',
                 'urgency'  => 'low',
             ],
         ]"
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Tell Us What You Need',
-                'body'   => 'Call our 24/7 dispatch at (815) 585-6922 or complete the quick online quote form. Share your service type, date, group size, pickup location, and destination. We confirm availability and provide a flat-rate quote within minutes for any transportation type.',
+                'body'   => 'Call our 24/7 dispatch or complete the quick online quote form. Share your service type, date, group size, pickup location, and destination. We confirm availability and provide a flat-rate quote within minutes for any transportation type.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             'Multi-stop itinerary confirmed in writing before your service date for charter and event bookings',
             'Service across all of Will County and Chicagoland, with a second location in Naperville for DuPage County',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

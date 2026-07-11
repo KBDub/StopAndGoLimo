@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -18,7 +18,7 @@
         }
     },
     "areaServed": "Illinois",
-    "description": "Wedding party bus rental throughout Chicagoland. Transport your bridal party and guests in comfort and style. Flat-rate pricing. Call (815) 585-6922."
+    "description": "Wedding party bus rental throughout Chicagoland. Transport your bridal party and guests in comfort and style. Flat-rate pricing."
 }
 </script>
 <script type="application/ld+json">
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="Wedding Party Bus Rental for Your Big Day"
-    metaDescription="Wedding party bus rental throughout Chicagoland. Transport your bridal party and guests in comfort and style. Professional chauffeurs, flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Wedding party bus rental throughout Chicagoland. Transport your bridal party and guests in comfort and style. Professional chauffeurs, flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/bus-rentals-for-wedding.png"
     ogImageAlt="Wedding party bus rental, Stop and Go Airport Shuttle Service"
@@ -46,7 +46,7 @@
         headingBold="Party Bus Rental"
         :headingTwoLines="false"
         subtitle="Keep your wedding party together, on time, and stress-free"
-        description="Your wedding day should be perfect from start to finish, and that includes the transportation. Stop & Go Airport Shuttle Service, Inc. provides professional wedding party bus rental service throughout Chicagoland. We transport bridal parties, groomsmen, and wedding guests with elegance and punctuality. Our wedding party buses are spacious enough to keep the entire wedding party together, fully equipped with sound systems and mood lighting, and driven by uniformed, background-checked chauffeurs who understand the importance of timing on your big day. We serve wedding venues across New Lenox, Naperville, Aurora, Joliet, and the greater Chicago area. In addition to wedding day transportation, we also provide airport transfers to O'Hare and Midway for out-of-town guests. Our flat-rate pricing means no surprises on your invoice. Booking is simple and our team walks you through every detail before your wedding day. Corporate clients, quinceañera groups, prom parties, and concert-goers also rely on us throughout the year. Call (815) 585-6922 to plan your wedding transportation today."
+        description="Your wedding day should be perfect from start to finish, and that includes the transportation. Stop & Go Airport Shuttle Service, Inc. provides professional wedding party bus rental service throughout Chicagoland. We transport bridal parties, groomsmen, and wedding guests with elegance and punctuality. Our wedding party buses are spacious enough to keep the entire wedding party together, fully equipped with sound systems and mood lighting, and driven by uniformed, background-checked chauffeurs who understand the importance of timing on your big day. We serve wedding venues across New Lenox, Naperville, Aurora, Joliet, and the greater Chicago area. In addition to wedding day transportation, we also provide airport transfers to O'Hare and Midway for out-of-town guests. Our flat-rate pricing means no surprises on your invoice. Booking is simple and our team walks you through every detail before your wedding day. Corporate clients, quinceañera groups, prom parties, and concert-goers also rely on us throughout the year. to plan your wedding transportation today."
         buttonText="Plan Wedding Transport"
         buttonHref="/get-a-quote"
         image="/images/heroes/bus-rentals-for-wedding.png"
@@ -123,7 +123,7 @@
             'Flat-rate pricing with no hidden charges',
             'Available 24 hours a day including early morning airport pickups',
         ]"
-        descClosing="Contact us early to secure your wedding date. Popular weekends book up months in advance. Call (815) 585-6922."
+        descClosing="Contact us early to secure your wedding date. Popular weekends book up months in advance."
         descImage="/images/sections/wedding-party-bus-rental.png"
         descImageAlt="Wedding transportation service throughout Chicagoland"
         :descImageTop="true"

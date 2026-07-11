@@ -4,7 +4,7 @@
             'city'        => 'Naperville',
             'address'     => '3420 Lacrosse Ln, Suite 116,',
             'addressLine2'=> 'Naperville, IL 60564',
-            'phone'       => '(815) 585-6922',
+            'phone'       => '',
             'reviewHref'  => '#',
         ],
         [

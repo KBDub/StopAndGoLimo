@@ -118,7 +118,7 @@
         <div style="background: var(--navy); padding: 1.5rem 2rem;">
             <p style="font-family: var(--font-body); font-size: 1.05rem; color: var(--cloud); line-height: 1.7;">
                 <strong style="color: var(--champagne);">Pricing in Chicagoland:</strong>
-                Party bus rates in the New Lenox and Chicago suburban market typically run from $100 to $300 per hour, depending on the vehicle, amenities, and the time of year. Summer weekends and spring prom season book up earliest. We offer flat-rate pricing with no hidden charges. Call <a href="tel:+18155856922" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;">(815) 585-6922</a> or use our online quote form to get your rate in minutes.
+                Party bus rates in the New Lenox and Chicago suburban market typically run from $100 to $300 per hour, depending on the vehicle, amenities, and the time of year. Summer weekends and spring prom season book up earliest. We offer flat-rate pricing with no hidden charges. Call <a href="tel:+17083154445" style="color: var(--champagne); text-decoration: underline; text-decoration-color: var(--champagne); text-underline-offset: 3px;"></a> or use our online quote form to get your rate in minutes.
             </p>
         </div>
 

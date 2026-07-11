@@ -8,7 +8,7 @@
     "name": "Stop & Go Airport Shuttle Service Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "(815) 585-6922",
+    "telephone": "",
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-new-bus-rental.jpg",
     "address": {
@@ -223,7 +223,7 @@
 
 <x-layouts.page
     title="Charter Bus Service | Group Transportation Chicagoland | Stop &amp; Go"
-    metaDescription="Charter bus service for groups across Chicagoland. Corporate shuttles, wedding party buses, airport group charters, concert transportation, and quinceañera buses. Flat-rate pricing. Call (815) 585-6922."
+    metaDescription="Charter bus service for groups across Chicagoland. Corporate shuttles, wedding party buses, airport group charters, concert transportation, and quinceañera buses. Flat-rate pricing."
     currentPage="our-services"
     ogImage="/images/heroes/hero-new-bus-rental.jpg"
     ogImageAlt="Stop and Go charter bus service vehicle for group transportation across Chicagoland"
@@ -455,7 +455,7 @@
             [
                 'number' => 'Step 1',
                 'title'  => 'Tell Us About Your Group',
-                'body'   => 'Complete our quick online form with your group size, pickup location, destination, number of stops, and your preferred date. Or call our 24/7 dispatch at (815) 585-6922. We confirm availability and provide a flat-rate quote for the whole group.',
+                'body'   => 'Complete our quick online form with your group size, pickup location, destination, number of stops, and your preferred date. Or call our 24/7 dispatch We confirm availability and provide a flat-rate quote for the whole group.',
             ],
             [
                 'number' => 'Step 2',
@@ -492,7 +492,7 @@
             '24/7/365 dispatch: early morning departures, late-night returns, and holiday charters all covered',
             'Service across all of Will County and Chicagoland, including airport group charters to O\'Hare and Midway',
         ]"
-        descClosing="Call (815) 585-6922 or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
+        descClosing="Call or get a free quote online. We serve all of Will County and Chicagoland, any hour of the day."
         :descImageTop="true"
     />
 

@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service Inc.",
-        "telephone": "(815) 585-6922",
+        "telephone": "",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",
@@ -36,7 +36,7 @@
 
 <x-layouts.page
     title="New Lenox Limo Service"
-    metaDescription="Professional limo service in New Lenox, IL. Airport transfers to O'Hare and Midway, weddings, proms, corporate travel, and more. Call (815) 585-6922."
+    metaDescription="Professional limo service in New Lenox, IL. Airport transfers to O'Hare and Midway, weddings, proms, corporate travel, and more."
     currentPage="service-areas"
     ogImage="/images/sections/limousine-professional.jpg"
     ogImageAlt="Luxury limo service in New Lenox, Illinois"

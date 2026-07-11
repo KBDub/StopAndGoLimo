@@ -7,7 +7,7 @@
     "name": "Transportation Services — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Point-to-point luxury transportation across the Southwest suburbs of Chicago. Serving New Lenox, Plainfield, Joliet, and beyond. Call (815) 585-6922."
+    "description": "Point-to-point luxury transportation across the Southwest suburbs of Chicago. Serving New Lenox, Plainfield, Joliet, and beyond."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Transportation"
-    metaDescription="Reliable private transportation across all of Chicagoland. Airport runs, corporate trips, special events, and point-to-point rides. Call (815) 585-6922."
+    metaDescription="Reliable private transportation across all of Chicagoland. Airport runs, corporate trips, special events, and point-to-point rides."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Transportation services in New Lenox, Illinois"

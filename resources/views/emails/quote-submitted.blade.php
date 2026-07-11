@@ -95,7 +95,7 @@
     </div>
 
     <div class="footer">
-        Stop &amp; Go Airport Shuttle Service Inc. &mdash; (815) 585-6922 &mdash; newlenoxlimoservice.com<br>
+        Stop &amp; Go Airport Shuttle Service Inc. &mdash; &mdash; newlenoxlimoservice.com<br>
         This is an automated notification. Reference: {{ $quote->reference }}
     </div>
 

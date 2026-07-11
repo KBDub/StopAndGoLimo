@@ -7,7 +7,7 @@
     "name": "Corporate Car Service — New Lenox and Southwest Suburbs, IL",
     "provider": { "@id": "https://www.newlenoxlimoservice.com" },
     "areaServed": { "@type": "State", "name": "Illinois" },
-    "description": "Executive ground transportation for business travel in New Lenox, Plainfield, and the Southwest suburbs of Chicago. Call (815) 585-6922."
+    "description": "Executive ground transportation for business travel in New Lenox, Plainfield, and the Southwest suburbs of Chicago."
 }
 </script>
 <script type="application/ld+json">
@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Corporate Cars"
-    metaDescription="Executive car service for Chicagoland business travel. On-time, professional, and discreet. Airport transfers and corporate events. Call (815) 585-6922."
+    metaDescription="Executive car service for Chicagoland business travel. On-time, professional, and discreet. Airport transfers and corporate events."
     currentPage="services"
     ogImage="/images/heroes/hero-services.jpg"
     ogImageAlt="Corporate car service in New Lenox, Illinois"

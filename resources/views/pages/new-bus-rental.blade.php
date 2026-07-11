@@ -26,7 +26,7 @@
 
 <x-layouts.page
     title="Party Bus Rental"
-    metaDescription="Rent the latest-model party and shuttle buses for any group occasion in Chicagoland. Weddings, events, airport runs, and more. Call (815) 585-6922."
+    metaDescription="Rent the latest-model party and shuttle buses for any group occasion in Chicagoland. Weddings, events, airport runs, and more."
     currentPage="services"
     ogImage="/images/heroes/hero-new-bus-rental.jpg"
     ogImageAlt="Bus rental in New Lenox, Illinois"

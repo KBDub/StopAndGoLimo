@@ -10,7 +10,7 @@
         { "@type": "City", "name": "New Lenox", "addressRegion": "IL", "addressCountry": "US" },
         { "@type": "City", "name": "Plainfield", "addressRegion": "IL", "addressCountry": "US" }
     ],
-    "description": "Stop and Go Limo provides party limousine rentals for weddings, proms, birthdays, and all special events in New Lenox and Plainfield, Illinois. Call (815) 585-6922."
+    "description": "Stop and Go Limo provides party limousine rentals for weddings, proms, birthdays, and all special events in New Lenox and Plainfield, Illinois."
 }
 </script>
 <script type="application/ld+json">
@@ -19,7 +19,7 @@
     "@type": "WebPage",
     "name": "Special Event Limousine | Party Limo Rental — New Lenox and Plainfield, IL",
     "url": "https://www.newlenoxlimoservice.com/special-event-limousine",
-    "description": "Party limousine rental in New Lenox and Plainfield, Illinois. Weddings, proms, birthdays, and special events. On-time, every time. Call (815) 585-6922."
+    "description": "Party limousine rental in New Lenox and Plainfield, Illinois. Weddings, proms, birthdays, and special events. On-time, every time."
 }
 </script>
 <script type="application/ld+json">
@@ -38,7 +38,7 @@
 
 <x-layouts.page
     title="Special Events"
-    metaDescription="Make your event unforgettable with a party limousine in Chicagoland. Weddings, proms, birthdays, and celebrations of all kinds. Call (815) 585-6922."
+    metaDescription="Make your event unforgettable with a party limousine in Chicagoland. Weddings, proms, birthdays, and celebrations of all kinds."
     currentPage="services"
     ogImage="/images/heroes/hero-special-event.jpg"
     ogImageAlt="Special event limousine rental in New Lenox and Plainfield, Illinois"

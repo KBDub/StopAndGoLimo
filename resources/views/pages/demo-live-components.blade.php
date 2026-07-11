@@ -104,7 +104,7 @@
             'desc'  => 'Navy section with embedded Google Map, contact info, and SM label-rule dividers (3px champagne, 30% width). H2 spec + social links.',
             'props' => ['heading', 'headingBold', 'phone', 'email', 'address', 'mapSrc'],
             'ar'    => 'map 4/3, section height auto',
-            'code'  => "<x-sections.map-contact-section\n    heading=\"Find\"\n    headingBold=\"Us\"\n    phone=\"(815) 585-6922\"\n    email=\"info@stopandgolimo.com\"\n    address=\"New Lenox, IL 60451\"\n    mapSrc=\"https://maps.google.com/...\"\n/>",
+            'code'  => "<x-sections.map-contact-section\n    heading=\"Find\"\n    headingBold=\"Us\"\n    phone=\"\"\n    email=\"info@stopandgolimo.com\"\n    address=\"New Lenox, IL 60451\"\n    mapSrc=\"https://maps.google.com/...\"\n/>",
         ],
         [
             'num'   => '10',

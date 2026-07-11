@@ -11,7 +11,7 @@
 
             {{-- Primary phone --}}
             <div class="flex items-center gap-1.5 shrink-0">
-                <a href="tel:+18155856922" class="font-semibold text-champagne hover:text-champagne-light transition-colors">(815) 585-6922</a>
+                <a href="tel:+17083154445" class="font-semibold text-champagne hover:text-champagne-light transition-colors">(708) 315-4445</a>
             </div>
 
             {{-- Social icons, desktop only --}}

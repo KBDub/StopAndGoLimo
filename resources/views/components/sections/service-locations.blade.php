@@ -1,21 +1,8 @@
 @props([
     'heading'     => 'Convenient Service Across',
-    'headingBold' => 'Two Locations',
-    'body'        => 'At Stop & Go Airport Shuttle Service Inc., we are proud to serve you from two distinct locations, making it easy for you to access our comprehensive transportation services. Whether you\'re in Plainfield or New Lenox, our team is ready to meet your needs with the same high level of service.',
-    'locations'   => [
-        [
-            'city'    => 'Naperville',
-            'address' => '3420 Lacrosse Ln, Suite 116, Naperville, IL 60564',
-            'phone'   => '',
-            'tel'     => '+17083154445',
-        ],
-        [
-            'city'    => 'New Lenox',
-            'address' => '400 E. Lincoln Hwy, New Lenox, IL 60451',
-            'phone'   => '(708) 315-4445',
-            'tel'     => '+17083154445',
-        ],
-    ],
+    'headingBold' => 'All of Chicagoland',
+    'body'        => 'Stop & Go Airport Shuttle Service, Inc. provides 24/7 flat-rate chauffeured transportation across all of Chicagoland. Our drivers cover every suburb from Will County north to Lake County, and from DuPage County into the city. Need a flat-rate ride to O\'Hare or Midway? We track your flight in real time and meet you at arrivals. Planning a big night out at a concert, a Bears or Cubs game, a wedding, or a prom? We have executive sedans, luxury SUVs, stretch limousines, Mercedes Sprinter vans, and party buses ready for your group. Every vehicle is clean, insured, and driven by a uniformed, background-checked chauffeur.',
+    'chambers'    => ['Naperville', 'Bolingbrook', 'Orland Park'],
 ])
 
 <section id="service-locations" style="background: var(--navy); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
@@ -24,46 +11,52 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             {{-- Left: Heading + body --}}
-            <div class="text-center">
-                <h2 class="font-head mb-5" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
-                    {{ $heading }} <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
-                </h2>
+            <div>
+                <div style="width: fit-content; margin: 0 auto 1.5rem; text-align: center;">
+                    <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
+                        {{ $heading }}<br>
+                        <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
+                </div>
+
                 @if($body)
-                    <p class="font-body" style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
+                    <p class="font-body" style="font-size: 1.1rem; line-height: 1.75; color: var(--cloud); text-align: center;">
                         {{ $body }}
                     </p>
                 @endif
             </div>
 
-            {{-- Right: Location cards --}}
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                @foreach($locations as $loc)
-                    <div class="text-center">
+            {{-- Right: Chamber of Commerce section --}}
+            <div style="text-align: center;">
 
-                        {{-- Inline SVG map pin --}}
-                        <div class="mx-auto mb-4" style="width: 4rem; height: auto;">
-                            <svg aria-hidden="true" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg" style="fill: var(--champagne); width: 4rem; height: auto; margin: 0 auto;">
-                                <path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
-                            </svg>
-                        </div>
+                {{-- Single community icon --}}
+                <div style="margin: 0 auto 1.5rem;">
+                    <img
+                        src="/icons/community-people2.svg"
+                        alt="Stop and Go Limo chamber of commerce community members icon"
+                        style="width: 5rem; height: auto; display: block; margin: 0 auto;"
+                    >
+                </div>
 
-                        {{-- City name — H5 spec: Poppins 20px / SemiBold 600 --}}
-                        <h5 class="font-head mb-3" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne);">
-                            {{ $loc['city'] }}
-                        </h5>
+                {{-- Chamber heading --}}
+                <h4 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); letter-spacing: 0.04em; margin-bottom: 0.5rem;">
+                    Proud Chamber of Commerce Member
+                </h4>
 
-                        {{-- Address --}}
-                        <p class="font-body mb-2" style="font-size: 1.25rem; line-height: 1.5; color: var(--cloud);">
-                            {{ $loc['address'] }}
-                        </p>
+                {{-- Champagne rule (H4 fixed-width style) --}}
+                <div style="height: 3px; background: var(--champagne); width: 4rem; margin: 0 auto 1.25rem;"></div>
 
-                        {{-- Phone --}}
-                        <p class="font-body" style="font-size: 1.25rem; color: var(--cloud);">
-                            Phone: <a href="tel:{{ $loc['tel'] }}" style="color: var(--cloud); text-decoration: none;" class="hover:underline">{{ $loc['phone'] }}</a>
-                        </p>
+                {{-- Chamber cities --}}
+                <p class="font-body" style="font-size: 1rem; color: var(--cloud-light); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.25rem;">
+                    {{ implode(' · ', $chambers) }}
+                </p>
 
-                    </div>
-                @endforeach
+                {{-- SEO community copy --}}
+                <p class="font-body" style="font-size: 1rem; line-height: 1.75; color: var(--cloud);">
+                    As an active chamber member in Naperville, Bolingbrook, and Orland Park, Stop &amp; Go is deeply rooted in the communities we serve. We believe outstanding Chicagoland transportation starts with local knowledge, neighborhood accountability, and a genuine commitment to every rider. From the southwest suburbs to the North Shore, we are your neighbors and your dedicated chauffeured transportation provider across the entire metro area.
+                </p>
+
             </div>
 
         </div>

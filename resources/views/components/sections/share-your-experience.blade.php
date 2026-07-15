@@ -80,11 +80,13 @@
                             </h5>
 
                             {{-- Headquarters badge --}}
+                            {{-- temp disabled 
                             @if(!empty($location['headquarters']))
                                 <p class="font-body" style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; color: var(--champagne); opacity: 0.75; margin-bottom: 0.85rem;">HEADQUARTERS</p>
                             @else
                                 <div style="margin-bottom: 1.5rem;"></div>
                             @endif
+                            --}}
 
                             {{-- Address --}}
                             <p class="font-body" style="color: var(--cloud-light); font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">

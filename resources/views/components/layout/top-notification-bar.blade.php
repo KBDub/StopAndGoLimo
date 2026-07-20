@@ -43,10 +43,10 @@
 
         {{-- MIDDLE: full tagline (desktop) / short tagline (mobile) --}}
         <span class="hidden md:block shrink-0 font-semibold text-navy/80 whitespace-nowrap">
-            Travel In Style &nbsp;&middot;&nbsp; Serving All of Chicago &nbsp;&middot;&nbsp; Available 24/7
+            Travel In Style &nbsp;&middot;&nbsp; Serving All of Chicagoland &nbsp;&middot;&nbsp; Available 24/7
         </span>
         <span class="md:hidden shrink-0 font-semibold text-navy/80 whitespace-nowrap">
-            Serving All of Chicago
+            Serving All of Chicagoland
         </span>
 
         {{-- RIGHT: Service Areas — always visible, always right-justified --}}

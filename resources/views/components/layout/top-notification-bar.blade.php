@@ -51,8 +51,8 @@
 
         {{-- RIGHT: Service Areas — always visible, always right-justified --}}
         <div class="flex-1 flex items-center justify-end whitespace-nowrap">
-            <a href="/service-areas" class="flex items-center gap-1 font-semibold text-navy/80 hover:text-navy-dark transition-colors">
-                Service Areas
+            <a href="" class="flex items-center gap-1 font-semibold text-navy/80 hover:text-navy-dark transition-colors">
+                Book Now
             </a>
         </div>
 

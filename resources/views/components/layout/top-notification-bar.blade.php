@@ -41,19 +41,17 @@
 
         </div>
 
-        {{-- MIDDLE: Tagline (desktop) / Book a Ride (mobile) --}}
+        {{-- MIDDLE: full tagline (desktop) / short tagline (mobile) --}}
         <span class="hidden md:block shrink-0 font-semibold text-navy/80 whitespace-nowrap">
             Travel In Style &nbsp;&middot;&nbsp; Serving All of Chicago &nbsp;&middot;&nbsp; Available 24/7
         </span>
-        <a href="#"
-           onclick="event.preventDefault(); window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-           class="md:hidden text-navy-dark hover:text-navy font-semibold whitespace-nowrap shrink-0 transition-colors">
-            Book a Ride
-        </a>
+        <span class="md:hidden shrink-0 font-semibold text-navy/80 whitespace-nowrap">
+            Serving All of Chicago
+        </span>
 
-        {{-- RIGHT: Service Areas --}}
+        {{-- RIGHT: Service Areas — always visible, always right-justified --}}
         <div class="flex-1 flex items-center justify-end whitespace-nowrap">
-            <a href="/service-areas" class="hidden md:flex items-center gap-1 font-semibold text-navy/80 hover:text-navy-dark transition-colors">
+            <a href="/service-areas" class="flex items-center gap-1 font-semibold text-navy/80 hover:text-navy-dark transition-colors">
                 Service Areas
             </a>
         </div>

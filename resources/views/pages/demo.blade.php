@@ -1979,6 +1979,172 @@
         </section>
         <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
 
+        {{-- ── 21 — x-ui.modal ───────────────────────────────────────── --}}
+        <section class="py-16" id="modals" style="scroll-margin-top: 80px;">
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div style="width: fit-content; margin-bottom: 2rem;">
+                    <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
+                        <strong style="font-weight: 700; color: var(--champagne);">21 &mdash; x-ui.</strong>modal
+                    </h2>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                </div>
+
+                <div class="w-full max-w-7xl mx-auto">
+                    <p class="font-body text-left mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
+                        Alpine.js overlay modals with sharp, branded panels. Backdrop blur, Escape key, and click-outside all close the modal. Three sizes available: <strong style="color: var(--champagne);">sm</strong>, <strong style="color: var(--champagne);">md</strong>, and <strong style="color: var(--champagne);">lg</strong>. Trigger any modal via a custom window event.
+                    </p>
+                </div>
+
+                {{-- Modal instances (position:fixed, invisible until triggered) --}}
+
+                {{-- Info / Announcement modal --}}
+                <x-ui.modal id="info" title="Limited-Time Offer" size="sm">
+                    <div style="display:flex; flex-direction:column; gap:1rem;">
+                        <span class="font-head" style="display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; color:var(--navy); background:var(--champagne); padding:0.2rem 0.6rem;">New Clients Only</span>
+                        <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.6; margin:0;">
+                            Book your first airport transfer this month and receive a complimentary meet-and-greet service at no extra charge. Our chauffeur will be waiting at baggage claim with your name sign.
+                        </p>
+                        <p class="font-body" style="color:var(--slate); font-size:0.8125rem; line-height:1.5; margin:0;">
+                            Valid on all O'Hare and Midway bookings through the end of the month. Cannot be combined with other offers.
+                        </p>
+                    </div>
+                    <x-slot name="footer">
+                        <button
+                            onclick="window.dispatchEvent(new CustomEvent('close-modal-info'))"
+                            style="background:none; border:1px solid rgba(220,181,126,0.35); color:var(--champagne); font-family:var(--font-head); font-size:0.875rem; font-weight:600; padding:0.5rem 1.1rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
+                            onmouseenter="this.style.background='rgba(220,181,126,0.08)'"
+                            onmouseleave="this.style.background='none'"
+                        >Not Now</button>
+                        <a
+                            href="/bookings-reservations"
+                            style="display:inline-block; background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.5rem 1.35rem; text-decoration:none; letter-spacing:0.04em; transition:background 0.15s;"
+                            onmouseenter="this.style.background='var(--champagne-light)'"
+                            onmouseleave="this.style.background='var(--champagne)'"
+                        >Book Now</a>
+                    </x-slot>
+                </x-ui.modal>
+
+                {{-- Confirm dialog modal --}}
+                <x-ui.modal id="confirm" title="Confirm Your Booking" size="sm">
+                    <div style="display:flex; flex-direction:column; gap:0.875rem;">
+                        <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.6; margin:0;">
+                            You are about to request a chauffeur for <strong style="color:var(--champagne);">O'Hare International Airport</strong> on <strong style="color:var(--champagne);">Friday, August 1 at 6:00 AM</strong>.
+                        </p>
+                        <p class="font-body" style="color:var(--slate); font-size:0.875rem; line-height:1.5; margin:0;">
+                            A confirmation and receipt will be sent to your email address. You can cancel or modify up to 24 hours before pickup at no charge.
+                        </p>
+                    </div>
+                    <x-slot name="footer">
+                        <button
+                            onclick="window.dispatchEvent(new CustomEvent('close-modal-confirm'))"
+                            style="background:none; border:1px solid rgba(105,114,125,0.45); color:var(--slate); font-family:var(--font-head); font-size:0.875rem; font-weight:600; padding:0.5rem 1.1rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
+                            onmouseenter="this.style.borderColor='var(--slate)'; this.style.color='var(--cloud)'"
+                            onmouseleave="this.style.borderColor='rgba(105,114,125,0.45)'; this.style.color='var(--slate)'"
+                        >Cancel</button>
+                        <button
+                            onclick="window.dispatchEvent(new CustomEvent('close-modal-confirm'))"
+                            style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.5rem 1.35rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
+                            onmouseenter="this.style.background='var(--champagne-light)'"
+                            onmouseleave="this.style.background='var(--champagne)'"
+                        >Confirm Booking</button>
+                    </x-slot>
+                </x-ui.modal>
+
+                {{-- Free Instant Quote modal --}}
+                <x-ui.modal-quote />
+
+                {{-- Trigger buttons --}}
+                <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:3rem;">
+
+                    <button
+                        onclick="window.dispatchEvent(new CustomEvent('open-modal-info'))"
+                        style="background:none; border:1px solid rgba(232,233,236,0.35); color:var(--cloud-light); font-family:var(--font-head); font-size:0.875rem; font-weight:600; padding:0.625rem 1.35rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
+                        onmouseenter="this.style.borderColor='var(--cloud-light)'; this.style.color='var(--white)'"
+                        onmouseleave="this.style.borderColor='rgba(232,233,236,0.35)'; this.style.color='var(--cloud-light)'"
+                    >View Announcement</button>
+
+                    <button
+                        onclick="window.dispatchEvent(new CustomEvent('open-modal-confirm'))"
+                        style="background:none; border:1px solid rgba(220,181,126,0.5); color:var(--champagne); font-family:var(--font-head); font-size:0.875rem; font-weight:600; padding:0.625rem 1.35rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
+                        onmouseenter="this.style.background='rgba(220,181,126,0.08)'; this.style.borderColor='var(--champagne)'"
+                        onmouseleave="this.style.background='none'; this.style.borderColor='rgba(220,181,126,0.5)'"
+                    >Confirm Dialog</button>
+
+                    <button
+                        onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))"
+                        style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.625rem 1.6rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
+                        onmouseenter="this.style.background='var(--champagne-light)'"
+                        onmouseleave="this.style.background='var(--champagne)'"
+                    >Get a Free Quote</button>
+
+                </div>
+
+                {{-- Spec + Code --}}
+                <div class="grid lg:grid-cols-2 gap-8 items-start">
+
+                    <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                        <p class="font-mono text-champagne text-xs mb-3">x-ui.modal — Props</p>
+                        <table class="w-full text-xs font-mono text-muted-light border-collapse">
+                            <thead>
+                                <tr class="border-b border-white/10">
+                                    <th class="text-left pb-2 text-champagne">Prop</th>
+                                    <th class="text-left pb-2 text-champagne">Type</th>
+                                    <th class="text-left pb-2 text-champagne">Default</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-white/5"><td class="py-1.5">id</td><td>string</td><td>'modal'</td></tr>
+                                <tr class="border-b border-white/5"><td class="py-1.5">title</td><td>string</td><td>'' (no header)</td></tr>
+                                <tr class="border-b border-white/5"><td class="py-1.5">size</td><td>string</td><td>'md'</td></tr>
+                                <tr><td class="py-1.5">$footer</td><td>slot</td><td>hidden if empty</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="font-mono text-muted text-[11px] mt-4">size options: sm (440px) | md (600px) | lg (780px) | xl (980px)</p>
+                        <p class="font-mono text-muted text-[11px] mt-1">Opens on: <span class="text-champagne/70">window event "open-modal-{id}"</span></p>
+                        <p class="font-mono text-muted text-[11px]">Closes on: <span class="text-champagne/70">Escape, backdrop click, "close-modal-{id}"</span></p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage — base modal</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/modal.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Trigger (any element, anywhere) --}}
+&lt;button onclick="window.dispatchEvent(
+  new CustomEvent('open-modal-confirm')
+)"&gt;Open&lt;/button&gt;
+
+{{-- Modal instance (once per page) --}}
+&lt;x-ui.modal id="confirm"
+  title="Confirm Your Booking"
+  size="sm"
+&gt;
+  &lt;p&gt;Body content here.&lt;/p&gt;
+  &lt;x-slot name="footer"&gt;
+    &lt;button onclick="..."&gt;Cancel&lt;/button&gt;
+    &lt;a href="..."&gt;Confirm&lt;/a&gt;
+  &lt;/x-slot&gt;
+&lt;/x-ui.modal&gt;</pre>
+                        </div>
+                        <div class="bg-navy-dark px-6 py-5 border border-white/8">
+                            <p class="font-mono text-champagne text-xs mb-1">Usage — Free Instant Quote</p>
+                            <p class="font-mono text-muted text-xs mb-3">resources/views/components/ui/modal-quote.blade.php</p>
+                            <pre class="font-mono text-cloud/70 text-xs bg-black/20 px-3 py-2 overflow-x-auto whitespace-pre-wrap">{{-- Drop once on any page --}}
+&lt;x-ui.modal-quote /&gt;
+
+{{-- Trigger from any CTA --}}
+&lt;button onclick="window.dispatchEvent(
+  new CustomEvent('open-modal-quote')
+)"&gt;Get a Free Quote&lt;/button&gt;</pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <div class="h-0.5 w-full bg-grad-champagne-rule"></div>
+
         {{-- ── Section Components Link ──────────────────────────── --}}
         <section class="py-16">
             <div class="max-w-7xl mx-auto px-6">

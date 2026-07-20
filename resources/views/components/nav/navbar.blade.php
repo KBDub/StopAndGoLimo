@@ -5,6 +5,8 @@
 --}}
 <header class="sg-nav sticky top-0 z-50" x-data="{ open: false }">
 
+    <x-layout.top-notification-bar />
+
     <nav class="nav-bar" aria-label="Primary">
 
         {{-- Col 1: Logo — stays full-size through md, steps down only on xs --}}

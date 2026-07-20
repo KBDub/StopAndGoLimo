@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+:root {
+    /* Sunburst Gold - Primary Brand Color */
+    --color-sunburst-light: #FFD93D;
+    --color-sunburst: #FFC20E;
+    --color-sunburst-dark: #E6A500;
+    
+    /* Azure Blue - Secondary Brand Color */
+    --color-azure-light: #5A9AE8;
+    --color-azure: #3273DC;
+    --color-azure-dark: #2558A8;
+    
+    /* Soft Linen - Background Color */
+    --color-linen-light: #FAF9F5;
+    --color-linen: #F2F0E6;
+    --color-linen-dark: #E8E5D8;
+    
+    /* Charcoal - Text Color */
+    --color-charcoal-light: #555555;
+    --color-charcoal: #2C2C2C;
+    --color-charcoal-dark: #1A1A1A;
+    
+    /* Olive - Social Media Hover Tags */
+    --color-olive: #A39822;
+    
+    /* White - Container Color */
+    --color-white: #FFFFFF;
+    
+    /* Semantic Colors */
+    --color-success: #4CAF50;
+    --color-warning: #F9A825;
+    --color-error: #C62828;
+    
+    /* Semantic Aliases */
+    --color-primary: var(--color-sunburst);
+    --color-secondary: var(--color-azure);
+    --color-background: var(--color-linen);
+    --color-text: var(--color-charcoal);
+    --color-link: var(--color-azure);
+    --color-link-hover: var(--color-azure-dark);
+
+    --font-primary: 'Titillium Web', Arial, sans-serif;
+    --font-fallback: Arial, sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --font-size-h1: 32px;
+    --font-size-h2: 32px;
+    --font-size-h3: 28px;
+    --font-size-h4: 24px;
+    --font-size-h5: 20px;
+    --font-size-body-lg: 22px;
+    --font-size-body: 20px;
+    --font-size-body-sm: 18px;
+    --font-size-caption: 16px;
+    --font-size-button: 18px;
+    --font-size-nav: 18px;
+
+    --font-size-h1-mobile: 28px;
+    --font-size-h2-mobile: 28px;
+    --font-size-h3-mobile: 24px;
+    --font-size-h4-mobile: 20px;
+    --font-size-h5-mobile: 18px;
+    --font-size-body-mobile: 18px;
+
+    --line-height-heading: 1.2;
+    --line-height-subheading: 1.3;
+    --line-height-body: 1.6;
+    --line-height-body-lg: 1.7;
+    --line-height-tight: 1;
+
+    --letter-spacing-tight: -0.01em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.02em;
+    --letter-spacing-button: 0.05em;
+
+    --spacing-unit: 4px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-5: 20px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-16: 64px;
+    --spacing-20: 80px;
+    --spacing-24: 96px;
+
+    --section-padding-y: 80px;
+    --section-padding-y-mobile: 48px;
+    --section-gap: 64px;
+    --section-gap-mobile: 40px;
+
+    --container-max-width: 1280px;
+    --container-padding: 24px;
+    --container-padding-mobile: 16px;
+
+    --border-width: 1px;
+    --border-width-thick: 2px;
+    --border-radius: 0px;
+    --border-radius-md: 0px;
+    --border-radius-lg: 0px;
+    --border-radius-full: 9999px;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+    --transition-fast: 150ms;
+    --transition-normal: 200ms;
+    --transition-slow: 300ms;
+    --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-default: var(--transition-normal) var(--transition-easing);
+    --transition-color: color var(--transition-default);
+    --transition-background: background-color var(--transition-default);
+    --transition-transform: transform var(--transition-default);
+    --transition-opacity: opacity var(--transition-default);
+    --transition-all: all var(--transition-default);
+
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
+
+    --btn-padding-x: 32px;
+    --btn-padding-y: 16px;
+    --btn-font-size: var(--font-size-button);
+    --btn-font-weight: var(--font-weight-semibold);
+    --btn-border-radius: var(--border-radius);
+
+    --input-height: 48px;
+    --input-padding-x: 16px;
+    --input-border-color: var(--color-gray-border);
+    --input-focus-border-color: var(--color-primary);
+    --input-border-radius: var(--border-radius);
+
+    --card-padding: var(--spacing-6);
+    --card-border-radius: var(--border-radius-md);
+    --card-shadow: var(--shadow-md);
+
+    --nav-height: 80px;
+    --nav-height-mobile: 64px;
+    --nav-background: var(--color-charcoal);
+    --nav-text-color: #FFFFFF;
+
+    --footer-background: var(--color-linen);
+    --footer-text-color: var(--color-charcoal);
+}
+
+@layer base {
+    html {
+        font-family: var(--font-primary);
+    }
+    
+    body {
+        @apply bg-white text-black antialiased;
+        font-size: var(--font-size-body);
+        line-height: var(--line-height-body);
+    }
+    
+    h1 {
+        @apply text-h1 font-bold;
+        line-height: var(--line-height-heading);
+    }
+    
+    h2 {
+        @apply text-h2 font-bold;
+        line-height: var(--line-height-heading);
+    }
+    
+    h3 {
+        @apply text-h3 font-semibold;
+        line-height: var(--line-height-subheading);
+    }
+    
+    h4 {
+        @apply text-h4 font-semibold;
+        line-height: var(--line-height-subheading);
+    }
+    
+    h5 {
+        @apply text-h5 font-semibold;
+        line-height: var(--line-height-subheading);
+    }
+    
+    a {
+        @apply text-azure transition-colors duration-200;
+    }
+    
+    a:hover {
+        @apply text-azure/80;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center justify-center font-semibold text-sm transition-all duration-200;
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        letter-spacing: var(--letter-spacing-button);
+    }
+    
+    .btn-primary {
+        @apply bg-sunburst text-charcoal hover:scale-[1.02] hover:shadow-lg;
+    }
+    
+    .btn-secondary {
+        @apply bg-transparent text-charcoal border border-charcoal hover:bg-linen;
+    }
+    
+    .btn-accent {
+        @apply bg-azure text-white hover:bg-azure-dark;
+    }
+    
+    .container-custom {
+        max-width: var(--container-max-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+
+    .section-padding {
+        padding-top: var(--section-padding-y);
+        padding-bottom: var(--section-padding-y);
+    }
+
+    .card {
+        padding: var(--card-padding);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--card-shadow);
+    }
+
+    .input-field {
+        height: var(--input-height);
+        padding-left: var(--input-padding-x);
+        padding-right: var(--input-padding-x);
+        border: var(--border-width) solid var(--input-border-color);
+        border-radius: var(--input-border-radius);
+        transition: var(--transition-all);
+    }
+
+    .input-field:focus {
+        border-color: var(--input-focus-border-color);
+        border-width: var(--border-width-thick);
+        outline: none;
+    }
+
+    .banner-thin {
+        width: 100%;
+        height: 3px;
+    }
+
+    /* ── Link Styles ─────────────────────────────────────── */
+    .link-inline {
+        @apply font-semibold text-azure hover:text-azure-dark underline decoration-azure/30 hover:decoration-azure transition-colors;
+    }
+
+    .link-underbar {
+        @apply font-semibold text-azure hover:text-azure-dark border-b-2 border-azure/30 hover:border-azure pb-0.5 transition-all no-underline;
+    }
+
+    .link-nav {
+        @apply font-semibold text-charcoal hover:text-sunburst text-lg transition-colors no-underline;
+    }
+
+    .link-arrow {
+        @apply font-semibold text-azure hover:text-azure-dark transition-colors no-underline;
+    }
+
+    .link-city {
+        @apply font-semibold no-underline pb-px border-b-2 border-transparent transition-colors;
+        color: inherit;
+    }
+
+    .link-city:hover {
+        @apply border-sunburst;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .scrollbar-sunburst {
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-sunburst) var(--color-linen);
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar-track {
+        background: var(--color-linen);
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar-thumb {
+        background: var(--color-sunburst);
+    }
+
+    .scrollbar-sunburst::-webkit-scrollbar-thumb:hover {
+        background: var(--color-sunburst-dark);
+    }
+}
+
+/* Unlayered — always wins over @layer base / @layer components decoration resets */
+.link-notification {
+    font-weight: 600;
+    color: var(--color-azure);
+    text-decoration-line: none;
+}
+.link-notification:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+@keyframes rock {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-2.5deg); }
+    60%  { transform: rotate(2.5deg); }
+    85%  { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.card-text-sway {
+    transform-origin: bottom center;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* card-detailed-info content zones: auto-styles headings, paragraphs, lists, and links */
+.card-detail-content {
+    color: var(--color-charcoal-light, #555);
+    line-height: 1.75;
+}
+.card-detail-content p {
+    margin-bottom: 1rem;
+}
+.card-detail-content > p:first-child {
+    text-indent: 2em;
+}
+.card-detail-content h3 {
+    font-size: var(--font-size-h3, 1.75rem);
+    font-weight: 700;
+    color: #A39822;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.card-detail-content h4 {
+    font-size: var(--font-size-h4, 1.5rem);
+    font-weight: 700;
+    color: #A39822;
+    margin-top: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+.card-detail-content h5 {
+    font-size: var(--font-size-h5, 1.25rem);
+    font-weight: 600;
+    color: #2C2C2C;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+.card-detail-content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+.card-detail-content ul li {
+    margin-bottom: 0.25rem;
+}
+.card-detail-content a {
+    color: #3273DC;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.card-detail-content a.link-notification {
+    text-decoration: none;
+    text-underline-offset: initial;
+}
+.card-detail-content a.link-notification:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+/* saved for later:
+.card-text-sway:hover {
+    animation: rock 1.8s ease-in-out 1 forwards;
+    transition: none;
+} */
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: var(--font-size-h1-mobile);
+        --font-size-h2: var(--font-size-h2-mobile);
+        --font-size-h3: var(--font-size-h3-mobile);
+        --font-size-h4: var(--font-size-h4-mobile);
+        --font-size-h5: var(--font-size-h5-mobile);
+        --font-size-body: var(--font-size-body-mobile);
+        --section-padding-y: var(--section-padding-y-mobile);
+        --section-gap: var(--section-gap-mobile);
+        --container-padding: var(--container-padding-mobile);
+    }
+}
+
+/* ── Landing page banner image card ───────────────────── */
+.lp-banner-wrap {
+    position: relative;
+    padding: 3px;
+    overflow: hidden;
+}
+
+.lp-banner-wrap::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: conic-gradient(
+        from 225deg,
+        transparent  0deg,
+        #FFC20E     20deg,
+        #FFC20E     50deg,
+        transparent  70deg,
+        transparent 360deg
+    );
+    opacity: 0;
+}
+
+.lp-banner-wrap:hover::before {
+    animation: lp-border-swirl 2.1s linear 1 both;
+}
+
+@keyframes lp-border-swirl {
+    0%   { transform: rotate(0deg);   opacity: 1; }
+    100% { transform: rotate(720deg); opacity: 1; }
+}

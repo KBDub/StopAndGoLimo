@@ -92,11 +92,11 @@
         </div>
 
         {{-- Col 2 (mobile): centered CTA — show/hide handled by CSS media queries --}}
-        <a href="/get-a-quote" class="nav-mobile-cta">Get In Touch</a>
+        <button type="button" class="nav-mobile-cta" onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))">Get A Free Quote</button>
 
         {{-- Col 3: desktop CTA + mobile hamburger — show/hide handled by CSS media queries --}}
         <div class="nav-actions">
-            <a href="/get-a-quote" class="nav-cta-btn">Get In Touch</a>
+            <button type="button" class="nav-cta-btn" onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))">Get A Free Quote</button>
             <button class="nav-hamburger"
                     @click="open = !open"
                     :aria-expanded="open.toString()"
@@ -169,7 +169,7 @@
 
             <a href="/service-areas" class="nav-drawer-link">Service Areas</a>
 
-            <a href="/get-a-quote" class="nav-drawer-cta">Get In Touch</a>
+            <button type="button" class="nav-drawer-cta" onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))">Get A Free Quote</button>
 
         </nav>
     </div>

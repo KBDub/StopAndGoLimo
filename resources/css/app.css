@@ -490,7 +490,7 @@ html {
     color: var(--champagne); border: 1px solid var(--champagne);
     padding: 7px clamp(16px, calc(10.909vw - 87.635px), 52px);
     text-decoration: none; white-space: nowrap;
-    border-radius: 10px;
+    border-radius: 10px; background: transparent; cursor: pointer;
     transition: background .2s, color .2s;
 }
 .sg-nav .nav-cta-btn:hover { background: var(--champagne-light); color: var(--navy); }
@@ -585,6 +585,7 @@ html {
     color: var(--champagne); border: 1px solid var(--champagne);
     padding: 7px 14px; text-decoration: none; white-space: nowrap;
     border-radius: 8px; justify-self: center; align-self: center;
+    background: transparent; cursor: pointer;
     transition: background .2s, color .2s;
 }
 .sg-nav .nav-mobile-cta:hover { background: rgba(220,181,126,.12); }
@@ -641,7 +642,7 @@ html {
     letter-spacing: .07em; text-transform: uppercase;
     color: var(--navy); background: var(--champagne);
     padding: 13px 24px; text-align: center; text-decoration: none;
-    margin-top: 16px; display: block;
+    margin-top: 16px; display: block; width: 100%; border: none; cursor: pointer;
     transition: background .2s;
 }
 .sg-nav .nav-drawer-cta:hover { background: var(--champagne-light); }

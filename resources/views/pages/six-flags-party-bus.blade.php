@@ -51,7 +51,7 @@
     />
 
     <x-sections.free-instant-quote
-        defaultVehicle="Party Bus"
+        defaultService="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
         image="/images/heroes/hero-six-flags-coaster.jpg"

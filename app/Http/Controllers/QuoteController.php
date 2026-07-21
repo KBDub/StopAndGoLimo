@@ -68,11 +68,11 @@ class QuoteController extends Controller
             'name'             => 'required|string|max:150',
             'phone'            => 'required|string|max:50',
             'email'            => 'required|email|max:255',
-            'vehicle_type'     => 'required|string|max:100',
+            'service_type'     => 'required|string|max:100',
             'passengers'       => 'required|string|max:20',
             'pickup_location'  => 'required|string|max:255',
             'destination'      => 'required|string|max:255',
-            'booking_date'     => 'required|date|after_or_equal:today',
+            'travel_date'      => 'required|date|after_or_equal:today',
             'additional_info'  => 'nullable|string|max:5000',
         ]);
 
@@ -80,8 +80,8 @@ class QuoteController extends Controller
             'ip'           => $ip,
             'name'         => $validated['name'],
             'email'        => $validated['email'],
-            'vehicle_type' => $validated['vehicle_type'],
-            'booking_date' => $validated['booking_date'],
+            'service_type' => $validated['service_type'],
+            'travel_date'  => $validated['travel_date'],
         ]);
 
         // ── Database save ─────────────────────────────────────────────────────

@@ -54,7 +54,7 @@
         imageObjectPosition="center"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        defaultVehicle="Corporate Transportation"
+        defaultService="Corporate Transportation"
     />
 
     <x-sections.review-slider />

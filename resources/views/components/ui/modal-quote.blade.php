@@ -117,13 +117,17 @@
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
                     >
                         <option value="" style="background:var(--navy-dark); color:var(--slate);">Select a service...</option>
-                        <option value="airport" style="background:var(--navy-dark);">Airport Shuttle (O'Hare / Midway)</option>
-                        <option value="limo" style="background:var(--navy-dark);">Limousine Service</option>
-                        <option value="party-bus" style="background:var(--navy-dark);">Party Bus</option>
-                        <option value="corporate" style="background:var(--navy-dark);">Corporate Car Service</option>
-                        <option value="wedding" style="background:var(--navy-dark);">Wedding Transportation</option>
-                        <option value="special-event" style="background:var(--navy-dark);">Special Event</option>
-                        <option value="other" style="background:var(--navy-dark);">Other</option>
+                        <option value="Airport Transportation" style="background:var(--navy-dark);">Airport Transportation (O'Hare / Midway)</option>
+                        <option value="Limousine Service" style="background:var(--navy-dark);">Limousine Service</option>
+                        <option value="Party Bus" style="background:var(--navy-dark);">Party Bus</option>
+                        <option value="Chartered Bus" style="background:var(--navy-dark);">Chartered Bus</option>
+                        <option value="Corporate Transportation" style="background:var(--navy-dark);">Corporate Transportation</option>
+                        <option value="Wedding Transportation" style="background:var(--navy-dark);">Wedding Transportation</option>
+                        <option value="Special Event" style="background:var(--navy-dark);">Special Event</option>
+                        <option value="Sporting Event" style="background:var(--navy-dark);">Sporting Event</option>
+                        <option value="Concert" style="background:var(--navy-dark);">Concert</option>
+                        <option value="Wine Tour" style="background:var(--navy-dark);">Wine Tour</option>
+                        <option value="Chauffeur Service" style="background:var(--navy-dark);">Chauffeur Service</option>
                     </select>
                 </div>
                 <div>

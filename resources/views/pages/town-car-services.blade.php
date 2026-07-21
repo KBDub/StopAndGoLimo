@@ -71,7 +71,7 @@
         descClosing="Serving New Lenox, Plainfield, Naperville, Joliet, Aurora, and the greater Chicagoland area, our professional chauffeurs are ready around the clock."
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        defaultVehicle="Limousine Service"
+        defaultService="Limousine Service"
     />
 
     <x-sections.why-choose-us />

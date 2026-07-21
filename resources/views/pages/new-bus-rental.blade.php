@@ -50,7 +50,7 @@
     />
 
     <x-sections.free-instant-quote
-        defaultVehicle="Chartered Bus"
+        defaultService="Chartered Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
         image="/images/heroes/hero-new-bus-rental-fiq.jpg"

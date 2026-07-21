@@ -54,8 +54,8 @@
         <h2>Trip Details</h2>
         <table>
             <tr>
-                <td class="label">Vehicle Type</td>
-                <td class="value">{{ $quote->payload['vehicle_type'] ?? 'N/A' }}</td>
+                <td class="label">Service Type</td>
+                <td class="value">{{ $quote->payload['service_type'] ?? 'N/A' }}</td>
             </tr>
             <tr>
                 <td class="label">Passengers</td>
@@ -70,10 +70,10 @@
                 <td class="value">{{ $quote->payload['destination'] ?? 'N/A' }}</td>
             </tr>
             <tr>
-                <td class="label">Booking Date</td>
+                <td class="label">Travel Date</td>
                 <td class="value">
-                    @if(!empty($quote->payload['booking_date']))
-                        {{ \Carbon\Carbon::parse($quote->payload['booking_date'])->format('F j, Y') }}
+                    @if(!empty($quote->payload['travel_date']))
+                        {{ \Carbon\Carbon::parse($quote->payload['travel_date'])->format('F j, Y') }}
                     @else
                         Not specified
                     @endif

@@ -81,7 +81,7 @@
         imageObjectPosition="center top"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        defaultVehicle="Limousine Service"
+        defaultService="Limousine Service"
         rightVariant="description"
         descHeading="Make your Graduation Day Epic!"
         descSubheading="Features & Safety"

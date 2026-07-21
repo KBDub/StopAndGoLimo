@@ -10,7 +10,7 @@
     'formAction'          => '/get-a-quote',
     'submitLabel'         => 'Send Message',
     'imageObjectPosition' => 'center',
-    'defaultVehicle'      => '',
+    'defaultService'      => '',
     'showInfoBox'         => false,
     'infoHeading'      => 'So What Are You',
     'infoHeadingBold'  => 'Waiting For?',
@@ -226,28 +226,28 @@
                         </div>
                     </div>
 
-                    {{-- Vehicle Type --}}
+                    {{-- Service Type --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Vehicle Type <span style="color: var(--champagne);">*</span>
+                            Service Type <span style="color: var(--champagne);">*</span>
                         </label>
                         <select
-                            name="vehicle_type"
+                            name="service_type"
                             required
                             class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0; appearance: auto;"
                         >
-                            <option value="Limousine Service" @selected(old('vehicle_type', $defaultVehicle) === 'Limousine Service')>Limousine Service</option>
-                            <option value="Airport Transportation" @selected(old('vehicle_type', $defaultVehicle) === 'Airport Transportation')>Airport Transportation</option>
-                            <option value="Party Bus" @selected(old('vehicle_type', $defaultVehicle) === 'Party Bus')>Party Bus</option>
-                            <option value="Chartered Bus" @selected(old('vehicle_type', $defaultVehicle) === 'Chartered Bus')>Chartered Bus</option>
-                            <option value="Corporate Transportation" @selected(old('vehicle_type', $defaultVehicle) === 'Corporate Transportation')>Corporate Transportation</option>
-                            <option value="Wedding" @selected(old('vehicle_type', $defaultVehicle) === 'Wedding')>Wedding</option>
-                            <option value="Special Event" @selected(old('vehicle_type', $defaultVehicle) === 'Special Event')>Special Event</option>
-                            <option value="Sporting Event" @selected(old('vehicle_type', $defaultVehicle) === 'Sporting Event')>Sporting Event</option>
-                            <option value="Concert" @selected(old('vehicle_type', $defaultVehicle) === 'Concert')>Concert</option>
-                            <option value="Wine Tour" @selected(old('vehicle_type', $defaultVehicle) === 'Wine Tour')>Wine Tour</option>
-                            <option value="Chauffeur" @selected(old('vehicle_type', $defaultVehicle) === 'Chauffeur')>Chauffeur</option>
+                            <option value="Airport Transportation" @selected(old('service_type', $defaultService) === 'Airport Transportation')>Airport Transportation (O'Hare / Midway)</option>
+                            <option value="Limousine Service" @selected(old('service_type', $defaultService) === 'Limousine Service')>Limousine Service</option>
+                            <option value="Party Bus" @selected(old('service_type', $defaultService) === 'Party Bus')>Party Bus</option>
+                            <option value="Chartered Bus" @selected(old('service_type', $defaultService) === 'Chartered Bus')>Chartered Bus</option>
+                            <option value="Corporate Transportation" @selected(old('service_type', $defaultService) === 'Corporate Transportation')>Corporate Transportation</option>
+                            <option value="Wedding Transportation" @selected(old('service_type', $defaultService) === 'Wedding Transportation')>Wedding Transportation</option>
+                            <option value="Special Event" @selected(old('service_type', $defaultService) === 'Special Event')>Special Event</option>
+                            <option value="Sporting Event" @selected(old('service_type', $defaultService) === 'Sporting Event')>Sporting Event</option>
+                            <option value="Concert" @selected(old('service_type', $defaultService) === 'Concert')>Concert</option>
+                            <option value="Wine Tour" @selected(old('service_type', $defaultService) === 'Wine Tour')>Wine Tour</option>
+                            <option value="Chauffeur Service" @selected(old('service_type', $defaultService) === 'Chauffeur Service')>Chauffeur Service</option>
                         </select>
                     </div>
 
@@ -305,17 +305,17 @@
                         </div>
                     </div>
 
-                    {{-- Booking Date --}}
+                    {{-- Travel Date --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Booking Date <span style="color: var(--champagne);">*</span>
+                            Travel Date <span style="color: var(--champagne);">*</span>
                         </label>
                         <input
                             type="date"
-                            name="booking_date"
+                            name="travel_date"
                             required
                             min="{{ date('Y-m-d') }}"
-                            value="{{ old('booking_date') }}"
+                            value="{{ old('travel_date') }}"
                             class="w-full font-body sg-quote-field"
                             style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
                         >

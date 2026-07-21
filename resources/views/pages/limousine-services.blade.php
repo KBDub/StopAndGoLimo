@@ -59,7 +59,7 @@
         headingTail="Today"
         body="Our professional chauffeurs are skilled and courteous, ensuring you enjoy a seamless and pleasant journey. Relax knowing your transportation is handled with care and precision, making every ride a truly exceptional experience."
         rightVariant="description"
-        defaultVehicle="Limousine Service"
+        defaultService="Limousine Service"
         descHeading="Why Choose Us?"
         descSubheading="Complete Transportation Services"
         descBody="As your trusted transportation provider for over 15 years, Stop & Go Airport Shuttle Service, Inc. offers complete luxury transportation services:"

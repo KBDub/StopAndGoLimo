@@ -54,7 +54,7 @@
 
     <x-sections.free-instant-quote
         rightVariant="description"
-        defaultVehicle="Airport Transportation"
+        defaultService="Airport Transportation"
         formAction="/get-a-quote"
         submitLabel="Send Message"
         descHeading="Why Choose Us?"

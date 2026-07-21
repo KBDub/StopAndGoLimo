@@ -2,8 +2,6 @@
     x-ui.modal-quote — Free Instant Quote modal
     Opens on window event: "open-modal-quote"
     Submits via fetch to POST /get-a-quote (QuoteController::submit).
-    On success: shows branded confirmation within the modal.
-    On validation error: displays inline field errors.
 --}}
 
 <x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg">
@@ -59,9 +57,10 @@
             </p>
             <button
                 onclick="window.dispatchEvent(new CustomEvent('close-modal-quote'))"
-                style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
+                class="bg-champagne text-navy-dark font-head"
+                style="font-size:0.9375rem; font-weight:700; padding:0.6rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
                 onmouseenter="this.style.background='var(--champagne-light)'"
-                onmouseleave="this.style.background='var(--champagne)'"
+                onmouseleave="this.style.background=''"
             >Close</button>
         </div>
 
@@ -93,11 +92,10 @@
                     name="name"
                     placeholder="Jane Smith"
                     required
-                    class="font-body"
-                    style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                    class="font-body w-full bg-navy-dark text-cloud-light"
+                    style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                     onfocus="this.style.borderColor='var(--champagne)'"
                     onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                    :style="errors.name ? 'border-color:rgba(192,57,43,0.7)' : ''"
                 >
                 <p x-show="errors.name" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.name ? errors.name[0] : ''"></p>
             </div>
@@ -112,11 +110,10 @@
                         name="phone"
                         placeholder="(815) 000-0000"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.phone ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                     <p x-show="errors.phone" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.phone ? errors.phone[0] : ''"></p>
                 </div>
@@ -128,11 +125,10 @@
                         name="email"
                         placeholder="jane@example.com"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.email ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                     <p x-show="errors.email" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.email ? errors.email[0] : ''"></p>
                 </div>
@@ -146,20 +142,19 @@
                         id="q-vehicle"
                         name="vehicle_type"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; appearance:none; cursor:pointer;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; appearance:none; cursor:pointer; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.vehicle_type ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
-                        <option value="" style="background:var(--navy-dark); color:var(--slate);">Select a service...</option>
-                        <option value="Airport Shuttle (O'Hare / Midway)" style="background:var(--navy-dark);">Airport Shuttle (O'Hare / Midway)</option>
-                        <option value="Limousine Service" style="background:var(--navy-dark);">Limousine Service</option>
-                        <option value="Party Bus" style="background:var(--navy-dark);">Party Bus</option>
-                        <option value="Corporate Car Service" style="background:var(--navy-dark);">Corporate Car Service</option>
-                        <option value="Wedding Transportation" style="background:var(--navy-dark);">Wedding Transportation</option>
-                        <option value="Special Event" style="background:var(--navy-dark);">Special Event</option>
-                        <option value="Other" style="background:var(--navy-dark);">Other</option>
+                        <option value="" class="bg-navy-dark text-slate">Select a service...</option>
+                        <option value="Airport Shuttle (O'Hare / Midway)" class="bg-navy-dark">Airport Shuttle (O'Hare / Midway)</option>
+                        <option value="Limousine Service" class="bg-navy-dark">Limousine Service</option>
+                        <option value="Party Bus" class="bg-navy-dark">Party Bus</option>
+                        <option value="Corporate Car Service" class="bg-navy-dark">Corporate Car Service</option>
+                        <option value="Wedding Transportation" class="bg-navy-dark">Wedding Transportation</option>
+                        <option value="Special Event" class="bg-navy-dark">Special Event</option>
+                        <option value="Other" class="bg-navy-dark">Other</option>
                     </select>
                     <p x-show="errors.vehicle_type" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.vehicle_type ? errors.vehicle_type[0] : ''"></p>
                 </div>
@@ -170,11 +165,10 @@
                         id="q-date"
                         name="booking_date"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; color-scheme:dark; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.booking_date ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                     <p x-show="errors.booking_date" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.booking_date ? errors.booking_date[0] : ''"></p>
                 </div>
@@ -190,11 +184,10 @@
                         name="pickup_location"
                         placeholder="Address or city"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.pickup_location ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                     <p x-show="errors.pickup_location" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.pickup_location ? errors.pickup_location[0] : ''"></p>
                 </div>
@@ -206,11 +199,10 @@
                         name="destination"
                         placeholder="Address, terminal, or city"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.destination ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                     <p x-show="errors.destination" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.destination ? errors.destination[0] : ''"></p>
                 </div>
@@ -228,11 +220,10 @@
                         max="60"
                         placeholder="1"
                         required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                        :style="errors.passengers ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                     <p x-show="errors.passengers" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.passengers ? errors.passengers[0] : ''"></p>
                 </div>
@@ -245,8 +236,8 @@
                         id="q-notes"
                         name="additional_info"
                         placeholder="Flight number, special requests..."
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                        class="font-body w-full bg-navy-dark text-cloud-light"
+                        style="font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; border:1px solid rgba(220,181,126,0.25); box-sizing:border-box; transition:border-color 0.15s;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
                     >
@@ -263,19 +254,22 @@
                 <button
                     type="button"
                     onclick="window.dispatchEvent(new CustomEvent('close-modal-quote'))"
-                    style="background:none; border:1px solid rgba(220,181,126,0.35); color:var(--champagne); font-family:var(--font-head); font-size:0.875rem; font-weight:600; padding:0.625rem 1.25rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
+                    class="font-head"
+                    style="background:none; border:1px solid rgba(220,181,126,0.35); color:var(--champagne); font-size:0.875rem; font-weight:600; padding:0.625rem 1.25rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
                     onmouseenter="this.style.background='rgba(220,181,126,0.08)'"
                     onmouseleave="this.style.background='none'"
                 >Cancel</button>
+
                 <button
                     type="submit"
                     :disabled="loading"
-                    style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s; min-width:10rem; display:flex; align-items:center; justify-content:center; gap:0.5rem;"
-                    onmouseenter="if(!this.disabled) this.style.background='var(--champagne-light)'"
-                    onmouseleave="this.style.background='var(--champagne)'"
+                    class="bg-champagne text-navy-dark font-head"
+                    style="font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; min-width:10rem; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; transition:opacity 0.15s;"
                     :style="loading ? 'opacity:0.7; cursor:not-allowed;' : ''"
+                    onmouseenter="if(!this.disabled) this.style.background='var(--champagne-light)'"
+                    onmouseleave="this.style.background=''"
                 >
-                    <svg x-show="loading" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:spin 0.8s linear infinite; flex-shrink:0;">
+                    <svg x-show="loading" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:sq-spin 0.8s linear infinite; flex-shrink:0;">
                         <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
                     </svg>
                     <span x-text="loading ? 'Sending...' : 'Get My Free Quote'"></span>
@@ -288,5 +282,5 @@
 </x-ui.modal>
 
 <style>
-@@keyframes spin { to { transform: rotate(360deg); } }
+@@keyframes sq-spin { to { transform: rotate(360deg); } }
 </style>

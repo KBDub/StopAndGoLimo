@@ -131,6 +131,7 @@ Full rules in `docs/branding-requirements.md` — read it before any UI change.
 -   **Livewire v3** bundles Alpine.js — never import Alpine separately in `app.js`.
 -   **Alpine plugins** must register via `document.addEventListener('alpine:init')`.
 -   **`overflow: hidden` on `<html>`** traps sticky elements. If you need to hide overflow, apply it to `<body>` or a specific component wrapper instead.
+-   **Alpine `:style` with an empty string wipes all inline styles.** Binding `:style="condition ? 'prop:val;' : ''"` causes Alpine v3 to reset `style.cssText` to `''` on the false branch, stripping every inline style on that element (background, color, padding, etc.). Use object syntax instead so only the targeted properties are touched: `:style="{ opacity: condition ? '0.65' : '1', cursor: condition ? 'not-allowed' : 'pointer' }"`. Symptom: a champagne button turns invisible on navy — no background, no text color, no border.
 
 ## SEO — Negative Keywords
 

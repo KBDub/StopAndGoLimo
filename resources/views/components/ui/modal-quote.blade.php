@@ -76,7 +76,7 @@
             {{-- Row 1: Name --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-first-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">First Name <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-first-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">First Name <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="text"
                         id="quote-first-name"
@@ -90,7 +90,7 @@
                     >
                 </div>
                 <div>
-                    <label class="font-head" for="quote-last-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Last Name <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-last-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Last Name <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="text"
                         id="quote-last-name"
@@ -108,7 +108,7 @@
             {{-- Row 2: Phone + Email --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-phone" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Phone <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-phone" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Phone <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="tel"
                         id="quote-phone"
@@ -123,7 +123,7 @@
                     >
                 </div>
                 <div>
-                    <label class="font-head" for="quote-email" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Email <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-email" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Email <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="email"
                         id="quote-email"
@@ -142,7 +142,7 @@
             {{-- Row 3: Service Type + Date --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-service" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Service Type <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-service" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Service Type <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <select
                         id="quote-service"
                         name="service_type"
@@ -167,7 +167,7 @@
                     </select>
                 </div>
                 <div>
-                    <label class="font-head" for="quote-date" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Travel Date <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-date" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Travel Date <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="date"
                         id="quote-date"
@@ -184,7 +184,7 @@
             {{-- Row 4: Pickup + Dropoff --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-pickup" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Pickup Location <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-pickup" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Pickup Location <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="text"
                         id="quote-pickup"
@@ -198,7 +198,7 @@
                     >
                 </div>
                 <div>
-                    <label class="font-head" for="quote-dropoff" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Dropoff Location <span style="color:#c0392b;" aria-hidden="true">*</span></label>
+                    <label class="font-head" for="quote-dropoff" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Dropoff Location <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="text"
                         id="quote-dropoff"

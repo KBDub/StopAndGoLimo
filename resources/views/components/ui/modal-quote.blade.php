@@ -9,11 +9,20 @@
 
 <x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg">
 
-    <div x-data="{
+    <div
+        x-on:open-modal-quote.window="resetState()"
+        x-data="{
         submitted:     false,
         submitting:    false,
         errorMessage:  '',
         confirmedName: '',
+        resetState() {
+            this.submitted     = false;
+            this.submitting    = false;
+            this.errorMessage  = '';
+            this.confirmedName = '';
+            this.$nextTick(() => { this.$el.querySelector('form')?.reset(); });
+        },
         async handleSubmit(e) {
             this.submitting   = true;
             this.errorMessage = '';

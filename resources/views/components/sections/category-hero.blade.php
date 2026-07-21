@@ -69,9 +69,9 @@
         {{-- CTAs --}}
         <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;">
 
-            <x-ui.button-white-navy href="tel:+17083154445" radius="{{ $buttonRadius }}">
+            <x-ui.button-champagne-gradient href="tel:+17083154445" radius="{{ $buttonRadius }}">
                 Call Us
-            </x-ui.button-white-navy>
+            </x-ui.button-champagne-gradient>
 
             <x-ui.button-navy-gold
                 radius="{{ $buttonRadius }}"
@@ -79,21 +79,21 @@
             >Get a Free Quote</x-ui.button-navy-gold>
 
             @if($isModal)
-                <x-ui.button-champagne-gradient
+                <x-ui.button-white-navy
                     radius="{{ $buttonRadius }}"
                     onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-                >{{ $buttonText }}</x-ui.button-champagne-gradient>
+                >{{ $buttonText }}</x-ui.button-white-navy>
             @elseif($isExternal)
-                <x-ui.button-champagne-gradient
+                <x-ui.button-white-navy
                     href="{{ $buttonHref }}"
                     radius="{{ $buttonRadius }}"
                     target="_blank"
                     rel="noopener noreferrer"
-                >{{ $buttonText }}</x-ui.button-champagne-gradient>
+                >{{ $buttonText }}</x-ui.button-white-navy>
             @else
-                <x-ui.button-champagne-gradient href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
+                <x-ui.button-white-navy href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
                     {{ $buttonText }}
-                </x-ui.button-champagne-gradient>
+                </x-ui.button-white-navy>
             @endif
 
         </div>

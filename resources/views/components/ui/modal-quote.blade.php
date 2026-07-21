@@ -249,27 +249,21 @@
                 By submitting, you agree to be contacted by Stop &amp; Go Airport Shuttle Service, Inc. regarding your quote. We never share your information.
             </p>
 
-            {{-- Actions --}}
-            <div style="display:flex; align-items:center; justify-content:flex-end; gap:0.75rem; flex-wrap:wrap; padding-top:0.25rem;">
+            {{-- Actions — styled as a modal footer row --}}
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:0.75rem; flex-wrap:wrap; margin:0.5rem -1.5rem -1.5rem; padding:1rem 1.5rem 1.25rem; border-top:1px solid rgba(220,181,126,0.15);">
                 <button
                     type="button"
                     onclick="window.dispatchEvent(new CustomEvent('close-modal-quote'))"
-                    class="font-head"
-                    style="background:none; border:1px solid rgba(220,181,126,0.35); color:var(--champagne); font-size:0.875rem; font-weight:600; padding:0.625rem 1.25rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
-                    onmouseenter="this.style.background='rgba(220,181,126,0.08)'"
-                    onmouseleave="this.style.background='none'"
+                    class="btn btn-secondary font-head"
                 >Cancel</button>
 
                 <button
                     type="submit"
                     :disabled="loading"
-                    class="bg-champagne text-navy-dark font-head"
-                    style="font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; min-width:10rem; display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; transition:opacity 0.15s;"
-                    :style="loading ? 'opacity:0.7; cursor:not-allowed;' : ''"
-                    onmouseenter="if(!this.disabled) this.style.background='var(--champagne-light)'"
-                    onmouseleave="this.style.background=''"
+                    class="btn btn-primary font-head gap-2"
+                    :class="loading ? 'opacity-70 cursor-not-allowed' : ''"
                 >
-                    <svg x-show="loading" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:sq-spin 0.8s linear infinite; flex-shrink:0;">
+                    <svg x-show="loading" x-cloak width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:sq-spin 0.8s linear infinite; flex-shrink:0;">
                         <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
                     </svg>
                     <span x-text="loading ? 'Sending...' : 'Get My Free Quote'"></span>

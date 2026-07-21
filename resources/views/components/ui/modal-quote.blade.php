@@ -1,83 +1,114 @@
 {{--
     x-ui.modal-quote — Free Instant Quote modal
     Opens on window event: "open-modal-quote"
-    Form action wired to Livewire or POST endpoint — set $action prop when ready.
+    Submits via fetch to POST /get-a-quote (QuoteController::submit).
+    On success: shows branded confirmation within the modal.
+    On validation error: displays inline field errors.
 --}}
-@props([
-    'action' => '#',
-])
 
 <x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg">
 
-    <div x-data="{ submitted: false }">
+    <div
+        x-data="{
+            submitted: false,
+            loading:   false,
+            errors:    {},
+            firstName: '',
+            reference: '',
+            async submit(form) {
+                this.loading = true;
+                this.errors  = {};
+                try {
+                    const res  = await fetch(form.action, {
+                        method:  'POST',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest',
+                            'Accept':           'application/json',
+                        },
+                        body: new FormData(form),
+                    });
+                    const data = await res.json();
+                    if (res.ok) {
+                        this.submitted = true;
+                        this.firstName = data.name      || 'there';
+                        this.reference = data.reference || '';
+                    } else {
+                        this.errors = data.errors || { form: [data.message || 'Please try again.'] };
+                    }
+                } catch {
+                    this.errors = { form: ['Network error. Please check your connection and try again.'] };
+                }
+                this.loading = false;
+            }
+        }"
+    >
 
-        {{-- Success state --}}
-        <div x-show="submitted" x-cloak style="text-align:center; padding:2rem 1rem;">
-            <div style="width:56px; height:56px; border-radius:50%; background:rgba(46,158,107,0.15); display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem;">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--stopngo-success, #2E9E6B)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        {{-- ── Success state ────────────────────────────────────── --}}
+        <div x-show="submitted" x-cloak style="text-align:center; padding:2.5rem 1rem;">
+            <div style="width:60px; height:60px; border-radius:50%; background:rgba(46,158,107,0.15); display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2E9E6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <polyline points="20 6 9 17 4 12"/>
                 </svg>
             </div>
-            <h4 class="font-head" style="font-size:1.25rem; font-weight:700; color:var(--champagne); margin:0 0 0.75rem;">Quote Request Received</h4>
-            <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.6; margin:0 0 1.5rem;">
-                Thank you. A member of our team will follow up with your personalized quote within the hour.
+            <h4 class="font-head" style="font-size:1.25rem; font-weight:700; color:var(--champagne); margin:0 0 0.5rem;">
+                Quote Request Received, <span x-text="firstName"></span>
+            </h4>
+            <p x-show="reference" class="font-mono" style="font-size:0.75rem; color:var(--slate); margin:0 0 1rem;" x-text="'Reference: ' + reference"></p>
+            <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.6; max-width:380px; margin:0 auto 1.75rem;">
+                A member of our team will follow up with your personalized quote within the hour.
             </p>
             <button
-                onclick="window.dispatchEvent(new CustomEvent('open-modal-quote', { detail: { reset: true } }))"
-                style="background:none; border:none; cursor:pointer; color:var(--champagne); font-family:var(--font-body); font-size:0.875rem; text-decoration:underline; text-underline-offset:3px;"
-            >Submit another request</button>
+                onclick="window.dispatchEvent(new CustomEvent('close-modal-quote'))"
+                style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
+                onmouseenter="this.style.background='var(--champagne-light)'"
+                onmouseleave="this.style.background='var(--champagne)'"
+            >Close</button>
         </div>
 
-        {{-- Form --}}
+        {{-- ── Form ─────────────────────────────────────────────── --}}
         <form
-            action="{{ $action }}"
+            action="{{ route('quote.submit') }}"
             method="POST"
             x-show="!submitted"
-            x-on:submit.prevent="submitted = true"
+            x-on:submit.prevent="submit($event.target)"
             novalidate
             style="display:flex; flex-direction:column; gap:1.25rem;"
         >
             @csrf
 
-            {{-- Row 1: Name --}}
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-                <div>
-                    <label class="font-head" for="quote-first-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">First Name</label>
-                    <input
-                        type="text"
-                        id="quote-first-name"
-                        name="first_name"
-                        placeholder="Jane"
-                        required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
-                        onfocus="this.style.borderColor='var(--champagne)'"
-                        onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                    >
-                </div>
-                <div>
-                    <label class="font-head" for="quote-last-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Last Name</label>
-                    <input
-                        type="text"
-                        id="quote-last-name"
-                        name="last_name"
-                        placeholder="Smith"
-                        required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
-                        onfocus="this.style.borderColor='var(--champagne)'"
-                        onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                    >
-                </div>
+            {{-- Honeypot --}}
+            <input type="text" name="sg_website" value="" style="display:none;" aria-hidden="true" tabindex="-1" autocomplete="off">
+
+            {{-- Form-level error --}}
+            <div x-show="errors.form" x-cloak style="background:rgba(192,57,43,0.1); border:1px solid rgba(192,57,43,0.4); padding:0.75rem 1rem;">
+                <p class="font-body" style="color:#e07060; font-size:0.875rem; margin:0;" x-text="errors.form ? errors.form[0] : ''"></p>
             </div>
 
-            {{-- Row 2: Phone + Email --}}
+            {{-- Full Name --}}
+            <div>
+                <label class="font-head" for="q-name" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Full Name</label>
+                <input
+                    type="text"
+                    id="q-name"
+                    name="name"
+                    placeholder="Jane Smith"
+                    required
+                    class="font-body"
+                    style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
+                    onfocus="this.style.borderColor='var(--champagne)'"
+                    onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                    :style="errors.name ? 'border-color:rgba(192,57,43,0.7)' : ''"
+                >
+                <p x-show="errors.name" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.name ? errors.name[0] : ''"></p>
+            </div>
+
+            {{-- Phone + Email --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-phone" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Phone</label>
+                    <label class="font-head" for="q-phone" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Phone</label>
                     <input
                         type="tel"
-                        id="quote-phone"
+                        id="q-phone"
                         name="phone"
                         placeholder="(815) 000-0000"
                         required
@@ -85,13 +116,15 @@
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.phone ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
+                    <p x-show="errors.phone" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.phone ? errors.phone[0] : ''"></p>
                 </div>
                 <div>
-                    <label class="font-head" for="quote-email" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Email</label>
+                    <label class="font-head" for="q-email" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Email</label>
                     <input
                         type="email"
-                        id="quote-email"
+                        id="q-email"
                         name="email"
                         placeholder="jane@example.com"
                         required
@@ -99,55 +132,61 @@
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.email ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
+                    <p x-show="errors.email" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.email ? errors.email[0] : ''"></p>
                 </div>
             </div>
 
-            {{-- Row 3: Service Type + Date --}}
+            {{-- Service Type + Date --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-service" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Service Type</label>
+                    <label class="font-head" for="q-vehicle" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Service Type</label>
                     <select
-                        id="quote-service"
-                        name="service_type"
+                        id="q-vehicle"
+                        name="vehicle_type"
                         required
                         class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; appearance:none;"
+                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; appearance:none; cursor:pointer;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.vehicle_type ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
                         <option value="" style="background:var(--navy-dark); color:var(--slate);">Select a service...</option>
-                        <option value="airport" style="background:var(--navy-dark);">Airport Shuttle (O'Hare / Midway)</option>
-                        <option value="limo" style="background:var(--navy-dark);">Limousine Service</option>
-                        <option value="party-bus" style="background:var(--navy-dark);">Party Bus</option>
-                        <option value="corporate" style="background:var(--navy-dark);">Corporate Car Service</option>
-                        <option value="wedding" style="background:var(--navy-dark);">Wedding Transportation</option>
-                        <option value="special-event" style="background:var(--navy-dark);">Special Event</option>
-                        <option value="other" style="background:var(--navy-dark);">Other</option>
+                        <option value="Airport Shuttle (O'Hare / Midway)" style="background:var(--navy-dark);">Airport Shuttle (O'Hare / Midway)</option>
+                        <option value="Limousine Service" style="background:var(--navy-dark);">Limousine Service</option>
+                        <option value="Party Bus" style="background:var(--navy-dark);">Party Bus</option>
+                        <option value="Corporate Car Service" style="background:var(--navy-dark);">Corporate Car Service</option>
+                        <option value="Wedding Transportation" style="background:var(--navy-dark);">Wedding Transportation</option>
+                        <option value="Special Event" style="background:var(--navy-dark);">Special Event</option>
+                        <option value="Other" style="background:var(--navy-dark);">Other</option>
                     </select>
+                    <p x-show="errors.vehicle_type" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.vehicle_type ? errors.vehicle_type[0] : ''"></p>
                 </div>
                 <div>
-                    <label class="font-head" for="quote-date" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Travel Date</label>
+                    <label class="font-head" for="q-date" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Travel Date</label>
                     <input
                         type="date"
-                        id="quote-date"
-                        name="travel_date"
+                        id="q-date"
+                        name="booking_date"
                         required
                         class="font-body"
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.booking_date ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
+                    <p x-show="errors.booking_date" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.booking_date ? errors.booking_date[0] : ''"></p>
                 </div>
             </div>
 
-            {{-- Row 4: Pickup + Dropoff --}}
+            {{-- Pickup + Dropoff --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-pickup" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Pickup Location</label>
+                    <label class="font-head" for="q-pickup" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Pickup Location</label>
                     <input
                         type="text"
-                        id="quote-pickup"
+                        id="q-pickup"
                         name="pickup_location"
                         placeholder="Address or city"
                         required
@@ -155,47 +194,56 @@
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.pickup_location ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
+                    <p x-show="errors.pickup_location" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.pickup_location ? errors.pickup_location[0] : ''"></p>
                 </div>
                 <div>
-                    <label class="font-head" for="quote-dropoff" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Dropoff Location</label>
+                    <label class="font-head" for="q-destination" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Destination</label>
                     <input
                         type="text"
-                        id="quote-dropoff"
-                        name="dropoff_location"
+                        id="q-destination"
+                        name="destination"
                         placeholder="Address, terminal, or city"
                         required
                         class="font-body"
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.destination ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
+                    <p x-show="errors.destination" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.destination ? errors.destination[0] : ''"></p>
                 </div>
             </div>
 
-            {{-- Row 5: Passengers + Notes --}}
+            {{-- Passengers + Notes --}}
             <div style="display:grid; grid-template-columns:160px 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-passengers" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Passengers</label>
+                    <label class="font-head" for="q-passengers" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Passengers</label>
                     <input
                         type="number"
-                        id="quote-passengers"
+                        id="q-passengers"
                         name="passengers"
                         min="1"
                         max="60"
                         placeholder="1"
+                        required
                         class="font-body"
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
                         onfocus="this.style.borderColor='var(--champagne)'"
                         onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        :style="errors.passengers ? 'border-color:rgba(192,57,43,0.7)' : ''"
                     >
+                    <p x-show="errors.passengers" x-cloak class="font-body" style="color:#e07060; font-size:0.75rem; margin:0.25rem 0 0;" x-text="errors.passengers ? errors.passengers[0] : ''"></p>
                 </div>
                 <div>
-                    <label class="font-head" for="quote-notes" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Notes <span style="color:var(--slate); font-weight:400;">(optional)</span></label>
+                    <label class="font-head" for="q-notes" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">
+                        Notes <span style="color:var(--slate); font-weight:400;">(optional)</span>
+                    </label>
                     <input
                         type="text"
-                        id="quote-notes"
-                        name="notes"
+                        id="q-notes"
+                        name="additional_info"
                         placeholder="Flight number, special requests..."
                         class="font-body"
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
@@ -210,7 +258,7 @@
                 By submitting, you agree to be contacted by Stop &amp; Go Airport Shuttle Service, Inc. regarding your quote. We never share your information.
             </p>
 
-            {{-- Submit --}}
+            {{-- Actions --}}
             <div style="display:flex; align-items:center; justify-content:flex-end; gap:0.75rem; flex-wrap:wrap; padding-top:0.25rem;">
                 <button
                     type="button"
@@ -218,16 +266,19 @@
                     style="background:none; border:1px solid rgba(220,181,126,0.35); color:var(--champagne); font-family:var(--font-head); font-size:0.875rem; font-weight:600; padding:0.625rem 1.25rem; cursor:pointer; letter-spacing:0.04em; transition:all 0.15s;"
                     onmouseenter="this.style.background='rgba(220,181,126,0.08)'"
                     onmouseleave="this.style.background='none'"
-                >
-                    Cancel
-                </button>
+                >Cancel</button>
                 <button
                     type="submit"
-                    style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
-                    onmouseenter="this.style.background='var(--champagne-light)'"
+                    :disabled="loading"
+                    style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s; min-width:10rem; display:flex; align-items:center; justify-content:center; gap:0.5rem;"
+                    onmouseenter="if(!this.disabled) this.style.background='var(--champagne-light)'"
                     onmouseleave="this.style.background='var(--champagne)'"
+                    :style="loading ? 'opacity:0.7; cursor:not-allowed;' : ''"
                 >
-                    Get My Free Quote
+                    <svg x-show="loading" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="animation:spin 0.8s linear infinite; flex-shrink:0;">
+                        <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                    </svg>
+                    <span x-text="loading ? 'Sending...' : 'Get My Free Quote'"></span>
                 </button>
             </div>
 
@@ -235,3 +286,7 @@
     </div>
 
 </x-ui.modal>
+
+<style>
+@@keyframes spin { to { transform: rotate(360deg); } }
+</style>

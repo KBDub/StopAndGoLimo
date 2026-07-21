@@ -54,6 +54,9 @@ class QuoteController extends Controller
                 'ip'        => $ip,
                 'reference' => $fakeRef,
             ]);
+            if ($request->wantsJson()) {
+                return response()->json(['success' => true, 'name' => 'there', 'reference' => $fakeRef]);
+            }
             return redirect()
                 ->route('get-a-quote')
                 ->with('quote_success', true)
@@ -110,6 +113,9 @@ class QuoteController extends Controller
                 'error'     => $e->getMessage(),
                 'trace'     => $e->getTraceAsString(),
             ]);
+            if ($request->wantsJson()) {
+                return response()->json(['errors' => ['form' => ['There was a problem saving your request. Please try again.']]], 422);
+            }
             return back()->withInput()->withErrors(['form' => 'There was a problem saving your request. Please try again.']);
         }
 
@@ -153,6 +159,14 @@ class QuoteController extends Controller
             'first_name' => $firstName,
             'ip'         => $ip,
         ]);
+
+        if ($request->wantsJson()) {
+            return response()->json([
+                'success'   => true,
+                'name'      => $firstName,
+                'reference' => $reference,
+            ]);
+        }
 
         return redirect()
             ->route('get-a-quote')

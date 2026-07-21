@@ -140,6 +140,9 @@
 
     {{--<x-layout.footer />--}}
 
+    {{-- Global quote modal — triggered by "Book Now" in the top bar and any page CTA --}}
+    <x-ui.modal-quote />
+
     @livewireScripts
 </body>
 </html>

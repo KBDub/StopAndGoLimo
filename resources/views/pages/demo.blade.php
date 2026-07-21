@@ -2051,6 +2051,9 @@
                     </x-slot>
                 </x-ui.modal>
 
+                {{-- Free Instant Quote modal --}}
+                <x-ui.modal-quote />
+
                 {{-- Trigger buttons --}}
                 <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-bottom:3rem;">
 

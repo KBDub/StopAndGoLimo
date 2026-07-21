@@ -78,7 +78,9 @@ class QuoteController extends Controller
             Log::error('[QuoteController] Modal email FAILED', ['reference' => $reference, 'error' => $e->getMessage()]);
         }
 
-        return response()->json(['success' => true, 'reference' => $reference]);
+        $firstName = explode(' ', trim($validated['name']))[0];
+
+        return response()->json(['success' => true, 'reference' => $reference, 'first_name' => $firstName]);
     }
 
     public function submit(Request $request): RedirectResponse

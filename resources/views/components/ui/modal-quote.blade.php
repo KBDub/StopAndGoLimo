@@ -10,9 +10,10 @@
 <x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg">
 
     <div x-data="{
-        submitted:    false,
-        submitting:   false,
-        errorMessage: '',
+        submitted:     false,
+        submitting:    false,
+        errorMessage:  '',
+        confirmedName: '',
         async handleSubmit(e) {
             this.submitting   = true;
             this.errorMessage = '';
@@ -28,6 +29,7 @@
                 const res  = await fetch('{{ route('quote.modal.submit') }}', { method: 'POST', body: fd });
                 const data = await res.json();
                 if (data.success) {
+                    this.confirmedName = data.first_name || '';
                     this.submitted = true;
                 } else {
                     this.errorMessage = data.message || 'Something went wrong. Please try again.';
@@ -47,8 +49,11 @@
                 </svg>
             </div>
             <h4 class="font-head" style="font-size:1.25rem; font-weight:700; color:var(--champagne); margin:0 0 0.75rem;">Quote Request Received</h4>
+            <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.5; margin:0 0 0.5rem;">
+                Thank you, <span x-text="confirmedName"></span>.
+            </p>
             <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.5; margin:0 0 1.75rem;">
-                Thank you. A member of our team will follow up with your personalized quote shortly.
+                A member of our team will follow up with you shortly.
             </p>
             <button
                 x-on:click="submitted = false; window.dispatchEvent(new CustomEvent('close-modal-quote'))"

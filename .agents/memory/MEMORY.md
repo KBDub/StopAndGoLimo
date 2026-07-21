@@ -15,3 +15,4 @@
 - [H2 heading champagne underbar](heading-underbar.md) — fit-content wrapper is mandatory; without it 116% resolves to 116% of the section. Blurb `<p>` lives OUTSIDE the fit-content wrapper.
 - [slideIn banner IntersectionObserver fix](slide-in-observer-fix.md) — IO uses visual (transformed) rect in most browsers; translateX(-100%) moves element off-screen so isIntersecting never fires. Fix: check el.offsetTop vs scroll first; use rootMargin: '0px 200% 0px 200%' as safety net.
 - [Full company name rule](full-company-name.md) — always use "Stop & Go Airport Shuttle Service, Inc." in all copy; "Stop & Go Limo" is logo/nav/social only, never in body text.
+- [Alpine :style empty string clears inline styles](alpine-style-empty-string.md) — binding :style="" (empty string) in Alpine v3 wipes all inline styles on the element, making champagne buttons invisible on navy. Use object syntax {:opacity:'0.65'} to target only specific properties.

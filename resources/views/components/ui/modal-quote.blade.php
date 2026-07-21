@@ -265,8 +265,8 @@
                 <button
                     type="submit"
                     :disabled="submitting"
-                    :style="submitting ? 'opacity:0.65; cursor:not-allowed;' : ''"
-                    style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
+                    :style="{ opacity: submitting ? '0.65' : '1', cursor: submitting ? 'not-allowed' : 'pointer' }"
+                    style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; letter-spacing:0.04em; transition:background 0.15s;"
                     onmouseenter="if(!this.disabled) this.style.background='var(--champagne-light)'"
                     onmouseleave="this.style.background='var(--champagne)'"
                 >

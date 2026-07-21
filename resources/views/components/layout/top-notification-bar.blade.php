@@ -51,6 +51,6 @@
                 Book Now
             </a>
         </div>
-
+ 
     </div>
 </div>

@@ -47,13 +47,15 @@
                 </svg>
             </div>
             <h4 class="font-head" style="font-size:1.25rem; font-weight:700; color:var(--champagne); margin:0 0 0.75rem;">Quote Request Received</h4>
-            <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.6; margin:0 0 1.5rem;">
-                Thank you. A member of our team will follow up with your personalized quote within the hour.
+            <p class="font-body" style="color:var(--cloud); font-size:0.9375rem; line-height:1.5; margin:0 0 1.75rem;">
+                Thank you. A member of our team will follow up with your personalized quote shortly.
             </p>
             <button
-                onclick="window.dispatchEvent(new CustomEvent('open-modal-quote', { detail: { reset: true } }))"
-                style="background:none; border:none; cursor:pointer; color:var(--champagne); font-family:var(--font-body); font-size:0.875rem; text-decoration:underline; text-underline-offset:3px;"
-            >Submit another request</button>
+                x-on:click="submitted = false; window.dispatchEvent(new CustomEvent('close-modal-quote'))"
+                style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 2rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
+                onmouseenter="this.style.background='var(--champagne-light)'"
+                onmouseleave="this.style.background='var(--champagne)'"
+            >Close</button>
         </div>
 
         {{-- Form --}}

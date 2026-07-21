@@ -45,11 +45,15 @@
         <span class="hidden md:block shrink-0 font-semibold text-navy/80 whitespace-nowrap">
             Travel In Style &nbsp;&middot;&nbsp; Serving All of Chicagoland &nbsp;&middot;&nbsp; Available 24/7
         </span>
-        {{-- RIGHT: Service Areas — always visible, always right-justified --}}
+        {{-- RIGHT: Book Now — opens Free Instant Quote modal --}}
         <div class="flex-1 flex items-center justify-end whitespace-nowrap">
-            <a href="" class="flex items-center gap-1 font-semibold text-navy/80 hover:text-navy-dark transition-colors">
+            <button
+                type="button"
+                onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))"
+                class="flex items-center gap-1 font-semibold text-navy/80 hover:text-navy-dark transition-colors bg-transparent border-0 cursor-pointer p-0"
+            >
                 Book Now
-            </a>
+            </button>
         </div>
  
     </div>

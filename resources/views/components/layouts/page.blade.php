@@ -125,7 +125,7 @@
     @livewireStyles
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
 </head>
-<body class="font-body antialiased bg-white text-navy overflow-x-hidden">
+<body class="font-body antialiased bg-white text-navy overflow-x-clip">
 
     @if(config('services.gtm.id'))
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ config('services.gtm.id') }}"
@@ -139,6 +139,9 @@
     </main>
 
     {{--<x-layout.footer />--}}
+
+    {{-- Global quote modal — triggered by Book Now in the top notification bar --}}
+    <x-ui.modal-quote />
 
     @livewireScripts
 </body>

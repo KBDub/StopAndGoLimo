@@ -66,24 +66,37 @@
             </p>
         @endif
 
-        {{-- Single CTA --}}
-        @if($isModal)
-            <x-ui.button-champagne-gradient
+        {{-- CTAs --}}
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;">
+
+            <x-ui.button-white-navy href="tel:+17083154445" radius="{{ $buttonRadius }}">
+                Call Us
+            </x-ui.button-white-navy>
+
+            <x-ui.button-navy-gold
                 radius="{{ $buttonRadius }}"
-                onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
-            >{{ $buttonText }}</x-ui.button-champagne-gradient>
-        @elseif($isExternal)
-            <x-ui.button-champagne-gradient
-                href="{{ $buttonHref }}"
-                radius="{{ $buttonRadius }}"
-                target="_blank"
-                rel="noopener noreferrer"
-            >{{ $buttonText }}</x-ui.button-champagne-gradient>
-        @else
-            <x-ui.button-champagne-gradient href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
-                {{ $buttonText }}
-            </x-ui.button-champagne-gradient>
-        @endif
+                onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))"
+            >Get a Free Quote</x-ui.button-navy-gold>
+
+            @if($isModal)
+                <x-ui.button-champagne-gradient
+                    radius="{{ $buttonRadius }}"
+                    onclick="window.dispatchEvent(new CustomEvent('open-contact-modal'))"
+                >{{ $buttonText }}</x-ui.button-champagne-gradient>
+            @elseif($isExternal)
+                <x-ui.button-champagne-gradient
+                    href="{{ $buttonHref }}"
+                    radius="{{ $buttonRadius }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >{{ $buttonText }}</x-ui.button-champagne-gradient>
+            @else
+                <x-ui.button-champagne-gradient href="{{ $buttonHref }}" radius="{{ $buttonRadius }}">
+                    {{ $buttonText }}
+                </x-ui.button-champagne-gradient>
+            @endif
+
+        </div>
 
     </div>
 

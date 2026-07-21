@@ -61,7 +61,7 @@
 @endpush
 
 <x-layouts.page
-    title="Core Service Pillars | Stop & Go Airport Shuttle Service, Inc. &amp; Limo"
+    title="Core Service Pillars | Stop & Go Airport Shuttle Service, Inc."
     metaDescription="Eight professional transportation services under one roof. Airport shuttles, chauffeurs, limousines, bus charters, wedding transport, special events, and more. Chicagoland."
     currentPage="our-services"
     ogImage="/images/heroes/hero-services.jpg"

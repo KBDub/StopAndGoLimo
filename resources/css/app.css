@@ -484,8 +484,7 @@ html {
 .sg-nav .nav-cta-btn {
     font-family: var(--font-head); font-weight: 400;
     font-size: clamp(13px, calc(2.121vw - 7.152px), 20px);
-    letter-spacing: .07em;
-    word-spacing: clamp(2px, calc(0.909vw - 6.636px), 5px);
+    word-spacing: normal;
     text-transform: uppercase;
     color: var(--champagne); border: 1px solid var(--champagne);
     padding: 6px 14px;

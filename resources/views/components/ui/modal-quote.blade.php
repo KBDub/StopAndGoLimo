@@ -9,7 +9,35 @@
 
 <x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg">
 
-    <div x-data="{ submitted: false }">
+    <div x-data="{
+        submitted:    false,
+        submitting:   false,
+        errorMessage: '',
+        async handleSubmit(e) {
+            this.submitting   = true;
+            this.errorMessage = '';
+            const fd = new FormData(e.target);
+            fd.set('name', [fd.get('first_name'), fd.get('last_name')].filter(Boolean).join(' ').trim());
+            fd.delete('first_name');
+            fd.delete('last_name');
+            fd.set('destination', fd.get('dropoff_location') || '');
+            fd.delete('dropoff_location');
+            fd.set('additional_info', fd.get('notes') || '');
+            fd.delete('notes');
+            try {
+                const res  = await fetch('{{ route('quote.modal.submit') }}', { method: 'POST', body: fd });
+                const data = await res.json();
+                if (data.success) {
+                    this.submitted = true;
+                } else {
+                    this.errorMessage = data.message || 'Something went wrong. Please try again.';
+                }
+            } catch {
+                this.errorMessage = 'Something went wrong. Please try again.';
+            }
+            this.submitting = false;
+        }
+    }">
 
         {{-- Success state --}}
         <div x-show="submitted" x-cloak style="text-align:center; padding:2rem 1rem;">
@@ -30,14 +58,18 @@
 
         {{-- Form --}}
         <form
-            action="{{ $action }}"
             method="POST"
             x-show="!submitted"
-            x-on:submit.prevent="submitted = true"
+            x-on:submit.prevent="handleSubmit($event)"
             novalidate
             style="display:flex; flex-direction:column; gap:1.25rem;"
         >
             @csrf
+            {{-- Honeypot — bots fill this, humans don't --}}
+            <div style="position:absolute; left:-9999px; top:-9999px; opacity:0;" aria-hidden="true">
+                <label for="modal-sg-website">Leave this blank</label>
+                <input type="text" name="sg_website" id="modal-sg-website" tabindex="-1" autocomplete="off">
+            </div>
 
             {{-- Row 1: Name --}}
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
@@ -214,6 +246,11 @@
                 By submitting, you agree to be contacted by Stop &amp; Go Airport Shuttle Service, Inc. regarding your quote. We never share your information.
             </p>
 
+            {{-- Inline error --}}
+            <p x-show="errorMessage" x-text="errorMessage" x-cloak class="font-body"
+               style="font-size:0.8125rem; color:#c0392b; background:#fff5f5; border-left:3px solid #c0392b; padding:0.5rem 0.75rem; margin:0;">
+            </p>
+
             {{-- Submit --}}
             <div style="display:flex; align-items:center; justify-content:flex-end; gap:0.75rem; flex-wrap:wrap; padding-top:0.25rem;">
                 <button
@@ -227,11 +264,13 @@
                 </button>
                 <button
                     type="submit"
+                    :disabled="submitting"
+                    :style="submitting ? 'opacity:0.65; cursor:not-allowed;' : ''"
                     style="background:var(--champagne); color:var(--navy-dark); font-family:var(--font-head); font-size:0.9375rem; font-weight:700; padding:0.6875rem 1.75rem; border:none; cursor:pointer; letter-spacing:0.04em; transition:background 0.15s;"
-                    onmouseenter="this.style.background='var(--champagne-light)'"
+                    onmouseenter="if(!this.disabled) this.style.background='var(--champagne-light)'"
                     onmouseleave="this.style.background='var(--champagne)'"
                 >
-                    Get My Free Quote
+                    <span x-text="submitting ? 'Sending...' : 'Get My Free Quote'">Get My Free Quote</span>
                 </button>
             </div>
 

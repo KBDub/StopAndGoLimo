@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\QuoteSubmitted;
 use App\Models\CustomOrderRequest;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -15,6 +16,70 @@ use Illuminate\Support\Str;
 
 class QuoteController extends Controller
 {
+    public function submitModal(Request $request): JsonResponse
+    {
+        $ip = $request->ip();
+
+        // ── Honeypot ──────────────────────────────────────────────────────────
+        if ($request->filled('sg_website')) {
+            $fakeRef = 'SG-QT-' . strtoupper(Str::random(8));
+            Log::warning('[QuoteController] Modal honeypot triggered', ['ip' => $ip, 'reference' => $fakeRef]);
+            return response()->json(['success' => true, 'reference' => $fakeRef]);
+        }
+
+        // ── Validation ────────────────────────────────────────────────────────
+        try {
+            $validated = $request->validate([
+                'name'             => 'required|string|max:150',
+                'phone'            => 'required|string|max:50',
+                'email'            => 'required|email|max:255',
+                'service_type'     => 'required|string|max:100',
+                'passengers'       => 'nullable|string|max:20',
+                'pickup_location'  => 'required|string|max:255',
+                'destination'      => 'required|string|max:255',
+                'travel_date'      => 'required|date|after_or_equal:today',
+                'additional_info'  => 'nullable|string|max:5000',
+            ]);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Please check your details and try again.',
+                'errors'  => $e->errors(),
+            ], 422);
+        }
+
+        // ── Database save ─────────────────────────────────────────────────────
+        $reference = 'SG-QT-' . strtoupper(Str::random(8));
+
+        try {
+            $quote = CustomOrderRequest::create([
+                'reference'     => $reference,
+                'order_type'    => 'quote_modal',
+                'contact_name'  => $validated['name'],
+                'contact_email' => $validated['email'],
+                'contact_phone' => $validated['phone'],
+                'payload'       => $validated,
+                'status'        => 'pending',
+                'submitted_at'  => now(),
+            ]);
+            Log::info('[QuoteController] Modal DB save successful', ['reference' => $reference, 'ip' => $ip]);
+        } catch (\Throwable $e) {
+            Log::error('[QuoteController] Modal DB save FAILED', ['reference' => $reference, 'error' => $e->getMessage()]);
+            return response()->json(['success' => false, 'message' => 'There was a problem saving your request. Please try again.'], 500);
+        }
+
+        // ── Email notification ────────────────────────────────────────────────
+        $recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
+        try {
+            Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));
+            Log::info('[QuoteController] Modal email sent', ['reference' => $reference]);
+        } catch (\Throwable $e) {
+            Log::error('[QuoteController] Modal email FAILED', ['reference' => $reference, 'error' => $e->getMessage()]);
+        }
+
+        return response()->json(['success' => true, 'reference' => $reference]);
+    }
+
     public function submit(Request $request): RedirectResponse
     {
         $ip = $request->ip();

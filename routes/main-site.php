@@ -293,6 +293,9 @@ Route::get('/order-confirmation/{orderId}', function (int $orderId) {
 Route::post('/get-a-quote', [\App\Http\Controllers\QuoteController::class, 'submit'])
     ->name('quote.submit');
 
+Route::post('/quote/modal', [\App\Http\Controllers\QuoteController::class, 'submitModal'])
+    ->name('quote.modal.submit');
+
 Route::post('/contact/message', [\App\Http\Controllers\ContactController::class, 'sendMessage'])
     ->name('contact.message');
 

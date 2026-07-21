@@ -488,7 +488,7 @@ html {
     word-spacing: clamp(2px, calc(0.909vw - 6.636px), 5px);
     text-transform: uppercase;
     color: var(--champagne); border: 1px solid var(--champagne);
-    padding: 7px clamp(16px, calc(10.909vw - 87.635px), 52px);
+    padding: 6px 14px;
     text-decoration: none; white-space: nowrap;
     border-radius: 10px; background: transparent; cursor: pointer;
     transition: background .2s, color .2s;

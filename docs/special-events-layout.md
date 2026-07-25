@@ -183,10 +183,10 @@ Existing presets include `general`, `airport-shuttle`, and others. The fallback 
 | 1 | Hero | `x-sections.category-hero` | Existing | `$event['hero']` |
 | 2 | Info strip | `x-sections.info-strip` | Existing | `$event['info_strip']` |
 | 3 | Travel in style CTA | `x-sections.travel-in-style-cta` | **New** | `$event['travel_in_style']` |
-| 4 | Event features | `x-sections.event-features` | **New** | `$event['event_features']` |
-| 5 | Event details | `x-sections.event-details` | **New (rename)** | `$event['event_details']` |
+| 4 | Event features | `x-sections.event-features` | Rename of inline `#party-bus-features` | `$event['event_features']` |
+| 5 | Event details | `x-sections.event-details` | Rename of `aurora-night-out` | `$event['event_details']` |
 | 6 | Process steps | `x-sections.limo-process-steps` | Existing | `$event['process_steps']` |
-| 7 | Service fulfillment | `x-sections.service-fulfillment` | **New (rename)** | `$event['service_fulfillment']` |
+| 7 | Service fulfillment | `x-sections.service-fulfillment` | Rename of `limo-booking-timeline` | `$event['service_fulfillment']` |
 | 8 | Review slider | `x-sections.review-slider` | Existing | (no props) |
 | 9 | Why choose us | `x-sections.why-choose-us` | Existing | (no props) |
 | 10 | FAQ | `x-sections.faq` | Existing | preset from `config/faqs.php` |
@@ -573,15 +573,23 @@ The `LocalBusiness` block is identical on every event page (it describes the bus
 
 ---
 
-## New Components to Build Before First Page Goes Live
+## Component Work Required Before First Page Goes Live
 
-| Component | Based on | Key differences |
+### Truly New Build
+
+| Component | Based on | What to build |
 |---|---|---|
-| `x-sections.travel-in-style-cta` | `x-sections.travel-in-style` | Full-width H2 row above both columns (centered + underbar); H3/H4 in right column; two branded CTAs (Call Us + Get a Free Quote modal) instead of a single link button |
-| `x-sections.event-features` | Inline markup in `party-bus-rental-aurora-il-night-out.blade.php` (`#party-bus-features`) | Extract the cloud-light 3-col feature card grid into a reusable component with `heading`, `intro`, and `cards` props |
-| `x-sections.event-details` | `x-sections.aurora-night-out` | Rename the file and make all hardcoded Aurora copy prop-driven. Update every existing usage of `aurora-night-out` to the new tag with matching inline props |
+| `x-sections.travel-in-style-cta` | `x-sections.travel-in-style` | Full-width centered H2 + champagne underbar row above both columns; H3/H4 in right column; two branded CTAs (Call Us + Get a Free Quote modal) instead of a single link button |
 
-All three components must include `id="component-name"` and `style="scroll-margin-top: 80px;"` on the `<section>` tag so the `/page-management` scanner can detect them.
+### Renames (existing code, new component tag)
+
+| New tag | Renamed from | Action |
+|---|---|---|
+| `x-sections.event-features` | Inline `#party-bus-features` in `party-bus-rental-aurora-il-night-out.blade.php` | Extract the cloud-light 3-col feature card grid into `event-features.blade.php` with `heading`, `intro`, and `cards` props. Update the Aurora page to use the new tag. |
+| `x-sections.event-details` | `x-sections.aurora-night-out` | Rename `aurora-night-out.blade.php` to `event-details.blade.php` and make all hardcoded Aurora copy prop-driven. Update every existing usage of `aurora-night-out` to `event-details` with matching inline props. |
+| `x-sections.service-fulfillment` | `x-sections.limo-booking-timeline` | Rename `limo-booking-timeline.blade.php` to `service-fulfillment.blade.php`. Update every existing usage of `limo-booking-timeline` across the site to the new tag. |
+
+All components must keep `id="component-name"` and `style="scroll-margin-top: 80px;"` on the `<section>` tag so the `/page-management` scanner can detect them.
 
 ---
 

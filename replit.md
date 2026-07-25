@@ -139,7 +139,7 @@ These two facts apply to all special events pages and must be reflected accurate
 
 **Service area:** All of Chicagoland. Copy must cover the full region: city of Chicago, north suburbs (Waukegan, Arlington Heights, Palatine, Schaumburg, Elk Grove Village), northwest suburbs (Crystal Lake, Elgin), west suburbs (Aurora, Downers Grove, Naperville), and south/southwest suburbs (New Lenox, Joliet, Tinley Park, Orland Park). Never list only the southwest suburbs as the service area.
 
-**Vehicle capacity:** 13 or more passengers. Do not state a hard upper limit in copy. Use "groups of 13 and up" or "13 or more passengers" and direct clients to call for exact availability by group size.
+**Vehicle capacity:** Stop & Go serves groups of 13 or more passengers. Do not say "our vehicles start at 13" — the service is for groups OF 13+. Do not list specific vehicle passenger capacities (e.g., "8 to 14" or "14 to 40") anywhere in copy. Do not state a hard upper limit. Use "no matter your group size," "for any group," or "groups of 13 and up" phrasing. Vehicle types (stretch limo, party bus, sprinter van, executive SUV) may be mentioned but never with specific passenger counts. Direct clients to call for exact vehicle availability.
 
 ---
 

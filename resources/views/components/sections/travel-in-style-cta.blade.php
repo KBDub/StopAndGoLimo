@@ -41,8 +41,8 @@
     <div class="max-w-7xl mx-auto px-6">
 
         {{-- Full-width H2 row --}}
-        <div class="text-center mb-10 lg:mb-14">
-            <div style="width: fit-content; margin: 0 auto;">
+        <div class="flex justify-center mb-10 lg:mb-14">
+            <div style="width: fit-content;">
                 <h2 class="font-head" style="font-size: var(--font-size-h2); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); color: var(--navy); font-weight: 400;">
                     {{ $heading }} <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
                 </h2>

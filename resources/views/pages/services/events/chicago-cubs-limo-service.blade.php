@@ -34,7 +34,7 @@
         { "@type": "City", "name": "Tinley Park",   "addressRegion": "IL" },
         { "@type": "City", "name": "New Lenox",     "addressRegion": "IL" }
     ],
-    "description": "Stop & Go Airport Shuttle Service, Inc. provides luxury limo, party bus, and sprinter van service to Wrigley Field for Cubs games from anywhere in Chicagoland. Groups of 13 or more. Flat-rate pricing."
+    "description": "Stop & Go Airport Shuttle Service, Inc. provides luxury limo, party bus, and sprinter van service to Wrigley Field for Cubs games from anywhere in Chicagoland. Flat-rate pricing."
 }
 </script>
 <script type="application/ld+json">
@@ -43,7 +43,7 @@
     "@type": "WebPage",
     "name": "Chicago Cubs Limo & Party Bus Service | Stop & Go Airport Shuttle Service, Inc.",
     "url": "https://www.newlenoxlimoservice.com/services/events/chicago-cubs-limo-service",
-    "description": "Luxury limo, party bus, and sprinter van service to Wrigley Field from anywhere in Chicagoland. Groups of 13 or more. Flat-rate pricing. Book your Cubs game day ride today."
+    "description": "Luxury limo, party bus, and sprinter van service to Wrigley Field from anywhere in Chicagoland. Flat-rate pricing. Book your Cubs game day ride today."
 }
 </script>
 <script type="application/ld+json">
@@ -62,9 +62,24 @@
 @endpush
 
 @php
-$heroDescription = 'Stop & Go Airport Shuttle Service, Inc. takes your group to Wrigley Field from anywhere in Chicagoland. No parking search. No surge-priced car. No scrambling for a ride home after extra innings. We pick up your group at your door in Naperville, Schaumburg, Evanston, or Orland Park, and we deliver you to the Friendly Confines on time, every time. Our fleet includes stretch limousines, luxury party buses, and executive sprinter vans for groups of 13 or more. Every chauffeur is background-checked, uniformed, and trained on the Kennedy Expressway and Lakeview routing that matters on game day. Flat-rate pricing, no hidden fees. Call us or request a free quote to get started.';
+$heroDescription = 'Stop & Go Airport Shuttle Service, Inc. takes your group to Wrigley Field from anywhere in Chicagoland. No parking search. No surge-priced car. No scrambling for a ride home after extra innings. We pick up your group at your door in Naperville, Schaumburg, Evanston, or Orland Park, and we deliver you to the Friendly Confines on time, every time. Our fleet includes stretch limousines, luxury party buses, and executive sprinter vans for any group. Every chauffeur is background-checked, uniformed, and trained on the Kennedy Expressway and Lakeview routing that matters on game day. Flat-rate pricing, no hidden fees. Call us or request a free quote to get started.';
 
-$featureCards = [
+$eventFeaturesLeftParagraphs = [
+    'Wrigley Field has stood at Clark and Addison since 1914, earning National Historic Landmark status and a place as one of the most iconic ballparks in American sports. The ivy-covered outfield walls and the hand-operated scoreboard are not decorations. They are a living record of more than a century of Chicago baseball. Arriving at the Friendly Confines by chauffeured vehicle sets the tone before the first pitch is even thrown.',
+    'Wrigleyville is the dense, walkable North Side neighborhood that grew up around the rhythm of home games. Clark Street and Sheffield Avenue are packed with sports bars, restaurants, and rooftop clubs that face the outfield from across the street. The pregame ritual in Wrigleyville is as much a Cubs tradition as the seventh-inning stretch, and a chauffeur means your group is part of the celebration rather than circling the block for parking.',
+    'Just east of Wrigleyville, Lincoln Park and the Chicago lakefront extend along Lake Michigan with some of the most recognizable views in the city. Many of our Cubs clients build a lakefront drive or a Lincoln Park stop into their itinerary. We coordinate the timing so the ballgame and the broader Chicago experience belong to the same seamless day.',
+];
+
+$eventFeaturesRightItems = [
+    ['service' => 'Weddings',                        'description' => 'Elegant stretch limousines for Chicagoland ceremonies, receptions, and bridal party transportation across the region.'],
+    ['service' => 'Concerts and Live Events',        'description' => 'Gallagher Way, Wintrust Arena, United Center, and every major Chicago venue served with the same reliability as a game day ride.'],
+    ['service' => 'Corporate Outings',               'description' => 'Client entertainment at Wrigley suites, company events, and executive group transportation throughout Chicagoland.'],
+    ['service' => 'Prom and Homecoming',             'description' => 'Safe, professional party bus service for Illinois high school students across all of Chicagoland.'],
+    ['service' => 'Bachelor and Bachelorette Parties', 'description' => 'Multi-stop Wrigleyville and North Side bar crawls designed around your group\'s night.'],
+    ['service' => 'Airport Transfers',               'description' => 'O\'Hare and Midway, 24 hours a day, 7 days a week, with real-time flight tracking.'],
+];
+
+$standardFeatureCards = [
     ['feature' => 'LED Lighting Throughout',     'benefit' => 'Game day energy from the first pickup',       'why' => 'Dimmable LED lighting sets the mood before the first pitch and keeps the energy high on the way home, win or lose.'],
     ['feature' => 'Premium Sound System',        'benefit' => 'Your playlist, your ride',                    'why' => 'Bluetooth audio throughout the cabin means your group controls the music from Naperville to Addison Street.'],
     ['feature' => 'Wrap-Around Leather Seating', 'benefit' => 'Room for every member of your crew',          'why' => 'Comfortable lounge-style seating with room to stand, move, and celebrate. No one is squeezed into a back seat.'],
@@ -91,13 +106,13 @@ $processSteps = [
     ['num' => '02', 'title' => 'We confirm your game-day details',                'detail' => 'First pitch time, pickup route, group size',             'body' => 'The day before your game, our team reviews your pickup address, timing, group size, and any stops on your itinerary. We pull up your game time and build the departure window around it.'],
     ['num' => '03', 'title' => 'Your vehicle is prepared and the route is loaded', 'detail' => 'Wrigleyville drop-off and post-game staging pre-planned', 'body' => 'The assigned vehicle is detailed, inspected, and climate-set before your pickup. Your chauffeur pre-loads the Kennedy Expressway routing and the specific Wrigleyville drop-off and post-game staging point for your group.'],
     ['num' => '04', 'title' => 'Your chauffeur arrives early',                    'detail' => '10 to 15 minutes ahead of your departure time',           'body' => 'Standard is 10 to 15 minutes before your scheduled departure. Your chauffeur is there when your group is still getting ready, not the other way around.'],
-    ['num' => '05', 'title' => 'The ride runs on your schedule',                  'detail' => 'Pre-game stop, the game, and post-game. Your call.',      'body' => 'Your chauffeur handles the route, the traffic, and any timing adjustments. Pre-game bar stop on Clark Street, straight to the gates, or a stop on the way home — we adapt to what your group wants.'],
+    ['num' => '05', 'title' => 'The ride runs on your schedule',                  'detail' => 'Pre-game stop, the game, and post-game. Your call.',      'body' => 'Your chauffeur handles the route, the traffic, and any timing adjustments. Pre-game bar stop on Clark Street, straight to the gates, or a stop on the way home. We adapt to what your group wants.'],
     ['num' => '06', 'title' => 'Post-game pickup, everyone home safe',             'detail' => 'Pre-staged away from Addison Street congestion',         'body' => 'After the final out, your chauffeur is at the pre-arranged meeting point, away from the surge of congestion on Addison Street. Your group is rolling while others are still waiting.'],
 ];
 
 $fulfillmentItems = [
-    ['occasion' => 'Group Size Options',    'timing' => '13 or more passengers',          'urgency' => 'high',   'detail' => 'Our fleet covers every group size. Stretch limousines and executive SUVs work for smaller outings. Luxury sprinter vans fit 8 to 14. Party buses and limo coaches handle 14 to 40. Call us if your group is larger.',                                                                                          'note' => 'Tell us your headcount when you request a quote. We will match you to the right vehicle.'],
-    ['occasion' => 'Pickup Routing',        'timing' => 'Anywhere in Chicagoland',        'urgency' => 'medium', 'detail' => 'We pick up from Naperville, Aurora, Schaumburg, Evanston, Orland Park, New Lenox, downtown Chicago, and every suburb in between. Multi-city pickups with stops at multiple addresses are handled regularly.',                                                                                      'note' => null],
+    ['occasion' => 'Group Size Options',    'timing' => 'Any group, any vehicle',          'urgency' => 'high',   'detail' => 'Our fleet includes stretch limousines, executive SUVs, luxury sprinter vans, and party buses. No matter your group size, we have the right vehicle for your Cubs outing. Tell us your headcount and we will recommend the best match.',                                                              'note' => 'Tell us your headcount when you request a quote. We will match you to the right vehicle.'],
+    ['occasion' => 'Pickup Routing',        'timing' => 'Anywhere in Chicagoland',        'urgency' => 'medium', 'detail' => 'We pick up from Naperville, Aurora, Wheaton, Schaumburg, Arlington Heights, Evanston, Wilmette, Winnetka, Highland Park, Orland Park, New Lenox, downtown Chicago, and every suburb in between. Multi-city pickups with stops at multiple addresses are handled regularly.',             'note' => null],
     ['occasion' => 'Wrigleyville Drop-Off', 'timing' => 'Right at the gates',             'urgency' => 'high',   'detail' => 'Our chauffeurs know the game-day drop-off lanes near Clark and Addison. We stage away from congestion and communicate the exact meeting point to your group leader before departure.',                                                                                                              'note' => 'Drop-off and pickup points are confirmed with your group leader the day before the game.'],
     ['occasion' => 'Pre-Game Stops',        'timing' => 'Built into your itinerary',      'urgency' => 'medium', 'detail' => 'A stop at a Wrigleyville bar or restaurant before the game is one of our most common requests. We build pre-game stop timing into the schedule so you make it to your seats before first pitch.',                                                                                                  'note' => null],
     ['occasion' => 'Post-Game Pickup',      'timing' => 'Staged and ready at final out',  'urgency' => 'high',   'detail' => 'Your chauffeur does not leave after drop-off. They stage at the pre-arranged meeting point and monitor the game. When the final out is recorded, they are ready to move before the lot traffic builds.',                                                                                          'note' => 'Extra-inning games are not a problem. Your rate does not change based on game length.'],
@@ -107,7 +122,7 @@ $fulfillmentItems = [
 
 <x-layouts.page
     title="Chicago Cubs Limo & Party Bus Service | Stop & Go Airport Shuttle Service, Inc."
-    metaDescription="Luxury limo, party bus, and sprinter van service to Wrigley Field from anywhere in Chicagoland. Groups of 13 or more. Flat-rate pricing. Book your Cubs game day ride today."
+    metaDescription="Luxury limo, party bus, and sprinter van service to Wrigley Field from anywhere in Chicagoland. Flat-rate pricing. Book your Cubs game day ride today."
     currentPage="services"
     ogImage="/images/heroes/hero-cubs-limo.jpg"
     ogImageAlt="Luxury party bus for Chicago Cubs game day transportation, Stop & Go Airport Shuttle Service, Inc."
@@ -129,23 +144,27 @@ $fulfillmentItems = [
         headingPrefix="Skip the Parking Search,"
         headingBold="Ride to the Friendly Confines"
         heading=""
-        body="We handle the Kennedy Expressway, the Lakeview parking maze, and the post-game pickup so your group focuses on the game, the beers on Sheffield Avenue, and the tradition, not the logistics."
+        body="Wrigley Field has stood at Clark and Addison since 1914, earning National Historic Landmark status and a place among the most iconic ballparks in American sports. For Cubs fans across Chicagoland, the trip to the North Side is a ritual as important as the game itself. We handle the Kennedy Expressway, the Lakeview parking maze, and the post-game pickup so your group focuses on the game, the beers on Sheffield Avenue, and the tradition, not the logistics."
     />
 
     <x-sections.travel-in-style-cta
         heading="From Your Driveway"
         headingBold="to Wrigley Field"
         subtitle="Pickup from every corner of Chicagoland"
-        body="Our chauffeurs know Wrigleyville. They know where to drop off, which side streets clear first after the game, and how to build in the right buffer for I-88, I-290, and the Kennedy so your group arrives relaxed. Whether you are coming from DuPage County, the North Shore, or the southwest suburbs, we have run this route many times. You focus on pre-game plans. We handle everything from your driveway to Clark and Addison."
-        note="Groups of 13 or more passengers. Call us for exact availability by group size."
+        body="The moment your group boards, the game day begins. Wrap-around leather seating, premium sound, and climate-controlled comfort carry you from your door straight to Clark and Addison, whether you are starting from River North, Evanston, the western suburbs, or anywhere else in Chicagoland. Our chauffeurs know Wrigleyville's game-day drop-off lanes, which side streets clear fastest after the final out, and the timing that gets your group to Sheffield Avenue with time to spare. You arrive relaxed, in style, and ready for everything the North Side has to offer. No parking search. No surge pricing. No driving home after the Cubby Bear closes."
+        note="No matter your group size, we have a vehicle for your Cubs outing. Call us and we will match you to the right one."
         image="/images/sections/cubs-wrigleyville.jpg"
         imageAlt="Wrigleyville neighborhood at Clark and Addison Streets, Wrigley Field, Chicago, Illinois"
     />
 
     <x-sections.event-features
-        heading="What Your Cubs Game Day Ride <strong>Includes</strong>"
-        intro="Every vehicle in our fleet comes fully equipped for an unforgettable game day. These are the features your group rides with."
-        :cards="$featureCards"
+        heading="The Wrigleyville Experience,"
+        headingBold="Start to Finish"
+        intro="A Cubs game day is a full Chicago story. Wrigley Field, the North Side neighborhood around it, and the city beyond the outfield walls are all part of what makes this one of the great live sports experiences in America."
+        leftHeading="Wrigley Field, Wrigleyville, and the Chicago Lakefront"
+        :leftParagraphs="$eventFeaturesLeftParagraphs"
+        rightHeading="Stop & Go Serves Every Chicago Occasion"
+        :rightItems="$eventFeaturesRightItems"
     />
 
     <x-sections.event-details
@@ -179,6 +198,12 @@ $fulfillmentItems = [
     <x-sections.faq preset="chicago-cubs" />
 
     <x-sections.share-your-experience />
+
+    <x-sections.standard-features
+        heading="What Your Cubs Game Day Ride <strong>Includes</strong>"
+        intro="Every vehicle in our fleet comes fully equipped for an unforgettable game day. These are the features your group rides with."
+        :cards="$standardFeatureCards"
+    />
 
     <x-sections.map-contact-section />
 

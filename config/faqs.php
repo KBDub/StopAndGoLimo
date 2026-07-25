@@ -1141,7 +1141,7 @@ return [
         ],
         [
             'question' => 'How many people fit in your party buses?',
-            'answer'   => 'Our vehicles start at 13 passengers. Party buses and limo coaches handle groups of 14 to 40. Call us with your exact headcount and we will match you to the right vehicle.',
+            'answer'   => 'No matter your group size, we have a vehicle for your Cubs outing. Our fleet includes stretch limousines, executive SUVs, luxury sprinter vans, and party buses. Call us with your headcount and we will match you to the right vehicle.',
         ],
     ],
 

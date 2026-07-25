@@ -133,6 +133,16 @@ Full rules in `docs/branding-requirements.md` — read it before any UI change.
 -   **`overflow: hidden` on `<html>`** traps sticky elements. If you need to hide overflow, apply it to `<body>` or a specific component wrapper instead.
 -   **Alpine `:style` with an empty string wipes all inline styles.** Binding `:style="condition ? 'prop:val;' : ''"` causes Alpine v3 to reset `style.cssText` to `''` on the false branch, stripping every inline style on that element (background, color, padding, etc.). Use object syntax instead so only the targeted properties are touched: `:style="{ opacity: condition ? '0.65' : '1', cursor: condition ? 'not-allowed' : 'pointer' }"`. Symptom: a champagne button turns invisible on navy — no background, no text color, no border.
 
+## Special Events — Service Constants
+
+These two facts apply to all special events pages and must be reflected accurately in copy, FAQs, structured data, and data files.
+
+**Service area:** All of Chicagoland. Copy must cover the full region: city of Chicago, north suburbs (Waukegan, Arlington Heights, Palatine, Schaumburg, Elk Grove Village), northwest suburbs (Crystal Lake, Elgin), west suburbs (Aurora, Downers Grove, Naperville), and south/southwest suburbs (New Lenox, Joliet, Tinley Park, Orland Park). Never list only the southwest suburbs as the service area.
+
+**Vehicle capacity:** 13 or more passengers. Do not state a hard upper limit in copy. Use "groups of 13 and up" or "13 or more passengers" and direct clients to call for exact availability by group size.
+
+---
+
 ## SEO — Negative Keywords
 
 The following words are **negative keywords** — never use them in page copy, headings, meta titles, meta descriptions, alt text, or structured data. Search engines use semantic clustering to determine a site's niche. Using these terms pulls the site into the budget/rideshare niche and repels the high-intent, high-value clients Stop & Go targets.

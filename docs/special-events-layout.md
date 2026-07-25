@@ -197,6 +197,29 @@ Existing presets include `general`, `airport-shuttle`, and others. The fallback 
 
 ---
 
+## Content Depth — Sections 1–7
+
+Sections 1 through 7 carry all the SEO weight and conversion content for the page. Every one of these sections must be fully written out with rich, specific copy. No placeholder text, no thin paragraphs. Each section should:
+
+- Answer a real question a potential client would ask about this specific event
+- Reference the event, venue, or team by name at least once per section
+- Include at least one concrete detail (timing, capacity, vehicle type, route, feature, or benefit)
+- Stay at a 7th grade reading level — short sentences, plain words, active voice
+
+Sections 8–14 are shared components with no event-specific content and need no custom copy.
+
+---
+
+## Service Area and Vehicle Capacity
+
+These two facts must be stated accurately across all event page copy, FAQs, and structured data.
+
+**Service area:** All of Chicagoland. This includes the city of Chicago, the north suburbs (Waukegan, Arlington Heights, Palatine, Schaumburg, Elk Grove Village), the northwest suburbs (Crystal Lake, Elgin), the west suburbs (Aurora, Downers Grove, Naperville), and the south and southwest suburbs (New Lenox, Joliet, Tinley Park, Orland Park). Never list only the southwest suburbs as the service area.
+
+**Maximum vehicle capacity:** 13 or more passengers. Do not state a hard upper limit in copy — say "13 or more" or "groups of 13 and up" and direct clients to call for exact capacity by group size.
+
+---
+
 ## H2–H5 Heading Structure by Section
 
 Every section must follow the site heading hierarchy. H1 appears only in the hero. No heading level may be skipped. The table below shows the full heading map for each component on this page type.
@@ -248,7 +271,7 @@ H2  — {heading} {headingBold}            (center-justified, full width, with c
 
 ### 4. Event Features — `x-sections.event-features` (**New**)
 
-Center-justified H2 above a 3-column card grid. Each card has H3 + body. Background: cloud-light.
+Center-justified H2 above a 3-column card grid. Each card has H3 + H4 + body. Background: cloud-light.
 
 This section is extracted from the inline markup in `resources/views/pages/party-bus-rental-aurora-il-night-out.blade.php` (the `#party-bus-features` section). It must become a reusable component.
 
@@ -256,15 +279,18 @@ This section is extracted from the inline markup in `resources/views/pages/party
 H2  — {heading}                          (center-justified)
         {intro}                           (center-justified body paragraph, max-w-2xl)
   [Card grid — 3 columns, 6 cards]
-    H3  — {cards[n]['feature']}           (champagne, per card)
-            {cards[n]['why']}             (body paragraph, per card)
+    H3  — {cards[n]['feature']}           (champagne, vehicle/amenity name per card)
+    H4  — {cards[n]['benefit']}           (white or navy, one-line "what this gives you" label)
+            {cards[n]['why']}             (body paragraph expanding on the H4, per card)
 ```
+
+The H4 `benefit` label bridges the H3 feature name and the body explanation. It answers "what does this mean for my group?" in one punchy line. Example: H3 = "Premium Sound System," H4 = "Your playlist, your night," body = "Bluetooth audio throughout the cabin means your group controls the music from pickup to last drop-off."
 
 **Props:**
 ```
 heading  string   H2 text (may contain <strong> for bold portion)
 intro    string   Paragraph below the H2
-cards    array    [{feature, why}, ...] — always 6 items
+cards    array    [{feature, benefit, why}, ...] — always 6 items
 ```
 
 ---
@@ -317,12 +343,15 @@ Background: white. Center H2, then 2x3 numbered card grid.
 H2  — {heading} {headingBold}            (center-justified)
         {intro}                           (center-justified body paragraph)
   [Card grid — 2 rows x 3 columns, 6 cards]
-    H3  — {steps[n]['title']}            (each card title)
-            {steps[n]['body']}            (body paragraph)
             {steps[n]['num']}             (champagne ghost number — decorative, aria-hidden)
+    H3  — {steps[n]['title']}            (step name — what happens at this stage)
+    H4  — {steps[n]['detail']}           (optional — event-specific callout for this step)
+            {steps[n]['body']}            (body paragraph with full explanation)
 ```
 
-Each step array: `['num' => '01', 'title' => '...', 'body' => '...']`. Always 6 items.
+The H4 `detail` field is optional and event-specific. It names the concrete action or outcome that applies to this event page. Example for a Cubs game: H3 = "Your vehicle is prepared," H4 = "Game-day ready, Wrigleyville route pre-loaded," body = full explanation. On a generic limo service page the H4 can be omitted.
+
+Each step array: `['num' => '01', 'title' => '...', 'detail' => '...', 'body' => '...']`. Always 6 items. `detail` is nullable — omit the H4 render when null.
 
 ---
 
@@ -337,12 +366,16 @@ H2  — {heading} {headingBold}            (center-justified, headingBold in cha
         {intro}                           (center-justified body paragraph)
   [Card grid — 3 columns, 6 cards]
     H3  — {items[n]['occasion']}         (card topic or service category)
-            {items[n]['timing']}          (styled label — champagne/azure/slate per urgency)
-            {items[n]['detail']}          (body paragraph)
-        {legend}                          (small note below the grid)
+    H4  — {items[n]['timing']}           (category label — urgency-colored, champagne/azure/slate)
+            {items[n]['detail']}          (body paragraph expanding on the H3 topic)
+    H5  — {items[n]['note']}             (optional — a short pro tip, policy note, or key fact
+                                          specific to this event; omit when null)
+        {legend}                          (small explanatory note below the grid — not a heading)
 ```
 
-Each item: `['occasion' => '...', 'timing' => '...', 'detail' => '...', 'urgency' => 'high|medium|low']`. Always 6 items. Urgency maps border color: `high` = champagne, `medium` = azure, `low` = slate.
+The H4 `timing` field is repurposed on event pages: instead of a booking window, it holds a category label like "13+ passengers," "Wrigleyville routing," or "Flat-rate pricing." The H5 `note` is a secondary callout within the card — one short sentence, styled subtly — used for event-specific policy details, such as "Parking near Wrigley is unavailable for groups. We drop at Gate K." Omit H5 when there is nothing worth the extra level.
+
+Each item: `['occasion' => '...', 'timing' => '...', 'detail' => '...', 'urgency' => 'high|medium|low', 'note' => null]`. Always 6 items. `note` is nullable. Urgency maps border color: `high` = champagne, `medium` = azure, `low` = slate.
 
 ---
 
@@ -579,7 +612,7 @@ The `LocalBusiness` block is identical on every event page (it describes the bus
 
 | Component | Based on | What to build |
 |---|---|---|
-| `x-sections.travel-in-style-cta` | `x-sections.travel-in-style` | Full-width centered H2 + champagne underbar row above both columns; H3/H4 in right column; two branded CTAs (Call Us + Get a Free Quote modal) instead of a single link button |
+| `x-sections.travel-in-style-cta` | `x-sections.travel-in-style` (modeled after, not copied) | Full-width centered H2 + champagne underbar row above both columns; H3/H4 in right column; two branded CTAs (Call Us + Get a Free Quote modal) instead of a single link button. The original travel-in-style has one button and no full-width header row — this component diverges structurally from that starting point. |
 
 ### Renames (existing code, new component tag)
 

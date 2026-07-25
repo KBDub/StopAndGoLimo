@@ -81,9 +81,16 @@ $resolvedSteps = $steps ?? [
                 <div style="font-family: var(--font-head); font-size: 2.5rem; font-weight: 800; color: var(--champagne); opacity: 0.35; line-height: 1; margin-bottom: 0.75rem;">
                     {{ $step['num'] }}
                 </div>
-                <h3 style="font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; color: var(--navy); line-height: 1.35;" class="mb-3">
+                <h3 style="font-family: var(--font-head); font-size: 1.05rem; font-weight: 700; color: var(--navy); line-height: 1.35;" class="mb-2">
                     {{ $step['title'] }}
                 </h3>
+                @if(!empty($step['detail']))
+                <h4 style="font-family: var(--font-head); font-size: 0.825rem; font-weight: 600; color: var(--champagne); letter-spacing: 0.03em; line-height: 1.3;" class="mb-3">
+                    {{ $step['detail'] }}
+                </h4>
+                @else
+                    <div class="mb-3"></div>
+                @endif
                 <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.95rem; line-height: 1.65;">
                     {{ $step['body'] }}
                 </p>

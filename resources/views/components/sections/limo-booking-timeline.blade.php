@@ -92,12 +92,17 @@ $resolvedItems = $items ?? [
                 <h3 style="font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: var(--navy); line-height: 1.3;" class="mb-1">
                     {{ $item['occasion'] }}
                 </h3>
-                <p style="font-family: var(--font-head); font-size: 0.9rem; font-weight: 600; color: {{ $borderColor }}; letter-spacing: 0.02em; margin-bottom: 0.75rem;">
+                <h4 style="font-family: var(--font-head); font-size: 0.9rem; font-weight: 600; color: {{ $borderColor }}; letter-spacing: 0.02em; margin-bottom: 0.75rem;">
                     {{ $item['timing'] }}
-                </p>
-                <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.95rem; line-height: 1.6;">
+                </h4>
+                <p style="font-family: var(--font-body); color: var(--slate); font-size: 0.95rem; line-height: 1.6;" class="{{ !empty($item['note']) ? 'mb-3' : '' }}">
                     {{ $item['detail'] }}
                 </p>
+                @if(!empty($item['note']))
+                <p style="font-family: var(--font-body); font-size: 0.825rem; font-weight: 600; color: var(--navy); font-style: italic; line-height: 1.5;">
+                    {{ $item['note'] }}
+                </p>
+                @endif
             </div>
             @endforeach
         </div>

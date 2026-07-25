@@ -1109,4 +1109,40 @@ return [
         ],
     ],
 
+
+    'chicago-cubs' => [
+        [
+            'question' => 'How far in advance should I book a limo or party bus for a Cubs game?',
+            'answer'   => 'For Opening Day, weekend games, and marquee series like Cubs vs. Cardinals or Cubs vs. Dodgers, we recommend booking 3 to 4 weeks ahead. For weekday games, we can often accommodate requests within a few days. The earlier you book, the more vehicle options you have.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near Wrigley Field?',
+            'answer'   => 'We coordinate a designated drop-off point near Clark and Addison that avoids the worst rideshare and pedestrian congestion on game day. Your chauffeur communicates the exact meeting point directly with your group leader before departure.',
+        ],
+        [
+            'question' => 'Can we make stops for dinner or drinks before or after the game?',
+            'answer'   => 'Yes. Most of our Cubs game day bookings include at least one additional stop, whether that is a Wrigleyville bar or restaurant before the game, a Lincoln Park dinner reservation after, or a lakefront photo stop on the way. We build your full itinerary into the schedule.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a Cubs game?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations. BYOB is common on our Cubs game day bookings.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for a Cubs outing?',
+            'answer'   => 'A stretch limousine is best for smaller, more intimate groups who want an elegant ride. A party bus is built for larger groups of 14 or more who want a social, celebratory atmosphere with music, LED lighting, and room to move around. We can help you choose based on your group size and occasion.',
+        ],
+        [
+            'question' => 'What happens if the game goes to extra innings?',
+            'answer'   => 'Your flat rate does not change based on game length. Your chauffeur stages near the park and monitors the game. When the final out is recorded, they are ready to move. Extra-inning games are not a problem.',
+        ],
+        [
+            'question' => 'Do you pick up from the suburbs for Cubs games?',
+            'answer'   => 'Yes. We serve all of Chicagoland for Cubs game day transportation, including Naperville, Aurora, Schaumburg, Arlington Heights, Evanston, Orland Park, Tinley Park, New Lenox, Joliet, and every community in between. Multi-city and multi-address pickups are common.',
+        ],
+        [
+            'question' => 'How many people fit in your party buses?',
+            'answer'   => 'Our vehicles start at 13 passengers. Party buses and limo coaches handle groups of 14 to 40. Call us with your exact headcount and we will match you to the right vehicle.',
+        ],
+    ],
+
 ];

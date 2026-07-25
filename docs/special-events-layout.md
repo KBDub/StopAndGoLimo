@@ -4,6 +4,7 @@ Canonical reference for building new special-events detail pages on the Stop & G
 
 ---
 
+
 ## URL Convention
 
 ```
@@ -89,7 +90,7 @@ class EventContent
                     'image'       => '/images/sections/cubs-travel.jpg',
                     'imageAlt'    => '...',
                 ],
-                'party_bus_features' => [
+                'event_features' => [
                     'heading' => 'What Your Cubs Game Day Ride Includes',
                     'intro'   => '...',
                     'cards'   => [
@@ -182,10 +183,10 @@ Existing presets include `general`, `airport-shuttle`, and others. The fallback 
 | 1 | Hero | `x-sections.category-hero` | Existing | `$event['hero']` |
 | 2 | Info strip | `x-sections.info-strip` | Existing | `$event['info_strip']` |
 | 3 | Travel in style CTA | `x-sections.travel-in-style-cta` | **New** | `$event['travel_in_style']` |
-| 4 | Party bus features | `x-sections.party-bus-features` | **New** | `$event['party_bus_features']` |
+| 4 | Event features | `x-sections.event-features` | **New** | `$event['event_features']` |
 | 5 | Event details | `x-sections.event-details` | **New (rename)** | `$event['event_details']` |
 | 6 | Process steps | `x-sections.limo-process-steps` | Existing | `$event['process_steps']` |
-| 7 | Service fulfillment | `x-sections.limo-booking-timeline` | Existing | `$event['service_fulfillment']` |
+| 7 | Service fulfillment | `x-sections.service-fulfillment` | **New (rename)** | `$event['service_fulfillment']` |
 | 8 | Review slider | `x-sections.review-slider` | Existing | (no props) |
 | 9 | Why choose us | `x-sections.why-choose-us` | Existing | (no props) |
 | 10 | FAQ | `x-sections.faq` | Existing | preset from `config/faqs.php` |
@@ -245,7 +246,7 @@ H2  — {heading} {headingBold}            (center-justified, full width, with c
 
 ---
 
-### 4. Party Bus Features — `x-sections.party-bus-features` (**New**)
+### 4. Event Features — `x-sections.event-features` (**New**)
 
 Center-justified H2 above a 3-column card grid. Each card has H3 + body. Background: cloud-light.
 
@@ -325,9 +326,9 @@ Each step array: `['num' => '01', 'title' => '...', 'body' => '...']`. Always 6 
 
 ---
 
-### 7. Service Fulfillment — `x-sections.limo-booking-timeline`
+### 7. Service Fulfillment — `x-sections.service-fulfillment` (**Renamed from `limo-booking-timeline`**)
 
-> **Important usage note:** Despite its default name and default content being about booking lead times, this component is a general-purpose 6-card grid on a cloud-light background. For special events pages it should be repurposed as a **service fulfillment** or **how we serve this event** section. The `heading`, `headingBold`, `intro`, `items`, and `legend` props give full control over the content. The card structure (H3 occasion/topic, styled timing/category label, detail body) maps cleanly to any category-level service breakdown. Example: "What We Cover on Cubs Game Day" with 6 cards covering group size, route planning, vehicle options, pricing, availability, and post-game drop-off.
+> **Important usage note:** The original component (`limo-booking-timeline`) defaulted to booking lead-time content. After rename it becomes `x-sections.service-fulfillment` — a general-purpose 6-card grid on a cloud-light background. All existing usages of `x-sections.limo-booking-timeline` must be updated to `x-sections.service-fulfillment`. For special events pages this section covers **how we serve this event**: group size options, route planning, vehicle selection, pricing, availability, and post-event drop-off. The `heading`, `headingBold`, `intro`, `items`, and `legend` props give full control. Example heading: "What We Cover on Cubs Game Day."
 
 Background: cloud-light. Center H2, then 3-column card grid.
 
@@ -527,10 +528,10 @@ The `LocalBusiness` block is identical on every event page (it describes the bus
         imageAlt="{{ $event['travel_in_style']['imageAlt'] }}"
     />
 
-    <x-sections.party-bus-features
-        heading="{{ $event['party_bus_features']['heading'] }}"
-        intro="{{ $event['party_bus_features']['intro'] }}"
-        :cards="$event['party_bus_features']['cards']"
+    <x-sections.event-features
+        heading="{{ $event['event_features']['heading'] }}"
+        intro="{{ $event['event_features']['intro'] }}"
+        :cards="$event['event_features']['cards']"
     />
 
     <x-sections.event-details
@@ -551,7 +552,7 @@ The `LocalBusiness` block is identical on every event page (it describes the bus
         :steps="$event['process_steps']['steps']"
     />
 
-    <x-sections.limo-booking-timeline
+    <x-sections.service-fulfillment
         heading="{{ $event['service_fulfillment']['heading'] }}"
         headingBold="{{ $event['service_fulfillment']['headingBold'] }}"
         intro="{{ $event['service_fulfillment']['intro'] }}"
@@ -577,7 +578,7 @@ The `LocalBusiness` block is identical on every event page (it describes the bus
 | Component | Based on | Key differences |
 |---|---|---|
 | `x-sections.travel-in-style-cta` | `x-sections.travel-in-style` | Full-width H2 row above both columns (centered + underbar); H3/H4 in right column; two branded CTAs (Call Us + Get a Free Quote modal) instead of a single link button |
-| `x-sections.party-bus-features` | Inline markup in `party-bus-rental-aurora-il-night-out.blade.php` (`#party-bus-features`) | Extract the cloud-light 3-col feature card grid into a reusable component with `heading`, `intro`, and `cards` props |
+| `x-sections.event-features` | Inline markup in `party-bus-rental-aurora-il-night-out.blade.php` (`#party-bus-features`) | Extract the cloud-light 3-col feature card grid into a reusable component with `heading`, `intro`, and `cards` props |
 | `x-sections.event-details` | `x-sections.aurora-night-out` | Rename the file and make all hardcoded Aurora copy prop-driven. Update every existing usage of `aurora-night-out` to the new tag with matching inline props |
 
 All three components must include `id="component-name"` and `style="scroll-margin-top: 80px;"` on the `<section>` tag so the `/page-management` scanner can detect them.

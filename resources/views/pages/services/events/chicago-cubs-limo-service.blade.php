@@ -124,8 +124,8 @@ $fulfillmentItems = [
     title="Chicago Cubs Limo & Party Bus Service | Stop & Go Airport Shuttle Service, Inc."
     metaDescription="Luxury limo, party bus, and sprinter van service to Wrigley Field from anywhere in Chicagoland. Flat-rate pricing. Book your Cubs game day ride today."
     currentPage="services"
-    ogImage="/images/heroes/hero-cubs-limo.jpg"
-    ogImageAlt="Luxury party bus for Chicago Cubs game day transportation, Stop & Go Airport Shuttle Service, Inc."
+    ogImage="/images/special-events/cubs/stopngolimo-chicacgo-cubs-wrigley-field.jpg"
+    ogImageAlt="Wrigley Field, home of the Chicago Cubs, served by Stop & Go Airport Shuttle Service, Inc."
 >
 
     <x-sections.category-hero
@@ -136,7 +136,7 @@ $fulfillmentItems = [
         :description="$heroDescription"
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/heroes/hero-cubs-limo.jpg"
+        image="/images/special-events/cubs/stopngolimo-chicacgo-cubs-wrigley-field.jpg"
         imagePosition="center center"
     />
 
@@ -153,8 +153,8 @@ $fulfillmentItems = [
         subtitle="Pickup from every corner of Chicagoland"
         body="The moment your group boards, the game day begins. Wrap-around leather seating, premium sound, and climate-controlled comfort carry you from your door straight to Clark and Addison, whether you are starting from River North, Evanston, the western suburbs, or anywhere else in Chicagoland. Our chauffeurs know Wrigleyville's game-day drop-off lanes, which side streets clear fastest after the final out, and the timing that gets your group to Sheffield Avenue with time to spare. You arrive relaxed, in style, and ready for everything the North Side has to offer. No parking search. No surge pricing. No driving home after the Cubby Bear closes."
         note="No matter your group size, we have a vehicle for your Cubs outing. Call us and we will match you to the right one."
-        image="/images/sections/cubs-wrigleyville.jpg"
-        imageAlt="Wrigleyville neighborhood at Clark and Addison Streets, Wrigley Field, Chicago, Illinois"
+        image="/images/special-events/cubs/stopngolimo-wrigley-field-game-day-group.jpg"
+        imageAlt="A group of Cubs fans at Wrigley Field on game day, Chicago, Illinois"
     />
 
     <x-sections.event-features

@@ -166,7 +166,7 @@ $fulfillmentItems = [
         descImage="/images/special-events/cubs/stopngolimo-chicacgo-cubs-ariel.jpg"
         descImageAlt="Aerial view of Wrigley Field and the Wrigleyville neighborhood, Chicago, Illinois"
         descHeading="Why Choose Us?"
-        descSubheading="Cubs Game Day Transportation"
+        descSubheading="We Have the Best Cubs Game Day Transportation"
         descBody="Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Wrigley Field safely and on time:"
         :descBullets="[
             'Flat-rate pricing locked at booking, no surge fees',

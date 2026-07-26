@@ -1110,6 +1110,37 @@ return [
     ],
 
 
+    'chicago-crosstown-rivalry' => [
+        [
+            'question' => 'What is the Crosstown Classic?',
+            'answer'   => 'The Crosstown Classic is the annual interleague series between the Chicago Cubs and the Chicago White Sox. Games split between Wrigley Field on the North Side and Rate Field on the South Side, giving fans of both teams a chance to watch their team host the city rival. It is one of the most anticipated events on the Chicago sports calendar every summer.',
+        ],
+        [
+            'question' => 'Do you serve both Wrigley Field and Rate Field for the Crosstown Classic?',
+            'answer'   => 'Yes. We cover both venues for every game in the series. Whether the night is at Wrigley Field or at Rate Field, we pick your group up from anywhere in Chicagoland and deliver you to the right ballpark. Our chauffeurs know both venues, their drop-off lanes, their staging areas, and the best post-game routes out of each neighborhood.',
+        ],
+        [
+            'question' => 'Can our group attend games at both parks in the same Crosstown series?',
+            'answer'   => 'Absolutely. Many of our clients book rides to both the Wrigley Field and Rate Field legs of the same Crosstown series. We handle the routing, timing, and staging for both venues and make every night as smooth as a single-game booking.',
+        ],
+        [
+            'question' => 'How far in advance should I book for the Crosstown Classic?',
+            'answer'   => 'The Crosstown Classic is one of the most popular bookings on our calendar every summer. We recommend booking 3 to 4 weeks ahead for Crosstown games, especially weekend dates. The earlier you book, the more vehicle options your group has.',
+        ],
+        [
+            'question' => 'Where do you pick up for Crosstown Classic transportation?',
+            'answer'   => 'We pick up from every corner of Chicagoland: Evanston, Wilmette, Winnetka, Highland Park, and Waukegan on the North Shore; Naperville, Aurora, Schaumburg, and Arlington Heights in the west and northwest suburbs; Orland Park, Tinley Park, New Lenox, and Joliet in the southwest; and every city neighborhood from Hyde Park to Logan Square to Andersonville. Multi-address pickups from several locations in the same group are handled regularly.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus for Crosstown Classic games?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations. BYOB is common on our Crosstown Classic bookings.',
+        ],
+        [
+            'question' => 'How many people does your service require?',
+            'answer'   => 'We serve groups of 13 or more. No matter how many are in your group, we have the right vehicle for your Crosstown Classic outing. Call us with your headcount and we will match you to the best fit.',
+        ],
+    ],
+
     'chicago-white-sox' => [
         [
             'question' => 'How far in advance should I book a limo or party bus for a White Sox game?',
@@ -1164,7 +1195,7 @@ return [
         ],
         [
             'question' => 'What is the difference between booking a limo and a party bus for a Cubs outing?',
-            'answer'   => 'A stretch limousine is best for smaller, more intimate groups who want an elegant ride. A party bus is built for larger groups of 14 or more who want a social, celebratory atmosphere with music, LED lighting, and room to move around. We can help you choose based on your group size and occasion.',
+            'answer'   => 'A stretch limousine is best for smaller, more intimate groups who want an elegant ride. A party bus is built for groups who want a social, celebratory atmosphere with music, LED lighting, and room to move around. Call us with your headcount and we will help you choose.',
         ],
         [
             'question' => 'What happens if the game goes to extra innings?',

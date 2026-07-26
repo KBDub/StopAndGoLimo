@@ -57,6 +57,27 @@ Every sentence on these pages must pass all of the following before it ships.
 | Double hyphens | Banned. Use a comma instead. |
 | Branded voice | First person plural ("we", "our"). Confident, premium, approachable. |
 | Company name | "Stop & Go Airport Shuttle Service, Inc." in body copy. "Stop & Go Limo" is logo/nav/social only. |
+| Passenger counts | Never say "our vehicles start at 13 passengers" or list vehicle capacities (e.g., "8 to 14", "14 to 40"). The service minimum is "groups of 13 or more." For all other size language use "no matter your group size" or "any group." |
+
+---
+
+## Component Standards
+
+### x-sections.info-strip — Body Minimum
+
+The `body` prop on every `x-sections.info-strip` **must contain a minimum of 2 to 3 full sentences.** A single sentence is not sufficient. The body anchors the heading with context and must satisfy search intent for the page topic. This requirement is also enforced as a comment inside the component itself.
+
+### x-sections.free-instant-quote — FIQ Subheading Standard
+
+The `descSubheading` prop on every event page FIQ block **must use the "We Have the Best" prefix pattern.** This applies to all existing and future special-events pages.
+
+| Page | descSubheading value |
+|---|---|
+| Chicago Cubs | `We Have the Best Cubs Game Day Transportation` |
+| Chicago White Sox | `We Have the Best White Sox Game Day Transportation` |
+| Crosstown Classic | `We Have the Best Crosstown Classic Transportation` |
+
+When adding a new event page, follow the same pattern: `We Have the Best [Event Name] Transportation`.
 
 ---
 

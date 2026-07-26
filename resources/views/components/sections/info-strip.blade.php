@@ -1,3 +1,12 @@
+{{--
+    x-sections.info-strip
+    ─────────────────────────────────────────────────────────────────────────
+    REQUIRED: The `body` prop MUST contain a minimum of 2 to 3 full sentences.
+    A single sentence is not sufficient for this component. The body is the
+    primary contextual paragraph for the page section and must provide enough
+    copy to anchor the heading and satisfy search intent for the page topic.
+    ─────────────────────────────────────────────────────────────────────────
+--}}
 @props([
     'headingPrefix' => '',
     'headingBold'   => 'Comfort & Style',

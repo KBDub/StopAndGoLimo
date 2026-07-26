@@ -168,7 +168,7 @@ $fulfillmentItems = [
         descImage="/images/heroes/hero-chicago-bears-fiq.jpg"
         descImageAlt="Rate Field at 35th and Shields, home of the Chicago White Sox, served by Stop & Go Airport Shuttle Service, Inc."
         descHeading="Why Choose Us?"
-        descSubheading="White Sox Game Day Transportation"
+        descSubheading="We Have the Best White Sox Game Day Transportation"
         descBody="Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Rate Field safely and on time:"
         :descBullets="[
             'Flat-rate pricing locked at booking, no surge fees',

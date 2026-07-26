@@ -72,6 +72,14 @@ Route::get('/grad-day-transportation',        fn () => view('pages.grad-day-tran
 
 // ─── Special Events ───────────────────────────────────────────────────────────
 
+// ─── Google Ads Landing Pages (/lp/) ─────────────────────────────────────────
+// Always noindex,nofollow — see resources/views/components/layouts/lp.blade.php
+Route::prefix('lp')->name('lp.')->group(function () {
+    Route::get('/chicago-cubs-game-day-limo',      fn () => view('pages.lp.chicago-cubs-game-day-limo'))->name('cubs');
+    Route::get('/chicago-white-sox-game-day-limo', fn () => view('pages.lp.chicago-white-sox-game-day-limo'))->name('white-sox');
+    Route::get('/chicago-crosstown-classic-limo',  fn () => view('pages.lp.chicago-crosstown-classic-limo'))->name('crosstown-classic');
+});
+
 Route::prefix('services/events')->name('events.')->group(function () {
     Route::get('/chicago-cubs-limo-service',        fn () => view('pages.services.events.chicago-cubs-limo-service'))->name('chicago-cubs');
     Route::get('/chicago-white-sox-limo-service',   fn () => view('pages.services.events.chicago-white-sox-limo-service'))->name('chicago-white-sox');

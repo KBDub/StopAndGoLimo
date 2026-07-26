@@ -184,7 +184,7 @@ $fulfillmentItems = [
     />
 
     <x-sections.event-features
-        heading="A City Divided,"
+        heading="A Crosstown Classic,"
         headingBold="One Great Ride"
         intro="The Crosstown Classic is a full Chicago story. Two teams, two ballparks, two neighborhoods, and one city that takes all of it seriously. Stop & Go Airport Shuttle Service, Inc. is the transportation company that serves both sides."
         leftHeading="The Crosstown Classic: Chicago's Greatest Baseball Rivalry"

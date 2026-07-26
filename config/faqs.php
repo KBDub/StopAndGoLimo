@@ -1110,6 +1110,41 @@ return [
     ],
 
 
+    'chicago-white-sox' => [
+        [
+            'question' => 'How far in advance should I book a limo or party bus for a White Sox game?',
+            'answer'   => 'We recommend booking 2 to 3 weeks ahead for weekend games and the Crosstown Classic series against the Cubs, though we can often accommodate weekday game requests on shorter notice. The earlier you book, the more vehicle options your group has.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near Rate Field?',
+            'answer'   => 'We coordinate a designated drop-off and pickup point near 35th and Shields that avoids the worst of the Dan Ryan and lot congestion. The exact meeting point is communicated directly to your group leader before departure.',
+        ],
+        [
+            'question' => 'Can we make a dinner stop in Bridgeport before or after the game?',
+            'answer'   => 'Yes. A Bridgeport dinner stop is one of the most popular additions to a White Sox game day booking. We build it into your schedule so you make it to your seats before first pitch.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a White Sox game?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations. BYOB is common on our White Sox game day bookings.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for a Sox outing?',
+            'answer'   => 'A stretch limo suits smaller, more intimate groups who want an elegant ride. A party bus is built for larger groups who want a social, celebratory atmosphere with music, LED lighting, and room to move around. Call us with your headcount and we will help you choose.',
+        ],
+        [
+            'question' => 'What happens if the game goes to extra innings?',
+            'answer'   => 'Your flat rate does not change based on game length. Your chauffeur stages near Rate Field and monitors the game. When the final out is recorded, they are ready to move. Extra-inning games are not a problem.',
+        ],
+        [
+            'question' => 'Do you pick up from the southwest suburbs and Northwest Indiana for White Sox games?',
+            'answer'   => 'Yes. Southwest suburban clients are some of our most consistent White Sox bookings. We serve Orland Park, Tinley Park, Oak Lawn, New Lenox, Joliet, Palos Hills, and Northwest Indiana, as well as every city neighborhood and north and west suburb in Chicagoland.',
+        ],
+        [
+            'question' => 'How many people does your service require?',
+            'answer'   => 'We serve groups of 13 or more passengers. Our fleet includes stretch limousines, executive SUVs, luxury sprinter vans, and party buses to cover any group size. Call us with your exact headcount and we will match you to the right vehicle.',
+        ],
+    ],
+
     'chicago-cubs' => [
         [
             'question' => 'How far in advance should I book a limo or party bus for a Cubs game?',

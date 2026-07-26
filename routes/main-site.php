@@ -73,7 +73,8 @@ Route::get('/grad-day-transportation',        fn () => view('pages.grad-day-tran
 // ─── Special Events ───────────────────────────────────────────────────────────
 
 Route::prefix('services/events')->name('events.')->group(function () {
-    Route::get('/chicago-cubs-limo-service', fn () => view('pages.services.events.chicago-cubs-limo-service'))->name('chicago-cubs');
+    Route::get('/chicago-cubs-limo-service',      fn () => view('pages.services.events.chicago-cubs-limo-service'))->name('chicago-cubs');
+    Route::get('/chicago-white-sox-limo-service', fn () => view('pages.services.events.chicago-white-sox-limo-service'))->name('chicago-white-sox');
 });
 
 Route::get('/six-flags-party-bus',              fn () => view('pages.six-flags-party-bus'))->name('six-flags-party-bus');

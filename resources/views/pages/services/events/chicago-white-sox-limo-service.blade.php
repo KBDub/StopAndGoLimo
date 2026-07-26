@@ -138,7 +138,7 @@ $fulfillmentItems = [
         :description="$heroDescription"
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/heroes/hero-special-event.jpg"
+        image="/images/special-events/white-sox/stopngolimo-chicago-white-sox-rate-field-sunset.jpg"
         imagePosition="center center"
     />
 
@@ -155,8 +155,8 @@ $fulfillmentItems = [
         subtitle="Pickup from anywhere in Chicago or the suburbs"
         body="Step into climate-controlled, wrap-around leather seating and let a professional chauffeur take the South Side completely off your hands. Whether your group starts from Hyde Park along Stony Island Avenue, Evanston on the North Shore, Beverly on the southwest side, or anywhere across the city or suburbs, we build the pickup around your address and your schedule. Groups picking up near Jackson Park often ask us to swing by the Museum of Science and Industry so out-of-town guests catch a look before heading north to the ballpark. Summer game days sometimes begin with a stop at the South Shore Cultural Center beach before an evening first pitch. The ride itself is part of the experience: premium Bluetooth sound, coolers stocked before departure, and a driver who knows every South Side route without a second thought. No parking search. No meter running. No stress on the Dan Ryan in or the Bishop Ford on the way home. You enjoy the city. We take care of everything from your door to the Rate Field gates and back again after the final out."
         note="No matter your group size, call us and we will match you to the right vehicle."
-        image="/images/heroes/hero-chicago-bears-party-bus.jpg"
-        imageAlt="Luxury party bus exterior, available for Chicago White Sox game day transportation from anywhere in Chicagoland"
+        image="/images/special-events/white-sox/stopngolimo-chicago-white-sox-happy-clients.jpeg"
+        imageAlt="Happy clients ready for Chicago White Sox game day transportation, Stop & Go Airport Shuttle Service, Inc."
     />
 
     <x-sections.free-instant-quote
@@ -165,8 +165,8 @@ $fulfillmentItems = [
         headingTail="Ride"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/heroes/hero-chicago-bears-fiq.jpg"
-        descImageAlt="Rate Field at 35th and Shields, home of the Chicago White Sox, served by Stop & Go Airport Shuttle Service, Inc."
+        descImage="/images/special-events/white-sox/stopngolimo-chicago-white-sox-family-at-game.jpeg"
+        descImageAlt="A family enjoying a Chicago White Sox game at Rate Field, served by Stop & Go Airport Shuttle Service, Inc."
         descHeading="Why Choose Us?"
         descSubheading="We Have the Best White Sox Game Day Transportation"
         descBody="Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Rate Field safely and on time:"

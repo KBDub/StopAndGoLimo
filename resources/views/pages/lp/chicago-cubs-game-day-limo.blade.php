@@ -49,7 +49,7 @@
                     gap: 0.75rem 1.5rem; text-align: center;">
             <p class="font-head"
                style="color: var(--navy); font-weight: 700; font-size: 0.9rem; margin: 0; line-height: 1.5;">
-                5-Star Rated Service
+                Top Rated Service
             </p>
             <p class="font-head"
                style="color: var(--navy); font-weight: 700; font-size: 0.9rem; margin: 0; line-height: 1.5;">

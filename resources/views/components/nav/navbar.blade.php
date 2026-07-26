@@ -56,6 +56,7 @@
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">
+                <x-nav.item href="/services/events/chicago-cubs-limo-service" title="Chicago Cubs Limo &amp; Party Bus" />
                 <x-nav.item href="/six-flags-party-bus"              title="Six Flags Party Bus" />
                 <x-nav.item href="/chicago-golf-party-bus"           title="Golfing Party Bus" />
                 <x-nav.item href="/chicago-concert-party-bus-rental" title="Concert Party Bus Rental" />
@@ -159,6 +160,7 @@
 
             <div class="nav-drawer-group">
                 <span class="nav-drawer-heading">Special Events</span>
+                <a href="/services/events/chicago-cubs-limo-service" class="nav-drawer-sub">Chicago Cubs Limo &amp; Party Bus</a>
                 <a href="/six-flags-party-bus"              class="nav-drawer-sub">Six Flags Party Bus</a>
                 <a href="/chicago-golf-party-bus"           class="nav-drawer-sub">Golfing Party Bus</a>
                 <a href="/chicago-concert-party-bus-rental" class="nav-drawer-sub">Concert Party Bus</a>

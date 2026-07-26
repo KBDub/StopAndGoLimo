@@ -1141,7 +1141,7 @@ return [
         ],
         [
             'question' => 'How many people does your service require?',
-            'answer'   => 'We serve groups of 13 or more passengers. Our fleet includes stretch limousines, executive SUVs, luxury sprinter vans, and party buses to cover any group size. Call us with your exact headcount and we will match you to the right vehicle.',
+            'answer'   => 'We serve groups of 13 or more. No matter how many are in your group, we have the right vehicle for your White Sox outing. Call us with your headcount and we will match you to the best fit.',
         ],
     ],
 

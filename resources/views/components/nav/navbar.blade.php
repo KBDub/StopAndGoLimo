@@ -56,9 +56,9 @@
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">
-                <x-nav.item href="/services/events/chicago-cubs-limo-service"      title="Chicago Cubs Limo &amp; Party Bus" />
-                <x-nav.item href="/services/events/chicago-white-sox-limo-service" title="Chicago White Sox Limo &amp; Party Bus" />
-                <x-nav.item href="/services/events/chicago-crosstown-rivalry"      title="Crosstown Classic Limo &amp; Party Bus" />
+                <x-nav.item href="/services/events/chicago-cubs-limo-service"      title="Chicago Cubs Limo & Party Bus" />
+                <x-nav.item href="/services/events/chicago-white-sox-limo-service" title="Chicago White Sox Limo & Party Bus" />
+                <x-nav.item href="/services/events/chicago-crosstown-rivalry"      title="Crosstown Classic Limo & Party Bus" />
                 <x-nav.item href="/six-flags-party-bus"              title="Six Flags Party Bus" />
                 <x-nav.item href="/chicago-golf-party-bus"           title="Golfing Party Bus" />
                 <x-nav.item href="/chicago-concert-party-bus-rental" title="Concert Party Bus Rental" />

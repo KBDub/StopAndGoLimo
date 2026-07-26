@@ -42,7 +42,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Chicago Crosstown Classic Limo & Party Bus | Stop & Go Airport Shuttle Service, Inc.",
-    "url": "https://www.newlenoxlimoservice.com/services/events/chicago-crosstown-rivalry",
+    "url": "https://www.newlenoxlimoservice.com/services/events/chicago-crosstown-classic",
     "description": "Luxury limo, party bus, and sprinter van service to Wrigley Field and Rate Field for the Chicago Crosstown Classic from anywhere in Chicagoland. Flat-rate pricing. Book your Crosstown Classic ride today."
 }
 </script>
@@ -54,7 +54,7 @@
         { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://www.newlenoxlimoservice.com" },
         { "@type": "ListItem", "position": 2, "name": "Services",       "item": "https://www.newlenoxlimoservice.com/our-services" },
         { "@type": "ListItem", "position": 3, "name": "Special Events", "item": "https://www.newlenoxlimoservice.com/special-event-limousine" },
-        { "@type": "ListItem", "position": 4, "name": "Chicago Crosstown Classic Limo & Party Bus", "item": "https://www.newlenoxlimoservice.com/services/events/chicago-crosstown-rivalry" }
+        { "@type": "ListItem", "position": 4, "name": "Chicago Crosstown Classic Limo & Party Bus", "item": "https://www.newlenoxlimoservice.com/services/events/chicago-crosstown-classic" }
     ]
 }
 </script>
@@ -221,7 +221,7 @@ $fulfillmentItems = [
 
     <x-sections.review-slider />
 
-    <x-sections.faq preset="chicago-crosstown-rivalry" />
+    <x-sections.faq preset="chicago-crosstown-classic" />
 
     <x-sections.share-your-experience />
 

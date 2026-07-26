@@ -1110,7 +1110,7 @@ return [
     ],
 
 
-    'chicago-crosstown-rivalry' => [
+    'chicago-crosstown-classic' => [
         [
             'question' => 'What is the Crosstown Classic?',
             'answer'   => 'The Crosstown Classic is the annual interleague series between the Chicago Cubs and the Chicago White Sox. Games split between Wrigley Field on the North Side and Rate Field on the South Side, giving fans of both teams a chance to watch their team host the city rival. It is one of the most anticipated events on the Chicago sports calendar every summer.',

@@ -138,7 +138,7 @@ $fulfillmentItems = [
         :description="$heroDescription"
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/special-events/cubs/stopngolimo-chicacgo-cubs-wrigley-field.jpg"
+        image="/images/special-events/crosstown-classic/stopngolimo-cross-town-classic-rivals.webp"
         imagePosition="center center"
     />
 
@@ -155,7 +155,7 @@ $fulfillmentItems = [
         subtitle="The best Crosstown Classic ride, North Side or South Side"
         body="The Crosstown Classic is the one event that asks you to show up for your team at two different ballparks in the same series, and Stop & Go Airport Shuttle Service, Inc. is built for exactly that. Step into climate-controlled leather seating and let a professional chauffeur handle the logistics, whether tonight's game is at Clark and Addison in Wrigleyville or at 35th and Shields in Bridgeport. Our chauffeurs know the Kennedy Expressway and the Dan Ryan equally well, and they know the drop-off lanes, staging areas, and post-game exit routes at both parks. No parking search at Wrigley. No Dan Ryan gridlock after Rate Field. Premium Bluetooth sound and coolers stocked before departure make the ride part of the Crosstown experience, not just the transportation. Whether your group is coming from Evanston on the North Shore, Orland Park on the southwest side, or anywhere else across the Chicago metro, we pick up at your door and deliver you to the gates in comfort. We believe Stop & Go Airport Shuttle Service, Inc. offers the best chauffeured transportation available for the Crosstown Classic, and every game day we have the chance to prove it."
         note="No matter your group size, call us and we will match you to the right vehicle."
-        image="/images/special-events/cubs/stopngolimo-wrigley-field-game-day-group.jpg"
+        image="/images/special-events/crosstown-classic/stopngolimo-cross-town-classic-group-fans.gif"
         imageAlt="A group of baseball fans on game day in Chicago, served by Stop & Go Airport Shuttle Service, Inc. for the Crosstown Classic"
     />
 
@@ -165,7 +165,7 @@ $fulfillmentItems = [
         headingTail="Ride"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/special-events/cubs/stopngolimo-chicacgo-cubs-ariel.jpg"
+        descImage="/images/special-events/crosstown-classic/stopngolimo-cross-town-classic-happy-clients.jpg"
         descImageAlt="Aerial view of Wrigley Field and the North Side of Chicago, one of two venues covered by Stop & Go Airport Shuttle Service, Inc. for the Crosstown Classic"
         descHeading="Why Choose Us?"
         descSubheading="We Have the Best Crosstown Classic Transportation"

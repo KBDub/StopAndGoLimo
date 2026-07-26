@@ -103,6 +103,18 @@ class EventContent
                     'image'       => '/images/sections/cubs-travel.jpg',
                     'imageAlt'    => '...',
                 ],
+                'fiq' => [
+                    'heading'        => '...',   // e.g. 'Book Your'
+                    'headingBold'    => '...',   // e.g. 'Cubs Game Day'
+                    'headingTail'    => '...',   // e.g. 'Ride'
+                    'descImage'      => '...',   // path to right-column photo
+                    'descImageAlt'   => '...',
+                    'descSubheading' => '...',   // H3 — event service label
+                    'descBody'       => '...',   // 1–2 sentence intro ending with colon
+                    'descBullets'    => ['...', '...', '...', '...', '...'],  // exactly 5
+                    'descClosing'    => '...',   // closing callout sentence
+                    'defaultService' => '...',   // pre-selects service dropdown
+                ],
                 'event_features' => [
                     'heading' => 'What Your Cubs Game Day Ride Includes',
                     'intro'   => '...',
@@ -195,31 +207,32 @@ Existing presets include `general`, `airport-shuttle`, and others. The fallback 
 |---|---|---|---|---|
 | 1 | Hero | `x-sections.category-hero` | Existing | `$event['hero']` |
 | 2 | Info strip | `x-sections.info-strip` | Existing | `$event['info_strip']` |
-| 3 | Travel in style CTA | `x-sections.travel-in-style-cta` | **New** | `$event['travel_in_style']` |
-| 4 | Event features | `x-sections.event-features` | Rename of inline `#party-bus-features` | `$event['event_features']` |
-| 5 | Event details | `x-sections.event-details` | Rename of `aurora-night-out` | `$event['event_details']` |
-| 6 | Process steps | `x-sections.limo-process-steps` | Existing | `$event['process_steps']` |
-| 7 | Service fulfillment | `x-sections.service-fulfillment` | Rename of `limo-booking-timeline` | `$event['service_fulfillment']` |
-| 8 | Review slider | `x-sections.review-slider` | Existing | (no props) |
-| 9 | Why choose us | `x-sections.why-choose-us` | Existing | (no props) |
-| 10 | FAQ | `x-sections.faq` | Existing | preset from `config/faqs.php` |
-| 11 | Share your experience | `x-sections.share-your-experience` | Existing | (no props) |
-| 12 | Map and contact | `x-sections.map-contact-section` | Existing | (no props) |
-| 13 | Thin divider | `x-ui.banner-thin-cloud` | Existing | (no props) |
-| 14 | Base footer | `x-sections.base-footer` | Existing | (no props) |
+| 3 | Travel in style CTA | `x-sections.travel-in-style-cta` | Existing | `$event['travel_in_style']` |
+| 4 | Free Instant Quote (FIQ) | `x-sections.free-instant-quote` | Existing | `$event['fiq']` |
+| 5 | Event features | `x-sections.event-features` | Rename of inline `#party-bus-features` | `$event['event_features']` |
+| 6 | Event details | `x-sections.event-details` | Rename of `aurora-night-out` | `$event['event_details']` |
+| 7 | Process steps | `x-sections.limo-process-steps` | Existing | `$event['process_steps']` |
+| 8 | Service fulfillment | `x-sections.service-fulfillment` | Rename of `limo-booking-timeline` | `$event['service_fulfillment']` |
+| 9 | Review slider | `x-sections.review-slider` | Existing | (no props) |
+| 10 | Why choose us | `x-sections.why-choose-us` | Existing | (no props) |
+| 11 | FAQ | `x-sections.faq` | Existing | preset from `config/faqs.php` |
+| 12 | Share your experience | `x-sections.share-your-experience` | Existing | (no props) |
+| 13 | Map and contact | `x-sections.map-contact-section` | Existing | (no props) |
+| 14 | Thin divider | `x-ui.banner-thin-cloud` | Existing | (no props) |
+| 15 | Base footer | `x-sections.base-footer` | Existing | (no props) |
 
 ---
 
-## Content Depth — Sections 1–7
+## Content Depth — Sections 1–8
 
-Sections 1 through 7 carry all the SEO weight and conversion content for the page. Every one of these sections must be fully written out with rich, specific copy. No placeholder text, no thin paragraphs. Each section should:
+Sections 1 through 8 carry all the SEO weight and conversion content for the page. Every one of these sections must be fully written out with rich, specific copy. No placeholder text, no thin paragraphs. Each section should:
 
 - Answer a real question a potential client would ask about this specific event
 - Reference the event, venue, or team by name at least once per section
 - Include at least one concrete detail (timing, capacity, vehicle type, route, feature, or benefit)
 - Stay at a 7th grade reading level — short sentences, plain words, active voice
 
-Sections 8–14 are shared components with no event-specific content and need no custom copy.
+Sections 9–15 are shared components with no event-specific content and need no custom copy.
 
 ---
 
@@ -282,7 +295,111 @@ H2  — {heading} {headingBold}            (center-justified, full width, with c
 
 ---
 
-### 4. Event Features — `x-sections.event-features` (**New**)
+### 4. Free Instant Quote (FIQ) — `x-sections.free-instant-quote`
+
+The FIQ section combines a contact/quote form on the left with a descriptive content panel on the right. For all special events pages, use `rightVariant="description"` with the event photo at the top of the right column (`descImageTop: true`). This mirrors the town-car-service page implementation exactly.
+
+**Right column structure (top to bottom):**
+
+1. Event photo — full width of the right column, positioned above the heading
+2. H2 — `descHeading` with champagne underbar (always "Why Choose Us?")
+3. H3 — `descSubheading` — event-specific service label (e.g., "Cubs Game Day Transportation")
+4. `descBody` — 1–2 sentence intro paragraph ending with a colon, introducing the bullet list
+5. `descBullets` — exactly 5 bullet points, styled with champagne dots and hairline dividers between items
+6. `descClosing` — bold blockquote-style callout rendered at the bottom of the right column
+
+**Background:** cloud-light (default). Do not pass `inverted`.
+
+**Left column:** Contact/quote form. `heading`, `headingBold`, and `headingTail` control the H2 above the form. Always set `formAction="/get-a-quote"` and `submitLabel="Send Message"`.
+
+```
+[Left column — quote form]
+H2  — {heading} {headingBold} {headingTail}     (three-part heading above the form)
+
+[Right column — description panel]
+        {descImage}                              (event photo, full right-column width, at top)
+H2  — {descHeading}                             ("Why Choose Us?" with champagne underbar)
+H3  — {descSubheading}                          (event-specific service name)
+        {descBody}                              (1–2 sentence intro ending with colon)
+      [Bullet list — exactly 5 items]
+        {descBullets[0..4]}
+        {descClosing}                           (closing callout, bold blockquote style)
+```
+
+**Props:**
+
+```
+heading        string   Regular text before the bold word in the form H2 (e.g., "Book Your").
+headingBold    string   Champagne bold phrase in the form H2 (e.g., "Cubs Game Day").
+headingTail    string   Regular text after the bold phrase (e.g., "Ride"). May be empty string.
+rightVariant   string   Always "description" on event pages.
+descImageTop   bool     Always true on event pages — places the photo above the H2.
+descImage      string   Path to the right-column event photo.
+descImageAlt   string   Descriptive alt text for the right-column photo.
+descHeading    string   H2 in the right column. Use the default: "Why Choose Us?".
+descSubheading string   H3 in the right column. Use the event-specific service label.
+descBody       string   1–2 sentence intro paragraph. End with a colon to lead into bullets.
+descBullets    array    Exactly 5 bullet points as plain strings.
+descClosing    string   Closing callout, rendered as a left-bordered blockquote. One confident sentence.
+formAction     string   Always "/get-a-quote".
+submitLabel    string   Always "Send Message".
+defaultService string   Pre-selects the service dropdown (e.g., "Chicago Cubs Game Day Limo").
+```
+
+**Blade call — Cubs example:**
+
+```blade
+<x-sections.free-instant-quote
+    heading="Book Your"
+    headingBold="Cubs Game Day"
+    headingTail="Ride"
+    rightVariant="description"
+    :descImageTop="true"
+    descImage="/images/special-events/cubs/stopngolimo-chicacgo-cubs-ariel.jpg"
+    descImageAlt="Aerial view of Wrigley Field and the Wrigleyville neighborhood, Chicago, Illinois"
+    descHeading="Why Choose Us?"
+    descSubheading="Cubs Game Day Transportation"
+    descBody="Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Wrigley Field safely and on time:"
+    :descBullets="[
+        'Flat-rate pricing locked at booking, no surge fees',
+        'Wrigleyville drop-off and post-game pickup staging included',
+        'Multi-address pickup from any Chicagoland suburb',
+        'All vehicles cleaned, inspected, and climate-set before pickup',
+        'Licensed, background-checked chauffeurs available 24/7',
+    ]"
+    descClosing="Serving all of Chicagoland, our professional chauffeurs are ready to get your group to Clark and Addison and back, no matter where you are starting from."
+    formAction="/get-a-quote"
+    submitLabel="Send Message"
+    defaultService="Chicago Cubs Game Day Limo"
+/>
+```
+
+**`$event['fiq']` data shape:**
+
+```php
+'fiq' => [
+    'heading'        => 'Book Your',
+    'headingBold'    => 'Cubs Game Day',
+    'headingTail'    => 'Ride',
+    'descImage'      => '/images/special-events/cubs/stopngolimo-chicacgo-cubs-ariel.jpg',
+    'descImageAlt'   => 'Aerial view of Wrigley Field and the Wrigleyville neighborhood, Chicago, Illinois',
+    'descSubheading' => 'Cubs Game Day Transportation',
+    'descBody'       => 'Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Wrigley Field safely and on time:',
+    'descBullets'    => [
+        'Flat-rate pricing locked at booking, no surge fees',
+        'Wrigleyville drop-off and post-game pickup staging included',
+        'Multi-address pickup from any Chicagoland suburb',
+        'All vehicles cleaned, inspected, and climate-set before pickup',
+        'Licensed, background-checked chauffeurs available 24/7',
+    ],
+    'descClosing'    => 'Serving all of Chicagoland, our professional chauffeurs are ready to get your group to Clark and Addison and back, no matter where you are starting from.',
+    'defaultService' => 'Chicago Cubs Game Day Limo',
+],
+```
+
+---
+
+### 5. Event Features — `x-sections.event-features` (**New**)
 
 Center-justified H2 above a 3-column card grid. Each card has H3 + H4 + body. Background: cloud-light.
 
@@ -308,7 +425,7 @@ cards    array    [{feature, benefit, why}, ...] — always 6 items
 
 ---
 
-### 5. Event Details — `x-sections.event-details` (**Renamed from `aurora-night-out`**)
+### 6. Event Details — `x-sections.event-details` (**Renamed from `aurora-night-out`**)
 
 **Action required:** `x-sections.aurora-night-out` must be renamed to `x-sections.event-details` and made fully prop-driven. The Aurora-specific hardcoded copy is replaced with props. All existing usages of `x-sections.aurora-night-out` must be updated to `x-sections.event-details` with inline props matching the current hardcoded content.
 
@@ -348,7 +465,7 @@ CTA buttons are hardcoded in the component (quote modal + phone link) — no pro
 
 ---
 
-### 6. Process Steps — `x-sections.limo-process-steps`
+### 7. Process Steps — `x-sections.limo-process-steps`
 
 Background: white. Center H2, then 2x3 numbered card grid.
 
@@ -368,7 +485,7 @@ Each step array: `['num' => '01', 'title' => '...', 'detail' => '...', 'body' =>
 
 ---
 
-### 7. Service Fulfillment — `x-sections.service-fulfillment` (**Renamed from `limo-booking-timeline`**)
+### 8. Service Fulfillment — `x-sections.service-fulfillment` (**Renamed from `limo-booking-timeline`**)
 
 > **Important usage note:** The original component (`limo-booking-timeline`) defaulted to booking lead-time content. After rename it becomes `x-sections.service-fulfillment` — a general-purpose 6-card grid on a cloud-light background. All existing usages of `x-sections.limo-booking-timeline` must be updated to `x-sections.service-fulfillment`. For special events pages this section covers **how we serve this event**: group size options, route planning, vehicle selection, pricing, availability, and post-event drop-off. The `heading`, `headingBold`, `intro`, `items`, and `legend` props give full control. Example heading: "What We Cover on Cubs Game Day."
 
@@ -392,7 +509,7 @@ Each item: `['occasion' => '...', 'timing' => '...', 'detail' => '...', 'urgency
 
 ---
 
-### 8. Review Slider — `x-sections.review-slider`
+### 9. Review Slider — `x-sections.review-slider`
 
 ```
 H2  — (hardcoded heading inside component)
@@ -404,7 +521,7 @@ No props. No customization needed on event pages.
 
 ---
 
-### 9. Why Choose Us — `x-sections.why-choose-us`
+### 10. Why Choose Us — `x-sections.why-choose-us`
 
 ```
 H2  — (hardcoded heading inside component)
@@ -416,7 +533,7 @@ No props.
 
 ---
 
-### 10. FAQ — `x-sections.faq`
+### 11. FAQ — `x-sections.faq`
 
 ```
 H2  — (hardcoded section heading inside component)
@@ -429,7 +546,7 @@ Pass a `preset` key from `config/faqs.php`. For event pages, create an event-spe
 
 ---
 
-### 11–14. Footer Sections
+### 12–15. Footer Sections
 
 These carry no event-specific headings and require no props on event pages.
 
@@ -574,6 +691,24 @@ The `LocalBusiness` block is identical on every event page (it describes the bus
         imageAlt="{{ $event['travel_in_style']['imageAlt'] }}"
     />
 
+    <x-sections.free-instant-quote
+        heading="{{ $event['fiq']['heading'] }}"
+        headingBold="{{ $event['fiq']['headingBold'] }}"
+        headingTail="{{ $event['fiq']['headingTail'] }}"
+        rightVariant="description"
+        :descImageTop="true"
+        descImage="{{ $event['fiq']['descImage'] }}"
+        descImageAlt="{{ $event['fiq']['descImageAlt'] }}"
+        descHeading="Why Choose Us?"
+        descSubheading="{{ $event['fiq']['descSubheading'] }}"
+        descBody="{{ $event['fiq']['descBody'] }}"
+        :descBullets="$event['fiq']['descBullets']"
+        descClosing="{{ $event['fiq']['descClosing'] }}"
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        defaultService="{{ $event['fiq']['defaultService'] }}"
+    />
+
     <x-sections.event-features
         heading="{{ $event['event_features']['heading'] }}"
         intro="{{ $event['event_features']['intro'] }}"
@@ -708,7 +843,32 @@ imageAlt:    'Wrigleyville neighborhood at Clark and Addison Streets, Wrigley Fi
 
 ---
 
-### Section 4 — Event Features (`$event['event_features']`)
+### Section 4 — Free Instant Quote (FIQ) (`$event['fiq']`)
+
+```
+heading:        'Book Your'
+headingBold:    'Cubs Game Day'
+headingTail:    'Ride'
+descImage:      '/images/special-events/cubs/stopngolimo-chicacgo-cubs-ariel.jpg'
+descImageAlt:   'Aerial view of Wrigley Field and the Wrigleyville neighborhood, Chicago, Illinois'
+descSubheading: 'Cubs Game Day Transportation'
+descBody:       'Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Wrigley Field safely and on time:'
+descBullets: [
+    'Flat-rate pricing locked at booking, no surge fees',
+    'Wrigleyville drop-off and post-game pickup staging included',
+    'Multi-address pickup from any Chicagoland suburb',
+    'All vehicles cleaned, inspected, and climate-set before pickup',
+    'Licensed, background-checked chauffeurs available 24/7',
+]
+descClosing:    'Serving all of Chicagoland, our professional chauffeurs are ready to get your group to Clark and Addison and back, no matter where you are starting from.'
+defaultService: 'Chicago Cubs Game Day Limo'
+```
+
+**SEO value:** The FIQ section anchors the quote conversion path and reinforces trust signals (licensed, insured, flat-rate, 24/7) immediately after the travel-in-style-cta builds desire.
+
+---
+
+### Section 5 — Event Features (`$event['event_features']`)
 
 ```
 heading: 'What Your Cubs Game Day Ride <strong>Includes</strong>'
@@ -752,7 +912,7 @@ cards: [
 
 ---
 
-### Section 5 — Event Details (`$event['event_details']`)
+### Section 6 — Event Details (`$event['event_details']`)
 
 ```
 heading:      'Why Chicagoland Groups Choose a Party Bus for Cubs Games'
@@ -793,7 +953,7 @@ ctaBody:    'Flat-rate pricing. All of Chicagoland. Get a free quote in minutes 
 
 ---
 
-### Section 6 — Process Steps (`$event['process_steps']`)
+### Section 7 — Process Steps (`$event['process_steps']`)
 
 ```
 heading:     'Six Things That Happen'
@@ -844,7 +1004,7 @@ steps: [
 
 ---
 
-### Section 7 — Service Fulfillment (`$event['service_fulfillment']`)
+### Section 8 — Service Fulfillment (`$event['service_fulfillment']`)
 
 ```
 heading:     'What We Cover on'
@@ -1071,7 +1231,13 @@ imageAlt:    'Rate Field at 35th and Shields Avenue, Chicago, Illinois, home of 
 
 ---
 
-### Section 4 — Event Features (`$event['event_features']`)
+### Section 4 — Free Instant Quote (FIQ) (`$event['fiq']`)
+
+> Populate when building the White Sox page. Use a Rate Field or South Side aerial/exterior photo from `public/images/special-events/white-sox/`. Follow the FIQ section spec in the heading hierarchy above. Keep exactly 5 bullets and 1–2 sentences for `descBody`. Set `defaultService` to `'Chicago White Sox Game Day Limo'`.
+
+---
+
+### Section 5 — Event Features (`$event['event_features']`)
 
 ```
 heading: 'What Your White Sox Game Day Ride <strong>Includes</strong>'
@@ -1115,7 +1281,7 @@ cards: [
 
 ---
 
-### Section 5 — Event Details (`$event['event_details']`)
+### Section 6 — Event Details (`$event['event_details']`)
 
 ```
 heading: 'Why Chicagoland Groups Choose a Party Bus for White Sox Games'
@@ -1156,7 +1322,7 @@ ctaBody:    'Flat-rate pricing. All of Chicagoland. Get a free quote in minutes 
 
 ---
 
-### Section 6 — Process Steps (`$event['process_steps']`)
+### Section 7 — Process Steps (`$event['process_steps']`)
 
 ```
 heading:     'Six Things That Happen'
@@ -1207,7 +1373,7 @@ steps: [
 
 ---
 
-### Section 7 — Service Fulfillment (`$event['service_fulfillment']`)
+### Section 8 — Service Fulfillment (`$event['service_fulfillment']`)
 
 ```
 heading:     'What We Cover on'
@@ -1428,7 +1594,13 @@ imageAlt:    'Chicago skyline with Wrigley Field and Rate Field representing the
 
 ---
 
-### Section 4 — Event Features (`$event['event_features']`)
+### Section 4 — Free Instant Quote (FIQ) (`$event['fiq']`)
+
+> Populate when building the Crosstown Classic page. Use a Wrigley Field or Rate Field photo (or a composite image representing both venues) from `public/images/special-events/crosstown/`. Follow the FIQ section spec in the heading hierarchy above. Keep exactly 5 bullets and 1–2 sentences for `descBody`. Set `defaultService` to `'Chicago Crosstown Classic Limo'`.
+
+---
+
+### Section 5 — Event Features (`$event['event_features']`)
 
 ```
 heading: 'What Your Crosstown Classic Ride <strong>Includes</strong>'
@@ -1472,7 +1644,7 @@ cards: [
 
 ---
 
-### Section 5 — Event Details (`$event['event_details']`)
+### Section 6 — Event Details (`$event['event_details']`)
 
 ```
 heading: 'Why Chicagoland Groups Book a Party Bus for the Crosstown Classic'
@@ -1513,7 +1685,7 @@ ctaBody:    'Both venues covered. All of Chicagoland. Flat-rate pricing. Get a f
 
 ---
 
-### Section 6 — Process Steps (`$event['process_steps']`)
+### Section 7 — Process Steps (`$event['process_steps']`)
 
 ```
 heading:     'Six Things That Happen'
@@ -1562,7 +1734,7 @@ steps: [
 
 ---
 
-### Section 7 — Service Fulfillment (`$event['service_fulfillment']`)
+### Section 8 — Service Fulfillment (`$event['service_fulfillment']`)
 
 ```
 heading:     'What We Cover for the'

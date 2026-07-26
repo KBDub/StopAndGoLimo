@@ -39,7 +39,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. makes Bears game day easy for groups throughout Chicagoland. We pick up your crew from the southwest, west, north, and northwest suburbs and take everyone straight to Soldier Field and back. No parking fees. No postgame traffic. Our party buses feature premium sound, LED lighting, and comfortable seating for 20 to 40-plus passengers. Professional, background-checked chauffeurs handle all logistics. Flat-rate, all-inclusive pricing with a clear quote before you book. Bears game day buses fill fast. Book early."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/heroes/hero-chicago-bears-party-bus.jpg"
+        image="/images/special-events/bears/stopngolimo-chicago-bears-logo.jpg"
         imagePosition="center center"
     />
 

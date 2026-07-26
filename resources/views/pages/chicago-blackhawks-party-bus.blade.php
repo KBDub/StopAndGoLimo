@@ -39,7 +39,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. takes your group to Chicago Blackhawks games at the United Center from communities throughout Chicagoland. No parking, no driving, no splitting the group. Our party buses seat 20 to 40-plus passengers with premium sound and LED lighting. Professional, background-checked chauffeurs handle pickup, drop-off, and the postgame return, all included in your flat-rate price. Company outings, birthday groups, and lifelong fans all welcome. Book your Blackhawks party bus early."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/heroes/hero-chicago-blackhawks-party-bus.jpg"
+        image="/images/special-events/blackhawks/stopngolimo-chicago-blackhawks-logo.jpg"
         imagePosition="center center"
     />
 

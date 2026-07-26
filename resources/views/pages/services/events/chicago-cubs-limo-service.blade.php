@@ -157,6 +157,30 @@ $fulfillmentItems = [
         imageAlt="A group of Cubs fans at Wrigley Field on game day, Chicago, Illinois"
     />
 
+    <x-sections.free-instant-quote
+        heading="Book Your"
+        headingBold="Cubs Game Day"
+        headingTail="Ride"
+        rightVariant="description"
+        :descImageTop="true"
+        descImage="/images/special-events/cubs/stopngolimo-chicacgo-cubs-ariel.jpg"
+        descImageAlt="Aerial view of Wrigley Field and the Wrigleyville neighborhood, Chicago, Illinois"
+        descHeading="Why Choose Us?"
+        descSubheading="Cubs Game Day Transportation"
+        descBody="Stop & Go Airport Shuttle Service, Inc. is a licensed, insured Chicagoland carrier with more than two decades of experience getting groups to Wrigley Field safely and on time:"
+        :descBullets="[
+            'Flat-rate pricing locked at booking, no surge fees',
+            'Wrigleyville drop-off and post-game pickup staging included',
+            'Multi-address pickup from any Chicagoland suburb',
+            'All vehicles cleaned, inspected, and climate-set before pickup',
+            'Licensed, background-checked chauffeurs available 24/7',
+        ]"
+        descClosing="Serving all of Chicagoland, our professional chauffeurs are ready to get your group to Clark and Addison and back, no matter where you are starting from."
+        formAction="/get-a-quote"
+        submitLabel="Send Message"
+        defaultService="Chicago Cubs Game Day Limo"
+    />
+
     <x-sections.event-features
         heading="The Wrigleyville Experience,"
         headingBold="Start to Finish"

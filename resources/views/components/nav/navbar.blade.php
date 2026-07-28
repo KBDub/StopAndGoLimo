@@ -11,7 +11,7 @@
 
         {{-- Col 1: Logo — stays full-size through md, steps down only on xs --}}
         <a href="/" class="nav-logo">
-            <img src="/images/logos/stop-and-go-inverted-logo-large.svg"
+            <img src="/images/logos/stop-and-go-limo-logo.svg"
                  alt="Stop &amp; Go Airport Shuttle Service, Inc."
                  class="nav-logo-img">
         </a>

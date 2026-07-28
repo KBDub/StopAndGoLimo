@@ -1906,3 +1906,183 @@ LSI/semantic terms to weave into body copy naturally:
 - [ ] No em dashes anywhere in copy or data files
 - [ ] Full company name "Stop & Go Airport Shuttle Service, Inc." used in body copy
 - [ ] H1 appears only in the hero. No heading levels skipped anywhere on the page
+
+---
+
+## Concert Venue Service Pages
+
+### Overview
+
+Concert venue full service pages live at `/services/events/concerts/{slug}`. They follow the same 15-section pattern as the baseball pages (Cubs, White Sox, Crosstown Classic) at `/services/events/{slug}`, with no structural changes to any component.
+
+**Directory:** `resources/views/pages/services/events/concerts/`
+**Route group:** nested `prefix('concerts')->name('concerts.')` inside the existing `prefix('services/events')` group in `routes/main-site.php`
+**Images:** `public/images/special-events/concerts/`
+**FAQ presets:** `config/faqs.php` (keys listed per page below)
+
+### Page Template Pattern
+
+All eight concert pages follow the Cubs page (`chicago-cubs-limo-service.blade.php`) exactly. No `app/Data/EventContent.php` data class is used; all content lives in inline `@php` blocks at the top of each blade file. Section order:
+
+1. `x-sections.category-hero`
+2. `x-sections.info-strip`
+3. `x-sections.travel-in-style-cta`
+4. `x-sections.free-instant-quote`
+5. `x-sections.event-features`
+6. `x-sections.event-details`
+7. `x-sections.limo-process-steps`
+8. `x-sections.limo-booking-timeline`
+9. `x-sections.review-slider`
+10. `x-sections.faq`
+11. `x-sections.share-your-experience`
+12. `x-sections.standard-features`
+13. `x-sections.map-contact-section`
+14. `x-ui.banner-thin-cloud`
+15. `x-sections.base-footer`
+
+Every `<section>` renders with `id="component-name"` and `scroll-margin-top: 80px` via the component defaults.
+
+### PHP Variables Per Page
+
+Each blade file defines these variables in the `@php` block:
+
+| Variable | Used by | Notes |
+|---|---|---|
+| `$heroDescription` | `category-hero :description` | ~80–100 words, venue-specific |
+| `$eventFeaturesLeftParagraphs` | `event-features :leftParagraphs` | 3 paragraphs: venue history, neighborhood, logistics |
+| `$eventFeaturesRightItems` | `event-features :rightItems` | 6 `[service, description]` items; first item is venue-specific, remainder are generic Stop & Go cross-sell |
+| `$standardFeatureCards` | `standard-features :cards` | 6 `[feature, benefit, why]` cards; first card is venue-specific (e.g. cargo space for Ravinia picnic gear) |
+| `$detailsChecklist` | `event-details :checklist` | 4 `[feature, detail]` items |
+| `$detailsParagraphs` | `event-details :rightParagraphs` | 3 paragraphs: logistics rationale, typical evening, service area |
+| `$processSteps` | `limo-process-steps :steps` | 6 `[num, title, detail, body]` items |
+| `$fulfillmentItems` | `limo-booking-timeline :items` | 6 `[occasion, timing, urgency, detail, note]` items |
+
+### Venue Pages
+
+#### 1. Ravinia Festival
+- **URL:** `/services/events/concerts/ravinia-festival-limo-service`
+- **Route name:** `events.concerts.ravinia`
+- **Blade:** `resources/views/pages/services/events/concerts/ravinia-festival-limo-service.blade.php`
+- **FAQ preset:** `ravinia-concert`
+- **Hero image:** `/images/special-events/concerts/ravinia-concert-lawn.jpg`
+- **CTA section image:** `/images/special-events/concerts/ravinia-festival-cta.jpg`
+- **FIQ image:** `/images/special-events/concerts/ravinia-festival-fiq.jpg`
+- **Key logistics angle:** Edens Expressway routing, Highland Park staging, picnic gear cargo, North Shore dining pre-show
+- **First `rightItems` item:** CSO Season Subscriber Packages
+- **First `standardFeatureCards` item:** Cargo Space for Picnic Gear
+
+#### 2. Credit Union 1 Amphitheatre (Tinley Park)
+- **URL:** `/services/events/concerts/tinley-park-amphitheatre-limo-service`
+- **Route name:** `events.concerts.tinley-park`
+- **Blade:** `resources/views/pages/services/events/concerts/tinley-park-amphitheatre-limo-service.blade.php`
+- **FAQ preset:** `tinley-park-concert`
+- **Hero image:** `/images/special-events/concerts/tinley-park-concert-crowd.jpg`
+- **CTA section image:** `/images/special-events/concerts/tinley-park-concert-crowd.jpg` (reuse)
+- **Key logistics angle:** I-57 post-show gridlock, southwest suburb pickup, lot congestion
+
+#### 3. United Center
+- **URL:** `/services/events/concerts/united-center-concert-limo-service`
+- **Route name:** `events.concerts.united-center`
+- **Blade:** `resources/views/pages/services/events/concerts/united-center-concert-limo-service.blade.php`
+- **FAQ preset:** `united-center-concert`
+- **Hero image:** `/images/special-events/concerts/united-center-concert-crowd.jpg`
+- **Key logistics angle:** Eisenhower/I-290 routing, Near West Side staging, West Loop dinner stop integration
+- **First `rightItems` item:** Bulls and Blackhawks Season Packages
+
+#### 4. Soldier Field
+- **URL:** `/services/events/concerts/soldier-field-concert-limo-service`
+- **Route name:** `events.concerts.soldier-field`
+- **Blade:** `resources/views/pages/services/events/concerts/soldier-field-concert-limo-service.blade.php`
+- **FAQ preset:** `soldier-field-concert`
+- **Hero image:** `/images/special-events/concerts/soldier-field-concert.jpg`
+- **CTA section image:** `/images/special-events/concerts/soldier-field-cta.jpg`
+- **Key logistics angle:** Lake Shore Drive timing, Museum Campus staging, 60,000-person exit management
+- **First `rightItems` item:** Stadium Concert Tour Packages (Bears season also)
+
+#### 5. House of Blues Chicago
+- **URL:** `/services/events/concerts/house-of-blues-chicago-limo-service`
+- **Route name:** `events.concerts.house-of-blues`
+- **Blade:** `resources/views/pages/services/events/concerts/house-of-blues-chicago-limo-service.blade.php`
+- **FAQ preset:** `house-of-blues-concert`
+- **Hero image:** `/images/special-events/concerts/house-of-blues-concert-crowd.jpg`
+- **CTA section image:** `/images/special-events/concerts/house-of-blues-cta.jpg`
+- **Key logistics angle:** River North/Marina City drop-off, downtown parking cost, Gospel Brunch seating-window coordination
+- **First `rightItems` item:** Sunday Gospel Brunch Group Bookings
+
+#### 6. Aragon Ballroom
+- **URL:** `/services/events/concerts/aragon-ballroom-chicago-limo-service`
+- **Route name:** `events.concerts.aragon-ballroom`
+- **Blade:** `resources/views/pages/services/events/concerts/aragon-ballroom-chicago-limo-service.blade.php`
+- **FAQ preset:** `aragon-ballroom-concert`
+- **Hero image:** `/images/special-events/concerts/aragon-ballroom-concert-crowd.jpg`
+- **CTA section image:** `/images/special-events/concerts/aragon-ballroom-cta.jpg`
+- **Key logistics angle:** Uptown residential staging, 5,000-person Lawrence Ave post-show crowd, Green Mill pre-show stop
+- **First `rightItems` item:** Uptown Historic Neighborhood Nights
+
+#### 7. Wrigley Field Concerts
+- **URL:** `/services/events/concerts/wrigley-field-concert-limo-service`
+- **Route name:** `events.concerts.wrigley-concert`
+- **Blade:** `resources/views/pages/services/events/concerts/wrigley-field-concert-limo-service.blade.php`
+- **FAQ preset:** `wrigley-field-concert`
+- **Hero image:** `/images/special-events/concerts/wrigley-field-concert.jpg`
+- **CTA section image:** `/images/special-events/concerts/wrigley-concert-cta.jpg`
+- **Key logistics angle:** Concert-specific staging differs from game-day; limited annual calendar; Gallagher Way pre-show; no dedicated parking
+- **First `rightItems` item:** Wrigley Field Concert Season Packages (includes Cubs game day cross-sell)
+- **Note:** This page is distinct from `chicago-cubs-limo-service.blade.php` — it targets concert-night search intent, not game day
+
+#### 8. Chicago Concert Night Out (hub)
+- **URL:** `/services/events/concerts/chicago-concert-night-out`
+- **Route name:** `events.concerts.night-out`
+- **Blade:** `resources/views/pages/services/events/concerts/chicago-concert-night-out.blade.php`
+- **FAQ preset:** `chicago-night-out`
+- **Hero image:** `/images/special-events/concerts/chicago-night-out.jpg`
+- **Key logistics angle:** Multi-venue hub page; any Chicago concert, any neighborhood; multi-stop itinerary flat-rate; no single venue dependency
+- **First `rightItems` item:** Any Chicago Concert Venue (generic Chicagoland concert catchall)
+
+### SEO Keyword Targets — Concert Pages
+
+**Primary targets (per page):**
+- `{venue name} limo service`
+- `{venue name} party bus`
+- `{venue name} transportation Chicago`
+- `{venue name} concert transportation Chicagoland`
+
+**Secondary targets (H3, body, FAQ):**
+- party bus to {venue}
+- limo service for {venue} concert
+- {venue} chauffeured ride
+- {suburb} to {venue} transportation
+
+**LSI/semantic terms to weave in naturally (all pages):**
+- chauffeur, flat-rate pricing, no surge pricing, door-to-door service, licensed and insured, group transportation, post-show pickup, Chicagoland, professional chauffeur
+
+### Copy Rules (Concert Pages)
+
+All standard event-page copy rules apply. Concert-specific additions:
+
+| Rule | Detail |
+|---|---|
+| Em dash ban | No em dashes anywhere. Use comma, period, or rephrase. |
+| Full company name | "Stop & Go Airport Shuttle Service, Inc." in all body copy. "Stop & Go" and "Stop & Go Limo" for nav/logo/social only. |
+| No taxi/Uber/Lyft/cheap/budget | Never mention these in copy. |
+| No hard vehicle capacity | Never state a maximum passenger count. Say "13 or more" when group size comes up. |
+| Chicagoland service area | Must name north (Waukegan, Arlington Heights, Palatine), northwest (Schaumburg, Elk Grove Village, Crystal Lake), west (Elgin, Aurora, Downers Grove), south/southwest (Orland Park, Tinley Park, New Lenox, Joliet), and the city of Chicago. |
+| FIQ `descSubheading` | Must follow "We Have the Best [Event/Venue] Transportation" pattern exactly. |
+| `info-strip` body | Minimum 2–3 full sentences. |
+| Venue-specific logistics | Each page must address the specific parking, routing, and post-show exit challenge unique to that venue. Generic copy that could apply to any venue is not acceptable. |
+
+### Checklist for Each Concert Service Page
+
+- [x] Blade file created at `resources/views/pages/services/events/concerts/{slug}.blade.php`
+- [x] Route added to `routes/main-site.php` under `events.concerts.*`
+- [x] Hero image present in `public/images/special-events/concerts/`
+- [x] CTA section image present (or reuses hero image where noted above)
+- [x] FAQ preset key exists in `config/faqs.php`
+- [x] All four JSON-LD structured data blocks present and populated
+- [x] All section `id` attributes present with `scroll-margin-top: 80px`
+- [x] Copy passes all rules in the Copy Rules table above
+- [x] FIQ `descSubheading` uses "We Have the Best [X] Transportation" pattern
+- [x] `info-strip` body is 2–3 full sentences minimum
+- [x] No em dashes anywhere in copy
+- [x] Full company name used in body copy
+- [x] Service area names all of Chicagoland (north, northwest, west, south/southwest, city)

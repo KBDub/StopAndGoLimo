@@ -93,6 +93,17 @@ Route::prefix('services/events')->name('events.')->group(function () {
     Route::get('/chicago-cubs-limo-service',        fn () => view('pages.services.events.chicago-cubs-limo-service'))->name('chicago-cubs');
     Route::get('/chicago-white-sox-limo-service',   fn () => view('pages.services.events.chicago-white-sox-limo-service'))->name('chicago-white-sox');
     Route::get('/chicago-crosstown-classic',        fn () => view('pages.services.events.chicago-crosstown-classic'))->name('chicago-crosstown-classic');
+
+    Route::prefix('concerts')->name('concerts.')->group(function () {
+        Route::get('/ravinia-festival-limo-service',          fn () => view('pages.services.events.concerts.ravinia-festival-limo-service'))->name('ravinia');
+        Route::get('/tinley-park-amphitheatre-limo-service',  fn () => view('pages.services.events.concerts.tinley-park-amphitheatre-limo-service'))->name('tinley-park');
+        Route::get('/united-center-concert-limo-service',     fn () => view('pages.services.events.concerts.united-center-concert-limo-service'))->name('united-center');
+        Route::get('/soldier-field-concert-limo-service',     fn () => view('pages.services.events.concerts.soldier-field-concert-limo-service'))->name('soldier-field');
+        Route::get('/house-of-blues-chicago-limo-service',    fn () => view('pages.services.events.concerts.house-of-blues-chicago-limo-service'))->name('house-of-blues');
+        Route::get('/aragon-ballroom-chicago-limo-service',   fn () => view('pages.services.events.concerts.aragon-ballroom-chicago-limo-service'))->name('aragon-ballroom');
+        Route::get('/wrigley-field-concert-limo-service',     fn () => view('pages.services.events.concerts.wrigley-field-concert-limo-service'))->name('wrigley-concert');
+        Route::get('/chicago-concert-night-out',              fn () => view('pages.services.events.concerts.chicago-concert-night-out'))->name('night-out');
+    });
 });
 
 Route::get('/six-flags-party-bus',              fn () => view('pages.six-flags-party-bus'))->name('six-flags-party-bus');

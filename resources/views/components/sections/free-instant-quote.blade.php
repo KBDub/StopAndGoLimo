@@ -373,7 +373,7 @@
                         <h3 class="font-head" style="font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 600; {{ $descHead }} line-height: 1.3;">
                             {{ $descHeading }}
                         </h3>
-                        <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                        <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                     </div>
 
                     {{-- Subheading --}}

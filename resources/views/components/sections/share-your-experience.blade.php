@@ -36,7 +36,7 @@
             <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
                 Share <strong style="font-weight: 700;">Your Experience</strong> With Us
             </h2>
-            <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
+            <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-left: -8%; margin-top: 0.85rem;"></div>
         </div>
 
         {{-- Body copy --}}

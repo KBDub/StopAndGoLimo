@@ -17,7 +17,7 @@
                         {{ $heading }}<br>
                         <strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-left: -8%; margin-top: 0.85rem;"></div>
                 </div>
 
                 @if($body)
@@ -36,7 +36,7 @@
                         Proud Chamber of<br>
                         <strong style="font-weight: 700; color: var(--champagne);">Commerce Member</strong>
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-left: -8%; margin-top: 0.85rem;"></div>
                 </div>
 
                 {{-- Three community icons, evenly spaced --}}

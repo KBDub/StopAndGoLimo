@@ -47,7 +47,7 @@
                         <h2 class="font-head" style="font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.2; letter-spacing: 0.25px; {{ $headingColor }}">
                             @if($headingPrefix)<span>{{ $headingPrefix }} </span>@endif<strong style="font-weight: 700; {{ $boldColor }}">{{ $headingBold }}</strong>
                         </h2>
-                        <div style="height: 3px; {{ $ruleColor }} width: 116%; margin-top: 0.85rem;"></div>
+                        <div style="height: 3px; {{ $ruleColor }} width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                     </div>
                 @endif
 

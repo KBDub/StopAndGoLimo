@@ -66,7 +66,7 @@
                 display: block;
                 letter-spacing: 0.02em;
             ">{{ $label }}</span>
-            <div style="height: 2px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 0.5rem;"></div>
+            <div style="height: 2px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-left: -8%; margin-top: 0.5rem;"></div>
         </div>
     </div>
 </a>

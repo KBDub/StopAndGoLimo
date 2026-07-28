@@ -42,7 +42,7 @@ $extTotal     = count($extended);    // 14
             <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; {{ $headingColor }} line-height: 1.2; letter-spacing: var(--letter-spacing-h2); text-align: center;">
                 What Our <strong style="font-weight: 700; color: var(--champagne);">Clients Say</strong>
             </h2>
-            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem; margin-left: -8%;"></div>
+            <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem; margin-left: -8%;"></div>
         </div>
 
         {{-- Slider --}}

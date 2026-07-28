@@ -76,7 +76,7 @@
                     Why Cubs Fans Choose
                     <strong style="font-weight: 700; color: var(--champagne);">Stop &amp; Go</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body"
                style="color: var(--slate); font-size: 1rem; line-height: 1.75; text-align: center; max-width: 640px; margin: 0 auto 2.75rem;">
@@ -127,7 +127,7 @@
                     Ready to Book Your
                     <strong style="font-weight: 700; color: var(--champagne);">Cubs Game Day Ride?</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body"
                style="color: var(--cloud); font-size: 1rem; line-height: 1.75; margin-bottom: 2rem;">
@@ -159,7 +159,7 @@
                     Popular
                     <strong style="font-weight: 700; color: var(--champagne);">Service Packages</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body"
                style="color: var(--slate); font-size: 1rem; line-height: 1.75; margin-bottom: 2.75rem; max-width: 700px;">

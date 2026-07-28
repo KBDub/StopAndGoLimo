@@ -30,7 +30,7 @@
                 <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; line-height: 1.2; letter-spacing: var(--letter-spacing-h2); {{ $headingColor }}">
                     @if($heading)<span>{{ $heading }} </span>@endif<strong style="font-weight: 700; {{ $boldColor }}">{{ $headingBold }}</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-left: -8%; margin-top: 1rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-left: -8%; margin-top: 1rem;"></div>
                 @if($subheading)
                     <p class="font-body mt-4" style="font-size: 1.0625rem; {{ $subColor }}">{{ $subheading }}</p>
                 @endif

@@ -6,7 +6,7 @@
             <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--navy); line-height: 1.2; letter-spacing: var(--letter-spacing-h2); text-align: center;">
                 Our <strong style="font-weight: 700; color: var(--champagne);">Rates</strong>
             </h2>
-            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+            <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
         </div>
 
         <p class="font-body" style="text-align: center; font-size: 0.85rem; color: var(--slate); margin: 1.5rem 0 3rem;">

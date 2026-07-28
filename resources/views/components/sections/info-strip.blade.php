@@ -22,7 +22,7 @@
             <h2 class="font-head" style="font-size: var(--font-size-h2); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: var(--letter-spacing-h2);">
                 @if($headingPrefix){{ $headingPrefix }} @endif<strong style="font-weight: 700; color: var(--champagne);">{{ $headingBold }}</strong>@if($heading) {{ $heading }}@endif
             </h2>
-            <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+            <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
         </div>
 
         {{-- Body --}}

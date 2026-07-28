@@ -144,7 +144,7 @@
                 <h2 class="font-head" style="font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; color: var(--cloud-light); line-height: 1.15; letter-spacing: 0.3px;">
                     Our <strong style="font-weight: 700; color: var(--champagne);">Fleet</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body" style="font-size: 1.125rem; color: var(--cloud); line-height: 1.7; max-width: 62ch; margin-bottom: 2rem;">
                 Every vehicle in our fleet is maintained to the highest standard. From executive sedans and full-size SUVs to Mercedes Sprinter vans, stretch limousines, and party buses, we have the right ride for every occasion. Serving greater Chicagoland with a fleet built for luxury, comfort, and professionalism.
@@ -205,7 +205,7 @@
                 <h2 class="font-head" style="font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; color: var(--cloud-light); line-height: 1.15; letter-spacing: 0.3px;">
                     Wedding <strong style="font-weight: 700; color: var(--champagne);">Transportation</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body" style="font-size: 1.125rem; color: var(--cloud); line-height: 1.7; max-width: 62ch; margin-bottom: 2rem;">
                 Your wedding day deserves a ride that matches the moment. We handle airport pickup for out-of-town guests, transportation for the wedding party, and a grand exit for the newlyweds. From the rehearsal dinner to the day after, we are with you every step of the way.
@@ -260,7 +260,7 @@
                 <h2 class="font-head" style="font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; color: var(--cloud-light); line-height: 1.15; letter-spacing: 0.3px;">
                     Professional <strong style="font-weight: 700; color: var(--champagne);">Chauffeur Service</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body" style="font-size: 1.125rem; color: var(--cloud); line-height: 1.7; max-width: 62ch; margin-bottom: 2rem;">
                 On time, every time. Our uniformed chauffeurs are trained professionals who take pride in safe, private, and discreet service. Whether you need a private airport transfer, a corporate car for an executive, or a town car for a special evening, we deliver a flawless experience from the moment you book.
@@ -304,7 +304,7 @@
                 <h2 class="font-head" style="font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; color: var(--cloud-light); line-height: 1.15; letter-spacing: 0.3px;">
                     Our <strong style="font-weight: 700; color: var(--champagne);">Clients</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body" style="font-size: 1.125rem; color: var(--cloud); line-height: 1.7; max-width: 62ch; margin-bottom: 2rem;">
                 From prom nights and quinceañeras to anniversary parties and corporate events, our clients come from all walks of life across Chicagoland. Their smiles say it all. We are proud to be part of so many special moments.
@@ -327,7 +327,7 @@
                 <h2 class="font-head" style="font-size: clamp(2rem, 5vw, 3.25rem); font-weight: 400; color: var(--cloud-light); line-height: 1.15; letter-spacing: 0.3px;">
                     Our <strong style="font-weight: 700; color: var(--champagne);">Story</strong>
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
             <p class="font-body" style="font-size: 1.125rem; color: var(--cloud); line-height: 1.7; max-width: 62ch; margin-bottom: 2rem;">
                 Stop & Go Airport Shuttle Service, Inc. was founded on a simple idea: everyone deserves a comfortable, reliable, and professional ride. Based in New Lenox, Illinois, we have grown into a trusted transportation partner for families, businesses, and event planners across the Chicago metropolitan area. We are proud members of the New Lenox and Bolingbrook Chambers of Commerce.

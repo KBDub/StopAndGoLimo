@@ -40,7 +40,7 @@ $resolvedCards = count($cards) ? $cards : [
                 <h2 style="font-family: var(--font-head); font-size: var(--font-size-h2); color: var(--navy); letter-spacing: var(--letter-spacing-h2); line-height: 1.2; font-weight: 700;">
                     {!! $heading !!}
                 </h2>
-                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
             </div>
         </div>
         <p style="font-family: var(--font-body); font-size: 1.25rem; color: var(--slate); line-height: 1.5; text-align: center;" class="max-w-2xl mx-auto mb-12">

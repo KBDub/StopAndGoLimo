@@ -1010,7 +1010,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">11 — Section</strong> Template
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1047,7 +1047,7 @@
                                 <p class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                                     <strong style="font-weight: 700; color: var(--champagne);">Section</strong> Heading
                                 </p>
-                                <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                             </div>
                             <div style="width: 100%; max-width: 80rem; margin: 0 auto;">
                                 <p class="font-body text-left" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5;">
@@ -1072,7 +1072,7 @@
             &lt;h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;"&gt;
                 &lt;strong style="font-weight: 700; color: var(--champagne);"&gt;Bold Part&lt;/strong&gt; Regular Part
             &lt;/h2&gt;
-            &lt;div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"&gt;&lt;/div&gt;
+            &lt;div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"&gt;&lt;/div&gt;
         &lt;/div&gt;
 
         {{-- Layer 3: inner content div --}}
@@ -1098,7 +1098,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">12 — x-ui.</strong>service-thin-rect-card
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1211,7 +1211,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">13 — x-ui.</strong>rect-box
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1286,7 +1286,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">14 — x-ui.</strong>service-card
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1371,7 +1371,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">15 — x-ui.</strong>key-offer-item
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1463,7 +1463,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">16 — x-ui.</strong>dropdown
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1594,7 +1594,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">17 — x-ui.</strong>accordion
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1695,7 +1695,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">18 —</strong> Spacing
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <p class="font-body mb-10" style="font-size: 1.25rem; font-weight: 400; color: var(--cloud-light); line-height: 1.5; max-width: 56rem;">
@@ -1798,7 +1798,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">19 — x-ui.</strong>chip
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1904,7 +1904,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">20 — x-ui.</strong>faq
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">
@@ -1987,7 +1987,7 @@
                     <h2 class="font-head" style="font-size: clamp(1.75rem, 5vw, 3rem); font-weight: 400; color: var(--cloud-light); line-height: 1.2; letter-spacing: 0.5px;">
                         <strong style="font-weight: 700; color: var(--champagne);">21 &mdash; x-ui.</strong>modal
                     </h2>
-                    <div style="height: 3px; background: var(--champagne); width: 116%; margin-top: 0.85rem;"></div>
+                    <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
                 </div>
 
                 <div class="w-full max-w-7xl mx-auto">

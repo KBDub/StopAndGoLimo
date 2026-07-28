@@ -6,10 +6,10 @@
     class="bg-champagne text-navy font-semibold transition-all duration-300 py-0.5 text-xs"
     x-bind:class="scrolled ? 'py-0 text-xs' : 'py-0.5 text-xs'"
 >
-    <div class="max-w-7xl mx-auto px-4 flex items-center gap-4">
+    <div class="max-w-7xl mx-auto px-4 flex items-center gap-4 min-w-0">
 
         {{-- LEFT: Phone + social icons --}}
-        <div class="flex-1 flex items-center gap-3 whitespace-nowrap">
+        <div class="flex-1 min-w-0 flex items-center gap-3 whitespace-nowrap overflow-hidden">
 
             {{-- Primary phone --}}
             <div class="flex items-center gap-1.5 shrink-0">
@@ -46,7 +46,7 @@
             Travel In Style &nbsp;&middot;&nbsp; Serving All of Chicagoland &nbsp;&middot;&nbsp; Available 24/7
         </span>
         {{-- RIGHT: Book Now — opens Free Instant Quote modal --}}
-        <div class="flex-1 flex items-center justify-end whitespace-nowrap">
+        <div class="flex-1 min-w-0 flex items-center justify-end whitespace-nowrap overflow-hidden">
             <button
                 type="button"
                 onclick="window.dispatchEvent(new CustomEvent('open-modal-quote'))"

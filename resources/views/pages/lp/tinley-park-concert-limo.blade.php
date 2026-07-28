@@ -1,0 +1,189 @@
+<x-layouts.lp
+    title="Limo & Party Bus to Credit Union 1 Amphitheatre | Tinley Park Concert Transportation"
+    metaDescription="Skip the infamous post-show parking lot at Credit Union 1 Amphitheatre. Stop & Go Airport Shuttle Service, Inc. gets your group to and from Tinley Park in a luxury party bus or limo. Flat-rate pricing. Book today."
+    ogImage="/images/special-events/concerts/tinley-park-concert-crowd.jpg"
+    ogImageAlt="Concert crowd at Credit Union 1 Amphitheatre in Tinley Park, served by Stop & Go Airport Shuttle Service, Inc."
+>
+
+    {{-- ─── Hero ─────────────────────────────────────────────────────────────── --}}
+    <section id="lp-hero"
+             style="position: relative; min-height: 82vh; display: flex; align-items: center; justify-content: center;
+                    background-image: url('/images/special-events/concerts/tinley-park-concert-crowd.jpg');
+                    background-size: cover; background-position: center center; scroll-margin-top: 80px;">
+        <div style="position: absolute; inset: 0; background: rgba(21, 21, 44, 0.78);"></div>
+        <div style="position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 4rem 1.5rem; text-align: center;">
+            <h1 class="font-head"
+                style="font-size: clamp(2.2rem, 6vw, 3.75rem); font-weight: 400; color: var(--white); line-height: 1.15; margin-bottom: 1.25rem;">
+                Luxury Transportation to Credit Union 1 Amphitheatre
+                <strong style="display: block; color: var(--champagne); font-weight: 700;">
+                    Skip the Infamous Post-Show Traffic
+                </strong>
+            </h1>
+            <p class="font-body"
+               style="font-size: clamp(1rem, 2.5vw, 1.2rem); color: var(--cloud); line-height: 1.7; margin-bottom: 2.25rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                We bring your group to one of Chicagoland's biggest stages and get you home while self-driven concertgoers are still sitting in the lot. Party buses, limos, and sprinter vans from anywhere in the region.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button onclick="window.dispatchEvent(new Event('open-modal-quote'))"
+                        class="font-head"
+                        style="background: var(--champagne); color: var(--navy); border: none;
+                               padding: 1rem 2.25rem; font-size: 1.05rem; font-weight: 700; cursor: pointer; line-height: 1.4;">
+                    Get Free Quote Online
+                </button>
+                <a href="tel:+17083154445"
+                   class="font-head"
+                   style="background: transparent; color: var(--champagne); border: 2px solid var(--champagne);
+                          padding: 1rem 2.25rem; font-size: 1.05rem; font-weight: 700; text-decoration: none; display: inline-block; line-height: 1.4;">
+                    Call (708) 315-4445 Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {{-- ─── Trust Badges ──────────────────────────────────────────────────────── --}}
+    <section id="lp-trust"
+             style="background: var(--champagne); padding: 1.15rem 1.5rem; scroll-margin-top: 80px;">
+        <div style="max-width: 1100px; margin: 0 auto;
+                    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 0.75rem 1.5rem; text-align: center;">
+            <p class="font-head" style="color: var(--navy); font-weight: 700; font-size: 0.9rem; margin: 0; line-height: 1.5;">Top Rated Service</p>
+            <p class="font-head" style="color: var(--navy); font-weight: 700; font-size: 0.9rem; margin: 0; line-height: 1.5;">IDOT Certified Fleet</p>
+            <p class="font-head" style="color: var(--navy); font-weight: 700; font-size: 0.9rem; margin: 0; line-height: 1.5;">Background-Checked Chauffeurs</p>
+            <p class="font-head" style="color: var(--navy); font-weight: 700; font-size: 0.9rem; margin: 0; line-height: 1.5;">Serving Chicagoland Since 2009</p>
+        </div>
+    </section>
+
+    {{-- ─── Value Proposition Grid ────────────────────────────────────────────── --}}
+    <section id="lp-value-props"
+             style="background: var(--white); padding: 4.5rem 1.5rem; scroll-margin-top: 80px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="width: fit-content; margin: 0 auto 1.5rem;">
+                <h2 class="font-head"
+                    style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 400; color: var(--navy); text-align: center; line-height: 1.25;">
+                    Why Chicagoland Books
+                    <strong style="font-weight: 700; color: var(--champagne);">Stop &amp; Go for Tinley Park</strong>
+                </h2>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
+            </div>
+            <p class="font-body"
+               style="color: var(--slate); font-size: 1rem; line-height: 1.75; text-align: center; max-width: 640px; margin: 0 auto 2.75rem;">
+                From your driveway to the amphitheatre gates and back home before the lot clears, here is what every Tinley Park booking includes.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div style="border-left: 4px solid var(--champagne); background: var(--navy); padding: 2rem 1.5rem;">
+                    <h3 class="font-head" style="color: var(--champagne); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.35;">Skip the Infamous Lot Traffic</h3>
+                    <p class="font-body" style="color: var(--cloud); font-size: 0.95rem; line-height: 1.7; margin: 0;">Credit Union 1 Amphitheatre is legendary for post-show parking lot gridlock. Our chauffeurs use designated staging areas and exit routes that get your group moving while self-driven concertgoers can sit still for over an hour. This is the single biggest reason people book us for Tinley Park.</p>
+                </div>
+                <div style="border-left: 4px solid var(--champagne); background: var(--navy); padding: 2rem 1.5rem;">
+                    <h3 class="font-head" style="color: var(--champagne); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.35;">The Party Starts on the Bus</h3>
+                    <p class="font-body" style="color: var(--cloud); font-size: 0.95rem; line-height: 1.7; margin: 0;">Built-in sound systems, LED lighting, and premium seating mean your celebration begins the moment everyone boards. For bachelor parties, bachelorette weekends, and large friend groups, a party bus to Tinley Park turns the drive into part of the event, not a prelude to it.</p>
+                </div>
+                <div style="border-left: 4px solid var(--champagne); background: var(--navy); padding: 2rem 1.5rem;">
+                    <h3 class="font-head" style="color: var(--champagne); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.35;">Flat Rates, No Surprises</h3>
+                    <p class="font-body" style="color: var(--cloud); font-size: 0.95rem; line-height: 1.7; margin: 0;">Your rate is locked at booking, regardless of how long the encore runs or how long it takes to exit the lot. No surge pricing. No meter running. One flat rate covers the full round trip, including any dinner stop you build into the evening.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- ─── Mid-Page CTA ───────────────────────────────────────────────────────── --}}
+    <section id="lp-cta-mid"
+             style="background: var(--navy); padding: 4rem 1.5rem; text-align: center; scroll-margin-top: 80px;">
+        <div style="max-width: 720px; margin: 0 auto;">
+            <div style="width: fit-content; margin: 0 auto 1.5rem;">
+                <h2 class="font-head"
+                    style="font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 400; color: var(--white); line-height: 1.25;">
+                    Ready to Book Your
+                    <strong style="font-weight: 700; color: var(--champagne);">Tinley Park Concert Ride?</strong>
+                </h2>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
+            </div>
+            <p class="font-body" style="color: var(--cloud); font-size: 1rem; line-height: 1.75; margin-bottom: 2rem;">
+                Call us now or fill out our short online form. We confirm your pickup, your headcount, and your flat rate within the hour.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+17083154445" class="font-head"
+                   style="background: var(--champagne); color: var(--navy); padding: 0.95rem 2rem; font-weight: 700; font-size: 1rem; text-decoration: none; display: inline-block;">
+                    <i class="fa fa-phone" style="margin-right: 0.5rem;"></i>Call (708) 315-4445
+                </a>
+                <button onclick="window.dispatchEvent(new Event('open-modal-quote'))" class="font-head"
+                        style="background: transparent; color: var(--champagne); border: 2px solid var(--champagne);
+                               padding: 0.95rem 2rem; font-weight: 700; font-size: 1rem; cursor: pointer;">
+                    Get Free Quote Online
+                </button>
+            </div>
+        </div>
+    </section>
+
+    {{-- ─── High-Margin Service Modules ───────────────────────────────────────── --}}
+    <section id="lp-services"
+             style="background: var(--white); padding: 4.5rem 1.5rem; scroll-margin-top: 80px;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="width: fit-content; margin-bottom: 1.5rem;">
+                <h2 class="font-head"
+                    style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 400; color: var(--navy); line-height: 1.25;">
+                    Popular
+                    <strong style="font-weight: 700; color: var(--champagne);">Service Packages</strong>
+                </h2>
+                <div style="height: 3px; background: var(--champagne); width: 116%; max-width: calc(100vw - 3rem); margin-top: 0.85rem;"></div>
+            </div>
+            <p class="font-body" style="color: var(--slate); font-size: 1rem; line-height: 1.75; margin-bottom: 2.75rem; max-width: 700px;">
+                Concert rides are just the beginning. Stop &amp; Go Airport Shuttle Service, Inc. handles every occasion that calls for a professional chauffeur across Chicagoland.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem;">
+                <div style="border: 1px solid var(--cloud); border-top: 4px solid var(--champagne); padding: 2rem 1.5rem; display: flex; flex-direction: column;">
+                    <h3 class="font-head" style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.4;">Bachelor &amp; Bachelorette Concert Packages</h3>
+                    <p class="font-body" style="color: var(--slate); font-size: 0.95rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem;">We turn a Tinley Park concert into the centerpiece of an unforgettable group celebration. Party buses with built-in coolers and premium sound, plus dinner stops and multi-address pickup from anywhere in Chicagoland. Tell us your plan and we build the full evening around it.</p>
+                    <button onclick="window.dispatchEvent(new Event('open-modal-quote'))" class="font-head"
+                            style="background: var(--navy); color: var(--champagne); border: none; padding: 0.65rem 1.25rem; font-size: 0.875rem; font-weight: 700; cursor: pointer; align-self: flex-start;">
+                        Get a Quote
+                    </button>
+                </div>
+                <div style="border: 1px solid var(--cloud); border-top: 4px solid var(--champagne); padding: 2rem 1.5rem; display: flex; flex-direction: column;">
+                    <h3 class="font-head" style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.4;">Large-Scale Corporate Client Nights</h3>
+                    <p class="font-body" style="color: var(--slate); font-size: 0.95rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem;">A major touring act at Credit Union 1 Amphitheatre makes for a memorable client entertainment night. We handle the logistics for large company outings and executive groups, including multi-address coordination and professional chauffeurs who represent your brand well.</p>
+                    <button onclick="window.dispatchEvent(new Event('open-modal-quote'))" class="font-head"
+                            style="background: var(--navy); color: var(--champagne); border: none; padding: 0.65rem 1.25rem; font-size: 0.875rem; font-weight: 700; cursor: pointer; align-self: flex-start;">
+                        Get a Quote
+                    </button>
+                </div>
+                <div style="border: 1px solid var(--cloud); border-top: 4px solid var(--champagne); padding: 2rem 1.5rem; display: flex; flex-direction: column;">
+                    <h3 class="font-head" style="color: var(--navy); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.4;">Multi-Generational Family &amp; Group Outings</h3>
+                    <p class="font-body" style="color: var(--slate); font-size: 0.95rem; line-height: 1.7; flex: 1; margin-bottom: 1.25rem;">Family groups and longtime friends catching a legacy touring act benefit most from professional transportation to this venue. We keep everyone together for the full evening and handle every detail from the first pickup to the last drop-off, no matter how many stops are on the itinerary.</p>
+                    <button onclick="window.dispatchEvent(new Event('open-modal-quote'))" class="font-head"
+                            style="background: var(--navy); color: var(--champagne); border: none; padding: 0.65rem 1.25rem; font-size: 0.875rem; font-weight: 700; cursor: pointer; align-self: flex-start;">
+                        Get a Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <x-sections.review-slider />
+    <x-sections.faq preset="tinley-park-concert" />
+
+    <section id="lp-cta-bottom"
+             style="background: var(--champagne); padding: 3rem 1.5rem; text-align: center; scroll-margin-top: 80px;">
+        <div style="max-width: 700px; margin: 0 auto;">
+            <h2 class="font-head"
+                style="font-size: clamp(1.5rem, 3.5vw, 2.25rem); font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; line-height: 1.3;">
+                Your Tinley Park Ride Is One Call Away
+            </h2>
+            <p class="font-body" style="color: var(--navy); font-size: 1rem; line-height: 1.7; margin-bottom: 1.75rem; opacity: 0.85;">
+                Stop &amp; Go Airport Shuttle Service, Inc. serves groups across all of Chicagoland. Call us or request a free quote and we will match your group to the right vehicle.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+17083154445" class="font-head"
+                   style="background: var(--navy); color: var(--champagne); padding: 0.95rem 2.25rem; font-weight: 700; font-size: 1.05rem; text-decoration: none; display: inline-block;">
+                    <i class="fa fa-phone" style="margin-right: 0.5rem;"></i>Call (708) 315-4445
+                </a>
+                <button onclick="window.dispatchEvent(new Event('open-modal-quote'))" class="font-head"
+                        style="background: transparent; color: var(--navy); border: 2px solid var(--navy);
+                               padding: 0.95rem 2.25rem; font-weight: 700; font-size: 1.05rem; cursor: pointer;">
+                    Get Free Quote Online
+                </button>
+            </div>
+        </div>
+    </section>
+
+</x-layouts.lp>

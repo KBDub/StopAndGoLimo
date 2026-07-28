@@ -78,6 +78,15 @@ Route::prefix('lp')->name('lp.')->group(function () {
     Route::get('/chicago-cubs-game-day-limo',      fn () => view('pages.lp.chicago-cubs-game-day-limo'))->name('cubs');
     Route::get('/chicago-white-sox-game-day-limo', fn () => view('pages.lp.chicago-white-sox-game-day-limo'))->name('white-sox');
     Route::get('/chicago-crosstown-classic-limo',  fn () => view('pages.lp.chicago-crosstown-classic-limo'))->name('crosstown-classic');
+    // Concert venue LPs
+    Route::get('/ravinia-concert-limo',            fn () => view('pages.lp.ravinia-concert-limo'))->name('ravinia-concert');
+    Route::get('/tinley-park-concert-limo',        fn () => view('pages.lp.tinley-park-concert-limo'))->name('tinley-park-concert');
+    Route::get('/united-center-concert-limo',      fn () => view('pages.lp.united-center-concert-limo'))->name('united-center-concert');
+    Route::get('/soldier-field-concert-limo',      fn () => view('pages.lp.soldier-field-concert-limo'))->name('soldier-field-concert');
+    Route::get('/house-of-blues-limo',             fn () => view('pages.lp.house-of-blues-limo'))->name('house-of-blues');
+    Route::get('/aragon-ballroom-limo',            fn () => view('pages.lp.aragon-ballroom-limo'))->name('aragon-ballroom');
+    Route::get('/wrigley-field-concert-limo',      fn () => view('pages.lp.wrigley-field-concert-limo'))->name('wrigley-field-concert');
+    Route::get('/chicago-concert-night-out',       fn () => view('pages.lp.chicago-concert-night-out'))->name('chicago-night-out');
 });
 
 Route::prefix('services/events')->name('events.')->group(function () {

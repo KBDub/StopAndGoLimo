@@ -1176,6 +1176,224 @@ return [
         ],
     ],
 
+    // ─── Concert Venue Presets ────────────────────────────────────────────────────
+
+    'ravinia-concert' => [
+        [
+            'question' => 'How far in advance should I book transportation to Ravinia?',
+            'answer'   => 'For CSO evenings and popular summer tour dates, we recommend booking 2 to 3 weeks ahead, especially for weekend shows. Ravinia draws from the entire region and our vehicles fill up quickly on peak nights.',
+        ],
+        [
+            'question' => 'Is there room for coolers, blankets, and picnic gear in the vehicle?',
+            'answer'   => 'Yes. Our vehicles offer ample cargo space, and we plan extra loading time for larger picnic setups. Just let us know what you are bringing when you book and we will make sure the right vehicle is matched to your group.',
+        ],
+        [
+            'question' => 'Can we add a dinner stop in Highland Park before the show?',
+            'answer'   => 'Absolutely. A North Shore dinner stop before the concert is one of the most popular additions to a Ravinia evening booking. We build the full itinerary, including restaurant timing, into your schedule.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the vehicle to Ravinia?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for Ravinia?',
+            'answer'   => 'A stretch limousine suits smaller, more refined groups who want an elegant, quiet ride up to the North Shore. A party bus fits larger friend groups who want music, space, and a social atmosphere for the drive to Highland Park and back.',
+        ],
+        [
+            'question' => 'Can we book transportation for multiple Ravinia evenings this season?',
+            'answer'   => 'Yes. Many of our Ravinia clients are season subscribers who book recurring summer transportation. We are happy to set up a seasonal arrangement that covers every show on your calendar.',
+        ],
+    ],
+
+    'tinley-park-concert' => [
+        [
+            'question' => 'How far in advance should I book transportation to Credit Union 1 Amphitheatre?',
+            'answer'   => 'For major touring acts and weekend shows, we recommend booking 3 to 4 weeks ahead due to high demand. This venue draws some of the largest crowds in the region and our vehicles fill up fast for the biggest nights.',
+        ],
+        [
+            'question' => 'How does professional transportation help with the traffic at this venue?',
+            'answer'   => 'Our chauffeurs use designated staging areas and exit routes that get your group moving significantly faster than the general parking lot after a show. While self-driven concertgoers can sit in that lot for over an hour, our clients are already on the road home.',
+        ],
+        [
+            'question' => 'Can we make a dinner stop before the concert?',
+            'answer'   => 'Yes. Many of our Tinley Park bookings include a restaurant stop either locally in Tinley Park or en route from your starting point. We build that into the full itinerary.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a Tinley Park show?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for this venue?',
+            'answer'   => 'A stretch limousine suits smaller, more intimate groups who want a relaxed, elegant ride. A party bus is built for larger groups who want a social, celebratory atmosphere with music and space to move for the full trip to and from the amphitheatre.',
+        ],
+        [
+            'question' => 'Do you pick up from downtown Chicago for Tinley Park shows?',
+            'answer'   => 'Yes. We pick up from downtown Chicago, the North Side, the North Shore, the western suburbs, and every other Chicagoland community. A party bus or sprinter van from the city turns what would be a long solo drive into a shared, relaxed celebration.',
+        ],
+    ],
+
+    'united-center-concert' => [
+        [
+            'question' => 'How far in advance should I book a limo or party bus for the United Center?',
+            'answer'   => 'For major global concert tours and marquee Bulls or Blackhawks matchups, we recommend booking 3 to 4 weeks ahead. The United Center hosts some of the biggest events in the country and availability fills up quickly around major dates.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near the United Center?',
+            'answer'   => 'We coordinate a designated drop-off and pickup zone on the Near West Side that avoids the heaviest pre- and post-event congestion. Your chauffeur communicates the exact meeting point directly with your group leader before departure.',
+        ],
+        [
+            'question' => 'Can we add a dinner stop in the West Loop or Fulton Market before the show?',
+            'answer'   => 'Yes. A West Loop or Fulton Market dinner stop is one of our most popular additions to a United Center booking. We build the timing into your full itinerary.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a United Center event?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for the United Center?',
+            'answer'   => 'A stretch limousine suits smaller, more intimate groups who want a quiet, elegant ride downtown. A party bus is built for larger groups who want a social, celebratory atmosphere with music and space before and after the event.',
+        ],
+        [
+            'question' => 'Do you handle transportation for Bulls games, Blackhawks games, and concerts?',
+            'answer'   => 'Yes. We serve every type of United Center event with the same reliable service, whether it is a global concert tour, a Bulls playoff game, a Blackhawks night, or any other arena event on the calendar.',
+        ],
+    ],
+
+    'soldier-field-concert' => [
+        [
+            'question' => 'How far in advance should I book a limo or party bus for Soldier Field?',
+            'answer'   => 'For major stadium concert tours and Bears marquee matchups, we recommend booking 3 to 4 weeks ahead. Soldier Field hosts some of the largest events in Chicagoland and our vehicles fill up quickly around big dates.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near Soldier Field?',
+            'answer'   => 'We coordinate a designated drop-off and pickup zone near the Museum Campus that avoids the heaviest pre- and post-event congestion. Your chauffeur communicates the exact meeting point with your group leader before departure.',
+        ],
+        [
+            'question' => 'Can we set up a tailgate or pre-game gathering before a Bears game or concert?',
+            'answer'   => 'Yes. Many of our Soldier Field bookings include time and vehicle space built in for a pre-event tailgate setup. We coordinate timing and cargo space around your full pre-show plan.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a Soldier Field event?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for Soldier Field?',
+            'answer'   => 'A stretch limousine suits smaller, more intimate groups who want a relaxed, elegant ride. A party bus is built for larger groups who want a social, tailgate-ready atmosphere with music and space for the full trip.',
+        ],
+        [
+            'question' => 'How do you handle the post-event Lake Shore Drive traffic?',
+            'answer'   => 'Our chauffeurs plan designated pickup points and exit routes that get your group moving while others are stuck in the post-event Museum Campus gridlock. We stage close and monitor the event end time so your vehicle is ready the moment you walk out.',
+        ],
+    ],
+
+    'house-of-blues-concert' => [
+        [
+            'question' => 'How far in advance should I book transportation to House of Blues Chicago?',
+            'answer'   => 'For popular touring acts and Sunday Gospel Brunch group bookings, we recommend booking 2 to 3 weeks ahead. House of Blues draws from across the entire region for the right show.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near House of Blues?',
+            'answer'   => 'We coordinate a designated drop-off and pickup point near Marina City that accounts for River North traffic patterns. Your chauffeur communicates the meeting point with your group leader before departure.',
+        ],
+        [
+            'question' => 'Can we book transportation just for the Sunday Gospel Brunch?',
+            'answer'   => 'Yes. The Sunday Gospel Brunch is one of our most popular House of Blues bookings for birthdays, bachelorette weekends, and family celebrations. We coordinate timing around the brunch seatings and pick your group up at your door.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a House of Blues show?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for House of Blues?',
+            'answer'   => 'A stretch limousine suits smaller, more intimate groups who want a quiet, elegant ride downtown. A party bus is built for larger groups who want a social, celebratory atmosphere on the way to and from River North.',
+        ],
+        [
+            'question' => 'Can we build a full River North evening around the show?',
+            'answer'   => 'Absolutely. River North has one of the most concentrated dining and nightlife districts in the city, and we regularly build multi-stop itineraries around a House of Blues show. Dinner before, the concert, and a nightcap after is a very common booking.',
+        ],
+    ],
+
+    'aragon-ballroom-concert' => [
+        [
+            'question' => 'How far in advance should I book transportation to the Aragon Ballroom?',
+            'answer'   => 'For popular touring acts, we recommend booking 2 to 3 weeks ahead, especially for sold-out general admission shows. The Aragon sells out quickly for the right headliner.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near the Aragon?',
+            'answer'   => 'We coordinate a designated drop-off and pickup point near the venue that avoids the heaviest post-show pedestrian and rideshare congestion on Lawrence and Broadway. Your chauffeur communicates the exact spot with your group leader before departure.',
+        ],
+        [
+            'question' => 'Can we visit the Green Mill or other Uptown spots before the show?',
+            'answer'   => 'Yes. Many of our Aragon bookings include a stop at a nearby Uptown restaurant or the historic Green Mill jazz club before the concert. We build that into the full itinerary.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to an Aragon show?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for the Aragon?',
+            'answer'   => 'A stretch limousine suits smaller, more intimate groups who want a quiet, elegant ride to this historic venue. A party bus is built for larger groups who want a social, celebratory atmosphere on the way to and from Uptown.',
+        ],
+        [
+            'question' => 'Why is professional transportation worth it for the Aragon?',
+            'answer'   => 'Uptown has limited parking and the post-show rideshare wait outside a 5,000-person capacity venue can be frustratingly long. Our chauffeur stages nearby and has your vehicle ready when you walk out, so your group is moving while others are still waiting.',
+        ],
+    ],
+
+    'wrigley-field-concert' => [
+        [
+            'question' => 'How far in advance should I book transportation to a Wrigley Field concert?',
+            'answer'   => 'Given how limited the ballpark concert calendar is each summer, we recommend booking as soon as your show date is announced. For the biggest headliners, 3 to 4 weeks ahead is ideal. Wrigley Field concerts sell out fast and so does our transportation.',
+        ],
+        [
+            'question' => 'Where does the limo or party bus drop us off near Wrigley Field on a concert night?',
+            'answer'   => 'We coordinate a designated drop-off and pickup zone near the ballpark that accounts for concert-specific street closures and crowd patterns in the Wrigleyville residential grid. Your chauffeur communicates the exact meeting point with your group leader.',
+        ],
+        [
+            'question' => 'Can we make stops for dinner or drinks before or after the show?',
+            'answer'   => 'Yes. Most of our Wrigley Field concert bookings include at least one additional stop, whether that is a Wrigleyville restaurant, a Clark Street bar, a downtown dinner reservation, or a Gallagher Way visit before the main event.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the party bus to a Wrigley Field concert?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations.',
+        ],
+        [
+            'question' => 'What is the difference between booking a limo and a party bus for a Wrigley Field concert?',
+            'answer'   => 'A stretch limousine suits smaller, more intimate groups looking for an elegant, relaxed ride. A party bus is built for larger groups who want a more social, celebratory atmosphere with music and room to move on the way to and from Wrigleyville.',
+        ],
+        [
+            'question' => 'Is Wrigley Field concert transportation different from Cubs game day transportation?',
+            'answer'   => 'The routing and staging are similar, but concert nights have their own crowd patterns and curfews that our chauffeurs account for. The experience inside is different from a game day, and we plan accordingly.',
+        ],
+    ],
+
+    'chicago-night-out' => [
+        [
+            'question' => 'How do I build a multi-stop night out with Stop & Go?',
+            'answer'   => 'Just tell us your starting point, your planned stops, and your approximate timing and we build the full itinerary. Most of our night-out bookings include dinner, a concert or show, and a post-show stop. Our chauffeur handles all the routing and timing so your group focuses entirely on the evening.',
+        ],
+        [
+            'question' => 'Which vehicle is best for a night out on the town?',
+            'answer'   => 'For couples and small groups, our stretch limousines offer an elegant, intimate ride. For larger friend groups or celebrations like bachelorette parties, our party buses bring music, lighting, and space to keep the energy going from the first pickup to the last drop-off.',
+        ],
+        [
+            'question' => 'How far in advance should I book for a night out?',
+            'answer'   => 'For weekend evenings, especially around a major concert or event, 2 to 3 weeks ahead is recommended. For weekday nights or shorter-notice requests, we can often accommodate with less lead time depending on availability.',
+        ],
+        [
+            'question' => 'Is alcohol allowed on the vehicle for a night out?',
+            'answer'   => 'Yes, for passengers of legal drinking age in accordance with Illinois law. Our chauffeurs are trained on responsible service protocols for group celebrations, making a night out both fun and safe.',
+        ],
+        [
+            'question' => 'What venues and neighborhoods do you cover for a Chicago night out?',
+            'answer'   => 'All of them. River North, the West Loop, Wrigleyville, Uptown, the South Loop, Lincoln Park, downtown, and any concert venue in the city or suburbs. We serve every Chicagoland neighborhood and every major venue on the map.',
+        ],
+        [
+            'question' => 'Can you handle a night out that starts in the suburbs and ends downtown?',
+            'answer'   => 'Absolutely. Many of our night-out bookings start with suburban pickups and end with a downtown drop-off or return trip home. We build the full route, including any stops along the way, into a single flat-rate booking.',
+        ],
+    ],
+
     'chicago-cubs' => [
         [
             'question' => 'How far in advance should I book a limo or party bus for a Cubs game?',

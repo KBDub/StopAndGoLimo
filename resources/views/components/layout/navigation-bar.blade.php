@@ -29,7 +29,7 @@
             {{-- Logo --}}
             <a href="/" class="flex items-center flex-shrink-0">
                 <img
-                    src="/images/logos/stop-and-go-inverted-logo-large.svg"
+                    src="/images/logos/stop-and-go-logo.1x1.svg"
                     alt="Stop & Go Airport Shuttle Service, Inc."
                     class="transition-all duration-300 transform-gpu h-10 lg:h-16"
                     x-bind:class="scrolled ? 'h-8 lg:h-10' : 'h-10 lg:h-16'"

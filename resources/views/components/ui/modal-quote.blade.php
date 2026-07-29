@@ -2,8 +2,8 @@
 @@media (max-width: 639px) {
     .mq-row-2col  { grid-template-columns: 1fr !important; }
     .mq-row-pax   { grid-template-columns: 90px 1fr !important; }
-    .mq-actions   { flex-wrap: nowrap !important; }
-    .mq-actions button { white-space: nowrap; }
+    .mq-actions   { flex-wrap: wrap !important; justify-content: center !important; }
+    .mq-actions button { white-space: nowrap; flex: 1 1 auto; text-align: center; }
 }
 </style>
 {{--

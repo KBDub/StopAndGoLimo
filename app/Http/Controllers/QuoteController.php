@@ -69,8 +69,8 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        //$recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
-        $recipients = ['support@apexwebseo.com'];
+        $recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
+        //$recipients = ['support@apexwebseo.com'];
         try {
             Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));
             Log::info('[QuoteController] Modal email sent', ['reference' => $reference]);
@@ -182,8 +182,8 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        //$recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
-        $recipients = ['support@apexwebseo.com'];
+        $recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
+        //$recipients = ['support@apexwebseo.com'];
         if (!empty($recipients)) {
             try {
                 Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));

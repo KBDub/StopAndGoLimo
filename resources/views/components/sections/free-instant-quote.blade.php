@@ -305,20 +305,31 @@
                         </div>
                     </div>
 
-                    {{-- Travel Date --}}
+                    {{-- Travel Date & Time --}}
                     <div class="mb-5">
                         <label class="font-head block mb-1" style="font-size: 0.9375rem; font-weight: 600; color: var(--navy);">
-                            Travel Date <span style="color: var(--champagne);">*</span>
+                            Travel Date &amp; Time <span style="color: var(--champagne);">*</span>
                         </label>
-                        <input
-                            type="date"
-                            name="travel_date"
-                            required
-                            min="{{ date('Y-m-d') }}"
-                            value="{{ old('travel_date') }}"
-                            class="w-full font-body sg-quote-field"
-                            style="border: 1px solid var(--cloud-dark); padding: 0.5rem 0.75rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
-                        >
+                        <div style="display:flex; gap:0;">
+                            <input
+                                type="date"
+                                id="sg-travel-date"
+                                name="travel_date"
+                                required
+                                min="{{ date('Y-m-d') }}"
+                                value="{{ old('travel_date') }}"
+                                class="font-body sg-quote-field"
+                                style="width:50%; border: 1px solid var(--cloud-dark); padding: 0.5rem 0.5rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
+                            >
+                            <input
+                                type="time"
+                                id="sg-travel-time"
+                                name="travel_time"
+                                required
+                                class="font-body sg-quote-field"
+                                style="width:50%; border: 1px solid var(--cloud-dark); border-left: none; padding: 0.5rem 0.5rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
+                            >
+                        </div>
                     </div>
 
                     {{-- Additional Information --}}
@@ -568,11 +579,45 @@
             }
         }
 
+        function sgValidate() {
+            var valid = true;
+            var first = null;
+            sgForm.querySelectorAll('[required]').forEach(function (el) {
+                if (!el.value.trim()) {
+                    el.style.borderColor = '#c0392b';
+                    el.style.boxShadow = '0 0 0 1px #c0392b';
+                    if (!first) { first = el; }
+                    valid = false;
+                }
+            });
+            if (first) { first.focus(); }
+            return valid;
+        }
+
+        function sgCombineDateTime() {
+            var dateEl = document.getElementById('sg-travel-date');
+            var timeEl = document.getElementById('sg-travel-time');
+            if (dateEl && timeEl && dateEl.value && timeEl.value) {
+                dateEl.value = dateEl.value + ' ' + timeEl.value;
+                timeEl.disabled = true;
+            }
+        }
+
+        sgForm.addEventListener('focusin', function (e) {
+            var el = e.target;
+            if (el.tagName === 'INPUT' || el.tagName === 'SELECT' || el.tagName === 'TEXTAREA') {
+                el.style.borderColor = '';
+                el.style.boxShadow = '';
+            }
+        });
+
         if (sgSiteKey) {
             sgInitRecaptcha();
 
             sgForm.addEventListener('submit', function (e) {
                 e.preventDefault();
+                if (!sgValidate()) { return; }
+                sgCombineDateTime();
                 sgDisableSubmit();
                 if (sgWidgetId !== null) {
                     grecaptcha.reset(sgWidgetId);
@@ -582,9 +627,13 @@
                 }
             });
         } else {
-            // No reCAPTCHA configured — disable on native submit.
-            sgForm.addEventListener('submit', function () {
+            // No reCAPTCHA configured — validate then submit.
+            sgForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (!sgValidate()) { return; }
+                sgCombineDateTime();
                 sgDisableSubmit();
+                sgForm.submit();
             });
         }
     }

@@ -1,3 +1,11 @@
+<style>
+@@media (max-width: 639px) {
+    .mq-row-2col  { grid-template-columns: 1fr !important; }
+    .mq-row-pax   { grid-template-columns: 90px 1fr !important; }
+    .mq-actions   { flex-wrap: nowrap !important; }
+    .mq-actions button { white-space: nowrap; }
+}
+</style>
 {{--
     x-ui.modal-quote — Free Instant Quote modal
     Opens on window event: "open-modal-quote"
@@ -115,7 +123,7 @@
             </div>
 
             {{-- Row 2: Phone + Email --}}
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="mq-row-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
                     <label class="font-head" for="quote-phone" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Phone <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
@@ -149,7 +157,7 @@
             </div>
 
             {{-- Row 3: Service Type + Date --}}
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="mq-row-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
                     <label class="font-head" for="quote-service" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Service Type <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <select
@@ -191,7 +199,7 @@
             </div>
 
             {{-- Row 4: Pickup + Dropoff --}}
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="mq-row-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
                 <div>
                     <label class="font-head" for="quote-pickup" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Pickup Location <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
@@ -223,7 +231,7 @@
             </div>
 
             {{-- Row 5: Passengers + Notes --}}
-            <div style="display:grid; grid-template-columns:160px 1fr; gap:1rem;">
+            <div class="mq-row-pax" style="display:grid; grid-template-columns:160px 1fr; gap:1rem;">
                 <div>
                     <label class="font-head" for="quote-passengers" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Passengers</label>
                     <input
@@ -260,7 +268,7 @@
             </p>
 
             {{-- Submit --}}
-            <div style="display:flex; align-items:center; justify-content:flex-end; gap:0.75rem; flex-wrap:wrap; padding-top:0.25rem;">
+            <div class="mq-actions" style="display:flex; align-items:center; justify-content:flex-end; gap:0.75rem; flex-wrap:wrap; padding-top:0.25rem;">
                 <button
                     type="button"
                     onclick="window.dispatchEvent(new CustomEvent('close-modal-quote'))"

@@ -98,7 +98,7 @@
         @endif
 
         {{-- Body --}}
-        <div style="padding:1.5rem; flex:1;">
+        <div style="padding:clamp(1rem, 4vw, 1.5rem); flex:1;">
             {{ $slot }}
         </div>
 

@@ -23,9 +23,10 @@
         onclick="window.dispatchEvent(new CustomEvent('open-modal-confirm'))"
 --}}
 @props([
-    'id'    => 'modal',
-    'title' => '',
-    'size'  => 'md',
+    'id'       => 'modal',
+    'title'    => '',
+    'size'     => 'md',
+    'backdrop' => 'rgba(15,18,35,0.85)',
 ])
 @php
     $maxWidths = [
@@ -57,7 +58,7 @@
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
-        style="position:absolute; inset:0; background:rgba(15,18,35,0.85); backdrop-filter:blur(4px);"
+        style="position:absolute; inset:0; background:{{ $backdrop }}; {{ $backdrop === 'none' || $backdrop === 'transparent' ? '' : 'backdrop-filter:blur(4px);' }}"
     ></div>
 
     {{-- Panel --}}

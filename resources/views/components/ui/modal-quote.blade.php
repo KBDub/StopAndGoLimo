@@ -15,7 +15,7 @@
     'action' => '#',
 ])
 
-<x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg">
+<x-ui.modal id="quote" title="Get a Free Instant Quote" size="lg" backdrop="none">
 
     <div
         x-on:open-modal-quote.window="resetState()"

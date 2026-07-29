@@ -73,7 +73,7 @@
                 <td class="label">Travel Date</td>
                 <td class="value">
                     @if(!empty($quote->payload['travel_date']))
-                        {{ \Carbon\Carbon::parse($quote->payload['travel_date'])->format('F j, Y') }}
+                        {{ \Carbon\Carbon::parse($quote->payload['travel_date'])->format('F j, Y \a\t g:i A') }}
                     @else
                         Not specified
                     @endif

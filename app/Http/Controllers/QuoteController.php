@@ -182,11 +182,8 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        $recipients = [
-            'vincent@newlenoxlimoservice.com',
-            'stopngovr@gmail.com',
-        ];
-
+        //$recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
+        $recipients = ['support@apexwebseo.com'];
         if (!empty($recipients)) {
             try {
                 Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));

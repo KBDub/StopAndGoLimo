@@ -89,11 +89,16 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        $recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
-        //$recipients = ['support@apexwebseo.com'];
+        $isTest     = strtolower(trim($validated['name']))  === 'test test'
+                   && strtolower(trim($validated['email'])) === 'test@test.com';
+        $recipients = $isTest
+            ? ['support@apexwebseo.com']
+            : ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
         try {
-            Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));
-            Log::info('[QuoteController] Modal email sent', ['reference' => $reference]);
+            $mailer = Mail::to($recipients);
+            if (!$isTest) { $mailer->bcc('support@apexwebseo.com'); }
+            $mailer->send(new QuoteSubmitted($quote));
+            Log::info('[QuoteController] Modal email sent', ['reference' => $reference, 'test_mode' => $isTest]);
         } catch (\Throwable $e) {
             Log::error('[QuoteController] Modal email FAILED', ['reference' => $reference, 'error' => $e->getMessage()]);
         }
@@ -202,11 +207,16 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        $recipients = ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
-        //$recipients = ['support@apexwebseo.com'];
+        $isTest     = strtolower(trim($validated['name']))  === 'test test'
+                   && strtolower(trim($validated['email'])) === 'test@test.com';
+        $recipients = $isTest
+            ? ['support@apexwebseo.com']
+            : ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
         if (!empty($recipients)) {
             try {
-                Mail::to($recipients)->bcc('support@apexwebseo.com')->send(new QuoteSubmitted($quote));
+                $mailer = Mail::to($recipients);
+                if (!$isTest) { $mailer->bcc('support@apexwebseo.com'); }
+                $mailer->send(new QuoteSubmitted($quote));
                 Log::info('[QuoteController] Notification email sent', [
                     'reference' => $reference,
                     'to'        => implode(', ', $recipients),

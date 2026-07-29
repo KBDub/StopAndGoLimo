@@ -34,7 +34,7 @@ class QuoteController extends Controller
                 'phone'            => 'required|string|max:50',
                 'email'            => 'required|email|max:255',
                 'service_type'     => 'required|string|max:100',
-                'passengers'       => 'nullable|string|max:20',
+                'passengers'       => 'required|string|max:20',
                 'pickup_location'  => 'required|string|max:255',
                 'destination'      => 'required|string|max:255',
                 'travel_date'      => 'required|date|after_or_equal:today',

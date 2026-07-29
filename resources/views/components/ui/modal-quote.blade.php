@@ -267,7 +267,7 @@
             {{-- Row 5: Passengers + Notes --}}
             <div class="mq-row-pax" style="display:grid; grid-template-columns:160px 1fr; gap:1rem;">
                 <div>
-                    <label class="font-head" for="quote-passengers" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Passengers</label>
+                    <label class="font-head" for="quote-passengers" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Passengers <span style="color:var(--white);" aria-hidden="true">*</span></label>
                     <input
                         type="number"
                         id="quote-passengers"
@@ -276,6 +276,7 @@
                         max="60"
                         value="1"
                         placeholder="1"
+                        required
                         class="font-body"
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"
                         onfocus="this.style.borderColor='var(--champagne)'"

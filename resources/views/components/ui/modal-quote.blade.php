@@ -29,11 +29,29 @@
             this.submitting    = false;
             this.errorMessage  = '';
             this.confirmedName = '';
-            this.$nextTick(() => { this.$el.querySelector('form')?.reset(); });
+            this.$nextTick(() => {
+                const form = this.$el.querySelector('form');
+                form?.reset();
+                form?.querySelectorAll('[required]').forEach(el => {
+                    el.style.borderColor = 'rgba(220,181,126,0.25)';
+                });
+            });
+        },
+        checkRequired(form) {
+            let valid = true;
+            form.querySelectorAll('[required]').forEach(el => {
+                if (!el.value.trim()) {
+                    el.style.borderColor = 'rgba(192,57,43,0.7)';
+                    if (valid) { el.focus(); }
+                    valid = false;
+                }
+            });
+            return valid;
         },
         async handleSubmit(e) {
-            this.submitting   = true;
             this.errorMessage = '';
+            if (!this.checkRequired(e.target)) { return; }
+            this.submitting   = true;
             const fd = new FormData(e.target);
             fd.set('name', [fd.get('first_name'), fd.get('last_name')].filter(Boolean).join(' ').trim());
             fd.delete('first_name');
@@ -256,6 +274,7 @@
                         name="passengers"
                         min="1"
                         max="60"
+                        value="1"
                         placeholder="1"
                         class="font-body"
                         style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box;"

@@ -19,11 +19,15 @@
 
     <div
         x-on:open-modal-quote.window="resetState()"
+        data-rckey="{{ config('services.recaptcha.site_key') }}"
         x-data="{
         submitted:     false,
         submitting:    false,
         errorMessage:  '',
         confirmedName: '',
+        _rcWidgetId:   null,
+        _rcResolve:    null,
+        init() { this.initRecaptcha(); },
         resetState() {
             this.submitted     = false;
             this.submitting    = false;
@@ -35,6 +39,38 @@
                 form?.querySelectorAll('[required]').forEach(el => {
                     el.style.borderColor = 'rgba(220,181,126,0.25)';
                 });
+            });
+        },
+        initRecaptcha() {
+            const key = this.$el.dataset.rckey;
+            if (!key) return;
+            const tryRender = () => {
+                if (typeof grecaptcha !== 'undefined' && typeof grecaptcha.render === 'function') {
+                    this._rcWidgetId = grecaptcha.render(
+                        this.$el.querySelector('#modal-rc-widget'),
+                        {
+                            sitekey:            key,
+                            size:               'invisible',
+                            callback:           (token) => { this._rcResolve && this._rcResolve(token); },
+                            'expired-callback': ()      => { this._rcResolve && this._rcResolve(''); },
+                            'error-callback':   ()      => { this._rcResolve && this._rcResolve(''); },
+                        }
+                    );
+                } else {
+                    setTimeout(tryRender, 100);
+                }
+            };
+            tryRender();
+        },
+        getRecaptchaToken() {
+            return new Promise((resolve) => {
+                const key = this.$el.dataset.rckey;
+                if (!key || typeof grecaptcha === 'undefined' || this._rcWidgetId === null) {
+                    resolve(''); return;
+                }
+                this._rcResolve = resolve;
+                grecaptcha.reset(this._rcWidgetId);
+                grecaptcha.execute(this._rcWidgetId);
             });
         },
         checkRequired(form) {
@@ -51,8 +87,10 @@
         async handleSubmit(e) {
             this.errorMessage = '';
             if (!this.checkRequired(e.target)) { return; }
-            this.submitting   = true;
+            this.submitting = true;
+            const token = await this.getRecaptchaToken();
             const fd = new FormData(e.target);
+            fd.set('g_recaptcha_response', token);
             fd.set('name', [fd.get('first_name'), fd.get('last_name')].filter(Boolean).join(' ').trim());
             fd.delete('first_name');
             fd.delete('last_name');
@@ -106,6 +144,9 @@
             style="display:flex; flex-direction:column; gap:1.25rem;"
         >
             @csrf
+            {{-- reCAPTCHA v2 Invisible widget anchor --}}
+            <div id="modal-rc-widget" style="display:none;"></div>
+
             {{-- Honeypot — bots fill this, humans don't --}}
             <div style="position:absolute; left:-9999px; top:-9999px; opacity:0;" aria-hidden="true">
                 <label for="modal-sg-website">Leave this blank</label>

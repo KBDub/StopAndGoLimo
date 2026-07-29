@@ -27,6 +27,26 @@ class QuoteController extends Controller
             return response()->json(['success' => true, 'reference' => $fakeRef]);
         }
 
+        // ── reCAPTCHA v2 Invisible verification ───────────────────────────────
+        $recaptchaSecret = config('services.recaptcha.secret_key');
+        if ($recaptchaSecret && app()->environment('production')) {
+            $token  = $request->input('g_recaptcha_response', '');
+            $verify = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+                'secret'   => $recaptchaSecret,
+                'response' => $token,
+                'remoteip' => $ip,
+            ]);
+            $result = $verify->json();
+            if (!($result['success'] ?? false)) {
+                Log::warning('[QuoteController] Modal reCAPTCHA failed', [
+                    'ip'          => $ip,
+                    'error-codes' => $result['error-codes'] ?? [],
+                ]);
+                return response()->json(['success' => false, 'message' => 'We could not verify your submission. Please try again.'], 422);
+            }
+            Log::info('[QuoteController] Modal reCAPTCHA passed', ['ip' => $ip]);
+        }
+
         // ── Validation ────────────────────────────────────────────────────────
         try {
             $validated = $request->validate([

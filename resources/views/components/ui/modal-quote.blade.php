@@ -189,26 +189,28 @@
                 </div>
                 <div>
                     <label class="font-head" style="display:block; font-size:0.75rem; font-weight:600; color:var(--champagne); margin-bottom:0.35rem; letter-spacing:0.04em;">Travel Date &amp; Time <span style="color:var(--white);" aria-hidden="true">*</span></label>
-                    <input
-                        type="date"
-                        id="quote-date"
-                        name="travel_date"
-                        required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark;"
-                        onfocus="this.style.borderColor='var(--champagne)'"
-                        onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
-                    >
-                    <input
-                        type="time"
-                        id="quote-time"
-                        name="travel_time"
-                        required
-                        class="font-body"
-                        style="width:100%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); border-top:none; color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.875rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark; margin-top:0;"
-                        onfocus="this.style.borderColor='var(--champagne)'; this.previousElementSibling.style.borderColor='var(--champagne)'"
-                        onblur="this.style.borderColor='rgba(220,181,126,0.25)'; this.previousElementSibling.style.borderColor='rgba(220,181,126,0.25)'"
-                    >
+                    <div style="display:flex; gap:0;">
+                        <input
+                            type="date"
+                            id="quote-date"
+                            name="travel_date"
+                            required
+                            class="font-body"
+                            style="width:50%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.5rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark;"
+                            onfocus="this.style.borderColor='var(--champagne)'"
+                            onblur="this.style.borderColor='rgba(220,181,126,0.25)'"
+                        >
+                        <input
+                            type="time"
+                            id="quote-time"
+                            name="travel_time"
+                            required
+                            class="font-body"
+                            style="width:50%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); border-left:none; color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.5rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark;"
+                            onfocus="this.style.borderColor='var(--champagne)'; this.previousElementSibling.style.borderColor='var(--champagne)'"
+                            onblur="this.style.borderColor='rgba(220,181,126,0.25)'; this.previousElementSibling.style.borderColor='rgba(220,181,126,0.25)'"
+                        >
+                    </div>
                 </div>
             </div>
 

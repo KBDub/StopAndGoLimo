@@ -33,18 +33,26 @@
         "closes": "23:59"
     },
     "areaServed": [
-        { "@type": "City", "name": "New Lenox" },
-        { "@type": "City", "name": "Joliet" },
-        { "@type": "City", "name": "Naperville" },
-        { "@type": "City", "name": "Frankfort" },
-        { "@type": "City", "name": "Mokena" },
-        { "@type": "City", "name": "Orland Park" },
-        { "@type": "City", "name": "Tinley Park" },
-        { "@type": "City", "name": "Plainfield" },
-        { "@type": "City", "name": "Bolingbrook" },
-        { "@type": "City", "name": "Romeoville" },
-        { "@type": "AdministrativeArea", "name": "Will County" },
-        { "@type": "State", "name": "Illinois" }
+        { "@type": "City", "name": "Aurora",      "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Joliet",      "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Mokena",      "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Oswego",      "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Chicago",     "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Minooka",     "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Lockport",    "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Frankfort",   "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "New Lenox",   "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Oak Brook",   "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Shorewood",   "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Crest Hill",  "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Homer Glen",  "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Naperville",  "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Plainfield",  "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Romeoville",  "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Bolingbrook", "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Orland Park", "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Tinley Park", "addressRegion": "IL", "addressCountry": "US" },
+        { "@type": "City", "name": "Manhattan",   "addressRegion": "IL", "addressCountry": "US" }
     ]
 }
 </script>

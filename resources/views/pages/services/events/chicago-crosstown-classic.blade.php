@@ -138,7 +138,7 @@ $fulfillmentItems = [
         :description="$heroDescription"
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/special-events/crosstown-classic/stopngolimo-cross-town-classic-rivals.webp"
+        image="/images/special-events/crosstown-classic/crosstown-classic-hero.jpg"
         imagePosition="center center"
     />
 
@@ -165,7 +165,7 @@ $fulfillmentItems = [
         headingTail="Ride"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/special-events/crosstown-classic/stopngolimo-cross-town-classic-happy-clients.jpg"
+        descImage="/images/special-events/crosstown-classic/crosstown-classic-fiq.jpg"
         descImageAlt="Aerial view of Wrigley Field and the North Side of Chicago, one of two venues covered by Stop & Go Airport Shuttle Service, Inc. for the Crosstown Classic"
         descHeading="Why Choose Us?"
         descSubheading="We Have the Best Crosstown Classic Transportation"

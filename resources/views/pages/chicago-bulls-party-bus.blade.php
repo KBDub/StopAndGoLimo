@@ -54,7 +54,7 @@
         defaultService="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        image="/images/special-events/bulls/bulls-united-center-fiq.jpg"
+        image="/images/special-events/bulls/bulls-fans-fiq.jpg"
         imageAlt="Chicago Bulls game day party bus at the United Center"
         imageAspect="4/3"
         heading="Elevate Your Chicago Bulls"

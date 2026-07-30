@@ -53,7 +53,7 @@
         defaultService="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        image="/images/heroes/hero-chicago-bears-fiq.jpg"
+        image="/images/special-events/bears/bears-tailgate-fiq.jpg"
         imageAlt="Soldier Field lit up on game day in Chicago"
         imageAspect="4/3"
         heading="Enjoy"

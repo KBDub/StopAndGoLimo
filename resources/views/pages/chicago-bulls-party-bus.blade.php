@@ -39,7 +39,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. brings your group to Chicago Bulls games at the United Center in style. We serve communities throughout Chicagoland, including the southwest, west, north, and northwest suburbs. Skip the parking and postgame gridlock. Our party buses seat 20 to 40-plus guests with premium sound and LED lighting. Professional, background-checked drivers navigate game-night Chicago so nothing interrupts your evening. Every trip is flat-rate and clearly quoted before you book. Book your Bulls party bus today."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/special-events/bulls/stopngolimo-chicago-bulls-logo.jpg"
+        image="/images/special-events/bulls/bulls-game-hero.jpg"
         imagePosition="center center"
     />
 
@@ -54,7 +54,7 @@
         defaultService="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        image="/images/heroes/hero-chicago-bulls-fiq.png"
+        image="/images/special-events/bulls/bulls-united-center-fiq.jpg"
         imageAlt="Chicago Bulls game day party bus at the United Center"
         imageAspect="4/3"
         heading="Elevate Your Chicago Bulls"

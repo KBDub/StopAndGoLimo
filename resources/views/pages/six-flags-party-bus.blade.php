@@ -39,7 +39,7 @@
         description="Stop & Go Airport Shuttle Service, Inc. takes your group to Six Flags Great America from communities throughout Chicagoland. Families, birthday groups, school groups, and friend crews skip the parking hassle and arrive together. Our party buses and Mercedes Sprinter vans offer comfortable seating, great sound, and a fun atmosphere that builds excitement on the way. Professional, background-checked chauffeurs handle all routing and pickup timing. Perfect for birthday parties, quinceañera day trips, and family reunions. Flat-rate, all-inclusive pricing. Book early as summer weekends fill fast."
         buttonText="Book a Ride"
         buttonHref="https://book.mylimobiz.com/v4/(S(1oixqymtpiatq43mylq5sucd))/stopngo"
-        image="/images/heroes/hero-six-flags-party-bus.jpg"
+        image="/images/heroes/six-flags-aerial-hero.jpg"
         imagePosition="center center"
     />
 
@@ -54,7 +54,7 @@
         defaultService="Party Bus"
         formAction="/get-a-quote"
         submitLabel="Send Message"
-        image="/images/heroes/hero-six-flags-coaster.jpg"
+        image="/images/heroes/six-flags-coaster-fiq.jpg"
         imageAlt="Riders on a roller coaster at Six Flags Great America, Chicago"
         imageAspect="4/3"
         heading="Enjoy a Hassle-Free Journey to"

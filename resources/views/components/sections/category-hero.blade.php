@@ -28,7 +28,7 @@
             style="object-position: {{ $imagePosition }};"
             loading="eager"
         >
-        <div class="absolute inset-0" style="background: var(--navy-dark); opacity: 0;"></div>
+        <div class="absolute inset-0" style="background: var(--navy-dark); opacity: 0.15;"></div>
     </div>
 
     {{-- Content --}}

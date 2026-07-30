@@ -151,7 +151,7 @@ $fulfillmentItems = [
         subtitle="Pickup from every corner of Chicagoland"
         body="The moment your group boards, the evening begins. Our chauffeurs know the drop-off approach, staging zones, and post-show exit routes at every major Chicago concert venue. Dinner before the show in the neighborhood around your venue, the concert itself, and wherever your group wants to finish the night. One flat rate covers the full itinerary from the first pickup to the last drop-off. You focus on the evening. We handle all the logistics."
         note="No matter your group size, we have a vehicle for your Chicago night out. Call us and we will match you to the right one."
-        image="/images/special-events/concerts/chicago-night-out.jpg"
+        image="/images/special-events/concerts/chicago-night-out-cta.jpg"
         imageAlt="Chicago concert night out, group dressed for an evening of live music and dining in Chicago"
     />
 
@@ -161,7 +161,7 @@ $fulfillmentItems = [
         headingTail="Night Out"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/special-events/concerts/chicago-night-out.jpg"
+        descImage="/images/special-events/concerts/chicago-night-out-fiq.jpg"
         descImageAlt="Chicago nightlife and concert night out transportation by Stop & Go Airport Shuttle Service, Inc."
         descHeading="Why Choose Us?"
         descSubheading="We Have the Best Chicago Concert Night Out Transportation"

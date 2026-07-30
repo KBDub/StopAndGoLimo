@@ -151,7 +151,7 @@ $fulfillmentItems = [
         subtitle="Pickup from every corner of Chicagoland"
         body="Our chauffeurs know the Near West Side. They know the Eisenhower Expressway timing on a concert night, the designated drop-off approach at the United Center, and which exit routes clear first after 20,000 people walk out onto Madison Street. Whether you are starting from the western suburbs, the North Shore, or downtown Chicago, we have covered this arena more times than we can count. You focus on the evening. We handle everything from your driveway to the last drop-off."
         note="No matter your group size, we have a vehicle for your United Center night. Call us and we will match you to the right one."
-        image="/images/special-events/concerts/united-center-concert-crowd.jpg"
+        image="/images/special-events/concerts/united-center-cta.jpg"
         imageAlt="Concert crowd at the United Center arena in Chicago, Illinois"
     />
 
@@ -161,7 +161,7 @@ $fulfillmentItems = [
         headingTail="Night"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/special-events/concerts/united-center-concert-crowd.jpg"
+        descImage="/images/special-events/concerts/united-center-fiq.jpg"
         descImageAlt="United Center arena concert in Chicago, Illinois, served by Stop & Go Airport Shuttle Service, Inc."
         descHeading="Why Choose Us?"
         descSubheading="We Have the Best United Center Concert Transportation"

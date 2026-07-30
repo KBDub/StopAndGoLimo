@@ -151,7 +151,7 @@ $fulfillmentItems = [
         subtitle="Pickup from every corner of Chicagoland"
         body="The moment your group boards, the concert night begins. Our chauffeurs know the southwest-suburban routes, the amphitheatre staging area, and the post-show exit strategies that get your group moving before the main lot backs up onto I-57. Whether you are coming from downtown Chicago, the North Shore, Joliet, or Orland Park, we have covered this venue more times than we can count. You focus on the show. We handle everything from your driveway to the last drop-off."
         note="No matter your group size, we have a vehicle for your Tinley Park concert. Call us and we will match you to the right one."
-        image="/images/special-events/concerts/tinley-park-concert-crowd.jpg"
+        image="/images/special-events/concerts/tinley-park-cta.jpg"
         imageAlt="Outdoor concert crowd at Credit Union 1 Amphitheatre in Tinley Park, Illinois"
     />
 
@@ -161,7 +161,7 @@ $fulfillmentItems = [
         headingTail="Ride"
         rightVariant="description"
         :descImageTop="true"
-        descImage="/images/special-events/concerts/tinley-park-concert-crowd.jpg"
+        descImage="/images/special-events/concerts/tinley-park-fiq.jpg"
         descImageAlt="Concert crowd at Credit Union 1 Amphitheatre in Tinley Park, Illinois"
         descHeading="Why Choose Us?"
         descSubheading="We Have the Best Tinley Park Concert Transportation"

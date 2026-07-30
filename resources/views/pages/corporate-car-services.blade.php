@@ -48,7 +48,7 @@
         headingBold="Corporate Car Transportation"
         headingTail=""
         body="Enjoy a blend of comfort, professionalism, and reliability. Our licensed chauffeurs are dedicated to delivering exceptional service for every journey whether it is business travel, airport transfers, special events, or daily commutes. Punctual, discreet, and attentive, we ensure you arrive relaxed and on time every time."
-        image="/images/sections/corporate-limo.jpg"
+        image="/images/services/chauffeur-tarmac-aerial-handshake.jpg"
         imageAlt="Corporate limousine service vehicle ready for executive transportation in Chicagoland"
         imageAspect="16/9"
         imageObjectPosition="center"

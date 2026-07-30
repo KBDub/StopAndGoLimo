@@ -29,6 +29,9 @@ Route::get('/sitemap.xml', function () {
     $excludeExact = [
         'up',                        // Laravel health check
         'services/events/concerts',  // 301 → /special-event-limousine
+        'terms',
+        'privacy',
+        'refund-policy',
     ];
 
     // URIs that get priority 0.9 (everything else defaults to 0.8)

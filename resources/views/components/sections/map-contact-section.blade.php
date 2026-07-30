@@ -104,27 +104,14 @@
         </div>
     </div>
 
-    {{-- ── Map: absolutely positioned over right ~45%, spanning both rows ── --}}
-    <div class="hidden md:block" style="position:absolute;top:1.5rem;right:3rem;width:30%;aspect-ratio:1/1;z-index:10;border:0;border-left:4px solid var(--champagne);">
+    {{-- ── Map: single iframe — inline on mobile (300px), absolute overlay on desktop ── --}}
+    <div class="h-[300px] md:h-auto md:aspect-square md:absolute md:top-6 md:right-12 md:w-[30%] md:z-10"
+         style="border-left:4px solid var(--champagne);">
         <iframe
             src="{{ $mapSrc }}"
             width="100%"
             height="100%"
             style="display:block;border:0;width:100%;height:100%;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Stop &amp; Go Airport Shuttle Service, Inc. location map"
-        ></iframe>
-    </div>
-
-    {{-- Map shown below on mobile (not overlaid) --}}
-    <div class="block md:hidden" style="height:300px;">
-        <iframe
-            src="{{ $mapSrc }}"
-            width="100%"
-            height="300"
-            style="display:block;border:0;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

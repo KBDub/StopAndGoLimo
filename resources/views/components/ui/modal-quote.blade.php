@@ -268,6 +268,7 @@
                             style="width:50%; background:var(--navy-dark); border:1px solid rgba(220,181,126,0.25); border-left:none; color:var(--cloud-light); font-size:0.9375rem; padding:0.625rem 0.5rem; outline:none; transition:border-color 0.15s; box-sizing:border-box; color-scheme:dark;"
                             onfocus="this.style.borderColor='var(--champagne)'; this.previousElementSibling.style.borderColor='var(--champagne)'"
                             onblur="this.style.borderColor='rgba(220,181,126,0.25)'; this.previousElementSibling.style.borderColor='rgba(220,181,126,0.25)'"
+                            onchange="if(this.value){var p=this.value.split(':'),h=parseInt(p[0]);if(h<12){this.value=(h+12).toString().padStart(2,'0')+':'+p[1];}}"
                         >
                     </div>
                 </div>

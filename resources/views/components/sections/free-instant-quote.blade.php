@@ -328,6 +328,7 @@
                                 required
                                 class="font-body sg-quote-field"
                                 style="width:50%; border: 1px solid var(--cloud-dark); border-left: none; padding: 0.5rem 0.5rem; font-size: 0.9375rem; color: var(--navy); background: var(--white); outline: none; border-radius: 0;"
+                                onchange="if(this.value){var p=this.value.split(':'),h=parseInt(p[0]);if(h<12){this.value=(h+12).toString().padStart(2,'0')+':'+p[1];}}"
                             >
                         </div>
                     </div>

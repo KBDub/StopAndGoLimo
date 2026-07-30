@@ -75,9 +75,9 @@
                             </div>
 
                             {{-- City name — H5 spec: Poppins 20px / SemiBold 600 --}}
-                            <h5 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); margin-bottom: 0.5rem;">
+                            <h3 class="font-head" style="font-size: 1.25rem; font-weight: 600; color: var(--champagne); margin-bottom: 0.5rem;">
                                 {{ $location['city'] }}
-                            </h5>
+                            </h3>
 
                             {{-- Headquarters badge --}}
                             {{-- temp disabled 

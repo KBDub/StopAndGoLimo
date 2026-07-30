@@ -32,6 +32,7 @@
                                     <img
                                         x-bind:src="img"
                                         x-bind:alt="'{{ $alt }} ' + (idx + 1)"
+                                        width="600" height="800"
                                         loading="lazy"
                                         class="w-full h-full object-cover object-top"
                                     >
@@ -60,7 +61,7 @@
                             class="w-20 h-24 overflow-hidden border-2 transition-all shrink-0"
                             x-bind:class="current === idx ? 'border-champagne shadow-champagne' : 'border-transparent hover:border-slate'"
                         >
-                            <img x-bind:src="img" class="w-full h-full object-cover object-top" alt="">
+                            <img x-bind:src="img" class="w-full h-full object-cover object-top" width="80" height="96" alt="">
                         </button>
                     </template>
                 </div>
@@ -75,6 +76,7 @@
                         <img
                             x-bind:src="images[current]"
                             x-bind:alt="'{{ $alt }} ' + (current + 1)"
+                            width="600" height="800"
                             class="w-full h-full object-cover object-top transition-opacity duration-300"
                             x-bind:class="zooming ? 'opacity-0' : 'opacity-100'"
                         >

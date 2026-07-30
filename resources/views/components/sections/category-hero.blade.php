@@ -26,6 +26,8 @@
             alt="{{ $clientConfig->business_name }} airport shuttle service"
             class="w-full h-full object-cover"
             style="object-position: {{ $imagePosition }};"
+            width="1600" height="900"
+            fetchpriority="high"
             loading="eager"
         >
         <div class="absolute inset-0" style="background: var(--navy-dark); opacity: 0.15;"></div>

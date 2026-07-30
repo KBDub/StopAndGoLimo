@@ -375,6 +375,7 @@
                                 src="{{ $descImage }}"
                                 alt="{{ $descImageAlt }}"
                                 class="w-full h-full object-cover"
+                                width="1600" height="900"
                                 loading="lazy"
                             >
                         </div>
@@ -428,6 +429,7 @@
                                 src="{{ $descImage }}"
                                 alt="{{ $descImageAlt }}"
                                 class="w-full h-full object-cover"
+                                width="1600" height="900"
                                 loading="lazy"
                             >
                         </div>
@@ -446,6 +448,7 @@
                             src="{{ $image }}"
                             alt="{{ $imageAlt }}"
                             class="w-full h-full object-cover"
+                            width="800" height="600"
                             style="object-position: {{ $imageObjectPosition }};"
                             loading="lazy"
                         >

@@ -39,7 +39,7 @@
            class="lp-banner-item"
            style="aspect-ratio: 16/7;">
             @if(!empty($banner['image']))
-                <img src="{{ $banner['image'] }}" alt="{{ $banner['alt'] ?? '' }}" loading="lazy">
+                <img src="{{ $banner['image'] }}" alt="{{ $banner['alt'] ?? '' }}" width="1600" height="700" loading="lazy">
             @else
                 <div style="width:100%;height:100%;background:#2c2c2c;"></div>
             @endif

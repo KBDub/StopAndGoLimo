@@ -15,6 +15,7 @@
             src="{{ $image }}"
             alt="{{ $alt }}"
             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            width="400" height="96"
             loading="lazy"
         />
     </div>

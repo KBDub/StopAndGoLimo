@@ -15,6 +15,7 @@
             src="{{ $image }}"
             alt="{{ $alt }}"
             class="w-full block"
+            width="1600" height="900"
             style="height: {{ $height }}; object-fit: cover; object-position: center;"
             loading="lazy"
         >

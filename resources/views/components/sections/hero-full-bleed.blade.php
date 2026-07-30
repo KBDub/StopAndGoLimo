@@ -29,6 +29,9 @@ $contentWidth = match($layout) {
     {{-- Background --}}
     @if($image)
         <img src="{{ $image }}" alt="{{ $title }}"
+             width="1600" height="900"
+             fetchpriority="high"
+             loading="eager"
              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
     @else
         <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1a1a1a 0%,#2c2c2c 100%);"></div>

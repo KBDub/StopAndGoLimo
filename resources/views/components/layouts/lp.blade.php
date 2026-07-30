@@ -69,6 +69,7 @@
                style="display: flex; align-items: center; text-decoration: none; flex-shrink: 0;">
                 <img src="/images/logos/stop-and-go-inverted-logo-large.svg"
                      alt="Stop & Go Airport Shuttle Service, Inc."
+                     width="330" height="100"
                      style="height: 46px; width: auto;">
             </a>
             <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; justify-content: flex-end;">
@@ -96,6 +97,7 @@
             <a href="/" style="display: inline-block; margin-bottom: 1.25rem;">
                 <img src="/images/logos/stop-and-go-inverted-logo-large.svg"
                      alt="Stop & Go Airport Shuttle Service, Inc."
+                     width="330" height="100"
                      style="height: 56px; width: auto;">
             </a>
             <p class="font-body"

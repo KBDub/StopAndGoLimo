@@ -28,6 +28,7 @@
             src="{{ $poster }}"
             alt="{{ $alt }}"
             class="absolute inset-0 w-full h-full object-cover object-center"
+            width="1600" height="900"
             loading="lazy"
         >
     @else

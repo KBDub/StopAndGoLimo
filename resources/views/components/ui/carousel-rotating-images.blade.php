@@ -87,6 +87,7 @@
                             <img
                                 :src="lImg.src"
                                 :alt="lImg.alt"
+                                width="600" height="450"
                                 class="w-full h-full object-cover"
                                 loading="lazy"
                             >
@@ -105,6 +106,7 @@
                         <img
                             :src="cImg.src"
                             :alt="cImg.alt"
+                            width="600" height="450"
                             class="w-full h-full object-cover"
                             loading="lazy"
                         >
@@ -120,6 +122,7 @@
                             <img
                                 :src="rImg.src"
                                 :alt="rImg.alt"
+                                width="600" height="450"
                                 class="w-full h-full object-cover"
                                 loading="lazy"
                             >

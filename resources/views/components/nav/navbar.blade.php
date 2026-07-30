@@ -13,6 +13,7 @@
         <a href="/" class="nav-logo">
             <img src="/images/logos/stop-and-go-limo-logo.svg"
                  alt="Stop &amp; Go Airport Shuttle Service, Inc."
+                 width="176" height="93"
                  class="nav-logo-img">
         </a>
 

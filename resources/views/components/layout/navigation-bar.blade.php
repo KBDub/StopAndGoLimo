@@ -32,6 +32,7 @@
                     src="/images/logos/stop-and-go-logo.1x1.svg"
                     alt="Stop & Go Airport Shuttle Service, Inc."
                     class="transition-all duration-300 transform-gpu h-10 lg:h-16"
+                    width="64" height="64"
                     x-bind:class="scrolled ? 'h-8 lg:h-10' : 'h-10 lg:h-16'"
                 >
             </a>

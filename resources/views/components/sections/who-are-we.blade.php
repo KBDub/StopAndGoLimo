@@ -24,6 +24,7 @@
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"
                         class="w-full h-full object-cover"
+                        width="800" height="800"
                         loading="lazy"
                     >
                 </div>

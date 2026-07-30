@@ -87,6 +87,7 @@
                     src="/images/gallery/about-vincent-new-lenox-ribbon-cutting-award.jpg"
                     alt="Owner Vincent with Emily Johnson at the New Lenox Chamber ribbon cutting"
                     class="w-full object-cover"
+                    width="800" height="600"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
                 >
@@ -94,6 +95,7 @@
                     src="/images/gallery/clients-womens-group-inside-party-bus-daytime.jpg"
                     alt="Group of women celebrating inside a Stop & Go Airport Shuttle Service, Inc. party bus"
                     class="w-full object-cover"
+                    width="800" height="600"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
                 >
@@ -159,6 +161,7 @@
                         src="/images/gallery/fleet-full-lineup-parking-lot-mixed.jpg"
                         alt="Full lineup of Stop & Go Airport Shuttle Service, Inc. fleet vehicles in parking lot"
                         class="w-full object-cover"
+                        width="1600" height="900"
                         style="aspect-ratio: 16/9;"
                         loading="lazy"
                     >
@@ -166,6 +169,7 @@
                         src="/images/gallery/fleet-party-bus-chicago-skyline-night.jpg"
                         alt="Stop & Go Airport Shuttle Service, Inc. party bus against the Chicago skyline at night"
                         class="w-full object-cover"
+                        width="1600" height="900"
                         style="aspect-ratio: 16/9;"
                         loading="lazy"
                     >
@@ -220,6 +224,7 @@
                         src="/images/gallery/clients-bride-exiting-sprinter-van.jpg"
                         alt="Bride exiting a Stop & Go Airport Shuttle Service, Inc. Sprinter van on her wedding day"
                         class="w-full object-cover"
+                        width="800" height="600"
                         style="aspect-ratio: 4/3;"
                         loading="lazy"
                     >
@@ -227,6 +232,7 @@
                         src="/images/gallery/clients-bride-seated-limo-bouquet.png"
                         alt="Bride seated inside stretch limousine holding wedding bouquet"
                         class="w-full object-cover"
+                        width="800" height="600"
                         style="aspect-ratio: 4/3;"
                         loading="lazy"
                     >
@@ -338,6 +344,7 @@
                     src="/images/gallery/about-new-lenox-chamber-ribbon-cutting-certificate-2024.jpg"
                     alt="New Lenox Chamber of Commerce ribbon cutting certificate 2024"
                     class="w-full object-cover"
+                    width="800" height="600"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
                 >
@@ -345,6 +352,7 @@
                     src="/images/gallery/about-vincent-new-lenox-ribbon-cutting-award.jpg"
                     alt="Owner Vincent with Emily Johnson at New Lenox Chamber ribbon cutting award ceremony"
                     class="w-full object-cover"
+                    width="800" height="600"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
                 >
@@ -352,6 +360,7 @@
                     src="/images/gallery/about-bolingbrook-chamber-member-plaque-2024.jpg"
                     alt="Bolingbrook Chamber of Commerce member plaque 2024"
                     class="w-full object-cover"
+                    width="800" height="600"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
                 >
@@ -359,6 +368,7 @@
                     src="/images/gallery/clients-womens-group-inside-party-bus-daytime.jpg"
                     alt="Group of women celebrating inside a Stop & Go Airport Shuttle Service, Inc. party bus"
                     class="w-full object-cover"
+                    width="800" height="600"
                     style="aspect-ratio: 4/3;"
                     loading="lazy"
                 >

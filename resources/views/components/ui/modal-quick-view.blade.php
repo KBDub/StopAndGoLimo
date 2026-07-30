@@ -46,6 +46,7 @@
                     <div style="aspect-ratio:1;background:#e0e0e0;">
                         <img :src="'{{ json_encode(array_column($images, 'src')) }}'[activeImg] || '{{ $images[0]['src'] }}'"
                              alt="{{ $title }}"
+                             width="600" height="600"
                              style="width:100%;height:100%;object-fit:cover;">
                     </div>
                     @if(count($images) > 1)
@@ -54,7 +55,7 @@
                                 <button x-on:click="activeImg={{ $i }}"
                                         style="width:48px;height:48px;border:2px solid #ccc;background:none;cursor:pointer;padding:0;"
                                         :style="activeImg === {{ $i }} ? 'border-color:#FFC20E' : ''">
-                                    <img src="{{ $img['src'] }}" alt="{{ $img['alt'] ?? '' }}" style="width:100%;height:100%;object-fit:cover;">
+                                    <img src="{{ $img['src'] }}" alt="{{ $img['alt'] ?? '' }}" width="48" height="48" style="width:100%;height:100%;object-fit:cover;">
                                 </button>
                             @endforeach
                         </div>

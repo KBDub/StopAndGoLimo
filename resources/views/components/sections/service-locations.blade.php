@@ -41,9 +41,9 @@
 
                 {{-- Three community icons, evenly spaced --}}
                 <div style="display: flex; justify-content: center; align-items: center; gap: 2.5rem; margin-bottom: 1.25rem;">
-                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
-                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
-                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" style="width: 4rem; height: auto; display: block;">
+                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" width="64" height="64" style="width: 4rem; height: auto; display: block;">
+                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" width="64" height="64" style="width: 4rem; height: auto; display: block;">
+                    <img src="/icons/community-people2.svg" alt="" aria-hidden="true" width="64" height="64" style="width: 4rem; height: auto; display: block;">
                 </div>
 
                 {{-- Chamber cities --}}

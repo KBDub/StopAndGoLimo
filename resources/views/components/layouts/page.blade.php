@@ -58,6 +58,11 @@
         $cssFile = $manifest['resources/css/app.css']['file'] ?? null;
         $jsFile = $manifest['resources/js/app.js']['file'] ?? null;
     @endphp
+    {{-- Google Fonts: preconnect + non-blocking stylesheet (replaces render-blocking @import chain in app.css) --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap">
     @if($cssFile)
     <link rel="stylesheet" href="/build/{{ $cssFile }}">
     @endif
@@ -138,7 +143,8 @@
     <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
     @endif
     @livewireStyles
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer"></noscript>
 </head>
 <body class="font-body antialiased bg-white text-navy overflow-x-clip">
 

@@ -36,6 +36,7 @@
                     src="{{ $imageLeft }}"
                     alt="{{ $altLeft }}"
                     class="absolute inset-0 w-full h-full object-cover object-center"
+                    width="800" height="500"
                     loading="lazy"
                 >
             @else
@@ -64,6 +65,7 @@
                     src="{{ $imageRight }}"
                     alt="{{ $altRight }}"
                     class="absolute inset-0 w-full h-full object-cover object-center"
+                    width="800" height="500"
                     loading="lazy"
                 >
             @else

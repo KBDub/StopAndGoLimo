@@ -24,6 +24,8 @@
         <img
             src="{{ $image }}"
             alt="{{ $imageAlt }}"
+            width="1600" height="900"
+            loading="lazy"
             style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block;"
         >
         <div style="position: absolute; inset: 0; background: rgba(10, 14, 35, 0.62);"></div>

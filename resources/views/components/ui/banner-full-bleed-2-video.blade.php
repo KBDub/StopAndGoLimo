@@ -43,7 +43,7 @@
                     <source src="{{ $videoLeft }}" type="{{ $type }}">
                 </video>
             @elseif($posterLeft)
-                <img src="{{ $posterLeft }}" alt="{{ $altLeft }}" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy">
+                <img src="{{ $posterLeft }}" alt="{{ $altLeft }}" class="absolute inset-0 w-full h-full object-cover object-center" width="800" height="500" loading="lazy">
             @else
                 <div class="absolute inset-0 w-full h-full bg-navy"></div>
             @endif
@@ -74,7 +74,7 @@
                     <source src="{{ $videoRight }}" type="{{ $type }}">
                 </video>
             @elseif($posterRight)
-                <img src="{{ $posterRight }}" alt="{{ $altRight }}" class="absolute inset-0 w-full h-full object-cover object-center" loading="lazy">
+                <img src="{{ $posterRight }}" alt="{{ $altRight }}" class="absolute inset-0 w-full h-full object-cover object-center" width="800" height="500" loading="lazy">
             @else
                 <div class="absolute inset-0 w-full h-full bg-slate"></div>
             @endif

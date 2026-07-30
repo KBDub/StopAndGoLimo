@@ -40,7 +40,7 @@
 
 <a href="{{ $href }}" class="sg-slide-banner" id="{{ $uid }}">
     @if($image)
-        <img src="{{ $image }}" alt="{{ $alt }}" loading="eager">
+        <img src="{{ $image }}" alt="{{ $alt }}" width="1600" height="900" fetchpriority="high" loading="eager">
     @else
         <div style="width:100%;height:100%;background:#2c2c2c;"></div>
     @endif

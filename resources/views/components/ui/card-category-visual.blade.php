@@ -13,6 +13,7 @@
 
     @if($image)
         <img class="ccv-img" src="{{ $image }}" alt="{{ $title }}"
+             width="800" height="800"
              loading="lazy"
              style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform 0.4s ease;">
     @endif

@@ -58,6 +58,8 @@
                     <img
                         src="{{ $image }}"
                         alt="{{ $imageAlt }}"
+                        width="800" height="600"
+                        loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; display: block;"
                     >
                 </div>

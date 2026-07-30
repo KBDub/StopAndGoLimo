@@ -27,7 +27,7 @@ $overflow = count($swatches) - 5;
     {{-- Image container --}}
     <a href="{{ $href }}" style="position:relative;overflow:hidden;aspect-ratio:3/4;display:block;background:#2c2c2c;">
         @if($image)
-            <img src="{{ $image }}" alt="{{ $title }}" loading="lazy"
+            <img src="{{ $image }}" alt="{{ $title }}" width="600" height="800" loading="lazy"
                  style="width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;"
                  onmouseenter="this.style.transform='scale(1.05)'"
                  onmouseleave="this.style.transform='scale(1)'">

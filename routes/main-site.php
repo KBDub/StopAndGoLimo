@@ -7,22 +7,99 @@ use App\Data\PrimaryLocations;
 // ─── Sitemap ─────────────────────────────────────────────────────────────────
 
 Route::get('/sitemap.xml', function () {
+    $base     = 'https://newlenoxlimoservice.com';
+    $viewsDir = resource_path('views/pages');
+    $floor    = now()->subMonths(3)->startOfDay()->timestamp;
+
+    // URI prefixes to exclude entirely
+    $excludePrefixes = [
+        '_', 'livewire', 'ignition', 'debugbar', 'sanctum',
+        'filament',
+        'hub',        // Filament / Lunar admin panel
+        'lp/',
+        'demo',
+        'page-management',
+        'devtools',
+        'sitemap',
+        'cart', 'checkout', 'order-confirmation', 'stripe',
+        'collections', 'products',
+    ];
+
+    // Exact URIs to exclude (e.g. redirect-only routes, health checks)
+    $excludeExact = [
+        'up',                        // Laravel health check
+        'services/events/concerts',  // 301 → /special-event-limousine
+    ];
+
+    // URIs that get priority 0.9 (everything else defaults to 0.8)
+    $highPriority = [
+        '/',
+        'our-services',
+        'get-a-quote',
+        'core-services',
+        'airport-shuttle-ohare-midway',
+        'new-lenox-airport-shuttle-limo-service',
+        'naperville-airport-shuttle-limo-service',
+    ];
+
+    // URIs that get priority 0.7
+    $lowPriority = [
+        'how-to-plan-a-party-bus-experience',
+        'rent-the-party-bus-of-your-dreams',
+        'renting-a-party-bus-2026-ultimate-party',
+        'best-limo-services-near-me-february-2026',
+    ];
+
+    $urls = collect(Route::getRoutes()->getRoutes())
+        ->filter(fn ($r) => in_array('GET', $r->methods()))
+        ->map(fn ($r) => $r->uri())
+        ->unique()
+        ->filter(function ($uri) use ($excludePrefixes, $excludeExact) {
+            // Drop parameterised routes
+            if (str_contains($uri, '{')) {
+                return false;
+            }
+            if (in_array($uri, $excludeExact)) {
+                return false;
+            }
+            foreach ($excludePrefixes as $prefix) {
+                if (str_starts_with($uri, $prefix)) {
+                    return false;
+                }
+            }
+            return true;
+        })
+        ->map(function ($uri) use ($base, $viewsDir, $floor, $highPriority, $lowPriority) {
+            $loc      = $base . ($uri === '/' ? '/' : '/' . $uri);
+            $viewPath = $uri === '/' ? 'home' : $uri;
+            $file     = $viewsDir . DIRECTORY_SEPARATOR
+                      . str_replace('/', DIRECTORY_SEPARATOR, $viewPath) . '.blade.php';
+
+            $mtime   = is_file($file) ? filemtime($file) : $floor;
+            $lastmod = date('Y-m-d', max($mtime, $floor));
+
+            if ($uri === '/') {
+                $priority   = '1.0';
+                $changefreq = 'weekly';
+            } elseif (in_array($uri, $highPriority)) {
+                $priority   = '0.9';
+                $changefreq = 'monthly';
+            } elseif (in_array($uri, $lowPriority)) {
+                $priority   = '0.7';
+                $changefreq = 'monthly';
+            } else {
+                $priority   = '0.8';
+                $changefreq = 'monthly';
+            }
+
+            return compact('loc', 'lastmod', 'changefreq', 'priority');
+        })
+        ->values();
+
     return response()
-        ->view('sitemaps.sitemap')
+        ->view('sitemaps.sitemap', compact('urls'))
         ->header('Content-Type', 'application/xml; charset=utf-8');
 })->name('sitemap');
-
-Route::get('/sitemap_video.xml', function () {
-    return response()
-        ->view('sitemaps.sitemap-video')
-        ->header('Content-Type', 'application/xml; charset=utf-8');
-})->name('sitemap.video');
-
-Route::get('/sitemap_images.xml', function () {
-    return response()
-        ->view('sitemaps.sitemap-images')
-        ->header('Content-Type', 'application/xml; charset=utf-8');
-})->name('sitemap.images');
 
 // ─── Main Site ───────────────────────────────────────────────────────────────
 

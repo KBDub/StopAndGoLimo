@@ -1,6 +1,7 @@
 @props([
-    'preset' => null,
-    'faqs'   => null,
+    'preset'  => null,
+    'faqs'    => null,
+    'schema'  => true,
 ])
 
 @php
@@ -9,6 +10,7 @@ $faqs ??= $preset
     : config('faqs.general');
 @endphp
 
+@if($schema)
 @push('structured-data')
 @php
 $faqJsonLd = [
@@ -26,6 +28,7 @@ $faqJsonLd = [
 @endphp
 <script type="application/ld+json">{!! json_encode($faqJsonLd, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}</script>
 @endpush
+@endif
 
 <section id="faq" style="background: var(--cloud-light); scroll-margin-top: 80px;" class="py-12 lg:py-[6.25rem]">
     <div class="max-w-7xl mx-auto px-6">

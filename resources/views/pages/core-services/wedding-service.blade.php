@@ -4,11 +4,13 @@
 {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
-    "@id": "https://newlenoxlimoservice.com/#business",
+    "@id": "https://newlenoxlimoservice.com",
     "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "",
+@endverbatim
+    "telephone": "{!! $clientConfig->phone_raw !!}",
+@verbatim
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/bus-rentals-for-wedding.png",
     "address": {
@@ -58,7 +60,7 @@
     "description": "Full-day wedding transportation service across New Lenox, Joliet, Naperville, Frankfort, and all of Will County and Chicagoland. Wedding limousines, bridal party transportation, wedding party buses, guest shuttles, getaway cars, rehearsal dinner transport, airport transfers for honeymoon and out-of-town guests, and full-day coordination under one dispatch contact. Flat-rate pricing, backup vehicles in reserve, 24/7/365 dispatch.",
     "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://newlenoxlimoservice.com/#business"
+        "@id": "https://newlenoxlimoservice.com"
     },
     "areaServed": { "@type": "State", "name": "Illinois" },
     "hasOfferCatalog": {
@@ -498,7 +500,7 @@
 
     <x-sections.review-slider />
 
-    <x-sections.faq preset="general" />
+    <x-sections.faq preset="general" :schema="false" />
 
     <x-sections.share-your-experience />
 

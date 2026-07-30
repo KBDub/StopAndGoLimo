@@ -4,11 +4,13 @@
 {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
-    "@id": "https://newlenoxlimoservice.com/#business",
+    "@id": "https://newlenoxlimoservice.com",
     "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "",
+@endverbatim
+    "telephone": "{!! $clientConfig->phone_raw !!}",
+@verbatim
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/airport-ohare-midway.jpg",
     "address": {
@@ -58,7 +60,7 @@
     "description": "Flat-rate airport shuttle service to O'Hare, Midway, Chicago Executive, Gary/Chicago, and regional FBOs from New Lenox, Joliet, Naperville, and all of Will County. Real-time flight tracking, meet-and-greet, 24/7/365 dispatch.",
     "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://newlenoxlimoservice.com/#business"
+        "@id": "https://newlenoxlimoservice.com"
     },
     "areaServed": { "@type": "State", "name": "Illinois" },
     "hasOfferCatalog": {
@@ -738,7 +740,7 @@
 
     <x-sections.review-slider />
 
-    <x-sections.faq preset="general" />
+    <x-sections.faq preset="general" :schema="false" />
 
     <x-sections.share-your-experience />
 

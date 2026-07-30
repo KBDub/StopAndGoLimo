@@ -7,7 +7,7 @@
     "provider": {
         "@@type": "LocalBusiness",
         "name": "Stop & Go Airport Shuttle Service, Inc.",
-        "telephone": "",
+        "telephone": "{!! $clientConfig->phone_raw !!}",
         "address": {
             "@@type": "PostalAddress",
             "streetAddress": "400 E Lincoln Hwy Suite 101A",

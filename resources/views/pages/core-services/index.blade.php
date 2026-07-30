@@ -4,11 +4,13 @@
 {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
-    "@id": "https://newlenoxlimoservice.com/#business",
+    "@id": "https://newlenoxlimoservice.com",
     "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "",
+@endverbatim
+    "telephone": "{!! $clientConfig->phone_raw !!}",
+@verbatim
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-services.jpg",
     "address": {

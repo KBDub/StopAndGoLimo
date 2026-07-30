@@ -6,7 +6,9 @@
     "@type": "LocalBusiness",
     "name": "Stop & Go Airport Shuttle Service, Inc.",
     "url": "https://www.newlenoxlimoservice.com/service-areas",
-    "telephone": "",
+@endverbatim
+    "telephone": "{!! $clientConfig->phone_raw !!}",
+@verbatim
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "400 E Lincoln Hwy Suite 101A",

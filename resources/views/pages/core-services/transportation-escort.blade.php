@@ -4,11 +4,13 @@
 {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "LimousineService"],
-    "@id": "https://newlenoxlimoservice.com/#business",
+    "@id": "https://newlenoxlimoservice.com",
     "name": "Stop & Go Airport Shuttle Service, Inc.",
     "alternateName": "Stop & Go Limo",
     "url": "https://newlenoxlimoservice.com",
-    "telephone": "",
+@endverbatim
+    "telephone": "{!! $clientConfig->phone_raw !!}",
+@verbatim
     "priceRange": "$$",
     "image": "https://newlenoxlimoservice.com/images/heroes/hero-special-event.jpg",
     "address": {
@@ -58,7 +60,7 @@
     "description": "Professional escorted transportation service for individuals, families, and groups across New Lenox, Joliet, Naperville, and all of Will County and Chicagoland. Dedicated chauffeur accompanies clients door-to-door for airport transfers, anniversaries, birthdays, city tours, school dances, corporate services, and private charters. Background-checked drivers, flat-rate pricing, 24/7/365 dispatch.",
     "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://newlenoxlimoservice.com/#business"
+        "@id": "https://newlenoxlimoservice.com"
     },
     "areaServed": { "@type": "State", "name": "Illinois" },
     "hasOfferCatalog": {
@@ -498,7 +500,7 @@
 
     <x-sections.review-slider />
 
-    <x-sections.faq preset="general" />
+    <x-sections.faq preset="general" :schema="false" />
 
     <x-sections.share-your-experience />
 

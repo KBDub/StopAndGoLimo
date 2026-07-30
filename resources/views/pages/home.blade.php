@@ -4,19 +4,19 @@
 {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Luxury Limo Service in Joliet, IL serving Chicagoland",
-    "provider": { "@id": "https://www.newlenoxlimoservice.com" },
-    "areaServed": { "@type": "City", "name": "Joliet", "addressRegion": "IL", "addressCountry": "US" },
-    "description": ""
+    "name": "Chicagoland Limousine & Airport Shuttle Service",
+    "provider": { "@type": "LocalBusiness", "@id": "https://newlenoxlimoservice.com" },
+    "areaServed": { "@type": "State", "name": "Illinois" },
+    "description": "Premium limousine, airport shuttle, party bus, and charter transportation across Chicagoland. Flat-rate, 24/7/365, professional background-checked chauffeurs serving O'Hare, Midway, and all Chicagoland communities."
 }
 </script>
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Luxury Limo Service in Joliet, IL | Stop & Go Airport Shuttle Service, Inc.",
-    "url": "https://www.newlenoxlimoservice.com/",
-    "description": ""
+    "name": "Stop & Go Airport Shuttle Service, Inc. | Chicagoland Limo & Airport Shuttle",
+    "url": "https://newlenoxlimoservice.com",
+    "description": "Premium limousine and airport shuttle across Chicagoland. Professional chauffeurs, flat rates, and 24/7 service to O'Hare and Midway."
 }
 </script>
 <script type="application/ld+json">
@@ -24,7 +24,7 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.newlenoxlimoservice.com" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://newlenoxlimoservice.com" }
     ]
 }
 </script>

@@ -89,19 +89,7 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        $isTest     = strtolower(trim($validated['name']))  === 'test test'
-                   && strtolower(trim($validated['email'])) === 'test@test.com';
-        $recipients = $isTest
-            ? ['support@apexwebseo.com']
-            : ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
-        try {
-            $mailer = Mail::to($recipients);
-            if (!$isTest) { $mailer->bcc('support@apexwebseo.com'); }
-            $mailer->send(new QuoteSubmitted($quote));
-            Log::info('[QuoteController] Modal email sent', ['reference' => $reference, 'test_mode' => $isTest]);
-        } catch (\Throwable $e) {
-            Log::error('[QuoteController] Modal email FAILED', ['reference' => $reference, 'error' => $e->getMessage()]);
-        }
+        $this->sendQuoteNotification($quote);
 
         $firstName = explode(' ', trim($validated['name']))[0];
 
@@ -207,38 +195,7 @@ class QuoteController extends Controller
         }
 
         // ── Email notification ────────────────────────────────────────────────
-        $isTest     = strtolower(trim($validated['name']))  === 'test test'
-                   && strtolower(trim($validated['email'])) === 'test@test.com';
-        $recipients = $isTest
-            ? ['support@apexwebseo.com']
-            : ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
-        if (!empty($recipients)) {
-            try {
-                $mailer = Mail::to($recipients);
-                if (!$isTest) { $mailer->bcc('support@apexwebseo.com'); }
-                $mailer->send(new QuoteSubmitted($quote));
-                Log::info('[QuoteController] Notification email sent', [
-                    'reference' => $reference,
-                    'to'        => implode(', ', $recipients),
-                    'host'      => config('mail.mailers.smtp.host'),
-                    'port'      => config('mail.mailers.smtp.port'),
-                    'scheme'    => config('mail.mailers.smtp.scheme'),
-                ]);
-            } catch (\Throwable $e) {
-                Log::error('[QuoteController] Email send FAILED', [
-                    'reference' => $reference,
-                    'to'        => implode(', ', $recipients),
-                    'host'      => config('mail.mailers.smtp.host'),
-                    'port'      => config('mail.mailers.smtp.port'),
-                    'scheme'    => config('mail.mailers.smtp.scheme'),
-                    'error'     => $e->getMessage(),
-                ]);
-            }
-        } else {
-            Log::warning('[QuoteController] No notify email configured — email skipped', [
-                'reference' => $reference,
-            ]);
-        }
+        $this->sendQuoteNotification($quote);
 
         // ── Success ───────────────────────────────────────────────────────────
         $firstName = explode(' ', trim($validated['name']))[0];
@@ -254,5 +211,38 @@ class QuoteController extends Controller
             ->with('quote_success', true)
             ->with('quote_name', $firstName)
             ->with('quote_reference', $reference);
+    }
+
+    // ── Shared ────────────────────────────────────────────────────────────────
+
+    private function sendQuoteNotification(CustomOrderRequest $quote): void
+    {
+        $isTest     = strtolower(trim($quote->contact_name))  === 'test test'
+                   && strtolower(trim($quote->contact_email)) === 'test@test.com';
+        $recipients = $isTest
+            ? ['support@apexwebseo.com']
+            : ['vincent@newlenoxlimoservice.com', 'stopngovr@gmail.com'];
+        try {
+            $mailer = Mail::to($recipients);
+            if (!$isTest) { $mailer->bcc('support@apexwebseo.com'); }
+            $mailer->send(new QuoteSubmitted($quote));
+            Log::info('[QuoteController] Email sent', [
+                'reference' => $quote->reference,
+                'to'        => implode(', ', $recipients),
+                'test_mode' => $isTest,
+                'host'      => config('mail.mailers.smtp.host'),
+                'port'      => config('mail.mailers.smtp.port'),
+                'scheme'    => config('mail.mailers.smtp.scheme'),
+            ]);
+        } catch (\Throwable $e) {
+            Log::error('[QuoteController] Email FAILED', [
+                'reference' => $quote->reference,
+                'to'        => implode(', ', $recipients),
+                'host'      => config('mail.mailers.smtp.host'),
+                'port'      => config('mail.mailers.smtp.port'),
+                'scheme'    => config('mail.mailers.smtp.scheme'),
+                'error'     => $e->getMessage(),
+            ]);
+        }
     }
 }

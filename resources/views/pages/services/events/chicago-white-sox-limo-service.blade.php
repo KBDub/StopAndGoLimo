@@ -34,7 +34,7 @@
         { "@type": "City", "name": "Beverly",         "addressRegion": "IL" },
         { "@type": "City", "name": "Mount Greenwood", "addressRegion": "IL" }
     ],
-    "description": "Stop & Go Airport Shuttle Service, Inc. provides luxury limo, party bus, and sprinter van service to Rate Field for White Sox games from anywhere in Chicagoland. Groups of 13 or more. Flat-rate pricing."
+    "description": "Stop & Go Airport Shuttle Service, Inc. provides luxury limo, party bus, and sprinter van service to Rate Field for White Sox games from anywhere in Chicagoland. Any group size welcome. Flat-rate pricing."
 }
 </script>
 <script type="application/ld+json">
@@ -43,7 +43,7 @@
     "@type": "WebPage",
     "name": "Chicago White Sox Limo & Party Bus Service | Stop & Go Airport Shuttle Service, Inc.",
     "url": "https://www.newlenoxlimoservice.com/services/events/chicago-white-sox-limo-service",
-    "description": "Luxury limo, party bus, and sprinter van service to Rate Field from anywhere in Chicagoland. Groups of 13 or more. Flat-rate pricing. Book your White Sox game day ride today."
+    "description": "Luxury limo, party bus, and sprinter van service to Rate Field from anywhere in Chicagoland. Any group size welcome. Flat-rate pricing. Book your White Sox game day ride today."
 }
 </script>
 <script type="application/ld+json">
@@ -124,7 +124,7 @@ $fulfillmentItems = [
 
 <x-layouts.page
     title="Chicago White Sox Limo & Party Bus Service | Stop & Go Airport Shuttle Service, Inc."
-    metaDescription="Luxury limo, party bus, and sprinter van service to Rate Field from anywhere in Chicagoland. Groups of 13 or more. Flat-rate pricing. Book your White Sox game day ride today."
+    metaDescription="Luxury limo, party bus, and sprinter van service to Rate Field from anywhere in Chicagoland. Any group size welcome. Flat-rate pricing. Book your White Sox game day ride today."
     currentPage="services"
     ogImage="/images/heroes/hero-special-event.jpg"
     ogImageAlt="Luxury party bus for Chicago White Sox game day transportation, Stop & Go Airport Shuttle Service, Inc."

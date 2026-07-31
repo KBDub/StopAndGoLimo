@@ -58,7 +58,7 @@
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">
                 <x-nav.item href="/six-flags-party-bus" title="Six Flags Party Bus" />
-                <x-nav.flyout title="Concerts" sub="Live music & venue transport" dir="right" href="/services/events/concerts">
+                <x-nav.flyout title="Concerts" sub="Live music & venue transport" dir="left" href="/services/events/concerts">
                     <x-nav.item href="/services/events/concerts/aragon-ballroom-chicago-limo-service"  title="Aragon Ballroom" />
                     <x-nav.item href="/services/events/concerts/chicago-concert-night-out"             title="Chicago Night Out" />
                     <x-nav.item href="/services/events/concerts/house-of-blues-chicago-limo-service"   title="House of Blues" />
@@ -68,7 +68,7 @@
                     <x-nav.item href="/services/events/concerts/united-center-concert-limo-service"    title="United Center" />
                     <x-nav.item href="/services/events/concerts/wrigley-field-concert-limo-service"    title="Wrigley Field" />
                 </x-nav.flyout>
-                <x-nav.flyout title="Sporting Events" sub="Pro teams & game-day rides" dir="right" href="/special-event-limousine">
+                <x-nav.flyout title="Sporting Events" sub="Pro teams & game-day rides" dir="left" href="/special-event-limousine">
                     <x-nav.item href="/chicago-bears-party-bus"                      title="Chicago Bears" />
                     <x-nav.item href="/chicago-bulls-party-bus"                      title="Chicago Bulls" />
                     <x-nav.item href="/chicago-blackhawks-party-bus"                 title="Chicago Blackhawks" />

@@ -265,14 +265,14 @@
                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Six Flags Party Bus</span>
                             </a>
 
-                            {{-- 2. Concerts — flyout opens RIGHT --}}
+                            {{-- 2. Concerts — flyout opens LEFT --}}
                             <div
                                 class="relative border-b border-white/8"
                                 @mouseenter="openMenu = 'events-concerts'"
                                 @mouseleave="openMenu = 'events'"
                             >
                                 <a href="/services/events/concerts" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Concerts <span class="text-champagne/60 text-xs ml-1">&#9654;</span></span>
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Concerts <span class="text-champagne/60 text-xs ml-1">&#9664;</span></span>
                                     <span class="text-sm text-muted mt-0.5">Live music &amp; venue transport</span>
                                 </a>
                                 <div
@@ -283,10 +283,10 @@
                                     x-transition:leave="transition ease-in duration-75"
                                     x-transition:leave-start="opacity-100"
                                     x-transition:leave-end="opacity-0"
-                                    class="absolute top-0 left-full z-50"
+                                    class="absolute top-0 right-full z-50"
                                     style="width: 300px;"
                                 >
-                                    <div class="bg-navy-dark border border-champagne/20 border-l-[3px] border-l-champagne shadow-champagne-lg">
+                                    <div class="bg-navy-dark border border-champagne/20 border-r-[3px] border-r-champagne shadow-champagne-lg">
                                         <a href="/services/events/concerts/aragon-ballroom-chicago-limo-service" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                             <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Aragon Ballroom</span>
                                         </a>
@@ -315,14 +315,14 @@
                                 </div>
                             </div>
 
-                            {{-- 3. Sporting Events — flyout opens RIGHT --}}
+                            {{-- 3. Sporting Events — flyout opens LEFT --}}
                             <div
                                 class="relative border-b border-white/8"
                                 @mouseenter="openMenu = 'events-sports'"
                                 @mouseleave="openMenu = 'events'"
                             >
                                 <a href="/special-event-limousine" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
-                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Sporting Events <span class="text-champagne/60 text-xs ml-1">&#9654;</span></span>
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Sporting Events <span class="text-champagne/60 text-xs ml-1">&#9664;</span></span>
                                     <span class="text-sm text-muted mt-0.5">Pro teams &amp; game-day rides</span>
                                 </a>
                                 <div
@@ -333,10 +333,10 @@
                                     x-transition:leave="transition ease-in duration-75"
                                     x-transition:leave-start="opacity-100"
                                     x-transition:leave-end="opacity-0"
-                                    class="absolute top-0 left-full z-50"
+                                    class="absolute top-0 right-full z-50"
                                     style="width: 300px;"
                                 >
-                                    <div class="bg-navy-dark border border-champagne/20 border-l-[3px] border-l-champagne shadow-champagne-lg">
+                                    <div class="bg-navy-dark border border-champagne/20 border-r-[3px] border-r-champagne shadow-champagne-lg">
                                         <a href="/chicago-bears-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
                                             <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Bears</span>
                                         </a>

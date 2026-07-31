@@ -259,7 +259,13 @@
                         style="width: 320px; max-width: calc(100vw - 20px);"
                     >
                         <div class="bg-navy-dark border-t-[3px] border-champagne shadow-champagne-lg">
-                            {{-- Concerts — flyout opens RIGHT --}}
+
+                            {{-- 1. Six Flags --}}
+                            <a href="/six-flags-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Six Flags Party Bus</span>
+                            </a>
+
+                            {{-- 2. Concerts — flyout opens RIGHT --}}
                             <div
                                 class="relative border-b border-white/8"
                                 @mouseenter="openMenu = 'events-concerts'"
@@ -308,24 +314,53 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="/six-flags-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Six Flags Party Bus</span>
-                            </a>
-                            <a href="/chicago-golf-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+
+                            {{-- 3. Sporting Events — flyout opens RIGHT --}}
+                            <div
+                                class="relative border-b border-white/8"
+                                @mouseenter="openMenu = 'events-sports'"
+                                @mouseleave="openMenu = 'events'"
+                            >
+                                <a href="/special-event-limousine" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
+                                    <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Sporting Events <span class="text-champagne/60 text-xs ml-1">&#9654;</span></span>
+                                    <span class="text-sm text-muted mt-0.5">Pro teams &amp; game-day rides</span>
+                                </a>
+                                <div
+                                    x-cloak x-show="openMenu === 'events-sports'"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="opacity-0"
+                                    x-transition:enter-end="opacity-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="opacity-100"
+                                    x-transition:leave-end="opacity-0"
+                                    class="absolute top-0 left-full z-50"
+                                    style="width: 300px;"
+                                >
+                                    <div class="bg-navy-dark border border-champagne/20 border-l-[3px] border-l-champagne shadow-champagne-lg">
+                                        <a href="/chicago-bears-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                            <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Bears</span>
+                                        </a>
+                                        <a href="/chicago-bulls-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                            <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Bulls</span>
+                                        </a>
+                                        <a href="/chicago-blackhawks-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                            <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Blackhawks</span>
+                                        </a>
+                                        <a href="/services/events/chicago-cubs-limo-service" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
+                                            <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Cubs</span>
+                                        </a>
+                                        <a href="/services/events/chicago-white-sox-limo-service" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group">
+                                            <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago White Sox</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- 4. Golf --}}
+                            <a href="/chicago-golf-party-bus" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group">
                                 <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Golfing Party Bus</span>
                             </a>
-                            <a href="/chicago-concert-party-bus-rental" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Concert Party Bus Rental</span>
-                            </a>
-                            <a href="/chicago-bears-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Bears Party and Limo Bus</span>
-                            </a>
-                            <a href="/chicago-bulls-party-bus" class="flex flex-col px-5 py-3 border-b border-white/8 hover:bg-white/5 transition-colors group">
-                                <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Bulls Party Bus</span>
-                            </a>
-                            <a href="/chicago-blackhawks-party-bus" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group">
-                                <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Chicago Blackhawks Party Bus</span>
-                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -463,6 +498,7 @@
                     <svg class="w-4 h-4 transition-transform duration-200" :class="openMobile === 'events' ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
                 <div x-show="openMobile === 'events'" x-transition class="pl-4 pt-1 pb-2 space-y-1 border-l-2 border-champagne ml-3">
+                    <a href="/six-flags-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Six Flags Party Bus</a>
                     <a href="/services/events/concerts" class="block px-3 py-1.5 text-sm font-semibold text-champagne">Concerts</a>
                     <a href="/services/events/concerts/aragon-ballroom-chicago-limo-service" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Aragon Ballroom</a>
                     <a href="/services/events/concerts/chicago-concert-night-out" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Chicago Night Out</a>
@@ -472,12 +508,13 @@
                     <a href="/services/events/concerts/tinley-park-amphitheatre-limo-service" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Tinley Park Amphitheatre</a>
                     <a href="/services/events/concerts/united-center-concert-limo-service" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">United Center</a>
                     <a href="/services/events/concerts/wrigley-field-concert-limo-service" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Wrigley Field</a>
-                    <a href="/six-flags-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Six Flags Party Bus</a>
+                    <a href="/special-event-limousine" class="block px-3 py-1.5 text-sm font-semibold text-champagne">Sporting Events</a>
+                    <a href="/chicago-bears-party-bus" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Chicago Bears</a>
+                    <a href="/chicago-bulls-party-bus" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Chicago Bulls</a>
+                    <a href="/chicago-blackhawks-party-bus" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Chicago Blackhawks</a>
+                    <a href="/services/events/chicago-cubs-limo-service" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Chicago Cubs</a>
+                    <a href="/services/events/chicago-white-sox-limo-service" class="block px-3 py-1.5 text-sm text-cloud/60 hover:text-champagne pl-6">Chicago White Sox</a>
                     <a href="/chicago-golf-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Golfing Party Bus</a>
-                    <a href="/chicago-concert-party-bus-rental" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Concert Party Bus Rental</a>
-                    <a href="/chicago-bears-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chicago Bears Party and Limo Bus</a>
-                    <a href="/chicago-bulls-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chicago Bulls Party Bus</a>
-                    <a href="/chicago-blackhawks-party-bus" class="block px-3 py-1.5 text-sm text-cloud/80 hover:text-champagne">Chicago Blackhawks Party Bus</a>
                 </div>
             </div>
 

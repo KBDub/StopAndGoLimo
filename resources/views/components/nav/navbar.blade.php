@@ -57,25 +57,25 @@
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Special Events" href="/special-event-limousine">
+                <x-nav.item href="/six-flags-party-bus" title="Six Flags Party Bus" />
                 <x-nav.flyout title="Concerts" sub="Live music & venue transport" dir="right" href="/services/events/concerts">
-                    <x-nav.item href="/services/events/concerts/aragon-ballroom-chicago-limo-service" title="Aragon Ballroom" />
-                    <x-nav.item href="/services/events/concerts/chicago-concert-night-out"            title="Chicago Night Out" />
-                    <x-nav.item href="/services/events/concerts/house-of-blues-chicago-limo-service"  title="House of Blues" />
-                    <x-nav.item href="/services/events/concerts/ravinia-festival-limo-service"        title="Ravinia Festival" />
-                    <x-nav.item href="/services/events/concerts/soldier-field-concert-limo-service"   title="Soldier Field" />
+                    <x-nav.item href="/services/events/concerts/aragon-ballroom-chicago-limo-service"  title="Aragon Ballroom" />
+                    <x-nav.item href="/services/events/concerts/chicago-concert-night-out"             title="Chicago Night Out" />
+                    <x-nav.item href="/services/events/concerts/house-of-blues-chicago-limo-service"   title="House of Blues" />
+                    <x-nav.item href="/services/events/concerts/ravinia-festival-limo-service"         title="Ravinia Festival" />
+                    <x-nav.item href="/services/events/concerts/soldier-field-concert-limo-service"    title="Soldier Field" />
                     <x-nav.item href="/services/events/concerts/tinley-park-amphitheatre-limo-service" title="Tinley Park Amphitheatre" />
-                    <x-nav.item href="/services/events/concerts/united-center-concert-limo-service"   title="United Center" />
-                    <x-nav.item href="/services/events/concerts/wrigley-field-concert-limo-service"   title="Wrigley Field" />
+                    <x-nav.item href="/services/events/concerts/united-center-concert-limo-service"    title="United Center" />
+                    <x-nav.item href="/services/events/concerts/wrigley-field-concert-limo-service"    title="Wrigley Field" />
                 </x-nav.flyout>
-                <x-nav.item href="/services/events/chicago-cubs-limo-service"      title="Chicago Cubs Limo & Party Bus" />
-                <x-nav.item href="/services/events/chicago-white-sox-limo-service" title="Chicago White Sox Limo & Party Bus" />
-                <x-nav.item href="/services/events/chicago-crosstown-classic"      title="Crosstown Classic Limo & Party Bus" />
-                <x-nav.item href="/six-flags-party-bus"              title="Six Flags Party Bus" />
-                <x-nav.item href="/chicago-golf-party-bus"           title="Golfing Party Bus" />
-                <x-nav.item href="/chicago-concert-party-bus-rental" title="Concert Party Bus Rental" />
-                <x-nav.item href="/chicago-bears-party-bus"          title="Chicago Bears Party & Limo Bus" />
-                <x-nav.item href="/chicago-bulls-party-bus"          title="Chicago Bulls Party Bus" />
-                <x-nav.item href="/chicago-blackhawks-party-bus"     title="Chicago Blackhawks Party Bus" />
+                <x-nav.flyout title="Sporting Events" sub="Pro teams & game-day rides" dir="right" href="/special-event-limousine">
+                    <x-nav.item href="/chicago-bears-party-bus"                      title="Chicago Bears" />
+                    <x-nav.item href="/chicago-bulls-party-bus"                      title="Chicago Bulls" />
+                    <x-nav.item href="/chicago-blackhawks-party-bus"                 title="Chicago Blackhawks" />
+                    <x-nav.item href="/services/events/chicago-cubs-limo-service"    title="Chicago Cubs" />
+                    <x-nav.item href="/services/events/chicago-white-sox-limo-service" title="Chicago White Sox" />
+                </x-nav.flyout>
+                <x-nav.item href="/chicago-golf-party-bus" title="Golfing Party Bus" />
             </x-nav.dropdown>
 
             <x-nav.dropdown label="Service Areas" panel="areas" href="/service-areas" heading="Exceptional Service, Serving all of Chicagoland, 24/7, 365">
@@ -173,6 +173,7 @@
 
             <div class="nav-drawer-group">
                 <span class="nav-drawer-heading">Special Events</span>
+                <a href="/six-flags-party-bus" class="nav-drawer-sub">Six Flags Party Bus</a>
                 <a href="/services/events/concerts" class="nav-drawer-sub">Concerts</a>
                 <a href="/services/events/concerts/aragon-ballroom-chicago-limo-service" class="nav-drawer-sub">Aragon Ballroom</a>
                 <a href="/services/events/concerts/chicago-concert-night-out" class="nav-drawer-sub">Chicago Night Out</a>
@@ -182,15 +183,13 @@
                 <a href="/services/events/concerts/tinley-park-amphitheatre-limo-service" class="nav-drawer-sub">Tinley Park Amphitheatre</a>
                 <a href="/services/events/concerts/united-center-concert-limo-service" class="nav-drawer-sub">United Center</a>
                 <a href="/services/events/concerts/wrigley-field-concert-limo-service" class="nav-drawer-sub">Wrigley Field</a>
-                <a href="/services/events/chicago-cubs-limo-service"      class="nav-drawer-sub">Chicago Cubs Limo &amp; Party Bus</a>
-                <a href="/services/events/chicago-white-sox-limo-service" class="nav-drawer-sub">Chicago White Sox Limo &amp; Party Bus</a>
-                <a href="/services/events/chicago-crosstown-classic"      class="nav-drawer-sub">Crosstown Classic Limo &amp; Party Bus</a>
-                <a href="/six-flags-party-bus"              class="nav-drawer-sub">Six Flags Party Bus</a>
-                <a href="/chicago-golf-party-bus"           class="nav-drawer-sub">Golfing Party Bus</a>
-                <a href="/chicago-concert-party-bus-rental" class="nav-drawer-sub">Concert Party Bus</a>
-                <a href="/chicago-bears-party-bus"          class="nav-drawer-sub">Chicago Bears Party Bus</a>
-                <a href="/chicago-bulls-party-bus"          class="nav-drawer-sub">Chicago Bulls Party Bus</a>
-                <a href="/chicago-blackhawks-party-bus"     class="nav-drawer-sub">Chicago Blackhawks Party Bus</a>
+                <a href="/special-event-limousine" class="nav-drawer-sub">Sporting Events</a>
+                <a href="/chicago-bears-party-bus"                      class="nav-drawer-sub">Chicago Bears</a>
+                <a href="/chicago-bulls-party-bus"                      class="nav-drawer-sub">Chicago Bulls</a>
+                <a href="/chicago-blackhawks-party-bus"                 class="nav-drawer-sub">Chicago Blackhawks</a>
+                <a href="/services/events/chicago-cubs-limo-service"   class="nav-drawer-sub">Chicago Cubs</a>
+                <a href="/services/events/chicago-white-sox-limo-service" class="nav-drawer-sub">Chicago White Sox</a>
+                <a href="/chicago-golf-party-bus" class="nav-drawer-sub">Golfing Party Bus</a>
             </div>
 
             <a href="/service-areas" class="nav-drawer-link">Service Areas</a>

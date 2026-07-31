@@ -321,7 +321,7 @@
                                 @mouseenter="openMenu = 'events-sports'"
                                 @mouseleave="openMenu = 'events'"
                             >
-                                <a href="/special-event-limousine" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
+                                <a href="/services/events/chicago-cubs-limo-service" class="flex flex-col px-5 py-3 hover:bg-white/5 transition-colors group h-full">
                                     <span class="font-head font-semibold text-cloud group-hover:text-champagne transition-colors">Sporting Events <span class="text-champagne/60 text-xs ml-1">&#9664;</span></span>
                                     <span class="text-sm text-muted mt-0.5">Pro teams &amp; game-day rides</span>
                                 </a>

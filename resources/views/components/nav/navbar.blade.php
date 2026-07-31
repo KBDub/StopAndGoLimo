@@ -68,7 +68,7 @@
                     <x-nav.item href="/services/events/concerts/united-center-concert-limo-service"    title="United Center" />
                     <x-nav.item href="/services/events/concerts/wrigley-field-concert-limo-service"    title="Wrigley Field" />
                 </x-nav.flyout>
-                <x-nav.flyout title="Sporting Events" sub="Pro teams & game-day rides" dir="left" href="/special-event-limousine">
+                <x-nav.flyout title="Sporting Events" sub="Pro teams & game-day rides" dir="left" href="/services/events/chicago-cubs-limo-service">
                     <x-nav.item href="/chicago-bears-party-bus"                      title="Chicago Bears" />
                     <x-nav.item href="/chicago-bulls-party-bus"                      title="Chicago Bulls" />
                     <x-nav.item href="/chicago-blackhawks-party-bus"                 title="Chicago Blackhawks" />

@@ -78,7 +78,7 @@
         headingBold="Special Event Limo"
         headingTail="Today"
         body="Planning a special event? Tell us your group size, destination, and date. Our team will match you with the perfect vehicle and get back to you fast."
-        image="/images/sections/classy-limo.jpg"
+        image="/images/sections/blog-limo.jpg"
         imageAlt="Elegant white limousine ready for a special event, Stop & Go Airport Shuttle Service, Inc. in New Lenox, Illinois"
         imageAspect="4/3"
         imageObjectPosition="center"

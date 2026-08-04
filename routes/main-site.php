@@ -28,7 +28,6 @@ Route::get('/sitemap.xml', function () {
     // Exact URIs to exclude (e.g. redirect-only routes, health checks)
     $excludeExact = [
         'up',                        // Laravel health check
-        'services/events/concerts',  // 301 → /special-event-limousine
         'terms',
         'privacy',
         'refund-policy',
@@ -175,7 +174,7 @@ Route::prefix('services/events')->name('events.')->group(function () {
     Route::get('/chicago-crosstown-classic',        fn () => view('pages.services.events.chicago-crosstown-classic'))->name('chicago-crosstown-classic');
 
     Route::prefix('concerts')->name('concerts.')->group(function () {
-        Route::get('/',                                       fn () => redirect('/special-event-limousine', 301))->name('index');
+        Route::get('/',                                       fn () => view('pages.services.events.concerts.tinley-park-amphitheatre-limo-service'))->name('index');
         Route::get('/ravinia-festival-limo-service',          fn () => view('pages.services.events.concerts.ravinia-festival-limo-service'))->name('ravinia');
         Route::get('/tinley-park-amphitheatre-limo-service',  fn () => view('pages.services.events.concerts.tinley-park-amphitheatre-limo-service'))->name('tinley-park');
         Route::get('/united-center-concert-limo-service',     fn () => view('pages.services.events.concerts.united-center-concert-limo-service'))->name('united-center');
